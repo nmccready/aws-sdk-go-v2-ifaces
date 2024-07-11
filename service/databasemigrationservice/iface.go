@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/databasemigrationservice"
 )
 
-// IDatabasemigrationservice defines the interface for databasemigrationservice
-type IDatabasemigrationservice interface {
+// IClient defines the interface for databasemigrationservice
+type IClient interface {
  Options() Options 
  AddTagsToResource(ctx context.Context, params *AddTagsToResourceInput, optFns ...func(*Options)) (*AddTagsToResourceOutput, error) 
  ApplyPendingMaintenanceAction(ctx context.Context, params *ApplyPendingMaintenanceActionInput, optFns ...func(*Options)) (*ApplyPendingMaintenanceActionOutput, error) 

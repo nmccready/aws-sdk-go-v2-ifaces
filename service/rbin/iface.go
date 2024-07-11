@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/rbin"
 )
 
-// IRbin defines the interface for rbin
-type IRbin interface {
+// IClient defines the interface for rbin
+type IClient interface {
  Options() Options 
  CreateRule(ctx context.Context, params *CreateRuleInput, optFns ...func(*Options)) (*CreateRuleOutput, error) 
  DeleteRule(ctx context.Context, params *DeleteRuleInput, optFns ...func(*Options)) (*DeleteRuleOutput, error) 

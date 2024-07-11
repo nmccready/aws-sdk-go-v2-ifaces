@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/opensearch"
 )
 
-// IOpensearch defines the interface for opensearch
-type IOpensearch interface {
+// IClient defines the interface for opensearch
+type IClient interface {
  Options() Options 
  AcceptInboundConnection(ctx context.Context, params *AcceptInboundConnectionInput, optFns ...func(*Options)) (*AcceptInboundConnectionOutput, error) 
  AddDataSource(ctx context.Context, params *AddDataSourceInput, optFns ...func(*Options)) (*AddDataSourceOutput, error) 

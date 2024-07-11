@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mwaa"
 )
 
-// IMwaa defines the interface for mwaa
-type IMwaa interface {
+// IClient defines the interface for mwaa
+type IClient interface {
  Options() Options 
  CreateCliToken(ctx context.Context, params *CreateCliTokenInput, optFns ...func(*Options)) (*CreateCliTokenOutput, error) 
  CreateEnvironment(ctx context.Context, params *CreateEnvironmentInput, optFns ...func(*Options)) (*CreateEnvironmentOutput, error) 

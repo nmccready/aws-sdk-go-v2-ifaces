@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/marketplacemetering"
 )
 
-// IMarketplacemetering defines the interface for marketplacemetering
-type IMarketplacemetering interface {
+// IClient defines the interface for marketplacemetering
+type IClient interface {
  Options() Options 
  BatchMeterUsage(ctx context.Context, params *BatchMeterUsageInput, optFns ...func(*Options)) (*BatchMeterUsageOutput, error) 
  MeterUsage(ctx context.Context, params *MeterUsageInput, optFns ...func(*Options)) (*MeterUsageOutput, error) 

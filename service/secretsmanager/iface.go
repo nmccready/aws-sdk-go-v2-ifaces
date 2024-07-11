@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/secretsmanager"
 )
 
-// ISecretsmanager defines the interface for secretsmanager
-type ISecretsmanager interface {
+// IClient defines the interface for secretsmanager
+type IClient interface {
  Options() Options 
  BatchGetSecretValue(ctx context.Context, params *BatchGetSecretValueInput, optFns ...func(*Options)) (*BatchGetSecretValueOutput, error) 
  CancelRotateSecret(ctx context.Context, params *CancelRotateSecretInput, optFns ...func(*Options)) (*CancelRotateSecretOutput, error) 

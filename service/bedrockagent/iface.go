@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/bedrockagent"
 )
 
-// IBedrockagent defines the interface for bedrockagent
-type IBedrockagent interface {
+// IClient defines the interface for bedrockagent
+type IClient interface {
  Options() Options 
  AssociateAgentKnowledgeBase(ctx context.Context, params *AssociateAgentKnowledgeBaseInput, optFns ...func(*Options)) (*AssociateAgentKnowledgeBaseOutput, error) 
  CreateAgent(ctx context.Context, params *CreateAgentInput, optFns ...func(*Options)) (*CreateAgentOutput, error) 

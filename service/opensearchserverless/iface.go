@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/opensearchserverless"
 )
 
-// IOpensearchserverless defines the interface for opensearchserverless
-type IOpensearchserverless interface {
+// IClient defines the interface for opensearchserverless
+type IClient interface {
  Options() Options 
  BatchGetCollection(ctx context.Context, params *BatchGetCollectionInput, optFns ...func(*Options)) (*BatchGetCollectionOutput, error) 
  BatchGetEffectiveLifecyclePolicy(ctx context.Context, params *BatchGetEffectiveLifecyclePolicyInput, optFns ...func(*Options)) (*BatchGetEffectiveLifecyclePolicyOutput, error) 

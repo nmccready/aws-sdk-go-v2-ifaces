@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/tnb"
 )
 
-// ITnb defines the interface for tnb
-type ITnb interface {
+// IClient defines the interface for tnb
+type IClient interface {
  Options() Options 
  CancelSolNetworkOperation(ctx context.Context, params *CancelSolNetworkOperationInput, optFns ...func(*Options)) (*CancelSolNetworkOperationOutput, error) 
  CreateSolFunctionPackage(ctx context.Context, params *CreateSolFunctionPackageInput, optFns ...func(*Options)) (*CreateSolFunctionPackageOutput, error) 

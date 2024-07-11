@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/snowball"
 )
 
-// ISnowball defines the interface for snowball
-type ISnowball interface {
+// IClient defines the interface for snowball
+type IClient interface {
  Options() Options 
  CancelCluster(ctx context.Context, params *CancelClusterInput, optFns ...func(*Options)) (*CancelClusterOutput, error) 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 

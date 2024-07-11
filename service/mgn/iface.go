@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mgn"
 )
 
-// IMgn defines the interface for mgn
-type IMgn interface {
+// IClient defines the interface for mgn
+type IClient interface {
  Options() Options 
  ArchiveApplication(ctx context.Context, params *ArchiveApplicationInput, optFns ...func(*Options)) (*ArchiveApplicationOutput, error) 
  ArchiveWave(ctx context.Context, params *ArchiveWaveInput, optFns ...func(*Options)) (*ArchiveWaveOutput, error) 

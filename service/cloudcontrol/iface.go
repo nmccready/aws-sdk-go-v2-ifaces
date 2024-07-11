@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudcontrol"
 )
 
-// ICloudcontrol defines the interface for cloudcontrol
-type ICloudcontrol interface {
+// IClient defines the interface for cloudcontrol
+type IClient interface {
  Options() Options 
  CancelResourceRequest(ctx context.Context, params *CancelResourceRequestInput, optFns ...func(*Options)) (*CancelResourceRequestOutput, error) 
  CreateResource(ctx context.Context, params *CreateResourceInput, optFns ...func(*Options)) (*CreateResourceOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/polly"
 )
 
-// IPolly defines the interface for polly
-type IPolly interface {
+// IClient defines the interface for polly
+type IClient interface {
  Options() Options 
  DeleteLexicon(ctx context.Context, params *DeleteLexiconInput, optFns ...func(*Options)) (*DeleteLexiconOutput, error) 
  DescribeVoices(ctx context.Context, params *DescribeVoicesInput, optFns ...func(*Options)) (*DescribeVoicesOutput, error) 

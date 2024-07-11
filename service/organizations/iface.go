@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/organizations"
 )
 
-// IOrganizations defines the interface for organizations
-type IOrganizations interface {
+// IClient defines the interface for organizations
+type IClient interface {
  Options() Options 
  AcceptHandshake(ctx context.Context, params *AcceptHandshakeInput, optFns ...func(*Options)) (*AcceptHandshakeOutput, error) 
  AttachPolicy(ctx context.Context, params *AttachPolicyInput, optFns ...func(*Options)) (*AttachPolicyOutput, error) 

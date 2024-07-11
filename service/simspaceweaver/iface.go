@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/simspaceweaver"
 )
 
-// ISimspaceweaver defines the interface for simspaceweaver
-type ISimspaceweaver interface {
+// IClient defines the interface for simspaceweaver
+type IClient interface {
  Options() Options 
  CreateSnapshot(ctx context.Context, params *CreateSnapshotInput, optFns ...func(*Options)) (*CreateSnapshotOutput, error) 
  DeleteApp(ctx context.Context, params *DeleteAppInput, optFns ...func(*Options)) (*DeleteAppOutput, error) 

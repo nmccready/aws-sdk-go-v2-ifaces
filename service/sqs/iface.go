@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sqs"
 )
 
-// ISqs defines the interface for sqs
-type ISqs interface {
+// IClient defines the interface for sqs
+type IClient interface {
  Options() Options 
  AddPermission(ctx context.Context, params *AddPermissionInput, optFns ...func(*Options)) (*AddPermissionOutput, error) 
  CancelMessageMoveTask(ctx context.Context, params *CancelMessageMoveTaskInput, optFns ...func(*Options)) (*CancelMessageMoveTaskOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/directoryservice"
 )
 
-// IDirectoryservice defines the interface for directoryservice
-type IDirectoryservice interface {
+// IClient defines the interface for directoryservice
+type IClient interface {
  Options() Options 
  AcceptSharedDirectory(ctx context.Context, params *AcceptSharedDirectoryInput, optFns ...func(*Options)) (*AcceptSharedDirectoryOutput, error) 
  AddIpRoutes(ctx context.Context, params *AddIpRoutesInput, optFns ...func(*Options)) (*AddIpRoutesOutput, error) 

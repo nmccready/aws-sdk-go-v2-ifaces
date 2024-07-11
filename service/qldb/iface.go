@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/qldb"
 )
 
-// IQldb defines the interface for qldb
-type IQldb interface {
+// IClient defines the interface for qldb
+type IClient interface {
  Options() Options 
  CancelJournalKinesisStream(ctx context.Context, params *CancelJournalKinesisStreamInput, optFns ...func(*Options)) (*CancelJournalKinesisStreamOutput, error) 
  CreateLedger(ctx context.Context, params *CreateLedgerInput, optFns ...func(*Options)) (*CreateLedgerOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kinesisvideo"
 )
 
-// IKinesisvideo defines the interface for kinesisvideo
-type IKinesisvideo interface {
+// IClient defines the interface for kinesisvideo
+type IClient interface {
  Options() Options 
  CreateSignalingChannel(ctx context.Context, params *CreateSignalingChannelInput, optFns ...func(*Options)) (*CreateSignalingChannelOutput, error) 
  CreateStream(ctx context.Context, params *CreateStreamInput, optFns ...func(*Options)) (*CreateStreamOutput, error) 

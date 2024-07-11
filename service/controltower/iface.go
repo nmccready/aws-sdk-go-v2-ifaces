@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/controltower"
 )
 
-// IControltower defines the interface for controltower
-type IControltower interface {
+// IClient defines the interface for controltower
+type IClient interface {
  Options() Options 
  CreateLandingZone(ctx context.Context, params *CreateLandingZoneInput, optFns ...func(*Options)) (*CreateLandingZoneOutput, error) 
  DeleteLandingZone(ctx context.Context, params *DeleteLandingZoneInput, optFns ...func(*Options)) (*DeleteLandingZoneOutput, error) 

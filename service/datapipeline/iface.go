@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/datapipeline"
 )
 
-// IDatapipeline defines the interface for datapipeline
-type IDatapipeline interface {
+// IClient defines the interface for datapipeline
+type IClient interface {
  Options() Options 
  ActivatePipeline(ctx context.Context, params *ActivatePipelineInput, optFns ...func(*Options)) (*ActivatePipelineOutput, error) 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 

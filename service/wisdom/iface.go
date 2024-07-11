@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/wisdom"
 )
 
-// IWisdom defines the interface for wisdom
-type IWisdom interface {
+// IClient defines the interface for wisdom
+type IClient interface {
  Options() Options 
  CreateAssistant(ctx context.Context, params *CreateAssistantInput, optFns ...func(*Options)) (*CreateAssistantOutput, error) 
  CreateAssistantAssociation(ctx context.Context, params *CreateAssistantAssociationInput, optFns ...func(*Options)) (*CreateAssistantAssociationOutput, error) 

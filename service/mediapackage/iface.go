@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediapackage"
 )
 
-// IMediapackage defines the interface for mediapackage
-type IMediapackage interface {
+// IClient defines the interface for mediapackage
+type IClient interface {
  Options() Options 
  ConfigureLogs(ctx context.Context, params *ConfigureLogsInput, optFns ...func(*Options)) (*ConfigureLogsOutput, error) 
  CreateChannel(ctx context.Context, params *CreateChannelInput, optFns ...func(*Options)) (*CreateChannelOutput, error) 

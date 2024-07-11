@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mq"
 )
 
-// IMq defines the interface for mq
-type IMq interface {
+// IClient defines the interface for mq
+type IClient interface {
  Options() Options 
  CreateBroker(ctx context.Context, params *CreateBrokerInput, optFns ...func(*Options)) (*CreateBrokerOutput, error) 
  CreateConfiguration(ctx context.Context, params *CreateConfigurationInput, optFns ...func(*Options)) (*CreateConfigurationOutput, error) 

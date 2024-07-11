@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ioteventsdata"
 )
 
-// IIoteventsdata defines the interface for ioteventsdata
-type IIoteventsdata interface {
+// IClient defines the interface for ioteventsdata
+type IClient interface {
  Options() Options 
  BatchAcknowledgeAlarm(ctx context.Context, params *BatchAcknowledgeAlarmInput, optFns ...func(*Options)) (*BatchAcknowledgeAlarmOutput, error) 
  BatchDeleteDetector(ctx context.Context, params *BatchDeleteDetectorInput, optFns ...func(*Options)) (*BatchDeleteDetectorOutput, error) 

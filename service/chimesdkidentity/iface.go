@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chimesdkidentity"
 )
 
-// IChimesdkidentity defines the interface for chimesdkidentity
-type IChimesdkidentity interface {
+// IClient defines the interface for chimesdkidentity
+type IClient interface {
  Options() Options 
  CreateAppInstance(ctx context.Context, params *CreateAppInstanceInput, optFns ...func(*Options)) (*CreateAppInstanceOutput, error) 
  CreateAppInstanceAdmin(ctx context.Context, params *CreateAppInstanceAdminInput, optFns ...func(*Options)) (*CreateAppInstanceAdminOutput, error) 

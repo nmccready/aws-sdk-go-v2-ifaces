@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/connectcases"
 )
 
-// IConnectcases defines the interface for connectcases
-type IConnectcases interface {
+// IClient defines the interface for connectcases
+type IClient interface {
  Options() Options 
  BatchGetField(ctx context.Context, params *BatchGetFieldInput, optFns ...func(*Options)) (*BatchGetFieldOutput, error) 
  BatchPutFieldOptions(ctx context.Context, params *BatchPutFieldOptionsInput, optFns ...func(*Options)) (*BatchPutFieldOptionsOutput, error) 

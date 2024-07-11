@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/emr"
 )
 
-// IEmr defines the interface for emr
-type IEmr interface {
+// IClient defines the interface for emr
+type IClient interface {
  Options() Options 
  AddInstanceFleet(ctx context.Context, params *AddInstanceFleetInput, optFns ...func(*Options)) (*AddInstanceFleetOutput, error) 
  AddInstanceGroups(ctx context.Context, params *AddInstanceGroupsInput, optFns ...func(*Options)) (*AddInstanceGroupsOutput, error) 

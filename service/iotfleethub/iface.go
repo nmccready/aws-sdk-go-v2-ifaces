@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotfleethub"
 )
 
-// IIotfleethub defines the interface for iotfleethub
-type IIotfleethub interface {
+// IClient defines the interface for iotfleethub
+type IClient interface {
  Options() Options 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  DeleteApplication(ctx context.Context, params *DeleteApplicationInput, optFns ...func(*Options)) (*DeleteApplicationOutput, error) 

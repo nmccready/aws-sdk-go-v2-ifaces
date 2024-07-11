@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/managedblockchainquery"
 )
 
-// IManagedblockchainquery defines the interface for managedblockchainquery
-type IManagedblockchainquery interface {
+// IClient defines the interface for managedblockchainquery
+type IClient interface {
  Options() Options 
  BatchGetTokenBalance(ctx context.Context, params *BatchGetTokenBalanceInput, optFns ...func(*Options)) (*BatchGetTokenBalanceOutput, error) 
  GetAssetContract(ctx context.Context, params *GetAssetContractInput, optFns ...func(*Options)) (*GetAssetContractOutput, error) 

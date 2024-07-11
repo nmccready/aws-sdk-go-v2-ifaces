@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53profiles"
 )
 
-// IRoute53profiles defines the interface for route53profiles
-type IRoute53profiles interface {
+// IClient defines the interface for route53profiles
+type IClient interface {
  Options() Options 
  AssociateProfile(ctx context.Context, params *AssociateProfileInput, optFns ...func(*Options)) (*AssociateProfileOutput, error) 
  AssociateResourceToProfile(ctx context.Context, params *AssociateResourceToProfileInput, optFns ...func(*Options)) (*AssociateResourceToProfileOutput, error) 

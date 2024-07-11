@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/rum"
 )
 
-// IRum defines the interface for rum
-type IRum interface {
+// IClient defines the interface for rum
+type IClient interface {
  Options() Options 
  BatchCreateRumMetricDefinitions(ctx context.Context, params *BatchCreateRumMetricDefinitionsInput, optFns ...func(*Options)) (*BatchCreateRumMetricDefinitionsOutput, error) 
  BatchDeleteRumMetricDefinitions(ctx context.Context, params *BatchDeleteRumMetricDefinitionsInput, optFns ...func(*Options)) (*BatchDeleteRumMetricDefinitionsOutput, error) 

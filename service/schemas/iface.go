@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/schemas"
 )
 
-// ISchemas defines the interface for schemas
-type ISchemas interface {
+// IClient defines the interface for schemas
+type IClient interface {
  Options() Options 
  CreateDiscoverer(ctx context.Context, params *CreateDiscovererInput, optFns ...func(*Options)) (*CreateDiscovererOutput, error) 
  CreateRegistry(ctx context.Context, params *CreateRegistryInput, optFns ...func(*Options)) (*CreateRegistryOutput, error) 

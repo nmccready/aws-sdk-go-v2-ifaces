@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ssmcontacts"
 )
 
-// ISsmcontacts defines the interface for ssmcontacts
-type ISsmcontacts interface {
+// IClient defines the interface for ssmcontacts
+type IClient interface {
  Options() Options 
  AcceptPage(ctx context.Context, params *AcceptPageInput, optFns ...func(*Options)) (*AcceptPageOutput, error) 
  ActivateContactChannel(ctx context.Context, params *ActivateContactChannelInput, optFns ...func(*Options)) (*ActivateContactChannelOutput, error) 

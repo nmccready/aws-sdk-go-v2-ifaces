@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/workspacesweb"
 )
 
-// IWorkspacesweb defines the interface for workspacesweb
-type IWorkspacesweb interface {
+// IClient defines the interface for workspacesweb
+type IClient interface {
  Options() Options 
  AssociateBrowserSettings(ctx context.Context, params *AssociateBrowserSettingsInput, optFns ...func(*Options)) (*AssociateBrowserSettingsOutput, error) 
  AssociateIpAccessSettings(ctx context.Context, params *AssociateIpAccessSettingsInput, optFns ...func(*Options)) (*AssociateIpAccessSettingsOutput, error) 

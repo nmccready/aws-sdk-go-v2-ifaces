@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sagemakera2iruntime"
 )
 
-// ISagemakera2iruntime defines the interface for sagemakera2iruntime
-type ISagemakera2iruntime interface {
+// IClient defines the interface for sagemakera2iruntime
+type IClient interface {
  Options() Options 
  DeleteHumanLoop(ctx context.Context, params *DeleteHumanLoopInput, optFns ...func(*Options)) (*DeleteHumanLoopOutput, error) 
  DescribeHumanLoop(ctx context.Context, params *DescribeHumanLoopInput, optFns ...func(*Options)) (*DescribeHumanLoopOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/macie2"
 )
 
-// IMacie2 defines the interface for macie2
-type IMacie2 interface {
+// IClient defines the interface for macie2
+type IClient interface {
  Options() Options 
  AcceptInvitation(ctx context.Context, params *AcceptInvitationInput, optFns ...func(*Options)) (*AcceptInvitationOutput, error) 
  BatchGetCustomDataIdentifiers(ctx context.Context, params *BatchGetCustomDataIdentifiersInput, optFns ...func(*Options)) (*BatchGetCustomDataIdentifiersOutput, error) 

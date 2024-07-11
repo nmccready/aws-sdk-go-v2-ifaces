@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediapackagevod"
 )
 
-// IMediapackagevod defines the interface for mediapackagevod
-type IMediapackagevod interface {
+// IClient defines the interface for mediapackagevod
+type IClient interface {
  Options() Options 
  ConfigureLogs(ctx context.Context, params *ConfigureLogsInput, optFns ...func(*Options)) (*ConfigureLogsOutput, error) 
  CreateAsset(ctx context.Context, params *CreateAssetInput, optFns ...func(*Options)) (*CreateAssetOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/entityresolution"
 )
 
-// IEntityresolution defines the interface for entityresolution
-type IEntityresolution interface {
+// IClient defines the interface for entityresolution
+type IClient interface {
  Options() Options 
  AddPolicyStatement(ctx context.Context, params *AddPolicyStatementInput, optFns ...func(*Options)) (*AddPolicyStatementOutput, error) 
  BatchDeleteUniqueId(ctx context.Context, params *BatchDeleteUniqueIdInput, optFns ...func(*Options)) (*BatchDeleteUniqueIdOutput, error) 

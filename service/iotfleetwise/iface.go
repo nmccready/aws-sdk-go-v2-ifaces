@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotfleetwise"
 )
 
-// IIotfleetwise defines the interface for iotfleetwise
-type IIotfleetwise interface {
+// IClient defines the interface for iotfleetwise
+type IClient interface {
  Options() Options 
  AssociateVehicleFleet(ctx context.Context, params *AssociateVehicleFleetInput, optFns ...func(*Options)) (*AssociateVehicleFleetOutput, error) 
  BatchCreateVehicle(ctx context.Context, params *BatchCreateVehicleInput, optFns ...func(*Options)) (*BatchCreateVehicleOutput, error) 

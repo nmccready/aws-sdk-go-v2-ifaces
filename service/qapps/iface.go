@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/qapps"
 )
 
-// IQapps defines the interface for qapps
-type IQapps interface {
+// IClient defines the interface for qapps
+type IClient interface {
  Options() Options 
  AssociateLibraryItemReview(ctx context.Context, params *AssociateLibraryItemReviewInput, optFns ...func(*Options)) (*AssociateLibraryItemReviewOutput, error) 
  AssociateQAppWithUser(ctx context.Context, params *AssociateQAppWithUserInput, optFns ...func(*Options)) (*AssociateQAppWithUserOutput, error) 

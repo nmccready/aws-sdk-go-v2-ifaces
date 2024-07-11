@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/workdocs"
 )
 
-// IWorkdocs defines the interface for workdocs
-type IWorkdocs interface {
+// IClient defines the interface for workdocs
+type IClient interface {
  Options() Options 
  AbortDocumentVersionUpload(ctx context.Context, params *AbortDocumentVersionUploadInput, optFns ...func(*Options)) (*AbortDocumentVersionUploadOutput, error) 
  ActivateUser(ctx context.Context, params *ActivateUserInput, optFns ...func(*Options)) (*ActivateUserOutput, error) 

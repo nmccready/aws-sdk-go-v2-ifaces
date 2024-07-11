@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
 )
 
-// IElasticloadbalancing defines the interface for elasticloadbalancing
-type IElasticloadbalancing interface {
+// IClient defines the interface for elasticloadbalancing
+type IClient interface {
  Options() Options 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 
  ApplySecurityGroupsToLoadBalancer(ctx context.Context, params *ApplySecurityGroupsToLoadBalancerInput, optFns ...func(*Options)) (*ApplySecurityGroupsToLoadBalancerOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kendraranking"
 )
 
-// IKendraranking defines the interface for kendraranking
-type IKendraranking interface {
+// IClient defines the interface for kendraranking
+type IClient interface {
  Options() Options 
  CreateRescoreExecutionPlan(ctx context.Context, params *CreateRescoreExecutionPlanInput, optFns ...func(*Options)) (*CreateRescoreExecutionPlanOutput, error) 
  DeleteRescoreExecutionPlan(ctx context.Context, params *DeleteRescoreExecutionPlanInput, optFns ...func(*Options)) (*DeleteRescoreExecutionPlanOutput, error) 

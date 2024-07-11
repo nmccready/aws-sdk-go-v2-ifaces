@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lexmodelsv2"
 )
 
-// ILexmodelsv2 defines the interface for lexmodelsv2
-type ILexmodelsv2 interface {
+// IClient defines the interface for lexmodelsv2
+type IClient interface {
  Options() Options 
  BatchCreateCustomVocabularyItem(ctx context.Context, params *BatchCreateCustomVocabularyItemInput, optFns ...func(*Options)) (*BatchCreateCustomVocabularyItemOutput, error) 
  BatchDeleteCustomVocabularyItem(ctx context.Context, params *BatchDeleteCustomVocabularyItemInput, optFns ...func(*Options)) (*BatchDeleteCustomVocabularyItemOutput, error) 

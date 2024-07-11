@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appintegrations"
 )
 
-// IAppintegrations defines the interface for appintegrations
-type IAppintegrations interface {
+// IClient defines the interface for appintegrations
+type IClient interface {
  Options() Options 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateDataIntegration(ctx context.Context, params *CreateDataIntegrationInput, optFns ...func(*Options)) (*CreateDataIntegrationOutput, error) 

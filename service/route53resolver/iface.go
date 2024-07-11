@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53resolver"
 )
 
-// IRoute53resolver defines the interface for route53resolver
-type IRoute53resolver interface {
+// IClient defines the interface for route53resolver
+type IClient interface {
  Options() Options 
  AssociateFirewallRuleGroup(ctx context.Context, params *AssociateFirewallRuleGroupInput, optFns ...func(*Options)) (*AssociateFirewallRuleGroupOutput, error) 
  AssociateResolverEndpointIpAddress(ctx context.Context, params *AssociateResolverEndpointIpAddressInput, optFns ...func(*Options)) (*AssociateResolverEndpointIpAddressOutput, error) 

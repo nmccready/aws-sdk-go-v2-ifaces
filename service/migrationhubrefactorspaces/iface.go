@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/migrationhubrefactorspaces"
 )
 
-// IMigrationhubrefactorspaces defines the interface for migrationhubrefactorspaces
-type IMigrationhubrefactorspaces interface {
+// IClient defines the interface for migrationhubrefactorspaces
+type IClient interface {
  Options() Options 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateEnvironment(ctx context.Context, params *CreateEnvironmentInput, optFns ...func(*Options)) (*CreateEnvironmentOutput, error) 

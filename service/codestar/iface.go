@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codestar"
 )
 
-// ICodestar defines the interface for codestar
-type ICodestar interface {
+// IClient defines the interface for codestar
+type IClient interface {
  Options() Options 
  AssociateTeamMember(ctx context.Context, params *AssociateTeamMemberInput, optFns ...func(*Options)) (*AssociateTeamMemberOutput, error) 
  CreateProject(ctx context.Context, params *CreateProjectInput, optFns ...func(*Options)) (*CreateProjectOutput, error) 

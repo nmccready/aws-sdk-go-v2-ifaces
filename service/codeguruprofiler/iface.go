@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codeguruprofiler"
 )
 
-// ICodeguruprofiler defines the interface for codeguruprofiler
-type ICodeguruprofiler interface {
+// IClient defines the interface for codeguruprofiler
+type IClient interface {
  Options() Options 
  AddNotificationChannels(ctx context.Context, params *AddNotificationChannelsInput, optFns ...func(*Options)) (*AddNotificationChannelsOutput, error) 
  BatchGetFrameMetricData(ctx context.Context, params *BatchGetFrameMetricDataInput, optFns ...func(*Options)) (*BatchGetFrameMetricDataOutput, error) 

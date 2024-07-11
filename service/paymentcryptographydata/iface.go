@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/paymentcryptographydata"
 )
 
-// IPaymentcryptographydata defines the interface for paymentcryptographydata
-type IPaymentcryptographydata interface {
+// IClient defines the interface for paymentcryptographydata
+type IClient interface {
  Options() Options 
  DecryptData(ctx context.Context, params *DecryptDataInput, optFns ...func(*Options)) (*DecryptDataOutput, error) 
  EncryptData(ctx context.Context, params *EncryptDataInput, optFns ...func(*Options)) (*EncryptDataOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/backupgateway"
 )
 
-// IBackupgateway defines the interface for backupgateway
-type IBackupgateway interface {
+// IClient defines the interface for backupgateway
+type IClient interface {
  Options() Options 
  AssociateGatewayToServer(ctx context.Context, params *AssociateGatewayToServerInput, optFns ...func(*Options)) (*AssociateGatewayToServerOutput, error) 
  CreateGateway(ctx context.Context, params *CreateGatewayInput, optFns ...func(*Options)) (*CreateGatewayOutput, error) 

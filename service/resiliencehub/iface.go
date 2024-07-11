@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/resiliencehub"
 )
 
-// IResiliencehub defines the interface for resiliencehub
-type IResiliencehub interface {
+// IClient defines the interface for resiliencehub
+type IClient interface {
  Options() Options 
  AddDraftAppVersionResourceMappings(ctx context.Context, params *AddDraftAppVersionResourceMappingsInput, optFns ...func(*Options)) (*AddDraftAppVersionResourceMappingsOutput, error) 
  BatchUpdateRecommendationStatus(ctx context.Context, params *BatchUpdateRecommendationStatusInput, optFns ...func(*Options)) (*BatchUpdateRecommendationStatusOutput, error) 

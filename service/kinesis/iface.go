@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kinesis"
 )
 
-// IKinesis defines the interface for kinesis
-type IKinesis interface {
+// IClient defines the interface for kinesis
+type IClient interface {
  Options() Options 
  AddTagsToStream(ctx context.Context, params *AddTagsToStreamInput, optFns ...func(*Options)) (*AddTagsToStreamOutput, error) 
  CreateStream(ctx context.Context, params *CreateStreamInput, optFns ...func(*Options)) (*CreateStreamOutput, error) 

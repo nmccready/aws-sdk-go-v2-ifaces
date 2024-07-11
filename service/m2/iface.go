@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/m2"
 )
 
-// IM2 defines the interface for m2
-type IM2 interface {
+// IClient defines the interface for m2
+type IClient interface {
  Options() Options 
  CancelBatchJobExecution(ctx context.Context, params *CancelBatchJobExecutionInput, optFns ...func(*Options)) (*CancelBatchJobExecutionOutput, error) 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 

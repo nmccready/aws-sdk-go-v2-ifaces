@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/rolesanywhere"
 )
 
-// IRolesanywhere defines the interface for rolesanywhere
-type IRolesanywhere interface {
+// IClient defines the interface for rolesanywhere
+type IClient interface {
  Options() Options 
  CreateProfile(ctx context.Context, params *CreateProfileInput, optFns ...func(*Options)) (*CreateProfileOutput, error) 
  CreateTrustAnchor(ctx context.Context, params *CreateTrustAnchorInput, optFns ...func(*Options)) (*CreateTrustAnchorOutput, error) 

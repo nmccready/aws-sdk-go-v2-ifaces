@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/redshift"
 )
 
-// IRedshift defines the interface for redshift
-type IRedshift interface {
+// IClient defines the interface for redshift
+type IClient interface {
  Options() Options 
  AcceptReservedNodeExchange(ctx context.Context, params *AcceptReservedNodeExchangeInput, optFns ...func(*Options)) (*AcceptReservedNodeExchangeOutput, error) 
  AddPartner(ctx context.Context, params *AddPartnerInput, optFns ...func(*Options)) (*AddPartnerOutput, error) 

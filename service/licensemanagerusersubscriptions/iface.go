@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/licensemanagerusersubscriptions"
 )
 
-// ILicensemanagerusersubscriptions defines the interface for licensemanagerusersubscriptions
-type ILicensemanagerusersubscriptions interface {
+// IClient defines the interface for licensemanagerusersubscriptions
+type IClient interface {
  Options() Options 
  AssociateUser(ctx context.Context, params *AssociateUserInput, optFns ...func(*Options)) (*AssociateUserOutput, error) 
  DeregisterIdentityProvider(ctx context.Context, params *DeregisterIdentityProviderInput, optFns ...func(*Options)) (*DeregisterIdentityProviderOutput, error) 

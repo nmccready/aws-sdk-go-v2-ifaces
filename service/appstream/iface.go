@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appstream"
 )
 
-// IAppstream defines the interface for appstream
-type IAppstream interface {
+// IClient defines the interface for appstream
+type IClient interface {
  Options() Options 
  AssociateAppBlockBuilderAppBlock(ctx context.Context, params *AssociateAppBlockBuilderAppBlockInput, optFns ...func(*Options)) (*AssociateAppBlockBuilderAppBlockOutput, error) 
  AssociateApplicationFleet(ctx context.Context, params *AssociateApplicationFleetInput, optFns ...func(*Options)) (*AssociateApplicationFleetOutput, error) 

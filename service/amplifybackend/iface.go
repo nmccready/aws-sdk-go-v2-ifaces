@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/amplifybackend"
 )
 
-// IAmplifybackend defines the interface for amplifybackend
-type IAmplifybackend interface {
+// IClient defines the interface for amplifybackend
+type IClient interface {
  Options() Options 
  CloneBackend(ctx context.Context, params *CloneBackendInput, optFns ...func(*Options)) (*CloneBackendOutput, error) 
  CreateBackend(ctx context.Context, params *CreateBackendInput, optFns ...func(*Options)) (*CreateBackendOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudformation"
 )
 
-// ICloudformation defines the interface for cloudformation
-type ICloudformation interface {
+// IClient defines the interface for cloudformation
+type IClient interface {
  Options() Options 
  ActivateOrganizationsAccess(ctx context.Context, params *ActivateOrganizationsAccessInput, optFns ...func(*Options)) (*ActivateOrganizationsAccessOutput, error) 
  ActivateType(ctx context.Context, params *ActivateTypeInput, optFns ...func(*Options)) (*ActivateTypeOutput, error) 

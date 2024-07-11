@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ssmincidents"
 )
 
-// ISsmincidents defines the interface for ssmincidents
-type ISsmincidents interface {
+// IClient defines the interface for ssmincidents
+type IClient interface {
  Options() Options 
  BatchGetIncidentFindings(ctx context.Context, params *BatchGetIncidentFindingsInput, optFns ...func(*Options)) (*BatchGetIncidentFindingsOutput, error) 
  CreateReplicationSet(ctx context.Context, params *CreateReplicationSetInput, optFns ...func(*Options)) (*CreateReplicationSetOutput, error) 

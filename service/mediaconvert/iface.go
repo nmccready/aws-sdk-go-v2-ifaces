@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediaconvert"
 )
 
-// IMediaconvert defines the interface for mediaconvert
-type IMediaconvert interface {
+// IClient defines the interface for mediaconvert
+type IClient interface {
  Options() Options 
  AssociateCertificate(ctx context.Context, params *AssociateCertificateInput, optFns ...func(*Options)) (*AssociateCertificateOutput, error) 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 

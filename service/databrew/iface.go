@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/databrew"
 )
 
-// IDatabrew defines the interface for databrew
-type IDatabrew interface {
+// IClient defines the interface for databrew
+type IClient interface {
  Options() Options 
  BatchDeleteRecipeVersion(ctx context.Context, params *BatchDeleteRecipeVersionInput, optFns ...func(*Options)) (*BatchDeleteRecipeVersionOutput, error) 
  CreateDataset(ctx context.Context, params *CreateDatasetInput, optFns ...func(*Options)) (*CreateDatasetOutput, error) 

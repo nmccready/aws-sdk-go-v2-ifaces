@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/finspacedata"
 )
 
-// IFinspacedata defines the interface for finspacedata
-type IFinspacedata interface {
+// IClient defines the interface for finspacedata
+type IClient interface {
  Options() Options 
  AssociateUserToPermissionGroup(ctx context.Context, params *AssociateUserToPermissionGroupInput, optFns ...func(*Options)) (*AssociateUserToPermissionGroupOutput, error) 
  CreateChangeset(ctx context.Context, params *CreateChangesetInput, optFns ...func(*Options)) (*CreateChangesetOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/apptest"
 )
 
-// IApptest defines the interface for apptest
-type IApptest interface {
+// IClient defines the interface for apptest
+type IClient interface {
  Options() Options 
  CreateTestCase(ctx context.Context, params *CreateTestCaseInput, optFns ...func(*Options)) (*CreateTestCaseOutput, error) 
  CreateTestConfiguration(ctx context.Context, params *CreateTestConfigurationInput, optFns ...func(*Options)) (*CreateTestConfigurationOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/s3outposts"
 )
 
-// IS3outposts defines the interface for s3outposts
-type IS3outposts interface {
+// IClient defines the interface for s3outposts
+type IClient interface {
  Options() Options 
  CreateEndpoint(ctx context.Context, params *CreateEndpointInput, optFns ...func(*Options)) (*CreateEndpointOutput, error) 
  DeleteEndpoint(ctx context.Context, params *DeleteEndpointInput, optFns ...func(*Options)) (*DeleteEndpointOutput, error) 

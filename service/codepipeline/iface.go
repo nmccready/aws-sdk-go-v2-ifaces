@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codepipeline"
 )
 
-// ICodepipeline defines the interface for codepipeline
-type ICodepipeline interface {
+// IClient defines the interface for codepipeline
+type IClient interface {
  Options() Options 
  AcknowledgeJob(ctx context.Context, params *AcknowledgeJobInput, optFns ...func(*Options)) (*AcknowledgeJobOutput, error) 
  AcknowledgeThirdPartyJob(ctx context.Context, params *AcknowledgeThirdPartyJobInput, optFns ...func(*Options)) (*AcknowledgeThirdPartyJobOutput, error) 

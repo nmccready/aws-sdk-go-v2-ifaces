@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/clouddirectory"
 )
 
-// IClouddirectory defines the interface for clouddirectory
-type IClouddirectory interface {
+// IClient defines the interface for clouddirectory
+type IClient interface {
  Options() Options 
  AddFacetToObject(ctx context.Context, params *AddFacetToObjectInput, optFns ...func(*Options)) (*AddFacetToObjectOutput, error) 
  ApplySchema(ctx context.Context, params *ApplySchemaInput, optFns ...func(*Options)) (*ApplySchemaOutput, error) 

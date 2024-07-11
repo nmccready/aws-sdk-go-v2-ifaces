@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/applicationautoscaling"
 )
 
-// IApplicationautoscaling defines the interface for applicationautoscaling
-type IApplicationautoscaling interface {
+// IClient defines the interface for applicationautoscaling
+type IClient interface {
  Options() Options 
  DeleteScalingPolicy(ctx context.Context, params *DeleteScalingPolicyInput, optFns ...func(*Options)) (*DeleteScalingPolicyOutput, error) 
  DeleteScheduledAction(ctx context.Context, params *DeleteScheduledActionInput, optFns ...func(*Options)) (*DeleteScheduledActionOutput, error) 

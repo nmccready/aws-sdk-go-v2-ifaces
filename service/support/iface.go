@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/support"
 )
 
-// ISupport defines the interface for support
-type ISupport interface {
+// IClient defines the interface for support
+type IClient interface {
  Options() Options 
  AddAttachmentsToSet(ctx context.Context, params *AddAttachmentsToSetInput, optFns ...func(*Options)) (*AddAttachmentsToSetOutput, error) 
  AddCommunicationToCase(ctx context.Context, params *AddCommunicationToCaseInput, optFns ...func(*Options)) (*AddCommunicationToCaseOutput, error) 

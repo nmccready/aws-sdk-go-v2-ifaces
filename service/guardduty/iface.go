@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/guardduty"
 )
 
-// IGuardduty defines the interface for guardduty
-type IGuardduty interface {
+// IClient defines the interface for guardduty
+type IClient interface {
  Options() Options 
  AcceptAdministratorInvitation(ctx context.Context, params *AcceptAdministratorInvitationInput, optFns ...func(*Options)) (*AcceptAdministratorInvitationOutput, error) 
  AcceptInvitation(ctx context.Context, params *AcceptInvitationInput, optFns ...func(*Options)) (*AcceptInvitationOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/xray"
 )
 
-// IXray defines the interface for xray
-type IXray interface {
+// IClient defines the interface for xray
+type IClient interface {
  Options() Options 
  BatchGetTraces(ctx context.Context, params *BatchGetTracesInput, optFns ...func(*Options)) (*BatchGetTracesOutput, error) 
  CreateGroup(ctx context.Context, params *CreateGroupInput, optFns ...func(*Options)) (*CreateGroupOutput, error) 

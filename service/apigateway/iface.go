@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/apigateway"
 )
 
-// IApigateway defines the interface for apigateway
-type IApigateway interface {
+// IClient defines the interface for apigateway
+type IClient interface {
  Options() Options 
  CreateApiKey(ctx context.Context, params *CreateApiKeyInput, optFns ...func(*Options)) (*CreateApiKeyOutput, error) 
  CreateAuthorizer(ctx context.Context, params *CreateAuthorizerInput, optFns ...func(*Options)) (*CreateAuthorizerOutput, error) 

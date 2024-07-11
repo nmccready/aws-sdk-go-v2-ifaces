@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/opsworks"
 )
 
-// IOpsworks defines the interface for opsworks
-type IOpsworks interface {
+// IClient defines the interface for opsworks
+type IClient interface {
  Options() Options 
  AssignInstance(ctx context.Context, params *AssignInstanceInput, optFns ...func(*Options)) (*AssignInstanceOutput, error) 
  AssignVolume(ctx context.Context, params *AssignVolumeInput, optFns ...func(*Options)) (*AssignVolumeOutput, error) 

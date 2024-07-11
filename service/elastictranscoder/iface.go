@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/elastictranscoder"
 )
 
-// IElastictranscoder defines the interface for elastictranscoder
-type IElastictranscoder interface {
+// IClient defines the interface for elastictranscoder
+type IClient interface {
  Options() Options 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 
  CreateJob(ctx context.Context, params *CreateJobInput, optFns ...func(*Options)) (*CreateJobOutput, error) 

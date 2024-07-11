@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lookoutequipment"
 )
 
-// ILookoutequipment defines the interface for lookoutequipment
-type ILookoutequipment interface {
+// IClient defines the interface for lookoutequipment
+type IClient interface {
  Options() Options 
  CreateDataset(ctx context.Context, params *CreateDatasetInput, optFns ...func(*Options)) (*CreateDatasetOutput, error) 
  CreateInferenceScheduler(ctx context.Context, params *CreateInferenceSchedulerInput, optFns ...func(*Options)) (*CreateInferenceSchedulerOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/redshiftserverless"
 )
 
-// IRedshiftserverless defines the interface for redshiftserverless
-type IRedshiftserverless interface {
+// IClient defines the interface for redshiftserverless
+type IClient interface {
  Options() Options 
  ConvertRecoveryPointToSnapshot(ctx context.Context, params *ConvertRecoveryPointToSnapshotInput, optFns ...func(*Options)) (*ConvertRecoveryPointToSnapshotOutput, error) 
  CreateCustomDomainAssociation(ctx context.Context, params *CreateCustomDomainAssociationInput, optFns ...func(*Options)) (*CreateCustomDomainAssociationOutput, error) 

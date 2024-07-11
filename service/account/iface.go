@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/account"
 )
 
-// IAccount defines the interface for account
-type IAccount interface {
+// IClient defines the interface for account
+type IClient interface {
  Options() Options 
  AcceptPrimaryEmailUpdate(ctx context.Context, params *AcceptPrimaryEmailUpdateInput, optFns ...func(*Options)) (*AcceptPrimaryEmailUpdateOutput, error) 
  DeleteAlternateContact(ctx context.Context, params *DeleteAlternateContactInput, optFns ...func(*Options)) (*DeleteAlternateContactOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/acm"
 )
 
-// IAcm defines the interface for acm
-type IAcm interface {
+// IClient defines the interface for acm
+type IClient interface {
  Options() Options 
  AddTagsToCertificate(ctx context.Context, params *AddTagsToCertificateInput, optFns ...func(*Options)) (*AddTagsToCertificateOutput, error) 
  DeleteCertificate(ctx context.Context, params *DeleteCertificateInput, optFns ...func(*Options)) (*DeleteCertificateOutput, error) 

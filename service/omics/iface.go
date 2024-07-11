@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/omics"
 )
 
-// IOmics defines the interface for omics
-type IOmics interface {
+// IClient defines the interface for omics
+type IClient interface {
  Options() Options 
  AbortMultipartReadSetUpload(ctx context.Context, params *AbortMultipartReadSetUploadInput, optFns ...func(*Options)) (*AbortMultipartReadSetUploadOutput, error) 
  AcceptShare(ctx context.Context, params *AcceptShareInput, optFns ...func(*Options)) (*AcceptShareOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lexruntimeservice"
 )
 
-// ILexruntimeservice defines the interface for lexruntimeservice
-type ILexruntimeservice interface {
+// IClient defines the interface for lexruntimeservice
+type IClient interface {
  Options() Options 
  DeleteSession(ctx context.Context, params *DeleteSessionInput, optFns ...func(*Options)) (*DeleteSessionOutput, error) 
  GetSession(ctx context.Context, params *GetSessionInput, optFns ...func(*Options)) (*GetSessionOutput, error) 

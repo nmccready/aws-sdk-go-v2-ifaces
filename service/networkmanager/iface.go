@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/networkmanager"
 )
 
-// INetworkmanager defines the interface for networkmanager
-type INetworkmanager interface {
+// IClient defines the interface for networkmanager
+type IClient interface {
  Options() Options 
  AcceptAttachment(ctx context.Context, params *AcceptAttachmentInput, optFns ...func(*Options)) (*AcceptAttachmentOutput, error) 
  AssociateConnectPeer(ctx context.Context, params *AssociateConnectPeerInput, optFns ...func(*Options)) (*AssociateConnectPeerOutput, error) 

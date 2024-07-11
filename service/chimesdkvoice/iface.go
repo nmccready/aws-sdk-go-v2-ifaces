@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chimesdkvoice"
 )
 
-// IChimesdkvoice defines the interface for chimesdkvoice
-type IChimesdkvoice interface {
+// IClient defines the interface for chimesdkvoice
+type IClient interface {
  Options() Options 
  AssociatePhoneNumbersWithVoiceConnector(ctx context.Context, params *AssociatePhoneNumbersWithVoiceConnectorInput, optFns ...func(*Options)) (*AssociatePhoneNumbersWithVoiceConnectorOutput, error) 
  AssociatePhoneNumbersWithVoiceConnectorGroup(ctx context.Context, params *AssociatePhoneNumbersWithVoiceConnectorGroupInput, optFns ...func(*Options)) (*AssociatePhoneNumbersWithVoiceConnectorGroupOutput, error) 

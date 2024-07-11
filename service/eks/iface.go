@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/eks"
 )
 
-// IEks defines the interface for eks
-type IEks interface {
+// IClient defines the interface for eks
+type IClient interface {
  Options() Options 
  AssociateAccessPolicy(ctx context.Context, params *AssociateAccessPolicyInput, optFns ...func(*Options)) (*AssociateAccessPolicyOutput, error) 
  AssociateEncryptionConfig(ctx context.Context, params *AssociateEncryptionConfigInput, optFns ...func(*Options)) (*AssociateEncryptionConfigOutput, error) 

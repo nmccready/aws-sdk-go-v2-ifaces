@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotjobsdataplane"
 )
 
-// IIotjobsdataplane defines the interface for iotjobsdataplane
-type IIotjobsdataplane interface {
+// IClient defines the interface for iotjobsdataplane
+type IClient interface {
  Options() Options 
  DescribeJobExecution(ctx context.Context, params *DescribeJobExecutionInput, optFns ...func(*Options)) (*DescribeJobExecutionOutput, error) 
  GetPendingJobExecutions(ctx context.Context, params *GetPendingJobExecutionsInput, optFns ...func(*Options)) (*GetPendingJobExecutionsOutput, error) 

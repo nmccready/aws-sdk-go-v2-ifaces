@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lakeformation"
 )
 
-// ILakeformation defines the interface for lakeformation
-type ILakeformation interface {
+// IClient defines the interface for lakeformation
+type IClient interface {
  Options() Options 
  AddLFTagsToResource(ctx context.Context, params *AddLFTagsToResourceInput, optFns ...func(*Options)) (*AddLFTagsToResourceOutput, error) 
  AssumeDecoratedRoleWithSAML(ctx context.Context, params *AssumeDecoratedRoleWithSAMLInput, optFns ...func(*Options)) (*AssumeDecoratedRoleWithSAMLOutput, error) 

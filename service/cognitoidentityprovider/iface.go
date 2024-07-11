@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cognitoidentityprovider"
 )
 
-// ICognitoidentityprovider defines the interface for cognitoidentityprovider
-type ICognitoidentityprovider interface {
+// IClient defines the interface for cognitoidentityprovider
+type IClient interface {
  Options() Options 
  AddCustomAttributes(ctx context.Context, params *AddCustomAttributesInput, optFns ...func(*Options)) (*AddCustomAttributesOutput, error) 
  AdminAddUserToGroup(ctx context.Context, params *AdminAddUserToGroupInput, optFns ...func(*Options)) (*AdminAddUserToGroupOutput, error) 

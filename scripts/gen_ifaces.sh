@@ -43,8 +43,7 @@ for service_dir in "$AWS_SDK_PATH"/*; do
         mkdir -p "$DEST_DIR/${service_name}"
         iface_file="$DEST_DIR/${service_name}/iface.go"
         
-        pascal_service_name=$(pascalcase $service_name)
-        echo "Generating interface I${pascal_service_name} for $service_name..."
+        echo "Generating interface IClient for $service_name..."
 
         # Generate the interface file
         # echo "$(pwd)/$service_dir"
@@ -58,8 +57,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/$service_name"
 )
 
-// I${pascal_service_name} defines the interface for $service_name
-type I${pascal_service_name} interface {
+// IClient defines the interface for $service_name
+type IClient interface {
 $(extract_methods "$(pwd)/$service_dir")
 }
 EOF

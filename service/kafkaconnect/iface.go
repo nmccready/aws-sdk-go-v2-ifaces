@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kafkaconnect"
 )
 
-// IKafkaconnect defines the interface for kafkaconnect
-type IKafkaconnect interface {
+// IClient defines the interface for kafkaconnect
+type IClient interface {
  Options() Options 
  CreateConnector(ctx context.Context, params *CreateConnectorInput, optFns ...func(*Options)) (*CreateConnectorOutput, error) 
  CreateCustomPlugin(ctx context.Context, params *CreateCustomPluginInput, optFns ...func(*Options)) (*CreateCustomPluginOutput, error) 

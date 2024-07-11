@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/textract"
 )
 
-// ITextract defines the interface for textract
-type ITextract interface {
+// IClient defines the interface for textract
+type IClient interface {
  Options() Options 
  AnalyzeDocument(ctx context.Context, params *AnalyzeDocumentInput, optFns ...func(*Options)) (*AnalyzeDocumentOutput, error) 
  AnalyzeExpense(ctx context.Context, params *AnalyzeExpenseInput, optFns ...func(*Options)) (*AnalyzeExpenseOutput, error) 

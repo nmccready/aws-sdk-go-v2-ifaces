@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mobile"
 )
 
-// IMobile defines the interface for mobile
-type IMobile interface {
+// IClient defines the interface for mobile
+type IClient interface {
  Options() Options 
  CreateProject(ctx context.Context, params *CreateProjectInput, optFns ...func(*Options)) (*CreateProjectOutput, error) 
  DeleteProject(ctx context.Context, params *DeleteProjectInput, optFns ...func(*Options)) (*DeleteProjectOutput, error) 

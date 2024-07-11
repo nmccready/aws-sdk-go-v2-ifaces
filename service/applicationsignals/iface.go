@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/applicationsignals"
 )
 
-// IApplicationsignals defines the interface for applicationsignals
-type IApplicationsignals interface {
+// IClient defines the interface for applicationsignals
+type IClient interface {
  Options() Options 
  BatchGetServiceLevelObjectiveBudgetReport(ctx context.Context, params *BatchGetServiceLevelObjectiveBudgetReportInput, optFns ...func(*Options)) (*BatchGetServiceLevelObjectiveBudgetReportOutput, error) 
  CreateServiceLevelObjective(ctx context.Context, params *CreateServiceLevelObjectiveInput, optFns ...func(*Options)) (*CreateServiceLevelObjectiveOutput, error) 

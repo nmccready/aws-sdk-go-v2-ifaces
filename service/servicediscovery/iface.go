@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/servicediscovery"
 )
 
-// IServicediscovery defines the interface for servicediscovery
-type IServicediscovery interface {
+// IClient defines the interface for servicediscovery
+type IClient interface {
  Options() Options 
  CreateHttpNamespace(ctx context.Context, params *CreateHttpNamespaceInput, optFns ...func(*Options)) (*CreateHttpNamespaceOutput, error) 
  CreatePrivateDnsNamespace(ctx context.Context, params *CreatePrivateDnsNamespaceInput, optFns ...func(*Options)) (*CreatePrivateDnsNamespaceOutput, error) 

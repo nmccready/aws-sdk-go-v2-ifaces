@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sagemakerfeaturestoreruntime"
 )
 
-// ISagemakerfeaturestoreruntime defines the interface for sagemakerfeaturestoreruntime
-type ISagemakerfeaturestoreruntime interface {
+// IClient defines the interface for sagemakerfeaturestoreruntime
+type IClient interface {
  Options() Options 
  BatchGetRecord(ctx context.Context, params *BatchGetRecordInput, optFns ...func(*Options)) (*BatchGetRecordOutput, error) 
  DeleteRecord(ctx context.Context, params *DeleteRecordInput, optFns ...func(*Options)) (*DeleteRecordOutput, error) 

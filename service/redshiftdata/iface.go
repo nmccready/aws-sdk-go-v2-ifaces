@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/redshiftdata"
 )
 
-// IRedshiftdata defines the interface for redshiftdata
-type IRedshiftdata interface {
+// IClient defines the interface for redshiftdata
+type IClient interface {
  Options() Options 
  BatchExecuteStatement(ctx context.Context, params *BatchExecuteStatementInput, optFns ...func(*Options)) (*BatchExecuteStatementOutput, error) 
  CancelStatement(ctx context.Context, params *CancelStatementInput, optFns ...func(*Options)) (*CancelStatementOutput, error) 

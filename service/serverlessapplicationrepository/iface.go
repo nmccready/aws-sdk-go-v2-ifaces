@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/serverlessapplicationrepository"
 )
 
-// IServerlessapplicationrepository defines the interface for serverlessapplicationrepository
-type IServerlessapplicationrepository interface {
+// IClient defines the interface for serverlessapplicationrepository
+type IClient interface {
  Options() Options 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateApplicationVersion(ctx context.Context, params *CreateApplicationVersionInput, optFns ...func(*Options)) (*CreateApplicationVersionOutput, error) 

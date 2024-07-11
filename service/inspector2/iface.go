@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/inspector2"
 )
 
-// IInspector2 defines the interface for inspector2
-type IInspector2 interface {
+// IClient defines the interface for inspector2
+type IClient interface {
  Options() Options 
  AssociateMember(ctx context.Context, params *AssociateMemberInput, optFns ...func(*Options)) (*AssociateMemberOutput, error) 
  BatchGetAccountStatus(ctx context.Context, params *BatchGetAccountStatusInput, optFns ...func(*Options)) (*BatchGetAccountStatusOutput, error) 

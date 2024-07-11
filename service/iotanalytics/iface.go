@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotanalytics"
 )
 
-// IIotanalytics defines the interface for iotanalytics
-type IIotanalytics interface {
+// IClient defines the interface for iotanalytics
+type IClient interface {
  Options() Options 
  BatchPutMessage(ctx context.Context, params *BatchPutMessageInput, optFns ...func(*Options)) (*BatchPutMessageOutput, error) 
  CancelPipelineReprocessing(ctx context.Context, params *CancelPipelineReprocessingInput, optFns ...func(*Options)) (*CancelPipelineReprocessingOutput, error) 

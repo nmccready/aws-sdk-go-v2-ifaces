@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/gamelift"
 )
 
-// IGamelift defines the interface for gamelift
-type IGamelift interface {
+// IClient defines the interface for gamelift
+type IClient interface {
  Options() Options 
  AcceptMatch(ctx context.Context, params *AcceptMatchInput, optFns ...func(*Options)) (*AcceptMatchOutput, error) 
  ClaimGameServer(ctx context.Context, params *ClaimGameServerInput, optFns ...func(*Options)) (*ClaimGameServerOutput, error) 

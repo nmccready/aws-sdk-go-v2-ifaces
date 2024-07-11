@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/panorama"
 )
 
-// IPanorama defines the interface for panorama
-type IPanorama interface {
+// IClient defines the interface for panorama
+type IClient interface {
  Options() Options 
  CreateApplicationInstance(ctx context.Context, params *CreateApplicationInstanceInput, optFns ...func(*Options)) (*CreateApplicationInstanceOutput, error) 
  CreateJobForDevices(ctx context.Context, params *CreateJobForDevicesInput, optFns ...func(*Options)) (*CreateJobForDevicesOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/qbusiness"
 )
 
-// IQbusiness defines the interface for qbusiness
-type IQbusiness interface {
+// IClient defines the interface for qbusiness
+type IClient interface {
  Options() Options 
  BatchDeleteDocument(ctx context.Context, params *BatchDeleteDocumentInput, optFns ...func(*Options)) (*BatchDeleteDocumentOutput, error) 
  BatchPutDocument(ctx context.Context, params *BatchPutDocumentInput, optFns ...func(*Options)) (*BatchPutDocumentOutput, error) 

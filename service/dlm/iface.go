@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/dlm"
 )
 
-// IDlm defines the interface for dlm
-type IDlm interface {
+// IClient defines the interface for dlm
+type IClient interface {
  Options() Options 
  CreateLifecyclePolicy(ctx context.Context, params *CreateLifecyclePolicyInput, optFns ...func(*Options)) (*CreateLifecyclePolicyOutput, error) 
  DeleteLifecyclePolicy(ctx context.Context, params *DeleteLifecyclePolicyInput, optFns ...func(*Options)) (*DeleteLifecyclePolicyOutput, error) 

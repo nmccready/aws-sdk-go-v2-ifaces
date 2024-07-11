@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudwatchevents"
 )
 
-// ICloudwatchevents defines the interface for cloudwatchevents
-type ICloudwatchevents interface {
+// IClient defines the interface for cloudwatchevents
+type IClient interface {
  Options() Options 
  ActivateEventSource(ctx context.Context, params *ActivateEventSourceInput, optFns ...func(*Options)) (*ActivateEventSourceOutput, error) 
  CancelReplay(ctx context.Context, params *CancelReplayInput, optFns ...func(*Options)) (*CancelReplayOutput, error) 

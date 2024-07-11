@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/scheduler"
 )
 
-// IScheduler defines the interface for scheduler
-type IScheduler interface {
+// IClient defines the interface for scheduler
+type IClient interface {
  Options() Options 
  CreateSchedule(ctx context.Context, params *CreateScheduleInput, optFns ...func(*Options)) (*CreateScheduleOutput, error) 
  CreateScheduleGroup(ctx context.Context, params *CreateScheduleGroupInput, optFns ...func(*Options)) (*CreateScheduleGroupOutput, error) 

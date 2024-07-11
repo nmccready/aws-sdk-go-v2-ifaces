@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/osis"
 )
 
-// IOsis defines the interface for osis
-type IOsis interface {
+// IClient defines the interface for osis
+type IClient interface {
  Options() Options 
  CreatePipeline(ctx context.Context, params *CreatePipelineInput, optFns ...func(*Options)) (*CreatePipelineOutput, error) 
  DeletePipeline(ctx context.Context, params *DeletePipelineInput, optFns ...func(*Options)) (*DeletePipelineOutput, error) 

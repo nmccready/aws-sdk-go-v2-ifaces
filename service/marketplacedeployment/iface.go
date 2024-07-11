@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/marketplacedeployment"
 )
 
-// IMarketplacedeployment defines the interface for marketplacedeployment
-type IMarketplacedeployment interface {
+// IClient defines the interface for marketplacedeployment
+type IClient interface {
  Options() Options 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutDeploymentParameter(ctx context.Context, params *PutDeploymentParameterInput, optFns ...func(*Options)) (*PutDeploymentParameterOutput, error) 

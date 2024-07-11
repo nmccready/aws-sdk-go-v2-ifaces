@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/braket"
 )
 
-// IBraket defines the interface for braket
-type IBraket interface {
+// IClient defines the interface for braket
+type IClient interface {
  Options() Options 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 
  CancelQuantumTask(ctx context.Context, params *CancelQuantumTaskInput, optFns ...func(*Options)) (*CancelQuantumTaskOutput, error) 

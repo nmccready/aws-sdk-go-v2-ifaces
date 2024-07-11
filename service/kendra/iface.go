@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kendra"
 )
 
-// IKendra defines the interface for kendra
-type IKendra interface {
+// IClient defines the interface for kendra
+type IClient interface {
  Options() Options 
  AssociateEntitiesToExperience(ctx context.Context, params *AssociateEntitiesToExperienceInput, optFns ...func(*Options)) (*AssociateEntitiesToExperienceOutput, error) 
  AssociatePersonasToEntities(ctx context.Context, params *AssociatePersonasToEntitiesInput, optFns ...func(*Options)) (*AssociatePersonasToEntitiesOutput, error) 

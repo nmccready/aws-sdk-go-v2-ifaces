@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/rekognition"
 )
 
-// IRekognition defines the interface for rekognition
-type IRekognition interface {
+// IClient defines the interface for rekognition
+type IClient interface {
  Options() Options 
  AssociateFaces(ctx context.Context, params *AssociateFacesInput, optFns ...func(*Options)) (*AssociateFacesOutput, error) 
  CompareFaces(ctx context.Context, params *CompareFacesInput, optFns ...func(*Options)) (*CompareFacesOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotwireless"
 )
 
-// IIotwireless defines the interface for iotwireless
-type IIotwireless interface {
+// IClient defines the interface for iotwireless
+type IClient interface {
  Options() Options 
  AssociateAwsAccountWithPartnerAccount(ctx context.Context, params *AssociateAwsAccountWithPartnerAccountInput, optFns ...func(*Options)) (*AssociateAwsAccountWithPartnerAccountOutput, error) 
  AssociateMulticastGroupWithFuotaTask(ctx context.Context, params *AssociateMulticastGroupWithFuotaTaskInput, optFns ...func(*Options)) (*AssociateMulticastGroupWithFuotaTaskOutput, error) 

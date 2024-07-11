@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotthingsgraph"
 )
 
-// IIotthingsgraph defines the interface for iotthingsgraph
-type IIotthingsgraph interface {
+// IClient defines the interface for iotthingsgraph
+type IClient interface {
  Options() Options 
  AssociateEntityToThing(ctx context.Context, params *AssociateEntityToThingInput, optFns ...func(*Options)) (*AssociateEntityToThingOutput, error) 
  CreateFlowTemplate(ctx context.Context, params *CreateFlowTemplateInput, optFns ...func(*Options)) (*CreateFlowTemplateOutput, error) 

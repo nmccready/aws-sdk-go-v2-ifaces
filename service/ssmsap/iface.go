@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ssmsap"
 )
 
-// ISsmsap defines the interface for ssmsap
-type ISsmsap interface {
+// IClient defines the interface for ssmsap
+type IClient interface {
  Options() Options 
  DeleteResourcePermission(ctx context.Context, params *DeleteResourcePermissionInput, optFns ...func(*Options)) (*DeleteResourcePermissionOutput, error) 
  DeregisterApplication(ctx context.Context, params *DeregisterApplicationInput, optFns ...func(*Options)) (*DeregisterApplicationOutput, error) 

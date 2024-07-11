@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ivs"
 )
 
-// IIvs defines the interface for ivs
-type IIvs interface {
+// IClient defines the interface for ivs
+type IClient interface {
  Options() Options 
  BatchGetChannel(ctx context.Context, params *BatchGetChannelInput, optFns ...func(*Options)) (*BatchGetChannelOutput, error) 
  BatchGetStreamKey(ctx context.Context, params *BatchGetStreamKeyInput, optFns ...func(*Options)) (*BatchGetStreamKeyOutput, error) 

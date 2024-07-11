@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/fsx"
 )
 
-// IFsx defines the interface for fsx
-type IFsx interface {
+// IClient defines the interface for fsx
+type IClient interface {
  Options() Options 
  AssociateFileSystemAliases(ctx context.Context, params *AssociateFileSystemAliasesInput, optFns ...func(*Options)) (*AssociateFileSystemAliasesOutput, error) 
  CancelDataRepositoryTask(ctx context.Context, params *CancelDataRepositoryTaskInput, optFns ...func(*Options)) (*CancelDataRepositoryTaskOutput, error) 

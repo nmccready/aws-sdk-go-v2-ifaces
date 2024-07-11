@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/waf"
 )
 
-// IWaf defines the interface for waf
-type IWaf interface {
+// IClient defines the interface for waf
+type IClient interface {
  Options() Options 
  CreateByteMatchSet(ctx context.Context, params *CreateByteMatchSetInput, optFns ...func(*Options)) (*CreateByteMatchSetOutput, error) 
  CreateGeoMatchSet(ctx context.Context, params *CreateGeoMatchSetInput, optFns ...func(*Options)) (*CreateGeoMatchSetOutput, error) 

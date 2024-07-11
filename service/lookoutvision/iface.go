@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lookoutvision"
 )
 
-// ILookoutvision defines the interface for lookoutvision
-type ILookoutvision interface {
+// IClient defines the interface for lookoutvision
+type IClient interface {
  Options() Options 
  CreateDataset(ctx context.Context, params *CreateDatasetInput, optFns ...func(*Options)) (*CreateDatasetOutput, error) 
  CreateModel(ctx context.Context, params *CreateModelInput, optFns ...func(*Options)) (*CreateModelOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/servicequotas"
 )
 
-// IServicequotas defines the interface for servicequotas
-type IServicequotas interface {
+// IClient defines the interface for servicequotas
+type IClient interface {
  Options() Options 
  AssociateServiceQuotaTemplate(ctx context.Context, params *AssociateServiceQuotaTemplateInput, optFns ...func(*Options)) (*AssociateServiceQuotaTemplateOutput, error) 
  DeleteServiceQuotaIncreaseRequestFromTemplate(ctx context.Context, params *DeleteServiceQuotaIncreaseRequestFromTemplateInput, optFns ...func(*Options)) (*DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) 

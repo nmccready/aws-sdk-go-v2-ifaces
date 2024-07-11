@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appfabric"
 )
 
-// IAppfabric defines the interface for appfabric
-type IAppfabric interface {
+// IClient defines the interface for appfabric
+type IClient interface {
  Options() Options 
  BatchGetUserAccessTasks(ctx context.Context, params *BatchGetUserAccessTasksInput, optFns ...func(*Options)) (*BatchGetUserAccessTasksOutput, error) 
  ConnectAppAuthorization(ctx context.Context, params *ConnectAppAuthorizationInput, optFns ...func(*Options)) (*ConnectAppAuthorizationOutput, error) 

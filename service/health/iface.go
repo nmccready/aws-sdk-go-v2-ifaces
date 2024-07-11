@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/health"
 )
 
-// IHealth defines the interface for health
-type IHealth interface {
+// IClient defines the interface for health
+type IClient interface {
  Options() Options 
  DescribeAffectedAccountsForOrganization(ctx context.Context, params *DescribeAffectedAccountsForOrganizationInput, optFns ...func(*Options)) (*DescribeAffectedAccountsForOrganizationOutput, error) 
  DescribeAffectedEntities(ctx context.Context, params *DescribeAffectedEntitiesInput, optFns ...func(*Options)) (*DescribeAffectedEntitiesOutput, error) 

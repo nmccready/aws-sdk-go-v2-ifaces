@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/quicksight"
 )
 
-// IQuicksight defines the interface for quicksight
-type IQuicksight interface {
+// IClient defines the interface for quicksight
+type IClient interface {
  Options() Options 
  CancelIngestion(ctx context.Context, params *CancelIngestionInput, optFns ...func(*Options)) (*CancelIngestionOutput, error) 
  CreateAccountCustomization(ctx context.Context, params *CreateAccountCustomizationInput, optFns ...func(*Options)) (*CreateAccountCustomizationOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/evidently"
 )
 
-// IEvidently defines the interface for evidently
-type IEvidently interface {
+// IClient defines the interface for evidently
+type IClient interface {
  Options() Options 
  BatchEvaluateFeature(ctx context.Context, params *BatchEvaluateFeatureInput, optFns ...func(*Options)) (*BatchEvaluateFeatureOutput, error) 
  CreateExperiment(ctx context.Context, params *CreateExperimentInput, optFns ...func(*Options)) (*CreateExperimentOutput, error) 

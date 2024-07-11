@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pcaconnectorscep"
 )
 
-// IPcaconnectorscep defines the interface for pcaconnectorscep
-type IPcaconnectorscep interface {
+// IClient defines the interface for pcaconnectorscep
+type IClient interface {
  Options() Options 
  CreateChallenge(ctx context.Context, params *CreateChallengeInput, optFns ...func(*Options)) (*CreateChallengeOutput, error) 
  CreateConnector(ctx context.Context, params *CreateConnectorInput, optFns ...func(*Options)) (*CreateConnectorOutput, error) 

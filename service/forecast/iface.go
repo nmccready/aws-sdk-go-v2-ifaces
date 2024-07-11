@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/forecast"
 )
 
-// IForecast defines the interface for forecast
-type IForecast interface {
+// IClient defines the interface for forecast
+type IClient interface {
  Options() Options 
  CreateAutoPredictor(ctx context.Context, params *CreateAutoPredictorInput, optFns ...func(*Options)) (*CreateAutoPredictorOutput, error) 
  CreateDataset(ctx context.Context, params *CreateDatasetInput, optFns ...func(*Options)) (*CreateDatasetOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/keyspaces"
 )
 
-// IKeyspaces defines the interface for keyspaces
-type IKeyspaces interface {
+// IClient defines the interface for keyspaces
+type IClient interface {
  Options() Options 
  CreateKeyspace(ctx context.Context, params *CreateKeyspaceInput, optFns ...func(*Options)) (*CreateKeyspaceOutput, error) 
  CreateTable(ctx context.Context, params *CreateTableInput, optFns ...func(*Options)) (*CreateTableOutput, error) 

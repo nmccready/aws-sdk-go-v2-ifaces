@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/elasticsearchservice"
 )
 
-// IElasticsearchservice defines the interface for elasticsearchservice
-type IElasticsearchservice interface {
+// IClient defines the interface for elasticsearchservice
+type IClient interface {
  Options() Options 
  AcceptInboundCrossClusterSearchConnection(ctx context.Context, params *AcceptInboundCrossClusterSearchConnectionInput, optFns ...func(*Options)) (*AcceptInboundCrossClusterSearchConnectionOutput, error) 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 

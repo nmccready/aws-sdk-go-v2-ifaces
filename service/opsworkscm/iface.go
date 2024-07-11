@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/opsworkscm"
 )
 
-// IOpsworkscm defines the interface for opsworkscm
-type IOpsworkscm interface {
+// IClient defines the interface for opsworkscm
+type IClient interface {
  Options() Options 
  AssociateNode(ctx context.Context, params *AssociateNodeInput, optFns ...func(*Options)) (*AssociateNodeOutput, error) 
  CreateBackup(ctx context.Context, params *CreateBackupInput, optFns ...func(*Options)) (*CreateBackupOutput, error) 

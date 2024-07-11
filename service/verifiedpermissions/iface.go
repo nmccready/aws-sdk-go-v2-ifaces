@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/verifiedpermissions"
 )
 
-// IVerifiedpermissions defines the interface for verifiedpermissions
-type IVerifiedpermissions interface {
+// IClient defines the interface for verifiedpermissions
+type IClient interface {
  Options() Options 
  BatchIsAuthorized(ctx context.Context, params *BatchIsAuthorizedInput, optFns ...func(*Options)) (*BatchIsAuthorizedOutput, error) 
  BatchIsAuthorizedWithToken(ctx context.Context, params *BatchIsAuthorizedWithTokenInput, optFns ...func(*Options)) (*BatchIsAuthorizedWithTokenOutput, error) 

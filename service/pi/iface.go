@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pi"
 )
 
-// IPi defines the interface for pi
-type IPi interface {
+// IClient defines the interface for pi
+type IClient interface {
  Options() Options 
  CreatePerformanceAnalysisReport(ctx context.Context, params *CreatePerformanceAnalysisReportInput, optFns ...func(*Options)) (*CreatePerformanceAnalysisReportOutput, error) 
  DeletePerformanceAnalysisReport(ctx context.Context, params *DeletePerformanceAnalysisReportInput, optFns ...func(*Options)) (*DeletePerformanceAnalysisReportOutput, error) 

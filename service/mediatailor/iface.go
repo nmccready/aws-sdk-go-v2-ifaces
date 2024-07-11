@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediatailor"
 )
 
-// IMediatailor defines the interface for mediatailor
-type IMediatailor interface {
+// IClient defines the interface for mediatailor
+type IClient interface {
  Options() Options 
  ConfigureLogsForChannel(ctx context.Context, params *ConfigureLogsForChannelInput, optFns ...func(*Options)) (*ConfigureLogsForChannelOutput, error) 
  ConfigureLogsForPlaybackConfiguration(ctx context.Context, params *ConfigureLogsForPlaybackConfigurationInput, optFns ...func(*Options)) (*ConfigureLogsForPlaybackConfigurationOutput, error) 

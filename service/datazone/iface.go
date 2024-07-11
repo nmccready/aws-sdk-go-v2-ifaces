@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/datazone"
 )
 
-// IDatazone defines the interface for datazone
-type IDatazone interface {
+// IClient defines the interface for datazone
+type IClient interface {
  Options() Options 
  AcceptPredictions(ctx context.Context, params *AcceptPredictionsInput, optFns ...func(*Options)) (*AcceptPredictionsOutput, error) 
  AcceptSubscriptionRequest(ctx context.Context, params *AcceptSubscriptionRequestInput, optFns ...func(*Options)) (*AcceptSubscriptionRequestOutput, error) 

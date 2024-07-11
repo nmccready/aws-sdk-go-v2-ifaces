@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/computeoptimizer"
 )
 
-// IComputeoptimizer defines the interface for computeoptimizer
-type IComputeoptimizer interface {
+// IClient defines the interface for computeoptimizer
+type IClient interface {
  Options() Options 
  DeleteRecommendationPreferences(ctx context.Context, params *DeleteRecommendationPreferencesInput, optFns ...func(*Options)) (*DeleteRecommendationPreferencesOutput, error) 
  DescribeRecommendationExportJobs(ctx context.Context, params *DescribeRecommendationExportJobsInput, optFns ...func(*Options)) (*DescribeRecommendationExportJobsOutput, error) 

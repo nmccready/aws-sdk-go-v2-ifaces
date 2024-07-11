@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/voiceid"
 )
 
-// IVoiceid defines the interface for voiceid
-type IVoiceid interface {
+// IClient defines the interface for voiceid
+type IClient interface {
  Options() Options 
  AssociateFraudster(ctx context.Context, params *AssociateFraudsterInput, optFns ...func(*Options)) (*AssociateFraudsterOutput, error) 
  CreateDomain(ctx context.Context, params *CreateDomainInput, optFns ...func(*Options)) (*CreateDomainOutput, error) 

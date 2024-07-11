@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pcaconnectorad"
 )
 
-// IPcaconnectorad defines the interface for pcaconnectorad
-type IPcaconnectorad interface {
+// IClient defines the interface for pcaconnectorad
+type IClient interface {
  Options() Options 
  CreateConnector(ctx context.Context, params *CreateConnectorInput, optFns ...func(*Options)) (*CreateConnectorOutput, error) 
  CreateDirectoryRegistration(ctx context.Context, params *CreateDirectoryRegistrationInput, optFns ...func(*Options)) (*CreateDirectoryRegistrationOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lexmodelbuildingservice"
 )
 
-// ILexmodelbuildingservice defines the interface for lexmodelbuildingservice
-type ILexmodelbuildingservice interface {
+// IClient defines the interface for lexmodelbuildingservice
+type IClient interface {
  Options() Options 
  CreateBotVersion(ctx context.Context, params *CreateBotVersionInput, optFns ...func(*Options)) (*CreateBotVersionOutput, error) 
  CreateIntentVersion(ctx context.Context, params *CreateIntentVersionInput, optFns ...func(*Options)) (*CreateIntentVersionOutput, error) 

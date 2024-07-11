@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/elasticache"
 )
 
-// IElasticache defines the interface for elasticache
-type IElasticache interface {
+// IClient defines the interface for elasticache
+type IClient interface {
  Options() Options 
  AddTagsToResource(ctx context.Context, params *AddTagsToResourceInput, optFns ...func(*Options)) (*AddTagsToResourceOutput, error) 
  AuthorizeCacheSecurityGroupIngress(ctx context.Context, params *AuthorizeCacheSecurityGroupIngressInput, optFns ...func(*Options)) (*AuthorizeCacheSecurityGroupIngressOutput, error) 

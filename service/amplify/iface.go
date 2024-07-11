@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/amplify"
 )
 
-// IAmplify defines the interface for amplify
-type IAmplify interface {
+// IClient defines the interface for amplify
+type IClient interface {
  Options() Options 
  CreateApp(ctx context.Context, params *CreateAppInput, optFns ...func(*Options)) (*CreateAppOutput, error) 
  CreateBackendEnvironment(ctx context.Context, params *CreateBackendEnvironmentInput, optFns ...func(*Options)) (*CreateBackendEnvironmentOutput, error) 

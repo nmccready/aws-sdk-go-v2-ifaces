@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53domains"
 )
 
-// IRoute53domains defines the interface for route53domains
-type IRoute53domains interface {
+// IClient defines the interface for route53domains
+type IClient interface {
  Options() Options 
  AcceptDomainTransferFromAnotherAwsAccount(ctx context.Context, params *AcceptDomainTransferFromAnotherAwsAccountInput, optFns ...func(*Options)) (*AcceptDomainTransferFromAnotherAwsAccountOutput, error) 
  AssociateDelegationSignerToDomain(ctx context.Context, params *AssociateDelegationSignerToDomainInput, optFns ...func(*Options)) (*AssociateDelegationSignerToDomainOutput, error) 

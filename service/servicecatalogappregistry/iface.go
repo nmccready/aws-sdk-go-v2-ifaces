@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/servicecatalogappregistry"
 )
 
-// IServicecatalogappregistry defines the interface for servicecatalogappregistry
-type IServicecatalogappregistry interface {
+// IClient defines the interface for servicecatalogappregistry
+type IClient interface {
  Options() Options 
  AssociateAttributeGroup(ctx context.Context, params *AssociateAttributeGroupInput, optFns ...func(*Options)) (*AssociateAttributeGroupOutput, error) 
  AssociateResource(ctx context.Context, params *AssociateResourceInput, optFns ...func(*Options)) (*AssociateResourceOutput, error) 

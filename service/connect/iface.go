@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/connect"
 )
 
-// IConnect defines the interface for connect
-type IConnect interface {
+// IClient defines the interface for connect
+type IClient interface {
  Options() Options 
  ActivateEvaluationForm(ctx context.Context, params *ActivateEvaluationFormInput, optFns ...func(*Options)) (*ActivateEvaluationFormOutput, error) 
  AssociateAnalyticsDataSet(ctx context.Context, params *AssociateAnalyticsDataSetInput, optFns ...func(*Options)) (*AssociateAnalyticsDataSetOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/trustedadvisor"
 )
 
-// ITrustedadvisor defines the interface for trustedadvisor
-type ITrustedadvisor interface {
+// IClient defines the interface for trustedadvisor
+type IClient interface {
  Options() Options 
  BatchUpdateRecommendationResourceExclusion(ctx context.Context, params *BatchUpdateRecommendationResourceExclusionInput, optFns ...func(*Options)) (*BatchUpdateRecommendationResourceExclusionOutput, error) 
  GetOrganizationRecommendation(ctx context.Context, params *GetOrganizationRecommendationInput, optFns ...func(*Options)) (*GetOrganizationRecommendationOutput, error) 

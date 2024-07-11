@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/docdbelastic"
 )
 
-// IDocdbelastic defines the interface for docdbelastic
-type IDocdbelastic interface {
+// IClient defines the interface for docdbelastic
+type IClient interface {
  Options() Options 
  CopyClusterSnapshot(ctx context.Context, params *CopyClusterSnapshotInput, optFns ...func(*Options)) (*CopyClusterSnapshotOutput, error) 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 

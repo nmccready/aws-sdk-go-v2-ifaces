@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediastore"
 )
 
-// IMediastore defines the interface for mediastore
-type IMediastore interface {
+// IClient defines the interface for mediastore
+type IClient interface {
  Options() Options 
  CreateContainer(ctx context.Context, params *CreateContainerInput, optFns ...func(*Options)) (*CreateContainerOutput, error) 
  DeleteContainer(ctx context.Context, params *DeleteContainerInput, optFns ...func(*Options)) (*DeleteContainerOutput, error) 

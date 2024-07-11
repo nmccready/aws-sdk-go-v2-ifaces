@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pinpointemail"
 )
 
-// IPinpointemail defines the interface for pinpointemail
-type IPinpointemail interface {
+// IClient defines the interface for pinpointemail
+type IClient interface {
  Options() Options 
  CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 
  CreateConfigurationSetEventDestination(ctx context.Context, params *CreateConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*CreateConfigurationSetEventDestinationOutput, error) 

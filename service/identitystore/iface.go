@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/identitystore"
 )
 
-// IIdentitystore defines the interface for identitystore
-type IIdentitystore interface {
+// IClient defines the interface for identitystore
+type IClient interface {
  Options() Options 
  CreateGroup(ctx context.Context, params *CreateGroupInput, optFns ...func(*Options)) (*CreateGroupOutput, error) 
  CreateGroupMembership(ctx context.Context, params *CreateGroupMembershipInput, optFns ...func(*Options)) (*CreateGroupMembershipOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotdeviceadvisor"
 )
 
-// IIotdeviceadvisor defines the interface for iotdeviceadvisor
-type IIotdeviceadvisor interface {
+// IClient defines the interface for iotdeviceadvisor
+type IClient interface {
  Options() Options 
  CreateSuiteDefinition(ctx context.Context, params *CreateSuiteDefinitionInput, optFns ...func(*Options)) (*CreateSuiteDefinitionOutput, error) 
  DeleteSuiteDefinition(ctx context.Context, params *DeleteSuiteDefinitionInput, optFns ...func(*Options)) (*DeleteSuiteDefinitionOutput, error) 

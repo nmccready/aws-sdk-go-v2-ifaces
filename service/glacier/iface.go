@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/glacier"
 )
 
-// IGlacier defines the interface for glacier
-type IGlacier interface {
+// IClient defines the interface for glacier
+type IClient interface {
  Options() Options 
  AbortMultipartUpload(ctx context.Context, params *AbortMultipartUploadInput, optFns ...func(*Options)) (*AbortMultipartUploadOutput, error) 
  AbortVaultLock(ctx context.Context, params *AbortVaultLockInput, optFns ...func(*Options)) (*AbortVaultLockOutput, error) 

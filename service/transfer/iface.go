@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/transfer"
 )
 
-// ITransfer defines the interface for transfer
-type ITransfer interface {
+// IClient defines the interface for transfer
+type IClient interface {
  Options() Options 
  CreateAccess(ctx context.Context, params *CreateAccessInput, optFns ...func(*Options)) (*CreateAccessOutput, error) 
  CreateAgreement(ctx context.Context, params *CreateAgreementInput, optFns ...func(*Options)) (*CreateAgreementOutput, error) 

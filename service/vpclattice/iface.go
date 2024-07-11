@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/vpclattice"
 )
 
-// IVpclattice defines the interface for vpclattice
-type IVpclattice interface {
+// IClient defines the interface for vpclattice
+type IClient interface {
  Options() Options 
  BatchUpdateRule(ctx context.Context, params *BatchUpdateRuleInput, optFns ...func(*Options)) (*BatchUpdateRuleOutput, error) 
  CreateAccessLogSubscription(ctx context.Context, params *CreateAccessLogSubscriptionInput, optFns ...func(*Options)) (*CreateAccessLogSubscriptionOutput, error) 

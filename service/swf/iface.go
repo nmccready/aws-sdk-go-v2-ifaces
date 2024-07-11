@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/swf"
 )
 
-// ISwf defines the interface for swf
-type ISwf interface {
+// IClient defines the interface for swf
+type IClient interface {
  Options() Options 
  CountClosedWorkflowExecutions(ctx context.Context, params *CountClosedWorkflowExecutionsInput, optFns ...func(*Options)) (*CountClosedWorkflowExecutionsOutput, error) 
  CountOpenWorkflowExecutions(ctx context.Context, params *CountOpenWorkflowExecutionsInput, optFns ...func(*Options)) (*CountOpenWorkflowExecutionsOutput, error) 

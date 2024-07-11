@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/bedrock"
 )
 
-// IBedrock defines the interface for bedrock
-type IBedrock interface {
+// IClient defines the interface for bedrock
+type IClient interface {
  Options() Options 
  CreateEvaluationJob(ctx context.Context, params *CreateEvaluationJobInput, optFns ...func(*Options)) (*CreateEvaluationJobOutput, error) 
  CreateGuardrail(ctx context.Context, params *CreateGuardrailInput, optFns ...func(*Options)) (*CreateGuardrailOutput, error) 

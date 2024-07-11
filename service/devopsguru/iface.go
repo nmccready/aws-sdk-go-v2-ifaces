@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/devopsguru"
 )
 
-// IDevopsguru defines the interface for devopsguru
-type IDevopsguru interface {
+// IClient defines the interface for devopsguru
+type IClient interface {
  Options() Options 
  AddNotificationChannel(ctx context.Context, params *AddNotificationChannelInput, optFns ...func(*Options)) (*AddNotificationChannelOutput, error) 
  DeleteInsight(ctx context.Context, params *DeleteInsightInput, optFns ...func(*Options)) (*DeleteInsightOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudwatch"
 )
 
-// ICloudwatch defines the interface for cloudwatch
-type ICloudwatch interface {
+// IClient defines the interface for cloudwatch
+type IClient interface {
  Options() Options 
  DeleteAlarms(ctx context.Context, params *DeleteAlarmsInput, optFns ...func(*Options)) (*DeleteAlarmsOutput, error) 
  DeleteAnomalyDetector(ctx context.Context, params *DeleteAnomalyDetectorInput, optFns ...func(*Options)) (*DeleteAnomalyDetectorOutput, error) 

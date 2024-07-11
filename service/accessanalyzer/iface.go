@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/accessanalyzer"
 )
 
-// IAccessanalyzer defines the interface for accessanalyzer
-type IAccessanalyzer interface {
+// IClient defines the interface for accessanalyzer
+type IClient interface {
  Options() Options 
  ApplyArchiveRule(ctx context.Context, params *ApplyArchiveRuleInput, optFns ...func(*Options)) (*ApplyArchiveRuleOutput, error) 
  CancelPolicyGeneration(ctx context.Context, params *CancelPolicyGenerationInput, optFns ...func(*Options)) (*CancelPolicyGenerationOutput, error) 

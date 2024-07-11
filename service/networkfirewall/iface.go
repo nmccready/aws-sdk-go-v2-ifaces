@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/networkfirewall"
 )
 
-// INetworkfirewall defines the interface for networkfirewall
-type INetworkfirewall interface {
+// IClient defines the interface for networkfirewall
+type IClient interface {
  Options() Options 
  AssociateFirewallPolicy(ctx context.Context, params *AssociateFirewallPolicyInput, optFns ...func(*Options)) (*AssociateFirewallPolicyOutput, error) 
  AssociateSubnets(ctx context.Context, params *AssociateSubnetsInput, optFns ...func(*Options)) (*AssociateSubnetsOutput, error) 

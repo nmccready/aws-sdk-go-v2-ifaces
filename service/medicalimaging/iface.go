@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/medicalimaging"
 )
 
-// IMedicalimaging defines the interface for medicalimaging
-type IMedicalimaging interface {
+// IClient defines the interface for medicalimaging
+type IClient interface {
  Options() Options 
  CopyImageSet(ctx context.Context, params *CopyImageSetInput, optFns ...func(*Options)) (*CopyImageSetOutput, error) 
  CreateDatastore(ctx context.Context, params *CreateDatastoreInput, optFns ...func(*Options)) (*CreateDatastoreOutput, error) 

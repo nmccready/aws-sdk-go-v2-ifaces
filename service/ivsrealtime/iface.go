@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ivsrealtime"
 )
 
-// IIvsrealtime defines the interface for ivsrealtime
-type IIvsrealtime interface {
+// IClient defines the interface for ivsrealtime
+type IClient interface {
  Options() Options 
  CreateEncoderConfiguration(ctx context.Context, params *CreateEncoderConfigurationInput, optFns ...func(*Options)) (*CreateEncoderConfigurationOutput, error) 
  CreateParticipantToken(ctx context.Context, params *CreateParticipantTokenInput, optFns ...func(*Options)) (*CreateParticipantTokenOutput, error) 

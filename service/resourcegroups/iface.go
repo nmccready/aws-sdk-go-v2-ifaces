@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/resourcegroups"
 )
 
-// IResourcegroups defines the interface for resourcegroups
-type IResourcegroups interface {
+// IClient defines the interface for resourcegroups
+type IClient interface {
  Options() Options 
  CreateGroup(ctx context.Context, params *CreateGroupInput, optFns ...func(*Options)) (*CreateGroupOutput, error) 
  DeleteGroup(ctx context.Context, params *DeleteGroupInput, optFns ...func(*Options)) (*DeleteGroupOutput, error) 

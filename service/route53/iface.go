@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53"
 )
 
-// IRoute53 defines the interface for route53
-type IRoute53 interface {
+// IClient defines the interface for route53
+type IClient interface {
  Options() Options 
  ActivateKeySigningKey(ctx context.Context, params *ActivateKeySigningKeyInput, optFns ...func(*Options)) (*ActivateKeySigningKeyOutput, error) 
  AssociateVPCWithHostedZone(ctx context.Context, params *AssociateVPCWithHostedZoneInput, optFns ...func(*Options)) (*AssociateVPCWithHostedZoneOutput, error) 

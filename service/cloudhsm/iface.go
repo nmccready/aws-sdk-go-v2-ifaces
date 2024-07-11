@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudhsm"
 )
 
-// ICloudhsm defines the interface for cloudhsm
-type ICloudhsm interface {
+// IClient defines the interface for cloudhsm
+type IClient interface {
  Options() Options 
  AddTagsToResource(ctx context.Context, params *AddTagsToResourceInput, optFns ...func(*Options)) (*AddTagsToResourceOutput, error) 
  CreateHapg(ctx context.Context, params *CreateHapgInput, optFns ...func(*Options)) (*CreateHapgOutput, error) 

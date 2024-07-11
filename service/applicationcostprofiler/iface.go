@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/applicationcostprofiler"
 )
 
-// IApplicationcostprofiler defines the interface for applicationcostprofiler
-type IApplicationcostprofiler interface {
+// IClient defines the interface for applicationcostprofiler
+type IClient interface {
  Options() Options 
  DeleteReportDefinition(ctx context.Context, params *DeleteReportDefinitionInput, optFns ...func(*Options)) (*DeleteReportDefinitionOutput, error) 
  GetReportDefinition(ctx context.Context, params *GetReportDefinitionInput, optFns ...func(*Options)) (*GetReportDefinitionOutput, error) 

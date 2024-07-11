@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sms"
 )
 
-// ISms defines the interface for sms
-type ISms interface {
+// IClient defines the interface for sms
+type IClient interface {
  Options() Options 
  CreateApp(ctx context.Context, params *CreateAppInput, optFns ...func(*Options)) (*CreateAppOutput, error) 
  CreateReplicationJob(ctx context.Context, params *CreateReplicationJobInput, optFns ...func(*Options)) (*CreateReplicationJobOutput, error) 

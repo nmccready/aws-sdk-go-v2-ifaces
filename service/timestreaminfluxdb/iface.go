@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/timestreaminfluxdb"
 )
 
-// ITimestreaminfluxdb defines the interface for timestreaminfluxdb
-type ITimestreaminfluxdb interface {
+// IClient defines the interface for timestreaminfluxdb
+type IClient interface {
  Options() Options 
  CreateDbInstance(ctx context.Context, params *CreateDbInstanceInput, optFns ...func(*Options)) (*CreateDbInstanceOutput, error) 
  CreateDbParameterGroup(ctx context.Context, params *CreateDbParameterGroupInput, optFns ...func(*Options)) (*CreateDbParameterGroupOutput, error) 

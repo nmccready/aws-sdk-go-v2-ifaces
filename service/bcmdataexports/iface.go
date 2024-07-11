@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/bcmdataexports"
 )
 
-// IBcmdataexports defines the interface for bcmdataexports
-type IBcmdataexports interface {
+// IClient defines the interface for bcmdataexports
+type IClient interface {
  Options() Options 
  CreateExport(ctx context.Context, params *CreateExportInput, optFns ...func(*Options)) (*CreateExportOutput, error) 
  DeleteExport(ctx context.Context, params *DeleteExportInput, optFns ...func(*Options)) (*DeleteExportOutput, error) 

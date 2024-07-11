@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/dynamodb"
 )
 
-// IDynamodb defines the interface for dynamodb
-type IDynamodb interface {
+// IClient defines the interface for dynamodb
+type IClient interface {
  Options() Options 
  BatchExecuteStatement(ctx context.Context, params *BatchExecuteStatementInput, optFns ...func(*Options)) (*BatchExecuteStatementOutput, error) 
  BatchGetItem(ctx context.Context, params *BatchGetItemInput, optFns ...func(*Options)) (*BatchGetItemOutput, error) 

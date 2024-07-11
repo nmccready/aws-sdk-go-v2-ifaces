@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lightsail"
 )
 
-// ILightsail defines the interface for lightsail
-type ILightsail interface {
+// IClient defines the interface for lightsail
+type IClient interface {
  Options() Options 
  AllocateStaticIp(ctx context.Context, params *AllocateStaticIpInput, optFns ...func(*Options)) (*AllocateStaticIpOutput, error) 
  AttachCertificateToDistribution(ctx context.Context, params *AttachCertificateToDistributionInput, optFns ...func(*Options)) (*AttachCertificateToDistributionOutput, error) 

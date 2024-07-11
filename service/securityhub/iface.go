@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/securityhub"
 )
 
-// ISecurityhub defines the interface for securityhub
-type ISecurityhub interface {
+// IClient defines the interface for securityhub
+type IClient interface {
  Options() Options 
  AcceptAdministratorInvitation(ctx context.Context, params *AcceptAdministratorInvitationInput, optFns ...func(*Options)) (*AcceptAdministratorInvitationOutput, error) 
  AcceptInvitation(ctx context.Context, params *AcceptInvitationInput, optFns ...func(*Options)) (*AcceptInvitationOutput, error) 

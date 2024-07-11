@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/docdb"
 )
 
-// IDocdb defines the interface for docdb
-type IDocdb interface {
+// IClient defines the interface for docdb
+type IClient interface {
  Options() Options 
  AddSourceIdentifierToSubscription(ctx context.Context, params *AddSourceIdentifierToSubscriptionInput, optFns ...func(*Options)) (*AddSourceIdentifierToSubscriptionOutput, error) 
  AddTagsToResource(ctx context.Context, params *AddTagsToResourceInput, optFns ...func(*Options)) (*AddTagsToResourceOutput, error) 

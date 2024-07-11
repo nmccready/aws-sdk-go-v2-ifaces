@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/s3control"
 )
 
-// IS3control defines the interface for s3control
-type IS3control interface {
+// IClient defines the interface for s3control
+type IClient interface {
  Options() Options 
  AssociateAccessGrantsIdentityCenter(ctx context.Context, params *AssociateAccessGrantsIdentityCenterInput, optFns ...func(*Options)) (*AssociateAccessGrantsIdentityCenterOutput, error) 
  CreateAccessGrant(ctx context.Context, params *CreateAccessGrantInput, optFns ...func(*Options)) (*CreateAccessGrantOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore"
 )
 
-// ICloudfrontkeyvaluestore defines the interface for cloudfrontkeyvaluestore
-type ICloudfrontkeyvaluestore interface {
+// IClient defines the interface for cloudfrontkeyvaluestore
+type IClient interface {
  Options() Options 
  DeleteKey(ctx context.Context, params *DeleteKeyInput, optFns ...func(*Options)) (*DeleteKeyOutput, error) 
  DescribeKeyValueStore(ctx context.Context, params *DescribeKeyValueStoreInput, optFns ...func(*Options)) (*DescribeKeyValueStoreOutput, error) 

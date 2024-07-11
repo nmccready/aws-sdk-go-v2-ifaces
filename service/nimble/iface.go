@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/nimble"
 )
 
-// INimble defines the interface for nimble
-type INimble interface {
+// IClient defines the interface for nimble
+type IClient interface {
  Options() Options 
  AcceptEulas(ctx context.Context, params *AcceptEulasInput, optFns ...func(*Options)) (*AcceptEulasOutput, error) 
  CreateLaunchProfile(ctx context.Context, params *CreateLaunchProfileInput, optFns ...func(*Options)) (*CreateLaunchProfileOutput, error) 

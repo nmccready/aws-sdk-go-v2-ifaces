@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/detective"
 )
 
-// IDetective defines the interface for detective
-type IDetective interface {
+// IClient defines the interface for detective
+type IClient interface {
  Options() Options 
  AcceptInvitation(ctx context.Context, params *AcceptInvitationInput, optFns ...func(*Options)) (*AcceptInvitationOutput, error) 
  BatchGetGraphMemberDatasources(ctx context.Context, params *BatchGetGraphMemberDatasourcesInput, optFns ...func(*Options)) (*BatchGetGraphMemberDatasourcesOutput, error) 

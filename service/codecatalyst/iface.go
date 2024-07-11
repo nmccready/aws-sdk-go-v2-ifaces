@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codecatalyst"
 )
 
-// ICodecatalyst defines the interface for codecatalyst
-type ICodecatalyst interface {
+// IClient defines the interface for codecatalyst
+type IClient interface {
  Options() Options 
  CreateAccessToken(ctx context.Context, params *CreateAccessTokenInput, optFns ...func(*Options)) (*CreateAccessTokenOutput, error) 
  CreateDevEnvironment(ctx context.Context, params *CreateDevEnvironmentInput, optFns ...func(*Options)) (*CreateDevEnvironmentOutput, error) 

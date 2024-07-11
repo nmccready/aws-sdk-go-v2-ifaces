@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/licensemanager"
 )
 
-// ILicensemanager defines the interface for licensemanager
-type ILicensemanager interface {
+// IClient defines the interface for licensemanager
+type IClient interface {
  Options() Options 
  AcceptGrant(ctx context.Context, params *AcceptGrantInput, optFns ...func(*Options)) (*AcceptGrantOutput, error) 
  CheckInLicense(ctx context.Context, params *CheckInLicenseInput, optFns ...func(*Options)) (*CheckInLicenseOutput, error) 

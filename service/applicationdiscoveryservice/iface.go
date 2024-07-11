@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/applicationdiscoveryservice"
 )
 
-// IApplicationdiscoveryservice defines the interface for applicationdiscoveryservice
-type IApplicationdiscoveryservice interface {
+// IClient defines the interface for applicationdiscoveryservice
+type IClient interface {
  Options() Options 
  AssociateConfigurationItemsToApplication(ctx context.Context, params *AssociateConfigurationItemsToApplicationInput, optFns ...func(*Options)) (*AssociateConfigurationItemsToApplicationOutput, error) 
  BatchDeleteAgents(ctx context.Context, params *BatchDeleteAgentsInput, optFns ...func(*Options)) (*BatchDeleteAgentsOutput, error) 

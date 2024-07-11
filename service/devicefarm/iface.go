@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/devicefarm"
 )
 
-// IDevicefarm defines the interface for devicefarm
-type IDevicefarm interface {
+// IClient defines the interface for devicefarm
+type IClient interface {
  Options() Options 
  CreateDevicePool(ctx context.Context, params *CreateDevicePoolInput, optFns ...func(*Options)) (*CreateDevicePoolOutput, error) 
  CreateInstanceProfile(ctx context.Context, params *CreateInstanceProfileInput, optFns ...func(*Options)) (*CreateInstanceProfileOutput, error) 

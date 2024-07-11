@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/medialive"
 )
 
-// IMedialive defines the interface for medialive
-type IMedialive interface {
+// IClient defines the interface for medialive
+type IClient interface {
  Options() Options 
  AcceptInputDeviceTransfer(ctx context.Context, params *AcceptInputDeviceTransferInput, optFns ...func(*Options)) (*AcceptInputDeviceTransferOutput, error) 
  BatchDelete(ctx context.Context, params *BatchDeleteInput, optFns ...func(*Options)) (*BatchDeleteOutput, error) 

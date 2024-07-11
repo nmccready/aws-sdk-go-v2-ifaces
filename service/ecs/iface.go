@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ecs"
 )
 
-// IEcs defines the interface for ecs
-type IEcs interface {
+// IClient defines the interface for ecs
+type IClient interface {
  Options() Options 
  CreateCapacityProvider(ctx context.Context, params *CreateCapacityProviderInput, optFns ...func(*Options)) (*CreateCapacityProviderOutput, error) 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 

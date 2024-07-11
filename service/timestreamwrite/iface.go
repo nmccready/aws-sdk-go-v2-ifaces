@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/timestreamwrite"
 )
 
-// ITimestreamwrite defines the interface for timestreamwrite
-type ITimestreamwrite interface {
+// IClient defines the interface for timestreamwrite
+type IClient interface {
  Options() Options 
  CreateBatchLoadTask(ctx context.Context, params *CreateBatchLoadTaskInput, optFns ...func(*Options)) (*CreateBatchLoadTaskOutput, error) 
  CreateDatabase(ctx context.Context, params *CreateDatabaseInput, optFns ...func(*Options)) (*CreateDatabaseOutput, error) 

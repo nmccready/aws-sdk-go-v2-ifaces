@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotevents"
 )
 
-// IIotevents defines the interface for iotevents
-type IIotevents interface {
+// IClient defines the interface for iotevents
+type IClient interface {
  Options() Options 
  CreateAlarmModel(ctx context.Context, params *CreateAlarmModelInput, optFns ...func(*Options)) (*CreateAlarmModelOutput, error) 
  CreateDetectorModel(ctx context.Context, params *CreateDetectorModelInput, optFns ...func(*Options)) (*CreateDetectorModelOutput, error) 

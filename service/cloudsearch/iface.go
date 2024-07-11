@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudsearch"
 )
 
-// ICloudsearch defines the interface for cloudsearch
-type ICloudsearch interface {
+// IClient defines the interface for cloudsearch
+type IClient interface {
  Options() Options 
  BuildSuggesters(ctx context.Context, params *BuildSuggestersInput, optFns ...func(*Options)) (*BuildSuggestersOutput, error) 
  CreateDomain(ctx context.Context, params *CreateDomainInput, optFns ...func(*Options)) (*CreateDomainOutput, error) 

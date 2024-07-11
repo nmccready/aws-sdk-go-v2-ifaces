@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mailmanager"
 )
 
-// IMailmanager defines the interface for mailmanager
-type IMailmanager interface {
+// IClient defines the interface for mailmanager
+type IClient interface {
  Options() Options 
  CreateAddonInstance(ctx context.Context, params *CreateAddonInstanceInput, optFns ...func(*Options)) (*CreateAddonInstanceOutput, error) 
  CreateAddonSubscription(ctx context.Context, params *CreateAddonSubscriptionInput, optFns ...func(*Options)) (*CreateAddonSubscriptionOutput, error) 

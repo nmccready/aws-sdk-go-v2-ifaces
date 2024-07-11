@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pinpointsmsvoice"
 )
 
-// IPinpointsmsvoice defines the interface for pinpointsmsvoice
-type IPinpointsmsvoice interface {
+// IClient defines the interface for pinpointsmsvoice
+type IClient interface {
  Options() Options 
  CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 
  CreateConfigurationSetEventDestination(ctx context.Context, params *CreateConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*CreateConfigurationSetEventDestinationOutput, error) 

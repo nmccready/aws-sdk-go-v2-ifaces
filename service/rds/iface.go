@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/rds"
 )
 
-// IRds defines the interface for rds
-type IRds interface {
+// IClient defines the interface for rds
+type IClient interface {
  Options() Options 
  AddRoleToDBCluster(ctx context.Context, params *AddRoleToDBClusterInput, optFns ...func(*Options)) (*AddRoleToDBClusterOutput, error) 
  AddRoleToDBInstance(ctx context.Context, params *AddRoleToDBInstanceInput, optFns ...func(*Options)) (*AddRoleToDBInstanceOutput, error) 

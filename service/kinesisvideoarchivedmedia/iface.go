@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kinesisvideoarchivedmedia"
 )
 
-// IKinesisvideoarchivedmedia defines the interface for kinesisvideoarchivedmedia
-type IKinesisvideoarchivedmedia interface {
+// IClient defines the interface for kinesisvideoarchivedmedia
+type IClient interface {
  Options() Options 
  GetClip(ctx context.Context, params *GetClipInput, optFns ...func(*Options)) (*GetClipOutput, error) 
  GetDASHStreamingSessionURL(ctx context.Context, params *GetDASHStreamingSessionURLInput, optFns ...func(*Options)) (*GetDASHStreamingSessionURLOutput, error) 

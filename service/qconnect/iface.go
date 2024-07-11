@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/qconnect"
 )
 
-// IQconnect defines the interface for qconnect
-type IQconnect interface {
+// IClient defines the interface for qconnect
+type IClient interface {
  Options() Options 
  CreateAssistant(ctx context.Context, params *CreateAssistantInput, optFns ...func(*Options)) (*CreateAssistantOutput, error) 
  CreateAssistantAssociation(ctx context.Context, params *CreateAssistantAssociationInput, optFns ...func(*Options)) (*CreateAssistantAssociationOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/networkmonitor"
 )
 
-// INetworkmonitor defines the interface for networkmonitor
-type INetworkmonitor interface {
+// IClient defines the interface for networkmonitor
+type IClient interface {
  Options() Options 
  CreateMonitor(ctx context.Context, params *CreateMonitorInput, optFns ...func(*Options)) (*CreateMonitorOutput, error) 
  CreateProbe(ctx context.Context, params *CreateProbeInput, optFns ...func(*Options)) (*CreateProbeOutput, error) 

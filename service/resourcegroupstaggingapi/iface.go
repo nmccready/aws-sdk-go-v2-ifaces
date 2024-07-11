@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/resourcegroupstaggingapi"
 )
 
-// IResourcegroupstaggingapi defines the interface for resourcegroupstaggingapi
-type IResourcegroupstaggingapi interface {
+// IClient defines the interface for resourcegroupstaggingapi
+type IClient interface {
  Options() Options 
  DescribeReportCreation(ctx context.Context, params *DescribeReportCreationInput, optFns ...func(*Options)) (*DescribeReportCreationOutput, error) 
  GetComplianceSummary(ctx context.Context, params *GetComplianceSummaryInput, optFns ...func(*Options)) (*GetComplianceSummaryOutput, error) 

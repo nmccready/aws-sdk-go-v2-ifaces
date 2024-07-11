@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mturk"
 )
 
-// IMturk defines the interface for mturk
-type IMturk interface {
+// IClient defines the interface for mturk
+type IClient interface {
  Options() Options 
  AcceptQualificationRequest(ctx context.Context, params *AcceptQualificationRequestInput, optFns ...func(*Options)) (*AcceptQualificationRequestOutput, error) 
  ApproveAssignment(ctx context.Context, params *ApproveAssignmentInput, optFns ...func(*Options)) (*ApproveAssignmentOutput, error) 

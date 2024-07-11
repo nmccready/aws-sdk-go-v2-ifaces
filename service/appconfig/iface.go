@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appconfig"
 )
 
-// IAppconfig defines the interface for appconfig
-type IAppconfig interface {
+// IClient defines the interface for appconfig
+type IClient interface {
  Options() Options 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateConfigurationProfile(ctx context.Context, params *CreateConfigurationProfileInput, optFns ...func(*Options)) (*CreateConfigurationProfileOutput, error) 

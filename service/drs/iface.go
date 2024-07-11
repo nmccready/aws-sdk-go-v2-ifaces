@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/drs"
 )
 
-// IDrs defines the interface for drs
-type IDrs interface {
+// IClient defines the interface for drs
+type IClient interface {
  Options() Options 
  AssociateSourceNetworkStack(ctx context.Context, params *AssociateSourceNetworkStackInput, optFns ...func(*Options)) (*AssociateSourceNetworkStackOutput, error) 
  CreateExtendedSourceServer(ctx context.Context, params *CreateExtendedSourceServerInput, optFns ...func(*Options)) (*CreateExtendedSourceServerOutput, error) 

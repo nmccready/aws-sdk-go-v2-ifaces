@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/personalizeevents"
 )
 
-// IPersonalizeevents defines the interface for personalizeevents
-type IPersonalizeevents interface {
+// IClient defines the interface for personalizeevents
+type IClient interface {
  Options() Options 
  PutActionInteractions(ctx context.Context, params *PutActionInteractionsInput, optFns ...func(*Options)) (*PutActionInteractionsOutput, error) 
  PutActions(ctx context.Context, params *PutActionsInput, optFns ...func(*Options)) (*PutActionsOutput, error) 

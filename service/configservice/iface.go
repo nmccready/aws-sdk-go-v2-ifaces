@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/configservice"
 )
 
-// IConfigservice defines the interface for configservice
-type IConfigservice interface {
+// IClient defines the interface for configservice
+type IClient interface {
  Options() Options 
  BatchGetAggregateResourceConfig(ctx context.Context, params *BatchGetAggregateResourceConfigInput, optFns ...func(*Options)) (*BatchGetAggregateResourceConfigOutput, error) 
  BatchGetResourceConfig(ctx context.Context, params *BatchGetResourceConfigInput, optFns ...func(*Options)) (*BatchGetResourceConfigOutput, error) 

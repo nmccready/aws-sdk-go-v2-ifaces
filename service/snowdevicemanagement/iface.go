@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/snowdevicemanagement"
 )
 
-// ISnowdevicemanagement defines the interface for snowdevicemanagement
-type ISnowdevicemanagement interface {
+// IClient defines the interface for snowdevicemanagement
+type IClient interface {
  Options() Options 
  CancelTask(ctx context.Context, params *CancelTaskInput, optFns ...func(*Options)) (*CancelTaskOutput, error) 
  CreateTask(ctx context.Context, params *CreateTaskInput, optFns ...func(*Options)) (*CreateTaskOutput, error) 

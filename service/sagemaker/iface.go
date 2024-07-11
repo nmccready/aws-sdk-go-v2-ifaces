@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sagemaker"
 )
 
-// ISagemaker defines the interface for sagemaker
-type ISagemaker interface {
+// IClient defines the interface for sagemaker
+type IClient interface {
  Options() Options 
  AddAssociation(ctx context.Context, params *AddAssociationInput, optFns ...func(*Options)) (*AddAssociationOutput, error) 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 

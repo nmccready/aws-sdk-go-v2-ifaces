@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kafka"
 )
 
-// IKafka defines the interface for kafka
-type IKafka interface {
+// IClient defines the interface for kafka
+type IClient interface {
  Options() Options 
  BatchAssociateScramSecret(ctx context.Context, params *BatchAssociateScramSecretInput, optFns ...func(*Options)) (*BatchAssociateScramSecretOutput, error) 
  BatchDisassociateScramSecret(ctx context.Context, params *BatchDisassociateScramSecretInput, optFns ...func(*Options)) (*BatchDisassociateScramSecretOutput, error) 

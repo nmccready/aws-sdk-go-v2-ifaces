@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53recoveryreadiness"
 )
 
-// IRoute53recoveryreadiness defines the interface for route53recoveryreadiness
-type IRoute53recoveryreadiness interface {
+// IClient defines the interface for route53recoveryreadiness
+type IClient interface {
  Options() Options 
  CreateCell(ctx context.Context, params *CreateCellInput, optFns ...func(*Options)) (*CreateCellOutput, error) 
  CreateCrossAccountAuthorization(ctx context.Context, params *CreateCrossAccountAuthorizationInput, optFns ...func(*Options)) (*CreateCrossAccountAuthorizationOutput, error) 

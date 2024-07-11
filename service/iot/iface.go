@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iot"
 )
 
-// IIot defines the interface for iot
-type IIot interface {
+// IClient defines the interface for iot
+type IClient interface {
  Options() Options 
  AcceptCertificateTransfer(ctx context.Context, params *AcceptCertificateTransferInput, optFns ...func(*Options)) (*AcceptCertificateTransferOutput, error) 
  AddThingToBillingGroup(ctx context.Context, params *AddThingToBillingGroupInput, optFns ...func(*Options)) (*AddThingToBillingGroupOutput, error) 

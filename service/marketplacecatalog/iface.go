@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/marketplacecatalog"
 )
 
-// IMarketplacecatalog defines the interface for marketplacecatalog
-type IMarketplacecatalog interface {
+// IClient defines the interface for marketplacecatalog
+type IClient interface {
  Options() Options 
  BatchDescribeEntities(ctx context.Context, params *BatchDescribeEntitiesInput, optFns ...func(*Options)) (*BatchDescribeEntitiesOutput, error) 
  CancelChangeSet(ctx context.Context, params *CancelChangeSetInput, optFns ...func(*Options)) (*CancelChangeSetOutput, error) 

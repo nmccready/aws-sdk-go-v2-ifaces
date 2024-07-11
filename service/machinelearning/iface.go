@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/machinelearning"
 )
 
-// IMachinelearning defines the interface for machinelearning
-type IMachinelearning interface {
+// IClient defines the interface for machinelearning
+type IClient interface {
  Options() Options 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 
  CreateBatchPrediction(ctx context.Context, params *CreateBatchPredictionInput, optFns ...func(*Options)) (*CreateBatchPredictionOutput, error) 

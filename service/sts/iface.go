@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sts"
 )
 
-// ISts defines the interface for sts
-type ISts interface {
+// IClient defines the interface for sts
+type IClient interface {
  Options() Options 
  AssumeRole(ctx context.Context, params *AssumeRoleInput, optFns ...func(*Options)) (*AssumeRoleOutput, error) 
  PresignAssumeRole(ctx context.Context, params *AssumeRoleInput, optFns ...func(*PresignOptions)) (*v4.PresignedHTTPRequest, error) 

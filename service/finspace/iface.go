@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/finspace"
 )
 
-// IFinspace defines the interface for finspace
-type IFinspace interface {
+// IClient defines the interface for finspace
+type IClient interface {
  Options() Options 
  CreateEnvironment(ctx context.Context, params *CreateEnvironmentInput, optFns ...func(*Options)) (*CreateEnvironmentOutput, error) 
  CreateKxChangeset(ctx context.Context, params *CreateKxChangesetInput, optFns ...func(*Options)) (*CreateKxChangesetOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/savingsplans"
 )
 
-// ISavingsplans defines the interface for savingsplans
-type ISavingsplans interface {
+// IClient defines the interface for savingsplans
+type IClient interface {
  Options() Options 
  CreateSavingsPlan(ctx context.Context, params *CreateSavingsPlanInput, optFns ...func(*Options)) (*CreateSavingsPlanOutput, error) 
  DeleteQueuedSavingsPlan(ctx context.Context, params *DeleteQueuedSavingsPlanInput, optFns ...func(*Options)) (*DeleteQueuedSavingsPlanOutput, error) 

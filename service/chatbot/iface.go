@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chatbot"
 )
 
-// IChatbot defines the interface for chatbot
-type IChatbot interface {
+// IClient defines the interface for chatbot
+type IClient interface {
  Options() Options 
  CreateChimeWebhookConfiguration(ctx context.Context, params *CreateChimeWebhookConfigurationInput, optFns ...func(*Options)) (*CreateChimeWebhookConfigurationOutput, error) 
  CreateMicrosoftTeamsChannelConfiguration(ctx context.Context, params *CreateMicrosoftTeamsChannelConfigurationInput, optFns ...func(*Options)) (*CreateMicrosoftTeamsChannelConfigurationOutput, error) 

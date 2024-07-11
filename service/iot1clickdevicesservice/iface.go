@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iot1clickdevicesservice"
 )
 
-// IIot1clickdevicesservice defines the interface for iot1clickdevicesservice
-type IIot1clickdevicesservice interface {
+// IClient defines the interface for iot1clickdevicesservice
+type IClient interface {
  Options() Options 
  ClaimDevicesByClaimCode(ctx context.Context, params *ClaimDevicesByClaimCodeInput, optFns ...func(*Options)) (*ClaimDevicesByClaimCodeOutput, error) 
  DescribeDevice(ctx context.Context, params *DescribeDeviceInput, optFns ...func(*Options)) (*DescribeDeviceOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ssm"
 )
 
-// ISsm defines the interface for ssm
-type ISsm interface {
+// IClient defines the interface for ssm
+type IClient interface {
  Options() Options 
  AddTagsToResource(ctx context.Context, params *AddTagsToResourceInput, optFns ...func(*Options)) (*AddTagsToResourceOutput, error) 
  AssociateOpsItemRelatedItem(ctx context.Context, params *AssociateOpsItemRelatedItemInput, optFns ...func(*Options)) (*AssociateOpsItemRelatedItemOutput, error) 

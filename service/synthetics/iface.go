@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/synthetics"
 )
 
-// ISynthetics defines the interface for synthetics
-type ISynthetics interface {
+// IClient defines the interface for synthetics
+type IClient interface {
  Options() Options 
  AssociateResource(ctx context.Context, params *AssociateResourceInput, optFns ...func(*Options)) (*AssociateResourceOutput, error) 
  CreateCanary(ctx context.Context, params *CreateCanaryInput, optFns ...func(*Options)) (*CreateCanaryOutput, error) 

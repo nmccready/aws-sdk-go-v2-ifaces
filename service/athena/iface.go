@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/athena"
 )
 
-// IAthena defines the interface for athena
-type IAthena interface {
+// IClient defines the interface for athena
+type IClient interface {
  Options() Options 
  BatchGetNamedQuery(ctx context.Context, params *BatchGetNamedQueryInput, optFns ...func(*Options)) (*BatchGetNamedQueryOutput, error) 
  BatchGetPreparedStatement(ctx context.Context, params *BatchGetPreparedStatementInput, optFns ...func(*Options)) (*BatchGetPreparedStatementOutput, error) 

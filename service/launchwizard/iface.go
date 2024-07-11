@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/launchwizard"
 )
 
-// ILaunchwizard defines the interface for launchwizard
-type ILaunchwizard interface {
+// IClient defines the interface for launchwizard
+type IClient interface {
  Options() Options 
  CreateDeployment(ctx context.Context, params *CreateDeploymentInput, optFns ...func(*Options)) (*CreateDeploymentOutput, error) 
  DeleteDeployment(ctx context.Context, params *DeleteDeploymentInput, optFns ...func(*Options)) (*DeleteDeploymentOutput, error) 

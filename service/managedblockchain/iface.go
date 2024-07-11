@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/managedblockchain"
 )
 
-// IManagedblockchain defines the interface for managedblockchain
-type IManagedblockchain interface {
+// IClient defines the interface for managedblockchain
+type IClient interface {
  Options() Options 
  CreateAccessor(ctx context.Context, params *CreateAccessorInput, optFns ...func(*Options)) (*CreateAccessorOutput, error) 
  CreateMember(ctx context.Context, params *CreateMemberInput, optFns ...func(*Options)) (*CreateMemberOutput, error) 

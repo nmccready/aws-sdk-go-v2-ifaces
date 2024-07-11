@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/eventbridge"
 )
 
-// IEventbridge defines the interface for eventbridge
-type IEventbridge interface {
+// IClient defines the interface for eventbridge
+type IClient interface {
  Options() Options 
  ActivateEventSource(ctx context.Context, params *ActivateEventSourceInput, optFns ...func(*Options)) (*ActivateEventSourceOutput, error) 
  CancelReplay(ctx context.Context, params *CancelReplayInput, optFns ...func(*Options)) (*CancelReplayOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/workspaces"
 )
 
-// IWorkspaces defines the interface for workspaces
-type IWorkspaces interface {
+// IClient defines the interface for workspaces
+type IClient interface {
  Options() Options 
  AcceptAccountLinkInvitation(ctx context.Context, params *AcceptAccountLinkInvitationInput, optFns ...func(*Options)) (*AcceptAccountLinkInvitationOutput, error) 
  AssociateConnectionAlias(ctx context.Context, params *AssociateConnectionAliasInput, optFns ...func(*Options)) (*AssociateConnectionAliasOutput, error) 

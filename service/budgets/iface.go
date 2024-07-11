@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/budgets"
 )
 
-// IBudgets defines the interface for budgets
-type IBudgets interface {
+// IClient defines the interface for budgets
+type IClient interface {
  Options() Options 
  CreateBudget(ctx context.Context, params *CreateBudgetInput, optFns ...func(*Options)) (*CreateBudgetOutput, error) 
  CreateBudgetAction(ctx context.Context, params *CreateBudgetActionInput, optFns ...func(*Options)) (*CreateBudgetActionOutput, error) 

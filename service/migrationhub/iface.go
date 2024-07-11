@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/migrationhub"
 )
 
-// IMigrationhub defines the interface for migrationhub
-type IMigrationhub interface {
+// IClient defines the interface for migrationhub
+type IClient interface {
  Options() Options 
  AssociateCreatedArtifact(ctx context.Context, params *AssociateCreatedArtifactInput, optFns ...func(*Options)) (*AssociateCreatedArtifactOutput, error) 
  AssociateDiscoveredResource(ctx context.Context, params *AssociateDiscoveredResourceInput, optFns ...func(*Options)) (*AssociateDiscoveredResourceOutput, error) 

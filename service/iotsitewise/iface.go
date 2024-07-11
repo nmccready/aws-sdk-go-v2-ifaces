@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotsitewise"
 )
 
-// IIotsitewise defines the interface for iotsitewise
-type IIotsitewise interface {
+// IClient defines the interface for iotsitewise
+type IClient interface {
  Options() Options 
  AssociateAssets(ctx context.Context, params *AssociateAssetsInput, optFns ...func(*Options)) (*AssociateAssetsOutput, error) 
  AssociateTimeSeriesToAssetProperty(ctx context.Context, params *AssociateTimeSeriesToAssetPropertyInput, optFns ...func(*Options)) (*AssociateTimeSeriesToAssetPropertyOutput, error) 

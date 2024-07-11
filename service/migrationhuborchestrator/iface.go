@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/migrationhuborchestrator"
 )
 
-// IMigrationhuborchestrator defines the interface for migrationhuborchestrator
-type IMigrationhuborchestrator interface {
+// IClient defines the interface for migrationhuborchestrator
+type IClient interface {
  Options() Options 
  CreateTemplate(ctx context.Context, params *CreateTemplateInput, optFns ...func(*Options)) (*CreateTemplateOutput, error) 
  CreateWorkflow(ctx context.Context, params *CreateWorkflowInput, optFns ...func(*Options)) (*CreateWorkflowOutput, error) 

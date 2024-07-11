@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kinesisanalyticsv2"
 )
 
-// IKinesisanalyticsv2 defines the interface for kinesisanalyticsv2
-type IKinesisanalyticsv2 interface {
+// IClient defines the interface for kinesisanalyticsv2
+type IClient interface {
  Options() Options 
  AddApplicationCloudWatchLoggingOption(ctx context.Context, params *AddApplicationCloudWatchLoggingOptionInput, optFns ...func(*Options)) (*AddApplicationCloudWatchLoggingOptionOutput, error) 
  AddApplicationInput(ctx context.Context, params *AddApplicationInputInput, optFns ...func(*Options)) (*AddApplicationInputOutput, error) 

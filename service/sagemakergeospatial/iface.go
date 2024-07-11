@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sagemakergeospatial"
 )
 
-// ISagemakergeospatial defines the interface for sagemakergeospatial
-type ISagemakergeospatial interface {
+// IClient defines the interface for sagemakergeospatial
+type IClient interface {
  Options() Options 
  DeleteEarthObservationJob(ctx context.Context, params *DeleteEarthObservationJobInput, optFns ...func(*Options)) (*DeleteEarthObservationJobOutput, error) 
  DeleteVectorEnrichmentJob(ctx context.Context, params *DeleteVectorEnrichmentJobInput, optFns ...func(*Options)) (*DeleteVectorEnrichmentJobOutput, error) 

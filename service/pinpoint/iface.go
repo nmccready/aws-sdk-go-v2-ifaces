@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pinpoint"
 )
 
-// IPinpoint defines the interface for pinpoint
-type IPinpoint interface {
+// IClient defines the interface for pinpoint
+type IClient interface {
  Options() Options 
  CreateApp(ctx context.Context, params *CreateAppInput, optFns ...func(*Options)) (*CreateAppOutput, error) 
  CreateCampaign(ctx context.Context, params *CreateCampaignInput, optFns ...func(*Options)) (*CreateCampaignOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/transcribe"
 )
 
-// ITranscribe defines the interface for transcribe
-type ITranscribe interface {
+// IClient defines the interface for transcribe
+type IClient interface {
  Options() Options 
  CreateCallAnalyticsCategory(ctx context.Context, params *CreateCallAnalyticsCategoryInput, optFns ...func(*Options)) (*CreateCallAnalyticsCategoryOutput, error) 
  CreateLanguageModel(ctx context.Context, params *CreateLanguageModelInput, optFns ...func(*Options)) (*CreateLanguageModelOutput, error) 

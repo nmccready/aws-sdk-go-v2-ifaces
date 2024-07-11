@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/personalize"
 )
 
-// IPersonalize defines the interface for personalize
-type IPersonalize interface {
+// IClient defines the interface for personalize
+type IClient interface {
  Options() Options 
  CreateBatchInferenceJob(ctx context.Context, params *CreateBatchInferenceJobInput, optFns ...func(*Options)) (*CreateBatchInferenceJobOutput, error) 
  CreateBatchSegmentJob(ctx context.Context, params *CreateBatchSegmentJobInput, optFns ...func(*Options)) (*CreateBatchSegmentJobOutput, error) 

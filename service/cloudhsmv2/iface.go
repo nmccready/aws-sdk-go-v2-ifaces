@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudhsmv2"
 )
 
-// ICloudhsmv2 defines the interface for cloudhsmv2
-type ICloudhsmv2 interface {
+// IClient defines the interface for cloudhsmv2
+type IClient interface {
  Options() Options 
  CopyBackupToRegion(ctx context.Context, params *CopyBackupToRegionInput, optFns ...func(*Options)) (*CopyBackupToRegionOutput, error) 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 

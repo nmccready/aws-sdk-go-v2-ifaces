@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/autoscaling"
 )
 
-// IAutoscaling defines the interface for autoscaling
-type IAutoscaling interface {
+// IClient defines the interface for autoscaling
+type IClient interface {
  Options() Options 
  AttachInstances(ctx context.Context, params *AttachInstancesInput, optFns ...func(*Options)) (*AttachInstancesOutput, error) 
  AttachLoadBalancerTargetGroups(ctx context.Context, params *AttachLoadBalancerTargetGroupsInput, optFns ...func(*Options)) (*AttachLoadBalancerTargetGroupsOutput, error) 

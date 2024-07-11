@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/resourceexplorer2"
 )
 
-// IResourceexplorer2 defines the interface for resourceexplorer2
-type IResourceexplorer2 interface {
+// IClient defines the interface for resourceexplorer2
+type IClient interface {
  Options() Options 
  AssociateDefaultView(ctx context.Context, params *AssociateDefaultViewInput, optFns ...func(*Options)) (*AssociateDefaultViewOutput, error) 
  BatchGetView(ctx context.Context, params *BatchGetViewInput, optFns ...func(*Options)) (*BatchGetViewOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ram"
 )
 
-// IRam defines the interface for ram
-type IRam interface {
+// IClient defines the interface for ram
+type IClient interface {
  Options() Options 
  AcceptResourceShareInvitation(ctx context.Context, params *AcceptResourceShareInvitationInput, optFns ...func(*Options)) (*AcceptResourceShareInvitationOutput, error) 
  AssociateResourceShare(ctx context.Context, params *AssociateResourceShareInput, optFns ...func(*Options)) (*AssociateResourceShareOutput, error) 

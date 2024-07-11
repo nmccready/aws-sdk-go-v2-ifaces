@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/artifact"
 )
 
-// IArtifact defines the interface for artifact
-type IArtifact interface {
+// IClient defines the interface for artifact
+type IClient interface {
  Options() Options 
  GetAccountSettings(ctx context.Context, params *GetAccountSettingsInput, optFns ...func(*Options)) (*GetAccountSettingsOutput, error) 
  GetReport(ctx context.Context, params *GetReportInput, optFns ...func(*Options)) (*GetReportOutput, error) 

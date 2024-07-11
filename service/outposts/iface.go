@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/outposts"
 )
 
-// IOutposts defines the interface for outposts
-type IOutposts interface {
+// IClient defines the interface for outposts
+type IClient interface {
  Options() Options 
  CancelCapacityTask(ctx context.Context, params *CancelCapacityTaskInput, optFns ...func(*Options)) (*CancelCapacityTaskOutput, error) 
  CancelOrder(ctx context.Context, params *CancelOrderInput, optFns ...func(*Options)) (*CancelOrderOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/healthlake"
 )
 
-// IHealthlake defines the interface for healthlake
-type IHealthlake interface {
+// IClient defines the interface for healthlake
+type IClient interface {
  Options() Options 
  CreateFHIRDatastore(ctx context.Context, params *CreateFHIRDatastoreInput, optFns ...func(*Options)) (*CreateFHIRDatastoreOutput, error) 
  DeleteFHIRDatastore(ctx context.Context, params *DeleteFHIRDatastoreInput, optFns ...func(*Options)) (*DeleteFHIRDatastoreOutput, error) 

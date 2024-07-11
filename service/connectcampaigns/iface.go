@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/connectcampaigns"
 )
 
-// IConnectcampaigns defines the interface for connectcampaigns
-type IConnectcampaigns interface {
+// IClient defines the interface for connectcampaigns
+type IClient interface {
  Options() Options 
  CreateCampaign(ctx context.Context, params *CreateCampaignInput, optFns ...func(*Options)) (*CreateCampaignOutput, error) 
  DeleteCampaign(ctx context.Context, params *DeleteCampaignInput, optFns ...func(*Options)) (*DeleteCampaignOutput, error) 

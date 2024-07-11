@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/signer"
 )
 
-// ISigner defines the interface for signer
-type ISigner interface {
+// IClient defines the interface for signer
+type IClient interface {
  Options() Options 
  AddProfilePermission(ctx context.Context, params *AddProfilePermissionInput, optFns ...func(*Options)) (*AddProfilePermissionOutput, error) 
  CancelSigningProfile(ctx context.Context, params *CancelSigningProfileInput, optFns ...func(*Options)) (*CancelSigningProfileOutput, error) 

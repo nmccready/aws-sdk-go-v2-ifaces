@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/greengrassv2"
 )
 
-// IGreengrassv2 defines the interface for greengrassv2
-type IGreengrassv2 interface {
+// IClient defines the interface for greengrassv2
+type IClient interface {
  Options() Options 
  AssociateServiceRoleToAccount(ctx context.Context, params *AssociateServiceRoleToAccountInput, optFns ...func(*Options)) (*AssociateServiceRoleToAccountOutput, error) 
  BatchAssociateClientDeviceWithCoreDevice(ctx context.Context, params *BatchAssociateClientDeviceWithCoreDeviceInput, optFns ...func(*Options)) (*BatchAssociateClientDeviceWithCoreDeviceOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chimesdkmediapipelines"
 )
 
-// IChimesdkmediapipelines defines the interface for chimesdkmediapipelines
-type IChimesdkmediapipelines interface {
+// IClient defines the interface for chimesdkmediapipelines
+type IClient interface {
  Options() Options 
  CreateMediaCapturePipeline(ctx context.Context, params *CreateMediaCapturePipelineInput, optFns ...func(*Options)) (*CreateMediaCapturePipelineOutput, error) 
  CreateMediaConcatenationPipeline(ctx context.Context, params *CreateMediaConcatenationPipelineInput, optFns ...func(*Options)) (*CreateMediaConcatenationPipelineOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ebs"
 )
 
-// IEbs defines the interface for ebs
-type IEbs interface {
+// IClient defines the interface for ebs
+type IClient interface {
  Options() Options 
  CompleteSnapshot(ctx context.Context, params *CompleteSnapshotInput, optFns ...func(*Options)) (*CompleteSnapshotOutput, error) 
  GetSnapshotBlock(ctx context.Context, params *GetSnapshotBlockInput, optFns ...func(*Options)) (*GetSnapshotBlockOutput, error) 

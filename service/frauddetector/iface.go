@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/frauddetector"
 )
 
-// IFrauddetector defines the interface for frauddetector
-type IFrauddetector interface {
+// IClient defines the interface for frauddetector
+type IClient interface {
  Options() Options 
  BatchCreateVariable(ctx context.Context, params *BatchCreateVariableInput, optFns ...func(*Options)) (*BatchCreateVariableOutput, error) 
  BatchGetVariable(ctx context.Context, params *BatchGetVariableInput, optFns ...func(*Options)) (*BatchGetVariableOutput, error) 

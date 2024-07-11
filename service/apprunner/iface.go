@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/apprunner"
 )
 
-// IApprunner defines the interface for apprunner
-type IApprunner interface {
+// IClient defines the interface for apprunner
+type IClient interface {
  Options() Options 
  AssociateCustomDomain(ctx context.Context, params *AssociateCustomDomainInput, optFns ...func(*Options)) (*AssociateCustomDomainOutput, error) 
  CreateAutoScalingConfiguration(ctx context.Context, params *CreateAutoScalingConfigurationInput, optFns ...func(*Options)) (*CreateAutoScalingConfigurationOutput, error) 

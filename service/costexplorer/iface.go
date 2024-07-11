@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/costexplorer"
 )
 
-// ICostexplorer defines the interface for costexplorer
-type ICostexplorer interface {
+// IClient defines the interface for costexplorer
+type IClient interface {
  Options() Options 
  CreateAnomalyMonitor(ctx context.Context, params *CreateAnomalyMonitorInput, optFns ...func(*Options)) (*CreateAnomalyMonitorOutput, error) 
  CreateAnomalySubscription(ctx context.Context, params *CreateAnomalySubscriptionInput, optFns ...func(*Options)) (*CreateAnomalySubscriptionOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/costandusagereportservice"
 )
 
-// ICostandusagereportservice defines the interface for costandusagereportservice
-type ICostandusagereportservice interface {
+// IClient defines the interface for costandusagereportservice
+type IClient interface {
  Options() Options 
  DeleteReportDefinition(ctx context.Context, params *DeleteReportDefinitionInput, optFns ...func(*Options)) (*DeleteReportDefinitionOutput, error) 
  DescribeReportDefinitions(ctx context.Context, params *DescribeReportDefinitionsInput, optFns ...func(*Options)) (*DescribeReportDefinitionsOutput, error) 

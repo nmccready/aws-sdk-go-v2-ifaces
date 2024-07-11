@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/worklink"
 )
 
-// IWorklink defines the interface for worklink
-type IWorklink interface {
+// IClient defines the interface for worklink
+type IClient interface {
  Options() Options 
  AssociateDomain(ctx context.Context, params *AssociateDomainInput, optFns ...func(*Options)) (*AssociateDomainOutput, error) 
  AssociateWebsiteAuthorizationProvider(ctx context.Context, params *AssociateWebsiteAuthorizationProviderInput, optFns ...func(*Options)) (*AssociateWebsiteAuthorizationProviderOutput, error) 

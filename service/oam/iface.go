@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/oam"
 )
 
-// IOam defines the interface for oam
-type IOam interface {
+// IClient defines the interface for oam
+type IClient interface {
  Options() Options 
  CreateLink(ctx context.Context, params *CreateLinkInput, optFns ...func(*Options)) (*CreateLinkOutput, error) 
  CreateSink(ctx context.Context, params *CreateSinkInput, optFns ...func(*Options)) (*CreateSinkOutput, error) 

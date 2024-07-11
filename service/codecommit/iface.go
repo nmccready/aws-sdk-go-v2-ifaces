@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codecommit"
 )
 
-// ICodecommit defines the interface for codecommit
-type ICodecommit interface {
+// IClient defines the interface for codecommit
+type IClient interface {
  Options() Options 
  AssociateApprovalRuleTemplateWithRepository(ctx context.Context, params *AssociateApprovalRuleTemplateWithRepositoryInput, optFns ...func(*Options)) (*AssociateApprovalRuleTemplateWithRepositoryOutput, error) 
  BatchAssociateApprovalRuleTemplateWithRepositories(ctx context.Context, params *BatchAssociateApprovalRuleTemplateWithRepositoriesInput, optFns ...func(*Options)) (*BatchAssociateApprovalRuleTemplateWithRepositoriesOutput, error) 

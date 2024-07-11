@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/applicationinsights"
 )
 
-// IApplicationinsights defines the interface for applicationinsights
-type IApplicationinsights interface {
+// IClient defines the interface for applicationinsights
+type IClient interface {
  Options() Options 
  AddWorkload(ctx context.Context, params *AddWorkloadInput, optFns ...func(*Options)) (*AddWorkloadOutput, error) 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 

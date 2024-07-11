@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/customerprofiles"
 )
 
-// ICustomerprofiles defines the interface for customerprofiles
-type ICustomerprofiles interface {
+// IClient defines the interface for customerprofiles
+type IClient interface {
  Options() Options 
  AddProfileKey(ctx context.Context, params *AddProfileKeyInput, optFns ...func(*Options)) (*AddProfileKeyOutput, error) 
  CreateCalculatedAttributeDefinition(ctx context.Context, params *CreateCalculatedAttributeDefinitionInput, optFns ...func(*Options)) (*CreateCalculatedAttributeDefinitionOutput, error) 

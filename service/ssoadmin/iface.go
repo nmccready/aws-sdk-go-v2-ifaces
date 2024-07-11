@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ssoadmin"
 )
 
-// ISsoadmin defines the interface for ssoadmin
-type ISsoadmin interface {
+// IClient defines the interface for ssoadmin
+type IClient interface {
  Options() Options 
  AttachCustomerManagedPolicyReferenceToPermissionSet(ctx context.Context, params *AttachCustomerManagedPolicyReferenceToPermissionSetInput, optFns ...func(*Options)) (*AttachCustomerManagedPolicyReferenceToPermissionSetOutput, error) 
  AttachManagedPolicyToPermissionSet(ctx context.Context, params *AttachManagedPolicyToPermissionSetInput, optFns ...func(*Options)) (*AttachManagedPolicyToPermissionSetOutput, error) 

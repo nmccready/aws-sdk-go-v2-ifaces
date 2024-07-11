@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codestarconnections"
 )
 
-// ICodestarconnections defines the interface for codestarconnections
-type ICodestarconnections interface {
+// IClient defines the interface for codestarconnections
+type IClient interface {
  Options() Options 
  CreateConnection(ctx context.Context, params *CreateConnectionInput, optFns ...func(*Options)) (*CreateConnectionOutput, error) 
  CreateHost(ctx context.Context, params *CreateHostInput, optFns ...func(*Options)) (*CreateHostOutput, error) 

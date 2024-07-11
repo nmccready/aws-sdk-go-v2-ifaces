@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/costoptimizationhub"
 )
 
-// ICostoptimizationhub defines the interface for costoptimizationhub
-type ICostoptimizationhub interface {
+// IClient defines the interface for costoptimizationhub
+type IClient interface {
  Options() Options 
  GetPreferences(ctx context.Context, params *GetPreferencesInput, optFns ...func(*Options)) (*GetPreferencesOutput, error) 
  GetRecommendation(ctx context.Context, params *GetRecommendationInput, optFns ...func(*Options)) (*GetRecommendationOutput, error) 

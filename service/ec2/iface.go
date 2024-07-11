@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ec2"
 )
 
-// IEc2 defines the interface for ec2
-type IEc2 interface {
+// IClient defines the interface for ec2
+type IClient interface {
  Options() Options 
  AcceptAddressTransfer(ctx context.Context, params *AcceptAddressTransferInput, optFns ...func(*Options)) (*AcceptAddressTransferOutput, error) 
  AcceptReservedInstancesExchangeQuote(ctx context.Context, params *AcceptReservedInstancesExchangeQuoteInput, optFns ...func(*Options)) (*AcceptReservedInstancesExchangeQuoteOutput, error) 

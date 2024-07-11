@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appsync"
 )
 
-// IAppsync defines the interface for appsync
-type IAppsync interface {
+// IClient defines the interface for appsync
+type IClient interface {
  Options() Options 
  AssociateApi(ctx context.Context, params *AssociateApiInput, optFns ...func(*Options)) (*AssociateApiOutput, error) 
  AssociateMergedGraphqlApi(ctx context.Context, params *AssociateMergedGraphqlApiInput, optFns ...func(*Options)) (*AssociateMergedGraphqlApiOutput, error) 

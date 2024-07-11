@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/memorydb"
 )
 
-// IMemorydb defines the interface for memorydb
-type IMemorydb interface {
+// IClient defines the interface for memorydb
+type IClient interface {
  Options() Options 
  BatchUpdateCluster(ctx context.Context, params *BatchUpdateClusterInput, optFns ...func(*Options)) (*BatchUpdateClusterOutput, error) 
  CopySnapshot(ctx context.Context, params *CopySnapshotInput, optFns ...func(*Options)) (*CopySnapshotOutput, error) 

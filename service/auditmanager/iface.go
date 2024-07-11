@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/auditmanager"
 )
 
-// IAuditmanager defines the interface for auditmanager
-type IAuditmanager interface {
+// IClient defines the interface for auditmanager
+type IClient interface {
  Options() Options 
  AssociateAssessmentReportEvidenceFolder(ctx context.Context, params *AssociateAssessmentReportEvidenceFolderInput, optFns ...func(*Options)) (*AssociateAssessmentReportEvidenceFolderOutput, error) 
  BatchAssociateAssessmentReportEvidence(ctx context.Context, params *BatchAssociateAssessmentReportEvidenceInput, optFns ...func(*Options)) (*BatchAssociateAssessmentReportEvidenceOutput, error) 

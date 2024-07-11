@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/imagebuilder"
 )
 
-// IImagebuilder defines the interface for imagebuilder
-type IImagebuilder interface {
+// IClient defines the interface for imagebuilder
+type IClient interface {
  Options() Options 
  CancelImageCreation(ctx context.Context, params *CancelImageCreationInput, optFns ...func(*Options)) (*CancelImageCreationOutput, error) 
  CancelLifecycleExecution(ctx context.Context, params *CancelLifecycleExecutionInput, optFns ...func(*Options)) (*CancelLifecycleExecutionOutput, error) 

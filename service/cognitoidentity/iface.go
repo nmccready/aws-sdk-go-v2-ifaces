@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cognitoidentity"
 )
 
-// ICognitoidentity defines the interface for cognitoidentity
-type ICognitoidentity interface {
+// IClient defines the interface for cognitoidentity
+type IClient interface {
  Options() Options 
  CreateIdentityPool(ctx context.Context, params *CreateIdentityPoolInput, optFns ...func(*Options)) (*CreateIdentityPoolOutput, error) 
  DeleteIdentities(ctx context.Context, params *DeleteIdentitiesInput, optFns ...func(*Options)) (*DeleteIdentitiesOutput, error) 

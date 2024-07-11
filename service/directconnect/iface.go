@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/directconnect"
 )
 
-// IDirectconnect defines the interface for directconnect
-type IDirectconnect interface {
+// IClient defines the interface for directconnect
+type IClient interface {
  Options() Options 
  AcceptDirectConnectGatewayAssociationProposal(ctx context.Context, params *AcceptDirectConnectGatewayAssociationProposalInput, optFns ...func(*Options)) (*AcceptDirectConnectGatewayAssociationProposalOutput, error) 
  AllocateConnectionOnInterconnect(ctx context.Context, params *AllocateConnectionOnInterconnectInput, optFns ...func(*Options)) (*AllocateConnectionOnInterconnectOutput, error) 

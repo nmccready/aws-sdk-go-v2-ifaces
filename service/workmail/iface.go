@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/workmail"
 )
 
-// IWorkmail defines the interface for workmail
-type IWorkmail interface {
+// IClient defines the interface for workmail
+type IClient interface {
  Options() Options 
  AssociateDelegateToResource(ctx context.Context, params *AssociateDelegateToResourceInput, optFns ...func(*Options)) (*AssociateDelegateToResourceOutput, error) 
  AssociateMemberToGroup(ctx context.Context, params *AssociateMemberToGroupInput, optFns ...func(*Options)) (*AssociateMemberToGroupOutput, error) 

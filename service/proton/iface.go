@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/proton"
 )
 
-// IProton defines the interface for proton
-type IProton interface {
+// IClient defines the interface for proton
+type IClient interface {
  Options() Options 
  AcceptEnvironmentAccountConnection(ctx context.Context, params *AcceptEnvironmentAccountConnectionInput, optFns ...func(*Options)) (*AcceptEnvironmentAccountConnectionOutput, error) 
  CancelComponentDeployment(ctx context.Context, params *CancelComponentDeploymentInput, optFns ...func(*Options)) (*CancelComponentDeploymentOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/b2bi"
 )
 
-// IB2bi defines the interface for b2bi
-type IB2bi interface {
+// IClient defines the interface for b2bi
+type IClient interface {
  Options() Options 
  CreateCapability(ctx context.Context, params *CreateCapabilityInput, optFns ...func(*Options)) (*CreateCapabilityOutput, error) 
  CreatePartnership(ctx context.Context, params *CreatePartnershipInput, optFns ...func(*Options)) (*CreatePartnershipOutput, error) 

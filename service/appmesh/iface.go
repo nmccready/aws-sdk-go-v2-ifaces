@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appmesh"
 )
 
-// IAppmesh defines the interface for appmesh
-type IAppmesh interface {
+// IClient defines the interface for appmesh
+type IClient interface {
  Options() Options 
  CreateGatewayRoute(ctx context.Context, params *CreateGatewayRouteInput, optFns ...func(*Options)) (*CreateGatewayRouteOutput, error) 
  CreateMesh(ctx context.Context, params *CreateMeshInput, optFns ...func(*Options)) (*CreateMeshOutput, error) 

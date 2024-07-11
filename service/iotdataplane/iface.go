@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotdataplane"
 )
 
-// IIotdataplane defines the interface for iotdataplane
-type IIotdataplane interface {
+// IClient defines the interface for iotdataplane
+type IClient interface {
  Options() Options 
  DeleteThingShadow(ctx context.Context, params *DeleteThingShadowInput, optFns ...func(*Options)) (*DeleteThingShadowOutput, error) 
  GetRetainedMessage(ctx context.Context, params *GetRetainedMessageInput, optFns ...func(*Options)) (*GetRetainedMessageOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codegurureviewer"
 )
 
-// ICodegurureviewer defines the interface for codegurureviewer
-type ICodegurureviewer interface {
+// IClient defines the interface for codegurureviewer
+type IClient interface {
  Options() Options 
  AssociateRepository(ctx context.Context, params *AssociateRepositoryInput, optFns ...func(*Options)) (*AssociateRepositoryOutput, error) 
  CreateCodeReview(ctx context.Context, params *CreateCodeReviewInput, optFns ...func(*Options)) (*CreateCodeReviewOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudfront"
 )
 
-// ICloudfront defines the interface for cloudfront
-type ICloudfront interface {
+// IClient defines the interface for cloudfront
+type IClient interface {
  Options() Options 
  AssociateAlias(ctx context.Context, params *AssociateAliasInput, optFns ...func(*Options)) (*AssociateAliasOutput, error) 
  CopyDistribution(ctx context.Context, params *CopyDistributionInput, optFns ...func(*Options)) (*CopyDistributionOutput, error) 

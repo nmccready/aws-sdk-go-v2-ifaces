@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/location"
 )
 
-// ILocation defines the interface for location
-type ILocation interface {
+// IClient defines the interface for location
+type IClient interface {
  Options() Options 
  AssociateTrackerConsumer(ctx context.Context, params *AssociateTrackerConsumerInput, optFns ...func(*Options)) (*AssociateTrackerConsumerOutput, error) 
  BatchDeleteDevicePositionHistory(ctx context.Context, params *BatchDeleteDevicePositionHistoryInput, optFns ...func(*Options)) (*BatchDeleteDevicePositionHistoryOutput, error) 

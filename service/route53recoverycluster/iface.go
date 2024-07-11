@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53recoverycluster"
 )
 
-// IRoute53recoverycluster defines the interface for route53recoverycluster
-type IRoute53recoverycluster interface {
+// IClient defines the interface for route53recoverycluster
+type IClient interface {
  Options() Options 
  GetRoutingControlState(ctx context.Context, params *GetRoutingControlStateInput, optFns ...func(*Options)) (*GetRoutingControlStateOutput, error) 
  ListRoutingControls(ctx context.Context, params *ListRoutingControlsInput, optFns ...func(*Options)) (*ListRoutingControlsOutput, error) 

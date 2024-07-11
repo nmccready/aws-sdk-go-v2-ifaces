@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iotsecuretunneling"
 )
 
-// IIotsecuretunneling defines the interface for iotsecuretunneling
-type IIotsecuretunneling interface {
+// IClient defines the interface for iotsecuretunneling
+type IClient interface {
  Options() Options 
  CloseTunnel(ctx context.Context, params *CloseTunnelInput, optFns ...func(*Options)) (*CloseTunnelOutput, error) 
  DescribeTunnel(ctx context.Context, params *DescribeTunnelInput, optFns ...func(*Options)) (*DescribeTunnelOutput, error) 

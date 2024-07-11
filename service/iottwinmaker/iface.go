@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iottwinmaker"
 )
 
-// IIottwinmaker defines the interface for iottwinmaker
-type IIottwinmaker interface {
+// IClient defines the interface for iottwinmaker
+type IClient interface {
  Options() Options 
  BatchPutPropertyValues(ctx context.Context, params *BatchPutPropertyValuesInput, optFns ...func(*Options)) (*BatchPutPropertyValuesOutput, error) 
  CancelMetadataTransferJob(ctx context.Context, params *CancelMetadataTransferJobInput, optFns ...func(*Options)) (*CancelMetadataTransferJobOutput, error) 

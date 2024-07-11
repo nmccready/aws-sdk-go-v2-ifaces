@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/wafregional"
 )
 
-// IWafregional defines the interface for wafregional
-type IWafregional interface {
+// IClient defines the interface for wafregional
+type IClient interface {
  Options() Options 
  AssociateWebACL(ctx context.Context, params *AssociateWebACLInput, optFns ...func(*Options)) (*AssociateWebACLOutput, error) 
  CreateByteMatchSet(ctx context.Context, params *CreateByteMatchSetInput, optFns ...func(*Options)) (*CreateByteMatchSetOutput, error) 

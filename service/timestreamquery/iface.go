@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/timestreamquery"
 )
 
-// ITimestreamquery defines the interface for timestreamquery
-type ITimestreamquery interface {
+// IClient defines the interface for timestreamquery
+type IClient interface {
  Options() Options 
  CancelQuery(ctx context.Context, params *CancelQueryInput, optFns ...func(*Options)) (*CancelQueryOutput, error) 
  CreateScheduledQuery(ctx context.Context, params *CreateScheduledQueryInput, optFns ...func(*Options)) (*CreateScheduledQueryOutput, error) 

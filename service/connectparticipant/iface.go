@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/connectparticipant"
 )
 
-// IConnectparticipant defines the interface for connectparticipant
-type IConnectparticipant interface {
+// IClient defines the interface for connectparticipant
+type IClient interface {
  Options() Options 
  CompleteAttachmentUpload(ctx context.Context, params *CompleteAttachmentUploadInput, optFns ...func(*Options)) (*CompleteAttachmentUploadOutput, error) 
  CreateParticipantConnection(ctx context.Context, params *CreateParticipantConnectionInput, optFns ...func(*Options)) (*CreateParticipantConnectionOutput, error) 

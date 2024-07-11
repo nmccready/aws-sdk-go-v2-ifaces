@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cleanroomsml"
 )
 
-// ICleanroomsml defines the interface for cleanroomsml
-type ICleanroomsml interface {
+// IClient defines the interface for cleanroomsml
+type IClient interface {
  Options() Options 
  CreateAudienceModel(ctx context.Context, params *CreateAudienceModelInput, optFns ...func(*Options)) (*CreateAudienceModelOutput, error) 
  CreateConfiguredAudienceModel(ctx context.Context, params *CreateConfiguredAudienceModelInput, optFns ...func(*Options)) (*CreateConfiguredAudienceModelOutput, error) 

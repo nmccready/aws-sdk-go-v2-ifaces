@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/storagegateway"
 )
 
-// IStoragegateway defines the interface for storagegateway
-type IStoragegateway interface {
+// IClient defines the interface for storagegateway
+type IClient interface {
  Options() Options 
  ActivateGateway(ctx context.Context, params *ActivateGatewayInput, optFns ...func(*Options)) (*ActivateGatewayOutput, error) 
  AddCache(ctx context.Context, params *AddCacheInput, optFns ...func(*Options)) (*AddCacheOutput, error) 

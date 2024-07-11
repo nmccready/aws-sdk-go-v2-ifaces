@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codegurusecurity"
 )
 
-// ICodegurusecurity defines the interface for codegurusecurity
-type ICodegurusecurity interface {
+// IClient defines the interface for codegurusecurity
+type IClient interface {
  Options() Options 
  BatchGetFindings(ctx context.Context, params *BatchGetFindingsInput, optFns ...func(*Options)) (*BatchGetFindingsOutput, error) 
  CreateScan(ctx context.Context, params *CreateScanInput, optFns ...func(*Options)) (*CreateScanOutput, error) 

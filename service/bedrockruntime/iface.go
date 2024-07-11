@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 )
 
-// IBedrockruntime defines the interface for bedrockruntime
-type IBedrockruntime interface {
+// IClient defines the interface for bedrockruntime
+type IClient interface {
  Options() Options 
  ApplyGuardrail(ctx context.Context, params *ApplyGuardrailInput, optFns ...func(*Options)) (*ApplyGuardrailOutput, error) 
  Converse(ctx context.Context, params *ConverseInput, optFns ...func(*Options)) (*ConverseOutput, error) 

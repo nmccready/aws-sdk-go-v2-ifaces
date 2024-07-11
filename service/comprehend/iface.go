@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/comprehend"
 )
 
-// IComprehend defines the interface for comprehend
-type IComprehend interface {
+// IClient defines the interface for comprehend
+type IClient interface {
  Options() Options 
  BatchDetectDominantLanguage(ctx context.Context, params *BatchDetectDominantLanguageInput, optFns ...func(*Options)) (*BatchDetectDominantLanguageOutput, error) 
  BatchDetectEntities(ctx context.Context, params *BatchDetectEntitiesInput, optFns ...func(*Options)) (*BatchDetectEntitiesOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lookoutmetrics"
 )
 
-// ILookoutmetrics defines the interface for lookoutmetrics
-type ILookoutmetrics interface {
+// IClient defines the interface for lookoutmetrics
+type IClient interface {
  Options() Options 
  ActivateAnomalyDetector(ctx context.Context, params *ActivateAnomalyDetectorInput, optFns ...func(*Options)) (*ActivateAnomalyDetectorOutput, error) 
  BackTestAnomalyDetector(ctx context.Context, params *BackTestAnomalyDetectorInput, optFns ...func(*Options)) (*BackTestAnomalyDetectorOutput, error) 

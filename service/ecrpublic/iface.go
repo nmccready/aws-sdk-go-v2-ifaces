@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ecrpublic"
 )
 
-// IEcrpublic defines the interface for ecrpublic
-type IEcrpublic interface {
+// IClient defines the interface for ecrpublic
+type IClient interface {
  Options() Options 
  BatchCheckLayerAvailability(ctx context.Context, params *BatchCheckLayerAvailabilityInput, optFns ...func(*Options)) (*BatchCheckLayerAvailabilityOutput, error) 
  BatchDeleteImage(ctx context.Context, params *BatchDeleteImageInput, optFns ...func(*Options)) (*BatchDeleteImageOutput, error) 

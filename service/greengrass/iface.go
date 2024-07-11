@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/greengrass"
 )
 
-// IGreengrass defines the interface for greengrass
-type IGreengrass interface {
+// IClient defines the interface for greengrass
+type IClient interface {
  Options() Options 
  AssociateRoleToGroup(ctx context.Context, params *AssociateRoleToGroupInput, optFns ...func(*Options)) (*AssociateRoleToGroupOutput, error) 
  AssociateServiceRoleToAccount(ctx context.Context, params *AssociateServiceRoleToAccountInput, optFns ...func(*Options)) (*AssociateServiceRoleToAccountOutput, error) 

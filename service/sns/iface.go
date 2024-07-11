@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sns"
 )
 
-// ISns defines the interface for sns
-type ISns interface {
+// IClient defines the interface for sns
+type IClient interface {
  Options() Options 
  AddPermission(ctx context.Context, params *AddPermissionInput, optFns ...func(*Options)) (*AddPermissionOutput, error) 
  CheckIfPhoneNumberIsOptedOut(ctx context.Context, params *CheckIfPhoneNumberIsOptedOutInput, optFns ...func(*Options)) (*CheckIfPhoneNumberIsOptedOutOutput, error) 

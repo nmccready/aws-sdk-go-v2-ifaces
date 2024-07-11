@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk"
 )
 
-// IElasticbeanstalk defines the interface for elasticbeanstalk
-type IElasticbeanstalk interface {
+// IClient defines the interface for elasticbeanstalk
+type IClient interface {
  Options() Options 
  AbortEnvironmentUpdate(ctx context.Context, params *AbortEnvironmentUpdateInput, optFns ...func(*Options)) (*AbortEnvironmentUpdateOutput, error) 
  ApplyEnvironmentManagedAction(ctx context.Context, params *ApplyEnvironmentManagedActionInput, optFns ...func(*Options)) (*ApplyEnvironmentManagedActionOutput, error) 

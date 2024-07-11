@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/marketplaceagreement"
 )
 
-// IMarketplaceagreement defines the interface for marketplaceagreement
-type IMarketplaceagreement interface {
+// IClient defines the interface for marketplaceagreement
+type IClient interface {
  Options() Options 
  DescribeAgreement(ctx context.Context, params *DescribeAgreementInput, optFns ...func(*Options)) (*DescribeAgreementOutput, error) 
  GetAgreementTerms(ctx context.Context, params *GetAgreementTermsInput, optFns ...func(*Options)) (*GetAgreementTermsOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pipes"
 )
 
-// IPipes defines the interface for pipes
-type IPipes interface {
+// IClient defines the interface for pipes
+type IClient interface {
  Options() Options 
  CreatePipe(ctx context.Context, params *CreatePipeInput, optFns ...func(*Options)) (*CreatePipeOutput, error) 
  DeletePipe(ctx context.Context, params *DeletePipeInput, optFns ...func(*Options)) (*DeletePipeOutput, error) 

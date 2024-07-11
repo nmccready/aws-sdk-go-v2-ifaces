@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/workspacesthinclient"
 )
 
-// IWorkspacesthinclient defines the interface for workspacesthinclient
-type IWorkspacesthinclient interface {
+// IClient defines the interface for workspacesthinclient
+type IClient interface {
  Options() Options 
  CreateEnvironment(ctx context.Context, params *CreateEnvironmentInput, optFns ...func(*Options)) (*CreateEnvironmentOutput, error) 
  DeleteDevice(ctx context.Context, params *DeleteDeviceInput, optFns ...func(*Options)) (*DeleteDeviceOutput, error) 

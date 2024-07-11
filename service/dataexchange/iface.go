@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/dataexchange"
 )
 
-// IDataexchange defines the interface for dataexchange
-type IDataexchange interface {
+// IClient defines the interface for dataexchange
+type IClient interface {
  Options() Options 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 
  CreateDataSet(ctx context.Context, params *CreateDataSetInput, optFns ...func(*Options)) (*CreateDataSetOutput, error) 

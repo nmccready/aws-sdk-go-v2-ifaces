@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/wafv2"
 )
 
-// IWafv2 defines the interface for wafv2
-type IWafv2 interface {
+// IClient defines the interface for wafv2
+type IClient interface {
  Options() Options 
  AssociateWebACL(ctx context.Context, params *AssociateWebACLInput, optFns ...func(*Options)) (*AssociateWebACLOutput, error) 
  CheckCapacity(ctx context.Context, params *CheckCapacityInput, optFns ...func(*Options)) (*CheckCapacityOutput, error) 

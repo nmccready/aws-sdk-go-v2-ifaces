@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/taxsettings"
 )
 
-// ITaxsettings defines the interface for taxsettings
-type ITaxsettings interface {
+// IClient defines the interface for taxsettings
+type IClient interface {
  Options() Options 
  BatchDeleteTaxRegistration(ctx context.Context, params *BatchDeleteTaxRegistrationInput, optFns ...func(*Options)) (*BatchDeleteTaxRegistrationOutput, error) 
  BatchPutTaxRegistration(ctx context.Context, params *BatchPutTaxRegistrationInput, optFns ...func(*Options)) (*BatchPutTaxRegistrationOutput, error) 

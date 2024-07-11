@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/batch"
 )
 
-// IBatch defines the interface for batch
-type IBatch interface {
+// IClient defines the interface for batch
+type IClient interface {
  Options() Options 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 
  CreateComputeEnvironment(ctx context.Context, params *CreateComputeEnvironmentInput, optFns ...func(*Options)) (*CreateComputeEnvironmentOutput, error) 

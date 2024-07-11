@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pinpointsmsvoicev2"
 )
 
-// IPinpointsmsvoicev2 defines the interface for pinpointsmsvoicev2
-type IPinpointsmsvoicev2 interface {
+// IClient defines the interface for pinpointsmsvoicev2
+type IClient interface {
  Options() Options 
  AssociateOriginationIdentity(ctx context.Context, params *AssociateOriginationIdentityInput, optFns ...func(*Options)) (*AssociateOriginationIdentityOutput, error) 
  AssociateProtectConfiguration(ctx context.Context, params *AssociateProtectConfigurationInput, optFns ...func(*Options)) (*AssociateProtectConfigurationOutput, error) 

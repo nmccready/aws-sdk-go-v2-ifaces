@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iot1clickprojects"
 )
 
-// IIot1clickprojects defines the interface for iot1clickprojects
-type IIot1clickprojects interface {
+// IClient defines the interface for iot1clickprojects
+type IClient interface {
  Options() Options 
  AssociateDeviceWithPlacement(ctx context.Context, params *AssociateDeviceWithPlacementInput, optFns ...func(*Options)) (*AssociateDeviceWithPlacementOutput, error) 
  CreatePlacement(ctx context.Context, params *CreatePlacementInput, optFns ...func(*Options)) (*CreatePlacementOutput, error) 

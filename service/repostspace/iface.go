@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/repostspace"
 )
 
-// IRepostspace defines the interface for repostspace
-type IRepostspace interface {
+// IClient defines the interface for repostspace
+type IClient interface {
  Options() Options 
  CreateSpace(ctx context.Context, params *CreateSpaceInput, optFns ...func(*Options)) (*CreateSpaceOutput, error) 
  DeleteSpace(ctx context.Context, params *DeleteSpaceInput, optFns ...func(*Options)) (*DeleteSpaceOutput, error) 

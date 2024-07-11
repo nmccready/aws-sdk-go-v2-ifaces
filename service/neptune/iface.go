@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/neptune"
 )
 
-// INeptune defines the interface for neptune
-type INeptune interface {
+// IClient defines the interface for neptune
+type IClient interface {
  Options() Options 
  AddRoleToDBCluster(ctx context.Context, params *AddRoleToDBClusterInput, optFns ...func(*Options)) (*AddRoleToDBClusterOutput, error) 
  AddSourceIdentifierToSubscription(ctx context.Context, params *AddSourceIdentifierToSubscriptionInput, optFns ...func(*Options)) (*AddSourceIdentifierToSubscriptionOutput, error) 

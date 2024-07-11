@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/route53recoverycontrolconfig"
 )
 
-// IRoute53recoverycontrolconfig defines the interface for route53recoverycontrolconfig
-type IRoute53recoverycontrolconfig interface {
+// IClient defines the interface for route53recoverycontrolconfig
+type IClient interface {
  Options() Options 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
  CreateControlPanel(ctx context.Context, params *CreateControlPanelInput, optFns ...func(*Options)) (*CreateControlPanelOutput, error) 

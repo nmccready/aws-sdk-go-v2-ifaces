@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codebuild"
 )
 
-// ICodebuild defines the interface for codebuild
-type ICodebuild interface {
+// IClient defines the interface for codebuild
+type IClient interface {
  Options() Options 
  BatchDeleteBuilds(ctx context.Context, params *BatchDeleteBuildsInput, optFns ...func(*Options)) (*BatchDeleteBuildsOutput, error) 
  BatchGetBuildBatches(ctx context.Context, params *BatchGetBuildBatchesInput, optFns ...func(*Options)) (*BatchGetBuildBatchesOutput, error) 

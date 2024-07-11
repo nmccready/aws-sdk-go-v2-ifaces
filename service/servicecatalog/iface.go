@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/servicecatalog"
 )
 
-// IServicecatalog defines the interface for servicecatalog
-type IServicecatalog interface {
+// IClient defines the interface for servicecatalog
+type IClient interface {
  Options() Options 
  AcceptPortfolioShare(ctx context.Context, params *AcceptPortfolioShareInput, optFns ...func(*Options)) (*AcceptPortfolioShareOutput, error) 
  AssociateBudgetWithResource(ctx context.Context, params *AssociateBudgetWithResourceInput, optFns ...func(*Options)) (*AssociateBudgetWithResourceOutput, error) 

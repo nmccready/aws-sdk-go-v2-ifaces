@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloud9"
 )
 
-// ICloud9 defines the interface for cloud9
-type ICloud9 interface {
+// IClient defines the interface for cloud9
+type IClient interface {
  Options() Options 
  CreateEnvironmentEC2(ctx context.Context, params *CreateEnvironmentEC2Input, optFns ...func(*Options)) (*CreateEnvironmentEC2Output, error) 
  CreateEnvironmentMembership(ctx context.Context, params *CreateEnvironmentMembershipInput, optFns ...func(*Options)) (*CreateEnvironmentMembershipOutput, error) 

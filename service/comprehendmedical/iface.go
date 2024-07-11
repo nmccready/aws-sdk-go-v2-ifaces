@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/comprehendmedical"
 )
 
-// IComprehendmedical defines the interface for comprehendmedical
-type IComprehendmedical interface {
+// IClient defines the interface for comprehendmedical
+type IClient interface {
  Options() Options 
  DescribeEntitiesDetectionV2Job(ctx context.Context, params *DescribeEntitiesDetectionV2JobInput, optFns ...func(*Options)) (*DescribeEntitiesDetectionV2JobOutput, error) 
  DescribeICD10CMInferenceJob(ctx context.Context, params *DescribeICD10CMInferenceJobInput, optFns ...func(*Options)) (*DescribeICD10CMInferenceJobOutput, error) 

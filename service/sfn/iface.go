@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sfn"
 )
 
-// ISfn defines the interface for sfn
-type ISfn interface {
+// IClient defines the interface for sfn
+type IClient interface {
  Options() Options 
  CreateActivity(ctx context.Context, params *CreateActivityInput, optFns ...func(*Options)) (*CreateActivityOutput, error) 
  CreateStateMachine(ctx context.Context, params *CreateStateMachineInput, optFns ...func(*Options)) (*CreateStateMachineOutput, error) 

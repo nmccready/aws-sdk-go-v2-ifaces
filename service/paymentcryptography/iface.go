@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/paymentcryptography"
 )
 
-// IPaymentcryptography defines the interface for paymentcryptography
-type IPaymentcryptography interface {
+// IClient defines the interface for paymentcryptography
+type IClient interface {
  Options() Options 
  CreateAlias(ctx context.Context, params *CreateAliasInput, optFns ...func(*Options)) (*CreateAliasOutput, error) 
  CreateKey(ctx context.Context, params *CreateKeyInput, optFns ...func(*Options)) (*CreateKeyOutput, error) 

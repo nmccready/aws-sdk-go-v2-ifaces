@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codedeploy"
 )
 
-// ICodedeploy defines the interface for codedeploy
-type ICodedeploy interface {
+// IClient defines the interface for codedeploy
+type IClient interface {
  Options() Options 
  AddTagsToOnPremisesInstances(ctx context.Context, params *AddTagsToOnPremisesInstancesInput, optFns ...func(*Options)) (*AddTagsToOnPremisesInstancesOutput, error) 
  BatchGetApplicationRevisions(ctx context.Context, params *BatchGetApplicationRevisionsInput, optFns ...func(*Options)) (*BatchGetApplicationRevisionsOutput, error) 

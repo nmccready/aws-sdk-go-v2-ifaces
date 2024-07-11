@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/fms"
 )
 
-// IFms defines the interface for fms
-type IFms interface {
+// IClient defines the interface for fms
+type IClient interface {
  Options() Options 
  AssociateAdminAccount(ctx context.Context, params *AssociateAdminAccountInput, optFns ...func(*Options)) (*AssociateAdminAccountOutput, error) 
  AssociateThirdPartyFirewall(ctx context.Context, params *AssociateThirdPartyFirewallInput, optFns ...func(*Options)) (*AssociateThirdPartyFirewallOutput, error) 

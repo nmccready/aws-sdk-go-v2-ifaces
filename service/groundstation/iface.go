@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/groundstation"
 )
 
-// IGroundstation defines the interface for groundstation
-type IGroundstation interface {
+// IClient defines the interface for groundstation
+type IClient interface {
  Options() Options 
  CancelContact(ctx context.Context, params *CancelContactInput, optFns ...func(*Options)) (*CancelContactOutput, error) 
  CreateConfig(ctx context.Context, params *CreateConfigInput, optFns ...func(*Options)) (*CreateConfigOutput, error) 

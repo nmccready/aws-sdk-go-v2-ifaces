@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/neptunedata"
 )
 
-// INeptunedata defines the interface for neptunedata
-type INeptunedata interface {
+// IClient defines the interface for neptunedata
+type IClient interface {
  Options() Options 
  CancelGremlinQuery(ctx context.Context, params *CancelGremlinQueryInput, optFns ...func(*Options)) (*CancelGremlinQueryOutput, error) 
  CancelLoaderJob(ctx context.Context, params *CancelLoaderJobInput, optFns ...func(*Options)) (*CancelLoaderJobOutput, error) 

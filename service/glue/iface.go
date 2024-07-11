@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/glue"
 )
 
-// IGlue defines the interface for glue
-type IGlue interface {
+// IClient defines the interface for glue
+type IClient interface {
  Options() Options 
  BatchCreatePartition(ctx context.Context, params *BatchCreatePartitionInput, optFns ...func(*Options)) (*BatchCreatePartitionOutput, error) 
  BatchDeleteConnection(ctx context.Context, params *BatchDeleteConnectionInput, optFns ...func(*Options)) (*BatchDeleteConnectionOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/s3"
 )
 
-// IS3 defines the interface for s3
-type IS3 interface {
+// IClient defines the interface for s3
+type IClient interface {
  Options() Options 
  AbortMultipartUpload(ctx context.Context, params *AbortMultipartUploadInput, optFns ...func(*Options)) (*AbortMultipartUploadOutput, error) 
  CompleteMultipartUpload(ctx context.Context, params *CompleteMultipartUploadInput, optFns ...func(*Options)) (*CompleteMultipartUploadOutput, error) 

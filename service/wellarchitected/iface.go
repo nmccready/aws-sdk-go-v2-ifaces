@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/wellarchitected"
 )
 
-// IWellarchitected defines the interface for wellarchitected
-type IWellarchitected interface {
+// IClient defines the interface for wellarchitected
+type IClient interface {
  Options() Options 
  AssociateLenses(ctx context.Context, params *AssociateLensesInput, optFns ...func(*Options)) (*AssociateLensesOutput, error) 
  AssociateProfiles(ctx context.Context, params *AssociateProfilesInput, optFns ...func(*Options)) (*AssociateProfilesOutput, error) 

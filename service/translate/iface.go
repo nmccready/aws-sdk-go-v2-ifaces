@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/translate"
 )
 
-// ITranslate defines the interface for translate
-type ITranslate interface {
+// IClient defines the interface for translate
+type IClient interface {
  Options() Options 
  CreateParallelData(ctx context.Context, params *CreateParallelDataInput, optFns ...func(*Options)) (*CreateParallelDataOutput, error) 
  DeleteParallelData(ctx context.Context, params *DeleteParallelDataInput, optFns ...func(*Options)) (*DeleteParallelDataOutput, error) 

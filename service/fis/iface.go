@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/fis"
 )
 
-// IFis defines the interface for fis
-type IFis interface {
+// IClient defines the interface for fis
+type IClient interface {
  Options() Options 
  CreateExperimentTemplate(ctx context.Context, params *CreateExperimentTemplateInput, optFns ...func(*Options)) (*CreateExperimentTemplateOutput, error) 
  CreateTargetAccountConfiguration(ctx context.Context, params *CreateTargetAccountConfigurationInput, optFns ...func(*Options)) (*CreateTargetAccountConfigurationOutput, error) 

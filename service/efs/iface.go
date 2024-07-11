@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/efs"
 )
 
-// IEfs defines the interface for efs
-type IEfs interface {
+// IClient defines the interface for efs
+type IClient interface {
  Options() Options 
  CreateAccessPoint(ctx context.Context, params *CreateAccessPointInput, optFns ...func(*Options)) (*CreateAccessPointOutput, error) 
  CreateFileSystem(ctx context.Context, params *CreateFileSystemInput, optFns ...func(*Options)) (*CreateFileSystemOutput, error) 

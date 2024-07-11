@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cleanrooms"
 )
 
-// ICleanrooms defines the interface for cleanrooms
-type ICleanrooms interface {
+// IClient defines the interface for cleanrooms
+type IClient interface {
  Options() Options 
  BatchGetCollaborationAnalysisTemplate(ctx context.Context, params *BatchGetCollaborationAnalysisTemplateInput, optFns ...func(*Options)) (*BatchGetCollaborationAnalysisTemplateOutput, error) 
  BatchGetSchema(ctx context.Context, params *BatchGetSchemaInput, optFns ...func(*Options)) (*BatchGetSchemaOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codeartifact"
 )
 
-// ICodeartifact defines the interface for codeartifact
-type ICodeartifact interface {
+// IClient defines the interface for codeartifact
+type IClient interface {
  Options() Options 
  AssociateExternalConnection(ctx context.Context, params *AssociateExternalConnectionInput, optFns ...func(*Options)) (*AssociateExternalConnectionOutput, error) 
  CopyPackageVersions(ctx context.Context, params *CopyPackageVersionsInput, optFns ...func(*Options)) (*CopyPackageVersionsOutput, error) 

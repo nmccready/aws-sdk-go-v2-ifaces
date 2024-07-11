@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cognitosync"
 )
 
-// ICognitosync defines the interface for cognitosync
-type ICognitosync interface {
+// IClient defines the interface for cognitosync
+type IClient interface {
  Options() Options 
  BulkPublish(ctx context.Context, params *BulkPublishInput, optFns ...func(*Options)) (*BulkPublishOutput, error) 
  DeleteDataset(ctx context.Context, params *DeleteDatasetInput, optFns ...func(*Options)) (*DeleteDatasetOutput, error) 

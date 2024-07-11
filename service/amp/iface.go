@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/amp"
 )
 
-// IAmp defines the interface for amp
-type IAmp interface {
+// IClient defines the interface for amp
+type IClient interface {
  Options() Options 
  CreateAlertManagerDefinition(ctx context.Context, params *CreateAlertManagerDefinitionInput, optFns ...func(*Options)) (*CreateAlertManagerDefinitionOutput, error) 
  CreateLoggingConfiguration(ctx context.Context, params *CreateLoggingConfigurationInput, optFns ...func(*Options)) (*CreateLoggingConfigurationOutput, error) 

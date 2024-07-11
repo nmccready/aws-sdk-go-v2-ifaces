@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/supportapp"
 )
 
-// ISupportapp defines the interface for supportapp
-type ISupportapp interface {
+// IClient defines the interface for supportapp
+type IClient interface {
  Options() Options 
  CreateSlackChannelConfiguration(ctx context.Context, params *CreateSlackChannelConfigurationInput, optFns ...func(*Options)) (*CreateSlackChannelConfigurationOutput, error) 
  DeleteAccountAlias(ctx context.Context, params *DeleteAccountAliasInput, optFns ...func(*Options)) (*DeleteAccountAliasOutput, error) 

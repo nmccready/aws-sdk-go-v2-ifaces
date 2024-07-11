@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/acmpca"
 )
 
-// IAcmpca defines the interface for acmpca
-type IAcmpca interface {
+// IClient defines the interface for acmpca
+type IClient interface {
  Options() Options 
  CreateCertificateAuthority(ctx context.Context, params *CreateCertificateAuthorityInput, optFns ...func(*Options)) (*CreateCertificateAuthorityOutput, error) 
  CreateCertificateAuthorityAuditReport(ctx context.Context, params *CreateCertificateAuthorityAuditReportInput, optFns ...func(*Options)) (*CreateCertificateAuthorityAuditReportOutput, error) 

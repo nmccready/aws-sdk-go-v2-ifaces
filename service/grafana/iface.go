@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/grafana"
 )
 
-// IGrafana defines the interface for grafana
-type IGrafana interface {
+// IClient defines the interface for grafana
+type IClient interface {
  Options() Options 
  AssociateLicense(ctx context.Context, params *AssociateLicenseInput, optFns ...func(*Options)) (*AssociateLicenseOutput, error) 
  CreateWorkspace(ctx context.Context, params *CreateWorkspaceInput, optFns ...func(*Options)) (*CreateWorkspaceOutput, error) 

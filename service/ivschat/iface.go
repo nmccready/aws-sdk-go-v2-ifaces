@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ivschat"
 )
 
-// IIvschat defines the interface for ivschat
-type IIvschat interface {
+// IClient defines the interface for ivschat
+type IClient interface {
  Options() Options 
  CreateChatToken(ctx context.Context, params *CreateChatTokenInput, optFns ...func(*Options)) (*CreateChatTokenOutput, error) 
  CreateLoggingConfiguration(ctx context.Context, params *CreateLoggingConfigurationInput, optFns ...func(*Options)) (*CreateLoggingConfigurationOutput, error) 

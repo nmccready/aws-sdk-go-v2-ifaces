@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediastoredata"
 )
 
-// IMediastoredata defines the interface for mediastoredata
-type IMediastoredata interface {
+// IClient defines the interface for mediastoredata
+type IClient interface {
  Options() Options 
  DeleteObject(ctx context.Context, params *DeleteObjectInput, optFns ...func(*Options)) (*DeleteObjectOutput, error) 
  DescribeObject(ctx context.Context, params *DescribeObjectInput, optFns ...func(*Options)) (*DescribeObjectOutput, error) 

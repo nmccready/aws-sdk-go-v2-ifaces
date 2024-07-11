@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/internetmonitor"
 )
 
-// IInternetmonitor defines the interface for internetmonitor
-type IInternetmonitor interface {
+// IClient defines the interface for internetmonitor
+type IClient interface {
  Options() Options 
  CreateMonitor(ctx context.Context, params *CreateMonitorInput, optFns ...func(*Options)) (*CreateMonitorOutput, error) 
  DeleteMonitor(ctx context.Context, params *DeleteMonitorInput, optFns ...func(*Options)) (*DeleteMonitorOutput, error) 

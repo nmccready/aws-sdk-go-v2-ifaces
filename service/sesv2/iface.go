@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sesv2"
 )
 
-// ISesv2 defines the interface for sesv2
-type ISesv2 interface {
+// IClient defines the interface for sesv2
+type IClient interface {
  Options() Options 
  BatchGetMetricData(ctx context.Context, params *BatchGetMetricDataInput, optFns ...func(*Options)) (*BatchGetMetricDataOutput, error) 
  CancelExportJob(ctx context.Context, params *CancelExportJobInput, optFns ...func(*Options)) (*CancelExportJobOutput, error) 

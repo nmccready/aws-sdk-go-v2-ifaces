@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/arczonalshift"
 )
 
-// IArczonalshift defines the interface for arczonalshift
-type IArczonalshift interface {
+// IClient defines the interface for arczonalshift
+type IClient interface {
  Options() Options 
  CancelZonalShift(ctx context.Context, params *CancelZonalShiftInput, optFns ...func(*Options)) (*CancelZonalShiftOutput, error) 
  CreatePracticeRunConfiguration(ctx context.Context, params *CreatePracticeRunConfigurationInput, optFns ...func(*Options)) (*CreatePracticeRunConfigurationOutput, error) 

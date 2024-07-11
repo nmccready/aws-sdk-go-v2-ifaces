@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/securitylake"
 )
 
-// ISecuritylake defines the interface for securitylake
-type ISecuritylake interface {
+// IClient defines the interface for securitylake
+type IClient interface {
  Options() Options 
  CreateAwsLogSource(ctx context.Context, params *CreateAwsLogSourceInput, optFns ...func(*Options)) (*CreateAwsLogSourceOutput, error) 
  CreateCustomLogSource(ctx context.Context, params *CreateCustomLogSourceInput, optFns ...func(*Options)) (*CreateCustomLogSourceOutput, error) 

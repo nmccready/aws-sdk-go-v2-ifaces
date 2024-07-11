@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/datasync"
 )
 
-// IDatasync defines the interface for datasync
-type IDatasync interface {
+// IClient defines the interface for datasync
+type IClient interface {
  Options() Options 
  AddStorageSystem(ctx context.Context, params *AddStorageSystemInput, optFns ...func(*Options)) (*AddStorageSystemOutput, error) 
  CancelTaskExecution(ctx context.Context, params *CancelTaskExecutionInput, optFns ...func(*Options)) (*CancelTaskExecutionOutput, error) 

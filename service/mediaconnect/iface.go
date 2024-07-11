@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/mediaconnect"
 )
 
-// IMediaconnect defines the interface for mediaconnect
-type IMediaconnect interface {
+// IClient defines the interface for mediaconnect
+type IClient interface {
  Options() Options 
  AddBridgeOutputs(ctx context.Context, params *AddBridgeOutputsInput, optFns ...func(*Options)) (*AddBridgeOutputsOutput, error) 
  AddBridgeSources(ctx context.Context, params *AddBridgeSourcesInput, optFns ...func(*Options)) (*AddBridgeSourcesOutput, error) 

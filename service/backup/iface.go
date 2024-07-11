@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/backup"
 )
 
-// IBackup defines the interface for backup
-type IBackup interface {
+// IClient defines the interface for backup
+type IClient interface {
  Options() Options 
  CancelLegalHold(ctx context.Context, params *CancelLegalHoldInput, optFns ...func(*Options)) (*CancelLegalHoldOutput, error) 
  CreateBackupPlan(ctx context.Context, params *CreateBackupPlanInput, optFns ...func(*Options)) (*CreateBackupPlanOutput, error) 

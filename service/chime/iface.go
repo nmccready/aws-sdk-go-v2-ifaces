@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chime"
 )
 
-// IChime defines the interface for chime
-type IChime interface {
+// IClient defines the interface for chime
+type IClient interface {
  Options() Options 
  AssociatePhoneNumberWithUser(ctx context.Context, params *AssociatePhoneNumberWithUserInput, optFns ...func(*Options)) (*AssociatePhoneNumberWithUserOutput, error) 
  AssociatePhoneNumbersWithVoiceConnector(ctx context.Context, params *AssociatePhoneNumbersWithVoiceConnectorInput, optFns ...func(*Options)) (*AssociatePhoneNumbersWithVoiceConnectorOutput, error) 

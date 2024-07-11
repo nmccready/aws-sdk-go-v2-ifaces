@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/kms"
 )
 
-// IKms defines the interface for kms
-type IKms interface {
+// IClient defines the interface for kms
+type IClient interface {
  Options() Options 
  CancelKeyDeletion(ctx context.Context, params *CancelKeyDeletionInput, optFns ...func(*Options)) (*CancelKeyDeletionOutput, error) 
  ConnectCustomKeyStore(ctx context.Context, params *ConnectCustomKeyStoreInput, optFns ...func(*Options)) (*ConnectCustomKeyStoreOutput, error) 

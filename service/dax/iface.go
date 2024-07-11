@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/dax"
 )
 
-// IDax defines the interface for dax
-type IDax interface {
+// IClient defines the interface for dax
+type IClient interface {
  Options() Options 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
  CreateParameterGroup(ctx context.Context, params *CreateParameterGroupInput, optFns ...func(*Options)) (*CreateParameterGroupOutput, error) 

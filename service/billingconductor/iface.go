@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/billingconductor"
 )
 
-// IBillingconductor defines the interface for billingconductor
-type IBillingconductor interface {
+// IClient defines the interface for billingconductor
+type IClient interface {
  Options() Options 
  AssociateAccounts(ctx context.Context, params *AssociateAccountsInput, optFns ...func(*Options)) (*AssociateAccountsOutput, error) 
  AssociatePricingRules(ctx context.Context, params *AssociatePricingRulesInput, optFns ...func(*Options)) (*AssociatePricingRulesOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/dynamodbstreams"
 )
 
-// IDynamodbstreams defines the interface for dynamodbstreams
-type IDynamodbstreams interface {
+// IClient defines the interface for dynamodbstreams
+type IClient interface {
  Options() Options 
  DescribeStream(ctx context.Context, params *DescribeStreamInput, optFns ...func(*Options)) (*DescribeStreamOutput, error) 
  GetRecords(ctx context.Context, params *GetRecordsInput, optFns ...func(*Options)) (*GetRecordsOutput, error) 

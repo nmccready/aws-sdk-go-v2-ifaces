@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/neptunegraph"
 )
 
-// INeptunegraph defines the interface for neptunegraph
-type INeptunegraph interface {
+// IClient defines the interface for neptunegraph
+type IClient interface {
  Options() Options 
  CancelImportTask(ctx context.Context, params *CancelImportTaskInput, optFns ...func(*Options)) (*CancelImportTaskOutput, error) 
  CancelQuery(ctx context.Context, params *CancelQueryInput, optFns ...func(*Options)) (*CancelQueryOutput, error) 

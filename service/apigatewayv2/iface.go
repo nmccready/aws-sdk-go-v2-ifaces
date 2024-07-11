@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/apigatewayv2"
 )
 
-// IApigatewayv2 defines the interface for apigatewayv2
-type IApigatewayv2 interface {
+// IClient defines the interface for apigatewayv2
+type IClient interface {
  Options() Options 
  CreateApi(ctx context.Context, params *CreateApiInput, optFns ...func(*Options)) (*CreateApiOutput, error) 
  CreateApiMapping(ctx context.Context, params *CreateApiMappingInput, optFns ...func(*Options)) (*CreateApiMappingOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/privatenetworks"
 )
 
-// IPrivatenetworks defines the interface for privatenetworks
-type IPrivatenetworks interface {
+// IClient defines the interface for privatenetworks
+type IClient interface {
  Options() Options 
  AcknowledgeOrderReceipt(ctx context.Context, params *AcknowledgeOrderReceiptInput, optFns ...func(*Options)) (*AcknowledgeOrderReceiptOutput, error) 
  ActivateDeviceIdentifier(ctx context.Context, params *ActivateDeviceIdentifierInput, optFns ...func(*Options)) (*ActivateDeviceIdentifierOutput, error) 

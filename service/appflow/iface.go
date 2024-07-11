@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/appflow"
 )
 
-// IAppflow defines the interface for appflow
-type IAppflow interface {
+// IClient defines the interface for appflow
+type IClient interface {
  Options() Options 
  CancelFlowExecutions(ctx context.Context, params *CancelFlowExecutionsInput, optFns ...func(*Options)) (*CancelFlowExecutionsOutput, error) 
  CreateConnectorProfile(ctx context.Context, params *CreateConnectorProfileInput, optFns ...func(*Options)) (*CreateConnectorProfileOutput, error) 

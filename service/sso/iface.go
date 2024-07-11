@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/sso"
 )
 
-// ISso defines the interface for sso
-type ISso interface {
+// IClient defines the interface for sso
+type IClient interface {
  Options() Options 
  GetRoleCredentials(ctx context.Context, params *GetRoleCredentialsInput, optFns ...func(*Options)) (*GetRoleCredentialsOutput, error) 
  ListAccountRoles(ctx context.Context, params *ListAccountRolesInput, optFns ...func(*Options)) (*ListAccountRolesOutput, error) 

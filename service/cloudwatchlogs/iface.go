@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs"
 )
 
-// ICloudwatchlogs defines the interface for cloudwatchlogs
-type ICloudwatchlogs interface {
+// IClient defines the interface for cloudwatchlogs
+type IClient interface {
  Options() Options 
  AssociateKmsKey(ctx context.Context, params *AssociateKmsKeyInput, optFns ...func(*Options)) (*AssociateKmsKeyOutput, error) 
  CancelExportTask(ctx context.Context, params *CancelExportTaskInput, optFns ...func(*Options)) (*CancelExportTaskOutput, error) 

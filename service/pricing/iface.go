@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/pricing"
 )
 
-// IPricing defines the interface for pricing
-type IPricing interface {
+// IClient defines the interface for pricing
+type IClient interface {
  Options() Options 
  DescribeServices(ctx context.Context, params *DescribeServicesInput, optFns ...func(*Options)) (*DescribeServicesOutput, error) 
  GetAttributeValues(ctx context.Context, params *GetAttributeValuesInput, optFns ...func(*Options)) (*GetAttributeValuesOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/inspector"
 )
 
-// IInspector defines the interface for inspector
-type IInspector interface {
+// IClient defines the interface for inspector
+type IClient interface {
  Options() Options 
  AddAttributesToFindings(ctx context.Context, params *AddAttributesToFindingsInput, optFns ...func(*Options)) (*AddAttributesToFindingsOutput, error) 
  CreateAssessmentTarget(ctx context.Context, params *CreateAssessmentTargetInput, optFns ...func(*Options)) (*CreateAssessmentTargetOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/deadline"
 )
 
-// IDeadline defines the interface for deadline
-type IDeadline interface {
+// IClient defines the interface for deadline
+type IClient interface {
  Options() Options 
  AssociateMemberToFarm(ctx context.Context, params *AssociateMemberToFarmInput, optFns ...func(*Options)) (*AssociateMemberToFarmOutput, error) 
  AssociateMemberToFleet(ctx context.Context, params *AssociateMemberToFleetInput, optFns ...func(*Options)) (*AssociateMemberToFleetOutput, error) 

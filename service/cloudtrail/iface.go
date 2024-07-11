@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/cloudtrail"
 )
 
-// ICloudtrail defines the interface for cloudtrail
-type ICloudtrail interface {
+// IClient defines the interface for cloudtrail
+type IClient interface {
  Options() Options 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 
  CancelQuery(ctx context.Context, params *CancelQueryInput, optFns ...func(*Options)) (*CancelQueryOutput, error) 

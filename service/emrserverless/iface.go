@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/emrserverless"
 )
 
-// IEmrserverless defines the interface for emrserverless
-type IEmrserverless interface {
+// IClient defines the interface for emrserverless
+type IClient interface {
  Options() Options 
  CancelJobRun(ctx context.Context, params *CancelJobRunInput, optFns ...func(*Options)) (*CancelJobRunOutput, error) 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 

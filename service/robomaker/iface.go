@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/robomaker"
 )
 
-// IRobomaker defines the interface for robomaker
-type IRobomaker interface {
+// IClient defines the interface for robomaker
+type IClient interface {
  Options() Options 
  BatchDeleteWorlds(ctx context.Context, params *BatchDeleteWorldsInput, optFns ...func(*Options)) (*BatchDeleteWorldsOutput, error) 
  BatchDescribeSimulationJob(ctx context.Context, params *BatchDescribeSimulationJobInput, optFns ...func(*Options)) (*BatchDescribeSimulationJobOutput, error) 

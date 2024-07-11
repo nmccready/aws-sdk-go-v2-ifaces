@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/rdsdata"
 )
 
-// IRdsdata defines the interface for rdsdata
-type IRdsdata interface {
+// IClient defines the interface for rdsdata
+type IClient interface {
  Options() Options 
  BatchExecuteStatement(ctx context.Context, params *BatchExecuteStatementInput, optFns ...func(*Options)) (*BatchExecuteStatementOutput, error) 
  BeginTransaction(ctx context.Context, params *BeginTransactionInput, optFns ...func(*Options)) (*BeginTransactionOutput, error) 

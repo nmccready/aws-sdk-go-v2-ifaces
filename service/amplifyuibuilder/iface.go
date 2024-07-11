@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/amplifyuibuilder"
 )
 
-// IAmplifyuibuilder defines the interface for amplifyuibuilder
-type IAmplifyuibuilder interface {
+// IClient defines the interface for amplifyuibuilder
+type IClient interface {
  Options() Options 
  CreateComponent(ctx context.Context, params *CreateComponentInput, optFns ...func(*Options)) (*CreateComponentOutput, error) 
  CreateForm(ctx context.Context, params *CreateFormInput, optFns ...func(*Options)) (*CreateFormOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/lambda"
 )
 
-// ILambda defines the interface for lambda
-type ILambda interface {
+// IClient defines the interface for lambda
+type IClient interface {
  Options() Options 
  AddLayerVersionPermission(ctx context.Context, params *AddLayerVersionPermissionInput, optFns ...func(*Options)) (*AddLayerVersionPermissionOutput, error) 
  AddPermission(ctx context.Context, params *AddPermissionInput, optFns ...func(*Options)) (*AddPermissionOutput, error) 

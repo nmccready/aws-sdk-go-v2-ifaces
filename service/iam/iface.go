@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/iam"
 )
 
-// IIam defines the interface for iam
-type IIam interface {
+// IClient defines the interface for iam
+type IClient interface {
  Options() Options 
  AddClientIDToOpenIDConnectProvider(ctx context.Context, params *AddClientIDToOpenIDConnectProviderInput, optFns ...func(*Options)) (*AddClientIDToOpenIDConnectProviderOutput, error) 
  AddRoleToInstanceProfile(ctx context.Context, params *AddRoleToInstanceProfileInput, optFns ...func(*Options)) (*AddRoleToInstanceProfileOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/ses"
 )
 
-// ISes defines the interface for ses
-type ISes interface {
+// IClient defines the interface for ses
+type IClient interface {
  Options() Options 
  CloneReceiptRuleSet(ctx context.Context, params *CloneReceiptRuleSetInput, optFns ...func(*Options)) (*CloneReceiptRuleSetOutput, error) 
  CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 

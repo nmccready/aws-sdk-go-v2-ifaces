@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/autoscalingplans"
 )
 
-// IAutoscalingplans defines the interface for autoscalingplans
-type IAutoscalingplans interface {
+// IClient defines the interface for autoscalingplans
+type IClient interface {
  Options() Options 
  CreateScalingPlan(ctx context.Context, params *CreateScalingPlanInput, optFns ...func(*Options)) (*CreateScalingPlanOutput, error) 
  DeleteScalingPlan(ctx context.Context, params *DeleteScalingPlanInput, optFns ...func(*Options)) (*DeleteScalingPlanOutput, error) 

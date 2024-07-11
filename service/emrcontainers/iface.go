@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/emrcontainers"
 )
 
-// IEmrcontainers defines the interface for emrcontainers
-type IEmrcontainers interface {
+// IClient defines the interface for emrcontainers
+type IClient interface {
  Options() Options 
  CancelJobRun(ctx context.Context, params *CancelJobRunInput, optFns ...func(*Options)) (*CancelJobRunOutput, error) 
  CreateJobTemplate(ctx context.Context, params *CreateJobTemplateInput, optFns ...func(*Options)) (*CreateJobTemplateOutput, error) 

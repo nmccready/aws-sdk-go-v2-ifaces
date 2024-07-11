@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/codestarnotifications"
 )
 
-// ICodestarnotifications defines the interface for codestarnotifications
-type ICodestarnotifications interface {
+// IClient defines the interface for codestarnotifications
+type IClient interface {
  Options() Options 
  CreateNotificationRule(ctx context.Context, params *CreateNotificationRuleInput, optFns ...func(*Options)) (*CreateNotificationRuleOutput, error) 
  DeleteNotificationRule(ctx context.Context, params *DeleteNotificationRuleInput, optFns ...func(*Options)) (*DeleteNotificationRuleOutput, error) 

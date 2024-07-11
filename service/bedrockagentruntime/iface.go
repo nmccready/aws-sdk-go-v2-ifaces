@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime"
 )
 
-// IBedrockagentruntime defines the interface for bedrockagentruntime
-type IBedrockagentruntime interface {
+// IClient defines the interface for bedrockagentruntime
+type IClient interface {
  Options() Options 
  DeleteAgentMemory(ctx context.Context, params *DeleteAgentMemoryInput, optFns ...func(*Options)) (*DeleteAgentMemoryOutput, error) 
  GetAgentMemory(ctx context.Context, params *GetAgentMemoryInput, optFns ...func(*Options)) (*GetAgentMemoryOutput, error) 

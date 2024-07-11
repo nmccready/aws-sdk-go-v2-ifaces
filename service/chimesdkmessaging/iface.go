@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chimesdkmessaging"
 )
 
-// IChimesdkmessaging defines the interface for chimesdkmessaging
-type IChimesdkmessaging interface {
+// IClient defines the interface for chimesdkmessaging
+type IClient interface {
  Options() Options 
  AssociateChannelFlow(ctx context.Context, params *AssociateChannelFlowInput, optFns ...func(*Options)) (*AssociateChannelFlowOutput, error) 
  BatchCreateChannelMembership(ctx context.Context, params *BatchCreateChannelMembershipInput, optFns ...func(*Options)) (*BatchCreateChannelMembershipOutput, error) 

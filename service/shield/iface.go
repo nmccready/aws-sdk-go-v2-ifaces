@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/shield"
 )
 
-// IShield defines the interface for shield
-type IShield interface {
+// IClient defines the interface for shield
+type IClient interface {
  Options() Options 
  AssociateDRTLogBucket(ctx context.Context, params *AssociateDRTLogBucketInput, optFns ...func(*Options)) (*AssociateDRTLogBucketOutput, error) 
  AssociateDRTRole(ctx context.Context, params *AssociateDRTRoleInput, optFns ...func(*Options)) (*AssociateDRTRoleOutput, error) 

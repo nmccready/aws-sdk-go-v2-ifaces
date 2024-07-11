@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/globalaccelerator"
 )
 
-// IGlobalaccelerator defines the interface for globalaccelerator
-type IGlobalaccelerator interface {
+// IClient defines the interface for globalaccelerator
+type IClient interface {
  Options() Options 
  AddCustomRoutingEndpoints(ctx context.Context, params *AddCustomRoutingEndpointsInput, optFns ...func(*Options)) (*AddCustomRoutingEndpointsOutput, error) 
  AddEndpoints(ctx context.Context, params *AddEndpointsInput, optFns ...func(*Options)) (*AddEndpointsOutput, error) 

@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/firehose"
 )
 
-// IFirehose defines the interface for firehose
-type IFirehose interface {
+// IClient defines the interface for firehose
+type IClient interface {
  Options() Options 
  CreateDeliveryStream(ctx context.Context, params *CreateDeliveryStreamInput, optFns ...func(*Options)) (*CreateDeliveryStreamOutput, error) 
  DeleteDeliveryStream(ctx context.Context, params *DeleteDeliveryStreamInput, optFns ...func(*Options)) (*DeleteDeliveryStreamOutput, error) 

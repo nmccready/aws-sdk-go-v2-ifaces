@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/migrationhubstrategy"
 )
 
-// IMigrationhubstrategy defines the interface for migrationhubstrategy
-type IMigrationhubstrategy interface {
+// IClient defines the interface for migrationhubstrategy
+type IClient interface {
  Options() Options 
  GetApplicationComponentDetails(ctx context.Context, params *GetApplicationComponentDetailsInput, optFns ...func(*Options)) (*GetApplicationComponentDetailsOutput, error) 
  GetApplicationComponentStrategies(ctx context.Context, params *GetApplicationComponentStrategiesInput, optFns ...func(*Options)) (*GetApplicationComponentStrategiesOutput, error) 

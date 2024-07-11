@@ -5,8 +5,8 @@ import (
     "github.com/aws/aws-sdk-go-v2/service/chimesdkmeetings"
 )
 
-// IChimesdkmeetings defines the interface for chimesdkmeetings
-type IChimesdkmeetings interface {
+// IClient defines the interface for chimesdkmeetings
+type IClient interface {
  Options() Options 
  BatchCreateAttendee(ctx context.Context, params *BatchCreateAttendeeInput, optFns ...func(*Options)) (*BatchCreateAttendeeOutput, error) 
  BatchUpdateAttendeeCapabilitiesExcept(ctx context.Context, params *BatchUpdateAttendeeCapabilitiesExceptInput, optFns ...func(*Options)) (*BatchUpdateAttendeeCapabilitiesExceptOutput, error) 
