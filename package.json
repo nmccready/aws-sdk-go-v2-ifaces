@@ -7,9 +7,9 @@
   "scripts": {
     "clone": "./scripts/git_clone_aws-sdk.sh",
     "gen_ifaces": "./scripts/gen_ifaces.sh",
-    "sync": "npm run clone && npm run gen_ifaces",
     "lint": "golangci-lint run --fix",
     "prepare": "go mod tidy -e && go mod vendor && sort-package-json",
+    "sync": "npm run clone && npm run gen_ifaces",
     "test": "npm run test:go",
     "test:go": "go test ./aws/..."
   },
