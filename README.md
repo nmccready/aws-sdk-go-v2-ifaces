@@ -4,6 +4,13 @@ To provide a more idiomatic interface to the AWS SDK for Go v2 since AWS refuses
 
 Eventually this will include mocks as well via mockery.
 
+## Dependencies
+
+- Node.js 20.x (use nvm or [proto](https://moonrepo.dev/proto))
+- npm = 8.X
+- Go >= 1.20 ([proto](https://moonrepo.dev/proto))
+- go mockery `go install github.com/vektra/mockery/v2@v2.43.2`
+
 ## Local Development
 
 - npm i (installs node and go dependencies)

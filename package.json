@@ -8,10 +8,10 @@
     "clone": "./scripts/git_clone_aws-sdk.sh",
     "gen_ifaces": "./scripts/gen_ifaces.sh",
     "lint": "golangci-lint run --fix",
-    "prepare": "go mod tidy -e && go mod vendor && sort-package-json",
+    "prepare": "npm run sync && go mod tidy -e && go install github.com/vektra/mockery/v2@v2.39.2 && go mod vendor && sort-package-json",
     "sync": "npm run clone && npm run gen_ifaces",
-    "test": "npm run test:go",
-    "test:go": "go test ./aws/..."
+    "test": "npm run sync && npm run test:go",
+    "test:go": "go test ./service/..."
   },
   "devDependencies": {
     "commit-and-tag-version": "12",
