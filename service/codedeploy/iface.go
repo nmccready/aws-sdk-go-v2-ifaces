@@ -1,0 +1,58 @@
+
+package codedeploy
+
+import (
+    "github.com/aws/aws-sdk-go-v2/service/codedeploy"
+)
+
+// ICodedeploy defines the interface for codedeploy
+type ICodedeploy interface {
+ Options() Options 
+ AddTagsToOnPremisesInstances(ctx context.Context, params *AddTagsToOnPremisesInstancesInput, optFns ...func(*Options)) (*AddTagsToOnPremisesInstancesOutput, error) 
+ BatchGetApplicationRevisions(ctx context.Context, params *BatchGetApplicationRevisionsInput, optFns ...func(*Options)) (*BatchGetApplicationRevisionsOutput, error) 
+ BatchGetApplications(ctx context.Context, params *BatchGetApplicationsInput, optFns ...func(*Options)) (*BatchGetApplicationsOutput, error) 
+ BatchGetDeploymentGroups(ctx context.Context, params *BatchGetDeploymentGroupsInput, optFns ...func(*Options)) (*BatchGetDeploymentGroupsOutput, error) 
+ BatchGetDeploymentInstances(ctx context.Context, params *BatchGetDeploymentInstancesInput, optFns ...func(*Options)) (*BatchGetDeploymentInstancesOutput, error) 
+ BatchGetDeploymentTargets(ctx context.Context, params *BatchGetDeploymentTargetsInput, optFns ...func(*Options)) (*BatchGetDeploymentTargetsOutput, error) 
+ BatchGetDeployments(ctx context.Context, params *BatchGetDeploymentsInput, optFns ...func(*Options)) (*BatchGetDeploymentsOutput, error) 
+ BatchGetOnPremisesInstances(ctx context.Context, params *BatchGetOnPremisesInstancesInput, optFns ...func(*Options)) (*BatchGetOnPremisesInstancesOutput, error) 
+ ContinueDeployment(ctx context.Context, params *ContinueDeploymentInput, optFns ...func(*Options)) (*ContinueDeploymentOutput, error) 
+ CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
+ CreateDeployment(ctx context.Context, params *CreateDeploymentInput, optFns ...func(*Options)) (*CreateDeploymentOutput, error) 
+ CreateDeploymentConfig(ctx context.Context, params *CreateDeploymentConfigInput, optFns ...func(*Options)) (*CreateDeploymentConfigOutput, error) 
+ CreateDeploymentGroup(ctx context.Context, params *CreateDeploymentGroupInput, optFns ...func(*Options)) (*CreateDeploymentGroupOutput, error) 
+ DeleteApplication(ctx context.Context, params *DeleteApplicationInput, optFns ...func(*Options)) (*DeleteApplicationOutput, error) 
+ DeleteDeploymentConfig(ctx context.Context, params *DeleteDeploymentConfigInput, optFns ...func(*Options)) (*DeleteDeploymentConfigOutput, error) 
+ DeleteDeploymentGroup(ctx context.Context, params *DeleteDeploymentGroupInput, optFns ...func(*Options)) (*DeleteDeploymentGroupOutput, error) 
+ DeleteGitHubAccountToken(ctx context.Context, params *DeleteGitHubAccountTokenInput, optFns ...func(*Options)) (*DeleteGitHubAccountTokenOutput, error) 
+ DeleteResourcesByExternalId(ctx context.Context, params *DeleteResourcesByExternalIdInput, optFns ...func(*Options)) (*DeleteResourcesByExternalIdOutput, error) 
+ DeregisterOnPremisesInstance(ctx context.Context, params *DeregisterOnPremisesInstanceInput, optFns ...func(*Options)) (*DeregisterOnPremisesInstanceOutput, error) 
+ GetApplication(ctx context.Context, params *GetApplicationInput, optFns ...func(*Options)) (*GetApplicationOutput, error) 
+ GetApplicationRevision(ctx context.Context, params *GetApplicationRevisionInput, optFns ...func(*Options)) (*GetApplicationRevisionOutput, error) 
+ GetDeployment(ctx context.Context, params *GetDeploymentInput, optFns ...func(*Options)) (*GetDeploymentOutput, error) 
+ GetDeploymentConfig(ctx context.Context, params *GetDeploymentConfigInput, optFns ...func(*Options)) (*GetDeploymentConfigOutput, error) 
+ GetDeploymentGroup(ctx context.Context, params *GetDeploymentGroupInput, optFns ...func(*Options)) (*GetDeploymentGroupOutput, error) 
+ GetDeploymentInstance(ctx context.Context, params *GetDeploymentInstanceInput, optFns ...func(*Options)) (*GetDeploymentInstanceOutput, error) 
+ GetDeploymentTarget(ctx context.Context, params *GetDeploymentTargetInput, optFns ...func(*Options)) (*GetDeploymentTargetOutput, error) 
+ GetOnPremisesInstance(ctx context.Context, params *GetOnPremisesInstanceInput, optFns ...func(*Options)) (*GetOnPremisesInstanceOutput, error) 
+ ListApplicationRevisions(ctx context.Context, params *ListApplicationRevisionsInput, optFns ...func(*Options)) (*ListApplicationRevisionsOutput, error) 
+ ListApplications(ctx context.Context, params *ListApplicationsInput, optFns ...func(*Options)) (*ListApplicationsOutput, error) 
+ ListDeploymentConfigs(ctx context.Context, params *ListDeploymentConfigsInput, optFns ...func(*Options)) (*ListDeploymentConfigsOutput, error) 
+ ListDeploymentGroups(ctx context.Context, params *ListDeploymentGroupsInput, optFns ...func(*Options)) (*ListDeploymentGroupsOutput, error) 
+ ListDeploymentInstances(ctx context.Context, params *ListDeploymentInstancesInput, optFns ...func(*Options)) (*ListDeploymentInstancesOutput, error) 
+ ListDeploymentTargets(ctx context.Context, params *ListDeploymentTargetsInput, optFns ...func(*Options)) (*ListDeploymentTargetsOutput, error) 
+ ListDeployments(ctx context.Context, params *ListDeploymentsInput, optFns ...func(*Options)) (*ListDeploymentsOutput, error) 
+ ListGitHubAccountTokenNames(ctx context.Context, params *ListGitHubAccountTokenNamesInput, optFns ...func(*Options)) (*ListGitHubAccountTokenNamesOutput, error) 
+ ListOnPremisesInstances(ctx context.Context, params *ListOnPremisesInstancesInput, optFns ...func(*Options)) (*ListOnPremisesInstancesOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ PutLifecycleEventHookExecutionStatus(ctx context.Context, params *PutLifecycleEventHookExecutionStatusInput, optFns ...func(*Options)) (*PutLifecycleEventHookExecutionStatusOutput, error) 
+ RegisterApplicationRevision(ctx context.Context, params *RegisterApplicationRevisionInput, optFns ...func(*Options)) (*RegisterApplicationRevisionOutput, error) 
+ RegisterOnPremisesInstance(ctx context.Context, params *RegisterOnPremisesInstanceInput, optFns ...func(*Options)) (*RegisterOnPremisesInstanceOutput, error) 
+ RemoveTagsFromOnPremisesInstances(ctx context.Context, params *RemoveTagsFromOnPremisesInstancesInput, optFns ...func(*Options)) (*RemoveTagsFromOnPremisesInstancesOutput, error) 
+ SkipWaitTimeForInstanceTermination(ctx context.Context, params *SkipWaitTimeForInstanceTerminationInput, optFns ...func(*Options)) (*SkipWaitTimeForInstanceTerminationOutput, error) 
+ StopDeployment(ctx context.Context, params *StopDeploymentInput, optFns ...func(*Options)) (*StopDeploymentOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateApplication(ctx context.Context, params *UpdateApplicationInput, optFns ...func(*Options)) (*UpdateApplicationOutput, error) 
+ UpdateDeploymentGroup(ctx context.Context, params *UpdateDeploymentGroupInput, optFns ...func(*Options)) (*UpdateDeploymentGroupOutput, error) 
+}

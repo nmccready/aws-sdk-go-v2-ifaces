@@ -1,0 +1,24 @@
+{
+  "name": "aws-sdk-go-v2-ifaces",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "clone": "./scripts/git_clone_aws-sdk.sh",
+    "gen_ifaces": "./scripts/gen_ifaces.sh",
+    "sync": "npm run clone && npm run gen_ifaces",
+    "lint": "golangci-lint run --fix",
+    "prepare": "go mod tidy -e && go mod vendor && sort-package-json",
+    "test": "npm run test:go",
+    "test:go": "go test ./aws/..."
+  },
+  "dependencies": {
+    "@stdlib/string-pascalcase-cli": "0.2.1"
+  },
+  "devDependencies": {
+    "commit-and-tag-version": "12",
+    "commitlint": "19",
+    "sort-package-json": "2.10"
+  }
+}
