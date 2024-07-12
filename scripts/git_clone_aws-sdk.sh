@@ -20,7 +20,7 @@ if [ -d "aws-sdk-go-v2" ]; then
 else
     echo "Cloning AWS SDK Go v2 version $AWS_SDK_VERSION"
     # Clone the AWS SDK Go v2 repository
-    git clone git@github.com:aws/aws-sdk-go-v2.git
+    git clone https://github.com/aws/aws-sdk-go-v2.git
 fi
 
 # Checkout the specified version
