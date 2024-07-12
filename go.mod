@@ -251,7 +251,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/mobile v1.21.3
 	github.com/aws/aws-sdk-go-v2/service/mq v1.25.3
 	github.com/aws/aws-sdk-go-v2/service/mturk v1.23.3
-	github.com/aws/aws-sdk-go-v2/service/mwaa v1.29.3
+	github.com/aws/aws-sdk-go-v2/service/mwaa v1.29.4
 	github.com/aws/aws-sdk-go-v2/service/neptune v1.33.3
 	github.com/aws/aws-sdk-go-v2/service/neptunedata v1.7.3
 	github.com/aws/aws-sdk-go-v2/service/neptunegraph v1.10.3
