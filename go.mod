@@ -29,7 +29,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/appstream v1.36.3
 	github.com/aws/aws-sdk-go-v2/service/appsync v1.34.3
 	github.com/aws/aws-sdk-go-v2/service/apptest v1.2.3
-	github.com/aws/aws-sdk-go-v2/service/arczonalshift v1.11.3
+	github.com/aws/aws-sdk-go-v2/service/arczonalshift v1.12.0
 	github.com/aws/aws-sdk-go-v2/service/artifact v1.4.3
 	github.com/aws/aws-sdk-go-v2/service/athena v1.44.3
 	github.com/aws/aws-sdk-go-v2/service/auditmanager v1.35.3
