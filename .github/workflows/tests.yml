@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: # important, must be defined on checkout to kick publish (defining in setup/node doesn't work)
+          token: ${{ secrets.GH_TOKEN }}
       - name: node
         uses: actions/setup-node@v3
         with:
