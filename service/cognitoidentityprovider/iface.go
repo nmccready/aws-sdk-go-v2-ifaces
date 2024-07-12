@@ -113,28 +113,4 @@ type IClient interface {
  UpdateUserPoolDomain(ctx context.Context, params *UpdateUserPoolDomainInput, optFns ...func(*Options)) (*UpdateUserPoolDomainOutput, error) 
  VerifySoftwareToken(ctx context.Context, params *VerifySoftwareTokenInput, optFns ...func(*Options)) (*VerifySoftwareTokenOutput, error) 
  VerifyUserAttribute(ctx context.Context, params *VerifyUserAttributeInput, optFns ...func(*Options)) (*VerifyUserAttributeOutput, error) 
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
 }

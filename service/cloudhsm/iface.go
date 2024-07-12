@@ -30,26 +30,4 @@ type IClient interface {
  ModifyHsm(ctx context.Context, params *ModifyHsmInput, optFns ...func(*Options)) (*ModifyHsmOutput, error) 
  ModifyLunaClient(ctx context.Context, params *ModifyLunaClientInput, optFns ...func(*Options)) (*ModifyLunaClientOutput, error) 
  RemoveTagsFromResource(ctx context.Context, params *RemoveTagsFromResourceInput, optFns ...func(*Options)) (*RemoveTagsFromResourceOutput, error) 
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
 }

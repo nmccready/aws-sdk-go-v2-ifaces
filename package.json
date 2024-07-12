@@ -7,10 +7,12 @@
   "scripts": {
     "clone": "./scripts/git_clone_aws-sdk.sh",
     "gen_ifaces": "./scripts/gen_ifaces.sh",
+    "gen_mocks": "./scripts/gen_mocks.sh",
     "lint": "golangci-lint run --fix",
-    "prepare": "npm run sync && go mod tidy -e && go install github.com/vektra/mockery/v2@v2.39.2 && go mod vendor && sort-package-json",
-    "sync": "npm run clone && npm run gen_ifaces",
-    "test": "npm run sync && npm run test:go",
+    "prepare": "go mod tidy -e && go install github.com/vektra/mockery/v2@v2.39.2 && go mod vendor && sort-package-json",
+    "sync": "npm run clone && npm run gen_ifaces && npm run gen_mocks",
+    "test": "npm run sync && npm run test:go && npm run test:artifacts",
+    "test:artifacts": "./scripts/git_artifact_changes_test.sh",
     "test:go": "go test ./service/..."
   },
   "devDependencies": {

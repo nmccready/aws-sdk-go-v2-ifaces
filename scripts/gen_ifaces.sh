@@ -26,11 +26,13 @@ extract_methods() {
     local service_dir="$1"
     # Extract public method signatures for Client struct receivers
     # e.g. func (c *Client) CreateBucket(input *CreateBucketInput) (*CreateBucketOutput, error)
+    # need to ignore any _test.go files (to elminate test methods from the interface)
     # sed removes the receiver and the method body, keep signature
     # cut removes remove leading bracket to method body
     # final cut removes the "$service_dir"/*.go file path and keeps signature
-    grep -E 'func \(([^)]+)\*?Client\) [A-Z][a-zA-Z0-9]*\(' "$service_dir"/*.go| \
-    sed -E 's/func \(([^)]+)\*?Client\)//'| \
+    grep -E 'func \(([^)]+)\*+Client\) [A-Z][a-zA-Z0-9]*\(' "$service_dir"/*.go| \
+    grep -v "_test.go" | \
+    sed -E 's/func \(([^)]+)\*+Client\)//'| \
     cut -d'{' -f1 | \
     cut -d':' -f2
 }
@@ -66,6 +68,7 @@ $(extract_methods "$(pwd)/$service_dir")
 EOF
     fi
 done
+
 
 echo "Interface generation complete."
 

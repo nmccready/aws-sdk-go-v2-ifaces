@@ -41,5 +41,4 @@ type IClient interface {
  UpdateBackendConfig(ctx context.Context, params *UpdateBackendConfigInput, optFns ...func(*Options)) (*UpdateBackendConfigOutput, error) 
  UpdateBackendJob(ctx context.Context, params *UpdateBackendJobInput, optFns ...func(*Options)) (*UpdateBackendJobOutput, error) 
  UpdateBackendStorage(ctx context.Context, params *UpdateBackendStorageInput, optFns ...func(*Options)) (*UpdateBackendStorageOutput, error) 
- ListBackendJobs(ctx context.Context, input *ListBackendJobsInput, optFns ...func(*Options)) (*ListBackendJobsOutput, error) 
 }

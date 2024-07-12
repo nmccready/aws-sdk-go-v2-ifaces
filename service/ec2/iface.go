@@ -65,8 +65,6 @@ type IClient interface {
  CopyFpgaImage(ctx context.Context, params *CopyFpgaImageInput, optFns ...func(*Options)) (*CopyFpgaImageOutput, error) 
  CopyImage(ctx context.Context, params *CopyImageInput, optFns ...func(*Options)) (*CopyImageOutput, error) 
  CopySnapshot(ctx context.Context, params *CopySnapshotInput, optFns ...func(*Options)) (*CopySnapshotOutput, error) 
- PresignURL(ctx context.Context, srcRegion string, params interface
- PresignCopySnapshot(ctx context.Context, params *CopySnapshotInput, optFns ...func(*PresignOptions)) (*v4.PresignedHTTPRequest, error) 
  CreateCapacityReservation(ctx context.Context, params *CreateCapacityReservationInput, optFns ...func(*Options)) (*CreateCapacityReservationOutput, error) 
  CreateCapacityReservationFleet(ctx context.Context, params *CreateCapacityReservationFleetInput, optFns ...func(*Options)) (*CreateCapacityReservationFleetOutput, error) 
  CreateCarrierGateway(ctx context.Context, params *CreateCarrierGatewayInput, optFns ...func(*Options)) (*CreateCarrierGatewayOutput, error) 

@@ -80,10 +80,4 @@ type IClient interface {
  UpdateSourceServer(ctx context.Context, params *UpdateSourceServerInput, optFns ...func(*Options)) (*UpdateSourceServerOutput, error) 
  UpdateSourceServerReplicationType(ctx context.Context, params *UpdateSourceServerReplicationTypeInput, optFns ...func(*Options)) (*UpdateSourceServerReplicationTypeOutput, error) 
  UpdateWave(ctx context.Context, params *UpdateWaveInput, optFns ...func(*Options)) (*UpdateWaveOutput, error) 
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
 }

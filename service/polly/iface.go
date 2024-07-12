@@ -19,5 +19,4 @@ type IClient interface {
  PutLexicon(ctx context.Context, params *PutLexiconInput, optFns ...func(*Options)) (*PutLexiconOutput, error) 
  StartSpeechSynthesisTask(ctx context.Context, params *StartSpeechSynthesisTaskInput, optFns ...func(*Options)) (*StartSpeechSynthesisTaskOutput, error) 
  SynthesizeSpeech(ctx context.Context, params *SynthesizeSpeechInput, optFns ...func(*Options)) (*SynthesizeSpeechOutput, error) 
- PresignSynthesizeSpeech(ctx context.Context, params *SynthesizeSpeechInput, optFns ...func(*PresignOptions)) (*v4.PresignedHTTPRequest, error) 
 }

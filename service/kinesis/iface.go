@@ -42,5 +42,4 @@ type IClient interface {
  SubscribeToShard(ctx context.Context, params *SubscribeToShardInput, optFns ...func(*Options)) (*SubscribeToShardOutput, error) 
  UpdateShardCount(ctx context.Context, params *UpdateShardCountInput, optFns ...func(*Options)) (*UpdateShardCountOutput, error) 
  UpdateStreamMode(ctx context.Context, params *UpdateStreamModeInput, optFns ...func(*Options)) (*UpdateStreamModeOutput, error) 
- DescribeStream(ctx context.Context, input *DescribeStreamInput, optFns ...func(*Options)) (*DescribeStreamOutput, error) 
 }

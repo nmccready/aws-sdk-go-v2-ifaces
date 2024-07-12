@@ -67,5 +67,4 @@ type IClient interface {
  UpdateTable(ctx context.Context, params *UpdateTableInput, optFns ...func(*Options)) (*UpdateTableOutput, error) 
  UpdateTableReplicaAutoScaling(ctx context.Context, params *UpdateTableReplicaAutoScalingInput, optFns ...func(*Options)) (*UpdateTableReplicaAutoScalingOutput, error) 
  UpdateTimeToLive(ctx context.Context, params *UpdateTimeToLiveInput, optFns ...func(*Options)) (*UpdateTimeToLiveOutput, error) 
- BatchGetItem(ctx context.Context, input *BatchGetItemInput, optFns ...func(*Options)) (*BatchGetItemOutput, error) 
 }

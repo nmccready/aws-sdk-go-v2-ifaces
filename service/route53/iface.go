@@ -80,5 +80,4 @@ type IClient interface {
  UpdateHostedZoneComment(ctx context.Context, params *UpdateHostedZoneCommentInput, optFns ...func(*Options)) (*UpdateHostedZoneCommentOutput, error) 
  UpdateTrafficPolicyComment(ctx context.Context, params *UpdateTrafficPolicyCommentInput, optFns ...func(*Options)) (*UpdateTrafficPolicyCommentOutput, error) 
  UpdateTrafficPolicyInstance(ctx context.Context, params *UpdateTrafficPolicyInstanceInput, optFns ...func(*Options)) (*UpdateTrafficPolicyInstanceOutput, error) 
- ListResourceRecordSets(ctx context.Context, input *ListResourceRecordSetsInput, optFns ...func(*Options)) (*ListResourceRecordSetsOutput, error) 
 }

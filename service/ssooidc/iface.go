@@ -14,10 +14,4 @@ type IClient interface {
  CreateTokenWithIAM(ctx context.Context, params *CreateTokenWithIAMInput, optFns ...func(*Options)) (*CreateTokenWithIAMOutput, error) 
  RegisterClient(ctx context.Context, params *RegisterClientInput, optFns ...func(*Options)) (*RegisterClientOutput, error) 
  StartDeviceAuthorization(ctx context.Context, params *StartDeviceAuthorizationInput, optFns ...func(*Options)) (*StartDeviceAuthorizationOutput, error) 
- ID() string 
- HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
- ID() string 
- HandleSerialize(ctx context.Context, in middleware.SerializeInput, next middleware.SerializeHandler) (
- ID() string 
- HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
 }
