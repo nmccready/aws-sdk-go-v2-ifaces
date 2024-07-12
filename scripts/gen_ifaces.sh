@@ -9,6 +9,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "$SCRIPT_DIR"
 cd ../
 
+AWS_SDK_VERSION=$(grep -E "aws/aws-sdk-go-v2 v[0-9]+\.[0-9]+\.[0-9]+" go.mod | cut -d' ' -f2)
+
 # ADD NPM BIN TO PATH
 export PATH=$PATH:$(npm bin)
 # Path to the AWS SDK Go v2 services directory
@@ -36,6 +38,8 @@ extract_methods() {
     cut -d'{' -f1 | \
     cut -d':' -f2
 }
+
+echo "Generating interfaces for AWS SDK Go v2 services Version $AWS_SDK_VERSION"
 
 # Iterate over each service directory
 for service_dir in "$AWS_SDK_PATH"/*; do

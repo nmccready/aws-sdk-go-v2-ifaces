@@ -25,6 +25,8 @@ fi
 
 # Checkout the specified version
 cd aws-sdk-go-v2
+git checkout main
+git pull -p
 git checkout "$AWS_SDK_VERSION"
 
 cd "$ORIG_DIR"
