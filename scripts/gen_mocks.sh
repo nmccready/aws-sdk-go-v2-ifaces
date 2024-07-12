@@ -16,7 +16,7 @@ for service_dir in ./service/*; do
     # and not the "internal" directory
     if [ -d "$service_dir"  ] && [ "$(basename "$service_dir")" != "internal" ]; then
     echo "==============================="
-    echo "Generating ICLient mock for $(basename "$service_dir")..."
+    echo "Generating IClient mock for $(basename "$service_dir")..."
     # execute in background bumping up against the limit of 5
     # capture the process id
     mockery --dir "$service_dir" --name IClient --output "$service_dir/mocks" > /dev/null 2>&1 &
