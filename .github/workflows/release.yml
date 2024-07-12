@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: # important, must be defined on checkout to kick publish (defining in setup/node doesn't work)
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN || github.token }}
       - name: node
         uses: actions/setup-node@v3
         with:
@@ -36,7 +36,7 @@ jobs:
           git config --local user.email "creadbot@github.com"
           git config --local user.name "creadbot_github"
           set -v
-          npm install //
+          npm install
           npx commit-and-tag-version
           git push
           git push --tags
