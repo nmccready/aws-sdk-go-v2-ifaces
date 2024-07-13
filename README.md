@@ -1,8 +1,6 @@
 # aws-sdk-go-v2-ifaces
 
-To provide a more idiomatic interface to the AWS SDK for Go v2 since AWS refuses to do so.
-
-Eventually this will include mocks as well via mockery.
+To provide a more idiomatic interfaces and mocks to the AWS SDK for Go v2 since AWS refuses to do so.
 
 ## Dependencies
 
