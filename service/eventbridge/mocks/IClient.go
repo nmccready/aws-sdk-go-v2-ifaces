@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	eventbridge "github.com/aws/aws-sdk-go-v2/service/eventbridge"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

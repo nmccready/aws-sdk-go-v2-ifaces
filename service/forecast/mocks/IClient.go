@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	forecast "github.com/aws/aws-sdk-go-v2/service/forecast"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

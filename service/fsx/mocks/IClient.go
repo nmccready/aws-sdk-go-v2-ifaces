@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	fsx "github.com/aws/aws-sdk-go-v2/service/fsx"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

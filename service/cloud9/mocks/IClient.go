@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	cloud9 "github.com/aws/aws-sdk-go-v2/service/cloud9"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

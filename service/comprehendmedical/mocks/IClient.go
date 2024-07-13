@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	comprehendmedical "github.com/aws/aws-sdk-go-v2/service/comprehendmedical"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

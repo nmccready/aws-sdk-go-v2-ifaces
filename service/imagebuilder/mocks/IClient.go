@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	imagebuilder "github.com/aws/aws-sdk-go-v2/service/imagebuilder"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

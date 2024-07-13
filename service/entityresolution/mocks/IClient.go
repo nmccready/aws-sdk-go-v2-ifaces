@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	entityresolution "github.com/aws/aws-sdk-go-v2/service/entityresolution"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

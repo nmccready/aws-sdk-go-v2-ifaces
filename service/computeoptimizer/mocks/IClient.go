@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	computeoptimizer "github.com/aws/aws-sdk-go-v2/service/computeoptimizer"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

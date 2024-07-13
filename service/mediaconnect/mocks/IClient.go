@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	mediaconnect "github.com/aws/aws-sdk-go-v2/service/mediaconnect"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

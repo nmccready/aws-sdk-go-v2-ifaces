@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	connectcases "github.com/aws/aws-sdk-go-v2/service/connectcases"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

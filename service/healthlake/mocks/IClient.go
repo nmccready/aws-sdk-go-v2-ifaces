@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	healthlake "github.com/aws/aws-sdk-go-v2/service/healthlake"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

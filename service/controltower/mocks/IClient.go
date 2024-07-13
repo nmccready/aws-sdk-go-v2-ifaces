@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	controltower "github.com/aws/aws-sdk-go-v2/service/controltower"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

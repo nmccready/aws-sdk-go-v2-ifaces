@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	elasticsearchservice "github.com/aws/aws-sdk-go-v2/service/elasticsearchservice"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

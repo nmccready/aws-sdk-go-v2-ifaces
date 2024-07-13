@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	arczonalshift "github.com/aws/aws-sdk-go-v2/service/arczonalshift"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

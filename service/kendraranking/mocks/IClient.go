@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	kendraranking "github.com/aws/aws-sdk-go-v2/service/kendraranking"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

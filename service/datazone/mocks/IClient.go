@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	datazone "github.com/aws/aws-sdk-go-v2/service/datazone"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

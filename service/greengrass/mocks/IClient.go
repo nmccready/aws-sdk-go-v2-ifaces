@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	greengrass "github.com/aws/aws-sdk-go-v2/service/greengrass"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

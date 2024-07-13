@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	codecatalyst "github.com/aws/aws-sdk-go-v2/service/codecatalyst"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

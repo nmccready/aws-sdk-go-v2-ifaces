@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	cloudtrail "github.com/aws/aws-sdk-go-v2/service/cloudtrail"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

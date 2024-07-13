@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	dataexchange "github.com/aws/aws-sdk-go-v2/service/dataexchange"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

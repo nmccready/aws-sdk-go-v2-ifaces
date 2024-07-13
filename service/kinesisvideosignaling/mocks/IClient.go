@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	kinesisvideosignaling "github.com/aws/aws-sdk-go-v2/service/kinesisvideosignaling"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

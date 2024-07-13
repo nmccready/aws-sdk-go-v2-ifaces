@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	mailmanager "github.com/aws/aws-sdk-go-v2/service/mailmanager"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

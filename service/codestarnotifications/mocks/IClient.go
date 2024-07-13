@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	codestarnotifications "github.com/aws/aws-sdk-go-v2/service/codestarnotifications"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	evidently "github.com/aws/aws-sdk-go-v2/service/evidently"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

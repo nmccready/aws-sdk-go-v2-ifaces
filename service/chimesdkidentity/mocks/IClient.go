@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	chimesdkidentity "github.com/aws/aws-sdk-go-v2/service/chimesdkidentity"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

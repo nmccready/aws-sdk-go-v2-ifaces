@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	datasync "github.com/aws/aws-sdk-go-v2/service/datasync"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

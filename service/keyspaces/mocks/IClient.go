@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	keyspaces "github.com/aws/aws-sdk-go-v2/service/keyspaces"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

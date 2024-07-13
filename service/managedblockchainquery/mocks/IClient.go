@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	managedblockchainquery "github.com/aws/aws-sdk-go-v2/service/managedblockchainquery"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

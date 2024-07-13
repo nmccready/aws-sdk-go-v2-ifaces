@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	lexruntimeservice "github.com/aws/aws-sdk-go-v2/service/lexruntimeservice"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

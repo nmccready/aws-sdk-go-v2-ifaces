@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	ec2instanceconnect "github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

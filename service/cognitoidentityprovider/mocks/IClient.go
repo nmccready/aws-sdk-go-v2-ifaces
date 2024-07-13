@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	cognitoidentityprovider "github.com/aws/aws-sdk-go-v2/service/cognitoidentityprovider"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

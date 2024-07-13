@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	chimesdkmediapipelines "github.com/aws/aws-sdk-go-v2/service/chimesdkmediapipelines"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	iotevents "github.com/aws/aws-sdk-go-v2/service/iotevents"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	globalaccelerator "github.com/aws/aws-sdk-go-v2/service/globalaccelerator"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

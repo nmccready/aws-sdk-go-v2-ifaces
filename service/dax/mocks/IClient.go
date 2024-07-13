@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	dax "github.com/aws/aws-sdk-go-v2/service/dax"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

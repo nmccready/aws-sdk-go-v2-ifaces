@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	docdb "github.com/aws/aws-sdk-go-v2/service/docdb"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

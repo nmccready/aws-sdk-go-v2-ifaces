@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	appfabric "github.com/aws/aws-sdk-go-v2/service/appfabric"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

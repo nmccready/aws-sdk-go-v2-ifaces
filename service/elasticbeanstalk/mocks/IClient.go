@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	elasticbeanstalk "github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

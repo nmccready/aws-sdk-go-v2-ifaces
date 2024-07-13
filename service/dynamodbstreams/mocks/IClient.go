@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	dynamodbstreams "github.com/aws/aws-sdk-go-v2/service/dynamodbstreams"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

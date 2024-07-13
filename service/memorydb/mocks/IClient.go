@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	memorydb "github.com/aws/aws-sdk-go-v2/service/memorydb"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

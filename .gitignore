@@ -7,3 +7,4 @@ node_modules
 .prettierrc.js
 go.sum
 package-lock.json
+coverage.txt

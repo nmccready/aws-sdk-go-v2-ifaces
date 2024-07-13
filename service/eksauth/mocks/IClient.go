@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	eksauth "github.com/aws/aws-sdk-go-v2/service/eksauth"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

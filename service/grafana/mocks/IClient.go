@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	grafana "github.com/aws/aws-sdk-go-v2/service/grafana"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

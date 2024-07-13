@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	glue "github.com/aws/aws-sdk-go-v2/service/glue"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

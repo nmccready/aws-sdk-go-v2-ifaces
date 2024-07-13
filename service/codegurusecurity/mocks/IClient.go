@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	codegurusecurity "github.com/aws/aws-sdk-go-v2/service/codegurusecurity"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	gamelift "github.com/aws/aws-sdk-go-v2/service/gamelift"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	deadline "github.com/aws/aws-sdk-go-v2/service/deadline"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	backup "github.com/aws/aws-sdk-go-v2/service/backup"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

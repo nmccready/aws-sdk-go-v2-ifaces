@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	lakeformation "github.com/aws/aws-sdk-go-v2/service/lakeformation"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

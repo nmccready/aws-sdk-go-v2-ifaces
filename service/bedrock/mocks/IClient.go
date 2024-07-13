@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	bedrock "github.com/aws/aws-sdk-go-v2/service/bedrock"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

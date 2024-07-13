@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	elasticinference "github.com/aws/aws-sdk-go-v2/service/elasticinference"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

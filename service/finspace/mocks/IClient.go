@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	finspace "github.com/aws/aws-sdk-go-v2/service/finspace"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

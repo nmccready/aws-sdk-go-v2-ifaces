@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	customerprofiles "github.com/aws/aws-sdk-go-v2/service/customerprofiles"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

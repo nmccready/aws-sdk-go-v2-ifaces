@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	inspectorscan "github.com/aws/aws-sdk-go-v2/service/inspectorscan"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

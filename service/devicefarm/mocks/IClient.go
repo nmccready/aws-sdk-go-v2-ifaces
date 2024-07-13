@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	devicefarm "github.com/aws/aws-sdk-go-v2/service/devicefarm"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

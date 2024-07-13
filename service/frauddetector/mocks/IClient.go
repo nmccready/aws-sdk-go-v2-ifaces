@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	frauddetector "github.com/aws/aws-sdk-go-v2/service/frauddetector"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

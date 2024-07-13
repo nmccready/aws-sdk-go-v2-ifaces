@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	billingconductor "github.com/aws/aws-sdk-go-v2/service/billingconductor"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

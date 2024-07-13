@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	auditmanager "github.com/aws/aws-sdk-go-v2/service/auditmanager"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	ecrpublic "github.com/aws/aws-sdk-go-v2/service/ecrpublic"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

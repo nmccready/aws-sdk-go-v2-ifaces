@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	lightsail "github.com/aws/aws-sdk-go-v2/service/lightsail"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

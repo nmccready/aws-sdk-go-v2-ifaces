@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	datapipeline "github.com/aws/aws-sdk-go-v2/service/datapipeline"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

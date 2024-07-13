@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	kinesis "github.com/aws/aws-sdk-go-v2/service/kinesis"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

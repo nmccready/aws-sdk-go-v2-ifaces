@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	applicationautoscaling "github.com/aws/aws-sdk-go-v2/service/applicationautoscaling"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	migrationhubconfig "github.com/aws/aws-sdk-go-v2/service/migrationhubconfig"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

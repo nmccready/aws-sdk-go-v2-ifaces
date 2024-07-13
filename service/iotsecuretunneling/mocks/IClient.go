@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	iotsecuretunneling "github.com/aws/aws-sdk-go-v2/service/iotsecuretunneling"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

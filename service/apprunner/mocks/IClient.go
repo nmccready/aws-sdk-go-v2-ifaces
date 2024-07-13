@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	apprunner "github.com/aws/aws-sdk-go-v2/service/apprunner"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

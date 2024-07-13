@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	firehose "github.com/aws/aws-sdk-go-v2/service/firehose"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

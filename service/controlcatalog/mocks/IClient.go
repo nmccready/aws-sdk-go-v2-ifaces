@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	controlcatalog "github.com/aws/aws-sdk-go-v2/service/controlcatalog"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

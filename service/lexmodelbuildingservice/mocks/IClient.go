@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	lexmodelbuildingservice "github.com/aws/aws-sdk-go-v2/service/lexmodelbuildingservice"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

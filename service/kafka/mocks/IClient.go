@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	kafka "github.com/aws/aws-sdk-go-v2/service/kafka"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

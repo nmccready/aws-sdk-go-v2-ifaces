@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	elasticloadbalancing "github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

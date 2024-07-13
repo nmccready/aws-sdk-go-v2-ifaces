@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	acm "github.com/aws/aws-sdk-go-v2/service/acm"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

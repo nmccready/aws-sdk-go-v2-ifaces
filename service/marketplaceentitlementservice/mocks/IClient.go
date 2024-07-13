@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	marketplaceentitlementservice "github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	cleanrooms "github.com/aws/aws-sdk-go-v2/service/cleanrooms"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

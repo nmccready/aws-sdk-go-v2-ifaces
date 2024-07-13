@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	internetmonitor "github.com/aws/aws-sdk-go-v2/service/internetmonitor"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

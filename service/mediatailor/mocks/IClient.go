@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	mediatailor "github.com/aws/aws-sdk-go-v2/service/mediatailor"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

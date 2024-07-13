@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	docdbelastic "github.com/aws/aws-sdk-go-v2/service/docdbelastic"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

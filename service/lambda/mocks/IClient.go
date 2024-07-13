@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	lambda "github.com/aws/aws-sdk-go-v2/service/lambda"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

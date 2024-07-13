@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	appmesh "github.com/aws/aws-sdk-go-v2/service/appmesh"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

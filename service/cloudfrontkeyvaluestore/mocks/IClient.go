@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	cloudfrontkeyvaluestore "github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

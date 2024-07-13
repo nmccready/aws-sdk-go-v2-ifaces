@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	iottwinmaker "github.com/aws/aws-sdk-go-v2/service/iottwinmaker"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

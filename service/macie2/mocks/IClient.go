@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	macie2 "github.com/aws/aws-sdk-go-v2/service/macie2"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

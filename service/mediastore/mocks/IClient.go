@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	mediastore "github.com/aws/aws-sdk-go-v2/service/mediastore"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

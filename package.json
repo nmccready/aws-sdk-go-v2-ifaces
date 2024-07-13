@@ -14,7 +14,8 @@
     "sync": "npm run clone && npm run gen_ifaces && npm run gen_mocks",
     "test": "npm run sync && npm run test:go",
     "test:artifacts": "./scripts/git_artifact_changes_test.sh",
-    "test:go": "go test ./service/..."
+    "test:go": "go test ./service/... ./internal/... ./tests/... -coverprofile=coverage.txt -covermode=atomic",
+    "test:go:tests": "go test ./tests/..."
   },
   "devDependencies": {
     "commit-and-tag-version": "12",

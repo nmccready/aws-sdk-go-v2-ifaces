@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	lookoutmetrics "github.com/aws/aws-sdk-go-v2/service/lookoutmetrics"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

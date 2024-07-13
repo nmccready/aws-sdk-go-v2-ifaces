@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	machinelearning "github.com/aws/aws-sdk-go-v2/service/machinelearning"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

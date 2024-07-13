@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	emrcontainers "github.com/aws/aws-sdk-go-v2/service/emrcontainers"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

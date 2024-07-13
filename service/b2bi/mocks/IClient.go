@@ -3,9 +3,9 @@
 package mocks
 
 import (
-	context "context"
-
 	b2bi "github.com/aws/aws-sdk-go-v2/service/b2bi"
+
+	context "context"
 
 	mock "github.com/stretchr/testify/mock"
 )

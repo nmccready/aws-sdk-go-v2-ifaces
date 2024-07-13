@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	identitystore "github.com/aws/aws-sdk-go-v2/service/identitystore"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

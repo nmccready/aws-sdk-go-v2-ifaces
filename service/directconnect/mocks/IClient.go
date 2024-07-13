@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	directconnect "github.com/aws/aws-sdk-go-v2/service/directconnect"
+
 	mock "github.com/stretchr/testify/mock"
 )
 

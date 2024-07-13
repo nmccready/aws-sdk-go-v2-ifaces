@@ -6,6 +6,7 @@ import (
 	context "context"
 
 	licensemanagerlinuxsubscriptions "github.com/aws/aws-sdk-go-v2/service/licensemanagerlinuxsubscriptions"
+
 	mock "github.com/stretchr/testify/mock"
 )
 
