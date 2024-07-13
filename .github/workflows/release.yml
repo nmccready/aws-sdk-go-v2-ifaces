@@ -35,7 +35,7 @@ jobs:
           fi
           git config --local user.email "creadbot@github.com"
           git config --local user.name "creadbot_github"
-          set -v
+          set -ev
           npm install
           npm run sync
           if [[ -n $(git status -s) ]]; then
