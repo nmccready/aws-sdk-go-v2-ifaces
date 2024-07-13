@@ -37,6 +37,11 @@ jobs:
           git config --local user.name "creadbot_github"
           set -v
           npm install
+          npm run sync
+          if [[ -n $(git status -s) ]]; then
+            git add -A
+            git commit -am "chore(release): sync aws-sdk-go-v2"
+          fi
           npx commit-and-tag-version
           git push
           git push --tags
