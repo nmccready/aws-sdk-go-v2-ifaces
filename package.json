@@ -9,15 +9,17 @@
     "clone_sdk": "./scripts/git_clone_aws-sdk.sh",
     "gen_ifaces": "./scripts/gen_ifaces.sh",
     "gen_mocks": "./scripts/gen_mocks.sh",
+    "gen_tests": "./scripts/gen_tests.sh",
     "lint": "golangci-lint run --fix --timeout 15m",
     "prepare": "npm run clone_sdk && go install github.com/vektra/mockery/v2@v2.39.2 && go mod tidy -e && go mod vendor && sort-package-json",
-    "sync": "npm run clone && npm run gen_ifaces && npm run gen_mocks",
+    "sync": "npm run clone && npm run gen_ifaces && npm run gen_mocks && npm run gen_tests",
     "test": "npm run sync && npm run test:go",
     "test:artifacts": "./scripts/git_artifact_changes_test.sh",
     "test:go": "go test ./service/... ./internal/... ./tests/... -coverprofile=coverage.txt -covermode=atomic",
     "test:go:tests": "go test ./tests/..."
   },
   "devDependencies": {
+    "@stdlib/string-pascalcase-cli": "0.2.1",
     "commit-and-tag-version": "12",
     "commitlint": "19",
     "sort-package-json": "2.10"
