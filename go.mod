@@ -291,7 +291,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/qconnect v1.9.3
 	github.com/aws/aws-sdk-go-v2/service/qldb v1.23.3
 	github.com/aws/aws-sdk-go-v2/service/qldbsession v1.23.3
-	github.com/aws/aws-sdk-go-v2/service/quicksight v1.67.3
+	github.com/aws/aws-sdk-go-v2/service/quicksight v1.68.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.27.3
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.18.3
 	github.com/aws/aws-sdk-go-v2/service/rds v1.81.4
