@@ -22,6 +22,6 @@
     "@stdlib/string-pascalcase-cli": "0.2.2",
     "commit-and-tag-version": "12",
     "commitlint": "19",
-    "sort-package-json": "2.10"
+    "sort-package-json": "2.13"
   }
 }
