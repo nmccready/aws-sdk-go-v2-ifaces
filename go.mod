@@ -1,6 +1,6 @@
 module github.com/nmccready/aws-sdk-go-v2-ifaces
 
-go 1.20
+go 1.21.4
 
 require (
 	github.com/aws/aws-sdk-go-v2/service/accessanalyzer v1.32.3
@@ -26,7 +26,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/applicationsignals v1.3.0
 	github.com/aws/aws-sdk-go-v2/service/appmesh v1.27.3
 	github.com/aws/aws-sdk-go-v2/service/apprunner v1.30.3
-	github.com/aws/aws-sdk-go-v2/service/appstream v1.37.0
+	github.com/aws/aws-sdk-go-v2/service/appstream v1.38.0
 	github.com/aws/aws-sdk-go-v2/service/appsync v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/apptest v1.2.3
 	github.com/aws/aws-sdk-go-v2/service/arczonalshift v1.12.0
@@ -393,17 +393,17 @@ require (
 )
 
 require (
-	github.com/aws/aws-sdk-go-v2 v1.30.4 // indirect
+	github.com/aws/aws-sdk-go-v2 v1.33.0 // indirect
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.6.3 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.16 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.16 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.28 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.28 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.15 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.11.3 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.3.17 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.9.16 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.11.17 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.17.15 // indirect
-	github.com/aws/smithy-go v1.20.4 // indirect
+	github.com/aws/smithy-go v1.22.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
