@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0-0](https://github.com/nmccready/aws-sdk-go-v2-ifaces/compare/v0.0.12...v0.1.0-0) (2025-01-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* sync broken services from breaking aws-sdk-go-v2 changes 1.30.5
+
+### Bug Fixes
+
+* sync appstream version bump ([e4569ed](https://github.com/nmccready/aws-sdk-go-v2-ifaces/commit/e4569eda923f26dbcbbd6b6c72cb15d1bc6f8f07))
+* sync broken services from breaking aws-sdk-go-v2 changes 1.30.5 ([4c0b255](https://github.com/nmccready/aws-sdk-go-v2-ifaces/commit/4c0b255f26cbd9b9fc5bfeceab2997ab000825cf))
+
 ## [0.0.13](https://github.com/nmccready/aws-sdk-go-v2-ifaces/compare/v0.0.12...v0.0.13) (2025-01-16)
 
 
