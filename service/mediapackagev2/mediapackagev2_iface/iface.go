@@ -10,8 +10,10 @@ import (
 // IClient defines the interface for mediapackagev2
 type IClient interface {
  Options() Options 
+ CancelHarvestJob(ctx context.Context, params *CancelHarvestJobInput, optFns ...func(*Options)) (*CancelHarvestJobOutput, error) 
  CreateChannel(ctx context.Context, params *CreateChannelInput, optFns ...func(*Options)) (*CreateChannelOutput, error) 
  CreateChannelGroup(ctx context.Context, params *CreateChannelGroupInput, optFns ...func(*Options)) (*CreateChannelGroupOutput, error) 
+ CreateHarvestJob(ctx context.Context, params *CreateHarvestJobInput, optFns ...func(*Options)) (*CreateHarvestJobOutput, error) 
  CreateOriginEndpoint(ctx context.Context, params *CreateOriginEndpointInput, optFns ...func(*Options)) (*CreateOriginEndpointOutput, error) 
  DeleteChannel(ctx context.Context, params *DeleteChannelInput, optFns ...func(*Options)) (*DeleteChannelOutput, error) 
  DeleteChannelGroup(ctx context.Context, params *DeleteChannelGroupInput, optFns ...func(*Options)) (*DeleteChannelGroupOutput, error) 
@@ -21,10 +23,12 @@ type IClient interface {
  GetChannel(ctx context.Context, params *GetChannelInput, optFns ...func(*Options)) (*GetChannelOutput, error) 
  GetChannelGroup(ctx context.Context, params *GetChannelGroupInput, optFns ...func(*Options)) (*GetChannelGroupOutput, error) 
  GetChannelPolicy(ctx context.Context, params *GetChannelPolicyInput, optFns ...func(*Options)) (*GetChannelPolicyOutput, error) 
+ GetHarvestJob(ctx context.Context, params *GetHarvestJobInput, optFns ...func(*Options)) (*GetHarvestJobOutput, error) 
  GetOriginEndpoint(ctx context.Context, params *GetOriginEndpointInput, optFns ...func(*Options)) (*GetOriginEndpointOutput, error) 
  GetOriginEndpointPolicy(ctx context.Context, params *GetOriginEndpointPolicyInput, optFns ...func(*Options)) (*GetOriginEndpointPolicyOutput, error) 
  ListChannelGroups(ctx context.Context, params *ListChannelGroupsInput, optFns ...func(*Options)) (*ListChannelGroupsOutput, error) 
  ListChannels(ctx context.Context, params *ListChannelsInput, optFns ...func(*Options)) (*ListChannelsOutput, error) 
+ ListHarvestJobs(ctx context.Context, params *ListHarvestJobsInput, optFns ...func(*Options)) (*ListHarvestJobsOutput, error) 
  ListOriginEndpoints(ctx context.Context, params *ListOriginEndpointsInput, optFns ...func(*Options)) (*ListOriginEndpointsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutChannelPolicy(ctx context.Context, params *PutChannelPolicyInput, optFns ...func(*Options)) (*PutChannelPolicyOutput, error) 

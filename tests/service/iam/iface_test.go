@@ -658,6 +658,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableOrganizationsRootCredentialsManagement", func(t *testing.T) {
+        input := &iam.DisableOrganizationsRootCredentialsManagementInput{}
+        output := &iam.DisableOrganizationsRootCredentialsManagementOutput{}
+
+        mockClient.On("DisableOrganizationsRootCredentialsManagement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableOrganizationsRootCredentialsManagement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisableOrganizationsRootSessions", func(t *testing.T) {
+        input := &iam.DisableOrganizationsRootSessionsInput{}
+        output := &iam.DisableOrganizationsRootSessionsOutput{}
+
+        mockClient.On("DisableOrganizationsRootSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableOrganizationsRootSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableMFADevice", func(t *testing.T) {
         input := &iam.EnableMFADeviceInput{}
         output := &iam.EnableMFADeviceOutput{}
@@ -665,6 +691,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableMFADevice", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableMFADevice(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableOrganizationsRootCredentialsManagement", func(t *testing.T) {
+        input := &iam.EnableOrganizationsRootCredentialsManagementInput{}
+        output := &iam.EnableOrganizationsRootCredentialsManagementOutput{}
+
+        mockClient.On("EnableOrganizationsRootCredentialsManagement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableOrganizationsRootCredentialsManagement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableOrganizationsRootSessions", func(t *testing.T) {
+        input := &iam.EnableOrganizationsRootSessionsInput{}
+        output := &iam.EnableOrganizationsRootSessionsOutput{}
+
+        mockClient.On("EnableOrganizationsRootSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableOrganizationsRootSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1250,6 +1302,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOpenIDConnectProviders", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOpenIDConnectProviders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOrganizationsFeatures", func(t *testing.T) {
+        input := &iam.ListOrganizationsFeaturesInput{}
+        output := &iam.ListOrganizationsFeaturesOutput{}
+
+        mockClient.On("ListOrganizationsFeatures", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOrganizationsFeatures(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

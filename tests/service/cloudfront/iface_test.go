@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAnycastIpList", func(t *testing.T) {
+        input := &cloudfront.CreateAnycastIpListInput{}
+        output := &cloudfront.CreateAnycastIpListOutput{}
+
+        mockClient.On("CreateAnycastIpList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAnycastIpList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCachePolicy", func(t *testing.T) {
         input := &cloudfront.CreateCachePolicyInput{}
         output := &cloudfront.CreateCachePolicyOutput{}
@@ -307,6 +320,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVpcOrigin", func(t *testing.T) {
+        input := &cloudfront.CreateVpcOriginInput{}
+        output := &cloudfront.CreateVpcOriginOutput{}
+
+        mockClient.On("CreateVpcOrigin", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVpcOrigin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAnycastIpList", func(t *testing.T) {
+        input := &cloudfront.DeleteAnycastIpListInput{}
+        output := &cloudfront.DeleteAnycastIpListOutput{}
+
+        mockClient.On("DeleteAnycastIpList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAnycastIpList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCachePolicy", func(t *testing.T) {
         input := &cloudfront.DeleteCachePolicyInput{}
         output := &cloudfront.DeleteCachePolicyOutput{}
@@ -515,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVpcOrigin", func(t *testing.T) {
+        input := &cloudfront.DeleteVpcOriginInput{}
+        output := &cloudfront.DeleteVpcOriginOutput{}
+
+        mockClient.On("DeleteVpcOrigin", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpcOrigin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeFunction", func(t *testing.T) {
         input := &cloudfront.DescribeFunctionInput{}
         output := &cloudfront.DescribeFunctionOutput{}
@@ -535,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeKeyValueStore", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeKeyValueStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAnycastIpList", func(t *testing.T) {
+        input := &cloudfront.GetAnycastIpListInput{}
+        output := &cloudfront.GetAnycastIpListOutput{}
+
+        mockClient.On("GetAnycastIpList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAnycastIpList(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,6 +970,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetVpcOrigin", func(t *testing.T) {
+        input := &cloudfront.GetVpcOriginInput{}
+        output := &cloudfront.GetVpcOriginOutput{}
+
+        mockClient.On("GetVpcOrigin", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVpcOrigin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAnycastIpLists", func(t *testing.T) {
+        input := &cloudfront.ListAnycastIpListsInput{}
+        output := &cloudfront.ListAnycastIpListsOutput{}
+
+        mockClient.On("ListAnycastIpLists", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAnycastIpLists(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCachePolicies", func(t *testing.T) {
         input := &cloudfront.ListCachePoliciesInput{}
         output := &cloudfront.ListCachePoliciesOutput{}
@@ -970,6 +1061,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDistributionsByAnycastIpListId", func(t *testing.T) {
+        input := &cloudfront.ListDistributionsByAnycastIpListIdInput{}
+        output := &cloudfront.ListDistributionsByAnycastIpListIdOutput{}
+
+        mockClient.On("ListDistributionsByAnycastIpListId", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionsByAnycastIpListId(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDistributionsByCachePolicyId", func(t *testing.T) {
         input := &cloudfront.ListDistributionsByCachePolicyIdInput{}
         output := &cloudfront.ListDistributionsByCachePolicyIdOutput{}
@@ -1029,6 +1133,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDistributionsByResponseHeadersPolicyId", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDistributionsByResponseHeadersPolicyId(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributionsByVpcOriginId", func(t *testing.T) {
+        input := &cloudfront.ListDistributionsByVpcOriginIdInput{}
+        output := &cloudfront.ListDistributionsByVpcOriginIdOutput{}
+
+        mockClient.On("ListDistributionsByVpcOriginId", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionsByVpcOriginId(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1211,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVpcOrigins", func(t *testing.T) {
+        input := &cloudfront.ListVpcOriginsInput{}
+        output := &cloudfront.ListVpcOriginsOutput{}
+
+        mockClient.On("ListVpcOrigins", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVpcOrigins(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1471,6 +1601,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateStreamingDistribution", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateStreamingDistribution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateVpcOrigin", func(t *testing.T) {
+        input := &cloudfront.UpdateVpcOriginInput{}
+        output := &cloudfront.UpdateVpcOriginOutput{}
+
+        mockClient.On("UpdateVpcOrigin", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateVpcOrigin(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

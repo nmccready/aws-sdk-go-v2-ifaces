@@ -47,6 +47,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateLicenseServerEndpoint", func(t *testing.T) {
+        input := &licensemanagerusersubscriptions.CreateLicenseServerEndpointInput{}
+        output := &licensemanagerusersubscriptions.CreateLicenseServerEndpointOutput{}
+
+        mockClient.On("CreateLicenseServerEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLicenseServerEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteLicenseServerEndpoint", func(t *testing.T) {
+        input := &licensemanagerusersubscriptions.DeleteLicenseServerEndpointInput{}
+        output := &licensemanagerusersubscriptions.DeleteLicenseServerEndpointOutput{}
+
+        mockClient.On("DeleteLicenseServerEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLicenseServerEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeregisterIdentityProvider", func(t *testing.T) {
         input := &licensemanagerusersubscriptions.DeregisterIdentityProviderInput{}
         output := &licensemanagerusersubscriptions.DeregisterIdentityProviderOutput{}
@@ -99,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListLicenseServerEndpoints", func(t *testing.T) {
+        input := &licensemanagerusersubscriptions.ListLicenseServerEndpointsInput{}
+        output := &licensemanagerusersubscriptions.ListLicenseServerEndpointsOutput{}
+
+        mockClient.On("ListLicenseServerEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLicenseServerEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListProductSubscriptions", func(t *testing.T) {
         input := &licensemanagerusersubscriptions.ListProductSubscriptionsInput{}
         output := &licensemanagerusersubscriptions.ListProductSubscriptionsOutput{}
@@ -106,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProductSubscriptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProductSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &licensemanagerusersubscriptions.ListTagsForResourceInput{}
+        output := &licensemanagerusersubscriptions.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -158,6 +210,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopProductSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopProductSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &licensemanagerusersubscriptions.TagResourceInput{}
+        output := &licensemanagerusersubscriptions.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &licensemanagerusersubscriptions.UntagResourceInput{}
+        output := &licensemanagerusersubscriptions.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

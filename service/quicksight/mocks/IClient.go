@@ -14,6 +14,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchCreateTopicReviewedAnswer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateTopicReviewedAnswer(ctx context.Context, params *quicksight.BatchCreateTopicReviewedAnswerInput, optFns ...func(*quicksight.Options)) (*quicksight.BatchCreateTopicReviewedAnswerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateTopicReviewedAnswer")
+	}
+
+	var r0 *quicksight.BatchCreateTopicReviewedAnswerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.BatchCreateTopicReviewedAnswerInput, ...func(*quicksight.Options)) (*quicksight.BatchCreateTopicReviewedAnswerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.BatchCreateTopicReviewedAnswerInput, ...func(*quicksight.Options)) *quicksight.BatchCreateTopicReviewedAnswerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.BatchCreateTopicReviewedAnswerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.BatchCreateTopicReviewedAnswerInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteTopicReviewedAnswer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteTopicReviewedAnswer(ctx context.Context, params *quicksight.BatchDeleteTopicReviewedAnswerInput, optFns ...func(*quicksight.Options)) (*quicksight.BatchDeleteTopicReviewedAnswerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteTopicReviewedAnswer")
+	}
+
+	var r0 *quicksight.BatchDeleteTopicReviewedAnswerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.BatchDeleteTopicReviewedAnswerInput, ...func(*quicksight.Options)) (*quicksight.BatchDeleteTopicReviewedAnswerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.BatchDeleteTopicReviewedAnswerInput, ...func(*quicksight.Options)) *quicksight.BatchDeleteTopicReviewedAnswerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.BatchDeleteTopicReviewedAnswerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.BatchDeleteTopicReviewedAnswerInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelIngestion provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelIngestion(ctx context.Context, params *quicksight.CancelIngestionInput, optFns ...func(*quicksight.Options)) (*quicksight.CancelIngestionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +228,80 @@ func (_m *IClient) CreateAnalysis(ctx context.Context, params *quicksight.Create
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.CreateAnalysisInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateBrand provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateBrand(ctx context.Context, params *quicksight.CreateBrandInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateBrandOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateBrand")
+	}
+
+	var r0 *quicksight.CreateBrandOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateBrandInput, ...func(*quicksight.Options)) (*quicksight.CreateBrandOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateBrandInput, ...func(*quicksight.Options)) *quicksight.CreateBrandOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.CreateBrandOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.CreateBrandInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCustomPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCustomPermissions(ctx context.Context, params *quicksight.CreateCustomPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateCustomPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCustomPermissions")
+	}
+
+	var r0 *quicksight.CreateCustomPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateCustomPermissionsInput, ...func(*quicksight.Options)) (*quicksight.CreateCustomPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateCustomPermissionsInput, ...func(*quicksight.Options)) *quicksight.CreateCustomPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.CreateCustomPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.CreateCustomPermissionsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -976,6 +1124,117 @@ func (_m *IClient) DeleteAnalysis(ctx context.Context, params *quicksight.Delete
 	return r0, r1
 }
 
+// DeleteBrand provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBrand(ctx context.Context, params *quicksight.DeleteBrandInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteBrandOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBrand")
+	}
+
+	var r0 *quicksight.DeleteBrandOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteBrandInput, ...func(*quicksight.Options)) (*quicksight.DeleteBrandOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteBrandInput, ...func(*quicksight.Options)) *quicksight.DeleteBrandOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteBrandOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteBrandInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteBrandAssignment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBrandAssignment(ctx context.Context, params *quicksight.DeleteBrandAssignmentInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteBrandAssignmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBrandAssignment")
+	}
+
+	var r0 *quicksight.DeleteBrandAssignmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteBrandAssignmentInput, ...func(*quicksight.Options)) (*quicksight.DeleteBrandAssignmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteBrandAssignmentInput, ...func(*quicksight.Options)) *quicksight.DeleteBrandAssignmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteBrandAssignmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteBrandAssignmentInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCustomPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCustomPermissions(ctx context.Context, params *quicksight.DeleteCustomPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteCustomPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCustomPermissions")
+	}
+
+	var r0 *quicksight.DeleteCustomPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteCustomPermissionsInput, ...func(*quicksight.Options)) (*quicksight.DeleteCustomPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteCustomPermissionsInput, ...func(*quicksight.Options)) *quicksight.DeleteCustomPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteCustomPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteCustomPermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDashboard provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDashboard(ctx context.Context, params *quicksight.DeleteDashboardInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteDashboardOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1116,6 +1375,43 @@ func (_m *IClient) DeleteDataSource(ctx context.Context, params *quicksight.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteDataSourceInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDefaultQBusinessApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDefaultQBusinessApplication(ctx context.Context, params *quicksight.DeleteDefaultQBusinessApplicationInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteDefaultQBusinessApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDefaultQBusinessApplication")
+	}
+
+	var r0 *quicksight.DeleteDefaultQBusinessApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) (*quicksight.DeleteDefaultQBusinessApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) *quicksight.DeleteDefaultQBusinessApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteDefaultQBusinessApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1790,6 +2086,43 @@ func (_m *IClient) DeleteUserByPrincipalId(ctx context.Context, params *quicksig
 	return r0, r1
 }
 
+// DeleteUserCustomPermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteUserCustomPermission(ctx context.Context, params *quicksight.DeleteUserCustomPermissionInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteUserCustomPermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteUserCustomPermission")
+	}
+
+	var r0 *quicksight.DeleteUserCustomPermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteUserCustomPermissionInput, ...func(*quicksight.Options)) (*quicksight.DeleteUserCustomPermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteUserCustomPermissionInput, ...func(*quicksight.Options)) *quicksight.DeleteUserCustomPermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteUserCustomPermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteUserCustomPermissionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteVPCConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteVPCConnection(ctx context.Context, params *quicksight.DeleteVPCConnectionInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteVPCConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2123,6 +2456,154 @@ func (_m *IClient) DescribeAssetBundleImportJob(ctx context.Context, params *qui
 	return r0, r1
 }
 
+// DescribeBrand provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeBrand(ctx context.Context, params *quicksight.DescribeBrandInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeBrandOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeBrand")
+	}
+
+	var r0 *quicksight.DescribeBrandOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeBrandInput, ...func(*quicksight.Options)) (*quicksight.DescribeBrandOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeBrandInput, ...func(*quicksight.Options)) *quicksight.DescribeBrandOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeBrandOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeBrandInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeBrandAssignment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeBrandAssignment(ctx context.Context, params *quicksight.DescribeBrandAssignmentInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeBrandAssignmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeBrandAssignment")
+	}
+
+	var r0 *quicksight.DescribeBrandAssignmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeBrandAssignmentInput, ...func(*quicksight.Options)) (*quicksight.DescribeBrandAssignmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeBrandAssignmentInput, ...func(*quicksight.Options)) *quicksight.DescribeBrandAssignmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeBrandAssignmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeBrandAssignmentInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeBrandPublishedVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeBrandPublishedVersion(ctx context.Context, params *quicksight.DescribeBrandPublishedVersionInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeBrandPublishedVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeBrandPublishedVersion")
+	}
+
+	var r0 *quicksight.DescribeBrandPublishedVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeBrandPublishedVersionInput, ...func(*quicksight.Options)) (*quicksight.DescribeBrandPublishedVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeBrandPublishedVersionInput, ...func(*quicksight.Options)) *quicksight.DescribeBrandPublishedVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeBrandPublishedVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeBrandPublishedVersionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCustomPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCustomPermissions(ctx context.Context, params *quicksight.DescribeCustomPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeCustomPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCustomPermissions")
+	}
+
+	var r0 *quicksight.DescribeCustomPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeCustomPermissionsInput, ...func(*quicksight.Options)) (*quicksight.DescribeCustomPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeCustomPermissionsInput, ...func(*quicksight.Options)) *quicksight.DescribeCustomPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeCustomPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeCustomPermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeDashboard provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeDashboard(ctx context.Context, params *quicksight.DescribeDashboardInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeDashboardOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2308,6 +2789,43 @@ func (_m *IClient) DescribeDashboardSnapshotJobResult(ctx context.Context, param
 	return r0, r1
 }
 
+// DescribeDashboardsQAConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDashboardsQAConfiguration(ctx context.Context, params *quicksight.DescribeDashboardsQAConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeDashboardsQAConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDashboardsQAConfiguration")
+	}
+
+	var r0 *quicksight.DescribeDashboardsQAConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeDashboardsQAConfigurationInput, ...func(*quicksight.Options)) (*quicksight.DescribeDashboardsQAConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeDashboardsQAConfigurationInput, ...func(*quicksight.Options)) *quicksight.DescribeDashboardsQAConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeDashboardsQAConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeDashboardsQAConfigurationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeDataSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeDataSet(ctx context.Context, params *quicksight.DescribeDataSetInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeDataSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2485,6 +3003,43 @@ func (_m *IClient) DescribeDataSourcePermissions(ctx context.Context, params *qu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeDataSourcePermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDefaultQBusinessApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDefaultQBusinessApplication(ctx context.Context, params *quicksight.DescribeDefaultQBusinessApplicationInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeDefaultQBusinessApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDefaultQBusinessApplication")
+	}
+
+	var r0 *quicksight.DescribeDefaultQBusinessApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) (*quicksight.DescribeDefaultQBusinessApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) *quicksight.DescribeDefaultQBusinessApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeDefaultQBusinessApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2855,6 +3410,80 @@ func (_m *IClient) DescribeNamespace(ctx context.Context, params *quicksight.Des
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeNamespaceInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeQPersonalizationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeQPersonalizationConfiguration(ctx context.Context, params *quicksight.DescribeQPersonalizationConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeQPersonalizationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeQPersonalizationConfiguration")
+	}
+
+	var r0 *quicksight.DescribeQPersonalizationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeQPersonalizationConfigurationInput, ...func(*quicksight.Options)) (*quicksight.DescribeQPersonalizationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeQPersonalizationConfigurationInput, ...func(*quicksight.Options)) *quicksight.DescribeQPersonalizationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeQPersonalizationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeQPersonalizationConfigurationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeQuickSightQSearchConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeQuickSightQSearchConfiguration(ctx context.Context, params *quicksight.DescribeQuickSightQSearchConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeQuickSightQSearchConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeQuickSightQSearchConfiguration")
+	}
+
+	var r0 *quicksight.DescribeQuickSightQSearchConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeQuickSightQSearchConfigurationInput, ...func(*quicksight.Options)) (*quicksight.DescribeQuickSightQSearchConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeQuickSightQSearchConfigurationInput, ...func(*quicksight.Options)) *quicksight.DescribeQuickSightQSearchConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeQuickSightQSearchConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeQuickSightQSearchConfigurationInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3492,6 +4121,43 @@ func (_m *IClient) GenerateEmbedUrlForRegisteredUser(ctx context.Context, params
 	return r0, r1
 }
 
+// GenerateEmbedUrlForRegisteredUserWithIdentity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GenerateEmbedUrlForRegisteredUserWithIdentity(ctx context.Context, params *quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityInput, optFns ...func(*quicksight.Options)) (*quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GenerateEmbedUrlForRegisteredUserWithIdentity")
+	}
+
+	var r0 *quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityInput, ...func(*quicksight.Options)) (*quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityInput, ...func(*quicksight.Options)) *quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.GenerateEmbedUrlForRegisteredUserWithIdentityInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDashboardEmbedUrl provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDashboardEmbedUrl(ctx context.Context, params *quicksight.GetDashboardEmbedUrlInput, optFns ...func(*quicksight.Options)) (*quicksight.GetDashboardEmbedUrlOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3669,6 +4335,80 @@ func (_m *IClient) ListAssetBundleImportJobs(ctx context.Context, params *quicks
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListAssetBundleImportJobsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBrands provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBrands(ctx context.Context, params *quicksight.ListBrandsInput, optFns ...func(*quicksight.Options)) (*quicksight.ListBrandsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBrands")
+	}
+
+	var r0 *quicksight.ListBrandsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListBrandsInput, ...func(*quicksight.Options)) (*quicksight.ListBrandsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListBrandsInput, ...func(*quicksight.Options)) *quicksight.ListBrandsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListBrandsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListBrandsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCustomPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomPermissions(ctx context.Context, params *quicksight.ListCustomPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.ListCustomPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomPermissions")
+	}
+
+	var r0 *quicksight.ListCustomPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListCustomPermissionsInput, ...func(*quicksight.Options)) (*quicksight.ListCustomPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListCustomPermissionsInput, ...func(*quicksight.Options)) *quicksight.ListCustomPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListCustomPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListCustomPermissionsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3891,6 +4631,43 @@ func (_m *IClient) ListFolders(ctx context.Context, params *quicksight.ListFolde
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListFoldersInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFoldersForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFoldersForResource(ctx context.Context, params *quicksight.ListFoldersForResourceInput, optFns ...func(*quicksight.Options)) (*quicksight.ListFoldersForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFoldersForResource")
+	}
+
+	var r0 *quicksight.ListFoldersForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListFoldersForResourceInput, ...func(*quicksight.Options)) (*quicksight.ListFoldersForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListFoldersForResourceInput, ...func(*quicksight.Options)) *quicksight.ListFoldersForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListFoldersForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListFoldersForResourceInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4528,6 +5305,43 @@ func (_m *IClient) ListTopicRefreshSchedules(ctx context.Context, params *quicks
 	return r0, r1
 }
 
+// ListTopicReviewedAnswers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTopicReviewedAnswers(ctx context.Context, params *quicksight.ListTopicReviewedAnswersInput, optFns ...func(*quicksight.Options)) (*quicksight.ListTopicReviewedAnswersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTopicReviewedAnswers")
+	}
+
+	var r0 *quicksight.ListTopicReviewedAnswersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListTopicReviewedAnswersInput, ...func(*quicksight.Options)) (*quicksight.ListTopicReviewedAnswersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListTopicReviewedAnswersInput, ...func(*quicksight.Options)) *quicksight.ListTopicReviewedAnswersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListTopicReviewedAnswersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListTopicReviewedAnswersInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTopics provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTopics(ctx context.Context, params *quicksight.ListTopicsInput, optFns ...func(*quicksight.Options)) (*quicksight.ListTopicsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4692,6 +5506,43 @@ func (_m *IClient) Options() quicksight.Options {
 	}
 
 	return r0
+}
+
+// PredictQAResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PredictQAResults(ctx context.Context, params *quicksight.PredictQAResultsInput, optFns ...func(*quicksight.Options)) (*quicksight.PredictQAResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PredictQAResults")
+	}
+
+	var r0 *quicksight.PredictQAResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.PredictQAResultsInput, ...func(*quicksight.Options)) (*quicksight.PredictQAResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.PredictQAResultsInput, ...func(*quicksight.Options)) *quicksight.PredictQAResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.PredictQAResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.PredictQAResultsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutDataSetRefreshProperties provides a mock function with given fields: ctx, params, optFns
@@ -5027,6 +5878,43 @@ func (_m *IClient) SearchGroups(ctx context.Context, params *quicksight.SearchGr
 	return r0, r1
 }
 
+// SearchTopics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchTopics(ctx context.Context, params *quicksight.SearchTopicsInput, optFns ...func(*quicksight.Options)) (*quicksight.SearchTopicsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchTopics")
+	}
+
+	var r0 *quicksight.SearchTopicsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchTopicsInput, ...func(*quicksight.Options)) (*quicksight.SearchTopicsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchTopicsInput, ...func(*quicksight.Options)) *quicksight.SearchTopicsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.SearchTopicsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.SearchTopicsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartAssetBundleExportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartAssetBundleExportJob(ctx context.Context, params *quicksight.StartAssetBundleExportJobInput, optFns ...func(*quicksight.Options)) (*quicksight.StartAssetBundleExportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5130,6 +6018,43 @@ func (_m *IClient) StartDashboardSnapshotJob(ctx context.Context, params *quicks
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.StartDashboardSnapshotJobInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartDashboardSnapshotJobSchedule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDashboardSnapshotJobSchedule(ctx context.Context, params *quicksight.StartDashboardSnapshotJobScheduleInput, optFns ...func(*quicksight.Options)) (*quicksight.StartDashboardSnapshotJobScheduleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDashboardSnapshotJobSchedule")
+	}
+
+	var r0 *quicksight.StartDashboardSnapshotJobScheduleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.StartDashboardSnapshotJobScheduleInput, ...func(*quicksight.Options)) (*quicksight.StartDashboardSnapshotJobScheduleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.StartDashboardSnapshotJobScheduleInput, ...func(*quicksight.Options)) *quicksight.StartDashboardSnapshotJobScheduleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.StartDashboardSnapshotJobScheduleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.StartDashboardSnapshotJobScheduleInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5360,6 +6285,191 @@ func (_m *IClient) UpdateAnalysisPermissions(ctx context.Context, params *quicks
 	return r0, r1
 }
 
+// UpdateApplicationWithTokenExchangeGrant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateApplicationWithTokenExchangeGrant(ctx context.Context, params *quicksight.UpdateApplicationWithTokenExchangeGrantInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateApplicationWithTokenExchangeGrantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateApplicationWithTokenExchangeGrant")
+	}
+
+	var r0 *quicksight.UpdateApplicationWithTokenExchangeGrantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateApplicationWithTokenExchangeGrantInput, ...func(*quicksight.Options)) (*quicksight.UpdateApplicationWithTokenExchangeGrantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateApplicationWithTokenExchangeGrantInput, ...func(*quicksight.Options)) *quicksight.UpdateApplicationWithTokenExchangeGrantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateApplicationWithTokenExchangeGrantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateApplicationWithTokenExchangeGrantInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBrand provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBrand(ctx context.Context, params *quicksight.UpdateBrandInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateBrandOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBrand")
+	}
+
+	var r0 *quicksight.UpdateBrandOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateBrandInput, ...func(*quicksight.Options)) (*quicksight.UpdateBrandOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateBrandInput, ...func(*quicksight.Options)) *quicksight.UpdateBrandOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateBrandOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateBrandInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBrandAssignment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBrandAssignment(ctx context.Context, params *quicksight.UpdateBrandAssignmentInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateBrandAssignmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBrandAssignment")
+	}
+
+	var r0 *quicksight.UpdateBrandAssignmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateBrandAssignmentInput, ...func(*quicksight.Options)) (*quicksight.UpdateBrandAssignmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateBrandAssignmentInput, ...func(*quicksight.Options)) *quicksight.UpdateBrandAssignmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateBrandAssignmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateBrandAssignmentInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBrandPublishedVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBrandPublishedVersion(ctx context.Context, params *quicksight.UpdateBrandPublishedVersionInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateBrandPublishedVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBrandPublishedVersion")
+	}
+
+	var r0 *quicksight.UpdateBrandPublishedVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateBrandPublishedVersionInput, ...func(*quicksight.Options)) (*quicksight.UpdateBrandPublishedVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateBrandPublishedVersionInput, ...func(*quicksight.Options)) *quicksight.UpdateBrandPublishedVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateBrandPublishedVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateBrandPublishedVersionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCustomPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCustomPermissions(ctx context.Context, params *quicksight.UpdateCustomPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateCustomPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCustomPermissions")
+	}
+
+	var r0 *quicksight.UpdateCustomPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateCustomPermissionsInput, ...func(*quicksight.Options)) (*quicksight.UpdateCustomPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateCustomPermissionsInput, ...func(*quicksight.Options)) *quicksight.UpdateCustomPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateCustomPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateCustomPermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDashboard provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDashboard(ctx context.Context, params *quicksight.UpdateDashboardInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateDashboardOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5508,6 +6618,43 @@ func (_m *IClient) UpdateDashboardPublishedVersion(ctx context.Context, params *
 	return r0, r1
 }
 
+// UpdateDashboardsQAConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDashboardsQAConfiguration(ctx context.Context, params *quicksight.UpdateDashboardsQAConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateDashboardsQAConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDashboardsQAConfiguration")
+	}
+
+	var r0 *quicksight.UpdateDashboardsQAConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateDashboardsQAConfigurationInput, ...func(*quicksight.Options)) (*quicksight.UpdateDashboardsQAConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateDashboardsQAConfigurationInput, ...func(*quicksight.Options)) *quicksight.UpdateDashboardsQAConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateDashboardsQAConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateDashboardsQAConfigurationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDataSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDataSet(ctx context.Context, params *quicksight.UpdateDataSetInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateDataSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5648,6 +6795,43 @@ func (_m *IClient) UpdateDataSourcePermissions(ctx context.Context, params *quic
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateDataSourcePermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDefaultQBusinessApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDefaultQBusinessApplication(ctx context.Context, params *quicksight.UpdateDefaultQBusinessApplicationInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateDefaultQBusinessApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDefaultQBusinessApplication")
+	}
+
+	var r0 *quicksight.UpdateDefaultQBusinessApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) (*quicksight.UpdateDefaultQBusinessApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) *quicksight.UpdateDefaultQBusinessApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateDefaultQBusinessApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5944,6 +7128,80 @@ func (_m *IClient) UpdatePublicSharingSettings(ctx context.Context, params *quic
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdatePublicSharingSettingsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQPersonalizationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQPersonalizationConfiguration(ctx context.Context, params *quicksight.UpdateQPersonalizationConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateQPersonalizationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQPersonalizationConfiguration")
+	}
+
+	var r0 *quicksight.UpdateQPersonalizationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateQPersonalizationConfigurationInput, ...func(*quicksight.Options)) (*quicksight.UpdateQPersonalizationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateQPersonalizationConfigurationInput, ...func(*quicksight.Options)) *quicksight.UpdateQPersonalizationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateQPersonalizationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateQPersonalizationConfigurationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQuickSightQSearchConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQuickSightQSearchConfiguration(ctx context.Context, params *quicksight.UpdateQuickSightQSearchConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateQuickSightQSearchConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQuickSightQSearchConfiguration")
+	}
+
+	var r0 *quicksight.UpdateQuickSightQSearchConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateQuickSightQSearchConfigurationInput, ...func(*quicksight.Options)) (*quicksight.UpdateQuickSightQSearchConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateQuickSightQSearchConfigurationInput, ...func(*quicksight.Options)) *quicksight.UpdateQuickSightQSearchConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateQuickSightQSearchConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateQuickSightQSearchConfigurationInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6425,6 +7683,43 @@ func (_m *IClient) UpdateUser(ctx context.Context, params *quicksight.UpdateUser
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateUserInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateUserCustomPermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateUserCustomPermission(ctx context.Context, params *quicksight.UpdateUserCustomPermissionInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateUserCustomPermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateUserCustomPermission")
+	}
+
+	var r0 *quicksight.UpdateUserCustomPermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateUserCustomPermissionInput, ...func(*quicksight.Options)) (*quicksight.UpdateUserCustomPermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateUserCustomPermissionInput, ...func(*quicksight.Options)) *quicksight.UpdateUserCustomPermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateUserCustomPermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateUserCustomPermissionInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

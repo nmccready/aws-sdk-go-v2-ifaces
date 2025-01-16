@@ -865,6 +865,43 @@ func (_m *IClient) DeleteProtectConfiguration(ctx context.Context, params *pinpo
 	return r0, r1
 }
 
+// DeleteProtectConfigurationRuleSetNumberOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProtectConfigurationRuleSetNumberOverride(ctx context.Context, params *pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProtectConfigurationRuleSetNumberOverride")
+	}
+
+	var r0 *pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteRegistration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteRegistration(ctx context.Context, params *pinpointsmsvoicev2.DeleteRegistrationInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteRegistrationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -968,6 +1005,43 @@ func (_m *IClient) DeleteRegistrationFieldValue(ctx context.Context, params *pin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.DeleteRegistrationFieldValueInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *pinpointsmsvoicev2.DeleteResourcePolicyInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *pinpointsmsvoicev2.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.DeleteResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.DeleteResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.DeleteResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1938,6 +2012,43 @@ func (_m *IClient) GetProtectConfigurationCountryRuleSet(ctx context.Context, pa
 	return r0, r1
 }
 
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *pinpointsmsvoicev2.GetResourcePolicyInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *pinpointsmsvoicev2.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.GetResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.GetResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.GetResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPoolOriginationIdentities provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPoolOriginationIdentities(ctx context.Context, params *pinpointsmsvoicev2.ListPoolOriginationIdentitiesInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.ListPoolOriginationIdentitiesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1967,6 +2078,43 @@ func (_m *IClient) ListPoolOriginationIdentities(ctx context.Context, params *pi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.ListPoolOriginationIdentitiesInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProtectConfigurationRuleSetNumberOverrides provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProtectConfigurationRuleSetNumberOverrides(ctx context.Context, params *pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProtectConfigurationRuleSetNumberOverrides")
+	}
+
+	var r0 *pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2104,6 +2252,43 @@ func (_m *IClient) PutKeyword(ctx context.Context, params *pinpointsmsvoicev2.Pu
 	return r0, r1
 }
 
+// PutMessageFeedback provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutMessageFeedback(ctx context.Context, params *pinpointsmsvoicev2.PutMessageFeedbackInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutMessageFeedbackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutMessageFeedback")
+	}
+
+	var r0 *pinpointsmsvoicev2.PutMessageFeedbackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.PutMessageFeedbackInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutMessageFeedbackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.PutMessageFeedbackInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.PutMessageFeedbackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.PutMessageFeedbackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.PutMessageFeedbackInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutOptedOutNumber provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutOptedOutNumber(ctx context.Context, params *pinpointsmsvoicev2.PutOptedOutNumberInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutOptedOutNumberOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2141,6 +2326,43 @@ func (_m *IClient) PutOptedOutNumber(ctx context.Context, params *pinpointsmsvoi
 	return r0, r1
 }
 
+// PutProtectConfigurationRuleSetNumberOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutProtectConfigurationRuleSetNumberOverride(ctx context.Context, params *pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutProtectConfigurationRuleSetNumberOverride")
+	}
+
+	var r0 *pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutRegistrationFieldValue provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutRegistrationFieldValue(ctx context.Context, params *pinpointsmsvoicev2.PutRegistrationFieldValueInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutRegistrationFieldValueOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2170,6 +2392,43 @@ func (_m *IClient) PutRegistrationFieldValue(ctx context.Context, params *pinpoi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.PutRegistrationFieldValueInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *pinpointsmsvoicev2.PutResourcePolicyInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *pinpointsmsvoicev2.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.PutResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.PutResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.PutResourcePolicyInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2503,6 +2762,43 @@ func (_m *IClient) SetAccountDefaultProtectConfiguration(ctx context.Context, pa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.SetAccountDefaultProtectConfigurationInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SetDefaultMessageFeedbackEnabled provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SetDefaultMessageFeedbackEnabled(ctx context.Context, params *pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SetDefaultMessageFeedbackEnabled")
+	}
+
+	var r0 *pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

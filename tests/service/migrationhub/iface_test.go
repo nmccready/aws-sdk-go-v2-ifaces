@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateSourceResource", func(t *testing.T) {
+        input := &migrationhub.AssociateSourceResourceInput{}
+        output := &migrationhub.AssociateSourceResourceOutput{}
+
+        mockClient.On("AssociateSourceResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSourceResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateProgressUpdateStream", func(t *testing.T) {
         input := &migrationhub.CreateProgressUpdateStreamInput{}
         output := &migrationhub.CreateProgressUpdateStreamOutput{}
@@ -138,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateSourceResource", func(t *testing.T) {
+        input := &migrationhub.DisassociateSourceResourceInput{}
+        output := &migrationhub.DisassociateSourceResourceOutput{}
+
+        mockClient.On("DisassociateSourceResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSourceResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestImportMigrationTask", func(t *testing.T) {
         input := &migrationhub.ImportMigrationTaskInput{}
         output := &migrationhub.ImportMigrationTaskOutput{}
@@ -190,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMigrationTaskUpdates", func(t *testing.T) {
+        input := &migrationhub.ListMigrationTaskUpdatesInput{}
+        output := &migrationhub.ListMigrationTaskUpdatesOutput{}
+
+        mockClient.On("ListMigrationTaskUpdates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMigrationTaskUpdates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMigrationTasks", func(t *testing.T) {
         input := &migrationhub.ListMigrationTasksInput{}
         output := &migrationhub.ListMigrationTasksOutput{}
@@ -210,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProgressUpdateStreams", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProgressUpdateStreams(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSourceResources", func(t *testing.T) {
+        input := &migrationhub.ListSourceResourcesInput{}
+        output := &migrationhub.ListSourceResourcesOutput{}
+
+        mockClient.On("ListSourceResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSourceResources(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

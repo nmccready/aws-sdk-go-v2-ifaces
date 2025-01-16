@@ -502,6 +502,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestFailoverGlobalCluster", func(t *testing.T) {
+        input := &docdb.FailoverGlobalClusterInput{}
+        output := &docdb.FailoverGlobalClusterOutput{}
+
+        mockClient.On("FailoverGlobalCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.FailoverGlobalCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &docdb.ListTagsForResourceInput{}
         output := &docdb.ListTagsForResourceOutput{}

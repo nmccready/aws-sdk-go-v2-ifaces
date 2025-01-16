@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIngestConfiguration", func(t *testing.T) {
+        input := &ivsrealtime.CreateIngestConfigurationInput{}
+        output := &ivsrealtime.CreateIngestConfigurationOutput{}
+
+        mockClient.On("CreateIngestConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIngestConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateParticipantToken", func(t *testing.T) {
         input := &ivsrealtime.CreateParticipantTokenInput{}
         output := &ivsrealtime.CreateParticipantTokenOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEncoderConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEncoderConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIngestConfiguration", func(t *testing.T) {
+        input := &ivsrealtime.DeleteIngestConfigurationInput{}
+        output := &ivsrealtime.DeleteIngestConfigurationOutput{}
+
+        mockClient.On("DeleteIngestConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIngestConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -171,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEncoderConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEncoderConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIngestConfiguration", func(t *testing.T) {
+        input := &ivsrealtime.GetIngestConfigurationInput{}
+        output := &ivsrealtime.GetIngestConfigurationOutput{}
+
+        mockClient.On("GetIngestConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIngestConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -275,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEncoderConfigurations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEncoderConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIngestConfigurations", func(t *testing.T) {
+        input := &ivsrealtime.ListIngestConfigurationsInput{}
+        output := &ivsrealtime.ListIngestConfigurationsOutput{}
+
+        mockClient.On("ListIngestConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIngestConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -418,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIngestConfiguration", func(t *testing.T) {
+        input := &ivsrealtime.UpdateIngestConfigurationInput{}
+        output := &ivsrealtime.UpdateIngestConfigurationOutput{}
+
+        mockClient.On("UpdateIngestConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIngestConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

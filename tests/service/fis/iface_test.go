@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSafetyLever", func(t *testing.T) {
+        input := &fis.GetSafetyLeverInput{}
+        output := &fis.GetSafetyLeverOutput{}
+
+        mockClient.On("GetSafetyLever", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSafetyLever(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTargetAccountConfiguration", func(t *testing.T) {
         input := &fis.GetTargetAccountConfigurationInput{}
         output := &fis.GetTargetAccountConfigurationOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateExperimentTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateExperimentTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSafetyLeverState", func(t *testing.T) {
+        input := &fis.UpdateSafetyLeverStateInput{}
+        output := &fis.UpdateSafetyLeverStateOutput{}
+
+        mockClient.On("UpdateSafetyLeverState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSafetyLeverState(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

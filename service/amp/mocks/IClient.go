@@ -958,6 +958,43 @@ func (_m *IClient) UpdateLoggingConfiguration(ctx context.Context, params *amp.U
 	return r0, r1
 }
 
+// UpdateScraper provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateScraper(ctx context.Context, params *amp.UpdateScraperInput, optFns ...func(*amp.Options)) (*amp.UpdateScraperOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateScraper")
+	}
+
+	var r0 *amp.UpdateScraperOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.UpdateScraperInput, ...func(*amp.Options)) (*amp.UpdateScraperOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.UpdateScraperInput, ...func(*amp.Options)) *amp.UpdateScraperOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.UpdateScraperOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.UpdateScraperInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateWorkspaceAlias provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateWorkspaceAlias(ctx context.Context, params *amp.UpdateWorkspaceAliasInput, optFns ...func(*amp.Options)) (*amp.UpdateWorkspaceAliasOutput, error) {
 	_va := make([]interface{}, len(optFns))

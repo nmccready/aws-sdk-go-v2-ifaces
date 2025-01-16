@@ -163,6 +163,43 @@ func (_m *IClient) CreateBuild(ctx context.Context, params *gamelift.CreateBuild
 	return r0, r1
 }
 
+// CreateContainerFleet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContainerFleet(ctx context.Context, params *gamelift.CreateContainerFleetInput, optFns ...func(*gamelift.Options)) (*gamelift.CreateContainerFleetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContainerFleet")
+	}
+
+	var r0 *gamelift.CreateContainerFleetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.CreateContainerFleetInput, ...func(*gamelift.Options)) (*gamelift.CreateContainerFleetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.CreateContainerFleetInput, ...func(*gamelift.Options)) *gamelift.CreateContainerFleetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.CreateContainerFleetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.CreateContainerFleetInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateContainerGroupDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateContainerGroupDefinition(ctx context.Context, params *gamelift.CreateContainerGroupDefinitionInput, optFns ...func(*gamelift.Options)) (*gamelift.CreateContainerGroupDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +784,43 @@ func (_m *IClient) DeleteBuild(ctx context.Context, params *gamelift.DeleteBuild
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.DeleteBuildInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteContainerFleet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteContainerFleet(ctx context.Context, params *gamelift.DeleteContainerFleetInput, optFns ...func(*gamelift.Options)) (*gamelift.DeleteContainerFleetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteContainerFleet")
+	}
+
+	var r0 *gamelift.DeleteContainerFleetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DeleteContainerFleetInput, ...func(*gamelift.Options)) (*gamelift.DeleteContainerFleetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DeleteContainerFleetInput, ...func(*gamelift.Options)) *gamelift.DeleteContainerFleetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.DeleteContainerFleetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.DeleteContainerFleetInput, ...func(*gamelift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1384,6 +1458,43 @@ func (_m *IClient) DescribeCompute(ctx context.Context, params *gamelift.Describ
 	return r0, r1
 }
 
+// DescribeContainerFleet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeContainerFleet(ctx context.Context, params *gamelift.DescribeContainerFleetInput, optFns ...func(*gamelift.Options)) (*gamelift.DescribeContainerFleetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeContainerFleet")
+	}
+
+	var r0 *gamelift.DescribeContainerFleetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DescribeContainerFleetInput, ...func(*gamelift.Options)) (*gamelift.DescribeContainerFleetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DescribeContainerFleetInput, ...func(*gamelift.Options)) *gamelift.DescribeContainerFleetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.DescribeContainerFleetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.DescribeContainerFleetInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeContainerGroupDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeContainerGroupDefinition(ctx context.Context, params *gamelift.DescribeContainerGroupDefinitionInput, optFns ...func(*gamelift.Options)) (*gamelift.DescribeContainerGroupDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1524,6 +1635,43 @@ func (_m *IClient) DescribeFleetCapacity(ctx context.Context, params *gamelift.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.DescribeFleetCapacityInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeFleetDeployment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeFleetDeployment(ctx context.Context, params *gamelift.DescribeFleetDeploymentInput, optFns ...func(*gamelift.Options)) (*gamelift.DescribeFleetDeploymentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeFleetDeployment")
+	}
+
+	var r0 *gamelift.DescribeFleetDeploymentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DescribeFleetDeploymentInput, ...func(*gamelift.Options)) (*gamelift.DescribeFleetDeploymentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DescribeFleetDeploymentInput, ...func(*gamelift.Options)) *gamelift.DescribeFleetDeploymentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.DescribeFleetDeploymentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.DescribeFleetDeploymentInput, ...func(*gamelift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2642,6 +2790,80 @@ func (_m *IClient) ListCompute(ctx context.Context, params *gamelift.ListCompute
 	return r0, r1
 }
 
+// ListContainerFleets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContainerFleets(ctx context.Context, params *gamelift.ListContainerFleetsInput, optFns ...func(*gamelift.Options)) (*gamelift.ListContainerFleetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContainerFleets")
+	}
+
+	var r0 *gamelift.ListContainerFleetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.ListContainerFleetsInput, ...func(*gamelift.Options)) (*gamelift.ListContainerFleetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.ListContainerFleetsInput, ...func(*gamelift.Options)) *gamelift.ListContainerFleetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.ListContainerFleetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.ListContainerFleetsInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContainerGroupDefinitionVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContainerGroupDefinitionVersions(ctx context.Context, params *gamelift.ListContainerGroupDefinitionVersionsInput, optFns ...func(*gamelift.Options)) (*gamelift.ListContainerGroupDefinitionVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContainerGroupDefinitionVersions")
+	}
+
+	var r0 *gamelift.ListContainerGroupDefinitionVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.ListContainerGroupDefinitionVersionsInput, ...func(*gamelift.Options)) (*gamelift.ListContainerGroupDefinitionVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.ListContainerGroupDefinitionVersionsInput, ...func(*gamelift.Options)) *gamelift.ListContainerGroupDefinitionVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.ListContainerGroupDefinitionVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.ListContainerGroupDefinitionVersionsInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListContainerGroupDefinitions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListContainerGroupDefinitions(ctx context.Context, params *gamelift.ListContainerGroupDefinitionsInput, optFns ...func(*gamelift.Options)) (*gamelift.ListContainerGroupDefinitionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2671,6 +2893,43 @@ func (_m *IClient) ListContainerGroupDefinitions(ctx context.Context, params *ga
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.ListContainerGroupDefinitionsInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFleetDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFleetDeployments(ctx context.Context, params *gamelift.ListFleetDeploymentsInput, optFns ...func(*gamelift.Options)) (*gamelift.ListFleetDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFleetDeployments")
+	}
+
+	var r0 *gamelift.ListFleetDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.ListFleetDeploymentsInput, ...func(*gamelift.Options)) (*gamelift.ListFleetDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.ListFleetDeploymentsInput, ...func(*gamelift.Options)) *gamelift.ListFleetDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.ListFleetDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.ListFleetDeploymentsInput, ...func(*gamelift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3511,6 +3770,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *gamelift.TagResource
 	return r0, r1
 }
 
+// TerminateGameSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TerminateGameSession(ctx context.Context, params *gamelift.TerminateGameSessionInput, optFns ...func(*gamelift.Options)) (*gamelift.TerminateGameSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TerminateGameSession")
+	}
+
+	var r0 *gamelift.TerminateGameSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.TerminateGameSessionInput, ...func(*gamelift.Options)) (*gamelift.TerminateGameSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.TerminateGameSessionInput, ...func(*gamelift.Options)) *gamelift.TerminateGameSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.TerminateGameSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.TerminateGameSessionInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UntagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UntagResource(ctx context.Context, params *gamelift.UntagResourceInput, optFns ...func(*gamelift.Options)) (*gamelift.UntagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3614,6 +3910,80 @@ func (_m *IClient) UpdateBuild(ctx context.Context, params *gamelift.UpdateBuild
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.UpdateBuildInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateContainerFleet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContainerFleet(ctx context.Context, params *gamelift.UpdateContainerFleetInput, optFns ...func(*gamelift.Options)) (*gamelift.UpdateContainerFleetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContainerFleet")
+	}
+
+	var r0 *gamelift.UpdateContainerFleetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.UpdateContainerFleetInput, ...func(*gamelift.Options)) (*gamelift.UpdateContainerFleetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.UpdateContainerFleetInput, ...func(*gamelift.Options)) *gamelift.UpdateContainerFleetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.UpdateContainerFleetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.UpdateContainerFleetInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateContainerGroupDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContainerGroupDefinition(ctx context.Context, params *gamelift.UpdateContainerGroupDefinitionInput, optFns ...func(*gamelift.Options)) (*gamelift.UpdateContainerGroupDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContainerGroupDefinition")
+	}
+
+	var r0 *gamelift.UpdateContainerGroupDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.UpdateContainerGroupDefinitionInput, ...func(*gamelift.Options)) (*gamelift.UpdateContainerGroupDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.UpdateContainerGroupDefinitionInput, ...func(*gamelift.Options)) *gamelift.UpdateContainerGroupDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.UpdateContainerGroupDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.UpdateContainerGroupDefinitionInput, ...func(*gamelift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

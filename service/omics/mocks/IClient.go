@@ -421,6 +421,43 @@ func (_m *IClient) CreateReferenceStore(ctx context.Context, params *omics.Creat
 	return r0, r1
 }
 
+// CreateRunCache provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRunCache(ctx context.Context, params *omics.CreateRunCacheInput, optFns ...func(*omics.Options)) (*omics.CreateRunCacheOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRunCache")
+	}
+
+	var r0 *omics.CreateRunCacheOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.CreateRunCacheInput, ...func(*omics.Options)) (*omics.CreateRunCacheOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.CreateRunCacheInput, ...func(*omics.Options)) *omics.CreateRunCacheOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.CreateRunCacheOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.CreateRunCacheInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateRunGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateRunGroup(ctx context.Context, params *omics.CreateRunGroupInput, optFns ...func(*omics.Options)) (*omics.CreateRunGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -791,6 +828,43 @@ func (_m *IClient) DeleteRun(ctx context.Context, params *omics.DeleteRunInput, 
 	return r0, r1
 }
 
+// DeleteRunCache provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRunCache(ctx context.Context, params *omics.DeleteRunCacheInput, optFns ...func(*omics.Options)) (*omics.DeleteRunCacheOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRunCache")
+	}
+
+	var r0 *omics.DeleteRunCacheOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteRunCacheInput, ...func(*omics.Options)) (*omics.DeleteRunCacheOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteRunCacheInput, ...func(*omics.Options)) *omics.DeleteRunCacheOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.DeleteRunCacheOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteRunCacheInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteRunGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteRunGroup(ctx context.Context, params *omics.DeleteRunGroupInput, optFns ...func(*omics.Options)) (*omics.DeleteRunGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -820,6 +894,43 @@ func (_m *IClient) DeleteRunGroup(ctx context.Context, params *omics.DeleteRunGr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteRunGroupInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteS3AccessPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteS3AccessPolicy(ctx context.Context, params *omics.DeleteS3AccessPolicyInput, optFns ...func(*omics.Options)) (*omics.DeleteS3AccessPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteS3AccessPolicy")
+	}
+
+	var r0 *omics.DeleteS3AccessPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteS3AccessPolicyInput, ...func(*omics.Options)) (*omics.DeleteS3AccessPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteS3AccessPolicyInput, ...func(*omics.Options)) *omics.DeleteS3AccessPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.DeleteS3AccessPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteS3AccessPolicyInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1457,6 +1568,43 @@ func (_m *IClient) GetRun(ctx context.Context, params *omics.GetRunInput, optFns
 	return r0, r1
 }
 
+// GetRunCache provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRunCache(ctx context.Context, params *omics.GetRunCacheInput, optFns ...func(*omics.Options)) (*omics.GetRunCacheOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRunCache")
+	}
+
+	var r0 *omics.GetRunCacheOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetRunCacheInput, ...func(*omics.Options)) (*omics.GetRunCacheOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetRunCacheInput, ...func(*omics.Options)) *omics.GetRunCacheOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.GetRunCacheOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.GetRunCacheInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRunGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRunGroup(ctx context.Context, params *omics.GetRunGroupInput, optFns ...func(*omics.Options)) (*omics.GetRunGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1523,6 +1671,43 @@ func (_m *IClient) GetRunTask(ctx context.Context, params *omics.GetRunTaskInput
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.GetRunTaskInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetS3AccessPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetS3AccessPolicy(ctx context.Context, params *omics.GetS3AccessPolicyInput, optFns ...func(*omics.Options)) (*omics.GetS3AccessPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetS3AccessPolicy")
+	}
+
+	var r0 *omics.GetS3AccessPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetS3AccessPolicyInput, ...func(*omics.Options)) (*omics.GetS3AccessPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetS3AccessPolicyInput, ...func(*omics.Options)) *omics.GetS3AccessPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.GetS3AccessPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.GetS3AccessPolicyInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2160,6 +2345,43 @@ func (_m *IClient) ListReferences(ctx context.Context, params *omics.ListReferen
 	return r0, r1
 }
 
+// ListRunCaches provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRunCaches(ctx context.Context, params *omics.ListRunCachesInput, optFns ...func(*omics.Options)) (*omics.ListRunCachesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRunCaches")
+	}
+
+	var r0 *omics.ListRunCachesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListRunCachesInput, ...func(*omics.Options)) (*omics.ListRunCachesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListRunCachesInput, ...func(*omics.Options)) *omics.ListRunCachesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.ListRunCachesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.ListRunCachesInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListRunGroups provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListRunGroups(ctx context.Context, params *omics.ListRunGroupsInput, optFns ...func(*omics.Options)) (*omics.ListRunGroupsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2509,6 +2731,43 @@ func (_m *IClient) Options() omics.Options {
 	}
 
 	return r0
+}
+
+// PutS3AccessPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutS3AccessPolicy(ctx context.Context, params *omics.PutS3AccessPolicyInput, optFns ...func(*omics.Options)) (*omics.PutS3AccessPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutS3AccessPolicy")
+	}
+
+	var r0 *omics.PutS3AccessPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.PutS3AccessPolicyInput, ...func(*omics.Options)) (*omics.PutS3AccessPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.PutS3AccessPolicyInput, ...func(*omics.Options)) *omics.PutS3AccessPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.PutS3AccessPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.PutS3AccessPolicyInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartAnnotationImportJob provides a mock function with given fields: ctx, params, optFns
@@ -2918,6 +3177,43 @@ func (_m *IClient) UpdateAnnotationStoreVersion(ctx context.Context, params *omi
 	return r0, r1
 }
 
+// UpdateRunCache provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRunCache(ctx context.Context, params *omics.UpdateRunCacheInput, optFns ...func(*omics.Options)) (*omics.UpdateRunCacheOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRunCache")
+	}
+
+	var r0 *omics.UpdateRunCacheOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.UpdateRunCacheInput, ...func(*omics.Options)) (*omics.UpdateRunCacheOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.UpdateRunCacheInput, ...func(*omics.Options)) *omics.UpdateRunCacheOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.UpdateRunCacheOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.UpdateRunCacheInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateRunGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateRunGroup(ctx context.Context, params *omics.UpdateRunGroupInput, optFns ...func(*omics.Options)) (*omics.UpdateRunGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2947,6 +3243,43 @@ func (_m *IClient) UpdateRunGroup(ctx context.Context, params *omics.UpdateRunGr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.UpdateRunGroupInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSequenceStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSequenceStore(ctx context.Context, params *omics.UpdateSequenceStoreInput, optFns ...func(*omics.Options)) (*omics.UpdateSequenceStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSequenceStore")
+	}
+
+	var r0 *omics.UpdateSequenceStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.UpdateSequenceStoreInput, ...func(*omics.Options)) (*omics.UpdateSequenceStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.UpdateSequenceStoreInput, ...func(*omics.Options)) *omics.UpdateSequenceStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.UpdateSequenceStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.UpdateSequenceStoreInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

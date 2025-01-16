@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchGetPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetPolicy(ctx context.Context, params *verifiedpermissions.BatchGetPolicyInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.BatchGetPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetPolicy")
+	}
+
+	var r0 *verifiedpermissions.BatchGetPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.BatchGetPolicyInput, ...func(*verifiedpermissions.Options)) (*verifiedpermissions.BatchGetPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.BatchGetPolicyInput, ...func(*verifiedpermissions.Options)) *verifiedpermissions.BatchGetPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*verifiedpermissions.BatchGetPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.BatchGetPolicyInput, ...func(*verifiedpermissions.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchIsAuthorized provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchIsAuthorized(ctx context.Context, params *verifiedpermissions.BatchIsAuthorizedInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.BatchIsAuthorizedOutput, error) {
 	_va := make([]interface{}, len(optFns))

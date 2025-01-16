@@ -52,6 +52,43 @@ func (_m *IClient) JoinStorageSession(ctx context.Context, params *kinesisvideow
 	return r0, r1
 }
 
+// JoinStorageSessionAsViewer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) JoinStorageSessionAsViewer(ctx context.Context, params *kinesisvideowebrtcstorage.JoinStorageSessionAsViewerInput, optFns ...func(*kinesisvideowebrtcstorage.Options)) (*kinesisvideowebrtcstorage.JoinStorageSessionAsViewerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for JoinStorageSessionAsViewer")
+	}
+
+	var r0 *kinesisvideowebrtcstorage.JoinStorageSessionAsViewerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisvideowebrtcstorage.JoinStorageSessionAsViewerInput, ...func(*kinesisvideowebrtcstorage.Options)) (*kinesisvideowebrtcstorage.JoinStorageSessionAsViewerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisvideowebrtcstorage.JoinStorageSessionAsViewerInput, ...func(*kinesisvideowebrtcstorage.Options)) *kinesisvideowebrtcstorage.JoinStorageSessionAsViewerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisvideowebrtcstorage.JoinStorageSessionAsViewerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisvideowebrtcstorage.JoinStorageSessionAsViewerInput, ...func(*kinesisvideowebrtcstorage.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with given fields:
 func (_m *IClient) Options() kinesisvideowebrtcstorage.Options {
 	ret := _m.Called()

@@ -11,9 +11,14 @@ import (
 type IClient interface {
  Options() Options 
  DeleteAgentMemory(ctx context.Context, params *DeleteAgentMemoryInput, optFns ...func(*Options)) (*DeleteAgentMemoryOutput, error) 
+ GenerateQuery(ctx context.Context, params *GenerateQueryInput, optFns ...func(*Options)) (*GenerateQueryOutput, error) 
  GetAgentMemory(ctx context.Context, params *GetAgentMemoryInput, optFns ...func(*Options)) (*GetAgentMemoryOutput, error) 
  InvokeAgent(ctx context.Context, params *InvokeAgentInput, optFns ...func(*Options)) (*InvokeAgentOutput, error) 
  InvokeFlow(ctx context.Context, params *InvokeFlowInput, optFns ...func(*Options)) (*InvokeFlowOutput, error) 
+ InvokeInlineAgent(ctx context.Context, params *InvokeInlineAgentInput, optFns ...func(*Options)) (*InvokeInlineAgentOutput, error) 
+ OptimizePrompt(ctx context.Context, params *OptimizePromptInput, optFns ...func(*Options)) (*OptimizePromptOutput, error) 
+ Rerank(ctx context.Context, params *RerankInput, optFns ...func(*Options)) (*RerankOutput, error) 
  Retrieve(ctx context.Context, params *RetrieveInput, optFns ...func(*Options)) (*RetrieveOutput, error) 
  RetrieveAndGenerate(ctx context.Context, params *RetrieveAndGenerateInput, optFns ...func(*Options)) (*RetrieveAndGenerateOutput, error) 
+ RetrieveAndGenerateStream(ctx context.Context, params *RetrieveAndGenerateStreamInput, optFns ...func(*Options)) (*RetrieveAndGenerateStreamOutput, error) 
 }

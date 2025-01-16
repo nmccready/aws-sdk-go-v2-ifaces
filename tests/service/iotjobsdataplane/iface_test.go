@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartCommandExecution", func(t *testing.T) {
+        input := &iotjobsdataplane.StartCommandExecutionInput{}
+        output := &iotjobsdataplane.StartCommandExecutionOutput{}
+
+        mockClient.On("StartCommandExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCommandExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartNextPendingJobExecution", func(t *testing.T) {
         input := &iotjobsdataplane.StartNextPendingJobExecutionInput{}
         output := &iotjobsdataplane.StartNextPendingJobExecutionOutput{}

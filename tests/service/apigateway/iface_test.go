@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDomainNameAccessAssociation", func(t *testing.T) {
+        input := &apigateway.CreateDomainNameAccessAssociationInput{}
+        output := &apigateway.CreateDomainNameAccessAssociationOutput{}
+
+        mockClient.On("CreateDomainNameAccessAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDomainNameAccessAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateModel", func(t *testing.T) {
         input := &apigateway.CreateModelInput{}
         output := &apigateway.CreateModelOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDomainName", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDomainName(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDomainNameAccessAssociation", func(t *testing.T) {
+        input := &apigateway.DeleteDomainNameAccessAssociationInput{}
+        output := &apigateway.DeleteDomainNameAccessAssociationOutput{}
+
+        mockClient.On("DeleteDomainNameAccessAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDomainNameAccessAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -743,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDomainName", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDomainName(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDomainNameAccessAssociations", func(t *testing.T) {
+        input := &apigateway.GetDomainNameAccessAssociationsInput{}
+        output := &apigateway.GetDomainNameAccessAssociationsOutput{}
+
+        mockClient.On("GetDomainNameAccessAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDomainNameAccessAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1250,6 +1289,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutRestApi", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutRestApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRejectDomainNameAccessAssociation", func(t *testing.T) {
+        input := &apigateway.RejectDomainNameAccessAssociationInput{}
+        output := &apigateway.RejectDomainNameAccessAssociationOutput{}
+
+        mockClient.On("RejectDomainNameAccessAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RejectDomainNameAccessAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

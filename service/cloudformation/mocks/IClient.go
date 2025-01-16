@@ -1828,6 +1828,43 @@ func (_m *IClient) ListGeneratedTemplates(ctx context.Context, params *cloudform
 	return r0, r1
 }
 
+// ListHookResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHookResults(ctx context.Context, params *cloudformation.ListHookResultsInput, optFns ...func(*cloudformation.Options)) (*cloudformation.ListHookResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHookResults")
+	}
+
+	var r0 *cloudformation.ListHookResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ListHookResultsInput, ...func(*cloudformation.Options)) (*cloudformation.ListHookResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ListHookResultsInput, ...func(*cloudformation.Options)) *cloudformation.ListHookResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.ListHookResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.ListHookResultsInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListImports provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListImports(ctx context.Context, params *cloudformation.ListImportsInput, optFns ...func(*cloudformation.Options)) (*cloudformation.ListImportsOutput, error) {
 	_va := make([]interface{}, len(optFns))

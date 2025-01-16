@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeConnectorOperation", func(t *testing.T) {
+        input := &kafkaconnect.DescribeConnectorOperationInput{}
+        output := &kafkaconnect.DescribeConnectorOperationOutput{}
+
+        mockClient.On("DescribeConnectorOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConnectorOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCustomPlugin", func(t *testing.T) {
         input := &kafkaconnect.DescribeCustomPluginInput{}
         output := &kafkaconnect.DescribeCustomPluginOutput{}
@@ -145,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWorkerConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWorkerConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConnectorOperations", func(t *testing.T) {
+        input := &kafkaconnect.ListConnectorOperationsInput{}
+        output := &kafkaconnect.ListConnectorOperationsOutput{}
+
+        mockClient.On("ListConnectorOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectorOperations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

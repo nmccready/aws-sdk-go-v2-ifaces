@@ -126,6 +126,43 @@ func (_m *IClient) CreateChannel(ctx context.Context, params *cloudtrail.CreateC
 	return r0, r1
 }
 
+// CreateDashboard provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDashboard(ctx context.Context, params *cloudtrail.CreateDashboardInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.CreateDashboardOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDashboard")
+	}
+
+	var r0 *cloudtrail.CreateDashboardOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.CreateDashboardInput, ...func(*cloudtrail.Options)) (*cloudtrail.CreateDashboardOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.CreateDashboardInput, ...func(*cloudtrail.Options)) *cloudtrail.CreateDashboardOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.CreateDashboardOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.CreateDashboardInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEventDataStore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEventDataStore(ctx context.Context, params *cloudtrail.CreateEventDataStoreInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.CreateEventDataStoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +266,43 @@ func (_m *IClient) DeleteChannel(ctx context.Context, params *cloudtrail.DeleteC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.DeleteChannelInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDashboard provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDashboard(ctx context.Context, params *cloudtrail.DeleteDashboardInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.DeleteDashboardOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDashboard")
+	}
+
+	var r0 *cloudtrail.DeleteDashboardOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.DeleteDashboardInput, ...func(*cloudtrail.Options)) (*cloudtrail.DeleteDashboardOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.DeleteDashboardInput, ...func(*cloudtrail.Options)) *cloudtrail.DeleteDashboardOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.DeleteDashboardOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.DeleteDashboardInput, ...func(*cloudtrail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -533,6 +607,43 @@ func (_m *IClient) EnableFederation(ctx context.Context, params *cloudtrail.Enab
 	return r0, r1
 }
 
+// GenerateQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GenerateQuery(ctx context.Context, params *cloudtrail.GenerateQueryInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.GenerateQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GenerateQuery")
+	}
+
+	var r0 *cloudtrail.GenerateQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.GenerateQueryInput, ...func(*cloudtrail.Options)) (*cloudtrail.GenerateQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.GenerateQueryInput, ...func(*cloudtrail.Options)) *cloudtrail.GenerateQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.GenerateQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.GenerateQueryInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetChannel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetChannel(ctx context.Context, params *cloudtrail.GetChannelInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.GetChannelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +673,43 @@ func (_m *IClient) GetChannel(ctx context.Context, params *cloudtrail.GetChannel
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.GetChannelInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDashboard provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDashboard(ctx context.Context, params *cloudtrail.GetDashboardInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.GetDashboardOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDashboard")
+	}
+
+	var r0 *cloudtrail.GetDashboardOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.GetDashboardInput, ...func(*cloudtrail.Options)) (*cloudtrail.GetDashboardOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.GetDashboardInput, ...func(*cloudtrail.Options)) *cloudtrail.GetDashboardOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.GetDashboardOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.GetDashboardInput, ...func(*cloudtrail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -895,6 +1043,43 @@ func (_m *IClient) ListChannels(ctx context.Context, params *cloudtrail.ListChan
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.ListChannelsInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDashboards provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDashboards(ctx context.Context, params *cloudtrail.ListDashboardsInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.ListDashboardsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDashboards")
+	}
+
+	var r0 *cloudtrail.ListDashboardsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.ListDashboardsInput, ...func(*cloudtrail.Options)) (*cloudtrail.ListDashboardsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.ListDashboardsInput, ...func(*cloudtrail.Options)) *cloudtrail.ListDashboardsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.ListDashboardsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.ListDashboardsInput, ...func(*cloudtrail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1476,6 +1661,43 @@ func (_m *IClient) RestoreEventDataStore(ctx context.Context, params *cloudtrail
 	return r0, r1
 }
 
+// StartDashboardRefresh provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDashboardRefresh(ctx context.Context, params *cloudtrail.StartDashboardRefreshInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.StartDashboardRefreshOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDashboardRefresh")
+	}
+
+	var r0 *cloudtrail.StartDashboardRefreshOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.StartDashboardRefreshInput, ...func(*cloudtrail.Options)) (*cloudtrail.StartDashboardRefreshOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.StartDashboardRefreshInput, ...func(*cloudtrail.Options)) *cloudtrail.StartDashboardRefreshOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.StartDashboardRefreshOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.StartDashboardRefreshInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartEventDataStoreIngestion provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartEventDataStoreIngestion(ctx context.Context, params *cloudtrail.StartEventDataStoreIngestionInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.StartEventDataStoreIngestionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1764,6 +1986,43 @@ func (_m *IClient) UpdateChannel(ctx context.Context, params *cloudtrail.UpdateC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.UpdateChannelInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDashboard provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDashboard(ctx context.Context, params *cloudtrail.UpdateDashboardInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.UpdateDashboardOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDashboard")
+	}
+
+	var r0 *cloudtrail.UpdateDashboardOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.UpdateDashboardInput, ...func(*cloudtrail.Options)) (*cloudtrail.UpdateDashboardOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.UpdateDashboardInput, ...func(*cloudtrail.Options)) *cloudtrail.UpdateDashboardOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.UpdateDashboardOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.UpdateDashboardInput, ...func(*cloudtrail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

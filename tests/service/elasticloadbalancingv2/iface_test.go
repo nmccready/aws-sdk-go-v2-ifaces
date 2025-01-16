@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSharedTrustStoreAssociation", func(t *testing.T) {
+        input := &elasticloadbalancingv2.DeleteSharedTrustStoreAssociationInput{}
+        output := &elasticloadbalancingv2.DeleteSharedTrustStoreAssociationOutput{}
+
+        mockClient.On("DeleteSharedTrustStoreAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSharedTrustStoreAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTargetGroup", func(t *testing.T) {
         input := &elasticloadbalancingv2.DeleteTargetGroupInput{}
         output := &elasticloadbalancingv2.DeleteTargetGroupOutput{}
@@ -223,6 +236,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAccountLimits", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAccountLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCapacityReservation", func(t *testing.T) {
+        input := &elasticloadbalancingv2.DescribeCapacityReservationInput{}
+        output := &elasticloadbalancingv2.DescribeCapacityReservationOutput{}
+
+        mockClient.On("DescribeCapacityReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeListenerAttributes", func(t *testing.T) {
+        input := &elasticloadbalancingv2.DescribeListenerAttributesInput{}
+        output := &elasticloadbalancingv2.DescribeListenerAttributesOutput{}
+
+        mockClient.On("DescribeListenerAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeListenerAttributes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &elasticloadbalancingv2.GetResourcePolicyInput{}
+        output := &elasticloadbalancingv2.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTrustStoreCaCertificatesBundle", func(t *testing.T) {
         input := &elasticloadbalancingv2.GetTrustStoreCaCertificatesBundleInput{}
         output := &elasticloadbalancingv2.GetTrustStoreCaCertificatesBundleOutput{}
@@ -424,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyCapacityReservation", func(t *testing.T) {
+        input := &elasticloadbalancingv2.ModifyCapacityReservationInput{}
+        output := &elasticloadbalancingv2.ModifyCapacityReservationOutput{}
+
+        mockClient.On("ModifyCapacityReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyCapacityReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyListener", func(t *testing.T) {
         input := &elasticloadbalancingv2.ModifyListenerInput{}
         output := &elasticloadbalancingv2.ModifyListenerOutput{}
@@ -431,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyListener", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyListener(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyListenerAttributes", func(t *testing.T) {
+        input := &elasticloadbalancingv2.ModifyListenerAttributesInput{}
+        output := &elasticloadbalancingv2.ModifyListenerAttributesOutput{}
+
+        mockClient.On("ModifyListenerAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyListenerAttributes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

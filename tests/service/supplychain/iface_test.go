@@ -47,6 +47,84 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataIntegrationFlow", func(t *testing.T) {
+        input := &supplychain.CreateDataIntegrationFlowInput{}
+        output := &supplychain.CreateDataIntegrationFlowOutput{}
+
+        mockClient.On("CreateDataIntegrationFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataIntegrationFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataLakeDataset", func(t *testing.T) {
+        input := &supplychain.CreateDataLakeDatasetInput{}
+        output := &supplychain.CreateDataLakeDatasetOutput{}
+
+        mockClient.On("CreateDataLakeDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataLakeDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateInstance", func(t *testing.T) {
+        input := &supplychain.CreateInstanceInput{}
+        output := &supplychain.CreateInstanceOutput{}
+
+        mockClient.On("CreateInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataIntegrationFlow", func(t *testing.T) {
+        input := &supplychain.DeleteDataIntegrationFlowInput{}
+        output := &supplychain.DeleteDataIntegrationFlowOutput{}
+
+        mockClient.On("DeleteDataIntegrationFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataIntegrationFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataLakeDataset", func(t *testing.T) {
+        input := &supplychain.DeleteDataLakeDatasetInput{}
+        output := &supplychain.DeleteDataLakeDatasetOutput{}
+
+        mockClient.On("DeleteDataLakeDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataLakeDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteInstance", func(t *testing.T) {
+        input := &supplychain.DeleteInstanceInput{}
+        output := &supplychain.DeleteInstanceOutput{}
+
+        mockClient.On("DeleteInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBillOfMaterialsImportJob", func(t *testing.T) {
         input := &supplychain.GetBillOfMaterialsImportJobInput{}
         output := &supplychain.GetBillOfMaterialsImportJobOutput{}
@@ -60,6 +138,97 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataIntegrationFlow", func(t *testing.T) {
+        input := &supplychain.GetDataIntegrationFlowInput{}
+        output := &supplychain.GetDataIntegrationFlowOutput{}
+
+        mockClient.On("GetDataIntegrationFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataIntegrationFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataLakeDataset", func(t *testing.T) {
+        input := &supplychain.GetDataLakeDatasetInput{}
+        output := &supplychain.GetDataLakeDatasetOutput{}
+
+        mockClient.On("GetDataLakeDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataLakeDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInstance", func(t *testing.T) {
+        input := &supplychain.GetInstanceInput{}
+        output := &supplychain.GetInstanceOutput{}
+
+        mockClient.On("GetInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataIntegrationFlows", func(t *testing.T) {
+        input := &supplychain.ListDataIntegrationFlowsInput{}
+        output := &supplychain.ListDataIntegrationFlowsOutput{}
+
+        mockClient.On("ListDataIntegrationFlows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataIntegrationFlows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataLakeDatasets", func(t *testing.T) {
+        input := &supplychain.ListDataLakeDatasetsInput{}
+        output := &supplychain.ListDataLakeDatasetsOutput{}
+
+        mockClient.On("ListDataLakeDatasets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataLakeDatasets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInstances", func(t *testing.T) {
+        input := &supplychain.ListInstancesInput{}
+        output := &supplychain.ListInstancesOutput{}
+
+        mockClient.On("ListInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &supplychain.ListTagsForResourceInput{}
+        output := &supplychain.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSendDataIntegrationEvent", func(t *testing.T) {
         input := &supplychain.SendDataIntegrationEventInput{}
         output := &supplychain.SendDataIntegrationEventOutput{}
@@ -67,6 +236,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendDataIntegrationEvent", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendDataIntegrationEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &supplychain.TagResourceInput{}
+        output := &supplychain.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &supplychain.UntagResourceInput{}
+        output := &supplychain.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataIntegrationFlow", func(t *testing.T) {
+        input := &supplychain.UpdateDataIntegrationFlowInput{}
+        output := &supplychain.UpdateDataIntegrationFlowOutput{}
+
+        mockClient.On("UpdateDataIntegrationFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataIntegrationFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataLakeDataset", func(t *testing.T) {
+        input := &supplychain.UpdateDataLakeDatasetInput{}
+        output := &supplychain.UpdateDataLakeDatasetOutput{}
+
+        mockClient.On("UpdateDataLakeDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataLakeDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateInstance", func(t *testing.T) {
+        input := &supplychain.UpdateInstanceInput{}
+        output := &supplychain.UpdateInstanceOutput{}
+
+        mockClient.On("UpdateInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateInstance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

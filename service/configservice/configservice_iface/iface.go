@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for configservice
 type IClient interface {
  Options() Options 
+ AssociateResourceTypes(ctx context.Context, params *AssociateResourceTypesInput, optFns ...func(*Options)) (*AssociateResourceTypesOutput, error) 
  BatchGetAggregateResourceConfig(ctx context.Context, params *BatchGetAggregateResourceConfigInput, optFns ...func(*Options)) (*BatchGetAggregateResourceConfigOutput, error) 
  BatchGetResourceConfig(ctx context.Context, params *BatchGetResourceConfigInput, optFns ...func(*Options)) (*BatchGetResourceConfigOutput, error) 
  DeleteAggregationAuthorization(ctx context.Context, params *DeleteAggregationAuthorizationInput, optFns ...func(*Options)) (*DeleteAggregationAuthorizationOutput, error) 
@@ -26,6 +27,7 @@ type IClient interface {
  DeleteRemediationExceptions(ctx context.Context, params *DeleteRemediationExceptionsInput, optFns ...func(*Options)) (*DeleteRemediationExceptionsOutput, error) 
  DeleteResourceConfig(ctx context.Context, params *DeleteResourceConfigInput, optFns ...func(*Options)) (*DeleteResourceConfigOutput, error) 
  DeleteRetentionConfiguration(ctx context.Context, params *DeleteRetentionConfigurationInput, optFns ...func(*Options)) (*DeleteRetentionConfigurationOutput, error) 
+ DeleteServiceLinkedConfigurationRecorder(ctx context.Context, params *DeleteServiceLinkedConfigurationRecorderInput, optFns ...func(*Options)) (*DeleteServiceLinkedConfigurationRecorderOutput, error) 
  DeleteStoredQuery(ctx context.Context, params *DeleteStoredQueryInput, optFns ...func(*Options)) (*DeleteStoredQueryOutput, error) 
  DeliverConfigSnapshot(ctx context.Context, params *DeliverConfigSnapshotInput, optFns ...func(*Options)) (*DeliverConfigSnapshotOutput, error) 
  DescribeAggregateComplianceByConfigRules(ctx context.Context, params *DescribeAggregateComplianceByConfigRulesInput, optFns ...func(*Options)) (*DescribeAggregateComplianceByConfigRulesOutput, error) 
@@ -53,6 +55,7 @@ type IClient interface {
  DescribeRemediationExceptions(ctx context.Context, params *DescribeRemediationExceptionsInput, optFns ...func(*Options)) (*DescribeRemediationExceptionsOutput, error) 
  DescribeRemediationExecutionStatus(ctx context.Context, params *DescribeRemediationExecutionStatusInput, optFns ...func(*Options)) (*DescribeRemediationExecutionStatusOutput, error) 
  DescribeRetentionConfigurations(ctx context.Context, params *DescribeRetentionConfigurationsInput, optFns ...func(*Options)) (*DescribeRetentionConfigurationsOutput, error) 
+ DisassociateResourceTypes(ctx context.Context, params *DisassociateResourceTypesInput, optFns ...func(*Options)) (*DisassociateResourceTypesOutput, error) 
  GetAggregateComplianceDetailsByConfigRule(ctx context.Context, params *GetAggregateComplianceDetailsByConfigRuleInput, optFns ...func(*Options)) (*GetAggregateComplianceDetailsByConfigRuleOutput, error) 
  GetAggregateConfigRuleComplianceSummary(ctx context.Context, params *GetAggregateConfigRuleComplianceSummaryInput, optFns ...func(*Options)) (*GetAggregateConfigRuleComplianceSummaryOutput, error) 
  GetAggregateConformancePackComplianceSummary(ctx context.Context, params *GetAggregateConformancePackComplianceSummaryInput, optFns ...func(*Options)) (*GetAggregateConformancePackComplianceSummaryOutput, error) 
@@ -73,6 +76,7 @@ type IClient interface {
  GetResourceEvaluationSummary(ctx context.Context, params *GetResourceEvaluationSummaryInput, optFns ...func(*Options)) (*GetResourceEvaluationSummaryOutput, error) 
  GetStoredQuery(ctx context.Context, params *GetStoredQueryInput, optFns ...func(*Options)) (*GetStoredQueryOutput, error) 
  ListAggregateDiscoveredResources(ctx context.Context, params *ListAggregateDiscoveredResourcesInput, optFns ...func(*Options)) (*ListAggregateDiscoveredResourcesOutput, error) 
+ ListConfigurationRecorders(ctx context.Context, params *ListConfigurationRecordersInput, optFns ...func(*Options)) (*ListConfigurationRecordersOutput, error) 
  ListConformancePackComplianceScores(ctx context.Context, params *ListConformancePackComplianceScoresInput, optFns ...func(*Options)) (*ListConformancePackComplianceScoresOutput, error) 
  ListDiscoveredResources(ctx context.Context, params *ListDiscoveredResourcesInput, optFns ...func(*Options)) (*ListDiscoveredResourcesOutput, error) 
  ListResourceEvaluations(ctx context.Context, params *ListResourceEvaluationsInput, optFns ...func(*Options)) (*ListResourceEvaluationsOutput, error) 
@@ -92,6 +96,7 @@ type IClient interface {
  PutRemediationExceptions(ctx context.Context, params *PutRemediationExceptionsInput, optFns ...func(*Options)) (*PutRemediationExceptionsOutput, error) 
  PutResourceConfig(ctx context.Context, params *PutResourceConfigInput, optFns ...func(*Options)) (*PutResourceConfigOutput, error) 
  PutRetentionConfiguration(ctx context.Context, params *PutRetentionConfigurationInput, optFns ...func(*Options)) (*PutRetentionConfigurationOutput, error) 
+ PutServiceLinkedConfigurationRecorder(ctx context.Context, params *PutServiceLinkedConfigurationRecorderInput, optFns ...func(*Options)) (*PutServiceLinkedConfigurationRecorderOutput, error) 
  PutStoredQuery(ctx context.Context, params *PutStoredQueryInput, optFns ...func(*Options)) (*PutStoredQueryOutput, error) 
  SelectAggregateResourceConfig(ctx context.Context, params *SelectAggregateResourceConfigInput, optFns ...func(*Options)) (*SelectAggregateResourceConfigOutput, error) 
  SelectResourceConfig(ctx context.Context, params *SelectResourceConfigInput, optFns ...func(*Options)) (*SelectResourceConfigOutput, error) 

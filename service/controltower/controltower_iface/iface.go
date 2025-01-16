@@ -31,6 +31,7 @@ type IClient interface {
  ListLandingZones(ctx context.Context, params *ListLandingZonesInput, optFns ...func(*Options)) (*ListLandingZonesOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ResetEnabledBaseline(ctx context.Context, params *ResetEnabledBaselineInput, optFns ...func(*Options)) (*ResetEnabledBaselineOutput, error) 
+ ResetEnabledControl(ctx context.Context, params *ResetEnabledControlInput, optFns ...func(*Options)) (*ResetEnabledControlOutput, error) 
  ResetLandingZone(ctx context.Context, params *ResetLandingZoneInput, optFns ...func(*Options)) (*ResetLandingZoneOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 

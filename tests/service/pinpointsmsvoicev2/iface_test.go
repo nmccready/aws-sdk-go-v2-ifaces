@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteProtectConfigurationRuleSetNumberOverride", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideInput{}
+        output := &pinpointsmsvoicev2.DeleteProtectConfigurationRuleSetNumberOverrideOutput{}
+
+        mockClient.On("DeleteProtectConfigurationRuleSetNumberOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProtectConfigurationRuleSetNumberOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRegistration", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DeleteRegistrationInput{}
         output := &pinpointsmsvoicev2.DeleteRegistrationOutput{}
@@ -366,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRegistrationFieldValue", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRegistrationFieldValue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteResourcePolicyInput{}
+        output := &pinpointsmsvoicev2.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.GetResourcePolicyInput{}
+        output := &pinpointsmsvoicev2.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPoolOriginationIdentities", func(t *testing.T) {
         input := &pinpointsmsvoicev2.ListPoolOriginationIdentitiesInput{}
         output := &pinpointsmsvoicev2.ListPoolOriginationIdentitiesOutput{}
@@ -717,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPoolOriginationIdentities", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPoolOriginationIdentities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProtectConfigurationRuleSetNumberOverrides", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesInput{}
+        output := &pinpointsmsvoicev2.ListProtectConfigurationRuleSetNumberOverridesOutput{}
+
+        mockClient.On("ListProtectConfigurationRuleSetNumberOverrides", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProtectConfigurationRuleSetNumberOverrides(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -762,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutMessageFeedback", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.PutMessageFeedbackInput{}
+        output := &pinpointsmsvoicev2.PutMessageFeedbackOutput{}
+
+        mockClient.On("PutMessageFeedback", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutMessageFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutOptedOutNumber", func(t *testing.T) {
         input := &pinpointsmsvoicev2.PutOptedOutNumberInput{}
         output := &pinpointsmsvoicev2.PutOptedOutNumberOutput{}
@@ -775,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutProtectConfigurationRuleSetNumberOverride", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideInput{}
+        output := &pinpointsmsvoicev2.PutProtectConfigurationRuleSetNumberOverrideOutput{}
+
+        mockClient.On("PutProtectConfigurationRuleSetNumberOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutProtectConfigurationRuleSetNumberOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutRegistrationFieldValue", func(t *testing.T) {
         input := &pinpointsmsvoicev2.PutRegistrationFieldValueInput{}
         output := &pinpointsmsvoicev2.PutRegistrationFieldValueOutput{}
@@ -782,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutRegistrationFieldValue", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutRegistrationFieldValue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.PutResourcePolicyInput{}
+        output := &pinpointsmsvoicev2.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -899,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SetAccountDefaultProtectConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.SetAccountDefaultProtectConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSetDefaultMessageFeedbackEnabled", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledInput{}
+        output := &pinpointsmsvoicev2.SetDefaultMessageFeedbackEnabledOutput{}
+
+        mockClient.On("SetDefaultMessageFeedbackEnabled", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SetDefaultMessageFeedbackEnabled(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

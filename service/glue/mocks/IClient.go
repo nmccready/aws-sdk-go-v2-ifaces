@@ -570,6 +570,43 @@ func (_m *IClient) BatchGetWorkflows(ctx context.Context, params *glue.BatchGetW
 	return r0, r1
 }
 
+// BatchPutDataQualityStatisticAnnotation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchPutDataQualityStatisticAnnotation(ctx context.Context, params *glue.BatchPutDataQualityStatisticAnnotationInput, optFns ...func(*glue.Options)) (*glue.BatchPutDataQualityStatisticAnnotationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchPutDataQualityStatisticAnnotation")
+	}
+
+	var r0 *glue.BatchPutDataQualityStatisticAnnotationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.BatchPutDataQualityStatisticAnnotationInput, ...func(*glue.Options)) (*glue.BatchPutDataQualityStatisticAnnotationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.BatchPutDataQualityStatisticAnnotationInput, ...func(*glue.Options)) *glue.BatchPutDataQualityStatisticAnnotationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.BatchPutDataQualityStatisticAnnotationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.BatchPutDataQualityStatisticAnnotationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchStopJobRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchStopJobRun(ctx context.Context, params *glue.BatchStopJobRunInput, optFns ...func(*glue.Options)) (*glue.BatchStopJobRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -866,6 +903,43 @@ func (_m *IClient) CreateBlueprint(ctx context.Context, params *glue.CreateBluep
 	return r0, r1
 }
 
+// CreateCatalog provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCatalog(ctx context.Context, params *glue.CreateCatalogInput, optFns ...func(*glue.Options)) (*glue.CreateCatalogOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCatalog")
+	}
+
+	var r0 *glue.CreateCatalogOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateCatalogInput, ...func(*glue.Options)) (*glue.CreateCatalogOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateCatalogInput, ...func(*glue.Options)) *glue.CreateCatalogOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateCatalogOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateCatalogInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateClassifier provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateClassifier(ctx context.Context, params *glue.CreateClassifierInput, optFns ...func(*glue.Options)) (*glue.CreateClassifierOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -895,6 +969,43 @@ func (_m *IClient) CreateClassifier(ctx context.Context, params *glue.CreateClas
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateClassifierInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateColumnStatisticsTaskSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateColumnStatisticsTaskSettings(ctx context.Context, params *glue.CreateColumnStatisticsTaskSettingsInput, optFns ...func(*glue.Options)) (*glue.CreateColumnStatisticsTaskSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateColumnStatisticsTaskSettings")
+	}
+
+	var r0 *glue.CreateColumnStatisticsTaskSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) (*glue.CreateColumnStatisticsTaskSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) *glue.CreateColumnStatisticsTaskSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateColumnStatisticsTaskSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1117,6 +1228,117 @@ func (_m *IClient) CreateDevEndpoint(ctx context.Context, params *glue.CreateDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIntegration(ctx context.Context, params *glue.CreateIntegrationInput, optFns ...func(*glue.Options)) (*glue.CreateIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIntegration")
+	}
+
+	var r0 *glue.CreateIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateIntegrationInput, ...func(*glue.Options)) (*glue.CreateIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateIntegrationInput, ...func(*glue.Options)) *glue.CreateIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateIntegrationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIntegrationResourceProperty provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIntegrationResourceProperty(ctx context.Context, params *glue.CreateIntegrationResourcePropertyInput, optFns ...func(*glue.Options)) (*glue.CreateIntegrationResourcePropertyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIntegrationResourceProperty")
+	}
+
+	var r0 *glue.CreateIntegrationResourcePropertyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateIntegrationResourcePropertyInput, ...func(*glue.Options)) (*glue.CreateIntegrationResourcePropertyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateIntegrationResourcePropertyInput, ...func(*glue.Options)) *glue.CreateIntegrationResourcePropertyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateIntegrationResourcePropertyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateIntegrationResourcePropertyInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIntegrationTableProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIntegrationTableProperties(ctx context.Context, params *glue.CreateIntegrationTablePropertiesInput, optFns ...func(*glue.Options)) (*glue.CreateIntegrationTablePropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIntegrationTableProperties")
+	}
+
+	var r0 *glue.CreateIntegrationTablePropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateIntegrationTablePropertiesInput, ...func(*glue.Options)) (*glue.CreateIntegrationTablePropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateIntegrationTablePropertiesInput, ...func(*glue.Options)) *glue.CreateIntegrationTablePropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateIntegrationTablePropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateIntegrationTablePropertiesInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1717,6 +1939,43 @@ func (_m *IClient) DeleteBlueprint(ctx context.Context, params *glue.DeleteBluep
 	return r0, r1
 }
 
+// DeleteCatalog provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCatalog(ctx context.Context, params *glue.DeleteCatalogInput, optFns ...func(*glue.Options)) (*glue.DeleteCatalogOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCatalog")
+	}
+
+	var r0 *glue.DeleteCatalogOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteCatalogInput, ...func(*glue.Options)) (*glue.DeleteCatalogOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteCatalogInput, ...func(*glue.Options)) *glue.DeleteCatalogOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteCatalogOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteCatalogInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteClassifier provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteClassifier(ctx context.Context, params *glue.DeleteClassifierInput, optFns ...func(*glue.Options)) (*glue.DeleteClassifierOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1820,6 +2079,43 @@ func (_m *IClient) DeleteColumnStatisticsForTable(ctx context.Context, params *g
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteColumnStatisticsForTableInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteColumnStatisticsTaskSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteColumnStatisticsTaskSettings(ctx context.Context, params *glue.DeleteColumnStatisticsTaskSettingsInput, optFns ...func(*glue.Options)) (*glue.DeleteColumnStatisticsTaskSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteColumnStatisticsTaskSettings")
+	}
+
+	var r0 *glue.DeleteColumnStatisticsTaskSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) (*glue.DeleteColumnStatisticsTaskSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) *glue.DeleteColumnStatisticsTaskSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteColumnStatisticsTaskSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2042,6 +2338,80 @@ func (_m *IClient) DeleteDevEndpoint(ctx context.Context, params *glue.DeleteDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIntegration(ctx context.Context, params *glue.DeleteIntegrationInput, optFns ...func(*glue.Options)) (*glue.DeleteIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIntegration")
+	}
+
+	var r0 *glue.DeleteIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteIntegrationInput, ...func(*glue.Options)) (*glue.DeleteIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteIntegrationInput, ...func(*glue.Options)) *glue.DeleteIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteIntegrationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIntegrationTableProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIntegrationTableProperties(ctx context.Context, params *glue.DeleteIntegrationTablePropertiesInput, optFns ...func(*glue.Options)) (*glue.DeleteIntegrationTablePropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIntegrationTableProperties")
+	}
+
+	var r0 *glue.DeleteIntegrationTablePropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteIntegrationTablePropertiesInput, ...func(*glue.Options)) (*glue.DeleteIntegrationTablePropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteIntegrationTablePropertiesInput, ...func(*glue.Options)) *glue.DeleteIntegrationTablePropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteIntegrationTablePropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteIntegrationTablePropertiesInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2679,6 +3049,154 @@ func (_m *IClient) DeleteWorkflow(ctx context.Context, params *glue.DeleteWorkfl
 	return r0, r1
 }
 
+// DescribeConnectionType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeConnectionType(ctx context.Context, params *glue.DescribeConnectionTypeInput, optFns ...func(*glue.Options)) (*glue.DescribeConnectionTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeConnectionType")
+	}
+
+	var r0 *glue.DescribeConnectionTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeConnectionTypeInput, ...func(*glue.Options)) (*glue.DescribeConnectionTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeConnectionTypeInput, ...func(*glue.Options)) *glue.DescribeConnectionTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DescribeConnectionTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DescribeConnectionTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeEntity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeEntity(ctx context.Context, params *glue.DescribeEntityInput, optFns ...func(*glue.Options)) (*glue.DescribeEntityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeEntity")
+	}
+
+	var r0 *glue.DescribeEntityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeEntityInput, ...func(*glue.Options)) (*glue.DescribeEntityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeEntityInput, ...func(*glue.Options)) *glue.DescribeEntityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DescribeEntityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DescribeEntityInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeInboundIntegrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeInboundIntegrations(ctx context.Context, params *glue.DescribeInboundIntegrationsInput, optFns ...func(*glue.Options)) (*glue.DescribeInboundIntegrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeInboundIntegrations")
+	}
+
+	var r0 *glue.DescribeInboundIntegrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeInboundIntegrationsInput, ...func(*glue.Options)) (*glue.DescribeInboundIntegrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeInboundIntegrationsInput, ...func(*glue.Options)) *glue.DescribeInboundIntegrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DescribeInboundIntegrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DescribeInboundIntegrationsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeIntegrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeIntegrations(ctx context.Context, params *glue.DescribeIntegrationsInput, optFns ...func(*glue.Options)) (*glue.DescribeIntegrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeIntegrations")
+	}
+
+	var r0 *glue.DescribeIntegrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeIntegrationsInput, ...func(*glue.Options)) (*glue.DescribeIntegrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DescribeIntegrationsInput, ...func(*glue.Options)) *glue.DescribeIntegrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DescribeIntegrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DescribeIntegrationsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBlueprint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBlueprint(ctx context.Context, params *glue.GetBlueprintInput, optFns ...func(*glue.Options)) (*glue.GetBlueprintOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2790,6 +3308,43 @@ func (_m *IClient) GetBlueprintRuns(ctx context.Context, params *glue.GetBluepri
 	return r0, r1
 }
 
+// GetCatalog provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCatalog(ctx context.Context, params *glue.GetCatalogInput, optFns ...func(*glue.Options)) (*glue.GetCatalogOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCatalog")
+	}
+
+	var r0 *glue.GetCatalogOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetCatalogInput, ...func(*glue.Options)) (*glue.GetCatalogOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetCatalogInput, ...func(*glue.Options)) *glue.GetCatalogOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetCatalogOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetCatalogInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCatalogImportStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCatalogImportStatus(ctx context.Context, params *glue.GetCatalogImportStatusInput, optFns ...func(*glue.Options)) (*glue.GetCatalogImportStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2819,6 +3374,43 @@ func (_m *IClient) GetCatalogImportStatus(ctx context.Context, params *glue.GetC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetCatalogImportStatusInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCatalogs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCatalogs(ctx context.Context, params *glue.GetCatalogsInput, optFns ...func(*glue.Options)) (*glue.GetCatalogsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCatalogs")
+	}
+
+	var r0 *glue.GetCatalogsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetCatalogsInput, ...func(*glue.Options)) (*glue.GetCatalogsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetCatalogsInput, ...func(*glue.Options)) *glue.GetCatalogsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetCatalogsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetCatalogsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3041,6 +3633,43 @@ func (_m *IClient) GetColumnStatisticsTaskRuns(ctx context.Context, params *glue
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetColumnStatisticsTaskRunsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetColumnStatisticsTaskSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetColumnStatisticsTaskSettings(ctx context.Context, params *glue.GetColumnStatisticsTaskSettingsInput, optFns ...func(*glue.Options)) (*glue.GetColumnStatisticsTaskSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetColumnStatisticsTaskSettings")
+	}
+
+	var r0 *glue.GetColumnStatisticsTaskSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) (*glue.GetColumnStatisticsTaskSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) *glue.GetColumnStatisticsTaskSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetColumnStatisticsTaskSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3300,6 +3929,80 @@ func (_m *IClient) GetDataCatalogEncryptionSettings(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataCatalogEncryptionSettingsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataQualityModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataQualityModel(ctx context.Context, params *glue.GetDataQualityModelInput, optFns ...func(*glue.Options)) (*glue.GetDataQualityModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataQualityModel")
+	}
+
+	var r0 *glue.GetDataQualityModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityModelInput, ...func(*glue.Options)) (*glue.GetDataQualityModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityModelInput, ...func(*glue.Options)) *glue.GetDataQualityModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetDataQualityModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataQualityModelInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataQualityModelResult provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataQualityModelResult(ctx context.Context, params *glue.GetDataQualityModelResultInput, optFns ...func(*glue.Options)) (*glue.GetDataQualityModelResultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataQualityModelResult")
+	}
+
+	var r0 *glue.GetDataQualityModelResultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityModelResultInput, ...func(*glue.Options)) (*glue.GetDataQualityModelResultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityModelResultInput, ...func(*glue.Options)) *glue.GetDataQualityModelResultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetDataQualityModelResultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataQualityModelResultInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3633,6 +4336,117 @@ func (_m *IClient) GetDevEndpoints(ctx context.Context, params *glue.GetDevEndpo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDevEndpointsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetEntityRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEntityRecords(ctx context.Context, params *glue.GetEntityRecordsInput, optFns ...func(*glue.Options)) (*glue.GetEntityRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEntityRecords")
+	}
+
+	var r0 *glue.GetEntityRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetEntityRecordsInput, ...func(*glue.Options)) (*glue.GetEntityRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetEntityRecordsInput, ...func(*glue.Options)) *glue.GetEntityRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetEntityRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetEntityRecordsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIntegrationResourceProperty provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIntegrationResourceProperty(ctx context.Context, params *glue.GetIntegrationResourcePropertyInput, optFns ...func(*glue.Options)) (*glue.GetIntegrationResourcePropertyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIntegrationResourceProperty")
+	}
+
+	var r0 *glue.GetIntegrationResourcePropertyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetIntegrationResourcePropertyInput, ...func(*glue.Options)) (*glue.GetIntegrationResourcePropertyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetIntegrationResourcePropertyInput, ...func(*glue.Options)) *glue.GetIntegrationResourcePropertyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetIntegrationResourcePropertyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetIntegrationResourcePropertyInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIntegrationTableProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIntegrationTableProperties(ctx context.Context, params *glue.GetIntegrationTablePropertiesInput, optFns ...func(*glue.Options)) (*glue.GetIntegrationTablePropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIntegrationTableProperties")
+	}
+
+	var r0 *glue.GetIntegrationTablePropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetIntegrationTablePropertiesInput, ...func(*glue.Options)) (*glue.GetIntegrationTablePropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetIntegrationTablePropertiesInput, ...func(*glue.Options)) *glue.GetIntegrationTablePropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetIntegrationTablePropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetIntegrationTablePropertiesInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5343,6 +6157,43 @@ func (_m *IClient) ListColumnStatisticsTaskRuns(ctx context.Context, params *glu
 	return r0, r1
 }
 
+// ListConnectionTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectionTypes(ctx context.Context, params *glue.ListConnectionTypesInput, optFns ...func(*glue.Options)) (*glue.ListConnectionTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectionTypes")
+	}
+
+	var r0 *glue.ListConnectionTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListConnectionTypesInput, ...func(*glue.Options)) (*glue.ListConnectionTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListConnectionTypesInput, ...func(*glue.Options)) *glue.ListConnectionTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListConnectionTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListConnectionTypesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCrawlers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCrawlers(ctx context.Context, params *glue.ListCrawlersInput, optFns ...func(*glue.Options)) (*glue.ListCrawlersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5602,6 +6453,80 @@ func (_m *IClient) ListDataQualityRulesets(ctx context.Context, params *glue.Lis
 	return r0, r1
 }
 
+// ListDataQualityStatisticAnnotations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataQualityStatisticAnnotations(ctx context.Context, params *glue.ListDataQualityStatisticAnnotationsInput, optFns ...func(*glue.Options)) (*glue.ListDataQualityStatisticAnnotationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataQualityStatisticAnnotations")
+	}
+
+	var r0 *glue.ListDataQualityStatisticAnnotationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityStatisticAnnotationsInput, ...func(*glue.Options)) (*glue.ListDataQualityStatisticAnnotationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityStatisticAnnotationsInput, ...func(*glue.Options)) *glue.ListDataQualityStatisticAnnotationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListDataQualityStatisticAnnotationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListDataQualityStatisticAnnotationsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataQualityStatistics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataQualityStatistics(ctx context.Context, params *glue.ListDataQualityStatisticsInput, optFns ...func(*glue.Options)) (*glue.ListDataQualityStatisticsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataQualityStatistics")
+	}
+
+	var r0 *glue.ListDataQualityStatisticsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityStatisticsInput, ...func(*glue.Options)) (*glue.ListDataQualityStatisticsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityStatisticsInput, ...func(*glue.Options)) *glue.ListDataQualityStatisticsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListDataQualityStatisticsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListDataQualityStatisticsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDevEndpoints provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDevEndpoints(ctx context.Context, params *glue.ListDevEndpointsInput, optFns ...func(*glue.Options)) (*glue.ListDevEndpointsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5631,6 +6556,43 @@ func (_m *IClient) ListDevEndpoints(ctx context.Context, params *glue.ListDevEnd
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListDevEndpointsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEntities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEntities(ctx context.Context, params *glue.ListEntitiesInput, optFns ...func(*glue.Options)) (*glue.ListEntitiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEntities")
+	}
+
+	var r0 *glue.ListEntitiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListEntitiesInput, ...func(*glue.Options)) (*glue.ListEntitiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListEntitiesInput, ...func(*glue.Options)) *glue.ListEntitiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListEntitiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListEntitiesInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6046,6 +7008,43 @@ func (_m *IClient) ListWorkflows(ctx context.Context, params *glue.ListWorkflows
 	return r0, r1
 }
 
+// ModifyIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyIntegration(ctx context.Context, params *glue.ModifyIntegrationInput, optFns ...func(*glue.Options)) (*glue.ModifyIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyIntegration")
+	}
+
+	var r0 *glue.ModifyIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ModifyIntegrationInput, ...func(*glue.Options)) (*glue.ModifyIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ModifyIntegrationInput, ...func(*glue.Options)) *glue.ModifyIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ModifyIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ModifyIntegrationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with given fields:
 func (_m *IClient) Options() glue.Options {
 	ret := _m.Called()
@@ -6093,6 +7092,43 @@ func (_m *IClient) PutDataCatalogEncryptionSettings(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutDataCatalogEncryptionSettingsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutDataQualityProfileAnnotation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutDataQualityProfileAnnotation(ctx context.Context, params *glue.PutDataQualityProfileAnnotationInput, optFns ...func(*glue.Options)) (*glue.PutDataQualityProfileAnnotationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutDataQualityProfileAnnotation")
+	}
+
+	var r0 *glue.PutDataQualityProfileAnnotationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutDataQualityProfileAnnotationInput, ...func(*glue.Options)) (*glue.PutDataQualityProfileAnnotationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutDataQualityProfileAnnotationInput, ...func(*glue.Options)) *glue.PutDataQualityProfileAnnotationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PutDataQualityProfileAnnotationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutDataQualityProfileAnnotationInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6545,6 +7581,43 @@ func (_m *IClient) StartColumnStatisticsTaskRun(ctx context.Context, params *glu
 	return r0, r1
 }
 
+// StartColumnStatisticsTaskRunSchedule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartColumnStatisticsTaskRunSchedule(ctx context.Context, params *glue.StartColumnStatisticsTaskRunScheduleInput, optFns ...func(*glue.Options)) (*glue.StartColumnStatisticsTaskRunScheduleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartColumnStatisticsTaskRunSchedule")
+	}
+
+	var r0 *glue.StartColumnStatisticsTaskRunScheduleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StartColumnStatisticsTaskRunScheduleInput, ...func(*glue.Options)) (*glue.StartColumnStatisticsTaskRunScheduleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StartColumnStatisticsTaskRunScheduleInput, ...func(*glue.Options)) *glue.StartColumnStatisticsTaskRunScheduleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.StartColumnStatisticsTaskRunScheduleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.StartColumnStatisticsTaskRunScheduleInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartCrawler provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartCrawler(ctx context.Context, params *glue.StartCrawlerInput, optFns ...func(*glue.Options)) (*glue.StartCrawlerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6989,6 +8062,43 @@ func (_m *IClient) StopColumnStatisticsTaskRun(ctx context.Context, params *glue
 	return r0, r1
 }
 
+// StopColumnStatisticsTaskRunSchedule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopColumnStatisticsTaskRunSchedule(ctx context.Context, params *glue.StopColumnStatisticsTaskRunScheduleInput, optFns ...func(*glue.Options)) (*glue.StopColumnStatisticsTaskRunScheduleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopColumnStatisticsTaskRunSchedule")
+	}
+
+	var r0 *glue.StopColumnStatisticsTaskRunScheduleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StopColumnStatisticsTaskRunScheduleInput, ...func(*glue.Options)) (*glue.StopColumnStatisticsTaskRunScheduleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StopColumnStatisticsTaskRunScheduleInput, ...func(*glue.Options)) *glue.StopColumnStatisticsTaskRunScheduleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.StopColumnStatisticsTaskRunScheduleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.StopColumnStatisticsTaskRunScheduleInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopCrawler provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopCrawler(ctx context.Context, params *glue.StopCrawlerInput, optFns ...func(*glue.Options)) (*glue.StopCrawlerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7211,6 +8321,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *glue.TagResourceInpu
 	return r0, r1
 }
 
+// TestConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TestConnection(ctx context.Context, params *glue.TestConnectionInput, optFns ...func(*glue.Options)) (*glue.TestConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TestConnection")
+	}
+
+	var r0 *glue.TestConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.TestConnectionInput, ...func(*glue.Options)) (*glue.TestConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.TestConnectionInput, ...func(*glue.Options)) *glue.TestConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.TestConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.TestConnectionInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UntagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UntagResource(ctx context.Context, params *glue.UntagResourceInput, optFns ...func(*glue.Options)) (*glue.UntagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7277,6 +8424,43 @@ func (_m *IClient) UpdateBlueprint(ctx context.Context, params *glue.UpdateBluep
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateBlueprintInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCatalog provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCatalog(ctx context.Context, params *glue.UpdateCatalogInput, optFns ...func(*glue.Options)) (*glue.UpdateCatalogOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCatalog")
+	}
+
+	var r0 *glue.UpdateCatalogOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateCatalogInput, ...func(*glue.Options)) (*glue.UpdateCatalogOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateCatalogInput, ...func(*glue.Options)) *glue.UpdateCatalogOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateCatalogOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateCatalogInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7388,6 +8572,43 @@ func (_m *IClient) UpdateColumnStatisticsForTable(ctx context.Context, params *g
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateColumnStatisticsForTableInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateColumnStatisticsTaskSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateColumnStatisticsTaskSettings(ctx context.Context, params *glue.UpdateColumnStatisticsTaskSettingsInput, optFns ...func(*glue.Options)) (*glue.UpdateColumnStatisticsTaskSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateColumnStatisticsTaskSettings")
+	}
+
+	var r0 *glue.UpdateColumnStatisticsTaskSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) (*glue.UpdateColumnStatisticsTaskSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) *glue.UpdateColumnStatisticsTaskSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateColumnStatisticsTaskSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateColumnStatisticsTaskSettingsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7610,6 +8831,80 @@ func (_m *IClient) UpdateDevEndpoint(ctx context.Context, params *glue.UpdateDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIntegrationResourceProperty provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIntegrationResourceProperty(ctx context.Context, params *glue.UpdateIntegrationResourcePropertyInput, optFns ...func(*glue.Options)) (*glue.UpdateIntegrationResourcePropertyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIntegrationResourceProperty")
+	}
+
+	var r0 *glue.UpdateIntegrationResourcePropertyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateIntegrationResourcePropertyInput, ...func(*glue.Options)) (*glue.UpdateIntegrationResourcePropertyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateIntegrationResourcePropertyInput, ...func(*glue.Options)) *glue.UpdateIntegrationResourcePropertyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateIntegrationResourcePropertyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateIntegrationResourcePropertyInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIntegrationTableProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIntegrationTableProperties(ctx context.Context, params *glue.UpdateIntegrationTablePropertiesInput, optFns ...func(*glue.Options)) (*glue.UpdateIntegrationTablePropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIntegrationTableProperties")
+	}
+
+	var r0 *glue.UpdateIntegrationTablePropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateIntegrationTablePropertiesInput, ...func(*glue.Options)) (*glue.UpdateIntegrationTablePropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateIntegrationTablePropertiesInput, ...func(*glue.Options)) *glue.UpdateIntegrationTablePropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateIntegrationTablePropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateIntegrationTablePropertiesInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -273,6 +273,43 @@ func (_m *IClient) CreateGroup(ctx context.Context, params *workmail.CreateGroup
 	return r0, r1
 }
 
+// CreateIdentityCenterApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIdentityCenterApplication(ctx context.Context, params *workmail.CreateIdentityCenterApplicationInput, optFns ...func(*workmail.Options)) (*workmail.CreateIdentityCenterApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIdentityCenterApplication")
+	}
+
+	var r0 *workmail.CreateIdentityCenterApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.CreateIdentityCenterApplicationInput, ...func(*workmail.Options)) (*workmail.CreateIdentityCenterApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.CreateIdentityCenterApplicationInput, ...func(*workmail.Options)) *workmail.CreateIdentityCenterApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.CreateIdentityCenterApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.CreateIdentityCenterApplicationInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateImpersonationRole provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateImpersonationRole(ctx context.Context, params *workmail.CreateImpersonationRoleInput, optFns ...func(*workmail.Options)) (*workmail.CreateImpersonationRoleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -643,6 +680,80 @@ func (_m *IClient) DeleteGroup(ctx context.Context, params *workmail.DeleteGroup
 	return r0, r1
 }
 
+// DeleteIdentityCenterApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIdentityCenterApplication(ctx context.Context, params *workmail.DeleteIdentityCenterApplicationInput, optFns ...func(*workmail.Options)) (*workmail.DeleteIdentityCenterApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIdentityCenterApplication")
+	}
+
+	var r0 *workmail.DeleteIdentityCenterApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DeleteIdentityCenterApplicationInput, ...func(*workmail.Options)) (*workmail.DeleteIdentityCenterApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DeleteIdentityCenterApplicationInput, ...func(*workmail.Options)) *workmail.DeleteIdentityCenterApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.DeleteIdentityCenterApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.DeleteIdentityCenterApplicationInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIdentityProviderConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIdentityProviderConfiguration(ctx context.Context, params *workmail.DeleteIdentityProviderConfigurationInput, optFns ...func(*workmail.Options)) (*workmail.DeleteIdentityProviderConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIdentityProviderConfiguration")
+	}
+
+	var r0 *workmail.DeleteIdentityProviderConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DeleteIdentityProviderConfigurationInput, ...func(*workmail.Options)) (*workmail.DeleteIdentityProviderConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DeleteIdentityProviderConfigurationInput, ...func(*workmail.Options)) *workmail.DeleteIdentityProviderConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.DeleteIdentityProviderConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.DeleteIdentityProviderConfigurationInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteImpersonationRole provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteImpersonationRole(ctx context.Context, params *workmail.DeleteImpersonationRoleInput, optFns ...func(*workmail.Options)) (*workmail.DeleteImpersonationRoleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -820,6 +931,43 @@ func (_m *IClient) DeleteOrganization(ctx context.Context, params *workmail.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workmail.DeleteOrganizationInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePersonalAccessToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePersonalAccessToken(ctx context.Context, params *workmail.DeletePersonalAccessTokenInput, optFns ...func(*workmail.Options)) (*workmail.DeletePersonalAccessTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePersonalAccessToken")
+	}
+
+	var r0 *workmail.DeletePersonalAccessTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DeletePersonalAccessTokenInput, ...func(*workmail.Options)) (*workmail.DeletePersonalAccessTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DeletePersonalAccessTokenInput, ...func(*workmail.Options)) *workmail.DeletePersonalAccessTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.DeletePersonalAccessTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.DeletePersonalAccessTokenInput, ...func(*workmail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1116,6 +1264,43 @@ func (_m *IClient) DescribeGroup(ctx context.Context, params *workmail.DescribeG
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workmail.DescribeGroupInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeIdentityProviderConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeIdentityProviderConfiguration(ctx context.Context, params *workmail.DescribeIdentityProviderConfigurationInput, optFns ...func(*workmail.Options)) (*workmail.DescribeIdentityProviderConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeIdentityProviderConfiguration")
+	}
+
+	var r0 *workmail.DescribeIdentityProviderConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DescribeIdentityProviderConfigurationInput, ...func(*workmail.Options)) (*workmail.DescribeIdentityProviderConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.DescribeIdentityProviderConfigurationInput, ...func(*workmail.Options)) *workmail.DescribeIdentityProviderConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.DescribeIdentityProviderConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.DescribeIdentityProviderConfigurationInput, ...func(*workmail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1679,6 +1864,43 @@ func (_m *IClient) GetMobileDeviceAccessOverride(ctx context.Context, params *wo
 	return r0, r1
 }
 
+// GetPersonalAccessTokenMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPersonalAccessTokenMetadata(ctx context.Context, params *workmail.GetPersonalAccessTokenMetadataInput, optFns ...func(*workmail.Options)) (*workmail.GetPersonalAccessTokenMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPersonalAccessTokenMetadata")
+	}
+
+	var r0 *workmail.GetPersonalAccessTokenMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.GetPersonalAccessTokenMetadataInput, ...func(*workmail.Options)) (*workmail.GetPersonalAccessTokenMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.GetPersonalAccessTokenMetadataInput, ...func(*workmail.Options)) *workmail.GetPersonalAccessTokenMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.GetPersonalAccessTokenMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.GetPersonalAccessTokenMetadataInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAccessControlRules provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAccessControlRules(ctx context.Context, params *workmail.ListAccessControlRulesInput, optFns ...func(*workmail.Options)) (*workmail.ListAccessControlRulesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2160,6 +2382,43 @@ func (_m *IClient) ListOrganizations(ctx context.Context, params *workmail.ListO
 	return r0, r1
 }
 
+// ListPersonalAccessTokens provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPersonalAccessTokens(ctx context.Context, params *workmail.ListPersonalAccessTokensInput, optFns ...func(*workmail.Options)) (*workmail.ListPersonalAccessTokensOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPersonalAccessTokens")
+	}
+
+	var r0 *workmail.ListPersonalAccessTokensOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.ListPersonalAccessTokensInput, ...func(*workmail.Options)) (*workmail.ListPersonalAccessTokensOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.ListPersonalAccessTokensInput, ...func(*workmail.Options)) *workmail.ListPersonalAccessTokensOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.ListPersonalAccessTokensOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.ListPersonalAccessTokensInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListResourceDelegates provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListResourceDelegates(ctx context.Context, params *workmail.ListResourceDelegatesInput, optFns ...func(*workmail.Options)) (*workmail.ListResourceDelegatesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2392,6 +2651,43 @@ func (_m *IClient) PutEmailMonitoringConfiguration(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workmail.PutEmailMonitoringConfigurationInput, ...func(*workmail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutIdentityProviderConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutIdentityProviderConfiguration(ctx context.Context, params *workmail.PutIdentityProviderConfigurationInput, optFns ...func(*workmail.Options)) (*workmail.PutIdentityProviderConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutIdentityProviderConfiguration")
+	}
+
+	var r0 *workmail.PutIdentityProviderConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.PutIdentityProviderConfigurationInput, ...func(*workmail.Options)) (*workmail.PutIdentityProviderConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workmail.PutIdentityProviderConfigurationInput, ...func(*workmail.Options)) *workmail.PutIdentityProviderConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workmail.PutIdentityProviderConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workmail.PutIdentityProviderConfigurationInput, ...func(*workmail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

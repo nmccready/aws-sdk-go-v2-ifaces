@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateChannelPlacementGroup", func(t *testing.T) {
+        input := &medialive.CreateChannelPlacementGroupInput{}
+        output := &medialive.CreateChannelPlacementGroupOutput{}
+
+        mockClient.On("CreateChannelPlacementGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannelPlacementGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCloudWatchAlarmTemplate", func(t *testing.T) {
         input := &medialive.CreateCloudWatchAlarmTemplateInput{}
         output := &medialive.CreateCloudWatchAlarmTemplateOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCloudWatchAlarmTemplateGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCloudWatchAlarmTemplateGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCluster", func(t *testing.T) {
+        input := &medialive.CreateClusterInput{}
+        output := &medialive.CreateClusterOutput{}
+
+        mockClient.On("CreateCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,6 +268,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateNetwork", func(t *testing.T) {
+        input := &medialive.CreateNetworkInput{}
+        output := &medialive.CreateNetworkOutput{}
+
+        mockClient.On("CreateNetwork", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateNode", func(t *testing.T) {
+        input := &medialive.CreateNodeInput{}
+        output := &medialive.CreateNodeOutput{}
+
+        mockClient.On("CreateNode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateNodeRegistrationScript", func(t *testing.T) {
+        input := &medialive.CreateNodeRegistrationScriptInput{}
+        output := &medialive.CreateNodeRegistrationScriptOutput{}
+
+        mockClient.On("CreateNodeRegistrationScript", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNodeRegistrationScript(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreatePartnerInput", func(t *testing.T) {
         input := &medialive.CreatePartnerInputInput{}
         output := &medialive.CreatePartnerInputOutput{}
@@ -294,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteChannelPlacementGroup", func(t *testing.T) {
+        input := &medialive.DeleteChannelPlacementGroupInput{}
+        output := &medialive.DeleteChannelPlacementGroupOutput{}
+
+        mockClient.On("DeleteChannelPlacementGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteChannelPlacementGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCloudWatchAlarmTemplate", func(t *testing.T) {
         input := &medialive.DeleteCloudWatchAlarmTemplateInput{}
         output := &medialive.DeleteCloudWatchAlarmTemplateOutput{}
@@ -314,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCloudWatchAlarmTemplateGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCloudWatchAlarmTemplateGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCluster", func(t *testing.T) {
+        input := &medialive.DeleteClusterInput{}
+        output := &medialive.DeleteClusterOutput{}
+
+        mockClient.On("DeleteCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +489,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteNetwork", func(t *testing.T) {
+        input := &medialive.DeleteNetworkInput{}
+        output := &medialive.DeleteNetworkOutput{}
+
+        mockClient.On("DeleteNetwork", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteNode", func(t *testing.T) {
+        input := &medialive.DeleteNodeInput{}
+        output := &medialive.DeleteNodeOutput{}
+
+        mockClient.On("DeleteNode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteReservation", func(t *testing.T) {
         input := &medialive.DeleteReservationInput{}
         output := &medialive.DeleteReservationOutput{}
@@ -476,6 +593,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeChannelPlacementGroup", func(t *testing.T) {
+        input := &medialive.DescribeChannelPlacementGroupInput{}
+        output := &medialive.DescribeChannelPlacementGroupOutput{}
+
+        mockClient.On("DescribeChannelPlacementGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeChannelPlacementGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCluster", func(t *testing.T) {
+        input := &medialive.DescribeClusterInput{}
+        output := &medialive.DescribeClusterOutput{}
+
+        mockClient.On("DescribeCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeInput", func(t *testing.T) {
         input := &medialive.DescribeInputInput{}
         output := &medialive.DescribeInputOutput{}
@@ -548,6 +691,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMultiplexProgram", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMultiplexProgram(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNetwork", func(t *testing.T) {
+        input := &medialive.DescribeNetworkInput{}
+        output := &medialive.DescribeNetworkOutput{}
+
+        mockClient.On("DescribeNetwork", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNode", func(t *testing.T) {
+        input := &medialive.DescribeNodeInput{}
+        output := &medialive.DescribeNodeOutput{}
+
+        mockClient.On("DescribeNode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNode(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -671,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListChannelPlacementGroups", func(t *testing.T) {
+        input := &medialive.ListChannelPlacementGroupsInput{}
+        output := &medialive.ListChannelPlacementGroupsOutput{}
+
+        mockClient.On("ListChannelPlacementGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannelPlacementGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListChannels", func(t *testing.T) {
         input := &medialive.ListChannelsInput{}
         output := &medialive.ListChannelsOutput{}
@@ -704,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCloudWatchAlarmTemplates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCloudWatchAlarmTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListClusters", func(t *testing.T) {
+        input := &medialive.ListClustersInput{}
+        output := &medialive.ListClustersOutput{}
+
+        mockClient.On("ListClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,6 +1009,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListNetworks", func(t *testing.T) {
+        input := &medialive.ListNetworksInput{}
+        output := &medialive.ListNetworksOutput{}
+
+        mockClient.On("ListNetworks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNodes", func(t *testing.T) {
+        input := &medialive.ListNodesInput{}
+        output := &medialive.ListNodesOutput{}
+
+        mockClient.On("ListNodes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNodes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListOfferings", func(t *testing.T) {
         input := &medialive.ListOfferingsInput{}
         output := &medialive.ListOfferingsOutput{}
@@ -860,6 +1081,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVersions", func(t *testing.T) {
+        input := &medialive.ListVersionsInput{}
+        output := &medialive.ListVersionsOutput{}
+
+        mockClient.On("ListVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1100,6 +1334,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateChannelPlacementGroup", func(t *testing.T) {
+        input := &medialive.UpdateChannelPlacementGroupInput{}
+        output := &medialive.UpdateChannelPlacementGroupOutput{}
+
+        mockClient.On("UpdateChannelPlacementGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChannelPlacementGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateCloudWatchAlarmTemplate", func(t *testing.T) {
         input := &medialive.UpdateCloudWatchAlarmTemplateInput{}
         output := &medialive.UpdateCloudWatchAlarmTemplateOutput{}
@@ -1120,6 +1367,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCloudWatchAlarmTemplateGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCloudWatchAlarmTemplateGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCluster", func(t *testing.T) {
+        input := &medialive.UpdateClusterInput{}
+        output := &medialive.UpdateClusterOutput{}
+
+        mockClient.On("UpdateCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1211,6 +1471,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateMultiplexProgram", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateMultiplexProgram(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateNetwork", func(t *testing.T) {
+        input := &medialive.UpdateNetworkInput{}
+        output := &medialive.UpdateNetworkOutput{}
+
+        mockClient.On("UpdateNetwork", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateNode", func(t *testing.T) {
+        input := &medialive.UpdateNodeInput{}
+        output := &medialive.UpdateNodeOutput{}
+
+        mockClient.On("UpdateNode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateNodeState", func(t *testing.T) {
+        input := &medialive.UpdateNodeStateInput{}
+        output := &medialive.UpdateNodeStateOutput{}
+
+        mockClient.On("UpdateNodeState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNodeState(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

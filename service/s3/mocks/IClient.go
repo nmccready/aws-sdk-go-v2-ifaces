@@ -162,6 +162,43 @@ func (_m *IClient) CreateBucket(ctx context.Context, params *s3.CreateBucketInpu
 	return r0, r1
 }
 
+// CreateBucketMetadataTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateBucketMetadataTableConfiguration(ctx context.Context, params *s3.CreateBucketMetadataTableConfigurationInput, optFns ...func(*s3.Options)) (*s3.CreateBucketMetadataTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateBucketMetadataTableConfiguration")
+	}
+
+	var r0 *s3.CreateBucketMetadataTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.CreateBucketMetadataTableConfigurationInput, ...func(*s3.Options)) (*s3.CreateBucketMetadataTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.CreateBucketMetadataTableConfigurationInput, ...func(*s3.Options)) *s3.CreateBucketMetadataTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.CreateBucketMetadataTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.CreateBucketMetadataTableConfigurationInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateMultipartUpload provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateMultipartUpload(ctx context.Context, params *s3.CreateMultipartUploadInput, optFns ...func(*s3.Options)) (*s3.CreateMultipartUploadOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -487,6 +524,43 @@ func (_m *IClient) DeleteBucketLifecycle(ctx context.Context, params *s3.DeleteB
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3.DeleteBucketLifecycleInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteBucketMetadataTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBucketMetadataTableConfiguration(ctx context.Context, params *s3.DeleteBucketMetadataTableConfigurationInput, optFns ...func(*s3.Options)) (*s3.DeleteBucketMetadataTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBucketMetadataTableConfiguration")
+	}
+
+	var r0 *s3.DeleteBucketMetadataTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.DeleteBucketMetadataTableConfigurationInput, ...func(*s3.Options)) (*s3.DeleteBucketMetadataTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.DeleteBucketMetadataTableConfigurationInput, ...func(*s3.Options)) *s3.DeleteBucketMetadataTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.DeleteBucketMetadataTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.DeleteBucketMetadataTableConfigurationInput, ...func(*s3.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1227,6 +1301,43 @@ func (_m *IClient) GetBucketLogging(ctx context.Context, params *s3.GetBucketLog
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3.GetBucketLoggingInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetBucketMetadataTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBucketMetadataTableConfiguration(ctx context.Context, params *s3.GetBucketMetadataTableConfigurationInput, optFns ...func(*s3.Options)) (*s3.GetBucketMetadataTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBucketMetadataTableConfiguration")
+	}
+
+	var r0 *s3.GetBucketMetadataTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.GetBucketMetadataTableConfigurationInput, ...func(*s3.Options)) (*s3.GetBucketMetadataTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.GetBucketMetadataTableConfigurationInput, ...func(*s3.Options)) *s3.GetBucketMetadataTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.GetBucketMetadataTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.GetBucketMetadataTableConfigurationInput, ...func(*s3.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

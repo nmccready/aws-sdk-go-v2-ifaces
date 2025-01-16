@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateToConfiguration", func(t *testing.T) {
+        input := &chatbot.AssociateToConfigurationInput{}
+        output := &chatbot.AssociateToConfigurationOutput{}
+
+        mockClient.On("AssociateToConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateToConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateChimeWebhookConfiguration", func(t *testing.T) {
         input := &chatbot.CreateChimeWebhookConfigurationInput{}
         output := &chatbot.CreateChimeWebhookConfigurationOutput{}
@@ -41,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateChimeWebhookConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateChimeWebhookConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCustomAction", func(t *testing.T) {
+        input := &chatbot.CreateCustomActionInput{}
+        output := &chatbot.CreateCustomActionOutput{}
+
+        mockClient.On("CreateCustomAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCustomAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -80,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteChimeWebhookConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteChimeWebhookConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCustomAction", func(t *testing.T) {
+        input := &chatbot.DeleteCustomActionInput{}
+        output := &chatbot.DeleteCustomActionOutput{}
+
+        mockClient.On("DeleteCustomAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCustomAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateFromConfiguration", func(t *testing.T) {
+        input := &chatbot.DisassociateFromConfigurationInput{}
+        output := &chatbot.DisassociateFromConfigurationOutput{}
+
+        mockClient.On("DisassociateFromConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateFromConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAccountPreferences", func(t *testing.T) {
         input := &chatbot.GetAccountPreferencesInput{}
         output := &chatbot.GetAccountPreferencesOutput{}
@@ -229,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCustomAction", func(t *testing.T) {
+        input := &chatbot.GetCustomActionInput{}
+        output := &chatbot.GetCustomActionOutput{}
+
+        mockClient.On("GetCustomAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetMicrosoftTeamsChannelConfiguration", func(t *testing.T) {
         input := &chatbot.GetMicrosoftTeamsChannelConfigurationInput{}
         output := &chatbot.GetMicrosoftTeamsChannelConfigurationOutput{}
@@ -236,6 +301,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetMicrosoftTeamsChannelConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetMicrosoftTeamsChannelConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssociations", func(t *testing.T) {
+        input := &chatbot.ListAssociationsInput{}
+        output := &chatbot.ListAssociationsOutput{}
+
+        mockClient.On("ListAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomActions", func(t *testing.T) {
+        input := &chatbot.ListCustomActionsInput{}
+        output := &chatbot.ListCustomActionsOutput{}
+
+        mockClient.On("ListCustomActions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomActions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateChimeWebhookConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateChimeWebhookConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCustomAction", func(t *testing.T) {
+        input := &chatbot.UpdateCustomActionInput{}
+        output := &chatbot.UpdateCustomActionOutput{}
+
+        mockClient.On("UpdateCustomAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCustomAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

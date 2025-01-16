@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDirectConnectGatewayAttachment", func(t *testing.T) {
+        input := &networkmanager.CreateDirectConnectGatewayAttachmentInput{}
+        output := &networkmanager.CreateDirectConnectGatewayAttachmentOutput{}
+
+        mockClient.On("CreateDirectConnectGatewayAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDirectConnectGatewayAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGlobalNetwork", func(t *testing.T) {
         input := &networkmanager.CreateGlobalNetworkInput{}
         output := &networkmanager.CreateGlobalNetworkOutput{}
@@ -619,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDirectConnectGatewayAttachment", func(t *testing.T) {
+        input := &networkmanager.GetDirectConnectGatewayAttachmentInput{}
+        output := &networkmanager.GetDirectConnectGatewayAttachmentOutput{}
+
+        mockClient.On("GetDirectConnectGatewayAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDirectConnectGatewayAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLinkAssociations", func(t *testing.T) {
         input := &networkmanager.GetLinkAssociationsInput{}
         output := &networkmanager.GetLinkAssociationsOutput{}
@@ -1068,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDevice", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDevice(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDirectConnectGatewayAttachment", func(t *testing.T) {
+        input := &networkmanager.UpdateDirectConnectGatewayAttachmentInput{}
+        output := &networkmanager.UpdateDirectConnectGatewayAttachmentOutput{}
+
+        mockClient.On("UpdateDirectConnectGatewayAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDirectConnectGatewayAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

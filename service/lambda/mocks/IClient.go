@@ -977,6 +977,43 @@ func (_m *IClient) GetFunctionEventInvokeConfig(ctx context.Context, params *lam
 	return r0, r1
 }
 
+// GetFunctionRecursionConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFunctionRecursionConfig(ctx context.Context, params *lambda.GetFunctionRecursionConfigInput, optFns ...func(*lambda.Options)) (*lambda.GetFunctionRecursionConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFunctionRecursionConfig")
+	}
+
+	var r0 *lambda.GetFunctionRecursionConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetFunctionRecursionConfigInput, ...func(*lambda.Options)) (*lambda.GetFunctionRecursionConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetFunctionRecursionConfigInput, ...func(*lambda.Options)) *lambda.GetFunctionRecursionConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.GetFunctionRecursionConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetFunctionRecursionConfigInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFunctionUrlConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFunctionUrlConfig(ctx context.Context, params *lambda.GetFunctionUrlConfigInput, optFns ...func(*lambda.Options)) (*lambda.GetFunctionUrlConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1986,6 +2023,43 @@ func (_m *IClient) PutFunctionEventInvokeConfig(ctx context.Context, params *lam
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.PutFunctionEventInvokeConfigInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutFunctionRecursionConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutFunctionRecursionConfig(ctx context.Context, params *lambda.PutFunctionRecursionConfigInput, optFns ...func(*lambda.Options)) (*lambda.PutFunctionRecursionConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutFunctionRecursionConfig")
+	}
+
+	var r0 *lambda.PutFunctionRecursionConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.PutFunctionRecursionConfigInput, ...func(*lambda.Options)) (*lambda.PutFunctionRecursionConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.PutFunctionRecursionConfigInput, ...func(*lambda.Options)) *lambda.PutFunctionRecursionConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.PutFunctionRecursionConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.PutFunctionRecursionConfigInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

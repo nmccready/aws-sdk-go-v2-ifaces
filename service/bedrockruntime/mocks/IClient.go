@@ -126,6 +126,43 @@ func (_m *IClient) ConverseStream(ctx context.Context, params *bedrockruntime.Co
 	return r0, r1
 }
 
+// GetAsyncInvoke provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAsyncInvoke(ctx context.Context, params *bedrockruntime.GetAsyncInvokeInput, optFns ...func(*bedrockruntime.Options)) (*bedrockruntime.GetAsyncInvokeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAsyncInvoke")
+	}
+
+	var r0 *bedrockruntime.GetAsyncInvokeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.GetAsyncInvokeInput, ...func(*bedrockruntime.Options)) (*bedrockruntime.GetAsyncInvokeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.GetAsyncInvokeInput, ...func(*bedrockruntime.Options)) *bedrockruntime.GetAsyncInvokeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockruntime.GetAsyncInvokeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockruntime.GetAsyncInvokeInput, ...func(*bedrockruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InvokeModel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InvokeModel(ctx context.Context, params *bedrockruntime.InvokeModelInput, optFns ...func(*bedrockruntime.Options)) (*bedrockruntime.InvokeModelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -200,6 +237,43 @@ func (_m *IClient) InvokeModelWithResponseStream(ctx context.Context, params *be
 	return r0, r1
 }
 
+// ListAsyncInvokes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAsyncInvokes(ctx context.Context, params *bedrockruntime.ListAsyncInvokesInput, optFns ...func(*bedrockruntime.Options)) (*bedrockruntime.ListAsyncInvokesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAsyncInvokes")
+	}
+
+	var r0 *bedrockruntime.ListAsyncInvokesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.ListAsyncInvokesInput, ...func(*bedrockruntime.Options)) (*bedrockruntime.ListAsyncInvokesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.ListAsyncInvokesInput, ...func(*bedrockruntime.Options)) *bedrockruntime.ListAsyncInvokesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockruntime.ListAsyncInvokesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockruntime.ListAsyncInvokesInput, ...func(*bedrockruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with given fields:
 func (_m *IClient) Options() bedrockruntime.Options {
 	ret := _m.Called()
@@ -216,6 +290,43 @@ func (_m *IClient) Options() bedrockruntime.Options {
 	}
 
 	return r0
+}
+
+// StartAsyncInvoke provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAsyncInvoke(ctx context.Context, params *bedrockruntime.StartAsyncInvokeInput, optFns ...func(*bedrockruntime.Options)) (*bedrockruntime.StartAsyncInvokeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAsyncInvoke")
+	}
+
+	var r0 *bedrockruntime.StartAsyncInvokeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.StartAsyncInvokeInput, ...func(*bedrockruntime.Options)) (*bedrockruntime.StartAsyncInvokeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.StartAsyncInvokeInput, ...func(*bedrockruntime.Options)) *bedrockruntime.StartAsyncInvokeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockruntime.StartAsyncInvokeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockruntime.StartAsyncInvokeInput, ...func(*bedrockruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

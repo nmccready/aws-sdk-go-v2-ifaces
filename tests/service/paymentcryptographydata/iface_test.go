@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGenerateMacEmvPinChange", func(t *testing.T) {
+        input := &paymentcryptographydata.GenerateMacEmvPinChangeInput{}
+        output := &paymentcryptographydata.GenerateMacEmvPinChangeOutput{}
+
+        mockClient.On("GenerateMacEmvPinChange", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateMacEmvPinChange(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGeneratePinData", func(t *testing.T) {
         input := &paymentcryptographydata.GeneratePinDataInput{}
         output := &paymentcryptographydata.GeneratePinDataOutput{}

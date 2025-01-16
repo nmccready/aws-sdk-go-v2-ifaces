@@ -59,6 +59,7 @@ type IClient interface {
  ListChangeSets(ctx context.Context, params *ListChangeSetsInput, optFns ...func(*Options)) (*ListChangeSetsOutput, error) 
  ListExports(ctx context.Context, params *ListExportsInput, optFns ...func(*Options)) (*ListExportsOutput, error) 
  ListGeneratedTemplates(ctx context.Context, params *ListGeneratedTemplatesInput, optFns ...func(*Options)) (*ListGeneratedTemplatesOutput, error) 
+ ListHookResults(ctx context.Context, params *ListHookResultsInput, optFns ...func(*Options)) (*ListHookResultsOutput, error) 
  ListImports(ctx context.Context, params *ListImportsInput, optFns ...func(*Options)) (*ListImportsOutput, error) 
  ListResourceScanRelatedResources(ctx context.Context, params *ListResourceScanRelatedResourcesInput, optFns ...func(*Options)) (*ListResourceScanRelatedResourcesOutput, error) 
  ListResourceScanResources(ctx context.Context, params *ListResourceScanResourcesInput, optFns ...func(*Options)) (*ListResourceScanResourcesOutput, error) 

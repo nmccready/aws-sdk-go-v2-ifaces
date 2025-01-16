@@ -52,6 +52,43 @@ func (_m *IClient) CreateEncoderConfiguration(ctx context.Context, params *ivsre
 	return r0, r1
 }
 
+// CreateIngestConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIngestConfiguration(ctx context.Context, params *ivsrealtime.CreateIngestConfigurationInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.CreateIngestConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIngestConfiguration")
+	}
+
+	var r0 *ivsrealtime.CreateIngestConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.CreateIngestConfigurationInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.CreateIngestConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.CreateIngestConfigurationInput, ...func(*ivsrealtime.Options)) *ivsrealtime.CreateIngestConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.CreateIngestConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.CreateIngestConfigurationInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateParticipantToken provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateParticipantToken(ctx context.Context, params *ivsrealtime.CreateParticipantTokenInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.CreateParticipantTokenOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +229,43 @@ func (_m *IClient) DeleteEncoderConfiguration(ctx context.Context, params *ivsre
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.DeleteEncoderConfigurationInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIngestConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIngestConfiguration(ctx context.Context, params *ivsrealtime.DeleteIngestConfigurationInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.DeleteIngestConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIngestConfiguration")
+	}
+
+	var r0 *ivsrealtime.DeleteIngestConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.DeleteIngestConfigurationInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.DeleteIngestConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.DeleteIngestConfigurationInput, ...func(*ivsrealtime.Options)) *ivsrealtime.DeleteIngestConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.DeleteIngestConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.DeleteIngestConfigurationInput, ...func(*ivsrealtime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -414,6 +488,43 @@ func (_m *IClient) GetEncoderConfiguration(ctx context.Context, params *ivsrealt
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.GetEncoderConfigurationInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIngestConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIngestConfiguration(ctx context.Context, params *ivsrealtime.GetIngestConfigurationInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.GetIngestConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIngestConfiguration")
+	}
+
+	var r0 *ivsrealtime.GetIngestConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.GetIngestConfigurationInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.GetIngestConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.GetIngestConfigurationInput, ...func(*ivsrealtime.Options)) *ivsrealtime.GetIngestConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.GetIngestConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.GetIngestConfigurationInput, ...func(*ivsrealtime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -710,6 +821,43 @@ func (_m *IClient) ListEncoderConfigurations(ctx context.Context, params *ivsrea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.ListEncoderConfigurationsInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIngestConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIngestConfigurations(ctx context.Context, params *ivsrealtime.ListIngestConfigurationsInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.ListIngestConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIngestConfigurations")
+	}
+
+	var r0 *ivsrealtime.ListIngestConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.ListIngestConfigurationsInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.ListIngestConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.ListIngestConfigurationsInput, ...func(*ivsrealtime.Options)) *ivsrealtime.ListIngestConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.ListIngestConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.ListIngestConfigurationsInput, ...func(*ivsrealtime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1135,6 +1283,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *ivsrealtime.UntagR
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.UntagResourceInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIngestConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIngestConfiguration(ctx context.Context, params *ivsrealtime.UpdateIngestConfigurationInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.UpdateIngestConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIngestConfiguration")
+	}
+
+	var r0 *ivsrealtime.UpdateIngestConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.UpdateIngestConfigurationInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.UpdateIngestConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.UpdateIngestConfigurationInput, ...func(*ivsrealtime.Options)) *ivsrealtime.UpdateIngestConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.UpdateIngestConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.UpdateIngestConfigurationInput, ...func(*ivsrealtime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

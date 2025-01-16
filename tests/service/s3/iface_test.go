@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBucketMetadataTableConfiguration", func(t *testing.T) {
+        input := &s3.CreateBucketMetadataTableConfigurationInput{}
+        output := &s3.CreateBucketMetadataTableConfigurationOutput{}
+
+        mockClient.On("CreateBucketMetadataTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBucketMetadataTableConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMultipartUpload", func(t *testing.T) {
         input := &s3.CreateMultipartUploadInput{}
         output := &s3.CreateMultipartUploadOutput{}
@@ -197,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBucketLifecycle", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBucketLifecycle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBucketMetadataTableConfiguration", func(t *testing.T) {
+        input := &s3.DeleteBucketMetadataTableConfigurationInput{}
+        output := &s3.DeleteBucketMetadataTableConfigurationOutput{}
+
+        mockClient.On("DeleteBucketMetadataTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBucketMetadataTableConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBucketLogging", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBucketLogging(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBucketMetadataTableConfiguration", func(t *testing.T) {
+        input := &s3.GetBucketMetadataTableConfigurationInput{}
+        output := &s3.GetBucketMetadataTableConfigurationOutput{}
+
+        mockClient.On("GetBucketMetadataTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBucketMetadataTableConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcceptResourceGroupingRecommendations", func(t *testing.T) {
+        input := &resiliencehub.AcceptResourceGroupingRecommendationsInput{}
+        output := &resiliencehub.AcceptResourceGroupingRecommendationsOutput{}
+
+        mockClient.On("AcceptResourceGroupingRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcceptResourceGroupingRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAddDraftAppVersionResourceMappings", func(t *testing.T) {
         input := &resiliencehub.AddDraftAppVersionResourceMappingsInput{}
         output := &resiliencehub.AddDraftAppVersionResourceMappingsOutput{}
@@ -320,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeMetricsExport", func(t *testing.T) {
+        input := &resiliencehub.DescribeMetricsExportInput{}
+        output := &resiliencehub.DescribeMetricsExportOutput{}
+
+        mockClient.On("DescribeMetricsExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetricsExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeResiliencyPolicy", func(t *testing.T) {
         input := &resiliencehub.DescribeResiliencyPolicyInput{}
         output := &resiliencehub.DescribeResiliencyPolicyOutput{}
@@ -327,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeResiliencyPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeResiliencyPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeResourceGroupingRecommendationTask", func(t *testing.T) {
+        input := &resiliencehub.DescribeResourceGroupingRecommendationTaskInput{}
+        output := &resiliencehub.DescribeResourceGroupingRecommendationTaskOutput{}
+
+        mockClient.On("DescribeResourceGroupingRecommendationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeResourceGroupingRecommendationTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,6 +541,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMetrics", func(t *testing.T) {
+        input := &resiliencehub.ListMetricsInput{}
+        output := &resiliencehub.ListMetricsOutput{}
+
+        mockClient.On("ListMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRecommendationTemplates", func(t *testing.T) {
         input := &resiliencehub.ListRecommendationTemplatesInput{}
         output := &resiliencehub.ListRecommendationTemplatesOutput{}
@@ -522,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResiliencyPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResiliencyPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourceGroupingRecommendations", func(t *testing.T) {
+        input := &resiliencehub.ListResourceGroupingRecommendationsInput{}
+        output := &resiliencehub.ListResourceGroupingRecommendationsOutput{}
+
+        mockClient.On("ListResourceGroupingRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceGroupingRecommendations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,6 +684,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRejectResourceGroupingRecommendations", func(t *testing.T) {
+        input := &resiliencehub.RejectResourceGroupingRecommendationsInput{}
+        output := &resiliencehub.RejectResourceGroupingRecommendationsOutput{}
+
+        mockClient.On("RejectResourceGroupingRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RejectResourceGroupingRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRemoveDraftAppVersionResourceMappings", func(t *testing.T) {
         input := &resiliencehub.RemoveDraftAppVersionResourceMappingsInput{}
         output := &resiliencehub.RemoveDraftAppVersionResourceMappingsOutput{}
@@ -652,6 +730,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAppAssessment", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAppAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartMetricsExport", func(t *testing.T) {
+        input := &resiliencehub.StartMetricsExportInput{}
+        output := &resiliencehub.StartMetricsExportOutput{}
+
+        mockClient.On("StartMetricsExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMetricsExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartResourceGroupingRecommendationTask", func(t *testing.T) {
+        input := &resiliencehub.StartResourceGroupingRecommendationTaskInput{}
+        output := &resiliencehub.StartResourceGroupingRecommendationTaskOutput{}
+
+        mockClient.On("StartResourceGroupingRecommendationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartResourceGroupingRecommendationTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

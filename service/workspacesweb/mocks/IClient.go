@@ -51,6 +51,43 @@ func (_m *IClient) AssociateBrowserSettings(ctx context.Context, params *workspa
 	return r0, r1
 }
 
+// AssociateDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateDataProtectionSettings(ctx context.Context, params *workspacesweb.AssociateDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.AssociateDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.AssociateDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.AssociateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.AssociateDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.AssociateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.AssociateDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.AssociateDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.AssociateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateIpAccessSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateIpAccessSettings(ctx context.Context, params *workspacesweb.AssociateIpAccessSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.AssociateIpAccessSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -265,6 +302,43 @@ func (_m *IClient) CreateBrowserSettings(ctx context.Context, params *workspaces
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.CreateBrowserSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataProtectionSettings(ctx context.Context, params *workspacesweb.CreateDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.CreateDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.CreateDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.CreateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.CreateDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.CreateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.CreateDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.CreateDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.CreateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -569,6 +643,43 @@ func (_m *IClient) DeleteBrowserSettings(ctx context.Context, params *workspaces
 	return r0, r1
 }
 
+// DeleteDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataProtectionSettings(ctx context.Context, params *workspacesweb.DeleteDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DeleteDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.DeleteDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DeleteDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.DeleteDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DeleteDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.DeleteDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.DeleteDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.DeleteDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteIdentityProvider provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteIdentityProvider(ctx context.Context, params *workspacesweb.DeleteIdentityProviderInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DeleteIdentityProviderOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -865,6 +976,43 @@ func (_m *IClient) DisassociateBrowserSettings(ctx context.Context, params *work
 	return r0, r1
 }
 
+// DisassociateDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateDataProtectionSettings(ctx context.Context, params *workspacesweb.DisassociateDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DisassociateDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.DisassociateDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DisassociateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.DisassociateDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DisassociateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.DisassociateDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.DisassociateDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.DisassociateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateIpAccessSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateIpAccessSettings(ctx context.Context, params *workspacesweb.DisassociateIpAccessSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DisassociateIpAccessSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1050,6 +1198,43 @@ func (_m *IClient) DisassociateUserSettings(ctx context.Context, params *workspa
 	return r0, r1
 }
 
+// ExpireSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExpireSession(ctx context.Context, params *workspacesweb.ExpireSessionInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.ExpireSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExpireSession")
+	}
+
+	var r0 *workspacesweb.ExpireSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ExpireSessionInput, ...func(*workspacesweb.Options)) (*workspacesweb.ExpireSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ExpireSessionInput, ...func(*workspacesweb.Options)) *workspacesweb.ExpireSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.ExpireSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.ExpireSessionInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBrowserSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBrowserSettings(ctx context.Context, params *workspacesweb.GetBrowserSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.GetBrowserSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1079,6 +1264,43 @@ func (_m *IClient) GetBrowserSettings(ctx context.Context, params *workspacesweb
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.GetBrowserSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataProtectionSettings(ctx context.Context, params *workspacesweb.GetDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.GetDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.GetDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.GetDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.GetDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.GetDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.GetDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.GetDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.GetDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1272,6 +1494,43 @@ func (_m *IClient) GetPortalServiceProviderMetadata(ctx context.Context, params 
 	return r0, r1
 }
 
+// GetSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSession(ctx context.Context, params *workspacesweb.GetSessionInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.GetSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSession")
+	}
+
+	var r0 *workspacesweb.GetSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.GetSessionInput, ...func(*workspacesweb.Options)) (*workspacesweb.GetSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.GetSessionInput, ...func(*workspacesweb.Options)) *workspacesweb.GetSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.GetSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.GetSessionInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTrustStore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTrustStore(ctx context.Context, params *workspacesweb.GetTrustStoreInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.GetTrustStoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1457,6 +1716,43 @@ func (_m *IClient) ListBrowserSettings(ctx context.Context, params *workspaceswe
 	return r0, r1
 }
 
+// ListDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataProtectionSettings(ctx context.Context, params *workspacesweb.ListDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.ListDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.ListDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ListDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.ListDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ListDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.ListDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.ListDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.ListDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListIdentityProviders provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListIdentityProviders(ctx context.Context, params *workspacesweb.ListIdentityProvidersInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.ListIdentityProvidersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1597,6 +1893,43 @@ func (_m *IClient) ListPortals(ctx context.Context, params *workspacesweb.ListPo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.ListPortalsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSessions(ctx context.Context, params *workspacesweb.ListSessionsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.ListSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSessions")
+	}
+
+	var r0 *workspacesweb.ListSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ListSessionsInput, ...func(*workspacesweb.Options)) (*workspacesweb.ListSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ListSessionsInput, ...func(*workspacesweb.Options)) *workspacesweb.ListSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.ListSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.ListSessionsInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1911,6 +2244,43 @@ func (_m *IClient) UpdateBrowserSettings(ctx context.Context, params *workspaces
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.UpdateBrowserSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataProtectionSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataProtectionSettings(ctx context.Context, params *workspacesweb.UpdateDataProtectionSettingsInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.UpdateDataProtectionSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataProtectionSettings")
+	}
+
+	var r0 *workspacesweb.UpdateDataProtectionSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.UpdateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) (*workspacesweb.UpdateDataProtectionSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.UpdateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) *workspacesweb.UpdateDataProtectionSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.UpdateDataProtectionSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.UpdateDataProtectionSettingsInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

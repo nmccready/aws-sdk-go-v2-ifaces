@@ -18,6 +18,7 @@ type IClient interface {
  GetExperiment(ctx context.Context, params *GetExperimentInput, optFns ...func(*Options)) (*GetExperimentOutput, error) 
  GetExperimentTargetAccountConfiguration(ctx context.Context, params *GetExperimentTargetAccountConfigurationInput, optFns ...func(*Options)) (*GetExperimentTargetAccountConfigurationOutput, error) 
  GetExperimentTemplate(ctx context.Context, params *GetExperimentTemplateInput, optFns ...func(*Options)) (*GetExperimentTemplateOutput, error) 
+ GetSafetyLever(ctx context.Context, params *GetSafetyLeverInput, optFns ...func(*Options)) (*GetSafetyLeverOutput, error) 
  GetTargetAccountConfiguration(ctx context.Context, params *GetTargetAccountConfigurationInput, optFns ...func(*Options)) (*GetTargetAccountConfigurationOutput, error) 
  GetTargetResourceType(ctx context.Context, params *GetTargetResourceTypeInput, optFns ...func(*Options)) (*GetTargetResourceTypeOutput, error) 
  ListActions(ctx context.Context, params *ListActionsInput, optFns ...func(*Options)) (*ListActionsOutput, error) 
@@ -33,5 +34,6 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateExperimentTemplate(ctx context.Context, params *UpdateExperimentTemplateInput, optFns ...func(*Options)) (*UpdateExperimentTemplateOutput, error) 
+ UpdateSafetyLeverState(ctx context.Context, params *UpdateSafetyLeverStateInput, optFns ...func(*Options)) (*UpdateSafetyLeverStateOutput, error) 
  UpdateTargetAccountConfiguration(ctx context.Context, params *UpdateTargetAccountConfigurationInput, optFns ...func(*Options)) (*UpdateTargetAccountConfigurationOutput, error) 
 }

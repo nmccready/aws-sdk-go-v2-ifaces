@@ -348,6 +348,117 @@ func (_m *IClient) CreateConfiguredTableAssociation(ctx context.Context, params 
 	return r0, r1
 }
 
+// CreateConfiguredTableAssociationAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConfiguredTableAssociationAnalysisRule(ctx context.Context, params *cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConfiguredTableAssociationAnalysisRule")
+	}
+
+	var r0 *cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIdMappingTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIdMappingTable(ctx context.Context, params *cleanrooms.CreateIdMappingTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateIdMappingTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIdMappingTable")
+	}
+
+	var r0 *cleanrooms.CreateIdMappingTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIdMappingTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.CreateIdMappingTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIdMappingTableInput, ...func(*cleanrooms.Options)) *cleanrooms.CreateIdMappingTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.CreateIdMappingTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.CreateIdMappingTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIdNamespaceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIdNamespaceAssociation(ctx context.Context, params *cleanrooms.CreateIdNamespaceAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateIdNamespaceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIdNamespaceAssociation")
+	}
+
+	var r0 *cleanrooms.CreateIdNamespaceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) (*cleanrooms.CreateIdNamespaceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) *cleanrooms.CreateIdNamespaceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.CreateIdNamespaceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.CreateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateMembership provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateMembership(ctx context.Context, params *cleanrooms.CreateMembershipInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateMembershipOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -644,6 +755,117 @@ func (_m *IClient) DeleteConfiguredTableAssociation(ctx context.Context, params 
 	return r0, r1
 }
 
+// DeleteConfiguredTableAssociationAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConfiguredTableAssociationAnalysisRule(ctx context.Context, params *cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConfiguredTableAssociationAnalysisRule")
+	}
+
+	var r0 *cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIdMappingTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIdMappingTable(ctx context.Context, params *cleanrooms.DeleteIdMappingTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIdMappingTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIdMappingTable")
+	}
+
+	var r0 *cleanrooms.DeleteIdMappingTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIdMappingTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIdMappingTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIdMappingTableInput, ...func(*cleanrooms.Options)) *cleanrooms.DeleteIdMappingTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.DeleteIdMappingTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DeleteIdMappingTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIdNamespaceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIdNamespaceAssociation(ctx context.Context, params *cleanrooms.DeleteIdNamespaceAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIdNamespaceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIdNamespaceAssociation")
+	}
+
+	var r0 *cleanrooms.DeleteIdNamespaceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIdNamespaceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) *cleanrooms.DeleteIdNamespaceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.DeleteIdNamespaceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DeleteIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteMember provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteMember(ctx context.Context, params *cleanrooms.DeleteMemberInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteMemberOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -903,6 +1125,43 @@ func (_m *IClient) GetCollaborationConfiguredAudienceModelAssociation(ctx contex
 	return r0, r1
 }
 
+// GetCollaborationIdNamespaceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCollaborationIdNamespaceAssociation(ctx context.Context, params *cleanrooms.GetCollaborationIdNamespaceAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetCollaborationIdNamespaceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCollaborationIdNamespaceAssociation")
+	}
+
+	var r0 *cleanrooms.GetCollaborationIdNamespaceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetCollaborationIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetCollaborationIdNamespaceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetCollaborationIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) *cleanrooms.GetCollaborationIdNamespaceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetCollaborationIdNamespaceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetCollaborationIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCollaborationPrivacyBudgetTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCollaborationPrivacyBudgetTemplate(ctx context.Context, params *cleanrooms.GetCollaborationPrivacyBudgetTemplateInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetCollaborationPrivacyBudgetTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1080,6 +1339,117 @@ func (_m *IClient) GetConfiguredTableAssociation(ctx context.Context, params *cl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetConfiguredTableAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConfiguredTableAssociationAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConfiguredTableAssociationAnalysisRule(ctx context.Context, params *cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConfiguredTableAssociationAnalysisRule")
+	}
+
+	var r0 *cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIdMappingTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIdMappingTable(ctx context.Context, params *cleanrooms.GetIdMappingTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetIdMappingTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIdMappingTable")
+	}
+
+	var r0 *cleanrooms.GetIdMappingTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIdMappingTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetIdMappingTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIdMappingTableInput, ...func(*cleanrooms.Options)) *cleanrooms.GetIdMappingTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetIdMappingTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetIdMappingTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIdNamespaceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIdNamespaceAssociation(ctx context.Context, params *cleanrooms.GetIdNamespaceAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetIdNamespaceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIdNamespaceAssociation")
+	}
+
+	var r0 *cleanrooms.GetIdNamespaceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetIdNamespaceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) *cleanrooms.GetIdNamespaceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetIdNamespaceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1384,6 +1754,43 @@ func (_m *IClient) ListCollaborationConfiguredAudienceModelAssociations(ctx cont
 	return r0, r1
 }
 
+// ListCollaborationIdNamespaceAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCollaborationIdNamespaceAssociations(ctx context.Context, params *cleanrooms.ListCollaborationIdNamespaceAssociationsInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListCollaborationIdNamespaceAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCollaborationIdNamespaceAssociations")
+	}
+
+	var r0 *cleanrooms.ListCollaborationIdNamespaceAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListCollaborationIdNamespaceAssociationsInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListCollaborationIdNamespaceAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListCollaborationIdNamespaceAssociationsInput, ...func(*cleanrooms.Options)) *cleanrooms.ListCollaborationIdNamespaceAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListCollaborationIdNamespaceAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListCollaborationIdNamespaceAssociationsInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCollaborationPrivacyBudgetTemplates provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCollaborationPrivacyBudgetTemplates(ctx context.Context, params *cleanrooms.ListCollaborationPrivacyBudgetTemplatesInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListCollaborationPrivacyBudgetTemplatesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1598,6 +2005,80 @@ func (_m *IClient) ListConfiguredTables(ctx context.Context, params *cleanrooms.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListConfiguredTablesInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIdMappingTables provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIdMappingTables(ctx context.Context, params *cleanrooms.ListIdMappingTablesInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListIdMappingTablesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIdMappingTables")
+	}
+
+	var r0 *cleanrooms.ListIdMappingTablesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIdMappingTablesInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListIdMappingTablesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIdMappingTablesInput, ...func(*cleanrooms.Options)) *cleanrooms.ListIdMappingTablesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListIdMappingTablesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListIdMappingTablesInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIdNamespaceAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIdNamespaceAssociations(ctx context.Context, params *cleanrooms.ListIdNamespaceAssociationsInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListIdNamespaceAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIdNamespaceAssociations")
+	}
+
+	var r0 *cleanrooms.ListIdNamespaceAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIdNamespaceAssociationsInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListIdNamespaceAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIdNamespaceAssociationsInput, ...func(*cleanrooms.Options)) *cleanrooms.ListIdNamespaceAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListIdNamespaceAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListIdNamespaceAssociationsInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1881,6 +2362,43 @@ func (_m *IClient) Options() cleanrooms.Options {
 	}
 
 	return r0
+}
+
+// PopulateIdMappingTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PopulateIdMappingTable(ctx context.Context, params *cleanrooms.PopulateIdMappingTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.PopulateIdMappingTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PopulateIdMappingTable")
+	}
+
+	var r0 *cleanrooms.PopulateIdMappingTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.PopulateIdMappingTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.PopulateIdMappingTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.PopulateIdMappingTableInput, ...func(*cleanrooms.Options)) *cleanrooms.PopulateIdMappingTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.PopulateIdMappingTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.PopulateIdMappingTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PreviewPrivacyImpact provides a mock function with given fields: ctx, params, optFns
@@ -2245,6 +2763,117 @@ func (_m *IClient) UpdateConfiguredTableAssociation(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateConfiguredTableAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConfiguredTableAssociationAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConfiguredTableAssociationAnalysisRule(ctx context.Context, params *cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConfiguredTableAssociationAnalysisRule")
+	}
+
+	var r0 *cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIdMappingTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIdMappingTable(ctx context.Context, params *cleanrooms.UpdateIdMappingTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIdMappingTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIdMappingTable")
+	}
+
+	var r0 *cleanrooms.UpdateIdMappingTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIdMappingTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIdMappingTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIdMappingTableInput, ...func(*cleanrooms.Options)) *cleanrooms.UpdateIdMappingTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.UpdateIdMappingTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateIdMappingTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIdNamespaceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIdNamespaceAssociation(ctx context.Context, params *cleanrooms.UpdateIdNamespaceAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIdNamespaceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIdNamespaceAssociation")
+	}
+
+	var r0 *cleanrooms.UpdateIdNamespaceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIdNamespaceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) *cleanrooms.UpdateIdNamespaceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.UpdateIdNamespaceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

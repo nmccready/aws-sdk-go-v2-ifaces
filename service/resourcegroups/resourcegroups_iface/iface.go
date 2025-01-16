@@ -10,18 +10,23 @@ import (
 // IClient defines the interface for resourcegroups
 type IClient interface {
  Options() Options 
+ CancelTagSyncTask(ctx context.Context, params *CancelTagSyncTaskInput, optFns ...func(*Options)) (*CancelTagSyncTaskOutput, error) 
  CreateGroup(ctx context.Context, params *CreateGroupInput, optFns ...func(*Options)) (*CreateGroupOutput, error) 
  DeleteGroup(ctx context.Context, params *DeleteGroupInput, optFns ...func(*Options)) (*DeleteGroupOutput, error) 
  GetAccountSettings(ctx context.Context, params *GetAccountSettingsInput, optFns ...func(*Options)) (*GetAccountSettingsOutput, error) 
  GetGroup(ctx context.Context, params *GetGroupInput, optFns ...func(*Options)) (*GetGroupOutput, error) 
  GetGroupConfiguration(ctx context.Context, params *GetGroupConfigurationInput, optFns ...func(*Options)) (*GetGroupConfigurationOutput, error) 
  GetGroupQuery(ctx context.Context, params *GetGroupQueryInput, optFns ...func(*Options)) (*GetGroupQueryOutput, error) 
+ GetTagSyncTask(ctx context.Context, params *GetTagSyncTaskInput, optFns ...func(*Options)) (*GetTagSyncTaskOutput, error) 
  GetTags(ctx context.Context, params *GetTagsInput, optFns ...func(*Options)) (*GetTagsOutput, error) 
  GroupResources(ctx context.Context, params *GroupResourcesInput, optFns ...func(*Options)) (*GroupResourcesOutput, error) 
  ListGroupResources(ctx context.Context, params *ListGroupResourcesInput, optFns ...func(*Options)) (*ListGroupResourcesOutput, error) 
+ ListGroupingStatuses(ctx context.Context, params *ListGroupingStatusesInput, optFns ...func(*Options)) (*ListGroupingStatusesOutput, error) 
  ListGroups(ctx context.Context, params *ListGroupsInput, optFns ...func(*Options)) (*ListGroupsOutput, error) 
+ ListTagSyncTasks(ctx context.Context, params *ListTagSyncTasksInput, optFns ...func(*Options)) (*ListTagSyncTasksOutput, error) 
  PutGroupConfiguration(ctx context.Context, params *PutGroupConfigurationInput, optFns ...func(*Options)) (*PutGroupConfigurationOutput, error) 
  SearchResources(ctx context.Context, params *SearchResourcesInput, optFns ...func(*Options)) (*SearchResourcesOutput, error) 
+ StartTagSyncTask(ctx context.Context, params *StartTagSyncTaskInput, optFns ...func(*Options)) (*StartTagSyncTaskOutput, error) 
  Tag(ctx context.Context, params *TagInput, optFns ...func(*Options)) (*TagOutput, error) 
  UngroupResources(ctx context.Context, params *UngroupResourcesInput, optFns ...func(*Options)) (*UngroupResourcesOutput, error) 
  Untag(ctx context.Context, params *UntagInput, optFns ...func(*Options)) (*UntagOutput, error) 

@@ -52,6 +52,80 @@ func (_m *IClient) AddProfileKey(ctx context.Context, params *customerprofiles.A
 	return r0, r1
 }
 
+// BatchGetCalculatedAttributeForProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetCalculatedAttributeForProfile(ctx context.Context, params *customerprofiles.BatchGetCalculatedAttributeForProfileInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.BatchGetCalculatedAttributeForProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetCalculatedAttributeForProfile")
+	}
+
+	var r0 *customerprofiles.BatchGetCalculatedAttributeForProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.BatchGetCalculatedAttributeForProfileInput, ...func(*customerprofiles.Options)) (*customerprofiles.BatchGetCalculatedAttributeForProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.BatchGetCalculatedAttributeForProfileInput, ...func(*customerprofiles.Options)) *customerprofiles.BatchGetCalculatedAttributeForProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.BatchGetCalculatedAttributeForProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.BatchGetCalculatedAttributeForProfileInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetProfile(ctx context.Context, params *customerprofiles.BatchGetProfileInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.BatchGetProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetProfile")
+	}
+
+	var r0 *customerprofiles.BatchGetProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.BatchGetProfileInput, ...func(*customerprofiles.Options)) (*customerprofiles.BatchGetProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.BatchGetProfileInput, ...func(*customerprofiles.Options)) *customerprofiles.BatchGetProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.BatchGetProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.BatchGetProfileInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCalculatedAttributeDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCalculatedAttributeDefinition(ctx context.Context, params *customerprofiles.CreateCalculatedAttributeDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateCalculatedAttributeDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -163,6 +237,43 @@ func (_m *IClient) CreateEventStream(ctx context.Context, params *customerprofil
 	return r0, r1
 }
 
+// CreateEventTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEventTrigger(ctx context.Context, params *customerprofiles.CreateEventTriggerInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateEventTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEventTrigger")
+	}
+
+	var r0 *customerprofiles.CreateEventTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateEventTriggerInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateEventTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateEventTriggerInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateEventTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateEventTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateEventTriggerInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateIntegrationWorkflow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateIntegrationWorkflow(ctx context.Context, params *customerprofiles.CreateIntegrationWorkflowInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateIntegrationWorkflowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +340,117 @@ func (_m *IClient) CreateProfile(ctx context.Context, params *customerprofiles.C
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateProfileInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSegmentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSegmentDefinition(ctx context.Context, params *customerprofiles.CreateSegmentDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSegmentDefinition")
+	}
+
+	var r0 *customerprofiles.CreateSegmentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateSegmentDefinitionInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateSegmentDefinitionInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateSegmentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateSegmentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateSegmentDefinitionInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSegmentEstimate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSegmentEstimate(ctx context.Context, params *customerprofiles.CreateSegmentEstimateInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentEstimateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSegmentEstimate")
+	}
+
+	var r0 *customerprofiles.CreateSegmentEstimateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateSegmentEstimateInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentEstimateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateSegmentEstimateInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateSegmentEstimateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateSegmentEstimateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateSegmentEstimateInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSegmentSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSegmentSnapshot(ctx context.Context, params *customerprofiles.CreateSegmentSnapshotInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSegmentSnapshot")
+	}
+
+	var r0 *customerprofiles.CreateSegmentSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateSegmentSnapshotInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateSegmentSnapshotInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateSegmentSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateSegmentSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateSegmentSnapshotInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -340,6 +562,43 @@ func (_m *IClient) DeleteEventStream(ctx context.Context, params *customerprofil
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteEventStreamInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteEventTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEventTrigger(ctx context.Context, params *customerprofiles.DeleteEventTriggerInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteEventTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEventTrigger")
+	}
+
+	var r0 *customerprofiles.DeleteEventTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteEventTriggerInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteEventTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteEventTriggerInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteEventTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteEventTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteEventTriggerInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -525,6 +784,43 @@ func (_m *IClient) DeleteProfileObjectType(ctx context.Context, params *customer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteProfileObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSegmentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSegmentDefinition(ctx context.Context, params *customerprofiles.DeleteSegmentDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteSegmentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSegmentDefinition")
+	}
+
+	var r0 *customerprofiles.DeleteSegmentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteSegmentDefinitionInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteSegmentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteSegmentDefinitionInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteSegmentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteSegmentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteSegmentDefinitionInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +1088,43 @@ func (_m *IClient) GetEventStream(ctx context.Context, params *customerprofiles.
 	return r0, r1
 }
 
+// GetEventTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEventTrigger(ctx context.Context, params *customerprofiles.GetEventTriggerInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetEventTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEventTrigger")
+	}
+
+	var r0 *customerprofiles.GetEventTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetEventTriggerInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetEventTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetEventTriggerInput, ...func(*customerprofiles.Options)) *customerprofiles.GetEventTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetEventTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetEventTriggerInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetIdentityResolutionJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetIdentityResolutionJob(ctx context.Context, params *customerprofiles.GetIdentityResolutionJobInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetIdentityResolutionJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -969,6 +1302,154 @@ func (_m *IClient) GetProfileObjectTypeTemplate(ctx context.Context, params *cus
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetProfileObjectTypeTemplateInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSegmentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSegmentDefinition(ctx context.Context, params *customerprofiles.GetSegmentDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSegmentDefinition")
+	}
+
+	var r0 *customerprofiles.GetSegmentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentDefinitionInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentDefinitionInput, ...func(*customerprofiles.Options)) *customerprofiles.GetSegmentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetSegmentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetSegmentDefinitionInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSegmentEstimate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSegmentEstimate(ctx context.Context, params *customerprofiles.GetSegmentEstimateInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentEstimateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSegmentEstimate")
+	}
+
+	var r0 *customerprofiles.GetSegmentEstimateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentEstimateInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentEstimateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentEstimateInput, ...func(*customerprofiles.Options)) *customerprofiles.GetSegmentEstimateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetSegmentEstimateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetSegmentEstimateInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSegmentMembership provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSegmentMembership(ctx context.Context, params *customerprofiles.GetSegmentMembershipInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentMembershipOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSegmentMembership")
+	}
+
+	var r0 *customerprofiles.GetSegmentMembershipOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentMembershipInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentMembershipOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentMembershipInput, ...func(*customerprofiles.Options)) *customerprofiles.GetSegmentMembershipOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetSegmentMembershipOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetSegmentMembershipInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSegmentSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSegmentSnapshot(ctx context.Context, params *customerprofiles.GetSegmentSnapshotInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSegmentSnapshot")
+	}
+
+	var r0 *customerprofiles.GetSegmentSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentSnapshotInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentSnapshotInput, ...func(*customerprofiles.Options)) *customerprofiles.GetSegmentSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetSegmentSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetSegmentSnapshotInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1273,6 +1754,43 @@ func (_m *IClient) ListEventStreams(ctx context.Context, params *customerprofile
 	return r0, r1
 }
 
+// ListEventTriggers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEventTriggers(ctx context.Context, params *customerprofiles.ListEventTriggersInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListEventTriggersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEventTriggers")
+	}
+
+	var r0 *customerprofiles.ListEventTriggersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListEventTriggersInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListEventTriggersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListEventTriggersInput, ...func(*customerprofiles.Options)) *customerprofiles.ListEventTriggersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListEventTriggersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListEventTriggersInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListIdentityResolutionJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListIdentityResolutionJobs(ctx context.Context, params *customerprofiles.ListIdentityResolutionJobsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListIdentityResolutionJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1339,6 +1857,80 @@ func (_m *IClient) ListIntegrations(ctx context.Context, params *customerprofile
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListIntegrationsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListObjectTypeAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListObjectTypeAttributes(ctx context.Context, params *customerprofiles.ListObjectTypeAttributesInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListObjectTypeAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListObjectTypeAttributes")
+	}
+
+	var r0 *customerprofiles.ListObjectTypeAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListObjectTypeAttributesInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListObjectTypeAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListObjectTypeAttributesInput, ...func(*customerprofiles.Options)) *customerprofiles.ListObjectTypeAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListObjectTypeAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListObjectTypeAttributesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProfileAttributeValues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProfileAttributeValues(ctx context.Context, params *customerprofiles.ListProfileAttributeValuesInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListProfileAttributeValuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProfileAttributeValues")
+	}
+
+	var r0 *customerprofiles.ListProfileAttributeValuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListProfileAttributeValuesInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListProfileAttributeValuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListProfileAttributeValuesInput, ...func(*customerprofiles.Options)) *customerprofiles.ListProfileAttributeValuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListProfileAttributeValuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListProfileAttributeValuesInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1487,6 +2079,43 @@ func (_m *IClient) ListRuleBasedMatches(ctx context.Context, params *customerpro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListRuleBasedMatchesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSegmentDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSegmentDefinitions(ctx context.Context, params *customerprofiles.ListSegmentDefinitionsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListSegmentDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSegmentDefinitions")
+	}
+
+	var r0 *customerprofiles.ListSegmentDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListSegmentDefinitionsInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListSegmentDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListSegmentDefinitionsInput, ...func(*customerprofiles.Options)) *customerprofiles.ListSegmentDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListSegmentDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListSegmentDefinitionsInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1912,6 +2541,43 @@ func (_m *IClient) UpdateDomain(ctx context.Context, params *customerprofiles.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.UpdateDomainInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateEventTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEventTrigger(ctx context.Context, params *customerprofiles.UpdateEventTriggerInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.UpdateEventTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEventTrigger")
+	}
+
+	var r0 *customerprofiles.UpdateEventTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.UpdateEventTriggerInput, ...func(*customerprofiles.Options)) (*customerprofiles.UpdateEventTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.UpdateEventTriggerInput, ...func(*customerprofiles.Options)) *customerprofiles.UpdateEventTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.UpdateEventTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.UpdateEventTriggerInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

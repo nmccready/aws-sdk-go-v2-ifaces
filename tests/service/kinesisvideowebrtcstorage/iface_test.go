@@ -46,4 +46,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestJoinStorageSessionAsViewer", func(t *testing.T) {
+        input := &kinesisvideowebrtcstorage.JoinStorageSessionAsViewerInput{}
+        output := &kinesisvideowebrtcstorage.JoinStorageSessionAsViewerOutput{}
+
+        mockClient.On("JoinStorageSessionAsViewer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.JoinStorageSessionAsViewer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataMigration", func(t *testing.T) {
+        input := &databasemigrationservice.CreateDataMigrationInput{}
+        output := &databasemigrationservice.CreateDataMigrationOutput{}
+
+        mockClient.On("CreateDataMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataProvider", func(t *testing.T) {
         input := &databasemigrationservice.CreateDataProviderInput{}
         output := &databasemigrationservice.CreateDataProviderOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataMigration", func(t *testing.T) {
+        input := &databasemigrationservice.DeleteDataMigrationInput{}
+        output := &databasemigrationservice.DeleteDataMigrationOutput{}
+
+        mockClient.On("DeleteDataMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataMigration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeConversionConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeConversionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataMigrations", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeDataMigrationsInput{}
+        output := &databasemigrationservice.DescribeDataMigrationsOutput{}
+
+        mockClient.On("DescribeDataMigrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataMigrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1009,6 +1048,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyDataMigration", func(t *testing.T) {
+        input := &databasemigrationservice.ModifyDataMigrationInput{}
+        output := &databasemigrationservice.ModifyDataMigrationOutput{}
+
+        mockClient.On("ModifyDataMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyDataMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyDataProvider", func(t *testing.T) {
         input := &databasemigrationservice.ModifyDataProviderInput{}
         output := &databasemigrationservice.ModifyDataProviderOutput{}
@@ -1217,6 +1269,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartDataMigration", func(t *testing.T) {
+        input := &databasemigrationservice.StartDataMigrationInput{}
+        output := &databasemigrationservice.StartDataMigrationOutput{}
+
+        mockClient.On("StartDataMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDataMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartExtensionPackAssociation", func(t *testing.T) {
         input := &databasemigrationservice.StartExtensionPackAssociationInput{}
         output := &databasemigrationservice.StartExtensionPackAssociationOutput{}
@@ -1354,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartReplicationTaskAssessmentRun", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartReplicationTaskAssessmentRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopDataMigration", func(t *testing.T) {
+        input := &databasemigrationservice.StopDataMigrationInput{}
+        output := &databasemigrationservice.StopDataMigrationOutput{}
+
+        mockClient.On("StopDataMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopDataMigration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -311,6 +311,43 @@ func (_m *IClient) CreateChannel(ctx context.Context, params *medialive.CreateCh
 	return r0, r1
 }
 
+// CreateChannelPlacementGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateChannelPlacementGroup(ctx context.Context, params *medialive.CreateChannelPlacementGroupInput, optFns ...func(*medialive.Options)) (*medialive.CreateChannelPlacementGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateChannelPlacementGroup")
+	}
+
+	var r0 *medialive.CreateChannelPlacementGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateChannelPlacementGroupInput, ...func(*medialive.Options)) (*medialive.CreateChannelPlacementGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateChannelPlacementGroupInput, ...func(*medialive.Options)) *medialive.CreateChannelPlacementGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.CreateChannelPlacementGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.CreateChannelPlacementGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCloudWatchAlarmTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCloudWatchAlarmTemplate(ctx context.Context, params *medialive.CreateCloudWatchAlarmTemplateInput, optFns ...func(*medialive.Options)) (*medialive.CreateCloudWatchAlarmTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +414,43 @@ func (_m *IClient) CreateCloudWatchAlarmTemplateGroup(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.CreateCloudWatchAlarmTemplateGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCluster(ctx context.Context, params *medialive.CreateClusterInput, optFns ...func(*medialive.Options)) (*medialive.CreateClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCluster")
+	}
+
+	var r0 *medialive.CreateClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateClusterInput, ...func(*medialive.Options)) (*medialive.CreateClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateClusterInput, ...func(*medialive.Options)) *medialive.CreateClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.CreateClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.CreateClusterInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -607,6 +681,117 @@ func (_m *IClient) CreateMultiplexProgram(ctx context.Context, params *medialive
 	return r0, r1
 }
 
+// CreateNetwork provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNetwork(ctx context.Context, params *medialive.CreateNetworkInput, optFns ...func(*medialive.Options)) (*medialive.CreateNetworkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNetwork")
+	}
+
+	var r0 *medialive.CreateNetworkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateNetworkInput, ...func(*medialive.Options)) (*medialive.CreateNetworkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateNetworkInput, ...func(*medialive.Options)) *medialive.CreateNetworkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.CreateNetworkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.CreateNetworkInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateNode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNode(ctx context.Context, params *medialive.CreateNodeInput, optFns ...func(*medialive.Options)) (*medialive.CreateNodeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNode")
+	}
+
+	var r0 *medialive.CreateNodeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateNodeInput, ...func(*medialive.Options)) (*medialive.CreateNodeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateNodeInput, ...func(*medialive.Options)) *medialive.CreateNodeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.CreateNodeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.CreateNodeInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateNodeRegistrationScript provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNodeRegistrationScript(ctx context.Context, params *medialive.CreateNodeRegistrationScriptInput, optFns ...func(*medialive.Options)) (*medialive.CreateNodeRegistrationScriptOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNodeRegistrationScript")
+	}
+
+	var r0 *medialive.CreateNodeRegistrationScriptOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateNodeRegistrationScriptInput, ...func(*medialive.Options)) (*medialive.CreateNodeRegistrationScriptOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.CreateNodeRegistrationScriptInput, ...func(*medialive.Options)) *medialive.CreateNodeRegistrationScriptOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.CreateNodeRegistrationScriptOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.CreateNodeRegistrationScriptInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreatePartnerInput provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreatePartnerInput(ctx context.Context, params *medialive.CreatePartnerInputInput, optFns ...func(*medialive.Options)) (*medialive.CreatePartnerInputOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -755,6 +940,43 @@ func (_m *IClient) DeleteChannel(ctx context.Context, params *medialive.DeleteCh
 	return r0, r1
 }
 
+// DeleteChannelPlacementGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteChannelPlacementGroup(ctx context.Context, params *medialive.DeleteChannelPlacementGroupInput, optFns ...func(*medialive.Options)) (*medialive.DeleteChannelPlacementGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteChannelPlacementGroup")
+	}
+
+	var r0 *medialive.DeleteChannelPlacementGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteChannelPlacementGroupInput, ...func(*medialive.Options)) (*medialive.DeleteChannelPlacementGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteChannelPlacementGroupInput, ...func(*medialive.Options)) *medialive.DeleteChannelPlacementGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DeleteChannelPlacementGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DeleteChannelPlacementGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCloudWatchAlarmTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCloudWatchAlarmTemplate(ctx context.Context, params *medialive.DeleteCloudWatchAlarmTemplateInput, optFns ...func(*medialive.Options)) (*medialive.DeleteCloudWatchAlarmTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +1043,43 @@ func (_m *IClient) DeleteCloudWatchAlarmTemplateGroup(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DeleteCloudWatchAlarmTemplateGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCluster(ctx context.Context, params *medialive.DeleteClusterInput, optFns ...func(*medialive.Options)) (*medialive.DeleteClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCluster")
+	}
+
+	var r0 *medialive.DeleteClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteClusterInput, ...func(*medialive.Options)) (*medialive.DeleteClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteClusterInput, ...func(*medialive.Options)) *medialive.DeleteClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DeleteClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DeleteClusterInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1051,6 +1310,80 @@ func (_m *IClient) DeleteMultiplexProgram(ctx context.Context, params *medialive
 	return r0, r1
 }
 
+// DeleteNetwork provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNetwork(ctx context.Context, params *medialive.DeleteNetworkInput, optFns ...func(*medialive.Options)) (*medialive.DeleteNetworkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNetwork")
+	}
+
+	var r0 *medialive.DeleteNetworkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteNetworkInput, ...func(*medialive.Options)) (*medialive.DeleteNetworkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteNetworkInput, ...func(*medialive.Options)) *medialive.DeleteNetworkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DeleteNetworkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DeleteNetworkInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteNode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNode(ctx context.Context, params *medialive.DeleteNodeInput, optFns ...func(*medialive.Options)) (*medialive.DeleteNodeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNode")
+	}
+
+	var r0 *medialive.DeleteNodeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteNodeInput, ...func(*medialive.Options)) (*medialive.DeleteNodeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DeleteNodeInput, ...func(*medialive.Options)) *medialive.DeleteNodeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DeleteNodeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DeleteNodeInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteReservation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteReservation(ctx context.Context, params *medialive.DeleteReservationInput, optFns ...func(*medialive.Options)) (*medialive.DeleteReservationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1273,6 +1606,80 @@ func (_m *IClient) DescribeChannel(ctx context.Context, params *medialive.Descri
 	return r0, r1
 }
 
+// DescribeChannelPlacementGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeChannelPlacementGroup(ctx context.Context, params *medialive.DescribeChannelPlacementGroupInput, optFns ...func(*medialive.Options)) (*medialive.DescribeChannelPlacementGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeChannelPlacementGroup")
+	}
+
+	var r0 *medialive.DescribeChannelPlacementGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeChannelPlacementGroupInput, ...func(*medialive.Options)) (*medialive.DescribeChannelPlacementGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeChannelPlacementGroupInput, ...func(*medialive.Options)) *medialive.DescribeChannelPlacementGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DescribeChannelPlacementGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DescribeChannelPlacementGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCluster(ctx context.Context, params *medialive.DescribeClusterInput, optFns ...func(*medialive.Options)) (*medialive.DescribeClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCluster")
+	}
+
+	var r0 *medialive.DescribeClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeClusterInput, ...func(*medialive.Options)) (*medialive.DescribeClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeClusterInput, ...func(*medialive.Options)) *medialive.DescribeClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DescribeClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DescribeClusterInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeInput provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeInput(ctx context.Context, params *medialive.DescribeInputInput, optFns ...func(*medialive.Options)) (*medialive.DescribeInputOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1487,6 +1894,80 @@ func (_m *IClient) DescribeMultiplexProgram(ctx context.Context, params *mediali
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DescribeMultiplexProgramInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeNetwork provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeNetwork(ctx context.Context, params *medialive.DescribeNetworkInput, optFns ...func(*medialive.Options)) (*medialive.DescribeNetworkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeNetwork")
+	}
+
+	var r0 *medialive.DescribeNetworkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeNetworkInput, ...func(*medialive.Options)) (*medialive.DescribeNetworkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeNetworkInput, ...func(*medialive.Options)) *medialive.DescribeNetworkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DescribeNetworkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DescribeNetworkInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeNode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeNode(ctx context.Context, params *medialive.DescribeNodeInput, optFns ...func(*medialive.Options)) (*medialive.DescribeNodeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeNode")
+	}
+
+	var r0 *medialive.DescribeNodeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeNodeInput, ...func(*medialive.Options)) (*medialive.DescribeNodeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.DescribeNodeInput, ...func(*medialive.Options)) *medialive.DescribeNodeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.DescribeNodeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.DescribeNodeInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1828,6 +2309,43 @@ func (_m *IClient) GetSignalMap(ctx context.Context, params *medialive.GetSignal
 	return r0, r1
 }
 
+// ListChannelPlacementGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChannelPlacementGroups(ctx context.Context, params *medialive.ListChannelPlacementGroupsInput, optFns ...func(*medialive.Options)) (*medialive.ListChannelPlacementGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChannelPlacementGroups")
+	}
+
+	var r0 *medialive.ListChannelPlacementGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListChannelPlacementGroupsInput, ...func(*medialive.Options)) (*medialive.ListChannelPlacementGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListChannelPlacementGroupsInput, ...func(*medialive.Options)) *medialive.ListChannelPlacementGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListChannelPlacementGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListChannelPlacementGroupsInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListChannels provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListChannels(ctx context.Context, params *medialive.ListChannelsInput, optFns ...func(*medialive.Options)) (*medialive.ListChannelsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1931,6 +2449,43 @@ func (_m *IClient) ListCloudWatchAlarmTemplates(ctx context.Context, params *med
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListCloudWatchAlarmTemplatesInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListClusters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClusters(ctx context.Context, params *medialive.ListClustersInput, optFns ...func(*medialive.Options)) (*medialive.ListClustersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClusters")
+	}
+
+	var r0 *medialive.ListClustersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListClustersInput, ...func(*medialive.Options)) (*medialive.ListClustersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListClustersInput, ...func(*medialive.Options)) *medialive.ListClustersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListClustersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListClustersInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2235,6 +2790,80 @@ func (_m *IClient) ListMultiplexes(ctx context.Context, params *medialive.ListMu
 	return r0, r1
 }
 
+// ListNetworks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworks(ctx context.Context, params *medialive.ListNetworksInput, optFns ...func(*medialive.Options)) (*medialive.ListNetworksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworks")
+	}
+
+	var r0 *medialive.ListNetworksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListNetworksInput, ...func(*medialive.Options)) (*medialive.ListNetworksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListNetworksInput, ...func(*medialive.Options)) *medialive.ListNetworksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListNetworksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListNetworksInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNodes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNodes(ctx context.Context, params *medialive.ListNodesInput, optFns ...func(*medialive.Options)) (*medialive.ListNodesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNodes")
+	}
+
+	var r0 *medialive.ListNodesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListNodesInput, ...func(*medialive.Options)) (*medialive.ListNodesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListNodesInput, ...func(*medialive.Options)) *medialive.ListNodesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListNodesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListNodesInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListOfferings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListOfferings(ctx context.Context, params *medialive.ListOfferingsInput, optFns ...func(*medialive.Options)) (*medialive.ListOfferingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2375,6 +3004,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *medialive.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListTagsForResourceInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListVersions(ctx context.Context, params *medialive.ListVersionsInput, optFns ...func(*medialive.Options)) (*medialive.ListVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListVersions")
+	}
+
+	var r0 *medialive.ListVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListVersionsInput, ...func(*medialive.Options)) (*medialive.ListVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListVersionsInput, ...func(*medialive.Options)) *medialive.ListVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListVersionsInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3067,6 +3733,43 @@ func (_m *IClient) UpdateChannelClass(ctx context.Context, params *medialive.Upd
 	return r0, r1
 }
 
+// UpdateChannelPlacementGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateChannelPlacementGroup(ctx context.Context, params *medialive.UpdateChannelPlacementGroupInput, optFns ...func(*medialive.Options)) (*medialive.UpdateChannelPlacementGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateChannelPlacementGroup")
+	}
+
+	var r0 *medialive.UpdateChannelPlacementGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateChannelPlacementGroupInput, ...func(*medialive.Options)) (*medialive.UpdateChannelPlacementGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateChannelPlacementGroupInput, ...func(*medialive.Options)) *medialive.UpdateChannelPlacementGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.UpdateChannelPlacementGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateChannelPlacementGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateCloudWatchAlarmTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateCloudWatchAlarmTemplate(ctx context.Context, params *medialive.UpdateCloudWatchAlarmTemplateInput, optFns ...func(*medialive.Options)) (*medialive.UpdateCloudWatchAlarmTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3133,6 +3836,43 @@ func (_m *IClient) UpdateCloudWatchAlarmTemplateGroup(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateCloudWatchAlarmTemplateGroupInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCluster(ctx context.Context, params *medialive.UpdateClusterInput, optFns ...func(*medialive.Options)) (*medialive.UpdateClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCluster")
+	}
+
+	var r0 *medialive.UpdateClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateClusterInput, ...func(*medialive.Options)) (*medialive.UpdateClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateClusterInput, ...func(*medialive.Options)) *medialive.UpdateClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.UpdateClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateClusterInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3392,6 +4132,117 @@ func (_m *IClient) UpdateMultiplexProgram(ctx context.Context, params *medialive
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateMultiplexProgramInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateNetwork provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNetwork(ctx context.Context, params *medialive.UpdateNetworkInput, optFns ...func(*medialive.Options)) (*medialive.UpdateNetworkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNetwork")
+	}
+
+	var r0 *medialive.UpdateNetworkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateNetworkInput, ...func(*medialive.Options)) (*medialive.UpdateNetworkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateNetworkInput, ...func(*medialive.Options)) *medialive.UpdateNetworkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.UpdateNetworkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateNetworkInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateNode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNode(ctx context.Context, params *medialive.UpdateNodeInput, optFns ...func(*medialive.Options)) (*medialive.UpdateNodeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNode")
+	}
+
+	var r0 *medialive.UpdateNodeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateNodeInput, ...func(*medialive.Options)) (*medialive.UpdateNodeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateNodeInput, ...func(*medialive.Options)) *medialive.UpdateNodeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.UpdateNodeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateNodeInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateNodeState provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNodeState(ctx context.Context, params *medialive.UpdateNodeStateInput, optFns ...func(*medialive.Options)) (*medialive.UpdateNodeStateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNodeState")
+	}
+
+	var r0 *medialive.UpdateNodeStateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateNodeStateInput, ...func(*medialive.Options)) (*medialive.UpdateNodeStateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.UpdateNodeStateInput, ...func(*medialive.Options)) *medialive.UpdateNodeStateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.UpdateNodeStateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.UpdateNodeStateInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -274,6 +274,43 @@ func (_m *IClient) DescribeConnector(ctx context.Context, params *kafkaconnect.D
 	return r0, r1
 }
 
+// DescribeConnectorOperation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeConnectorOperation(ctx context.Context, params *kafkaconnect.DescribeConnectorOperationInput, optFns ...func(*kafkaconnect.Options)) (*kafkaconnect.DescribeConnectorOperationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeConnectorOperation")
+	}
+
+	var r0 *kafkaconnect.DescribeConnectorOperationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafkaconnect.DescribeConnectorOperationInput, ...func(*kafkaconnect.Options)) (*kafkaconnect.DescribeConnectorOperationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafkaconnect.DescribeConnectorOperationInput, ...func(*kafkaconnect.Options)) *kafkaconnect.DescribeConnectorOperationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafkaconnect.DescribeConnectorOperationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafkaconnect.DescribeConnectorOperationInput, ...func(*kafkaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeCustomPlugin provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeCustomPlugin(ctx context.Context, params *kafkaconnect.DescribeCustomPluginInput, optFns ...func(*kafkaconnect.Options)) (*kafkaconnect.DescribeCustomPluginOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +377,43 @@ func (_m *IClient) DescribeWorkerConfiguration(ctx context.Context, params *kafk
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafkaconnect.DescribeWorkerConfigurationInput, ...func(*kafkaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConnectorOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectorOperations(ctx context.Context, params *kafkaconnect.ListConnectorOperationsInput, optFns ...func(*kafkaconnect.Options)) (*kafkaconnect.ListConnectorOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectorOperations")
+	}
+
+	var r0 *kafkaconnect.ListConnectorOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafkaconnect.ListConnectorOperationsInput, ...func(*kafkaconnect.Options)) (*kafkaconnect.ListConnectorOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafkaconnect.ListConnectorOperationsInput, ...func(*kafkaconnect.Options)) *kafkaconnect.ListConnectorOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafkaconnect.ListConnectorOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafkaconnect.ListConnectorOperationsInput, ...func(*kafkaconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

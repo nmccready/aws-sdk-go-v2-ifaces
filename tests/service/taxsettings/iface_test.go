@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetTaxExemptions", func(t *testing.T) {
+        input := &taxsettings.BatchGetTaxExemptionsInput{}
+        output := &taxsettings.BatchGetTaxExemptionsOutput{}
+
+        mockClient.On("BatchGetTaxExemptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetTaxExemptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchPutTaxRegistration", func(t *testing.T) {
         input := &taxsettings.BatchPutTaxRegistrationInput{}
         output := &taxsettings.BatchPutTaxRegistrationOutput{}
@@ -60,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSupplementalTaxRegistration", func(t *testing.T) {
+        input := &taxsettings.DeleteSupplementalTaxRegistrationInput{}
+        output := &taxsettings.DeleteSupplementalTaxRegistrationOutput{}
+
+        mockClient.On("DeleteSupplementalTaxRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSupplementalTaxRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTaxRegistration", func(t *testing.T) {
         input := &taxsettings.DeleteTaxRegistrationInput{}
         output := &taxsettings.DeleteTaxRegistrationOutput{}
@@ -67,6 +93,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTaxRegistration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTaxRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTaxExemptionTypes", func(t *testing.T) {
+        input := &taxsettings.GetTaxExemptionTypesInput{}
+        output := &taxsettings.GetTaxExemptionTypesOutput{}
+
+        mockClient.On("GetTaxExemptionTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTaxExemptionTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTaxInheritance", func(t *testing.T) {
+        input := &taxsettings.GetTaxInheritanceInput{}
+        output := &taxsettings.GetTaxInheritanceOutput{}
+
+        mockClient.On("GetTaxInheritance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTaxInheritance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +151,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSupplementalTaxRegistrations", func(t *testing.T) {
+        input := &taxsettings.ListSupplementalTaxRegistrationsInput{}
+        output := &taxsettings.ListSupplementalTaxRegistrationsOutput{}
+
+        mockClient.On("ListSupplementalTaxRegistrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSupplementalTaxRegistrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTaxExemptions", func(t *testing.T) {
+        input := &taxsettings.ListTaxExemptionsInput{}
+        output := &taxsettings.ListTaxExemptionsOutput{}
+
+        mockClient.On("ListTaxExemptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTaxExemptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTaxRegistrations", func(t *testing.T) {
         input := &taxsettings.ListTaxRegistrationsInput{}
         output := &taxsettings.ListTaxRegistrationsOutput{}
@@ -106,6 +184,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTaxRegistrations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTaxRegistrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutSupplementalTaxRegistration", func(t *testing.T) {
+        input := &taxsettings.PutSupplementalTaxRegistrationInput{}
+        output := &taxsettings.PutSupplementalTaxRegistrationOutput{}
+
+        mockClient.On("PutSupplementalTaxRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutSupplementalTaxRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTaxExemption", func(t *testing.T) {
+        input := &taxsettings.PutTaxExemptionInput{}
+        output := &taxsettings.PutTaxExemptionOutput{}
+
+        mockClient.On("PutTaxExemption", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTaxExemption(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTaxInheritance", func(t *testing.T) {
+        input := &taxsettings.PutTaxInheritanceInput{}
+        output := &taxsettings.PutTaxInheritanceOutput{}
+
+        mockClient.On("PutTaxInheritance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTaxInheritance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

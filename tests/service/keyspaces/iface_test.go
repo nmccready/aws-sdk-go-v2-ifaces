@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateType", func(t *testing.T) {
+        input := &keyspaces.CreateTypeInput{}
+        output := &keyspaces.CreateTypeOutput{}
+
+        mockClient.On("CreateType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteKeyspace", func(t *testing.T) {
         input := &keyspaces.DeleteKeyspaceInput{}
         output := &keyspaces.DeleteKeyspaceOutput{}
@@ -80,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteType", func(t *testing.T) {
+        input := &keyspaces.DeleteTypeInput{}
+        output := &keyspaces.DeleteTypeOutput{}
+
+        mockClient.On("DeleteType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteType(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetType", func(t *testing.T) {
+        input := &keyspaces.GetTypeInput{}
+        output := &keyspaces.GetTypeOutput{}
+
+        mockClient.On("GetType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListKeyspaces", func(t *testing.T) {
         input := &keyspaces.ListKeyspacesInput{}
         output := &keyspaces.ListKeyspacesOutput{}
@@ -164,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTypes", func(t *testing.T) {
+        input := &keyspaces.ListTypesInput{}
+        output := &keyspaces.ListTypesOutput{}
+
+        mockClient.On("ListTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRestoreTable", func(t *testing.T) {
         input := &keyspaces.RestoreTableInput{}
         output := &keyspaces.RestoreTableOutput{}
@@ -197,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateKeyspace", func(t *testing.T) {
+        input := &keyspaces.UpdateKeyspaceInput{}
+        output := &keyspaces.UpdateKeyspaceOutput{}
+
+        mockClient.On("UpdateKeyspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateKeyspace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

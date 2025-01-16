@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchDeleteEvaluationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteEvaluationJob(ctx context.Context, params *bedrock.BatchDeleteEvaluationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.BatchDeleteEvaluationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteEvaluationJob")
+	}
+
+	var r0 *bedrock.BatchDeleteEvaluationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.BatchDeleteEvaluationJobInput, ...func(*bedrock.Options)) (*bedrock.BatchDeleteEvaluationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.BatchDeleteEvaluationJobInput, ...func(*bedrock.Options)) *bedrock.BatchDeleteEvaluationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.BatchDeleteEvaluationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.BatchDeleteEvaluationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEvaluationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEvaluationJob(ctx context.Context, params *bedrock.CreateEvaluationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateEvaluationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -126,6 +163,117 @@ func (_m *IClient) CreateGuardrailVersion(ctx context.Context, params *bedrock.C
 	return r0, r1
 }
 
+// CreateInferenceProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateInferenceProfile(ctx context.Context, params *bedrock.CreateInferenceProfileInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateInferenceProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateInferenceProfile")
+	}
+
+	var r0 *bedrock.CreateInferenceProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateInferenceProfileInput, ...func(*bedrock.Options)) (*bedrock.CreateInferenceProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateInferenceProfileInput, ...func(*bedrock.Options)) *bedrock.CreateInferenceProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateInferenceProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateInferenceProfileInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateMarketplaceModelEndpoint(ctx context.Context, params *bedrock.CreateMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateMarketplaceModelEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateMarketplaceModelEndpoint")
+	}
+
+	var r0 *bedrock.CreateMarketplaceModelEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) (*bedrock.CreateMarketplaceModelEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) *bedrock.CreateMarketplaceModelEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateMarketplaceModelEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateModelCopyJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateModelCopyJob(ctx context.Context, params *bedrock.CreateModelCopyJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateModelCopyJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateModelCopyJob")
+	}
+
+	var r0 *bedrock.CreateModelCopyJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateModelCopyJobInput, ...func(*bedrock.Options)) (*bedrock.CreateModelCopyJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateModelCopyJobInput, ...func(*bedrock.Options)) *bedrock.CreateModelCopyJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateModelCopyJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateModelCopyJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateModelCustomizationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateModelCustomizationJob(ctx context.Context, params *bedrock.CreateModelCustomizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateModelCustomizationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -155,6 +303,80 @@ func (_m *IClient) CreateModelCustomizationJob(ctx context.Context, params *bedr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateModelCustomizationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateModelImportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateModelImportJob(ctx context.Context, params *bedrock.CreateModelImportJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateModelImportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateModelImportJob")
+	}
+
+	var r0 *bedrock.CreateModelImportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateModelImportJobInput, ...func(*bedrock.Options)) (*bedrock.CreateModelImportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateModelImportJobInput, ...func(*bedrock.Options)) *bedrock.CreateModelImportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateModelImportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateModelImportJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateModelInvocationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateModelInvocationJob(ctx context.Context, params *bedrock.CreateModelInvocationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateModelInvocationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateModelInvocationJob")
+	}
+
+	var r0 *bedrock.CreateModelInvocationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateModelInvocationJobInput, ...func(*bedrock.Options)) (*bedrock.CreateModelInvocationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateModelInvocationJobInput, ...func(*bedrock.Options)) *bedrock.CreateModelInvocationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateModelInvocationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateModelInvocationJobInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -274,6 +496,117 @@ func (_m *IClient) DeleteGuardrail(ctx context.Context, params *bedrock.DeleteGu
 	return r0, r1
 }
 
+// DeleteImportedModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteImportedModel(ctx context.Context, params *bedrock.DeleteImportedModelInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteImportedModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteImportedModel")
+	}
+
+	var r0 *bedrock.DeleteImportedModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteImportedModelInput, ...func(*bedrock.Options)) (*bedrock.DeleteImportedModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteImportedModelInput, ...func(*bedrock.Options)) *bedrock.DeleteImportedModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteImportedModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteImportedModelInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteInferenceProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteInferenceProfile(ctx context.Context, params *bedrock.DeleteInferenceProfileInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteInferenceProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteInferenceProfile")
+	}
+
+	var r0 *bedrock.DeleteInferenceProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteInferenceProfileInput, ...func(*bedrock.Options)) (*bedrock.DeleteInferenceProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteInferenceProfileInput, ...func(*bedrock.Options)) *bedrock.DeleteInferenceProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteInferenceProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteInferenceProfileInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteMarketplaceModelEndpoint(ctx context.Context, params *bedrock.DeleteMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteMarketplaceModelEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteMarketplaceModelEndpoint")
+	}
+
+	var r0 *bedrock.DeleteMarketplaceModelEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteMarketplaceModelEndpointInput, ...func(*bedrock.Options)) (*bedrock.DeleteMarketplaceModelEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteMarketplaceModelEndpointInput, ...func(*bedrock.Options)) *bedrock.DeleteMarketplaceModelEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteMarketplaceModelEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteModelInvocationLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteModelInvocationLoggingConfiguration(ctx context.Context, params *bedrock.DeleteModelInvocationLoggingConfigurationInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteModelInvocationLoggingConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +673,43 @@ func (_m *IClient) DeleteProvisionedModelThroughput(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteProvisionedModelThroughputInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeregisterMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterMarketplaceModelEndpoint(ctx context.Context, params *bedrock.DeregisterMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.DeregisterMarketplaceModelEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterMarketplaceModelEndpoint")
+	}
+
+	var r0 *bedrock.DeregisterMarketplaceModelEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeregisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) (*bedrock.DeregisterMarketplaceModelEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeregisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) *bedrock.DeregisterMarketplaceModelEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeregisterMarketplaceModelEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeregisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -496,6 +866,154 @@ func (_m *IClient) GetGuardrail(ctx context.Context, params *bedrock.GetGuardrai
 	return r0, r1
 }
 
+// GetImportedModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetImportedModel(ctx context.Context, params *bedrock.GetImportedModelInput, optFns ...func(*bedrock.Options)) (*bedrock.GetImportedModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetImportedModel")
+	}
+
+	var r0 *bedrock.GetImportedModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetImportedModelInput, ...func(*bedrock.Options)) (*bedrock.GetImportedModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetImportedModelInput, ...func(*bedrock.Options)) *bedrock.GetImportedModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetImportedModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetImportedModelInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetInferenceProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInferenceProfile(ctx context.Context, params *bedrock.GetInferenceProfileInput, optFns ...func(*bedrock.Options)) (*bedrock.GetInferenceProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInferenceProfile")
+	}
+
+	var r0 *bedrock.GetInferenceProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetInferenceProfileInput, ...func(*bedrock.Options)) (*bedrock.GetInferenceProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetInferenceProfileInput, ...func(*bedrock.Options)) *bedrock.GetInferenceProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetInferenceProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetInferenceProfileInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMarketplaceModelEndpoint(ctx context.Context, params *bedrock.GetMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.GetMarketplaceModelEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMarketplaceModelEndpoint")
+	}
+
+	var r0 *bedrock.GetMarketplaceModelEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetMarketplaceModelEndpointInput, ...func(*bedrock.Options)) (*bedrock.GetMarketplaceModelEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetMarketplaceModelEndpointInput, ...func(*bedrock.Options)) *bedrock.GetMarketplaceModelEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetMarketplaceModelEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetModelCopyJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetModelCopyJob(ctx context.Context, params *bedrock.GetModelCopyJobInput, optFns ...func(*bedrock.Options)) (*bedrock.GetModelCopyJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetModelCopyJob")
+	}
+
+	var r0 *bedrock.GetModelCopyJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetModelCopyJobInput, ...func(*bedrock.Options)) (*bedrock.GetModelCopyJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetModelCopyJobInput, ...func(*bedrock.Options)) *bedrock.GetModelCopyJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetModelCopyJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetModelCopyJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetModelCustomizationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetModelCustomizationJob(ctx context.Context, params *bedrock.GetModelCustomizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.GetModelCustomizationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -533,6 +1051,80 @@ func (_m *IClient) GetModelCustomizationJob(ctx context.Context, params *bedrock
 	return r0, r1
 }
 
+// GetModelImportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetModelImportJob(ctx context.Context, params *bedrock.GetModelImportJobInput, optFns ...func(*bedrock.Options)) (*bedrock.GetModelImportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetModelImportJob")
+	}
+
+	var r0 *bedrock.GetModelImportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetModelImportJobInput, ...func(*bedrock.Options)) (*bedrock.GetModelImportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetModelImportJobInput, ...func(*bedrock.Options)) *bedrock.GetModelImportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetModelImportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetModelImportJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetModelInvocationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetModelInvocationJob(ctx context.Context, params *bedrock.GetModelInvocationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.GetModelInvocationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetModelInvocationJob")
+	}
+
+	var r0 *bedrock.GetModelInvocationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetModelInvocationJobInput, ...func(*bedrock.Options)) (*bedrock.GetModelInvocationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetModelInvocationJobInput, ...func(*bedrock.Options)) *bedrock.GetModelInvocationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetModelInvocationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetModelInvocationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetModelInvocationLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetModelInvocationLoggingConfiguration(ctx context.Context, params *bedrock.GetModelInvocationLoggingConfigurationInput, optFns ...func(*bedrock.Options)) (*bedrock.GetModelInvocationLoggingConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +1154,43 @@ func (_m *IClient) GetModelInvocationLoggingConfiguration(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetModelInvocationLoggingConfigurationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPromptRouter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPromptRouter(ctx context.Context, params *bedrock.GetPromptRouterInput, optFns ...func(*bedrock.Options)) (*bedrock.GetPromptRouterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPromptRouter")
+	}
+
+	var r0 *bedrock.GetPromptRouterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetPromptRouterInput, ...func(*bedrock.Options)) (*bedrock.GetPromptRouterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetPromptRouterInput, ...func(*bedrock.Options)) *bedrock.GetPromptRouterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetPromptRouterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetPromptRouterInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -755,6 +1384,154 @@ func (_m *IClient) ListGuardrails(ctx context.Context, params *bedrock.ListGuard
 	return r0, r1
 }
 
+// ListImportedModels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListImportedModels(ctx context.Context, params *bedrock.ListImportedModelsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListImportedModelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListImportedModels")
+	}
+
+	var r0 *bedrock.ListImportedModelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListImportedModelsInput, ...func(*bedrock.Options)) (*bedrock.ListImportedModelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListImportedModelsInput, ...func(*bedrock.Options)) *bedrock.ListImportedModelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListImportedModelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListImportedModelsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInferenceProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInferenceProfiles(ctx context.Context, params *bedrock.ListInferenceProfilesInput, optFns ...func(*bedrock.Options)) (*bedrock.ListInferenceProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInferenceProfiles")
+	}
+
+	var r0 *bedrock.ListInferenceProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListInferenceProfilesInput, ...func(*bedrock.Options)) (*bedrock.ListInferenceProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListInferenceProfilesInput, ...func(*bedrock.Options)) *bedrock.ListInferenceProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListInferenceProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListInferenceProfilesInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMarketplaceModelEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMarketplaceModelEndpoints(ctx context.Context, params *bedrock.ListMarketplaceModelEndpointsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListMarketplaceModelEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMarketplaceModelEndpoints")
+	}
+
+	var r0 *bedrock.ListMarketplaceModelEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListMarketplaceModelEndpointsInput, ...func(*bedrock.Options)) (*bedrock.ListMarketplaceModelEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListMarketplaceModelEndpointsInput, ...func(*bedrock.Options)) *bedrock.ListMarketplaceModelEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListMarketplaceModelEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListMarketplaceModelEndpointsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListModelCopyJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListModelCopyJobs(ctx context.Context, params *bedrock.ListModelCopyJobsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListModelCopyJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListModelCopyJobs")
+	}
+
+	var r0 *bedrock.ListModelCopyJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListModelCopyJobsInput, ...func(*bedrock.Options)) (*bedrock.ListModelCopyJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListModelCopyJobsInput, ...func(*bedrock.Options)) *bedrock.ListModelCopyJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListModelCopyJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListModelCopyJobsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListModelCustomizationJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListModelCustomizationJobs(ctx context.Context, params *bedrock.ListModelCustomizationJobsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListModelCustomizationJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -784,6 +1561,117 @@ func (_m *IClient) ListModelCustomizationJobs(ctx context.Context, params *bedro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListModelCustomizationJobsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListModelImportJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListModelImportJobs(ctx context.Context, params *bedrock.ListModelImportJobsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListModelImportJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListModelImportJobs")
+	}
+
+	var r0 *bedrock.ListModelImportJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListModelImportJobsInput, ...func(*bedrock.Options)) (*bedrock.ListModelImportJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListModelImportJobsInput, ...func(*bedrock.Options)) *bedrock.ListModelImportJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListModelImportJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListModelImportJobsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListModelInvocationJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListModelInvocationJobs(ctx context.Context, params *bedrock.ListModelInvocationJobsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListModelInvocationJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListModelInvocationJobs")
+	}
+
+	var r0 *bedrock.ListModelInvocationJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListModelInvocationJobsInput, ...func(*bedrock.Options)) (*bedrock.ListModelInvocationJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListModelInvocationJobsInput, ...func(*bedrock.Options)) *bedrock.ListModelInvocationJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListModelInvocationJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListModelInvocationJobsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPromptRouters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPromptRouters(ctx context.Context, params *bedrock.ListPromptRoutersInput, optFns ...func(*bedrock.Options)) (*bedrock.ListPromptRoutersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPromptRouters")
+	}
+
+	var r0 *bedrock.ListPromptRoutersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListPromptRoutersInput, ...func(*bedrock.Options)) (*bedrock.ListPromptRoutersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListPromptRoutersInput, ...func(*bedrock.Options)) *bedrock.ListPromptRoutersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListPromptRoutersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListPromptRoutersInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -921,6 +1809,43 @@ func (_m *IClient) PutModelInvocationLoggingConfiguration(ctx context.Context, p
 	return r0, r1
 }
 
+// RegisterMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterMarketplaceModelEndpoint(ctx context.Context, params *bedrock.RegisterMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.RegisterMarketplaceModelEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterMarketplaceModelEndpoint")
+	}
+
+	var r0 *bedrock.RegisterMarketplaceModelEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.RegisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) (*bedrock.RegisterMarketplaceModelEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.RegisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) *bedrock.RegisterMarketplaceModelEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.RegisterMarketplaceModelEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.RegisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopEvaluationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopEvaluationJob(ctx context.Context, params *bedrock.StopEvaluationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.StopEvaluationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -987,6 +1912,43 @@ func (_m *IClient) StopModelCustomizationJob(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StopModelCustomizationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopModelInvocationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopModelInvocationJob(ctx context.Context, params *bedrock.StopModelInvocationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.StopModelInvocationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopModelInvocationJob")
+	}
+
+	var r0 *bedrock.StopModelInvocationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StopModelInvocationJobInput, ...func(*bedrock.Options)) (*bedrock.StopModelInvocationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StopModelInvocationJobInput, ...func(*bedrock.Options)) *bedrock.StopModelInvocationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StopModelInvocationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StopModelInvocationJobInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1098,6 +2060,43 @@ func (_m *IClient) UpdateGuardrail(ctx context.Context, params *bedrock.UpdateGu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateGuardrailInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMarketplaceModelEndpoint(ctx context.Context, params *bedrock.UpdateMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.UpdateMarketplaceModelEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMarketplaceModelEndpoint")
+	}
+
+	var r0 *bedrock.UpdateMarketplaceModelEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) (*bedrock.UpdateMarketplaceModelEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) *bedrock.UpdateMarketplaceModelEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.UpdateMarketplaceModelEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

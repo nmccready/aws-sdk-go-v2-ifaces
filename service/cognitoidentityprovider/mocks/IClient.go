@@ -1088,6 +1088,43 @@ func (_m *IClient) ChangePassword(ctx context.Context, params *cognitoidentitypr
 	return r0, r1
 }
 
+// CompleteWebAuthnRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CompleteWebAuthnRegistration(ctx context.Context, params *cognitoidentityprovider.CompleteWebAuthnRegistrationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CompleteWebAuthnRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CompleteWebAuthnRegistration")
+	}
+
+	var r0 *cognitoidentityprovider.CompleteWebAuthnRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CompleteWebAuthnRegistrationInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CompleteWebAuthnRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CompleteWebAuthnRegistrationInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.CompleteWebAuthnRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.CompleteWebAuthnRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CompleteWebAuthnRegistrationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ConfirmDevice provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ConfirmDevice(ctx context.Context, params *cognitoidentityprovider.ConfirmDeviceInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ConfirmDeviceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1265,6 +1302,43 @@ func (_m *IClient) CreateIdentityProvider(ctx context.Context, params *cognitoid
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CreateIdentityProviderInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateManagedLoginBranding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateManagedLoginBranding(ctx context.Context, params *cognitoidentityprovider.CreateManagedLoginBrandingInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateManagedLoginBrandingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateManagedLoginBranding")
+	}
+
+	var r0 *cognitoidentityprovider.CreateManagedLoginBrandingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateManagedLoginBrandingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.CreateManagedLoginBrandingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.CreateManagedLoginBrandingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CreateManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1532,6 +1606,43 @@ func (_m *IClient) DeleteIdentityProvider(ctx context.Context, params *cognitoid
 	return r0, r1
 }
 
+// DeleteManagedLoginBranding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteManagedLoginBranding(ctx context.Context, params *cognitoidentityprovider.DeleteManagedLoginBrandingInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteManagedLoginBrandingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteManagedLoginBranding")
+	}
+
+	var r0 *cognitoidentityprovider.DeleteManagedLoginBrandingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteManagedLoginBrandingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DeleteManagedLoginBrandingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DeleteManagedLoginBrandingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteResourceServer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteResourceServer(ctx context.Context, params *cognitoidentityprovider.DeleteResourceServerInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteResourceServerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1754,6 +1865,43 @@ func (_m *IClient) DeleteUserPoolDomain(ctx context.Context, params *cognitoiden
 	return r0, r1
 }
 
+// DeleteWebAuthnCredential provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWebAuthnCredential(ctx context.Context, params *cognitoidentityprovider.DeleteWebAuthnCredentialInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteWebAuthnCredentialOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWebAuthnCredential")
+	}
+
+	var r0 *cognitoidentityprovider.DeleteWebAuthnCredentialOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteWebAuthnCredentialInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteWebAuthnCredentialOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteWebAuthnCredentialInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DeleteWebAuthnCredentialOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DeleteWebAuthnCredentialOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteWebAuthnCredentialInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeIdentityProvider provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeIdentityProvider(ctx context.Context, params *cognitoidentityprovider.DescribeIdentityProviderInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1783,6 +1931,80 @@ func (_m *IClient) DescribeIdentityProvider(ctx context.Context, params *cognito
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeIdentityProviderInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeManagedLoginBranding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeManagedLoginBranding(ctx context.Context, params *cognitoidentityprovider.DescribeManagedLoginBrandingInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeManagedLoginBrandingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeManagedLoginBranding")
+	}
+
+	var r0 *cognitoidentityprovider.DescribeManagedLoginBrandingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeManagedLoginBrandingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DescribeManagedLoginBrandingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DescribeManagedLoginBrandingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeManagedLoginBrandingByClient provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeManagedLoginBrandingByClient(ctx context.Context, params *cognitoidentityprovider.DescribeManagedLoginBrandingByClientInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeManagedLoginBrandingByClientOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeManagedLoginBrandingByClient")
+	}
+
+	var r0 *cognitoidentityprovider.DescribeManagedLoginBrandingByClientOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingByClientInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeManagedLoginBrandingByClientOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingByClientInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DescribeManagedLoginBrandingByClientOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DescribeManagedLoginBrandingByClientOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingByClientInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2420,6 +2642,43 @@ func (_m *IClient) GetUserAttributeVerificationCode(ctx context.Context, params 
 	return r0, r1
 }
 
+// GetUserAuthFactors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUserAuthFactors(ctx context.Context, params *cognitoidentityprovider.GetUserAuthFactorsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserAuthFactorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUserAuthFactors")
+	}
+
+	var r0 *cognitoidentityprovider.GetUserAuthFactorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetUserAuthFactorsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserAuthFactorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetUserAuthFactorsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.GetUserAuthFactorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.GetUserAuthFactorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetUserAuthFactorsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetUserPoolMfaConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetUserPoolMfaConfig(ctx context.Context, params *cognitoidentityprovider.GetUserPoolMfaConfigInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2901,6 +3160,43 @@ func (_m *IClient) ListUsersInGroup(ctx context.Context, params *cognitoidentity
 	return r0, r1
 }
 
+// ListWebAuthnCredentials provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWebAuthnCredentials(ctx context.Context, params *cognitoidentityprovider.ListWebAuthnCredentialsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListWebAuthnCredentialsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWebAuthnCredentials")
+	}
+
+	var r0 *cognitoidentityprovider.ListWebAuthnCredentialsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListWebAuthnCredentialsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListWebAuthnCredentialsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListWebAuthnCredentialsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListWebAuthnCredentialsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListWebAuthnCredentialsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListWebAuthnCredentialsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with given fields:
 func (_m *IClient) Options() cognitoidentityprovider.Options {
 	ret := _m.Called()
@@ -3326,6 +3622,43 @@ func (_m *IClient) StartUserImportJob(ctx context.Context, params *cognitoidenti
 	return r0, r1
 }
 
+// StartWebAuthnRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartWebAuthnRegistration(ctx context.Context, params *cognitoidentityprovider.StartWebAuthnRegistrationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.StartWebAuthnRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartWebAuthnRegistration")
+	}
+
+	var r0 *cognitoidentityprovider.StartWebAuthnRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.StartWebAuthnRegistrationInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.StartWebAuthnRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.StartWebAuthnRegistrationInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.StartWebAuthnRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.StartWebAuthnRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.StartWebAuthnRegistrationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopUserImportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopUserImportJob(ctx context.Context, params *cognitoidentityprovider.StopUserImportJobInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.StopUserImportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3577,6 +3910,43 @@ func (_m *IClient) UpdateIdentityProvider(ctx context.Context, params *cognitoid
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateIdentityProviderInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateManagedLoginBranding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateManagedLoginBranding(ctx context.Context, params *cognitoidentityprovider.UpdateManagedLoginBrandingInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateManagedLoginBrandingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateManagedLoginBranding")
+	}
+
+	var r0 *cognitoidentityprovider.UpdateManagedLoginBrandingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateManagedLoginBrandingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.UpdateManagedLoginBrandingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.UpdateManagedLoginBrandingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateManagedLoginBrandingInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

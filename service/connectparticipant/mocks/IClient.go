@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CancelParticipantAuthentication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelParticipantAuthentication(ctx context.Context, params *connectparticipant.CancelParticipantAuthenticationInput, optFns ...func(*connectparticipant.Options)) (*connectparticipant.CancelParticipantAuthenticationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelParticipantAuthentication")
+	}
+
+	var r0 *connectparticipant.CancelParticipantAuthenticationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectparticipant.CancelParticipantAuthenticationInput, ...func(*connectparticipant.Options)) (*connectparticipant.CancelParticipantAuthenticationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectparticipant.CancelParticipantAuthenticationInput, ...func(*connectparticipant.Options)) *connectparticipant.CancelParticipantAuthenticationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectparticipant.CancelParticipantAuthenticationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectparticipant.CancelParticipantAuthenticationInput, ...func(*connectparticipant.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CompleteAttachmentUpload provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CompleteAttachmentUpload(ctx context.Context, params *connectparticipant.CompleteAttachmentUploadInput, optFns ...func(*connectparticipant.Options)) (*connectparticipant.CompleteAttachmentUploadOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +229,43 @@ func (_m *IClient) GetAttachment(ctx context.Context, params *connectparticipant
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectparticipant.GetAttachmentInput, ...func(*connectparticipant.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAuthenticationUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAuthenticationUrl(ctx context.Context, params *connectparticipant.GetAuthenticationUrlInput, optFns ...func(*connectparticipant.Options)) (*connectparticipant.GetAuthenticationUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAuthenticationUrl")
+	}
+
+	var r0 *connectparticipant.GetAuthenticationUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectparticipant.GetAuthenticationUrlInput, ...func(*connectparticipant.Options)) (*connectparticipant.GetAuthenticationUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectparticipant.GetAuthenticationUrlInput, ...func(*connectparticipant.Options)) *connectparticipant.GetAuthenticationUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectparticipant.GetAuthenticationUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectparticipant.GetAuthenticationUrlInput, ...func(*connectparticipant.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

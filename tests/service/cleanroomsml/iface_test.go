@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelTrainedModel", func(t *testing.T) {
+        input := &cleanroomsml.CancelTrainedModelInput{}
+        output := &cleanroomsml.CancelTrainedModelOutput{}
+
+        mockClient.On("CancelTrainedModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelTrainedModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCancelTrainedModelInferenceJob", func(t *testing.T) {
+        input := &cleanroomsml.CancelTrainedModelInferenceJobInput{}
+        output := &cleanroomsml.CancelTrainedModelInferenceJobOutput{}
+
+        mockClient.On("CancelTrainedModelInferenceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelTrainedModelInferenceJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAudienceModel", func(t *testing.T) {
         input := &cleanroomsml.CreateAudienceModelInput{}
         output := &cleanroomsml.CreateAudienceModelOutput{}
@@ -54,6 +80,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateConfiguredAudienceModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateConfiguredAudienceModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConfiguredModelAlgorithm", func(t *testing.T) {
+        input := &cleanroomsml.CreateConfiguredModelAlgorithmInput{}
+        output := &cleanroomsml.CreateConfiguredModelAlgorithmOutput{}
+
+        mockClient.On("CreateConfiguredModelAlgorithm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfiguredModelAlgorithm(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConfiguredModelAlgorithmAssociation", func(t *testing.T) {
+        input := &cleanroomsml.CreateConfiguredModelAlgorithmAssociationInput{}
+        output := &cleanroomsml.CreateConfiguredModelAlgorithmAssociationOutput{}
+
+        mockClient.On("CreateConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMLInputChannel", func(t *testing.T) {
+        input := &cleanroomsml.CreateMLInputChannelInput{}
+        output := &cleanroomsml.CreateMLInputChannelOutput{}
+
+        mockClient.On("CreateMLInputChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMLInputChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTrainedModel", func(t *testing.T) {
+        input := &cleanroomsml.CreateTrainedModelInput{}
+        output := &cleanroomsml.CreateTrainedModelOutput{}
+
+        mockClient.On("CreateTrainedModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTrainedModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,6 +203,71 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConfiguredModelAlgorithm", func(t *testing.T) {
+        input := &cleanroomsml.DeleteConfiguredModelAlgorithmInput{}
+        output := &cleanroomsml.DeleteConfiguredModelAlgorithmOutput{}
+
+        mockClient.On("DeleteConfiguredModelAlgorithm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguredModelAlgorithm(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConfiguredModelAlgorithmAssociation", func(t *testing.T) {
+        input := &cleanroomsml.DeleteConfiguredModelAlgorithmAssociationInput{}
+        output := &cleanroomsml.DeleteConfiguredModelAlgorithmAssociationOutput{}
+
+        mockClient.On("DeleteConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMLConfiguration", func(t *testing.T) {
+        input := &cleanroomsml.DeleteMLConfigurationInput{}
+        output := &cleanroomsml.DeleteMLConfigurationOutput{}
+
+        mockClient.On("DeleteMLConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMLConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMLInputChannelData", func(t *testing.T) {
+        input := &cleanroomsml.DeleteMLInputChannelDataInput{}
+        output := &cleanroomsml.DeleteMLInputChannelDataOutput{}
+
+        mockClient.On("DeleteMLInputChannelData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMLInputChannelData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTrainedModelOutput", func(t *testing.T) {
+        input := &cleanroomsml.DeleteTrainedModelOutputInput{}
+        output := &cleanroomsml.DeleteTrainedModelOutputOutput{}
+
+        mockClient.On("DeleteTrainedModelOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTrainedModelOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTrainingDataset", func(t *testing.T) {
         input := &cleanroomsml.DeleteTrainingDatasetInput{}
         output := &cleanroomsml.DeleteTrainingDatasetOutput{}
@@ -164,6 +307,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCollaborationConfiguredModelAlgorithmAssociation", func(t *testing.T) {
+        input := &cleanroomsml.GetCollaborationConfiguredModelAlgorithmAssociationInput{}
+        output := &cleanroomsml.GetCollaborationConfiguredModelAlgorithmAssociationOutput{}
+
+        mockClient.On("GetCollaborationConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCollaborationConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCollaborationMLInputChannel", func(t *testing.T) {
+        input := &cleanroomsml.GetCollaborationMLInputChannelInput{}
+        output := &cleanroomsml.GetCollaborationMLInputChannelOutput{}
+
+        mockClient.On("GetCollaborationMLInputChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCollaborationMLInputChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCollaborationTrainedModel", func(t *testing.T) {
+        input := &cleanroomsml.GetCollaborationTrainedModelInput{}
+        output := &cleanroomsml.GetCollaborationTrainedModelOutput{}
+
+        mockClient.On("GetCollaborationTrainedModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCollaborationTrainedModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetConfiguredAudienceModel", func(t *testing.T) {
         input := &cleanroomsml.GetConfiguredAudienceModelInput{}
         output := &cleanroomsml.GetConfiguredAudienceModelOutput{}
@@ -184,6 +366,84 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfiguredAudienceModelPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfiguredAudienceModelPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfiguredModelAlgorithm", func(t *testing.T) {
+        input := &cleanroomsml.GetConfiguredModelAlgorithmInput{}
+        output := &cleanroomsml.GetConfiguredModelAlgorithmOutput{}
+
+        mockClient.On("GetConfiguredModelAlgorithm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfiguredModelAlgorithm(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfiguredModelAlgorithmAssociation", func(t *testing.T) {
+        input := &cleanroomsml.GetConfiguredModelAlgorithmAssociationInput{}
+        output := &cleanroomsml.GetConfiguredModelAlgorithmAssociationOutput{}
+
+        mockClient.On("GetConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMLConfiguration", func(t *testing.T) {
+        input := &cleanroomsml.GetMLConfigurationInput{}
+        output := &cleanroomsml.GetMLConfigurationOutput{}
+
+        mockClient.On("GetMLConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMLConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMLInputChannel", func(t *testing.T) {
+        input := &cleanroomsml.GetMLInputChannelInput{}
+        output := &cleanroomsml.GetMLInputChannelOutput{}
+
+        mockClient.On("GetMLInputChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMLInputChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrainedModel", func(t *testing.T) {
+        input := &cleanroomsml.GetTrainedModelInput{}
+        output := &cleanroomsml.GetTrainedModelOutput{}
+
+        mockClient.On("GetTrainedModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrainedModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrainedModelInferenceJob", func(t *testing.T) {
+        input := &cleanroomsml.GetTrainedModelInferenceJobInput{}
+        output := &cleanroomsml.GetTrainedModelInferenceJobOutput{}
+
+        mockClient.On("GetTrainedModelInferenceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrainedModelInferenceJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,6 +502,71 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCollaborationConfiguredModelAlgorithmAssociations", func(t *testing.T) {
+        input := &cleanroomsml.ListCollaborationConfiguredModelAlgorithmAssociationsInput{}
+        output := &cleanroomsml.ListCollaborationConfiguredModelAlgorithmAssociationsOutput{}
+
+        mockClient.On("ListCollaborationConfiguredModelAlgorithmAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationConfiguredModelAlgorithmAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCollaborationMLInputChannels", func(t *testing.T) {
+        input := &cleanroomsml.ListCollaborationMLInputChannelsInput{}
+        output := &cleanroomsml.ListCollaborationMLInputChannelsOutput{}
+
+        mockClient.On("ListCollaborationMLInputChannels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationMLInputChannels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCollaborationTrainedModelExportJobs", func(t *testing.T) {
+        input := &cleanroomsml.ListCollaborationTrainedModelExportJobsInput{}
+        output := &cleanroomsml.ListCollaborationTrainedModelExportJobsOutput{}
+
+        mockClient.On("ListCollaborationTrainedModelExportJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationTrainedModelExportJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCollaborationTrainedModelInferenceJobs", func(t *testing.T) {
+        input := &cleanroomsml.ListCollaborationTrainedModelInferenceJobsInput{}
+        output := &cleanroomsml.ListCollaborationTrainedModelInferenceJobsOutput{}
+
+        mockClient.On("ListCollaborationTrainedModelInferenceJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationTrainedModelInferenceJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCollaborationTrainedModels", func(t *testing.T) {
+        input := &cleanroomsml.ListCollaborationTrainedModelsInput{}
+        output := &cleanroomsml.ListCollaborationTrainedModelsOutput{}
+
+        mockClient.On("ListCollaborationTrainedModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationTrainedModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListConfiguredAudienceModels", func(t *testing.T) {
         input := &cleanroomsml.ListConfiguredAudienceModelsInput{}
         output := &cleanroomsml.ListConfiguredAudienceModelsOutput{}
@@ -255,6 +580,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConfiguredModelAlgorithmAssociations", func(t *testing.T) {
+        input := &cleanroomsml.ListConfiguredModelAlgorithmAssociationsInput{}
+        output := &cleanroomsml.ListConfiguredModelAlgorithmAssociationsOutput{}
+
+        mockClient.On("ListConfiguredModelAlgorithmAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfiguredModelAlgorithmAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConfiguredModelAlgorithms", func(t *testing.T) {
+        input := &cleanroomsml.ListConfiguredModelAlgorithmsInput{}
+        output := &cleanroomsml.ListConfiguredModelAlgorithmsOutput{}
+
+        mockClient.On("ListConfiguredModelAlgorithms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfiguredModelAlgorithms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMLInputChannels", func(t *testing.T) {
+        input := &cleanroomsml.ListMLInputChannelsInput{}
+        output := &cleanroomsml.ListMLInputChannelsOutput{}
+
+        mockClient.On("ListMLInputChannels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMLInputChannels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &cleanroomsml.ListTagsForResourceInput{}
         output := &cleanroomsml.ListTagsForResourceOutput{}
@@ -262,6 +626,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrainedModelInferenceJobs", func(t *testing.T) {
+        input := &cleanroomsml.ListTrainedModelInferenceJobsInput{}
+        output := &cleanroomsml.ListTrainedModelInferenceJobsOutput{}
+
+        mockClient.On("ListTrainedModelInferenceJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrainedModelInferenceJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrainedModels", func(t *testing.T) {
+        input := &cleanroomsml.ListTrainedModelsInput{}
+        output := &cleanroomsml.ListTrainedModelsOutput{}
+
+        mockClient.On("ListTrainedModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrainedModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,6 +684,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutMLConfiguration", func(t *testing.T) {
+        input := &cleanroomsml.PutMLConfigurationInput{}
+        output := &cleanroomsml.PutMLConfigurationOutput{}
+
+        mockClient.On("PutMLConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutMLConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartAudienceExportJob", func(t *testing.T) {
         input := &cleanroomsml.StartAudienceExportJobInput{}
         output := &cleanroomsml.StartAudienceExportJobOutput{}
@@ -314,6 +717,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAudienceGenerationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAudienceGenerationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTrainedModelExportJob", func(t *testing.T) {
+        input := &cleanroomsml.StartTrainedModelExportJobInput{}
+        output := &cleanroomsml.StartTrainedModelExportJobOutput{}
+
+        mockClient.On("StartTrainedModelExportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTrainedModelExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTrainedModelInferenceJob", func(t *testing.T) {
+        input := &cleanroomsml.StartTrainedModelInferenceJobInput{}
+        output := &cleanroomsml.StartTrainedModelInferenceJobOutput{}
+
+        mockClient.On("StartTrainedModelInferenceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTrainedModelInferenceJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

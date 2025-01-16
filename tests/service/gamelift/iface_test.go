@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateContainerFleet", func(t *testing.T) {
+        input := &gamelift.CreateContainerFleetInput{}
+        output := &gamelift.CreateContainerFleetOutput{}
+
+        mockClient.On("CreateContainerFleet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContainerFleet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateContainerGroupDefinition", func(t *testing.T) {
         input := &gamelift.CreateContainerGroupDefinitionInput{}
         output := &gamelift.CreateContainerGroupDefinitionOutput{}
@@ -288,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBuild", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBuild(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteContainerFleet", func(t *testing.T) {
+        input := &gamelift.DeleteContainerFleetInput{}
+        output := &gamelift.DeleteContainerFleetOutput{}
+
+        mockClient.On("DeleteContainerFleet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContainerFleet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +541,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeContainerFleet", func(t *testing.T) {
+        input := &gamelift.DescribeContainerFleetInput{}
+        output := &gamelift.DescribeContainerFleetOutput{}
+
+        mockClient.On("DescribeContainerFleet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeContainerFleet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeContainerGroupDefinition", func(t *testing.T) {
         input := &gamelift.DescribeContainerGroupDefinitionInput{}
         output := &gamelift.DescribeContainerGroupDefinitionOutput{}
@@ -561,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeFleetCapacity", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeFleetCapacity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeFleetDeployment", func(t *testing.T) {
+        input := &gamelift.DescribeFleetDeploymentInput{}
+        output := &gamelift.DescribeFleetDeploymentOutput{}
+
+        mockClient.On("DescribeFleetDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFleetDeployment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,6 +1009,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListContainerFleets", func(t *testing.T) {
+        input := &gamelift.ListContainerFleetsInput{}
+        output := &gamelift.ListContainerFleetsOutput{}
+
+        mockClient.On("ListContainerFleets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContainerFleets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContainerGroupDefinitionVersions", func(t *testing.T) {
+        input := &gamelift.ListContainerGroupDefinitionVersionsInput{}
+        output := &gamelift.ListContainerGroupDefinitionVersionsOutput{}
+
+        mockClient.On("ListContainerGroupDefinitionVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContainerGroupDefinitionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListContainerGroupDefinitions", func(t *testing.T) {
         input := &gamelift.ListContainerGroupDefinitionsInput{}
         output := &gamelift.ListContainerGroupDefinitionsOutput{}
@@ -964,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContainerGroupDefinitions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContainerGroupDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFleetDeployments", func(t *testing.T) {
+        input := &gamelift.ListFleetDeploymentsInput{}
+        output := &gamelift.ListFleetDeploymentsOutput{}
+
+        mockClient.On("ListFleetDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFleetDeployments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1256,6 +1347,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTerminateGameSession", func(t *testing.T) {
+        input := &gamelift.TerminateGameSessionInput{}
+        output := &gamelift.TerminateGameSessionOutput{}
+
+        mockClient.On("TerminateGameSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateGameSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUntagResource", func(t *testing.T) {
         input := &gamelift.UntagResourceInput{}
         output := &gamelift.UntagResourceOutput{}
@@ -1289,6 +1393,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBuild", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBuild(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContainerFleet", func(t *testing.T) {
+        input := &gamelift.UpdateContainerFleetInput{}
+        output := &gamelift.UpdateContainerFleetOutput{}
+
+        mockClient.On("UpdateContainerFleet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContainerFleet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContainerGroupDefinition", func(t *testing.T) {
+        input := &gamelift.UpdateContainerGroupDefinitionInput{}
+        output := &gamelift.UpdateContainerGroupDefinitionOutput{}
+
+        mockClient.On("UpdateContainerGroupDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContainerGroupDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

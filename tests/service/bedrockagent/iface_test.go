@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateAgentCollaborator", func(t *testing.T) {
+        input := &bedrockagent.AssociateAgentCollaboratorInput{}
+        output := &bedrockagent.AssociateAgentCollaboratorOutput{}
+
+        mockClient.On("AssociateAgentCollaborator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateAgentCollaborator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateAgentKnowledgeBase", func(t *testing.T) {
         input := &bedrockagent.AssociateAgentKnowledgeBaseInput{}
         output := &bedrockagent.AssociateAgentKnowledgeBaseOutput{}
@@ -294,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteKnowledgeBaseDocuments", func(t *testing.T) {
+        input := &bedrockagent.DeleteKnowledgeBaseDocumentsInput{}
+        output := &bedrockagent.DeleteKnowledgeBaseDocumentsOutput{}
+
+        mockClient.On("DeleteKnowledgeBaseDocuments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteKnowledgeBaseDocuments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePrompt", func(t *testing.T) {
         input := &bedrockagent.DeletePromptInput{}
         output := &bedrockagent.DeletePromptOutput{}
@@ -301,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateAgentCollaborator", func(t *testing.T) {
+        input := &bedrockagent.DisassociateAgentCollaboratorInput{}
+        output := &bedrockagent.DisassociateAgentCollaboratorOutput{}
+
+        mockClient.On("DisassociateAgentCollaborator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateAgentCollaborator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -353,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentCollaborator", func(t *testing.T) {
+        input := &bedrockagent.GetAgentCollaboratorInput{}
+        output := &bedrockagent.GetAgentCollaboratorOutput{}
+
+        mockClient.On("GetAgentCollaborator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentCollaborator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetKnowledgeBaseDocuments", func(t *testing.T) {
+        input := &bedrockagent.GetKnowledgeBaseDocumentsInput{}
+        output := &bedrockagent.GetKnowledgeBaseDocumentsOutput{}
+
+        mockClient.On("GetKnowledgeBaseDocuments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetKnowledgeBaseDocuments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPrompt", func(t *testing.T) {
         input := &bedrockagent.GetPromptInput{}
         output := &bedrockagent.GetPromptOutput{}
@@ -470,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestIngestKnowledgeBaseDocuments", func(t *testing.T) {
+        input := &bedrockagent.IngestKnowledgeBaseDocumentsInput{}
+        output := &bedrockagent.IngestKnowledgeBaseDocumentsOutput{}
+
+        mockClient.On("IngestKnowledgeBaseDocuments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.IngestKnowledgeBaseDocuments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -496,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAgentAliases", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAgentAliases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentCollaborators", func(t *testing.T) {
+        input := &bedrockagent.ListAgentCollaboratorsInput{}
+        output := &bedrockagent.ListAgentCollaboratorsOutput{}
+
+        mockClient.On("ListAgentCollaborators", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentCollaborators(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,6 +697,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListKnowledgeBaseDocuments", func(t *testing.T) {
+        input := &bedrockagent.ListKnowledgeBaseDocumentsInput{}
+        output := &bedrockagent.ListKnowledgeBaseDocumentsOutput{}
+
+        mockClient.On("ListKnowledgeBaseDocuments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListKnowledgeBaseDocuments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListKnowledgeBases", func(t *testing.T) {
         input := &bedrockagent.ListKnowledgeBasesInput{}
         output := &bedrockagent.ListKnowledgeBasesOutput{}
@@ -684,6 +788,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStopIngestionJob", func(t *testing.T) {
+        input := &bedrockagent.StopIngestionJobInput{}
+        output := &bedrockagent.StopIngestionJobOutput{}
+
+        mockClient.On("StopIngestionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopIngestionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &bedrockagent.TagResourceInput{}
         output := &bedrockagent.TagResourceOutput{}
@@ -743,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAgentAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAgentAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentCollaborator", func(t *testing.T) {
+        input := &bedrockagent.UpdateAgentCollaboratorInput{}
+        output := &bedrockagent.UpdateAgentCollaboratorOutput{}
+
+        mockClient.On("UpdateAgentCollaborator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentCollaborator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -821,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestValidateFlowDefinition", func(t *testing.T) {
+        input := &bedrockagent.ValidateFlowDefinitionInput{}
+        output := &bedrockagent.ValidateFlowDefinitionOutput{}
+
+        mockClient.On("ValidateFlowDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ValidateFlowDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

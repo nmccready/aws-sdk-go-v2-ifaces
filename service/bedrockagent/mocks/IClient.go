@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateAgentCollaborator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateAgentCollaborator(ctx context.Context, params *bedrockagent.AssociateAgentCollaboratorInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.AssociateAgentCollaboratorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateAgentCollaborator")
+	}
+
+	var r0 *bedrockagent.AssociateAgentCollaboratorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.AssociateAgentCollaboratorInput, ...func(*bedrockagent.Options)) (*bedrockagent.AssociateAgentCollaboratorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.AssociateAgentCollaboratorInput, ...func(*bedrockagent.Options)) *bedrockagent.AssociateAgentCollaboratorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.AssociateAgentCollaboratorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.AssociateAgentCollaboratorInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateAgentKnowledgeBase provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateAgentKnowledgeBase(ctx context.Context, params *bedrockagent.AssociateAgentKnowledgeBaseInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.AssociateAgentKnowledgeBaseOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -755,6 +792,43 @@ func (_m *IClient) DeleteKnowledgeBase(ctx context.Context, params *bedrockagent
 	return r0, r1
 }
 
+// DeleteKnowledgeBaseDocuments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteKnowledgeBaseDocuments(ctx context.Context, params *bedrockagent.DeleteKnowledgeBaseDocumentsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.DeleteKnowledgeBaseDocumentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteKnowledgeBaseDocuments")
+	}
+
+	var r0 *bedrockagent.DeleteKnowledgeBaseDocumentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DeleteKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) (*bedrockagent.DeleteKnowledgeBaseDocumentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DeleteKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) *bedrockagent.DeleteKnowledgeBaseDocumentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.DeleteKnowledgeBaseDocumentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DeleteKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePrompt provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePrompt(ctx context.Context, params *bedrockagent.DeletePromptInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.DeletePromptOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -784,6 +858,43 @@ func (_m *IClient) DeletePrompt(ctx context.Context, params *bedrockagent.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DeletePromptInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateAgentCollaborator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateAgentCollaborator(ctx context.Context, params *bedrockagent.DisassociateAgentCollaboratorInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.DisassociateAgentCollaboratorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateAgentCollaborator")
+	}
+
+	var r0 *bedrockagent.DisassociateAgentCollaboratorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DisassociateAgentCollaboratorInput, ...func(*bedrockagent.Options)) (*bedrockagent.DisassociateAgentCollaboratorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DisassociateAgentCollaboratorInput, ...func(*bedrockagent.Options)) *bedrockagent.DisassociateAgentCollaboratorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.DisassociateAgentCollaboratorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DisassociateAgentCollaboratorInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -932,6 +1043,43 @@ func (_m *IClient) GetAgentAlias(ctx context.Context, params *bedrockagent.GetAg
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.GetAgentAliasInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentCollaborator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentCollaborator(ctx context.Context, params *bedrockagent.GetAgentCollaboratorInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.GetAgentCollaboratorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentCollaborator")
+	}
+
+	var r0 *bedrockagent.GetAgentCollaboratorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetAgentCollaboratorInput, ...func(*bedrockagent.Options)) (*bedrockagent.GetAgentCollaboratorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetAgentCollaboratorInput, ...func(*bedrockagent.Options)) *bedrockagent.GetAgentCollaboratorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.GetAgentCollaboratorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.GetAgentCollaboratorInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1236,6 +1384,43 @@ func (_m *IClient) GetKnowledgeBase(ctx context.Context, params *bedrockagent.Ge
 	return r0, r1
 }
 
+// GetKnowledgeBaseDocuments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetKnowledgeBaseDocuments(ctx context.Context, params *bedrockagent.GetKnowledgeBaseDocumentsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.GetKnowledgeBaseDocumentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetKnowledgeBaseDocuments")
+	}
+
+	var r0 *bedrockagent.GetKnowledgeBaseDocumentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) (*bedrockagent.GetKnowledgeBaseDocumentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) *bedrockagent.GetKnowledgeBaseDocumentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.GetKnowledgeBaseDocumentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.GetKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPrompt provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPrompt(ctx context.Context, params *bedrockagent.GetPromptInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.GetPromptOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1265,6 +1450,43 @@ func (_m *IClient) GetPrompt(ctx context.Context, params *bedrockagent.GetPrompt
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.GetPromptInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// IngestKnowledgeBaseDocuments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) IngestKnowledgeBaseDocuments(ctx context.Context, params *bedrockagent.IngestKnowledgeBaseDocumentsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.IngestKnowledgeBaseDocumentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for IngestKnowledgeBaseDocuments")
+	}
+
+	var r0 *bedrockagent.IngestKnowledgeBaseDocumentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.IngestKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) (*bedrockagent.IngestKnowledgeBaseDocumentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.IngestKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) *bedrockagent.IngestKnowledgeBaseDocumentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.IngestKnowledgeBaseDocumentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.IngestKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1339,6 +1561,43 @@ func (_m *IClient) ListAgentAliases(ctx context.Context, params *bedrockagent.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListAgentAliasesInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAgentCollaborators provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgentCollaborators(ctx context.Context, params *bedrockagent.ListAgentCollaboratorsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ListAgentCollaboratorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgentCollaborators")
+	}
+
+	var r0 *bedrockagent.ListAgentCollaboratorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListAgentCollaboratorsInput, ...func(*bedrockagent.Options)) (*bedrockagent.ListAgentCollaboratorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListAgentCollaboratorsInput, ...func(*bedrockagent.Options)) *bedrockagent.ListAgentCollaboratorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.ListAgentCollaboratorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListAgentCollaboratorsInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1643,6 +1902,43 @@ func (_m *IClient) ListIngestionJobs(ctx context.Context, params *bedrockagent.L
 	return r0, r1
 }
 
+// ListKnowledgeBaseDocuments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListKnowledgeBaseDocuments(ctx context.Context, params *bedrockagent.ListKnowledgeBaseDocumentsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ListKnowledgeBaseDocumentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListKnowledgeBaseDocuments")
+	}
+
+	var r0 *bedrockagent.ListKnowledgeBaseDocumentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) (*bedrockagent.ListKnowledgeBaseDocumentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) *bedrockagent.ListKnowledgeBaseDocumentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.ListKnowledgeBaseDocumentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListKnowledgeBaseDocumentsInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListKnowledgeBases provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListKnowledgeBases(ctx context.Context, params *bedrockagent.ListKnowledgeBasesInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ListKnowledgeBasesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1883,6 +2179,43 @@ func (_m *IClient) StartIngestionJob(ctx context.Context, params *bedrockagent.S
 	return r0, r1
 }
 
+// StopIngestionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopIngestionJob(ctx context.Context, params *bedrockagent.StopIngestionJobInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.StopIngestionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopIngestionJob")
+	}
+
+	var r0 *bedrockagent.StopIngestionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.StopIngestionJobInput, ...func(*bedrockagent.Options)) (*bedrockagent.StopIngestionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.StopIngestionJobInput, ...func(*bedrockagent.Options)) *bedrockagent.StopIngestionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.StopIngestionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.StopIngestionJobInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *bedrockagent.TagResourceInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2060,6 +2393,43 @@ func (_m *IClient) UpdateAgentAlias(ctx context.Context, params *bedrockagent.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.UpdateAgentAliasInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAgentCollaborator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAgentCollaborator(ctx context.Context, params *bedrockagent.UpdateAgentCollaboratorInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.UpdateAgentCollaboratorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAgentCollaborator")
+	}
+
+	var r0 *bedrockagent.UpdateAgentCollaboratorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.UpdateAgentCollaboratorInput, ...func(*bedrockagent.Options)) (*bedrockagent.UpdateAgentCollaboratorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.UpdateAgentCollaboratorInput, ...func(*bedrockagent.Options)) *bedrockagent.UpdateAgentCollaboratorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.UpdateAgentCollaboratorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.UpdateAgentCollaboratorInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2282,6 +2652,43 @@ func (_m *IClient) UpdatePrompt(ctx context.Context, params *bedrockagent.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.UpdatePromptInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ValidateFlowDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ValidateFlowDefinition(ctx context.Context, params *bedrockagent.ValidateFlowDefinitionInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ValidateFlowDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ValidateFlowDefinition")
+	}
+
+	var r0 *bedrockagent.ValidateFlowDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ValidateFlowDefinitionInput, ...func(*bedrockagent.Options)) (*bedrockagent.ValidateFlowDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ValidateFlowDefinitionInput, ...func(*bedrockagent.Options)) *bedrockagent.ValidateFlowDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.ValidateFlowDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ValidateFlowDefinitionInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

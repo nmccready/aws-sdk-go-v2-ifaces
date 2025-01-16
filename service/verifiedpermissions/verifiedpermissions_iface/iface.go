@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for verifiedpermissions
 type IClient interface {
  Options() Options 
+ BatchGetPolicy(ctx context.Context, params *BatchGetPolicyInput, optFns ...func(*Options)) (*BatchGetPolicyOutput, error) 
  BatchIsAuthorized(ctx context.Context, params *BatchIsAuthorizedInput, optFns ...func(*Options)) (*BatchIsAuthorizedOutput, error) 
  BatchIsAuthorizedWithToken(ctx context.Context, params *BatchIsAuthorizedWithTokenInput, optFns ...func(*Options)) (*BatchIsAuthorizedWithTokenOutput, error) 
  CreateIdentitySource(ctx context.Context, params *CreateIdentitySourceInput, optFns ...func(*Options)) (*CreateIdentitySourceOutput, error) 

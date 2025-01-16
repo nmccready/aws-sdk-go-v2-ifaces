@@ -73,6 +73,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateResourceConfiguration", func(t *testing.T) {
+        input := &vpclattice.CreateResourceConfigurationInput{}
+        output := &vpclattice.CreateResourceConfigurationOutput{}
+
+        mockClient.On("CreateResourceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateResourceConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateResourceGateway", func(t *testing.T) {
+        input := &vpclattice.CreateResourceGatewayInput{}
+        output := &vpclattice.CreateResourceGatewayOutput{}
+
+        mockClient.On("CreateResourceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateResourceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRule", func(t *testing.T) {
         input := &vpclattice.CreateRuleInput{}
         output := &vpclattice.CreateRuleOutput{}
@@ -106,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateServiceNetwork", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateServiceNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateServiceNetworkResourceAssociation", func(t *testing.T) {
+        input := &vpclattice.CreateServiceNetworkResourceAssociationInput{}
+        output := &vpclattice.CreateServiceNetworkResourceAssociationOutput{}
+
+        mockClient.On("CreateServiceNetworkResourceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateServiceNetworkResourceAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +229,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteResourceConfiguration", func(t *testing.T) {
+        input := &vpclattice.DeleteResourceConfigurationInput{}
+        output := &vpclattice.DeleteResourceConfigurationOutput{}
+
+        mockClient.On("DeleteResourceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourceConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourceEndpointAssociation", func(t *testing.T) {
+        input := &vpclattice.DeleteResourceEndpointAssociationInput{}
+        output := &vpclattice.DeleteResourceEndpointAssociationOutput{}
+
+        mockClient.On("DeleteResourceEndpointAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourceEndpointAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourceGateway", func(t *testing.T) {
+        input := &vpclattice.DeleteResourceGatewayInput{}
+        output := &vpclattice.DeleteResourceGatewayOutput{}
+
+        mockClient.On("DeleteResourceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
         input := &vpclattice.DeleteResourcePolicyInput{}
         output := &vpclattice.DeleteResourcePolicyOutput{}
@@ -236,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteServiceNetwork", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteServiceNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteServiceNetworkResourceAssociation", func(t *testing.T) {
+        input := &vpclattice.DeleteServiceNetworkResourceAssociationInput{}
+        output := &vpclattice.DeleteServiceNetworkResourceAssociationOutput{}
+
+        mockClient.On("DeleteServiceNetworkResourceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteServiceNetworkResourceAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +424,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourceConfiguration", func(t *testing.T) {
+        input := &vpclattice.GetResourceConfigurationInput{}
+        output := &vpclattice.GetResourceConfigurationOutput{}
+
+        mockClient.On("GetResourceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourceConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourceGateway", func(t *testing.T) {
+        input := &vpclattice.GetResourceGatewayInput{}
+        output := &vpclattice.GetResourceGatewayOutput{}
+
+        mockClient.On("GetResourceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetResourcePolicy", func(t *testing.T) {
         input := &vpclattice.GetResourcePolicyInput{}
         output := &vpclattice.GetResourcePolicyOutput{}
@@ -379,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetServiceNetwork", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetServiceNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetServiceNetworkResourceAssociation", func(t *testing.T) {
+        input := &vpclattice.GetServiceNetworkResourceAssociationInput{}
+        output := &vpclattice.GetServiceNetworkResourceAssociationOutput{}
+
+        mockClient.On("GetServiceNetworkResourceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetServiceNetworkResourceAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +580,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListResourceConfigurations", func(t *testing.T) {
+        input := &vpclattice.ListResourceConfigurationsInput{}
+        output := &vpclattice.ListResourceConfigurationsOutput{}
+
+        mockClient.On("ListResourceConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourceEndpointAssociations", func(t *testing.T) {
+        input := &vpclattice.ListResourceEndpointAssociationsInput{}
+        output := &vpclattice.ListResourceEndpointAssociationsOutput{}
+
+        mockClient.On("ListResourceEndpointAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceEndpointAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourceGateways", func(t *testing.T) {
+        input := &vpclattice.ListResourceGatewaysInput{}
+        output := &vpclattice.ListResourceGatewaysOutput{}
+
+        mockClient.On("ListResourceGateways", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRules", func(t *testing.T) {
         input := &vpclattice.ListRulesInput{}
         output := &vpclattice.ListRulesOutput{}
@@ -457,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRules", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceNetworkResourceAssociations", func(t *testing.T) {
+        input := &vpclattice.ListServiceNetworkResourceAssociationsInput{}
+        output := &vpclattice.ListServiceNetworkResourceAssociationsOutput{}
+
+        mockClient.On("ListServiceNetworkResourceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceNetworkResourceAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServiceNetworkVpcAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServiceNetworkVpcAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceNetworkVpcEndpointAssociations", func(t *testing.T) {
+        input := &vpclattice.ListServiceNetworkVpcEndpointAssociationsInput{}
+        output := &vpclattice.ListServiceNetworkVpcEndpointAssociationsOutput{}
+
+        mockClient.On("ListServiceNetworkVpcEndpointAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceNetworkVpcEndpointAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -639,6 +834,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateListener", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateListener(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResourceConfiguration", func(t *testing.T) {
+        input := &vpclattice.UpdateResourceConfigurationInput{}
+        output := &vpclattice.UpdateResourceConfigurationOutput{}
+
+        mockClient.On("UpdateResourceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResourceConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResourceGateway", func(t *testing.T) {
+        input := &vpclattice.UpdateResourceGatewayInput{}
+        output := &vpclattice.UpdateResourceGatewayOutput{}
+
+        mockClient.On("UpdateResourceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResourceGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

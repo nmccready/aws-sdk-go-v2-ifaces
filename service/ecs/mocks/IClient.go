@@ -607,6 +607,80 @@ func (_m *IClient) DescribeContainerInstances(ctx context.Context, params *ecs.D
 	return r0, r1
 }
 
+// DescribeServiceDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeServiceDeployments(ctx context.Context, params *ecs.DescribeServiceDeploymentsInput, optFns ...func(*ecs.Options)) (*ecs.DescribeServiceDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeServiceDeployments")
+	}
+
+	var r0 *ecs.DescribeServiceDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeServiceDeploymentsInput, ...func(*ecs.Options)) (*ecs.DescribeServiceDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeServiceDeploymentsInput, ...func(*ecs.Options)) *ecs.DescribeServiceDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeServiceDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeServiceDeploymentsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeServiceRevisions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeServiceRevisions(ctx context.Context, params *ecs.DescribeServiceRevisionsInput, optFns ...func(*ecs.Options)) (*ecs.DescribeServiceRevisionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeServiceRevisions")
+	}
+
+	var r0 *ecs.DescribeServiceRevisionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeServiceRevisionsInput, ...func(*ecs.Options)) (*ecs.DescribeServiceRevisionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeServiceRevisionsInput, ...func(*ecs.Options)) *ecs.DescribeServiceRevisionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeServiceRevisionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeServiceRevisionsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeServices provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeServices(ctx context.Context, params *ecs.DescribeServicesInput, optFns ...func(*ecs.Options)) (*ecs.DescribeServicesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1006,6 +1080,43 @@ func (_m *IClient) ListContainerInstances(ctx context.Context, params *ecs.ListC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.ListContainerInstancesInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListServiceDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListServiceDeployments(ctx context.Context, params *ecs.ListServiceDeploymentsInput, optFns ...func(*ecs.Options)) (*ecs.ListServiceDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListServiceDeployments")
+	}
+
+	var r0 *ecs.ListServiceDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListServiceDeploymentsInput, ...func(*ecs.Options)) (*ecs.ListServiceDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListServiceDeploymentsInput, ...func(*ecs.Options)) *ecs.ListServiceDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.ListServiceDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.ListServiceDeploymentsInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

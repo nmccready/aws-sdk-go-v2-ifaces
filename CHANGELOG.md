@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.13](https://github.com/nmccready/aws-sdk-go-v2-ifaces/compare/v0.0.12...v0.0.13) (2025-01-16)
+
+
+### Bug Fixes
+
+* sync appstream version bump ([e4569ed](https://github.com/nmccready/aws-sdk-go-v2-ifaces/commit/e4569eda923f26dbcbbd6b6c72cb15d1bc6f8f07))
+
 ## 0.0.12 (2024-11-26)
 
 ## 0.0.11 (2024-08-13)

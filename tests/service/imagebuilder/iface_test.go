@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMarketplaceResource", func(t *testing.T) {
+        input := &imagebuilder.GetMarketplaceResourceInput{}
+        output := &imagebuilder.GetMarketplaceResourceOutput{}
+
+        mockClient.On("GetMarketplaceResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMarketplaceResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWorkflow", func(t *testing.T) {
         input := &imagebuilder.GetWorkflowInput{}
         output := &imagebuilder.GetWorkflowOutput{}
@@ -509,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ImportComponent", ctx, input).Return(output, nil)
 
         result, err := mockClient.ImportComponent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestImportDiskImage", func(t *testing.T) {
+        input := &imagebuilder.ImportDiskImageInput{}
+        output := &imagebuilder.ImportDiskImageOutput{}
+
+        mockClient.On("ImportDiskImage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ImportDiskImage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

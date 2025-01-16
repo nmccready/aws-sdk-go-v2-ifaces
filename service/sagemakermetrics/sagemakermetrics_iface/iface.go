@@ -10,5 +10,6 @@ import (
 // IClient defines the interface for sagemakermetrics
 type IClient interface {
  Options() Options 
+ BatchGetMetrics(ctx context.Context, params *BatchGetMetricsInput, optFns ...func(*Options)) (*BatchGetMetricsOutput, error) 
  BatchPutMetrics(ctx context.Context, params *BatchPutMetricsInput, optFns ...func(*Options)) (*BatchPutMetricsOutput, error) 
 }

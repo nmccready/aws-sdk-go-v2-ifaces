@@ -274,6 +274,43 @@ func (_m *IClient) CreateRepository(ctx context.Context, params *ecr.CreateRepos
 	return r0, r1
 }
 
+// CreateRepositoryCreationTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRepositoryCreationTemplate(ctx context.Context, params *ecr.CreateRepositoryCreationTemplateInput, optFns ...func(*ecr.Options)) (*ecr.CreateRepositoryCreationTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRepositoryCreationTemplate")
+	}
+
+	var r0 *ecr.CreateRepositoryCreationTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.CreateRepositoryCreationTemplateInput, ...func(*ecr.Options)) (*ecr.CreateRepositoryCreationTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.CreateRepositoryCreationTemplateInput, ...func(*ecr.Options)) *ecr.CreateRepositoryCreationTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.CreateRepositoryCreationTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.CreateRepositoryCreationTemplateInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteLifecyclePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteLifecyclePolicy(ctx context.Context, params *ecr.DeleteLifecyclePolicyInput, optFns ...func(*ecr.Options)) (*ecr.DeleteLifecyclePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +451,43 @@ func (_m *IClient) DeleteRepository(ctx context.Context, params *ecr.DeleteRepos
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DeleteRepositoryInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRepositoryCreationTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRepositoryCreationTemplate(ctx context.Context, params *ecr.DeleteRepositoryCreationTemplateInput, optFns ...func(*ecr.Options)) (*ecr.DeleteRepositoryCreationTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRepositoryCreationTemplate")
+	}
+
+	var r0 *ecr.DeleteRepositoryCreationTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DeleteRepositoryCreationTemplateInput, ...func(*ecr.Options)) (*ecr.DeleteRepositoryCreationTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DeleteRepositoryCreationTemplateInput, ...func(*ecr.Options)) *ecr.DeleteRepositoryCreationTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.DeleteRepositoryCreationTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DeleteRepositoryCreationTemplateInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -673,6 +747,80 @@ func (_m *IClient) DescribeRepositories(ctx context.Context, params *ecr.Describ
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DescribeRepositoriesInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeRepositoryCreationTemplates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeRepositoryCreationTemplates(ctx context.Context, params *ecr.DescribeRepositoryCreationTemplatesInput, optFns ...func(*ecr.Options)) (*ecr.DescribeRepositoryCreationTemplatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeRepositoryCreationTemplates")
+	}
+
+	var r0 *ecr.DescribeRepositoryCreationTemplatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DescribeRepositoryCreationTemplatesInput, ...func(*ecr.Options)) (*ecr.DescribeRepositoryCreationTemplatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DescribeRepositoryCreationTemplatesInput, ...func(*ecr.Options)) *ecr.DescribeRepositoryCreationTemplatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.DescribeRepositoryCreationTemplatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DescribeRepositoryCreationTemplatesInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAccountSetting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountSetting(ctx context.Context, params *ecr.GetAccountSettingInput, optFns ...func(*ecr.Options)) (*ecr.GetAccountSettingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountSetting")
+	}
+
+	var r0 *ecr.GetAccountSettingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.GetAccountSettingInput, ...func(*ecr.Options)) (*ecr.GetAccountSettingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.GetAccountSettingInput, ...func(*ecr.Options)) *ecr.GetAccountSettingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.GetAccountSettingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.GetAccountSettingInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1067,6 +1215,43 @@ func (_m *IClient) Options() ecr.Options {
 	}
 
 	return r0
+}
+
+// PutAccountSetting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountSetting(ctx context.Context, params *ecr.PutAccountSettingInput, optFns ...func(*ecr.Options)) (*ecr.PutAccountSettingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountSetting")
+	}
+
+	var r0 *ecr.PutAccountSettingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.PutAccountSettingInput, ...func(*ecr.Options)) (*ecr.PutAccountSettingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.PutAccountSettingInput, ...func(*ecr.Options)) *ecr.PutAccountSettingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.PutAccountSettingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.PutAccountSettingInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutImage provides a mock function with given fields: ctx, params, optFns
@@ -1542,6 +1727,43 @@ func (_m *IClient) UpdatePullThroughCacheRule(ctx context.Context, params *ecr.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.UpdatePullThroughCacheRuleInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRepositoryCreationTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRepositoryCreationTemplate(ctx context.Context, params *ecr.UpdateRepositoryCreationTemplateInput, optFns ...func(*ecr.Options)) (*ecr.UpdateRepositoryCreationTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRepositoryCreationTemplate")
+	}
+
+	var r0 *ecr.UpdateRepositoryCreationTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.UpdateRepositoryCreationTemplateInput, ...func(*ecr.Options)) (*ecr.UpdateRepositoryCreationTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.UpdateRepositoryCreationTemplateInput, ...func(*ecr.Options)) *ecr.UpdateRepositoryCreationTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.UpdateRepositoryCreationTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.UpdateRepositoryCreationTemplateInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

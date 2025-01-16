@@ -274,6 +274,43 @@ func (_m *IClient) CreateDomainName(ctx context.Context, params *apigateway.Crea
 	return r0, r1
 }
 
+// CreateDomainNameAccessAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDomainNameAccessAssociation(ctx context.Context, params *apigateway.CreateDomainNameAccessAssociationInput, optFns ...func(*apigateway.Options)) (*apigateway.CreateDomainNameAccessAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDomainNameAccessAssociation")
+	}
+
+	var r0 *apigateway.CreateDomainNameAccessAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.CreateDomainNameAccessAssociationInput, ...func(*apigateway.Options)) (*apigateway.CreateDomainNameAccessAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.CreateDomainNameAccessAssociationInput, ...func(*apigateway.Options)) *apigateway.CreateDomainNameAccessAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigateway.CreateDomainNameAccessAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.CreateDomainNameAccessAssociationInput, ...func(*apigateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateModel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateModel(ctx context.Context, params *apigateway.CreateModelInput, optFns ...func(*apigateway.Options)) (*apigateway.CreateModelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -858,6 +895,43 @@ func (_m *IClient) DeleteDomainName(ctx context.Context, params *apigateway.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.DeleteDomainNameInput, ...func(*apigateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDomainNameAccessAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDomainNameAccessAssociation(ctx context.Context, params *apigateway.DeleteDomainNameAccessAssociationInput, optFns ...func(*apigateway.Options)) (*apigateway.DeleteDomainNameAccessAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDomainNameAccessAssociation")
+	}
+
+	var r0 *apigateway.DeleteDomainNameAccessAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.DeleteDomainNameAccessAssociationInput, ...func(*apigateway.Options)) (*apigateway.DeleteDomainNameAccessAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.DeleteDomainNameAccessAssociationInput, ...func(*apigateway.Options)) *apigateway.DeleteDomainNameAccessAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigateway.DeleteDomainNameAccessAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.DeleteDomainNameAccessAssociationInput, ...func(*apigateway.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2042,6 +2116,43 @@ func (_m *IClient) GetDomainName(ctx context.Context, params *apigateway.GetDoma
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.GetDomainNameInput, ...func(*apigateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDomainNameAccessAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDomainNameAccessAssociations(ctx context.Context, params *apigateway.GetDomainNameAccessAssociationsInput, optFns ...func(*apigateway.Options)) (*apigateway.GetDomainNameAccessAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDomainNameAccessAssociations")
+	}
+
+	var r0 *apigateway.GetDomainNameAccessAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.GetDomainNameAccessAssociationsInput, ...func(*apigateway.Options)) (*apigateway.GetDomainNameAccessAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.GetDomainNameAccessAssociationsInput, ...func(*apigateway.Options)) *apigateway.GetDomainNameAccessAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigateway.GetDomainNameAccessAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.GetDomainNameAccessAssociationsInput, ...func(*apigateway.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3503,6 +3614,43 @@ func (_m *IClient) PutRestApi(ctx context.Context, params *apigateway.PutRestApi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.PutRestApiInput, ...func(*apigateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RejectDomainNameAccessAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RejectDomainNameAccessAssociation(ctx context.Context, params *apigateway.RejectDomainNameAccessAssociationInput, optFns ...func(*apigateway.Options)) (*apigateway.RejectDomainNameAccessAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RejectDomainNameAccessAssociation")
+	}
+
+	var r0 *apigateway.RejectDomainNameAccessAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.RejectDomainNameAccessAssociationInput, ...func(*apigateway.Options)) (*apigateway.RejectDomainNameAccessAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigateway.RejectDomainNameAccessAssociationInput, ...func(*apigateway.Options)) *apigateway.RejectDomainNameAccessAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigateway.RejectDomainNameAccessAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigateway.RejectDomainNameAccessAssociationInput, ...func(*apigateway.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

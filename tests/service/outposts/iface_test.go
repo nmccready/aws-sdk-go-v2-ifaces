@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAssetInstances", func(t *testing.T) {
+        input := &outposts.ListAssetInstancesInput{}
+        output := &outposts.ListAssetInstancesOutput{}
+
+        mockClient.On("ListAssetInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssetInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAssets", func(t *testing.T) {
         input := &outposts.ListAssetsInput{}
         output := &outposts.ListAssetsOutput{}
@@ -249,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBlockingInstancesForCapacityTask", func(t *testing.T) {
+        input := &outposts.ListBlockingInstancesForCapacityTaskInput{}
+        output := &outposts.ListBlockingInstancesForCapacityTaskOutput{}
+
+        mockClient.On("ListBlockingInstancesForCapacityTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBlockingInstancesForCapacityTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

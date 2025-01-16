@@ -311,6 +311,43 @@ func (_m *IClient) CreateLFTag(ctx context.Context, params *lakeformation.Create
 	return r0, r1
 }
 
+// CreateLFTagExpression provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateLFTagExpression(ctx context.Context, params *lakeformation.CreateLFTagExpressionInput, optFns ...func(*lakeformation.Options)) (*lakeformation.CreateLFTagExpressionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateLFTagExpression")
+	}
+
+	var r0 *lakeformation.CreateLFTagExpressionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.CreateLFTagExpressionInput, ...func(*lakeformation.Options)) (*lakeformation.CreateLFTagExpressionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.CreateLFTagExpressionInput, ...func(*lakeformation.Options)) *lakeformation.CreateLFTagExpressionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.CreateLFTagExpressionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.CreateLFTagExpressionInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateLakeFormationIdentityCenterConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateLakeFormationIdentityCenterConfiguration(ctx context.Context, params *lakeformation.CreateLakeFormationIdentityCenterConfigurationInput, optFns ...func(*lakeformation.Options)) (*lakeformation.CreateLakeFormationIdentityCenterConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -451,6 +488,43 @@ func (_m *IClient) DeleteLFTag(ctx context.Context, params *lakeformation.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.DeleteLFTagInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteLFTagExpression provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLFTagExpression(ctx context.Context, params *lakeformation.DeleteLFTagExpressionInput, optFns ...func(*lakeformation.Options)) (*lakeformation.DeleteLFTagExpressionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLFTagExpression")
+	}
+
+	var r0 *lakeformation.DeleteLFTagExpressionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.DeleteLFTagExpressionInput, ...func(*lakeformation.Options)) (*lakeformation.DeleteLFTagExpressionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.DeleteLFTagExpressionInput, ...func(*lakeformation.Options)) *lakeformation.DeleteLFTagExpressionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.DeleteLFTagExpressionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.DeleteLFTagExpressionInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -940,6 +1014,43 @@ func (_m *IClient) GetLFTag(ctx context.Context, params *lakeformation.GetLFTagI
 	return r0, r1
 }
 
+// GetLFTagExpression provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLFTagExpression(ctx context.Context, params *lakeformation.GetLFTagExpressionInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetLFTagExpressionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLFTagExpression")
+	}
+
+	var r0 *lakeformation.GetLFTagExpressionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetLFTagExpressionInput, ...func(*lakeformation.Options)) (*lakeformation.GetLFTagExpressionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetLFTagExpressionInput, ...func(*lakeformation.Options)) *lakeformation.GetLFTagExpressionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.GetLFTagExpressionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetLFTagExpressionInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetQueryState provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetQueryState(ctx context.Context, params *lakeformation.GetQueryStateInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetQueryStateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1302,6 +1413,43 @@ func (_m *IClient) ListDataCellsFilter(ctx context.Context, params *lakeformatio
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.ListDataCellsFilterInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListLFTagExpressions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLFTagExpressions(ctx context.Context, params *lakeformation.ListLFTagExpressionsInput, optFns ...func(*lakeformation.Options)) (*lakeformation.ListLFTagExpressionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLFTagExpressions")
+	}
+
+	var r0 *lakeformation.ListLFTagExpressionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.ListLFTagExpressionsInput, ...func(*lakeformation.Options)) (*lakeformation.ListLFTagExpressionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.ListLFTagExpressionsInput, ...func(*lakeformation.Options)) *lakeformation.ListLFTagExpressionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.ListLFTagExpressionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.ListLFTagExpressionsInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1912,6 +2060,43 @@ func (_m *IClient) UpdateLFTag(ctx context.Context, params *lakeformation.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.UpdateLFTagInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateLFTagExpression provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLFTagExpression(ctx context.Context, params *lakeformation.UpdateLFTagExpressionInput, optFns ...func(*lakeformation.Options)) (*lakeformation.UpdateLFTagExpressionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLFTagExpression")
+	}
+
+	var r0 *lakeformation.UpdateLFTagExpressionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.UpdateLFTagExpressionInput, ...func(*lakeformation.Options)) (*lakeformation.UpdateLFTagExpressionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.UpdateLFTagExpressionInput, ...func(*lakeformation.Options)) *lakeformation.UpdateLFTagExpressionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.UpdateLFTagExpressionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.UpdateLFTagExpressionInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

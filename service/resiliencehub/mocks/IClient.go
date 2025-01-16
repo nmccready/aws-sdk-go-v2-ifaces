@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AcceptResourceGroupingRecommendations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcceptResourceGroupingRecommendations(ctx context.Context, params *resiliencehub.AcceptResourceGroupingRecommendationsInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.AcceptResourceGroupingRecommendationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcceptResourceGroupingRecommendations")
+	}
+
+	var r0 *resiliencehub.AcceptResourceGroupingRecommendationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.AcceptResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) (*resiliencehub.AcceptResourceGroupingRecommendationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.AcceptResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) *resiliencehub.AcceptResourceGroupingRecommendationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.AcceptResourceGroupingRecommendationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.AcceptResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddDraftAppVersionResourceMappings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddDraftAppVersionResourceMappings(ctx context.Context, params *resiliencehub.AddDraftAppVersionResourceMappingsInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.AddDraftAppVersionResourceMappingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -828,6 +865,43 @@ func (_m *IClient) DescribeDraftAppVersionResourcesImportStatus(ctx context.Cont
 	return r0, r1
 }
 
+// DescribeMetricsExport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetricsExport(ctx context.Context, params *resiliencehub.DescribeMetricsExportInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.DescribeMetricsExportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetricsExport")
+	}
+
+	var r0 *resiliencehub.DescribeMetricsExportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.DescribeMetricsExportInput, ...func(*resiliencehub.Options)) (*resiliencehub.DescribeMetricsExportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.DescribeMetricsExportInput, ...func(*resiliencehub.Options)) *resiliencehub.DescribeMetricsExportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.DescribeMetricsExportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.DescribeMetricsExportInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeResiliencyPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeResiliencyPolicy(ctx context.Context, params *resiliencehub.DescribeResiliencyPolicyInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.DescribeResiliencyPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -857,6 +931,43 @@ func (_m *IClient) DescribeResiliencyPolicy(ctx context.Context, params *resilie
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.DescribeResiliencyPolicyInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeResourceGroupingRecommendationTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeResourceGroupingRecommendationTask(ctx context.Context, params *resiliencehub.DescribeResourceGroupingRecommendationTaskInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.DescribeResourceGroupingRecommendationTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeResourceGroupingRecommendationTask")
+	}
+
+	var r0 *resiliencehub.DescribeResourceGroupingRecommendationTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.DescribeResourceGroupingRecommendationTaskInput, ...func(*resiliencehub.Options)) (*resiliencehub.DescribeResourceGroupingRecommendationTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.DescribeResourceGroupingRecommendationTaskInput, ...func(*resiliencehub.Options)) *resiliencehub.DescribeResourceGroupingRecommendationTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.DescribeResourceGroupingRecommendationTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.DescribeResourceGroupingRecommendationTaskInput, ...func(*resiliencehub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1346,6 +1457,43 @@ func (_m *IClient) ListApps(ctx context.Context, params *resiliencehub.ListAppsI
 	return r0, r1
 }
 
+// ListMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMetrics(ctx context.Context, params *resiliencehub.ListMetricsInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.ListMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMetrics")
+	}
+
+	var r0 *resiliencehub.ListMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.ListMetricsInput, ...func(*resiliencehub.Options)) (*resiliencehub.ListMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.ListMetricsInput, ...func(*resiliencehub.Options)) *resiliencehub.ListMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.ListMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.ListMetricsInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListRecommendationTemplates provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListRecommendationTemplates(ctx context.Context, params *resiliencehub.ListRecommendationTemplatesInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.ListRecommendationTemplatesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1412,6 +1560,43 @@ func (_m *IClient) ListResiliencyPolicies(ctx context.Context, params *resilienc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.ListResiliencyPoliciesInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourceGroupingRecommendations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourceGroupingRecommendations(ctx context.Context, params *resiliencehub.ListResourceGroupingRecommendationsInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.ListResourceGroupingRecommendationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourceGroupingRecommendations")
+	}
+
+	var r0 *resiliencehub.ListResourceGroupingRecommendationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.ListResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) (*resiliencehub.ListResourceGroupingRecommendationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.ListResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) *resiliencehub.ListResourceGroupingRecommendationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.ListResourceGroupingRecommendationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.ListResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1697,6 +1882,43 @@ func (_m *IClient) PutDraftAppVersionTemplate(ctx context.Context, params *resil
 	return r0, r1
 }
 
+// RejectResourceGroupingRecommendations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RejectResourceGroupingRecommendations(ctx context.Context, params *resiliencehub.RejectResourceGroupingRecommendationsInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.RejectResourceGroupingRecommendationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RejectResourceGroupingRecommendations")
+	}
+
+	var r0 *resiliencehub.RejectResourceGroupingRecommendationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.RejectResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) (*resiliencehub.RejectResourceGroupingRecommendationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.RejectResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) *resiliencehub.RejectResourceGroupingRecommendationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.RejectResourceGroupingRecommendationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.RejectResourceGroupingRecommendationsInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RemoveDraftAppVersionResourceMappings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RemoveDraftAppVersionResourceMappings(ctx context.Context, params *resiliencehub.RemoveDraftAppVersionResourceMappingsInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.RemoveDraftAppVersionResourceMappingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1800,6 +2022,80 @@ func (_m *IClient) StartAppAssessment(ctx context.Context, params *resiliencehub
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.StartAppAssessmentInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartMetricsExport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMetricsExport(ctx context.Context, params *resiliencehub.StartMetricsExportInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.StartMetricsExportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMetricsExport")
+	}
+
+	var r0 *resiliencehub.StartMetricsExportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.StartMetricsExportInput, ...func(*resiliencehub.Options)) (*resiliencehub.StartMetricsExportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.StartMetricsExportInput, ...func(*resiliencehub.Options)) *resiliencehub.StartMetricsExportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.StartMetricsExportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.StartMetricsExportInput, ...func(*resiliencehub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartResourceGroupingRecommendationTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartResourceGroupingRecommendationTask(ctx context.Context, params *resiliencehub.StartResourceGroupingRecommendationTaskInput, optFns ...func(*resiliencehub.Options)) (*resiliencehub.StartResourceGroupingRecommendationTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartResourceGroupingRecommendationTask")
+	}
+
+	var r0 *resiliencehub.StartResourceGroupingRecommendationTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.StartResourceGroupingRecommendationTaskInput, ...func(*resiliencehub.Options)) (*resiliencehub.StartResourceGroupingRecommendationTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehub.StartResourceGroupingRecommendationTaskInput, ...func(*resiliencehub.Options)) *resiliencehub.StartResourceGroupingRecommendationTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehub.StartResourceGroupingRecommendationTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehub.StartResourceGroupingRecommendationTaskInput, ...func(*resiliencehub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

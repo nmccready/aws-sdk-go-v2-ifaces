@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcceptDataGrant", func(t *testing.T) {
+        input := &dataexchange.AcceptDataGrantInput{}
+        output := &dataexchange.AcceptDataGrantOutput{}
+
+        mockClient.On("AcceptDataGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcceptDataGrant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelJob", func(t *testing.T) {
         input := &dataexchange.CancelJobInput{}
         output := &dataexchange.CancelJobOutput{}
@@ -41,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataGrant", func(t *testing.T) {
+        input := &dataexchange.CreateDataGrantInput{}
+        output := &dataexchange.CreateDataGrantOutput{}
+
+        mockClient.On("CreateDataGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataGrant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataGrant", func(t *testing.T) {
+        input := &dataexchange.DeleteDataGrantInput{}
+        output := &dataexchange.DeleteDataGrantOutput{}
+
+        mockClient.On("DeleteDataGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataGrant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDataSet", func(t *testing.T) {
         input := &dataexchange.DeleteDataSetInput{}
         output := &dataexchange.DeleteDataSetOutput{}
@@ -164,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataGrant", func(t *testing.T) {
+        input := &dataexchange.GetDataGrantInput{}
+        output := &dataexchange.GetDataGrantOutput{}
+
+        mockClient.On("GetDataGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataGrant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataSet", func(t *testing.T) {
         input := &dataexchange.GetDataSetInput{}
         output := &dataexchange.GetDataSetOutput{}
@@ -203,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetReceivedDataGrant", func(t *testing.T) {
+        input := &dataexchange.GetReceivedDataGrantInput{}
+        output := &dataexchange.GetReceivedDataGrantOutput{}
+
+        mockClient.On("GetReceivedDataGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetReceivedDataGrant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRevision", func(t *testing.T) {
         input := &dataexchange.GetRevisionInput{}
         output := &dataexchange.GetRevisionOutput{}
@@ -210,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRevision", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRevision(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataGrants", func(t *testing.T) {
+        input := &dataexchange.ListDataGrantsInput{}
+        output := &dataexchange.ListDataGrantsOutput{}
+
+        mockClient.On("ListDataGrants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataGrants(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -262,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReceivedDataGrants", func(t *testing.T) {
+        input := &dataexchange.ListReceivedDataGrantsInput{}
+        output := &dataexchange.ListReceivedDataGrantsOutput{}
+
+        mockClient.On("ListReceivedDataGrants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReceivedDataGrants(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

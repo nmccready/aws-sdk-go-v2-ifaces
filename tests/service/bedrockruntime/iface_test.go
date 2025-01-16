@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAsyncInvoke", func(t *testing.T) {
+        input := &bedrockruntime.GetAsyncInvokeInput{}
+        output := &bedrockruntime.GetAsyncInvokeOutput{}
+
+        mockClient.On("GetAsyncInvoke", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAsyncInvoke(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeModel", func(t *testing.T) {
         input := &bedrockruntime.InvokeModelInput{}
         output := &bedrockruntime.InvokeModelOutput{}
@@ -93,6 +106,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("InvokeModelWithResponseStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.InvokeModelWithResponseStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAsyncInvokes", func(t *testing.T) {
+        input := &bedrockruntime.ListAsyncInvokesInput{}
+        output := &bedrockruntime.ListAsyncInvokesOutput{}
+
+        mockClient.On("ListAsyncInvokes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAsyncInvokes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAsyncInvoke", func(t *testing.T) {
+        input := &bedrockruntime.StartAsyncInvokeInput{}
+        output := &bedrockruntime.StartAsyncInvokeOutput{}
+
+        mockClient.On("StartAsyncInvoke", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAsyncInvoke(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

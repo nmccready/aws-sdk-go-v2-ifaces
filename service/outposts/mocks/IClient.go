@@ -606,6 +606,43 @@ func (_m *IClient) GetSiteAddress(ctx context.Context, params *outposts.GetSiteA
 	return r0, r1
 }
 
+// ListAssetInstances provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetInstances(ctx context.Context, params *outposts.ListAssetInstancesInput, optFns ...func(*outposts.Options)) (*outposts.ListAssetInstancesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetInstances")
+	}
+
+	var r0 *outposts.ListAssetInstancesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListAssetInstancesInput, ...func(*outposts.Options)) (*outposts.ListAssetInstancesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListAssetInstancesInput, ...func(*outposts.Options)) *outposts.ListAssetInstancesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.ListAssetInstancesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.ListAssetInstancesInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAssets provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAssets(ctx context.Context, params *outposts.ListAssetsInput, optFns ...func(*outposts.Options)) (*outposts.ListAssetsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -635,6 +672,43 @@ func (_m *IClient) ListAssets(ctx context.Context, params *outposts.ListAssetsIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *outposts.ListAssetsInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBlockingInstancesForCapacityTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBlockingInstancesForCapacityTask(ctx context.Context, params *outposts.ListBlockingInstancesForCapacityTaskInput, optFns ...func(*outposts.Options)) (*outposts.ListBlockingInstancesForCapacityTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBlockingInstancesForCapacityTask")
+	}
+
+	var r0 *outposts.ListBlockingInstancesForCapacityTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListBlockingInstancesForCapacityTaskInput, ...func(*outposts.Options)) (*outposts.ListBlockingInstancesForCapacityTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListBlockingInstancesForCapacityTaskInput, ...func(*outposts.Options)) *outposts.ListBlockingInstancesForCapacityTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.ListBlockingInstancesForCapacityTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.ListBlockingInstancesForCapacityTaskInput, ...func(*outposts.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

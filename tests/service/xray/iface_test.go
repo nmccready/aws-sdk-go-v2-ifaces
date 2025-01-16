@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelTraceRetrieval", func(t *testing.T) {
+        input := &xray.CancelTraceRetrievalInput{}
+        output := &xray.CancelTraceRetrievalOutput{}
+
+        mockClient.On("CancelTraceRetrieval", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelTraceRetrieval(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGroup", func(t *testing.T) {
         input := &xray.CreateGroupInput{}
         output := &xray.CreateGroupOutput{}
@@ -151,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIndexingRules", func(t *testing.T) {
+        input := &xray.GetIndexingRulesInput{}
+        output := &xray.GetIndexingRulesOutput{}
+
+        mockClient.On("GetIndexingRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIndexingRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInsight", func(t *testing.T) {
         input := &xray.GetInsightInput{}
         output := &xray.GetInsightOutput{}
@@ -197,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInsightSummaries", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInsightSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRetrievedTracesGraph", func(t *testing.T) {
+        input := &xray.GetRetrievedTracesGraphInput{}
+        output := &xray.GetRetrievedTracesGraphOutput{}
+
+        mockClient.On("GetRetrievedTracesGraph", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRetrievedTracesGraph(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTraceSegmentDestination", func(t *testing.T) {
+        input := &xray.GetTraceSegmentDestinationInput{}
+        output := &xray.GetTraceSegmentDestinationOutput{}
+
+        mockClient.On("GetTraceSegmentDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTraceSegmentDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTraceSummaries", func(t *testing.T) {
         input := &xray.GetTraceSummariesInput{}
         output := &xray.GetTraceSummariesOutput{}
@@ -301,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResourcePolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResourcePolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRetrievedTraces", func(t *testing.T) {
+        input := &xray.ListRetrievedTracesInput{}
+        output := &xray.ListRetrievedTracesOutput{}
+
+        mockClient.On("ListRetrievedTraces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRetrievedTraces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartTraceRetrieval", func(t *testing.T) {
+        input := &xray.StartTraceRetrievalInput{}
+        output := &xray.StartTraceRetrievalOutput{}
+
+        mockClient.On("StartTraceRetrieval", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTraceRetrieval(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &xray.TagResourceInput{}
         output := &xray.TagResourceOutput{}
@@ -411,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateIndexingRule", func(t *testing.T) {
+        input := &xray.UpdateIndexingRuleInput{}
+        output := &xray.UpdateIndexingRuleOutput{}
+
+        mockClient.On("UpdateIndexingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIndexingRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateSamplingRule", func(t *testing.T) {
         input := &xray.UpdateSamplingRuleInput{}
         output := &xray.UpdateSamplingRuleOutput{}
@@ -418,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSamplingRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSamplingRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTraceSegmentDestination", func(t *testing.T) {
+        input := &xray.UpdateTraceSegmentDestinationInput{}
+        output := &xray.UpdateTraceSegmentDestinationOutput{}
+
+        mockClient.On("UpdateTraceSegmentDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTraceSegmentDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

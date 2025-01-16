@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCommitmentPurchaseAnalysis", func(t *testing.T) {
+        input := &costexplorer.GetCommitmentPurchaseAnalysisInput{}
+        output := &costexplorer.GetCommitmentPurchaseAnalysisOutput{}
+
+        mockClient.On("GetCommitmentPurchaseAnalysis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCommitmentPurchaseAnalysis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCostAndUsage", func(t *testing.T) {
         input := &costexplorer.GetCostAndUsageInput{}
         output := &costexplorer.GetCostAndUsageOutput{}
@@ -385,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCommitmentPurchaseAnalyses", func(t *testing.T) {
+        input := &costexplorer.ListCommitmentPurchaseAnalysesInput{}
+        output := &costexplorer.ListCommitmentPurchaseAnalysesOutput{}
+
+        mockClient.On("ListCommitmentPurchaseAnalyses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCommitmentPurchaseAnalyses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCostAllocationTagBackfillHistory", func(t *testing.T) {
         input := &costexplorer.ListCostAllocationTagBackfillHistoryInput{}
         output := &costexplorer.ListCostAllocationTagBackfillHistoryOutput{}
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ProvideAnomalyFeedback", ctx, input).Return(output, nil)
 
         result, err := mockClient.ProvideAnomalyFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartCommitmentPurchaseAnalysis", func(t *testing.T) {
+        input := &costexplorer.StartCommitmentPurchaseAnalysisInput{}
+        output := &costexplorer.StartCommitmentPurchaseAnalysisOutput{}
+
+        mockClient.On("StartCommitmentPurchaseAnalysis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCommitmentPurchaseAnalysis(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

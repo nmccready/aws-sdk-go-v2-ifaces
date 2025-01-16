@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociatePermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociatePermission(ctx context.Context, params *qbusiness.AssociatePermissionInput, optFns ...func(*qbusiness.Options)) (*qbusiness.AssociatePermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociatePermission")
+	}
+
+	var r0 *qbusiness.AssociatePermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.AssociatePermissionInput, ...func(*qbusiness.Options)) (*qbusiness.AssociatePermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.AssociatePermissionInput, ...func(*qbusiness.Options)) *qbusiness.AssociatePermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.AssociatePermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.AssociatePermissionInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchDeleteDocument provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchDeleteDocument(ctx context.Context, params *qbusiness.BatchDeleteDocumentInput, optFns ...func(*qbusiness.Options)) (*qbusiness.BatchDeleteDocumentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -191,6 +228,43 @@ func (_m *IClient) CreateApplication(ctx context.Context, params *qbusiness.Crea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.CreateApplicationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataAccessor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataAccessor(ctx context.Context, params *qbusiness.CreateDataAccessorInput, optFns ...func(*qbusiness.Options)) (*qbusiness.CreateDataAccessorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataAccessor")
+	}
+
+	var r0 *qbusiness.CreateDataAccessorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CreateDataAccessorInput, ...func(*qbusiness.Options)) (*qbusiness.CreateDataAccessorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CreateDataAccessorInput, ...func(*qbusiness.Options)) *qbusiness.CreateDataAccessorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.CreateDataAccessorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.CreateDataAccessorInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -532,6 +606,43 @@ func (_m *IClient) DeleteConversation(ctx context.Context, params *qbusiness.Del
 	return r0, r1
 }
 
+// DeleteDataAccessor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataAccessor(ctx context.Context, params *qbusiness.DeleteDataAccessorInput, optFns ...func(*qbusiness.Options)) (*qbusiness.DeleteDataAccessorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataAccessor")
+	}
+
+	var r0 *qbusiness.DeleteDataAccessorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DeleteDataAccessorInput, ...func(*qbusiness.Options)) (*qbusiness.DeleteDataAccessorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DeleteDataAccessorInput, ...func(*qbusiness.Options)) *qbusiness.DeleteDataAccessorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.DeleteDataAccessorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.DeleteDataAccessorInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDataSource(ctx context.Context, params *qbusiness.DeleteDataSourceInput, optFns ...func(*qbusiness.Options)) (*qbusiness.DeleteDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -791,6 +902,43 @@ func (_m *IClient) DeleteWebExperience(ctx context.Context, params *qbusiness.De
 	return r0, r1
 }
 
+// DisassociatePermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociatePermission(ctx context.Context, params *qbusiness.DisassociatePermissionInput, optFns ...func(*qbusiness.Options)) (*qbusiness.DisassociatePermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociatePermission")
+	}
+
+	var r0 *qbusiness.DisassociatePermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DisassociatePermissionInput, ...func(*qbusiness.Options)) (*qbusiness.DisassociatePermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DisassociatePermissionInput, ...func(*qbusiness.Options)) *qbusiness.DisassociatePermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.DisassociatePermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.DisassociatePermissionInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetApplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetApplication(ctx context.Context, params *qbusiness.GetApplicationInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetApplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -857,6 +1005,43 @@ func (_m *IClient) GetChatControlsConfiguration(ctx context.Context, params *qbu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetChatControlsConfigurationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataAccessor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataAccessor(ctx context.Context, params *qbusiness.GetDataAccessorInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetDataAccessorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataAccessor")
+	}
+
+	var r0 *qbusiness.GetDataAccessorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetDataAccessorInput, ...func(*qbusiness.Options)) (*qbusiness.GetDataAccessorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetDataAccessorInput, ...func(*qbusiness.Options)) *qbusiness.GetDataAccessorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.GetDataAccessorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetDataAccessorInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -976,6 +1161,43 @@ func (_m *IClient) GetIndex(ctx context.Context, params *qbusiness.GetIndexInput
 	return r0, r1
 }
 
+// GetMedia provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMedia(ctx context.Context, params *qbusiness.GetMediaInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetMediaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMedia")
+	}
+
+	var r0 *qbusiness.GetMediaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetMediaInput, ...func(*qbusiness.Options)) (*qbusiness.GetMediaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetMediaInput, ...func(*qbusiness.Options)) *qbusiness.GetMediaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.GetMediaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetMediaInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPlugin provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPlugin(ctx context.Context, params *qbusiness.GetPluginInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetPluginOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1005,6 +1227,43 @@ func (_m *IClient) GetPlugin(ctx context.Context, params *qbusiness.GetPluginInp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetPluginInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicy(ctx context.Context, params *qbusiness.GetPolicyInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicy")
+	}
+
+	var r0 *qbusiness.GetPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetPolicyInput, ...func(*qbusiness.Options)) (*qbusiness.GetPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetPolicyInput, ...func(*qbusiness.Options)) *qbusiness.GetPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.GetPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetPolicyInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1161,6 +1420,43 @@ func (_m *IClient) ListApplications(ctx context.Context, params *qbusiness.ListA
 	return r0, r1
 }
 
+// ListAttachments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAttachments(ctx context.Context, params *qbusiness.ListAttachmentsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListAttachmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAttachments")
+	}
+
+	var r0 *qbusiness.ListAttachmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListAttachmentsInput, ...func(*qbusiness.Options)) (*qbusiness.ListAttachmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListAttachmentsInput, ...func(*qbusiness.Options)) *qbusiness.ListAttachmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListAttachmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListAttachmentsInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListConversations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListConversations(ctx context.Context, params *qbusiness.ListConversationsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListConversationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1190,6 +1486,43 @@ func (_m *IClient) ListConversations(ctx context.Context, params *qbusiness.List
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListConversationsInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataAccessors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataAccessors(ctx context.Context, params *qbusiness.ListDataAccessorsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListDataAccessorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataAccessors")
+	}
+
+	var r0 *qbusiness.ListDataAccessorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListDataAccessorsInput, ...func(*qbusiness.Options)) (*qbusiness.ListDataAccessorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListDataAccessorsInput, ...func(*qbusiness.Options)) *qbusiness.ListDataAccessorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListDataAccessorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListDataAccessorsInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1412,6 +1745,117 @@ func (_m *IClient) ListMessages(ctx context.Context, params *qbusiness.ListMessa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListMessagesInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPluginActions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPluginActions(ctx context.Context, params *qbusiness.ListPluginActionsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListPluginActionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPluginActions")
+	}
+
+	var r0 *qbusiness.ListPluginActionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListPluginActionsInput, ...func(*qbusiness.Options)) (*qbusiness.ListPluginActionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListPluginActionsInput, ...func(*qbusiness.Options)) *qbusiness.ListPluginActionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListPluginActionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListPluginActionsInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPluginTypeActions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPluginTypeActions(ctx context.Context, params *qbusiness.ListPluginTypeActionsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListPluginTypeActionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPluginTypeActions")
+	}
+
+	var r0 *qbusiness.ListPluginTypeActionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListPluginTypeActionsInput, ...func(*qbusiness.Options)) (*qbusiness.ListPluginTypeActionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListPluginTypeActionsInput, ...func(*qbusiness.Options)) *qbusiness.ListPluginTypeActionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListPluginTypeActionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListPluginTypeActionsInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPluginTypeMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPluginTypeMetadata(ctx context.Context, params *qbusiness.ListPluginTypeMetadataInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListPluginTypeMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPluginTypeMetadata")
+	}
+
+	var r0 *qbusiness.ListPluginTypeMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListPluginTypeMetadataInput, ...func(*qbusiness.Options)) (*qbusiness.ListPluginTypeMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListPluginTypeMetadataInput, ...func(*qbusiness.Options)) *qbusiness.ListPluginTypeMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListPluginTypeMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListPluginTypeMetadataInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1660,6 +2104,43 @@ func (_m *IClient) PutGroup(ctx context.Context, params *qbusiness.PutGroupInput
 	return r0, r1
 }
 
+// SearchRelevantContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchRelevantContent(ctx context.Context, params *qbusiness.SearchRelevantContentInput, optFns ...func(*qbusiness.Options)) (*qbusiness.SearchRelevantContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchRelevantContent")
+	}
+
+	var r0 *qbusiness.SearchRelevantContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.SearchRelevantContentInput, ...func(*qbusiness.Options)) (*qbusiness.SearchRelevantContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.SearchRelevantContentInput, ...func(*qbusiness.Options)) *qbusiness.SearchRelevantContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.SearchRelevantContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.SearchRelevantContentInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartDataSourceSyncJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartDataSourceSyncJob(ctx context.Context, params *qbusiness.StartDataSourceSyncJobInput, optFns ...func(*qbusiness.Options)) (*qbusiness.StartDataSourceSyncJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1874,6 +2355,43 @@ func (_m *IClient) UpdateChatControlsConfiguration(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.UpdateChatControlsConfigurationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataAccessor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataAccessor(ctx context.Context, params *qbusiness.UpdateDataAccessorInput, optFns ...func(*qbusiness.Options)) (*qbusiness.UpdateDataAccessorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataAccessor")
+	}
+
+	var r0 *qbusiness.UpdateDataAccessorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.UpdateDataAccessorInput, ...func(*qbusiness.Options)) (*qbusiness.UpdateDataAccessorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.UpdateDataAccessorInput, ...func(*qbusiness.Options)) *qbusiness.UpdateDataAccessorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.UpdateDataAccessorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.UpdateDataAccessorInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

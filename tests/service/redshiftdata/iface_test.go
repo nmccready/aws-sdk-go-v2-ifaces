@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetStatementResultV2", func(t *testing.T) {
+        input := &redshiftdata.GetStatementResultV2Input{}
+        output := &redshiftdata.GetStatementResultV2Output{}
+
+        mockClient.On("GetStatementResultV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStatementResultV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDatabases", func(t *testing.T) {
         input := &redshiftdata.ListDatabasesInput{}
         output := &redshiftdata.ListDatabasesOutput{}

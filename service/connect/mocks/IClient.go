@@ -866,6 +866,43 @@ func (_m *IClient) CreateAgentStatus(ctx context.Context, params *connect.Create
 	return r0, r1
 }
 
+// CreateContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContact(ctx context.Context, params *connect.CreateContactInput, optFns ...func(*connect.Options)) (*connect.CreateContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContact")
+	}
+
+	var r0 *connect.CreateContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateContactInput, ...func(*connect.Options)) (*connect.CreateContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateContactInput, ...func(*connect.Options)) *connect.CreateContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateContactFlow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateContactFlow(ctx context.Context, params *connect.CreateContactFlowInput, optFns ...func(*connect.Options)) (*connect.CreateContactFlowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -940,6 +977,80 @@ func (_m *IClient) CreateContactFlowModule(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// CreateContactFlowVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContactFlowVersion(ctx context.Context, params *connect.CreateContactFlowVersionInput, optFns ...func(*connect.Options)) (*connect.CreateContactFlowVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContactFlowVersion")
+	}
+
+	var r0 *connect.CreateContactFlowVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateContactFlowVersionInput, ...func(*connect.Options)) (*connect.CreateContactFlowVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateContactFlowVersionInput, ...func(*connect.Options)) *connect.CreateContactFlowVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateContactFlowVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateContactFlowVersionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateEmailAddress provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEmailAddress(ctx context.Context, params *connect.CreateEmailAddressInput, optFns ...func(*connect.Options)) (*connect.CreateEmailAddressOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEmailAddress")
+	}
+
+	var r0 *connect.CreateEmailAddressOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateEmailAddressInput, ...func(*connect.Options)) (*connect.CreateEmailAddressOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateEmailAddressInput, ...func(*connect.Options)) *connect.CreateEmailAddressOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateEmailAddressOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateEmailAddressInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEvaluationForm provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEvaluationForm(ctx context.Context, params *connect.CreateEvaluationFormInput, optFns ...func(*connect.Options)) (*connect.CreateEvaluationFormOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1006,6 +1117,43 @@ func (_m *IClient) CreateHoursOfOperation(ctx context.Context, params *connect.C
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateHoursOfOperationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateHoursOfOperationOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateHoursOfOperationOverride(ctx context.Context, params *connect.CreateHoursOfOperationOverrideInput, optFns ...func(*connect.Options)) (*connect.CreateHoursOfOperationOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateHoursOfOperationOverride")
+	}
+
+	var r0 *connect.CreateHoursOfOperationOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateHoursOfOperationOverrideInput, ...func(*connect.Options)) (*connect.CreateHoursOfOperationOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateHoursOfOperationOverrideInput, ...func(*connect.Options)) *connect.CreateHoursOfOperationOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateHoursOfOperationOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateHoursOfOperationOverrideInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1228,6 +1376,43 @@ func (_m *IClient) CreatePrompt(ctx context.Context, params *connect.CreatePromp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreatePromptInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePushNotificationRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePushNotificationRegistration(ctx context.Context, params *connect.CreatePushNotificationRegistrationInput, optFns ...func(*connect.Options)) (*connect.CreatePushNotificationRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePushNotificationRegistration")
+	}
+
+	var r0 *connect.CreatePushNotificationRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreatePushNotificationRegistrationInput, ...func(*connect.Options)) (*connect.CreatePushNotificationRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreatePushNotificationRegistrationInput, ...func(*connect.Options)) *connect.CreatePushNotificationRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreatePushNotificationRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreatePushNotificationRegistrationInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1902,6 +2087,43 @@ func (_m *IClient) DeleteContactFlowModule(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// DeleteEmailAddress provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEmailAddress(ctx context.Context, params *connect.DeleteEmailAddressInput, optFns ...func(*connect.Options)) (*connect.DeleteEmailAddressOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEmailAddress")
+	}
+
+	var r0 *connect.DeleteEmailAddressOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteEmailAddressInput, ...func(*connect.Options)) (*connect.DeleteEmailAddressOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteEmailAddressInput, ...func(*connect.Options)) *connect.DeleteEmailAddressOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteEmailAddressOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteEmailAddressInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEvaluationForm provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEvaluationForm(ctx context.Context, params *connect.DeleteEvaluationFormInput, optFns ...func(*connect.Options)) (*connect.DeleteEvaluationFormOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1968,6 +2190,43 @@ func (_m *IClient) DeleteHoursOfOperation(ctx context.Context, params *connect.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteHoursOfOperationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteHoursOfOperationOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteHoursOfOperationOverride(ctx context.Context, params *connect.DeleteHoursOfOperationOverrideInput, optFns ...func(*connect.Options)) (*connect.DeleteHoursOfOperationOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteHoursOfOperationOverride")
+	}
+
+	var r0 *connect.DeleteHoursOfOperationOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteHoursOfOperationOverrideInput, ...func(*connect.Options)) (*connect.DeleteHoursOfOperationOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteHoursOfOperationOverrideInput, ...func(*connect.Options)) *connect.DeleteHoursOfOperationOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteHoursOfOperationOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteHoursOfOperationOverrideInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2116,6 +2375,43 @@ func (_m *IClient) DeletePrompt(ctx context.Context, params *connect.DeletePromp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeletePromptInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePushNotificationRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePushNotificationRegistration(ctx context.Context, params *connect.DeletePushNotificationRegistrationInput, optFns ...func(*connect.Options)) (*connect.DeletePushNotificationRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePushNotificationRegistration")
+	}
+
+	var r0 *connect.DeletePushNotificationRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeletePushNotificationRegistrationInput, ...func(*connect.Options)) (*connect.DeletePushNotificationRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeletePushNotificationRegistrationInput, ...func(*connect.Options)) *connect.DeletePushNotificationRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeletePushNotificationRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeletePushNotificationRegistrationInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2827,6 +3123,43 @@ func (_m *IClient) DescribeContactFlowModule(ctx context.Context, params *connec
 	return r0, r1
 }
 
+// DescribeEmailAddress provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeEmailAddress(ctx context.Context, params *connect.DescribeEmailAddressInput, optFns ...func(*connect.Options)) (*connect.DescribeEmailAddressOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeEmailAddress")
+	}
+
+	var r0 *connect.DescribeEmailAddressOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeEmailAddressInput, ...func(*connect.Options)) (*connect.DescribeEmailAddressOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeEmailAddressInput, ...func(*connect.Options)) *connect.DescribeEmailAddressOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeEmailAddressOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeEmailAddressInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeEvaluationForm provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeEvaluationForm(ctx context.Context, params *connect.DescribeEvaluationFormInput, optFns ...func(*connect.Options)) (*connect.DescribeEvaluationFormOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2893,6 +3226,43 @@ func (_m *IClient) DescribeHoursOfOperation(ctx context.Context, params *connect
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeHoursOfOperationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeHoursOfOperationOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeHoursOfOperationOverride(ctx context.Context, params *connect.DescribeHoursOfOperationOverrideInput, optFns ...func(*connect.Options)) (*connect.DescribeHoursOfOperationOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeHoursOfOperationOverride")
+	}
+
+	var r0 *connect.DescribeHoursOfOperationOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeHoursOfOperationOverrideInput, ...func(*connect.Options)) (*connect.DescribeHoursOfOperationOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeHoursOfOperationOverrideInput, ...func(*connect.Options)) *connect.DescribeHoursOfOperationOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeHoursOfOperationOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeHoursOfOperationOverrideInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4196,6 +4566,43 @@ func (_m *IClient) GetCurrentUserData(ctx context.Context, params *connect.GetCu
 	return r0, r1
 }
 
+// GetEffectiveHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEffectiveHoursOfOperations(ctx context.Context, params *connect.GetEffectiveHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.GetEffectiveHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEffectiveHoursOfOperations")
+	}
+
+	var r0 *connect.GetEffectiveHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetEffectiveHoursOfOperationsInput, ...func(*connect.Options)) (*connect.GetEffectiveHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetEffectiveHoursOfOperationsInput, ...func(*connect.Options)) *connect.GetEffectiveHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.GetEffectiveHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.GetEffectiveHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFederationToken provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFederationToken(ctx context.Context, params *connect.GetFederationTokenInput, optFns ...func(*connect.Options)) (*connect.GetFederationTokenOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4603,6 +5010,43 @@ func (_m *IClient) ListApprovedOrigins(ctx context.Context, params *connect.List
 	return r0, r1
 }
 
+// ListAssociatedContacts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssociatedContacts(ctx context.Context, params *connect.ListAssociatedContactsInput, optFns ...func(*connect.Options)) (*connect.ListAssociatedContactsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssociatedContacts")
+	}
+
+	var r0 *connect.ListAssociatedContactsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListAssociatedContactsInput, ...func(*connect.Options)) (*connect.ListAssociatedContactsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListAssociatedContactsInput, ...func(*connect.Options)) *connect.ListAssociatedContactsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListAssociatedContactsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListAssociatedContactsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAuthenticationProfiles provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAuthenticationProfiles(ctx context.Context, params *connect.ListAuthenticationProfilesInput, optFns ...func(*connect.Options)) (*connect.ListAuthenticationProfilesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4743,6 +5187,43 @@ func (_m *IClient) ListContactFlowModules(ctx context.Context, params *connect.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListContactFlowModulesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContactFlowVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContactFlowVersions(ctx context.Context, params *connect.ListContactFlowVersionsInput, optFns ...func(*connect.Options)) (*connect.ListContactFlowVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContactFlowVersions")
+	}
+
+	var r0 *connect.ListContactFlowVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListContactFlowVersionsInput, ...func(*connect.Options)) (*connect.ListContactFlowVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListContactFlowVersionsInput, ...func(*connect.Options)) *connect.ListContactFlowVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListContactFlowVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListContactFlowVersionsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4965,6 +5446,43 @@ func (_m *IClient) ListFlowAssociations(ctx context.Context, params *connect.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListFlowAssociationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListHoursOfOperationOverrides provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHoursOfOperationOverrides(ctx context.Context, params *connect.ListHoursOfOperationOverridesInput, optFns ...func(*connect.Options)) (*connect.ListHoursOfOperationOverridesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHoursOfOperationOverrides")
+	}
+
+	var r0 *connect.ListHoursOfOperationOverridesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListHoursOfOperationOverridesInput, ...func(*connect.Options)) (*connect.ListHoursOfOperationOverridesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListHoursOfOperationOverridesInput, ...func(*connect.Options)) *connect.ListHoursOfOperationOverridesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListHoursOfOperationOverridesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListHoursOfOperationOverridesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6434,6 +6952,43 @@ func (_m *IClient) ResumeContactRecording(ctx context.Context, params *connect.R
 	return r0, r1
 }
 
+// SearchAgentStatuses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchAgentStatuses(ctx context.Context, params *connect.SearchAgentStatusesInput, optFns ...func(*connect.Options)) (*connect.SearchAgentStatusesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchAgentStatuses")
+	}
+
+	var r0 *connect.SearchAgentStatusesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchAgentStatusesInput, ...func(*connect.Options)) (*connect.SearchAgentStatusesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchAgentStatusesInput, ...func(*connect.Options)) *connect.SearchAgentStatusesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchAgentStatusesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchAgentStatusesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchAvailablePhoneNumbers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchAvailablePhoneNumbers(ctx context.Context, params *connect.SearchAvailablePhoneNumbersInput, optFns ...func(*connect.Options)) (*connect.SearchAvailablePhoneNumbersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6574,6 +7129,80 @@ func (_m *IClient) SearchContacts(ctx context.Context, params *connect.SearchCon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchContactsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchEmailAddresses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchEmailAddresses(ctx context.Context, params *connect.SearchEmailAddressesInput, optFns ...func(*connect.Options)) (*connect.SearchEmailAddressesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchEmailAddresses")
+	}
+
+	var r0 *connect.SearchEmailAddressesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchEmailAddressesInput, ...func(*connect.Options)) (*connect.SearchEmailAddressesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchEmailAddressesInput, ...func(*connect.Options)) *connect.SearchEmailAddressesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchEmailAddressesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchEmailAddressesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchHoursOfOperationOverrides provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchHoursOfOperationOverrides(ctx context.Context, params *connect.SearchHoursOfOperationOverridesInput, optFns ...func(*connect.Options)) (*connect.SearchHoursOfOperationOverridesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchHoursOfOperationOverrides")
+	}
+
+	var r0 *connect.SearchHoursOfOperationOverridesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchHoursOfOperationOverridesInput, ...func(*connect.Options)) (*connect.SearchHoursOfOperationOverridesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchHoursOfOperationOverridesInput, ...func(*connect.Options)) *connect.SearchHoursOfOperationOverridesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchHoursOfOperationOverridesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchHoursOfOperationOverridesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6878,6 +7507,43 @@ func (_m *IClient) SearchSecurityProfiles(ctx context.Context, params *connect.S
 	return r0, r1
 }
 
+// SearchUserHierarchyGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchUserHierarchyGroups(ctx context.Context, params *connect.SearchUserHierarchyGroupsInput, optFns ...func(*connect.Options)) (*connect.SearchUserHierarchyGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchUserHierarchyGroups")
+	}
+
+	var r0 *connect.SearchUserHierarchyGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchUserHierarchyGroupsInput, ...func(*connect.Options)) (*connect.SearchUserHierarchyGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchUserHierarchyGroupsInput, ...func(*connect.Options)) *connect.SearchUserHierarchyGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchUserHierarchyGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchUserHierarchyGroupsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchUsers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchUsers(ctx context.Context, params *connect.SearchUsersInput, optFns ...func(*connect.Options)) (*connect.SearchUsersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6981,6 +7647,43 @@ func (_m *IClient) SendChatIntegrationEvent(ctx context.Context, params *connect
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.SendChatIntegrationEventInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendOutboundEmail provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendOutboundEmail(ctx context.Context, params *connect.SendOutboundEmailInput, optFns ...func(*connect.Options)) (*connect.SendOutboundEmailOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendOutboundEmail")
+	}
+
+	var r0 *connect.SendOutboundEmailOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SendOutboundEmailInput, ...func(*connect.Options)) (*connect.SendOutboundEmailOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SendOutboundEmailInput, ...func(*connect.Options)) *connect.SendOutboundEmailOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SendOutboundEmailOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SendOutboundEmailInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7174,6 +7877,117 @@ func (_m *IClient) StartContactStreaming(ctx context.Context, params *connect.St
 	return r0, r1
 }
 
+// StartEmailContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartEmailContact(ctx context.Context, params *connect.StartEmailContactInput, optFns ...func(*connect.Options)) (*connect.StartEmailContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartEmailContact")
+	}
+
+	var r0 *connect.StartEmailContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartEmailContactInput, ...func(*connect.Options)) (*connect.StartEmailContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartEmailContactInput, ...func(*connect.Options)) *connect.StartEmailContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartEmailContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartEmailContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartOutboundChatContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartOutboundChatContact(ctx context.Context, params *connect.StartOutboundChatContactInput, optFns ...func(*connect.Options)) (*connect.StartOutboundChatContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartOutboundChatContact")
+	}
+
+	var r0 *connect.StartOutboundChatContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartOutboundChatContactInput, ...func(*connect.Options)) (*connect.StartOutboundChatContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartOutboundChatContactInput, ...func(*connect.Options)) *connect.StartOutboundChatContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartOutboundChatContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartOutboundChatContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartOutboundEmailContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartOutboundEmailContact(ctx context.Context, params *connect.StartOutboundEmailContactInput, optFns ...func(*connect.Options)) (*connect.StartOutboundEmailContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartOutboundEmailContact")
+	}
+
+	var r0 *connect.StartOutboundEmailContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartOutboundEmailContactInput, ...func(*connect.Options)) (*connect.StartOutboundEmailContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartOutboundEmailContactInput, ...func(*connect.Options)) *connect.StartOutboundEmailContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartOutboundEmailContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartOutboundEmailContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartOutboundVoiceContact provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartOutboundVoiceContact(ctx context.Context, params *connect.StartOutboundVoiceContactInput, optFns ...func(*connect.Options)) (*connect.StartOutboundVoiceContactOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7203,6 +8017,43 @@ func (_m *IClient) StartOutboundVoiceContact(ctx context.Context, params *connec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartOutboundVoiceContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartScreenSharing provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartScreenSharing(ctx context.Context, params *connect.StartScreenSharingInput, optFns ...func(*connect.Options)) (*connect.StartScreenSharingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartScreenSharing")
+	}
+
+	var r0 *connect.StartScreenSharingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartScreenSharingInput, ...func(*connect.Options)) (*connect.StartScreenSharingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartScreenSharingInput, ...func(*connect.Options)) *connect.StartScreenSharingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartScreenSharingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartScreenSharingInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8099,6 +8950,43 @@ func (_m *IClient) UpdateContactSchedule(ctx context.Context, params *connect.Up
 	return r0, r1
 }
 
+// UpdateEmailAddressMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEmailAddressMetadata(ctx context.Context, params *connect.UpdateEmailAddressMetadataInput, optFns ...func(*connect.Options)) (*connect.UpdateEmailAddressMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEmailAddressMetadata")
+	}
+
+	var r0 *connect.UpdateEmailAddressMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateEmailAddressMetadataInput, ...func(*connect.Options)) (*connect.UpdateEmailAddressMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateEmailAddressMetadataInput, ...func(*connect.Options)) *connect.UpdateEmailAddressMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateEmailAddressMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateEmailAddressMetadataInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateEvaluationForm provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateEvaluationForm(ctx context.Context, params *connect.UpdateEvaluationFormInput, optFns ...func(*connect.Options)) (*connect.UpdateEvaluationFormOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8173,6 +9061,43 @@ func (_m *IClient) UpdateHoursOfOperation(ctx context.Context, params *connect.U
 	return r0, r1
 }
 
+// UpdateHoursOfOperationOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHoursOfOperationOverride(ctx context.Context, params *connect.UpdateHoursOfOperationOverrideInput, optFns ...func(*connect.Options)) (*connect.UpdateHoursOfOperationOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHoursOfOperationOverride")
+	}
+
+	var r0 *connect.UpdateHoursOfOperationOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateHoursOfOperationOverrideInput, ...func(*connect.Options)) (*connect.UpdateHoursOfOperationOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateHoursOfOperationOverrideInput, ...func(*connect.Options)) *connect.UpdateHoursOfOperationOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateHoursOfOperationOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateHoursOfOperationOverrideInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateInstanceAttribute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateInstanceAttribute(ctx context.Context, params *connect.UpdateInstanceAttributeInput, optFns ...func(*connect.Options)) (*connect.UpdateInstanceAttributeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8239,6 +9164,43 @@ func (_m *IClient) UpdateInstanceStorageConfig(ctx context.Context, params *conn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateInstanceStorageConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateParticipantAuthentication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateParticipantAuthentication(ctx context.Context, params *connect.UpdateParticipantAuthenticationInput, optFns ...func(*connect.Options)) (*connect.UpdateParticipantAuthenticationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateParticipantAuthentication")
+	}
+
+	var r0 *connect.UpdateParticipantAuthenticationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateParticipantAuthenticationInput, ...func(*connect.Options)) (*connect.UpdateParticipantAuthenticationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateParticipantAuthenticationInput, ...func(*connect.Options)) *connect.UpdateParticipantAuthenticationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateParticipantAuthenticationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateParticipantAuthenticationInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8572,6 +9534,43 @@ func (_m *IClient) UpdateQueueOutboundCallerConfig(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateQueueOutboundCallerConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQueueOutboundEmailConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQueueOutboundEmailConfig(ctx context.Context, params *connect.UpdateQueueOutboundEmailConfigInput, optFns ...func(*connect.Options)) (*connect.UpdateQueueOutboundEmailConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQueueOutboundEmailConfig")
+	}
+
+	var r0 *connect.UpdateQueueOutboundEmailConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateQueueOutboundEmailConfigInput, ...func(*connect.Options)) (*connect.UpdateQueueOutboundEmailConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateQueueOutboundEmailConfigInput, ...func(*connect.Options)) *connect.UpdateQueueOutboundEmailConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateQueueOutboundEmailConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateQueueOutboundEmailConfigInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

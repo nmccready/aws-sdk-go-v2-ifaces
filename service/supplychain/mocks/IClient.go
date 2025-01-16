@@ -51,6 +51,228 @@ func (_m *IClient) CreateBillOfMaterialsImportJob(ctx context.Context, params *s
 	return r0, r1
 }
 
+// CreateDataIntegrationFlow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataIntegrationFlow(ctx context.Context, params *supplychain.CreateDataIntegrationFlowInput, optFns ...func(*supplychain.Options)) (*supplychain.CreateDataIntegrationFlowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataIntegrationFlow")
+	}
+
+	var r0 *supplychain.CreateDataIntegrationFlowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.CreateDataIntegrationFlowInput, ...func(*supplychain.Options)) (*supplychain.CreateDataIntegrationFlowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.CreateDataIntegrationFlowInput, ...func(*supplychain.Options)) *supplychain.CreateDataIntegrationFlowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.CreateDataIntegrationFlowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.CreateDataIntegrationFlowInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataLakeDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataLakeDataset(ctx context.Context, params *supplychain.CreateDataLakeDatasetInput, optFns ...func(*supplychain.Options)) (*supplychain.CreateDataLakeDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataLakeDataset")
+	}
+
+	var r0 *supplychain.CreateDataLakeDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.CreateDataLakeDatasetInput, ...func(*supplychain.Options)) (*supplychain.CreateDataLakeDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.CreateDataLakeDatasetInput, ...func(*supplychain.Options)) *supplychain.CreateDataLakeDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.CreateDataLakeDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.CreateDataLakeDatasetInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateInstance provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateInstance(ctx context.Context, params *supplychain.CreateInstanceInput, optFns ...func(*supplychain.Options)) (*supplychain.CreateInstanceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateInstance")
+	}
+
+	var r0 *supplychain.CreateInstanceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.CreateInstanceInput, ...func(*supplychain.Options)) (*supplychain.CreateInstanceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.CreateInstanceInput, ...func(*supplychain.Options)) *supplychain.CreateInstanceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.CreateInstanceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.CreateInstanceInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataIntegrationFlow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataIntegrationFlow(ctx context.Context, params *supplychain.DeleteDataIntegrationFlowInput, optFns ...func(*supplychain.Options)) (*supplychain.DeleteDataIntegrationFlowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataIntegrationFlow")
+	}
+
+	var r0 *supplychain.DeleteDataIntegrationFlowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.DeleteDataIntegrationFlowInput, ...func(*supplychain.Options)) (*supplychain.DeleteDataIntegrationFlowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.DeleteDataIntegrationFlowInput, ...func(*supplychain.Options)) *supplychain.DeleteDataIntegrationFlowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.DeleteDataIntegrationFlowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.DeleteDataIntegrationFlowInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataLakeDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataLakeDataset(ctx context.Context, params *supplychain.DeleteDataLakeDatasetInput, optFns ...func(*supplychain.Options)) (*supplychain.DeleteDataLakeDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataLakeDataset")
+	}
+
+	var r0 *supplychain.DeleteDataLakeDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.DeleteDataLakeDatasetInput, ...func(*supplychain.Options)) (*supplychain.DeleteDataLakeDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.DeleteDataLakeDatasetInput, ...func(*supplychain.Options)) *supplychain.DeleteDataLakeDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.DeleteDataLakeDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.DeleteDataLakeDatasetInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteInstance provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteInstance(ctx context.Context, params *supplychain.DeleteInstanceInput, optFns ...func(*supplychain.Options)) (*supplychain.DeleteInstanceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteInstance")
+	}
+
+	var r0 *supplychain.DeleteInstanceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.DeleteInstanceInput, ...func(*supplychain.Options)) (*supplychain.DeleteInstanceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.DeleteInstanceInput, ...func(*supplychain.Options)) *supplychain.DeleteInstanceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.DeleteInstanceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.DeleteInstanceInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBillOfMaterialsImportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBillOfMaterialsImportJob(ctx context.Context, params *supplychain.GetBillOfMaterialsImportJobInput, optFns ...func(*supplychain.Options)) (*supplychain.GetBillOfMaterialsImportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -80,6 +302,265 @@ func (_m *IClient) GetBillOfMaterialsImportJob(ctx context.Context, params *supp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.GetBillOfMaterialsImportJobInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataIntegrationFlow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataIntegrationFlow(ctx context.Context, params *supplychain.GetDataIntegrationFlowInput, optFns ...func(*supplychain.Options)) (*supplychain.GetDataIntegrationFlowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataIntegrationFlow")
+	}
+
+	var r0 *supplychain.GetDataIntegrationFlowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.GetDataIntegrationFlowInput, ...func(*supplychain.Options)) (*supplychain.GetDataIntegrationFlowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.GetDataIntegrationFlowInput, ...func(*supplychain.Options)) *supplychain.GetDataIntegrationFlowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.GetDataIntegrationFlowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.GetDataIntegrationFlowInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataLakeDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataLakeDataset(ctx context.Context, params *supplychain.GetDataLakeDatasetInput, optFns ...func(*supplychain.Options)) (*supplychain.GetDataLakeDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataLakeDataset")
+	}
+
+	var r0 *supplychain.GetDataLakeDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.GetDataLakeDatasetInput, ...func(*supplychain.Options)) (*supplychain.GetDataLakeDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.GetDataLakeDatasetInput, ...func(*supplychain.Options)) *supplychain.GetDataLakeDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.GetDataLakeDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.GetDataLakeDatasetInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetInstance provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInstance(ctx context.Context, params *supplychain.GetInstanceInput, optFns ...func(*supplychain.Options)) (*supplychain.GetInstanceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInstance")
+	}
+
+	var r0 *supplychain.GetInstanceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.GetInstanceInput, ...func(*supplychain.Options)) (*supplychain.GetInstanceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.GetInstanceInput, ...func(*supplychain.Options)) *supplychain.GetInstanceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.GetInstanceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.GetInstanceInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataIntegrationFlows provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataIntegrationFlows(ctx context.Context, params *supplychain.ListDataIntegrationFlowsInput, optFns ...func(*supplychain.Options)) (*supplychain.ListDataIntegrationFlowsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataIntegrationFlows")
+	}
+
+	var r0 *supplychain.ListDataIntegrationFlowsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListDataIntegrationFlowsInput, ...func(*supplychain.Options)) (*supplychain.ListDataIntegrationFlowsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListDataIntegrationFlowsInput, ...func(*supplychain.Options)) *supplychain.ListDataIntegrationFlowsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.ListDataIntegrationFlowsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.ListDataIntegrationFlowsInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataLakeDatasets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataLakeDatasets(ctx context.Context, params *supplychain.ListDataLakeDatasetsInput, optFns ...func(*supplychain.Options)) (*supplychain.ListDataLakeDatasetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataLakeDatasets")
+	}
+
+	var r0 *supplychain.ListDataLakeDatasetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListDataLakeDatasetsInput, ...func(*supplychain.Options)) (*supplychain.ListDataLakeDatasetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListDataLakeDatasetsInput, ...func(*supplychain.Options)) *supplychain.ListDataLakeDatasetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.ListDataLakeDatasetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.ListDataLakeDatasetsInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInstances provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInstances(ctx context.Context, params *supplychain.ListInstancesInput, optFns ...func(*supplychain.Options)) (*supplychain.ListInstancesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInstances")
+	}
+
+	var r0 *supplychain.ListInstancesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListInstancesInput, ...func(*supplychain.Options)) (*supplychain.ListInstancesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListInstancesInput, ...func(*supplychain.Options)) *supplychain.ListInstancesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.ListInstancesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.ListInstancesInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *supplychain.ListTagsForResourceInput, optFns ...func(*supplychain.Options)) (*supplychain.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *supplychain.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListTagsForResourceInput, ...func(*supplychain.Options)) (*supplychain.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.ListTagsForResourceInput, ...func(*supplychain.Options)) *supplychain.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.ListTagsForResourceInput, ...func(*supplychain.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -135,6 +616,191 @@ func (_m *IClient) SendDataIntegrationEvent(ctx context.Context, params *supplyc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.SendDataIntegrationEventInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *supplychain.TagResourceInput, optFns ...func(*supplychain.Options)) (*supplychain.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *supplychain.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.TagResourceInput, ...func(*supplychain.Options)) (*supplychain.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.TagResourceInput, ...func(*supplychain.Options)) *supplychain.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.TagResourceInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *supplychain.UntagResourceInput, optFns ...func(*supplychain.Options)) (*supplychain.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *supplychain.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UntagResourceInput, ...func(*supplychain.Options)) (*supplychain.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UntagResourceInput, ...func(*supplychain.Options)) *supplychain.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.UntagResourceInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataIntegrationFlow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataIntegrationFlow(ctx context.Context, params *supplychain.UpdateDataIntegrationFlowInput, optFns ...func(*supplychain.Options)) (*supplychain.UpdateDataIntegrationFlowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataIntegrationFlow")
+	}
+
+	var r0 *supplychain.UpdateDataIntegrationFlowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UpdateDataIntegrationFlowInput, ...func(*supplychain.Options)) (*supplychain.UpdateDataIntegrationFlowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UpdateDataIntegrationFlowInput, ...func(*supplychain.Options)) *supplychain.UpdateDataIntegrationFlowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.UpdateDataIntegrationFlowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.UpdateDataIntegrationFlowInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataLakeDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataLakeDataset(ctx context.Context, params *supplychain.UpdateDataLakeDatasetInput, optFns ...func(*supplychain.Options)) (*supplychain.UpdateDataLakeDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataLakeDataset")
+	}
+
+	var r0 *supplychain.UpdateDataLakeDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UpdateDataLakeDatasetInput, ...func(*supplychain.Options)) (*supplychain.UpdateDataLakeDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UpdateDataLakeDatasetInput, ...func(*supplychain.Options)) *supplychain.UpdateDataLakeDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.UpdateDataLakeDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.UpdateDataLakeDatasetInput, ...func(*supplychain.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateInstance provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateInstance(ctx context.Context, params *supplychain.UpdateInstanceInput, optFns ...func(*supplychain.Options)) (*supplychain.UpdateInstanceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateInstance")
+	}
+
+	var r0 *supplychain.UpdateInstanceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UpdateInstanceInput, ...func(*supplychain.Options)) (*supplychain.UpdateInstanceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *supplychain.UpdateInstanceInput, ...func(*supplychain.Options)) *supplychain.UpdateInstanceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*supplychain.UpdateInstanceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *supplychain.UpdateInstanceInput, ...func(*supplychain.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

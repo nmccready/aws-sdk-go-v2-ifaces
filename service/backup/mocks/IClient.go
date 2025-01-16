@@ -1569,6 +1569,43 @@ func (_m *IClient) GetLegalHold(ctx context.Context, params *backup.GetLegalHold
 	return r0, r1
 }
 
+// GetRecoveryPointIndexDetails provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecoveryPointIndexDetails(ctx context.Context, params *backup.GetRecoveryPointIndexDetailsInput, optFns ...func(*backup.Options)) (*backup.GetRecoveryPointIndexDetailsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecoveryPointIndexDetails")
+	}
+
+	var r0 *backup.GetRecoveryPointIndexDetailsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.GetRecoveryPointIndexDetailsInput, ...func(*backup.Options)) (*backup.GetRecoveryPointIndexDetailsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.GetRecoveryPointIndexDetailsInput, ...func(*backup.Options)) *backup.GetRecoveryPointIndexDetailsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.GetRecoveryPointIndexDetailsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.GetRecoveryPointIndexDetailsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRecoveryPointRestoreMetadata provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRecoveryPointRestoreMetadata(ctx context.Context, params *backup.GetRecoveryPointRestoreMetadataInput, optFns ...func(*backup.Options)) (*backup.GetRecoveryPointRestoreMetadataOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2153,6 +2190,43 @@ func (_m *IClient) ListFrameworks(ctx context.Context, params *backup.ListFramew
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListFrameworksInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIndexedRecoveryPoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIndexedRecoveryPoints(ctx context.Context, params *backup.ListIndexedRecoveryPointsInput, optFns ...func(*backup.Options)) (*backup.ListIndexedRecoveryPointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIndexedRecoveryPoints")
+	}
+
+	var r0 *backup.ListIndexedRecoveryPointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListIndexedRecoveryPointsInput, ...func(*backup.Options)) (*backup.ListIndexedRecoveryPointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListIndexedRecoveryPointsInput, ...func(*backup.Options)) *backup.ListIndexedRecoveryPointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListIndexedRecoveryPointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListIndexedRecoveryPointsInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3207,6 +3281,43 @@ func (_m *IClient) UpdateGlobalSettings(ctx context.Context, params *backup.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.UpdateGlobalSettingsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRecoveryPointIndexSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRecoveryPointIndexSettings(ctx context.Context, params *backup.UpdateRecoveryPointIndexSettingsInput, optFns ...func(*backup.Options)) (*backup.UpdateRecoveryPointIndexSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRecoveryPointIndexSettings")
+	}
+
+	var r0 *backup.UpdateRecoveryPointIndexSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.UpdateRecoveryPointIndexSettingsInput, ...func(*backup.Options)) (*backup.UpdateRecoveryPointIndexSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.UpdateRecoveryPointIndexSettingsInput, ...func(*backup.Options)) *backup.UpdateRecoveryPointIndexSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.UpdateRecoveryPointIndexSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.UpdateRecoveryPointIndexSettingsInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -33,6 +33,7 @@ type IClient interface {
  DescribeAddonConfiguration(ctx context.Context, params *DescribeAddonConfigurationInput, optFns ...func(*Options)) (*DescribeAddonConfigurationOutput, error) 
  DescribeAddonVersions(ctx context.Context, params *DescribeAddonVersionsInput, optFns ...func(*Options)) (*DescribeAddonVersionsOutput, error) 
  DescribeCluster(ctx context.Context, params *DescribeClusterInput, optFns ...func(*Options)) (*DescribeClusterOutput, error) 
+ DescribeClusterVersions(ctx context.Context, params *DescribeClusterVersionsInput, optFns ...func(*Options)) (*DescribeClusterVersionsOutput, error) 
  DescribeEksAnywhereSubscription(ctx context.Context, params *DescribeEksAnywhereSubscriptionInput, optFns ...func(*Options)) (*DescribeEksAnywhereSubscriptionOutput, error) 
  DescribeFargateProfile(ctx context.Context, params *DescribeFargateProfileInput, optFns ...func(*Options)) (*DescribeFargateProfileOutput, error) 
  DescribeIdentityProviderConfig(ctx context.Context, params *DescribeIdentityProviderConfigInput, optFns ...func(*Options)) (*DescribeIdentityProviderConfigOutput, error) 

@@ -237,6 +237,43 @@ func (_m *IClient) ExportECSServiceRecommendations(ctx context.Context, params *
 	return r0, r1
 }
 
+// ExportIdleRecommendations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExportIdleRecommendations(ctx context.Context, params *computeoptimizer.ExportIdleRecommendationsInput, optFns ...func(*computeoptimizer.Options)) (*computeoptimizer.ExportIdleRecommendationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExportIdleRecommendations")
+	}
+
+	var r0 *computeoptimizer.ExportIdleRecommendationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizer.ExportIdleRecommendationsInput, ...func(*computeoptimizer.Options)) (*computeoptimizer.ExportIdleRecommendationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizer.ExportIdleRecommendationsInput, ...func(*computeoptimizer.Options)) *computeoptimizer.ExportIdleRecommendationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*computeoptimizer.ExportIdleRecommendationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizer.ExportIdleRecommendationsInput, ...func(*computeoptimizer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ExportLambdaFunctionRecommendations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ExportLambdaFunctionRecommendations(ctx context.Context, params *computeoptimizer.ExportLambdaFunctionRecommendationsInput, optFns ...func(*computeoptimizer.Options)) (*computeoptimizer.ExportLambdaFunctionRecommendationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -673,6 +710,43 @@ func (_m *IClient) GetEnrollmentStatusesForOrganization(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizer.GetEnrollmentStatusesForOrganizationInput, ...func(*computeoptimizer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIdleRecommendations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIdleRecommendations(ctx context.Context, params *computeoptimizer.GetIdleRecommendationsInput, optFns ...func(*computeoptimizer.Options)) (*computeoptimizer.GetIdleRecommendationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIdleRecommendations")
+	}
+
+	var r0 *computeoptimizer.GetIdleRecommendationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizer.GetIdleRecommendationsInput, ...func(*computeoptimizer.Options)) (*computeoptimizer.GetIdleRecommendationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizer.GetIdleRecommendationsInput, ...func(*computeoptimizer.Options)) *computeoptimizer.GetIdleRecommendationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*computeoptimizer.GetIdleRecommendationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizer.GetIdleRecommendationsInput, ...func(*computeoptimizer.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

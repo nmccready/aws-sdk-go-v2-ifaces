@@ -755,6 +755,80 @@ func (_m *IClient) ListPipelines(ctx context.Context, params *codepipeline.ListP
 	return r0, r1
 }
 
+// ListRuleExecutions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRuleExecutions(ctx context.Context, params *codepipeline.ListRuleExecutionsInput, optFns ...func(*codepipeline.Options)) (*codepipeline.ListRuleExecutionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRuleExecutions")
+	}
+
+	var r0 *codepipeline.ListRuleExecutionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *codepipeline.ListRuleExecutionsInput, ...func(*codepipeline.Options)) (*codepipeline.ListRuleExecutionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *codepipeline.ListRuleExecutionsInput, ...func(*codepipeline.Options)) *codepipeline.ListRuleExecutionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*codepipeline.ListRuleExecutionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *codepipeline.ListRuleExecutionsInput, ...func(*codepipeline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRuleTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRuleTypes(ctx context.Context, params *codepipeline.ListRuleTypesInput, optFns ...func(*codepipeline.Options)) (*codepipeline.ListRuleTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRuleTypes")
+	}
+
+	var r0 *codepipeline.ListRuleTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *codepipeline.ListRuleTypesInput, ...func(*codepipeline.Options)) (*codepipeline.ListRuleTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *codepipeline.ListRuleTypesInput, ...func(*codepipeline.Options)) *codepipeline.ListRuleTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*codepipeline.ListRuleTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *codepipeline.ListRuleTypesInput, ...func(*codepipeline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *codepipeline.ListTagsForResourceInput, optFns ...func(*codepipeline.Options)) (*codepipeline.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -845,6 +919,43 @@ func (_m *IClient) Options() codepipeline.Options {
 	}
 
 	return r0
+}
+
+// OverrideStageCondition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) OverrideStageCondition(ctx context.Context, params *codepipeline.OverrideStageConditionInput, optFns ...func(*codepipeline.Options)) (*codepipeline.OverrideStageConditionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for OverrideStageCondition")
+	}
+
+	var r0 *codepipeline.OverrideStageConditionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *codepipeline.OverrideStageConditionInput, ...func(*codepipeline.Options)) (*codepipeline.OverrideStageConditionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *codepipeline.OverrideStageConditionInput, ...func(*codepipeline.Options)) *codepipeline.OverrideStageConditionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*codepipeline.OverrideStageConditionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *codepipeline.OverrideStageConditionInput, ...func(*codepipeline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PollForJobs provides a mock function with given fields: ctx, params, optFns

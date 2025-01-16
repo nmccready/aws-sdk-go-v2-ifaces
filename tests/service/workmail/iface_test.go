@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIdentityCenterApplication", func(t *testing.T) {
+        input := &workmail.CreateIdentityCenterApplicationInput{}
+        output := &workmail.CreateIdentityCenterApplicationOutput{}
+
+        mockClient.On("CreateIdentityCenterApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIdentityCenterApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateImpersonationRole", func(t *testing.T) {
         input := &workmail.CreateImpersonationRoleInput{}
         output := &workmail.CreateImpersonationRoleOutput{}
@@ -255,6 +268,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIdentityCenterApplication", func(t *testing.T) {
+        input := &workmail.DeleteIdentityCenterApplicationInput{}
+        output := &workmail.DeleteIdentityCenterApplicationOutput{}
+
+        mockClient.On("DeleteIdentityCenterApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIdentityCenterApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIdentityProviderConfiguration", func(t *testing.T) {
+        input := &workmail.DeleteIdentityProviderConfigurationInput{}
+        output := &workmail.DeleteIdentityProviderConfigurationOutput{}
+
+        mockClient.On("DeleteIdentityProviderConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIdentityProviderConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteImpersonationRole", func(t *testing.T) {
         input := &workmail.DeleteImpersonationRoleInput{}
         output := &workmail.DeleteImpersonationRoleOutput{}
@@ -314,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePersonalAccessToken", func(t *testing.T) {
+        input := &workmail.DeletePersonalAccessTokenInput{}
+        output := &workmail.DeletePersonalAccessTokenOutput{}
+
+        mockClient.On("DeletePersonalAccessToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePersonalAccessToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -418,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIdentityProviderConfiguration", func(t *testing.T) {
+        input := &workmail.DescribeIdentityProviderConfigurationInput{}
+        output := &workmail.DescribeIdentityProviderConfigurationOutput{}
+
+        mockClient.On("DescribeIdentityProviderConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIdentityProviderConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,6 +684,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPersonalAccessTokenMetadata", func(t *testing.T) {
+        input := &workmail.GetPersonalAccessTokenMetadataInput{}
+        output := &workmail.GetPersonalAccessTokenMetadataOutput{}
+
+        mockClient.On("GetPersonalAccessTokenMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPersonalAccessTokenMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAccessControlRules", func(t *testing.T) {
         input := &workmail.ListAccessControlRulesInput{}
         output := &workmail.ListAccessControlRulesOutput{}
@@ -788,6 +866,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPersonalAccessTokens", func(t *testing.T) {
+        input := &workmail.ListPersonalAccessTokensInput{}
+        output := &workmail.ListPersonalAccessTokensOutput{}
+
+        mockClient.On("ListPersonalAccessTokens", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPersonalAccessTokens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListResourceDelegates", func(t *testing.T) {
         input := &workmail.ListResourceDelegatesInput{}
         output := &workmail.ListResourceDelegatesOutput{}
@@ -860,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutEmailMonitoringConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutEmailMonitoringConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutIdentityProviderConfiguration", func(t *testing.T) {
+        input := &workmail.PutIdentityProviderConfigurationInput{}
+        output := &workmail.PutIdentityProviderConfigurationOutput{}
+
+        mockClient.On("PutIdentityProviderConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutIdentityProviderConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

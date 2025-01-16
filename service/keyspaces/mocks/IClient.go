@@ -89,6 +89,43 @@ func (_m *IClient) CreateTable(ctx context.Context, params *keyspaces.CreateTabl
 	return r0, r1
 }
 
+// CreateType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateType(ctx context.Context, params *keyspaces.CreateTypeInput, optFns ...func(*keyspaces.Options)) (*keyspaces.CreateTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateType")
+	}
+
+	var r0 *keyspaces.CreateTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.CreateTypeInput, ...func(*keyspaces.Options)) (*keyspaces.CreateTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.CreateTypeInput, ...func(*keyspaces.Options)) *keyspaces.CreateTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*keyspaces.CreateTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.CreateTypeInput, ...func(*keyspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteKeyspace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteKeyspace(ctx context.Context, params *keyspaces.DeleteKeyspaceInput, optFns ...func(*keyspaces.Options)) (*keyspaces.DeleteKeyspaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -155,6 +192,43 @@ func (_m *IClient) DeleteTable(ctx context.Context, params *keyspaces.DeleteTabl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.DeleteTableInput, ...func(*keyspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteType(ctx context.Context, params *keyspaces.DeleteTypeInput, optFns ...func(*keyspaces.Options)) (*keyspaces.DeleteTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteType")
+	}
+
+	var r0 *keyspaces.DeleteTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.DeleteTypeInput, ...func(*keyspaces.Options)) (*keyspaces.DeleteTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.DeleteTypeInput, ...func(*keyspaces.Options)) *keyspaces.DeleteTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*keyspaces.DeleteTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.DeleteTypeInput, ...func(*keyspaces.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -274,6 +348,43 @@ func (_m *IClient) GetTableAutoScalingSettings(ctx context.Context, params *keys
 	return r0, r1
 }
 
+// GetType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetType(ctx context.Context, params *keyspaces.GetTypeInput, optFns ...func(*keyspaces.Options)) (*keyspaces.GetTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetType")
+	}
+
+	var r0 *keyspaces.GetTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.GetTypeInput, ...func(*keyspaces.Options)) (*keyspaces.GetTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.GetTypeInput, ...func(*keyspaces.Options)) *keyspaces.GetTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*keyspaces.GetTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.GetTypeInput, ...func(*keyspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListKeyspaces provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListKeyspaces(ctx context.Context, params *keyspaces.ListKeyspacesInput, optFns ...func(*keyspaces.Options)) (*keyspaces.ListKeyspacesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +488,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *keyspaces.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.ListTagsForResourceInput, ...func(*keyspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTypes(ctx context.Context, params *keyspaces.ListTypesInput, optFns ...func(*keyspaces.Options)) (*keyspaces.ListTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTypes")
+	}
+
+	var r0 *keyspaces.ListTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.ListTypesInput, ...func(*keyspaces.Options)) (*keyspaces.ListTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.ListTypesInput, ...func(*keyspaces.Options)) *keyspaces.ListTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*keyspaces.ListTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.ListTypesInput, ...func(*keyspaces.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -506,6 +654,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *keyspaces.UntagRes
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.UntagResourceInput, ...func(*keyspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateKeyspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateKeyspace(ctx context.Context, params *keyspaces.UpdateKeyspaceInput, optFns ...func(*keyspaces.Options)) (*keyspaces.UpdateKeyspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateKeyspace")
+	}
+
+	var r0 *keyspaces.UpdateKeyspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.UpdateKeyspaceInput, ...func(*keyspaces.Options)) (*keyspaces.UpdateKeyspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *keyspaces.UpdateKeyspaceInput, ...func(*keyspaces.Options)) *keyspaces.UpdateKeyspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*keyspaces.UpdateKeyspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *keyspaces.UpdateKeyspaceInput, ...func(*keyspaces.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

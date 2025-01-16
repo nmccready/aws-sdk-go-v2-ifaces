@@ -16,6 +16,7 @@ type IClient interface {
  DescribeTable(ctx context.Context, params *DescribeTableInput, optFns ...func(*Options)) (*DescribeTableOutput, error) 
  ExecuteStatement(ctx context.Context, params *ExecuteStatementInput, optFns ...func(*Options)) (*ExecuteStatementOutput, error) 
  GetStatementResult(ctx context.Context, params *GetStatementResultInput, optFns ...func(*Options)) (*GetStatementResultOutput, error) 
+ GetStatementResultV2(ctx context.Context, params *GetStatementResultV2Input, optFns ...func(*Options)) (*GetStatementResultV2Output, error) 
  ListDatabases(ctx context.Context, params *ListDatabasesInput, optFns ...func(*Options)) (*ListDatabasesOutput, error) 
  ListSchemas(ctx context.Context, params *ListSchemasInput, optFns ...func(*Options)) (*ListSchemasOutput, error) 
  ListStatements(ctx context.Context, params *ListStatementsInput, optFns ...func(*Options)) (*ListStatementsOutput, error) 

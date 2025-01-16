@@ -88,6 +88,43 @@ func (_m *IClient) AddDataSource(ctx context.Context, params *opensearch.AddData
 	return r0, r1
 }
 
+// AddDirectQueryDataSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddDirectQueryDataSource(ctx context.Context, params *opensearch.AddDirectQueryDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.AddDirectQueryDataSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddDirectQueryDataSource")
+	}
+
+	var r0 *opensearch.AddDirectQueryDataSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AddDirectQueryDataSourceInput, ...func(*opensearch.Options)) (*opensearch.AddDirectQueryDataSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AddDirectQueryDataSourceInput, ...func(*opensearch.Options)) *opensearch.AddDirectQueryDataSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.AddDirectQueryDataSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.AddDirectQueryDataSourceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddTags provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddTags(ctx context.Context, params *opensearch.AddTagsInput, optFns ...func(*opensearch.Options)) (*opensearch.AddTagsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +191,43 @@ func (_m *IClient) AssociatePackage(ctx context.Context, params *opensearch.Asso
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.AssociatePackageInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AssociatePackages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociatePackages(ctx context.Context, params *opensearch.AssociatePackagesInput, optFns ...func(*opensearch.Options)) (*opensearch.AssociatePackagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociatePackages")
+	}
+
+	var r0 *opensearch.AssociatePackagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AssociatePackagesInput, ...func(*opensearch.Options)) (*opensearch.AssociatePackagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AssociatePackagesInput, ...func(*opensearch.Options)) *opensearch.AssociatePackagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.AssociatePackagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.AssociatePackagesInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -265,6 +339,43 @@ func (_m *IClient) CancelServiceSoftwareUpdate(ctx context.Context, params *open
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.CancelServiceSoftwareUpdateInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateApplication(ctx context.Context, params *opensearch.CreateApplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.CreateApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateApplication")
+	}
+
+	var r0 *opensearch.CreateApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.CreateApplicationInput, ...func(*opensearch.Options)) (*opensearch.CreateApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.CreateApplicationInput, ...func(*opensearch.Options)) *opensearch.CreateApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.CreateApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.CreateApplicationInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -421,6 +532,43 @@ func (_m *IClient) CreateVpcEndpoint(ctx context.Context, params *opensearch.Cre
 	return r0, r1
 }
 
+// DeleteApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteApplication(ctx context.Context, params *opensearch.DeleteApplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.DeleteApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteApplication")
+	}
+
+	var r0 *opensearch.DeleteApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeleteApplicationInput, ...func(*opensearch.Options)) (*opensearch.DeleteApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeleteApplicationInput, ...func(*opensearch.Options)) *opensearch.DeleteApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DeleteApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DeleteApplicationInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDataSource(ctx context.Context, params *opensearch.DeleteDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.DeleteDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -450,6 +598,43 @@ func (_m *IClient) DeleteDataSource(ctx context.Context, params *opensearch.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DeleteDataSourceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDirectQueryDataSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDirectQueryDataSource(ctx context.Context, params *opensearch.DeleteDirectQueryDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.DeleteDirectQueryDataSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDirectQueryDataSource")
+	}
+
+	var r0 *opensearch.DeleteDirectQueryDataSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeleteDirectQueryDataSourceInput, ...func(*opensearch.Options)) (*opensearch.DeleteDirectQueryDataSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeleteDirectQueryDataSourceInput, ...func(*opensearch.Options)) *opensearch.DeleteDirectQueryDataSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DeleteDirectQueryDataSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DeleteDirectQueryDataSourceInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1235,6 +1420,80 @@ func (_m *IClient) DissociatePackage(ctx context.Context, params *opensearch.Dis
 	return r0, r1
 }
 
+// DissociatePackages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DissociatePackages(ctx context.Context, params *opensearch.DissociatePackagesInput, optFns ...func(*opensearch.Options)) (*opensearch.DissociatePackagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DissociatePackages")
+	}
+
+	var r0 *opensearch.DissociatePackagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DissociatePackagesInput, ...func(*opensearch.Options)) (*opensearch.DissociatePackagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DissociatePackagesInput, ...func(*opensearch.Options)) *opensearch.DissociatePackagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DissociatePackagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DissociatePackagesInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetApplication(ctx context.Context, params *opensearch.GetApplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.GetApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetApplication")
+	}
+
+	var r0 *opensearch.GetApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetApplicationInput, ...func(*opensearch.Options)) (*opensearch.GetApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetApplicationInput, ...func(*opensearch.Options)) *opensearch.GetApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.GetApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetApplicationInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCompatibleVersions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCompatibleVersions(ctx context.Context, params *opensearch.GetCompatibleVersionsInput, optFns ...func(*opensearch.Options)) (*opensearch.GetCompatibleVersionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1301,6 +1560,43 @@ func (_m *IClient) GetDataSource(ctx context.Context, params *opensearch.GetData
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetDataSourceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDirectQueryDataSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDirectQueryDataSource(ctx context.Context, params *opensearch.GetDirectQueryDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.GetDirectQueryDataSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDirectQueryDataSource")
+	}
+
+	var r0 *opensearch.GetDirectQueryDataSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetDirectQueryDataSourceInput, ...func(*opensearch.Options)) (*opensearch.GetDirectQueryDataSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetDirectQueryDataSourceInput, ...func(*opensearch.Options)) *opensearch.GetDirectQueryDataSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.GetDirectQueryDataSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetDirectQueryDataSourceInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1457,6 +1753,43 @@ func (_m *IClient) GetUpgradeStatus(ctx context.Context, params *opensearch.GetU
 	return r0, r1
 }
 
+// ListApplications provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListApplications(ctx context.Context, params *opensearch.ListApplicationsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListApplicationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListApplications")
+	}
+
+	var r0 *opensearch.ListApplicationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListApplicationsInput, ...func(*opensearch.Options)) (*opensearch.ListApplicationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListApplicationsInput, ...func(*opensearch.Options)) *opensearch.ListApplicationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.ListApplicationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListApplicationsInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDataSources provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDataSources(ctx context.Context, params *opensearch.ListDataSourcesInput, optFns ...func(*opensearch.Options)) (*opensearch.ListDataSourcesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1486,6 +1819,43 @@ func (_m *IClient) ListDataSources(ctx context.Context, params *opensearch.ListD
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListDataSourcesInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDirectQueryDataSources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDirectQueryDataSources(ctx context.Context, params *opensearch.ListDirectQueryDataSourcesInput, optFns ...func(*opensearch.Options)) (*opensearch.ListDirectQueryDataSourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDirectQueryDataSources")
+	}
+
+	var r0 *opensearch.ListDirectQueryDataSourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListDirectQueryDataSourcesInput, ...func(*opensearch.Options)) (*opensearch.ListDirectQueryDataSourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListDirectQueryDataSourcesInput, ...func(*opensearch.Options)) *opensearch.ListDirectQueryDataSourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.ListDirectQueryDataSourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListDirectQueryDataSourcesInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2141,6 +2511,43 @@ func (_m *IClient) StartServiceSoftwareUpdate(ctx context.Context, params *opens
 	return r0, r1
 }
 
+// UpdateApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateApplication(ctx context.Context, params *opensearch.UpdateApplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdateApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateApplication")
+	}
+
+	var r0 *opensearch.UpdateApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateApplicationInput, ...func(*opensearch.Options)) (*opensearch.UpdateApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateApplicationInput, ...func(*opensearch.Options)) *opensearch.UpdateApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.UpdateApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdateApplicationInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDataSource(ctx context.Context, params *opensearch.UpdateDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdateDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2170,6 +2577,43 @@ func (_m *IClient) UpdateDataSource(ctx context.Context, params *opensearch.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdateDataSourceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDirectQueryDataSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDirectQueryDataSource(ctx context.Context, params *opensearch.UpdateDirectQueryDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdateDirectQueryDataSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDirectQueryDataSource")
+	}
+
+	var r0 *opensearch.UpdateDirectQueryDataSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateDirectQueryDataSourceInput, ...func(*opensearch.Options)) (*opensearch.UpdateDirectQueryDataSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateDirectQueryDataSourceInput, ...func(*opensearch.Options)) *opensearch.UpdateDirectQueryDataSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.UpdateDirectQueryDataSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdateDirectQueryDataSourceInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2244,6 +2688,43 @@ func (_m *IClient) UpdatePackage(ctx context.Context, params *opensearch.UpdateP
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdatePackageInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePackageScope provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePackageScope(ctx context.Context, params *opensearch.UpdatePackageScopeInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdatePackageScopeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePackageScope")
+	}
+
+	var r0 *opensearch.UpdatePackageScopeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdatePackageScopeInput, ...func(*opensearch.Options)) (*opensearch.UpdatePackageScopeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdatePackageScopeInput, ...func(*opensearch.Options)) *opensearch.UpdatePackageScopeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.UpdatePackageScopeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdatePackageScopeInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

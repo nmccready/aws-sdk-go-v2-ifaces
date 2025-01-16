@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCustomerAgreements", func(t *testing.T) {
+        input := &artifact.ListCustomerAgreementsInput{}
+        output := &artifact.ListCustomerAgreementsOutput{}
+
+        mockClient.On("ListCustomerAgreements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomerAgreements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListReports", func(t *testing.T) {
         input := &artifact.ListReportsInput{}
         output := &artifact.ListReportsOutput{}

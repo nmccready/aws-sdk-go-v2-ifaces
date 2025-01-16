@@ -236,6 +236,43 @@ func (_m *IClient) GetStatementResult(ctx context.Context, params *redshiftdata.
 	return r0, r1
 }
 
+// GetStatementResultV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetStatementResultV2(ctx context.Context, params *redshiftdata.GetStatementResultV2Input, optFns ...func(*redshiftdata.Options)) (*redshiftdata.GetStatementResultV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetStatementResultV2")
+	}
+
+	var r0 *redshiftdata.GetStatementResultV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftdata.GetStatementResultV2Input, ...func(*redshiftdata.Options)) (*redshiftdata.GetStatementResultV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftdata.GetStatementResultV2Input, ...func(*redshiftdata.Options)) *redshiftdata.GetStatementResultV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshiftdata.GetStatementResultV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshiftdata.GetStatementResultV2Input, ...func(*redshiftdata.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDatabases provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDatabases(ctx context.Context, params *redshiftdata.ListDatabasesInput, optFns ...func(*redshiftdata.Options)) (*redshiftdata.ListDatabasesOutput, error) {
 	_va := make([]interface{}, len(optFns))

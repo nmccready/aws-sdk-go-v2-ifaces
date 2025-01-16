@@ -437,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListManagedWorkgroups", func(t *testing.T) {
+        input := &redshiftserverless.ListManagedWorkgroupsInput{}
+        output := &redshiftserverless.ListManagedWorkgroupsOutput{}
+
+        mockClient.On("ListManagedWorkgroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedWorkgroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNamespaces", func(t *testing.T) {
         input := &redshiftserverless.ListNamespacesInput{}
         output := &redshiftserverless.ListNamespacesOutput{}

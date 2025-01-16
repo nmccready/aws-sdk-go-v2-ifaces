@@ -422,6 +422,43 @@ func (_m *IClient) GetApproximateUsageRecords(ctx context.Context, params *coste
 	return r0, r1
 }
 
+// GetCommitmentPurchaseAnalysis provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCommitmentPurchaseAnalysis(ctx context.Context, params *costexplorer.GetCommitmentPurchaseAnalysisInput, optFns ...func(*costexplorer.Options)) (*costexplorer.GetCommitmentPurchaseAnalysisOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCommitmentPurchaseAnalysis")
+	}
+
+	var r0 *costexplorer.GetCommitmentPurchaseAnalysisOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.GetCommitmentPurchaseAnalysisInput, ...func(*costexplorer.Options)) (*costexplorer.GetCommitmentPurchaseAnalysisOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.GetCommitmentPurchaseAnalysisInput, ...func(*costexplorer.Options)) *costexplorer.GetCommitmentPurchaseAnalysisOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*costexplorer.GetCommitmentPurchaseAnalysisOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.GetCommitmentPurchaseAnalysisInput, ...func(*costexplorer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCostAndUsage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCostAndUsage(ctx context.Context, params *costexplorer.GetCostAndUsageInput, optFns ...func(*costexplorer.Options)) (*costexplorer.GetCostAndUsageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1014,6 +1051,43 @@ func (_m *IClient) GetUsageForecast(ctx context.Context, params *costexplorer.Ge
 	return r0, r1
 }
 
+// ListCommitmentPurchaseAnalyses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCommitmentPurchaseAnalyses(ctx context.Context, params *costexplorer.ListCommitmentPurchaseAnalysesInput, optFns ...func(*costexplorer.Options)) (*costexplorer.ListCommitmentPurchaseAnalysesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCommitmentPurchaseAnalyses")
+	}
+
+	var r0 *costexplorer.ListCommitmentPurchaseAnalysesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.ListCommitmentPurchaseAnalysesInput, ...func(*costexplorer.Options)) (*costexplorer.ListCommitmentPurchaseAnalysesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.ListCommitmentPurchaseAnalysesInput, ...func(*costexplorer.Options)) *costexplorer.ListCommitmentPurchaseAnalysesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*costexplorer.ListCommitmentPurchaseAnalysesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.ListCommitmentPurchaseAnalysesInput, ...func(*costexplorer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCostAllocationTagBackfillHistory provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCostAllocationTagBackfillHistory(ctx context.Context, params *costexplorer.ListCostAllocationTagBackfillHistoryInput, optFns ...func(*costexplorer.Options)) (*costexplorer.ListCostAllocationTagBackfillHistoryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1246,6 +1320,43 @@ func (_m *IClient) ProvideAnomalyFeedback(ctx context.Context, params *costexplo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.ProvideAnomalyFeedbackInput, ...func(*costexplorer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartCommitmentPurchaseAnalysis provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartCommitmentPurchaseAnalysis(ctx context.Context, params *costexplorer.StartCommitmentPurchaseAnalysisInput, optFns ...func(*costexplorer.Options)) (*costexplorer.StartCommitmentPurchaseAnalysisOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartCommitmentPurchaseAnalysis")
+	}
+
+	var r0 *costexplorer.StartCommitmentPurchaseAnalysisOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.StartCommitmentPurchaseAnalysisInput, ...func(*costexplorer.Options)) (*costexplorer.StartCommitmentPurchaseAnalysisOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.StartCommitmentPurchaseAnalysisInput, ...func(*costexplorer.Options)) *costexplorer.StartCommitmentPurchaseAnalysisOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*costexplorer.StartCommitmentPurchaseAnalysisOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.StartCommitmentPurchaseAnalysisInput, ...func(*costexplorer.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

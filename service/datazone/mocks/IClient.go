@@ -89,6 +89,80 @@ func (_m *IClient) AcceptSubscriptionRequest(ctx context.Context, params *datazo
 	return r0, r1
 }
 
+// AddEntityOwner provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddEntityOwner(ctx context.Context, params *datazone.AddEntityOwnerInput, optFns ...func(*datazone.Options)) (*datazone.AddEntityOwnerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddEntityOwner")
+	}
+
+	var r0 *datazone.AddEntityOwnerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.AddEntityOwnerInput, ...func(*datazone.Options)) (*datazone.AddEntityOwnerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.AddEntityOwnerInput, ...func(*datazone.Options)) *datazone.AddEntityOwnerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.AddEntityOwnerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.AddEntityOwnerInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AddPolicyGrant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddPolicyGrant(ctx context.Context, params *datazone.AddPolicyGrantInput, optFns ...func(*datazone.Options)) (*datazone.AddPolicyGrantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddPolicyGrant")
+	}
+
+	var r0 *datazone.AddPolicyGrantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.AddPolicyGrantInput, ...func(*datazone.Options)) (*datazone.AddPolicyGrantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.AddPolicyGrantInput, ...func(*datazone.Options)) *datazone.AddPolicyGrantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.AddPolicyGrantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.AddPolicyGrantInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateEnvironmentRole provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateEnvironmentRole(ctx context.Context, params *datazone.AssociateEnvironmentRoleInput, optFns ...func(*datazone.Options)) (*datazone.AssociateEnvironmentRoleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -237,6 +311,43 @@ func (_m *IClient) CreateAsset(ctx context.Context, params *datazone.CreateAsset
 	return r0, r1
 }
 
+// CreateAssetFilter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAssetFilter(ctx context.Context, params *datazone.CreateAssetFilterInput, optFns ...func(*datazone.Options)) (*datazone.CreateAssetFilterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAssetFilter")
+	}
+
+	var r0 *datazone.CreateAssetFilterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateAssetFilterInput, ...func(*datazone.Options)) (*datazone.CreateAssetFilterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateAssetFilterInput, ...func(*datazone.Options)) *datazone.CreateAssetFilterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateAssetFilterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateAssetFilterInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAssetRevision provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAssetRevision(ctx context.Context, params *datazone.CreateAssetRevisionInput, optFns ...func(*datazone.Options)) (*datazone.CreateAssetRevisionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -311,6 +422,117 @@ func (_m *IClient) CreateAssetType(ctx context.Context, params *datazone.CreateA
 	return r0, r1
 }
 
+// CreateConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConnection(ctx context.Context, params *datazone.CreateConnectionInput, optFns ...func(*datazone.Options)) (*datazone.CreateConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConnection")
+	}
+
+	var r0 *datazone.CreateConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateConnectionInput, ...func(*datazone.Options)) (*datazone.CreateConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateConnectionInput, ...func(*datazone.Options)) *datazone.CreateConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateConnectionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataProduct(ctx context.Context, params *datazone.CreateDataProductInput, optFns ...func(*datazone.Options)) (*datazone.CreateDataProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataProduct")
+	}
+
+	var r0 *datazone.CreateDataProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDataProductInput, ...func(*datazone.Options)) (*datazone.CreateDataProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDataProductInput, ...func(*datazone.Options)) *datazone.CreateDataProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateDataProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateDataProductInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataProductRevision provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataProductRevision(ctx context.Context, params *datazone.CreateDataProductRevisionInput, optFns ...func(*datazone.Options)) (*datazone.CreateDataProductRevisionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataProductRevision")
+	}
+
+	var r0 *datazone.CreateDataProductRevisionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDataProductRevisionInput, ...func(*datazone.Options)) (*datazone.CreateDataProductRevisionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDataProductRevisionInput, ...func(*datazone.Options)) *datazone.CreateDataProductRevisionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateDataProductRevisionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateDataProductRevisionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDataSource(ctx context.Context, params *datazone.CreateDataSourceInput, optFns ...func(*datazone.Options)) (*datazone.CreateDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +599,43 @@ func (_m *IClient) CreateDomain(ctx context.Context, params *datazone.CreateDoma
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateDomainInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDomainUnit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDomainUnit(ctx context.Context, params *datazone.CreateDomainUnitInput, optFns ...func(*datazone.Options)) (*datazone.CreateDomainUnitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDomainUnit")
+	}
+
+	var r0 *datazone.CreateDomainUnitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDomainUnitInput, ...func(*datazone.Options)) (*datazone.CreateDomainUnitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDomainUnitInput, ...func(*datazone.Options)) *datazone.CreateDomainUnitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateDomainUnitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateDomainUnitInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -755,6 +1014,80 @@ func (_m *IClient) CreateProjectMembership(ctx context.Context, params *datazone
 	return r0, r1
 }
 
+// CreateProjectProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateProjectProfile(ctx context.Context, params *datazone.CreateProjectProfileInput, optFns ...func(*datazone.Options)) (*datazone.CreateProjectProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateProjectProfile")
+	}
+
+	var r0 *datazone.CreateProjectProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateProjectProfileInput, ...func(*datazone.Options)) (*datazone.CreateProjectProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateProjectProfileInput, ...func(*datazone.Options)) *datazone.CreateProjectProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateProjectProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateProjectProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRule(ctx context.Context, params *datazone.CreateRuleInput, optFns ...func(*datazone.Options)) (*datazone.CreateRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRule")
+	}
+
+	var r0 *datazone.CreateRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateRuleInput, ...func(*datazone.Options)) (*datazone.CreateRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateRuleInput, ...func(*datazone.Options)) *datazone.CreateRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateRuleInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateSubscriptionGrant provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateSubscriptionGrant(ctx context.Context, params *datazone.CreateSubscriptionGrantInput, optFns ...func(*datazone.Options)) (*datazone.CreateSubscriptionGrantOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -940,6 +1273,43 @@ func (_m *IClient) DeleteAsset(ctx context.Context, params *datazone.DeleteAsset
 	return r0, r1
 }
 
+// DeleteAssetFilter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAssetFilter(ctx context.Context, params *datazone.DeleteAssetFilterInput, optFns ...func(*datazone.Options)) (*datazone.DeleteAssetFilterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAssetFilter")
+	}
+
+	var r0 *datazone.DeleteAssetFilterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteAssetFilterInput, ...func(*datazone.Options)) (*datazone.DeleteAssetFilterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteAssetFilterInput, ...func(*datazone.Options)) *datazone.DeleteAssetFilterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteAssetFilterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteAssetFilterInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAssetType provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAssetType(ctx context.Context, params *datazone.DeleteAssetTypeInput, optFns ...func(*datazone.Options)) (*datazone.DeleteAssetTypeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -969,6 +1339,80 @@ func (_m *IClient) DeleteAssetType(ctx context.Context, params *datazone.DeleteA
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteAssetTypeInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnection(ctx context.Context, params *datazone.DeleteConnectionInput, optFns ...func(*datazone.Options)) (*datazone.DeleteConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnection")
+	}
+
+	var r0 *datazone.DeleteConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteConnectionInput, ...func(*datazone.Options)) (*datazone.DeleteConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteConnectionInput, ...func(*datazone.Options)) *datazone.DeleteConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteConnectionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataProduct(ctx context.Context, params *datazone.DeleteDataProductInput, optFns ...func(*datazone.Options)) (*datazone.DeleteDataProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataProduct")
+	}
+
+	var r0 *datazone.DeleteDataProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDataProductInput, ...func(*datazone.Options)) (*datazone.DeleteDataProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDataProductInput, ...func(*datazone.Options)) *datazone.DeleteDataProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteDataProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteDataProductInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1043,6 +1487,43 @@ func (_m *IClient) DeleteDomain(ctx context.Context, params *datazone.DeleteDoma
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteDomainInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDomainUnit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDomainUnit(ctx context.Context, params *datazone.DeleteDomainUnitInput, optFns ...func(*datazone.Options)) (*datazone.DeleteDomainUnitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDomainUnit")
+	}
+
+	var r0 *datazone.DeleteDomainUnitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDomainUnitInput, ...func(*datazone.Options)) (*datazone.DeleteDomainUnitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDomainUnitInput, ...func(*datazone.Options)) *datazone.DeleteDomainUnitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteDomainUnitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteDomainUnitInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1421,6 +1902,80 @@ func (_m *IClient) DeleteProjectMembership(ctx context.Context, params *datazone
 	return r0, r1
 }
 
+// DeleteProjectProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProjectProfile(ctx context.Context, params *datazone.DeleteProjectProfileInput, optFns ...func(*datazone.Options)) (*datazone.DeleteProjectProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProjectProfile")
+	}
+
+	var r0 *datazone.DeleteProjectProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteProjectProfileInput, ...func(*datazone.Options)) (*datazone.DeleteProjectProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteProjectProfileInput, ...func(*datazone.Options)) *datazone.DeleteProjectProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteProjectProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteProjectProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRule(ctx context.Context, params *datazone.DeleteRuleInput, optFns ...func(*datazone.Options)) (*datazone.DeleteRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRule")
+	}
+
+	var r0 *datazone.DeleteRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteRuleInput, ...func(*datazone.Options)) (*datazone.DeleteRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteRuleInput, ...func(*datazone.Options)) *datazone.DeleteRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteRuleInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteSubscriptionGrant provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteSubscriptionGrant(ctx context.Context, params *datazone.DeleteSubscriptionGrantInput, optFns ...func(*datazone.Options)) (*datazone.DeleteSubscriptionGrantOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1643,6 +2198,43 @@ func (_m *IClient) GetAsset(ctx context.Context, params *datazone.GetAssetInput,
 	return r0, r1
 }
 
+// GetAssetFilter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAssetFilter(ctx context.Context, params *datazone.GetAssetFilterInput, optFns ...func(*datazone.Options)) (*datazone.GetAssetFilterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAssetFilter")
+	}
+
+	var r0 *datazone.GetAssetFilterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetAssetFilterInput, ...func(*datazone.Options)) (*datazone.GetAssetFilterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetAssetFilterInput, ...func(*datazone.Options)) *datazone.GetAssetFilterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetAssetFilterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetAssetFilterInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAssetType provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAssetType(ctx context.Context, params *datazone.GetAssetTypeInput, optFns ...func(*datazone.Options)) (*datazone.GetAssetTypeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1672,6 +2264,80 @@ func (_m *IClient) GetAssetType(ctx context.Context, params *datazone.GetAssetTy
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetAssetTypeInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnection(ctx context.Context, params *datazone.GetConnectionInput, optFns ...func(*datazone.Options)) (*datazone.GetConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnection")
+	}
+
+	var r0 *datazone.GetConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetConnectionInput, ...func(*datazone.Options)) (*datazone.GetConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetConnectionInput, ...func(*datazone.Options)) *datazone.GetConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetConnectionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataProduct(ctx context.Context, params *datazone.GetDataProductInput, optFns ...func(*datazone.Options)) (*datazone.GetDataProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataProduct")
+	}
+
+	var r0 *datazone.GetDataProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDataProductInput, ...func(*datazone.Options)) (*datazone.GetDataProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDataProductInput, ...func(*datazone.Options)) *datazone.GetDataProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetDataProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetDataProductInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1783,6 +2449,43 @@ func (_m *IClient) GetDomain(ctx context.Context, params *datazone.GetDomainInpu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetDomainInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDomainUnit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDomainUnit(ctx context.Context, params *datazone.GetDomainUnitInput, optFns ...func(*datazone.Options)) (*datazone.GetDomainUnitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDomainUnit")
+	}
+
+	var r0 *datazone.GetDomainUnitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDomainUnitInput, ...func(*datazone.Options)) (*datazone.GetDomainUnitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDomainUnitInput, ...func(*datazone.Options)) *datazone.GetDomainUnitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetDomainUnitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetDomainUnitInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1931,6 +2634,43 @@ func (_m *IClient) GetEnvironmentBlueprintConfiguration(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetEnvironmentBlueprintConfigurationInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetEnvironmentCredentials provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEnvironmentCredentials(ctx context.Context, params *datazone.GetEnvironmentCredentialsInput, optFns ...func(*datazone.Options)) (*datazone.GetEnvironmentCredentialsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEnvironmentCredentials")
+	}
+
+	var r0 *datazone.GetEnvironmentCredentialsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetEnvironmentCredentialsInput, ...func(*datazone.Options)) (*datazone.GetEnvironmentCredentialsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetEnvironmentCredentialsInput, ...func(*datazone.Options)) *datazone.GetEnvironmentCredentialsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetEnvironmentCredentialsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetEnvironmentCredentialsInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2161,6 +2901,80 @@ func (_m *IClient) GetIamPortalLoginUrl(ctx context.Context, params *datazone.Ge
 	return r0, r1
 }
 
+// GetJobRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetJobRun(ctx context.Context, params *datazone.GetJobRunInput, optFns ...func(*datazone.Options)) (*datazone.GetJobRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetJobRun")
+	}
+
+	var r0 *datazone.GetJobRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetJobRunInput, ...func(*datazone.Options)) (*datazone.GetJobRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetJobRunInput, ...func(*datazone.Options)) *datazone.GetJobRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetJobRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetJobRunInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetLineageEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLineageEvent(ctx context.Context, params *datazone.GetLineageEventInput, optFns ...func(*datazone.Options)) (*datazone.GetLineageEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLineageEvent")
+	}
+
+	var r0 *datazone.GetLineageEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetLineageEventInput, ...func(*datazone.Options)) (*datazone.GetLineageEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetLineageEventInput, ...func(*datazone.Options)) *datazone.GetLineageEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetLineageEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetLineageEventInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetLineageNode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetLineageNode(ctx context.Context, params *datazone.GetLineageNodeInput, optFns ...func(*datazone.Options)) (*datazone.GetLineageNodeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2301,6 +3115,80 @@ func (_m *IClient) GetProject(ctx context.Context, params *datazone.GetProjectIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetProjectInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProjectProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProjectProfile(ctx context.Context, params *datazone.GetProjectProfileInput, optFns ...func(*datazone.Options)) (*datazone.GetProjectProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProjectProfile")
+	}
+
+	var r0 *datazone.GetProjectProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetProjectProfileInput, ...func(*datazone.Options)) (*datazone.GetProjectProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetProjectProfileInput, ...func(*datazone.Options)) *datazone.GetProjectProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetProjectProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetProjectProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRule(ctx context.Context, params *datazone.GetRuleInput, optFns ...func(*datazone.Options)) (*datazone.GetRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRule")
+	}
+
+	var r0 *datazone.GetRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetRuleInput, ...func(*datazone.Options)) (*datazone.GetRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetRuleInput, ...func(*datazone.Options)) *datazone.GetRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetRuleInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2531,6 +3419,43 @@ func (_m *IClient) GetUserProfile(ctx context.Context, params *datazone.GetUserP
 	return r0, r1
 }
 
+// ListAssetFilters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetFilters(ctx context.Context, params *datazone.ListAssetFiltersInput, optFns ...func(*datazone.Options)) (*datazone.ListAssetFiltersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetFilters")
+	}
+
+	var r0 *datazone.ListAssetFiltersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListAssetFiltersInput, ...func(*datazone.Options)) (*datazone.ListAssetFiltersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListAssetFiltersInput, ...func(*datazone.Options)) *datazone.ListAssetFiltersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListAssetFiltersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListAssetFiltersInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAssetRevisions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAssetRevisions(ctx context.Context, params *datazone.ListAssetRevisionsInput, optFns ...func(*datazone.Options)) (*datazone.ListAssetRevisionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2560,6 +3485,80 @@ func (_m *IClient) ListAssetRevisions(ctx context.Context, params *datazone.List
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListAssetRevisionsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConnections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnections(ctx context.Context, params *datazone.ListConnectionsInput, optFns ...func(*datazone.Options)) (*datazone.ListConnectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnections")
+	}
+
+	var r0 *datazone.ListConnectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListConnectionsInput, ...func(*datazone.Options)) (*datazone.ListConnectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListConnectionsInput, ...func(*datazone.Options)) *datazone.ListConnectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListConnectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListConnectionsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataProductRevisions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataProductRevisions(ctx context.Context, params *datazone.ListDataProductRevisionsInput, optFns ...func(*datazone.Options)) (*datazone.ListDataProductRevisionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataProductRevisions")
+	}
+
+	var r0 *datazone.ListDataProductRevisionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListDataProductRevisionsInput, ...func(*datazone.Options)) (*datazone.ListDataProductRevisionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListDataProductRevisionsInput, ...func(*datazone.Options)) *datazone.ListDataProductRevisionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListDataProductRevisionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListDataProductRevisionsInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2679,6 +3678,43 @@ func (_m *IClient) ListDataSources(ctx context.Context, params *datazone.ListDat
 	return r0, r1
 }
 
+// ListDomainUnitsForParent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDomainUnitsForParent(ctx context.Context, params *datazone.ListDomainUnitsForParentInput, optFns ...func(*datazone.Options)) (*datazone.ListDomainUnitsForParentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDomainUnitsForParent")
+	}
+
+	var r0 *datazone.ListDomainUnitsForParentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListDomainUnitsForParentInput, ...func(*datazone.Options)) (*datazone.ListDomainUnitsForParentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListDomainUnitsForParentInput, ...func(*datazone.Options)) *datazone.ListDomainUnitsForParentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListDomainUnitsForParentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListDomainUnitsForParentInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDomains provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDomains(ctx context.Context, params *datazone.ListDomainsInput, optFns ...func(*datazone.Options)) (*datazone.ListDomainsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2708,6 +3744,43 @@ func (_m *IClient) ListDomains(ctx context.Context, params *datazone.ListDomains
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListDomainsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEntityOwners provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEntityOwners(ctx context.Context, params *datazone.ListEntityOwnersInput, optFns ...func(*datazone.Options)) (*datazone.ListEntityOwnersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEntityOwners")
+	}
+
+	var r0 *datazone.ListEntityOwnersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListEntityOwnersInput, ...func(*datazone.Options)) (*datazone.ListEntityOwnersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListEntityOwnersInput, ...func(*datazone.Options)) *datazone.ListEntityOwnersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListEntityOwnersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListEntityOwnersInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2901,6 +3974,80 @@ func (_m *IClient) ListEnvironments(ctx context.Context, params *datazone.ListEn
 	return r0, r1
 }
 
+// ListJobRuns provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListJobRuns(ctx context.Context, params *datazone.ListJobRunsInput, optFns ...func(*datazone.Options)) (*datazone.ListJobRunsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListJobRuns")
+	}
+
+	var r0 *datazone.ListJobRunsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListJobRunsInput, ...func(*datazone.Options)) (*datazone.ListJobRunsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListJobRunsInput, ...func(*datazone.Options)) *datazone.ListJobRunsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListJobRunsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListJobRunsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListLineageEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLineageEvents(ctx context.Context, params *datazone.ListLineageEventsInput, optFns ...func(*datazone.Options)) (*datazone.ListLineageEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLineageEvents")
+	}
+
+	var r0 *datazone.ListLineageEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListLineageEventsInput, ...func(*datazone.Options)) (*datazone.ListLineageEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListLineageEventsInput, ...func(*datazone.Options)) *datazone.ListLineageEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListLineageEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListLineageEventsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListLineageNodeHistory provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListLineageNodeHistory(ctx context.Context, params *datazone.ListLineageNodeHistoryInput, optFns ...func(*datazone.Options)) (*datazone.ListLineageNodeHistoryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3012,6 +4159,43 @@ func (_m *IClient) ListNotifications(ctx context.Context, params *datazone.ListN
 	return r0, r1
 }
 
+// ListPolicyGrants provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyGrants(ctx context.Context, params *datazone.ListPolicyGrantsInput, optFns ...func(*datazone.Options)) (*datazone.ListPolicyGrantsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyGrants")
+	}
+
+	var r0 *datazone.ListPolicyGrantsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListPolicyGrantsInput, ...func(*datazone.Options)) (*datazone.ListPolicyGrantsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListPolicyGrantsInput, ...func(*datazone.Options)) *datazone.ListPolicyGrantsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListPolicyGrantsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListPolicyGrantsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListProjectMemberships provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListProjectMemberships(ctx context.Context, params *datazone.ListProjectMembershipsInput, optFns ...func(*datazone.Options)) (*datazone.ListProjectMembershipsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3049,6 +4233,43 @@ func (_m *IClient) ListProjectMemberships(ctx context.Context, params *datazone.
 	return r0, r1
 }
 
+// ListProjectProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProjectProfiles(ctx context.Context, params *datazone.ListProjectProfilesInput, optFns ...func(*datazone.Options)) (*datazone.ListProjectProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProjectProfiles")
+	}
+
+	var r0 *datazone.ListProjectProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListProjectProfilesInput, ...func(*datazone.Options)) (*datazone.ListProjectProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListProjectProfilesInput, ...func(*datazone.Options)) *datazone.ListProjectProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListProjectProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListProjectProfilesInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListProjects provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListProjects(ctx context.Context, params *datazone.ListProjectsInput, optFns ...func(*datazone.Options)) (*datazone.ListProjectsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3078,6 +4299,43 @@ func (_m *IClient) ListProjects(ctx context.Context, params *datazone.ListProjec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListProjectsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRules(ctx context.Context, params *datazone.ListRulesInput, optFns ...func(*datazone.Options)) (*datazone.ListRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRules")
+	}
+
+	var r0 *datazone.ListRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListRulesInput, ...func(*datazone.Options)) (*datazone.ListRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListRulesInput, ...func(*datazone.Options)) *datazone.ListRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListRulesInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3511,6 +4769,80 @@ func (_m *IClient) RejectSubscriptionRequest(ctx context.Context, params *datazo
 	return r0, r1
 }
 
+// RemoveEntityOwner provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveEntityOwner(ctx context.Context, params *datazone.RemoveEntityOwnerInput, optFns ...func(*datazone.Options)) (*datazone.RemoveEntityOwnerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveEntityOwner")
+	}
+
+	var r0 *datazone.RemoveEntityOwnerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.RemoveEntityOwnerInput, ...func(*datazone.Options)) (*datazone.RemoveEntityOwnerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.RemoveEntityOwnerInput, ...func(*datazone.Options)) *datazone.RemoveEntityOwnerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.RemoveEntityOwnerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.RemoveEntityOwnerInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RemovePolicyGrant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemovePolicyGrant(ctx context.Context, params *datazone.RemovePolicyGrantInput, optFns ...func(*datazone.Options)) (*datazone.RemovePolicyGrantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemovePolicyGrant")
+	}
+
+	var r0 *datazone.RemovePolicyGrantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.RemovePolicyGrantInput, ...func(*datazone.Options)) (*datazone.RemovePolicyGrantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.RemovePolicyGrantInput, ...func(*datazone.Options)) *datazone.RemovePolicyGrantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.RemovePolicyGrantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.RemovePolicyGrantInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RevokeSubscription provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RevokeSubscription(ctx context.Context, params *datazone.RevokeSubscriptionInput, optFns ...func(*datazone.Options)) (*datazone.RevokeSubscriptionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3881,6 +5213,80 @@ func (_m *IClient) UntagResource(ctx context.Context, params *datazone.UntagReso
 	return r0, r1
 }
 
+// UpdateAssetFilter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAssetFilter(ctx context.Context, params *datazone.UpdateAssetFilterInput, optFns ...func(*datazone.Options)) (*datazone.UpdateAssetFilterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAssetFilter")
+	}
+
+	var r0 *datazone.UpdateAssetFilterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateAssetFilterInput, ...func(*datazone.Options)) (*datazone.UpdateAssetFilterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateAssetFilterInput, ...func(*datazone.Options)) *datazone.UpdateAssetFilterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateAssetFilterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateAssetFilterInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnection(ctx context.Context, params *datazone.UpdateConnectionInput, optFns ...func(*datazone.Options)) (*datazone.UpdateConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnection")
+	}
+
+	var r0 *datazone.UpdateConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateConnectionInput, ...func(*datazone.Options)) (*datazone.UpdateConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateConnectionInput, ...func(*datazone.Options)) *datazone.UpdateConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateConnectionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDataSource(ctx context.Context, params *datazone.UpdateDataSourceInput, optFns ...func(*datazone.Options)) (*datazone.UpdateDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3947,6 +5353,43 @@ func (_m *IClient) UpdateDomain(ctx context.Context, params *datazone.UpdateDoma
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateDomainInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDomainUnit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDomainUnit(ctx context.Context, params *datazone.UpdateDomainUnitInput, optFns ...func(*datazone.Options)) (*datazone.UpdateDomainUnitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDomainUnit")
+	}
+
+	var r0 *datazone.UpdateDomainUnitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateDomainUnitInput, ...func(*datazone.Options)) (*datazone.UpdateDomainUnitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateDomainUnitInput, ...func(*datazone.Options)) *datazone.UpdateDomainUnitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateDomainUnitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateDomainUnitInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4206,6 +5649,80 @@ func (_m *IClient) UpdateProject(ctx context.Context, params *datazone.UpdatePro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateProjectInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProjectProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProjectProfile(ctx context.Context, params *datazone.UpdateProjectProfileInput, optFns ...func(*datazone.Options)) (*datazone.UpdateProjectProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProjectProfile")
+	}
+
+	var r0 *datazone.UpdateProjectProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateProjectProfileInput, ...func(*datazone.Options)) (*datazone.UpdateProjectProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateProjectProfileInput, ...func(*datazone.Options)) *datazone.UpdateProjectProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateProjectProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateProjectProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRule(ctx context.Context, params *datazone.UpdateRuleInput, optFns ...func(*datazone.Options)) (*datazone.UpdateRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRule")
+	}
+
+	var r0 *datazone.UpdateRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateRuleInput, ...func(*datazone.Options)) (*datazone.UpdateRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateRuleInput, ...func(*datazone.Options)) *datazone.UpdateRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateRuleInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

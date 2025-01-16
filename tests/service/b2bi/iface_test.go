@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateStarterMappingTemplate", func(t *testing.T) {
+        input := &b2bi.CreateStarterMappingTemplateInput{}
+        output := &b2bi.CreateStarterMappingTemplateOutput{}
+
+        mockClient.On("CreateStarterMappingTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStarterMappingTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTransformer", func(t *testing.T) {
         input := &b2bi.CreateTransformerInput{}
         output := &b2bi.CreateTransformerOutput{}
@@ -132,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTransformer", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTransformer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGenerateMapping", func(t *testing.T) {
+        input := &b2bi.GenerateMappingInput{}
+        output := &b2bi.GenerateMappingOutput{}
+
+        mockClient.On("GenerateMapping", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateMapping(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("TagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTestConversion", func(t *testing.T) {
+        input := &b2bi.TestConversionInput{}
+        output := &b2bi.TestConversionOutput{}
+
+        mockClient.On("TestConversion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TestConversion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

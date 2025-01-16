@@ -126,6 +126,43 @@ func (_m *IClient) CreateProfile(ctx context.Context, params *b2bi.CreateProfile
 	return r0, r1
 }
 
+// CreateStarterMappingTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateStarterMappingTemplate(ctx context.Context, params *b2bi.CreateStarterMappingTemplateInput, optFns ...func(*b2bi.Options)) (*b2bi.CreateStarterMappingTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateStarterMappingTemplate")
+	}
+
+	var r0 *b2bi.CreateStarterMappingTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *b2bi.CreateStarterMappingTemplateInput, ...func(*b2bi.Options)) (*b2bi.CreateStarterMappingTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *b2bi.CreateStarterMappingTemplateInput, ...func(*b2bi.Options)) *b2bi.CreateStarterMappingTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*b2bi.CreateStarterMappingTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *b2bi.CreateStarterMappingTemplateInput, ...func(*b2bi.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTransformer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTransformer(ctx context.Context, params *b2bi.CreateTransformerInput, optFns ...func(*b2bi.Options)) (*b2bi.CreateTransformerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -303,6 +340,43 @@ func (_m *IClient) DeleteTransformer(ctx context.Context, params *b2bi.DeleteTra
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *b2bi.DeleteTransformerInput, ...func(*b2bi.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GenerateMapping provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GenerateMapping(ctx context.Context, params *b2bi.GenerateMappingInput, optFns ...func(*b2bi.Options)) (*b2bi.GenerateMappingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GenerateMapping")
+	}
+
+	var r0 *b2bi.GenerateMappingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *b2bi.GenerateMappingInput, ...func(*b2bi.Options)) (*b2bi.GenerateMappingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *b2bi.GenerateMappingInput, ...func(*b2bi.Options)) *b2bi.GenerateMappingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*b2bi.GenerateMappingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *b2bi.GenerateMappingInput, ...func(*b2bi.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -765,6 +839,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *b2bi.TagResourceInpu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *b2bi.TagResourceInput, ...func(*b2bi.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TestConversion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TestConversion(ctx context.Context, params *b2bi.TestConversionInput, optFns ...func(*b2bi.Options)) (*b2bi.TestConversionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TestConversion")
+	}
+
+	var r0 *b2bi.TestConversionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *b2bi.TestConversionInput, ...func(*b2bi.Options)) (*b2bi.TestConversionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *b2bi.TestConversionInput, ...func(*b2bi.Options)) *b2bi.TestConversionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*b2bi.TestConversionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *b2bi.TestConversionInput, ...func(*b2bi.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

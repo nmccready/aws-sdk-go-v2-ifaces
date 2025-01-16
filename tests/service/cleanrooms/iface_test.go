@@ -151,6 +151,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("CreateConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfiguredTableAssociationAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIdMappingTable", func(t *testing.T) {
+        input := &cleanrooms.CreateIdMappingTableInput{}
+        output := &cleanrooms.CreateIdMappingTableOutput{}
+
+        mockClient.On("CreateIdMappingTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIdMappingTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIdNamespaceAssociation", func(t *testing.T) {
+        input := &cleanrooms.CreateIdNamespaceAssociationInput{}
+        output := &cleanrooms.CreateIdNamespaceAssociationOutput{}
+
+        mockClient.On("CreateIdNamespaceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIdNamespaceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMembership", func(t *testing.T) {
         input := &cleanrooms.CreateMembershipInput{}
         output := &cleanrooms.CreateMembershipOutput{}
@@ -255,6 +294,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("DeleteConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguredTableAssociationAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIdMappingTable", func(t *testing.T) {
+        input := &cleanrooms.DeleteIdMappingTableInput{}
+        output := &cleanrooms.DeleteIdMappingTableOutput{}
+
+        mockClient.On("DeleteIdMappingTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIdMappingTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIdNamespaceAssociation", func(t *testing.T) {
+        input := &cleanrooms.DeleteIdNamespaceAssociationInput{}
+        output := &cleanrooms.DeleteIdNamespaceAssociationOutput{}
+
+        mockClient.On("DeleteIdNamespaceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIdNamespaceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteMember", func(t *testing.T) {
         input := &cleanrooms.DeleteMemberInput{}
         output := &cleanrooms.DeleteMemberOutput{}
@@ -346,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCollaborationIdNamespaceAssociation", func(t *testing.T) {
+        input := &cleanrooms.GetCollaborationIdNamespaceAssociationInput{}
+        output := &cleanrooms.GetCollaborationIdNamespaceAssociationOutput{}
+
+        mockClient.On("GetCollaborationIdNamespaceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCollaborationIdNamespaceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCollaborationPrivacyBudgetTemplate", func(t *testing.T) {
         input := &cleanrooms.GetCollaborationPrivacyBudgetTemplateInput{}
         output := &cleanrooms.GetCollaborationPrivacyBudgetTemplateOutput{}
@@ -405,6 +496,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfiguredTableAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfiguredTableAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("GetConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfiguredTableAssociationAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIdMappingTable", func(t *testing.T) {
+        input := &cleanrooms.GetIdMappingTableInput{}
+        output := &cleanrooms.GetIdMappingTableOutput{}
+
+        mockClient.On("GetIdMappingTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIdMappingTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIdNamespaceAssociation", func(t *testing.T) {
+        input := &cleanrooms.GetIdNamespaceAssociationInput{}
+        output := &cleanrooms.GetIdNamespaceAssociationOutput{}
+
+        mockClient.On("GetIdNamespaceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIdNamespaceAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCollaborationIdNamespaceAssociations", func(t *testing.T) {
+        input := &cleanrooms.ListCollaborationIdNamespaceAssociationsInput{}
+        output := &cleanrooms.ListCollaborationIdNamespaceAssociationsOutput{}
+
+        mockClient.On("ListCollaborationIdNamespaceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationIdNamespaceAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCollaborationPrivacyBudgetTemplates", func(t *testing.T) {
         input := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesInput{}
         output := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesOutput{}
@@ -587,6 +730,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListConfiguredTables", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListConfiguredTables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIdMappingTables", func(t *testing.T) {
+        input := &cleanrooms.ListIdMappingTablesInput{}
+        output := &cleanrooms.ListIdMappingTablesOutput{}
+
+        mockClient.On("ListIdMappingTables", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIdMappingTables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIdNamespaceAssociations", func(t *testing.T) {
+        input := &cleanrooms.ListIdNamespaceAssociationsInput{}
+        output := &cleanrooms.ListIdNamespaceAssociationsOutput{}
+
+        mockClient.On("ListIdNamespaceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIdNamespaceAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -678,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPopulateIdMappingTable", func(t *testing.T) {
+        input := &cleanrooms.PopulateIdMappingTableInput{}
+        output := &cleanrooms.PopulateIdMappingTableOutput{}
+
+        mockClient.On("PopulateIdMappingTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PopulateIdMappingTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -808,6 +990,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConfiguredTableAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConfiguredTableAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("UpdateConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConfiguredTableAssociationAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIdMappingTable", func(t *testing.T) {
+        input := &cleanrooms.UpdateIdMappingTableInput{}
+        output := &cleanrooms.UpdateIdMappingTableOutput{}
+
+        mockClient.On("UpdateIdMappingTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIdMappingTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIdNamespaceAssociation", func(t *testing.T) {
+        input := &cleanrooms.UpdateIdNamespaceAssociationInput{}
+        output := &cleanrooms.UpdateIdNamespaceAssociationOutput{}
+
+        mockClient.On("UpdateIdNamespaceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIdNamespaceAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

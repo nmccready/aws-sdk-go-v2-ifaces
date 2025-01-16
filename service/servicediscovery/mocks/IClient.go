@@ -236,6 +236,43 @@ func (_m *IClient) DeleteService(ctx context.Context, params *servicediscovery.D
 	return r0, r1
 }
 
+// DeleteServiceAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteServiceAttributes(ctx context.Context, params *servicediscovery.DeleteServiceAttributesInput, optFns ...func(*servicediscovery.Options)) (*servicediscovery.DeleteServiceAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteServiceAttributes")
+	}
+
+	var r0 *servicediscovery.DeleteServiceAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *servicediscovery.DeleteServiceAttributesInput, ...func(*servicediscovery.Options)) (*servicediscovery.DeleteServiceAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *servicediscovery.DeleteServiceAttributesInput, ...func(*servicediscovery.Options)) *servicediscovery.DeleteServiceAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*servicediscovery.DeleteServiceAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *servicediscovery.DeleteServiceAttributesInput, ...func(*servicediscovery.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeregisterInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeregisterInstance(ctx context.Context, params *servicediscovery.DeregisterInstanceInput, optFns ...func(*servicediscovery.Options)) (*servicediscovery.DeregisterInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -524,6 +561,43 @@ func (_m *IClient) GetService(ctx context.Context, params *servicediscovery.GetS
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *servicediscovery.GetServiceInput, ...func(*servicediscovery.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetServiceAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetServiceAttributes(ctx context.Context, params *servicediscovery.GetServiceAttributesInput, optFns ...func(*servicediscovery.Options)) (*servicediscovery.GetServiceAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetServiceAttributes")
+	}
+
+	var r0 *servicediscovery.GetServiceAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *servicediscovery.GetServiceAttributesInput, ...func(*servicediscovery.Options)) (*servicediscovery.GetServiceAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *servicediscovery.GetServiceAttributesInput, ...func(*servicediscovery.Options)) *servicediscovery.GetServiceAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*servicediscovery.GetServiceAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *servicediscovery.GetServiceAttributesInput, ...func(*servicediscovery.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1023,6 +1097,43 @@ func (_m *IClient) UpdateService(ctx context.Context, params *servicediscovery.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *servicediscovery.UpdateServiceInput, ...func(*servicediscovery.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateServiceAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateServiceAttributes(ctx context.Context, params *servicediscovery.UpdateServiceAttributesInput, optFns ...func(*servicediscovery.Options)) (*servicediscovery.UpdateServiceAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateServiceAttributes")
+	}
+
+	var r0 *servicediscovery.UpdateServiceAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *servicediscovery.UpdateServiceAttributesInput, ...func(*servicediscovery.Options)) (*servicediscovery.UpdateServiceAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *servicediscovery.UpdateServiceAttributesInput, ...func(*servicediscovery.Options)) *servicediscovery.UpdateServiceAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*servicediscovery.UpdateServiceAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *servicediscovery.UpdateServiceAttributesInput, ...func(*servicediscovery.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

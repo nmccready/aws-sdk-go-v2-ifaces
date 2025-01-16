@@ -294,6 +294,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRuleExecutions", func(t *testing.T) {
+        input := &codepipeline.ListRuleExecutionsInput{}
+        output := &codepipeline.ListRuleExecutionsOutput{}
+
+        mockClient.On("ListRuleExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRuleExecutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRuleTypes", func(t *testing.T) {
+        input := &codepipeline.ListRuleTypesInput{}
+        output := &codepipeline.ListRuleTypesOutput{}
+
+        mockClient.On("ListRuleTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRuleTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &codepipeline.ListTagsForResourceInput{}
         output := &codepipeline.ListTagsForResourceOutput{}
@@ -314,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWebhooks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWebhooks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestOverrideStageCondition", func(t *testing.T) {
+        input := &codepipeline.OverrideStageConditionInput{}
+        output := &codepipeline.OverrideStageConditionOutput{}
+
+        mockClient.On("OverrideStageCondition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.OverrideStageCondition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

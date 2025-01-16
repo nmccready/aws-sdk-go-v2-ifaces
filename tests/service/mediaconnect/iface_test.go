@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeFlowSourceThumbnail", func(t *testing.T) {
+        input := &mediaconnect.DescribeFlowSourceThumbnailInput{}
+        output := &mediaconnect.DescribeFlowSourceThumbnailOutput{}
+
+        mockClient.On("DescribeFlowSourceThumbnail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFlowSourceThumbnail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeGateway", func(t *testing.T) {
         input := &mediaconnect.DescribeGatewayInput{}
         output := &mediaconnect.DescribeGatewayOutput{}

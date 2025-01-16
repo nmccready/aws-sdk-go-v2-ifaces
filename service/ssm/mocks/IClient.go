@@ -2604,6 +2604,43 @@ func (_m *IClient) GetDocument(ctx context.Context, params *ssm.GetDocumentInput
 	return r0, r1
 }
 
+// GetExecutionPreview provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExecutionPreview(ctx context.Context, params *ssm.GetExecutionPreviewInput, optFns ...func(*ssm.Options)) (*ssm.GetExecutionPreviewOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExecutionPreview")
+	}
+
+	var r0 *ssm.GetExecutionPreviewOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.GetExecutionPreviewInput, ...func(*ssm.Options)) (*ssm.GetExecutionPreviewOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.GetExecutionPreviewInput, ...func(*ssm.Options)) *ssm.GetExecutionPreviewOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.GetExecutionPreviewOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.GetExecutionPreviewInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetInventory provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetInventory(ctx context.Context, params *ssm.GetInventoryInput, optFns ...func(*ssm.Options)) (*ssm.GetInventoryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3677,6 +3714,80 @@ func (_m *IClient) ListInventoryEntries(ctx context.Context, params *ssm.ListInv
 	return r0, r1
 }
 
+// ListNodes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNodes(ctx context.Context, params *ssm.ListNodesInput, optFns ...func(*ssm.Options)) (*ssm.ListNodesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNodes")
+	}
+
+	var r0 *ssm.ListNodesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ListNodesInput, ...func(*ssm.Options)) (*ssm.ListNodesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ListNodesInput, ...func(*ssm.Options)) *ssm.ListNodesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.ListNodesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.ListNodesInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNodesSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNodesSummary(ctx context.Context, params *ssm.ListNodesSummaryInput, optFns ...func(*ssm.Options)) (*ssm.ListNodesSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNodesSummary")
+	}
+
+	var r0 *ssm.ListNodesSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ListNodesSummaryInput, ...func(*ssm.Options)) (*ssm.ListNodesSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ListNodesSummaryInput, ...func(*ssm.Options)) *ssm.ListNodesSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.ListNodesSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.ListNodesSummaryInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListOpsItemEvents provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListOpsItemEvents(ctx context.Context, params *ssm.ListOpsItemEventsInput, optFns ...func(*ssm.Options)) (*ssm.ListOpsItemEventsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4538,6 +4649,43 @@ func (_m *IClient) StartChangeRequestExecution(ctx context.Context, params *ssm.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssm.StartChangeRequestExecutionInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartExecutionPreview provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartExecutionPreview(ctx context.Context, params *ssm.StartExecutionPreviewInput, optFns ...func(*ssm.Options)) (*ssm.StartExecutionPreviewOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartExecutionPreview")
+	}
+
+	var r0 *ssm.StartExecutionPreviewOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.StartExecutionPreviewInput, ...func(*ssm.Options)) (*ssm.StartExecutionPreviewOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.StartExecutionPreviewInput, ...func(*ssm.Options)) *ssm.StartExecutionPreviewOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.StartExecutionPreviewOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.StartExecutionPreviewInput, ...func(*ssm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

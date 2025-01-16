@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// ApplyPendingMaintenanceAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ApplyPendingMaintenanceAction(ctx context.Context, params *docdbelastic.ApplyPendingMaintenanceActionInput, optFns ...func(*docdbelastic.Options)) (*docdbelastic.ApplyPendingMaintenanceActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ApplyPendingMaintenanceAction")
+	}
+
+	var r0 *docdbelastic.ApplyPendingMaintenanceActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *docdbelastic.ApplyPendingMaintenanceActionInput, ...func(*docdbelastic.Options)) (*docdbelastic.ApplyPendingMaintenanceActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *docdbelastic.ApplyPendingMaintenanceActionInput, ...func(*docdbelastic.Options)) *docdbelastic.ApplyPendingMaintenanceActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*docdbelastic.ApplyPendingMaintenanceActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *docdbelastic.ApplyPendingMaintenanceActionInput, ...func(*docdbelastic.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CopyClusterSnapshot provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CopyClusterSnapshot(ctx context.Context, params *docdbelastic.CopyClusterSnapshotInput, optFns ...func(*docdbelastic.Options)) (*docdbelastic.CopyClusterSnapshotOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -274,6 +311,43 @@ func (_m *IClient) GetClusterSnapshot(ctx context.Context, params *docdbelastic.
 	return r0, r1
 }
 
+// GetPendingMaintenanceAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPendingMaintenanceAction(ctx context.Context, params *docdbelastic.GetPendingMaintenanceActionInput, optFns ...func(*docdbelastic.Options)) (*docdbelastic.GetPendingMaintenanceActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPendingMaintenanceAction")
+	}
+
+	var r0 *docdbelastic.GetPendingMaintenanceActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *docdbelastic.GetPendingMaintenanceActionInput, ...func(*docdbelastic.Options)) (*docdbelastic.GetPendingMaintenanceActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *docdbelastic.GetPendingMaintenanceActionInput, ...func(*docdbelastic.Options)) *docdbelastic.GetPendingMaintenanceActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*docdbelastic.GetPendingMaintenanceActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *docdbelastic.GetPendingMaintenanceActionInput, ...func(*docdbelastic.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListClusterSnapshots provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListClusterSnapshots(ctx context.Context, params *docdbelastic.ListClusterSnapshotsInput, optFns ...func(*docdbelastic.Options)) (*docdbelastic.ListClusterSnapshotsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +414,43 @@ func (_m *IClient) ListClusters(ctx context.Context, params *docdbelastic.ListCl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *docdbelastic.ListClustersInput, ...func(*docdbelastic.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPendingMaintenanceActions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPendingMaintenanceActions(ctx context.Context, params *docdbelastic.ListPendingMaintenanceActionsInput, optFns ...func(*docdbelastic.Options)) (*docdbelastic.ListPendingMaintenanceActionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPendingMaintenanceActions")
+	}
+
+	var r0 *docdbelastic.ListPendingMaintenanceActionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *docdbelastic.ListPendingMaintenanceActionsInput, ...func(*docdbelastic.Options)) (*docdbelastic.ListPendingMaintenanceActionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *docdbelastic.ListPendingMaintenanceActionsInput, ...func(*docdbelastic.Options)) *docdbelastic.ListPendingMaintenanceActionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*docdbelastic.ListPendingMaintenanceActionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *docdbelastic.ListPendingMaintenanceActionsInput, ...func(*docdbelastic.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

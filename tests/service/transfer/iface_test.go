@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWebApp", func(t *testing.T) {
+        input := &transfer.CreateWebAppInput{}
+        output := &transfer.CreateWebAppOutput{}
+
+        mockClient.On("CreateWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWebApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWorkflow", func(t *testing.T) {
         input := &transfer.CreateWorkflowInput{}
         output := &transfer.CreateWorkflowOutput{}
@@ -236,6 +249,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteUser", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteUser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWebApp", func(t *testing.T) {
+        input := &transfer.DeleteWebAppInput{}
+        output := &transfer.DeleteWebAppOutput{}
+
+        mockClient.On("DeleteWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWebAppCustomization", func(t *testing.T) {
+        input := &transfer.DeleteWebAppCustomizationInput{}
+        output := &transfer.DeleteWebAppCustomizationOutput{}
+
+        mockClient.On("DeleteWebAppCustomization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebAppCustomization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,6 +424,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeWebApp", func(t *testing.T) {
+        input := &transfer.DescribeWebAppInput{}
+        output := &transfer.DescribeWebAppOutput{}
+
+        mockClient.On("DescribeWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWebApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWebAppCustomization", func(t *testing.T) {
+        input := &transfer.DescribeWebAppCustomizationInput{}
+        output := &transfer.DescribeWebAppCustomizationOutput{}
+
+        mockClient.On("DescribeWebAppCustomization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWebAppCustomization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeWorkflow", func(t *testing.T) {
         input := &transfer.DescribeWorkflowInput{}
         output := &transfer.DescribeWorkflowOutput{}
@@ -502,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFileTransferResults", func(t *testing.T) {
+        input := &transfer.ListFileTransferResultsInput{}
+        output := &transfer.ListFileTransferResultsOutput{}
+
+        mockClient.On("ListFileTransferResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFileTransferResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListHostKeys", func(t *testing.T) {
         input := &transfer.ListHostKeysInput{}
         output := &transfer.ListHostKeysOutput{}
@@ -574,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListUsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListUsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWebApps", func(t *testing.T) {
+        input := &transfer.ListWebAppsInput{}
+        output := &transfer.ListWebAppsOutput{}
+
+        mockClient.On("ListWebApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWebApps(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -808,6 +899,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateUser", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateUser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWebApp", func(t *testing.T) {
+        input := &transfer.UpdateWebAppInput{}
+        output := &transfer.UpdateWebAppOutput{}
+
+        mockClient.On("UpdateWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWebApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWebAppCustomization", func(t *testing.T) {
+        input := &transfer.UpdateWebAppCustomizationInput{}
+        output := &transfer.UpdateWebAppCustomizationOutput{}
+
+        mockClient.On("UpdateWebAppCustomization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWebAppCustomization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

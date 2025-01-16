@@ -12,6 +12,7 @@ type IClient interface {
  Options() Options 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateDataIntegration(ctx context.Context, params *CreateDataIntegrationInput, optFns ...func(*Options)) (*CreateDataIntegrationOutput, error) 
+ CreateDataIntegrationAssociation(ctx context.Context, params *CreateDataIntegrationAssociationInput, optFns ...func(*Options)) (*CreateDataIntegrationAssociationOutput, error) 
  CreateEventIntegration(ctx context.Context, params *CreateEventIntegrationInput, optFns ...func(*Options)) (*CreateEventIntegrationOutput, error) 
  DeleteApplication(ctx context.Context, params *DeleteApplicationInput, optFns ...func(*Options)) (*DeleteApplicationOutput, error) 
  DeleteDataIntegration(ctx context.Context, params *DeleteDataIntegrationInput, optFns ...func(*Options)) (*DeleteDataIntegrationOutput, error) 
@@ -30,5 +31,6 @@ type IClient interface {
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateApplication(ctx context.Context, params *UpdateApplicationInput, optFns ...func(*Options)) (*UpdateApplicationOutput, error) 
  UpdateDataIntegration(ctx context.Context, params *UpdateDataIntegrationInput, optFns ...func(*Options)) (*UpdateDataIntegrationOutput, error) 
+ UpdateDataIntegrationAssociation(ctx context.Context, params *UpdateDataIntegrationAssociationInput, optFns ...func(*Options)) (*UpdateDataIntegrationAssociationOutput, error) 
  UpdateEventIntegration(ctx context.Context, params *UpdateEventIntegrationInput, optFns ...func(*Options)) (*UpdateEventIntegrationOutput, error) 
 }

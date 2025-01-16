@@ -35,5 +35,6 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateLoggingConfiguration(ctx context.Context, params *UpdateLoggingConfigurationInput, optFns ...func(*Options)) (*UpdateLoggingConfigurationOutput, error) 
+ UpdateScraper(ctx context.Context, params *UpdateScraperInput, optFns ...func(*Options)) (*UpdateScraperOutput, error) 
  UpdateWorkspaceAlias(ctx context.Context, params *UpdateWorkspaceAliasInput, optFns ...func(*Options)) (*UpdateWorkspaceAliasOutput, error) 
 }

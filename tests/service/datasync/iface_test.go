@@ -723,6 +723,71 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateLocationEfs", func(t *testing.T) {
+        input := &datasync.UpdateLocationEfsInput{}
+        output := &datasync.UpdateLocationEfsOutput{}
+
+        mockClient.On("UpdateLocationEfs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLocationEfs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLocationFsxLustre", func(t *testing.T) {
+        input := &datasync.UpdateLocationFsxLustreInput{}
+        output := &datasync.UpdateLocationFsxLustreOutput{}
+
+        mockClient.On("UpdateLocationFsxLustre", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLocationFsxLustre(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLocationFsxOntap", func(t *testing.T) {
+        input := &datasync.UpdateLocationFsxOntapInput{}
+        output := &datasync.UpdateLocationFsxOntapOutput{}
+
+        mockClient.On("UpdateLocationFsxOntap", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLocationFsxOntap(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLocationFsxOpenZfs", func(t *testing.T) {
+        input := &datasync.UpdateLocationFsxOpenZfsInput{}
+        output := &datasync.UpdateLocationFsxOpenZfsOutput{}
+
+        mockClient.On("UpdateLocationFsxOpenZfs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLocationFsxOpenZfs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLocationFsxWindows", func(t *testing.T) {
+        input := &datasync.UpdateLocationFsxWindowsInput{}
+        output := &datasync.UpdateLocationFsxWindowsOutput{}
+
+        mockClient.On("UpdateLocationFsxWindows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLocationFsxWindows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateLocationHdfs", func(t *testing.T) {
         input := &datasync.UpdateLocationHdfsInput{}
         output := &datasync.UpdateLocationHdfsOutput{}
@@ -756,6 +821,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLocationObjectStorage", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLocationObjectStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLocationS3", func(t *testing.T) {
+        input := &datasync.UpdateLocationS3Input{}
+        output := &datasync.UpdateLocationS3Output{}
+
+        mockClient.On("UpdateLocationS3", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLocationS3(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

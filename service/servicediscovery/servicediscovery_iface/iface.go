@@ -16,6 +16,7 @@ type IClient interface {
  CreateService(ctx context.Context, params *CreateServiceInput, optFns ...func(*Options)) (*CreateServiceOutput, error) 
  DeleteNamespace(ctx context.Context, params *DeleteNamespaceInput, optFns ...func(*Options)) (*DeleteNamespaceOutput, error) 
  DeleteService(ctx context.Context, params *DeleteServiceInput, optFns ...func(*Options)) (*DeleteServiceOutput, error) 
+ DeleteServiceAttributes(ctx context.Context, params *DeleteServiceAttributesInput, optFns ...func(*Options)) (*DeleteServiceAttributesOutput, error) 
  DeregisterInstance(ctx context.Context, params *DeregisterInstanceInput, optFns ...func(*Options)) (*DeregisterInstanceOutput, error) 
  DiscoverInstances(ctx context.Context, params *DiscoverInstancesInput, optFns ...func(*Options)) (*DiscoverInstancesOutput, error) 
  DiscoverInstancesRevision(ctx context.Context, params *DiscoverInstancesRevisionInput, optFns ...func(*Options)) (*DiscoverInstancesRevisionOutput, error) 
@@ -24,6 +25,7 @@ type IClient interface {
  GetNamespace(ctx context.Context, params *GetNamespaceInput, optFns ...func(*Options)) (*GetNamespaceOutput, error) 
  GetOperation(ctx context.Context, params *GetOperationInput, optFns ...func(*Options)) (*GetOperationOutput, error) 
  GetService(ctx context.Context, params *GetServiceInput, optFns ...func(*Options)) (*GetServiceOutput, error) 
+ GetServiceAttributes(ctx context.Context, params *GetServiceAttributesInput, optFns ...func(*Options)) (*GetServiceAttributesOutput, error) 
  ListInstances(ctx context.Context, params *ListInstancesInput, optFns ...func(*Options)) (*ListInstancesOutput, error) 
  ListNamespaces(ctx context.Context, params *ListNamespacesInput, optFns ...func(*Options)) (*ListNamespacesOutput, error) 
  ListOperations(ctx context.Context, params *ListOperationsInput, optFns ...func(*Options)) (*ListOperationsOutput, error) 
@@ -37,4 +39,5 @@ type IClient interface {
  UpdatePrivateDnsNamespace(ctx context.Context, params *UpdatePrivateDnsNamespaceInput, optFns ...func(*Options)) (*UpdatePrivateDnsNamespaceOutput, error) 
  UpdatePublicDnsNamespace(ctx context.Context, params *UpdatePublicDnsNamespaceInput, optFns ...func(*Options)) (*UpdatePublicDnsNamespaceOutput, error) 
  UpdateService(ctx context.Context, params *UpdateServiceInput, optFns ...func(*Options)) (*UpdateServiceOutput, error) 
+ UpdateServiceAttributes(ctx context.Context, params *UpdateServiceAttributesInput, optFns ...func(*Options)) (*UpdateServiceAttributesOutput, error) 
 }

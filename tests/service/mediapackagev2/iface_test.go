@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelHarvestJob", func(t *testing.T) {
+        input := &mediapackagev2.CancelHarvestJobInput{}
+        output := &mediapackagev2.CancelHarvestJobOutput{}
+
+        mockClient.On("CancelHarvestJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelHarvestJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateChannel", func(t *testing.T) {
         input := &mediapackagev2.CreateChannelInput{}
         output := &mediapackagev2.CreateChannelOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateChannelGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateChannelGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateHarvestJob", func(t *testing.T) {
+        input := &mediapackagev2.CreateHarvestJobInput{}
+        output := &mediapackagev2.CreateHarvestJobOutput{}
+
+        mockClient.On("CreateHarvestJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHarvestJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetHarvestJob", func(t *testing.T) {
+        input := &mediapackagev2.GetHarvestJobInput{}
+        output := &mediapackagev2.GetHarvestJobOutput{}
+
+        mockClient.On("GetHarvestJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHarvestJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetOriginEndpoint", func(t *testing.T) {
         input := &mediapackagev2.GetOriginEndpointInput{}
         output := &mediapackagev2.GetOriginEndpointOutput{}
@@ -223,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListChannels", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListChannels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHarvestJobs", func(t *testing.T) {
+        input := &mediapackagev2.ListHarvestJobsInput{}
+        output := &mediapackagev2.ListHarvestJobsOutput{}
+
+        mockClient.On("ListHarvestJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHarvestJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

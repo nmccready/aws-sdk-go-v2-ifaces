@@ -359,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateScraper", func(t *testing.T) {
+        input := &amp.UpdateScraperInput{}
+        output := &amp.UpdateScraperOutput{}
+
+        mockClient.On("UpdateScraper", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateScraper(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateWorkspaceAlias", func(t *testing.T) {
         input := &amp.UpdateWorkspaceAliasInput{}
         output := &amp.UpdateWorkspaceAliasOutput{}

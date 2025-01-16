@@ -533,6 +533,43 @@ func (_m *IClient) CreateDashboard(ctx context.Context, params *iotsitewise.Crea
 	return r0, r1
 }
 
+// CreateDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataset(ctx context.Context, params *iotsitewise.CreateDatasetInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataset")
+	}
+
+	var r0 *iotsitewise.CreateDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateDatasetInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateDatasetInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateDatasetInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGateway(ctx context.Context, params *iotsitewise.CreateGatewayInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +858,43 @@ func (_m *IClient) DeleteDashboard(ctx context.Context, params *iotsitewise.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteDashboardInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataset(ctx context.Context, params *iotsitewise.DeleteDatasetInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataset")
+	}
+
+	var r0 *iotsitewise.DeleteDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteDatasetInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeleteDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteDatasetInput, ...func(*iotsitewise.Options)) *iotsitewise.DeleteDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeleteDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteDatasetInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1302,6 +1376,43 @@ func (_m *IClient) DescribeDashboard(ctx context.Context, params *iotsitewise.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeDashboardInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDataset(ctx context.Context, params *iotsitewise.DescribeDatasetInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDataset")
+	}
+
+	var r0 *iotsitewise.DescribeDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeDatasetInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeDatasetInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeDatasetInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1902,6 +2013,43 @@ func (_m *IClient) GetInterpolatedAssetPropertyValues(ctx context.Context, param
 	return r0, r1
 }
 
+// InvokeAssistant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeAssistant(ctx context.Context, params *iotsitewise.InvokeAssistantInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.InvokeAssistantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeAssistant")
+	}
+
+	var r0 *iotsitewise.InvokeAssistantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.InvokeAssistantInput, ...func(*iotsitewise.Options)) (*iotsitewise.InvokeAssistantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.InvokeAssistantInput, ...func(*iotsitewise.Options)) *iotsitewise.InvokeAssistantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.InvokeAssistantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.InvokeAssistantInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAccessPolicies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAccessPolicies(ctx context.Context, params *iotsitewise.ListAccessPoliciesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListAccessPoliciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2338,6 +2486,43 @@ func (_m *IClient) ListDashboards(ctx context.Context, params *iotsitewise.ListD
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListDashboardsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasets(ctx context.Context, params *iotsitewise.ListDatasetsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasets")
+	}
+
+	var r0 *iotsitewise.ListDatasetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListDatasetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListDatasetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListDatasetsInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2985,6 +3170,43 @@ func (_m *IClient) UpdateDashboard(ctx context.Context, params *iotsitewise.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateDashboardInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataset(ctx context.Context, params *iotsitewise.UpdateDatasetInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.UpdateDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataset")
+	}
+
+	var r0 *iotsitewise.UpdateDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateDatasetInput, ...func(*iotsitewise.Options)) (*iotsitewise.UpdateDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateDatasetInput, ...func(*iotsitewise.Options)) *iotsitewise.UpdateDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.UpdateDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateDatasetInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

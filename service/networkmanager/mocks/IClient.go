@@ -384,6 +384,43 @@ func (_m *IClient) CreateDevice(ctx context.Context, params *networkmanager.Crea
 	return r0, r1
 }
 
+// CreateDirectConnectGatewayAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDirectConnectGatewayAttachment(ctx context.Context, params *networkmanager.CreateDirectConnectGatewayAttachmentInput, optFns ...func(*networkmanager.Options)) (*networkmanager.CreateDirectConnectGatewayAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDirectConnectGatewayAttachment")
+	}
+
+	var r0 *networkmanager.CreateDirectConnectGatewayAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.CreateDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) (*networkmanager.CreateDirectConnectGatewayAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.CreateDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) *networkmanager.CreateDirectConnectGatewayAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.CreateDirectConnectGatewayAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.CreateDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGlobalNetwork provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGlobalNetwork(ctx context.Context, params *networkmanager.CreateGlobalNetworkInput, optFns ...func(*networkmanager.Options)) (*networkmanager.CreateGlobalNetworkOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1671,6 +1708,43 @@ func (_m *IClient) GetDevices(ctx context.Context, params *networkmanager.GetDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.GetDevicesInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDirectConnectGatewayAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDirectConnectGatewayAttachment(ctx context.Context, params *networkmanager.GetDirectConnectGatewayAttachmentInput, optFns ...func(*networkmanager.Options)) (*networkmanager.GetDirectConnectGatewayAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDirectConnectGatewayAttachment")
+	}
+
+	var r0 *networkmanager.GetDirectConnectGatewayAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) (*networkmanager.GetDirectConnectGatewayAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) *networkmanager.GetDirectConnectGatewayAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.GetDirectConnectGatewayAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.GetDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2984,6 +3058,43 @@ func (_m *IClient) UpdateDevice(ctx context.Context, params *networkmanager.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.UpdateDeviceInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDirectConnectGatewayAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDirectConnectGatewayAttachment(ctx context.Context, params *networkmanager.UpdateDirectConnectGatewayAttachmentInput, optFns ...func(*networkmanager.Options)) (*networkmanager.UpdateDirectConnectGatewayAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDirectConnectGatewayAttachment")
+	}
+
+	var r0 *networkmanager.UpdateDirectConnectGatewayAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.UpdateDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) (*networkmanager.UpdateDirectConnectGatewayAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.UpdateDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) *networkmanager.UpdateDirectConnectGatewayAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.UpdateDirectConnectGatewayAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.UpdateDirectConnectGatewayAttachmentInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
