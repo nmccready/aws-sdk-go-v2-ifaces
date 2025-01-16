@@ -10,9 +10,8 @@ cd "$SCRIPT_DIR"
 cd ../
 
 rm -rf service tests
-
-./gen_ifaces.sh
-./gen_mocks.sh
-./gen_tests.sh
+./scripts/gen_ifaces.sh
+./scripts/gen_mocks.sh
+./scripts/gen_tests.sh
 
 cd "$ORIG_DIR"
