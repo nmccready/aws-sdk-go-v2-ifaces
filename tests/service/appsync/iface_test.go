@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateApi", func(t *testing.T) {
+        input := &appsync.CreateApiInput{}
+        output := &appsync.CreateApiOutput{}
+
+        mockClient.On("CreateApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateApiCache", func(t *testing.T) {
         input := &appsync.CreateApiCacheInput{}
         output := &appsync.CreateApiCacheOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateApiKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateApiKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateChannelNamespace", func(t *testing.T) {
+        input := &appsync.CreateChannelNamespaceInput{}
+        output := &appsync.CreateChannelNamespaceOutput{}
+
+        mockClient.On("CreateChannelNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannelNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteApi", func(t *testing.T) {
+        input := &appsync.DeleteApiInput{}
+        output := &appsync.DeleteApiOutput{}
+
+        mockClient.On("DeleteApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteApiCache", func(t *testing.T) {
         input := &appsync.DeleteApiCacheInput{}
         output := &appsync.DeleteApiCacheOutput{}
@@ -197,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteApiKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteApiKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteChannelNamespace", func(t *testing.T) {
+        input := &appsync.DeleteChannelNamespaceInput{}
+        output := &appsync.DeleteChannelNamespaceOutput{}
+
+        mockClient.On("DeleteChannelNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteChannelNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetApi", func(t *testing.T) {
+        input := &appsync.GetApiInput{}
+        output := &appsync.GetApiOutput{}
+
+        mockClient.On("GetApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetApiAssociation", func(t *testing.T) {
         input := &appsync.GetApiAssociationInput{}
         output := &appsync.GetApiAssociationOutput{}
@@ -379,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetApiCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetApiCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetChannelNamespace", func(t *testing.T) {
+        input := &appsync.GetChannelNamespaceInput{}
+        output := &appsync.GetChannelNamespaceOutput{}
+
+        mockClient.On("GetChannelNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetChannelNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -535,6 +613,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApiKeys", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApiKeys(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApis", func(t *testing.T) {
+        input := &appsync.ListApisInput{}
+        output := &appsync.ListApisOutput{}
+
+        mockClient.On("ListApis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannelNamespaces", func(t *testing.T) {
+        input := &appsync.ListChannelNamespacesInput{}
+        output := &appsync.ListChannelNamespacesOutput{}
+
+        mockClient.On("ListChannelNamespaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannelNamespaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateApi", func(t *testing.T) {
+        input := &appsync.UpdateApiInput{}
+        output := &appsync.UpdateApiOutput{}
+
+        mockClient.On("UpdateApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateApiCache", func(t *testing.T) {
         input := &appsync.UpdateApiCacheInput{}
         output := &appsync.UpdateApiCacheOutput{}
@@ -769,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateApiKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateApiKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChannelNamespace", func(t *testing.T) {
+        input := &appsync.UpdateChannelNamespaceInput{}
+        output := &appsync.UpdateChannelNamespaceOutput{}
+
+        mockClient.On("UpdateChannelNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChannelNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

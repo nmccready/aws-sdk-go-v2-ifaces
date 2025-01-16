@@ -15,6 +15,7 @@ type IClient interface {
  CreateWebLoginToken(ctx context.Context, params *CreateWebLoginTokenInput, optFns ...func(*Options)) (*CreateWebLoginTokenOutput, error) 
  DeleteEnvironment(ctx context.Context, params *DeleteEnvironmentInput, optFns ...func(*Options)) (*DeleteEnvironmentOutput, error) 
  GetEnvironment(ctx context.Context, params *GetEnvironmentInput, optFns ...func(*Options)) (*GetEnvironmentOutput, error) 
+ InvokeRestApi(ctx context.Context, params *InvokeRestApiInput, optFns ...func(*Options)) (*InvokeRestApiOutput, error) 
  ListEnvironments(ctx context.Context, params *ListEnvironmentsInput, optFns ...func(*Options)) (*ListEnvironmentsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PublishMetrics(ctx context.Context, params *PublishMetricsInput, optFns ...func(*Options)) (*PublishMetricsOutput, error) 

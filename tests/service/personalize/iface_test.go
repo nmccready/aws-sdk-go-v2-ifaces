@@ -943,4 +943,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestUpdateSolution", func(t *testing.T) {
+        input := &personalize.UpdateSolutionInput{}
+        output := &personalize.UpdateSolutionOutput{}
+
+        mockClient.On("UpdateSolution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSolution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

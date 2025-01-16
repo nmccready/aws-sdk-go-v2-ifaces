@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListVersions", func(t *testing.T) {
+        input := &mediaconvert.ListVersionsInput{}
+        output := &mediaconvert.ListVersionsOutput{}
+
+        mockClient.On("ListVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutPolicy", func(t *testing.T) {
         input := &mediaconvert.PutPolicyInput{}
         output := &mediaconvert.PutPolicyOutput{}

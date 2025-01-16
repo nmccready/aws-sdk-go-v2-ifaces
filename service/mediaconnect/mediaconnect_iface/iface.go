@@ -26,6 +26,7 @@ type IClient interface {
  DescribeBridge(ctx context.Context, params *DescribeBridgeInput, optFns ...func(*Options)) (*DescribeBridgeOutput, error) 
  DescribeFlow(ctx context.Context, params *DescribeFlowInput, optFns ...func(*Options)) (*DescribeFlowOutput, error) 
  DescribeFlowSourceMetadata(ctx context.Context, params *DescribeFlowSourceMetadataInput, optFns ...func(*Options)) (*DescribeFlowSourceMetadataOutput, error) 
+ DescribeFlowSourceThumbnail(ctx context.Context, params *DescribeFlowSourceThumbnailInput, optFns ...func(*Options)) (*DescribeFlowSourceThumbnailOutput, error) 
  DescribeGateway(ctx context.Context, params *DescribeGatewayInput, optFns ...func(*Options)) (*DescribeGatewayOutput, error) 
  DescribeGatewayInstance(ctx context.Context, params *DescribeGatewayInstanceInput, optFns ...func(*Options)) (*DescribeGatewayInstanceOutput, error) 
  DescribeOffering(ctx context.Context, params *DescribeOfferingInput, optFns ...func(*Options)) (*DescribeOfferingOutput, error) 

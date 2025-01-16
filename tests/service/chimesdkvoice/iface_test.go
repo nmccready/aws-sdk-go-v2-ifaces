@@ -281,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVoiceConnectorExternalSystemsConfiguration", func(t *testing.T) {
+        input := &chimesdkvoice.DeleteVoiceConnectorExternalSystemsConfigurationInput{}
+        output := &chimesdkvoice.DeleteVoiceConnectorExternalSystemsConfigurationOutput{}
+
+        mockClient.On("DeleteVoiceConnectorExternalSystemsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVoiceConnectorExternalSystemsConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteVoiceConnectorGroup", func(t *testing.T) {
         input := &chimesdkvoice.DeleteVoiceConnectorGroupInput{}
         output := &chimesdkvoice.DeleteVoiceConnectorGroupOutput{}
@@ -561,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetVoiceConnectorEmergencyCallingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetVoiceConnectorEmergencyCallingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVoiceConnectorExternalSystemsConfiguration", func(t *testing.T) {
+        input := &chimesdkvoice.GetVoiceConnectorExternalSystemsConfigurationInput{}
+        output := &chimesdkvoice.GetVoiceConnectorExternalSystemsConfigurationOutput{}
+
+        mockClient.On("GetVoiceConnectorExternalSystemsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVoiceConnectorExternalSystemsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -899,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutVoiceConnectorEmergencyCallingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutVoiceConnectorEmergencyCallingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutVoiceConnectorExternalSystemsConfiguration", func(t *testing.T) {
+        input := &chimesdkvoice.PutVoiceConnectorExternalSystemsConfigurationInput{}
+        output := &chimesdkvoice.PutVoiceConnectorExternalSystemsConfigurationOutput{}
+
+        mockClient.On("PutVoiceConnectorExternalSystemsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutVoiceConnectorExternalSystemsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

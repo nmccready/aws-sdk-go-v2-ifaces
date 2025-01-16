@@ -216,6 +216,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIndexPolicy", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteIndexPolicyInput{}
+        output := &cloudwatchlogs.DeleteIndexPolicyOutput{}
+
+        mockClient.On("DeleteIndexPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIndexPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIntegration", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteIntegrationInput{}
+        output := &cloudwatchlogs.DeleteIntegrationOutput{}
+
+        mockClient.On("DeleteIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLogAnomalyDetector", func(t *testing.T) {
         input := &cloudwatchlogs.DeleteLogAnomalyDetectorInput{}
         output := &cloudwatchlogs.DeleteLogAnomalyDetectorOutput{}
@@ -320,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTransformer", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteTransformerInput{}
+        output := &cloudwatchlogs.DeleteTransformerOutput{}
+
+        mockClient.On("DeleteTransformer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTransformer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAccountPolicies", func(t *testing.T) {
         input := &cloudwatchlogs.DescribeAccountPoliciesInput{}
         output := &cloudwatchlogs.DescribeAccountPoliciesOutput{}
@@ -327,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAccountPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAccountPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeConfigurationTemplates", func(t *testing.T) {
+        input := &cloudwatchlogs.DescribeConfigurationTemplatesInput{}
+        output := &cloudwatchlogs.DescribeConfigurationTemplatesOutput{}
+
+        mockClient.On("DescribeConfigurationTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConfigurationTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -392,6 +444,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeExportTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeExportTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeFieldIndexes", func(t *testing.T) {
+        input := &cloudwatchlogs.DescribeFieldIndexesInput{}
+        output := &cloudwatchlogs.DescribeFieldIndexesOutput{}
+
+        mockClient.On("DescribeFieldIndexes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFieldIndexes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIndexPolicies", func(t *testing.T) {
+        input := &cloudwatchlogs.DescribeIndexPoliciesInput{}
+        output := &cloudwatchlogs.DescribeIndexPoliciesOutput{}
+
+        mockClient.On("DescribeIndexPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIndexPolicies(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,6 +658,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIntegration", func(t *testing.T) {
+        input := &cloudwatchlogs.GetIntegrationInput{}
+        output := &cloudwatchlogs.GetIntegrationOutput{}
+
+        mockClient.On("GetIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLogAnomalyDetector", func(t *testing.T) {
         input := &cloudwatchlogs.GetLogAnomalyDetectorInput{}
         output := &cloudwatchlogs.GetLogAnomalyDetectorOutput{}
@@ -645,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTransformer", func(t *testing.T) {
+        input := &cloudwatchlogs.GetTransformerInput{}
+        output := &cloudwatchlogs.GetTransformerOutput{}
+
+        mockClient.On("GetTransformer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTransformer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAnomalies", func(t *testing.T) {
         input := &cloudwatchlogs.ListAnomaliesInput{}
         output := &cloudwatchlogs.ListAnomaliesOutput{}
@@ -658,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListIntegrations", func(t *testing.T) {
+        input := &cloudwatchlogs.ListIntegrationsInput{}
+        output := &cloudwatchlogs.ListIntegrationsOutput{}
+
+        mockClient.On("ListIntegrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIntegrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListLogAnomalyDetectors", func(t *testing.T) {
         input := &cloudwatchlogs.ListLogAnomalyDetectorsInput{}
         output := &cloudwatchlogs.ListLogAnomalyDetectorsOutput{}
@@ -665,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLogAnomalyDetectors", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLogAnomalyDetectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLogGroupsForQuery", func(t *testing.T) {
+        input := &cloudwatchlogs.ListLogGroupsForQueryInput{}
+        output := &cloudwatchlogs.ListLogGroupsForQueryOutput{}
+
+        mockClient.On("ListLogGroupsForQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLogGroupsForQuery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,6 +918,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutIndexPolicy", func(t *testing.T) {
+        input := &cloudwatchlogs.PutIndexPolicyInput{}
+        output := &cloudwatchlogs.PutIndexPolicyOutput{}
+
+        mockClient.On("PutIndexPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutIndexPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutIntegration", func(t *testing.T) {
+        input := &cloudwatchlogs.PutIntegrationInput{}
+        output := &cloudwatchlogs.PutIntegrationOutput{}
+
+        mockClient.On("PutIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutLogEvents", func(t *testing.T) {
         input := &cloudwatchlogs.PutLogEventsInput{}
         output := &cloudwatchlogs.PutLogEventsOutput{}
@@ -860,6 +1016,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutSubscriptionFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutSubscriptionFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTransformer", func(t *testing.T) {
+        input := &cloudwatchlogs.PutTransformerInput{}
+        output := &cloudwatchlogs.PutTransformerOutput{}
+
+        mockClient.On("PutTransformer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTransformer(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -944,6 +1113,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTestTransformer", func(t *testing.T) {
+        input := &cloudwatchlogs.TestTransformerInput{}
+        output := &cloudwatchlogs.TestTransformerOutput{}
+
+        mockClient.On("TestTransformer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TestTransformer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUntagLogGroup", func(t *testing.T) {
         input := &cloudwatchlogs.UntagLogGroupInput{}
         output := &cloudwatchlogs.UntagLogGroupOutput{}
@@ -977,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAnomaly", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAnomaly(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDeliveryConfiguration", func(t *testing.T) {
+        input := &cloudwatchlogs.UpdateDeliveryConfigurationInput{}
+        output := &cloudwatchlogs.UpdateDeliveryConfigurationOutput{}
+
+        mockClient.On("UpdateDeliveryConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDeliveryConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

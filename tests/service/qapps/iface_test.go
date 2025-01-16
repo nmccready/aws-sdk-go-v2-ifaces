@@ -60,6 +60,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchCreateCategory", func(t *testing.T) {
+        input := &qapps.BatchCreateCategoryInput{}
+        output := &qapps.BatchCreateCategoryOutput{}
+
+        mockClient.On("BatchCreateCategory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchCreateCategory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteCategory", func(t *testing.T) {
+        input := &qapps.BatchDeleteCategoryInput{}
+        output := &qapps.BatchDeleteCategoryOutput{}
+
+        mockClient.On("BatchDeleteCategory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteCategory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateCategory", func(t *testing.T) {
+        input := &qapps.BatchUpdateCategoryInput{}
+        output := &qapps.BatchUpdateCategoryOutput{}
+
+        mockClient.On("BatchUpdateCategory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateCategory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLibraryItem", func(t *testing.T) {
         input := &qapps.CreateLibraryItemInput{}
         output := &qapps.CreateLibraryItemOutput{}
@@ -67,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateLibraryItem", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateLibraryItem(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePresignedUrl", func(t *testing.T) {
+        input := &qapps.CreatePresignedUrlInput{}
+        output := &qapps.CreatePresignedUrlOutput{}
+
+        mockClient.On("CreatePresignedUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePresignedUrl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeQAppPermissions", func(t *testing.T) {
+        input := &qapps.DescribeQAppPermissionsInput{}
+        output := &qapps.DescribeQAppPermissionsOutput{}
+
+        mockClient.On("DescribeQAppPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeQAppPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateLibraryItemReview", func(t *testing.T) {
         input := &qapps.DisassociateLibraryItemReviewInput{}
         output := &qapps.DisassociateLibraryItemReviewOutput{}
@@ -132,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateQAppFromUser", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateQAppFromUser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestExportQAppSessionData", func(t *testing.T) {
+        input := &qapps.ExportQAppSessionDataInput{}
+        output := &qapps.ExportQAppSessionDataOutput{}
+
+        mockClient.On("ExportQAppSessionData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportQAppSessionData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetQAppSessionMetadata", func(t *testing.T) {
+        input := &qapps.GetQAppSessionMetadataInput{}
+        output := &qapps.GetQAppSessionMetadataOutput{}
+
+        mockClient.On("GetQAppSessionMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQAppSessionMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestImportDocument", func(t *testing.T) {
         input := &qapps.ImportDocumentInput{}
         output := &qapps.ImportDocumentOutput{}
@@ -190,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCategories", func(t *testing.T) {
+        input := &qapps.ListCategoriesInput{}
+        output := &qapps.ListCategoriesOutput{}
+
+        mockClient.On("ListCategories", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCategories(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListLibraryItems", func(t *testing.T) {
         input := &qapps.ListLibraryItemsInput{}
         output := &qapps.ListLibraryItemsOutput{}
@@ -197,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLibraryItems", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLibraryItems(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQAppSessionData", func(t *testing.T) {
+        input := &qapps.ListQAppSessionDataInput{}
+        output := &qapps.ListQAppSessionDataOutput{}
+
+        mockClient.On("ListQAppSessionData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQAppSessionData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateLibraryItemMetadata", func(t *testing.T) {
+        input := &qapps.UpdateLibraryItemMetadataInput{}
+        output := &qapps.UpdateLibraryItemMetadataOutput{}
+
+        mockClient.On("UpdateLibraryItemMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLibraryItemMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateQApp", func(t *testing.T) {
         input := &qapps.UpdateQAppInput{}
         output := &qapps.UpdateQAppOutput{}
@@ -320,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateQAppPermissions", func(t *testing.T) {
+        input := &qapps.UpdateQAppPermissionsInput{}
+        output := &qapps.UpdateQAppPermissionsOutput{}
+
+        mockClient.On("UpdateQAppPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQAppPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateQAppSession", func(t *testing.T) {
         input := &qapps.UpdateQAppSessionInput{}
         output := &qapps.UpdateQAppSessionOutput{}
@@ -327,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateQAppSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateQAppSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQAppSessionMetadata", func(t *testing.T) {
+        input := &qapps.UpdateQAppSessionMetadataInput{}
+        output := &qapps.UpdateQAppSessionMetadataOutput{}
+
+        mockClient.On("UpdateQAppSessionMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQAppSessionMetadata(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -580,6 +580,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetRecoveryPointIndexDetails", func(t *testing.T) {
+        input := &backup.GetRecoveryPointIndexDetailsInput{}
+        output := &backup.GetRecoveryPointIndexDetailsOutput{}
+
+        mockClient.On("GetRecoveryPointIndexDetails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecoveryPointIndexDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRecoveryPointRestoreMetadata", func(t *testing.T) {
         input := &backup.GetRecoveryPointRestoreMetadataInput{}
         output := &backup.GetRecoveryPointRestoreMetadataOutput{}
@@ -782,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFrameworks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFrameworks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIndexedRecoveryPoints", func(t *testing.T) {
+        input := &backup.ListIndexedRecoveryPointsInput{}
+        output := &backup.ListIndexedRecoveryPointsOutput{}
+
+        mockClient.On("ListIndexedRecoveryPoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIndexedRecoveryPoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1146,6 +1172,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGlobalSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGlobalSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRecoveryPointIndexSettings", func(t *testing.T) {
+        input := &backup.UpdateRecoveryPointIndexSettingsInput{}
+        output := &backup.UpdateRecoveryPointIndexSettingsOutput{}
+
+        mockClient.On("UpdateRecoveryPointIndexSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRecoveryPointIndexSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

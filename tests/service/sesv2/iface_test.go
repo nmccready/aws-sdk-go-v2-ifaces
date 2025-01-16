@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateMultiRegionEndpoint", func(t *testing.T) {
+        input := &sesv2.CreateMultiRegionEndpointInput{}
+        output := &sesv2.CreateMultiRegionEndpointOutput{}
+
+        mockClient.On("CreateMultiRegionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMultiRegionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteConfigurationSet", func(t *testing.T) {
         input := &sesv2.DeleteConfigurationSetInput{}
         output := &sesv2.DeleteConfigurationSetOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEmailTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEmailTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMultiRegionEndpoint", func(t *testing.T) {
+        input := &sesv2.DeleteMultiRegionEndpointInput{}
+        output := &sesv2.DeleteMultiRegionEndpointOutput{}
+
+        mockClient.On("DeleteMultiRegionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMultiRegionEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMultiRegionEndpoint", func(t *testing.T) {
+        input := &sesv2.GetMultiRegionEndpointInput{}
+        output := &sesv2.GetMultiRegionEndpointOutput{}
+
+        mockClient.On("GetMultiRegionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMultiRegionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSuppressedDestination", func(t *testing.T) {
         input := &sesv2.GetSuppressedDestinationInput{}
         output := &sesv2.GetSuppressedDestinationOutput{}
@@ -756,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListImportJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListImportJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMultiRegionEndpoints", func(t *testing.T) {
+        input := &sesv2.ListMultiRegionEndpointsInput{}
+        output := &sesv2.ListMultiRegionEndpointsOutput{}
+
+        mockClient.On("ListMultiRegionEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMultiRegionEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateMultiRegionCluster", func(t *testing.T) {
+        input := &memorydb.CreateMultiRegionClusterInput{}
+        output := &memorydb.CreateMultiRegionClusterOutput{}
+
+        mockClient.On("CreateMultiRegionCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMultiRegionCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateParameterGroup", func(t *testing.T) {
         input := &memorydb.CreateParameterGroupInput{}
         output := &memorydb.CreateParameterGroupOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMultiRegionCluster", func(t *testing.T) {
+        input := &memorydb.DeleteMultiRegionClusterInput{}
+        output := &memorydb.DeleteMultiRegionClusterOutput{}
+
+        mockClient.On("DeleteMultiRegionCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMultiRegionCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -262,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMultiRegionClusters", func(t *testing.T) {
+        input := &memorydb.DescribeMultiRegionClustersInput{}
+        output := &memorydb.DescribeMultiRegionClustersOutput{}
+
+        mockClient.On("DescribeMultiRegionClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMultiRegionClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAllowedMultiRegionClusterUpdates", func(t *testing.T) {
+        input := &memorydb.ListAllowedMultiRegionClusterUpdatesInput{}
+        output := &memorydb.ListAllowedMultiRegionClusterUpdatesOutput{}
+
+        mockClient.On("ListAllowedMultiRegionClusterUpdates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAllowedMultiRegionClusterUpdates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAllowedNodeTypeUpdates", func(t *testing.T) {
         input := &memorydb.ListAllowedNodeTypeUpdatesInput{}
         output := &memorydb.ListAllowedNodeTypeUpdatesOutput{}
@@ -483,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMultiRegionCluster", func(t *testing.T) {
+        input := &memorydb.UpdateMultiRegionClusterInput{}
+        output := &memorydb.UpdateMultiRegionClusterOutput{}
+
+        mockClient.On("UpdateMultiRegionCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMultiRegionCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

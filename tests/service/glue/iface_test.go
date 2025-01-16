@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchPutDataQualityStatisticAnnotation", func(t *testing.T) {
+        input := &glue.BatchPutDataQualityStatisticAnnotationInput{}
+        output := &glue.BatchPutDataQualityStatisticAnnotationOutput{}
+
+        mockClient.On("BatchPutDataQualityStatisticAnnotation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchPutDataQualityStatisticAnnotation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchStopJobRun", func(t *testing.T) {
         input := &glue.BatchStopJobRunInput{}
         output := &glue.BatchStopJobRunOutput{}
@@ -333,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCatalog", func(t *testing.T) {
+        input := &glue.CreateCatalogInput{}
+        output := &glue.CreateCatalogOutput{}
+
+        mockClient.On("CreateCatalog", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateClassifier", func(t *testing.T) {
         input := &glue.CreateClassifierInput{}
         output := &glue.CreateClassifierOutput{}
@@ -340,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateClassifier", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateClassifier(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateColumnStatisticsTaskSettings", func(t *testing.T) {
+        input := &glue.CreateColumnStatisticsTaskSettingsInput{}
+        output := &glue.CreateColumnStatisticsTaskSettingsOutput{}
+
+        mockClient.On("CreateColumnStatisticsTaskSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateColumnStatisticsTaskSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -418,6 +457,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDevEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDevEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIntegration", func(t *testing.T) {
+        input := &glue.CreateIntegrationInput{}
+        output := &glue.CreateIntegrationOutput{}
+
+        mockClient.On("CreateIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIntegrationResourceProperty", func(t *testing.T) {
+        input := &glue.CreateIntegrationResourcePropertyInput{}
+        output := &glue.CreateIntegrationResourcePropertyOutput{}
+
+        mockClient.On("CreateIntegrationResourceProperty", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIntegrationResourceProperty(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIntegrationTableProperties", func(t *testing.T) {
+        input := &glue.CreateIntegrationTablePropertiesInput{}
+        output := &glue.CreateIntegrationTablePropertiesOutput{}
+
+        mockClient.On("CreateIntegrationTableProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIntegrationTableProperties(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -632,6 +710,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCatalog", func(t *testing.T) {
+        input := &glue.DeleteCatalogInput{}
+        output := &glue.DeleteCatalogOutput{}
+
+        mockClient.On("DeleteCatalog", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteClassifier", func(t *testing.T) {
         input := &glue.DeleteClassifierInput{}
         output := &glue.DeleteClassifierOutput{}
@@ -665,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteColumnStatisticsForTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteColumnStatisticsForTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteColumnStatisticsTaskSettings", func(t *testing.T) {
+        input := &glue.DeleteColumnStatisticsTaskSettingsInput{}
+        output := &glue.DeleteColumnStatisticsTaskSettingsOutput{}
+
+        mockClient.On("DeleteColumnStatisticsTaskSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteColumnStatisticsTaskSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -743,6 +847,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDevEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDevEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIntegration", func(t *testing.T) {
+        input := &glue.DeleteIntegrationInput{}
+        output := &glue.DeleteIntegrationOutput{}
+
+        mockClient.On("DeleteIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIntegrationTableProperties", func(t *testing.T) {
+        input := &glue.DeleteIntegrationTablePropertiesInput{}
+        output := &glue.DeleteIntegrationTablePropertiesOutput{}
+
+        mockClient.On("DeleteIntegrationTableProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIntegrationTableProperties(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -970,6 +1100,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeConnectionType", func(t *testing.T) {
+        input := &glue.DescribeConnectionTypeInput{}
+        output := &glue.DescribeConnectionTypeOutput{}
+
+        mockClient.On("DescribeConnectionType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConnectionType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEntity", func(t *testing.T) {
+        input := &glue.DescribeEntityInput{}
+        output := &glue.DescribeEntityOutput{}
+
+        mockClient.On("DescribeEntity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEntity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeInboundIntegrations", func(t *testing.T) {
+        input := &glue.DescribeInboundIntegrationsInput{}
+        output := &glue.DescribeInboundIntegrationsOutput{}
+
+        mockClient.On("DescribeInboundIntegrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInboundIntegrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIntegrations", func(t *testing.T) {
+        input := &glue.DescribeIntegrationsInput{}
+        output := &glue.DescribeIntegrationsOutput{}
+
+        mockClient.On("DescribeIntegrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIntegrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBlueprint", func(t *testing.T) {
         input := &glue.GetBlueprintInput{}
         output := &glue.GetBlueprintOutput{}
@@ -1009,6 +1191,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCatalog", func(t *testing.T) {
+        input := &glue.GetCatalogInput{}
+        output := &glue.GetCatalogOutput{}
+
+        mockClient.On("GetCatalog", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCatalogImportStatus", func(t *testing.T) {
         input := &glue.GetCatalogImportStatusInput{}
         output := &glue.GetCatalogImportStatusOutput{}
@@ -1016,6 +1211,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCatalogImportStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCatalogImportStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCatalogs", func(t *testing.T) {
+        input := &glue.GetCatalogsInput{}
+        output := &glue.GetCatalogsOutput{}
+
+        mockClient.On("GetCatalogs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCatalogs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1094,6 +1302,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetColumnStatisticsTaskRuns", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetColumnStatisticsTaskRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetColumnStatisticsTaskSettings", func(t *testing.T) {
+        input := &glue.GetColumnStatisticsTaskSettingsInput{}
+        output := &glue.GetColumnStatisticsTaskSettingsOutput{}
+
+        mockClient.On("GetColumnStatisticsTaskSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetColumnStatisticsTaskSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1185,6 +1406,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataCatalogEncryptionSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataCatalogEncryptionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataQualityModel", func(t *testing.T) {
+        input := &glue.GetDataQualityModelInput{}
+        output := &glue.GetDataQualityModelOutput{}
+
+        mockClient.On("GetDataQualityModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataQualityModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataQualityModelResult", func(t *testing.T) {
+        input := &glue.GetDataQualityModelResultInput{}
+        output := &glue.GetDataQualityModelResultOutput{}
+
+        mockClient.On("GetDataQualityModelResult", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataQualityModelResult(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1302,6 +1549,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDevEndpoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDevEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEntityRecords", func(t *testing.T) {
+        input := &glue.GetEntityRecordsInput{}
+        output := &glue.GetEntityRecordsOutput{}
+
+        mockClient.On("GetEntityRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEntityRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIntegrationResourceProperty", func(t *testing.T) {
+        input := &glue.GetIntegrationResourcePropertyInput{}
+        output := &glue.GetIntegrationResourcePropertyOutput{}
+
+        mockClient.On("GetIntegrationResourceProperty", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIntegrationResourceProperty(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIntegrationTableProperties", func(t *testing.T) {
+        input := &glue.GetIntegrationTablePropertiesInput{}
+        output := &glue.GetIntegrationTablePropertiesOutput{}
+
+        mockClient.On("GetIntegrationTableProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIntegrationTableProperties(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1906,6 +2192,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConnectionTypes", func(t *testing.T) {
+        input := &glue.ListConnectionTypesInput{}
+        output := &glue.ListConnectionTypesOutput{}
+
+        mockClient.On("ListConnectionTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectionTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCrawlers", func(t *testing.T) {
         input := &glue.ListCrawlersInput{}
         output := &glue.ListCrawlersOutput{}
@@ -1997,6 +2296,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDataQualityStatisticAnnotations", func(t *testing.T) {
+        input := &glue.ListDataQualityStatisticAnnotationsInput{}
+        output := &glue.ListDataQualityStatisticAnnotationsOutput{}
+
+        mockClient.On("ListDataQualityStatisticAnnotations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataQualityStatisticAnnotations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataQualityStatistics", func(t *testing.T) {
+        input := &glue.ListDataQualityStatisticsInput{}
+        output := &glue.ListDataQualityStatisticsOutput{}
+
+        mockClient.On("ListDataQualityStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataQualityStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDevEndpoints", func(t *testing.T) {
         input := &glue.ListDevEndpointsInput{}
         output := &glue.ListDevEndpointsOutput{}
@@ -2004,6 +2329,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDevEndpoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDevEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEntities", func(t *testing.T) {
+        input := &glue.ListEntitiesInput{}
+        output := &glue.ListEntitiesOutput{}
+
+        mockClient.On("ListEntities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEntities(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2153,6 +2491,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyIntegration", func(t *testing.T) {
+        input := &glue.ModifyIntegrationInput{}
+        output := &glue.ModifyIntegrationOutput{}
+
+        mockClient.On("ModifyIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutDataCatalogEncryptionSettings", func(t *testing.T) {
         input := &glue.PutDataCatalogEncryptionSettingsInput{}
         output := &glue.PutDataCatalogEncryptionSettingsOutput{}
@@ -2160,6 +2511,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutDataCatalogEncryptionSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutDataCatalogEncryptionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutDataQualityProfileAnnotation", func(t *testing.T) {
+        input := &glue.PutDataQualityProfileAnnotationInput{}
+        output := &glue.PutDataQualityProfileAnnotationOutput{}
+
+        mockClient.On("PutDataQualityProfileAnnotation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutDataQualityProfileAnnotation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2322,6 +2686,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartColumnStatisticsTaskRunSchedule", func(t *testing.T) {
+        input := &glue.StartColumnStatisticsTaskRunScheduleInput{}
+        output := &glue.StartColumnStatisticsTaskRunScheduleOutput{}
+
+        mockClient.On("StartColumnStatisticsTaskRunSchedule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartColumnStatisticsTaskRunSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartCrawler", func(t *testing.T) {
         input := &glue.StartCrawlerInput{}
         output := &glue.StartCrawlerOutput{}
@@ -2478,6 +2855,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStopColumnStatisticsTaskRunSchedule", func(t *testing.T) {
+        input := &glue.StopColumnStatisticsTaskRunScheduleInput{}
+        output := &glue.StopColumnStatisticsTaskRunScheduleOutput{}
+
+        mockClient.On("StopColumnStatisticsTaskRunSchedule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopColumnStatisticsTaskRunSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopCrawler", func(t *testing.T) {
         input := &glue.StopCrawlerInput{}
         output := &glue.StopCrawlerOutput{}
@@ -2556,6 +2946,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTestConnection", func(t *testing.T) {
+        input := &glue.TestConnectionInput{}
+        output := &glue.TestConnectionOutput{}
+
+        mockClient.On("TestConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TestConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUntagResource", func(t *testing.T) {
         input := &glue.UntagResourceInput{}
         output := &glue.UntagResourceOutput{}
@@ -2576,6 +2979,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBlueprint", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCatalog", func(t *testing.T) {
+        input := &glue.UpdateCatalogInput{}
+        output := &glue.UpdateCatalogOutput{}
+
+        mockClient.On("UpdateCatalog", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCatalog(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2615,6 +3031,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateColumnStatisticsForTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateColumnStatisticsForTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateColumnStatisticsTaskSettings", func(t *testing.T) {
+        input := &glue.UpdateColumnStatisticsTaskSettingsInput{}
+        output := &glue.UpdateColumnStatisticsTaskSettingsOutput{}
+
+        mockClient.On("UpdateColumnStatisticsTaskSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateColumnStatisticsTaskSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2693,6 +3122,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDevEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDevEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIntegrationResourceProperty", func(t *testing.T) {
+        input := &glue.UpdateIntegrationResourcePropertyInput{}
+        output := &glue.UpdateIntegrationResourcePropertyOutput{}
+
+        mockClient.On("UpdateIntegrationResourceProperty", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIntegrationResourceProperty(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIntegrationTableProperties", func(t *testing.T) {
+        input := &glue.UpdateIntegrationTablePropertiesInput{}
+        output := &glue.UpdateIntegrationTablePropertiesOutput{}
+
+        mockClient.On("UpdateIntegrationTableProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIntegrationTableProperties(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

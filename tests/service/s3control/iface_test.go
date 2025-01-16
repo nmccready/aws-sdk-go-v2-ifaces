@@ -879,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCallerAccessGrants", func(t *testing.T) {
+        input := &s3control.ListCallerAccessGrantsInput{}
+        output := &s3control.ListCallerAccessGrantsOutput{}
+
+        mockClient.On("ListCallerAccessGrants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCallerAccessGrants(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListJobs", func(t *testing.T) {
         input := &s3control.ListJobsInput{}
         output := &s3control.ListJobsOutput{}

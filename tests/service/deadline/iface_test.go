@@ -827,6 +827,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListJobParameterDefinitions", func(t *testing.T) {
+        input := &deadline.ListJobParameterDefinitionsInput{}
+        output := &deadline.ListJobParameterDefinitionsOutput{}
+
+        mockClient.On("ListJobParameterDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobParameterDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListJobs", func(t *testing.T) {
         input := &deadline.ListJobsInput{}
         output := &deadline.ListJobsOutput{}

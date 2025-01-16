@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestApplyPendingMaintenanceAction", func(t *testing.T) {
+        input := &docdbelastic.ApplyPendingMaintenanceActionInput{}
+        output := &docdbelastic.ApplyPendingMaintenanceActionOutput{}
+
+        mockClient.On("ApplyPendingMaintenanceAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ApplyPendingMaintenanceAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCopyClusterSnapshot", func(t *testing.T) {
         input := &docdbelastic.CopyClusterSnapshotInput{}
         output := &docdbelastic.CopyClusterSnapshotOutput{}
@@ -125,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPendingMaintenanceAction", func(t *testing.T) {
+        input := &docdbelastic.GetPendingMaintenanceActionInput{}
+        output := &docdbelastic.GetPendingMaintenanceActionOutput{}
+
+        mockClient.On("GetPendingMaintenanceAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPendingMaintenanceAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListClusterSnapshots", func(t *testing.T) {
         input := &docdbelastic.ListClusterSnapshotsInput{}
         output := &docdbelastic.ListClusterSnapshotsOutput{}
@@ -145,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListClusters", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPendingMaintenanceActions", func(t *testing.T) {
+        input := &docdbelastic.ListPendingMaintenanceActionsInput{}
+        output := &docdbelastic.ListPendingMaintenanceActionsOutput{}
+
+        mockClient.On("ListPendingMaintenanceActions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPendingMaintenanceActions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

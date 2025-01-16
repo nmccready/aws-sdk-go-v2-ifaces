@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchAddRole", func(t *testing.T) {
+        input := &repostspace.BatchAddRoleInput{}
+        output := &repostspace.BatchAddRoleOutput{}
+
+        mockClient.On("BatchAddRole", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchAddRole(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchRemoveRole", func(t *testing.T) {
+        input := &repostspace.BatchRemoveRoleInput{}
+        output := &repostspace.BatchRemoveRoleOutput{}
+
+        mockClient.On("BatchRemoveRole", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchRemoveRole(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSpace", func(t *testing.T) {
         input := &repostspace.CreateSpaceInput{}
         output := &repostspace.CreateSpaceOutput{}

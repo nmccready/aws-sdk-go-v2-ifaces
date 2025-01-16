@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateStateTemplate", func(t *testing.T) {
+        input := &iotfleetwise.CreateStateTemplateInput{}
+        output := &iotfleetwise.CreateStateTemplateOutput{}
+
+        mockClient.On("CreateStateTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStateTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVehicle", func(t *testing.T) {
         input := &iotfleetwise.CreateVehicleInput{}
         output := &iotfleetwise.CreateVehicleOutput{}
@@ -210,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSignalCatalog", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSignalCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteStateTemplate", func(t *testing.T) {
+        input := &iotfleetwise.DeleteStateTemplateInput{}
+        output := &iotfleetwise.DeleteStateTemplateOutput{}
+
+        mockClient.On("DeleteStateTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteStateTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSignalCatalog", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSignalCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetStateTemplate", func(t *testing.T) {
+        input := &iotfleetwise.GetStateTemplateInput{}
+        output := &iotfleetwise.GetStateTemplateOutput{}
+
+        mockClient.On("GetStateTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStateTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListStateTemplates", func(t *testing.T) {
+        input := &iotfleetwise.ListStateTemplatesInput{}
+        output := &iotfleetwise.ListStateTemplatesOutput{}
+
+        mockClient.On("ListStateTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStateTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &iotfleetwise.ListTagsForResourceInput{}
         output := &iotfleetwise.ListTagsForResourceOutput{}
@@ -691,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSignalCatalog", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSignalCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateStateTemplate", func(t *testing.T) {
+        input := &iotfleetwise.UpdateStateTemplateInput{}
+        output := &iotfleetwise.UpdateStateTemplateOutput{}
+
+        mockClient.On("UpdateStateTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateStateTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

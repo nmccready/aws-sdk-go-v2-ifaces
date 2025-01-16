@@ -60,6 +60,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddEntityOwner", func(t *testing.T) {
+        input := &datazone.AddEntityOwnerInput{}
+        output := &datazone.AddEntityOwnerOutput{}
+
+        mockClient.On("AddEntityOwner", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddEntityOwner(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAddPolicyGrant", func(t *testing.T) {
+        input := &datazone.AddPolicyGrantInput{}
+        output := &datazone.AddPolicyGrantOutput{}
+
+        mockClient.On("AddPolicyGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddPolicyGrant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateEnvironmentRole", func(t *testing.T) {
         input := &datazone.AssociateEnvironmentRoleInput{}
         output := &datazone.AssociateEnvironmentRoleOutput{}
@@ -112,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAssetFilter", func(t *testing.T) {
+        input := &datazone.CreateAssetFilterInput{}
+        output := &datazone.CreateAssetFilterOutput{}
+
+        mockClient.On("CreateAssetFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAssetRevision", func(t *testing.T) {
         input := &datazone.CreateAssetRevisionInput{}
         output := &datazone.CreateAssetRevisionOutput{}
@@ -138,6 +177,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConnection", func(t *testing.T) {
+        input := &datazone.CreateConnectionInput{}
+        output := &datazone.CreateConnectionOutput{}
+
+        mockClient.On("CreateConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataProduct", func(t *testing.T) {
+        input := &datazone.CreateDataProductInput{}
+        output := &datazone.CreateDataProductOutput{}
+
+        mockClient.On("CreateDataProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataProduct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataProductRevision", func(t *testing.T) {
+        input := &datazone.CreateDataProductRevisionInput{}
+        output := &datazone.CreateDataProductRevisionOutput{}
+
+        mockClient.On("CreateDataProductRevision", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataProductRevision(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataSource", func(t *testing.T) {
         input := &datazone.CreateDataSourceInput{}
         output := &datazone.CreateDataSourceOutput{}
@@ -158,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDomainUnit", func(t *testing.T) {
+        input := &datazone.CreateDomainUnitInput{}
+        output := &datazone.CreateDomainUnitOutput{}
+
+        mockClient.On("CreateDomainUnit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDomainUnit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,6 +385,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateProjectProfile", func(t *testing.T) {
+        input := &datazone.CreateProjectProfileInput{}
+        output := &datazone.CreateProjectProfileOutput{}
+
+        mockClient.On("CreateProjectProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProjectProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRule", func(t *testing.T) {
+        input := &datazone.CreateRuleInput{}
+        output := &datazone.CreateRuleOutput{}
+
+        mockClient.On("CreateRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSubscriptionGrant", func(t *testing.T) {
         input := &datazone.CreateSubscriptionGrantInput{}
         output := &datazone.CreateSubscriptionGrantOutput{}
@@ -359,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAssetFilter", func(t *testing.T) {
+        input := &datazone.DeleteAssetFilterInput{}
+        output := &datazone.DeleteAssetFilterOutput{}
+
+        mockClient.On("DeleteAssetFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAssetType", func(t *testing.T) {
         input := &datazone.DeleteAssetTypeInput{}
         output := &datazone.DeleteAssetTypeOutput{}
@@ -366,6 +496,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAssetType", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAssetType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConnection", func(t *testing.T) {
+        input := &datazone.DeleteConnectionInput{}
+        output := &datazone.DeleteConnectionOutput{}
+
+        mockClient.On("DeleteConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataProduct", func(t *testing.T) {
+        input := &datazone.DeleteDataProductInput{}
+        output := &datazone.DeleteDataProductOutput{}
+
+        mockClient.On("DeleteDataProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataProduct(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -392,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDomainUnit", func(t *testing.T) {
+        input := &datazone.DeleteDomainUnitInput{}
+        output := &datazone.DeleteDomainUnitOutput{}
+
+        mockClient.On("DeleteDomainUnit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDomainUnit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,6 +697,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteProjectProfile", func(t *testing.T) {
+        input := &datazone.DeleteProjectProfileInput{}
+        output := &datazone.DeleteProjectProfileOutput{}
+
+        mockClient.On("DeleteProjectProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProjectProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRule", func(t *testing.T) {
+        input := &datazone.DeleteRuleInput{}
+        output := &datazone.DeleteRuleOutput{}
+
+        mockClient.On("DeleteRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteSubscriptionGrant", func(t *testing.T) {
         input := &datazone.DeleteSubscriptionGrantInput{}
         output := &datazone.DeleteSubscriptionGrantOutput{}
@@ -606,6 +801,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAssetFilter", func(t *testing.T) {
+        input := &datazone.GetAssetFilterInput{}
+        output := &datazone.GetAssetFilterOutput{}
+
+        mockClient.On("GetAssetFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAssetType", func(t *testing.T) {
         input := &datazone.GetAssetTypeInput{}
         output := &datazone.GetAssetTypeOutput{}
@@ -613,6 +821,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAssetType", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAssetType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnection", func(t *testing.T) {
+        input := &datazone.GetConnectionInput{}
+        output := &datazone.GetConnectionOutput{}
+
+        mockClient.On("GetConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataProduct", func(t *testing.T) {
+        input := &datazone.GetDataProductInput{}
+        output := &datazone.GetDataProductOutput{}
+
+        mockClient.On("GetDataProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataProduct(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -652,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDomainUnit", func(t *testing.T) {
+        input := &datazone.GetDomainUnitInput{}
+        output := &datazone.GetDomainUnitOutput{}
+
+        mockClient.On("GetDomainUnit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDomainUnit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -704,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEnvironmentBlueprintConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEnvironmentBlueprintConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEnvironmentCredentials", func(t *testing.T) {
+        input := &datazone.GetEnvironmentCredentialsInput{}
+        output := &datazone.GetEnvironmentCredentialsOutput{}
+
+        mockClient.On("GetEnvironmentCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnvironmentCredentials(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,6 +1048,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetJobRun", func(t *testing.T) {
+        input := &datazone.GetJobRunInput{}
+        output := &datazone.GetJobRunOutput{}
+
+        mockClient.On("GetJobRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetJobRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLineageEvent", func(t *testing.T) {
+        input := &datazone.GetLineageEventInput{}
+        output := &datazone.GetLineageEventOutput{}
+
+        mockClient.On("GetLineageEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLineageEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLineageNode", func(t *testing.T) {
         input := &datazone.GetLineageNodeInput{}
         output := &datazone.GetLineageNodeOutput{}
@@ -834,6 +1120,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetProject", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProjectProfile", func(t *testing.T) {
+        input := &datazone.GetProjectProfileInput{}
+        output := &datazone.GetProjectProfileOutput{}
+
+        mockClient.On("GetProjectProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProjectProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRule", func(t *testing.T) {
+        input := &datazone.GetRuleInput{}
+        output := &datazone.GetRuleOutput{}
+
+        mockClient.On("GetRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -918,6 +1230,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAssetFilters", func(t *testing.T) {
+        input := &datazone.ListAssetFiltersInput{}
+        output := &datazone.ListAssetFiltersOutput{}
+
+        mockClient.On("ListAssetFilters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssetFilters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAssetRevisions", func(t *testing.T) {
         input := &datazone.ListAssetRevisionsInput{}
         output := &datazone.ListAssetRevisionsOutput{}
@@ -925,6 +1250,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssetRevisions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssetRevisions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConnections", func(t *testing.T) {
+        input := &datazone.ListConnectionsInput{}
+        output := &datazone.ListConnectionsOutput{}
+
+        mockClient.On("ListConnections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataProductRevisions", func(t *testing.T) {
+        input := &datazone.ListDataProductRevisionsInput{}
+        output := &datazone.ListDataProductRevisionsOutput{}
+
+        mockClient.On("ListDataProductRevisions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataProductRevisions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -970,6 +1321,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
+        input := &datazone.ListDomainUnitsForParentInput{}
+        output := &datazone.ListDomainUnitsForParentOutput{}
+
+        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDomains", func(t *testing.T) {
         input := &datazone.ListDomainsInput{}
         output := &datazone.ListDomainsOutput{}
@@ -977,6 +1341,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDomains", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEntityOwners", func(t *testing.T) {
+        input := &datazone.ListEntityOwnersInput{}
+        output := &datazone.ListEntityOwnersOutput{}
+
+        mockClient.On("ListEntityOwners", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEntityOwners(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1048,6 +1425,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListJobRuns", func(t *testing.T) {
+        input := &datazone.ListJobRunsInput{}
+        output := &datazone.ListJobRunsOutput{}
+
+        mockClient.On("ListJobRuns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLineageEvents", func(t *testing.T) {
+        input := &datazone.ListLineageEventsInput{}
+        output := &datazone.ListLineageEventsOutput{}
+
+        mockClient.On("ListLineageEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLineageEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListLineageNodeHistory", func(t *testing.T) {
         input := &datazone.ListLineageNodeHistoryInput{}
         output := &datazone.ListLineageNodeHistoryOutput{}
@@ -1087,6 +1490,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPolicyGrants", func(t *testing.T) {
+        input := &datazone.ListPolicyGrantsInput{}
+        output := &datazone.ListPolicyGrantsOutput{}
+
+        mockClient.On("ListPolicyGrants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyGrants(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListProjectMemberships", func(t *testing.T) {
         input := &datazone.ListProjectMembershipsInput{}
         output := &datazone.ListProjectMembershipsOutput{}
@@ -1100,6 +1516,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListProjectProfiles", func(t *testing.T) {
+        input := &datazone.ListProjectProfilesInput{}
+        output := &datazone.ListProjectProfilesOutput{}
+
+        mockClient.On("ListProjectProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProjectProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListProjects", func(t *testing.T) {
         input := &datazone.ListProjectsInput{}
         output := &datazone.ListProjectsOutput{}
@@ -1107,6 +1536,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProjects", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProjects(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRules", func(t *testing.T) {
+        input := &datazone.ListRulesInput{}
+        output := &datazone.ListRulesOutput{}
+
+        mockClient.On("ListRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1256,6 +1698,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRemoveEntityOwner", func(t *testing.T) {
+        input := &datazone.RemoveEntityOwnerInput{}
+        output := &datazone.RemoveEntityOwnerOutput{}
+
+        mockClient.On("RemoveEntityOwner", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveEntityOwner(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRemovePolicyGrant", func(t *testing.T) {
+        input := &datazone.RemovePolicyGrantInput{}
+        output := &datazone.RemovePolicyGrantOutput{}
+
+        mockClient.On("RemovePolicyGrant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemovePolicyGrant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRevokeSubscription", func(t *testing.T) {
         input := &datazone.RevokeSubscriptionInput{}
         output := &datazone.RevokeSubscriptionOutput{}
@@ -1386,6 +1854,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAssetFilter", func(t *testing.T) {
+        input := &datazone.UpdateAssetFilterInput{}
+        output := &datazone.UpdateAssetFilterOutput{}
+
+        mockClient.On("UpdateAssetFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConnection", func(t *testing.T) {
+        input := &datazone.UpdateConnectionInput{}
+        output := &datazone.UpdateConnectionOutput{}
+
+        mockClient.On("UpdateConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateDataSource", func(t *testing.T) {
         input := &datazone.UpdateDataSourceInput{}
         output := &datazone.UpdateDataSourceOutput{}
@@ -1406,6 +1900,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDomainUnit", func(t *testing.T) {
+        input := &datazone.UpdateDomainUnitInput{}
+        output := &datazone.UpdateDomainUnitOutput{}
+
+        mockClient.On("UpdateDomainUnit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDomainUnit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1497,6 +2004,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateProject", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProjectProfile", func(t *testing.T) {
+        input := &datazone.UpdateProjectProfileInput{}
+        output := &datazone.UpdateProjectProfileOutput{}
+
+        mockClient.On("UpdateProjectProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProjectProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRule", func(t *testing.T) {
+        input := &datazone.UpdateRuleInput{}
+        output := &datazone.UpdateRuleOutput{}
+
+        mockClient.On("UpdateRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

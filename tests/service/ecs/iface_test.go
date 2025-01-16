@@ -242,6 +242,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeServiceDeployments", func(t *testing.T) {
+        input := &ecs.DescribeServiceDeploymentsInput{}
+        output := &ecs.DescribeServiceDeploymentsOutput{}
+
+        mockClient.On("DescribeServiceDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServiceDeployments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeServiceRevisions", func(t *testing.T) {
+        input := &ecs.DescribeServiceRevisionsInput{}
+        output := &ecs.DescribeServiceRevisionsOutput{}
+
+        mockClient.On("DescribeServiceRevisions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServiceRevisions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeServices", func(t *testing.T) {
         input := &ecs.DescribeServicesInput{}
         output := &ecs.DescribeServicesOutput{}
@@ -379,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContainerInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContainerInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceDeployments", func(t *testing.T) {
+        input := &ecs.ListServiceDeploymentsInput{}
+        output := &ecs.ListServiceDeploymentsOutput{}
+
+        mockClient.On("ListServiceDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceDeployments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

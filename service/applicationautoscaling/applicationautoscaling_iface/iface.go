@@ -17,6 +17,7 @@ type IClient interface {
  DescribeScalingActivities(ctx context.Context, params *DescribeScalingActivitiesInput, optFns ...func(*Options)) (*DescribeScalingActivitiesOutput, error) 
  DescribeScalingPolicies(ctx context.Context, params *DescribeScalingPoliciesInput, optFns ...func(*Options)) (*DescribeScalingPoliciesOutput, error) 
  DescribeScheduledActions(ctx context.Context, params *DescribeScheduledActionsInput, optFns ...func(*Options)) (*DescribeScheduledActionsOutput, error) 
+ GetPredictiveScalingForecast(ctx context.Context, params *GetPredictiveScalingForecastInput, optFns ...func(*Options)) (*GetPredictiveScalingForecastOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutScalingPolicy(ctx context.Context, params *PutScalingPolicyInput, optFns ...func(*Options)) (*PutScalingPolicyOutput, error) 
  PutScheduledAction(ctx context.Context, params *PutScheduledActionInput, optFns ...func(*Options)) (*PutScheduledActionOutput, error) 

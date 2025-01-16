@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetMetrics", func(t *testing.T) {
+        input := &sagemakermetrics.BatchGetMetricsInput{}
+        output := &sagemakermetrics.BatchGetMetricsOutput{}
+
+        mockClient.On("BatchGetMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchPutMetrics", func(t *testing.T) {
         input := &sagemakermetrics.BatchPutMetricsInput{}
         output := &sagemakermetrics.BatchPutMetricsOutput{}

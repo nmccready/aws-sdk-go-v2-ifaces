@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssumeRoot", func(t *testing.T) {
+        input := &sts.AssumeRootInput{}
+        output := &sts.AssumeRootOutput{}
+
+        mockClient.On("AssumeRoot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssumeRoot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDecodeAuthorizationMessage", func(t *testing.T) {
         input := &sts.DecodeAuthorizationMessageInput{}
         output := &sts.DecodeAuthorizationMessageOutput{}

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelExportTask", func(t *testing.T) {
+        input := &neptunegraph.CancelExportTaskInput{}
+        output := &neptunegraph.CancelExportTaskOutput{}
+
+        mockClient.On("CancelExportTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelExportTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelImportTask", func(t *testing.T) {
         input := &neptunegraph.CancelImportTaskInput{}
         output := &neptunegraph.CancelImportTaskOutput{}
@@ -164,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetExportTask", func(t *testing.T) {
+        input := &neptunegraph.GetExportTaskInput{}
+        output := &neptunegraph.GetExportTaskOutput{}
+
+        mockClient.On("GetExportTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExportTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetGraph", func(t *testing.T) {
         input := &neptunegraph.GetGraphInput{}
         output := &neptunegraph.GetGraphOutput{}
@@ -236,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQuery", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExportTasks", func(t *testing.T) {
+        input := &neptunegraph.ListExportTasksInput{}
+        output := &neptunegraph.ListExportTasksOutput{}
+
+        mockClient.On("ListExportTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExportTasks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RestoreGraphFromSnapshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.RestoreGraphFromSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartExportTask", func(t *testing.T) {
+        input := &neptunegraph.StartExportTaskInput{}
+        output := &neptunegraph.StartExportTaskOutput{}
+
+        mockClient.On("StartExportTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartExportTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

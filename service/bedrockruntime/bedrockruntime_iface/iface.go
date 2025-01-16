@@ -13,6 +13,9 @@ type IClient interface {
  ApplyGuardrail(ctx context.Context, params *ApplyGuardrailInput, optFns ...func(*Options)) (*ApplyGuardrailOutput, error) 
  Converse(ctx context.Context, params *ConverseInput, optFns ...func(*Options)) (*ConverseOutput, error) 
  ConverseStream(ctx context.Context, params *ConverseStreamInput, optFns ...func(*Options)) (*ConverseStreamOutput, error) 
+ GetAsyncInvoke(ctx context.Context, params *GetAsyncInvokeInput, optFns ...func(*Options)) (*GetAsyncInvokeOutput, error) 
  InvokeModel(ctx context.Context, params *InvokeModelInput, optFns ...func(*Options)) (*InvokeModelOutput, error) 
  InvokeModelWithResponseStream(ctx context.Context, params *InvokeModelWithResponseStreamInput, optFns ...func(*Options)) (*InvokeModelWithResponseStreamOutput, error) 
+ ListAsyncInvokes(ctx context.Context, params *ListAsyncInvokesInput, optFns ...func(*Options)) (*ListAsyncInvokesOutput, error) 
+ StartAsyncInvoke(ctx context.Context, params *StartAsyncInvokeInput, optFns ...func(*Options)) (*StartAsyncInvokeOutput, error) 
 }

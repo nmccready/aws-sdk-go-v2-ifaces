@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataset", func(t *testing.T) {
+        input := &iotsitewise.CreateDatasetInput{}
+        output := &iotsitewise.CreateDatasetOutput{}
+
+        mockClient.On("CreateDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGateway", func(t *testing.T) {
         input := &iotsitewise.CreateGatewayInput{}
         output := &iotsitewise.CreateGatewayOutput{}
@@ -314,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDashboard", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataset", func(t *testing.T) {
+        input := &iotsitewise.DeleteDatasetInput{}
+        output := &iotsitewise.DeleteDatasetOutput{}
+
+        mockClient.On("DeleteDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDashboard", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataset", func(t *testing.T) {
+        input := &iotsitewise.DescribeDatasetInput{}
+        output := &iotsitewise.DescribeDatasetOutput{}
+
+        mockClient.On("DescribeDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeAssistant", func(t *testing.T) {
+        input := &iotsitewise.InvokeAssistantInput{}
+        output := &iotsitewise.InvokeAssistantOutput{}
+
+        mockClient.On("InvokeAssistant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeAssistant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAccessPolicies", func(t *testing.T) {
         input := &iotsitewise.ListAccessPoliciesInput{}
         output := &iotsitewise.ListAccessPoliciesOutput{}
@@ -847,6 +899,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDashboards", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDashboards(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasets", func(t *testing.T) {
+        input := &iotsitewise.ListDatasetsInput{}
+        output := &iotsitewise.ListDatasetsOutput{}
+
+        mockClient.On("ListDatasets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1068,6 +1133,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDashboard", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataset", func(t *testing.T) {
+        input := &iotsitewise.UpdateDatasetInput{}
+        output := &iotsitewise.UpdateDatasetOutput{}
+
+        mockClient.On("UpdateDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

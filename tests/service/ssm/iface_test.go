@@ -944,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetExecutionPreview", func(t *testing.T) {
+        input := &ssm.GetExecutionPreviewInput{}
+        output := &ssm.GetExecutionPreviewOutput{}
+
+        mockClient.On("GetExecutionPreview", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExecutionPreview(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInventory", func(t *testing.T) {
         input := &ssm.GetInventoryInput{}
         output := &ssm.GetInventoryOutput{}
@@ -1321,6 +1334,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListNodes", func(t *testing.T) {
+        input := &ssm.ListNodesInput{}
+        output := &ssm.ListNodesOutput{}
+
+        mockClient.On("ListNodes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNodes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNodesSummary", func(t *testing.T) {
+        input := &ssm.ListNodesSummaryInput{}
+        output := &ssm.ListNodesSummaryOutput{}
+
+        mockClient.On("ListNodesSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNodesSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListOpsItemEvents", func(t *testing.T) {
         input := &ssm.ListOpsItemEventsInput{}
         output := &ssm.ListOpsItemEventsOutput{}
@@ -1614,6 +1653,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartChangeRequestExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartChangeRequestExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartExecutionPreview", func(t *testing.T) {
+        input := &ssm.StartExecutionPreviewInput{}
+        output := &ssm.StartExecutionPreviewOutput{}
+
+        mockClient.On("StartExecutionPreview", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartExecutionPreview(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAutoshiftObserverNotificationStatus", func(t *testing.T) {
+        input := &arczonalshift.GetAutoshiftObserverNotificationStatusInput{}
+        output := &arczonalshift.GetAutoshiftObserverNotificationStatusOutput{}
+
+        mockClient.On("GetAutoshiftObserverNotificationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutoshiftObserverNotificationStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetManagedResource", func(t *testing.T) {
         input := &arczonalshift.GetManagedResourceInput{}
         output := &arczonalshift.GetManagedResourceOutput{}
@@ -132,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartZonalShift", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartZonalShift(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutoshiftObserverNotificationStatus", func(t *testing.T) {
+        input := &arczonalshift.UpdateAutoshiftObserverNotificationStatusInput{}
+        output := &arczonalshift.UpdateAutoshiftObserverNotificationStatusOutput{}
+
+        mockClient.On("UpdateAutoshiftObserverNotificationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutoshiftObserverNotificationStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

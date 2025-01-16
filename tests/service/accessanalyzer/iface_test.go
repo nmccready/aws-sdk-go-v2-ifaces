@@ -450,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAnalyzer", func(t *testing.T) {
+        input := &accessanalyzer.UpdateAnalyzerInput{}
+        output := &accessanalyzer.UpdateAnalyzerOutput{}
+
+        mockClient.On("UpdateAnalyzer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAnalyzer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateArchiveRule", func(t *testing.T) {
         input := &accessanalyzer.UpdateArchiveRuleInput{}
         output := &accessanalyzer.UpdateArchiveRuleOutput{}

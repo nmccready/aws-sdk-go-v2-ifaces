@@ -10,6 +10,8 @@ import (
 // IClient defines the interface for repostspace
 type IClient interface {
  Options() Options 
+ BatchAddRole(ctx context.Context, params *BatchAddRoleInput, optFns ...func(*Options)) (*BatchAddRoleOutput, error) 
+ BatchRemoveRole(ctx context.Context, params *BatchRemoveRoleInput, optFns ...func(*Options)) (*BatchRemoveRoleOutput, error) 
  CreateSpace(ctx context.Context, params *CreateSpaceInput, optFns ...func(*Options)) (*CreateSpaceOutput, error) 
  DeleteSpace(ctx context.Context, params *DeleteSpaceInput, optFns ...func(*Options)) (*DeleteSpaceOutput, error) 
  DeregisterAdmin(ctx context.Context, params *DeregisterAdminInput, optFns ...func(*Options)) (*DeregisterAdminOutput, error) 

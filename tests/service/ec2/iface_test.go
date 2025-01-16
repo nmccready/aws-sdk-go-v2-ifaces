@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcceptCapacityReservationBillingOwnership", func(t *testing.T) {
+        input := &ec2.AcceptCapacityReservationBillingOwnershipInput{}
+        output := &ec2.AcceptCapacityReservationBillingOwnershipOutput{}
+
+        mockClient.On("AcceptCapacityReservationBillingOwnership", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcceptCapacityReservationBillingOwnership(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAcceptReservedInstancesExchangeQuote", func(t *testing.T) {
         input := &ec2.AcceptReservedInstancesExchangeQuoteInput{}
         output := &ec2.AcceptReservedInstancesExchangeQuoteOutput{}
@@ -242,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateCapacityReservationBillingOwner", func(t *testing.T) {
+        input := &ec2.AssociateCapacityReservationBillingOwnerInput{}
+        output := &ec2.AssociateCapacityReservationBillingOwnerOutput{}
+
+        mockClient.On("AssociateCapacityReservationBillingOwner", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateCapacityReservationBillingOwner(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateClientVpnTargetNetwork", func(t *testing.T) {
         input := &ec2.AssociateClientVpnTargetNetworkInput{}
         output := &ec2.AssociateClientVpnTargetNetworkOutput{}
@@ -353,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("AssociateRouteTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.AssociateRouteTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAssociateSecurityGroupVpc", func(t *testing.T) {
+        input := &ec2.AssociateSecurityGroupVpcInput{}
+        output := &ec2.AssociateSecurityGroupVpcOutput{}
+
+        mockClient.On("AssociateSecurityGroupVpc", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSecurityGroupVpc(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,6 +658,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelDeclarativePoliciesReport", func(t *testing.T) {
+        input := &ec2.CancelDeclarativePoliciesReportInput{}
+        output := &ec2.CancelDeclarativePoliciesReportOutput{}
+
+        mockClient.On("CancelDeclarativePoliciesReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelDeclarativePoliciesReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelExportTask", func(t *testing.T) {
         input := &ec2.CancelExportTaskInput{}
         output := &ec2.CancelExportTaskOutput{}
@@ -756,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCapacityReservation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCapacityReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCapacityReservationBySplitting", func(t *testing.T) {
+        input := &ec2.CreateCapacityReservationBySplittingInput{}
+        output := &ec2.CreateCapacityReservationBySplittingOutput{}
+
+        mockClient.On("CreateCapacityReservationBySplitting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCapacityReservationBySplitting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1016,6 +1081,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIpam", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIpam(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIpamExternalResourceVerificationToken", func(t *testing.T) {
+        input := &ec2.CreateIpamExternalResourceVerificationTokenInput{}
+        output := &ec2.CreateIpamExternalResourceVerificationTokenOutput{}
+
+        mockClient.On("CreateIpamExternalResourceVerificationToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIpamExternalResourceVerificationToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1724,6 +1802,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVpcBlockPublicAccessExclusion", func(t *testing.T) {
+        input := &ec2.CreateVpcBlockPublicAccessExclusionInput{}
+        output := &ec2.CreateVpcBlockPublicAccessExclusionOutput{}
+
+        mockClient.On("CreateVpcBlockPublicAccessExclusion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVpcBlockPublicAccessExclusion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVpcEndpoint", func(t *testing.T) {
         input := &ec2.CreateVpcEndpointInput{}
         output := &ec2.CreateVpcEndpointOutput{}
@@ -2004,6 +2095,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteIpam", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteIpam(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIpamExternalResourceVerificationToken", func(t *testing.T) {
+        input := &ec2.DeleteIpamExternalResourceVerificationTokenInput{}
+        output := &ec2.DeleteIpamExternalResourceVerificationTokenOutput{}
+
+        mockClient.On("DeleteIpamExternalResourceVerificationToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIpamExternalResourceVerificationToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2686,6 +2790,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVpcBlockPublicAccessExclusion", func(t *testing.T) {
+        input := &ec2.DeleteVpcBlockPublicAccessExclusionInput{}
+        output := &ec2.DeleteVpcBlockPublicAccessExclusionOutput{}
+
+        mockClient.On("DeleteVpcBlockPublicAccessExclusion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpcBlockPublicAccessExclusion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteVpcEndpointConnectionNotifications", func(t *testing.T) {
         input := &ec2.DeleteVpcEndpointConnectionNotificationsInput{}
         output := &ec2.DeleteVpcEndpointConnectionNotificationsOutput{}
@@ -2998,6 +3115,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeCapacityBlockExtensionHistory", func(t *testing.T) {
+        input := &ec2.DescribeCapacityBlockExtensionHistoryInput{}
+        output := &ec2.DescribeCapacityBlockExtensionHistoryOutput{}
+
+        mockClient.On("DescribeCapacityBlockExtensionHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityBlockExtensionHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCapacityBlockExtensionOfferings", func(t *testing.T) {
+        input := &ec2.DescribeCapacityBlockExtensionOfferingsInput{}
+        output := &ec2.DescribeCapacityBlockExtensionOfferingsOutput{}
+
+        mockClient.On("DescribeCapacityBlockExtensionOfferings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityBlockExtensionOfferings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCapacityBlockOfferings", func(t *testing.T) {
         input := &ec2.DescribeCapacityBlockOfferingsInput{}
         output := &ec2.DescribeCapacityBlockOfferingsOutput{}
@@ -3005,6 +3148,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCapacityBlockOfferings", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCapacityBlockOfferings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCapacityReservationBillingRequests", func(t *testing.T) {
+        input := &ec2.DescribeCapacityReservationBillingRequestsInput{}
+        output := &ec2.DescribeCapacityReservationBillingRequestsOutput{}
+
+        mockClient.On("DescribeCapacityReservationBillingRequests", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityReservationBillingRequests(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3161,6 +3317,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCustomerGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCustomerGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDeclarativePoliciesReports", func(t *testing.T) {
+        input := &ec2.DescribeDeclarativePoliciesReportsInput{}
+        output := &ec2.DescribeDeclarativePoliciesReportsOutput{}
+
+        mockClient.On("DescribeDeclarativePoliciesReports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDeclarativePoliciesReports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3531,6 +3700,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeInstanceImageMetadata", func(t *testing.T) {
+        input := &ec2.DescribeInstanceImageMetadataInput{}
+        output := &ec2.DescribeInstanceImageMetadataOutput{}
+
+        mockClient.On("DescribeInstanceImageMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInstanceImageMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeInstanceStatus", func(t *testing.T) {
         input := &ec2.DescribeInstanceStatusInput{}
         output := &ec2.DescribeInstanceStatusOutput{}
@@ -3616,6 +3798,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeIpamByoasn", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeIpamByoasn(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIpamExternalResourceVerificationTokens", func(t *testing.T) {
+        input := &ec2.DescribeIpamExternalResourceVerificationTokensInput{}
+        output := &ec2.DescribeIpamExternalResourceVerificationTokensOutput{}
+
+        mockClient.On("DescribeIpamExternalResourceVerificationTokens", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIpamExternalResourceVerificationTokens(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4181,6 +4376,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeSecurityGroupVpcAssociations", func(t *testing.T) {
+        input := &ec2.DescribeSecurityGroupVpcAssociationsInput{}
+        output := &ec2.DescribeSecurityGroupVpcAssociationsOutput{}
+
+        mockClient.On("DescribeSecurityGroupVpcAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSecurityGroupVpcAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeSecurityGroups", func(t *testing.T) {
         input := &ec2.DescribeSecurityGroupsInput{}
         output := &ec2.DescribeSecurityGroupsOutput{}
@@ -4688,6 +4896,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeVpcBlockPublicAccessExclusions", func(t *testing.T) {
+        input := &ec2.DescribeVpcBlockPublicAccessExclusionsInput{}
+        output := &ec2.DescribeVpcBlockPublicAccessExclusionsOutput{}
+
+        mockClient.On("DescribeVpcBlockPublicAccessExclusions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpcBlockPublicAccessExclusions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeVpcBlockPublicAccessOptions", func(t *testing.T) {
+        input := &ec2.DescribeVpcBlockPublicAccessOptionsInput{}
+        output := &ec2.DescribeVpcBlockPublicAccessOptionsOutput{}
+
+        mockClient.On("DescribeVpcBlockPublicAccessOptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpcBlockPublicAccessOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeVpcClassicLink", func(t *testing.T) {
         input := &ec2.DescribeVpcClassicLinkInput{}
         output := &ec2.DescribeVpcClassicLinkOutput{}
@@ -4708,6 +4942,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeVpcClassicLinkDnsSupport", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeVpcClassicLinkDnsSupport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeVpcEndpointAssociations", func(t *testing.T) {
+        input := &ec2.DescribeVpcEndpointAssociationsInput{}
+        output := &ec2.DescribeVpcEndpointAssociationsOutput{}
+
+        mockClient.On("DescribeVpcEndpointAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpcEndpointAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4935,6 +5182,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableAllowedImagesSettings", func(t *testing.T) {
+        input := &ec2.DisableAllowedImagesSettingsInput{}
+        output := &ec2.DisableAllowedImagesSettingsOutput{}
+
+        mockClient.On("DisableAllowedImagesSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableAllowedImagesSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableAwsNetworkPerformanceMetricSubscription", func(t *testing.T) {
         input := &ec2.DisableAwsNetworkPerformanceMetricSubscriptionInput{}
         output := &ec2.DisableAwsNetworkPerformanceMetricSubscriptionOutput{}
@@ -5143,6 +5403,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateCapacityReservationBillingOwner", func(t *testing.T) {
+        input := &ec2.DisassociateCapacityReservationBillingOwnerInput{}
+        output := &ec2.DisassociateCapacityReservationBillingOwnerOutput{}
+
+        mockClient.On("DisassociateCapacityReservationBillingOwner", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateCapacityReservationBillingOwner(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateClientVpnTargetNetwork", func(t *testing.T) {
         input := &ec2.DisassociateClientVpnTargetNetworkInput{}
         output := &ec2.DisassociateClientVpnTargetNetworkOutput{}
@@ -5247,6 +5520,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateSecurityGroupVpc", func(t *testing.T) {
+        input := &ec2.DisassociateSecurityGroupVpcInput{}
+        output := &ec2.DisassociateSecurityGroupVpcOutput{}
+
+        mockClient.On("DisassociateSecurityGroupVpc", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSecurityGroupVpc(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateSubnetCidrBlock", func(t *testing.T) {
         input := &ec2.DisassociateSubnetCidrBlockInput{}
         output := &ec2.DisassociateSubnetCidrBlockOutput{}
@@ -5332,6 +5618,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableAddressTransfer", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableAddressTransfer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableAllowedImagesSettings", func(t *testing.T) {
+        input := &ec2.EnableAllowedImagesSettingsInput{}
+        output := &ec2.EnableAllowedImagesSettingsOutput{}
+
+        mockClient.On("EnableAllowedImagesSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableAllowedImagesSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5611,6 +5910,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestExportVerifiedAccessInstanceClientConfiguration", func(t *testing.T) {
+        input := &ec2.ExportVerifiedAccessInstanceClientConfigurationInput{}
+        output := &ec2.ExportVerifiedAccessInstanceClientConfigurationOutput{}
+
+        mockClient.On("ExportVerifiedAccessInstanceClientConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportVerifiedAccessInstanceClientConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAllowedImagesSettings", func(t *testing.T) {
+        input := &ec2.GetAllowedImagesSettingsInput{}
+        output := &ec2.GetAllowedImagesSettingsOutput{}
+
+        mockClient.On("GetAllowedImagesSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAllowedImagesSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAssociatedEnclaveCertificateIamRoles", func(t *testing.T) {
         input := &ec2.GetAssociatedEnclaveCertificateIamRolesInput{}
         output := &ec2.GetAssociatedEnclaveCertificateIamRolesOutput{}
@@ -5696,6 +6021,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConsoleScreenshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConsoleScreenshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDeclarativePoliciesReportSummary", func(t *testing.T) {
+        input := &ec2.GetDeclarativePoliciesReportSummaryInput{}
+        output := &ec2.GetDeclarativePoliciesReportSummaryOutput{}
+
+        mockClient.On("GetDeclarativePoliciesReportSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDeclarativePoliciesReportSummary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6196,6 +6534,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetVerifiedAccessEndpointTargets", func(t *testing.T) {
+        input := &ec2.GetVerifiedAccessEndpointTargetsInput{}
+        output := &ec2.GetVerifiedAccessEndpointTargetsOutput{}
+
+        mockClient.On("GetVerifiedAccessEndpointTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVerifiedAccessEndpointTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetVerifiedAccessGroupPolicy", func(t *testing.T) {
         input := &ec2.GetVerifiedAccessGroupPolicyInput{}
         output := &ec2.GetVerifiedAccessGroupPolicyOutput{}
@@ -6560,6 +6911,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyInstanceCpuOptions", func(t *testing.T) {
+        input := &ec2.ModifyInstanceCpuOptionsInput{}
+        output := &ec2.ModifyInstanceCpuOptionsOutput{}
+
+        mockClient.On("ModifyInstanceCpuOptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyInstanceCpuOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyInstanceCreditSpecification", func(t *testing.T) {
         input := &ec2.ModifyInstanceCreditSpecificationInput{}
         output := &ec2.ModifyInstanceCreditSpecificationOutput{}
@@ -6632,6 +6996,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyInstanceMetadataOptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyInstanceMetadataOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyInstanceNetworkPerformanceOptions", func(t *testing.T) {
+        input := &ec2.ModifyInstanceNetworkPerformanceOptionsInput{}
+        output := &ec2.ModifyInstanceNetworkPerformanceOptionsOutput{}
+
+        mockClient.On("ModifyInstanceNetworkPerformanceOptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyInstanceNetworkPerformanceOptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7067,6 +7444,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyVpcBlockPublicAccessExclusion", func(t *testing.T) {
+        input := &ec2.ModifyVpcBlockPublicAccessExclusionInput{}
+        output := &ec2.ModifyVpcBlockPublicAccessExclusionOutput{}
+
+        mockClient.On("ModifyVpcBlockPublicAccessExclusion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyVpcBlockPublicAccessExclusion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyVpcBlockPublicAccessOptions", func(t *testing.T) {
+        input := &ec2.ModifyVpcBlockPublicAccessOptionsInput{}
+        output := &ec2.ModifyVpcBlockPublicAccessOptionsOutput{}
+
+        mockClient.On("ModifyVpcBlockPublicAccessOptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyVpcBlockPublicAccessOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyVpcEndpoint", func(t *testing.T) {
         input := &ec2.ModifyVpcEndpointInput{}
         output := &ec2.ModifyVpcEndpointOutput{}
@@ -7249,6 +7652,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestMoveCapacityReservationInstances", func(t *testing.T) {
+        input := &ec2.MoveCapacityReservationInstancesInput{}
+        output := &ec2.MoveCapacityReservationInstancesOutput{}
+
+        mockClient.On("MoveCapacityReservationInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.MoveCapacityReservationInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestProvisionByoipCidr", func(t *testing.T) {
         input := &ec2.ProvisionByoipCidrInput{}
         output := &ec2.ProvisionByoipCidrOutput{}
@@ -7308,6 +7724,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PurchaseCapacityBlock", ctx, input).Return(output, nil)
 
         result, err := mockClient.PurchaseCapacityBlock(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPurchaseCapacityBlockExtension", func(t *testing.T) {
+        input := &ec2.PurchaseCapacityBlockExtensionInput{}
+        output := &ec2.PurchaseCapacityBlockExtensionOutput{}
+
+        mockClient.On("PurchaseCapacityBlockExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PurchaseCapacityBlockExtension(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7412,6 +7841,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterTransitGatewayMulticastGroupSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterTransitGatewayMulticastGroupSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRejectCapacityReservationBillingOwnership", func(t *testing.T) {
+        input := &ec2.RejectCapacityReservationBillingOwnershipInput{}
+        output := &ec2.RejectCapacityReservationBillingOwnershipOutput{}
+
+        mockClient.On("RejectCapacityReservationBillingOwnership", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RejectCapacityReservationBillingOwnership(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7529,6 +7971,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ReplaceIamInstanceProfileAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.ReplaceIamInstanceProfileAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestReplaceImageCriteriaInAllowedImagesSettings", func(t *testing.T) {
+        input := &ec2.ReplaceImageCriteriaInAllowedImagesSettingsInput{}
+        output := &ec2.ReplaceImageCriteriaInAllowedImagesSettingsOutput{}
+
+        mockClient.On("ReplaceImageCriteriaInAllowedImagesSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ReplaceImageCriteriaInAllowedImagesSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7919,6 +8374,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendDiagnosticInterrupt", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendDiagnosticInterrupt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDeclarativePoliciesReport", func(t *testing.T) {
+        input := &ec2.StartDeclarativePoliciesReportInput{}
+        output := &ec2.StartDeclarativePoliciesReportOutput{}
+
+        mockClient.On("StartDeclarativePoliciesReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDeclarativePoliciesReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

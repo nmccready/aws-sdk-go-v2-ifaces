@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeleteEvaluationJob", func(t *testing.T) {
+        input := &bedrock.BatchDeleteEvaluationJobInput{}
+        output := &bedrock.BatchDeleteEvaluationJobOutput{}
+
+        mockClient.On("BatchDeleteEvaluationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteEvaluationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvaluationJob", func(t *testing.T) {
         input := &bedrock.CreateEvaluationJobInput{}
         output := &bedrock.CreateEvaluationJobOutput{}
@@ -73,6 +86,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateInferenceProfile", func(t *testing.T) {
+        input := &bedrock.CreateInferenceProfileInput{}
+        output := &bedrock.CreateInferenceProfileOutput{}
+
+        mockClient.On("CreateInferenceProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInferenceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMarketplaceModelEndpoint", func(t *testing.T) {
+        input := &bedrock.CreateMarketplaceModelEndpointInput{}
+        output := &bedrock.CreateMarketplaceModelEndpointOutput{}
+
+        mockClient.On("CreateMarketplaceModelEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMarketplaceModelEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateModelCopyJob", func(t *testing.T) {
+        input := &bedrock.CreateModelCopyJobInput{}
+        output := &bedrock.CreateModelCopyJobOutput{}
+
+        mockClient.On("CreateModelCopyJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateModelCopyJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateModelCustomizationJob", func(t *testing.T) {
         input := &bedrock.CreateModelCustomizationJobInput{}
         output := &bedrock.CreateModelCustomizationJobOutput{}
@@ -80,6 +132,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateModelCustomizationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateModelCustomizationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateModelImportJob", func(t *testing.T) {
+        input := &bedrock.CreateModelImportJobInput{}
+        output := &bedrock.CreateModelImportJobOutput{}
+
+        mockClient.On("CreateModelImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateModelImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateModelInvocationJob", func(t *testing.T) {
+        input := &bedrock.CreateModelInvocationJobInput{}
+        output := &bedrock.CreateModelInvocationJobOutput{}
+
+        mockClient.On("CreateModelInvocationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateModelInvocationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,6 +203,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteImportedModel", func(t *testing.T) {
+        input := &bedrock.DeleteImportedModelInput{}
+        output := &bedrock.DeleteImportedModelOutput{}
+
+        mockClient.On("DeleteImportedModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteImportedModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteInferenceProfile", func(t *testing.T) {
+        input := &bedrock.DeleteInferenceProfileInput{}
+        output := &bedrock.DeleteInferenceProfileOutput{}
+
+        mockClient.On("DeleteInferenceProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteInferenceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMarketplaceModelEndpoint", func(t *testing.T) {
+        input := &bedrock.DeleteMarketplaceModelEndpointInput{}
+        output := &bedrock.DeleteMarketplaceModelEndpointOutput{}
+
+        mockClient.On("DeleteMarketplaceModelEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMarketplaceModelEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteModelInvocationLoggingConfiguration", func(t *testing.T) {
         input := &bedrock.DeleteModelInvocationLoggingConfigurationInput{}
         output := &bedrock.DeleteModelInvocationLoggingConfigurationOutput{}
@@ -145,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteProvisionedModelThroughput", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteProvisionedModelThroughput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeregisterMarketplaceModelEndpoint", func(t *testing.T) {
+        input := &bedrock.DeregisterMarketplaceModelEndpointInput{}
+        output := &bedrock.DeregisterMarketplaceModelEndpointOutput{}
+
+        mockClient.On("DeregisterMarketplaceModelEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterMarketplaceModelEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +333,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetImportedModel", func(t *testing.T) {
+        input := &bedrock.GetImportedModelInput{}
+        output := &bedrock.GetImportedModelOutput{}
+
+        mockClient.On("GetImportedModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetImportedModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInferenceProfile", func(t *testing.T) {
+        input := &bedrock.GetInferenceProfileInput{}
+        output := &bedrock.GetInferenceProfileOutput{}
+
+        mockClient.On("GetInferenceProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInferenceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMarketplaceModelEndpoint", func(t *testing.T) {
+        input := &bedrock.GetMarketplaceModelEndpointInput{}
+        output := &bedrock.GetMarketplaceModelEndpointOutput{}
+
+        mockClient.On("GetMarketplaceModelEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMarketplaceModelEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetModelCopyJob", func(t *testing.T) {
+        input := &bedrock.GetModelCopyJobInput{}
+        output := &bedrock.GetModelCopyJobOutput{}
+
+        mockClient.On("GetModelCopyJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModelCopyJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetModelCustomizationJob", func(t *testing.T) {
         input := &bedrock.GetModelCustomizationJobInput{}
         output := &bedrock.GetModelCustomizationJobOutput{}
@@ -216,6 +398,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetModelImportJob", func(t *testing.T) {
+        input := &bedrock.GetModelImportJobInput{}
+        output := &bedrock.GetModelImportJobOutput{}
+
+        mockClient.On("GetModelImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModelImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetModelInvocationJob", func(t *testing.T) {
+        input := &bedrock.GetModelInvocationJobInput{}
+        output := &bedrock.GetModelInvocationJobOutput{}
+
+        mockClient.On("GetModelInvocationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModelInvocationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetModelInvocationLoggingConfiguration", func(t *testing.T) {
         input := &bedrock.GetModelInvocationLoggingConfigurationInput{}
         output := &bedrock.GetModelInvocationLoggingConfigurationOutput{}
@@ -223,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetModelInvocationLoggingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetModelInvocationLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPromptRouter", func(t *testing.T) {
+        input := &bedrock.GetPromptRouterInput{}
+        output := &bedrock.GetPromptRouterOutput{}
+
+        mockClient.On("GetPromptRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPromptRouter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,6 +515,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListImportedModels", func(t *testing.T) {
+        input := &bedrock.ListImportedModelsInput{}
+        output := &bedrock.ListImportedModelsOutput{}
+
+        mockClient.On("ListImportedModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListImportedModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInferenceProfiles", func(t *testing.T) {
+        input := &bedrock.ListInferenceProfilesInput{}
+        output := &bedrock.ListInferenceProfilesOutput{}
+
+        mockClient.On("ListInferenceProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInferenceProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMarketplaceModelEndpoints", func(t *testing.T) {
+        input := &bedrock.ListMarketplaceModelEndpointsInput{}
+        output := &bedrock.ListMarketplaceModelEndpointsOutput{}
+
+        mockClient.On("ListMarketplaceModelEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMarketplaceModelEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListModelCopyJobs", func(t *testing.T) {
+        input := &bedrock.ListModelCopyJobsInput{}
+        output := &bedrock.ListModelCopyJobsOutput{}
+
+        mockClient.On("ListModelCopyJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListModelCopyJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListModelCustomizationJobs", func(t *testing.T) {
         input := &bedrock.ListModelCustomizationJobsInput{}
         output := &bedrock.ListModelCustomizationJobsOutput{}
@@ -301,6 +574,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListModelCustomizationJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListModelCustomizationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListModelImportJobs", func(t *testing.T) {
+        input := &bedrock.ListModelImportJobsInput{}
+        output := &bedrock.ListModelImportJobsOutput{}
+
+        mockClient.On("ListModelImportJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListModelImportJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListModelInvocationJobs", func(t *testing.T) {
+        input := &bedrock.ListModelInvocationJobsInput{}
+        output := &bedrock.ListModelInvocationJobsOutput{}
+
+        mockClient.On("ListModelInvocationJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListModelInvocationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPromptRouters", func(t *testing.T) {
+        input := &bedrock.ListPromptRoutersInput{}
+        output := &bedrock.ListPromptRoutersOutput{}
+
+        mockClient.On("ListPromptRouters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPromptRouters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -346,6 +658,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRegisterMarketplaceModelEndpoint", func(t *testing.T) {
+        input := &bedrock.RegisterMarketplaceModelEndpointInput{}
+        output := &bedrock.RegisterMarketplaceModelEndpointOutput{}
+
+        mockClient.On("RegisterMarketplaceModelEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterMarketplaceModelEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopEvaluationJob", func(t *testing.T) {
         input := &bedrock.StopEvaluationJobInput{}
         output := &bedrock.StopEvaluationJobOutput{}
@@ -366,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopModelCustomizationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopModelCustomizationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopModelInvocationJob", func(t *testing.T) {
+        input := &bedrock.StopModelInvocationJobInput{}
+        output := &bedrock.StopModelInvocationJobOutput{}
+
+        mockClient.On("StopModelInvocationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopModelInvocationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -405,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGuardrail", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGuardrail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMarketplaceModelEndpoint", func(t *testing.T) {
+        input := &bedrock.UpdateMarketplaceModelEndpointInput{}
+        output := &bedrock.UpdateMarketplaceModelEndpointOutput{}
+
+        mockClient.On("UpdateMarketplaceModelEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMarketplaceModelEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

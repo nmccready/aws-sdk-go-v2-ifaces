@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestExportIdleRecommendations", func(t *testing.T) {
+        input := &computeoptimizer.ExportIdleRecommendationsInput{}
+        output := &computeoptimizer.ExportIdleRecommendationsOutput{}
+
+        mockClient.On("ExportIdleRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportIdleRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestExportLambdaFunctionRecommendations", func(t *testing.T) {
         input := &computeoptimizer.ExportLambdaFunctionRecommendationsInput{}
         output := &computeoptimizer.ExportLambdaFunctionRecommendationsOutput{}
@@ -262,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEnrollmentStatusesForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEnrollmentStatusesForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIdleRecommendations", func(t *testing.T) {
+        input := &computeoptimizer.GetIdleRecommendationsInput{}
+        output := &computeoptimizer.GetIdleRecommendationsOutput{}
+
+        mockClient.On("GetIdleRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIdleRecommendations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

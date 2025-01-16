@@ -359,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDirectoryDataAccess", func(t *testing.T) {
+        input := &directoryservice.DescribeDirectoryDataAccessInput{}
+        output := &directoryservice.DescribeDirectoryDataAccessOutput{}
+
+        mockClient.On("DescribeDirectoryDataAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDirectoryDataAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDomainControllers", func(t *testing.T) {
         input := &directoryservice.DescribeDomainControllersInput{}
         output := &directoryservice.DescribeDomainControllersOutput{}
@@ -489,6 +502,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableDirectoryDataAccess", func(t *testing.T) {
+        input := &directoryservice.DisableDirectoryDataAccessInput{}
+        output := &directoryservice.DisableDirectoryDataAccessOutput{}
+
+        mockClient.On("DisableDirectoryDataAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableDirectoryDataAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableLDAPS", func(t *testing.T) {
         input := &directoryservice.DisableLDAPSInput{}
         output := &directoryservice.DisableLDAPSOutput{}
@@ -535,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableClientAuthentication", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableClientAuthentication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableDirectoryDataAccess", func(t *testing.T) {
+        input := &directoryservice.EnableDirectoryDataAccessInput{}
+        output := &directoryservice.EnableDirectoryDataAccessOutput{}
+
+        mockClient.On("EnableDirectoryDataAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableDirectoryDataAccess(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

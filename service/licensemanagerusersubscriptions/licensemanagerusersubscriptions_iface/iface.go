@@ -11,14 +11,20 @@ import (
 type IClient interface {
  Options() Options 
  AssociateUser(ctx context.Context, params *AssociateUserInput, optFns ...func(*Options)) (*AssociateUserOutput, error) 
+ CreateLicenseServerEndpoint(ctx context.Context, params *CreateLicenseServerEndpointInput, optFns ...func(*Options)) (*CreateLicenseServerEndpointOutput, error) 
+ DeleteLicenseServerEndpoint(ctx context.Context, params *DeleteLicenseServerEndpointInput, optFns ...func(*Options)) (*DeleteLicenseServerEndpointOutput, error) 
  DeregisterIdentityProvider(ctx context.Context, params *DeregisterIdentityProviderInput, optFns ...func(*Options)) (*DeregisterIdentityProviderOutput, error) 
  DisassociateUser(ctx context.Context, params *DisassociateUserInput, optFns ...func(*Options)) (*DisassociateUserOutput, error) 
  ListIdentityProviders(ctx context.Context, params *ListIdentityProvidersInput, optFns ...func(*Options)) (*ListIdentityProvidersOutput, error) 
  ListInstances(ctx context.Context, params *ListInstancesInput, optFns ...func(*Options)) (*ListInstancesOutput, error) 
+ ListLicenseServerEndpoints(ctx context.Context, params *ListLicenseServerEndpointsInput, optFns ...func(*Options)) (*ListLicenseServerEndpointsOutput, error) 
  ListProductSubscriptions(ctx context.Context, params *ListProductSubscriptionsInput, optFns ...func(*Options)) (*ListProductSubscriptionsOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListUserAssociations(ctx context.Context, params *ListUserAssociationsInput, optFns ...func(*Options)) (*ListUserAssociationsOutput, error) 
  RegisterIdentityProvider(ctx context.Context, params *RegisterIdentityProviderInput, optFns ...func(*Options)) (*RegisterIdentityProviderOutput, error) 
  StartProductSubscription(ctx context.Context, params *StartProductSubscriptionInput, optFns ...func(*Options)) (*StartProductSubscriptionOutput, error) 
  StopProductSubscription(ctx context.Context, params *StopProductSubscriptionInput, optFns ...func(*Options)) (*StopProductSubscriptionOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateIdentityProviderSettings(ctx context.Context, params *UpdateIdentityProviderSettingsInput, optFns ...func(*Options)) (*UpdateIdentityProviderSettingsOutput, error) 
 }

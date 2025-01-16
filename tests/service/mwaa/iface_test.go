@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeRestApi", func(t *testing.T) {
+        input := &mwaa.InvokeRestApiInput{}
+        output := &mwaa.InvokeRestApiOutput{}
+
+        mockClient.On("InvokeRestApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeRestApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEnvironments", func(t *testing.T) {
         input := &mwaa.ListEnvironmentsInput{}
         output := &mwaa.ListEnvironmentsOutput{}

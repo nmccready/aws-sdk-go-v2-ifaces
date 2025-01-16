@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetManagedView", func(t *testing.T) {
+        input := &resourceexplorer2.GetManagedViewInput{}
+        output := &resourceexplorer2.GetManagedViewOutput{}
+
+        mockClient.On("GetManagedView", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedView(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetView", func(t *testing.T) {
         input := &resourceexplorer2.GetViewInput{}
         output := &resourceexplorer2.GetViewOutput{}
@@ -197,6 +210,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIndexesForMembers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIndexesForMembers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedViews", func(t *testing.T) {
+        input := &resourceexplorer2.ListManagedViewsInput{}
+        output := &resourceexplorer2.ListManagedViewsOutput{}
+
+        mockClient.On("ListManagedViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResources", func(t *testing.T) {
+        input := &resourceexplorer2.ListResourcesInput{}
+        output := &resourceexplorer2.ListResourcesOutput{}
+
+        mockClient.On("ListResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResources(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

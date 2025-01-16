@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDashboard", func(t *testing.T) {
+        input := &cloudtrail.CreateDashboardInput{}
+        output := &cloudtrail.CreateDashboardOutput{}
+
+        mockClient.On("CreateDashboard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEventDataStore", func(t *testing.T) {
         input := &cloudtrail.CreateEventDataStoreInput{}
         output := &cloudtrail.CreateEventDataStoreOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDashboard", func(t *testing.T) {
+        input := &cloudtrail.DeleteDashboardInput{}
+        output := &cloudtrail.DeleteDashboardOutput{}
+
+        mockClient.On("DeleteDashboard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDashboard(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGenerateQuery", func(t *testing.T) {
+        input := &cloudtrail.GenerateQueryInput{}
+        output := &cloudtrail.GenerateQueryOutput{}
+
+        mockClient.On("GenerateQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetChannel", func(t *testing.T) {
         input := &cloudtrail.GetChannelInput{}
         output := &cloudtrail.GetChannelOutput{}
@@ -223,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDashboard", func(t *testing.T) {
+        input := &cloudtrail.GetDashboardInput{}
+        output := &cloudtrail.GetDashboardOutput{}
+
+        mockClient.On("GetDashboard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDashboard(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListChannels", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListChannels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDashboards", func(t *testing.T) {
+        input := &cloudtrail.ListDashboardsInput{}
+        output := &cloudtrail.ListDashboardsOutput{}
+
+        mockClient.On("ListDashboards", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDashboards(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartDashboardRefresh", func(t *testing.T) {
+        input := &cloudtrail.StartDashboardRefreshInput{}
+        output := &cloudtrail.StartDashboardRefreshOutput{}
+
+        mockClient.On("StartDashboardRefresh", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDashboardRefresh(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartEventDataStoreIngestion", func(t *testing.T) {
         input := &cloudtrail.StartEventDataStoreIngestionInput{}
         output := &cloudtrail.StartEventDataStoreIngestionOutput{}
@@ -639,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDashboard", func(t *testing.T) {
+        input := &cloudtrail.UpdateDashboardInput{}
+        output := &cloudtrail.UpdateDashboardOutput{}
+
+        mockClient.On("UpdateDashboard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDashboard(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeClusterVersions", func(t *testing.T) {
+        input := &eks.DescribeClusterVersionsInput{}
+        output := &eks.DescribeClusterVersionsOutput{}
+
+        mockClient.On("DescribeClusterVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeClusterVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEksAnywhereSubscription", func(t *testing.T) {
         input := &eks.DescribeEksAnywhereSubscriptionInput{}
         output := &eks.DescribeEksAnywhereSubscriptionOutput{}

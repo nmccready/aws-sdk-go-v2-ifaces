@@ -268,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateThemeForStack", func(t *testing.T) {
+        input := &appstream.CreateThemeForStackInput{}
+        output := &appstream.CreateThemeForStackOutput{}
+
+        mockClient.On("CreateThemeForStack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateThemeForStack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateUpdatedImage", func(t *testing.T) {
         input := &appstream.CreateUpdatedImageInput{}
         output := &appstream.CreateUpdatedImageOutput{}
@@ -431,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteStack", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteStack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteThemeForStack", func(t *testing.T) {
+        input := &appstream.DeleteThemeForStackInput{}
+        output := &appstream.DeleteThemeForStackOutput{}
+
+        mockClient.On("DeleteThemeForStack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteThemeForStack(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -626,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStacks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStacks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeThemeForStack", func(t *testing.T) {
+        input := &appstream.DescribeThemeForStackInput{}
+        output := &appstream.DescribeThemeForStackOutput{}
+
+        mockClient.On("DescribeThemeForStack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeThemeForStack(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1003,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateStack", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateStack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateThemeForStack", func(t *testing.T) {
+        input := &appstream.UpdateThemeForStackInput{}
+        output := &appstream.UpdateThemeForStackOutput{}
+
+        mockClient.On("UpdateThemeForStack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateThemeForStack(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -71,6 +71,7 @@ type IClient interface {
  ListFleetMembers(ctx context.Context, params *ListFleetMembersInput, optFns ...func(*Options)) (*ListFleetMembersOutput, error) 
  ListFleets(ctx context.Context, params *ListFleetsInput, optFns ...func(*Options)) (*ListFleetsOutput, error) 
  ListJobMembers(ctx context.Context, params *ListJobMembersInput, optFns ...func(*Options)) (*ListJobMembersOutput, error) 
+ ListJobParameterDefinitions(ctx context.Context, params *ListJobParameterDefinitionsInput, optFns ...func(*Options)) (*ListJobParameterDefinitionsOutput, error) 
  ListJobs(ctx context.Context, params *ListJobsInput, optFns ...func(*Options)) (*ListJobsOutput, error) 
  ListLicenseEndpoints(ctx context.Context, params *ListLicenseEndpointsInput, optFns ...func(*Options)) (*ListLicenseEndpointsOutput, error) 
  ListMeteredProducts(ctx context.Context, params *ListMeteredProductsInput, optFns ...func(*Options)) (*ListMeteredProductsOutput, error) 

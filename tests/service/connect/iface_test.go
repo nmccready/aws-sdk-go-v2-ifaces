@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateContact", func(t *testing.T) {
+        input := &connect.CreateContactInput{}
+        output := &connect.CreateContactOutput{}
+
+        mockClient.On("CreateContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateContactFlow", func(t *testing.T) {
         input := &connect.CreateContactFlowInput{}
         output := &connect.CreateContactFlowOutput{}
@@ -359,6 +372,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateContactFlowVersion", func(t *testing.T) {
+        input := &connect.CreateContactFlowVersionInput{}
+        output := &connect.CreateContactFlowVersionOutput{}
+
+        mockClient.On("CreateContactFlowVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContactFlowVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateEmailAddress", func(t *testing.T) {
+        input := &connect.CreateEmailAddressInput{}
+        output := &connect.CreateEmailAddressOutput{}
+
+        mockClient.On("CreateEmailAddress", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEmailAddress(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvaluationForm", func(t *testing.T) {
         input := &connect.CreateEvaluationFormInput{}
         output := &connect.CreateEvaluationFormOutput{}
@@ -379,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateHoursOfOperation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateHoursOfOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateHoursOfOperationOverride", func(t *testing.T) {
+        input := &connect.CreateHoursOfOperationOverrideInput{}
+        output := &connect.CreateHoursOfOperationOverrideOutput{}
+
+        mockClient.On("CreateHoursOfOperationOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHoursOfOperationOverride(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreatePrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreatePrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePushNotificationRegistration", func(t *testing.T) {
+        input := &connect.CreatePushNotificationRegistrationInput{}
+        output := &connect.CreatePushNotificationRegistrationOutput{}
+
+        mockClient.On("CreatePushNotificationRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePushNotificationRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteEmailAddress", func(t *testing.T) {
+        input := &connect.DeleteEmailAddressInput{}
+        output := &connect.DeleteEmailAddressOutput{}
+
+        mockClient.On("DeleteEmailAddress", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEmailAddress(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEvaluationForm", func(t *testing.T) {
         input := &connect.DeleteEvaluationFormInput{}
         output := &connect.DeleteEvaluationFormOutput{}
@@ -717,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteHoursOfOperation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteHoursOfOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteHoursOfOperationOverride", func(t *testing.T) {
+        input := &connect.DeleteHoursOfOperationOverrideInput{}
+        output := &connect.DeleteHoursOfOperationOverrideOutput{}
+
+        mockClient.On("DeleteHoursOfOperationOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteHoursOfOperationOverride(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -769,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePushNotificationRegistration", func(t *testing.T) {
+        input := &connect.DeletePushNotificationRegistrationInput{}
+        output := &connect.DeletePushNotificationRegistrationOutput{}
+
+        mockClient.On("DeletePushNotificationRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePushNotificationRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,6 +1126,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeEmailAddress", func(t *testing.T) {
+        input := &connect.DescribeEmailAddressInput{}
+        output := &connect.DescribeEmailAddressOutput{}
+
+        mockClient.On("DescribeEmailAddress", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEmailAddress(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEvaluationForm", func(t *testing.T) {
         input := &connect.DescribeEvaluationFormInput{}
         output := &connect.DescribeEvaluationFormOutput{}
@@ -1042,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeHoursOfOperation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeHoursOfOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeHoursOfOperationOverride", func(t *testing.T) {
+        input := &connect.DescribeHoursOfOperationOverrideInput{}
+        output := &connect.DescribeHoursOfOperationOverrideOutput{}
+
+        mockClient.On("DescribeHoursOfOperationOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeHoursOfOperationOverride(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1503,6 +1633,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEffectiveHoursOfOperations", func(t *testing.T) {
+        input := &connect.GetEffectiveHoursOfOperationsInput{}
+        output := &connect.GetEffectiveHoursOfOperationsOutput{}
+
+        mockClient.On("GetEffectiveHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEffectiveHoursOfOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFederationToken", func(t *testing.T) {
         input := &connect.GetFederationTokenInput{}
         output := &connect.GetFederationTokenOutput{}
@@ -1646,6 +1789,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAssociatedContacts", func(t *testing.T) {
+        input := &connect.ListAssociatedContactsInput{}
+        output := &connect.ListAssociatedContactsOutput{}
+
+        mockClient.On("ListAssociatedContacts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssociatedContacts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAuthenticationProfiles", func(t *testing.T) {
         input := &connect.ListAuthenticationProfilesInput{}
         output := &connect.ListAuthenticationProfilesOutput{}
@@ -1692,6 +1848,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContactFlowModules", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContactFlowModules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContactFlowVersions", func(t *testing.T) {
+        input := &connect.ListContactFlowVersionsInput{}
+        output := &connect.ListContactFlowVersionsOutput{}
+
+        mockClient.On("ListContactFlowVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContactFlowVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1770,6 +1939,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFlowAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFlowAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHoursOfOperationOverrides", func(t *testing.T) {
+        input := &connect.ListHoursOfOperationOverridesInput{}
+        output := &connect.ListHoursOfOperationOverridesOutput{}
+
+        mockClient.On("ListHoursOfOperationOverrides", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHoursOfOperationOverrides(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2283,6 +2465,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchAgentStatuses", func(t *testing.T) {
+        input := &connect.SearchAgentStatusesInput{}
+        output := &connect.SearchAgentStatusesOutput{}
+
+        mockClient.On("SearchAgentStatuses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchAgentStatuses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchAvailablePhoneNumbers", func(t *testing.T) {
         input := &connect.SearchAvailablePhoneNumbersInput{}
         output := &connect.SearchAvailablePhoneNumbersOutput{}
@@ -2329,6 +2524,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchContacts", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchContacts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchEmailAddresses", func(t *testing.T) {
+        input := &connect.SearchEmailAddressesInput{}
+        output := &connect.SearchEmailAddressesOutput{}
+
+        mockClient.On("SearchEmailAddresses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchEmailAddresses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchHoursOfOperationOverrides", func(t *testing.T) {
+        input := &connect.SearchHoursOfOperationOverridesInput{}
+        output := &connect.SearchHoursOfOperationOverridesOutput{}
+
+        mockClient.On("SearchHoursOfOperationOverrides", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchHoursOfOperationOverrides(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2439,6 +2660,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchUserHierarchyGroups", func(t *testing.T) {
+        input := &connect.SearchUserHierarchyGroupsInput{}
+        output := &connect.SearchUserHierarchyGroupsOutput{}
+
+        mockClient.On("SearchUserHierarchyGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchUserHierarchyGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchUsers", func(t *testing.T) {
         input := &connect.SearchUsersInput{}
         output := &connect.SearchUsersOutput{}
@@ -2472,6 +2706,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendChatIntegrationEvent", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendChatIntegrationEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendOutboundEmail", func(t *testing.T) {
+        input := &connect.SendOutboundEmailInput{}
+        output := &connect.SendOutboundEmailOutput{}
+
+        mockClient.On("SendOutboundEmail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendOutboundEmail(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2543,6 +2790,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartEmailContact", func(t *testing.T) {
+        input := &connect.StartEmailContactInput{}
+        output := &connect.StartEmailContactOutput{}
+
+        mockClient.On("StartEmailContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartEmailContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartOutboundChatContact", func(t *testing.T) {
+        input := &connect.StartOutboundChatContactInput{}
+        output := &connect.StartOutboundChatContactOutput{}
+
+        mockClient.On("StartOutboundChatContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOutboundChatContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartOutboundEmailContact", func(t *testing.T) {
+        input := &connect.StartOutboundEmailContactInput{}
+        output := &connect.StartOutboundEmailContactOutput{}
+
+        mockClient.On("StartOutboundEmailContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOutboundEmailContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartOutboundVoiceContact", func(t *testing.T) {
         input := &connect.StartOutboundVoiceContactInput{}
         output := &connect.StartOutboundVoiceContactOutput{}
@@ -2550,6 +2836,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartOutboundVoiceContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartOutboundVoiceContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartScreenSharing", func(t *testing.T) {
+        input := &connect.StartScreenSharingInput{}
+        output := &connect.StartScreenSharingOutput{}
+
+        mockClient.On("StartScreenSharing", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartScreenSharing(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2868,6 +3167,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateEmailAddressMetadata", func(t *testing.T) {
+        input := &connect.UpdateEmailAddressMetadataInput{}
+        output := &connect.UpdateEmailAddressMetadataOutput{}
+
+        mockClient.On("UpdateEmailAddressMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEmailAddressMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateEvaluationForm", func(t *testing.T) {
         input := &connect.UpdateEvaluationFormInput{}
         output := &connect.UpdateEvaluationFormOutput{}
@@ -2894,6 +3206,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateHoursOfOperationOverride", func(t *testing.T) {
+        input := &connect.UpdateHoursOfOperationOverrideInput{}
+        output := &connect.UpdateHoursOfOperationOverrideOutput{}
+
+        mockClient.On("UpdateHoursOfOperationOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHoursOfOperationOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateInstanceAttribute", func(t *testing.T) {
         input := &connect.UpdateInstanceAttributeInput{}
         output := &connect.UpdateInstanceAttributeOutput{}
@@ -2914,6 +3239,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInstanceStorageConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInstanceStorageConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateParticipantAuthentication", func(t *testing.T) {
+        input := &connect.UpdateParticipantAuthenticationInput{}
+        output := &connect.UpdateParticipantAuthenticationOutput{}
+
+        mockClient.On("UpdateParticipantAuthentication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateParticipantAuthentication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3031,6 +3369,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateQueueOutboundCallerConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateQueueOutboundCallerConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQueueOutboundEmailConfig", func(t *testing.T) {
+        input := &connect.UpdateQueueOutboundEmailConfigInput{}
+        output := &connect.UpdateQueueOutboundEmailConfigOutput{}
+
+        mockClient.On("UpdateQueueOutboundEmailConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQueueOutboundEmailConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

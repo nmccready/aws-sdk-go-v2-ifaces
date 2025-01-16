@@ -671,6 +671,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListHookResults", func(t *testing.T) {
+        input := &cloudformation.ListHookResultsInput{}
+        output := &cloudformation.ListHookResultsOutput{}
+
+        mockClient.On("ListHookResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHookResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListImports", func(t *testing.T) {
         input := &cloudformation.ListImportsInput{}
         output := &cloudformation.ListImportsOutput{}

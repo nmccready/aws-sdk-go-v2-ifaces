@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIntegration", func(t *testing.T) {
+        input := &redshift.CreateIntegrationInput{}
+        output := &redshift.CreateIntegrationOutput{}
+
+        mockClient.On("CreateIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRedshiftIdcApplication", func(t *testing.T) {
         input := &redshift.CreateRedshiftIdcApplicationInput{}
         output := &redshift.CreateRedshiftIdcApplicationOutput{}
@@ -554,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIntegration", func(t *testing.T) {
+        input := &redshift.DeleteIntegrationInput{}
+        output := &redshift.DeleteIntegrationOutput{}
+
+        mockClient.On("DeleteIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePartner", func(t *testing.T) {
         input := &redshift.DeletePartnerInput{}
         output := &redshift.DeletePartnerOutput{}
@@ -652,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteUsageLimit", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteUsageLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeregisterNamespace", func(t *testing.T) {
+        input := &redshift.DeregisterNamespaceInput{}
+        output := &redshift.DeregisterNamespaceOutput{}
+
+        mockClient.On("DeregisterNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -964,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInboundIntegrations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInboundIntegrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIntegrations", func(t *testing.T) {
+        input := &redshift.DescribeIntegrationsInput{}
+        output := &redshift.DescribeIntegrationsOutput{}
+
+        mockClient.On("DescribeIntegrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIntegrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1503,6 +1555,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyIntegration", func(t *testing.T) {
+        input := &redshift.ModifyIntegrationInput{}
+        output := &redshift.ModifyIntegrationOutput{}
+
+        mockClient.On("ModifyIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyRedshiftIdcApplication", func(t *testing.T) {
         input := &redshift.ModifyRedshiftIdcApplicationInput{}
         output := &redshift.ModifyRedshiftIdcApplicationOutput{}
@@ -1614,6 +1679,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RebootCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.RebootCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterNamespace", func(t *testing.T) {
+        input := &redshift.RegisterNamespaceInput{}
+        output := &redshift.RegisterNamespaceOutput{}
+
+        mockClient.On("RegisterNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

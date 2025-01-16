@@ -34,6 +34,97 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestActivateMessageTemplate", func(t *testing.T) {
+        input := &qconnect.ActivateMessageTemplateInput{}
+        output := &qconnect.ActivateMessageTemplateOutput{}
+
+        mockClient.On("ActivateMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ActivateMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIAgent", func(t *testing.T) {
+        input := &qconnect.CreateAIAgentInput{}
+        output := &qconnect.CreateAIAgentOutput{}
+
+        mockClient.On("CreateAIAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIAgentVersion", func(t *testing.T) {
+        input := &qconnect.CreateAIAgentVersionInput{}
+        output := &qconnect.CreateAIAgentVersionOutput{}
+
+        mockClient.On("CreateAIAgentVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIAgentVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIGuardrail", func(t *testing.T) {
+        input := &qconnect.CreateAIGuardrailInput{}
+        output := &qconnect.CreateAIGuardrailOutput{}
+
+        mockClient.On("CreateAIGuardrail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIGuardrail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIGuardrailVersion", func(t *testing.T) {
+        input := &qconnect.CreateAIGuardrailVersionInput{}
+        output := &qconnect.CreateAIGuardrailVersionOutput{}
+
+        mockClient.On("CreateAIGuardrailVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIGuardrailVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIPrompt", func(t *testing.T) {
+        input := &qconnect.CreateAIPromptInput{}
+        output := &qconnect.CreateAIPromptOutput{}
+
+        mockClient.On("CreateAIPrompt", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIPrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIPromptVersion", func(t *testing.T) {
+        input := &qconnect.CreateAIPromptVersionInput{}
+        output := &qconnect.CreateAIPromptVersionOutput{}
+
+        mockClient.On("CreateAIPromptVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIPromptVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAssistant", func(t *testing.T) {
         input := &qconnect.CreateAssistantInput{}
         output := &qconnect.CreateAssistantOutput{}
@@ -99,6 +190,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateMessageTemplate", func(t *testing.T) {
+        input := &qconnect.CreateMessageTemplateInput{}
+        output := &qconnect.CreateMessageTemplateOutput{}
+
+        mockClient.On("CreateMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMessageTemplateAttachment", func(t *testing.T) {
+        input := &qconnect.CreateMessageTemplateAttachmentInput{}
+        output := &qconnect.CreateMessageTemplateAttachmentOutput{}
+
+        mockClient.On("CreateMessageTemplateAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMessageTemplateAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMessageTemplateVersion", func(t *testing.T) {
+        input := &qconnect.CreateMessageTemplateVersionInput{}
+        output := &qconnect.CreateMessageTemplateVersionOutput{}
+
+        mockClient.On("CreateMessageTemplateVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMessageTemplateVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateQuickResponse", func(t *testing.T) {
         input := &qconnect.CreateQuickResponseInput{}
         output := &qconnect.CreateQuickResponseOutput{}
@@ -119,6 +249,97 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeactivateMessageTemplate", func(t *testing.T) {
+        input := &qconnect.DeactivateMessageTemplateInput{}
+        output := &qconnect.DeactivateMessageTemplateOutput{}
+
+        mockClient.On("DeactivateMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeactivateMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIAgent", func(t *testing.T) {
+        input := &qconnect.DeleteAIAgentInput{}
+        output := &qconnect.DeleteAIAgentOutput{}
+
+        mockClient.On("DeleteAIAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIAgentVersion", func(t *testing.T) {
+        input := &qconnect.DeleteAIAgentVersionInput{}
+        output := &qconnect.DeleteAIAgentVersionOutput{}
+
+        mockClient.On("DeleteAIAgentVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIAgentVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIGuardrail", func(t *testing.T) {
+        input := &qconnect.DeleteAIGuardrailInput{}
+        output := &qconnect.DeleteAIGuardrailOutput{}
+
+        mockClient.On("DeleteAIGuardrail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIGuardrail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIGuardrailVersion", func(t *testing.T) {
+        input := &qconnect.DeleteAIGuardrailVersionInput{}
+        output := &qconnect.DeleteAIGuardrailVersionOutput{}
+
+        mockClient.On("DeleteAIGuardrailVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIGuardrailVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIPrompt", func(t *testing.T) {
+        input := &qconnect.DeleteAIPromptInput{}
+        output := &qconnect.DeleteAIPromptOutput{}
+
+        mockClient.On("DeleteAIPrompt", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIPrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIPromptVersion", func(t *testing.T) {
+        input := &qconnect.DeleteAIPromptVersionInput{}
+        output := &qconnect.DeleteAIPromptVersionOutput{}
+
+        mockClient.On("DeleteAIPromptVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIPromptVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +424,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteMessageTemplate", func(t *testing.T) {
+        input := &qconnect.DeleteMessageTemplateInput{}
+        output := &qconnect.DeleteMessageTemplateOutput{}
+
+        mockClient.On("DeleteMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMessageTemplateAttachment", func(t *testing.T) {
+        input := &qconnect.DeleteMessageTemplateAttachmentInput{}
+        output := &qconnect.DeleteMessageTemplateAttachmentOutput{}
+
+        mockClient.On("DeleteMessageTemplateAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMessageTemplateAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteQuickResponse", func(t *testing.T) {
         input := &qconnect.DeleteQuickResponseInput{}
         output := &qconnect.DeleteQuickResponseOutput{}
@@ -210,6 +457,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteQuickResponse", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteQuickResponse(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAIAgent", func(t *testing.T) {
+        input := &qconnect.GetAIAgentInput{}
+        output := &qconnect.GetAIAgentOutput{}
+
+        mockClient.On("GetAIAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAIAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAIGuardrail", func(t *testing.T) {
+        input := &qconnect.GetAIGuardrailInput{}
+        output := &qconnect.GetAIGuardrailOutput{}
+
+        mockClient.On("GetAIGuardrail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAIGuardrail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAIPrompt", func(t *testing.T) {
+        input := &qconnect.GetAIPromptInput{}
+        output := &qconnect.GetAIPromptOutput{}
+
+        mockClient.On("GetAIPrompt", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAIPrompt(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +593,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMessageTemplate", func(t *testing.T) {
+        input := &qconnect.GetMessageTemplateInput{}
+        output := &qconnect.GetMessageTemplateOutput{}
+
+        mockClient.On("GetMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetNextMessage", func(t *testing.T) {
+        input := &qconnect.GetNextMessageInput{}
+        output := &qconnect.GetNextMessageOutput{}
+
+        mockClient.On("GetNextMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNextMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetQuickResponse", func(t *testing.T) {
         input := &qconnect.GetQuickResponseInput{}
         output := &qconnect.GetQuickResponseOutput{}
@@ -340,6 +652,84 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIAgentVersions", func(t *testing.T) {
+        input := &qconnect.ListAIAgentVersionsInput{}
+        output := &qconnect.ListAIAgentVersionsOutput{}
+
+        mockClient.On("ListAIAgentVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIAgentVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIAgents", func(t *testing.T) {
+        input := &qconnect.ListAIAgentsInput{}
+        output := &qconnect.ListAIAgentsOutput{}
+
+        mockClient.On("ListAIAgents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIAgents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIGuardrailVersions", func(t *testing.T) {
+        input := &qconnect.ListAIGuardrailVersionsInput{}
+        output := &qconnect.ListAIGuardrailVersionsOutput{}
+
+        mockClient.On("ListAIGuardrailVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIGuardrailVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIGuardrails", func(t *testing.T) {
+        input := &qconnect.ListAIGuardrailsInput{}
+        output := &qconnect.ListAIGuardrailsOutput{}
+
+        mockClient.On("ListAIGuardrails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIGuardrails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIPromptVersions", func(t *testing.T) {
+        input := &qconnect.ListAIPromptVersionsInput{}
+        output := &qconnect.ListAIPromptVersionsOutput{}
+
+        mockClient.On("ListAIPromptVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIPromptVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIPrompts", func(t *testing.T) {
+        input := &qconnect.ListAIPromptsInput{}
+        output := &qconnect.ListAIPromptsOutput{}
+
+        mockClient.On("ListAIPrompts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIPrompts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +814,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMessageTemplateVersions", func(t *testing.T) {
+        input := &qconnect.ListMessageTemplateVersionsInput{}
+        output := &qconnect.ListMessageTemplateVersionsOutput{}
+
+        mockClient.On("ListMessageTemplateVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMessageTemplateVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMessageTemplates", func(t *testing.T) {
+        input := &qconnect.ListMessageTemplatesInput{}
+        output := &qconnect.ListMessageTemplatesOutput{}
+
+        mockClient.On("ListMessageTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMessageTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMessages", func(t *testing.T) {
+        input := &qconnect.ListMessagesInput{}
+        output := &qconnect.ListMessagesOutput{}
+
+        mockClient.On("ListMessages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMessages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListQuickResponses", func(t *testing.T) {
         input := &qconnect.ListQuickResponsesInput{}
         output := &qconnect.ListQuickResponsesOutput{}
@@ -489,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRemoveAssistantAIAgent", func(t *testing.T) {
+        input := &qconnect.RemoveAssistantAIAgentInput{}
+        output := &qconnect.RemoveAssistantAIAgentOutput{}
+
+        mockClient.On("RemoveAssistantAIAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveAssistantAIAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRemoveKnowledgeBaseTemplateUri", func(t *testing.T) {
         input := &qconnect.RemoveKnowledgeBaseTemplateUriInput{}
         output := &qconnect.RemoveKnowledgeBaseTemplateUriOutput{}
@@ -502,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRenderMessageTemplate", func(t *testing.T) {
+        input := &qconnect.RenderMessageTemplateInput{}
+        output := &qconnect.RenderMessageTemplateOutput{}
+
+        mockClient.On("RenderMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RenderMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchContent", func(t *testing.T) {
         input := &qconnect.SearchContentInput{}
         output := &qconnect.SearchContentOutput{}
@@ -509,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchContent", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchMessageTemplates", func(t *testing.T) {
+        input := &qconnect.SearchMessageTemplatesInput{}
+        output := &qconnect.SearchMessageTemplatesOutput{}
+
+        mockClient.On("SearchMessageTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchMessageTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -535,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendMessage", func(t *testing.T) {
+        input := &qconnect.SendMessageInput{}
+        output := &qconnect.SendMessageOutput{}
+
+        mockClient.On("SendMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendMessage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +1074,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAIAgent", func(t *testing.T) {
+        input := &qconnect.UpdateAIAgentInput{}
+        output := &qconnect.UpdateAIAgentOutput{}
+
+        mockClient.On("UpdateAIAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAIAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAIGuardrail", func(t *testing.T) {
+        input := &qconnect.UpdateAIGuardrailInput{}
+        output := &qconnect.UpdateAIGuardrailOutput{}
+
+        mockClient.On("UpdateAIGuardrail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAIGuardrail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAIPrompt", func(t *testing.T) {
+        input := &qconnect.UpdateAIPromptInput{}
+        output := &qconnect.UpdateAIPromptOutput{}
+
+        mockClient.On("UpdateAIPrompt", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAIPrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAssistantAIAgent", func(t *testing.T) {
+        input := &qconnect.UpdateAssistantAIAgentInput{}
+        output := &qconnect.UpdateAssistantAIAgentOutput{}
+
+        mockClient.On("UpdateAssistantAIAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAssistantAIAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateContent", func(t *testing.T) {
         input := &qconnect.UpdateContentInput{}
         output := &qconnect.UpdateContentOutput{}
@@ -619,6 +1152,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateMessageTemplate", func(t *testing.T) {
+        input := &qconnect.UpdateMessageTemplateInput{}
+        output := &qconnect.UpdateMessageTemplateOutput{}
+
+        mockClient.On("UpdateMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMessageTemplateMetadata", func(t *testing.T) {
+        input := &qconnect.UpdateMessageTemplateMetadataInput{}
+        output := &qconnect.UpdateMessageTemplateMetadataOutput{}
+
+        mockClient.On("UpdateMessageTemplateMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMessageTemplateMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateQuickResponse", func(t *testing.T) {
         input := &qconnect.UpdateQuickResponseInput{}
         output := &qconnect.UpdateQuickResponseOutput{}
@@ -639,6 +1198,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSessionData", func(t *testing.T) {
+        input := &qconnect.UpdateSessionDataInput{}
+        output := &qconnect.UpdateSessionDataOutput{}
+
+        mockClient.On("UpdateSessionData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSessionData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

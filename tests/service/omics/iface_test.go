@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRunCache", func(t *testing.T) {
+        input := &omics.CreateRunCacheInput{}
+        output := &omics.CreateRunCacheOutput{}
+
+        mockClient.On("CreateRunCache", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRunCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRunGroup", func(t *testing.T) {
         input := &omics.CreateRunGroupInput{}
         output := &omics.CreateRunGroupOutput{}
@@ -307,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteRunCache", func(t *testing.T) {
+        input := &omics.DeleteRunCacheInput{}
+        output := &omics.DeleteRunCacheOutput{}
+
+        mockClient.On("DeleteRunCache", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRunCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRunGroup", func(t *testing.T) {
         input := &omics.DeleteRunGroupInput{}
         output := &omics.DeleteRunGroupOutput{}
@@ -314,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRunGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRunGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteS3AccessPolicy", func(t *testing.T) {
+        input := &omics.DeleteS3AccessPolicyInput{}
+        output := &omics.DeleteS3AccessPolicyOutput{}
+
+        mockClient.On("DeleteS3AccessPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteS3AccessPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,6 +580,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetRunCache", func(t *testing.T) {
+        input := &omics.GetRunCacheInput{}
+        output := &omics.GetRunCacheOutput{}
+
+        mockClient.On("GetRunCache", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRunCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRunGroup", func(t *testing.T) {
         input := &omics.GetRunGroupInput{}
         output := &omics.GetRunGroupOutput{}
@@ -561,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRunTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRunTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetS3AccessPolicy", func(t *testing.T) {
+        input := &omics.GetS3AccessPolicyInput{}
+        output := &omics.GetS3AccessPolicyOutput{}
+
+        mockClient.On("GetS3AccessPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetS3AccessPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRunCaches", func(t *testing.T) {
+        input := &omics.ListRunCachesInput{}
+        output := &omics.ListRunCachesOutput{}
+
+        mockClient.On("ListRunCaches", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRunCaches(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRunGroups", func(t *testing.T) {
         input := &omics.ListRunGroupsInput{}
         output := &omics.ListRunGroupsOutput{}
@@ -899,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkflows", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkflows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutS3AccessPolicy", func(t *testing.T) {
+        input := &omics.PutS3AccessPolicyInput{}
+        output := &omics.PutS3AccessPolicyOutput{}
+
+        mockClient.On("PutS3AccessPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutS3AccessPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1048,6 +1139,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateRunCache", func(t *testing.T) {
+        input := &omics.UpdateRunCacheInput{}
+        output := &omics.UpdateRunCacheOutput{}
+
+        mockClient.On("UpdateRunCache", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRunCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateRunGroup", func(t *testing.T) {
         input := &omics.UpdateRunGroupInput{}
         output := &omics.UpdateRunGroupOutput{}
@@ -1055,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRunGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRunGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSequenceStore", func(t *testing.T) {
+        input := &omics.UpdateSequenceStoreInput{}
+        output := &omics.UpdateSequenceStoreOutput{}
+
+        mockClient.On("UpdateSequenceStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSequenceStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

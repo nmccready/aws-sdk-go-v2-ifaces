@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelParticipantAuthentication", func(t *testing.T) {
+        input := &connectparticipant.CancelParticipantAuthenticationInput{}
+        output := &connectparticipant.CancelParticipantAuthenticationOutput{}
+
+        mockClient.On("CancelParticipantAuthentication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelParticipantAuthentication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCompleteAttachmentUpload", func(t *testing.T) {
         input := &connectparticipant.CompleteAttachmentUploadInput{}
         output := &connectparticipant.CompleteAttachmentUploadOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAttachment", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAuthenticationUrl", func(t *testing.T) {
+        input := &connectparticipant.GetAuthenticationUrlInput{}
+        output := &connectparticipant.GetAuthenticationUrlOutput{}
+
+        mockClient.On("GetAuthenticationUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAuthenticationUrl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetControl", func(t *testing.T) {
+        input := &controlcatalog.GetControlInput{}
+        output := &controlcatalog.GetControlOutput{}
+
+        mockClient.On("GetControl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetControl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCommonControls", func(t *testing.T) {
         input := &controlcatalog.ListCommonControlsInput{}
         output := &controlcatalog.ListCommonControlsOutput{}
@@ -41,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCommonControls", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCommonControls(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListControls", func(t *testing.T) {
+        input := &controlcatalog.ListControlsInput{}
+        output := &controlcatalog.ListControlsOutput{}
+
+        mockClient.On("ListControls", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListControls(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

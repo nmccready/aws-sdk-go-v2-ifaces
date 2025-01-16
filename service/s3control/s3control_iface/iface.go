@@ -75,6 +75,7 @@ type IClient interface {
  ListAccessGrantsLocations(ctx context.Context, params *ListAccessGrantsLocationsInput, optFns ...func(*Options)) (*ListAccessGrantsLocationsOutput, error) 
  ListAccessPoints(ctx context.Context, params *ListAccessPointsInput, optFns ...func(*Options)) (*ListAccessPointsOutput, error) 
  ListAccessPointsForObjectLambda(ctx context.Context, params *ListAccessPointsForObjectLambdaInput, optFns ...func(*Options)) (*ListAccessPointsForObjectLambdaOutput, error) 
+ ListCallerAccessGrants(ctx context.Context, params *ListCallerAccessGrantsInput, optFns ...func(*Options)) (*ListCallerAccessGrantsOutput, error) 
  ListJobs(ctx context.Context, params *ListJobsInput, optFns ...func(*Options)) (*ListJobsOutput, error) 
  ListMultiRegionAccessPoints(ctx context.Context, params *ListMultiRegionAccessPointsInput, optFns ...func(*Options)) (*ListMultiRegionAccessPointsOutput, error) 
  ListRegionalBuckets(ctx context.Context, params *ListRegionalBucketsInput, optFns ...func(*Options)) (*ListRegionalBucketsOutput, error) 

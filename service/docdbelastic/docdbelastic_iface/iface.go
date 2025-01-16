@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for docdbelastic
 type IClient interface {
  Options() Options 
+ ApplyPendingMaintenanceAction(ctx context.Context, params *ApplyPendingMaintenanceActionInput, optFns ...func(*Options)) (*ApplyPendingMaintenanceActionOutput, error) 
  CopyClusterSnapshot(ctx context.Context, params *CopyClusterSnapshotInput, optFns ...func(*Options)) (*CopyClusterSnapshotOutput, error) 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
  CreateClusterSnapshot(ctx context.Context, params *CreateClusterSnapshotInput, optFns ...func(*Options)) (*CreateClusterSnapshotOutput, error) 
@@ -17,8 +18,10 @@ type IClient interface {
  DeleteClusterSnapshot(ctx context.Context, params *DeleteClusterSnapshotInput, optFns ...func(*Options)) (*DeleteClusterSnapshotOutput, error) 
  GetCluster(ctx context.Context, params *GetClusterInput, optFns ...func(*Options)) (*GetClusterOutput, error) 
  GetClusterSnapshot(ctx context.Context, params *GetClusterSnapshotInput, optFns ...func(*Options)) (*GetClusterSnapshotOutput, error) 
+ GetPendingMaintenanceAction(ctx context.Context, params *GetPendingMaintenanceActionInput, optFns ...func(*Options)) (*GetPendingMaintenanceActionOutput, error) 
  ListClusterSnapshots(ctx context.Context, params *ListClusterSnapshotsInput, optFns ...func(*Options)) (*ListClusterSnapshotsOutput, error) 
  ListClusters(ctx context.Context, params *ListClustersInput, optFns ...func(*Options)) (*ListClustersOutput, error) 
+ ListPendingMaintenanceActions(ctx context.Context, params *ListPendingMaintenanceActionsInput, optFns ...func(*Options)) (*ListPendingMaintenanceActionsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  RestoreClusterFromSnapshot(ctx context.Context, params *RestoreClusterFromSnapshotInput, optFns ...func(*Options)) (*RestoreClusterFromSnapshotOutput, error) 
  StartCluster(ctx context.Context, params *StartClusterInput, optFns ...func(*Options)) (*StartClusterOutput, error) 

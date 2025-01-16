@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.AssociateDataProtectionSettingsInput{}
+        output := &workspacesweb.AssociateDataProtectionSettingsOutput{}
+
+        mockClient.On("AssociateDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateDataProtectionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateIpAccessSettings", func(t *testing.T) {
         input := &workspacesweb.AssociateIpAccessSettingsInput{}
         output := &workspacesweb.AssociateIpAccessSettingsOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateBrowserSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateBrowserSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.CreateDataProtectionSettingsInput{}
+        output := &workspacesweb.CreateDataProtectionSettingsOutput{}
+
+        mockClient.On("CreateDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataProtectionSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.DeleteDataProtectionSettingsInput{}
+        output := &workspacesweb.DeleteDataProtectionSettingsOutput{}
+
+        mockClient.On("DeleteDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataProtectionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteIdentityProvider", func(t *testing.T) {
         input := &workspacesweb.DeleteIdentityProviderInput{}
         output := &workspacesweb.DeleteIdentityProviderOutput{}
@@ -333,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.DisassociateDataProtectionSettingsInput{}
+        output := &workspacesweb.DisassociateDataProtectionSettingsOutput{}
+
+        mockClient.On("DisassociateDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateDataProtectionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateIpAccessSettings", func(t *testing.T) {
         input := &workspacesweb.DisassociateIpAccessSettingsInput{}
         output := &workspacesweb.DisassociateIpAccessSettingsOutput{}
@@ -398,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestExpireSession", func(t *testing.T) {
+        input := &workspacesweb.ExpireSessionInput{}
+        output := &workspacesweb.ExpireSessionOutput{}
+
+        mockClient.On("ExpireSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExpireSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBrowserSettings", func(t *testing.T) {
         input := &workspacesweb.GetBrowserSettingsInput{}
         output := &workspacesweb.GetBrowserSettingsOutput{}
@@ -405,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBrowserSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBrowserSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.GetDataProtectionSettingsInput{}
+        output := &workspacesweb.GetDataProtectionSettingsOutput{}
+
+        mockClient.On("GetDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataProtectionSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSession", func(t *testing.T) {
+        input := &workspacesweb.GetSessionInput{}
+        output := &workspacesweb.GetSessionOutput{}
+
+        mockClient.On("GetSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTrustStore", func(t *testing.T) {
         input := &workspacesweb.GetTrustStoreInput{}
         output := &workspacesweb.GetTrustStoreOutput{}
@@ -541,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.ListDataProtectionSettingsInput{}
+        output := &workspacesweb.ListDataProtectionSettingsOutput{}
+
+        mockClient.On("ListDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataProtectionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListIdentityProviders", func(t *testing.T) {
         input := &workspacesweb.ListIdentityProvidersInput{}
         output := &workspacesweb.ListIdentityProvidersOutput{}
@@ -587,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPortals", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPortals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSessions", func(t *testing.T) {
+        input := &workspacesweb.ListSessionsInput{}
+        output := &workspacesweb.ListSessionsOutput{}
+
+        mockClient.On("ListSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -691,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBrowserSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBrowserSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataProtectionSettings", func(t *testing.T) {
+        input := &workspacesweb.UpdateDataProtectionSettingsInput{}
+        output := &workspacesweb.UpdateDataProtectionSettingsOutput{}
+
+        mockClient.On("UpdateDataProtectionSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataProtectionSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -80,4 +80,5 @@ type IClient interface {
  UpdateDataset(ctx context.Context, params *UpdateDatasetInput, optFns ...func(*Options)) (*UpdateDatasetOutput, error) 
  UpdateMetricAttribution(ctx context.Context, params *UpdateMetricAttributionInput, optFns ...func(*Options)) (*UpdateMetricAttributionOutput, error) 
  UpdateRecommender(ctx context.Context, params *UpdateRecommenderInput, optFns ...func(*Options)) (*UpdateRecommenderOutput, error) 
+ UpdateSolution(ctx context.Context, params *UpdateSolutionInput, optFns ...func(*Options)) (*UpdateSolutionOutput, error) 
 }

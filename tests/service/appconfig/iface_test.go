@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccountSettings", func(t *testing.T) {
+        input := &appconfig.GetAccountSettingsInput{}
+        output := &appconfig.GetAccountSettingsOutput{}
+
+        mockClient.On("GetAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetApplication", func(t *testing.T) {
         input := &appconfig.GetApplicationInput{}
         output := &appconfig.GetApplicationOutput{}
@@ -496,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAccountSettings", func(t *testing.T) {
+        input := &appconfig.UpdateAccountSettingsInput{}
+        output := &appconfig.UpdateAccountSettingsOutput{}
+
+        mockClient.On("UpdateAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccountSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

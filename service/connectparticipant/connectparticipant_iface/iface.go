@@ -10,11 +10,13 @@ import (
 // IClient defines the interface for connectparticipant
 type IClient interface {
  Options() Options 
+ CancelParticipantAuthentication(ctx context.Context, params *CancelParticipantAuthenticationInput, optFns ...func(*Options)) (*CancelParticipantAuthenticationOutput, error) 
  CompleteAttachmentUpload(ctx context.Context, params *CompleteAttachmentUploadInput, optFns ...func(*Options)) (*CompleteAttachmentUploadOutput, error) 
  CreateParticipantConnection(ctx context.Context, params *CreateParticipantConnectionInput, optFns ...func(*Options)) (*CreateParticipantConnectionOutput, error) 
  DescribeView(ctx context.Context, params *DescribeViewInput, optFns ...func(*Options)) (*DescribeViewOutput, error) 
  DisconnectParticipant(ctx context.Context, params *DisconnectParticipantInput, optFns ...func(*Options)) (*DisconnectParticipantOutput, error) 
  GetAttachment(ctx context.Context, params *GetAttachmentInput, optFns ...func(*Options)) (*GetAttachmentOutput, error) 
+ GetAuthenticationUrl(ctx context.Context, params *GetAuthenticationUrlInput, optFns ...func(*Options)) (*GetAuthenticationUrlOutput, error) 
  GetTranscript(ctx context.Context, params *GetTranscriptInput, optFns ...func(*Options)) (*GetTranscriptOutput, error) 
  SendEvent(ctx context.Context, params *SendEventInput, optFns ...func(*Options)) (*SendEventOutput, error) 
  SendMessage(ctx context.Context, params *SendMessageInput, optFns ...func(*Options)) (*SendMessageOutput, error) 

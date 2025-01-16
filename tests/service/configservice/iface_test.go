@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateResourceTypes", func(t *testing.T) {
+        input := &configservice.AssociateResourceTypesInput{}
+        output := &configservice.AssociateResourceTypesOutput{}
+
+        mockClient.On("AssociateResourceTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateResourceTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetAggregateResourceConfig", func(t *testing.T) {
         input := &configservice.BatchGetAggregateResourceConfigInput{}
         output := &configservice.BatchGetAggregateResourceConfigOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRetentionConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRetentionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteServiceLinkedConfigurationRecorder", func(t *testing.T) {
+        input := &configservice.DeleteServiceLinkedConfigurationRecorderInput{}
+        output := &configservice.DeleteServiceLinkedConfigurationRecorderOutput{}
+
+        mockClient.On("DeleteServiceLinkedConfigurationRecorder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteServiceLinkedConfigurationRecorder(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateResourceTypes", func(t *testing.T) {
+        input := &configservice.DisassociateResourceTypesInput{}
+        output := &configservice.DisassociateResourceTypesOutput{}
+
+        mockClient.On("DisassociateResourceTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateResourceTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAggregateComplianceDetailsByConfigRule", func(t *testing.T) {
         input := &configservice.GetAggregateComplianceDetailsByConfigRuleInput{}
         output := &configservice.GetAggregateComplianceDetailsByConfigRuleOutput{}
@@ -853,6 +892,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConfigurationRecorders", func(t *testing.T) {
+        input := &configservice.ListConfigurationRecordersInput{}
+        output := &configservice.ListConfigurationRecordersOutput{}
+
+        mockClient.On("ListConfigurationRecorders", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfigurationRecorders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListConformancePackComplianceScores", func(t *testing.T) {
         input := &configservice.ListConformancePackComplianceScoresInput{}
         output := &configservice.ListConformancePackComplianceScoresOutput{}
@@ -1094,6 +1146,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutRetentionConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutRetentionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutServiceLinkedConfigurationRecorder", func(t *testing.T) {
+        input := &configservice.PutServiceLinkedConfigurationRecorderInput{}
+        output := &configservice.PutServiceLinkedConfigurationRecorderOutput{}
+
+        mockClient.On("PutServiceLinkedConfigurationRecorder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutServiceLinkedConfigurationRecorder(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

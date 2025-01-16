@@ -411,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCompleteWebAuthnRegistration", func(t *testing.T) {
+        input := &cognitoidentityprovider.CompleteWebAuthnRegistrationInput{}
+        output := &cognitoidentityprovider.CompleteWebAuthnRegistrationOutput{}
+
+        mockClient.On("CompleteWebAuthnRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CompleteWebAuthnRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestConfirmDevice", func(t *testing.T) {
         input := &cognitoidentityprovider.ConfirmDeviceInput{}
         output := &cognitoidentityprovider.ConfirmDeviceOutput{}
@@ -470,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIdentityProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIdentityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateManagedLoginBranding", func(t *testing.T) {
+        input := &cognitoidentityprovider.CreateManagedLoginBrandingInput{}
+        output := &cognitoidentityprovider.CreateManagedLoginBrandingOutput{}
+
+        mockClient.On("CreateManagedLoginBranding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateManagedLoginBranding(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteManagedLoginBranding", func(t *testing.T) {
+        input := &cognitoidentityprovider.DeleteManagedLoginBrandingInput{}
+        output := &cognitoidentityprovider.DeleteManagedLoginBrandingOutput{}
+
+        mockClient.On("DeleteManagedLoginBranding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteManagedLoginBranding(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteResourceServer", func(t *testing.T) {
         input := &cognitoidentityprovider.DeleteResourceServerInput{}
         output := &cognitoidentityprovider.DeleteResourceServerOutput{}
@@ -645,6 +684,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteWebAuthnCredential", func(t *testing.T) {
+        input := &cognitoidentityprovider.DeleteWebAuthnCredentialInput{}
+        output := &cognitoidentityprovider.DeleteWebAuthnCredentialOutput{}
+
+        mockClient.On("DeleteWebAuthnCredential", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebAuthnCredential(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeIdentityProvider", func(t *testing.T) {
         input := &cognitoidentityprovider.DescribeIdentityProviderInput{}
         output := &cognitoidentityprovider.DescribeIdentityProviderOutput{}
@@ -652,6 +704,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeIdentityProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeIdentityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeManagedLoginBranding", func(t *testing.T) {
+        input := &cognitoidentityprovider.DescribeManagedLoginBrandingInput{}
+        output := &cognitoidentityprovider.DescribeManagedLoginBrandingOutput{}
+
+        mockClient.On("DescribeManagedLoginBranding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeManagedLoginBranding(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeManagedLoginBrandingByClient", func(t *testing.T) {
+        input := &cognitoidentityprovider.DescribeManagedLoginBrandingByClientInput{}
+        output := &cognitoidentityprovider.DescribeManagedLoginBrandingByClientOutput{}
+
+        mockClient.On("DescribeManagedLoginBrandingByClient", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeManagedLoginBrandingByClient(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -879,6 +957,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetUserAuthFactors", func(t *testing.T) {
+        input := &cognitoidentityprovider.GetUserAuthFactorsInput{}
+        output := &cognitoidentityprovider.GetUserAuthFactorsOutput{}
+
+        mockClient.On("GetUserAuthFactors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUserAuthFactors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetUserPoolMfaConfig", func(t *testing.T) {
         input := &cognitoidentityprovider.GetUserPoolMfaConfigInput{}
         output := &cognitoidentityprovider.GetUserPoolMfaConfigOutput{}
@@ -1048,6 +1139,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListWebAuthnCredentials", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListWebAuthnCredentialsInput{}
+        output := &cognitoidentityprovider.ListWebAuthnCredentialsOutput{}
+
+        mockClient.On("ListWebAuthnCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWebAuthnCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestResendConfirmationCode", func(t *testing.T) {
         input := &cognitoidentityprovider.ResendConfirmationCodeInput{}
         output := &cognitoidentityprovider.ResendConfirmationCodeOutput{}
@@ -1191,6 +1295,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartWebAuthnRegistration", func(t *testing.T) {
+        input := &cognitoidentityprovider.StartWebAuthnRegistrationInput{}
+        output := &cognitoidentityprovider.StartWebAuthnRegistrationOutput{}
+
+        mockClient.On("StartWebAuthnRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartWebAuthnRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopUserImportJob", func(t *testing.T) {
         input := &cognitoidentityprovider.StopUserImportJobInput{}
         output := &cognitoidentityprovider.StopUserImportJobOutput{}
@@ -1276,6 +1393,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateIdentityProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateIdentityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateManagedLoginBranding", func(t *testing.T) {
+        input := &cognitoidentityprovider.UpdateManagedLoginBrandingInput{}
+        output := &cognitoidentityprovider.UpdateManagedLoginBrandingOutput{}
+
+        mockClient.On("UpdateManagedLoginBranding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateManagedLoginBranding(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

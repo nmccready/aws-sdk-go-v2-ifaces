@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddDirectQueryDataSource", func(t *testing.T) {
+        input := &opensearch.AddDirectQueryDataSourceInput{}
+        output := &opensearch.AddDirectQueryDataSourceOutput{}
+
+        mockClient.On("AddDirectQueryDataSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddDirectQueryDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAddTags", func(t *testing.T) {
         input := &opensearch.AddTagsInput{}
         output := &opensearch.AddTagsOutput{}
@@ -80,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("AssociatePackage", ctx, input).Return(output, nil)
 
         result, err := mockClient.AssociatePackage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAssociatePackages", func(t *testing.T) {
+        input := &opensearch.AssociatePackagesInput{}
+        output := &opensearch.AssociatePackagesOutput{}
+
+        mockClient.On("AssociatePackages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociatePackages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -119,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelServiceSoftwareUpdate", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelServiceSoftwareUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateApplication", func(t *testing.T) {
+        input := &opensearch.CreateApplicationInput{}
+        output := &opensearch.CreateApplicationOutput{}
+
+        mockClient.On("CreateApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteApplication", func(t *testing.T) {
+        input := &opensearch.DeleteApplicationInput{}
+        output := &opensearch.DeleteApplicationOutput{}
+
+        mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDataSource", func(t *testing.T) {
         input := &opensearch.DeleteDataSourceInput{}
         output := &opensearch.DeleteDataSourceOutput{}
@@ -184,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDirectQueryDataSource", func(t *testing.T) {
+        input := &opensearch.DeleteDirectQueryDataSourceInput{}
+        output := &opensearch.DeleteDirectQueryDataSourceOutput{}
+
+        mockClient.On("DeleteDirectQueryDataSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDirectQueryDataSource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,6 +528,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDissociatePackages", func(t *testing.T) {
+        input := &opensearch.DissociatePackagesInput{}
+        output := &opensearch.DissociatePackagesOutput{}
+
+        mockClient.On("DissociatePackages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DissociatePackages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetApplication", func(t *testing.T) {
+        input := &opensearch.GetApplicationInput{}
+        output := &opensearch.GetApplicationOutput{}
+
+        mockClient.On("GetApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCompatibleVersions", func(t *testing.T) {
         input := &opensearch.GetCompatibleVersionsInput{}
         output := &opensearch.GetCompatibleVersionsOutput{}
@@ -483,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDirectQueryDataSource", func(t *testing.T) {
+        input := &opensearch.GetDirectQueryDataSourceInput{}
+        output := &opensearch.GetDirectQueryDataSourceOutput{}
+
+        mockClient.On("GetDirectQueryDataSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDirectQueryDataSource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListApplications", func(t *testing.T) {
+        input := &opensearch.ListApplicationsInput{}
+        output := &opensearch.ListApplicationsOutput{}
+
+        mockClient.On("ListApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDataSources", func(t *testing.T) {
         input := &opensearch.ListDataSourcesInput{}
         output := &opensearch.ListDataSourcesOutput{}
@@ -548,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDirectQueryDataSources", func(t *testing.T) {
+        input := &opensearch.ListDirectQueryDataSourcesInput{}
+        output := &opensearch.ListDirectQueryDataSourcesOutput{}
+
+        mockClient.On("ListDirectQueryDataSources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDirectQueryDataSources(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,6 +905,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateApplication", func(t *testing.T) {
+        input := &opensearch.UpdateApplicationInput{}
+        output := &opensearch.UpdateApplicationOutput{}
+
+        mockClient.On("UpdateApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateDataSource", func(t *testing.T) {
         input := &opensearch.UpdateDataSourceInput{}
         output := &opensearch.UpdateDataSourceOutput{}
@@ -782,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDirectQueryDataSource", func(t *testing.T) {
+        input := &opensearch.UpdateDirectQueryDataSourceInput{}
+        output := &opensearch.UpdateDirectQueryDataSourceOutput{}
+
+        mockClient.On("UpdateDirectQueryDataSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDirectQueryDataSource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -808,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePackage", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePackage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePackageScope", func(t *testing.T) {
+        input := &opensearch.UpdatePackageScopeInput{}
+        output := &opensearch.UpdatePackageScopeOutput{}
+
+        mockClient.On("UpdatePackageScope", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePackageScope(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetPolicy", func(t *testing.T) {
+        input := &verifiedpermissions.BatchGetPolicyInput{}
+        output := &verifiedpermissions.BatchGetPolicyOutput{}
+
+        mockClient.On("BatchGetPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchIsAuthorized", func(t *testing.T) {
         input := &verifiedpermissions.BatchIsAuthorizedInput{}
         output := &verifiedpermissions.BatchIsAuthorizedOutput{}

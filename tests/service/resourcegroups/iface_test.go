@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelTagSyncTask", func(t *testing.T) {
+        input := &resourcegroups.CancelTagSyncTaskInput{}
+        output := &resourcegroups.CancelTagSyncTaskOutput{}
+
+        mockClient.On("CancelTagSyncTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelTagSyncTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGroup", func(t *testing.T) {
         input := &resourcegroups.CreateGroupInput{}
         output := &resourcegroups.CreateGroupOutput{}
@@ -112,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTagSyncTask", func(t *testing.T) {
+        input := &resourcegroups.GetTagSyncTaskInput{}
+        output := &resourcegroups.GetTagSyncTaskOutput{}
+
+        mockClient.On("GetTagSyncTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTagSyncTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTags", func(t *testing.T) {
         input := &resourcegroups.GetTagsInput{}
         output := &resourcegroups.GetTagsOutput{}
@@ -151,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListGroupingStatuses", func(t *testing.T) {
+        input := &resourcegroups.ListGroupingStatusesInput{}
+        output := &resourcegroups.ListGroupingStatusesOutput{}
+
+        mockClient.On("ListGroupingStatuses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroupingStatuses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListGroups", func(t *testing.T) {
         input := &resourcegroups.ListGroupsInput{}
         output := &resourcegroups.ListGroupsOutput{}
@@ -158,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagSyncTasks", func(t *testing.T) {
+        input := &resourcegroups.ListTagSyncTasksInput{}
+        output := &resourcegroups.ListTagSyncTasksOutput{}
+
+        mockClient.On("ListTagSyncTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagSyncTasks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchResources", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTagSyncTask", func(t *testing.T) {
+        input := &resourcegroups.StartTagSyncTaskInput{}
+        output := &resourcegroups.StartTagSyncTaskOutput{}
+
+        mockClient.On("StartTagSyncTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTagSyncTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

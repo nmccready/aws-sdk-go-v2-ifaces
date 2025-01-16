@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPredictiveScalingForecast", func(t *testing.T) {
+        input := &applicationautoscaling.GetPredictiveScalingForecastInput{}
+        output := &applicationautoscaling.GetPredictiveScalingForecastOutput{}
+
+        mockClient.On("GetPredictiveScalingForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPredictiveScalingForecast(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &applicationautoscaling.ListTagsForResourceInput{}
         output := &applicationautoscaling.ListTagsForResourceOutput{}

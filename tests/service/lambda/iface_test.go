@@ -372,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFunctionRecursionConfig", func(t *testing.T) {
+        input := &lambda.GetFunctionRecursionConfigInput{}
+        output := &lambda.GetFunctionRecursionConfigOutput{}
+
+        mockClient.On("GetFunctionRecursionConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFunctionRecursionConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFunctionUrlConfig", func(t *testing.T) {
         input := &lambda.GetFunctionUrlConfigInput{}
         output := &lambda.GetFunctionUrlConfigOutput{}
@@ -717,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutFunctionEventInvokeConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutFunctionEventInvokeConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutFunctionRecursionConfig", func(t *testing.T) {
+        input := &lambda.PutFunctionRecursionConfigInput{}
+        output := &lambda.PutFunctionRecursionConfigOutput{}
+
+        mockClient.On("PutFunctionRecursionConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutFunctionRecursionConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

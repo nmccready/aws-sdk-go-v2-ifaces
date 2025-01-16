@@ -307,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestResetEnabledControl", func(t *testing.T) {
+        input := &controltower.ResetEnabledControlInput{}
+        output := &controltower.ResetEnabledControlOutput{}
+
+        mockClient.On("ResetEnabledControl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResetEnabledControl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestResetLandingZone", func(t *testing.T) {
         input := &controltower.ResetLandingZoneInput{}
         output := &controltower.ResetLandingZoneOutput{}

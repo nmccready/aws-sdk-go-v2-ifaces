@@ -14,6 +14,7 @@ type IClient interface {
  EncryptData(ctx context.Context, params *EncryptDataInput, optFns ...func(*Options)) (*EncryptDataOutput, error) 
  GenerateCardValidationData(ctx context.Context, params *GenerateCardValidationDataInput, optFns ...func(*Options)) (*GenerateCardValidationDataOutput, error) 
  GenerateMac(ctx context.Context, params *GenerateMacInput, optFns ...func(*Options)) (*GenerateMacOutput, error) 
+ GenerateMacEmvPinChange(ctx context.Context, params *GenerateMacEmvPinChangeInput, optFns ...func(*Options)) (*GenerateMacEmvPinChangeOutput, error) 
  GeneratePinData(ctx context.Context, params *GeneratePinDataInput, optFns ...func(*Options)) (*GeneratePinDataOutput, error) 
  ReEncryptData(ctx context.Context, params *ReEncryptDataInput, optFns ...func(*Options)) (*ReEncryptDataOutput, error) 
  TranslatePinData(ctx context.Context, params *TranslatePinDataInput, optFns ...func(*Options)) (*TranslatePinDataOutput, error) 

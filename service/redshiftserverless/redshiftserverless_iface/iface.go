@@ -41,6 +41,7 @@ type IClient interface {
  GetWorkgroup(ctx context.Context, params *GetWorkgroupInput, optFns ...func(*Options)) (*GetWorkgroupOutput, error) 
  ListCustomDomainAssociations(ctx context.Context, params *ListCustomDomainAssociationsInput, optFns ...func(*Options)) (*ListCustomDomainAssociationsOutput, error) 
  ListEndpointAccess(ctx context.Context, params *ListEndpointAccessInput, optFns ...func(*Options)) (*ListEndpointAccessOutput, error) 
+ ListManagedWorkgroups(ctx context.Context, params *ListManagedWorkgroupsInput, optFns ...func(*Options)) (*ListManagedWorkgroupsOutput, error) 
  ListNamespaces(ctx context.Context, params *ListNamespacesInput, optFns ...func(*Options)) (*ListNamespacesOutput, error) 
  ListRecoveryPoints(ctx context.Context, params *ListRecoveryPointsInput, optFns ...func(*Options)) (*ListRecoveryPointsOutput, error) 
  ListScheduledActions(ctx context.Context, params *ListScheduledActionsInput, optFns ...func(*Options)) (*ListScheduledActionsOutput, error) 

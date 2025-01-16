@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRepositoryCreationTemplate", func(t *testing.T) {
+        input := &ecr.CreateRepositoryCreationTemplateInput{}
+        output := &ecr.CreateRepositoryCreationTemplateOutput{}
+
+        mockClient.On("CreateRepositoryCreationTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRepositoryCreationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLifecyclePolicy", func(t *testing.T) {
         input := &ecr.DeleteLifecyclePolicyInput{}
         output := &ecr.DeleteLifecyclePolicyOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRepository", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRepository(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRepositoryCreationTemplate", func(t *testing.T) {
+        input := &ecr.DeleteRepositoryCreationTemplateInput{}
+        output := &ecr.DeleteRepositoryCreationTemplateOutput{}
+
+        mockClient.On("DeleteRepositoryCreationTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRepositoryCreationTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -262,6 +288,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeRepositories", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeRepositories(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeRepositoryCreationTemplates", func(t *testing.T) {
+        input := &ecr.DescribeRepositoryCreationTemplatesInput{}
+        output := &ecr.DescribeRepositoryCreationTemplatesOutput{}
+
+        mockClient.On("DescribeRepositoryCreationTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRepositoryCreationTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccountSetting", func(t *testing.T) {
+        input := &ecr.GetAccountSettingInput{}
+        output := &ecr.GetAccountSettingOutput{}
+
+        mockClient.On("GetAccountSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountSetting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -392,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountSetting", func(t *testing.T) {
+        input := &ecr.PutAccountSettingInput{}
+        output := &ecr.PutAccountSettingOutput{}
+
+        mockClient.On("PutAccountSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountSetting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -561,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePullThroughCacheRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePullThroughCacheRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRepositoryCreationTemplate", func(t *testing.T) {
+        input := &ecr.UpdateRepositoryCreationTemplateInput{}
+        output := &ecr.UpdateRepositoryCreationTemplateOutput{}
+
+        mockClient.On("UpdateRepositoryCreationTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRepositoryCreationTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

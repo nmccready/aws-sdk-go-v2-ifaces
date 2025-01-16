@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeleteClusterNodes", func(t *testing.T) {
+        input := &sagemaker.BatchDeleteClusterNodesInput{}
+        output := &sagemaker.BatchDeleteClusterNodesOutput{}
+
+        mockClient.On("BatchDeleteClusterNodes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteClusterNodes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDescribeModelPackage", func(t *testing.T) {
         input := &sagemaker.BatchDescribeModelPackageInput{}
         output := &sagemaker.BatchDescribeModelPackageOutput{}
@@ -190,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateClusterSchedulerConfig", func(t *testing.T) {
+        input := &sagemaker.CreateClusterSchedulerConfigInput{}
+        output := &sagemaker.CreateClusterSchedulerConfigOutput{}
+
+        mockClient.On("CreateClusterSchedulerConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateClusterSchedulerConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCodeRepository", func(t *testing.T) {
         input := &sagemaker.CreateCodeRepositoryInput{}
         output := &sagemaker.CreateCodeRepositoryOutput{}
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCompilationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCompilationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateComputeQuota", func(t *testing.T) {
+        input := &sagemaker.CreateComputeQuotaInput{}
+        output := &sagemaker.CreateComputeQuotaOutput{}
+
+        mockClient.On("CreateComputeQuota", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateComputeQuota(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -671,6 +710,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePartnerApp", func(t *testing.T) {
+        input := &sagemaker.CreatePartnerAppInput{}
+        output := &sagemaker.CreatePartnerAppOutput{}
+
+        mockClient.On("CreatePartnerApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePartnerApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePartnerAppPresignedUrl", func(t *testing.T) {
+        input := &sagemaker.CreatePartnerAppPresignedUrlInput{}
+        output := &sagemaker.CreatePartnerAppPresignedUrlOutput{}
+
+        mockClient.On("CreatePartnerAppPresignedUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePartnerAppPresignedUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreatePipeline", func(t *testing.T) {
         input := &sagemaker.CreatePipelineInput{}
         output := &sagemaker.CreatePipelineOutput{}
@@ -782,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTrainingJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTrainingJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTrainingPlan", func(t *testing.T) {
+        input := &sagemaker.CreateTrainingPlanInput{}
+        output := &sagemaker.CreateTrainingPlanOutput{}
+
+        mockClient.On("CreateTrainingPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTrainingPlan(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,6 +1035,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteClusterSchedulerConfig", func(t *testing.T) {
+        input := &sagemaker.DeleteClusterSchedulerConfigInput{}
+        output := &sagemaker.DeleteClusterSchedulerConfigOutput{}
+
+        mockClient.On("DeleteClusterSchedulerConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteClusterSchedulerConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCodeRepository", func(t *testing.T) {
         input := &sagemaker.DeleteCodeRepositoryInput{}
         output := &sagemaker.DeleteCodeRepositoryOutput{}
@@ -977,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCompilationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCompilationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteComputeQuota", func(t *testing.T) {
+        input := &sagemaker.DeleteComputeQuotaInput{}
+        output := &sagemaker.DeleteComputeQuotaOutput{}
+
+        mockClient.On("DeleteComputeQuota", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteComputeQuota(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1412,6 +1516,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeletePartnerApp", func(t *testing.T) {
+        input := &sagemaker.DeletePartnerAppInput{}
+        output := &sagemaker.DeletePartnerAppOutput{}
+
+        mockClient.On("DeletePartnerApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePartnerApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePipeline", func(t *testing.T) {
         input := &sagemaker.DeletePipelineInput{}
         output := &sagemaker.DeletePipelineOutput{}
@@ -1672,6 +1789,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeClusterSchedulerConfig", func(t *testing.T) {
+        input := &sagemaker.DescribeClusterSchedulerConfigInput{}
+        output := &sagemaker.DescribeClusterSchedulerConfigOutput{}
+
+        mockClient.On("DescribeClusterSchedulerConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeClusterSchedulerConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCodeRepository", func(t *testing.T) {
         input := &sagemaker.DescribeCodeRepositoryInput{}
         output := &sagemaker.DescribeCodeRepositoryOutput{}
@@ -1692,6 +1822,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCompilationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCompilationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeComputeQuota", func(t *testing.T) {
+        input := &sagemaker.DescribeComputeQuotaInput{}
+        output := &sagemaker.DescribeComputeQuotaOutput{}
+
+        mockClient.On("DescribeComputeQuota", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeComputeQuota(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2179,6 +2322,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribePartnerApp", func(t *testing.T) {
+        input := &sagemaker.DescribePartnerAppInput{}
+        output := &sagemaker.DescribePartnerAppOutput{}
+
+        mockClient.On("DescribePartnerApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePartnerApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribePipeline", func(t *testing.T) {
         input := &sagemaker.DescribePipelineInput{}
         output := &sagemaker.DescribePipelineOutput{}
@@ -2290,6 +2446,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTrainingJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTrainingJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTrainingPlan", func(t *testing.T) {
+        input := &sagemaker.DescribeTrainingPlanInput{}
+        output := &sagemaker.DescribeTrainingPlanOutput{}
+
+        mockClient.On("DescribeTrainingPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTrainingPlan(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2634,6 +2803,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListClusterSchedulerConfigs", func(t *testing.T) {
+        input := &sagemaker.ListClusterSchedulerConfigsInput{}
+        output := &sagemaker.ListClusterSchedulerConfigsOutput{}
+
+        mockClient.On("ListClusterSchedulerConfigs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClusterSchedulerConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListClusters", func(t *testing.T) {
         input := &sagemaker.ListClustersInput{}
         output := &sagemaker.ListClustersOutput{}
@@ -2667,6 +2849,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCompilationJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCompilationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListComputeQuotas", func(t *testing.T) {
+        input := &sagemaker.ListComputeQuotasInput{}
+        output := &sagemaker.ListComputeQuotasOutput{}
+
+        mockClient.On("ListComputeQuotas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListComputeQuotas(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3245,6 +3440,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPartnerApps", func(t *testing.T) {
+        input := &sagemaker.ListPartnerAppsInput{}
+        output := &sagemaker.ListPartnerAppsOutput{}
+
+        mockClient.On("ListPartnerApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPartnerApps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPipelineExecutionSteps", func(t *testing.T) {
         input := &sagemaker.ListPipelineExecutionStepsInput{}
         output := &sagemaker.ListPipelineExecutionStepsOutput{}
@@ -3427,6 +3635,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTrainingPlans", func(t *testing.T) {
+        input := &sagemaker.ListTrainingPlansInput{}
+        output := &sagemaker.ListTrainingPlansOutput{}
+
+        mockClient.On("ListTrainingPlans", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrainingPlans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTransformJobs", func(t *testing.T) {
         input := &sagemaker.ListTransformJobsInput{}
         output := &sagemaker.ListTransformJobsOutput{}
@@ -3577,6 +3798,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("Search", ctx, input).Return(output, nil)
 
         result, err := mockClient.Search(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchTrainingPlanOfferings", func(t *testing.T) {
+        input := &sagemaker.SearchTrainingPlanOfferingsInput{}
+        output := &sagemaker.SearchTrainingPlanOfferingsOutput{}
+
+        mockClient.On("SearchTrainingPlanOfferings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchTrainingPlanOfferings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3947,6 +4181,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateClusterSchedulerConfig", func(t *testing.T) {
+        input := &sagemaker.UpdateClusterSchedulerConfigInput{}
+        output := &sagemaker.UpdateClusterSchedulerConfigOutput{}
+
+        mockClient.On("UpdateClusterSchedulerConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateClusterSchedulerConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateClusterSoftware", func(t *testing.T) {
         input := &sagemaker.UpdateClusterSoftwareInput{}
         output := &sagemaker.UpdateClusterSoftwareOutput{}
@@ -3967,6 +4214,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCodeRepository", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCodeRepository(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateComputeQuota", func(t *testing.T) {
+        input := &sagemaker.UpdateComputeQuotaInput{}
+        output := &sagemaker.UpdateComputeQuotaOutput{}
+
+        mockClient.On("UpdateComputeQuota", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateComputeQuota(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4253,6 +4513,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateNotebookInstanceLifecycleConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateNotebookInstanceLifecycleConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePartnerApp", func(t *testing.T) {
+        input := &sagemaker.UpdatePartnerAppInput{}
+        output := &sagemaker.UpdatePartnerAppOutput{}
+
+        mockClient.On("UpdatePartnerApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePartnerApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
