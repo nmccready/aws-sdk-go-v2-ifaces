@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMedicalScribeStream", func(t *testing.T) {
+        input := &transcribestreaming.GetMedicalScribeStreamInput{}
+        output := &transcribestreaming.GetMedicalScribeStreamOutput{}
+
+        mockClient.On("GetMedicalScribeStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMedicalScribeStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartCallAnalyticsStreamTranscription", func(t *testing.T) {
         input := &transcribestreaming.StartCallAnalyticsStreamTranscriptionInput{}
         output := &transcribestreaming.StartCallAnalyticsStreamTranscriptionOutput{}
@@ -41,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartCallAnalyticsStreamTranscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartCallAnalyticsStreamTranscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartMedicalScribeStream", func(t *testing.T) {
+        input := &transcribestreaming.StartMedicalScribeStreamInput{}
+        output := &transcribestreaming.StartMedicalScribeStreamOutput{}
+
+        mockClient.On("StartMedicalScribeStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMedicalScribeStream(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

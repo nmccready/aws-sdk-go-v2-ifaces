@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// GetMedicalScribeStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMedicalScribeStream(ctx context.Context, params *transcribestreaming.GetMedicalScribeStreamInput, optFns ...func(*transcribestreaming.Options)) (*transcribestreaming.GetMedicalScribeStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMedicalScribeStream")
+	}
+
+	var r0 *transcribestreaming.GetMedicalScribeStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *transcribestreaming.GetMedicalScribeStreamInput, ...func(*transcribestreaming.Options)) (*transcribestreaming.GetMedicalScribeStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *transcribestreaming.GetMedicalScribeStreamInput, ...func(*transcribestreaming.Options)) *transcribestreaming.GetMedicalScribeStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*transcribestreaming.GetMedicalScribeStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *transcribestreaming.GetMedicalScribeStreamInput, ...func(*transcribestreaming.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with given fields:
 func (_m *IClient) Options() transcribestreaming.Options {
 	ret := _m.Called()
@@ -61,6 +98,43 @@ func (_m *IClient) StartCallAnalyticsStreamTranscription(ctx context.Context, pa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *transcribestreaming.StartCallAnalyticsStreamTranscriptionInput, ...func(*transcribestreaming.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartMedicalScribeStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMedicalScribeStream(ctx context.Context, params *transcribestreaming.StartMedicalScribeStreamInput, optFns ...func(*transcribestreaming.Options)) (*transcribestreaming.StartMedicalScribeStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMedicalScribeStream")
+	}
+
+	var r0 *transcribestreaming.StartMedicalScribeStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *transcribestreaming.StartMedicalScribeStreamInput, ...func(*transcribestreaming.Options)) (*transcribestreaming.StartMedicalScribeStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *transcribestreaming.StartMedicalScribeStreamInput, ...func(*transcribestreaming.Options)) *transcribestreaming.StartMedicalScribeStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*transcribestreaming.StartMedicalScribeStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *transcribestreaming.StartMedicalScribeStreamInput, ...func(*transcribestreaming.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

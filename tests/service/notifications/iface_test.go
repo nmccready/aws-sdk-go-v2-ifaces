@@ -47,6 +47,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateManagedNotificationAccountContact", func(t *testing.T) {
+        input := &notifications.AssociateManagedNotificationAccountContactInput{}
+        output := &notifications.AssociateManagedNotificationAccountContactOutput{}
+
+        mockClient.On("AssociateManagedNotificationAccountContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateManagedNotificationAccountContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAssociateManagedNotificationAdditionalChannel", func(t *testing.T) {
+        input := &notifications.AssociateManagedNotificationAdditionalChannelInput{}
+        output := &notifications.AssociateManagedNotificationAdditionalChannelOutput{}
+
+        mockClient.On("AssociateManagedNotificationAdditionalChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateManagedNotificationAdditionalChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEventRule", func(t *testing.T) {
         input := &notifications.CreateEventRuleInput{}
         output := &notifications.CreateEventRuleOutput{}
@@ -112,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableNotificationsAccessForOrganization", func(t *testing.T) {
+        input := &notifications.DisableNotificationsAccessForOrganizationInput{}
+        output := &notifications.DisableNotificationsAccessForOrganizationOutput{}
+
+        mockClient.On("DisableNotificationsAccessForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableNotificationsAccessForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateChannel", func(t *testing.T) {
         input := &notifications.DisassociateChannelInput{}
         output := &notifications.DisassociateChannelOutput{}
@@ -125,6 +164,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateManagedNotificationAccountContact", func(t *testing.T) {
+        input := &notifications.DisassociateManagedNotificationAccountContactInput{}
+        output := &notifications.DisassociateManagedNotificationAccountContactOutput{}
+
+        mockClient.On("DisassociateManagedNotificationAccountContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateManagedNotificationAccountContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateManagedNotificationAdditionalChannel", func(t *testing.T) {
+        input := &notifications.DisassociateManagedNotificationAdditionalChannelInput{}
+        output := &notifications.DisassociateManagedNotificationAdditionalChannelOutput{}
+
+        mockClient.On("DisassociateManagedNotificationAdditionalChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateManagedNotificationAdditionalChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableNotificationsAccessForOrganization", func(t *testing.T) {
+        input := &notifications.EnableNotificationsAccessForOrganizationInput{}
+        output := &notifications.EnableNotificationsAccessForOrganizationOutput{}
+
+        mockClient.On("EnableNotificationsAccessForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableNotificationsAccessForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEventRule", func(t *testing.T) {
         input := &notifications.GetEventRuleInput{}
         output := &notifications.GetEventRuleOutput{}
@@ -132,6 +210,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEventRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEventRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetManagedNotificationChildEvent", func(t *testing.T) {
+        input := &notifications.GetManagedNotificationChildEventInput{}
+        output := &notifications.GetManagedNotificationChildEventOutput{}
+
+        mockClient.On("GetManagedNotificationChildEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedNotificationChildEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetManagedNotificationConfiguration", func(t *testing.T) {
+        input := &notifications.GetManagedNotificationConfigurationInput{}
+        output := &notifications.GetManagedNotificationConfigurationOutput{}
+
+        mockClient.On("GetManagedNotificationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedNotificationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetManagedNotificationEvent", func(t *testing.T) {
+        input := &notifications.GetManagedNotificationEventInput{}
+        output := &notifications.GetManagedNotificationEventOutput{}
+
+        mockClient.On("GetManagedNotificationEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedNotificationEvent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetNotificationsAccessForOrganization", func(t *testing.T) {
+        input := &notifications.GetNotificationsAccessForOrganizationInput{}
+        output := &notifications.GetNotificationsAccessForOrganizationOutput{}
+
+        mockClient.On("GetNotificationsAccessForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNotificationsAccessForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListChannels", func(t *testing.T) {
         input := &notifications.ListChannelsInput{}
         output := &notifications.ListChannelsOutput{}
@@ -184,6 +314,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEventRules", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEventRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedNotificationChannelAssociations", func(t *testing.T) {
+        input := &notifications.ListManagedNotificationChannelAssociationsInput{}
+        output := &notifications.ListManagedNotificationChannelAssociationsOutput{}
+
+        mockClient.On("ListManagedNotificationChannelAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedNotificationChannelAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedNotificationChildEvents", func(t *testing.T) {
+        input := &notifications.ListManagedNotificationChildEventsInput{}
+        output := &notifications.ListManagedNotificationChildEventsOutput{}
+
+        mockClient.On("ListManagedNotificationChildEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedNotificationChildEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedNotificationConfigurations", func(t *testing.T) {
+        input := &notifications.ListManagedNotificationConfigurationsInput{}
+        output := &notifications.ListManagedNotificationConfigurationsOutput{}
+
+        mockClient.On("ListManagedNotificationConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedNotificationConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedNotificationEvents", func(t *testing.T) {
+        input := &notifications.ListManagedNotificationEventsInput{}
+        output := &notifications.ListManagedNotificationEventsOutput{}
+
+        mockClient.On("ListManagedNotificationEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedNotificationEvents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

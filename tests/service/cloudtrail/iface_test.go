@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchSampleQueries", func(t *testing.T) {
+        input := &cloudtrail.SearchSampleQueriesInput{}
+        output := &cloudtrail.SearchSampleQueriesOutput{}
+
+        mockClient.On("SearchSampleQueries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchSampleQueries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartDashboardRefresh", func(t *testing.T) {
         input := &cloudtrail.StartDashboardRefreshInput{}
         output := &cloudtrail.StartDashboardRefreshOutput{}

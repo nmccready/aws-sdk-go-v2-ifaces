@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelSubscription", func(t *testing.T) {
+        input := &qbusiness.CancelSubscriptionInput{}
+        output := &qbusiness.CancelSubscriptionOutput{}
+
+        mockClient.On("CancelSubscription", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestChat", func(t *testing.T) {
         input := &qbusiness.ChatInput{}
         output := &qbusiness.ChatOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateRetriever", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateRetriever(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSubscription", func(t *testing.T) {
+        input := &qbusiness.CreateSubscriptionInput{}
+        output := &qbusiness.CreateSubscriptionOutput{}
+
+        mockClient.On("CreateSubscription", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSubscription(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSubscriptions", func(t *testing.T) {
+        input := &qbusiness.ListSubscriptionsInput{}
+        output := &qbusiness.ListSubscriptionsOutput{}
+
+        mockClient.On("ListSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &qbusiness.ListTagsForResourceInput{}
         output := &qbusiness.ListTagsForResourceOutput{}
@@ -912,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRetriever", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRetriever(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSubscription", func(t *testing.T) {
+        input := &qbusiness.UpdateSubscriptionInput{}
+        output := &qbusiness.UpdateSubscriptionOutput{}
+
+        mockClient.On("UpdateSubscription", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSubscription(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

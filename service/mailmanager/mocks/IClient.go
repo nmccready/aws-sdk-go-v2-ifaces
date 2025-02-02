@@ -89,6 +89,80 @@ func (_m *IClient) CreateAddonSubscription(ctx context.Context, params *mailmana
 	return r0, r1
 }
 
+// CreateAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAddressList(ctx context.Context, params *mailmanager.CreateAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.CreateAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAddressList")
+	}
+
+	var r0 *mailmanager.CreateAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.CreateAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.CreateAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.CreateAddressListInput, ...func(*mailmanager.Options)) *mailmanager.CreateAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.CreateAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.CreateAddressListInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAddressListImportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAddressListImportJob(ctx context.Context, params *mailmanager.CreateAddressListImportJobInput, optFns ...func(*mailmanager.Options)) (*mailmanager.CreateAddressListImportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAddressListImportJob")
+	}
+
+	var r0 *mailmanager.CreateAddressListImportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.CreateAddressListImportJobInput, ...func(*mailmanager.Options)) (*mailmanager.CreateAddressListImportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.CreateAddressListImportJobInput, ...func(*mailmanager.Options)) *mailmanager.CreateAddressListImportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.CreateAddressListImportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.CreateAddressListImportJobInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateArchive provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateArchive(ctx context.Context, params *mailmanager.CreateArchiveInput, optFns ...func(*mailmanager.Options)) (*mailmanager.CreateArchiveOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -348,6 +422,43 @@ func (_m *IClient) DeleteAddonSubscription(ctx context.Context, params *mailmana
 	return r0, r1
 }
 
+// DeleteAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAddressList(ctx context.Context, params *mailmanager.DeleteAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.DeleteAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAddressList")
+	}
+
+	var r0 *mailmanager.DeleteAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.DeleteAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.DeleteAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.DeleteAddressListInput, ...func(*mailmanager.Options)) *mailmanager.DeleteAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.DeleteAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.DeleteAddressListInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteArchive provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteArchive(ctx context.Context, params *mailmanager.DeleteArchiveInput, optFns ...func(*mailmanager.Options)) (*mailmanager.DeleteArchiveOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -533,6 +644,43 @@ func (_m *IClient) DeleteTrafficPolicy(ctx context.Context, params *mailmanager.
 	return r0, r1
 }
 
+// DeregisterMemberFromAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterMemberFromAddressList(ctx context.Context, params *mailmanager.DeregisterMemberFromAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.DeregisterMemberFromAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterMemberFromAddressList")
+	}
+
+	var r0 *mailmanager.DeregisterMemberFromAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.DeregisterMemberFromAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.DeregisterMemberFromAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.DeregisterMemberFromAddressListInput, ...func(*mailmanager.Options)) *mailmanager.DeregisterMemberFromAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.DeregisterMemberFromAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.DeregisterMemberFromAddressListInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAddonInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAddonInstance(ctx context.Context, params *mailmanager.GetAddonInstanceInput, optFns ...func(*mailmanager.Options)) (*mailmanager.GetAddonInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +747,80 @@ func (_m *IClient) GetAddonSubscription(ctx context.Context, params *mailmanager
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.GetAddonSubscriptionInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAddressList(ctx context.Context, params *mailmanager.GetAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.GetAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAddressList")
+	}
+
+	var r0 *mailmanager.GetAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.GetAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.GetAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.GetAddressListInput, ...func(*mailmanager.Options)) *mailmanager.GetAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.GetAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.GetAddressListInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAddressListImportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAddressListImportJob(ctx context.Context, params *mailmanager.GetAddressListImportJobInput, optFns ...func(*mailmanager.Options)) (*mailmanager.GetAddressListImportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAddressListImportJob")
+	}
+
+	var r0 *mailmanager.GetAddressListImportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.GetAddressListImportJobInput, ...func(*mailmanager.Options)) (*mailmanager.GetAddressListImportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.GetAddressListImportJobInput, ...func(*mailmanager.Options)) *mailmanager.GetAddressListImportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.GetAddressListImportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.GetAddressListImportJobInput, ...func(*mailmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -866,6 +1088,43 @@ func (_m *IClient) GetIngressPoint(ctx context.Context, params *mailmanager.GetI
 	return r0, r1
 }
 
+// GetMemberOfAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMemberOfAddressList(ctx context.Context, params *mailmanager.GetMemberOfAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.GetMemberOfAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMemberOfAddressList")
+	}
+
+	var r0 *mailmanager.GetMemberOfAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.GetMemberOfAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.GetMemberOfAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.GetMemberOfAddressListInput, ...func(*mailmanager.Options)) *mailmanager.GetMemberOfAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.GetMemberOfAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.GetMemberOfAddressListInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRelay provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRelay(ctx context.Context, params *mailmanager.GetRelayInput, optFns ...func(*mailmanager.Options)) (*mailmanager.GetRelayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1051,6 +1310,80 @@ func (_m *IClient) ListAddonSubscriptions(ctx context.Context, params *mailmanag
 	return r0, r1
 }
 
+// ListAddressListImportJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAddressListImportJobs(ctx context.Context, params *mailmanager.ListAddressListImportJobsInput, optFns ...func(*mailmanager.Options)) (*mailmanager.ListAddressListImportJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAddressListImportJobs")
+	}
+
+	var r0 *mailmanager.ListAddressListImportJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.ListAddressListImportJobsInput, ...func(*mailmanager.Options)) (*mailmanager.ListAddressListImportJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.ListAddressListImportJobsInput, ...func(*mailmanager.Options)) *mailmanager.ListAddressListImportJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.ListAddressListImportJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.ListAddressListImportJobsInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAddressLists provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAddressLists(ctx context.Context, params *mailmanager.ListAddressListsInput, optFns ...func(*mailmanager.Options)) (*mailmanager.ListAddressListsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAddressLists")
+	}
+
+	var r0 *mailmanager.ListAddressListsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.ListAddressListsInput, ...func(*mailmanager.Options)) (*mailmanager.ListAddressListsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.ListAddressListsInput, ...func(*mailmanager.Options)) *mailmanager.ListAddressListsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.ListAddressListsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.ListAddressListsInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListArchiveExports provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListArchiveExports(ctx context.Context, params *mailmanager.ListArchiveExportsInput, optFns ...func(*mailmanager.Options)) (*mailmanager.ListArchiveExportsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1191,6 +1524,43 @@ func (_m *IClient) ListIngressPoints(ctx context.Context, params *mailmanager.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.ListIngressPointsInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMembersOfAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMembersOfAddressList(ctx context.Context, params *mailmanager.ListMembersOfAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.ListMembersOfAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMembersOfAddressList")
+	}
+
+	var r0 *mailmanager.ListMembersOfAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.ListMembersOfAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.ListMembersOfAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.ListMembersOfAddressListInput, ...func(*mailmanager.Options)) *mailmanager.ListMembersOfAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.ListMembersOfAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.ListMembersOfAddressListInput, ...func(*mailmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1365,6 +1735,80 @@ func (_m *IClient) Options() mailmanager.Options {
 	return r0
 }
 
+// RegisterMemberToAddressList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterMemberToAddressList(ctx context.Context, params *mailmanager.RegisterMemberToAddressListInput, optFns ...func(*mailmanager.Options)) (*mailmanager.RegisterMemberToAddressListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterMemberToAddressList")
+	}
+
+	var r0 *mailmanager.RegisterMemberToAddressListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.RegisterMemberToAddressListInput, ...func(*mailmanager.Options)) (*mailmanager.RegisterMemberToAddressListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.RegisterMemberToAddressListInput, ...func(*mailmanager.Options)) *mailmanager.RegisterMemberToAddressListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.RegisterMemberToAddressListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.RegisterMemberToAddressListInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAddressListImportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAddressListImportJob(ctx context.Context, params *mailmanager.StartAddressListImportJobInput, optFns ...func(*mailmanager.Options)) (*mailmanager.StartAddressListImportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAddressListImportJob")
+	}
+
+	var r0 *mailmanager.StartAddressListImportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.StartAddressListImportJobInput, ...func(*mailmanager.Options)) (*mailmanager.StartAddressListImportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.StartAddressListImportJobInput, ...func(*mailmanager.Options)) *mailmanager.StartAddressListImportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.StartAddressListImportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.StartAddressListImportJobInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartArchiveExport provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartArchiveExport(ctx context.Context, params *mailmanager.StartArchiveExportInput, optFns ...func(*mailmanager.Options)) (*mailmanager.StartArchiveExportOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1431,6 +1875,43 @@ func (_m *IClient) StartArchiveSearch(ctx context.Context, params *mailmanager.S
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.StartArchiveSearchInput, ...func(*mailmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopAddressListImportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopAddressListImportJob(ctx context.Context, params *mailmanager.StopAddressListImportJobInput, optFns ...func(*mailmanager.Options)) (*mailmanager.StopAddressListImportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopAddressListImportJob")
+	}
+
+	var r0 *mailmanager.StopAddressListImportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.StopAddressListImportJobInput, ...func(*mailmanager.Options)) (*mailmanager.StopAddressListImportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mailmanager.StopAddressListImportJobInput, ...func(*mailmanager.Options)) *mailmanager.StopAddressListImportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mailmanager.StopAddressListImportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mailmanager.StopAddressListImportJobInput, ...func(*mailmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

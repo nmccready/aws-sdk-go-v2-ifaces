@@ -51,6 +51,80 @@ func (_m *IClient) AssociateChannel(ctx context.Context, params *notifications.A
 	return r0, r1
 }
 
+// AssociateManagedNotificationAccountContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateManagedNotificationAccountContact(ctx context.Context, params *notifications.AssociateManagedNotificationAccountContactInput, optFns ...func(*notifications.Options)) (*notifications.AssociateManagedNotificationAccountContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateManagedNotificationAccountContact")
+	}
+
+	var r0 *notifications.AssociateManagedNotificationAccountContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.AssociateManagedNotificationAccountContactInput, ...func(*notifications.Options)) (*notifications.AssociateManagedNotificationAccountContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.AssociateManagedNotificationAccountContactInput, ...func(*notifications.Options)) *notifications.AssociateManagedNotificationAccountContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.AssociateManagedNotificationAccountContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.AssociateManagedNotificationAccountContactInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AssociateManagedNotificationAdditionalChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateManagedNotificationAdditionalChannel(ctx context.Context, params *notifications.AssociateManagedNotificationAdditionalChannelInput, optFns ...func(*notifications.Options)) (*notifications.AssociateManagedNotificationAdditionalChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateManagedNotificationAdditionalChannel")
+	}
+
+	var r0 *notifications.AssociateManagedNotificationAdditionalChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.AssociateManagedNotificationAdditionalChannelInput, ...func(*notifications.Options)) (*notifications.AssociateManagedNotificationAdditionalChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.AssociateManagedNotificationAdditionalChannelInput, ...func(*notifications.Options)) *notifications.AssociateManagedNotificationAdditionalChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.AssociateManagedNotificationAdditionalChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.AssociateManagedNotificationAdditionalChannelInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEventRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEventRule(ctx context.Context, params *notifications.CreateEventRuleInput, optFns ...func(*notifications.Options)) (*notifications.CreateEventRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -236,6 +310,43 @@ func (_m *IClient) DeregisterNotificationHub(ctx context.Context, params *notifi
 	return r0, r1
 }
 
+// DisableNotificationsAccessForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableNotificationsAccessForOrganization(ctx context.Context, params *notifications.DisableNotificationsAccessForOrganizationInput, optFns ...func(*notifications.Options)) (*notifications.DisableNotificationsAccessForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableNotificationsAccessForOrganization")
+	}
+
+	var r0 *notifications.DisableNotificationsAccessForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.DisableNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) (*notifications.DisableNotificationsAccessForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.DisableNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) *notifications.DisableNotificationsAccessForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.DisableNotificationsAccessForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.DisableNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateChannel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateChannel(ctx context.Context, params *notifications.DisassociateChannelInput, optFns ...func(*notifications.Options)) (*notifications.DisassociateChannelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -273,6 +384,117 @@ func (_m *IClient) DisassociateChannel(ctx context.Context, params *notification
 	return r0, r1
 }
 
+// DisassociateManagedNotificationAccountContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateManagedNotificationAccountContact(ctx context.Context, params *notifications.DisassociateManagedNotificationAccountContactInput, optFns ...func(*notifications.Options)) (*notifications.DisassociateManagedNotificationAccountContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateManagedNotificationAccountContact")
+	}
+
+	var r0 *notifications.DisassociateManagedNotificationAccountContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.DisassociateManagedNotificationAccountContactInput, ...func(*notifications.Options)) (*notifications.DisassociateManagedNotificationAccountContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.DisassociateManagedNotificationAccountContactInput, ...func(*notifications.Options)) *notifications.DisassociateManagedNotificationAccountContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.DisassociateManagedNotificationAccountContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.DisassociateManagedNotificationAccountContactInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateManagedNotificationAdditionalChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateManagedNotificationAdditionalChannel(ctx context.Context, params *notifications.DisassociateManagedNotificationAdditionalChannelInput, optFns ...func(*notifications.Options)) (*notifications.DisassociateManagedNotificationAdditionalChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateManagedNotificationAdditionalChannel")
+	}
+
+	var r0 *notifications.DisassociateManagedNotificationAdditionalChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.DisassociateManagedNotificationAdditionalChannelInput, ...func(*notifications.Options)) (*notifications.DisassociateManagedNotificationAdditionalChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.DisassociateManagedNotificationAdditionalChannelInput, ...func(*notifications.Options)) *notifications.DisassociateManagedNotificationAdditionalChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.DisassociateManagedNotificationAdditionalChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.DisassociateManagedNotificationAdditionalChannelInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableNotificationsAccessForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableNotificationsAccessForOrganization(ctx context.Context, params *notifications.EnableNotificationsAccessForOrganizationInput, optFns ...func(*notifications.Options)) (*notifications.EnableNotificationsAccessForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableNotificationsAccessForOrganization")
+	}
+
+	var r0 *notifications.EnableNotificationsAccessForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.EnableNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) (*notifications.EnableNotificationsAccessForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.EnableNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) *notifications.EnableNotificationsAccessForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.EnableNotificationsAccessForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.EnableNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEventRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEventRule(ctx context.Context, params *notifications.GetEventRuleInput, optFns ...func(*notifications.Options)) (*notifications.GetEventRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -302,6 +524,117 @@ func (_m *IClient) GetEventRule(ctx context.Context, params *notifications.GetEv
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *notifications.GetEventRuleInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetManagedNotificationChildEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetManagedNotificationChildEvent(ctx context.Context, params *notifications.GetManagedNotificationChildEventInput, optFns ...func(*notifications.Options)) (*notifications.GetManagedNotificationChildEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetManagedNotificationChildEvent")
+	}
+
+	var r0 *notifications.GetManagedNotificationChildEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetManagedNotificationChildEventInput, ...func(*notifications.Options)) (*notifications.GetManagedNotificationChildEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetManagedNotificationChildEventInput, ...func(*notifications.Options)) *notifications.GetManagedNotificationChildEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.GetManagedNotificationChildEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.GetManagedNotificationChildEventInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetManagedNotificationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetManagedNotificationConfiguration(ctx context.Context, params *notifications.GetManagedNotificationConfigurationInput, optFns ...func(*notifications.Options)) (*notifications.GetManagedNotificationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetManagedNotificationConfiguration")
+	}
+
+	var r0 *notifications.GetManagedNotificationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetManagedNotificationConfigurationInput, ...func(*notifications.Options)) (*notifications.GetManagedNotificationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetManagedNotificationConfigurationInput, ...func(*notifications.Options)) *notifications.GetManagedNotificationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.GetManagedNotificationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.GetManagedNotificationConfigurationInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetManagedNotificationEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetManagedNotificationEvent(ctx context.Context, params *notifications.GetManagedNotificationEventInput, optFns ...func(*notifications.Options)) (*notifications.GetManagedNotificationEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetManagedNotificationEvent")
+	}
+
+	var r0 *notifications.GetManagedNotificationEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetManagedNotificationEventInput, ...func(*notifications.Options)) (*notifications.GetManagedNotificationEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetManagedNotificationEventInput, ...func(*notifications.Options)) *notifications.GetManagedNotificationEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.GetManagedNotificationEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.GetManagedNotificationEventInput, ...func(*notifications.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -384,6 +717,43 @@ func (_m *IClient) GetNotificationEvent(ctx context.Context, params *notificatio
 	return r0, r1
 }
 
+// GetNotificationsAccessForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetNotificationsAccessForOrganization(ctx context.Context, params *notifications.GetNotificationsAccessForOrganizationInput, optFns ...func(*notifications.Options)) (*notifications.GetNotificationsAccessForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetNotificationsAccessForOrganization")
+	}
+
+	var r0 *notifications.GetNotificationsAccessForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) (*notifications.GetNotificationsAccessForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.GetNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) *notifications.GetNotificationsAccessForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.GetNotificationsAccessForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.GetNotificationsAccessForOrganizationInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListChannels provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListChannels(ctx context.Context, params *notifications.ListChannelsInput, optFns ...func(*notifications.Options)) (*notifications.ListChannelsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -450,6 +820,154 @@ func (_m *IClient) ListEventRules(ctx context.Context, params *notifications.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *notifications.ListEventRulesInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListManagedNotificationChannelAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListManagedNotificationChannelAssociations(ctx context.Context, params *notifications.ListManagedNotificationChannelAssociationsInput, optFns ...func(*notifications.Options)) (*notifications.ListManagedNotificationChannelAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListManagedNotificationChannelAssociations")
+	}
+
+	var r0 *notifications.ListManagedNotificationChannelAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationChannelAssociationsInput, ...func(*notifications.Options)) (*notifications.ListManagedNotificationChannelAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationChannelAssociationsInput, ...func(*notifications.Options)) *notifications.ListManagedNotificationChannelAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.ListManagedNotificationChannelAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.ListManagedNotificationChannelAssociationsInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListManagedNotificationChildEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListManagedNotificationChildEvents(ctx context.Context, params *notifications.ListManagedNotificationChildEventsInput, optFns ...func(*notifications.Options)) (*notifications.ListManagedNotificationChildEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListManagedNotificationChildEvents")
+	}
+
+	var r0 *notifications.ListManagedNotificationChildEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationChildEventsInput, ...func(*notifications.Options)) (*notifications.ListManagedNotificationChildEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationChildEventsInput, ...func(*notifications.Options)) *notifications.ListManagedNotificationChildEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.ListManagedNotificationChildEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.ListManagedNotificationChildEventsInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListManagedNotificationConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListManagedNotificationConfigurations(ctx context.Context, params *notifications.ListManagedNotificationConfigurationsInput, optFns ...func(*notifications.Options)) (*notifications.ListManagedNotificationConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListManagedNotificationConfigurations")
+	}
+
+	var r0 *notifications.ListManagedNotificationConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationConfigurationsInput, ...func(*notifications.Options)) (*notifications.ListManagedNotificationConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationConfigurationsInput, ...func(*notifications.Options)) *notifications.ListManagedNotificationConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.ListManagedNotificationConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.ListManagedNotificationConfigurationsInput, ...func(*notifications.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListManagedNotificationEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListManagedNotificationEvents(ctx context.Context, params *notifications.ListManagedNotificationEventsInput, optFns ...func(*notifications.Options)) (*notifications.ListManagedNotificationEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListManagedNotificationEvents")
+	}
+
+	var r0 *notifications.ListManagedNotificationEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationEventsInput, ...func(*notifications.Options)) (*notifications.ListManagedNotificationEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *notifications.ListManagedNotificationEventsInput, ...func(*notifications.Options)) *notifications.ListManagedNotificationEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*notifications.ListManagedNotificationEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *notifications.ListManagedNotificationEventsInput, ...func(*notifications.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateLimit", func(t *testing.T) {
+        input := &deadline.CreateLimitInput{}
+        output := &deadline.CreateLimitOutput{}
+
+        mockClient.On("CreateLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMonitor", func(t *testing.T) {
         input := &deadline.CreateMonitorInput{}
         output := &deadline.CreateMonitorOutput{}
@@ -288,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateQueueFleetAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateQueueFleetAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateQueueLimitAssociation", func(t *testing.T) {
+        input := &deadline.CreateQueueLimitAssociationInput{}
+        output := &deadline.CreateQueueLimitAssociationOutput{}
+
+        mockClient.On("CreateQueueLimitAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQueueLimitAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteLimit", func(t *testing.T) {
+        input := &deadline.DeleteLimitInput{}
+        output := &deadline.DeleteLimitOutput{}
+
+        mockClient.On("DeleteLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteMeteredProduct", func(t *testing.T) {
         input := &deadline.DeleteMeteredProductInput{}
         output := &deadline.DeleteMeteredProductOutput{}
@@ -431,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteQueueFleetAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteQueueFleetAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQueueLimitAssociation", func(t *testing.T) {
+        input := &deadline.DeleteQueueLimitAssociationInput{}
+        output := &deadline.DeleteQueueLimitAssociationOutput{}
+
+        mockClient.On("DeleteQueueLimitAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQueueLimitAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetLimit", func(t *testing.T) {
+        input := &deadline.GetLimitInput{}
+        output := &deadline.GetLimitOutput{}
+
+        mockClient.On("GetLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetMonitor", func(t *testing.T) {
         input := &deadline.GetMonitorInput{}
         output := &deadline.GetMonitorOutput{}
@@ -626,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQueueFleetAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQueueFleetAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQueueLimitAssociation", func(t *testing.T) {
+        input := &deadline.GetQueueLimitAssociationInput{}
+        output := &deadline.GetQueueLimitAssociationOutput{}
+
+        mockClient.On("GetQueueLimitAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQueueLimitAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -866,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListLimits", func(t *testing.T) {
+        input := &deadline.ListLimitsInput{}
+        output := &deadline.ListLimitsOutput{}
+
+        mockClient.On("ListLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMeteredProducts", func(t *testing.T) {
         input := &deadline.ListMeteredProductsInput{}
         output := &deadline.ListMeteredProductsOutput{}
@@ -912,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListQueueFleetAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListQueueFleetAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQueueLimitAssociations", func(t *testing.T) {
+        input := &deadline.ListQueueLimitAssociationsInput{}
+        output := &deadline.ListQueueLimitAssociationsOutput{}
+
+        mockClient.On("ListQueueLimitAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQueueLimitAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1243,6 +1347,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateLimit", func(t *testing.T) {
+        input := &deadline.UpdateLimitInput{}
+        output := &deadline.UpdateLimitOutput{}
+
+        mockClient.On("UpdateLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateMonitor", func(t *testing.T) {
         input := &deadline.UpdateMonitorInput{}
         output := &deadline.UpdateMonitorOutput{}
@@ -1289,6 +1406,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateQueueFleetAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateQueueFleetAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQueueLimitAssociation", func(t *testing.T) {
+        input := &deadline.UpdateQueueLimitAssociationInput{}
+        output := &deadline.UpdateQueueLimitAssociationOutput{}
+
+        mockClient.On("UpdateQueueLimitAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQueueLimitAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
