@@ -60,6 +60,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAddressList", func(t *testing.T) {
+        input := &mailmanager.CreateAddressListInput{}
+        output := &mailmanager.CreateAddressListOutput{}
+
+        mockClient.On("CreateAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAddressList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAddressListImportJob", func(t *testing.T) {
+        input := &mailmanager.CreateAddressListImportJobInput{}
+        output := &mailmanager.CreateAddressListImportJobOutput{}
+
+        mockClient.On("CreateAddressListImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAddressListImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateArchive", func(t *testing.T) {
         input := &mailmanager.CreateArchiveInput{}
         output := &mailmanager.CreateArchiveOutput{}
@@ -151,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAddressList", func(t *testing.T) {
+        input := &mailmanager.DeleteAddressListInput{}
+        output := &mailmanager.DeleteAddressListOutput{}
+
+        mockClient.On("DeleteAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAddressList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteArchive", func(t *testing.T) {
         input := &mailmanager.DeleteArchiveInput{}
         output := &mailmanager.DeleteArchiveOutput{}
@@ -216,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeregisterMemberFromAddressList", func(t *testing.T) {
+        input := &mailmanager.DeregisterMemberFromAddressListInput{}
+        output := &mailmanager.DeregisterMemberFromAddressListOutput{}
+
+        mockClient.On("DeregisterMemberFromAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterMemberFromAddressList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAddonInstance", func(t *testing.T) {
         input := &mailmanager.GetAddonInstanceInput{}
         output := &mailmanager.GetAddonInstanceOutput{}
@@ -236,6 +288,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAddonSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAddonSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAddressList", func(t *testing.T) {
+        input := &mailmanager.GetAddressListInput{}
+        output := &mailmanager.GetAddressListOutput{}
+
+        mockClient.On("GetAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAddressList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAddressListImportJob", func(t *testing.T) {
+        input := &mailmanager.GetAddressListImportJobInput{}
+        output := &mailmanager.GetAddressListImportJobOutput{}
+
+        mockClient.On("GetAddressListImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAddressListImportJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMemberOfAddressList", func(t *testing.T) {
+        input := &mailmanager.GetMemberOfAddressListInput{}
+        output := &mailmanager.GetMemberOfAddressListOutput{}
+
+        mockClient.On("GetMemberOfAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMemberOfAddressList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRelay", func(t *testing.T) {
         input := &mailmanager.GetRelayInput{}
         output := &mailmanager.GetRelayOutput{}
@@ -398,6 +489,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAddressListImportJobs", func(t *testing.T) {
+        input := &mailmanager.ListAddressListImportJobsInput{}
+        output := &mailmanager.ListAddressListImportJobsOutput{}
+
+        mockClient.On("ListAddressListImportJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAddressListImportJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAddressLists", func(t *testing.T) {
+        input := &mailmanager.ListAddressListsInput{}
+        output := &mailmanager.ListAddressListsOutput{}
+
+        mockClient.On("ListAddressLists", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAddressLists(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListArchiveExports", func(t *testing.T) {
         input := &mailmanager.ListArchiveExportsInput{}
         output := &mailmanager.ListArchiveExportsOutput{}
@@ -444,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIngressPoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIngressPoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMembersOfAddressList", func(t *testing.T) {
+        input := &mailmanager.ListMembersOfAddressListInput{}
+        output := &mailmanager.ListMembersOfAddressListOutput{}
+
+        mockClient.On("ListMembersOfAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMembersOfAddressList(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,6 +632,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRegisterMemberToAddressList", func(t *testing.T) {
+        input := &mailmanager.RegisterMemberToAddressListInput{}
+        output := &mailmanager.RegisterMemberToAddressListOutput{}
+
+        mockClient.On("RegisterMemberToAddressList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterMemberToAddressList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAddressListImportJob", func(t *testing.T) {
+        input := &mailmanager.StartAddressListImportJobInput{}
+        output := &mailmanager.StartAddressListImportJobOutput{}
+
+        mockClient.On("StartAddressListImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAddressListImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartArchiveExport", func(t *testing.T) {
         input := &mailmanager.StartArchiveExportInput{}
         output := &mailmanager.StartArchiveExportOutput{}
@@ -522,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartArchiveSearch", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartArchiveSearch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopAddressListImportJob", func(t *testing.T) {
+        input := &mailmanager.StopAddressListImportJobInput{}
+        output := &mailmanager.StopAddressListImportJobOutput{}
+
+        mockClient.On("StopAddressListImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopAddressListImportJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

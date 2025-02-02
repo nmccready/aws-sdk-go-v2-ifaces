@@ -10,8 +10,6 @@ cd ../
 
 mkdir -p ./tmp
 
-# cut the version out of the go.mod file, get the version of the aws-sdk-go-v2
-AWS_SDK_VERSION=$(grep -E "aws/aws-sdk-go-v2 v[0-9]+\.[0-9]+\.[0-9]+" go.mod | cut -d' ' -f2)
 cd ./tmp
 
 # clone only if aws-sdk-go-v2 is not already cloned
@@ -28,7 +26,18 @@ cd aws-sdk-go-v2
 cp ../../.prototools .
 git checkout main
 git pull -p
+
+# get the latest tag version by using git tag command and sort it by version where version starts with v\d+.\d+.\d+
+AWS_SDK_VERSION=$(git tag | grep -E "^v[0-9]+\.[0-9]+\.[0-9]+$" | sort -V | tail -n 1)
+# explicit checkout of the tagged version
 git checkout "$AWS_SDK_VERSION"
 
 cd "$ORIG_DIR"
 
+# wipe out dependencies as they will come directly from pulling
+# tmp/aws-sdk-go-v2 (structs, apis, etc)
+rm -rf go.sum go.mod vendor
+
+echo "module github.com/nmccready/aws-sdk-go-v2-ifaces
+
+go 1.21.4" > go.mod

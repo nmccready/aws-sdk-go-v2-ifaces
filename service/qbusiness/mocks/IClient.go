@@ -125,6 +125,43 @@ func (_m *IClient) BatchPutDocument(ctx context.Context, params *qbusiness.Batch
 	return r0, r1
 }
 
+// CancelSubscription provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelSubscription(ctx context.Context, params *qbusiness.CancelSubscriptionInput, optFns ...func(*qbusiness.Options)) (*qbusiness.CancelSubscriptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelSubscription")
+	}
+
+	var r0 *qbusiness.CancelSubscriptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CancelSubscriptionInput, ...func(*qbusiness.Options)) (*qbusiness.CancelSubscriptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CancelSubscriptionInput, ...func(*qbusiness.Options)) *qbusiness.CancelSubscriptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.CancelSubscriptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.CancelSubscriptionInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Chat provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) Chat(ctx context.Context, params *qbusiness.ChatInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ChatOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -413,6 +450,43 @@ func (_m *IClient) CreateRetriever(ctx context.Context, params *qbusiness.Create
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.CreateRetrieverInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSubscription provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSubscription(ctx context.Context, params *qbusiness.CreateSubscriptionInput, optFns ...func(*qbusiness.Options)) (*qbusiness.CreateSubscriptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSubscription")
+	}
+
+	var r0 *qbusiness.CreateSubscriptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CreateSubscriptionInput, ...func(*qbusiness.Options)) (*qbusiness.CreateSubscriptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CreateSubscriptionInput, ...func(*qbusiness.Options)) *qbusiness.CreateSubscriptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.CreateSubscriptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.CreateSubscriptionInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1938,6 +2012,43 @@ func (_m *IClient) ListRetrievers(ctx context.Context, params *qbusiness.ListRet
 	return r0, r1
 }
 
+// ListSubscriptions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSubscriptions(ctx context.Context, params *qbusiness.ListSubscriptionsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListSubscriptionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSubscriptions")
+	}
+
+	var r0 *qbusiness.ListSubscriptionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListSubscriptionsInput, ...func(*qbusiness.Options)) (*qbusiness.ListSubscriptionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListSubscriptionsInput, ...func(*qbusiness.Options)) *qbusiness.ListSubscriptionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListSubscriptionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListSubscriptionsInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *qbusiness.ListTagsForResourceInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2540,6 +2651,43 @@ func (_m *IClient) UpdateRetriever(ctx context.Context, params *qbusiness.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.UpdateRetrieverInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSubscription provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSubscription(ctx context.Context, params *qbusiness.UpdateSubscriptionInput, optFns ...func(*qbusiness.Options)) (*qbusiness.UpdateSubscriptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSubscription")
+	}
+
+	var r0 *qbusiness.UpdateSubscriptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.UpdateSubscriptionInput, ...func(*qbusiness.Options)) (*qbusiness.UpdateSubscriptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.UpdateSubscriptionInput, ...func(*qbusiness.Options)) *qbusiness.UpdateSubscriptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.UpdateSubscriptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.UpdateSubscriptionInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

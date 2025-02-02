@@ -607,6 +607,43 @@ func (_m *IClient) CreateLicenseEndpoint(ctx context.Context, params *deadline.C
 	return r0, r1
 }
 
+// CreateLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateLimit(ctx context.Context, params *deadline.CreateLimitInput, optFns ...func(*deadline.Options)) (*deadline.CreateLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateLimit")
+	}
+
+	var r0 *deadline.CreateLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.CreateLimitInput, ...func(*deadline.Options)) (*deadline.CreateLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.CreateLimitInput, ...func(*deadline.Options)) *deadline.CreateLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.CreateLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.CreateLimitInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateMonitor provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateMonitor(ctx context.Context, params *deadline.CreateMonitorInput, optFns ...func(*deadline.Options)) (*deadline.CreateMonitorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +784,43 @@ func (_m *IClient) CreateQueueFleetAssociation(ctx context.Context, params *dead
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.CreateQueueFleetAssociationInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateQueueLimitAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQueueLimitAssociation(ctx context.Context, params *deadline.CreateQueueLimitAssociationInput, optFns ...func(*deadline.Options)) (*deadline.CreateQueueLimitAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQueueLimitAssociation")
+	}
+
+	var r0 *deadline.CreateQueueLimitAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.CreateQueueLimitAssociationInput, ...func(*deadline.Options)) (*deadline.CreateQueueLimitAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.CreateQueueLimitAssociationInput, ...func(*deadline.Options)) *deadline.CreateQueueLimitAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.CreateQueueLimitAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.CreateQueueLimitAssociationInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -977,6 +1051,43 @@ func (_m *IClient) DeleteLicenseEndpoint(ctx context.Context, params *deadline.D
 	return r0, r1
 }
 
+// DeleteLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLimit(ctx context.Context, params *deadline.DeleteLimitInput, optFns ...func(*deadline.Options)) (*deadline.DeleteLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLimit")
+	}
+
+	var r0 *deadline.DeleteLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.DeleteLimitInput, ...func(*deadline.Options)) (*deadline.DeleteLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.DeleteLimitInput, ...func(*deadline.Options)) *deadline.DeleteLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.DeleteLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.DeleteLimitInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteMeteredProduct provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteMeteredProduct(ctx context.Context, params *deadline.DeleteMeteredProductInput, optFns ...func(*deadline.Options)) (*deadline.DeleteMeteredProductOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1154,6 +1265,43 @@ func (_m *IClient) DeleteQueueFleetAssociation(ctx context.Context, params *dead
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.DeleteQueueFleetAssociationInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQueueLimitAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQueueLimitAssociation(ctx context.Context, params *deadline.DeleteQueueLimitAssociationInput, optFns ...func(*deadline.Options)) (*deadline.DeleteQueueLimitAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQueueLimitAssociation")
+	}
+
+	var r0 *deadline.DeleteQueueLimitAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.DeleteQueueLimitAssociationInput, ...func(*deadline.Options)) (*deadline.DeleteQueueLimitAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.DeleteQueueLimitAssociationInput, ...func(*deadline.Options)) *deadline.DeleteQueueLimitAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.DeleteQueueLimitAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.DeleteQueueLimitAssociationInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1569,6 +1717,43 @@ func (_m *IClient) GetLicenseEndpoint(ctx context.Context, params *deadline.GetL
 	return r0, r1
 }
 
+// GetLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLimit(ctx context.Context, params *deadline.GetLimitInput, optFns ...func(*deadline.Options)) (*deadline.GetLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLimit")
+	}
+
+	var r0 *deadline.GetLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetLimitInput, ...func(*deadline.Options)) (*deadline.GetLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetLimitInput, ...func(*deadline.Options)) *deadline.GetLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.GetLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.GetLimitInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetMonitor provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetMonitor(ctx context.Context, params *deadline.GetMonitorInput, optFns ...func(*deadline.Options)) (*deadline.GetMonitorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1709,6 +1894,43 @@ func (_m *IClient) GetQueueFleetAssociation(ctx context.Context, params *deadlin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.GetQueueFleetAssociationInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQueueLimitAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQueueLimitAssociation(ctx context.Context, params *deadline.GetQueueLimitAssociationInput, optFns ...func(*deadline.Options)) (*deadline.GetQueueLimitAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQueueLimitAssociation")
+	}
+
+	var r0 *deadline.GetQueueLimitAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetQueueLimitAssociationInput, ...func(*deadline.Options)) (*deadline.GetQueueLimitAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetQueueLimitAssociationInput, ...func(*deadline.Options)) *deadline.GetQueueLimitAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.GetQueueLimitAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.GetQueueLimitAssociationInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2383,6 +2605,43 @@ func (_m *IClient) ListLicenseEndpoints(ctx context.Context, params *deadline.Li
 	return r0, r1
 }
 
+// ListLimits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLimits(ctx context.Context, params *deadline.ListLimitsInput, optFns ...func(*deadline.Options)) (*deadline.ListLimitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLimits")
+	}
+
+	var r0 *deadline.ListLimitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.ListLimitsInput, ...func(*deadline.Options)) (*deadline.ListLimitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.ListLimitsInput, ...func(*deadline.Options)) *deadline.ListLimitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.ListLimitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.ListLimitsInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListMeteredProducts provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListMeteredProducts(ctx context.Context, params *deadline.ListMeteredProductsInput, optFns ...func(*deadline.Options)) (*deadline.ListMeteredProductsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2523,6 +2782,43 @@ func (_m *IClient) ListQueueFleetAssociations(ctx context.Context, params *deadl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.ListQueueFleetAssociationsInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListQueueLimitAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQueueLimitAssociations(ctx context.Context, params *deadline.ListQueueLimitAssociationsInput, optFns ...func(*deadline.Options)) (*deadline.ListQueueLimitAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQueueLimitAssociations")
+	}
+
+	var r0 *deadline.ListQueueLimitAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.ListQueueLimitAssociationsInput, ...func(*deadline.Options)) (*deadline.ListQueueLimitAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.ListQueueLimitAssociationsInput, ...func(*deadline.Options)) *deadline.ListQueueLimitAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.ListQueueLimitAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.ListQueueLimitAssociationsInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3474,6 +3770,43 @@ func (_m *IClient) UpdateJob(ctx context.Context, params *deadline.UpdateJobInpu
 	return r0, r1
 }
 
+// UpdateLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLimit(ctx context.Context, params *deadline.UpdateLimitInput, optFns ...func(*deadline.Options)) (*deadline.UpdateLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLimit")
+	}
+
+	var r0 *deadline.UpdateLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.UpdateLimitInput, ...func(*deadline.Options)) (*deadline.UpdateLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.UpdateLimitInput, ...func(*deadline.Options)) *deadline.UpdateLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.UpdateLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.UpdateLimitInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateMonitor provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateMonitor(ctx context.Context, params *deadline.UpdateMonitorInput, optFns ...func(*deadline.Options)) (*deadline.UpdateMonitorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3614,6 +3947,43 @@ func (_m *IClient) UpdateQueueFleetAssociation(ctx context.Context, params *dead
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.UpdateQueueFleetAssociationInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQueueLimitAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQueueLimitAssociation(ctx context.Context, params *deadline.UpdateQueueLimitAssociationInput, optFns ...func(*deadline.Options)) (*deadline.UpdateQueueLimitAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQueueLimitAssociation")
+	}
+
+	var r0 *deadline.UpdateQueueLimitAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.UpdateQueueLimitAssociationInput, ...func(*deadline.Options)) (*deadline.UpdateQueueLimitAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.UpdateQueueLimitAssociationInput, ...func(*deadline.Options)) *deadline.UpdateQueueLimitAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.UpdateQueueLimitAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.UpdateQueueLimitAssociationInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

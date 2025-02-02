@@ -66,6 +66,7 @@ type IClient interface {
  DeleteContactEvaluation(ctx context.Context, params *DeleteContactEvaluationInput, optFns ...func(*Options)) (*DeleteContactEvaluationOutput, error) 
  DeleteContactFlow(ctx context.Context, params *DeleteContactFlowInput, optFns ...func(*Options)) (*DeleteContactFlowOutput, error) 
  DeleteContactFlowModule(ctx context.Context, params *DeleteContactFlowModuleInput, optFns ...func(*Options)) (*DeleteContactFlowModuleOutput, error) 
+ DeleteContactFlowVersion(ctx context.Context, params *DeleteContactFlowVersionInput, optFns ...func(*Options)) (*DeleteContactFlowVersionOutput, error) 
  DeleteEmailAddress(ctx context.Context, params *DeleteEmailAddressInput, optFns ...func(*Options)) (*DeleteEmailAddressOutput, error) 
  DeleteEvaluationForm(ctx context.Context, params *DeleteEvaluationFormInput, optFns ...func(*Options)) (*DeleteEvaluationFormOutput, error) 
  DeleteHoursOfOperation(ctx context.Context, params *DeleteHoursOfOperationInput, optFns ...func(*Options)) (*DeleteHoursOfOperationOutput, error) 

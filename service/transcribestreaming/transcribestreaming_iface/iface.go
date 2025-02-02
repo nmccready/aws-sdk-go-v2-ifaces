@@ -10,7 +10,9 @@ import (
 // IClient defines the interface for transcribestreaming
 type IClient interface {
  Options() Options 
+ GetMedicalScribeStream(ctx context.Context, params *GetMedicalScribeStreamInput, optFns ...func(*Options)) (*GetMedicalScribeStreamOutput, error) 
  StartCallAnalyticsStreamTranscription(ctx context.Context, params *StartCallAnalyticsStreamTranscriptionInput, optFns ...func(*Options)) (*StartCallAnalyticsStreamTranscriptionOutput, error) 
+ StartMedicalScribeStream(ctx context.Context, params *StartMedicalScribeStreamInput, optFns ...func(*Options)) (*StartMedicalScribeStreamOutput, error) 
  StartMedicalStreamTranscription(ctx context.Context, params *StartMedicalStreamTranscriptionInput, optFns ...func(*Options)) (*StartMedicalStreamTranscriptionOutput, error) 
  StartStreamTranscription(ctx context.Context, params *StartStreamTranscriptionInput, optFns ...func(*Options)) (*StartStreamTranscriptionOutput, error) 
 }

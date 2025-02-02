@@ -762,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteContactFlowVersion", func(t *testing.T) {
+        input := &connect.DeleteContactFlowVersionInput{}
+        output := &connect.DeleteContactFlowVersionOutput{}
+
+        mockClient.On("DeleteContactFlowVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContactFlowVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEmailAddress", func(t *testing.T) {
         input := &connect.DeleteEmailAddressInput{}
         output := &connect.DeleteEmailAddressOutput{}
