@@ -249,7 +249,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/mediapackagevod v1.34.15
 	github.com/aws/aws-sdk-go-v2/service/mediastore v1.24.14
 	github.com/aws/aws-sdk-go-v2/service/mediastoredata v1.24.14
-	github.com/aws/aws-sdk-go-v2/service/mediatailor v1.43.1
+	github.com/aws/aws-sdk-go-v2/service/mediatailor v1.44.0
 	github.com/aws/aws-sdk-go-v2/service/medicalimaging v1.14.14
 	github.com/aws/aws-sdk-go-v2/service/memorydb v1.25.7
 	github.com/aws/aws-sdk-go-v2/service/mgn v1.32.14
