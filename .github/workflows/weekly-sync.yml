@@ -1,0 +1,43 @@
+name: Weekly Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Runs every Sunday at 00:00 UTC
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with: # important, must be defined on checkout to kick publish (defining in setup/node doesn't work)
+          token: ${{ secrets.GH_TOKEN || github.token }}
+      - name: node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          # cache: "npm" # needs lockfile if enabled
+
+      - name: go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 1.21.4
+
+      - name: Install dependencies and run sync
+        run: |
+          npm install
+          npm run sync
+
+      - name: Fetch AWS SDK version
+        run: |
+          cd ./tmp/aws-sdk-go-v2
+          AWS_SDK_VERSION=$(git tag | grep -E "^v[0-9]+\.[0-9]+\.[0-9]+$" | sort -V | tail -n 1)
+          echo "AWS_SDK_VERSION=$AWS_SDK_VERSION" >> $GITHUB_ENV
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'Automated sync'
+          branch: 'automated-sync-aws-sdk-go-v2-${{ env.AWS_SDK_VERSION }}'
+          title: 'Automated sync'
+          body: 'fix: this PR was created automatically to sync with aws-sdk-go-v2 ${{ env.AWS_SDK_VERSION }}'
