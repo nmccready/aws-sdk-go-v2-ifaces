@@ -2,7 +2,7 @@
 
 To provide a more idiomatic interfaces and mocks to the AWS SDK for Go v2 since AWS refuses to do so.
 
-## Dependencies
+## Dev Dependencies
 
 - Node.js 20.x (use nvm or [proto](https://moonrepo.dev/proto))
 - npm = 8.X
