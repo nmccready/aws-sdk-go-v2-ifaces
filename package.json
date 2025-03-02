@@ -6,6 +6,7 @@
   "author": "",
   "scripts": {
     "clone_sdk": "./scripts/git_clone_aws-sdk.sh",
+    "commitlint": "commitlint --from $(git log origin/main | cut -d ' ' -f2 | head -n1)",
     "install:go": "go mod tidy -e && go mod vendor",
     "lint": "golangci-lint run --fix --timeout 15m",
     "prepare": "npm run clone_sdk && ./scripts/install_binary_deps.sh && sort-package-json",
@@ -16,6 +17,8 @@
     "test:go:tests": "go test ./tests/..."
   },
   "devDependencies": {
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
     "@stdlib/string-pascalcase-cli": "0.2.2",
     "commit-and-tag-version": "12",
     "commitlint": "19",

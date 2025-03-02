@@ -78,6 +78,7 @@ type IClient interface {
  PutAccountSendingAttributes(ctx context.Context, params *PutAccountSendingAttributesInput, optFns ...func(*Options)) (*PutAccountSendingAttributesOutput, error) 
  PutAccountSuppressionAttributes(ctx context.Context, params *PutAccountSuppressionAttributesInput, optFns ...func(*Options)) (*PutAccountSuppressionAttributesOutput, error) 
  PutAccountVdmAttributes(ctx context.Context, params *PutAccountVdmAttributesInput, optFns ...func(*Options)) (*PutAccountVdmAttributesOutput, error) 
+ PutConfigurationSetArchivingOptions(ctx context.Context, params *PutConfigurationSetArchivingOptionsInput, optFns ...func(*Options)) (*PutConfigurationSetArchivingOptionsOutput, error) 
  PutConfigurationSetDeliveryOptions(ctx context.Context, params *PutConfigurationSetDeliveryOptionsInput, optFns ...func(*Options)) (*PutConfigurationSetDeliveryOptionsOutput, error) 
  PutConfigurationSetReputationOptions(ctx context.Context, params *PutConfigurationSetReputationOptionsInput, optFns ...func(*Options)) (*PutConfigurationSetReputationOptionsOutput, error) 
  PutConfigurationSetSendingOptions(ctx context.Context, params *PutConfigurationSetSendingOptionsInput, optFns ...func(*Options)) (*PutConfigurationSetSendingOptionsOutput, error) 

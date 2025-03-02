@@ -1789,6 +1789,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAnalyticsDataLakeDataSets", func(t *testing.T) {
+        input := &connect.ListAnalyticsDataLakeDataSetsInput{}
+        output := &connect.ListAnalyticsDataLakeDataSetsOutput{}
+
+        mockClient.On("ListAnalyticsDataLakeDataSets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAnalyticsDataLakeDataSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListApprovedOrigins", func(t *testing.T) {
         input := &connect.ListApprovedOriginsInput{}
         output := &connect.ListApprovedOriginsOutput{}

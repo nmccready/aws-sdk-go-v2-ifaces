@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelCacheReport", func(t *testing.T) {
+        input := &storagegateway.CancelCacheReportInput{}
+        output := &storagegateway.CancelCacheReportOutput{}
+
+        mockClient.On("CancelCacheReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelCacheReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelRetrieval", func(t *testing.T) {
         input := &storagegateway.CancelRetrievalInput{}
         output := &storagegateway.CancelRetrievalOutput{}
@@ -307,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCacheReport", func(t *testing.T) {
+        input := &storagegateway.DeleteCacheReportInput{}
+        output := &storagegateway.DeleteCacheReportOutput{}
+
+        mockClient.On("DeleteCacheReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCacheReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteChapCredentials", func(t *testing.T) {
         input := &storagegateway.DeleteChapCredentialsInput{}
         output := &storagegateway.DeleteChapCredentialsOutput{}
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCacheReport", func(t *testing.T) {
+        input := &storagegateway.DescribeCacheReportInput{}
+        output := &storagegateway.DescribeCacheReportOutput{}
+
+        mockClient.On("DescribeCacheReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCacheReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestEvictFilesFailingUpload", func(t *testing.T) {
+        input := &storagegateway.EvictFilesFailingUploadInput{}
+        output := &storagegateway.EvictFilesFailingUploadOutput{}
+
+        mockClient.On("EvictFilesFailingUpload", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EvictFilesFailingUpload(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestJoinDomain", func(t *testing.T) {
         input := &storagegateway.JoinDomainInput{}
         output := &storagegateway.JoinDomainOutput{}
@@ -730,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAutomaticTapeCreationPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAutomaticTapeCreationPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCacheReports", func(t *testing.T) {
+        input := &storagegateway.ListCacheReportsInput{}
+        output := &storagegateway.ListCacheReportsOutput{}
+
+        mockClient.On("ListCacheReports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCacheReports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -990,6 +1055,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAvailabilityMonitorTest", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAvailabilityMonitorTest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartCacheReport", func(t *testing.T) {
+        input := &storagegateway.StartCacheReportInput{}
+        output := &storagegateway.StartCacheReportOutput{}
+
+        mockClient.On("StartCacheReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCacheReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

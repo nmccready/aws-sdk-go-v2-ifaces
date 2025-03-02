@@ -717,6 +717,80 @@ func (_m *IClient) DisassociateSubnets(ctx context.Context, params *networkfirew
 	return r0, r1
 }
 
+// GetAnalysisReportResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAnalysisReportResults(ctx context.Context, params *networkfirewall.GetAnalysisReportResultsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.GetAnalysisReportResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAnalysisReportResults")
+	}
+
+	var r0 *networkfirewall.GetAnalysisReportResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.GetAnalysisReportResultsInput, ...func(*networkfirewall.Options)) (*networkfirewall.GetAnalysisReportResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.GetAnalysisReportResultsInput, ...func(*networkfirewall.Options)) *networkfirewall.GetAnalysisReportResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.GetAnalysisReportResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.GetAnalysisReportResultsInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAnalysisReports provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAnalysisReports(ctx context.Context, params *networkfirewall.ListAnalysisReportsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListAnalysisReportsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAnalysisReports")
+	}
+
+	var r0 *networkfirewall.ListAnalysisReportsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListAnalysisReportsInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListAnalysisReportsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListAnalysisReportsInput, ...func(*networkfirewall.Options)) *networkfirewall.ListAnalysisReportsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.ListAnalysisReportsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListAnalysisReportsInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFirewallPolicies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFirewallPolicies(ctx context.Context, params *networkfirewall.ListFirewallPoliciesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallPoliciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -957,6 +1031,43 @@ func (_m *IClient) PutResourcePolicy(ctx context.Context, params *networkfirewal
 	return r0, r1
 }
 
+// StartAnalysisReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAnalysisReport(ctx context.Context, params *networkfirewall.StartAnalysisReportInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.StartAnalysisReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAnalysisReport")
+	}
+
+	var r0 *networkfirewall.StartAnalysisReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.StartAnalysisReportInput, ...func(*networkfirewall.Options)) (*networkfirewall.StartAnalysisReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.StartAnalysisReportInput, ...func(*networkfirewall.Options)) *networkfirewall.StartAnalysisReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.StartAnalysisReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.StartAnalysisReportInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *networkfirewall.TagResourceInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1023,6 +1134,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *networkfirewall.Un
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UntagResourceInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateFirewallAnalysisSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateFirewallAnalysisSettings(ctx context.Context, params *networkfirewall.UpdateFirewallAnalysisSettingsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateFirewallAnalysisSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateFirewallAnalysisSettings")
+	}
+
+	var r0 *networkfirewall.UpdateFirewallAnalysisSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateFirewallAnalysisSettingsInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateFirewallAnalysisSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateFirewallAnalysisSettingsInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateFirewallAnalysisSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.UpdateFirewallAnalysisSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateFirewallAnalysisSettingsInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

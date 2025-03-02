@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConsumableResource", func(t *testing.T) {
+        input := &batch.CreateConsumableResourceInput{}
+        output := &batch.CreateConsumableResourceOutput{}
+
+        mockClient.On("CreateConsumableResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConsumableResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateJobQueue", func(t *testing.T) {
         input := &batch.CreateJobQueueInput{}
         output := &batch.CreateJobQueueOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteComputeEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteComputeEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConsumableResource", func(t *testing.T) {
+        input := &batch.DeleteConsumableResourceInput{}
+        output := &batch.DeleteConsumableResourceOutput{}
+
+        mockClient.On("DeleteConsumableResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConsumableResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeComputeEnvironments", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeComputeEnvironments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeConsumableResource", func(t *testing.T) {
+        input := &batch.DescribeConsumableResourceInput{}
+        output := &batch.DescribeConsumableResourceOutput{}
+
+        mockClient.On("DescribeConsumableResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConsumableResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConsumableResources", func(t *testing.T) {
+        input := &batch.ListConsumableResourcesInput{}
+        output := &batch.ListConsumableResourcesOutput{}
+
+        mockClient.On("ListConsumableResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConsumableResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListJobs", func(t *testing.T) {
         input := &batch.ListJobsInput{}
         output := &batch.ListJobsOutput{}
@@ -223,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobsByConsumableResource", func(t *testing.T) {
+        input := &batch.ListJobsByConsumableResourceInput{}
+        output := &batch.ListJobsByConsumableResourceOutput{}
+
+        mockClient.On("ListJobsByConsumableResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobsByConsumableResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -327,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateComputeEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateComputeEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConsumableResource", func(t *testing.T) {
+        input := &batch.UpdateConsumableResourceInput{}
+        output := &batch.UpdateConsumableResourceOutput{}
+
+        mockClient.On("UpdateConsumableResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConsumableResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

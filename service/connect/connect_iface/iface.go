@@ -145,6 +145,7 @@ type IClient interface {
  ImportPhoneNumber(ctx context.Context, params *ImportPhoneNumberInput, optFns ...func(*Options)) (*ImportPhoneNumberOutput, error) 
  ListAgentStatuses(ctx context.Context, params *ListAgentStatusesInput, optFns ...func(*Options)) (*ListAgentStatusesOutput, error) 
  ListAnalyticsDataAssociations(ctx context.Context, params *ListAnalyticsDataAssociationsInput, optFns ...func(*Options)) (*ListAnalyticsDataAssociationsOutput, error) 
+ ListAnalyticsDataLakeDataSets(ctx context.Context, params *ListAnalyticsDataLakeDataSetsInput, optFns ...func(*Options)) (*ListAnalyticsDataLakeDataSetsOutput, error) 
  ListApprovedOrigins(ctx context.Context, params *ListApprovedOriginsInput, optFns ...func(*Options)) (*ListApprovedOriginsOutput, error) 
  ListAssociatedContacts(ctx context.Context, params *ListAssociatedContactsInput, optFns ...func(*Options)) (*ListAssociatedContactsOutput, error) 
  ListAuthenticationProfiles(ctx context.Context, params *ListAuthenticationProfilesInput, optFns ...func(*Options)) (*ListAuthenticationProfilesOutput, error) 

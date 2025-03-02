@@ -26,6 +26,7 @@ type IClient interface {
  CreateUser(ctx context.Context, params *CreateUserInput, optFns ...func(*Options)) (*CreateUserOutput, error) 
  CreateWebExperience(ctx context.Context, params *CreateWebExperienceInput, optFns ...func(*Options)) (*CreateWebExperienceOutput, error) 
  DeleteApplication(ctx context.Context, params *DeleteApplicationInput, optFns ...func(*Options)) (*DeleteApplicationOutput, error) 
+ DeleteAttachment(ctx context.Context, params *DeleteAttachmentInput, optFns ...func(*Options)) (*DeleteAttachmentOutput, error) 
  DeleteChatControlsConfiguration(ctx context.Context, params *DeleteChatControlsConfigurationInput, optFns ...func(*Options)) (*DeleteChatControlsConfigurationOutput, error) 
  DeleteConversation(ctx context.Context, params *DeleteConversationInput, optFns ...func(*Options)) (*DeleteConversationOutput, error) 
  DeleteDataAccessor(ctx context.Context, params *DeleteDataAccessorInput, optFns ...func(*Options)) (*DeleteDataAccessorOutput, error) 

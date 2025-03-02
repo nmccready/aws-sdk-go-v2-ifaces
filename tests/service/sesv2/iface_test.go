@@ -918,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutConfigurationSetArchivingOptions", func(t *testing.T) {
+        input := &sesv2.PutConfigurationSetArchivingOptionsInput{}
+        output := &sesv2.PutConfigurationSetArchivingOptionsOutput{}
+
+        mockClient.On("PutConfigurationSetArchivingOptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutConfigurationSetArchivingOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutConfigurationSetDeliveryOptions", func(t *testing.T) {
         input := &sesv2.PutConfigurationSetDeliveryOptionsInput{}
         output := &sesv2.PutConfigurationSetDeliveryOptionsOutput{}

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetCaseRule", func(t *testing.T) {
+        input := &connectcases.BatchGetCaseRuleInput{}
+        output := &connectcases.BatchGetCaseRuleOutput{}
+
+        mockClient.On("BatchGetCaseRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetCaseRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetField", func(t *testing.T) {
         input := &connectcases.BatchGetFieldInput{}
         output := &connectcases.BatchGetFieldOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCase", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCaseRule", func(t *testing.T) {
+        input := &connectcases.CreateCaseRuleInput{}
+        output := &connectcases.CreateCaseRuleOutput{}
+
+        mockClient.On("CreateCaseRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCaseRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCaseRule", func(t *testing.T) {
+        input := &connectcases.DeleteCaseRuleInput{}
+        output := &connectcases.DeleteCaseRuleOutput{}
+
+        mockClient.On("DeleteCaseRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCaseRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -262,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCaseRules", func(t *testing.T) {
+        input := &connectcases.ListCaseRulesInput{}
+        output := &connectcases.ListCaseRulesOutput{}
+
+        mockClient.On("ListCaseRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCaseRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -431,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCase", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCaseRule", func(t *testing.T) {
+        input := &connectcases.UpdateCaseRuleInput{}
+        output := &connectcases.UpdateCaseRuleOutput{}
+
+        mockClient.On("UpdateCaseRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCaseRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

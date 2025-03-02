@@ -28,6 +28,7 @@ type IClient interface {
  GetFinding(ctx context.Context, params *GetFindingInput, optFns ...func(*Options)) (*GetFindingOutput, error) 
  GetFindingRecommendation(ctx context.Context, params *GetFindingRecommendationInput, optFns ...func(*Options)) (*GetFindingRecommendationOutput, error) 
  GetFindingV2(ctx context.Context, params *GetFindingV2Input, optFns ...func(*Options)) (*GetFindingV2Output, error) 
+ GetFindingsStatistics(ctx context.Context, params *GetFindingsStatisticsInput, optFns ...func(*Options)) (*GetFindingsStatisticsOutput, error) 
  GetGeneratedPolicy(ctx context.Context, params *GetGeneratedPolicyInput, optFns ...func(*Options)) (*GetGeneratedPolicyOutput, error) 
  ListAccessPreviewFindings(ctx context.Context, params *ListAccessPreviewFindingsInput, optFns ...func(*Options)) (*ListAccessPreviewFindingsOutput, error) 
  ListAccessPreviews(ctx context.Context, params *ListAccessPreviewsInput, optFns ...func(*Options)) (*ListAccessPreviewsOutput, error) 

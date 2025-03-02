@@ -4363,6 +4363,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateHubContent", func(t *testing.T) {
+        input := &sagemaker.UpdateHubContentInput{}
+        output := &sagemaker.UpdateHubContentOutput{}
+
+        mockClient.On("UpdateHubContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHubContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateHubContentReference", func(t *testing.T) {
+        input := &sagemaker.UpdateHubContentReferenceInput{}
+        output := &sagemaker.UpdateHubContentReferenceOutput{}
+
+        mockClient.On("UpdateHubContentReference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHubContentReference(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateImage", func(t *testing.T) {
         input := &sagemaker.UpdateImageInput{}
         output := &sagemaker.UpdateImageOutput{}

@@ -12353,6 +12353,80 @@ func (_m *IClient) UpdateHub(ctx context.Context, params *sagemaker.UpdateHubInp
 	return r0, r1
 }
 
+// UpdateHubContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHubContent(ctx context.Context, params *sagemaker.UpdateHubContentInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateHubContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHubContent")
+	}
+
+	var r0 *sagemaker.UpdateHubContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateHubContentInput, ...func(*sagemaker.Options)) (*sagemaker.UpdateHubContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateHubContentInput, ...func(*sagemaker.Options)) *sagemaker.UpdateHubContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdateHubContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateHubContentInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateHubContentReference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHubContentReference(ctx context.Context, params *sagemaker.UpdateHubContentReferenceInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateHubContentReferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHubContentReference")
+	}
+
+	var r0 *sagemaker.UpdateHubContentReferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateHubContentReferenceInput, ...func(*sagemaker.Options)) (*sagemaker.UpdateHubContentReferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateHubContentReferenceInput, ...func(*sagemaker.Options)) *sagemaker.UpdateHubContentReferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdateHubContentReferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateHubContentReferenceInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateImage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateImage(ctx context.Context, params *sagemaker.UpdateImageInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateImageOutput, error) {
 	_va := make([]interface{}, len(optFns))
