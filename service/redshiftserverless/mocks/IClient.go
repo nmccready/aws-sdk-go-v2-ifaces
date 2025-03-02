@@ -1013,6 +1013,43 @@ func (_m *IClient) GetTableRestoreStatus(ctx context.Context, params *redshiftse
 	return r0, r1
 }
 
+// GetTrack provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrack(ctx context.Context, params *redshiftserverless.GetTrackInput, optFns ...func(*redshiftserverless.Options)) (*redshiftserverless.GetTrackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrack")
+	}
+
+	var r0 *redshiftserverless.GetTrackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftserverless.GetTrackInput, ...func(*redshiftserverless.Options)) (*redshiftserverless.GetTrackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftserverless.GetTrackInput, ...func(*redshiftserverless.Options)) *redshiftserverless.GetTrackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshiftserverless.GetTrackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshiftserverless.GetTrackInput, ...func(*redshiftserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetUsageLimit provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetUsageLimit(ctx context.Context, params *redshiftserverless.GetUsageLimitInput, optFns ...func(*redshiftserverless.Options)) (*redshiftserverless.GetUsageLimitOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1449,6 +1486,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *redshiftserv
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *redshiftserverless.ListTagsForResourceInput, ...func(*redshiftserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTracks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTracks(ctx context.Context, params *redshiftserverless.ListTracksInput, optFns ...func(*redshiftserverless.Options)) (*redshiftserverless.ListTracksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTracks")
+	}
+
+	var r0 *redshiftserverless.ListTracksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftserverless.ListTracksInput, ...func(*redshiftserverless.Options)) (*redshiftserverless.ListTracksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftserverless.ListTracksInput, ...func(*redshiftserverless.Options)) *redshiftserverless.ListTracksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshiftserverless.ListTracksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshiftserverless.ListTracksInput, ...func(*redshiftserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

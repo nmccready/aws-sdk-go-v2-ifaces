@@ -606,6 +606,43 @@ func (_m *IClient) DeleteApplication(ctx context.Context, params *qbusiness.Dele
 	return r0, r1
 }
 
+// DeleteAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAttachment(ctx context.Context, params *qbusiness.DeleteAttachmentInput, optFns ...func(*qbusiness.Options)) (*qbusiness.DeleteAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAttachment")
+	}
+
+	var r0 *qbusiness.DeleteAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DeleteAttachmentInput, ...func(*qbusiness.Options)) (*qbusiness.DeleteAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DeleteAttachmentInput, ...func(*qbusiness.Options)) *qbusiness.DeleteAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.DeleteAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.DeleteAttachmentInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteChatControlsConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteChatControlsConfiguration(ctx context.Context, params *qbusiness.DeleteChatControlsConfigurationInput, optFns ...func(*qbusiness.Options)) (*qbusiness.DeleteChatControlsConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))

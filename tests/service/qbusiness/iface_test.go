@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAttachment", func(t *testing.T) {
+        input := &qbusiness.DeleteAttachmentInput{}
+        output := &qbusiness.DeleteAttachmentOutput{}
+
+        mockClient.On("DeleteAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteChatControlsConfiguration", func(t *testing.T) {
         input := &qbusiness.DeleteChatControlsConfigurationInput{}
         output := &qbusiness.DeleteChatControlsConfigurationOutput{}

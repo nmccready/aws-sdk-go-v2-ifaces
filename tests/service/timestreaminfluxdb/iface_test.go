@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDbCluster", func(t *testing.T) {
+        input := &timestreaminfluxdb.CreateDbClusterInput{}
+        output := &timestreaminfluxdb.CreateDbClusterOutput{}
+
+        mockClient.On("CreateDbCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDbCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDbInstance", func(t *testing.T) {
         input := &timestreaminfluxdb.CreateDbInstanceInput{}
         output := &timestreaminfluxdb.CreateDbInstanceOutput{}
@@ -60,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDbCluster", func(t *testing.T) {
+        input := &timestreaminfluxdb.DeleteDbClusterInput{}
+        output := &timestreaminfluxdb.DeleteDbClusterOutput{}
+
+        mockClient.On("DeleteDbCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDbCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDbInstance", func(t *testing.T) {
         input := &timestreaminfluxdb.DeleteDbInstanceInput{}
         output := &timestreaminfluxdb.DeleteDbInstanceOutput{}
@@ -67,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDbInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDbInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDbCluster", func(t *testing.T) {
+        input := &timestreaminfluxdb.GetDbClusterInput{}
+        output := &timestreaminfluxdb.GetDbClusterOutput{}
+
+        mockClient.On("GetDbCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDbCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDbClusters", func(t *testing.T) {
+        input := &timestreaminfluxdb.ListDbClustersInput{}
+        output := &timestreaminfluxdb.ListDbClustersOutput{}
+
+        mockClient.On("ListDbClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDbClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDbInstances", func(t *testing.T) {
         input := &timestreaminfluxdb.ListDbInstancesInput{}
         output := &timestreaminfluxdb.ListDbInstancesOutput{}
@@ -106,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDbInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDbInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDbInstancesForCluster", func(t *testing.T) {
+        input := &timestreaminfluxdb.ListDbInstancesForClusterInput{}
+        output := &timestreaminfluxdb.ListDbInstancesForClusterOutput{}
+
+        mockClient.On("ListDbInstancesForCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDbInstancesForCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -158,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDbCluster", func(t *testing.T) {
+        input := &timestreaminfluxdb.UpdateDbClusterInput{}
+        output := &timestreaminfluxdb.UpdateDbClusterOutput{}
+
+        mockClient.On("UpdateDbCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDbCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

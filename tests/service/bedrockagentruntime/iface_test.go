@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateInvocation", func(t *testing.T) {
+        input := &bedrockagentruntime.CreateInvocationInput{}
+        output := &bedrockagentruntime.CreateInvocationOutput{}
+
+        mockClient.On("CreateInvocation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInvocation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSession", func(t *testing.T) {
+        input := &bedrockagentruntime.CreateSessionInput{}
+        output := &bedrockagentruntime.CreateSessionOutput{}
+
+        mockClient.On("CreateSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAgentMemory", func(t *testing.T) {
         input := &bedrockagentruntime.DeleteAgentMemoryInput{}
         output := &bedrockagentruntime.DeleteAgentMemoryOutput{}
@@ -41,6 +67,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAgentMemory", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAgentMemory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSession", func(t *testing.T) {
+        input := &bedrockagentruntime.DeleteSessionInput{}
+        output := &bedrockagentruntime.DeleteSessionOutput{}
+
+        mockClient.On("DeleteSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEndSession", func(t *testing.T) {
+        input := &bedrockagentruntime.EndSessionInput{}
+        output := &bedrockagentruntime.EndSessionOutput{}
+
+        mockClient.On("EndSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EndSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -67,6 +119,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentMemory", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentMemory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInvocationStep", func(t *testing.T) {
+        input := &bedrockagentruntime.GetInvocationStepInput{}
+        output := &bedrockagentruntime.GetInvocationStepOutput{}
+
+        mockClient.On("GetInvocationStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInvocationStep(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSession", func(t *testing.T) {
+        input := &bedrockagentruntime.GetSessionInput{}
+        output := &bedrockagentruntime.GetSessionOutput{}
+
+        mockClient.On("GetSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,6 +190,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInvocationSteps", func(t *testing.T) {
+        input := &bedrockagentruntime.ListInvocationStepsInput{}
+        output := &bedrockagentruntime.ListInvocationStepsOutput{}
+
+        mockClient.On("ListInvocationSteps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvocationSteps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInvocations", func(t *testing.T) {
+        input := &bedrockagentruntime.ListInvocationsInput{}
+        output := &bedrockagentruntime.ListInvocationsOutput{}
+
+        mockClient.On("ListInvocations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvocations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSessions", func(t *testing.T) {
+        input := &bedrockagentruntime.ListSessionsInput{}
+        output := &bedrockagentruntime.ListSessionsOutput{}
+
+        mockClient.On("ListSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &bedrockagentruntime.ListTagsForResourceInput{}
+        output := &bedrockagentruntime.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestOptimizePrompt", func(t *testing.T) {
         input := &bedrockagentruntime.OptimizePromptInput{}
         output := &bedrockagentruntime.OptimizePromptOutput{}
@@ -119,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("OptimizePrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.OptimizePrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutInvocationStep", func(t *testing.T) {
+        input := &bedrockagentruntime.PutInvocationStepInput{}
+        output := &bedrockagentruntime.PutInvocationStepOutput{}
+
+        mockClient.On("PutInvocationStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutInvocationStep(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -171,6 +314,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("RetrieveAndGenerateStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.RetrieveAndGenerateStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &bedrockagentruntime.TagResourceInput{}
+        output := &bedrockagentruntime.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &bedrockagentruntime.UntagResourceInput{}
+        output := &bedrockagentruntime.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSession", func(t *testing.T) {
+        input := &bedrockagentruntime.UpdateSessionInput{}
+        output := &bedrockagentruntime.UpdateSessionOutput{}
+
+        mockClient.On("UpdateSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

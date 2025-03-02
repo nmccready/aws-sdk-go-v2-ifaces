@@ -385,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTrack", func(t *testing.T) {
+        input := &redshiftserverless.GetTrackInput{}
+        output := &redshiftserverless.GetTrackOutput{}
+
+        mockClient.On("GetTrack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetUsageLimit", func(t *testing.T) {
         input := &redshiftserverless.GetUsageLimitInput{}
         output := &redshiftserverless.GetUsageLimitOutput{}
@@ -535,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTracks", func(t *testing.T) {
+        input := &redshiftserverless.ListTracksInput{}
+        output := &redshiftserverless.ListTracksOutput{}
+
+        mockClient.On("ListTracks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTracks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchGetCaseRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetCaseRule(ctx context.Context, params *connectcases.BatchGetCaseRuleInput, optFns ...func(*connectcases.Options)) (*connectcases.BatchGetCaseRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetCaseRule")
+	}
+
+	var r0 *connectcases.BatchGetCaseRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.BatchGetCaseRuleInput, ...func(*connectcases.Options)) (*connectcases.BatchGetCaseRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.BatchGetCaseRuleInput, ...func(*connectcases.Options)) *connectcases.BatchGetCaseRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.BatchGetCaseRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.BatchGetCaseRuleInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetField provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetField(ctx context.Context, params *connectcases.BatchGetFieldInput, optFns ...func(*connectcases.Options)) (*connectcases.BatchGetFieldOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) CreateCase(ctx context.Context, params *connectcases.CreateCa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.CreateCaseInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCaseRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCaseRule(ctx context.Context, params *connectcases.CreateCaseRuleInput, optFns ...func(*connectcases.Options)) (*connectcases.CreateCaseRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCaseRule")
+	}
+
+	var r0 *connectcases.CreateCaseRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.CreateCaseRuleInput, ...func(*connectcases.Options)) (*connectcases.CreateCaseRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.CreateCaseRuleInput, ...func(*connectcases.Options)) *connectcases.CreateCaseRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.CreateCaseRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.CreateCaseRuleInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -303,6 +377,43 @@ func (_m *IClient) CreateTemplate(ctx context.Context, params *connectcases.Crea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.CreateTemplateInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCaseRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCaseRule(ctx context.Context, params *connectcases.DeleteCaseRuleInput, optFns ...func(*connectcases.Options)) (*connectcases.DeleteCaseRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCaseRule")
+	}
+
+	var r0 *connectcases.DeleteCaseRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.DeleteCaseRuleInput, ...func(*connectcases.Options)) (*connectcases.DeleteCaseRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.DeleteCaseRuleInput, ...func(*connectcases.Options)) *connectcases.DeleteCaseRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.DeleteCaseRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.DeleteCaseRuleInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -673,6 +784,43 @@ func (_m *IClient) GetTemplate(ctx context.Context, params *connectcases.GetTemp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.GetTemplateInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCaseRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCaseRules(ctx context.Context, params *connectcases.ListCaseRulesInput, optFns ...func(*connectcases.Options)) (*connectcases.ListCaseRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCaseRules")
+	}
+
+	var r0 *connectcases.ListCaseRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.ListCaseRulesInput, ...func(*connectcases.Options)) (*connectcases.ListCaseRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.ListCaseRulesInput, ...func(*connectcases.Options)) *connectcases.ListCaseRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.ListCaseRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.ListCaseRulesInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1172,6 +1320,43 @@ func (_m *IClient) UpdateCase(ctx context.Context, params *connectcases.UpdateCa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.UpdateCaseInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCaseRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCaseRule(ctx context.Context, params *connectcases.UpdateCaseRuleInput, optFns ...func(*connectcases.Options)) (*connectcases.UpdateCaseRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCaseRule")
+	}
+
+	var r0 *connectcases.UpdateCaseRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.UpdateCaseRuleInput, ...func(*connectcases.Options)) (*connectcases.UpdateCaseRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.UpdateCaseRuleInput, ...func(*connectcases.Options)) *connectcases.UpdateCaseRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.UpdateCaseRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.UpdateCaseRuleInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

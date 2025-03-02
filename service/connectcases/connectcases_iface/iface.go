@@ -10,14 +10,17 @@ import (
 // IClient defines the interface for connectcases
 type IClient interface {
  Options() Options 
+ BatchGetCaseRule(ctx context.Context, params *BatchGetCaseRuleInput, optFns ...func(*Options)) (*BatchGetCaseRuleOutput, error) 
  BatchGetField(ctx context.Context, params *BatchGetFieldInput, optFns ...func(*Options)) (*BatchGetFieldOutput, error) 
  BatchPutFieldOptions(ctx context.Context, params *BatchPutFieldOptionsInput, optFns ...func(*Options)) (*BatchPutFieldOptionsOutput, error) 
  CreateCase(ctx context.Context, params *CreateCaseInput, optFns ...func(*Options)) (*CreateCaseOutput, error) 
+ CreateCaseRule(ctx context.Context, params *CreateCaseRuleInput, optFns ...func(*Options)) (*CreateCaseRuleOutput, error) 
  CreateDomain(ctx context.Context, params *CreateDomainInput, optFns ...func(*Options)) (*CreateDomainOutput, error) 
  CreateField(ctx context.Context, params *CreateFieldInput, optFns ...func(*Options)) (*CreateFieldOutput, error) 
  CreateLayout(ctx context.Context, params *CreateLayoutInput, optFns ...func(*Options)) (*CreateLayoutOutput, error) 
  CreateRelatedItem(ctx context.Context, params *CreateRelatedItemInput, optFns ...func(*Options)) (*CreateRelatedItemOutput, error) 
  CreateTemplate(ctx context.Context, params *CreateTemplateInput, optFns ...func(*Options)) (*CreateTemplateOutput, error) 
+ DeleteCaseRule(ctx context.Context, params *DeleteCaseRuleInput, optFns ...func(*Options)) (*DeleteCaseRuleOutput, error) 
  DeleteDomain(ctx context.Context, params *DeleteDomainInput, optFns ...func(*Options)) (*DeleteDomainOutput, error) 
  DeleteField(ctx context.Context, params *DeleteFieldInput, optFns ...func(*Options)) (*DeleteFieldOutput, error) 
  DeleteLayout(ctx context.Context, params *DeleteLayoutInput, optFns ...func(*Options)) (*DeleteLayoutOutput, error) 
@@ -28,6 +31,7 @@ type IClient interface {
  GetDomain(ctx context.Context, params *GetDomainInput, optFns ...func(*Options)) (*GetDomainOutput, error) 
  GetLayout(ctx context.Context, params *GetLayoutInput, optFns ...func(*Options)) (*GetLayoutOutput, error) 
  GetTemplate(ctx context.Context, params *GetTemplateInput, optFns ...func(*Options)) (*GetTemplateOutput, error) 
+ ListCaseRules(ctx context.Context, params *ListCaseRulesInput, optFns ...func(*Options)) (*ListCaseRulesOutput, error) 
  ListCasesForContact(ctx context.Context, params *ListCasesForContactInput, optFns ...func(*Options)) (*ListCasesForContactOutput, error) 
  ListDomains(ctx context.Context, params *ListDomainsInput, optFns ...func(*Options)) (*ListDomainsOutput, error) 
  ListFieldOptions(ctx context.Context, params *ListFieldOptionsInput, optFns ...func(*Options)) (*ListFieldOptionsOutput, error) 
@@ -41,6 +45,7 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateCase(ctx context.Context, params *UpdateCaseInput, optFns ...func(*Options)) (*UpdateCaseOutput, error) 
+ UpdateCaseRule(ctx context.Context, params *UpdateCaseRuleInput, optFns ...func(*Options)) (*UpdateCaseRuleOutput, error) 
  UpdateField(ctx context.Context, params *UpdateFieldInput, optFns ...func(*Options)) (*UpdateFieldOutput, error) 
  UpdateLayout(ctx context.Context, params *UpdateLayoutInput, optFns ...func(*Options)) (*UpdateLayoutOutput, error) 
  UpdateTemplate(ctx context.Context, params *UpdateTemplateInput, optFns ...func(*Options)) (*UpdateTemplateOutput, error) 

@@ -268,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFindingsStatistics", func(t *testing.T) {
+        input := &accessanalyzer.GetFindingsStatisticsInput{}
+        output := &accessanalyzer.GetFindingsStatisticsOutput{}
+
+        mockClient.On("GetFindingsStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindingsStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetGeneratedPolicy", func(t *testing.T) {
         input := &accessanalyzer.GetGeneratedPolicyInput{}
         output := &accessanalyzer.GetGeneratedPolicyOutput{}

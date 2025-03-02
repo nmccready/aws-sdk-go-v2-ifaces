@@ -347,6 +347,43 @@ func (_m *IClient) CancelArchival(ctx context.Context, params *storagegateway.Ca
 	return r0, r1
 }
 
+// CancelCacheReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelCacheReport(ctx context.Context, params *storagegateway.CancelCacheReportInput, optFns ...func(*storagegateway.Options)) (*storagegateway.CancelCacheReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelCacheReport")
+	}
+
+	var r0 *storagegateway.CancelCacheReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.CancelCacheReportInput, ...func(*storagegateway.Options)) (*storagegateway.CancelCacheReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.CancelCacheReportInput, ...func(*storagegateway.Options)) *storagegateway.CancelCacheReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*storagegateway.CancelCacheReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.CancelCacheReportInput, ...func(*storagegateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelRetrieval provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelRetrieval(ctx context.Context, params *storagegateway.CancelRetrievalInput, optFns ...func(*storagegateway.Options)) (*storagegateway.CancelRetrievalOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -791,6 +828,43 @@ func (_m *IClient) DeleteBandwidthRateLimit(ctx context.Context, params *storage
 	return r0, r1
 }
 
+// DeleteCacheReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCacheReport(ctx context.Context, params *storagegateway.DeleteCacheReportInput, optFns ...func(*storagegateway.Options)) (*storagegateway.DeleteCacheReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCacheReport")
+	}
+
+	var r0 *storagegateway.DeleteCacheReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.DeleteCacheReportInput, ...func(*storagegateway.Options)) (*storagegateway.DeleteCacheReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.DeleteCacheReportInput, ...func(*storagegateway.Options)) *storagegateway.DeleteCacheReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*storagegateway.DeleteCacheReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.DeleteCacheReportInput, ...func(*storagegateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteChapCredentials provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteChapCredentials(ctx context.Context, params *storagegateway.DeleteChapCredentialsInput, optFns ...func(*storagegateway.Options)) (*storagegateway.DeleteChapCredentialsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1227,6 +1301,43 @@ func (_m *IClient) DescribeCache(ctx context.Context, params *storagegateway.Des
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.DescribeCacheInput, ...func(*storagegateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCacheReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCacheReport(ctx context.Context, params *storagegateway.DescribeCacheReportInput, optFns ...func(*storagegateway.Options)) (*storagegateway.DescribeCacheReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCacheReport")
+	}
+
+	var r0 *storagegateway.DescribeCacheReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.DescribeCacheReportInput, ...func(*storagegateway.Options)) (*storagegateway.DescribeCacheReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.DescribeCacheReportInput, ...func(*storagegateway.Options)) *storagegateway.DescribeCacheReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*storagegateway.DescribeCacheReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.DescribeCacheReportInput, ...func(*storagegateway.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1938,6 +2049,43 @@ func (_m *IClient) DisassociateFileSystem(ctx context.Context, params *storagega
 	return r0, r1
 }
 
+// EvictFilesFailingUpload provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EvictFilesFailingUpload(ctx context.Context, params *storagegateway.EvictFilesFailingUploadInput, optFns ...func(*storagegateway.Options)) (*storagegateway.EvictFilesFailingUploadOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EvictFilesFailingUpload")
+	}
+
+	var r0 *storagegateway.EvictFilesFailingUploadOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.EvictFilesFailingUploadInput, ...func(*storagegateway.Options)) (*storagegateway.EvictFilesFailingUploadOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.EvictFilesFailingUploadInput, ...func(*storagegateway.Options)) *storagegateway.EvictFilesFailingUploadOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*storagegateway.EvictFilesFailingUploadOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.EvictFilesFailingUploadInput, ...func(*storagegateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // JoinDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) JoinDomain(ctx context.Context, params *storagegateway.JoinDomainInput, optFns ...func(*storagegateway.Options)) (*storagegateway.JoinDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2004,6 +2152,43 @@ func (_m *IClient) ListAutomaticTapeCreationPolicies(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.ListAutomaticTapeCreationPoliciesInput, ...func(*storagegateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCacheReports provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCacheReports(ctx context.Context, params *storagegateway.ListCacheReportsInput, optFns ...func(*storagegateway.Options)) (*storagegateway.ListCacheReportsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCacheReports")
+	}
+
+	var r0 *storagegateway.ListCacheReportsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.ListCacheReportsInput, ...func(*storagegateway.Options)) (*storagegateway.ListCacheReportsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.ListCacheReportsInput, ...func(*storagegateway.Options)) *storagegateway.ListCacheReportsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*storagegateway.ListCacheReportsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.ListCacheReportsInput, ...func(*storagegateway.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2762,6 +2947,43 @@ func (_m *IClient) StartAvailabilityMonitorTest(ctx context.Context, params *sto
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.StartAvailabilityMonitorTestInput, ...func(*storagegateway.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartCacheReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartCacheReport(ctx context.Context, params *storagegateway.StartCacheReportInput, optFns ...func(*storagegateway.Options)) (*storagegateway.StartCacheReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartCacheReport")
+	}
+
+	var r0 *storagegateway.StartCacheReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.StartCacheReportInput, ...func(*storagegateway.Options)) (*storagegateway.StartCacheReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *storagegateway.StartCacheReportInput, ...func(*storagegateway.Options)) *storagegateway.StartCacheReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*storagegateway.StartCacheReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *storagegateway.StartCacheReportInput, ...func(*storagegateway.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

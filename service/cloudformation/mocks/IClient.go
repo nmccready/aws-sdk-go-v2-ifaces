@@ -348,6 +348,43 @@ func (_m *IClient) CreateStackInstances(ctx context.Context, params *cloudformat
 	return r0, r1
 }
 
+// CreateStackRefactor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateStackRefactor(ctx context.Context, params *cloudformation.CreateStackRefactorInput, optFns ...func(*cloudformation.Options)) (*cloudformation.CreateStackRefactorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateStackRefactor")
+	}
+
+	var r0 *cloudformation.CreateStackRefactorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.CreateStackRefactorInput, ...func(*cloudformation.Options)) (*cloudformation.CreateStackRefactorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.CreateStackRefactorInput, ...func(*cloudformation.Options)) *cloudformation.CreateStackRefactorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.CreateStackRefactorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.CreateStackRefactorInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateStackSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateStackSet(ctx context.Context, params *cloudformation.CreateStackSetInput, optFns ...func(*cloudformation.Options)) (*cloudformation.CreateStackSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1051,6 +1088,43 @@ func (_m *IClient) DescribeStackInstance(ctx context.Context, params *cloudforma
 	return r0, r1
 }
 
+// DescribeStackRefactor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeStackRefactor(ctx context.Context, params *cloudformation.DescribeStackRefactorInput, optFns ...func(*cloudformation.Options)) (*cloudformation.DescribeStackRefactorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeStackRefactor")
+	}
+
+	var r0 *cloudformation.DescribeStackRefactorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.DescribeStackRefactorInput, ...func(*cloudformation.Options)) (*cloudformation.DescribeStackRefactorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.DescribeStackRefactorInput, ...func(*cloudformation.Options)) *cloudformation.DescribeStackRefactorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.DescribeStackRefactorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.DescribeStackRefactorInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeStackResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeStackResource(ctx context.Context, params *cloudformation.DescribeStackResourceInput, optFns ...func(*cloudformation.Options)) (*cloudformation.DescribeStackResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1524,6 +1598,43 @@ func (_m *IClient) ExecuteChangeSet(ctx context.Context, params *cloudformation.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.ExecuteChangeSetInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ExecuteStackRefactor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExecuteStackRefactor(ctx context.Context, params *cloudformation.ExecuteStackRefactorInput, optFns ...func(*cloudformation.Options)) (*cloudformation.ExecuteStackRefactorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExecuteStackRefactor")
+	}
+
+	var r0 *cloudformation.ExecuteStackRefactorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ExecuteStackRefactorInput, ...func(*cloudformation.Options)) (*cloudformation.ExecuteStackRefactorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ExecuteStackRefactorInput, ...func(*cloudformation.Options)) *cloudformation.ExecuteStackRefactorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.ExecuteStackRefactorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.ExecuteStackRefactorInput, ...func(*cloudformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2079,6 +2190,80 @@ func (_m *IClient) ListStackInstances(ctx context.Context, params *cloudformatio
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.ListStackInstancesInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListStackRefactorActions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListStackRefactorActions(ctx context.Context, params *cloudformation.ListStackRefactorActionsInput, optFns ...func(*cloudformation.Options)) (*cloudformation.ListStackRefactorActionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListStackRefactorActions")
+	}
+
+	var r0 *cloudformation.ListStackRefactorActionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ListStackRefactorActionsInput, ...func(*cloudformation.Options)) (*cloudformation.ListStackRefactorActionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ListStackRefactorActionsInput, ...func(*cloudformation.Options)) *cloudformation.ListStackRefactorActionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.ListStackRefactorActionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.ListStackRefactorActionsInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListStackRefactors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListStackRefactors(ctx context.Context, params *cloudformation.ListStackRefactorsInput, optFns ...func(*cloudformation.Options)) (*cloudformation.ListStackRefactorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListStackRefactors")
+	}
+
+	var r0 *cloudformation.ListStackRefactorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ListStackRefactorsInput, ...func(*cloudformation.Options)) (*cloudformation.ListStackRefactorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.ListStackRefactorsInput, ...func(*cloudformation.Options)) *cloudformation.ListStackRefactorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.ListStackRefactorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.ListStackRefactorsInput, ...func(*cloudformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

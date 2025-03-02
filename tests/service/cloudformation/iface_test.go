@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateStackRefactor", func(t *testing.T) {
+        input := &cloudformation.CreateStackRefactorInput{}
+        output := &cloudformation.CreateStackRefactorOutput{}
+
+        mockClient.On("CreateStackRefactor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStackRefactor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateStackSet", func(t *testing.T) {
         input := &cloudformation.CreateStackSetInput{}
         output := &cloudformation.CreateStackSetOutput{}
@@ -398,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeStackRefactor", func(t *testing.T) {
+        input := &cloudformation.DescribeStackRefactorInput{}
+        output := &cloudformation.DescribeStackRefactorOutput{}
+
+        mockClient.On("DescribeStackRefactor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStackRefactor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeStackResource", func(t *testing.T) {
         input := &cloudformation.DescribeStackResourceInput{}
         output := &cloudformation.DescribeStackResourceOutput{}
@@ -561,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ExecuteChangeSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.ExecuteChangeSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestExecuteStackRefactor", func(t *testing.T) {
+        input := &cloudformation.ExecuteStackRefactorInput{}
+        output := &cloudformation.ExecuteStackRefactorOutput{}
+
+        mockClient.On("ExecuteStackRefactor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExecuteStackRefactor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +795,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStackInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStackInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStackRefactorActions", func(t *testing.T) {
+        input := &cloudformation.ListStackRefactorActionsInput{}
+        output := &cloudformation.ListStackRefactorActionsOutput{}
+
+        mockClient.On("ListStackRefactorActions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStackRefactorActions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStackRefactors", func(t *testing.T) {
+        input := &cloudformation.ListStackRefactorsInput{}
+        output := &cloudformation.ListStackRefactorsOutput{}
+
+        mockClient.On("ListStackRefactors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStackRefactors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -343,6 +343,8 @@ type IClient interface {
  UpdateFeatureGroup(ctx context.Context, params *UpdateFeatureGroupInput, optFns ...func(*Options)) (*UpdateFeatureGroupOutput, error) 
  UpdateFeatureMetadata(ctx context.Context, params *UpdateFeatureMetadataInput, optFns ...func(*Options)) (*UpdateFeatureMetadataOutput, error) 
  UpdateHub(ctx context.Context, params *UpdateHubInput, optFns ...func(*Options)) (*UpdateHubOutput, error) 
+ UpdateHubContent(ctx context.Context, params *UpdateHubContentInput, optFns ...func(*Options)) (*UpdateHubContentOutput, error) 
+ UpdateHubContentReference(ctx context.Context, params *UpdateHubContentReferenceInput, optFns ...func(*Options)) (*UpdateHubContentReferenceOutput, error) 
  UpdateImage(ctx context.Context, params *UpdateImageInput, optFns ...func(*Options)) (*UpdateImageOutput, error) 
  UpdateImageVersion(ctx context.Context, params *UpdateImageVersionInput, optFns ...func(*Options)) (*UpdateImageVersionOutput, error) 
  UpdateInferenceComponent(ctx context.Context, params *UpdateInferenceComponentInput, optFns ...func(*Options)) (*UpdateInferenceComponentOutput, error) 

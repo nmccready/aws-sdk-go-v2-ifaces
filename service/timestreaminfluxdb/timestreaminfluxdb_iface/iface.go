@@ -10,15 +10,21 @@ import (
 // IClient defines the interface for timestreaminfluxdb
 type IClient interface {
  Options() Options 
+ CreateDbCluster(ctx context.Context, params *CreateDbClusterInput, optFns ...func(*Options)) (*CreateDbClusterOutput, error) 
  CreateDbInstance(ctx context.Context, params *CreateDbInstanceInput, optFns ...func(*Options)) (*CreateDbInstanceOutput, error) 
  CreateDbParameterGroup(ctx context.Context, params *CreateDbParameterGroupInput, optFns ...func(*Options)) (*CreateDbParameterGroupOutput, error) 
+ DeleteDbCluster(ctx context.Context, params *DeleteDbClusterInput, optFns ...func(*Options)) (*DeleteDbClusterOutput, error) 
  DeleteDbInstance(ctx context.Context, params *DeleteDbInstanceInput, optFns ...func(*Options)) (*DeleteDbInstanceOutput, error) 
+ GetDbCluster(ctx context.Context, params *GetDbClusterInput, optFns ...func(*Options)) (*GetDbClusterOutput, error) 
  GetDbInstance(ctx context.Context, params *GetDbInstanceInput, optFns ...func(*Options)) (*GetDbInstanceOutput, error) 
  GetDbParameterGroup(ctx context.Context, params *GetDbParameterGroupInput, optFns ...func(*Options)) (*GetDbParameterGroupOutput, error) 
+ ListDbClusters(ctx context.Context, params *ListDbClustersInput, optFns ...func(*Options)) (*ListDbClustersOutput, error) 
  ListDbInstances(ctx context.Context, params *ListDbInstancesInput, optFns ...func(*Options)) (*ListDbInstancesOutput, error) 
+ ListDbInstancesForCluster(ctx context.Context, params *ListDbInstancesForClusterInput, optFns ...func(*Options)) (*ListDbInstancesForClusterOutput, error) 
  ListDbParameterGroups(ctx context.Context, params *ListDbParameterGroupsInput, optFns ...func(*Options)) (*ListDbParameterGroupsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateDbCluster(ctx context.Context, params *UpdateDbClusterInput, optFns ...func(*Options)) (*UpdateDbClusterOutput, error) 
  UpdateDbInstance(ctx context.Context, params *UpdateDbInstanceInput, optFns ...func(*Options)) (*UpdateDbInstanceOutput, error) 
 }

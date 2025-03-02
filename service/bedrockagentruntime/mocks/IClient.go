@@ -15,6 +15,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateInvocation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateInvocation(ctx context.Context, params *bedrockagentruntime.CreateInvocationInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CreateInvocationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateInvocation")
+	}
+
+	var r0 *bedrockagentruntime.CreateInvocationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.CreateInvocationInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CreateInvocationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.CreateInvocationInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.CreateInvocationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.CreateInvocationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.CreateInvocationInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSession(ctx context.Context, params *bedrockagentruntime.CreateSessionInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CreateSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSession")
+	}
+
+	var r0 *bedrockagentruntime.CreateSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.CreateSessionInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CreateSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.CreateSessionInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.CreateSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.CreateSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.CreateSessionInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAgentMemory provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAgentMemory(ctx context.Context, params *bedrockagentruntime.DeleteAgentMemoryInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.DeleteAgentMemoryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -44,6 +118,80 @@ func (_m *IClient) DeleteAgentMemory(ctx context.Context, params *bedrockagentru
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.DeleteAgentMemoryInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSession(ctx context.Context, params *bedrockagentruntime.DeleteSessionInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.DeleteSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSession")
+	}
+
+	var r0 *bedrockagentruntime.DeleteSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.DeleteSessionInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.DeleteSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.DeleteSessionInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.DeleteSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.DeleteSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.DeleteSessionInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EndSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EndSession(ctx context.Context, params *bedrockagentruntime.EndSessionInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.EndSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EndSession")
+	}
+
+	var r0 *bedrockagentruntime.EndSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.EndSessionInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.EndSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.EndSessionInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.EndSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.EndSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.EndSessionInput, ...func(*bedrockagentruntime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -118,6 +266,80 @@ func (_m *IClient) GetAgentMemory(ctx context.Context, params *bedrockagentrunti
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetAgentMemoryInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetInvocationStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInvocationStep(ctx context.Context, params *bedrockagentruntime.GetInvocationStepInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetInvocationStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInvocationStep")
+	}
+
+	var r0 *bedrockagentruntime.GetInvocationStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetInvocationStepInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetInvocationStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetInvocationStepInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.GetInvocationStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.GetInvocationStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetInvocationStepInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSession(ctx context.Context, params *bedrockagentruntime.GetSessionInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSession")
+	}
+
+	var r0 *bedrockagentruntime.GetSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetSessionInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetSessionInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.GetSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.GetSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetSessionInput, ...func(*bedrockagentruntime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -237,6 +459,154 @@ func (_m *IClient) InvokeInlineAgent(ctx context.Context, params *bedrockagentru
 	return r0, r1
 }
 
+// ListInvocationSteps provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInvocationSteps(ctx context.Context, params *bedrockagentruntime.ListInvocationStepsInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListInvocationStepsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInvocationSteps")
+	}
+
+	var r0 *bedrockagentruntime.ListInvocationStepsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListInvocationStepsInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListInvocationStepsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListInvocationStepsInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.ListInvocationStepsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.ListInvocationStepsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.ListInvocationStepsInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInvocations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInvocations(ctx context.Context, params *bedrockagentruntime.ListInvocationsInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListInvocationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInvocations")
+	}
+
+	var r0 *bedrockagentruntime.ListInvocationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListInvocationsInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListInvocationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListInvocationsInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.ListInvocationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.ListInvocationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.ListInvocationsInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSessions(ctx context.Context, params *bedrockagentruntime.ListSessionsInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSessions")
+	}
+
+	var r0 *bedrockagentruntime.ListSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListSessionsInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListSessionsInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.ListSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.ListSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.ListSessionsInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *bedrockagentruntime.ListTagsForResourceInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *bedrockagentruntime.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListTagsForResourceInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.ListTagsForResourceInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.ListTagsForResourceInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // OptimizePrompt provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) OptimizePrompt(ctx context.Context, params *bedrockagentruntime.OptimizePromptInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.OptimizePromptOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -290,6 +660,43 @@ func (_m *IClient) Options() bedrockagentruntime.Options {
 	}
 
 	return r0
+}
+
+// PutInvocationStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutInvocationStep(ctx context.Context, params *bedrockagentruntime.PutInvocationStepInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.PutInvocationStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutInvocationStep")
+	}
+
+	var r0 *bedrockagentruntime.PutInvocationStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.PutInvocationStepInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.PutInvocationStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.PutInvocationStepInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.PutInvocationStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.PutInvocationStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.PutInvocationStepInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // Rerank provides a mock function with given fields: ctx, params, optFns
@@ -432,6 +839,117 @@ func (_m *IClient) RetrieveAndGenerateStream(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.RetrieveAndGenerateStreamInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *bedrockagentruntime.TagResourceInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *bedrockagentruntime.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.TagResourceInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.TagResourceInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.TagResourceInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *bedrockagentruntime.UntagResourceInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *bedrockagentruntime.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.UntagResourceInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.UntagResourceInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.UntagResourceInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSession(ctx context.Context, params *bedrockagentruntime.UpdateSessionInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.UpdateSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSession")
+	}
+
+	var r0 *bedrockagentruntime.UpdateSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.UpdateSessionInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.UpdateSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.UpdateSessionInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.UpdateSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.UpdateSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.UpdateSessionInput, ...func(*bedrockagentruntime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

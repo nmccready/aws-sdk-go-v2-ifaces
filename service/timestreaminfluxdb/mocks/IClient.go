@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateDbCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDbCluster(ctx context.Context, params *timestreaminfluxdb.CreateDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.CreateDbClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDbCluster")
+	}
+
+	var r0 *timestreaminfluxdb.CreateDbClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.CreateDbClusterInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.CreateDbClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.CreateDbClusterInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.CreateDbClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.CreateDbClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.CreateDbClusterInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDbInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDbInstance(ctx context.Context, params *timestreaminfluxdb.CreateDbInstanceInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.CreateDbInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -88,6 +125,43 @@ func (_m *IClient) CreateDbParameterGroup(ctx context.Context, params *timestrea
 	return r0, r1
 }
 
+// DeleteDbCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDbCluster(ctx context.Context, params *timestreaminfluxdb.DeleteDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.DeleteDbClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDbCluster")
+	}
+
+	var r0 *timestreaminfluxdb.DeleteDbClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.DeleteDbClusterInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.DeleteDbClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.DeleteDbClusterInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.DeleteDbClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.DeleteDbClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.DeleteDbClusterInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDbInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDbInstance(ctx context.Context, params *timestreaminfluxdb.DeleteDbInstanceInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.DeleteDbInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -117,6 +191,43 @@ func (_m *IClient) DeleteDbInstance(ctx context.Context, params *timestreaminflu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.DeleteDbInstanceInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDbCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDbCluster(ctx context.Context, params *timestreaminfluxdb.GetDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.GetDbClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDbCluster")
+	}
+
+	var r0 *timestreaminfluxdb.GetDbClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.GetDbClusterInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.GetDbClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.GetDbClusterInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.GetDbClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.GetDbClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.GetDbClusterInput, ...func(*timestreaminfluxdb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -199,6 +310,43 @@ func (_m *IClient) GetDbParameterGroup(ctx context.Context, params *timestreamin
 	return r0, r1
 }
 
+// ListDbClusters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDbClusters(ctx context.Context, params *timestreaminfluxdb.ListDbClustersInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbClustersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDbClusters")
+	}
+
+	var r0 *timestreaminfluxdb.ListDbClustersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.ListDbClustersInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbClustersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.ListDbClustersInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.ListDbClustersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.ListDbClustersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.ListDbClustersInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDbInstances provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDbInstances(ctx context.Context, params *timestreaminfluxdb.ListDbInstancesInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbInstancesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +376,43 @@ func (_m *IClient) ListDbInstances(ctx context.Context, params *timestreaminflux
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.ListDbInstancesInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDbInstancesForCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDbInstancesForCluster(ctx context.Context, params *timestreaminfluxdb.ListDbInstancesForClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbInstancesForClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDbInstancesForCluster")
+	}
+
+	var r0 *timestreaminfluxdb.ListDbInstancesForClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.ListDbInstancesForClusterInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbInstancesForClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.ListDbInstancesForClusterInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.ListDbInstancesForClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.ListDbInstancesForClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.ListDbInstancesForClusterInput, ...func(*timestreaminfluxdb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -394,6 +579,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *timestreaminfluxdb
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.UntagResourceInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDbCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDbCluster(ctx context.Context, params *timestreaminfluxdb.UpdateDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.UpdateDbClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDbCluster")
+	}
+
+	var r0 *timestreaminfluxdb.UpdateDbClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.UpdateDbClusterInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.UpdateDbClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.UpdateDbClusterInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.UpdateDbClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.UpdateDbClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.UpdateDbClusterInput, ...func(*timestreaminfluxdb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

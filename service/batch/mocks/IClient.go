@@ -89,6 +89,43 @@ func (_m *IClient) CreateComputeEnvironment(ctx context.Context, params *batch.C
 	return r0, r1
 }
 
+// CreateConsumableResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConsumableResource(ctx context.Context, params *batch.CreateConsumableResourceInput, optFns ...func(*batch.Options)) (*batch.CreateConsumableResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConsumableResource")
+	}
+
+	var r0 *batch.CreateConsumableResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.CreateConsumableResourceInput, ...func(*batch.Options)) (*batch.CreateConsumableResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.CreateConsumableResourceInput, ...func(*batch.Options)) *batch.CreateConsumableResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.CreateConsumableResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.CreateConsumableResourceInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateJobQueue provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateJobQueue(ctx context.Context, params *batch.CreateJobQueueInput, optFns ...func(*batch.Options)) (*batch.CreateJobQueueOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +229,43 @@ func (_m *IClient) DeleteComputeEnvironment(ctx context.Context, params *batch.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.DeleteComputeEnvironmentInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConsumableResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConsumableResource(ctx context.Context, params *batch.DeleteConsumableResourceInput, optFns ...func(*batch.Options)) (*batch.DeleteConsumableResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConsumableResource")
+	}
+
+	var r0 *batch.DeleteConsumableResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DeleteConsumableResourceInput, ...func(*batch.Options)) (*batch.DeleteConsumableResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DeleteConsumableResourceInput, ...func(*batch.Options)) *batch.DeleteConsumableResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.DeleteConsumableResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.DeleteConsumableResourceInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -340,6 +414,43 @@ func (_m *IClient) DescribeComputeEnvironments(ctx context.Context, params *batc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.DescribeComputeEnvironmentsInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeConsumableResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeConsumableResource(ctx context.Context, params *batch.DescribeConsumableResourceInput, optFns ...func(*batch.Options)) (*batch.DescribeConsumableResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeConsumableResource")
+	}
+
+	var r0 *batch.DescribeConsumableResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DescribeConsumableResourceInput, ...func(*batch.Options)) (*batch.DescribeConsumableResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DescribeConsumableResourceInput, ...func(*batch.Options)) *batch.DescribeConsumableResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.DescribeConsumableResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.DescribeConsumableResourceInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -533,6 +644,43 @@ func (_m *IClient) GetJobQueueSnapshot(ctx context.Context, params *batch.GetJob
 	return r0, r1
 }
 
+// ListConsumableResources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConsumableResources(ctx context.Context, params *batch.ListConsumableResourcesInput, optFns ...func(*batch.Options)) (*batch.ListConsumableResourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConsumableResources")
+	}
+
+	var r0 *batch.ListConsumableResourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.ListConsumableResourcesInput, ...func(*batch.Options)) (*batch.ListConsumableResourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.ListConsumableResourcesInput, ...func(*batch.Options)) *batch.ListConsumableResourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.ListConsumableResourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.ListConsumableResourcesInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListJobs(ctx context.Context, params *batch.ListJobsInput, optFns ...func(*batch.Options)) (*batch.ListJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +710,43 @@ func (_m *IClient) ListJobs(ctx context.Context, params *batch.ListJobsInput, op
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.ListJobsInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListJobsByConsumableResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListJobsByConsumableResource(ctx context.Context, params *batch.ListJobsByConsumableResourceInput, optFns ...func(*batch.Options)) (*batch.ListJobsByConsumableResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListJobsByConsumableResource")
+	}
+
+	var r0 *batch.ListJobsByConsumableResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.ListJobsByConsumableResourceInput, ...func(*batch.Options)) (*batch.ListJobsByConsumableResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.ListJobsByConsumableResourceInput, ...func(*batch.Options)) *batch.ListJobsByConsumableResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.ListJobsByConsumableResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.ListJobsByConsumableResourceInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -876,6 +1061,43 @@ func (_m *IClient) UpdateComputeEnvironment(ctx context.Context, params *batch.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.UpdateComputeEnvironmentInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConsumableResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConsumableResource(ctx context.Context, params *batch.UpdateConsumableResourceInput, optFns ...func(*batch.Options)) (*batch.UpdateConsumableResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConsumableResource")
+	}
+
+	var r0 *batch.UpdateConsumableResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.UpdateConsumableResourceInput, ...func(*batch.Options)) (*batch.UpdateConsumableResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.UpdateConsumableResourceInput, ...func(*batch.Options)) *batch.UpdateConsumableResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.UpdateConsumableResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.UpdateConsumableResourceInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
