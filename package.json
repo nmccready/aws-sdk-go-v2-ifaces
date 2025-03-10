@@ -17,11 +17,11 @@
     "test:go:tests": "go test ./tests/..."
   },
   "devDependencies": {
-    "@commitlint/cli": "19.7.1",
-    "@commitlint/config-conventional": "19.7.1",
+    "@commitlint/cli": "19.8.0",
+    "@commitlint/config-conventional": "19.8.0",
     "@stdlib/string-pascalcase-cli": "0.2.2",
     "commit-and-tag-version": "12",
     "commitlint": "19",
-    "sort-package-json": "2.14"
+    "sort-package-json": "3.0"
   }
 }
