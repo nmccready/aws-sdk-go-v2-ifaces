@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateConfiguredModelAlgorithm", func(t *testing.T) {
-        input := &cleanroomsml.CreateConfiguredModelAlgorithmInput{}
-        output := &cleanroomsml.CreateConfiguredModelAlgorithmOutput{}
-
-        mockClient.On("CreateConfiguredModelAlgorithm", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateConfiguredModelAlgorithm(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateConfiguredModelAlgorithmAssociation", func(t *testing.T) {
         input := &cleanroomsml.CreateConfiguredModelAlgorithmAssociationInput{}
         output := &cleanroomsml.CreateConfiguredModelAlgorithmAssociationOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConfiguredModelAlgorithm", func(t *testing.T) {
+        input := &cleanroomsml.CreateConfiguredModelAlgorithmInput{}
+        output := &cleanroomsml.CreateConfiguredModelAlgorithmOutput{}
+
+        mockClient.On("CreateConfiguredModelAlgorithm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfiguredModelAlgorithm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteConfiguredModelAlgorithm", func(t *testing.T) {
-        input := &cleanroomsml.DeleteConfiguredModelAlgorithmInput{}
-        output := &cleanroomsml.DeleteConfiguredModelAlgorithmOutput{}
-
-        mockClient.On("DeleteConfiguredModelAlgorithm", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteConfiguredModelAlgorithm(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteConfiguredModelAlgorithmAssociation", func(t *testing.T) {
         input := &cleanroomsml.DeleteConfiguredModelAlgorithmAssociationInput{}
         output := &cleanroomsml.DeleteConfiguredModelAlgorithmAssociationOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConfiguredModelAlgorithm", func(t *testing.T) {
+        input := &cleanroomsml.DeleteConfiguredModelAlgorithmInput{}
+        output := &cleanroomsml.DeleteConfiguredModelAlgorithmOutput{}
+
+        mockClient.On("DeleteConfiguredModelAlgorithm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguredModelAlgorithm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConfiguredModelAlgorithm", func(t *testing.T) {
-        input := &cleanroomsml.GetConfiguredModelAlgorithmInput{}
-        output := &cleanroomsml.GetConfiguredModelAlgorithmOutput{}
-
-        mockClient.On("GetConfiguredModelAlgorithm", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetConfiguredModelAlgorithm(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetConfiguredModelAlgorithmAssociation", func(t *testing.T) {
         input := &cleanroomsml.GetConfiguredModelAlgorithmAssociationInput{}
         output := &cleanroomsml.GetConfiguredModelAlgorithmAssociationOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfiguredModelAlgorithmAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfiguredModelAlgorithmAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfiguredModelAlgorithm", func(t *testing.T) {
+        input := &cleanroomsml.GetConfiguredModelAlgorithmInput{}
+        output := &cleanroomsml.GetConfiguredModelAlgorithmOutput{}
+
+        mockClient.On("GetConfiguredModelAlgorithm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfiguredModelAlgorithm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

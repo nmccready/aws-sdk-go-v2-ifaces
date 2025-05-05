@@ -12,8 +12,8 @@ type IClient interface {
  Options() Options 
  CreateMediaCapturePipeline(ctx context.Context, params *CreateMediaCapturePipelineInput, optFns ...func(*Options)) (*CreateMediaCapturePipelineOutput, error) 
  CreateMediaConcatenationPipeline(ctx context.Context, params *CreateMediaConcatenationPipelineInput, optFns ...func(*Options)) (*CreateMediaConcatenationPipelineOutput, error) 
- CreateMediaInsightsPipeline(ctx context.Context, params *CreateMediaInsightsPipelineInput, optFns ...func(*Options)) (*CreateMediaInsightsPipelineOutput, error) 
  CreateMediaInsightsPipelineConfiguration(ctx context.Context, params *CreateMediaInsightsPipelineConfigurationInput, optFns ...func(*Options)) (*CreateMediaInsightsPipelineConfigurationOutput, error) 
+ CreateMediaInsightsPipeline(ctx context.Context, params *CreateMediaInsightsPipelineInput, optFns ...func(*Options)) (*CreateMediaInsightsPipelineOutput, error) 
  CreateMediaLiveConnectorPipeline(ctx context.Context, params *CreateMediaLiveConnectorPipelineInput, optFns ...func(*Options)) (*CreateMediaLiveConnectorPipelineOutput, error) 
  CreateMediaPipelineKinesisVideoStreamPool(ctx context.Context, params *CreateMediaPipelineKinesisVideoStreamPoolInput, optFns ...func(*Options)) (*CreateMediaPipelineKinesisVideoStreamPoolOutput, error) 
  CreateMediaStreamPipeline(ctx context.Context, params *CreateMediaStreamPipelineInput, optFns ...func(*Options)) (*CreateMediaStreamPipelineOutput, error) 

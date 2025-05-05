@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteService", func(t *testing.T) {
-        input := &servicediscovery.DeleteServiceInput{}
-        output := &servicediscovery.DeleteServiceOutput{}
-
-        mockClient.On("DeleteService", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteService(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteServiceAttributes", func(t *testing.T) {
         input := &servicediscovery.DeleteServiceAttributesInput{}
         output := &servicediscovery.DeleteServiceAttributesOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteServiceAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteServiceAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteService", func(t *testing.T) {
+        input := &servicediscovery.DeleteServiceInput{}
+        output := &servicediscovery.DeleteServiceOutput{}
+
+        mockClient.On("DeleteService", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteService(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetService", func(t *testing.T) {
-        input := &servicediscovery.GetServiceInput{}
-        output := &servicediscovery.GetServiceOutput{}
-
-        mockClient.On("GetService", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetService(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetServiceAttributes", func(t *testing.T) {
         input := &servicediscovery.GetServiceAttributesInput{}
         output := &servicediscovery.GetServiceAttributesOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetServiceAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetServiceAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetService", func(t *testing.T) {
+        input := &servicediscovery.GetServiceInput{}
+        output := &servicediscovery.GetServiceOutput{}
+
+        mockClient.On("GetService", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetService(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateService", func(t *testing.T) {
-        input := &servicediscovery.UpdateServiceInput{}
-        output := &servicediscovery.UpdateServiceOutput{}
-
-        mockClient.On("UpdateService", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateService(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateServiceAttributes", func(t *testing.T) {
         input := &servicediscovery.UpdateServiceAttributesInput{}
         output := &servicediscovery.UpdateServiceAttributesOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateServiceAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateServiceAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateService", func(t *testing.T) {
+        input := &servicediscovery.UpdateServiceInput{}
+        output := &servicediscovery.UpdateServiceOutput{}
+
+        mockClient.On("UpdateService", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateService(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

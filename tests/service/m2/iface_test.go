@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteApplication", func(t *testing.T) {
-        input := &m2.DeleteApplicationInput{}
-        output := &m2.DeleteApplicationOutput{}
-
-        mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteApplication(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteApplicationFromEnvironment", func(t *testing.T) {
         input := &m2.DeleteApplicationFromEnvironmentInput{}
         output := &m2.DeleteApplicationFromEnvironmentOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteApplicationFromEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteApplicationFromEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteApplication", func(t *testing.T) {
+        input := &m2.DeleteApplicationInput{}
+        output := &m2.DeleteApplicationOutput{}
+
+        mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListApplicationVersions", func(t *testing.T) {
-        input := &m2.ListApplicationVersionsInput{}
-        output := &m2.ListApplicationVersionsOutput{}
-
-        mockClient.On("ListApplicationVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListApplicationVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListApplications", func(t *testing.T) {
         input := &m2.ListApplicationsInput{}
         output := &m2.ListApplicationsOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApplicationVersions", func(t *testing.T) {
+        input := &m2.ListApplicationVersionsInput{}
+        output := &m2.ListApplicationVersionsOutput{}
+
+        mockClient.On("ListApplicationVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplicationVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

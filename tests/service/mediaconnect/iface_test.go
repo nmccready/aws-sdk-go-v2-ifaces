@@ -632,19 +632,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateFlow", func(t *testing.T) {
-        input := &mediaconnect.UpdateFlowInput{}
-        output := &mediaconnect.UpdateFlowOutput{}
-
-        mockClient.On("UpdateFlow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateFlow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateFlowEntitlement", func(t *testing.T) {
         input := &mediaconnect.UpdateFlowEntitlementInput{}
         output := &mediaconnect.UpdateFlowEntitlementOutput{}
@@ -652,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateFlowEntitlement", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateFlowEntitlement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateFlow", func(t *testing.T) {
+        input := &mediaconnect.UpdateFlowInput{}
+        output := &mediaconnect.UpdateFlowOutput{}
+
+        mockClient.On("UpdateFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

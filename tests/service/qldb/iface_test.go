@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListJournalS3Exports", func(t *testing.T) {
-        input := &qldb.ListJournalS3ExportsInput{}
-        output := &qldb.ListJournalS3ExportsOutput{}
-
-        mockClient.On("ListJournalS3Exports", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListJournalS3Exports(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListJournalS3ExportsForLedger", func(t *testing.T) {
         input := &qldb.ListJournalS3ExportsForLedgerInput{}
         output := &qldb.ListJournalS3ExportsForLedgerOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJournalS3ExportsForLedger", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJournalS3ExportsForLedger(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJournalS3Exports", func(t *testing.T) {
+        input := &qldb.ListJournalS3ExportsInput{}
+        output := &qldb.ListJournalS3ExportsOutput{}
+
+        mockClient.On("ListJournalS3Exports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJournalS3Exports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

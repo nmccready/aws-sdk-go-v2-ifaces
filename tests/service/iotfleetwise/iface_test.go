@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDecoderManifestSignals", func(t *testing.T) {
-        input := &iotfleetwise.ListDecoderManifestSignalsInput{}
-        output := &iotfleetwise.ListDecoderManifestSignalsOutput{}
-
-        mockClient.On("ListDecoderManifestSignals", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDecoderManifestSignals(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDecoderManifests", func(t *testing.T) {
         input := &iotfleetwise.ListDecoderManifestsInput{}
         output := &iotfleetwise.ListDecoderManifestsOutput{}
@@ -489,13 +476,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFleets", func(t *testing.T) {
-        input := &iotfleetwise.ListFleetsInput{}
-        output := &iotfleetwise.ListFleetsOutput{}
+    t.Run("TestListDecoderManifestSignals", func(t *testing.T) {
+        input := &iotfleetwise.ListDecoderManifestSignalsInput{}
+        output := &iotfleetwise.ListDecoderManifestSignalsOutput{}
 
-        mockClient.On("ListFleets", ctx, input).Return(output, nil)
+        mockClient.On("ListDecoderManifestSignals", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListFleets(ctx, input)
+        result, err := mockClient.ListDecoderManifestSignals(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFleetsForVehicle", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFleetsForVehicle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFleets", func(t *testing.T) {
+        input := &iotfleetwise.ListFleetsInput{}
+        output := &iotfleetwise.ListFleetsOutput{}
+
+        mockClient.On("ListFleets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFleets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

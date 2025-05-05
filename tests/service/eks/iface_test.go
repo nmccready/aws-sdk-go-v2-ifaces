@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAddon", func(t *testing.T) {
-        input := &eks.DescribeAddonInput{}
-        output := &eks.DescribeAddonOutput{}
-
-        mockClient.On("DescribeAddon", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAddon(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeAddonConfiguration", func(t *testing.T) {
         input := &eks.DescribeAddonConfigurationInput{}
         output := &eks.DescribeAddonConfigurationOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAddonConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAddonConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAddon", func(t *testing.T) {
+        input := &eks.DescribeAddonInput{}
+        output := &eks.DescribeAddonOutput{}
+
+        mockClient.On("DescribeAddon", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAddon(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

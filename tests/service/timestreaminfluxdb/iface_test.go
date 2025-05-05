@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDbInstances", func(t *testing.T) {
-        input := &timestreaminfluxdb.ListDbInstancesInput{}
-        output := &timestreaminfluxdb.ListDbInstancesOutput{}
-
-        mockClient.On("ListDbInstances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDbInstances(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDbInstancesForCluster", func(t *testing.T) {
         input := &timestreaminfluxdb.ListDbInstancesForClusterInput{}
         output := &timestreaminfluxdb.ListDbInstancesForClusterOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDbInstancesForCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDbInstancesForCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDbInstances", func(t *testing.T) {
+        input := &timestreaminfluxdb.ListDbInstancesInput{}
+        output := &timestreaminfluxdb.ListDbInstancesOutput{}
+
+        mockClient.On("ListDbInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDbInstances(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

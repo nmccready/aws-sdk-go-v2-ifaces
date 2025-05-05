@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDBCluster", func(t *testing.T) {
-        input := &rds.CreateDBClusterInput{}
-        output := &rds.CreateDBClusterOutput{}
-
-        mockClient.On("CreateDBCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDBCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDBClusterEndpoint", func(t *testing.T) {
         input := &rds.CreateDBClusterEndpointInput{}
         output := &rds.CreateDBClusterEndpointOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDBClusterEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDBClusterEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDBCluster", func(t *testing.T) {
+        input := &rds.CreateDBClusterInput{}
+        output := &rds.CreateDBClusterOutput{}
+
+        mockClient.On("CreateDBCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDBCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDBProxy", func(t *testing.T) {
-        input := &rds.CreateDBProxyInput{}
-        output := &rds.CreateDBProxyOutput{}
-
-        mockClient.On("CreateDBProxy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDBProxy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDBProxyEndpoint", func(t *testing.T) {
         input := &rds.CreateDBProxyEndpointInput{}
         output := &rds.CreateDBProxyEndpointOutput{}
@@ -340,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDBProxyEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDBProxyEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDBProxy", func(t *testing.T) {
+        input := &rds.CreateDBProxyInput{}
+        output := &rds.CreateDBProxyOutput{}
+
+        mockClient.On("CreateDBProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDBProxy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,19 +489,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDBCluster", func(t *testing.T) {
-        input := &rds.DeleteDBClusterInput{}
-        output := &rds.DeleteDBClusterOutput{}
-
-        mockClient.On("DeleteDBCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDBCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDBClusterAutomatedBackup", func(t *testing.T) {
         input := &rds.DeleteDBClusterAutomatedBackupInput{}
         output := &rds.DeleteDBClusterAutomatedBackupOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDBClusterEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDBClusterEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDBCluster", func(t *testing.T) {
+        input := &rds.DeleteDBClusterInput{}
+        output := &rds.DeleteDBClusterOutput{}
+
+        mockClient.On("DeleteDBCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDBCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,19 +554,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDBInstance", func(t *testing.T) {
-        input := &rds.DeleteDBInstanceInput{}
-        output := &rds.DeleteDBInstanceOutput{}
-
-        mockClient.On("DeleteDBInstance", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDBInstance(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDBInstanceAutomatedBackup", func(t *testing.T) {
         input := &rds.DeleteDBInstanceAutomatedBackupInput{}
         output := &rds.DeleteDBInstanceAutomatedBackupOutput{}
@@ -574,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDBInstanceAutomatedBackup", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDBInstanceAutomatedBackup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDBInstance", func(t *testing.T) {
+        input := &rds.DeleteDBInstanceInput{}
+        output := &rds.DeleteDBInstanceOutput{}
+
+        mockClient.On("DeleteDBInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDBInstance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,19 +593,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDBProxy", func(t *testing.T) {
-        input := &rds.DeleteDBProxyInput{}
-        output := &rds.DeleteDBProxyOutput{}
-
-        mockClient.On("DeleteDBProxy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDBProxy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDBProxyEndpoint", func(t *testing.T) {
         input := &rds.DeleteDBProxyEndpointInput{}
         output := &rds.DeleteDBProxyEndpointOutput{}
@@ -613,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDBProxyEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDBProxyEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDBProxy", func(t *testing.T) {
+        input := &rds.DeleteDBProxyInput{}
+        output := &rds.DeleteDBProxyOutput{}
+
+        mockClient.On("DeleteDBProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDBProxy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDBClusters", func(t *testing.T) {
+        input := &rds.DescribeDBClustersInput{}
+        output := &rds.DescribeDBClustersOutput{}
+
+        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDBClusterSnapshotAttributes", func(t *testing.T) {
         input := &rds.DescribeDBClusterSnapshotAttributesInput{}
         output := &rds.DescribeDBClusterSnapshotAttributesOutput{}
@@ -873,19 +886,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDBClusterSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDBClusterSnapshots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeDBClusters", func(t *testing.T) {
-        input := &rds.DescribeDBClustersInput{}
-        output := &rds.DescribeDBClustersOutput{}
-
-        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDBClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1074,19 +1074,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDBSnapshotTenantDatabases", func(t *testing.T) {
-        input := &rds.DescribeDBSnapshotTenantDatabasesInput{}
-        output := &rds.DescribeDBSnapshotTenantDatabasesOutput{}
-
-        mockClient.On("DescribeDBSnapshotTenantDatabases", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDBSnapshotTenantDatabases(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeDBSnapshots", func(t *testing.T) {
         input := &rds.DescribeDBSnapshotsInput{}
         output := &rds.DescribeDBSnapshotsOutput{}
@@ -1094,6 +1081,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDBSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDBSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDBSnapshotTenantDatabases", func(t *testing.T) {
+        input := &rds.DescribeDBSnapshotTenantDatabasesInput{}
+        output := &rds.DescribeDBSnapshotTenantDatabasesOutput{}
+
+        mockClient.On("DescribeDBSnapshotTenantDatabases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBSnapshotTenantDatabases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,19 +1152,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
-        input := &rds.DescribeEventSubscriptionsInput{}
-        output := &rds.DescribeEventSubscriptionsOutput{}
-
-        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &rds.DescribeEventsInput{}
         output := &rds.DescribeEventsOutput{}
@@ -1172,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
+        input := &rds.DescribeEventSubscriptionsInput{}
+        output := &rds.DescribeEventSubscriptionsOutput{}
+
+        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1464,19 +1464,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyDBCluster", func(t *testing.T) {
-        input := &rds.ModifyDBClusterInput{}
-        output := &rds.ModifyDBClusterOutput{}
-
-        mockClient.On("ModifyDBCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyDBCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyDBClusterEndpoint", func(t *testing.T) {
         input := &rds.ModifyDBClusterEndpointInput{}
         output := &rds.ModifyDBClusterEndpointOutput{}
@@ -1484,6 +1471,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyDBClusterEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyDBClusterEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyDBCluster", func(t *testing.T) {
+        input := &rds.ModifyDBClusterInput{}
+        output := &rds.ModifyDBClusterOutput{}
+
+        mockClient.On("ModifyDBCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyDBCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1542,19 +1542,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyDBProxy", func(t *testing.T) {
-        input := &rds.ModifyDBProxyInput{}
-        output := &rds.ModifyDBProxyOutput{}
-
-        mockClient.On("ModifyDBProxy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyDBProxy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyDBProxyEndpoint", func(t *testing.T) {
         input := &rds.ModifyDBProxyEndpointInput{}
         output := &rds.ModifyDBProxyEndpointOutput{}
@@ -1562,6 +1549,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyDBProxyEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyDBProxyEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyDBProxy", func(t *testing.T) {
+        input := &rds.ModifyDBProxyInput{}
+        output := &rds.ModifyDBProxyOutput{}
+
+        mockClient.On("ModifyDBProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyDBProxy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1607,19 +1607,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyDBSnapshot", func(t *testing.T) {
-        input := &rds.ModifyDBSnapshotInput{}
-        output := &rds.ModifyDBSnapshotOutput{}
-
-        mockClient.On("ModifyDBSnapshot", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyDBSnapshot(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyDBSnapshotAttribute", func(t *testing.T) {
         input := &rds.ModifyDBSnapshotAttributeInput{}
         output := &rds.ModifyDBSnapshotAttributeOutput{}
@@ -1627,6 +1614,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyDBSnapshotAttribute", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyDBSnapshotAttribute(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyDBSnapshot", func(t *testing.T) {
+        input := &rds.ModifyDBSnapshotInput{}
+        output := &rds.ModifyDBSnapshotOutput{}
+
+        mockClient.On("ModifyDBSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyDBSnapshot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1711,19 +1711,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPromoteReadReplica", func(t *testing.T) {
-        input := &rds.PromoteReadReplicaInput{}
-        output := &rds.PromoteReadReplicaOutput{}
-
-        mockClient.On("PromoteReadReplica", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PromoteReadReplica(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPromoteReadReplicaDBCluster", func(t *testing.T) {
         input := &rds.PromoteReadReplicaDBClusterInput{}
         output := &rds.PromoteReadReplicaDBClusterOutput{}
@@ -1731,6 +1718,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PromoteReadReplicaDBCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.PromoteReadReplicaDBCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPromoteReadReplica", func(t *testing.T) {
+        input := &rds.PromoteReadReplicaInput{}
+        output := &rds.PromoteReadReplicaOutput{}
+
+        mockClient.On("PromoteReadReplica", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PromoteReadReplica(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2010,19 +2010,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartDBInstance", func(t *testing.T) {
-        input := &rds.StartDBInstanceInput{}
-        output := &rds.StartDBInstanceOutput{}
-
-        mockClient.On("StartDBInstance", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StartDBInstance(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStartDBInstanceAutomatedBackupsReplication", func(t *testing.T) {
         input := &rds.StartDBInstanceAutomatedBackupsReplicationInput{}
         output := &rds.StartDBInstanceAutomatedBackupsReplicationOutput{}
@@ -2030,6 +2017,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartDBInstanceAutomatedBackupsReplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartDBInstanceAutomatedBackupsReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDBInstance", func(t *testing.T) {
+        input := &rds.StartDBInstanceInput{}
+        output := &rds.StartDBInstanceOutput{}
+
+        mockClient.On("StartDBInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDBInstance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2075,19 +2075,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStopDBInstance", func(t *testing.T) {
-        input := &rds.StopDBInstanceInput{}
-        output := &rds.StopDBInstanceOutput{}
-
-        mockClient.On("StopDBInstance", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StopDBInstance(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStopDBInstanceAutomatedBackupsReplication", func(t *testing.T) {
         input := &rds.StopDBInstanceAutomatedBackupsReplicationInput{}
         output := &rds.StopDBInstanceAutomatedBackupsReplicationOutput{}
@@ -2095,6 +2082,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopDBInstanceAutomatedBackupsReplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopDBInstanceAutomatedBackupsReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopDBInstance", func(t *testing.T) {
+        input := &rds.StopDBInstanceInput{}
+        output := &rds.StopDBInstanceOutput{}
+
+        mockClient.On("StopDBInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopDBInstance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateCertificateAuthority", func(t *testing.T) {
-        input := &acmpca.CreateCertificateAuthorityInput{}
-        output := &acmpca.CreateCertificateAuthorityOutput{}
-
-        mockClient.On("CreateCertificateAuthority", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateCertificateAuthority(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateCertificateAuthorityAuditReport", func(t *testing.T) {
         input := &acmpca.CreateCertificateAuthorityAuditReportInput{}
         output := &acmpca.CreateCertificateAuthorityAuditReportOutput{}
@@ -54,6 +41,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCertificateAuthorityAuditReport", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCertificateAuthorityAuditReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCertificateAuthority", func(t *testing.T) {
+        input := &acmpca.CreateCertificateAuthorityInput{}
+        output := &acmpca.CreateCertificateAuthorityOutput{}
+
+        mockClient.On("CreateCertificateAuthority", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCertificateAuthority(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeCertificateAuthority", func(t *testing.T) {
-        input := &acmpca.DescribeCertificateAuthorityInput{}
-        output := &acmpca.DescribeCertificateAuthorityOutput{}
-
-        mockClient.On("DescribeCertificateAuthority", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeCertificateAuthority(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeCertificateAuthorityAuditReport", func(t *testing.T) {
         input := &acmpca.DescribeCertificateAuthorityAuditReportInput{}
         output := &acmpca.DescribeCertificateAuthorityAuditReportOutput{}
@@ -138,13 +125,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCertificate", func(t *testing.T) {
-        input := &acmpca.GetCertificateInput{}
-        output := &acmpca.GetCertificateOutput{}
+    t.Run("TestDescribeCertificateAuthority", func(t *testing.T) {
+        input := &acmpca.DescribeCertificateAuthorityInput{}
+        output := &acmpca.DescribeCertificateAuthorityOutput{}
 
-        mockClient.On("GetCertificate", ctx, input).Return(output, nil)
+        mockClient.On("DescribeCertificateAuthority", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetCertificate(ctx, input)
+        result, err := mockClient.DescribeCertificateAuthority(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCertificateAuthorityCsr", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCertificateAuthorityCsr(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCertificate", func(t *testing.T) {
+        input := &acmpca.GetCertificateInput{}
+        output := &acmpca.GetCertificateOutput{}
+
+        mockClient.On("GetCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCertificate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

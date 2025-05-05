@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAdapterVersions", func(t *testing.T) {
-        input := &textract.ListAdapterVersionsInput{}
-        output := &textract.ListAdapterVersionsOutput{}
-
-        mockClient.On("ListAdapterVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAdapterVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAdapters", func(t *testing.T) {
         input := &textract.ListAdaptersInput{}
         output := &textract.ListAdaptersOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAdapters", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAdapters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAdapterVersions", func(t *testing.T) {
+        input := &textract.ListAdapterVersionsInput{}
+        output := &textract.ListAdapterVersionsOutput{}
+
+        mockClient.On("ListAdapterVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAdapterVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

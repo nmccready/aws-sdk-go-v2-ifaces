@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAssistant", func(t *testing.T) {
-        input := &wisdom.CreateAssistantInput{}
-        output := &wisdom.CreateAssistantOutput{}
-
-        mockClient.On("CreateAssistant", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAssistant(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAssistantAssociation", func(t *testing.T) {
         input := &wisdom.CreateAssistantAssociationInput{}
         output := &wisdom.CreateAssistantAssociationOutput{}
@@ -54,6 +41,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAssistantAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAssistantAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAssistant", func(t *testing.T) {
+        input := &wisdom.CreateAssistantInput{}
+        output := &wisdom.CreateAssistantOutput{}
+
+        mockClient.On("CreateAssistant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssistant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAssistant", func(t *testing.T) {
-        input := &wisdom.DeleteAssistantInput{}
-        output := &wisdom.DeleteAssistantOutput{}
-
-        mockClient.On("DeleteAssistant", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAssistant(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAssistantAssociation", func(t *testing.T) {
         input := &wisdom.DeleteAssistantAssociationInput{}
         output := &wisdom.DeleteAssistantAssociationOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAssistantAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAssistantAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAssistant", func(t *testing.T) {
+        input := &wisdom.DeleteAssistantInput{}
+        output := &wisdom.DeleteAssistantOutput{}
+
+        mockClient.On("DeleteAssistant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssistant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAssistant", func(t *testing.T) {
-        input := &wisdom.GetAssistantInput{}
-        output := &wisdom.GetAssistantOutput{}
-
-        mockClient.On("GetAssistant", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAssistant(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAssistantAssociation", func(t *testing.T) {
         input := &wisdom.GetAssistantAssociationInput{}
         output := &wisdom.GetAssistantAssociationOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAssistantAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAssistantAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAssistant", func(t *testing.T) {
+        input := &wisdom.GetAssistantInput{}
+        output := &wisdom.GetAssistantOutput{}
+
+        mockClient.On("GetAssistant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAssistant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

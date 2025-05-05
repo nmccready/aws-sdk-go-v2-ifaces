@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDataLake", func(t *testing.T) {
-        input := &securitylake.CreateDataLakeInput{}
-        output := &securitylake.CreateDataLakeOutput{}
-
-        mockClient.On("CreateDataLake", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDataLake(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDataLakeExceptionSubscription", func(t *testing.T) {
         input := &securitylake.CreateDataLakeExceptionSubscriptionInput{}
         output := &securitylake.CreateDataLakeExceptionSubscriptionOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDataLakeExceptionSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDataLakeExceptionSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataLake", func(t *testing.T) {
+        input := &securitylake.CreateDataLakeInput{}
+        output := &securitylake.CreateDataLakeOutput{}
+
+        mockClient.On("CreateDataLake", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataLake(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDataLake", func(t *testing.T) {
-        input := &securitylake.DeleteDataLakeInput{}
-        output := &securitylake.DeleteDataLakeOutput{}
-
-        mockClient.On("DeleteDataLake", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDataLake(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDataLakeExceptionSubscription", func(t *testing.T) {
         input := &securitylake.DeleteDataLakeExceptionSubscriptionInput{}
         output := &securitylake.DeleteDataLakeExceptionSubscriptionOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDataLakeExceptionSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDataLakeExceptionSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataLake", func(t *testing.T) {
+        input := &securitylake.DeleteDataLakeInput{}
+        output := &securitylake.DeleteDataLakeOutput{}
+
+        mockClient.On("DeleteDataLake", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataLake(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateDataLake", func(t *testing.T) {
-        input := &securitylake.UpdateDataLakeInput{}
-        output := &securitylake.UpdateDataLakeOutput{}
-
-        mockClient.On("UpdateDataLake", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateDataLake(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateDataLakeExceptionSubscription", func(t *testing.T) {
         input := &securitylake.UpdateDataLakeExceptionSubscriptionInput{}
         output := &securitylake.UpdateDataLakeExceptionSubscriptionOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDataLakeExceptionSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDataLakeExceptionSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataLake", func(t *testing.T) {
+        input := &securitylake.UpdateDataLakeInput{}
+        output := &securitylake.UpdateDataLakeOutput{}
+
+        mockClient.On("UpdateDataLake", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataLake(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

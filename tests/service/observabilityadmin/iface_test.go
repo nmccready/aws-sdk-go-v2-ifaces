@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTelemetryEvaluationStatus", func(t *testing.T) {
-        input := &observabilityadmin.GetTelemetryEvaluationStatusInput{}
-        output := &observabilityadmin.GetTelemetryEvaluationStatusOutput{}
-
-        mockClient.On("GetTelemetryEvaluationStatus", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTelemetryEvaluationStatus(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetTelemetryEvaluationStatusForOrganization", func(t *testing.T) {
         input := &observabilityadmin.GetTelemetryEvaluationStatusForOrganizationInput{}
         output := &observabilityadmin.GetTelemetryEvaluationStatusForOrganizationOutput{}
@@ -60,13 +47,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListResourceTelemetry", func(t *testing.T) {
-        input := &observabilityadmin.ListResourceTelemetryInput{}
-        output := &observabilityadmin.ListResourceTelemetryOutput{}
+    t.Run("TestGetTelemetryEvaluationStatus", func(t *testing.T) {
+        input := &observabilityadmin.GetTelemetryEvaluationStatusInput{}
+        output := &observabilityadmin.GetTelemetryEvaluationStatusOutput{}
 
-        mockClient.On("ListResourceTelemetry", ctx, input).Return(output, nil)
+        mockClient.On("GetTelemetryEvaluationStatus", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListResourceTelemetry(ctx, input)
+        result, err := mockClient.GetTelemetryEvaluationStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,13 +73,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartTelemetryEvaluation", func(t *testing.T) {
-        input := &observabilityadmin.StartTelemetryEvaluationInput{}
-        output := &observabilityadmin.StartTelemetryEvaluationOutput{}
+    t.Run("TestListResourceTelemetry", func(t *testing.T) {
+        input := &observabilityadmin.ListResourceTelemetryInput{}
+        output := &observabilityadmin.ListResourceTelemetryOutput{}
 
-        mockClient.On("StartTelemetryEvaluation", ctx, input).Return(output, nil)
+        mockClient.On("ListResourceTelemetry", ctx, input).Return(output, nil)
 
-        result, err := mockClient.StartTelemetryEvaluation(ctx, input)
+        result, err := mockClient.ListResourceTelemetry(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,13 +99,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStopTelemetryEvaluation", func(t *testing.T) {
-        input := &observabilityadmin.StopTelemetryEvaluationInput{}
-        output := &observabilityadmin.StopTelemetryEvaluationOutput{}
+    t.Run("TestStartTelemetryEvaluation", func(t *testing.T) {
+        input := &observabilityadmin.StartTelemetryEvaluationInput{}
+        output := &observabilityadmin.StartTelemetryEvaluationOutput{}
 
-        mockClient.On("StopTelemetryEvaluation", ctx, input).Return(output, nil)
+        mockClient.On("StartTelemetryEvaluation", ctx, input).Return(output, nil)
 
-        result, err := mockClient.StopTelemetryEvaluation(ctx, input)
+        result, err := mockClient.StartTelemetryEvaluation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopTelemetryEvaluationForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopTelemetryEvaluationForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopTelemetryEvaluation", func(t *testing.T) {
+        input := &observabilityadmin.StopTelemetryEvaluationInput{}
+        output := &observabilityadmin.StopTelemetryEvaluationOutput{}
+
+        mockClient.On("StopTelemetryEvaluation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopTelemetryEvaluation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

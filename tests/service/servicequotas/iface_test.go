@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAWSDefaultServiceQuota", func(t *testing.T) {
-        input := &servicequotas.GetAWSDefaultServiceQuotaInput{}
-        output := &servicequotas.GetAWSDefaultServiceQuotaOutput{}
-
-        mockClient.On("GetAWSDefaultServiceQuota", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAWSDefaultServiceQuota(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAssociationForServiceQuotaTemplate", func(t *testing.T) {
         input := &servicequotas.GetAssociationForServiceQuotaTemplateInput{}
         output := &servicequotas.GetAssociationForServiceQuotaTemplateOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAssociationForServiceQuotaTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAssociationForServiceQuotaTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAWSDefaultServiceQuota", func(t *testing.T) {
+        input := &servicequotas.GetAWSDefaultServiceQuotaInput{}
+        output := &servicequotas.GetAWSDefaultServiceQuotaOutput{}
+
+        mockClient.On("GetAWSDefaultServiceQuota", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAWSDefaultServiceQuota(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRequestedServiceQuotaChangeHistory", func(t *testing.T) {
-        input := &servicequotas.ListRequestedServiceQuotaChangeHistoryInput{}
-        output := &servicequotas.ListRequestedServiceQuotaChangeHistoryOutput{}
-
-        mockClient.On("ListRequestedServiceQuotaChangeHistory", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRequestedServiceQuotaChangeHistory(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRequestedServiceQuotaChangeHistoryByQuota", func(t *testing.T) {
         input := &servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput{}
         output := &servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRequestedServiceQuotaChangeHistoryByQuota", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRequestedServiceQuotaChangeHistoryByQuota(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRequestedServiceQuotaChangeHistory", func(t *testing.T) {
+        input := &servicequotas.ListRequestedServiceQuotaChangeHistoryInput{}
+        output := &servicequotas.ListRequestedServiceQuotaChangeHistoryOutput{}
+
+        mockClient.On("ListRequestedServiceQuotaChangeHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRequestedServiceQuotaChangeHistory(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

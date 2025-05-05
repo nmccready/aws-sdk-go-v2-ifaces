@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateChannel", func(t *testing.T) {
-        input := &chimesdkmessaging.CreateChannelInput{}
-        output := &chimesdkmessaging.CreateChannelOutput{}
-
-        mockClient.On("CreateChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateChannelBan", func(t *testing.T) {
         input := &chimesdkmessaging.CreateChannelBanInput{}
         output := &chimesdkmessaging.CreateChannelBanOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateChannelFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateChannelFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateChannel", func(t *testing.T) {
+        input := &chimesdkmessaging.CreateChannelInput{}
+        output := &chimesdkmessaging.CreateChannelOutput{}
+
+        mockClient.On("CreateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteChannel", func(t *testing.T) {
-        input := &chimesdkmessaging.DeleteChannelInput{}
-        output := &chimesdkmessaging.DeleteChannelOutput{}
-
-        mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteChannelBan", func(t *testing.T) {
         input := &chimesdkmessaging.DeleteChannelBanInput{}
         output := &chimesdkmessaging.DeleteChannelBanOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteChannelFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteChannelFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteChannel", func(t *testing.T) {
+        input := &chimesdkmessaging.DeleteChannelInput{}
+        output := &chimesdkmessaging.DeleteChannelOutput{}
+
+        mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeChannel", func(t *testing.T) {
-        input := &chimesdkmessaging.DescribeChannelInput{}
-        output := &chimesdkmessaging.DescribeChannelOutput{}
-
-        mockClient.On("DescribeChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeChannelBan", func(t *testing.T) {
         input := &chimesdkmessaging.DescribeChannelBanInput{}
         output := &chimesdkmessaging.DescribeChannelBanOutput{}
@@ -268,13 +255,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeChannelMembership", func(t *testing.T) {
-        input := &chimesdkmessaging.DescribeChannelMembershipInput{}
-        output := &chimesdkmessaging.DescribeChannelMembershipOutput{}
+    t.Run("TestDescribeChannel", func(t *testing.T) {
+        input := &chimesdkmessaging.DescribeChannelInput{}
+        output := &chimesdkmessaging.DescribeChannelOutput{}
 
-        mockClient.On("DescribeChannelMembership", ctx, input).Return(output, nil)
+        mockClient.On("DescribeChannel", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeChannelMembership(ctx, input)
+        result, err := mockClient.DescribeChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeChannelMembershipForAppInstanceUser", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeChannelMembershipForAppInstanceUser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeChannelMembership", func(t *testing.T) {
+        input := &chimesdkmessaging.DescribeChannelMembershipInput{}
+        output := &chimesdkmessaging.DescribeChannelMembershipOutput{}
+
+        mockClient.On("DescribeChannelMembership", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeChannelMembership(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListChannelMemberships", func(t *testing.T) {
-        input := &chimesdkmessaging.ListChannelMembershipsInput{}
-        output := &chimesdkmessaging.ListChannelMembershipsOutput{}
-
-        mockClient.On("ListChannelMemberships", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListChannelMemberships(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListChannelMembershipsForAppInstanceUser", func(t *testing.T) {
         input := &chimesdkmessaging.ListChannelMembershipsForAppInstanceUserInput{}
         output := &chimesdkmessaging.ListChannelMembershipsForAppInstanceUserOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListChannelMembershipsForAppInstanceUser", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListChannelMembershipsForAppInstanceUser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannelMemberships", func(t *testing.T) {
+        input := &chimesdkmessaging.ListChannelMembershipsInput{}
+        output := &chimesdkmessaging.ListChannelMembershipsOutput{}
+
+        mockClient.On("ListChannelMemberships", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannelMemberships(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListChannels", func(t *testing.T) {
-        input := &chimesdkmessaging.ListChannelsInput{}
-        output := &chimesdkmessaging.ListChannelsOutput{}
-
-        mockClient.On("ListChannels", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListChannels(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListChannelsAssociatedWithChannelFlow", func(t *testing.T) {
         input := &chimesdkmessaging.ListChannelsAssociatedWithChannelFlowInput{}
         output := &chimesdkmessaging.ListChannelsAssociatedWithChannelFlowOutput{}
@@ -496,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListChannelsAssociatedWithChannelFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListChannelsAssociatedWithChannelFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannels", func(t *testing.T) {
+        input := &chimesdkmessaging.ListChannelsInput{}
+        output := &chimesdkmessaging.ListChannelsOutput{}
+
+        mockClient.On("ListChannels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,19 +645,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateChannel", func(t *testing.T) {
-        input := &chimesdkmessaging.UpdateChannelInput{}
-        output := &chimesdkmessaging.UpdateChannelOutput{}
-
-        mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateChannelFlow", func(t *testing.T) {
         input := &chimesdkmessaging.UpdateChannelFlowInput{}
         output := &chimesdkmessaging.UpdateChannelFlowOutput{}
@@ -665,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateChannelFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateChannelFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChannel", func(t *testing.T) {
+        input := &chimesdkmessaging.UpdateChannelInput{}
+        output := &chimesdkmessaging.UpdateChannelOutput{}
+
+        mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

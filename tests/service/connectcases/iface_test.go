@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCase", func(t *testing.T) {
-        input := &connectcases.GetCaseInput{}
-        output := &connectcases.GetCaseOutput{}
-
-        mockClient.On("GetCase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCase(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCaseAuditEvents", func(t *testing.T) {
         input := &connectcases.GetCaseAuditEventsInput{}
         output := &connectcases.GetCaseAuditEventsOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCaseEventConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCaseEventConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCase", func(t *testing.T) {
+        input := &connectcases.GetCaseInput{}
+        output := &connectcases.GetCaseOutput{}
+
+        mockClient.On("GetCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

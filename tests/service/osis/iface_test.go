@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetPipeline", func(t *testing.T) {
-        input := &osis.GetPipelineInput{}
-        output := &osis.GetPipelineOutput{}
-
-        mockClient.On("GetPipeline", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetPipeline(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetPipelineBlueprint", func(t *testing.T) {
         input := &osis.GetPipelineBlueprintInput{}
         output := &osis.GetPipelineBlueprintOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPipelineChangeProgress", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPipelineChangeProgress(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPipeline", func(t *testing.T) {
+        input := &osis.GetPipelineInput{}
+        output := &osis.GetPipelineOutput{}
+
+        mockClient.On("GetPipeline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPipeline(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

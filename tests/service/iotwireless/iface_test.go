@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateWirelessGatewayTask", func(t *testing.T) {
-        input := &iotwireless.CreateWirelessGatewayTaskInput{}
-        output := &iotwireless.CreateWirelessGatewayTaskOutput{}
-
-        mockClient.On("CreateWirelessGatewayTask", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateWirelessGatewayTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateWirelessGatewayTaskDefinition", func(t *testing.T) {
         input := &iotwireless.CreateWirelessGatewayTaskDefinitionInput{}
         output := &iotwireless.CreateWirelessGatewayTaskDefinitionOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateWirelessGatewayTaskDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateWirelessGatewayTaskDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWirelessGatewayTask", func(t *testing.T) {
+        input := &iotwireless.CreateWirelessGatewayTaskInput{}
+        output := &iotwireless.CreateWirelessGatewayTaskOutput{}
+
+        mockClient.On("CreateWirelessGatewayTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWirelessGatewayTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteWirelessGatewayTask", func(t *testing.T) {
-        input := &iotwireless.DeleteWirelessGatewayTaskInput{}
-        output := &iotwireless.DeleteWirelessGatewayTaskOutput{}
-
-        mockClient.On("DeleteWirelessGatewayTask", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteWirelessGatewayTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteWirelessGatewayTaskDefinition", func(t *testing.T) {
         input := &iotwireless.DeleteWirelessGatewayTaskDefinitionInput{}
         output := &iotwireless.DeleteWirelessGatewayTaskDefinitionOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWirelessGatewayTaskDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWirelessGatewayTaskDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWirelessGatewayTask", func(t *testing.T) {
+        input := &iotwireless.DeleteWirelessGatewayTaskInput{}
+        output := &iotwireless.DeleteWirelessGatewayTaskOutput{}
+
+        mockClient.On("DeleteWirelessGatewayTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWirelessGatewayTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -671,19 +671,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetPosition", func(t *testing.T) {
-        input := &iotwireless.GetPositionInput{}
-        output := &iotwireless.GetPositionOutput{}
-
-        mockClient.On("GetPosition", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetPosition(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetPositionConfiguration", func(t *testing.T) {
         input := &iotwireless.GetPositionConfigurationInput{}
         output := &iotwireless.GetPositionConfigurationOutput{}
@@ -704,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPositionEstimate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPositionEstimate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPosition", func(t *testing.T) {
+        input := &iotwireless.GetPositionInput{}
+        output := &iotwireless.GetPositionOutput{}
+
+        mockClient.On("GetPosition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPosition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,19 +814,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetWirelessGateway", func(t *testing.T) {
-        input := &iotwireless.GetWirelessGatewayInput{}
-        output := &iotwireless.GetWirelessGatewayOutput{}
-
-        mockClient.On("GetWirelessGateway", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetWirelessGateway(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetWirelessGatewayCertificate", func(t *testing.T) {
         input := &iotwireless.GetWirelessGatewayCertificateInput{}
         output := &iotwireless.GetWirelessGatewayCertificateOutput{}
@@ -853,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetWirelessGateway", func(t *testing.T) {
+        input := &iotwireless.GetWirelessGatewayInput{}
+        output := &iotwireless.GetWirelessGatewayOutput{}
+
+        mockClient.On("GetWirelessGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWirelessGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWirelessGatewayStatistics", func(t *testing.T) {
         input := &iotwireless.GetWirelessGatewayStatisticsInput{}
         output := &iotwireless.GetWirelessGatewayStatisticsOutput{}
@@ -866,19 +866,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetWirelessGatewayTask", func(t *testing.T) {
-        input := &iotwireless.GetWirelessGatewayTaskInput{}
-        output := &iotwireless.GetWirelessGatewayTaskOutput{}
-
-        mockClient.On("GetWirelessGatewayTask", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetWirelessGatewayTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetWirelessGatewayTaskDefinition", func(t *testing.T) {
         input := &iotwireless.GetWirelessGatewayTaskDefinitionInput{}
         output := &iotwireless.GetWirelessGatewayTaskDefinitionOutput{}
@@ -886,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetWirelessGatewayTaskDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetWirelessGatewayTaskDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWirelessGatewayTask", func(t *testing.T) {
+        input := &iotwireless.GetWirelessGatewayTaskInput{}
+        output := &iotwireless.GetWirelessGatewayTaskOutput{}
+
+        mockClient.On("GetWirelessGatewayTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWirelessGatewayTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,19 +957,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMulticastGroups", func(t *testing.T) {
-        input := &iotwireless.ListMulticastGroupsInput{}
-        output := &iotwireless.ListMulticastGroupsOutput{}
-
-        mockClient.On("ListMulticastGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListMulticastGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListMulticastGroupsByFuotaTask", func(t *testing.T) {
         input := &iotwireless.ListMulticastGroupsByFuotaTaskInput{}
         output := &iotwireless.ListMulticastGroupsByFuotaTaskOutput{}
@@ -977,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListMulticastGroupsByFuotaTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListMulticastGroupsByFuotaTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMulticastGroups", func(t *testing.T) {
+        input := &iotwireless.ListMulticastGroupsInput{}
+        output := &iotwireless.ListMulticastGroupsOutput{}
+
+        mockClient.On("ListMulticastGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMulticastGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1087,19 +1087,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWirelessGatewayTaskDefinitions", func(t *testing.T) {
-        input := &iotwireless.ListWirelessGatewayTaskDefinitionsInput{}
-        output := &iotwireless.ListWirelessGatewayTaskDefinitionsOutput{}
-
-        mockClient.On("ListWirelessGatewayTaskDefinitions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWirelessGatewayTaskDefinitions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWirelessGateways", func(t *testing.T) {
         input := &iotwireless.ListWirelessGatewaysInput{}
         output := &iotwireless.ListWirelessGatewaysOutput{}
@@ -1107,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWirelessGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWirelessGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWirelessGatewayTaskDefinitions", func(t *testing.T) {
+        input := &iotwireless.ListWirelessGatewayTaskDefinitionsInput{}
+        output := &iotwireless.ListWirelessGatewayTaskDefinitionsOutput{}
+
+        mockClient.On("ListWirelessGatewayTaskDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWirelessGatewayTaskDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

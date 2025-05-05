@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateVocabulary", func(t *testing.T) {
-        input := &transcribe.CreateVocabularyInput{}
-        output := &transcribe.CreateVocabularyOutput{}
-
-        mockClient.On("CreateVocabulary", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateVocabulary(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateVocabularyFilter", func(t *testing.T) {
         input := &transcribe.CreateVocabularyFilterInput{}
         output := &transcribe.CreateVocabularyFilterOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateVocabularyFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateVocabularyFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateVocabulary", func(t *testing.T) {
+        input := &transcribe.CreateVocabularyInput{}
+        output := &transcribe.CreateVocabularyOutput{}
+
+        mockClient.On("CreateVocabulary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVocabulary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteVocabulary", func(t *testing.T) {
-        input := &transcribe.DeleteVocabularyInput{}
-        output := &transcribe.DeleteVocabularyOutput{}
-
-        mockClient.On("DeleteVocabulary", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteVocabulary(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteVocabularyFilter", func(t *testing.T) {
         input := &transcribe.DeleteVocabularyFilterInput{}
         output := &transcribe.DeleteVocabularyFilterOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVocabularyFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVocabularyFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteVocabulary", func(t *testing.T) {
+        input := &transcribe.DeleteVocabularyInput{}
+        output := &transcribe.DeleteVocabularyOutput{}
+
+        mockClient.On("DeleteVocabulary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVocabulary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetVocabulary", func(t *testing.T) {
-        input := &transcribe.GetVocabularyInput{}
-        output := &transcribe.GetVocabularyOutput{}
-
-        mockClient.On("GetVocabulary", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetVocabulary(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetVocabularyFilter", func(t *testing.T) {
         input := &transcribe.GetVocabularyFilterInput{}
         output := &transcribe.GetVocabularyFilterOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetVocabularyFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetVocabularyFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVocabulary", func(t *testing.T) {
+        input := &transcribe.GetVocabularyInput{}
+        output := &transcribe.GetVocabularyOutput{}
+
+        mockClient.On("GetVocabulary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVocabulary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateVocabulary", func(t *testing.T) {
-        input := &transcribe.UpdateVocabularyInput{}
-        output := &transcribe.UpdateVocabularyOutput{}
-
-        mockClient.On("UpdateVocabulary", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateVocabulary(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateVocabularyFilter", func(t *testing.T) {
         input := &transcribe.UpdateVocabularyFilterInput{}
         output := &transcribe.UpdateVocabularyFilterOutput{}
@@ -587,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateVocabularyFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateVocabularyFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateVocabulary", func(t *testing.T) {
+        input := &transcribe.UpdateVocabularyInput{}
+        output := &transcribe.UpdateVocabularyOutput{}
+
+        mockClient.On("UpdateVocabulary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateVocabulary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

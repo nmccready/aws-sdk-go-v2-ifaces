@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPutRecord", func(t *testing.T) {
-        input := &firehose.PutRecordInput{}
-        output := &firehose.PutRecordOutput{}
-
-        mockClient.On("PutRecord", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PutRecord(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPutRecordBatch", func(t *testing.T) {
         input := &firehose.PutRecordBatchInput{}
         output := &firehose.PutRecordBatchOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutRecordBatch", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutRecordBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutRecord", func(t *testing.T) {
+        input := &firehose.PutRecordInput{}
+        output := &firehose.PutRecordOutput{}
+
+        mockClient.On("PutRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutRecord(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

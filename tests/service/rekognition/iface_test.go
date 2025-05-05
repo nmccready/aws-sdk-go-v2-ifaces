@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeProjectVersions", func(t *testing.T) {
-        input := &rekognition.DescribeProjectVersionsInput{}
-        output := &rekognition.DescribeProjectVersionsOutput{}
-
-        mockClient.On("DescribeProjectVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeProjectVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeProjects", func(t *testing.T) {
         input := &rekognition.DescribeProjectsInput{}
         output := &rekognition.DescribeProjectsOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeProjects", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeProjects(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeProjectVersions", func(t *testing.T) {
+        input := &rekognition.DescribeProjectVersionsInput{}
+        output := &rekognition.DescribeProjectVersionsOutput{}
+
+        mockClient.On("DescribeProjectVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProjectVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -736,19 +736,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestSearchFaces", func(t *testing.T) {
-        input := &rekognition.SearchFacesInput{}
-        output := &rekognition.SearchFacesOutput{}
-
-        mockClient.On("SearchFaces", ctx, input).Return(output, nil)
-
-        result, err := mockClient.SearchFaces(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestSearchFacesByImage", func(t *testing.T) {
         input := &rekognition.SearchFacesByImageInput{}
         output := &rekognition.SearchFacesByImageOutput{}
@@ -762,13 +749,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestSearchUsers", func(t *testing.T) {
-        input := &rekognition.SearchUsersInput{}
-        output := &rekognition.SearchUsersOutput{}
+    t.Run("TestSearchFaces", func(t *testing.T) {
+        input := &rekognition.SearchFacesInput{}
+        output := &rekognition.SearchFacesOutput{}
 
-        mockClient.On("SearchUsers", ctx, input).Return(output, nil)
+        mockClient.On("SearchFaces", ctx, input).Return(output, nil)
 
-        result, err := mockClient.SearchUsers(ctx, input)
+        result, err := mockClient.SearchFaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -782,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchUsersByImage", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchUsersByImage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchUsers", func(t *testing.T) {
+        input := &rekognition.SearchUsersInput{}
+        output := &rekognition.SearchUsersOutput{}
+
+        mockClient.On("SearchUsers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchUsers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

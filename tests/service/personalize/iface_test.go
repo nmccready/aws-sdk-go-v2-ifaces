@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDataset", func(t *testing.T) {
-        input := &personalize.CreateDatasetInput{}
-        output := &personalize.CreateDatasetOutput{}
-
-        mockClient.On("CreateDataset", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDataset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDatasetExportJob", func(t *testing.T) {
         input := &personalize.CreateDatasetExportJobInput{}
         output := &personalize.CreateDatasetExportJobOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDatasetExportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDatasetExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataset", func(t *testing.T) {
+        input := &personalize.CreateDatasetInput{}
+        output := &personalize.CreateDatasetOutput{}
+
+        mockClient.On("CreateDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,19 +411,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDataset", func(t *testing.T) {
-        input := &personalize.DescribeDatasetInput{}
-        output := &personalize.DescribeDatasetOutput{}
-
-        mockClient.On("DescribeDataset", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDataset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeDatasetExportJob", func(t *testing.T) {
         input := &personalize.DescribeDatasetExportJobInput{}
         output := &personalize.DescribeDatasetExportJobOutput{}
@@ -431,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDatasetExportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDatasetExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataset", func(t *testing.T) {
+        input := &personalize.DescribeDatasetInput{}
+        output := &personalize.DescribeDatasetOutput{}
+
+        mockClient.On("DescribeDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSolutionVersions", func(t *testing.T) {
-        input := &personalize.ListSolutionVersionsInput{}
-        output := &personalize.ListSolutionVersionsOutput{}
-
-        mockClient.On("ListSolutionVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSolutionVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSolutions", func(t *testing.T) {
         input := &personalize.ListSolutionsInput{}
         output := &personalize.ListSolutionsOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSolutions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSolutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSolutionVersions", func(t *testing.T) {
+        input := &personalize.ListSolutionVersionsInput{}
+        output := &personalize.ListSolutionVersionsOutput{}
+
+        mockClient.On("ListSolutionVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSolutionVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAppBlock", func(t *testing.T) {
-        input := &appstream.CreateAppBlockInput{}
-        output := &appstream.CreateAppBlockOutput{}
-
-        mockClient.On("CreateAppBlock", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAppBlock(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAppBlockBuilder", func(t *testing.T) {
         input := &appstream.CreateAppBlockBuilderInput{}
         output := &appstream.CreateAppBlockBuilderOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAppBlockBuilderStreamingURL", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAppBlockBuilderStreamingURL(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAppBlock", func(t *testing.T) {
+        input := &appstream.CreateAppBlockInput{}
+        output := &appstream.CreateAppBlockOutput{}
+
+        mockClient.On("CreateAppBlock", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAppBlock(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAppBlock", func(t *testing.T) {
-        input := &appstream.DeleteAppBlockInput{}
-        output := &appstream.DeleteAppBlockOutput{}
-
-        mockClient.On("DeleteAppBlock", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAppBlock(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAppBlockBuilder", func(t *testing.T) {
         input := &appstream.DeleteAppBlockBuilderInput{}
         output := &appstream.DeleteAppBlockBuilderOutput{}
@@ -340,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAppBlockBuilder", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAppBlockBuilder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAppBlock", func(t *testing.T) {
+        input := &appstream.DeleteAppBlockInput{}
+        output := &appstream.DeleteAppBlockOutput{}
+
+        mockClient.On("DeleteAppBlock", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAppBlock(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteImage", func(t *testing.T) {
-        input := &appstream.DeleteImageInput{}
-        output := &appstream.DeleteImageOutput{}
-
-        mockClient.On("DeleteImage", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteImage(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteImageBuilder", func(t *testing.T) {
         input := &appstream.DeleteImageBuilderInput{}
         output := &appstream.DeleteImageBuilderOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteImageBuilder", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteImageBuilder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteImage", func(t *testing.T) {
+        input := &appstream.DeleteImageInput{}
+        output := &appstream.DeleteImageOutput{}
+
+        mockClient.On("DeleteImage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteImage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,19 +684,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeUserStackAssociations", func(t *testing.T) {
-        input := &appstream.DescribeUserStackAssociationsInput{}
-        output := &appstream.DescribeUserStackAssociationsOutput{}
-
-        mockClient.On("DescribeUserStackAssociations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeUserStackAssociations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeUsers", func(t *testing.T) {
         input := &appstream.DescribeUsersInput{}
         output := &appstream.DescribeUsersOutput{}
@@ -704,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeUsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeUsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeUserStackAssociations", func(t *testing.T) {
+        input := &appstream.DescribeUserStackAssociationsInput{}
+        output := &appstream.DescribeUserStackAssociationsOutput{}
+
+        mockClient.On("DescribeUserStackAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeUserStackAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

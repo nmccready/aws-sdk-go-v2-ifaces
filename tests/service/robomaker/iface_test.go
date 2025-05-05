@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCancelSimulationJob", func(t *testing.T) {
-        input := &robomaker.CancelSimulationJobInput{}
-        output := &robomaker.CancelSimulationJobOutput{}
-
-        mockClient.On("CancelSimulationJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CancelSimulationJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCancelSimulationJobBatch", func(t *testing.T) {
         input := &robomaker.CancelSimulationJobBatchInput{}
         output := &robomaker.CancelSimulationJobBatchOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelSimulationJobBatch", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelSimulationJobBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCancelSimulationJob", func(t *testing.T) {
+        input := &robomaker.CancelSimulationJobInput{}
+        output := &robomaker.CancelSimulationJobOutput{}
+
+        mockClient.On("CancelSimulationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelSimulationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateRobot", func(t *testing.T) {
-        input := &robomaker.CreateRobotInput{}
-        output := &robomaker.CreateRobotOutput{}
-
-        mockClient.On("CreateRobot", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateRobot(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateRobotApplication", func(t *testing.T) {
         input := &robomaker.CreateRobotApplicationInput{}
         output := &robomaker.CreateRobotApplicationOutput{}
@@ -184,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateRobotApplicationVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateRobotApplicationVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRobot", func(t *testing.T) {
+        input := &robomaker.CreateRobotInput{}
+        output := &robomaker.CreateRobotOutput{}
+
+        mockClient.On("CreateRobot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRobot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteRobot", func(t *testing.T) {
-        input := &robomaker.DeleteRobotInput{}
-        output := &robomaker.DeleteRobotOutput{}
-
-        mockClient.On("DeleteRobot", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteRobot(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteRobotApplication", func(t *testing.T) {
         input := &robomaker.DeleteRobotApplicationInput{}
         output := &robomaker.DeleteRobotApplicationOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRobotApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRobotApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRobot", func(t *testing.T) {
+        input := &robomaker.DeleteRobotInput{}
+        output := &robomaker.DeleteRobotOutput{}
+
+        mockClient.On("DeleteRobot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRobot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeRobot", func(t *testing.T) {
-        input := &robomaker.DescribeRobotInput{}
-        output := &robomaker.DescribeRobotOutput{}
-
-        mockClient.On("DescribeRobot", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeRobot(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeRobotApplication", func(t *testing.T) {
         input := &robomaker.DescribeRobotApplicationInput{}
         output := &robomaker.DescribeRobotApplicationOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeRobotApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeRobotApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeRobot", func(t *testing.T) {
+        input := &robomaker.DescribeRobotInput{}
+        output := &robomaker.DescribeRobotOutput{}
+
+        mockClient.On("DescribeRobot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRobot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,19 +411,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeSimulationJob", func(t *testing.T) {
-        input := &robomaker.DescribeSimulationJobInput{}
-        output := &robomaker.DescribeSimulationJobOutput{}
-
-        mockClient.On("DescribeSimulationJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeSimulationJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeSimulationJobBatch", func(t *testing.T) {
         input := &robomaker.DescribeSimulationJobBatchInput{}
         output := &robomaker.DescribeSimulationJobBatchOutput{}
@@ -437,13 +424,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeWorld", func(t *testing.T) {
-        input := &robomaker.DescribeWorldInput{}
-        output := &robomaker.DescribeWorldOutput{}
+    t.Run("TestDescribeSimulationJob", func(t *testing.T) {
+        input := &robomaker.DescribeSimulationJobInput{}
+        output := &robomaker.DescribeSimulationJobOutput{}
 
-        mockClient.On("DescribeWorld", ctx, input).Return(output, nil)
+        mockClient.On("DescribeSimulationJob", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeWorld(ctx, input)
+        result, err := mockClient.DescribeSimulationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWorldGenerationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWorldGenerationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWorld", func(t *testing.T) {
+        input := &robomaker.DescribeWorldInput{}
+        output := &robomaker.DescribeWorldOutput{}
+
+        mockClient.On("DescribeWorld", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorld(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -632,19 +632,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorldTemplates", func(t *testing.T) {
-        input := &robomaker.ListWorldTemplatesInput{}
-        output := &robomaker.ListWorldTemplatesOutput{}
-
-        mockClient.On("ListWorldTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorldTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorlds", func(t *testing.T) {
         input := &robomaker.ListWorldsInput{}
         output := &robomaker.ListWorldsOutput{}
@@ -652,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorlds", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorlds(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorldTemplates", func(t *testing.T) {
+        input := &robomaker.ListWorldTemplatesInput{}
+        output := &robomaker.ListWorldTemplatesOutput{}
+
+        mockClient.On("ListWorldTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorldTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribePortfolioShareStatus", func(t *testing.T) {
-        input := &servicecatalog.DescribePortfolioShareStatusInput{}
-        output := &servicecatalog.DescribePortfolioShareStatusOutput{}
-
-        mockClient.On("DescribePortfolioShareStatus", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribePortfolioShareStatus(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribePortfolioShares", func(t *testing.T) {
         input := &servicecatalog.DescribePortfolioSharesInput{}
         output := &servicecatalog.DescribePortfolioSharesOutput{}
@@ -424,13 +411,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeProduct", func(t *testing.T) {
-        input := &servicecatalog.DescribeProductInput{}
-        output := &servicecatalog.DescribeProductOutput{}
+    t.Run("TestDescribePortfolioShareStatus", func(t *testing.T) {
+        input := &servicecatalog.DescribePortfolioShareStatusInput{}
+        output := &servicecatalog.DescribePortfolioShareStatusOutput{}
 
-        mockClient.On("DescribeProduct", ctx, input).Return(output, nil)
+        mockClient.On("DescribePortfolioShareStatus", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeProduct(ctx, input)
+        result, err := mockClient.DescribePortfolioShareStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeProductAsAdmin", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeProductAsAdmin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeProduct", func(t *testing.T) {
+        input := &servicecatalog.DescribeProductInput{}
+        output := &servicecatalog.DescribeProductOutput{}
+
+        mockClient.On("DescribeProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProduct(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeServiceAction", func(t *testing.T) {
-        input := &servicecatalog.DescribeServiceActionInput{}
-        output := &servicecatalog.DescribeServiceActionOutput{}
-
-        mockClient.On("DescribeServiceAction", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeServiceAction(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeServiceActionExecutionParameters", func(t *testing.T) {
         input := &servicecatalog.DescribeServiceActionExecutionParametersInput{}
         output := &servicecatalog.DescribeServiceActionExecutionParametersOutput{}
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeServiceActionExecutionParameters", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeServiceActionExecutionParameters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeServiceAction", func(t *testing.T) {
+        input := &servicecatalog.DescribeServiceActionInput{}
+        output := &servicecatalog.DescribeServiceActionOutput{}
+
+        mockClient.On("DescribeServiceAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServiceAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,19 +801,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPortfolios", func(t *testing.T) {
-        input := &servicecatalog.ListPortfoliosInput{}
-        output := &servicecatalog.ListPortfoliosOutput{}
-
-        mockClient.On("ListPortfolios", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPortfolios(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListPortfoliosForProduct", func(t *testing.T) {
         input := &servicecatalog.ListPortfoliosForProductInput{}
         output := &servicecatalog.ListPortfoliosForProductOutput{}
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPortfoliosForProduct", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPortfoliosForProduct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPortfolios", func(t *testing.T) {
+        input := &servicecatalog.ListPortfoliosInput{}
+        output := &servicecatalog.ListPortfoliosOutput{}
+
+        mockClient.On("ListPortfolios", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPortfolios(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProvisioningArtifacts", func(t *testing.T) {
-        input := &servicecatalog.ListProvisioningArtifactsInput{}
-        output := &servicecatalog.ListProvisioningArtifactsOutput{}
-
-        mockClient.On("ListProvisioningArtifacts", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListProvisioningArtifacts(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListProvisioningArtifactsForServiceAction", func(t *testing.T) {
         input := &servicecatalog.ListProvisioningArtifactsForServiceActionInput{}
         output := &servicecatalog.ListProvisioningArtifactsForServiceActionOutput{}
@@ -873,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProvisioningArtifactsForServiceAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProvisioningArtifactsForServiceAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProvisioningArtifacts", func(t *testing.T) {
+        input := &servicecatalog.ListProvisioningArtifactsInput{}
+        output := &servicecatalog.ListProvisioningArtifactsOutput{}
+
+        mockClient.On("ListProvisioningArtifacts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProvisioningArtifacts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,19 +905,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServiceActions", func(t *testing.T) {
-        input := &servicecatalog.ListServiceActionsInput{}
-        output := &servicecatalog.ListServiceActionsOutput{}
-
-        mockClient.On("ListServiceActions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServiceActions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListServiceActionsForProvisioningArtifact", func(t *testing.T) {
         input := &servicecatalog.ListServiceActionsForProvisioningArtifactInput{}
         output := &servicecatalog.ListServiceActionsForProvisioningArtifactOutput{}
@@ -925,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServiceActionsForProvisioningArtifact", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServiceActionsForProvisioningArtifact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceActions", func(t *testing.T) {
+        input := &servicecatalog.ListServiceActionsInput{}
+        output := &servicecatalog.ListServiceActionsOutput{}
+
+        mockClient.On("ListServiceActions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceActions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1035,19 +1035,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestSearchProducts", func(t *testing.T) {
-        input := &servicecatalog.SearchProductsInput{}
-        output := &servicecatalog.SearchProductsOutput{}
-
-        mockClient.On("SearchProducts", ctx, input).Return(output, nil)
-
-        result, err := mockClient.SearchProducts(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestSearchProductsAsAdmin", func(t *testing.T) {
         input := &servicecatalog.SearchProductsAsAdminInput{}
         output := &servicecatalog.SearchProductsAsAdminOutput{}
@@ -1055,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchProductsAsAdmin", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchProductsAsAdmin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchProducts", func(t *testing.T) {
+        input := &servicecatalog.SearchProductsInput{}
+        output := &servicecatalog.SearchProductsOutput{}
+
+        mockClient.On("SearchProducts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchProducts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -164,19 +164,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAssetModel", func(t *testing.T) {
-        input := &iotsitewise.CreateAssetModelInput{}
-        output := &iotsitewise.CreateAssetModelOutput{}
-
-        mockClient.On("CreateAssetModel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAssetModel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAssetModelCompositeModel", func(t *testing.T) {
         input := &iotsitewise.CreateAssetModelCompositeModelInput{}
         output := &iotsitewise.CreateAssetModelCompositeModelOutput{}
@@ -184,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAssetModelCompositeModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAssetModelCompositeModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAssetModel", func(t *testing.T) {
+        input := &iotsitewise.CreateAssetModelInput{}
+        output := &iotsitewise.CreateAssetModelOutput{}
+
+        mockClient.On("CreateAssetModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssetModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAssetModel", func(t *testing.T) {
-        input := &iotsitewise.DeleteAssetModelInput{}
-        output := &iotsitewise.DeleteAssetModelOutput{}
-
-        mockClient.On("DeleteAssetModel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAssetModel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAssetModelCompositeModel", func(t *testing.T) {
         input := &iotsitewise.DeleteAssetModelCompositeModelInput{}
         output := &iotsitewise.DeleteAssetModelCompositeModelOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAssetModelCompositeModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAssetModelCompositeModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAssetModel", func(t *testing.T) {
+        input := &iotsitewise.DeleteAssetModelInput{}
+        output := &iotsitewise.DeleteAssetModelOutput{}
+
+        mockClient.On("DeleteAssetModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssetModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAsset", func(t *testing.T) {
-        input := &iotsitewise.DescribeAssetInput{}
-        output := &iotsitewise.DescribeAssetOutput{}
-
-        mockClient.On("DescribeAsset", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAsset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeAssetCompositeModel", func(t *testing.T) {
         input := &iotsitewise.DescribeAssetCompositeModelInput{}
         output := &iotsitewise.DescribeAssetCompositeModelOutput{}
@@ -450,13 +437,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAssetModel", func(t *testing.T) {
-        input := &iotsitewise.DescribeAssetModelInput{}
-        output := &iotsitewise.DescribeAssetModelOutput{}
+    t.Run("TestDescribeAsset", func(t *testing.T) {
+        input := &iotsitewise.DescribeAssetInput{}
+        output := &iotsitewise.DescribeAssetOutput{}
 
-        mockClient.On("DescribeAssetModel", ctx, input).Return(output, nil)
+        mockClient.On("DescribeAsset", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeAssetModel(ctx, input)
+        result, err := mockClient.DescribeAsset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAssetModelCompositeModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAssetModelCompositeModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAssetModel", func(t *testing.T) {
+        input := &iotsitewise.DescribeAssetModelInput{}
+        output := &iotsitewise.DescribeAssetModelOutput{}
+
+        mockClient.On("DescribeAssetModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAssetModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeGateway", func(t *testing.T) {
-        input := &iotsitewise.DescribeGatewayInput{}
-        output := &iotsitewise.DescribeGatewayOutput{}
-
-        mockClient.On("DescribeGateway", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeGateway(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeGatewayCapabilityConfiguration", func(t *testing.T) {
         input := &iotsitewise.DescribeGatewayCapabilityConfigurationInput{}
         output := &iotsitewise.DescribeGatewayCapabilityConfigurationOutput{}
@@ -561,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeGatewayCapabilityConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeGatewayCapabilityConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeGateway", func(t *testing.T) {
+        input := &iotsitewise.DescribeGatewayInput{}
+        output := &iotsitewise.DescribeGatewayOutput{}
+
+        mockClient.On("DescribeGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1087,19 +1087,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateAssetModel", func(t *testing.T) {
-        input := &iotsitewise.UpdateAssetModelInput{}
-        output := &iotsitewise.UpdateAssetModelOutput{}
-
-        mockClient.On("UpdateAssetModel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateAssetModel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateAssetModelCompositeModel", func(t *testing.T) {
         input := &iotsitewise.UpdateAssetModelCompositeModelInput{}
         output := &iotsitewise.UpdateAssetModelCompositeModelOutput{}
@@ -1107,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAssetModelCompositeModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAssetModelCompositeModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAssetModel", func(t *testing.T) {
+        input := &iotsitewise.UpdateAssetModelInput{}
+        output := &iotsitewise.UpdateAssetModelOutput{}
+
+        mockClient.On("UpdateAssetModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAssetModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,19 +1152,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateGateway", func(t *testing.T) {
-        input := &iotsitewise.UpdateGatewayInput{}
-        output := &iotsitewise.UpdateGatewayOutput{}
-
-        mockClient.On("UpdateGateway", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateGateway(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateGatewayCapabilityConfiguration", func(t *testing.T) {
         input := &iotsitewise.UpdateGatewayCapabilityConfigurationInput{}
         output := &iotsitewise.UpdateGatewayCapabilityConfigurationOutput{}
@@ -1172,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGatewayCapabilityConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGatewayCapabilityConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateGateway", func(t *testing.T) {
+        input := &iotsitewise.UpdateGatewayInput{}
+        output := &iotsitewise.UpdateGatewayOutput{}
+
+        mockClient.On("UpdateGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteIPSet", func(t *testing.T) {
-        input := &guardduty.DeleteIPSetInput{}
-        output := &guardduty.DeleteIPSetOutput{}
-
-        mockClient.On("DeleteIPSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteIPSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteInvitations", func(t *testing.T) {
         input := &guardduty.DeleteInvitationsInput{}
         output := &guardduty.DeleteInvitationsOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteInvitations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteInvitations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIPSet", func(t *testing.T) {
+        input := &guardduty.DeleteIPSetInput{}
+        output := &guardduty.DeleteIPSetOutput{}
+
+        mockClient.On("DeleteIPSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIPSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetIPSet", func(t *testing.T) {
-        input := &guardduty.GetIPSetInput{}
-        output := &guardduty.GetIPSetOutput{}
-
-        mockClient.On("GetIPSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetIPSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetInvitationsCount", func(t *testing.T) {
         input := &guardduty.GetInvitationsCountInput{}
         output := &guardduty.GetInvitationsCountOutput{}
@@ -496,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInvitationsCount", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInvitationsCount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIPSet", func(t *testing.T) {
+        input := &guardduty.GetIPSetInput{}
+        output := &guardduty.GetIPSetOutput{}
+
+        mockClient.On("GetIPSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIPSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,19 +684,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListIPSets", func(t *testing.T) {
-        input := &guardduty.ListIPSetsInput{}
-        output := &guardduty.ListIPSetsOutput{}
-
-        mockClient.On("ListIPSets", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListIPSets(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInvitations", func(t *testing.T) {
         input := &guardduty.ListInvitationsInput{}
         output := &guardduty.ListInvitationsOutput{}
@@ -704,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInvitations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInvitations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIPSets", func(t *testing.T) {
+        input := &guardduty.ListIPSetsInput{}
+        output := &guardduty.ListIPSetsOutput{}
+
+        mockClient.On("ListIPSets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIPSets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

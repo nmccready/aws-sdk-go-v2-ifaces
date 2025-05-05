@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeStackResource", func(t *testing.T) {
-        input := &cloudformation.DescribeStackResourceInput{}
-        output := &cloudformation.DescribeStackResourceOutput{}
-
-        mockClient.On("DescribeStackResource", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStackResource(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeStackResourceDrifts", func(t *testing.T) {
         input := &cloudformation.DescribeStackResourceDriftsInput{}
         output := &cloudformation.DescribeStackResourceDriftsOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStackResourceDrifts", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStackResourceDrifts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeStackResource", func(t *testing.T) {
+        input := &cloudformation.DescribeStackResourceInput{}
+        output := &cloudformation.DescribeStackResourceOutput{}
+
+        mockClient.On("DescribeStackResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStackResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -918,19 +918,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTypeVersions", func(t *testing.T) {
-        input := &cloudformation.ListTypeVersionsInput{}
-        output := &cloudformation.ListTypeVersionsOutput{}
-
-        mockClient.On("ListTypeVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTypeVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTypes", func(t *testing.T) {
         input := &cloudformation.ListTypesInput{}
         output := &cloudformation.ListTypesOutput{}
@@ -938,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTypeVersions", func(t *testing.T) {
+        input := &cloudformation.ListTypeVersionsInput{}
+        output := &cloudformation.ListTypeVersionsOutput{}
+
+        mockClient.On("ListTypeVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTypeVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

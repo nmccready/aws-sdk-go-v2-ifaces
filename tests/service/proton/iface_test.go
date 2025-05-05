@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateEnvironment", func(t *testing.T) {
-        input := &proton.CreateEnvironmentInput{}
-        output := &proton.CreateEnvironmentOutput{}
-
-        mockClient.On("CreateEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateEnvironmentAccountConnection", func(t *testing.T) {
         input := &proton.CreateEnvironmentAccountConnectionInput{}
         output := &proton.CreateEnvironmentAccountConnectionOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateEnvironmentAccountConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateEnvironmentAccountConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateEnvironment", func(t *testing.T) {
+        input := &proton.CreateEnvironmentInput{}
+        output := &proton.CreateEnvironmentOutput{}
+
+        mockClient.On("CreateEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteEnvironment", func(t *testing.T) {
-        input := &proton.DeleteEnvironmentInput{}
-        output := &proton.DeleteEnvironmentOutput{}
-
-        mockClient.On("DeleteEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteEnvironmentAccountConnection", func(t *testing.T) {
         input := &proton.DeleteEnvironmentAccountConnectionInput{}
         output := &proton.DeleteEnvironmentAccountConnectionOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEnvironmentAccountConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEnvironmentAccountConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteEnvironment", func(t *testing.T) {
+        input := &proton.DeleteEnvironmentInput{}
+        output := &proton.DeleteEnvironmentOutput{}
+
+        mockClient.On("DeleteEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetEnvironment", func(t *testing.T) {
-        input := &proton.GetEnvironmentInput{}
-        output := &proton.GetEnvironmentOutput{}
-
-        mockClient.On("GetEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetEnvironmentAccountConnection", func(t *testing.T) {
         input := &proton.GetEnvironmentAccountConnectionInput{}
         output := &proton.GetEnvironmentAccountConnectionOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEnvironmentAccountConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEnvironmentAccountConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEnvironment", func(t *testing.T) {
+        input := &proton.GetEnvironmentInput{}
+        output := &proton.GetEnvironmentOutput{}
+
+        mockClient.On("GetEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,13 +749,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironmentTemplateVersions", func(t *testing.T) {
-        input := &proton.ListEnvironmentTemplateVersionsInput{}
-        output := &proton.ListEnvironmentTemplateVersionsOutput{}
+    t.Run("TestListEnvironments", func(t *testing.T) {
+        input := &proton.ListEnvironmentsInput{}
+        output := &proton.ListEnvironmentsOutput{}
 
-        mockClient.On("ListEnvironmentTemplateVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListEnvironmentTemplateVersions(ctx, input)
+        result, err := mockClient.ListEnvironments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,13 +775,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironments", func(t *testing.T) {
-        input := &proton.ListEnvironmentsInput{}
-        output := &proton.ListEnvironmentsOutput{}
+    t.Run("TestListEnvironmentTemplateVersions", func(t *testing.T) {
+        input := &proton.ListEnvironmentTemplateVersionsInput{}
+        output := &proton.ListEnvironmentTemplateVersionsOutput{}
 
-        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
+        mockClient.On("ListEnvironmentTemplateVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListEnvironments(ctx, input)
+        result, err := mockClient.ListEnvironmentTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -879,13 +879,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServiceTemplateVersions", func(t *testing.T) {
-        input := &proton.ListServiceTemplateVersionsInput{}
-        output := &proton.ListServiceTemplateVersionsOutput{}
+    t.Run("TestListServices", func(t *testing.T) {
+        input := &proton.ListServicesInput{}
+        output := &proton.ListServicesOutput{}
 
-        mockClient.On("ListServiceTemplateVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListServices", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListServiceTemplateVersions(ctx, input)
+        result, err := mockClient.ListServices(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,13 +905,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServices", func(t *testing.T) {
-        input := &proton.ListServicesInput{}
-        output := &proton.ListServicesOutput{}
+    t.Run("TestListServiceTemplateVersions", func(t *testing.T) {
+        input := &proton.ListServiceTemplateVersionsInput{}
+        output := &proton.ListServiceTemplateVersionsOutput{}
 
-        mockClient.On("ListServices", ctx, input).Return(output, nil)
+        mockClient.On("ListServiceTemplateVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListServices(ctx, input)
+        result, err := mockClient.ListServiceTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1009,19 +1009,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateEnvironment", func(t *testing.T) {
-        input := &proton.UpdateEnvironmentInput{}
-        output := &proton.UpdateEnvironmentOutput{}
-
-        mockClient.On("UpdateEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateEnvironmentAccountConnection", func(t *testing.T) {
         input := &proton.UpdateEnvironmentAccountConnectionInput{}
         output := &proton.UpdateEnvironmentAccountConnectionOutput{}
@@ -1029,6 +1016,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateEnvironmentAccountConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateEnvironmentAccountConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateEnvironment", func(t *testing.T) {
+        input := &proton.UpdateEnvironmentInput{}
+        output := &proton.UpdateEnvironmentOutput{}
+
+        mockClient.On("UpdateEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

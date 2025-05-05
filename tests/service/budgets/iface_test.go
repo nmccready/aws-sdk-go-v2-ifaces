@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateBudget", func(t *testing.T) {
-        input := &budgets.CreateBudgetInput{}
-        output := &budgets.CreateBudgetOutput{}
-
-        mockClient.On("CreateBudget", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateBudget(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateBudgetAction", func(t *testing.T) {
         input := &budgets.CreateBudgetActionInput{}
         output := &budgets.CreateBudgetActionOutput{}
@@ -54,6 +41,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateBudgetAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateBudgetAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateBudget", func(t *testing.T) {
+        input := &budgets.CreateBudgetInput{}
+        output := &budgets.CreateBudgetOutput{}
+
+        mockClient.On("CreateBudget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBudget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteBudget", func(t *testing.T) {
-        input := &budgets.DeleteBudgetInput{}
-        output := &budgets.DeleteBudgetOutput{}
-
-        mockClient.On("DeleteBudget", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteBudget(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteBudgetAction", func(t *testing.T) {
         input := &budgets.DeleteBudgetActionInput{}
         output := &budgets.DeleteBudgetActionOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBudgetAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBudgetAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBudget", func(t *testing.T) {
+        input := &budgets.DeleteBudgetInput{}
+        output := &budgets.DeleteBudgetOutput{}
+
+        mockClient.On("DeleteBudget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBudget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,19 +132,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSubscriber", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSubscriber(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeBudget", func(t *testing.T) {
-        input := &budgets.DescribeBudgetInput{}
-        output := &budgets.DescribeBudgetOutput{}
-
-        mockClient.On("DescribeBudget", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeBudget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeBudgetActionsForBudget", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeBudgetActionsForBudget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeBudget", func(t *testing.T) {
+        input := &budgets.DescribeBudgetInput{}
+        output := &budgets.DescribeBudgetOutput{}
+
+        mockClient.On("DescribeBudget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeBudget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateBudget", func(t *testing.T) {
-        input := &budgets.UpdateBudgetInput{}
-        output := &budgets.UpdateBudgetOutput{}
-
-        mockClient.On("UpdateBudget", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateBudget(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateBudgetAction", func(t *testing.T) {
         input := &budgets.UpdateBudgetActionInput{}
         output := &budgets.UpdateBudgetActionOutput{}
@@ -340,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBudgetAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBudgetAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBudget", func(t *testing.T) {
+        input := &budgets.UpdateBudgetInput{}
+        output := &budgets.UpdateBudgetOutput{}
+
+        mockClient.On("UpdateBudget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBudget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

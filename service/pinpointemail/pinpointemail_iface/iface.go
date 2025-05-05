@@ -10,19 +10,19 @@ import (
 // IClient defines the interface for pinpointemail
 type IClient interface {
  Options() Options 
- CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 
  CreateConfigurationSetEventDestination(ctx context.Context, params *CreateConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*CreateConfigurationSetEventDestinationOutput, error) 
+ CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 
  CreateDedicatedIpPool(ctx context.Context, params *CreateDedicatedIpPoolInput, optFns ...func(*Options)) (*CreateDedicatedIpPoolOutput, error) 
  CreateDeliverabilityTestReport(ctx context.Context, params *CreateDeliverabilityTestReportInput, optFns ...func(*Options)) (*CreateDeliverabilityTestReportOutput, error) 
  CreateEmailIdentity(ctx context.Context, params *CreateEmailIdentityInput, optFns ...func(*Options)) (*CreateEmailIdentityOutput, error) 
- DeleteConfigurationSet(ctx context.Context, params *DeleteConfigurationSetInput, optFns ...func(*Options)) (*DeleteConfigurationSetOutput, error) 
  DeleteConfigurationSetEventDestination(ctx context.Context, params *DeleteConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*DeleteConfigurationSetEventDestinationOutput, error) 
+ DeleteConfigurationSet(ctx context.Context, params *DeleteConfigurationSetInput, optFns ...func(*Options)) (*DeleteConfigurationSetOutput, error) 
  DeleteDedicatedIpPool(ctx context.Context, params *DeleteDedicatedIpPoolInput, optFns ...func(*Options)) (*DeleteDedicatedIpPoolOutput, error) 
  DeleteEmailIdentity(ctx context.Context, params *DeleteEmailIdentityInput, optFns ...func(*Options)) (*DeleteEmailIdentityOutput, error) 
  GetAccount(ctx context.Context, params *GetAccountInput, optFns ...func(*Options)) (*GetAccountOutput, error) 
  GetBlacklistReports(ctx context.Context, params *GetBlacklistReportsInput, optFns ...func(*Options)) (*GetBlacklistReportsOutput, error) 
- GetConfigurationSet(ctx context.Context, params *GetConfigurationSetInput, optFns ...func(*Options)) (*GetConfigurationSetOutput, error) 
  GetConfigurationSetEventDestinations(ctx context.Context, params *GetConfigurationSetEventDestinationsInput, optFns ...func(*Options)) (*GetConfigurationSetEventDestinationsOutput, error) 
+ GetConfigurationSet(ctx context.Context, params *GetConfigurationSetInput, optFns ...func(*Options)) (*GetConfigurationSetOutput, error) 
  GetDedicatedIp(ctx context.Context, params *GetDedicatedIpInput, optFns ...func(*Options)) (*GetDedicatedIpOutput, error) 
  GetDedicatedIps(ctx context.Context, params *GetDedicatedIpsInput, optFns ...func(*Options)) (*GetDedicatedIpsOutput, error) 
  GetDeliverabilityDashboardOptions(ctx context.Context, params *GetDeliverabilityDashboardOptionsInput, optFns ...func(*Options)) (*GetDeliverabilityDashboardOptionsOutput, error) 

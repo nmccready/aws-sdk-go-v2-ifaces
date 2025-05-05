@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDataIntegration", func(t *testing.T) {
-        input := &appintegrations.CreateDataIntegrationInput{}
-        output := &appintegrations.CreateDataIntegrationOutput{}
-
-        mockClient.On("CreateDataIntegration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDataIntegration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDataIntegrationAssociation", func(t *testing.T) {
         input := &appintegrations.CreateDataIntegrationAssociationInput{}
         output := &appintegrations.CreateDataIntegrationAssociationOutput{}
@@ -67,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDataIntegrationAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDataIntegrationAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataIntegration", func(t *testing.T) {
+        input := &appintegrations.CreateDataIntegrationInput{}
+        output := &appintegrations.CreateDataIntegrationOutput{}
+
+        mockClient.On("CreateDataIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataIntegration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateDataIntegration", func(t *testing.T) {
-        input := &appintegrations.UpdateDataIntegrationInput{}
-        output := &appintegrations.UpdateDataIntegrationOutput{}
-
-        mockClient.On("UpdateDataIntegration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateDataIntegration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateDataIntegrationAssociation", func(t *testing.T) {
         input := &appintegrations.UpdateDataIntegrationAssociationInput{}
         output := &appintegrations.UpdateDataIntegrationAssociationOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDataIntegrationAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDataIntegrationAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataIntegration", func(t *testing.T) {
+        input := &appintegrations.UpdateDataIntegrationInput{}
+        output := &appintegrations.UpdateDataIntegrationOutput{}
+
+        mockClient.On("UpdateDataIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataIntegration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

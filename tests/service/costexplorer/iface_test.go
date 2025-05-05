@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSavingsPlansUtilization", func(t *testing.T) {
-        input := &costexplorer.GetSavingsPlansUtilizationInput{}
-        output := &costexplorer.GetSavingsPlansUtilizationOutput{}
-
-        mockClient.On("GetSavingsPlansUtilization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSavingsPlansUtilization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSavingsPlansUtilizationDetails", func(t *testing.T) {
         input := &costexplorer.GetSavingsPlansUtilizationDetailsInput{}
         output := &costexplorer.GetSavingsPlansUtilizationDetailsOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSavingsPlansUtilizationDetails", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSavingsPlansUtilizationDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSavingsPlansUtilization", func(t *testing.T) {
+        input := &costexplorer.GetSavingsPlansUtilizationInput{}
+        output := &costexplorer.GetSavingsPlansUtilizationOutput{}
+
+        mockClient.On("GetSavingsPlansUtilization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSavingsPlansUtilization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

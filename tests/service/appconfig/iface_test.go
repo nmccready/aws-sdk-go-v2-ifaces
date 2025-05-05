@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateExtension", func(t *testing.T) {
-        input := &appconfig.CreateExtensionInput{}
-        output := &appconfig.CreateExtensionOutput{}
-
-        mockClient.On("CreateExtension", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateExtension(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateExtensionAssociation", func(t *testing.T) {
         input := &appconfig.CreateExtensionAssociationInput{}
         output := &appconfig.CreateExtensionAssociationOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateExtensionAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateExtensionAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateExtension", func(t *testing.T) {
+        input := &appconfig.CreateExtensionInput{}
+        output := &appconfig.CreateExtensionOutput{}
+
+        mockClient.On("CreateExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateExtension(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteExtension", func(t *testing.T) {
-        input := &appconfig.DeleteExtensionInput{}
-        output := &appconfig.DeleteExtensionOutput{}
-
-        mockClient.On("DeleteExtension", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteExtension(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteExtensionAssociation", func(t *testing.T) {
         input := &appconfig.DeleteExtensionAssociationInput{}
         output := &appconfig.DeleteExtensionAssociationOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteExtensionAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteExtensionAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteExtension", func(t *testing.T) {
+        input := &appconfig.DeleteExtensionInput{}
+        output := &appconfig.DeleteExtensionOutput{}
+
+        mockClient.On("DeleteExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteExtension(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetExtension", func(t *testing.T) {
-        input := &appconfig.GetExtensionInput{}
-        output := &appconfig.GetExtensionOutput{}
-
-        mockClient.On("GetExtension", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetExtension(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetExtensionAssociation", func(t *testing.T) {
         input := &appconfig.GetExtensionAssociationInput{}
         output := &appconfig.GetExtensionAssociationOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetExtensionAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetExtensionAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetExtension", func(t *testing.T) {
+        input := &appconfig.GetExtensionInput{}
+        output := &appconfig.GetExtensionOutput{}
+
+        mockClient.On("GetExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExtension(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDeploymentStrategies", func(t *testing.T) {
-        input := &appconfig.ListDeploymentStrategiesInput{}
-        output := &appconfig.ListDeploymentStrategiesOutput{}
-
-        mockClient.On("ListDeploymentStrategies", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDeploymentStrategies(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDeployments", func(t *testing.T) {
         input := &appconfig.ListDeploymentsInput{}
         output := &appconfig.ListDeploymentsOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDeployments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDeployments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDeploymentStrategies", func(t *testing.T) {
+        input := &appconfig.ListDeploymentStrategiesInput{}
+        output := &appconfig.ListDeploymentStrategiesOutput{}
+
+        mockClient.On("ListDeploymentStrategies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeploymentStrategies(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,19 +580,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateExtension", func(t *testing.T) {
-        input := &appconfig.UpdateExtensionInput{}
-        output := &appconfig.UpdateExtensionOutput{}
-
-        mockClient.On("UpdateExtension", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateExtension(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateExtensionAssociation", func(t *testing.T) {
         input := &appconfig.UpdateExtensionAssociationInput{}
         output := &appconfig.UpdateExtensionAssociationOutput{}
@@ -600,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateExtensionAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateExtensionAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateExtension", func(t *testing.T) {
+        input := &appconfig.UpdateExtensionInput{}
+        output := &appconfig.UpdateExtensionOutput{}
+
+        mockClient.On("UpdateExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExtension(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

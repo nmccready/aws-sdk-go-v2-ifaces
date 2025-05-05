@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeApplicationInstance", func(t *testing.T) {
-        input := &panorama.DescribeApplicationInstanceInput{}
-        output := &panorama.DescribeApplicationInstanceOutput{}
-
-        mockClient.On("DescribeApplicationInstance", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeApplicationInstance(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeApplicationInstanceDetails", func(t *testing.T) {
         input := &panorama.DescribeApplicationInstanceDetailsInput{}
         output := &panorama.DescribeApplicationInstanceDetailsOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeApplicationInstanceDetails", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeApplicationInstanceDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApplicationInstance", func(t *testing.T) {
+        input := &panorama.DescribeApplicationInstanceInput{}
+        output := &panorama.DescribeApplicationInstanceOutput{}
+
+        mockClient.On("DescribeApplicationInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplicationInstance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeNode", func(t *testing.T) {
-        input := &panorama.DescribeNodeInput{}
-        output := &panorama.DescribeNodeOutput{}
-
-        mockClient.On("DescribeNode", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeNode(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeNodeFromTemplateJob", func(t *testing.T) {
         input := &panorama.DescribeNodeFromTemplateJobInput{}
         output := &panorama.DescribeNodeFromTemplateJobOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeNodeFromTemplateJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeNodeFromTemplateJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNode", func(t *testing.T) {
+        input := &panorama.DescribeNodeInput{}
+        output := &panorama.DescribeNodeOutput{}
+
+        mockClient.On("DescribeNode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNode(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

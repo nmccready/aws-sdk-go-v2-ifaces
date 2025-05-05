@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateRepository", func(t *testing.T) {
-        input := &ecr.CreateRepositoryInput{}
-        output := &ecr.CreateRepositoryOutput{}
-
-        mockClient.On("CreateRepository", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateRepository(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateRepositoryCreationTemplate", func(t *testing.T) {
         input := &ecr.CreateRepositoryCreationTemplateInput{}
         output := &ecr.CreateRepositoryCreationTemplateOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateRepositoryCreationTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateRepositoryCreationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRepository", func(t *testing.T) {
+        input := &ecr.CreateRepositoryInput{}
+        output := &ecr.CreateRepositoryOutput{}
+
+        mockClient.On("CreateRepository", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRepository(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteRepository", func(t *testing.T) {
-        input := &ecr.DeleteRepositoryInput{}
-        output := &ecr.DeleteRepositoryOutput{}
-
-        mockClient.On("DeleteRepository", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteRepository(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteRepositoryCreationTemplate", func(t *testing.T) {
         input := &ecr.DeleteRepositoryCreationTemplateInput{}
         output := &ecr.DeleteRepositoryCreationTemplateOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRepositoryCreationTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRepositoryCreationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRepository", func(t *testing.T) {
+        input := &ecr.DeleteRepositoryInput{}
+        output := &ecr.DeleteRepositoryOutput{}
+
+        mockClient.On("DeleteRepository", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRepository(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

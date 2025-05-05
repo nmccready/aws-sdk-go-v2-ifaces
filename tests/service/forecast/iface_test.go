@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateExplainability", func(t *testing.T) {
-        input := &forecast.CreateExplainabilityInput{}
-        output := &forecast.CreateExplainabilityOutput{}
-
-        mockClient.On("CreateExplainability", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateExplainability(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateExplainabilityExport", func(t *testing.T) {
         input := &forecast.CreateExplainabilityExportInput{}
         output := &forecast.CreateExplainabilityExportOutput{}
@@ -112,13 +99,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateForecast", func(t *testing.T) {
-        input := &forecast.CreateForecastInput{}
-        output := &forecast.CreateForecastOutput{}
+    t.Run("TestCreateExplainability", func(t *testing.T) {
+        input := &forecast.CreateExplainabilityInput{}
+        output := &forecast.CreateExplainabilityOutput{}
 
-        mockClient.On("CreateForecast", ctx, input).Return(output, nil)
+        mockClient.On("CreateExplainability", ctx, input).Return(output, nil)
 
-        result, err := mockClient.CreateForecast(ctx, input)
+        result, err := mockClient.CreateExplainability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateForecast", func(t *testing.T) {
+        input := &forecast.CreateForecastInput{}
+        output := &forecast.CreateForecastOutput{}
+
+        mockClient.On("CreateForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateForecast(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMonitor", func(t *testing.T) {
         input := &forecast.CreateMonitorInput{}
         output := &forecast.CreateMonitorOutput{}
@@ -145,19 +145,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateMonitor", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateMonitor(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreatePredictor", func(t *testing.T) {
-        input := &forecast.CreatePredictorInput{}
-        output := &forecast.CreatePredictorOutput{}
-
-        mockClient.On("CreatePredictor", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreatePredictor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePredictor", func(t *testing.T) {
+        input := &forecast.CreatePredictorInput{}
+        output := &forecast.CreatePredictorOutput{}
+
+        mockClient.On("CreatePredictor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePredictor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWhatIfAnalysis", func(t *testing.T) {
         input := &forecast.CreateWhatIfAnalysisInput{}
         output := &forecast.CreateWhatIfAnalysisOutput{}
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateWhatIfForecast", func(t *testing.T) {
-        input := &forecast.CreateWhatIfForecastInput{}
-        output := &forecast.CreateWhatIfForecastOutput{}
-
-        mockClient.On("CreateWhatIfForecast", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateWhatIfForecast(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateWhatIfForecastExport", func(t *testing.T) {
         input := &forecast.CreateWhatIfForecastExportInput{}
         output := &forecast.CreateWhatIfForecastExportOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateWhatIfForecastExport", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateWhatIfForecastExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWhatIfForecast", func(t *testing.T) {
+        input := &forecast.CreateWhatIfForecastInput{}
+        output := &forecast.CreateWhatIfForecastOutput{}
+
+        mockClient.On("CreateWhatIfForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWhatIfForecast(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteExplainability", func(t *testing.T) {
-        input := &forecast.DeleteExplainabilityInput{}
-        output := &forecast.DeleteExplainabilityOutput{}
-
-        mockClient.On("DeleteExplainability", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteExplainability(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteExplainabilityExport", func(t *testing.T) {
         input := &forecast.DeleteExplainabilityExportInput{}
         output := &forecast.DeleteExplainabilityExportOutput{}
@@ -281,13 +268,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteForecast", func(t *testing.T) {
-        input := &forecast.DeleteForecastInput{}
-        output := &forecast.DeleteForecastOutput{}
+    t.Run("TestDeleteExplainability", func(t *testing.T) {
+        input := &forecast.DeleteExplainabilityInput{}
+        output := &forecast.DeleteExplainabilityOutput{}
 
-        mockClient.On("DeleteForecast", ctx, input).Return(output, nil)
+        mockClient.On("DeleteExplainability", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeleteForecast(ctx, input)
+        result, err := mockClient.DeleteExplainability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteForecast", func(t *testing.T) {
+        input := &forecast.DeleteForecastInput{}
+        output := &forecast.DeleteForecastOutput{}
+
+        mockClient.On("DeleteForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteForecast(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteMonitor", func(t *testing.T) {
         input := &forecast.DeleteMonitorInput{}
         output := &forecast.DeleteMonitorOutput{}
@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeletePredictor", func(t *testing.T) {
-        input := &forecast.DeletePredictorInput{}
-        output := &forecast.DeletePredictorOutput{}
-
-        mockClient.On("DeletePredictor", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeletePredictor(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeletePredictorBacktestExportJob", func(t *testing.T) {
         input := &forecast.DeletePredictorBacktestExportJobInput{}
         output := &forecast.DeletePredictorBacktestExportJobOutput{}
@@ -340,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePredictorBacktestExportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePredictorBacktestExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePredictor", func(t *testing.T) {
+        input := &forecast.DeletePredictorInput{}
+        output := &forecast.DeletePredictorOutput{}
+
+        mockClient.On("DeletePredictor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePredictor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteWhatIfForecast", func(t *testing.T) {
-        input := &forecast.DeleteWhatIfForecastInput{}
-        output := &forecast.DeleteWhatIfForecastOutput{}
-
-        mockClient.On("DeleteWhatIfForecast", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteWhatIfForecast(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteWhatIfForecastExport", func(t *testing.T) {
         input := &forecast.DeleteWhatIfForecastExportInput{}
         output := &forecast.DeleteWhatIfForecastExportOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWhatIfForecastExport", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWhatIfForecastExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWhatIfForecast", func(t *testing.T) {
+        input := &forecast.DeleteWhatIfForecastInput{}
+        output := &forecast.DeleteWhatIfForecastOutput{}
+
+        mockClient.On("DeleteWhatIfForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWhatIfForecast(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeExplainability", func(t *testing.T) {
-        input := &forecast.DescribeExplainabilityInput{}
-        output := &forecast.DescribeExplainabilityOutput{}
-
-        mockClient.On("DescribeExplainability", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeExplainability(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeExplainabilityExport", func(t *testing.T) {
         input := &forecast.DescribeExplainabilityExportInput{}
         output := &forecast.DescribeExplainabilityExportOutput{}
@@ -476,13 +463,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeForecast", func(t *testing.T) {
-        input := &forecast.DescribeForecastInput{}
-        output := &forecast.DescribeForecastOutput{}
+    t.Run("TestDescribeExplainability", func(t *testing.T) {
+        input := &forecast.DescribeExplainabilityInput{}
+        output := &forecast.DescribeExplainabilityOutput{}
 
-        mockClient.On("DescribeForecast", ctx, input).Return(output, nil)
+        mockClient.On("DescribeExplainability", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeForecast(ctx, input)
+        result, err := mockClient.DescribeExplainability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeForecast", func(t *testing.T) {
+        input := &forecast.DescribeForecastInput{}
+        output := &forecast.DescribeForecastOutput{}
+
+        mockClient.On("DescribeForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeForecast(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeMonitor", func(t *testing.T) {
         input := &forecast.DescribeMonitorInput{}
         output := &forecast.DescribeMonitorOutput{}
@@ -509,19 +509,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMonitor", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMonitor(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribePredictor", func(t *testing.T) {
-        input := &forecast.DescribePredictorInput{}
-        output := &forecast.DescribePredictorOutput{}
-
-        mockClient.On("DescribePredictor", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribePredictor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribePredictor", func(t *testing.T) {
+        input := &forecast.DescribePredictorInput{}
+        output := &forecast.DescribePredictorOutput{}
+
+        mockClient.On("DescribePredictor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePredictor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeWhatIfAnalysis", func(t *testing.T) {
         input := &forecast.DescribeWhatIfAnalysisInput{}
         output := &forecast.DescribeWhatIfAnalysisOutput{}
@@ -554,19 +554,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeWhatIfForecast", func(t *testing.T) {
-        input := &forecast.DescribeWhatIfForecastInput{}
-        output := &forecast.DescribeWhatIfForecastOutput{}
-
-        mockClient.On("DescribeWhatIfForecast", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeWhatIfForecast(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeWhatIfForecastExport", func(t *testing.T) {
         input := &forecast.DescribeWhatIfForecastExportInput{}
         output := &forecast.DescribeWhatIfForecastExportOutput{}
@@ -574,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWhatIfForecastExport", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWhatIfForecastExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWhatIfForecast", func(t *testing.T) {
+        input := &forecast.DescribeWhatIfForecastInput{}
+        output := &forecast.DescribeWhatIfForecastOutput{}
+
+        mockClient.On("DescribeWhatIfForecast", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWhatIfForecast(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
