@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeComponent", func(t *testing.T) {
+        input := &applicationinsights.DescribeComponentInput{}
+        output := &applicationinsights.DescribeComponentOutput{}
+
+        mockClient.On("DescribeComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeComponent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeComponentConfiguration", func(t *testing.T) {
         input := &applicationinsights.DescribeComponentConfigurationInput{}
         output := &applicationinsights.DescribeComponentConfigurationOutput{}
@@ -158,19 +171,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeComponentConfigurationRecommendation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeComponentConfigurationRecommendation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeComponent", func(t *testing.T) {
-        input := &applicationinsights.DescribeComponentInput{}
-        output := &applicationinsights.DescribeComponentOutput{}
-
-        mockClient.On("DescribeComponent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateComponentConfiguration", func(t *testing.T) {
-        input := &applicationinsights.UpdateComponentConfigurationInput{}
-        output := &applicationinsights.UpdateComponentConfigurationOutput{}
-
-        mockClient.On("UpdateComponentConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateComponentConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateComponent", func(t *testing.T) {
         input := &applicationinsights.UpdateComponentInput{}
         output := &applicationinsights.UpdateComponentOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateComponent", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateComponent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateComponentConfiguration", func(t *testing.T) {
+        input := &applicationinsights.UpdateComponentConfigurationInput{}
+        output := &applicationinsights.UpdateComponentConfigurationOutput{}
+
+        mockClient.On("UpdateComponentConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateComponentConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

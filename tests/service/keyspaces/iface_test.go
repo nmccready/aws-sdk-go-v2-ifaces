@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTableAutoScalingSettings", func(t *testing.T) {
-        input := &keyspaces.GetTableAutoScalingSettingsInput{}
-        output := &keyspaces.GetTableAutoScalingSettingsOutput{}
-
-        mockClient.On("GetTableAutoScalingSettings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTableAutoScalingSettings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetTable", func(t *testing.T) {
         input := &keyspaces.GetTableInput{}
         output := &keyspaces.GetTableOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableAutoScalingSettings", func(t *testing.T) {
+        input := &keyspaces.GetTableAutoScalingSettingsInput{}
+        output := &keyspaces.GetTableAutoScalingSettingsOutput{}
+
+        mockClient.On("GetTableAutoScalingSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableAutoScalingSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

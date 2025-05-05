@@ -10,12 +10,12 @@ import (
 // IClient defines the interface for observabilityadmin
 type IClient interface {
  Options() Options 
- GetTelemetryEvaluationStatusForOrganization(ctx context.Context, params *GetTelemetryEvaluationStatusForOrganizationInput, optFns ...func(*Options)) (*GetTelemetryEvaluationStatusForOrganizationOutput, error) 
  GetTelemetryEvaluationStatus(ctx context.Context, params *GetTelemetryEvaluationStatusInput, optFns ...func(*Options)) (*GetTelemetryEvaluationStatusOutput, error) 
- ListResourceTelemetryForOrganization(ctx context.Context, params *ListResourceTelemetryForOrganizationInput, optFns ...func(*Options)) (*ListResourceTelemetryForOrganizationOutput, error) 
+ GetTelemetryEvaluationStatusForOrganization(ctx context.Context, params *GetTelemetryEvaluationStatusForOrganizationInput, optFns ...func(*Options)) (*GetTelemetryEvaluationStatusForOrganizationOutput, error) 
  ListResourceTelemetry(ctx context.Context, params *ListResourceTelemetryInput, optFns ...func(*Options)) (*ListResourceTelemetryOutput, error) 
- StartTelemetryEvaluationForOrganization(ctx context.Context, params *StartTelemetryEvaluationForOrganizationInput, optFns ...func(*Options)) (*StartTelemetryEvaluationForOrganizationOutput, error) 
+ ListResourceTelemetryForOrganization(ctx context.Context, params *ListResourceTelemetryForOrganizationInput, optFns ...func(*Options)) (*ListResourceTelemetryForOrganizationOutput, error) 
  StartTelemetryEvaluation(ctx context.Context, params *StartTelemetryEvaluationInput, optFns ...func(*Options)) (*StartTelemetryEvaluationOutput, error) 
- StopTelemetryEvaluationForOrganization(ctx context.Context, params *StopTelemetryEvaluationForOrganizationInput, optFns ...func(*Options)) (*StopTelemetryEvaluationForOrganizationOutput, error) 
+ StartTelemetryEvaluationForOrganization(ctx context.Context, params *StartTelemetryEvaluationForOrganizationInput, optFns ...func(*Options)) (*StartTelemetryEvaluationForOrganizationOutput, error) 
  StopTelemetryEvaluation(ctx context.Context, params *StopTelemetryEvaluationInput, optFns ...func(*Options)) (*StopTelemetryEvaluationOutput, error) 
+ StopTelemetryEvaluationForOrganization(ctx context.Context, params *StopTelemetryEvaluationForOrganizationInput, optFns ...func(*Options)) (*StopTelemetryEvaluationForOrganizationOutput, error) 
 }

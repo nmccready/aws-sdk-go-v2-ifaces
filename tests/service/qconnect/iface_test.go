@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAssistantAssociation", func(t *testing.T) {
-        input := &qconnect.CreateAssistantAssociationInput{}
-        output := &qconnect.CreateAssistantAssociationOutput{}
-
-        mockClient.On("CreateAssistantAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAssistantAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAssistant", func(t *testing.T) {
         input := &qconnect.CreateAssistantInput{}
         output := &qconnect.CreateAssistantOutput{}
@@ -151,13 +138,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateContentAssociation", func(t *testing.T) {
-        input := &qconnect.CreateContentAssociationInput{}
-        output := &qconnect.CreateContentAssociationOutput{}
+    t.Run("TestCreateAssistantAssociation", func(t *testing.T) {
+        input := &qconnect.CreateAssistantAssociationInput{}
+        output := &qconnect.CreateAssistantAssociationOutput{}
 
-        mockClient.On("CreateContentAssociation", ctx, input).Return(output, nil)
+        mockClient.On("CreateAssistantAssociation", ctx, input).Return(output, nil)
 
-        result, err := mockClient.CreateContentAssociation(ctx, input)
+        result, err := mockClient.CreateAssistantAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateContentAssociation", func(t *testing.T) {
+        input := &qconnect.CreateContentAssociationInput{}
+        output := &qconnect.CreateContentAssociationOutput{}
+
+        mockClient.On("CreateContentAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContentAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateKnowledgeBase", func(t *testing.T) {
         input := &qconnect.CreateKnowledgeBaseInput{}
         output := &qconnect.CreateKnowledgeBaseOutput{}
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateMessageTemplateAttachment", func(t *testing.T) {
-        input := &qconnect.CreateMessageTemplateAttachmentInput{}
-        output := &qconnect.CreateMessageTemplateAttachmentOutput{}
-
-        mockClient.On("CreateMessageTemplateAttachment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateMessageTemplateAttachment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateMessageTemplate", func(t *testing.T) {
         input := &qconnect.CreateMessageTemplateInput{}
         output := &qconnect.CreateMessageTemplateOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateMessageTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMessageTemplateAttachment", func(t *testing.T) {
+        input := &qconnect.CreateMessageTemplateAttachmentInput{}
+        output := &qconnect.CreateMessageTemplateAttachmentOutput{}
+
+        mockClient.On("CreateMessageTemplateAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMessageTemplateAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAssistantAssociation", func(t *testing.T) {
-        input := &qconnect.DeleteAssistantAssociationInput{}
-        output := &qconnect.DeleteAssistantAssociationOutput{}
-
-        mockClient.On("DeleteAssistantAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAssistantAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAssistant", func(t *testing.T) {
         input := &qconnect.DeleteAssistantInput{}
         output := &qconnect.DeleteAssistantOutput{}
@@ -372,13 +359,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteContentAssociation", func(t *testing.T) {
-        input := &qconnect.DeleteContentAssociationInput{}
-        output := &qconnect.DeleteContentAssociationOutput{}
+    t.Run("TestDeleteAssistantAssociation", func(t *testing.T) {
+        input := &qconnect.DeleteAssistantAssociationInput{}
+        output := &qconnect.DeleteAssistantAssociationOutput{}
 
-        mockClient.On("DeleteContentAssociation", ctx, input).Return(output, nil)
+        mockClient.On("DeleteAssistantAssociation", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeleteContentAssociation(ctx, input)
+        result, err := mockClient.DeleteAssistantAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteContent", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteContentAssociation", func(t *testing.T) {
+        input := &qconnect.DeleteContentAssociationInput{}
+        output := &qconnect.DeleteContentAssociationOutput{}
+
+        mockClient.On("DeleteContentAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContentAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteMessageTemplateAttachment", func(t *testing.T) {
-        input := &qconnect.DeleteMessageTemplateAttachmentInput{}
-        output := &qconnect.DeleteMessageTemplateAttachmentOutput{}
-
-        mockClient.On("DeleteMessageTemplateAttachment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteMessageTemplateAttachment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteMessageTemplate", func(t *testing.T) {
         input := &qconnect.DeleteMessageTemplateInput{}
         output := &qconnect.DeleteMessageTemplateOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteMessageTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMessageTemplateAttachment", func(t *testing.T) {
+        input := &qconnect.DeleteMessageTemplateAttachmentInput{}
+        output := &qconnect.DeleteMessageTemplateAttachmentOutput{}
+
+        mockClient.On("DeleteMessageTemplateAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMessageTemplateAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAssistantAssociation", func(t *testing.T) {
-        input := &qconnect.GetAssistantAssociationInput{}
-        output := &qconnect.GetAssistantAssociationOutput{}
-
-        mockClient.On("GetAssistantAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAssistantAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAssistant", func(t *testing.T) {
         input := &qconnect.GetAssistantInput{}
         output := &qconnect.GetAssistantOutput{}
@@ -528,13 +515,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetContentAssociation", func(t *testing.T) {
-        input := &qconnect.GetContentAssociationInput{}
-        output := &qconnect.GetContentAssociationOutput{}
+    t.Run("TestGetAssistantAssociation", func(t *testing.T) {
+        input := &qconnect.GetAssistantAssociationInput{}
+        output := &qconnect.GetAssistantAssociationOutput{}
 
-        mockClient.On("GetContentAssociation", ctx, input).Return(output, nil)
+        mockClient.On("GetAssistantAssociation", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetContentAssociation(ctx, input)
+        result, err := mockClient.GetAssistantAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetContent", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetContentAssociation", func(t *testing.T) {
+        input := &qconnect.GetContentAssociationInput{}
+        output := &qconnect.GetContentAssociationOutput{}
+
+        mockClient.On("GetContentAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetContentAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAIAgents", func(t *testing.T) {
-        input := &qconnect.ListAIAgentsInput{}
-        output := &qconnect.ListAIAgentsOutput{}
-
-        mockClient.On("ListAIAgents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAIAgents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAIAgentVersions", func(t *testing.T) {
         input := &qconnect.ListAIAgentVersionsInput{}
         output := &qconnect.ListAIAgentVersionsOutput{}
@@ -684,13 +671,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAIGuardrails", func(t *testing.T) {
-        input := &qconnect.ListAIGuardrailsInput{}
-        output := &qconnect.ListAIGuardrailsOutput{}
+    t.Run("TestListAIAgents", func(t *testing.T) {
+        input := &qconnect.ListAIAgentsInput{}
+        output := &qconnect.ListAIAgentsOutput{}
 
-        mockClient.On("ListAIGuardrails", ctx, input).Return(output, nil)
+        mockClient.On("ListAIAgents", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListAIGuardrails(ctx, input)
+        result, err := mockClient.ListAIAgents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,13 +697,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAIPrompts", func(t *testing.T) {
-        input := &qconnect.ListAIPromptsInput{}
-        output := &qconnect.ListAIPromptsOutput{}
+    t.Run("TestListAIGuardrails", func(t *testing.T) {
+        input := &qconnect.ListAIGuardrailsInput{}
+        output := &qconnect.ListAIGuardrailsOutput{}
 
-        mockClient.On("ListAIPrompts", ctx, input).Return(output, nil)
+        mockClient.On("ListAIGuardrails", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListAIPrompts(ctx, input)
+        result, err := mockClient.ListAIGuardrails(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -730,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAIPromptVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAIPromptVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIPrompts", func(t *testing.T) {
+        input := &qconnect.ListAIPromptsInput{}
+        output := &qconnect.ListAIPromptsOutput{}
+
+        mockClient.On("ListAIPrompts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIPrompts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,13 +814,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMessages", func(t *testing.T) {
-        input := &qconnect.ListMessagesInput{}
-        output := &qconnect.ListMessagesOutput{}
+    t.Run("TestListMessageTemplateVersions", func(t *testing.T) {
+        input := &qconnect.ListMessageTemplateVersionsInput{}
+        output := &qconnect.ListMessageTemplateVersionsOutput{}
 
-        mockClient.On("ListMessages", ctx, input).Return(output, nil)
+        mockClient.On("ListMessageTemplateVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListMessages(ctx, input)
+        result, err := mockClient.ListMessageTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -840,13 +840,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMessageTemplateVersions", func(t *testing.T) {
-        input := &qconnect.ListMessageTemplateVersionsInput{}
-        output := &qconnect.ListMessageTemplateVersionsOutput{}
+    t.Run("TestListMessages", func(t *testing.T) {
+        input := &qconnect.ListMessagesInput{}
+        output := &qconnect.ListMessagesOutput{}
 
-        mockClient.On("ListMessageTemplateVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListMessages", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListMessageTemplateVersions(ctx, input)
+        result, err := mockClient.ListMessages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1191,19 +1191,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateSessionData", func(t *testing.T) {
-        input := &qconnect.UpdateSessionDataInput{}
-        output := &qconnect.UpdateSessionDataOutput{}
-
-        mockClient.On("UpdateSessionData", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateSessionData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateSession", func(t *testing.T) {
         input := &qconnect.UpdateSessionInput{}
         output := &qconnect.UpdateSessionOutput{}
@@ -1211,6 +1198,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSessionData", func(t *testing.T) {
+        input := &qconnect.UpdateSessionDataInput{}
+        output := &qconnect.UpdateSessionDataOutput{}
+
+        mockClient.On("UpdateSessionData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSessionData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

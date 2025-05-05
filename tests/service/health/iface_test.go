@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAffectedEntitiesForOrganization", func(t *testing.T) {
-        input := &health.DescribeAffectedEntitiesForOrganizationInput{}
-        output := &health.DescribeAffectedEntitiesForOrganizationOutput{}
-
-        mockClient.On("DescribeAffectedEntitiesForOrganization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAffectedEntitiesForOrganization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeAffectedEntities", func(t *testing.T) {
         input := &health.DescribeAffectedEntitiesInput{}
         output := &health.DescribeAffectedEntitiesOutput{}
@@ -73,13 +60,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEntityAggregatesForOrganization", func(t *testing.T) {
-        input := &health.DescribeEntityAggregatesForOrganizationInput{}
-        output := &health.DescribeEntityAggregatesForOrganizationOutput{}
+    t.Run("TestDescribeAffectedEntitiesForOrganization", func(t *testing.T) {
+        input := &health.DescribeAffectedEntitiesForOrganizationInput{}
+        output := &health.DescribeAffectedEntitiesForOrganizationOutput{}
 
-        mockClient.On("DescribeEntityAggregatesForOrganization", ctx, input).Return(output, nil)
+        mockClient.On("DescribeAffectedEntitiesForOrganization", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeEntityAggregatesForOrganization(ctx, input)
+        result, err := mockClient.DescribeAffectedEntitiesForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeEntityAggregatesForOrganization", func(t *testing.T) {
+        input := &health.DescribeEntityAggregatesForOrganizationInput{}
+        output := &health.DescribeEntityAggregatesForOrganizationOutput{}
+
+        mockClient.On("DescribeEntityAggregatesForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEntityAggregatesForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEventAggregates", func(t *testing.T) {
         input := &health.DescribeEventAggregatesInput{}
         output := &health.DescribeEventAggregatesOutput{}
@@ -106,19 +106,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEventAggregates", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEventAggregates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeEventDetailsForOrganization", func(t *testing.T) {
-        input := &health.DescribeEventDetailsForOrganizationInput{}
-        output := &health.DescribeEventDetailsForOrganizationOutput{}
-
-        mockClient.On("DescribeEventDetailsForOrganization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventDetailsForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,13 +125,26 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventsForOrganization", func(t *testing.T) {
-        input := &health.DescribeEventsForOrganizationInput{}
-        output := &health.DescribeEventsForOrganizationOutput{}
+    t.Run("TestDescribeEventDetailsForOrganization", func(t *testing.T) {
+        input := &health.DescribeEventDetailsForOrganizationInput{}
+        output := &health.DescribeEventDetailsForOrganizationOutput{}
 
-        mockClient.On("DescribeEventsForOrganization", ctx, input).Return(output, nil)
+        mockClient.On("DescribeEventDetailsForOrganization", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeEventsForOrganization(ctx, input)
+        result, err := mockClient.DescribeEventDetailsForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventTypes", func(t *testing.T) {
+        input := &health.DescribeEventTypesInput{}
+        output := &health.DescribeEventTypesOutput{}
+
+        mockClient.On("DescribeEventTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,13 +164,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventTypes", func(t *testing.T) {
-        input := &health.DescribeEventTypesInput{}
-        output := &health.DescribeEventTypesOutput{}
+    t.Run("TestDescribeEventsForOrganization", func(t *testing.T) {
+        input := &health.DescribeEventsForOrganizationInput{}
+        output := &health.DescribeEventsForOrganizationOutput{}
 
-        mockClient.On("DescribeEventTypes", ctx, input).Return(output, nil)
+        mockClient.On("DescribeEventsForOrganization", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeEventTypes(ctx, input)
+        result, err := mockClient.DescribeEventsForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

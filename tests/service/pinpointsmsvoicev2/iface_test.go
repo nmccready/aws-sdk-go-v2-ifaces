@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRegistration", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.CreateRegistrationInput{}
+        output := &pinpointsmsvoicev2.CreateRegistrationOutput{}
+
+        mockClient.On("CreateRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRegistrationAssociation", func(t *testing.T) {
         input := &pinpointsmsvoicev2.CreateRegistrationAssociationInput{}
         output := &pinpointsmsvoicev2.CreateRegistrationAssociationOutput{}
@@ -145,19 +158,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateRegistrationAttachment", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateRegistrationAttachment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreateRegistration", func(t *testing.T) {
-        input := &pinpointsmsvoicev2.CreateRegistrationInput{}
-        output := &pinpointsmsvoicev2.CreateRegistrationOutput{}
-
-        mockClient.On("CreateRegistration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteOptedOutNumber", func(t *testing.T) {
-        input := &pinpointsmsvoicev2.DeleteOptedOutNumberInput{}
-        output := &pinpointsmsvoicev2.DeleteOptedOutNumberOutput{}
-
-        mockClient.On("DeleteOptedOutNumber", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteOptedOutNumber(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteOptOutList", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DeleteOptOutListInput{}
         output := &pinpointsmsvoicev2.DeleteOptOutListOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOptOutList", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOptOutList(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteOptedOutNumber", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteOptedOutNumberInput{}
+        output := &pinpointsmsvoicev2.DeleteOptedOutNumberOutput{}
+
+        mockClient.On("DeleteOptedOutNumber", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteOptedOutNumber(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -346,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteRegistration", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteRegistrationInput{}
+        output := &pinpointsmsvoicev2.DeleteRegistrationOutput{}
+
+        mockClient.On("DeleteRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRegistrationAttachment", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DeleteRegistrationAttachmentInput{}
         output := &pinpointsmsvoicev2.DeleteRegistrationAttachmentOutput{}
@@ -366,19 +379,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRegistrationFieldValue", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRegistrationFieldValue(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteRegistration", func(t *testing.T) {
-        input := &pinpointsmsvoicev2.DeleteRegistrationInput{}
-        output := &pinpointsmsvoicev2.DeleteRegistrationOutput{}
-
-        mockClient.On("DeleteRegistration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,19 +489,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeOptedOutNumbers", func(t *testing.T) {
-        input := &pinpointsmsvoicev2.DescribeOptedOutNumbersInput{}
-        output := &pinpointsmsvoicev2.DescribeOptedOutNumbersOutput{}
-
-        mockClient.On("DescribeOptedOutNumbers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeOptedOutNumbers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeOptOutLists", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DescribeOptOutListsInput{}
         output := &pinpointsmsvoicev2.DescribeOptOutListsOutput{}
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeOptOutLists", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeOptOutLists(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeOptedOutNumbers", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DescribeOptedOutNumbersInput{}
+        output := &pinpointsmsvoicev2.DescribeOptedOutNumbersOutput{}
+
+        mockClient.On("DescribeOptedOutNumbers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeOptedOutNumbers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeRegistrations", func(t *testing.T) {
-        input := &pinpointsmsvoicev2.DescribeRegistrationsInput{}
-        output := &pinpointsmsvoicev2.DescribeRegistrationsOutput{}
-
-        mockClient.On("DescribeRegistrations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeRegistrations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeRegistrationTypeDefinitions", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DescribeRegistrationTypeDefinitionsInput{}
         output := &pinpointsmsvoicev2.DescribeRegistrationTypeDefinitionsOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeRegistrationVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeRegistrationVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeRegistrations", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DescribeRegistrationsInput{}
+        output := &pinpointsmsvoicev2.DescribeRegistrationsOutput{}
+
+        mockClient.On("DescribeRegistrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRegistrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,19 +1152,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateProtectConfigurationCountryRuleSet", func(t *testing.T) {
-        input := &pinpointsmsvoicev2.UpdateProtectConfigurationCountryRuleSetInput{}
-        output := &pinpointsmsvoicev2.UpdateProtectConfigurationCountryRuleSetOutput{}
-
-        mockClient.On("UpdateProtectConfigurationCountryRuleSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateProtectConfigurationCountryRuleSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateProtectConfiguration", func(t *testing.T) {
         input := &pinpointsmsvoicev2.UpdateProtectConfigurationInput{}
         output := &pinpointsmsvoicev2.UpdateProtectConfigurationOutput{}
@@ -1172,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateProtectConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateProtectConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProtectConfigurationCountryRuleSet", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.UpdateProtectConfigurationCountryRuleSetInput{}
+        output := &pinpointsmsvoicev2.UpdateProtectConfigurationCountryRuleSetOutput{}
+
+        mockClient.On("UpdateProtectConfigurationCountryRuleSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProtectConfigurationCountryRuleSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

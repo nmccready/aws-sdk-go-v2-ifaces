@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListNetworks", func(t *testing.T) {
-        input := &privatenetworks.ListNetworksInput{}
-        output := &privatenetworks.ListNetworksOutput{}
-
-        mockClient.On("ListNetworks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListNetworks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListNetworkSites", func(t *testing.T) {
         input := &privatenetworks.ListNetworkSitesInput{}
         output := &privatenetworks.ListNetworkSitesOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListNetworkSites", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListNetworkSites(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworks", func(t *testing.T) {
+        input := &privatenetworks.ListNetworksInput{}
+        output := &privatenetworks.ListNetworksOutput{}
+
+        mockClient.On("ListNetworks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

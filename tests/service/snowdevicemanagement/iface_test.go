@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDeviceEc2Instances", func(t *testing.T) {
-        input := &snowdevicemanagement.DescribeDeviceEc2InstancesInput{}
-        output := &snowdevicemanagement.DescribeDeviceEc2InstancesOutput{}
-
-        mockClient.On("DescribeDeviceEc2Instances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDeviceEc2Instances(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeDevice", func(t *testing.T) {
         input := &snowdevicemanagement.DescribeDeviceInput{}
         output := &snowdevicemanagement.DescribeDeviceOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDevice", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDevice(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDeviceEc2Instances", func(t *testing.T) {
+        input := &snowdevicemanagement.DescribeDeviceEc2InstancesInput{}
+        output := &snowdevicemanagement.DescribeDeviceEc2InstancesOutput{}
+
+        mockClient.On("DescribeDeviceEc2Instances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDeviceEc2Instances(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

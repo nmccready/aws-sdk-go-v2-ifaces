@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateBotAlias", func(t *testing.T) {
-        input := &lexmodelsv2.CreateBotAliasInput{}
-        output := &lexmodelsv2.CreateBotAliasOutput{}
-
-        mockClient.On("CreateBotAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateBotAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateBot", func(t *testing.T) {
         input := &lexmodelsv2.CreateBotInput{}
         output := &lexmodelsv2.CreateBotOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateBot", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateBot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateBotAlias", func(t *testing.T) {
+        input := &lexmodelsv2.CreateBotAliasInput{}
+        output := &lexmodelsv2.CreateBotAliasOutput{}
+
+        mockClient.On("CreateBotAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBotAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteBotAlias", func(t *testing.T) {
-        input := &lexmodelsv2.DeleteBotAliasInput{}
-        output := &lexmodelsv2.DeleteBotAliasOutput{}
-
-        mockClient.On("DeleteBotAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteBotAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteBot", func(t *testing.T) {
         input := &lexmodelsv2.DeleteBotInput{}
         output := &lexmodelsv2.DeleteBotOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBot", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBotAlias", func(t *testing.T) {
+        input := &lexmodelsv2.DeleteBotAliasInput{}
+        output := &lexmodelsv2.DeleteBotAliasOutput{}
+
+        mockClient.On("DeleteBotAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBotAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeBotAlias", func(t *testing.T) {
-        input := &lexmodelsv2.DescribeBotAliasInput{}
-        output := &lexmodelsv2.DescribeBotAliasOutput{}
-
-        mockClient.On("DescribeBotAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeBotAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeBot", func(t *testing.T) {
         input := &lexmodelsv2.DescribeBotInput{}
         output := &lexmodelsv2.DescribeBotOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeBot", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeBot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeBotAlias", func(t *testing.T) {
+        input := &lexmodelsv2.DescribeBotAliasInput{}
+        output := &lexmodelsv2.DescribeBotAliasOutput{}
+
+        mockClient.On("DescribeBotAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeBotAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTestSet", func(t *testing.T) {
+        input := &lexmodelsv2.DescribeTestSetInput{}
+        output := &lexmodelsv2.DescribeTestSetOutput{}
+
+        mockClient.On("DescribeTestSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTestSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTestSetDiscrepancyReport", func(t *testing.T) {
         input := &lexmodelsv2.DescribeTestSetDiscrepancyReportInput{}
         output := &lexmodelsv2.DescribeTestSetDiscrepancyReportOutput{}
@@ -665,19 +678,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTestSetGeneration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTestSetGeneration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeTestSet", func(t *testing.T) {
-        input := &lexmodelsv2.DescribeTestSetInput{}
-        output := &lexmodelsv2.DescribeTestSetOutput{}
-
-        mockClient.On("DescribeTestSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTestSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,19 +723,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBotAliases", func(t *testing.T) {
-        input := &lexmodelsv2.ListBotAliasesInput{}
-        output := &lexmodelsv2.ListBotAliasesOutput{}
-
-        mockClient.On("ListBotAliases", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListBotAliases(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListBotAliasReplicas", func(t *testing.T) {
         input := &lexmodelsv2.ListBotAliasReplicasInput{}
         output := &lexmodelsv2.ListBotAliasReplicasOutput{}
@@ -743,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBotAliasReplicas", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBotAliasReplicas(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBotAliases", func(t *testing.T) {
+        input := &lexmodelsv2.ListBotAliasesInput{}
+        output := &lexmodelsv2.ListBotAliasesOutput{}
+
+        mockClient.On("ListBotAliases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBotAliases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,19 +801,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBots", func(t *testing.T) {
-        input := &lexmodelsv2.ListBotsInput{}
-        output := &lexmodelsv2.ListBotsOutput{}
-
-        mockClient.On("ListBots", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListBots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListBotVersionReplicas", func(t *testing.T) {
         input := &lexmodelsv2.ListBotVersionReplicasInput{}
         output := &lexmodelsv2.ListBotVersionReplicasOutput{}
@@ -834,6 +821,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBotVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBotVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBots", func(t *testing.T) {
+        input := &lexmodelsv2.ListBotsInput{}
+        output := &lexmodelsv2.ListBotsOutput{}
+
+        mockClient.On("ListBots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -931,19 +931,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListIntents", func(t *testing.T) {
-        input := &lexmodelsv2.ListIntentsInput{}
-        output := &lexmodelsv2.ListIntentsOutput{}
-
-        mockClient.On("ListIntents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListIntents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListIntentStageMetrics", func(t *testing.T) {
         input := &lexmodelsv2.ListIntentStageMetricsInput{}
         output := &lexmodelsv2.ListIntentStageMetricsOutput{}
@@ -951,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIntentStageMetrics", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIntentStageMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIntents", func(t *testing.T) {
+        input := &lexmodelsv2.ListIntentsInput{}
+        output := &lexmodelsv2.ListIntentsOutput{}
+
+        mockClient.On("ListIntents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIntents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -996,19 +996,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSlots", func(t *testing.T) {
-        input := &lexmodelsv2.ListSlotsInput{}
-        output := &lexmodelsv2.ListSlotsOutput{}
-
-        mockClient.On("ListSlots", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSlots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSlotTypes", func(t *testing.T) {
         input := &lexmodelsv2.ListSlotTypesInput{}
         output := &lexmodelsv2.ListSlotTypesOutput{}
@@ -1016,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSlotTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSlotTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSlots", func(t *testing.T) {
+        input := &lexmodelsv2.ListSlotsInput{}
+        output := &lexmodelsv2.ListSlotsOutput{}
+
+        mockClient.On("ListSlots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSlots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1230,19 +1230,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateBotAlias", func(t *testing.T) {
-        input := &lexmodelsv2.UpdateBotAliasInput{}
-        output := &lexmodelsv2.UpdateBotAliasOutput{}
-
-        mockClient.On("UpdateBotAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateBotAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateBot", func(t *testing.T) {
         input := &lexmodelsv2.UpdateBotInput{}
         output := &lexmodelsv2.UpdateBotOutput{}
@@ -1250,6 +1237,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBot", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBotAlias", func(t *testing.T) {
+        input := &lexmodelsv2.UpdateBotAliasInput{}
+        output := &lexmodelsv2.UpdateBotAliasOutput{}
+
+        mockClient.On("UpdateBotAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBotAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

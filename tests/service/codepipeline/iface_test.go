@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetPipelineExecution", func(t *testing.T) {
-        input := &codepipeline.GetPipelineExecutionInput{}
-        output := &codepipeline.GetPipelineExecutionOutput{}
-
-        mockClient.On("GetPipelineExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetPipelineExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetPipeline", func(t *testing.T) {
         input := &codepipeline.GetPipelineInput{}
         output := &codepipeline.GetPipelineOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPipeline", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPipelineExecution", func(t *testing.T) {
+        input := &codepipeline.GetPipelineExecutionInput{}
+        output := &codepipeline.GetPipelineExecutionOutput{}
+
+        mockClient.On("GetPipelineExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPipelineExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

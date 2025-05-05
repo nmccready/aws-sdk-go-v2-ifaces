@@ -44,8 +44,8 @@ type IClient interface {
  DescribeStorageSystem(ctx context.Context, params *DescribeStorageSystemInput, optFns ...func(*Options)) (*DescribeStorageSystemOutput, error) 
  DescribeStorageSystemResourceMetrics(ctx context.Context, params *DescribeStorageSystemResourceMetricsInput, optFns ...func(*Options)) (*DescribeStorageSystemResourceMetricsOutput, error) 
  DescribeStorageSystemResources(ctx context.Context, params *DescribeStorageSystemResourcesInput, optFns ...func(*Options)) (*DescribeStorageSystemResourcesOutput, error) 
- DescribeTaskExecution(ctx context.Context, params *DescribeTaskExecutionInput, optFns ...func(*Options)) (*DescribeTaskExecutionOutput, error) 
  DescribeTask(ctx context.Context, params *DescribeTaskInput, optFns ...func(*Options)) (*DescribeTaskOutput, error) 
+ DescribeTaskExecution(ctx context.Context, params *DescribeTaskExecutionInput, optFns ...func(*Options)) (*DescribeTaskExecutionOutput, error) 
  GenerateRecommendations(ctx context.Context, params *GenerateRecommendationsInput, optFns ...func(*Options)) (*GenerateRecommendationsOutput, error) 
  ListAgents(ctx context.Context, params *ListAgentsInput, optFns ...func(*Options)) (*ListAgentsOutput, error) 
  ListDiscoveryJobs(ctx context.Context, params *ListDiscoveryJobsInput, optFns ...func(*Options)) (*ListDiscoveryJobsOutput, error) 
@@ -74,6 +74,6 @@ type IClient interface {
  UpdateLocationS3(ctx context.Context, params *UpdateLocationS3Input, optFns ...func(*Options)) (*UpdateLocationS3Output, error) 
  UpdateLocationSmb(ctx context.Context, params *UpdateLocationSmbInput, optFns ...func(*Options)) (*UpdateLocationSmbOutput, error) 
  UpdateStorageSystem(ctx context.Context, params *UpdateStorageSystemInput, optFns ...func(*Options)) (*UpdateStorageSystemOutput, error) 
- UpdateTaskExecution(ctx context.Context, params *UpdateTaskExecutionInput, optFns ...func(*Options)) (*UpdateTaskExecutionOutput, error) 
  UpdateTask(ctx context.Context, params *UpdateTaskInput, optFns ...func(*Options)) (*UpdateTaskOutput, error) 
+ UpdateTaskExecution(ctx context.Context, params *UpdateTaskExecutionInput, optFns ...func(*Options)) (*UpdateTaskExecutionOutput, error) 
 }

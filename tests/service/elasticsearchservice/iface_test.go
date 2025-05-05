@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeElasticsearchDomainConfig", func(t *testing.T) {
-        input := &elasticsearchservice.DescribeElasticsearchDomainConfigInput{}
-        output := &elasticsearchservice.DescribeElasticsearchDomainConfigOutput{}
-
-        mockClient.On("DescribeElasticsearchDomainConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeElasticsearchDomainConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeElasticsearchDomain", func(t *testing.T) {
         input := &elasticsearchservice.DescribeElasticsearchDomainInput{}
         output := &elasticsearchservice.DescribeElasticsearchDomainOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeElasticsearchDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeElasticsearchDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeElasticsearchDomainConfig", func(t *testing.T) {
+        input := &elasticsearchservice.DescribeElasticsearchDomainConfigInput{}
+        output := &elasticsearchservice.DescribeElasticsearchDomainConfigOutput{}
+
+        mockClient.On("DescribeElasticsearchDomainConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeElasticsearchDomainConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,19 +554,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListVpcEndpointsForDomain", func(t *testing.T) {
-        input := &elasticsearchservice.ListVpcEndpointsForDomainInput{}
-        output := &elasticsearchservice.ListVpcEndpointsForDomainOutput{}
-
-        mockClient.On("ListVpcEndpointsForDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListVpcEndpointsForDomain(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListVpcEndpoints", func(t *testing.T) {
         input := &elasticsearchservice.ListVpcEndpointsInput{}
         output := &elasticsearchservice.ListVpcEndpointsOutput{}
@@ -574,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListVpcEndpoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListVpcEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVpcEndpointsForDomain", func(t *testing.T) {
+        input := &elasticsearchservice.ListVpcEndpointsForDomainInput{}
+        output := &elasticsearchservice.ListVpcEndpointsForDomainOutput{}
+
+        mockClient.On("ListVpcEndpointsForDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVpcEndpointsForDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

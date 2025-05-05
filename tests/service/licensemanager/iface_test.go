@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateLicense", func(t *testing.T) {
+        input := &licensemanager.CreateLicenseInput{}
+        output := &licensemanager.CreateLicenseOutput{}
+
+        mockClient.On("CreateLicense", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLicense(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLicenseConfiguration", func(t *testing.T) {
         input := &licensemanager.CreateLicenseConfigurationInput{}
         output := &licensemanager.CreateLicenseConfigurationOutput{}
@@ -132,19 +145,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateLicenseConversionTaskForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateLicenseConversionTaskForResource(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreateLicense", func(t *testing.T) {
-        input := &licensemanager.CreateLicenseInput{}
-        output := &licensemanager.CreateLicenseOutput{}
-
-        mockClient.On("CreateLicense", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateLicense(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteLicenseConfiguration", func(t *testing.T) {
-        input := &licensemanager.DeleteLicenseConfigurationInput{}
-        output := &licensemanager.DeleteLicenseConfigurationOutput{}
-
-        mockClient.On("DeleteLicenseConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteLicenseConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteLicense", func(t *testing.T) {
         input := &licensemanager.DeleteLicenseInput{}
         output := &licensemanager.DeleteLicenseOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLicense", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLicense(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteLicenseConfiguration", func(t *testing.T) {
+        input := &licensemanager.DeleteLicenseConfigurationInput{}
+        output := &licensemanager.DeleteLicenseConfigurationOutput{}
+
+        mockClient.On("DeleteLicenseConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLicenseConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetLicense", func(t *testing.T) {
+        input := &licensemanager.GetLicenseInput{}
+        output := &licensemanager.GetLicenseOutput{}
+
+        mockClient.On("GetLicense", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLicense(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLicenseConfiguration", func(t *testing.T) {
         input := &licensemanager.GetLicenseConfigurationInput{}
         output := &licensemanager.GetLicenseConfigurationOutput{}
@@ -314,19 +327,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLicenseConversionTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLicenseConversionTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetLicense", func(t *testing.T) {
-        input := &licensemanager.GetLicenseInput{}
-        output := &licensemanager.GetLicenseOutput{}
-
-        mockClient.On("GetLicense", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetLicense(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListLicenses", func(t *testing.T) {
-        input := &licensemanager.ListLicensesInput{}
-        output := &licensemanager.ListLicensesOutput{}
-
-        mockClient.On("ListLicenses", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLicenses(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListLicenseSpecificationsForResource", func(t *testing.T) {
         input := &licensemanager.ListLicenseSpecificationsForResourceInput{}
         output := &licensemanager.ListLicenseSpecificationsForResourceOutput{}
@@ -489,13 +476,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReceivedGrantsForOrganization", func(t *testing.T) {
-        input := &licensemanager.ListReceivedGrantsForOrganizationInput{}
-        output := &licensemanager.ListReceivedGrantsForOrganizationOutput{}
+    t.Run("TestListLicenses", func(t *testing.T) {
+        input := &licensemanager.ListLicensesInput{}
+        output := &licensemanager.ListLicensesOutput{}
 
-        mockClient.On("ListReceivedGrantsForOrganization", ctx, input).Return(output, nil)
+        mockClient.On("ListLicenses", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListReceivedGrantsForOrganization(ctx, input)
+        result, err := mockClient.ListLicenses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,13 +502,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReceivedLicensesForOrganization", func(t *testing.T) {
-        input := &licensemanager.ListReceivedLicensesForOrganizationInput{}
-        output := &licensemanager.ListReceivedLicensesForOrganizationOutput{}
+    t.Run("TestListReceivedGrantsForOrganization", func(t *testing.T) {
+        input := &licensemanager.ListReceivedGrantsForOrganizationInput{}
+        output := &licensemanager.ListReceivedGrantsForOrganizationOutput{}
 
-        mockClient.On("ListReceivedLicensesForOrganization", ctx, input).Return(output, nil)
+        mockClient.On("ListReceivedGrantsForOrganization", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListReceivedLicensesForOrganization(ctx, input)
+        result, err := mockClient.ListReceivedGrantsForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReceivedLicenses", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReceivedLicenses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReceivedLicensesForOrganization", func(t *testing.T) {
+        input := &licensemanager.ListReceivedLicensesForOrganizationInput{}
+        output := &licensemanager.ListReceivedLicensesForOrganizationOutput{}
+
+        mockClient.On("ListReceivedLicensesForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReceivedLicensesForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

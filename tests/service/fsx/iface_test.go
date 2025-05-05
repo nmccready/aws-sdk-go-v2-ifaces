@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateFileSystemFromBackup", func(t *testing.T) {
-        input := &fsx.CreateFileSystemFromBackupInput{}
-        output := &fsx.CreateFileSystemFromBackupOutput{}
-
-        mockClient.On("CreateFileSystemFromBackup", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateFileSystemFromBackup(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateFileSystem", func(t *testing.T) {
         input := &fsx.CreateFileSystemInput{}
         output := &fsx.CreateFileSystemOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateFileSystem", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateFileSystem(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateFileSystemFromBackup", func(t *testing.T) {
+        input := &fsx.CreateFileSystemFromBackupInput{}
+        output := &fsx.CreateFileSystemFromBackupOutput{}
+
+        mockClient.On("CreateFileSystemFromBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateFileSystemFromBackup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateVolumeFromBackup", func(t *testing.T) {
-        input := &fsx.CreateVolumeFromBackupInput{}
-        output := &fsx.CreateVolumeFromBackupOutput{}
-
-        mockClient.On("CreateVolumeFromBackup", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateVolumeFromBackup(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateVolume", func(t *testing.T) {
         input := &fsx.CreateVolumeInput{}
         output := &fsx.CreateVolumeOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateVolume", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateVolume(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateVolumeFromBackup", func(t *testing.T) {
+        input := &fsx.CreateVolumeFromBackupInput{}
+        output := &fsx.CreateVolumeFromBackupOutput{}
+
+        mockClient.On("CreateVolumeFromBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVolumeFromBackup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

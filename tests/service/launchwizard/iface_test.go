@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetWorkloadDeploymentPattern", func(t *testing.T) {
-        input := &launchwizard.GetWorkloadDeploymentPatternInput{}
-        output := &launchwizard.GetWorkloadDeploymentPatternOutput{}
-
-        mockClient.On("GetWorkloadDeploymentPattern", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetWorkloadDeploymentPattern(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetWorkload", func(t *testing.T) {
         input := &launchwizard.GetWorkloadInput{}
         output := &launchwizard.GetWorkloadOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetWorkload", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetWorkload(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWorkloadDeploymentPattern", func(t *testing.T) {
+        input := &launchwizard.GetWorkloadDeploymentPatternInput{}
+        output := &launchwizard.GetWorkloadDeploymentPatternOutput{}
+
+        mockClient.On("GetWorkloadDeploymentPattern", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWorkloadDeploymentPattern(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

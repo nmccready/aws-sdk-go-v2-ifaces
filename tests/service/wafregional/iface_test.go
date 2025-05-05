@@ -619,19 +619,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetWebACLForResource", func(t *testing.T) {
-        input := &wafregional.GetWebACLForResourceInput{}
-        output := &wafregional.GetWebACLForResourceOutput{}
-
-        mockClient.On("GetWebACLForResource", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetWebACLForResource(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetWebACL", func(t *testing.T) {
         input := &wafregional.GetWebACLInput{}
         output := &wafregional.GetWebACLOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetWebACL", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetWebACL(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWebACLForResource", func(t *testing.T) {
+        input := &wafregional.GetWebACLForResourceInput{}
+        output := &wafregional.GetWebACLForResourceOutput{}
+
+        mockClient.On("GetWebACLForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWebACLForResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

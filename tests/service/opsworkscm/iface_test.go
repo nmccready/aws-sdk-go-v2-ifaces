@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateServerEngineAttributes", func(t *testing.T) {
-        input := &opsworkscm.UpdateServerEngineAttributesInput{}
-        output := &opsworkscm.UpdateServerEngineAttributesOutput{}
-
-        mockClient.On("UpdateServerEngineAttributes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateServerEngineAttributes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateServer", func(t *testing.T) {
         input := &opsworkscm.UpdateServerInput{}
         output := &opsworkscm.UpdateServerOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateServer", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateServer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateServerEngineAttributes", func(t *testing.T) {
+        input := &opsworkscm.UpdateServerEngineAttributesInput{}
+        output := &opsworkscm.UpdateServerEngineAttributesOutput{}
+
+        mockClient.On("UpdateServerEngineAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateServerEngineAttributes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

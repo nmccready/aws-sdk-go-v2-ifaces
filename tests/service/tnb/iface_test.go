@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSolFunctionPackage", func(t *testing.T) {
+        input := &tnb.GetSolFunctionPackageInput{}
+        output := &tnb.GetSolFunctionPackageOutput{}
+
+        mockClient.On("GetSolFunctionPackage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSolFunctionPackage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSolFunctionPackageContent", func(t *testing.T) {
         input := &tnb.GetSolFunctionPackageContentInput{}
         output := &tnb.GetSolFunctionPackageContentOutput{}
@@ -158,19 +171,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSolFunctionPackageDescriptor", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSolFunctionPackageDescriptor(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetSolFunctionPackage", func(t *testing.T) {
-        input := &tnb.GetSolFunctionPackageInput{}
-        output := &tnb.GetSolFunctionPackageOutput{}
-
-        mockClient.On("GetSolFunctionPackage", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSolFunctionPackage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSolNetworkPackage", func(t *testing.T) {
+        input := &tnb.GetSolNetworkPackageInput{}
+        output := &tnb.GetSolNetworkPackageOutput{}
+
+        mockClient.On("GetSolNetworkPackage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSolNetworkPackage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSolNetworkPackageContent", func(t *testing.T) {
         input := &tnb.GetSolNetworkPackageContentInput{}
         output := &tnb.GetSolNetworkPackageContentOutput{}
@@ -223,19 +236,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSolNetworkPackageDescriptor", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSolNetworkPackageDescriptor(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetSolNetworkPackage", func(t *testing.T) {
-        input := &tnb.GetSolNetworkPackageInput{}
-        output := &tnb.GetSolNetworkPackageOutput{}
-
-        mockClient.On("GetSolNetworkPackage", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSolNetworkPackage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

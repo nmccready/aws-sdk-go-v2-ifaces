@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetGroupConfiguration", func(t *testing.T) {
-        input := &resourcegroups.GetGroupConfigurationInput{}
-        output := &resourcegroups.GetGroupConfigurationOutput{}
-
-        mockClient.On("GetGroupConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetGroupConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetGroup", func(t *testing.T) {
         input := &resourcegroups.GetGroupInput{}
         output := &resourcegroups.GetGroupOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetGroupConfiguration", func(t *testing.T) {
+        input := &resourcegroups.GetGroupConfigurationInput{}
+        output := &resourcegroups.GetGroupConfigurationOutput{}
+
+        mockClient.On("GetGroupConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGroupConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTags", func(t *testing.T) {
-        input := &resourcegroups.GetTagsInput{}
-        output := &resourcegroups.GetTagsOutput{}
-
-        mockClient.On("GetTags", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTags(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetTagSyncTask", func(t *testing.T) {
         input := &resourcegroups.GetTagSyncTaskInput{}
         output := &resourcegroups.GetTagSyncTaskOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTagSyncTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTagSyncTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTags", func(t *testing.T) {
+        input := &resourcegroups.GetTagsInput{}
+        output := &resourcegroups.GetTagsOutput{}
+
+        mockClient.On("GetTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,19 +164,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListGroupingStatuses", func(t *testing.T) {
-        input := &resourcegroups.ListGroupingStatusesInput{}
-        output := &resourcegroups.ListGroupingStatusesOutput{}
-
-        mockClient.On("ListGroupingStatuses", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGroupingStatuses(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListGroupResources", func(t *testing.T) {
         input := &resourcegroups.ListGroupResourcesInput{}
         output := &resourcegroups.ListGroupResourcesOutput{}
@@ -184,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGroupResources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGroupResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGroupingStatuses", func(t *testing.T) {
+        input := &resourcegroups.ListGroupingStatusesInput{}
+        output := &resourcegroups.ListGroupingStatusesOutput{}
+
+        mockClient.On("ListGroupingStatuses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroupingStatuses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

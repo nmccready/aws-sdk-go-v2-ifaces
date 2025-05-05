@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTaxRegistrationDocument", func(t *testing.T) {
-        input := &taxsettings.GetTaxRegistrationDocumentInput{}
-        output := &taxsettings.GetTaxRegistrationDocumentOutput{}
-
-        mockClient.On("GetTaxRegistrationDocument", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTaxRegistrationDocument(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetTaxRegistration", func(t *testing.T) {
         input := &taxsettings.GetTaxRegistrationInput{}
         output := &taxsettings.GetTaxRegistrationOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTaxRegistration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTaxRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTaxRegistrationDocument", func(t *testing.T) {
+        input := &taxsettings.GetTaxRegistrationDocumentInput{}
+        output := &taxsettings.GetTaxRegistrationDocumentOutput{}
+
+        mockClient.On("GetTaxRegistrationDocument", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTaxRegistrationDocument(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

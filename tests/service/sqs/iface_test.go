@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestChangeMessageVisibilityBatch", func(t *testing.T) {
-        input := &sqs.ChangeMessageVisibilityBatchInput{}
-        output := &sqs.ChangeMessageVisibilityBatchOutput{}
-
-        mockClient.On("ChangeMessageVisibilityBatch", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ChangeMessageVisibilityBatch(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestChangeMessageVisibility", func(t *testing.T) {
         input := &sqs.ChangeMessageVisibilityInput{}
         output := &sqs.ChangeMessageVisibilityOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ChangeMessageVisibility", ctx, input).Return(output, nil)
 
         result, err := mockClient.ChangeMessageVisibility(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestChangeMessageVisibilityBatch", func(t *testing.T) {
+        input := &sqs.ChangeMessageVisibilityBatchInput{}
+        output := &sqs.ChangeMessageVisibilityBatchOutput{}
+
+        mockClient.On("ChangeMessageVisibilityBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ChangeMessageVisibilityBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteMessageBatch", func(t *testing.T) {
-        input := &sqs.DeleteMessageBatchInput{}
-        output := &sqs.DeleteMessageBatchOutput{}
-
-        mockClient.On("DeleteMessageBatch", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteMessageBatch(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteMessage", func(t *testing.T) {
         input := &sqs.DeleteMessageInput{}
         output := &sqs.DeleteMessageOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteMessage", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMessageBatch", func(t *testing.T) {
+        input := &sqs.DeleteMessageBatchInput{}
+        output := &sqs.DeleteMessageBatchOutput{}
+
+        mockClient.On("DeleteMessageBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMessageBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListQueues", func(t *testing.T) {
-        input := &sqs.ListQueuesInput{}
-        output := &sqs.ListQueuesOutput{}
-
-        mockClient.On("ListQueues", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListQueues(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListQueueTags", func(t *testing.T) {
         input := &sqs.ListQueueTagsInput{}
         output := &sqs.ListQueueTagsOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListQueueTags", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListQueueTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQueues", func(t *testing.T) {
+        input := &sqs.ListQueuesInput{}
+        output := &sqs.ListQueuesOutput{}
+
+        mockClient.On("ListQueues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQueues(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestSendMessageBatch", func(t *testing.T) {
-        input := &sqs.SendMessageBatchInput{}
-        output := &sqs.SendMessageBatchOutput{}
-
-        mockClient.On("SendMessageBatch", ctx, input).Return(output, nil)
-
-        result, err := mockClient.SendMessageBatch(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestSendMessage", func(t *testing.T) {
         input := &sqs.SendMessageInput{}
         output := &sqs.SendMessageOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendMessage", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendMessageBatch", func(t *testing.T) {
+        input := &sqs.SendMessageBatchInput{}
+        output := &sqs.SendMessageBatchOutput{}
+
+        mockClient.On("SendMessageBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendMessageBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

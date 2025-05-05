@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteFunction", func(t *testing.T) {
+        input := &lambda.DeleteFunctionInput{}
+        output := &lambda.DeleteFunctionOutput{}
+
+        mockClient.On("DeleteFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteFunctionCodeSigningConfig", func(t *testing.T) {
         input := &lambda.DeleteFunctionCodeSigningConfigInput{}
         output := &lambda.DeleteFunctionCodeSigningConfigOutput{}
@@ -197,19 +210,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFunctionEventInvokeConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFunctionEventInvokeConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteFunction", func(t *testing.T) {
-        input := &lambda.DeleteFunctionInput{}
-        output := &lambda.DeleteFunctionOutput{}
-
-        mockClient.On("DeleteFunction", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteFunction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFunction", func(t *testing.T) {
+        input := &lambda.GetFunctionInput{}
+        output := &lambda.GetFunctionOutput{}
+
+        mockClient.On("GetFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFunctionCodeSigningConfig", func(t *testing.T) {
         input := &lambda.GetFunctionCodeSigningConfigInput{}
         output := &lambda.GetFunctionCodeSigningConfigOutput{}
@@ -359,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFunction", func(t *testing.T) {
-        input := &lambda.GetFunctionInput{}
-        output := &lambda.GetFunctionOutput{}
-
-        mockClient.On("GetFunction", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFunction(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetFunctionRecursionConfig", func(t *testing.T) {
         input := &lambda.GetFunctionRecursionConfigInput{}
         output := &lambda.GetFunctionRecursionConfigOutput{}
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetLayerVersionByArn", func(t *testing.T) {
-        input := &lambda.GetLayerVersionByArnInput{}
-        output := &lambda.GetLayerVersionByArnOutput{}
-
-        mockClient.On("GetLayerVersionByArn", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetLayerVersionByArn(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetLayerVersion", func(t *testing.T) {
         input := &lambda.GetLayerVersionInput{}
         output := &lambda.GetLayerVersionOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLayerVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLayerVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLayerVersionByArn", func(t *testing.T) {
+        input := &lambda.GetLayerVersionByArnInput{}
+        output := &lambda.GetLayerVersionByArnOutput{}
+
+        mockClient.On("GetLayerVersionByArn", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLayerVersionByArn(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestInvokeAsync", func(t *testing.T) {
-        input := &lambda.InvokeAsyncInput{}
-        output := &lambda.InvokeAsyncOutput{}
-
-        mockClient.On("InvokeAsync", ctx, input).Return(output, nil)
-
-        result, err := mockClient.InvokeAsync(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestInvoke", func(t *testing.T) {
         input := &lambda.InvokeInput{}
         output := &lambda.InvokeOutput{}
@@ -496,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("Invoke", ctx, input).Return(output, nil)
 
         result, err := mockClient.Invoke(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestInvokeAsync", func(t *testing.T) {
+        input := &lambda.InvokeAsyncInput{}
+        output := &lambda.InvokeAsyncOutput{}
+
+        mockClient.On("InvokeAsync", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeAsync(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,13 +567,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFunctionsByCodeSigningConfig", func(t *testing.T) {
-        input := &lambda.ListFunctionsByCodeSigningConfigInput{}
-        output := &lambda.ListFunctionsByCodeSigningConfigOutput{}
+    t.Run("TestListFunctionUrlConfigs", func(t *testing.T) {
+        input := &lambda.ListFunctionUrlConfigsInput{}
+        output := &lambda.ListFunctionUrlConfigsOutput{}
 
-        mockClient.On("ListFunctionsByCodeSigningConfig", ctx, input).Return(output, nil)
+        mockClient.On("ListFunctionUrlConfigs", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListFunctionsByCodeSigningConfig(ctx, input)
+        result, err := mockClient.ListFunctionUrlConfigs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,26 +593,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFunctionUrlConfigs", func(t *testing.T) {
-        input := &lambda.ListFunctionUrlConfigsInput{}
-        output := &lambda.ListFunctionUrlConfigsOutput{}
+    t.Run("TestListFunctionsByCodeSigningConfig", func(t *testing.T) {
+        input := &lambda.ListFunctionsByCodeSigningConfigInput{}
+        output := &lambda.ListFunctionsByCodeSigningConfigOutput{}
 
-        mockClient.On("ListFunctionUrlConfigs", ctx, input).Return(output, nil)
+        mockClient.On("ListFunctionsByCodeSigningConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListFunctionUrlConfigs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListLayers", func(t *testing.T) {
-        input := &lambda.ListLayersInput{}
-        output := &lambda.ListLayersOutput{}
-
-        mockClient.On("ListLayers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLayers(ctx, input)
+        result, err := mockClient.ListFunctionsByCodeSigningConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -626,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLayerVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLayerVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLayers", func(t *testing.T) {
+        input := &lambda.ListLayersInput{}
+        output := &lambda.ListLayersOutput{}
+
+        mockClient.On("ListLayers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLayers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

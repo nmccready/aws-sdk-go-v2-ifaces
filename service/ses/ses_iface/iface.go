@@ -11,16 +11,16 @@ import (
 type IClient interface {
  Options() Options 
  CloneReceiptRuleSet(ctx context.Context, params *CloneReceiptRuleSetInput, optFns ...func(*Options)) (*CloneReceiptRuleSetOutput, error) 
- CreateConfigurationSetEventDestination(ctx context.Context, params *CreateConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*CreateConfigurationSetEventDestinationOutput, error) 
  CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 
+ CreateConfigurationSetEventDestination(ctx context.Context, params *CreateConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*CreateConfigurationSetEventDestinationOutput, error) 
  CreateConfigurationSetTrackingOptions(ctx context.Context, params *CreateConfigurationSetTrackingOptionsInput, optFns ...func(*Options)) (*CreateConfigurationSetTrackingOptionsOutput, error) 
  CreateCustomVerificationEmailTemplate(ctx context.Context, params *CreateCustomVerificationEmailTemplateInput, optFns ...func(*Options)) (*CreateCustomVerificationEmailTemplateOutput, error) 
  CreateReceiptFilter(ctx context.Context, params *CreateReceiptFilterInput, optFns ...func(*Options)) (*CreateReceiptFilterOutput, error) 
  CreateReceiptRule(ctx context.Context, params *CreateReceiptRuleInput, optFns ...func(*Options)) (*CreateReceiptRuleOutput, error) 
  CreateReceiptRuleSet(ctx context.Context, params *CreateReceiptRuleSetInput, optFns ...func(*Options)) (*CreateReceiptRuleSetOutput, error) 
  CreateTemplate(ctx context.Context, params *CreateTemplateInput, optFns ...func(*Options)) (*CreateTemplateOutput, error) 
- DeleteConfigurationSetEventDestination(ctx context.Context, params *DeleteConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*DeleteConfigurationSetEventDestinationOutput, error) 
  DeleteConfigurationSet(ctx context.Context, params *DeleteConfigurationSetInput, optFns ...func(*Options)) (*DeleteConfigurationSetOutput, error) 
+ DeleteConfigurationSetEventDestination(ctx context.Context, params *DeleteConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*DeleteConfigurationSetEventDestinationOutput, error) 
  DeleteConfigurationSetTrackingOptions(ctx context.Context, params *DeleteConfigurationSetTrackingOptionsInput, optFns ...func(*Options)) (*DeleteConfigurationSetTrackingOptionsOutput, error) 
  DeleteCustomVerificationEmailTemplate(ctx context.Context, params *DeleteCustomVerificationEmailTemplateInput, optFns ...func(*Options)) (*DeleteCustomVerificationEmailTemplateOutput, error) 
  DeleteIdentity(ctx context.Context, params *DeleteIdentityInput, optFns ...func(*Options)) (*DeleteIdentityOutput, error) 

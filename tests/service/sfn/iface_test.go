@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateStateMachineAlias", func(t *testing.T) {
-        input := &sfn.CreateStateMachineAliasInput{}
-        output := &sfn.CreateStateMachineAliasOutput{}
-
-        mockClient.On("CreateStateMachineAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateStateMachineAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateStateMachine", func(t *testing.T) {
         input := &sfn.CreateStateMachineInput{}
         output := &sfn.CreateStateMachineOutput{}
@@ -67,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateStateMachine", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateStateMachine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateStateMachineAlias", func(t *testing.T) {
+        input := &sfn.CreateStateMachineAliasInput{}
+        output := &sfn.CreateStateMachineAliasOutput{}
+
+        mockClient.On("CreateStateMachineAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStateMachineAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteStateMachineAlias", func(t *testing.T) {
-        input := &sfn.DeleteStateMachineAliasInput{}
-        output := &sfn.DeleteStateMachineAliasOutput{}
-
-        mockClient.On("DeleteStateMachineAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteStateMachineAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteStateMachine", func(t *testing.T) {
         input := &sfn.DeleteStateMachineInput{}
         output := &sfn.DeleteStateMachineOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteStateMachine", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteStateMachine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteStateMachineAlias", func(t *testing.T) {
+        input := &sfn.DeleteStateMachineAliasInput{}
+        output := &sfn.DeleteStateMachineAliasOutput{}
+
+        mockClient.On("DeleteStateMachineAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteStateMachineAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeStateMachine", func(t *testing.T) {
+        input := &sfn.DescribeStateMachineInput{}
+        output := &sfn.DescribeStateMachineOutput{}
+
+        mockClient.On("DescribeStateMachine", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStateMachine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeStateMachineAlias", func(t *testing.T) {
         input := &sfn.DescribeStateMachineAliasInput{}
         output := &sfn.DescribeStateMachineAliasOutput{}
@@ -184,19 +197,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStateMachineForExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStateMachineForExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeStateMachine", func(t *testing.T) {
-        input := &sfn.DescribeStateMachineInput{}
-        output := &sfn.DescribeStateMachineOutput{}
-
-        mockClient.On("DescribeStateMachine", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStateMachine(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStateMachines", func(t *testing.T) {
-        input := &sfn.ListStateMachinesInput{}
-        output := &sfn.ListStateMachinesOutput{}
-
-        mockClient.On("ListStateMachines", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStateMachines(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStateMachineVersions", func(t *testing.T) {
         input := &sfn.ListStateMachineVersionsInput{}
         output := &sfn.ListStateMachineVersionsOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStateMachineVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStateMachineVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStateMachines", func(t *testing.T) {
+        input := &sfn.ListStateMachinesInput{}
+        output := &sfn.ListStateMachinesOutput{}
+
+        mockClient.On("ListStateMachines", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStateMachines(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateStateMachineAlias", func(t *testing.T) {
-        input := &sfn.UpdateStateMachineAliasInput{}
-        output := &sfn.UpdateStateMachineAliasOutput{}
-
-        mockClient.On("UpdateStateMachineAlias", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateStateMachineAlias(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateStateMachine", func(t *testing.T) {
         input := &sfn.UpdateStateMachineInput{}
         output := &sfn.UpdateStateMachineOutput{}
@@ -496,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateStateMachine", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateStateMachine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateStateMachineAlias", func(t *testing.T) {
+        input := &sfn.UpdateStateMachineAliasInput{}
+        output := &sfn.UpdateStateMachineAliasOutput{}
+
+        mockClient.On("UpdateStateMachineAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateStateMachineAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

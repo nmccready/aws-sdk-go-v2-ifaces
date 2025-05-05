@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetEnrollmentStatusesForOrganization", func(t *testing.T) {
-        input := &computeoptimizer.GetEnrollmentStatusesForOrganizationInput{}
-        output := &computeoptimizer.GetEnrollmentStatusesForOrganizationOutput{}
-
-        mockClient.On("GetEnrollmentStatusesForOrganization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetEnrollmentStatusesForOrganization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetEnrollmentStatus", func(t *testing.T) {
         input := &computeoptimizer.GetEnrollmentStatusInput{}
         output := &computeoptimizer.GetEnrollmentStatusOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEnrollmentStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEnrollmentStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEnrollmentStatusesForOrganization", func(t *testing.T) {
+        input := &computeoptimizer.GetEnrollmentStatusesForOrganizationInput{}
+        output := &computeoptimizer.GetEnrollmentStatusesForOrganizationOutput{}
+
+        mockClient.On("GetEnrollmentStatusesForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnrollmentStatusesForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

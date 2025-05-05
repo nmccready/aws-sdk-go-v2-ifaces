@@ -11,16 +11,16 @@ import (
 type IClient interface {
  Options() Options 
  CreateCampaign(ctx context.Context, params *CreateCampaignInput, optFns ...func(*Options)) (*CreateCampaignOutput, error) 
+ DeleteCampaign(ctx context.Context, params *DeleteCampaignInput, optFns ...func(*Options)) (*DeleteCampaignOutput, error) 
  DeleteCampaignChannelSubtypeConfig(ctx context.Context, params *DeleteCampaignChannelSubtypeConfigInput, optFns ...func(*Options)) (*DeleteCampaignChannelSubtypeConfigOutput, error) 
  DeleteCampaignCommunicationLimits(ctx context.Context, params *DeleteCampaignCommunicationLimitsInput, optFns ...func(*Options)) (*DeleteCampaignCommunicationLimitsOutput, error) 
  DeleteCampaignCommunicationTime(ctx context.Context, params *DeleteCampaignCommunicationTimeInput, optFns ...func(*Options)) (*DeleteCampaignCommunicationTimeOutput, error) 
- DeleteCampaign(ctx context.Context, params *DeleteCampaignInput, optFns ...func(*Options)) (*DeleteCampaignOutput, error) 
  DeleteConnectInstanceConfig(ctx context.Context, params *DeleteConnectInstanceConfigInput, optFns ...func(*Options)) (*DeleteConnectInstanceConfigOutput, error) 
  DeleteConnectInstanceIntegration(ctx context.Context, params *DeleteConnectInstanceIntegrationInput, optFns ...func(*Options)) (*DeleteConnectInstanceIntegrationOutput, error) 
  DeleteInstanceOnboardingJob(ctx context.Context, params *DeleteInstanceOnboardingJobInput, optFns ...func(*Options)) (*DeleteInstanceOnboardingJobOutput, error) 
  DescribeCampaign(ctx context.Context, params *DescribeCampaignInput, optFns ...func(*Options)) (*DescribeCampaignOutput, error) 
- GetCampaignStateBatch(ctx context.Context, params *GetCampaignStateBatchInput, optFns ...func(*Options)) (*GetCampaignStateBatchOutput, error) 
  GetCampaignState(ctx context.Context, params *GetCampaignStateInput, optFns ...func(*Options)) (*GetCampaignStateOutput, error) 
+ GetCampaignStateBatch(ctx context.Context, params *GetCampaignStateBatchInput, optFns ...func(*Options)) (*GetCampaignStateBatchOutput, error) 
  GetConnectInstanceConfig(ctx context.Context, params *GetConnectInstanceConfigInput, optFns ...func(*Options)) (*GetConnectInstanceConfigOutput, error) 
  GetInstanceOnboardingJobStatus(ctx context.Context, params *GetInstanceOnboardingJobStatusInput, optFns ...func(*Options)) (*GetInstanceOnboardingJobStatusOutput, error) 
  ListCampaigns(ctx context.Context, params *ListCampaignsInput, optFns ...func(*Options)) (*ListCampaignsOutput, error) 

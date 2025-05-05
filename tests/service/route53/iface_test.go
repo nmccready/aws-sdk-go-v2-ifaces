@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetHealthCheckCount", func(t *testing.T) {
-        input := &route53.GetHealthCheckCountInput{}
-        output := &route53.GetHealthCheckCountOutput{}
-
-        mockClient.On("GetHealthCheckCount", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetHealthCheckCount(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetHealthCheck", func(t *testing.T) {
         input := &route53.GetHealthCheckInput{}
         output := &route53.GetHealthCheckOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetHealthCheck", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetHealthCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetHealthCheckCount", func(t *testing.T) {
+        input := &route53.GetHealthCheckCountInput{}
+        output := &route53.GetHealthCheckCountOutput{}
+
+        mockClient.On("GetHealthCheckCount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHealthCheckCount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetHostedZoneCount", func(t *testing.T) {
-        input := &route53.GetHostedZoneCountInput{}
-        output := &route53.GetHostedZoneCountOutput{}
-
-        mockClient.On("GetHostedZoneCount", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetHostedZoneCount(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetHostedZone", func(t *testing.T) {
         input := &route53.GetHostedZoneInput{}
         output := &route53.GetHostedZoneOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetHostedZone", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetHostedZone(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetHostedZoneCount", func(t *testing.T) {
+        input := &route53.GetHostedZoneCountInput{}
+        output := &route53.GetHostedZoneCountOutput{}
+
+        mockClient.On("GetHostedZoneCount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHostedZoneCount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTrafficPolicyInstanceCount", func(t *testing.T) {
-        input := &route53.GetTrafficPolicyInstanceCountInput{}
-        output := &route53.GetTrafficPolicyInstanceCountOutput{}
-
-        mockClient.On("GetTrafficPolicyInstanceCount", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTrafficPolicyInstanceCount(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetTrafficPolicyInstance", func(t *testing.T) {
         input := &route53.GetTrafficPolicyInstanceInput{}
         output := &route53.GetTrafficPolicyInstanceOutput{}
@@ -626,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTrafficPolicyInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTrafficPolicyInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrafficPolicyInstanceCount", func(t *testing.T) {
+        input := &route53.GetTrafficPolicyInstanceCountInput{}
+        output := &route53.GetTrafficPolicyInstanceCountOutput{}
+
+        mockClient.On("GetTrafficPolicyInstanceCount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrafficPolicyInstanceCount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,6 +697,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListHostedZones", func(t *testing.T) {
+        input := &route53.ListHostedZonesInput{}
+        output := &route53.ListHostedZonesOutput{}
+
+        mockClient.On("ListHostedZones", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHostedZones(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListHostedZonesByName", func(t *testing.T) {
         input := &route53.ListHostedZonesByNameInput{}
         output := &route53.ListHostedZonesByNameOutput{}
@@ -717,19 +730,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListHostedZonesByVPC", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListHostedZonesByVPC(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListHostedZones", func(t *testing.T) {
-        input := &route53.ListHostedZonesInput{}
-        output := &route53.ListHostedZonesOutput{}
-
-        mockClient.On("ListHostedZones", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListHostedZones(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTrafficPolicyInstances", func(t *testing.T) {
+        input := &route53.ListTrafficPolicyInstancesInput{}
+        output := &route53.ListTrafficPolicyInstancesOutput{}
+
+        mockClient.On("ListTrafficPolicyInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrafficPolicyInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTrafficPolicyInstancesByHostedZone", func(t *testing.T) {
         input := &route53.ListTrafficPolicyInstancesByHostedZoneInput{}
         output := &route53.ListTrafficPolicyInstancesByHostedZoneOutput{}
@@ -834,19 +847,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTrafficPolicyInstancesByPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTrafficPolicyInstancesByPolicy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListTrafficPolicyInstances", func(t *testing.T) {
-        input := &route53.ListTrafficPolicyInstancesInput{}
-        output := &route53.ListTrafficPolicyInstancesOutput{}
-
-        mockClient.On("ListTrafficPolicyInstances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTrafficPolicyInstances(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

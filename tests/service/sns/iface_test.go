@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSubscriptionsByTopic", func(t *testing.T) {
-        input := &sns.ListSubscriptionsByTopicInput{}
-        output := &sns.ListSubscriptionsByTopicOutput{}
-
-        mockClient.On("ListSubscriptionsByTopic", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSubscriptionsByTopic(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSubscriptions", func(t *testing.T) {
         input := &sns.ListSubscriptionsInput{}
         output := &sns.ListSubscriptionsOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSubscriptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubscriptionsByTopic", func(t *testing.T) {
+        input := &sns.ListSubscriptionsByTopicInput{}
+        output := &sns.ListSubscriptionsByTopicOutput{}
+
+        mockClient.On("ListSubscriptionsByTopic", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptionsByTopic(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPublishBatch", func(t *testing.T) {
-        input := &sns.PublishBatchInput{}
-        output := &sns.PublishBatchOutput{}
-
-        mockClient.On("PublishBatch", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PublishBatch(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPublish", func(t *testing.T) {
         input := &sns.PublishInput{}
         output := &sns.PublishOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("Publish", ctx, input).Return(output, nil)
 
         result, err := mockClient.Publish(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPublishBatch", func(t *testing.T) {
+        input := &sns.PublishBatchInput{}
+        output := &sns.PublishBatchOutput{}
+
+        mockClient.On("PublishBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PublishBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

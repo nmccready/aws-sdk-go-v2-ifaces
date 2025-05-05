@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateSnapshotCopyConfiguration", func(t *testing.T) {
-        input := &redshiftserverless.CreateSnapshotCopyConfigurationInput{}
-        output := &redshiftserverless.CreateSnapshotCopyConfigurationOutput{}
-
-        mockClient.On("CreateSnapshotCopyConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateSnapshotCopyConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateSnapshot", func(t *testing.T) {
         input := &redshiftserverless.CreateSnapshotInput{}
         output := &redshiftserverless.CreateSnapshotOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateSnapshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSnapshotCopyConfiguration", func(t *testing.T) {
+        input := &redshiftserverless.CreateSnapshotCopyConfigurationInput{}
+        output := &redshiftserverless.CreateSnapshotCopyConfigurationOutput{}
+
+        mockClient.On("CreateSnapshotCopyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSnapshotCopyConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteSnapshotCopyConfiguration", func(t *testing.T) {
-        input := &redshiftserverless.DeleteSnapshotCopyConfigurationInput{}
-        output := &redshiftserverless.DeleteSnapshotCopyConfigurationOutput{}
-
-        mockClient.On("DeleteSnapshotCopyConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteSnapshotCopyConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteSnapshot", func(t *testing.T) {
         input := &redshiftserverless.DeleteSnapshotInput{}
         output := &redshiftserverless.DeleteSnapshotOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSnapshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSnapshotCopyConfiguration", func(t *testing.T) {
+        input := &redshiftserverless.DeleteSnapshotCopyConfigurationInput{}
+        output := &redshiftserverless.DeleteSnapshotCopyConfigurationOutput{}
+
+        mockClient.On("DeleteSnapshotCopyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSnapshotCopyConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -736,19 +736,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateSnapshotCopyConfiguration", func(t *testing.T) {
-        input := &redshiftserverless.UpdateSnapshotCopyConfigurationInput{}
-        output := &redshiftserverless.UpdateSnapshotCopyConfigurationOutput{}
-
-        mockClient.On("UpdateSnapshotCopyConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateSnapshotCopyConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateSnapshot", func(t *testing.T) {
         input := &redshiftserverless.UpdateSnapshotInput{}
         output := &redshiftserverless.UpdateSnapshotOutput{}
@@ -756,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSnapshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSnapshotCopyConfiguration", func(t *testing.T) {
+        input := &redshiftserverless.UpdateSnapshotCopyConfigurationInput{}
+        output := &redshiftserverless.UpdateSnapshotCopyConfigurationOutput{}
+
+        mockClient.On("UpdateSnapshotCopyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSnapshotCopyConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

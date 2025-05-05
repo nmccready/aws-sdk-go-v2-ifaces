@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestBatchGetDeployments", func(t *testing.T) {
-        input := &codedeploy.BatchGetDeploymentsInput{}
-        output := &codedeploy.BatchGetDeploymentsOutput{}
-
-        mockClient.On("BatchGetDeployments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.BatchGetDeployments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestBatchGetDeploymentTargets", func(t *testing.T) {
         input := &codedeploy.BatchGetDeploymentTargetsInput{}
         output := &codedeploy.BatchGetDeploymentTargetsOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetDeploymentTargets", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetDeploymentTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetDeployments", func(t *testing.T) {
+        input := &codedeploy.BatchGetDeploymentsInput{}
+        output := &codedeploy.BatchGetDeploymentsOutput{}
+
+        mockClient.On("BatchGetDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetDeployments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,19 +164,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDeploymentConfig", func(t *testing.T) {
-        input := &codedeploy.CreateDeploymentConfigInput{}
-        output := &codedeploy.CreateDeploymentConfigOutput{}
-
-        mockClient.On("CreateDeploymentConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDeploymentConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDeployment", func(t *testing.T) {
         input := &codedeploy.CreateDeploymentInput{}
         output := &codedeploy.CreateDeploymentOutput{}
@@ -184,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDeployment", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDeploymentConfig", func(t *testing.T) {
+        input := &codedeploy.CreateDeploymentConfigInput{}
+        output := &codedeploy.CreateDeploymentConfigOutput{}
+
+        mockClient.On("CreateDeploymentConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDeploymentConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDeploymentConfig", func(t *testing.T) {
-        input := &codedeploy.GetDeploymentConfigInput{}
-        output := &codedeploy.GetDeploymentConfigOutput{}
-
-        mockClient.On("GetDeploymentConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDeploymentConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDeployment", func(t *testing.T) {
         input := &codedeploy.GetDeploymentInput{}
         output := &codedeploy.GetDeploymentOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDeployment", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDeploymentConfig", func(t *testing.T) {
+        input := &codedeploy.GetDeploymentConfigInput{}
+        output := &codedeploy.GetDeploymentConfigOutput{}
+
+        mockClient.On("GetDeploymentConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDeploymentConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDeployments", func(t *testing.T) {
-        input := &codedeploy.ListDeploymentsInput{}
-        output := &codedeploy.ListDeploymentsOutput{}
-
-        mockClient.On("ListDeployments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDeployments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDeploymentTargets", func(t *testing.T) {
         input := &codedeploy.ListDeploymentTargetsInput{}
         output := &codedeploy.ListDeploymentTargetsOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDeploymentTargets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDeploymentTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDeployments", func(t *testing.T) {
+        input := &codedeploy.ListDeploymentsInput{}
+        output := &codedeploy.ListDeploymentsOutput{}
+
+        mockClient.On("ListDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeployments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

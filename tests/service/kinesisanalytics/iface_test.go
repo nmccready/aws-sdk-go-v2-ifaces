@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteApplicationCloudWatchLoggingOption", func(t *testing.T) {
-        input := &kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput{}
-        output := &kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput{}
-
-        mockClient.On("DeleteApplicationCloudWatchLoggingOption", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteApplicationCloudWatchLoggingOption(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteApplication", func(t *testing.T) {
         input := &kinesisanalytics.DeleteApplicationInput{}
         output := &kinesisanalytics.DeleteApplicationOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteApplicationCloudWatchLoggingOption", func(t *testing.T) {
+        input := &kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput{}
+        output := &kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput{}
+
+        mockClient.On("DeleteApplicationCloudWatchLoggingOption", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApplicationCloudWatchLoggingOption(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPackages", func(t *testing.T) {
-        input := &codeartifact.ListPackagesInput{}
-        output := &codeartifact.ListPackagesOutput{}
-
-        mockClient.On("ListPackages", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPackages(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListPackageVersionAssets", func(t *testing.T) {
         input := &codeartifact.ListPackageVersionAssetsInput{}
         output := &codeartifact.ListPackageVersionAssetsOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPackageVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPackageVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPackages", func(t *testing.T) {
+        input := &codeartifact.ListPackagesInput{}
+        output := &codeartifact.ListPackagesOutput{}
+
+        mockClient.On("ListPackages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPackages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

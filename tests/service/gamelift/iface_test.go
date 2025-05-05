@@ -801,19 +801,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeMatchmakingConfigurations", func(t *testing.T) {
-        input := &gamelift.DescribeMatchmakingConfigurationsInput{}
-        output := &gamelift.DescribeMatchmakingConfigurationsOutput{}
-
-        mockClient.On("DescribeMatchmakingConfigurations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeMatchmakingConfigurations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeMatchmaking", func(t *testing.T) {
         input := &gamelift.DescribeMatchmakingInput{}
         output := &gamelift.DescribeMatchmakingOutput{}
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMatchmaking", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMatchmaking(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMatchmakingConfigurations", func(t *testing.T) {
+        input := &gamelift.DescribeMatchmakingConfigurationsInput{}
+        output := &gamelift.DescribeMatchmakingConfigurationsOutput{}
+
+        mockClient.On("DescribeMatchmakingConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMatchmakingConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,19 +1022,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListContainerGroupDefinitions", func(t *testing.T) {
-        input := &gamelift.ListContainerGroupDefinitionsInput{}
-        output := &gamelift.ListContainerGroupDefinitionsOutput{}
-
-        mockClient.On("ListContainerGroupDefinitions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListContainerGroupDefinitions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListContainerGroupDefinitionVersions", func(t *testing.T) {
         input := &gamelift.ListContainerGroupDefinitionVersionsInput{}
         output := &gamelift.ListContainerGroupDefinitionVersionsOutput{}
@@ -1042,6 +1029,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContainerGroupDefinitionVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContainerGroupDefinitionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContainerGroupDefinitions", func(t *testing.T) {
+        input := &gamelift.ListContainerGroupDefinitionsInput{}
+        output := &gamelift.ListContainerGroupDefinitionsOutput{}
+
+        mockClient.On("ListContainerGroupDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContainerGroupDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

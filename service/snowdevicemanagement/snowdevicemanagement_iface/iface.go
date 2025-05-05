@@ -12,8 +12,8 @@ type IClient interface {
  Options() Options 
  CancelTask(ctx context.Context, params *CancelTaskInput, optFns ...func(*Options)) (*CancelTaskOutput, error) 
  CreateTask(ctx context.Context, params *CreateTaskInput, optFns ...func(*Options)) (*CreateTaskOutput, error) 
- DescribeDeviceEc2Instances(ctx context.Context, params *DescribeDeviceEc2InstancesInput, optFns ...func(*Options)) (*DescribeDeviceEc2InstancesOutput, error) 
  DescribeDevice(ctx context.Context, params *DescribeDeviceInput, optFns ...func(*Options)) (*DescribeDeviceOutput, error) 
+ DescribeDeviceEc2Instances(ctx context.Context, params *DescribeDeviceEc2InstancesInput, optFns ...func(*Options)) (*DescribeDeviceEc2InstancesOutput, error) 
  DescribeExecution(ctx context.Context, params *DescribeExecutionInput, optFns ...func(*Options)) (*DescribeExecutionOutput, error) 
  DescribeTask(ctx context.Context, params *DescribeTaskInput, optFns ...func(*Options)) (*DescribeTaskOutput, error) 
  ListDeviceResources(ctx context.Context, params *ListDeviceResourcesInput, optFns ...func(*Options)) (*ListDeviceResourcesOutput, error) 

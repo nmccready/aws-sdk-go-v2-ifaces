@@ -125,6 +125,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateLFTag", func(t *testing.T) {
+        input := &lakeformation.CreateLFTagInput{}
+        output := &lakeformation.CreateLFTagOutput{}
+
+        mockClient.On("CreateLFTag", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLFTag(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateLFTagExpression", func(t *testing.T) {
+        input := &lakeformation.CreateLFTagExpressionInput{}
+        output := &lakeformation.CreateLFTagExpressionOutput{}
+
+        mockClient.On("CreateLFTagExpression", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLFTagExpression(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLakeFormationIdentityCenterConfiguration", func(t *testing.T) {
         input := &lakeformation.CreateLakeFormationIdentityCenterConfigurationInput{}
         output := &lakeformation.CreateLakeFormationIdentityCenterConfigurationOutput{}
@@ -151,32 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateLFTagExpression", func(t *testing.T) {
-        input := &lakeformation.CreateLFTagExpressionInput{}
-        output := &lakeformation.CreateLFTagExpressionOutput{}
-
-        mockClient.On("CreateLFTagExpression", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateLFTagExpression(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreateLFTag", func(t *testing.T) {
-        input := &lakeformation.CreateLFTagInput{}
-        output := &lakeformation.CreateLFTagOutput{}
-
-        mockClient.On("CreateLFTag", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateLFTag(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDataCellsFilter", func(t *testing.T) {
         input := &lakeformation.DeleteDataCellsFilterInput{}
         output := &lakeformation.DeleteDataCellsFilterOutput{}
@@ -184,6 +184,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDataCellsFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDataCellsFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteLFTag", func(t *testing.T) {
+        input := &lakeformation.DeleteLFTagInput{}
+        output := &lakeformation.DeleteLFTagOutput{}
+
+        mockClient.On("DeleteLFTag", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLFTag(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteLFTagExpression", func(t *testing.T) {
+        input := &lakeformation.DeleteLFTagExpressionInput{}
+        output := &lakeformation.DeleteLFTagExpressionOutput{}
+
+        mockClient.On("DeleteLFTagExpression", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLFTagExpression(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -210,32 +236,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLakeFormationOptIn", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLakeFormationOptIn(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteLFTagExpression", func(t *testing.T) {
-        input := &lakeformation.DeleteLFTagExpressionInput{}
-        output := &lakeformation.DeleteLFTagExpressionOutput{}
-
-        mockClient.On("DeleteLFTagExpression", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteLFTagExpression(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteLFTag", func(t *testing.T) {
-        input := &lakeformation.DeleteLFTagInput{}
-        output := &lakeformation.DeleteLFTagOutput{}
-
-        mockClient.On("DeleteLFTag", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteLFTag(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetLFTagExpression", func(t *testing.T) {
-        input := &lakeformation.GetLFTagExpressionInput{}
-        output := &lakeformation.GetLFTagExpressionOutput{}
-
-        mockClient.On("GetLFTagExpression", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetLFTagExpression(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetLFTag", func(t *testing.T) {
         input := &lakeformation.GetLFTagInput{}
         output := &lakeformation.GetLFTagOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLFTag", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLFTag(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLFTagExpression", func(t *testing.T) {
+        input := &lakeformation.GetLFTagExpressionInput{}
+        output := &lakeformation.GetLFTagExpressionOutput{}
+
+        mockClient.On("GetLFTagExpression", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLFTagExpression(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListLakeFormationOptIns", func(t *testing.T) {
-        input := &lakeformation.ListLakeFormationOptInsInput{}
-        output := &lakeformation.ListLakeFormationOptInsOutput{}
-
-        mockClient.On("ListLakeFormationOptIns", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLakeFormationOptIns(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListLFTagExpressions", func(t *testing.T) {
         input := &lakeformation.ListLFTagExpressionsInput{}
         output := &lakeformation.ListLFTagExpressionsOutput{}
@@ -561,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLFTags", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLFTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLakeFormationOptIns", func(t *testing.T) {
+        input := &lakeformation.ListLakeFormationOptInsInput{}
+        output := &lakeformation.ListLakeFormationOptInsOutput{}
+
+        mockClient.On("ListLakeFormationOptIns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLakeFormationOptIns(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -736,13 +736,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateLakeFormationIdentityCenterConfiguration", func(t *testing.T) {
-        input := &lakeformation.UpdateLakeFormationIdentityCenterConfigurationInput{}
-        output := &lakeformation.UpdateLakeFormationIdentityCenterConfigurationOutput{}
+    t.Run("TestUpdateLFTag", func(t *testing.T) {
+        input := &lakeformation.UpdateLFTagInput{}
+        output := &lakeformation.UpdateLFTagOutput{}
 
-        mockClient.On("UpdateLakeFormationIdentityCenterConfiguration", ctx, input).Return(output, nil)
+        mockClient.On("UpdateLFTag", ctx, input).Return(output, nil)
 
-        result, err := mockClient.UpdateLakeFormationIdentityCenterConfiguration(ctx, input)
+        result, err := mockClient.UpdateLFTag(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -762,13 +762,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateLFTag", func(t *testing.T) {
-        input := &lakeformation.UpdateLFTagInput{}
-        output := &lakeformation.UpdateLFTagOutput{}
+    t.Run("TestUpdateLakeFormationIdentityCenterConfiguration", func(t *testing.T) {
+        input := &lakeformation.UpdateLakeFormationIdentityCenterConfigurationInput{}
+        output := &lakeformation.UpdateLakeFormationIdentityCenterConfigurationOutput{}
 
-        mockClient.On("UpdateLFTag", ctx, input).Return(output, nil)
+        mockClient.On("UpdateLakeFormationIdentityCenterConfiguration", ctx, input).Return(output, nil)
 
-        result, err := mockClient.UpdateLFTag(ctx, input)
+        result, err := mockClient.UpdateLakeFormationIdentityCenterConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

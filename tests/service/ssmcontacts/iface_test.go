@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateContactChannel", func(t *testing.T) {
-        input := &ssmcontacts.CreateContactChannelInput{}
-        output := &ssmcontacts.CreateContactChannelOutput{}
-
-        mockClient.On("CreateContactChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateContactChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateContact", func(t *testing.T) {
         input := &ssmcontacts.CreateContactInput{}
         output := &ssmcontacts.CreateContactOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateContactChannel", func(t *testing.T) {
+        input := &ssmcontacts.CreateContactChannelInput{}
+        output := &ssmcontacts.CreateContactChannelOutput{}
+
+        mockClient.On("CreateContactChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContactChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteContactChannel", func(t *testing.T) {
-        input := &ssmcontacts.DeleteContactChannelInput{}
-        output := &ssmcontacts.DeleteContactChannelOutput{}
-
-        mockClient.On("DeleteContactChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteContactChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteContact", func(t *testing.T) {
         input := &ssmcontacts.DeleteContactInput{}
         output := &ssmcontacts.DeleteContactOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteContactChannel", func(t *testing.T) {
+        input := &ssmcontacts.DeleteContactChannelInput{}
+        output := &ssmcontacts.DeleteContactChannelOutput{}
+
+        mockClient.On("DeleteContactChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContactChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetContactChannel", func(t *testing.T) {
-        input := &ssmcontacts.GetContactChannelInput{}
-        output := &ssmcontacts.GetContactChannelOutput{}
-
-        mockClient.On("GetContactChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetContactChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetContact", func(t *testing.T) {
         input := &ssmcontacts.GetContactInput{}
         output := &ssmcontacts.GetContactOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetContactChannel", func(t *testing.T) {
+        input := &ssmcontacts.GetContactChannelInput{}
+        output := &ssmcontacts.GetContactChannelOutput{}
+
+        mockClient.On("GetContactChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetContactChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRotations", func(t *testing.T) {
-        input := &ssmcontacts.ListRotationsInput{}
-        output := &ssmcontacts.ListRotationsOutput{}
-
-        mockClient.On("ListRotations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRotations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRotationShifts", func(t *testing.T) {
         input := &ssmcontacts.ListRotationShiftsInput{}
         output := &ssmcontacts.ListRotationShiftsOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRotationShifts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRotationShifts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRotations", func(t *testing.T) {
+        input := &ssmcontacts.ListRotationsInput{}
+        output := &ssmcontacts.ListRotationsOutput{}
+
+        mockClient.On("ListRotations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRotations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateContactChannel", func(t *testing.T) {
-        input := &ssmcontacts.UpdateContactChannelInput{}
-        output := &ssmcontacts.UpdateContactChannelOutput{}
-
-        mockClient.On("UpdateContactChannel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateContactChannel(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateContact", func(t *testing.T) {
         input := &ssmcontacts.UpdateContactInput{}
         output := &ssmcontacts.UpdateContactOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContactChannel", func(t *testing.T) {
+        input := &ssmcontacts.UpdateContactChannelInput{}
+        output := &ssmcontacts.UpdateContactChannelOutput{}
+
+        mockClient.On("UpdateContactChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContactChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

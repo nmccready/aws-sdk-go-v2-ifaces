@@ -112,11 +112,11 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dataexchange v1.34.3
 	github.com/aws/aws-sdk-go-v2/service/datapipeline v1.26.2
 	github.com/aws/aws-sdk-go-v2/service/datasync v1.47.2
-	github.com/aws/aws-sdk-go-v2/service/datazone v1.29.1
+	github.com/aws/aws-sdk-go-v2/service/datazone v1.30.0
 	github.com/aws/aws-sdk-go-v2/service/dax v1.24.2
 	github.com/aws/aws-sdk-go-v2/service/deadline v1.11.0
 	github.com/aws/aws-sdk-go-v2/service/detective v1.33.0
-	github.com/aws/aws-sdk-go-v2/service/devicefarm v1.30.2
+	github.com/aws/aws-sdk-go-v2/service/devicefarm v1.31.0
 	github.com/aws/aws-sdk-go-v2/service/devopsguru v1.35.2
 	github.com/aws/aws-sdk-go-v2/service/directconnect v1.32.2
 	github.com/aws/aws-sdk-go-v2/service/directoryservice v1.31.5
@@ -129,11 +129,11 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.43.1
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.25.3
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.28.3
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.213.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.214.0
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.28.2
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.44.0
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.33.0
-	github.com/aws/aws-sdk-go-v2/service/ecs v1.56.2
+	github.com/aws/aws-sdk-go-v2/service/ecs v1.56.3
 	github.com/aws/aws-sdk-go-v2/service/efs v1.35.3
 	github.com/aws/aws-sdk-go-v2/service/eks v1.64.0
 	github.com/aws/aws-sdk-go-v2/service/eksauth v1.8.2
@@ -204,8 +204,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/kendraranking v1.12.2
 	github.com/aws/aws-sdk-go-v2/service/keyspaces v1.18.1
 	github.com/aws/aws-sdk-go-v2/service/kinesis v1.35.0
-	github.com/aws/aws-sdk-go-v2/service/kinesisanalytics v1.26.3
-	github.com/aws/aws-sdk-go-v2/service/kinesisanalyticsv2 v1.32.3
+	github.com/aws/aws-sdk-go-v2/service/kinesisanalytics v1.26.4
+	github.com/aws/aws-sdk-go-v2/service/kinesisanalyticsv2 v1.32.4
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideo v1.28.2
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideoarchivedmedia v1.28.2
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideomedia v1.23.2
@@ -241,7 +241,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.29.0
 	github.com/aws/aws-sdk-go-v2/service/marketplacereporting v1.2.2
 	github.com/aws/aws-sdk-go-v2/service/mediaconnect v1.39.1
-	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.71.1
+	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.72.0
 	github.com/aws/aws-sdk-go-v2/service/medialive v1.74.0
 	github.com/aws/aws-sdk-go-v2/service/mediapackage v1.35.2
 	github.com/aws/aws-sdk-go-v2/service/mediapackagev2 v1.22.2

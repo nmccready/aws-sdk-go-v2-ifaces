@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDisableDelegatedAdminAccount", func(t *testing.T) {
-        input := &inspector2.DisableDelegatedAdminAccountInput{}
-        output := &inspector2.DisableDelegatedAdminAccountOutput{}
-
-        mockClient.On("DisableDelegatedAdminAccount", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DisableDelegatedAdminAccount(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDisable", func(t *testing.T) {
         input := &inspector2.DisableInput{}
         output := &inspector2.DisableOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("Disable", ctx, input).Return(output, nil)
 
         result, err := mockClient.Disable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisableDelegatedAdminAccount", func(t *testing.T) {
+        input := &inspector2.DisableDelegatedAdminAccountInput{}
+        output := &inspector2.DisableDelegatedAdminAccountOutput{}
+
+        mockClient.On("DisableDelegatedAdminAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableDelegatedAdminAccount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestEnableDelegatedAdminAccount", func(t *testing.T) {
-        input := &inspector2.EnableDelegatedAdminAccountInput{}
-        output := &inspector2.EnableDelegatedAdminAccountOutput{}
-
-        mockClient.On("EnableDelegatedAdminAccount", ctx, input).Return(output, nil)
-
-        result, err := mockClient.EnableDelegatedAdminAccount(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestEnable", func(t *testing.T) {
         input := &inspector2.EnableInput{}
         output := &inspector2.EnableOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("Enable", ctx, input).Return(output, nil)
 
         result, err := mockClient.Enable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableDelegatedAdminAccount", func(t *testing.T) {
+        input := &inspector2.EnableDelegatedAdminAccountInput{}
+        output := &inspector2.EnableDelegatedAdminAccountOutput{}
+
+        mockClient.On("EnableDelegatedAdminAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableDelegatedAdminAccount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,19 +775,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateOrganizationConfiguration", func(t *testing.T) {
-        input := &inspector2.UpdateOrganizationConfigurationInput{}
-        output := &inspector2.UpdateOrganizationConfigurationOutput{}
-
-        mockClient.On("UpdateOrganizationConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateOrganizationConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateOrgEc2DeepInspectionConfiguration", func(t *testing.T) {
         input := &inspector2.UpdateOrgEc2DeepInspectionConfigurationInput{}
         output := &inspector2.UpdateOrgEc2DeepInspectionConfigurationOutput{}
@@ -795,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOrgEc2DeepInspectionConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOrgEc2DeepInspectionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOrganizationConfiguration", func(t *testing.T) {
+        input := &inspector2.UpdateOrganizationConfigurationInput{}
+        output := &inspector2.UpdateOrganizationConfigurationOutput{}
+
+        mockClient.On("UpdateOrganizationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOrganizationConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

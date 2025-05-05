@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateMediaInsightsPipelineConfiguration", func(t *testing.T) {
-        input := &chimesdkmediapipelines.CreateMediaInsightsPipelineConfigurationInput{}
-        output := &chimesdkmediapipelines.CreateMediaInsightsPipelineConfigurationOutput{}
-
-        mockClient.On("CreateMediaInsightsPipelineConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateMediaInsightsPipelineConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateMediaInsightsPipeline", func(t *testing.T) {
         input := &chimesdkmediapipelines.CreateMediaInsightsPipelineInput{}
         output := &chimesdkmediapipelines.CreateMediaInsightsPipelineOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateMediaInsightsPipeline", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateMediaInsightsPipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMediaInsightsPipelineConfiguration", func(t *testing.T) {
+        input := &chimesdkmediapipelines.CreateMediaInsightsPipelineConfigurationInput{}
+        output := &chimesdkmediapipelines.CreateMediaInsightsPipelineConfigurationOutput{}
+
+        mockClient.On("CreateMediaInsightsPipelineConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMediaInsightsPipelineConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

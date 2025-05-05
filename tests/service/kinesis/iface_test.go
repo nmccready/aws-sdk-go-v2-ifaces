@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeStreamConsumer", func(t *testing.T) {
-        input := &kinesis.DescribeStreamConsumerInput{}
-        output := &kinesis.DescribeStreamConsumerOutput{}
-
-        mockClient.On("DescribeStreamConsumer", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStreamConsumer(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeStream", func(t *testing.T) {
         input := &kinesis.DescribeStreamInput{}
         output := &kinesis.DescribeStreamOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeStreamConsumer", func(t *testing.T) {
+        input := &kinesis.DescribeStreamConsumerInput{}
+        output := &kinesis.DescribeStreamConsumerOutput{}
+
+        mockClient.On("DescribeStreamConsumer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStreamConsumer(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

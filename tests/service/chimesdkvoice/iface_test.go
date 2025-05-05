@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateSipMediaApplicationCall", func(t *testing.T) {
-        input := &chimesdkvoice.CreateSipMediaApplicationCallInput{}
-        output := &chimesdkvoice.CreateSipMediaApplicationCallOutput{}
-
-        mockClient.On("CreateSipMediaApplicationCall", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateSipMediaApplicationCall(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateSipMediaApplication", func(t *testing.T) {
         input := &chimesdkvoice.CreateSipMediaApplicationInput{}
         output := &chimesdkvoice.CreateSipMediaApplicationOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateSipMediaApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateSipMediaApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSipMediaApplicationCall", func(t *testing.T) {
+        input := &chimesdkvoice.CreateSipMediaApplicationCallInput{}
+        output := &chimesdkvoice.CreateSipMediaApplicationCallOutput{}
+
+        mockClient.On("CreateSipMediaApplicationCall", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSipMediaApplicationCall(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateVoiceProfileDomain", func(t *testing.T) {
-        input := &chimesdkvoice.CreateVoiceProfileDomainInput{}
-        output := &chimesdkvoice.CreateVoiceProfileDomainOutput{}
-
-        mockClient.On("CreateVoiceProfileDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateVoiceProfileDomain(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateVoiceProfile", func(t *testing.T) {
         input := &chimesdkvoice.CreateVoiceProfileInput{}
         output := &chimesdkvoice.CreateVoiceProfileOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateVoiceProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateVoiceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateVoiceProfileDomain", func(t *testing.T) {
+        input := &chimesdkvoice.CreateVoiceProfileDomainInput{}
+        output := &chimesdkvoice.CreateVoiceProfileDomainOutput{}
+
+        mockClient.On("CreateVoiceProfileDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVoiceProfileDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVoiceConnector", func(t *testing.T) {
+        input := &chimesdkvoice.DeleteVoiceConnectorInput{}
+        output := &chimesdkvoice.DeleteVoiceConnectorOutput{}
+
+        mockClient.On("DeleteVoiceConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVoiceConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteVoiceConnectorEmergencyCallingConfiguration", func(t *testing.T) {
         input := &chimesdkvoice.DeleteVoiceConnectorEmergencyCallingConfigurationInput{}
         output := &chimesdkvoice.DeleteVoiceConnectorEmergencyCallingConfigurationOutput{}
@@ -275,19 +288,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVoiceConnectorExternalSystemsConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVoiceConnectorExternalSystemsConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteVoiceConnector", func(t *testing.T) {
-        input := &chimesdkvoice.DeleteVoiceConnectorInput{}
-        output := &chimesdkvoice.DeleteVoiceConnectorOutput{}
-
-        mockClient.On("DeleteVoiceConnector", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteVoiceConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteVoiceConnectorTerminationCredentials", func(t *testing.T) {
-        input := &chimesdkvoice.DeleteVoiceConnectorTerminationCredentialsInput{}
-        output := &chimesdkvoice.DeleteVoiceConnectorTerminationCredentialsOutput{}
-
-        mockClient.On("DeleteVoiceConnectorTerminationCredentials", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteVoiceConnectorTerminationCredentials(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteVoiceConnectorTermination", func(t *testing.T) {
         input := &chimesdkvoice.DeleteVoiceConnectorTerminationInput{}
         output := &chimesdkvoice.DeleteVoiceConnectorTerminationOutput{}
@@ -372,13 +359,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteVoiceProfileDomain", func(t *testing.T) {
-        input := &chimesdkvoice.DeleteVoiceProfileDomainInput{}
-        output := &chimesdkvoice.DeleteVoiceProfileDomainOutput{}
+    t.Run("TestDeleteVoiceConnectorTerminationCredentials", func(t *testing.T) {
+        input := &chimesdkvoice.DeleteVoiceConnectorTerminationCredentialsInput{}
+        output := &chimesdkvoice.DeleteVoiceConnectorTerminationCredentialsOutput{}
 
-        mockClient.On("DeleteVoiceProfileDomain", ctx, input).Return(output, nil)
+        mockClient.On("DeleteVoiceConnectorTerminationCredentials", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeleteVoiceProfileDomain(ctx, input)
+        result, err := mockClient.DeleteVoiceConnectorTerminationCredentials(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVoiceProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVoiceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteVoiceProfileDomain", func(t *testing.T) {
+        input := &chimesdkvoice.DeleteVoiceProfileDomainInput{}
+        output := &chimesdkvoice.DeleteVoiceProfileDomainOutput{}
+
+        mockClient.On("DeleteVoiceProfileDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVoiceProfileDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,19 +489,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSipMediaApplicationAlexaSkillConfiguration", func(t *testing.T) {
-        input := &chimesdkvoice.GetSipMediaApplicationAlexaSkillConfigurationInput{}
-        output := &chimesdkvoice.GetSipMediaApplicationAlexaSkillConfigurationOutput{}
-
-        mockClient.On("GetSipMediaApplicationAlexaSkillConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSipMediaApplicationAlexaSkillConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSipMediaApplication", func(t *testing.T) {
         input := &chimesdkvoice.GetSipMediaApplicationInput{}
         output := &chimesdkvoice.GetSipMediaApplicationOutput{}
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSipMediaApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSipMediaApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSipMediaApplicationAlexaSkillConfiguration", func(t *testing.T) {
+        input := &chimesdkvoice.GetSipMediaApplicationAlexaSkillConfigurationInput{}
+        output := &chimesdkvoice.GetSipMediaApplicationAlexaSkillConfigurationOutput{}
+
+        mockClient.On("GetSipMediaApplicationAlexaSkillConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSipMediaApplicationAlexaSkillConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetVoiceConnector", func(t *testing.T) {
+        input := &chimesdkvoice.GetVoiceConnectorInput{}
+        output := &chimesdkvoice.GetVoiceConnectorOutput{}
+
+        mockClient.On("GetVoiceConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVoiceConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetVoiceConnectorEmergencyCallingConfiguration", func(t *testing.T) {
         input := &chimesdkvoice.GetVoiceConnectorEmergencyCallingConfigurationInput{}
         output := &chimesdkvoice.GetVoiceConnectorEmergencyCallingConfigurationOutput{}
@@ -574,19 +587,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetVoiceConnectorExternalSystemsConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetVoiceConnectorExternalSystemsConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetVoiceConnector", func(t *testing.T) {
-        input := &chimesdkvoice.GetVoiceConnectorInput{}
-        output := &chimesdkvoice.GetVoiceConnectorOutput{}
-
-        mockClient.On("GetVoiceConnector", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetVoiceConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,19 +684,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetVoiceProfileDomain", func(t *testing.T) {
-        input := &chimesdkvoice.GetVoiceProfileDomainInput{}
-        output := &chimesdkvoice.GetVoiceProfileDomainOutput{}
-
-        mockClient.On("GetVoiceProfileDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetVoiceProfileDomain(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetVoiceProfile", func(t *testing.T) {
         input := &chimesdkvoice.GetVoiceProfileInput{}
         output := &chimesdkvoice.GetVoiceProfileOutput{}
@@ -704,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetVoiceProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetVoiceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVoiceProfileDomain", func(t *testing.T) {
+        input := &chimesdkvoice.GetVoiceProfileDomainInput{}
+        output := &chimesdkvoice.GetVoiceProfileDomainOutput{}
+
+        mockClient.On("GetVoiceProfileDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVoiceProfileDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -840,19 +840,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListVoiceConnectors", func(t *testing.T) {
-        input := &chimesdkvoice.ListVoiceConnectorsInput{}
-        output := &chimesdkvoice.ListVoiceConnectorsOutput{}
-
-        mockClient.On("ListVoiceConnectors", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListVoiceConnectors(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListVoiceConnectorTerminationCredentials", func(t *testing.T) {
         input := &chimesdkvoice.ListVoiceConnectorTerminationCredentialsInput{}
         output := &chimesdkvoice.ListVoiceConnectorTerminationCredentialsOutput{}
@@ -860,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListVoiceConnectorTerminationCredentials", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListVoiceConnectorTerminationCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVoiceConnectors", func(t *testing.T) {
+        input := &chimesdkvoice.ListVoiceConnectorsInput{}
+        output := &chimesdkvoice.ListVoiceConnectorsOutput{}
+
+        mockClient.On("ListVoiceConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVoiceConnectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -996,19 +996,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPutVoiceConnectorTerminationCredentials", func(t *testing.T) {
-        input := &chimesdkvoice.PutVoiceConnectorTerminationCredentialsInput{}
-        output := &chimesdkvoice.PutVoiceConnectorTerminationCredentialsOutput{}
-
-        mockClient.On("PutVoiceConnectorTerminationCredentials", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PutVoiceConnectorTerminationCredentials(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPutVoiceConnectorTermination", func(t *testing.T) {
         input := &chimesdkvoice.PutVoiceConnectorTerminationInput{}
         output := &chimesdkvoice.PutVoiceConnectorTerminationOutput{}
@@ -1016,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutVoiceConnectorTermination", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutVoiceConnectorTermination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutVoiceConnectorTerminationCredentials", func(t *testing.T) {
+        input := &chimesdkvoice.PutVoiceConnectorTerminationCredentialsInput{}
+        output := &chimesdkvoice.PutVoiceConnectorTerminationCredentialsOutput{}
+
+        mockClient.On("PutVoiceConnectorTerminationCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutVoiceConnectorTerminationCredentials(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1178,19 +1178,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateSipMediaApplicationCall", func(t *testing.T) {
-        input := &chimesdkvoice.UpdateSipMediaApplicationCallInput{}
-        output := &chimesdkvoice.UpdateSipMediaApplicationCallOutput{}
-
-        mockClient.On("UpdateSipMediaApplicationCall", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateSipMediaApplicationCall(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateSipMediaApplication", func(t *testing.T) {
         input := &chimesdkvoice.UpdateSipMediaApplicationInput{}
         output := &chimesdkvoice.UpdateSipMediaApplicationOutput{}
@@ -1198,6 +1185,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSipMediaApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSipMediaApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSipMediaApplicationCall", func(t *testing.T) {
+        input := &chimesdkvoice.UpdateSipMediaApplicationCallInput{}
+        output := &chimesdkvoice.UpdateSipMediaApplicationCallOutput{}
+
+        mockClient.On("UpdateSipMediaApplicationCall", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSipMediaApplicationCall(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1243,19 +1243,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateVoiceProfileDomain", func(t *testing.T) {
-        input := &chimesdkvoice.UpdateVoiceProfileDomainInput{}
-        output := &chimesdkvoice.UpdateVoiceProfileDomainOutput{}
-
-        mockClient.On("UpdateVoiceProfileDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateVoiceProfileDomain(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateVoiceProfile", func(t *testing.T) {
         input := &chimesdkvoice.UpdateVoiceProfileInput{}
         output := &chimesdkvoice.UpdateVoiceProfileOutput{}
@@ -1263,6 +1250,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateVoiceProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateVoiceProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateVoiceProfileDomain", func(t *testing.T) {
+        input := &chimesdkvoice.UpdateVoiceProfileDomainInput{}
+        output := &chimesdkvoice.UpdateVoiceProfileDomainOutput{}
+
+        mockClient.On("UpdateVoiceProfileDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateVoiceProfileDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

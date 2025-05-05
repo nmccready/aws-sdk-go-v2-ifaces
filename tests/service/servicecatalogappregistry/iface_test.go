@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAttributeGroupsForApplication", func(t *testing.T) {
-        input := &servicecatalogappregistry.ListAttributeGroupsForApplicationInput{}
-        output := &servicecatalogappregistry.ListAttributeGroupsForApplicationOutput{}
-
-        mockClient.On("ListAttributeGroupsForApplication", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAttributeGroupsForApplication(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAttributeGroups", func(t *testing.T) {
         input := &servicecatalogappregistry.ListAttributeGroupsInput{}
         output := &servicecatalogappregistry.ListAttributeGroupsOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAttributeGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAttributeGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAttributeGroupsForApplication", func(t *testing.T) {
+        input := &servicecatalogappregistry.ListAttributeGroupsForApplicationInput{}
+        output := &servicecatalogappregistry.ListAttributeGroupsForApplicationOutput{}
+
+        mockClient.On("ListAttributeGroupsForApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAttributeGroupsForApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

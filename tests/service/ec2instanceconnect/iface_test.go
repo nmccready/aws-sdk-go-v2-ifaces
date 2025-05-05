@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestSendSerialConsoleSSHPublicKey", func(t *testing.T) {
-        input := &ec2instanceconnect.SendSerialConsoleSSHPublicKeyInput{}
-        output := &ec2instanceconnect.SendSerialConsoleSSHPublicKeyOutput{}
-
-        mockClient.On("SendSerialConsoleSSHPublicKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.SendSerialConsoleSSHPublicKey(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestSendSSHPublicKey", func(t *testing.T) {
         input := &ec2instanceconnect.SendSSHPublicKeyInput{}
         output := &ec2instanceconnect.SendSSHPublicKeyOutput{}
@@ -54,6 +41,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendSSHPublicKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendSSHPublicKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendSerialConsoleSSHPublicKey", func(t *testing.T) {
+        input := &ec2instanceconnect.SendSerialConsoleSSHPublicKeyInput{}
+        output := &ec2instanceconnect.SendSerialConsoleSSHPublicKeyOutput{}
+
+        mockClient.On("SendSerialConsoleSSHPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendSerialConsoleSSHPublicKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

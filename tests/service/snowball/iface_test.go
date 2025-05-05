@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAddresses", func(t *testing.T) {
-        input := &snowball.DescribeAddressesInput{}
-        output := &snowball.DescribeAddressesOutput{}
-
-        mockClient.On("DescribeAddresses", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAddresses(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeAddress", func(t *testing.T) {
         input := &snowball.DescribeAddressInput{}
         output := &snowball.DescribeAddressOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAddress", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAddress(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAddresses", func(t *testing.T) {
+        input := &snowball.DescribeAddressesInput{}
+        output := &snowball.DescribeAddressesOutput{}
+
+        mockClient.On("DescribeAddresses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAddresses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

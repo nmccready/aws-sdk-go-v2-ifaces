@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDomain", func(t *testing.T) {
+        input := &opensearch.DescribeDomainInput{}
+        output := &opensearch.DescribeDomainOutput{}
+
+        mockClient.On("DescribeDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDomainAutoTunes", func(t *testing.T) {
         input := &opensearch.DescribeDomainAutoTunesInput{}
         output := &opensearch.DescribeDomainAutoTunesOutput{}
@@ -353,19 +366,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDomainConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDomainConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeDomain", func(t *testing.T) {
-        input := &opensearch.DescribeDomainInput{}
-        output := &opensearch.DescribeDomainOutput{}
-
-        mockClient.On("DescribeDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,19 +801,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListVpcEndpointsForDomain", func(t *testing.T) {
-        input := &opensearch.ListVpcEndpointsForDomainInput{}
-        output := &opensearch.ListVpcEndpointsForDomainOutput{}
-
-        mockClient.On("ListVpcEndpointsForDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListVpcEndpointsForDomain(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListVpcEndpoints", func(t *testing.T) {
         input := &opensearch.ListVpcEndpointsInput{}
         output := &opensearch.ListVpcEndpointsOutput{}
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListVpcEndpoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListVpcEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVpcEndpointsForDomain", func(t *testing.T) {
+        input := &opensearch.ListVpcEndpointsForDomainInput{}
+        output := &opensearch.ListVpcEndpointsForDomainOutput{}
+
+        mockClient.On("ListVpcEndpointsForDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVpcEndpointsForDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

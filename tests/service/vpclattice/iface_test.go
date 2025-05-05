@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServiceNetworks", func(t *testing.T) {
-        input := &vpclattice.ListServiceNetworksInput{}
-        output := &vpclattice.ListServiceNetworksOutput{}
-
-        mockClient.On("ListServiceNetworks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServiceNetworks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListServiceNetworkVpcAssociations", func(t *testing.T) {
         input := &vpclattice.ListServiceNetworkVpcAssociationsInput{}
         output := &vpclattice.ListServiceNetworkVpcAssociationsOutput{}
@@ -691,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServiceNetworkVpcEndpointAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServiceNetworkVpcEndpointAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceNetworks", func(t *testing.T) {
+        input := &vpclattice.ListServiceNetworksInput{}
+        output := &vpclattice.ListServiceNetworksOutput{}
+
+        mockClient.On("ListServiceNetworks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceNetworks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

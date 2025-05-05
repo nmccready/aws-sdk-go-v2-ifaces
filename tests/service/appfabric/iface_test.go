@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateIngestionDestination", func(t *testing.T) {
-        input := &appfabric.CreateIngestionDestinationInput{}
-        output := &appfabric.CreateIngestionDestinationOutput{}
-
-        mockClient.On("CreateIngestionDestination", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateIngestionDestination(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateIngestion", func(t *testing.T) {
         input := &appfabric.CreateIngestionInput{}
         output := &appfabric.CreateIngestionOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIngestion", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIngestion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIngestionDestination", func(t *testing.T) {
+        input := &appfabric.CreateIngestionDestinationInput{}
+        output := &appfabric.CreateIngestionDestinationOutput{}
+
+        mockClient.On("CreateIngestionDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIngestionDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteIngestionDestination", func(t *testing.T) {
-        input := &appfabric.DeleteIngestionDestinationInput{}
-        output := &appfabric.DeleteIngestionDestinationOutput{}
-
-        mockClient.On("DeleteIngestionDestination", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteIngestionDestination(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteIngestion", func(t *testing.T) {
         input := &appfabric.DeleteIngestionInput{}
         output := &appfabric.DeleteIngestionOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteIngestion", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteIngestion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIngestionDestination", func(t *testing.T) {
+        input := &appfabric.DeleteIngestionDestinationInput{}
+        output := &appfabric.DeleteIngestionDestinationOutput{}
+
+        mockClient.On("DeleteIngestionDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIngestionDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetIngestionDestination", func(t *testing.T) {
-        input := &appfabric.GetIngestionDestinationInput{}
-        output := &appfabric.GetIngestionDestinationOutput{}
-
-        mockClient.On("GetIngestionDestination", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetIngestionDestination(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetIngestion", func(t *testing.T) {
         input := &appfabric.GetIngestionInput{}
         output := &appfabric.GetIngestionOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetIngestion", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetIngestion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIngestionDestination", func(t *testing.T) {
+        input := &appfabric.GetIngestionDestinationInput{}
+        output := &appfabric.GetIngestionDestinationOutput{}
+
+        mockClient.On("GetIngestionDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIngestionDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateEndpointConfig", func(t *testing.T) {
-        input := &sagemaker.CreateEndpointConfigInput{}
-        output := &sagemaker.CreateEndpointConfigOutput{}
-
-        mockClient.On("CreateEndpointConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateEndpointConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateEndpoint", func(t *testing.T) {
         input := &sagemaker.CreateEndpointInput{}
         output := &sagemaker.CreateEndpointOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateEndpointConfig", func(t *testing.T) {
+        input := &sagemaker.CreateEndpointConfigInput{}
+        output := &sagemaker.CreateEndpointConfigOutput{}
+
+        mockClient.On("CreateEndpointConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEndpointConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,19 +411,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateHubContentReference", func(t *testing.T) {
-        input := &sagemaker.CreateHubContentReferenceInput{}
-        output := &sagemaker.CreateHubContentReferenceOutput{}
-
-        mockClient.On("CreateHubContentReference", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateHubContentReference(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateHub", func(t *testing.T) {
         input := &sagemaker.CreateHubInput{}
         output := &sagemaker.CreateHubOutput{}
@@ -431,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateHub", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateHub(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateHubContentReference", func(t *testing.T) {
+        input := &sagemaker.CreateHubContentReferenceInput{}
+        output := &sagemaker.CreateHubContentReferenceOutput{}
+
+        mockClient.On("CreateHubContentReference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHubContentReference(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateModel", func(t *testing.T) {
+        input := &sagemaker.CreateModelInput{}
+        output := &sagemaker.CreateModelOutput{}
+
+        mockClient.On("CreateModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateModelBiasJobDefinition", func(t *testing.T) {
         input := &sagemaker.CreateModelBiasJobDefinitionInput{}
         output := &sagemaker.CreateModelBiasJobDefinitionOutput{}
@@ -561,19 +574,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateModelBiasJobDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateModelBiasJobDefinition(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreateModelCardExportJob", func(t *testing.T) {
-        input := &sagemaker.CreateModelCardExportJobInput{}
-        output := &sagemaker.CreateModelCardExportJobOutput{}
-
-        mockClient.On("CreateModelCardExportJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateModelCardExportJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateModelCardExportJob", func(t *testing.T) {
+        input := &sagemaker.CreateModelCardExportJobInput{}
+        output := &sagemaker.CreateModelCardExportJobOutput{}
+
+        mockClient.On("CreateModelCardExportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateModelCardExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateModelExplainabilityJobDefinition", func(t *testing.T) {
         input := &sagemaker.CreateModelExplainabilityJobDefinitionInput{}
         output := &sagemaker.CreateModelExplainabilityJobDefinitionOutput{}
@@ -600,19 +613,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateModelExplainabilityJobDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateModelExplainabilityJobDefinition(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreateModel", func(t *testing.T) {
-        input := &sagemaker.CreateModelInput{}
-        output := &sagemaker.CreateModelOutput{}
-
-        mockClient.On("CreateModel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -879,19 +879,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateTrialComponent", func(t *testing.T) {
-        input := &sagemaker.CreateTrialComponentInput{}
-        output := &sagemaker.CreateTrialComponentOutput{}
-
-        mockClient.On("CreateTrialComponent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateTrialComponent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateTrial", func(t *testing.T) {
         input := &sagemaker.CreateTrialInput{}
         output := &sagemaker.CreateTrialOutput{}
@@ -899,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTrial", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTrial(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTrialComponent", func(t *testing.T) {
+        input := &sagemaker.CreateTrialComponentInput{}
+        output := &sagemaker.CreateTrialComponentOutput{}
+
+        mockClient.On("CreateTrialComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTrialComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1165,19 +1165,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteEndpointConfig", func(t *testing.T) {
-        input := &sagemaker.DeleteEndpointConfigInput{}
-        output := &sagemaker.DeleteEndpointConfigOutput{}
-
-        mockClient.On("DeleteEndpointConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteEndpointConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteEndpoint", func(t *testing.T) {
         input := &sagemaker.DeleteEndpointInput{}
         output := &sagemaker.DeleteEndpointOutput{}
@@ -1185,6 +1172,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteEndpointConfig", func(t *testing.T) {
+        input := &sagemaker.DeleteEndpointConfigInput{}
+        output := &sagemaker.DeleteEndpointConfigOutput{}
+
+        mockClient.On("DeleteEndpointConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEndpointConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1230,6 +1230,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteHub", func(t *testing.T) {
+        input := &sagemaker.DeleteHubInput{}
+        output := &sagemaker.DeleteHubOutput{}
+
+        mockClient.On("DeleteHub", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteHub(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteHubContent", func(t *testing.T) {
         input := &sagemaker.DeleteHubContentInput{}
         output := &sagemaker.DeleteHubContentOutput{}
@@ -1250,19 +1263,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteHubContentReference", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteHubContentReference(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteHub", func(t *testing.T) {
-        input := &sagemaker.DeleteHubInput{}
-        output := &sagemaker.DeleteHubOutput{}
-
-        mockClient.On("DeleteHub", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteHub(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1360,6 +1360,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteModel", func(t *testing.T) {
+        input := &sagemaker.DeleteModelInput{}
+        output := &sagemaker.DeleteModelOutput{}
+
+        mockClient.On("DeleteModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteModelBiasJobDefinition", func(t *testing.T) {
         input := &sagemaker.DeleteModelBiasJobDefinitionInput{}
         output := &sagemaker.DeleteModelBiasJobDefinitionOutput{}
@@ -1393,19 +1406,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteModelExplainabilityJobDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteModelExplainabilityJobDefinition(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteModel", func(t *testing.T) {
-        input := &sagemaker.DeleteModelInput{}
-        output := &sagemaker.DeleteModelOutput{}
-
-        mockClient.On("DeleteModel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1594,19 +1594,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteTrialComponent", func(t *testing.T) {
-        input := &sagemaker.DeleteTrialComponentInput{}
-        output := &sagemaker.DeleteTrialComponentOutput{}
-
-        mockClient.On("DeleteTrialComponent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteTrialComponent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteTrial", func(t *testing.T) {
         input := &sagemaker.DeleteTrialInput{}
         output := &sagemaker.DeleteTrialOutput{}
@@ -1614,6 +1601,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTrial", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTrial(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTrialComponent", func(t *testing.T) {
+        input := &sagemaker.DeleteTrialComponentInput{}
+        output := &sagemaker.DeleteTrialComponentOutput{}
+
+        mockClient.On("DeleteTrialComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTrialComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1867,19 +1867,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDeviceFleet", func(t *testing.T) {
-        input := &sagemaker.DescribeDeviceFleetInput{}
-        output := &sagemaker.DescribeDeviceFleetOutput{}
-
-        mockClient.On("DescribeDeviceFleet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDeviceFleet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeDevice", func(t *testing.T) {
         input := &sagemaker.DescribeDeviceInput{}
         output := &sagemaker.DescribeDeviceOutput{}
@@ -1887,6 +1874,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDevice", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDevice(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDeviceFleet", func(t *testing.T) {
+        input := &sagemaker.DescribeDeviceFleetInput{}
+        output := &sagemaker.DescribeDeviceFleetOutput{}
+
+        mockClient.On("DescribeDeviceFleet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDeviceFleet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1932,19 +1932,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEndpointConfig", func(t *testing.T) {
-        input := &sagemaker.DescribeEndpointConfigInput{}
-        output := &sagemaker.DescribeEndpointConfigOutput{}
-
-        mockClient.On("DescribeEndpointConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEndpointConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEndpoint", func(t *testing.T) {
         input := &sagemaker.DescribeEndpointInput{}
         output := &sagemaker.DescribeEndpointOutput{}
@@ -1952,6 +1939,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEndpointConfig", func(t *testing.T) {
+        input := &sagemaker.DescribeEndpointConfigInput{}
+        output := &sagemaker.DescribeEndpointConfigOutput{}
+
+        mockClient.On("DescribeEndpointConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEndpointConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2010,19 +2010,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeHubContent", func(t *testing.T) {
-        input := &sagemaker.DescribeHubContentInput{}
-        output := &sagemaker.DescribeHubContentOutput{}
-
-        mockClient.On("DescribeHubContent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeHubContent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeHub", func(t *testing.T) {
         input := &sagemaker.DescribeHubInput{}
         output := &sagemaker.DescribeHubOutput{}
@@ -2030,6 +2017,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeHub", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeHub(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeHubContent", func(t *testing.T) {
+        input := &sagemaker.DescribeHubContentInput{}
+        output := &sagemaker.DescribeHubContentOutput{}
+
+        mockClient.On("DescribeHubContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeHubContent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2166,6 +2166,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeModel", func(t *testing.T) {
+        input := &sagemaker.DescribeModelInput{}
+        output := &sagemaker.DescribeModelOutput{}
+
+        mockClient.On("DescribeModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeModelBiasJobDefinition", func(t *testing.T) {
         input := &sagemaker.DescribeModelBiasJobDefinitionInput{}
         output := &sagemaker.DescribeModelBiasJobDefinitionOutput{}
@@ -2173,19 +2186,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeModelBiasJobDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeModelBiasJobDefinition(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeModelCardExportJob", func(t *testing.T) {
-        input := &sagemaker.DescribeModelCardExportJobInput{}
-        output := &sagemaker.DescribeModelCardExportJobOutput{}
-
-        mockClient.On("DescribeModelCardExportJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeModelCardExportJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2205,6 +2205,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeModelCardExportJob", func(t *testing.T) {
+        input := &sagemaker.DescribeModelCardExportJobInput{}
+        output := &sagemaker.DescribeModelCardExportJobOutput{}
+
+        mockClient.On("DescribeModelCardExportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeModelCardExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeModelExplainabilityJobDefinition", func(t *testing.T) {
         input := &sagemaker.DescribeModelExplainabilityJobDefinitionInput{}
         output := &sagemaker.DescribeModelExplainabilityJobDefinitionOutput{}
@@ -2212,19 +2225,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeModelExplainabilityJobDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeModelExplainabilityJobDefinition(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeModel", func(t *testing.T) {
-        input := &sagemaker.DescribeModelInput{}
-        output := &sagemaker.DescribeModelOutput{}
-
-        mockClient.On("DescribeModel", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2335,6 +2335,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribePipeline", func(t *testing.T) {
+        input := &sagemaker.DescribePipelineInput{}
+        output := &sagemaker.DescribePipelineOutput{}
+
+        mockClient.On("DescribePipeline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribePipelineDefinitionForExecution", func(t *testing.T) {
         input := &sagemaker.DescribePipelineDefinitionForExecutionInput{}
         output := &sagemaker.DescribePipelineDefinitionForExecutionOutput{}
@@ -2355,19 +2368,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribePipelineExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribePipelineExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribePipeline", func(t *testing.T) {
-        input := &sagemaker.DescribePipelineInput{}
-        output := &sagemaker.DescribePipelineOutput{}
-
-        mockClient.On("DescribePipeline", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribePipeline(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2478,19 +2478,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeTrialComponent", func(t *testing.T) {
-        input := &sagemaker.DescribeTrialComponentInput{}
-        output := &sagemaker.DescribeTrialComponentOutput{}
-
-        mockClient.On("DescribeTrialComponent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTrialComponent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeTrial", func(t *testing.T) {
         input := &sagemaker.DescribeTrialInput{}
         output := &sagemaker.DescribeTrialOutput{}
@@ -2498,6 +2485,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTrial", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTrial(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTrialComponent", func(t *testing.T) {
+        input := &sagemaker.DescribeTrialComponentInput{}
+        output := &sagemaker.DescribeTrialComponentOutput{}
+
+        mockClient.On("DescribeTrialComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTrialComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3024,19 +3024,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListHubContents", func(t *testing.T) {
-        input := &sagemaker.ListHubContentsInput{}
-        output := &sagemaker.ListHubContentsOutput{}
-
-        mockClient.On("ListHubContents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListHubContents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListHubContentVersions", func(t *testing.T) {
         input := &sagemaker.ListHubContentVersionsInput{}
         output := &sagemaker.ListHubContentVersionsOutput{}
@@ -3044,6 +3031,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListHubContentVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListHubContentVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHubContents", func(t *testing.T) {
+        input := &sagemaker.ListHubContentsInput{}
+        output := &sagemaker.ListHubContentsOutput{}
+
+        mockClient.On("ListHubContents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHubContents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3089,19 +3089,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListImages", func(t *testing.T) {
-        input := &sagemaker.ListImagesInput{}
-        output := &sagemaker.ListImagesOutput{}
-
-        mockClient.On("ListImages", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListImages(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListImageVersions", func(t *testing.T) {
         input := &sagemaker.ListImageVersionsInput{}
         output := &sagemaker.ListImageVersionsOutput{}
@@ -3109,6 +3096,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListImageVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListImageVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListImages", func(t *testing.T) {
+        input := &sagemaker.ListImagesInput{}
+        output := &sagemaker.ListImagesOutput{}
+
+        mockClient.On("ListImages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListImages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3141,19 +3141,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInferenceRecommendationsJobs", func(t *testing.T) {
-        input := &sagemaker.ListInferenceRecommendationsJobsInput{}
-        output := &sagemaker.ListInferenceRecommendationsJobsOutput{}
-
-        mockClient.On("ListInferenceRecommendationsJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInferenceRecommendationsJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInferenceRecommendationsJobSteps", func(t *testing.T) {
         input := &sagemaker.ListInferenceRecommendationsJobStepsInput{}
         output := &sagemaker.ListInferenceRecommendationsJobStepsOutput{}
@@ -3167,13 +3154,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListLabelingJobsForWorkteam", func(t *testing.T) {
-        input := &sagemaker.ListLabelingJobsForWorkteamInput{}
-        output := &sagemaker.ListLabelingJobsForWorkteamOutput{}
+    t.Run("TestListInferenceRecommendationsJobs", func(t *testing.T) {
+        input := &sagemaker.ListInferenceRecommendationsJobsInput{}
+        output := &sagemaker.ListInferenceRecommendationsJobsOutput{}
 
-        mockClient.On("ListLabelingJobsForWorkteam", ctx, input).Return(output, nil)
+        mockClient.On("ListInferenceRecommendationsJobs", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListLabelingJobsForWorkteam(ctx, input)
+        result, err := mockClient.ListInferenceRecommendationsJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3187,6 +3174,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLabelingJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLabelingJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLabelingJobsForWorkteam", func(t *testing.T) {
+        input := &sagemaker.ListLabelingJobsForWorkteamInput{}
+        output := &sagemaker.ListLabelingJobsForWorkteamOutput{}
+
+        mockClient.On("ListLabelingJobsForWorkteam", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLabelingJobsForWorkteam(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3245,19 +3245,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListModelCards", func(t *testing.T) {
-        input := &sagemaker.ListModelCardsInput{}
-        output := &sagemaker.ListModelCardsOutput{}
-
-        mockClient.On("ListModelCards", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListModelCards(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListModelCardVersions", func(t *testing.T) {
         input := &sagemaker.ListModelCardVersionsInput{}
         output := &sagemaker.ListModelCardVersionsOutput{}
@@ -3265,6 +3252,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListModelCardVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListModelCardVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListModelCards", func(t *testing.T) {
+        input := &sagemaker.ListModelCardsInput{}
+        output := &sagemaker.ListModelCardsOutput{}
+
+        mockClient.On("ListModelCards", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListModelCards(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3453,19 +3453,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPipelineExecutions", func(t *testing.T) {
-        input := &sagemaker.ListPipelineExecutionsInput{}
-        output := &sagemaker.ListPipelineExecutionsOutput{}
-
-        mockClient.On("ListPipelineExecutions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPipelineExecutions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListPipelineExecutionSteps", func(t *testing.T) {
         input := &sagemaker.ListPipelineExecutionStepsInput{}
         output := &sagemaker.ListPipelineExecutionStepsOutput{}
@@ -3473,6 +3460,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPipelineExecutionSteps", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPipelineExecutionSteps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPipelineExecutions", func(t *testing.T) {
+        input := &sagemaker.ListPipelineExecutionsInput{}
+        output := &sagemaker.ListPipelineExecutionsOutput{}
+
+        mockClient.On("ListPipelineExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPipelineExecutions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3609,19 +3609,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTrainingJobsForHyperParameterTuningJob", func(t *testing.T) {
-        input := &sagemaker.ListTrainingJobsForHyperParameterTuningJobInput{}
-        output := &sagemaker.ListTrainingJobsForHyperParameterTuningJobOutput{}
-
-        mockClient.On("ListTrainingJobsForHyperParameterTuningJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTrainingJobsForHyperParameterTuningJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTrainingJobs", func(t *testing.T) {
         input := &sagemaker.ListTrainingJobsInput{}
         output := &sagemaker.ListTrainingJobsOutput{}
@@ -3629,6 +3616,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTrainingJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTrainingJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrainingJobsForHyperParameterTuningJob", func(t *testing.T) {
+        input := &sagemaker.ListTrainingJobsForHyperParameterTuningJobInput{}
+        output := &sagemaker.ListTrainingJobsForHyperParameterTuningJobOutput{}
+
+        mockClient.On("ListTrainingJobsForHyperParameterTuningJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrainingJobsForHyperParameterTuningJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4350,6 +4350,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateHub", func(t *testing.T) {
+        input := &sagemaker.UpdateHubInput{}
+        output := &sagemaker.UpdateHubOutput{}
+
+        mockClient.On("UpdateHub", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHub(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateHubContent", func(t *testing.T) {
         input := &sagemaker.UpdateHubContentInput{}
         output := &sagemaker.UpdateHubContentOutput{}
@@ -4370,19 +4383,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateHubContentReference", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateHubContentReference(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestUpdateHub", func(t *testing.T) {
-        input := &sagemaker.UpdateHubInput{}
-        output := &sagemaker.UpdateHubOutput{}
-
-        mockClient.On("UpdateHub", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateHub(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4558,19 +4558,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdatePipelineExecution", func(t *testing.T) {
-        input := &sagemaker.UpdatePipelineExecutionInput{}
-        output := &sagemaker.UpdatePipelineExecutionOutput{}
-
-        mockClient.On("UpdatePipelineExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdatePipelineExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdatePipeline", func(t *testing.T) {
         input := &sagemaker.UpdatePipelineInput{}
         output := &sagemaker.UpdatePipelineOutput{}
@@ -4578,6 +4565,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePipeline", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePipelineExecution", func(t *testing.T) {
+        input := &sagemaker.UpdatePipelineExecutionInput{}
+        output := &sagemaker.UpdatePipelineExecutionOutput{}
+
+        mockClient.On("UpdatePipelineExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePipelineExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4623,19 +4623,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateTrialComponent", func(t *testing.T) {
-        input := &sagemaker.UpdateTrialComponentInput{}
-        output := &sagemaker.UpdateTrialComponentOutput{}
-
-        mockClient.On("UpdateTrialComponent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateTrialComponent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateTrial", func(t *testing.T) {
         input := &sagemaker.UpdateTrialInput{}
         output := &sagemaker.UpdateTrialOutput{}
@@ -4643,6 +4630,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTrial", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTrial(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTrialComponent", func(t *testing.T) {
+        input := &sagemaker.UpdateTrialComponentInput{}
+        output := &sagemaker.UpdateTrialComponentOutput{}
+
+        mockClient.On("UpdateTrialComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTrialComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

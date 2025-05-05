@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetQueryResultsWorkloadInsightsTopContributorsData", func(t *testing.T) {
-        input := &networkflowmonitor.GetQueryResultsWorkloadInsightsTopContributorsDataInput{}
-        output := &networkflowmonitor.GetQueryResultsWorkloadInsightsTopContributorsDataOutput{}
-
-        mockClient.On("GetQueryResultsWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetQueryResultsWorkloadInsightsTopContributorsData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetQueryResultsWorkloadInsightsTopContributors", func(t *testing.T) {
         input := &networkflowmonitor.GetQueryResultsWorkloadInsightsTopContributorsInput{}
         output := &networkflowmonitor.GetQueryResultsWorkloadInsightsTopContributorsOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQueryResultsWorkloadInsightsTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQueryResultsWorkloadInsightsTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQueryResultsWorkloadInsightsTopContributorsData", func(t *testing.T) {
+        input := &networkflowmonitor.GetQueryResultsWorkloadInsightsTopContributorsDataInput{}
+        output := &networkflowmonitor.GetQueryResultsWorkloadInsightsTopContributorsDataOutput{}
+
+        mockClient.On("GetQueryResultsWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQueryResultsWorkloadInsightsTopContributorsData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetQueryStatusWorkloadInsightsTopContributorsData", func(t *testing.T) {
-        input := &networkflowmonitor.GetQueryStatusWorkloadInsightsTopContributorsDataInput{}
-        output := &networkflowmonitor.GetQueryStatusWorkloadInsightsTopContributorsDataOutput{}
-
-        mockClient.On("GetQueryStatusWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetQueryStatusWorkloadInsightsTopContributorsData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetQueryStatusWorkloadInsightsTopContributors", func(t *testing.T) {
         input := &networkflowmonitor.GetQueryStatusWorkloadInsightsTopContributorsInput{}
         output := &networkflowmonitor.GetQueryStatusWorkloadInsightsTopContributorsOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQueryStatusWorkloadInsightsTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQueryStatusWorkloadInsightsTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQueryStatusWorkloadInsightsTopContributorsData", func(t *testing.T) {
+        input := &networkflowmonitor.GetQueryStatusWorkloadInsightsTopContributorsDataInput{}
+        output := &networkflowmonitor.GetQueryStatusWorkloadInsightsTopContributorsDataOutput{}
+
+        mockClient.On("GetQueryStatusWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQueryStatusWorkloadInsightsTopContributorsData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartQueryWorkloadInsightsTopContributorsData", func(t *testing.T) {
-        input := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsDataInput{}
-        output := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsDataOutput{}
-
-        mockClient.On("StartQueryWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StartQueryWorkloadInsightsTopContributorsData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStartQueryWorkloadInsightsTopContributors", func(t *testing.T) {
         input := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsInput{}
         output := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartQueryWorkloadInsightsTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartQueryWorkloadInsightsTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartQueryWorkloadInsightsTopContributorsData", func(t *testing.T) {
+        input := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsDataInput{}
+        output := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsDataOutput{}
+
+        mockClient.On("StartQueryWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartQueryWorkloadInsightsTopContributorsData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStopQueryWorkloadInsightsTopContributorsData", func(t *testing.T) {
-        input := &networkflowmonitor.StopQueryWorkloadInsightsTopContributorsDataInput{}
-        output := &networkflowmonitor.StopQueryWorkloadInsightsTopContributorsDataOutput{}
-
-        mockClient.On("StopQueryWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StopQueryWorkloadInsightsTopContributorsData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStopQueryWorkloadInsightsTopContributors", func(t *testing.T) {
         input := &networkflowmonitor.StopQueryWorkloadInsightsTopContributorsInput{}
         output := &networkflowmonitor.StopQueryWorkloadInsightsTopContributorsOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopQueryWorkloadInsightsTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopQueryWorkloadInsightsTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopQueryWorkloadInsightsTopContributorsData", func(t *testing.T) {
+        input := &networkflowmonitor.StopQueryWorkloadInsightsTopContributorsDataInput{}
+        output := &networkflowmonitor.StopQueryWorkloadInsightsTopContributorsDataOutput{}
+
+        mockClient.On("StopQueryWorkloadInsightsTopContributorsData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopQueryWorkloadInsightsTopContributorsData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateWorkspaceApiKey", func(t *testing.T) {
-        input := &grafana.CreateWorkspaceApiKeyInput{}
-        output := &grafana.CreateWorkspaceApiKeyOutput{}
-
-        mockClient.On("CreateWorkspaceApiKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateWorkspaceApiKey(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateWorkspace", func(t *testing.T) {
         input := &grafana.CreateWorkspaceInput{}
         output := &grafana.CreateWorkspaceOutput{}
@@ -67,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateWorkspace", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWorkspaceApiKey", func(t *testing.T) {
+        input := &grafana.CreateWorkspaceApiKeyInput{}
+        output := &grafana.CreateWorkspaceApiKeyOutput{}
+
+        mockClient.On("CreateWorkspaceApiKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWorkspaceApiKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteWorkspaceApiKey", func(t *testing.T) {
-        input := &grafana.DeleteWorkspaceApiKeyInput{}
-        output := &grafana.DeleteWorkspaceApiKeyOutput{}
-
-        mockClient.On("DeleteWorkspaceApiKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteWorkspaceApiKey(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteWorkspace", func(t *testing.T) {
         input := &grafana.DeleteWorkspaceInput{}
         output := &grafana.DeleteWorkspaceOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWorkspace", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWorkspaceApiKey", func(t *testing.T) {
+        input := &grafana.DeleteWorkspaceApiKeyInput{}
+        output := &grafana.DeleteWorkspaceApiKeyOutput{}
+
+        mockClient.On("DeleteWorkspaceApiKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWorkspaceApiKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeWorkspace", func(t *testing.T) {
+        input := &grafana.DescribeWorkspaceInput{}
+        output := &grafana.DescribeWorkspaceOutput{}
+
+        mockClient.On("DescribeWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeWorkspaceAuthentication", func(t *testing.T) {
         input := &grafana.DescribeWorkspaceAuthenticationInput{}
         output := &grafana.DescribeWorkspaceAuthenticationOutput{}
@@ -171,19 +184,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWorkspaceConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWorkspaceConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeWorkspace", func(t *testing.T) {
-        input := &grafana.DescribeWorkspaceInput{}
-        output := &grafana.DescribeWorkspaceOutput{}
-
-        mockClient.On("DescribeWorkspace", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeWorkspace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkspaceServiceAccounts", func(t *testing.T) {
-        input := &grafana.ListWorkspaceServiceAccountsInput{}
-        output := &grafana.ListWorkspaceServiceAccountsOutput{}
-
-        mockClient.On("ListWorkspaceServiceAccounts", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorkspaceServiceAccounts(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorkspaceServiceAccountTokens", func(t *testing.T) {
         input := &grafana.ListWorkspaceServiceAccountTokensInput{}
         output := &grafana.ListWorkspaceServiceAccountTokensOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkspaceServiceAccountTokens", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkspaceServiceAccountTokens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkspaceServiceAccounts", func(t *testing.T) {
+        input := &grafana.ListWorkspaceServiceAccountsInput{}
+        output := &grafana.ListWorkspaceServiceAccountsOutput{}
+
+        mockClient.On("ListWorkspaceServiceAccounts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkspaceServiceAccounts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateWorkspace", func(t *testing.T) {
+        input := &grafana.UpdateWorkspaceInput{}
+        output := &grafana.UpdateWorkspaceOutput{}
+
+        mockClient.On("UpdateWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateWorkspaceAuthentication", func(t *testing.T) {
         input := &grafana.UpdateWorkspaceAuthenticationInput{}
         output := &grafana.UpdateWorkspaceAuthenticationOutput{}
@@ -340,19 +353,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateWorkspaceConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateWorkspaceConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestUpdateWorkspace", func(t *testing.T) {
-        input := &grafana.UpdateWorkspaceInput{}
-        output := &grafana.UpdateWorkspaceOutput{}
-
-        mockClient.On("UpdateWorkspace", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateWorkspace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

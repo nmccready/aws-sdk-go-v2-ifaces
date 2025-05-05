@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteVaultAccessPolicy", func(t *testing.T) {
-        input := &glacier.DeleteVaultAccessPolicyInput{}
-        output := &glacier.DeleteVaultAccessPolicyOutput{}
-
-        mockClient.On("DeleteVaultAccessPolicy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteVaultAccessPolicy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteVault", func(t *testing.T) {
         input := &glacier.DeleteVaultInput{}
         output := &glacier.DeleteVaultOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVault", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVault(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteVaultAccessPolicy", func(t *testing.T) {
+        input := &glacier.DeleteVaultAccessPolicyInput{}
+        output := &glacier.DeleteVaultAccessPolicyOutput{}
+
+        mockClient.On("DeleteVaultAccessPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVaultAccessPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

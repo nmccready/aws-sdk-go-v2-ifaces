@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFirewallRuleGroupAssociation", func(t *testing.T) {
-        input := &route53resolver.GetFirewallRuleGroupAssociationInput{}
-        output := &route53resolver.GetFirewallRuleGroupAssociationOutput{}
-
-        mockClient.On("GetFirewallRuleGroupAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFirewallRuleGroupAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetFirewallRuleGroup", func(t *testing.T) {
         input := &route53resolver.GetFirewallRuleGroupInput{}
         output := &route53resolver.GetFirewallRuleGroupOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFirewallRuleGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFirewallRuleGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFirewallRuleGroupAssociation", func(t *testing.T) {
+        input := &route53resolver.GetFirewallRuleGroupAssociationInput{}
+        output := &route53resolver.GetFirewallRuleGroupAssociationOutput{}
+
+        mockClient.On("GetFirewallRuleGroupAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFirewallRuleGroupAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -437,19 +437,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetResolverQueryLogConfigAssociation", func(t *testing.T) {
-        input := &route53resolver.GetResolverQueryLogConfigAssociationInput{}
-        output := &route53resolver.GetResolverQueryLogConfigAssociationOutput{}
-
-        mockClient.On("GetResolverQueryLogConfigAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetResolverQueryLogConfigAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetResolverQueryLogConfig", func(t *testing.T) {
         input := &route53resolver.GetResolverQueryLogConfigInput{}
         output := &route53resolver.GetResolverQueryLogConfigOutput{}
@@ -457,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResolverQueryLogConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResolverQueryLogConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResolverQueryLogConfigAssociation", func(t *testing.T) {
+        input := &route53resolver.GetResolverQueryLogConfigAssociationInput{}
+        output := &route53resolver.GetResolverQueryLogConfigAssociationOutput{}
+
+        mockClient.On("GetResolverQueryLogConfigAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResolverQueryLogConfigAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetResolverRuleAssociation", func(t *testing.T) {
-        input := &route53resolver.GetResolverRuleAssociationInput{}
-        output := &route53resolver.GetResolverRuleAssociationOutput{}
-
-        mockClient.On("GetResolverRuleAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetResolverRuleAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetResolverRule", func(t *testing.T) {
         input := &route53resolver.GetResolverRuleInput{}
         output := &route53resolver.GetResolverRuleOutput{}
@@ -496,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResolverRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResolverRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResolverRuleAssociation", func(t *testing.T) {
+        input := &route53resolver.GetResolverRuleAssociationInput{}
+        output := &route53resolver.GetResolverRuleAssociationOutput{}
+
+        mockClient.On("GetResolverRuleAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResolverRuleAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

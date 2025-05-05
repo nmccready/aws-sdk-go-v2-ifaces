@@ -27,6 +27,6 @@ type IClient interface {
  StartMaintenance(ctx context.Context, params *StartMaintenanceInput, optFns ...func(*Options)) (*StartMaintenanceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
- UpdateServerEngineAttributes(ctx context.Context, params *UpdateServerEngineAttributesInput, optFns ...func(*Options)) (*UpdateServerEngineAttributesOutput, error) 
  UpdateServer(ctx context.Context, params *UpdateServerInput, optFns ...func(*Options)) (*UpdateServerOutput, error) 
+ UpdateServerEngineAttributes(ctx context.Context, params *UpdateServerEngineAttributesInput, optFns ...func(*Options)) (*UpdateServerEngineAttributesOutput, error) 
 }

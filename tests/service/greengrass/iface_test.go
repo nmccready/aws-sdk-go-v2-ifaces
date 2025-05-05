@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateGroupCertificateAuthority", func(t *testing.T) {
-        input := &greengrass.CreateGroupCertificateAuthorityInput{}
-        output := &greengrass.CreateGroupCertificateAuthorityOutput{}
-
-        mockClient.On("CreateGroupCertificateAuthority", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateGroupCertificateAuthority(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateGroup", func(t *testing.T) {
         input := &greengrass.CreateGroupInput{}
         output := &greengrass.CreateGroupOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateGroupCertificateAuthority", func(t *testing.T) {
+        input := &greengrass.CreateGroupCertificateAuthorityInput{}
+        output := &greengrass.CreateGroupCertificateAuthorityOutput{}
+
+        mockClient.On("CreateGroupCertificateAuthority", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGroupCertificateAuthority(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetGroup", func(t *testing.T) {
+        input := &greengrass.GetGroupInput{}
+        output := &greengrass.GetGroupOutput{}
+
+        mockClient.On("GetGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetGroupCertificateAuthority", func(t *testing.T) {
         input := &greengrass.GetGroupCertificateAuthorityInput{}
         output := &greengrass.GetGroupCertificateAuthorityOutput{}
@@ -613,19 +626,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetGroupCertificateConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetGroupCertificateConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetGroup", func(t *testing.T) {
-        input := &greengrass.GetGroupInput{}
-        output := &greengrass.GetGroupOutput{}
-
-        mockClient.On("GetGroup", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,19 +775,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListConnectorDefinitions", func(t *testing.T) {
-        input := &greengrass.ListConnectorDefinitionsInput{}
-        output := &greengrass.ListConnectorDefinitionsOutput{}
-
-        mockClient.On("ListConnectorDefinitions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListConnectorDefinitions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListConnectorDefinitionVersions", func(t *testing.T) {
         input := &greengrass.ListConnectorDefinitionVersionsInput{}
         output := &greengrass.ListConnectorDefinitionVersionsOutput{}
@@ -801,13 +788,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCoreDefinitions", func(t *testing.T) {
-        input := &greengrass.ListCoreDefinitionsInput{}
-        output := &greengrass.ListCoreDefinitionsOutput{}
+    t.Run("TestListConnectorDefinitions", func(t *testing.T) {
+        input := &greengrass.ListConnectorDefinitionsInput{}
+        output := &greengrass.ListConnectorDefinitionsOutput{}
 
-        mockClient.On("ListCoreDefinitions", ctx, input).Return(output, nil)
+        mockClient.On("ListConnectorDefinitions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListCoreDefinitions(ctx, input)
+        result, err := mockClient.ListConnectorDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCoreDefinitions", func(t *testing.T) {
+        input := &greengrass.ListCoreDefinitionsInput{}
+        output := &greengrass.ListCoreDefinitionsOutput{}
+
+        mockClient.On("ListCoreDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCoreDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDeployments", func(t *testing.T) {
         input := &greengrass.ListDeploymentsInput{}
         output := &greengrass.ListDeploymentsOutput{}
@@ -834,19 +834,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDeployments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDeployments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListDeviceDefinitions", func(t *testing.T) {
-        input := &greengrass.ListDeviceDefinitionsInput{}
-        output := &greengrass.ListDeviceDefinitionsOutput{}
-
-        mockClient.On("ListDeviceDefinitions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDeviceDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -866,13 +853,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFunctionDefinitions", func(t *testing.T) {
-        input := &greengrass.ListFunctionDefinitionsInput{}
-        output := &greengrass.ListFunctionDefinitionsOutput{}
+    t.Run("TestListDeviceDefinitions", func(t *testing.T) {
+        input := &greengrass.ListDeviceDefinitionsInput{}
+        output := &greengrass.ListDeviceDefinitionsOutput{}
 
-        mockClient.On("ListFunctionDefinitions", ctx, input).Return(output, nil)
+        mockClient.On("ListDeviceDefinitions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListFunctionDefinitions(ctx, input)
+        result, err := mockClient.ListDeviceDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -892,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFunctionDefinitions", func(t *testing.T) {
+        input := &greengrass.ListFunctionDefinitionsInput{}
+        output := &greengrass.ListFunctionDefinitionsOutput{}
+
+        mockClient.On("ListFunctionDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFunctionDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListGroupCertificateAuthorities", func(t *testing.T) {
         input := &greengrass.ListGroupCertificateAuthoritiesInput{}
         output := &greengrass.ListGroupCertificateAuthoritiesOutput{}
@@ -899,19 +899,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGroupCertificateAuthorities", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGroupCertificateAuthorities(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListGroups", func(t *testing.T) {
-        input := &greengrass.ListGroupsInput{}
-        output := &greengrass.ListGroupsOutput{}
-
-        mockClient.On("ListGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -931,13 +918,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListLoggerDefinitions", func(t *testing.T) {
-        input := &greengrass.ListLoggerDefinitionsInput{}
-        output := &greengrass.ListLoggerDefinitionsOutput{}
+    t.Run("TestListGroups", func(t *testing.T) {
+        input := &greengrass.ListGroupsInput{}
+        output := &greengrass.ListGroupsOutput{}
 
-        mockClient.On("ListLoggerDefinitions", ctx, input).Return(output, nil)
+        mockClient.On("ListGroups", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListLoggerDefinitions(ctx, input)
+        result, err := mockClient.ListGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,13 +944,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListResourceDefinitions", func(t *testing.T) {
-        input := &greengrass.ListResourceDefinitionsInput{}
-        output := &greengrass.ListResourceDefinitionsOutput{}
+    t.Run("TestListLoggerDefinitions", func(t *testing.T) {
+        input := &greengrass.ListLoggerDefinitionsInput{}
+        output := &greengrass.ListLoggerDefinitionsOutput{}
 
-        mockClient.On("ListResourceDefinitions", ctx, input).Return(output, nil)
+        mockClient.On("ListLoggerDefinitions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListResourceDefinitions(ctx, input)
+        result, err := mockClient.ListLoggerDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -983,13 +970,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSubscriptionDefinitions", func(t *testing.T) {
-        input := &greengrass.ListSubscriptionDefinitionsInput{}
-        output := &greengrass.ListSubscriptionDefinitionsOutput{}
+    t.Run("TestListResourceDefinitions", func(t *testing.T) {
+        input := &greengrass.ListResourceDefinitionsInput{}
+        output := &greengrass.ListResourceDefinitionsOutput{}
 
-        mockClient.On("ListSubscriptionDefinitions", ctx, input).Return(output, nil)
+        mockClient.On("ListResourceDefinitions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListSubscriptionDefinitions(ctx, input)
+        result, err := mockClient.ListResourceDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1003,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSubscriptionDefinitionVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSubscriptionDefinitionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubscriptionDefinitions", func(t *testing.T) {
+        input := &greengrass.ListSubscriptionDefinitionsInput{}
+        output := &greengrass.ListSubscriptionDefinitionsOutput{}
+
+        mockClient.On("ListSubscriptionDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptionDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,19 +1152,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateGroupCertificateConfiguration", func(t *testing.T) {
-        input := &greengrass.UpdateGroupCertificateConfigurationInput{}
-        output := &greengrass.UpdateGroupCertificateConfigurationOutput{}
-
-        mockClient.On("UpdateGroupCertificateConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateGroupCertificateConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateGroup", func(t *testing.T) {
         input := &greengrass.UpdateGroupInput{}
         output := &greengrass.UpdateGroupOutput{}
@@ -1172,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateGroupCertificateConfiguration", func(t *testing.T) {
+        input := &greengrass.UpdateGroupCertificateConfigurationInput{}
+        output := &greengrass.UpdateGroupCertificateConfigurationOutput{}
+
+        mockClient.On("UpdateGroupCertificateConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGroupCertificateConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

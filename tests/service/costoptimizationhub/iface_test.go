@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRecommendations", func(t *testing.T) {
-        input := &costoptimizationhub.ListRecommendationsInput{}
-        output := &costoptimizationhub.ListRecommendationsOutput{}
-
-        mockClient.On("ListRecommendations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRecommendations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRecommendationSummaries", func(t *testing.T) {
         input := &costoptimizationhub.ListRecommendationSummariesInput{}
         output := &costoptimizationhub.ListRecommendationSummariesOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRecommendationSummaries", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRecommendationSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecommendations", func(t *testing.T) {
+        input := &costoptimizationhub.ListRecommendationsInput{}
+        output := &costoptimizationhub.ListRecommendationsOutput{}
+
+        mockClient.On("ListRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommendations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

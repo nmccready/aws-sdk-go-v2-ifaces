@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAppMonitorData", func(t *testing.T) {
-        input := &rum.GetAppMonitorDataInput{}
-        output := &rum.GetAppMonitorDataOutput{}
-
-        mockClient.On("GetAppMonitorData", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAppMonitorData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAppMonitor", func(t *testing.T) {
         input := &rum.GetAppMonitorInput{}
         output := &rum.GetAppMonitorOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAppMonitor", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAppMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAppMonitorData", func(t *testing.T) {
+        input := &rum.GetAppMonitorDataInput{}
+        output := &rum.GetAppMonitorDataOutput{}
+
+        mockClient.On("GetAppMonitorData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAppMonitorData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

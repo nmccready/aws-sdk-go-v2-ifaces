@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCalculationExecutionCode", func(t *testing.T) {
-        input := &athena.GetCalculationExecutionCodeInput{}
-        output := &athena.GetCalculationExecutionCodeOutput{}
-
-        mockClient.On("GetCalculationExecutionCode", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCalculationExecutionCode(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCalculationExecution", func(t *testing.T) {
         input := &athena.GetCalculationExecutionInput{}
         output := &athena.GetCalculationExecutionOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCalculationExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCalculationExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCalculationExecutionCode", func(t *testing.T) {
+        input := &athena.GetCalculationExecutionCodeInput{}
+        output := &athena.GetCalculationExecutionCodeOutput{}
+
+        mockClient.On("GetCalculationExecutionCode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCalculationExecutionCode(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDatabase", func(t *testing.T) {
-        input := &athena.GetDatabaseInput{}
-        output := &athena.GetDatabaseOutput{}
-
-        mockClient.On("GetDatabase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDatabase(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDataCatalog", func(t *testing.T) {
         input := &athena.GetDataCatalogInput{}
         output := &athena.GetDataCatalogOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataCatalog", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataCatalog(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDatabase", func(t *testing.T) {
+        input := &athena.GetDatabaseInput{}
+        output := &athena.GetDatabaseOutput{}
+
+        mockClient.On("GetDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDatabase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDatabases", func(t *testing.T) {
-        input := &athena.ListDatabasesInput{}
-        output := &athena.ListDatabasesOutput{}
-
-        mockClient.On("ListDatabases", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDatabases(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDataCatalogs", func(t *testing.T) {
         input := &athena.ListDataCatalogsInput{}
         output := &athena.ListDataCatalogsOutput{}
@@ -561,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataCatalogs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataCatalogs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatabases", func(t *testing.T) {
+        input := &athena.ListDatabasesInput{}
+        output := &athena.ListDatabasesOutput{}
+
+        mockClient.On("ListDatabases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatabases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

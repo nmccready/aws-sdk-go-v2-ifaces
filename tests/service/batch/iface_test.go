@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListJobsByConsumableResource", func(t *testing.T) {
-        input := &batch.ListJobsByConsumableResourceInput{}
-        output := &batch.ListJobsByConsumableResourceOutput{}
-
-        mockClient.On("ListJobsByConsumableResource", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListJobsByConsumableResource(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListJobs", func(t *testing.T) {
         input := &batch.ListJobsInput{}
         output := &batch.ListJobsOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobsByConsumableResource", func(t *testing.T) {
+        input := &batch.ListJobsByConsumableResourceInput{}
+        output := &batch.ListJobsByConsumableResourceOutput{}
+
+        mockClient.On("ListJobsByConsumableResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobsByConsumableResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

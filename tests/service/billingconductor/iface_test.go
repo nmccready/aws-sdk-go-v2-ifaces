@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCustomLineItems", func(t *testing.T) {
-        input := &billingconductor.ListCustomLineItemsInput{}
-        output := &billingconductor.ListCustomLineItemsOutput{}
-
-        mockClient.On("ListCustomLineItems", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListCustomLineItems(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListCustomLineItemVersions", func(t *testing.T) {
         input := &billingconductor.ListCustomLineItemVersionsInput{}
         output := &billingconductor.ListCustomLineItemVersionsOutput{}
@@ -294,13 +281,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPricingPlansAssociatedWithPricingRule", func(t *testing.T) {
-        input := &billingconductor.ListPricingPlansAssociatedWithPricingRuleInput{}
-        output := &billingconductor.ListPricingPlansAssociatedWithPricingRuleOutput{}
+    t.Run("TestListCustomLineItems", func(t *testing.T) {
+        input := &billingconductor.ListCustomLineItemsInput{}
+        output := &billingconductor.ListCustomLineItemsOutput{}
 
-        mockClient.On("ListPricingPlansAssociatedWithPricingRule", ctx, input).Return(output, nil)
+        mockClient.On("ListCustomLineItems", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListPricingPlansAssociatedWithPricingRule(ctx, input)
+        result, err := mockClient.ListCustomLineItems(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,13 +307,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPricingRulesAssociatedToPricingPlan", func(t *testing.T) {
-        input := &billingconductor.ListPricingRulesAssociatedToPricingPlanInput{}
-        output := &billingconductor.ListPricingRulesAssociatedToPricingPlanOutput{}
+    t.Run("TestListPricingPlansAssociatedWithPricingRule", func(t *testing.T) {
+        input := &billingconductor.ListPricingPlansAssociatedWithPricingRuleInput{}
+        output := &billingconductor.ListPricingPlansAssociatedWithPricingRuleOutput{}
 
-        mockClient.On("ListPricingRulesAssociatedToPricingPlan", ctx, input).Return(output, nil)
+        mockClient.On("ListPricingPlansAssociatedWithPricingRule", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListPricingRulesAssociatedToPricingPlan(ctx, input)
+        result, err := mockClient.ListPricingPlansAssociatedWithPricingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPricingRules", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPricingRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPricingRulesAssociatedToPricingPlan", func(t *testing.T) {
+        input := &billingconductor.ListPricingRulesAssociatedToPricingPlanInput{}
+        output := &billingconductor.ListPricingRulesAssociatedToPricingPlanOutput{}
+
+        mockClient.On("ListPricingRulesAssociatedToPricingPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPricingRulesAssociatedToPricingPlan(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

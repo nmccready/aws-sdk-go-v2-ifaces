@@ -164,19 +164,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeSpeakerEnrollmentJob", func(t *testing.T) {
-        input := &voiceid.DescribeSpeakerEnrollmentJobInput{}
-        output := &voiceid.DescribeSpeakerEnrollmentJobOutput{}
-
-        mockClient.On("DescribeSpeakerEnrollmentJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeSpeakerEnrollmentJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeSpeaker", func(t *testing.T) {
         input := &voiceid.DescribeSpeakerInput{}
         output := &voiceid.DescribeSpeakerOutput{}
@@ -184,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeSpeaker", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeSpeaker(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSpeakerEnrollmentJob", func(t *testing.T) {
+        input := &voiceid.DescribeSpeakerEnrollmentJobInput{}
+        output := &voiceid.DescribeSpeakerEnrollmentJobOutput{}
+
+        mockClient.On("DescribeSpeakerEnrollmentJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSpeakerEnrollmentJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

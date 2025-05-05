@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetArchiveExport", func(t *testing.T) {
-        input := &mailmanager.GetArchiveExportInput{}
-        output := &mailmanager.GetArchiveExportOutput{}
-
-        mockClient.On("GetArchiveExport", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetArchiveExport(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetArchive", func(t *testing.T) {
         input := &mailmanager.GetArchiveInput{}
         output := &mailmanager.GetArchiveOutput{}
@@ -346,13 +333,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetArchiveMessageContent", func(t *testing.T) {
-        input := &mailmanager.GetArchiveMessageContentInput{}
-        output := &mailmanager.GetArchiveMessageContentOutput{}
+    t.Run("TestGetArchiveExport", func(t *testing.T) {
+        input := &mailmanager.GetArchiveExportInput{}
+        output := &mailmanager.GetArchiveExportOutput{}
 
-        mockClient.On("GetArchiveMessageContent", ctx, input).Return(output, nil)
+        mockClient.On("GetArchiveExport", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetArchiveMessageContent(ctx, input)
+        result, err := mockClient.GetArchiveExport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetArchiveMessage", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetArchiveMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetArchiveMessageContent", func(t *testing.T) {
+        input := &mailmanager.GetArchiveMessageContentInput{}
+        output := &mailmanager.GetArchiveMessageContentOutput{}
+
+        mockClient.On("GetArchiveMessageContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetArchiveMessageContent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

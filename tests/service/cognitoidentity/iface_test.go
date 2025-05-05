@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetIdentityPoolRoles", func(t *testing.T) {
-        input := &cognitoidentity.GetIdentityPoolRolesInput{}
-        output := &cognitoidentity.GetIdentityPoolRolesOutput{}
-
-        mockClient.On("GetIdentityPoolRoles", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetIdentityPoolRoles(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetId", func(t *testing.T) {
         input := &cognitoidentity.GetIdInput{}
         output := &cognitoidentity.GetIdOutput{}
@@ -138,13 +125,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetOpenIdTokenForDeveloperIdentity", func(t *testing.T) {
-        input := &cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput{}
-        output := &cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput{}
+    t.Run("TestGetIdentityPoolRoles", func(t *testing.T) {
+        input := &cognitoidentity.GetIdentityPoolRolesInput{}
+        output := &cognitoidentity.GetIdentityPoolRolesOutput{}
 
-        mockClient.On("GetOpenIdTokenForDeveloperIdentity", ctx, input).Return(output, nil)
+        mockClient.On("GetIdentityPoolRoles", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetOpenIdTokenForDeveloperIdentity(ctx, input)
+        result, err := mockClient.GetIdentityPoolRoles(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOpenIdToken", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOpenIdToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetOpenIdTokenForDeveloperIdentity", func(t *testing.T) {
+        input := &cognitoidentity.GetOpenIdTokenForDeveloperIdentityInput{}
+        output := &cognitoidentity.GetOpenIdTokenForDeveloperIdentityOutput{}
+
+        mockClient.On("GetOpenIdTokenForDeveloperIdentity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOpenIdTokenForDeveloperIdentity(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

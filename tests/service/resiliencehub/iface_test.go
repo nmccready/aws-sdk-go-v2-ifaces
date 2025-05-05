@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAppAssessment", func(t *testing.T) {
-        input := &resiliencehub.DeleteAppAssessmentInput{}
-        output := &resiliencehub.DeleteAppAssessmentOutput{}
-
-        mockClient.On("DeleteAppAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAppAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteApp", func(t *testing.T) {
         input := &resiliencehub.DeleteAppInput{}
         output := &resiliencehub.DeleteAppOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteApp", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAppAssessment", func(t *testing.T) {
+        input := &resiliencehub.DeleteAppAssessmentInput{}
+        output := &resiliencehub.DeleteAppAssessmentOutput{}
+
+        mockClient.On("DeleteAppAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAppAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAppAssessment", func(t *testing.T) {
-        input := &resiliencehub.DescribeAppAssessmentInput{}
-        output := &resiliencehub.DescribeAppAssessmentOutput{}
-
-        mockClient.On("DescribeAppAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAppAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeApp", func(t *testing.T) {
         input := &resiliencehub.DescribeAppInput{}
         output := &resiliencehub.DescribeAppOutput{}
@@ -255,13 +242,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAppVersionAppComponent", func(t *testing.T) {
-        input := &resiliencehub.DescribeAppVersionAppComponentInput{}
-        output := &resiliencehub.DescribeAppVersionAppComponentOutput{}
+    t.Run("TestDescribeAppAssessment", func(t *testing.T) {
+        input := &resiliencehub.DescribeAppAssessmentInput{}
+        output := &resiliencehub.DescribeAppAssessmentOutput{}
 
-        mockClient.On("DescribeAppVersionAppComponent", ctx, input).Return(output, nil)
+        mockClient.On("DescribeAppAssessment", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeAppVersionAppComponent(ctx, input)
+        result, err := mockClient.DescribeAppAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAppVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAppVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAppVersionAppComponent", func(t *testing.T) {
+        input := &resiliencehub.DescribeAppVersionAppComponentInput{}
+        output := &resiliencehub.DescribeAppVersionAppComponentOutput{}
+
+        mockClient.On("DescribeAppVersionAppComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAppVersionAppComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListApps", func(t *testing.T) {
-        input := &resiliencehub.ListAppsInput{}
-        output := &resiliencehub.ListAppsOutput{}
-
-        mockClient.On("ListApps", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListApps(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAppVersionAppComponents", func(t *testing.T) {
         input := &resiliencehub.ListAppVersionAppComponentsInput{}
         output := &resiliencehub.ListAppVersionAppComponentsOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAppVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAppVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApps", func(t *testing.T) {
+        input := &resiliencehub.ListAppsInput{}
+        output := &resiliencehub.ListAppsOutput{}
+
+        mockClient.On("ListApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApps(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,19 +801,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateAppVersionAppComponent", func(t *testing.T) {
-        input := &resiliencehub.UpdateAppVersionAppComponentInput{}
-        output := &resiliencehub.UpdateAppVersionAppComponentOutput{}
-
-        mockClient.On("UpdateAppVersionAppComponent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateAppVersionAppComponent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateAppVersion", func(t *testing.T) {
         input := &resiliencehub.UpdateAppVersionInput{}
         output := &resiliencehub.UpdateAppVersionOutput{}
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAppVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAppVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAppVersionAppComponent", func(t *testing.T) {
+        input := &resiliencehub.UpdateAppVersionAppComponentInput{}
+        output := &resiliencehub.UpdateAppVersionAppComponentOutput{}
+
+        mockClient.On("UpdateAppVersionAppComponent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAppVersionAppComponent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

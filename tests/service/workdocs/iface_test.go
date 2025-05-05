@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteFolderContents", func(t *testing.T) {
-        input := &workdocs.DeleteFolderContentsInput{}
-        output := &workdocs.DeleteFolderContentsOutput{}
-
-        mockClient.On("DeleteFolderContents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteFolderContents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteFolder", func(t *testing.T) {
         input := &workdocs.DeleteFolderInput{}
         output := &workdocs.DeleteFolderOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFolder", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFolder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteFolderContents", func(t *testing.T) {
+        input := &workdocs.DeleteFolderContentsInput{}
+        output := &workdocs.DeleteFolderContentsOutput{}
+
+        mockClient.On("DeleteFolderContents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFolderContents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

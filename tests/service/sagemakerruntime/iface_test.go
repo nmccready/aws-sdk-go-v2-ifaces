@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestInvokeEndpointAsync", func(t *testing.T) {
-        input := &sagemakerruntime.InvokeEndpointAsyncInput{}
-        output := &sagemakerruntime.InvokeEndpointAsyncOutput{}
-
-        mockClient.On("InvokeEndpointAsync", ctx, input).Return(output, nil)
-
-        result, err := mockClient.InvokeEndpointAsync(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestInvokeEndpoint", func(t *testing.T) {
         input := &sagemakerruntime.InvokeEndpointInput{}
         output := &sagemakerruntime.InvokeEndpointOutput{}
@@ -54,6 +41,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("InvokeEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.InvokeEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestInvokeEndpointAsync", func(t *testing.T) {
+        input := &sagemakerruntime.InvokeEndpointAsyncInput{}
+        output := &sagemakerruntime.InvokeEndpointAsyncOutput{}
+
+        mockClient.On("InvokeEndpointAsync", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeEndpointAsync(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

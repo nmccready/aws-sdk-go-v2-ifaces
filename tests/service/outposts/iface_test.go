@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSiteAddress", func(t *testing.T) {
-        input := &outposts.GetSiteAddressInput{}
-        output := &outposts.GetSiteAddressOutput{}
-
-        mockClient.On("GetSiteAddress", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSiteAddress(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSite", func(t *testing.T) {
         input := &outposts.GetSiteInput{}
         output := &outposts.GetSiteOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSite", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSite(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSiteAddress", func(t *testing.T) {
+        input := &outposts.GetSiteAddressInput{}
+        output := &outposts.GetSiteAddressOutput{}
+
+        mockClient.On("GetSiteAddress", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSiteAddress(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateSiteAddress", func(t *testing.T) {
-        input := &outposts.UpdateSiteAddressInput{}
-        output := &outposts.UpdateSiteAddressOutput{}
-
-        mockClient.On("UpdateSiteAddress", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateSiteAddress(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateSite", func(t *testing.T) {
         input := &outposts.UpdateSiteInput{}
         output := &outposts.UpdateSiteOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSite", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSite(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSiteAddress", func(t *testing.T) {
+        input := &outposts.UpdateSiteAddressInput{}
+        output := &outposts.UpdateSiteAddressOutput{}
+
+        mockClient.On("UpdateSiteAddress", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSiteAddress(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

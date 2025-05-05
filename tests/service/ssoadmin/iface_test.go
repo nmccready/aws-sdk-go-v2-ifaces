@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateApplicationAssignment", func(t *testing.T) {
-        input := &ssoadmin.CreateApplicationAssignmentInput{}
-        output := &ssoadmin.CreateApplicationAssignmentOutput{}
-
-        mockClient.On("CreateApplicationAssignment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateApplicationAssignment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateApplication", func(t *testing.T) {
         input := &ssoadmin.CreateApplicationInput{}
         output := &ssoadmin.CreateApplicationOutput{}
@@ -99,13 +86,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
-        input := &ssoadmin.CreateInstanceAccessControlAttributeConfigurationInput{}
-        output := &ssoadmin.CreateInstanceAccessControlAttributeConfigurationOutput{}
+    t.Run("TestCreateApplicationAssignment", func(t *testing.T) {
+        input := &ssoadmin.CreateApplicationAssignmentInput{}
+        output := &ssoadmin.CreateApplicationAssignmentOutput{}
 
-        mockClient.On("CreateInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
+        mockClient.On("CreateApplicationAssignment", ctx, input).Return(output, nil)
 
-        result, err := mockClient.CreateInstanceAccessControlAttributeConfiguration(ctx, input)
+        result, err := mockClient.CreateApplicationAssignment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
+        input := &ssoadmin.CreateInstanceAccessControlAttributeConfigurationInput{}
+        output := &ssoadmin.CreateInstanceAccessControlAttributeConfigurationOutput{}
+
+        mockClient.On("CreateInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInstanceAccessControlAttributeConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteApplication", func(t *testing.T) {
+        input := &ssoadmin.DeleteApplicationInput{}
+        output := &ssoadmin.DeleteApplicationOutput{}
+
+        mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteApplicationAccessScope", func(t *testing.T) {
         input := &ssoadmin.DeleteApplicationAccessScopeInput{}
         output := &ssoadmin.DeleteApplicationAccessScopeOutput{}
@@ -203,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteApplication", func(t *testing.T) {
-        input := &ssoadmin.DeleteApplicationInput{}
-        output := &ssoadmin.DeleteApplicationOutput{}
-
-        mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteApplication(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteApplicationGrant", func(t *testing.T) {
         input := &ssoadmin.DeleteApplicationGrantInput{}
         output := &ssoadmin.DeleteApplicationGrantOutput{}
@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
-        input := &ssoadmin.DeleteInstanceAccessControlAttributeConfigurationInput{}
-        output := &ssoadmin.DeleteInstanceAccessControlAttributeConfigurationOutput{}
-
-        mockClient.On("DeleteInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteInstanceAccessControlAttributeConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteInstance", func(t *testing.T) {
         input := &ssoadmin.DeleteInstanceInput{}
         output := &ssoadmin.DeleteInstanceOutput{}
@@ -268,13 +255,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeletePermissionsBoundaryFromPermissionSet", func(t *testing.T) {
-        input := &ssoadmin.DeletePermissionsBoundaryFromPermissionSetInput{}
-        output := &ssoadmin.DeletePermissionsBoundaryFromPermissionSetOutput{}
+    t.Run("TestDeleteInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
+        input := &ssoadmin.DeleteInstanceAccessControlAttributeConfigurationInput{}
+        output := &ssoadmin.DeleteInstanceAccessControlAttributeConfigurationOutput{}
 
-        mockClient.On("DeletePermissionsBoundaryFromPermissionSet", ctx, input).Return(output, nil)
+        mockClient.On("DeleteInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeletePermissionsBoundaryFromPermissionSet(ctx, input)
+        result, err := mockClient.DeleteInstanceAccessControlAttributeConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePermissionSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePermissionSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePermissionsBoundaryFromPermissionSet", func(t *testing.T) {
+        input := &ssoadmin.DeletePermissionsBoundaryFromPermissionSetInput{}
+        output := &ssoadmin.DeletePermissionsBoundaryFromPermissionSetOutput{}
+
+        mockClient.On("DeletePermissionsBoundaryFromPermissionSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePermissionsBoundaryFromPermissionSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeApplicationAssignment", func(t *testing.T) {
-        input := &ssoadmin.DescribeApplicationAssignmentInput{}
-        output := &ssoadmin.DescribeApplicationAssignmentOutput{}
-
-        mockClient.On("DescribeApplicationAssignment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeApplicationAssignment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeApplication", func(t *testing.T) {
         input := &ssoadmin.DescribeApplicationInput{}
         output := &ssoadmin.DescribeApplicationOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApplicationAssignment", func(t *testing.T) {
+        input := &ssoadmin.DescribeApplicationAssignmentInput{}
+        output := &ssoadmin.DescribeApplicationAssignmentOutput{}
+
+        mockClient.On("DescribeApplicationAssignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplicationAssignment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
-        input := &ssoadmin.DescribeInstanceAccessControlAttributeConfigurationInput{}
-        output := &ssoadmin.DescribeInstanceAccessControlAttributeConfigurationOutput{}
-
-        mockClient.On("DescribeInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeInstanceAccessControlAttributeConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeInstance", func(t *testing.T) {
         input := &ssoadmin.DescribeInstanceInput{}
         output := &ssoadmin.DescribeInstanceOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
+        input := &ssoadmin.DescribeInstanceAccessControlAttributeConfigurationInput{}
+        output := &ssoadmin.DescribeInstanceAccessControlAttributeConfigurationOutput{}
+
+        mockClient.On("DescribeInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInstanceAccessControlAttributeConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAccountAssignmentsForPrincipal", func(t *testing.T) {
-        input := &ssoadmin.ListAccountAssignmentsForPrincipalInput{}
-        output := &ssoadmin.ListAccountAssignmentsForPrincipalOutput{}
-
-        mockClient.On("ListAccountAssignmentsForPrincipal", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAccountAssignmentsForPrincipal(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAccountAssignments", func(t *testing.T) {
         input := &ssoadmin.ListAccountAssignmentsInput{}
         output := &ssoadmin.ListAccountAssignmentsOutput{}
@@ -587,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAccountAssignments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAccountAssignments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAccountAssignmentsForPrincipal", func(t *testing.T) {
+        input := &ssoadmin.ListAccountAssignmentsForPrincipalInput{}
+        output := &ssoadmin.ListAccountAssignmentsForPrincipalOutput{}
+
+        mockClient.On("ListAccountAssignmentsForPrincipal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccountAssignmentsForPrincipal(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,19 +619,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListApplicationAssignmentsForPrincipal", func(t *testing.T) {
-        input := &ssoadmin.ListApplicationAssignmentsForPrincipalInput{}
-        output := &ssoadmin.ListApplicationAssignmentsForPrincipalOutput{}
-
-        mockClient.On("ListApplicationAssignmentsForPrincipal", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListApplicationAssignmentsForPrincipal(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListApplicationAssignments", func(t *testing.T) {
         input := &ssoadmin.ListApplicationAssignmentsInput{}
         output := &ssoadmin.ListApplicationAssignmentsOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApplicationAssignments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApplicationAssignments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApplicationAssignmentsForPrincipal", func(t *testing.T) {
+        input := &ssoadmin.ListApplicationAssignmentsForPrincipalInput{}
+        output := &ssoadmin.ListApplicationAssignmentsForPrincipalOutput{}
+
+        mockClient.On("ListApplicationAssignmentsForPrincipal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplicationAssignmentsForPrincipal(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -931,19 +931,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
-        input := &ssoadmin.UpdateInstanceAccessControlAttributeConfigurationInput{}
-        output := &ssoadmin.UpdateInstanceAccessControlAttributeConfigurationOutput{}
-
-        mockClient.On("UpdateInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateInstanceAccessControlAttributeConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateInstance", func(t *testing.T) {
         input := &ssoadmin.UpdateInstanceInput{}
         output := &ssoadmin.UpdateInstanceOutput{}
@@ -951,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateInstanceAccessControlAttributeConfiguration", func(t *testing.T) {
+        input := &ssoadmin.UpdateInstanceAccessControlAttributeConfigurationInput{}
+        output := &ssoadmin.UpdateInstanceAccessControlAttributeConfigurationOutput{}
+
+        mockClient.On("UpdateInstanceAccessControlAttributeConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateInstanceAccessControlAttributeConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDevicePoolCompatibility", func(t *testing.T) {
-        input := &devicefarm.GetDevicePoolCompatibilityInput{}
-        output := &devicefarm.GetDevicePoolCompatibilityOutput{}
-
-        mockClient.On("GetDevicePoolCompatibility", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDevicePoolCompatibility(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDevicePool", func(t *testing.T) {
         input := &devicefarm.GetDevicePoolInput{}
         output := &devicefarm.GetDevicePoolOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDevicePool", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDevicePool(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDevicePoolCompatibility", func(t *testing.T) {
+        input := &devicefarm.GetDevicePoolCompatibilityInput{}
+        output := &devicefarm.GetDevicePoolCompatibilityOutput{}
+
+        mockClient.On("GetDevicePoolCompatibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDevicePoolCompatibility(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,19 +619,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListOfferings", func(t *testing.T) {
-        input := &devicefarm.ListOfferingsInput{}
-        output := &devicefarm.ListOfferingsOutput{}
-
-        mockClient.On("ListOfferings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListOfferings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListOfferingTransactions", func(t *testing.T) {
         input := &devicefarm.ListOfferingTransactionsInput{}
         output := &devicefarm.ListOfferingTransactionsOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOfferingTransactions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOfferingTransactions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOfferings", func(t *testing.T) {
+        input := &devicefarm.ListOfferingsInput{}
+        output := &devicefarm.ListOfferingsOutput{}
+
+        mockClient.On("ListOfferings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOfferings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDatasetContent", func(t *testing.T) {
-        input := &iotanalytics.CreateDatasetContentInput{}
-        output := &iotanalytics.CreateDatasetContentOutput{}
-
-        mockClient.On("CreateDatasetContent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDatasetContent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDataset", func(t *testing.T) {
         input := &iotanalytics.CreateDatasetInput{}
         output := &iotanalytics.CreateDatasetOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDataset", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDatasetContent", func(t *testing.T) {
+        input := &iotanalytics.CreateDatasetContentInput{}
+        output := &iotanalytics.CreateDatasetContentOutput{}
+
+        mockClient.On("CreateDatasetContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDatasetContent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDatasetContent", func(t *testing.T) {
-        input := &iotanalytics.DeleteDatasetContentInput{}
-        output := &iotanalytics.DeleteDatasetContentOutput{}
-
-        mockClient.On("DeleteDatasetContent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDatasetContent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDataset", func(t *testing.T) {
         input := &iotanalytics.DeleteDatasetInput{}
         output := &iotanalytics.DeleteDatasetOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDataset", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDatasetContent", func(t *testing.T) {
+        input := &iotanalytics.DeleteDatasetContentInput{}
+        output := &iotanalytics.DeleteDatasetContentOutput{}
+
+        mockClient.On("DeleteDatasetContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDatasetContent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

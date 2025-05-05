@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreatePullRequestApprovalRule", func(t *testing.T) {
-        input := &codecommit.CreatePullRequestApprovalRuleInput{}
-        output := &codecommit.CreatePullRequestApprovalRuleOutput{}
-
-        mockClient.On("CreatePullRequestApprovalRule", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreatePullRequestApprovalRule(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreatePullRequest", func(t *testing.T) {
         input := &codecommit.CreatePullRequestInput{}
         output := &codecommit.CreatePullRequestOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreatePullRequest", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreatePullRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePullRequestApprovalRule", func(t *testing.T) {
+        input := &codecommit.CreatePullRequestApprovalRuleInput{}
+        output := &codecommit.CreatePullRequestApprovalRuleOutput{}
+
+        mockClient.On("CreatePullRequestApprovalRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePullRequestApprovalRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetPullRequestApprovalStates", func(t *testing.T) {
-        input := &codecommit.GetPullRequestApprovalStatesInput{}
-        output := &codecommit.GetPullRequestApprovalStatesOutput{}
-
-        mockClient.On("GetPullRequestApprovalStates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetPullRequestApprovalStates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetPullRequest", func(t *testing.T) {
         input := &codecommit.GetPullRequestInput{}
         output := &codecommit.GetPullRequestOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPullRequest", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPullRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPullRequestApprovalStates", func(t *testing.T) {
+        input := &codecommit.GetPullRequestApprovalStatesInput{}
+        output := &codecommit.GetPullRequestApprovalStatesOutput{}
+
+        mockClient.On("GetPullRequestApprovalStates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPullRequestApprovalStates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,19 +645,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRepositoriesForApprovalRuleTemplate", func(t *testing.T) {
-        input := &codecommit.ListRepositoriesForApprovalRuleTemplateInput{}
-        output := &codecommit.ListRepositoriesForApprovalRuleTemplateOutput{}
-
-        mockClient.On("ListRepositoriesForApprovalRuleTemplate", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRepositoriesForApprovalRuleTemplate(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRepositories", func(t *testing.T) {
         input := &codecommit.ListRepositoriesInput{}
         output := &codecommit.ListRepositoriesOutput{}
@@ -665,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRepositories", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRepositories(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRepositoriesForApprovalRuleTemplate", func(t *testing.T) {
+        input := &codecommit.ListRepositoriesForApprovalRuleTemplateInput{}
+        output := &codecommit.ListRepositoriesForApprovalRuleTemplateOutput{}
+
+        mockClient.On("ListRepositoriesForApprovalRuleTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRepositoriesForApprovalRuleTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

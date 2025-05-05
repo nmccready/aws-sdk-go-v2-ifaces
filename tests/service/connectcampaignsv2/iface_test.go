@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCampaign", func(t *testing.T) {
+        input := &connectcampaignsv2.DeleteCampaignInput{}
+        output := &connectcampaignsv2.DeleteCampaignOutput{}
+
+        mockClient.On("DeleteCampaign", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCampaign(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCampaignChannelSubtypeConfig", func(t *testing.T) {
         input := &connectcampaignsv2.DeleteCampaignChannelSubtypeConfigInput{}
         output := &connectcampaignsv2.DeleteCampaignChannelSubtypeConfigOutput{}
@@ -80,19 +93,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCampaignCommunicationTime", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCampaignCommunicationTime(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteCampaign", func(t *testing.T) {
-        input := &connectcampaignsv2.DeleteCampaignInput{}
-        output := &connectcampaignsv2.DeleteCampaignOutput{}
-
-        mockClient.On("DeleteCampaign", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteCampaign(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCampaignStateBatch", func(t *testing.T) {
-        input := &connectcampaignsv2.GetCampaignStateBatchInput{}
-        output := &connectcampaignsv2.GetCampaignStateBatchOutput{}
-
-        mockClient.On("GetCampaignStateBatch", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCampaignStateBatch(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCampaignState", func(t *testing.T) {
         input := &connectcampaignsv2.GetCampaignStateInput{}
         output := &connectcampaignsv2.GetCampaignStateOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCampaignState", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCampaignState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCampaignStateBatch", func(t *testing.T) {
+        input := &connectcampaignsv2.GetCampaignStateBatchInput{}
+        output := &connectcampaignsv2.GetCampaignStateBatchOutput{}
+
+        mockClient.On("GetCampaignStateBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCampaignStateBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListHITsForQualificationType", func(t *testing.T) {
-        input := &mturk.ListHITsForQualificationTypeInput{}
-        output := &mturk.ListHITsForQualificationTypeOutput{}
-
-        mockClient.On("ListHITsForQualificationType", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListHITsForQualificationType(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListHITs", func(t *testing.T) {
         input := &mturk.ListHITsInput{}
         output := &mturk.ListHITsOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListHITs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListHITs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHITsForQualificationType", func(t *testing.T) {
+        input := &mturk.ListHITsForQualificationTypeInput{}
+        output := &mturk.ListHITsForQualificationTypeOutput{}
+
+        mockClient.On("ListHITsForQualificationType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHITsForQualificationType(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReviewableHITs", func(t *testing.T) {
-        input := &mturk.ListReviewableHITsInput{}
-        output := &mturk.ListReviewableHITsOutput{}
-
-        mockClient.On("ListReviewableHITs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListReviewableHITs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListReviewPolicyResultsForHIT", func(t *testing.T) {
         input := &mturk.ListReviewPolicyResultsForHITInput{}
         output := &mturk.ListReviewPolicyResultsForHITOutput{}
@@ -379,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReviewPolicyResultsForHIT", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReviewPolicyResultsForHIT(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReviewableHITs", func(t *testing.T) {
+        input := &mturk.ListReviewableHITsInput{}
+        output := &mturk.ListReviewableHITsOutput{}
+
+        mockClient.On("ListReviewableHITs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReviewableHITs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

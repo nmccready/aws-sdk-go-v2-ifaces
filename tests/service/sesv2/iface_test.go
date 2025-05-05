@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateConfigurationSetEventDestination", func(t *testing.T) {
-        input := &sesv2.CreateConfigurationSetEventDestinationInput{}
-        output := &sesv2.CreateConfigurationSetEventDestinationOutput{}
-
-        mockClient.On("CreateConfigurationSetEventDestination", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateConfigurationSetEventDestination(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateConfigurationSet", func(t *testing.T) {
         input := &sesv2.CreateConfigurationSetInput{}
         output := &sesv2.CreateConfigurationSetOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateConfigurationSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateConfigurationSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConfigurationSetEventDestination", func(t *testing.T) {
+        input := &sesv2.CreateConfigurationSetEventDestinationInput{}
+        output := &sesv2.CreateConfigurationSetEventDestinationOutput{}
+
+        mockClient.On("CreateConfigurationSetEventDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfigurationSetEventDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteConfigurationSetEventDestination", func(t *testing.T) {
-        input := &sesv2.DeleteConfigurationSetEventDestinationInput{}
-        output := &sesv2.DeleteConfigurationSetEventDestinationOutput{}
-
-        mockClient.On("DeleteConfigurationSetEventDestination", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteConfigurationSetEventDestination(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteConfigurationSet", func(t *testing.T) {
         input := &sesv2.DeleteConfigurationSetInput{}
         output := &sesv2.DeleteConfigurationSetOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConfigurationSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConfigurationSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConfigurationSetEventDestination", func(t *testing.T) {
+        input := &sesv2.DeleteConfigurationSetEventDestinationInput{}
+        output := &sesv2.DeleteConfigurationSetEventDestinationOutput{}
+
+        mockClient.On("DeleteConfigurationSetEventDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfigurationSetEventDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConfigurationSetEventDestinations", func(t *testing.T) {
-        input := &sesv2.GetConfigurationSetEventDestinationsInput{}
-        output := &sesv2.GetConfigurationSetEventDestinationsOutput{}
-
-        mockClient.On("GetConfigurationSetEventDestinations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetConfigurationSetEventDestinations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetConfigurationSet", func(t *testing.T) {
         input := &sesv2.GetConfigurationSetInput{}
         output := &sesv2.GetConfigurationSetOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfigurationSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfigurationSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfigurationSetEventDestinations", func(t *testing.T) {
+        input := &sesv2.GetConfigurationSetEventDestinationsInput{}
+        output := &sesv2.GetConfigurationSetEventDestinationsOutput{}
+
+        mockClient.On("GetConfigurationSetEventDestinations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfigurationSetEventDestinations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
