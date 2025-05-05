@@ -10,6 +10,6 @@ import (
 // IClient defines the interface for kinesisvideowebrtcstorage
 type IClient interface {
  Options() Options 
- JoinStorageSession(ctx context.Context, params *JoinStorageSessionInput, optFns ...func(*Options)) (*JoinStorageSessionOutput, error) 
  JoinStorageSessionAsViewer(ctx context.Context, params *JoinStorageSessionAsViewerInput, optFns ...func(*Options)) (*JoinStorageSessionAsViewerOutput, error) 
+ JoinStorageSession(ctx context.Context, params *JoinStorageSessionInput, optFns ...func(*Options)) (*JoinStorageSessionOutput, error) 
 }

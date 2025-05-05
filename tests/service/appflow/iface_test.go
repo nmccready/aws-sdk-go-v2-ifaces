@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeConnector", func(t *testing.T) {
-        input := &appflow.DescribeConnectorInput{}
-        output := &appflow.DescribeConnectorOutput{}
-
-        mockClient.On("DescribeConnector", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeConnector(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeConnectorEntity", func(t *testing.T) {
         input := &appflow.DescribeConnectorEntityInput{}
         output := &appflow.DescribeConnectorEntityOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeConnectorEntity", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeConnectorEntity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeConnector", func(t *testing.T) {
+        input := &appflow.DescribeConnectorInput{}
+        output := &appflow.DescribeConnectorOutput{}
+
+        mockClient.On("DescribeConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeFlow", func(t *testing.T) {
-        input := &appflow.DescribeFlowInput{}
-        output := &appflow.DescribeFlowOutput{}
-
-        mockClient.On("DescribeFlow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeFlow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeFlowExecutionRecords", func(t *testing.T) {
         input := &appflow.DescribeFlowExecutionRecordsInput{}
         output := &appflow.DescribeFlowExecutionRecordsOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeFlowExecutionRecords", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeFlowExecutionRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeFlow", func(t *testing.T) {
+        input := &appflow.DescribeFlowInput{}
+        output := &appflow.DescribeFlowOutput{}
+
+        mockClient.On("DescribeFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

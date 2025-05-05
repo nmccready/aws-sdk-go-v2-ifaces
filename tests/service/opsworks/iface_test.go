@@ -528,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeStackSummary", func(t *testing.T) {
-        input := &opsworks.DescribeStackSummaryInput{}
-        output := &opsworks.DescribeStackSummaryOutput{}
-
-        mockClient.On("DescribeStackSummary", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStackSummary(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeStacks", func(t *testing.T) {
         input := &opsworks.DescribeStacksInput{}
         output := &opsworks.DescribeStacksOutput{}
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStacks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStacks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeStackSummary", func(t *testing.T) {
+        input := &opsworks.DescribeStackSummaryInput{}
+        output := &opsworks.DescribeStackSummaryOutput{}
+
+        mockClient.On("DescribeStackSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStackSummary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

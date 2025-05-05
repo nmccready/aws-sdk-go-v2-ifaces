@@ -775,6 +775,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeClusters", func(t *testing.T) {
+        input := &redshift.DescribeClustersInput{}
+        output := &redshift.DescribeClustersOutput{}
+
+        mockClient.On("DescribeClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeClusterSnapshots", func(t *testing.T) {
         input := &redshift.DescribeClusterSnapshotsInput{}
         output := &redshift.DescribeClusterSnapshotsOutput{}
@@ -827,19 +840,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeClusters", func(t *testing.T) {
-        input := &redshift.DescribeClustersInput{}
-        output := &redshift.DescribeClustersOutput{}
-
-        mockClient.On("DescribeClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeClusters(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeCustomDomainAssociations", func(t *testing.T) {
         input := &redshift.DescribeCustomDomainAssociationsInput{}
         output := &redshift.DescribeCustomDomainAssociationsOutput{}
@@ -847,19 +847,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCustomDomainAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCustomDomainAssociations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeDataShares", func(t *testing.T) {
-        input := &redshift.DescribeDataSharesInput{}
-        output := &redshift.DescribeDataSharesOutput{}
-
-        mockClient.On("DescribeDataShares", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDataShares(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -886,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDataSharesForProducer", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDataSharesForProducer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataShares", func(t *testing.T) {
+        input := &redshift.DescribeDataSharesInput{}
+        output := &redshift.DescribeDataSharesOutput{}
+
+        mockClient.On("DescribeDataShares", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataShares(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -944,19 +944,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
-        input := &redshift.DescribeEventSubscriptionsInput{}
-        output := &redshift.DescribeEventSubscriptionsOutput{}
-
-        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &redshift.DescribeEventsInput{}
         output := &redshift.DescribeEventsOutput{}
@@ -964,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
+        input := &redshift.DescribeEventSubscriptionsInput{}
+        output := &redshift.DescribeEventSubscriptionsOutput{}
+
+        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1412,19 +1412,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyCluster", func(t *testing.T) {
-        input := &redshift.ModifyClusterInput{}
-        output := &redshift.ModifyClusterOutput{}
-
-        mockClient.On("ModifyCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyClusterDbRevision", func(t *testing.T) {
         input := &redshift.ModifyClusterDbRevisionInput{}
         output := &redshift.ModifyClusterDbRevisionOutput{}
@@ -1432,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyClusterDbRevision", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyClusterDbRevision(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyCluster", func(t *testing.T) {
+        input := &redshift.ModifyClusterInput{}
+        output := &redshift.ModifyClusterOutput{}
+
+        mockClient.On("ModifyCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

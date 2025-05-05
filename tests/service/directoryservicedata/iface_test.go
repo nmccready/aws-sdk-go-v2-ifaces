@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListGroups", func(t *testing.T) {
-        input := &directoryservicedata.ListGroupsInput{}
-        output := &directoryservicedata.ListGroupsOutput{}
-
-        mockClient.On("ListGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListGroupsForMember", func(t *testing.T) {
         input := &directoryservicedata.ListGroupsForMemberInput{}
         output := &directoryservicedata.ListGroupsForMemberOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGroupsForMember", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGroupsForMember(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGroups", func(t *testing.T) {
+        input := &directoryservicedata.ListGroupsInput{}
+        output := &directoryservicedata.ListGroupsOutput{}
+
+        mockClient.On("ListGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

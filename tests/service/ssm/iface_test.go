@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAssociation", func(t *testing.T) {
-        input := &ssm.CreateAssociationInput{}
-        output := &ssm.CreateAssociationOutput{}
-
-        mockClient.On("CreateAssociation", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAssociation(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAssociationBatch", func(t *testing.T) {
         input := &ssm.CreateAssociationBatchInput{}
         output := &ssm.CreateAssociationBatchOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAssociationBatch", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAssociationBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAssociation", func(t *testing.T) {
+        input := &ssm.CreateAssociationInput{}
+        output := &ssm.CreateAssociationOutput{}
+
+        mockClient.On("CreateAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,13 +424,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAssociation", func(t *testing.T) {
-        input := &ssm.DescribeAssociationInput{}
-        output := &ssm.DescribeAssociationOutput{}
+    t.Run("TestDescribeAssociationExecutions", func(t *testing.T) {
+        input := &ssm.DescribeAssociationExecutionsInput{}
+        output := &ssm.DescribeAssociationExecutionsOutput{}
 
-        mockClient.On("DescribeAssociation", ctx, input).Return(output, nil)
+        mockClient.On("DescribeAssociationExecutions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeAssociation(ctx, input)
+        result, err := mockClient.DescribeAssociationExecutions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,13 +450,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAssociationExecutions", func(t *testing.T) {
-        input := &ssm.DescribeAssociationExecutionsInput{}
-        output := &ssm.DescribeAssociationExecutionsOutput{}
+    t.Run("TestDescribeAssociation", func(t *testing.T) {
+        input := &ssm.DescribeAssociationInput{}
+        output := &ssm.DescribeAssociationOutput{}
 
-        mockClient.On("DescribeAssociationExecutions", ctx, input).Return(output, nil)
+        mockClient.On("DescribeAssociation", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeAssociationExecutions(ctx, input)
+        result, err := mockClient.DescribeAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,13 +580,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeInstancePatchStates", func(t *testing.T) {
-        input := &ssm.DescribeInstancePatchStatesInput{}
-        output := &ssm.DescribeInstancePatchStatesOutput{}
+    t.Run("TestDescribeInstancePatches", func(t *testing.T) {
+        input := &ssm.DescribeInstancePatchesInput{}
+        output := &ssm.DescribeInstancePatchesOutput{}
 
-        mockClient.On("DescribeInstancePatchStates", ctx, input).Return(output, nil)
+        mockClient.On("DescribeInstancePatches", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeInstancePatchStates(ctx, input)
+        result, err := mockClient.DescribeInstancePatches(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,13 +606,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeInstancePatches", func(t *testing.T) {
-        input := &ssm.DescribeInstancePatchesInput{}
-        output := &ssm.DescribeInstancePatchesOutput{}
+    t.Run("TestDescribeInstancePatchStates", func(t *testing.T) {
+        input := &ssm.DescribeInstancePatchStatesInput{}
+        output := &ssm.DescribeInstancePatchStatesOutput{}
 
-        mockClient.On("DescribeInstancePatches", ctx, input).Return(output, nil)
+        mockClient.On("DescribeInstancePatchStates", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeInstancePatches(ctx, input)
+        result, err := mockClient.DescribeInstancePatchStates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeMaintenanceWindowExecutions", func(t *testing.T) {
+        input := &ssm.DescribeMaintenanceWindowExecutionsInput{}
+        output := &ssm.DescribeMaintenanceWindowExecutionsOutput{}
+
+        mockClient.On("DescribeMaintenanceWindowExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMaintenanceWindowExecutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeMaintenanceWindowExecutionTaskInvocations", func(t *testing.T) {
         input := &ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput{}
         output := &ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput{}
@@ -671,19 +684,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeMaintenanceWindowExecutions", func(t *testing.T) {
-        input := &ssm.DescribeMaintenanceWindowExecutionsInput{}
-        output := &ssm.DescribeMaintenanceWindowExecutionsOutput{}
-
-        mockClient.On("DescribeMaintenanceWindowExecutions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeMaintenanceWindowExecutions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeMaintenanceWindowSchedule", func(t *testing.T) {
         input := &ssm.DescribeMaintenanceWindowScheduleInput{}
         output := &ssm.DescribeMaintenanceWindowScheduleOutput{}
@@ -691,6 +691,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMaintenanceWindowSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMaintenanceWindowSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMaintenanceWindowsForTarget", func(t *testing.T) {
+        input := &ssm.DescribeMaintenanceWindowsForTargetInput{}
+        output := &ssm.DescribeMaintenanceWindowsForTargetOutput{}
+
+        mockClient.On("DescribeMaintenanceWindowsForTarget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMaintenanceWindowsForTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMaintenanceWindows", func(t *testing.T) {
+        input := &ssm.DescribeMaintenanceWindowsInput{}
+        output := &ssm.DescribeMaintenanceWindowsOutput{}
+
+        mockClient.On("DescribeMaintenanceWindows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMaintenanceWindows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -717,32 +743,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMaintenanceWindowTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMaintenanceWindowTasks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeMaintenanceWindows", func(t *testing.T) {
-        input := &ssm.DescribeMaintenanceWindowsInput{}
-        output := &ssm.DescribeMaintenanceWindowsOutput{}
-
-        mockClient.On("DescribeMaintenanceWindows", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeMaintenanceWindows(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeMaintenanceWindowsForTarget", func(t *testing.T) {
-        input := &ssm.DescribeMaintenanceWindowsForTargetInput{}
-        output := &ssm.DescribeMaintenanceWindowsForTargetOutput{}
-
-        mockClient.On("DescribeMaintenanceWindowsForTarget", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeMaintenanceWindowsForTarget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribePatchGroupState", func(t *testing.T) {
-        input := &ssm.DescribePatchGroupStateInput{}
-        output := &ssm.DescribePatchGroupStateOutput{}
-
-        mockClient.On("DescribePatchGroupState", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribePatchGroupState(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribePatchGroups", func(t *testing.T) {
         input := &ssm.DescribePatchGroupsInput{}
         output := &ssm.DescribePatchGroupsOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribePatchGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribePatchGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribePatchGroupState", func(t *testing.T) {
+        input := &ssm.DescribePatchGroupStateInput{}
+        output := &ssm.DescribePatchGroupStateOutput{}
+
+        mockClient.On("DescribePatchGroupState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePatchGroupState(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -983,19 +983,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetMaintenanceWindow", func(t *testing.T) {
-        input := &ssm.GetMaintenanceWindowInput{}
-        output := &ssm.GetMaintenanceWindowOutput{}
-
-        mockClient.On("GetMaintenanceWindow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetMaintenanceWindow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetMaintenanceWindowExecution", func(t *testing.T) {
         input := &ssm.GetMaintenanceWindowExecutionInput{}
         output := &ssm.GetMaintenanceWindowExecutionOutput{}
@@ -1029,6 +1016,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetMaintenanceWindowExecutionTaskInvocation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetMaintenanceWindowExecutionTaskInvocation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMaintenanceWindow", func(t *testing.T) {
+        input := &ssm.GetMaintenanceWindowInput{}
+        output := &ssm.GetMaintenanceWindowOutput{}
+
+        mockClient.On("GetMaintenanceWindow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMaintenanceWindow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1113,19 +1113,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetParameters", func(t *testing.T) {
-        input := &ssm.GetParametersInput{}
-        output := &ssm.GetParametersOutput{}
-
-        mockClient.On("GetParameters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetParameters(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetParametersByPath", func(t *testing.T) {
         input := &ssm.GetParametersByPathInput{}
         output := &ssm.GetParametersByPathOutput{}
@@ -1139,13 +1126,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetPatchBaseline", func(t *testing.T) {
-        input := &ssm.GetPatchBaselineInput{}
-        output := &ssm.GetPatchBaselineOutput{}
+    t.Run("TestGetParameters", func(t *testing.T) {
+        input := &ssm.GetParametersInput{}
+        output := &ssm.GetParametersOutput{}
 
-        mockClient.On("GetPatchBaseline", ctx, input).Return(output, nil)
+        mockClient.On("GetParameters", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetPatchBaseline(ctx, input)
+        result, err := mockClient.GetParameters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1159,6 +1146,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPatchBaselineForPatchGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPatchBaselineForPatchGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPatchBaseline", func(t *testing.T) {
+        input := &ssm.GetPatchBaselineInput{}
+        output := &ssm.GetPatchBaselineOutput{}
+
+        mockClient.On("GetPatchBaseline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPatchBaseline(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1204,19 +1204,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAssociationVersions", func(t *testing.T) {
-        input := &ssm.ListAssociationVersionsInput{}
-        output := &ssm.ListAssociationVersionsOutput{}
-
-        mockClient.On("ListAssociationVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAssociationVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAssociations", func(t *testing.T) {
         input := &ssm.ListAssociationsInput{}
         output := &ssm.ListAssociationsOutput{}
@@ -1224,6 +1211,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssociationVersions", func(t *testing.T) {
+        input := &ssm.ListAssociationVersionsInput{}
+        output := &ssm.ListAssociationVersionsOutput{}
+
+        mockClient.On("ListAssociationVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssociationVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1295,19 +1295,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDocumentVersions", func(t *testing.T) {
-        input := &ssm.ListDocumentVersionsInput{}
-        output := &ssm.ListDocumentVersionsOutput{}
-
-        mockClient.On("ListDocumentVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDocumentVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDocuments", func(t *testing.T) {
         input := &ssm.ListDocumentsInput{}
         output := &ssm.ListDocumentsOutput{}
@@ -1315,6 +1302,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDocuments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDocuments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDocumentVersions", func(t *testing.T) {
+        input := &ssm.ListDocumentVersionsInput{}
+        output := &ssm.ListDocumentVersionsOutput{}
+
+        mockClient.On("ListDocumentVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDocumentVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1750,19 +1750,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateDocument", func(t *testing.T) {
-        input := &ssm.UpdateDocumentInput{}
-        output := &ssm.UpdateDocumentOutput{}
-
-        mockClient.On("UpdateDocument", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateDocument(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateDocumentDefaultVersion", func(t *testing.T) {
         input := &ssm.UpdateDocumentDefaultVersionInput{}
         output := &ssm.UpdateDocumentDefaultVersionOutput{}
@@ -1770,6 +1757,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDocumentDefaultVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDocumentDefaultVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDocument", func(t *testing.T) {
+        input := &ssm.UpdateDocumentInput{}
+        output := &ssm.UpdateDocumentOutput{}
+
+        mockClient.On("UpdateDocument", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDocument(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

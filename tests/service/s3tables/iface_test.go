@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateTable", func(t *testing.T) {
-        input := &s3tables.CreateTableInput{}
-        output := &s3tables.CreateTableOutput{}
-
-        mockClient.On("CreateTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateTable(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateTableBucket", func(t *testing.T) {
         input := &s3tables.CreateTableBucketInput{}
         output := &s3tables.CreateTableBucketOutput{}
@@ -73,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTable", func(t *testing.T) {
+        input := &s3tables.CreateTableInput{}
+        output := &s3tables.CreateTableOutput{}
+
+        mockClient.On("CreateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteNamespace", func(t *testing.T) {
         input := &s3tables.DeleteNamespaceInput{}
         output := &s3tables.DeleteNamespaceOutput{}
@@ -80,19 +80,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteNamespace", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteNamespace(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteTable", func(t *testing.T) {
-        input := &s3tables.DeleteTableInput{}
-        output := &s3tables.DeleteTableOutput{}
-
-        mockClient.On("DeleteTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTable", func(t *testing.T) {
+        input := &s3tables.DeleteTableInput{}
+        output := &s3tables.DeleteTableOutput{}
+
+        mockClient.On("DeleteTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTablePolicy", func(t *testing.T) {
         input := &s3tables.DeleteTablePolicyInput{}
         output := &s3tables.DeleteTablePolicyOutput{}
@@ -145,19 +145,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetNamespace", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetNamespace(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetTable", func(t *testing.T) {
-        input := &s3tables.GetTableInput{}
-        output := &s3tables.GetTableOutput{}
-
-        mockClient.On("GetTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTableBucketPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTableBucketPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTable", func(t *testing.T) {
+        input := &s3tables.GetTableInput{}
+        output := &s3tables.GetTableOutput{}
+
+        mockClient.On("GetTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

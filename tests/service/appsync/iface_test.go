@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateApi", func(t *testing.T) {
-        input := &appsync.CreateApiInput{}
-        output := &appsync.CreateApiOutput{}
-
-        mockClient.On("CreateApi", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateApi(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateApiCache", func(t *testing.T) {
         input := &appsync.CreateApiCacheInput{}
         output := &appsync.CreateApiCacheOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateApiCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateApiCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateApi", func(t *testing.T) {
+        input := &appsync.CreateApiInput{}
+        output := &appsync.CreateApiOutput{}
+
+        mockClient.On("CreateApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateApi(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteApi", func(t *testing.T) {
-        input := &appsync.DeleteApiInput{}
-        output := &appsync.DeleteApiOutput{}
-
-        mockClient.On("DeleteApi", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteApi(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteApiCache", func(t *testing.T) {
         input := &appsync.DeleteApiCacheInput{}
         output := &appsync.DeleteApiCacheOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteApiCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteApiCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteApi", func(t *testing.T) {
+        input := &appsync.DeleteApiInput{}
+        output := &appsync.DeleteApiOutput{}
+
+        mockClient.On("DeleteApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApi(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,19 +411,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetApi", func(t *testing.T) {
-        input := &appsync.GetApiInput{}
-        output := &appsync.GetApiOutput{}
-
-        mockClient.On("GetApi", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetApi(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetApiAssociation", func(t *testing.T) {
         input := &appsync.GetApiAssociationInput{}
         output := &appsync.GetApiAssociationOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetApiCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetApiCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetApi", func(t *testing.T) {
+        input := &appsync.GetApiInput{}
+        output := &appsync.GetApiOutput{}
+
+        mockClient.On("GetApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetApi(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetGraphqlApi", func(t *testing.T) {
-        input := &appsync.GetGraphqlApiInput{}
-        output := &appsync.GetGraphqlApiOutput{}
-
-        mockClient.On("GetGraphqlApi", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetGraphqlApi(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetGraphqlApiEnvironmentVariables", func(t *testing.T) {
         input := &appsync.GetGraphqlApiEnvironmentVariablesInput{}
         output := &appsync.GetGraphqlApiEnvironmentVariablesOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetGraphqlApiEnvironmentVariables", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetGraphqlApiEnvironmentVariables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetGraphqlApi", func(t *testing.T) {
+        input := &appsync.GetGraphqlApiInput{}
+        output := &appsync.GetGraphqlApiOutput{}
+
+        mockClient.On("GetGraphqlApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGraphqlApi(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,19 +697,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListResolvers", func(t *testing.T) {
-        input := &appsync.ListResolversInput{}
-        output := &appsync.ListResolversOutput{}
-
-        mockClient.On("ListResolvers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListResolvers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListResolversByFunction", func(t *testing.T) {
         input := &appsync.ListResolversByFunctionInput{}
         output := &appsync.ListResolversByFunctionOutput{}
@@ -717,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResolversByFunction", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResolversByFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResolvers", func(t *testing.T) {
+        input := &appsync.ListResolversInput{}
+        output := &appsync.ListResolversOutput{}
+
+        mockClient.On("ListResolvers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResolvers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,19 +749,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTypes", func(t *testing.T) {
-        input := &appsync.ListTypesInput{}
-        output := &appsync.ListTypesOutput{}
-
-        mockClient.On("ListTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTypesByAssociation", func(t *testing.T) {
         input := &appsync.ListTypesByAssociationInput{}
         output := &appsync.ListTypesByAssociationOutput{}
@@ -769,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTypesByAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTypesByAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTypes", func(t *testing.T) {
+        input := &appsync.ListTypesInput{}
+        output := &appsync.ListTypesOutput{}
+
+        mockClient.On("ListTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateApi", func(t *testing.T) {
-        input := &appsync.UpdateApiInput{}
-        output := &appsync.UpdateApiOutput{}
-
-        mockClient.On("UpdateApi", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateApi(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateApiCache", func(t *testing.T) {
         input := &appsync.UpdateApiCacheInput{}
         output := &appsync.UpdateApiCacheOutput{}
@@ -873,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateApiCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateApiCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateApi", func(t *testing.T) {
+        input := &appsync.UpdateApiInput{}
+        output := &appsync.UpdateApiOutput{}
+
+        mockClient.On("UpdateApi", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateApi(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

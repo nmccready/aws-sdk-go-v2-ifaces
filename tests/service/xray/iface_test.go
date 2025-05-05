@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetInsight", func(t *testing.T) {
-        input := &xray.GetInsightInput{}
-        output := &xray.GetInsightOutput{}
-
-        mockClient.On("GetInsight", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetInsight(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetInsightEvents", func(t *testing.T) {
         input := &xray.GetInsightEventsInput{}
         output := &xray.GetInsightEventsOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInsightEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInsightEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInsight", func(t *testing.T) {
+        input := &xray.GetInsightInput{}
+        output := &xray.GetInsightOutput{}
+
+        mockClient.On("GetInsight", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInsight(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAccessPoint", func(t *testing.T) {
-        input := &s3control.CreateAccessPointInput{}
-        output := &s3control.CreateAccessPointOutput{}
-
-        mockClient.On("CreateAccessPoint", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAccessPoint(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAccessPointForObjectLambda", func(t *testing.T) {
         input := &s3control.CreateAccessPointForObjectLambdaInput{}
         output := &s3control.CreateAccessPointForObjectLambdaOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAccessPointForObjectLambda", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAccessPointForObjectLambda(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAccessPoint", func(t *testing.T) {
+        input := &s3control.CreateAccessPointInput{}
+        output := &s3control.CreateAccessPointOutput{}
+
+        mockClient.On("CreateAccessPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAccessPoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAccessPoint", func(t *testing.T) {
-        input := &s3control.DeleteAccessPointInput{}
-        output := &s3control.DeleteAccessPointOutput{}
-
-        mockClient.On("DeleteAccessPoint", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAccessPoint(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAccessPointForObjectLambda", func(t *testing.T) {
         input := &s3control.DeleteAccessPointForObjectLambdaInput{}
         output := &s3control.DeleteAccessPointForObjectLambdaOutput{}
@@ -242,13 +229,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAccessPointPolicy", func(t *testing.T) {
-        input := &s3control.DeleteAccessPointPolicyInput{}
-        output := &s3control.DeleteAccessPointPolicyOutput{}
+    t.Run("TestDeleteAccessPoint", func(t *testing.T) {
+        input := &s3control.DeleteAccessPointInput{}
+        output := &s3control.DeleteAccessPointOutput{}
 
-        mockClient.On("DeleteAccessPointPolicy", ctx, input).Return(output, nil)
+        mockClient.On("DeleteAccessPoint", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeleteAccessPointPolicy(ctx, input)
+        result, err := mockClient.DeleteAccessPoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAccessPointPolicyForObjectLambda", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAccessPointPolicyForObjectLambda(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAccessPointPolicy", func(t *testing.T) {
+        input := &s3control.DeleteAccessPointPolicyInput{}
+        output := &s3control.DeleteAccessPointPolicyOutput{}
+
+        mockClient.On("DeleteAccessPointPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccessPointPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAccessGrantsInstance", func(t *testing.T) {
-        input := &s3control.GetAccessGrantsInstanceInput{}
-        output := &s3control.GetAccessGrantsInstanceOutput{}
-
-        mockClient.On("GetAccessGrantsInstance", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAccessGrantsInstance(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAccessGrantsInstanceForPrefix", func(t *testing.T) {
         input := &s3control.GetAccessGrantsInstanceForPrefixInput{}
         output := &s3control.GetAccessGrantsInstanceForPrefixOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAccessGrantsInstanceForPrefix", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAccessGrantsInstanceForPrefix(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccessGrantsInstance", func(t *testing.T) {
+        input := &s3control.GetAccessGrantsInstanceInput{}
+        output := &s3control.GetAccessGrantsInstanceOutput{}
+
+        mockClient.On("GetAccessGrantsInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccessGrantsInstance(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAccessPoint", func(t *testing.T) {
-        input := &s3control.GetAccessPointInput{}
-        output := &s3control.GetAccessPointOutput{}
-
-        mockClient.On("GetAccessPoint", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAccessPoint(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAccessPointConfigurationForObjectLambda", func(t *testing.T) {
         input := &s3control.GetAccessPointConfigurationForObjectLambdaInput{}
         output := &s3control.GetAccessPointConfigurationForObjectLambdaOutput{}
@@ -554,13 +541,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAccessPointPolicy", func(t *testing.T) {
-        input := &s3control.GetAccessPointPolicyInput{}
-        output := &s3control.GetAccessPointPolicyOutput{}
+    t.Run("TestGetAccessPoint", func(t *testing.T) {
+        input := &s3control.GetAccessPointInput{}
+        output := &s3control.GetAccessPointOutput{}
 
-        mockClient.On("GetAccessPointPolicy", ctx, input).Return(output, nil)
+        mockClient.On("GetAccessPoint", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetAccessPointPolicy(ctx, input)
+        result, err := mockClient.GetAccessPoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,13 +567,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAccessPointPolicyStatus", func(t *testing.T) {
-        input := &s3control.GetAccessPointPolicyStatusInput{}
-        output := &s3control.GetAccessPointPolicyStatusOutput{}
+    t.Run("TestGetAccessPointPolicy", func(t *testing.T) {
+        input := &s3control.GetAccessPointPolicyInput{}
+        output := &s3control.GetAccessPointPolicyOutput{}
 
-        mockClient.On("GetAccessPointPolicyStatus", ctx, input).Return(output, nil)
+        mockClient.On("GetAccessPointPolicy", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetAccessPointPolicyStatus(ctx, input)
+        result, err := mockClient.GetAccessPointPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -600,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAccessPointPolicyStatusForObjectLambda", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAccessPointPolicyStatusForObjectLambda(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccessPointPolicyStatus", func(t *testing.T) {
+        input := &s3control.GetAccessPointPolicyStatusInput{}
+        output := &s3control.GetAccessPointPolicyStatusOutput{}
+
+        mockClient.On("GetAccessPointPolicyStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccessPointPolicyStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAccessPoints", func(t *testing.T) {
-        input := &s3control.ListAccessPointsInput{}
-        output := &s3control.ListAccessPointsOutput{}
-
-        mockClient.On("ListAccessPoints", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAccessPoints(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAccessPointsForObjectLambda", func(t *testing.T) {
         input := &s3control.ListAccessPointsForObjectLambdaInput{}
         output := &s3control.ListAccessPointsForObjectLambdaOutput{}
@@ -873,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAccessPointsForObjectLambda", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAccessPointsForObjectLambda(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAccessPoints", func(t *testing.T) {
+        input := &s3control.ListAccessPointsInput{}
+        output := &s3control.ListAccessPointsOutput{}
+
+        mockClient.On("ListAccessPoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccessPoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -996,19 +996,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPutAccessPointPolicy", func(t *testing.T) {
-        input := &s3control.PutAccessPointPolicyInput{}
-        output := &s3control.PutAccessPointPolicyOutput{}
-
-        mockClient.On("PutAccessPointPolicy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PutAccessPointPolicy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPutAccessPointPolicyForObjectLambda", func(t *testing.T) {
         input := &s3control.PutAccessPointPolicyForObjectLambdaInput{}
         output := &s3control.PutAccessPointPolicyForObjectLambdaOutput{}
@@ -1016,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAccessPointPolicyForObjectLambda", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAccessPointPolicyForObjectLambda(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccessPointPolicy", func(t *testing.T) {
+        input := &s3control.PutAccessPointPolicyInput{}
+        output := &s3control.PutAccessPointPolicyOutput{}
+
+        mockClient.On("PutAccessPointPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccessPointPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

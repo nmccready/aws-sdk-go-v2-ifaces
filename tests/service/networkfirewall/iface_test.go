@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTLSInspectionConfigurations", func(t *testing.T) {
-        input := &networkfirewall.ListTLSInspectionConfigurationsInput{}
-        output := &networkfirewall.ListTLSInspectionConfigurationsOutput{}
-
-        mockClient.On("ListTLSInspectionConfigurations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTLSInspectionConfigurations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &networkfirewall.ListTagsForResourceInput{}
         output := &networkfirewall.ListTagsForResourceOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTLSInspectionConfigurations", func(t *testing.T) {
+        input := &networkfirewall.ListTLSInspectionConfigurationsInput{}
+        output := &networkfirewall.ListTLSInspectionConfigurationsOutput{}
+
+        mockClient.On("ListTLSInspectionConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTLSInspectionConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateFirewallPolicy", func(t *testing.T) {
-        input := &networkfirewall.UpdateFirewallPolicyInput{}
-        output := &networkfirewall.UpdateFirewallPolicyOutput{}
-
-        mockClient.On("UpdateFirewallPolicy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateFirewallPolicy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateFirewallPolicyChangeProtection", func(t *testing.T) {
         input := &networkfirewall.UpdateFirewallPolicyChangeProtectionInput{}
         output := &networkfirewall.UpdateFirewallPolicyChangeProtectionOutput{}
@@ -496,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateFirewallPolicyChangeProtection", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateFirewallPolicyChangeProtection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateFirewallPolicy", func(t *testing.T) {
+        input := &networkfirewall.UpdateFirewallPolicyInput{}
+        output := &networkfirewall.UpdateFirewallPolicyOutput{}
+
+        mockClient.On("UpdateFirewallPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFirewallPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

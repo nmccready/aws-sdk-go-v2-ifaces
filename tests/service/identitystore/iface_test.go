@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListGroupMemberships", func(t *testing.T) {
-        input := &identitystore.ListGroupMembershipsInput{}
-        output := &identitystore.ListGroupMembershipsOutput{}
-
-        mockClient.On("ListGroupMemberships", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGroupMemberships(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListGroupMembershipsForMember", func(t *testing.T) {
         input := &identitystore.ListGroupMembershipsForMemberInput{}
         output := &identitystore.ListGroupMembershipsForMemberOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGroupMembershipsForMember", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGroupMembershipsForMember(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGroupMemberships", func(t *testing.T) {
+        input := &identitystore.ListGroupMembershipsInput{}
+        output := &identitystore.ListGroupMembershipsOutput{}
+
+        mockClient.On("ListGroupMemberships", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroupMemberships(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

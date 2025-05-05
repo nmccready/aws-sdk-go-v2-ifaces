@@ -10,20 +10,20 @@ import (
 // IClient defines the interface for wisdom
 type IClient interface {
  Options() Options 
- CreateAssistant(ctx context.Context, params *CreateAssistantInput, optFns ...func(*Options)) (*CreateAssistantOutput, error) 
  CreateAssistantAssociation(ctx context.Context, params *CreateAssistantAssociationInput, optFns ...func(*Options)) (*CreateAssistantAssociationOutput, error) 
+ CreateAssistant(ctx context.Context, params *CreateAssistantInput, optFns ...func(*Options)) (*CreateAssistantOutput, error) 
  CreateContent(ctx context.Context, params *CreateContentInput, optFns ...func(*Options)) (*CreateContentOutput, error) 
  CreateKnowledgeBase(ctx context.Context, params *CreateKnowledgeBaseInput, optFns ...func(*Options)) (*CreateKnowledgeBaseOutput, error) 
  CreateQuickResponse(ctx context.Context, params *CreateQuickResponseInput, optFns ...func(*Options)) (*CreateQuickResponseOutput, error) 
  CreateSession(ctx context.Context, params *CreateSessionInput, optFns ...func(*Options)) (*CreateSessionOutput, error) 
- DeleteAssistant(ctx context.Context, params *DeleteAssistantInput, optFns ...func(*Options)) (*DeleteAssistantOutput, error) 
  DeleteAssistantAssociation(ctx context.Context, params *DeleteAssistantAssociationInput, optFns ...func(*Options)) (*DeleteAssistantAssociationOutput, error) 
+ DeleteAssistant(ctx context.Context, params *DeleteAssistantInput, optFns ...func(*Options)) (*DeleteAssistantOutput, error) 
  DeleteContent(ctx context.Context, params *DeleteContentInput, optFns ...func(*Options)) (*DeleteContentOutput, error) 
  DeleteImportJob(ctx context.Context, params *DeleteImportJobInput, optFns ...func(*Options)) (*DeleteImportJobOutput, error) 
  DeleteKnowledgeBase(ctx context.Context, params *DeleteKnowledgeBaseInput, optFns ...func(*Options)) (*DeleteKnowledgeBaseOutput, error) 
  DeleteQuickResponse(ctx context.Context, params *DeleteQuickResponseInput, optFns ...func(*Options)) (*DeleteQuickResponseOutput, error) 
- GetAssistant(ctx context.Context, params *GetAssistantInput, optFns ...func(*Options)) (*GetAssistantOutput, error) 
  GetAssistantAssociation(ctx context.Context, params *GetAssistantAssociationInput, optFns ...func(*Options)) (*GetAssistantAssociationOutput, error) 
+ GetAssistant(ctx context.Context, params *GetAssistantInput, optFns ...func(*Options)) (*GetAssistantOutput, error) 
  GetContent(ctx context.Context, params *GetContentInput, optFns ...func(*Options)) (*GetContentOutput, error) 
  GetContentSummary(ctx context.Context, params *GetContentSummaryInput, optFns ...func(*Options)) (*GetContentSummaryOutput, error) 
  GetImportJob(ctx context.Context, params *GetImportJobInput, optFns ...func(*Options)) (*GetImportJobOutput, error) 

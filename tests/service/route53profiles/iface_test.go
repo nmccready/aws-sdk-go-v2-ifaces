@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetProfile", func(t *testing.T) {
-        input := &route53profiles.GetProfileInput{}
-        output := &route53profiles.GetProfileOutput{}
-
-        mockClient.On("GetProfile", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetProfile(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetProfileAssociation", func(t *testing.T) {
         input := &route53profiles.GetProfileAssociationInput{}
         output := &route53profiles.GetProfileAssociationOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetProfileAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetProfileAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProfile", func(t *testing.T) {
+        input := &route53profiles.GetProfileInput{}
+        output := &route53profiles.GetProfileOutput{}
+
+        mockClient.On("GetProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

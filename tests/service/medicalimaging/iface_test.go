@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDICOMImportJob", func(t *testing.T) {
-        input := &medicalimaging.GetDICOMImportJobInput{}
-        output := &medicalimaging.GetDICOMImportJobOutput{}
-
-        mockClient.On("GetDICOMImportJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDICOMImportJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDatastore", func(t *testing.T) {
         input := &medicalimaging.GetDatastoreInput{}
         output := &medicalimaging.GetDatastoreOutput{}
@@ -106,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDatastore", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDatastore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDICOMImportJob", func(t *testing.T) {
+        input := &medicalimaging.GetDICOMImportJobInput{}
+        output := &medicalimaging.GetDICOMImportJobOutput{}
+
+        mockClient.On("GetDICOMImportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDICOMImportJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDICOMImportJobs", func(t *testing.T) {
-        input := &medicalimaging.ListDICOMImportJobsInput{}
-        output := &medicalimaging.ListDICOMImportJobsOutput{}
-
-        mockClient.On("ListDICOMImportJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDICOMImportJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDatastores", func(t *testing.T) {
         input := &medicalimaging.ListDatastoresInput{}
         output := &medicalimaging.ListDatastoresOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDatastores", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDatastores(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDICOMImportJobs", func(t *testing.T) {
+        input := &medicalimaging.ListDICOMImportJobsInput{}
+        output := &medicalimaging.ListDICOMImportJobsOutput{}
+
+        mockClient.On("ListDICOMImportJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDICOMImportJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

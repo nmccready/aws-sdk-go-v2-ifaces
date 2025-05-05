@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateSnapshot", func(t *testing.T) {
-        input := &storagegateway.CreateSnapshotInput{}
-        output := &storagegateway.CreateSnapshotOutput{}
-
-        mockClient.On("CreateSnapshot", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateSnapshot(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateSnapshotFromVolumeRecoveryPoint", func(t *testing.T) {
         input := &storagegateway.CreateSnapshotFromVolumeRecoveryPointInput{}
         output := &storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateSnapshotFromVolumeRecoveryPoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateSnapshotFromVolumeRecoveryPoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSnapshot", func(t *testing.T) {
+        input := &storagegateway.CreateSnapshotInput{}
+        output := &storagegateway.CreateSnapshotOutput{}
+
+        mockClient.On("CreateSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSnapshot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateTapeWithBarcode", func(t *testing.T) {
-        input := &storagegateway.CreateTapeWithBarcodeInput{}
-        output := &storagegateway.CreateTapeWithBarcodeOutput{}
-
-        mockClient.On("CreateTapeWithBarcode", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateTapeWithBarcode(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateTapes", func(t *testing.T) {
         input := &storagegateway.CreateTapesInput{}
         output := &storagegateway.CreateTapesOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTapes", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTapes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTapeWithBarcode", func(t *testing.T) {
+        input := &storagegateway.CreateTapeWithBarcodeInput{}
+        output := &storagegateway.CreateTapeWithBarcodeOutput{}
+
+        mockClient.On("CreateTapeWithBarcode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTapeWithBarcode(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteTape", func(t *testing.T) {
-        input := &storagegateway.DeleteTapeInput{}
-        output := &storagegateway.DeleteTapeOutput{}
-
-        mockClient.On("DeleteTape", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteTape(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteTapeArchive", func(t *testing.T) {
         input := &storagegateway.DeleteTapeArchiveInput{}
         output := &storagegateway.DeleteTapeArchiveOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTapeArchive", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTapeArchive(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTape", func(t *testing.T) {
+        input := &storagegateway.DeleteTapeInput{}
+        output := &storagegateway.DeleteTapeOutput{}
+
+        mockClient.On("DeleteTape", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTape(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeCachediSCSIVolumes", func(t *testing.T) {
+        input := &storagegateway.DescribeCachediSCSIVolumesInput{}
+        output := &storagegateway.DescribeCachediSCSIVolumesOutput{}
+
+        mockClient.On("DescribeCachediSCSIVolumes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCachediSCSIVolumes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCache", func(t *testing.T) {
         input := &storagegateway.DescribeCacheInput{}
         output := &storagegateway.DescribeCacheOutput{}
@@ -496,19 +509,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCacheReport", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCacheReport(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeCachediSCSIVolumes", func(t *testing.T) {
-        input := &storagegateway.DescribeCachediSCSIVolumesInput{}
-        output := &storagegateway.DescribeCachediSCSIVolumesOutput{}
-
-        mockClient.On("DescribeCachediSCSIVolumes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeCachediSCSIVolumes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAssessment", func(t *testing.T) {
-        input := &auditmanager.CreateAssessmentInput{}
-        output := &auditmanager.CreateAssessmentOutput{}
-
-        mockClient.On("CreateAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAssessmentFramework", func(t *testing.T) {
         input := &auditmanager.CreateAssessmentFrameworkInput{}
         output := &auditmanager.CreateAssessmentFrameworkOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAssessmentFramework", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAssessmentFramework(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAssessment", func(t *testing.T) {
+        input := &auditmanager.CreateAssessmentInput{}
+        output := &auditmanager.CreateAssessmentOutput{}
+
+        mockClient.On("CreateAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,19 +164,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAssessment", func(t *testing.T) {
-        input := &auditmanager.DeleteAssessmentInput{}
-        output := &auditmanager.DeleteAssessmentOutput{}
-
-        mockClient.On("DeleteAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAssessmentFramework", func(t *testing.T) {
         input := &auditmanager.DeleteAssessmentFrameworkInput{}
         output := &auditmanager.DeleteAssessmentFrameworkOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAssessmentFrameworkShare", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAssessmentFrameworkShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAssessment", func(t *testing.T) {
+        input := &auditmanager.DeleteAssessmentInput{}
+        output := &auditmanager.DeleteAssessmentOutput{}
+
+        mockClient.On("DeleteAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAssessment", func(t *testing.T) {
-        input := &auditmanager.GetAssessmentInput{}
-        output := &auditmanager.GetAssessmentOutput{}
-
-        mockClient.On("GetAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAssessmentFramework", func(t *testing.T) {
         input := &auditmanager.GetAssessmentFrameworkInput{}
         output := &auditmanager.GetAssessmentFrameworkOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAssessmentFramework", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAssessmentFramework(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAssessment", func(t *testing.T) {
+        input := &auditmanager.GetAssessmentInput{}
+        output := &auditmanager.GetAssessmentOutput{}
+
+        mockClient.On("GetAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetEvidence", func(t *testing.T) {
-        input := &auditmanager.GetEvidenceInput{}
-        output := &auditmanager.GetEvidenceOutput{}
-
-        mockClient.On("GetEvidence", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetEvidence(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetEvidenceByEvidenceFolder", func(t *testing.T) {
         input := &auditmanager.GetEvidenceByEvidenceFolderInput{}
         output := &auditmanager.GetEvidenceByEvidenceFolderOutput{}
@@ -411,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetEvidenceFoldersByAssessment", func(t *testing.T) {
-        input := &auditmanager.GetEvidenceFoldersByAssessmentInput{}
-        output := &auditmanager.GetEvidenceFoldersByAssessmentOutput{}
-
-        mockClient.On("GetEvidenceFoldersByAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetEvidenceFoldersByAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetEvidenceFoldersByAssessmentControl", func(t *testing.T) {
         input := &auditmanager.GetEvidenceFoldersByAssessmentControlInput{}
         output := &auditmanager.GetEvidenceFoldersByAssessmentControlOutput{}
@@ -437,13 +411,26 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetInsights", func(t *testing.T) {
-        input := &auditmanager.GetInsightsInput{}
-        output := &auditmanager.GetInsightsOutput{}
+    t.Run("TestGetEvidenceFoldersByAssessment", func(t *testing.T) {
+        input := &auditmanager.GetEvidenceFoldersByAssessmentInput{}
+        output := &auditmanager.GetEvidenceFoldersByAssessmentOutput{}
 
-        mockClient.On("GetInsights", ctx, input).Return(output, nil)
+        mockClient.On("GetEvidenceFoldersByAssessment", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetInsights(ctx, input)
+        result, err := mockClient.GetEvidenceFoldersByAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEvidence", func(t *testing.T) {
+        input := &auditmanager.GetEvidenceInput{}
+        output := &auditmanager.GetEvidenceOutput{}
+
+        mockClient.On("GetEvidence", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEvidence(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInsightsByAssessment", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInsightsByAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInsights", func(t *testing.T) {
+        input := &auditmanager.GetInsightsInput{}
+        output := &auditmanager.GetInsightsOutput{}
+
+        mockClient.On("GetInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInsights(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAssessmentFrameworkShareRequests", func(t *testing.T) {
-        input := &auditmanager.ListAssessmentFrameworkShareRequestsInput{}
-        output := &auditmanager.ListAssessmentFrameworkShareRequestsOutput{}
-
-        mockClient.On("ListAssessmentFrameworkShareRequests", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAssessmentFrameworkShareRequests(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAssessmentFrameworks", func(t *testing.T) {
         input := &auditmanager.ListAssessmentFrameworksInput{}
         output := &auditmanager.ListAssessmentFrameworksOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssessmentFrameworks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssessmentFrameworks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssessmentFrameworkShareRequests", func(t *testing.T) {
+        input := &auditmanager.ListAssessmentFrameworkShareRequestsInput{}
+        output := &auditmanager.ListAssessmentFrameworkShareRequestsOutput{}
+
+        mockClient.On("ListAssessmentFrameworkShareRequests", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssessmentFrameworkShareRequests(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListControlDomainInsights", func(t *testing.T) {
-        input := &auditmanager.ListControlDomainInsightsInput{}
-        output := &auditmanager.ListControlDomainInsightsOutput{}
-
-        mockClient.On("ListControlDomainInsights", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListControlDomainInsights(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListControlDomainInsightsByAssessment", func(t *testing.T) {
         input := &auditmanager.ListControlDomainInsightsByAssessmentInput{}
         output := &auditmanager.ListControlDomainInsightsByAssessmentOutput{}
@@ -587,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListControlDomainInsightsByAssessment", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListControlDomainInsightsByAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListControlDomainInsights", func(t *testing.T) {
+        input := &auditmanager.ListControlDomainInsightsInput{}
+        output := &auditmanager.ListControlDomainInsightsOutput{}
+
+        mockClient.On("ListControlDomainInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListControlDomainInsights(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,19 +723,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateAssessment", func(t *testing.T) {
-        input := &auditmanager.UpdateAssessmentInput{}
-        output := &auditmanager.UpdateAssessmentOutput{}
-
-        mockClient.On("UpdateAssessment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateAssessment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateAssessmentControl", func(t *testing.T) {
         input := &auditmanager.UpdateAssessmentControlInput{}
         output := &auditmanager.UpdateAssessmentControlOutput{}
@@ -782,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAssessmentFrameworkShare", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAssessmentFrameworkShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAssessment", func(t *testing.T) {
+        input := &auditmanager.UpdateAssessmentInput{}
+        output := &auditmanager.UpdateAssessmentOutput{}
+
+        mockClient.On("UpdateAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

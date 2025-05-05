@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDirectConnectGateway", func(t *testing.T) {
-        input := &directconnect.CreateDirectConnectGatewayInput{}
-        output := &directconnect.CreateDirectConnectGatewayOutput{}
-
-        mockClient.On("CreateDirectConnectGateway", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDirectConnectGateway(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDirectConnectGatewayAssociation", func(t *testing.T) {
         input := &directconnect.CreateDirectConnectGatewayAssociationInput{}
         output := &directconnect.CreateDirectConnectGatewayAssociationOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDirectConnectGatewayAssociationProposal", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDirectConnectGatewayAssociationProposal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDirectConnectGateway", func(t *testing.T) {
+        input := &directconnect.CreateDirectConnectGatewayInput{}
+        output := &directconnect.CreateDirectConnectGatewayOutput{}
+
+        mockClient.On("CreateDirectConnectGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDirectConnectGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDirectConnectGateway", func(t *testing.T) {
-        input := &directconnect.DeleteDirectConnectGatewayInput{}
-        output := &directconnect.DeleteDirectConnectGatewayOutput{}
-
-        mockClient.On("DeleteDirectConnectGateway", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDirectConnectGateway(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDirectConnectGatewayAssociation", func(t *testing.T) {
         input := &directconnect.DeleteDirectConnectGatewayAssociationInput{}
         output := &directconnect.DeleteDirectConnectGatewayAssociationOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDirectConnectGatewayAssociationProposal", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDirectConnectGatewayAssociationProposal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDirectConnectGateway", func(t *testing.T) {
+        input := &directconnect.DeleteDirectConnectGatewayInput{}
+        output := &directconnect.DeleteDirectConnectGatewayOutput{}
+
+        mockClient.On("DeleteDirectConnectGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDirectConnectGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,19 +801,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateDirectConnectGateway", func(t *testing.T) {
-        input := &directconnect.UpdateDirectConnectGatewayInput{}
-        output := &directconnect.UpdateDirectConnectGatewayOutput{}
-
-        mockClient.On("UpdateDirectConnectGateway", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateDirectConnectGateway(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateDirectConnectGatewayAssociation", func(t *testing.T) {
         input := &directconnect.UpdateDirectConnectGatewayAssociationInput{}
         output := &directconnect.UpdateDirectConnectGatewayAssociationOutput{}
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDirectConnectGatewayAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDirectConnectGatewayAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDirectConnectGateway", func(t *testing.T) {
+        input := &directconnect.UpdateDirectConnectGatewayInput{}
+        output := &directconnect.UpdateDirectConnectGatewayOutput{}
+
+        mockClient.On("UpdateDirectConnectGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDirectConnectGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

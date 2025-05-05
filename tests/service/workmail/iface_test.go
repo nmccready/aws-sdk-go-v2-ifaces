@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetImpersonationRole", func(t *testing.T) {
-        input := &workmail.GetImpersonationRoleInput{}
-        output := &workmail.GetImpersonationRoleOutput{}
-
-        mockClient.On("GetImpersonationRole", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetImpersonationRole(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetImpersonationRoleEffect", func(t *testing.T) {
         input := &workmail.GetImpersonationRoleEffectInput{}
         output := &workmail.GetImpersonationRoleEffectOutput{}
@@ -632,13 +619,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetMailDomain", func(t *testing.T) {
-        input := &workmail.GetMailDomainInput{}
-        output := &workmail.GetMailDomainOutput{}
+    t.Run("TestGetImpersonationRole", func(t *testing.T) {
+        input := &workmail.GetImpersonationRoleInput{}
+        output := &workmail.GetImpersonationRoleOutput{}
 
-        mockClient.On("GetMailDomain", ctx, input).Return(output, nil)
+        mockClient.On("GetImpersonationRole", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetMailDomain(ctx, input)
+        result, err := mockClient.GetImpersonationRole(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -652,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetMailboxDetails", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetMailboxDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMailDomain", func(t *testing.T) {
+        input := &workmail.GetMailDomainInput{}
+        output := &workmail.GetMailDomainOutput{}
+
+        mockClient.On("GetMailDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMailDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,19 +749,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListGroups", func(t *testing.T) {
-        input := &workmail.ListGroupsInput{}
-        output := &workmail.ListGroupsOutput{}
-
-        mockClient.On("ListGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListGroupsForEntity", func(t *testing.T) {
         input := &workmail.ListGroupsForEntityInput{}
         output := &workmail.ListGroupsForEntityOutput{}
@@ -775,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListGroups", func(t *testing.T) {
+        input := &workmail.ListGroupsInput{}
+        output := &workmail.ListGroupsOutput{}
+
+        mockClient.On("ListGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListImpersonationRoles", func(t *testing.T) {
         input := &workmail.ListImpersonationRolesInput{}
         output := &workmail.ListImpersonationRolesOutput{}
@@ -782,19 +782,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListImpersonationRoles", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListImpersonationRoles(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListMailDomains", func(t *testing.T) {
-        input := &workmail.ListMailDomainsInput{}
-        output := &workmail.ListMailDomainsOutput{}
-
-        mockClient.On("ListMailDomains", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListMailDomains(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListMailboxPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListMailboxPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMailDomains", func(t *testing.T) {
+        input := &workmail.ListMailDomainsInput{}
+        output := &workmail.ListMailDomainsOutput{}
+
+        mockClient.On("ListMailDomains", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMailDomains(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

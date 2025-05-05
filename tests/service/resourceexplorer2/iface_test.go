@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListIndexes", func(t *testing.T) {
-        input := &resourceexplorer2.ListIndexesInput{}
-        output := &resourceexplorer2.ListIndexesOutput{}
-
-        mockClient.On("ListIndexes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListIndexes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListIndexesForMembers", func(t *testing.T) {
         input := &resourceexplorer2.ListIndexesForMembersInput{}
         output := &resourceexplorer2.ListIndexesForMembersOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIndexesForMembers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIndexesForMembers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIndexes", func(t *testing.T) {
+        input := &resourceexplorer2.ListIndexesInput{}
+        output := &resourceexplorer2.ListIndexesOutput{}
+
+        mockClient.On("ListIndexes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIndexes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

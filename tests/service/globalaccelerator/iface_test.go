@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAccelerator", func(t *testing.T) {
-        input := &globalaccelerator.DescribeAcceleratorInput{}
-        output := &globalaccelerator.DescribeAcceleratorOutput{}
-
-        mockClient.On("DescribeAccelerator", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAccelerator(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeAcceleratorAttributes", func(t *testing.T) {
         input := &globalaccelerator.DescribeAcceleratorAttributesInput{}
         output := &globalaccelerator.DescribeAcceleratorAttributesOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAcceleratorAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAcceleratorAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAccelerator", func(t *testing.T) {
+        input := &globalaccelerator.DescribeAcceleratorInput{}
+        output := &globalaccelerator.DescribeAcceleratorOutput{}
+
+        mockClient.On("DescribeAccelerator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAccelerator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeCustomRoutingAccelerator", func(t *testing.T) {
-        input := &globalaccelerator.DescribeCustomRoutingAcceleratorInput{}
-        output := &globalaccelerator.DescribeCustomRoutingAcceleratorOutput{}
-
-        mockClient.On("DescribeCustomRoutingAccelerator", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeCustomRoutingAccelerator(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeCustomRoutingAcceleratorAttributes", func(t *testing.T) {
         input := &globalaccelerator.DescribeCustomRoutingAcceleratorAttributesInput{}
         output := &globalaccelerator.DescribeCustomRoutingAcceleratorAttributesOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCustomRoutingAcceleratorAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCustomRoutingAcceleratorAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCustomRoutingAccelerator", func(t *testing.T) {
+        input := &globalaccelerator.DescribeCustomRoutingAcceleratorInput{}
+        output := &globalaccelerator.DescribeCustomRoutingAcceleratorOutput{}
+
+        mockClient.On("DescribeCustomRoutingAccelerator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCustomRoutingAccelerator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCustomRoutingPortMappings", func(t *testing.T) {
-        input := &globalaccelerator.ListCustomRoutingPortMappingsInput{}
-        output := &globalaccelerator.ListCustomRoutingPortMappingsOutput{}
-
-        mockClient.On("ListCustomRoutingPortMappings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListCustomRoutingPortMappings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListCustomRoutingPortMappingsByDestination", func(t *testing.T) {
         input := &globalaccelerator.ListCustomRoutingPortMappingsByDestinationInput{}
         output := &globalaccelerator.ListCustomRoutingPortMappingsByDestinationOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCustomRoutingPortMappingsByDestination", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCustomRoutingPortMappingsByDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomRoutingPortMappings", func(t *testing.T) {
+        input := &globalaccelerator.ListCustomRoutingPortMappingsInput{}
+        output := &globalaccelerator.ListCustomRoutingPortMappingsOutput{}
+
+        mockClient.On("ListCustomRoutingPortMappings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomRoutingPortMappings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,19 +645,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateAccelerator", func(t *testing.T) {
-        input := &globalaccelerator.UpdateAcceleratorInput{}
-        output := &globalaccelerator.UpdateAcceleratorOutput{}
-
-        mockClient.On("UpdateAccelerator", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateAccelerator(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateAcceleratorAttributes", func(t *testing.T) {
         input := &globalaccelerator.UpdateAcceleratorAttributesInput{}
         output := &globalaccelerator.UpdateAcceleratorAttributesOutput{}
@@ -665,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAcceleratorAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAcceleratorAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAccelerator", func(t *testing.T) {
+        input := &globalaccelerator.UpdateAcceleratorInput{}
+        output := &globalaccelerator.UpdateAcceleratorOutput{}
+
+        mockClient.On("UpdateAccelerator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccelerator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,19 +684,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateCustomRoutingAccelerator", func(t *testing.T) {
-        input := &globalaccelerator.UpdateCustomRoutingAcceleratorInput{}
-        output := &globalaccelerator.UpdateCustomRoutingAcceleratorOutput{}
-
-        mockClient.On("UpdateCustomRoutingAccelerator", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateCustomRoutingAccelerator(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateCustomRoutingAcceleratorAttributes", func(t *testing.T) {
         input := &globalaccelerator.UpdateCustomRoutingAcceleratorAttributesInput{}
         output := &globalaccelerator.UpdateCustomRoutingAcceleratorAttributesOutput{}
@@ -704,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCustomRoutingAcceleratorAttributes", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCustomRoutingAcceleratorAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCustomRoutingAccelerator", func(t *testing.T) {
+        input := &globalaccelerator.UpdateCustomRoutingAcceleratorInput{}
+        output := &globalaccelerator.UpdateCustomRoutingAcceleratorOutput{}
+
+        mockClient.On("UpdateCustomRoutingAccelerator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCustomRoutingAccelerator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

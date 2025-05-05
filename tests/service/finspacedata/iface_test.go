@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDataView", func(t *testing.T) {
-        input := &finspacedata.CreateDataViewInput{}
-        output := &finspacedata.CreateDataViewOutput{}
-
-        mockClient.On("CreateDataView", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDataView(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDataset", func(t *testing.T) {
         input := &finspacedata.CreateDatasetInput{}
         output := &finspacedata.CreateDatasetOutput{}
@@ -80,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDataset", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataView", func(t *testing.T) {
+        input := &finspacedata.CreateDataViewInput{}
+        output := &finspacedata.CreateDataViewOutput{}
+
+        mockClient.On("CreateDataView", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataView(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDataView", func(t *testing.T) {
-        input := &finspacedata.GetDataViewInput{}
-        output := &finspacedata.GetDataViewOutput{}
-
-        mockClient.On("GetDataView", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDataView(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDataset", func(t *testing.T) {
         input := &finspacedata.GetDatasetInput{}
         output := &finspacedata.GetDatasetOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataset", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataView", func(t *testing.T) {
+        input := &finspacedata.GetDataViewInput{}
+        output := &finspacedata.GetDataViewOutput{}
+
+        mockClient.On("GetDataView", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataView(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDataViews", func(t *testing.T) {
-        input := &finspacedata.ListDataViewsInput{}
-        output := &finspacedata.ListDataViewsOutput{}
-
-        mockClient.On("ListDataViews", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDataViews(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDatasets", func(t *testing.T) {
         input := &finspacedata.ListDatasetsInput{}
         output := &finspacedata.ListDatasetsOutput{}
@@ -320,13 +307,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPermissionGroups", func(t *testing.T) {
-        input := &finspacedata.ListPermissionGroupsInput{}
-        output := &finspacedata.ListPermissionGroupsOutput{}
+    t.Run("TestListDataViews", func(t *testing.T) {
+        input := &finspacedata.ListDataViewsInput{}
+        output := &finspacedata.ListDataViewsOutput{}
 
-        mockClient.On("ListPermissionGroups", ctx, input).Return(output, nil)
+        mockClient.On("ListDataViews", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListPermissionGroups(ctx, input)
+        result, err := mockClient.ListDataViews(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -346,13 +333,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListUsers", func(t *testing.T) {
-        input := &finspacedata.ListUsersInput{}
-        output := &finspacedata.ListUsersOutput{}
+    t.Run("TestListPermissionGroups", func(t *testing.T) {
+        input := &finspacedata.ListPermissionGroupsInput{}
+        output := &finspacedata.ListPermissionGroupsOutput{}
 
-        mockClient.On("ListUsers", ctx, input).Return(output, nil)
+        mockClient.On("ListPermissionGroups", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListUsers(ctx, input)
+        result, err := mockClient.ListPermissionGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListUsersByPermissionGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListUsersByPermissionGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListUsers", func(t *testing.T) {
+        input := &finspacedata.ListUsersInput{}
+        output := &finspacedata.ListUsersOutput{}
+
+        mockClient.On("ListUsers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUsers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

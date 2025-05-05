@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteReplicationTask", func(t *testing.T) {
-        input := &databasemigrationservice.DeleteReplicationTaskInput{}
-        output := &databasemigrationservice.DeleteReplicationTaskOutput{}
-
-        mockClient.On("DeleteReplicationTask", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteReplicationTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteReplicationTaskAssessmentRun", func(t *testing.T) {
         input := &databasemigrationservice.DeleteReplicationTaskAssessmentRunInput{}
         output := &databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteReplicationTaskAssessmentRun", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteReplicationTaskAssessmentRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteReplicationTask", func(t *testing.T) {
+        input := &databasemigrationservice.DeleteReplicationTaskInput{}
+        output := &databasemigrationservice.DeleteReplicationTaskOutput{}
+
+        mockClient.On("DeleteReplicationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteReplicationTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEndpointTypes", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeEndpointTypesInput{}
-        output := &databasemigrationservice.DescribeEndpointTypesOutput{}
-
-        mockClient.On("DescribeEndpointTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEndpointTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEndpoints", func(t *testing.T) {
         input := &databasemigrationservice.DescribeEndpointsInput{}
         output := &databasemigrationservice.DescribeEndpointsOutput{}
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEndpoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEndpointTypes", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeEndpointTypesInput{}
+        output := &databasemigrationservice.DescribeEndpointTypesOutput{}
+
+        mockClient.On("DescribeEndpointTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEndpointTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,19 +580,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeEventSubscriptionsInput{}
-        output := &databasemigrationservice.DescribeEventSubscriptionsOutput{}
-
-        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &databasemigrationservice.DescribeEventsInput{}
         output := &databasemigrationservice.DescribeEventsOutput{}
@@ -600,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeEventSubscriptionsInput{}
+        output := &databasemigrationservice.DescribeEventSubscriptionsOutput{}
+
+        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeReplicationInstances", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeReplicationInstancesInput{}
+        output := &databasemigrationservice.DescribeReplicationInstancesOutput{}
+
+        mockClient.On("DescribeReplicationInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeReplicationInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeReplicationInstanceTaskLogs", func(t *testing.T) {
         input := &databasemigrationservice.DescribeReplicationInstanceTaskLogsInput{}
         output := &databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput{}
@@ -866,13 +879,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeReplicationInstances", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeReplicationInstancesInput{}
-        output := &databasemigrationservice.DescribeReplicationInstancesOutput{}
+    t.Run("TestDescribeReplications", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeReplicationsInput{}
+        output := &databasemigrationservice.DescribeReplicationsOutput{}
 
-        mockClient.On("DescribeReplicationInstances", ctx, input).Return(output, nil)
+        mockClient.On("DescribeReplications", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeReplicationInstances(ctx, input)
+        result, err := mockClient.DescribeReplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -951,19 +964,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeReplicationTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeReplicationTasks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeReplications", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeReplicationsInput{}
-        output := &databasemigrationservice.DescribeReplicationsOutput{}
-
-        mockClient.On("DescribeReplications", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeReplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1386,19 +1386,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartReplicationTask", func(t *testing.T) {
-        input := &databasemigrationservice.StartReplicationTaskInput{}
-        output := &databasemigrationservice.StartReplicationTaskOutput{}
-
-        mockClient.On("StartReplicationTask", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StartReplicationTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStartReplicationTaskAssessment", func(t *testing.T) {
         input := &databasemigrationservice.StartReplicationTaskAssessmentInput{}
         output := &databasemigrationservice.StartReplicationTaskAssessmentOutput{}
@@ -1419,6 +1406,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartReplicationTaskAssessmentRun", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartReplicationTaskAssessmentRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartReplicationTask", func(t *testing.T) {
+        input := &databasemigrationservice.StartReplicationTaskInput{}
+        output := &databasemigrationservice.StartReplicationTaskOutput{}
+
+        mockClient.On("StartReplicationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartReplicationTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

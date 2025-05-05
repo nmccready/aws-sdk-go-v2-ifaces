@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAsset", func(t *testing.T) {
-        input := &datazone.CreateAssetInput{}
-        output := &datazone.CreateAssetOutput{}
-
-        mockClient.On("CreateAsset", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAsset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAssetFilter", func(t *testing.T) {
         input := &datazone.CreateAssetFilterInput{}
         output := &datazone.CreateAssetFilterOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAssetFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAsset", func(t *testing.T) {
+        input := &datazone.CreateAssetInput{}
+        output := &datazone.CreateAssetOutput{}
+
+        mockClient.On("CreateAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAsset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateEnvironment", func(t *testing.T) {
-        input := &datazone.CreateEnvironmentInput{}
-        output := &datazone.CreateEnvironmentOutput{}
-
-        mockClient.On("CreateEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateEnvironmentAction", func(t *testing.T) {
         input := &datazone.CreateEnvironmentActionInput{}
         output := &datazone.CreateEnvironmentActionOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateEnvironmentAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateEnvironmentAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateEnvironment", func(t *testing.T) {
+        input := &datazone.CreateEnvironmentInput{}
+        output := &datazone.CreateEnvironmentOutput{}
+
+        mockClient.On("CreateEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAsset", func(t *testing.T) {
-        input := &datazone.DeleteAssetInput{}
-        output := &datazone.DeleteAssetOutput{}
-
-        mockClient.On("DeleteAsset", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAsset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAssetFilter", func(t *testing.T) {
         input := &datazone.DeleteAssetFilterInput{}
         output := &datazone.DeleteAssetFilterOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAssetFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAsset", func(t *testing.T) {
+        input := &datazone.DeleteAssetInput{}
+        output := &datazone.DeleteAssetOutput{}
+
+        mockClient.On("DeleteAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAsset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteEnvironment", func(t *testing.T) {
-        input := &datazone.DeleteEnvironmentInput{}
-        output := &datazone.DeleteEnvironmentOutput{}
-
-        mockClient.On("DeleteEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteEnvironmentAction", func(t *testing.T) {
         input := &datazone.DeleteEnvironmentActionInput{}
         output := &datazone.DeleteEnvironmentActionOutput{}
@@ -600,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEnvironmentBlueprintConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEnvironmentBlueprintConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteEnvironment", func(t *testing.T) {
+        input := &datazone.DeleteEnvironmentInput{}
+        output := &datazone.DeleteEnvironmentOutput{}
+
+        mockClient.On("DeleteEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAsset", func(t *testing.T) {
-        input := &datazone.GetAssetInput{}
-        output := &datazone.GetAssetOutput{}
-
-        mockClient.On("GetAsset", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAsset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAssetFilter", func(t *testing.T) {
         input := &datazone.GetAssetFilterInput{}
         output := &datazone.GetAssetFilterOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAssetFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAssetFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAsset", func(t *testing.T) {
+        input := &datazone.GetAssetInput{}
+        output := &datazone.GetAssetOutput{}
+
+        mockClient.On("GetAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAsset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,19 +905,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetEnvironment", func(t *testing.T) {
-        input := &datazone.GetEnvironmentInput{}
-        output := &datazone.GetEnvironmentOutput{}
-
-        mockClient.On("GetEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetEnvironmentAction", func(t *testing.T) {
         input := &datazone.GetEnvironmentActionInput{}
         output := &datazone.GetEnvironmentActionOutput{}
@@ -925,19 +912,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEnvironmentAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEnvironmentAction(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetEnvironmentBlueprint", func(t *testing.T) {
-        input := &datazone.GetEnvironmentBlueprintInput{}
-        output := &datazone.GetEnvironmentBlueprintOutput{}
-
-        mockClient.On("GetEnvironmentBlueprint", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetEnvironmentBlueprint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,6 +931,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEnvironmentBlueprint", func(t *testing.T) {
+        input := &datazone.GetEnvironmentBlueprintInput{}
+        output := &datazone.GetEnvironmentBlueprintOutput{}
+
+        mockClient.On("GetEnvironmentBlueprint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnvironmentBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEnvironmentCredentials", func(t *testing.T) {
         input := &datazone.GetEnvironmentCredentialsInput{}
         output := &datazone.GetEnvironmentCredentialsOutput{}
@@ -964,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEnvironmentCredentials", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEnvironmentCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEnvironment", func(t *testing.T) {
+        input := &datazone.GetEnvironmentInput{}
+        output := &datazone.GetEnvironmentOutput{}
+
+        mockClient.On("GetEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1321,19 +1321,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
-        input := &datazone.ListDomainUnitsForParentInput{}
-        output := &datazone.ListDomainUnitsForParentOutput{}
-
-        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDomains", func(t *testing.T) {
         input := &datazone.ListDomainsInput{}
         output := &datazone.ListDomainsOutput{}
@@ -1341,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDomains", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
+        input := &datazone.ListDomainUnitsForParentInput{}
+        output := &datazone.ListDomainUnitsForParentOutput{}
+
+        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1581,19 +1581,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSubscriptionTargets", func(t *testing.T) {
-        input := &datazone.ListSubscriptionTargetsInput{}
-        output := &datazone.ListSubscriptionTargetsOutput{}
-
-        mockClient.On("ListSubscriptionTargets", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSubscriptionTargets(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSubscriptions", func(t *testing.T) {
         input := &datazone.ListSubscriptionsInput{}
         output := &datazone.ListSubscriptionsOutput{}
@@ -1601,6 +1588,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSubscriptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubscriptionTargets", func(t *testing.T) {
+        input := &datazone.ListSubscriptionTargetsInput{}
+        output := &datazone.ListSubscriptionTargetsOutput{}
+
+        mockClient.On("ListSubscriptionTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptionTargets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1919,19 +1919,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateEnvironment", func(t *testing.T) {
-        input := &datazone.UpdateEnvironmentInput{}
-        output := &datazone.UpdateEnvironmentOutput{}
-
-        mockClient.On("UpdateEnvironment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateEnvironment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateEnvironmentAction", func(t *testing.T) {
         input := &datazone.UpdateEnvironmentActionInput{}
         output := &datazone.UpdateEnvironmentActionOutput{}
@@ -1939,6 +1926,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateEnvironmentAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateEnvironmentAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateEnvironment", func(t *testing.T) {
+        input := &datazone.UpdateEnvironmentInput{}
+        output := &datazone.UpdateEnvironmentOutput{}
+
+        mockClient.On("UpdateEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

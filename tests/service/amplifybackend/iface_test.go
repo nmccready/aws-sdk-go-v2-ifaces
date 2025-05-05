@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateBackend", func(t *testing.T) {
-        input := &amplifybackend.CreateBackendInput{}
-        output := &amplifybackend.CreateBackendOutput{}
-
-        mockClient.On("CreateBackend", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateBackend(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateBackendAPI", func(t *testing.T) {
         input := &amplifybackend.CreateBackendAPIInput{}
         output := &amplifybackend.CreateBackendAPIOutput{}
@@ -99,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBackend", func(t *testing.T) {
+        input := &amplifybackend.CreateBackendInput{}
+        output := &amplifybackend.CreateBackendOutput{}
+
+        mockClient.On("CreateBackend", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBackend(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBackendStorage", func(t *testing.T) {
         input := &amplifybackend.CreateBackendStorageInput{}
         output := &amplifybackend.CreateBackendStorageOutput{}
@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteBackend", func(t *testing.T) {
-        input := &amplifybackend.DeleteBackendInput{}
-        output := &amplifybackend.DeleteBackendOutput{}
-
-        mockClient.On("DeleteBackend", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteBackend(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteBackendAPI", func(t *testing.T) {
         input := &amplifybackend.DeleteBackendAPIInput{}
         output := &amplifybackend.DeleteBackendAPIOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBackendAuth", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBackendAuth(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBackend", func(t *testing.T) {
+        input := &amplifybackend.DeleteBackendInput{}
+        output := &amplifybackend.DeleteBackendOutput{}
+
+        mockClient.On("DeleteBackend", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBackend(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetBackend", func(t *testing.T) {
-        input := &amplifybackend.GetBackendInput{}
-        output := &amplifybackend.GetBackendOutput{}
-
-        mockClient.On("GetBackend", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetBackend(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetBackendAPI", func(t *testing.T) {
         input := &amplifybackend.GetBackendAPIInput{}
         output := &amplifybackend.GetBackendAPIOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBackendAuth", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBackendAuth(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBackend", func(t *testing.T) {
+        input := &amplifybackend.GetBackendInput{}
+        output := &amplifybackend.GetBackendOutput{}
+
+        mockClient.On("GetBackend", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBackend(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

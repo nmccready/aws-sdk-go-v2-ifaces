@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetReviewTemplate", func(t *testing.T) {
-        input := &wellarchitected.GetReviewTemplateInput{}
-        output := &wellarchitected.GetReviewTemplateOutput{}
-
-        mockClient.On("GetReviewTemplate", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetReviewTemplate(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetReviewTemplateAnswer", func(t *testing.T) {
         input := &wellarchitected.GetReviewTemplateAnswerInput{}
         output := &wellarchitected.GetReviewTemplateAnswerOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetReviewTemplateAnswer", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetReviewTemplateAnswer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetReviewTemplate", func(t *testing.T) {
+        input := &wellarchitected.GetReviewTemplateInput{}
+        output := &wellarchitected.GetReviewTemplateOutput{}
+
+        mockClient.On("GetReviewTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetReviewTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListLenses", func(t *testing.T) {
+        input := &wellarchitected.ListLensesInput{}
+        output := &wellarchitected.ListLensesOutput{}
+
+        mockClient.On("ListLenses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLenses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListLensReviewImprovements", func(t *testing.T) {
         input := &wellarchitected.ListLensReviewImprovementsInput{}
         output := &wellarchitected.ListLensReviewImprovementsOutput{}
@@ -587,19 +600,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLensShares", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLensShares(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListLenses", func(t *testing.T) {
-        input := &wellarchitected.ListLensesInput{}
-        output := &wellarchitected.ListLensesOutput{}
-
-        mockClient.On("ListLenses", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLenses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,19 +645,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProfileShares", func(t *testing.T) {
-        input := &wellarchitected.ListProfileSharesInput{}
-        output := &wellarchitected.ListProfileSharesOutput{}
-
-        mockClient.On("ListProfileShares", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListProfileShares(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListProfiles", func(t *testing.T) {
         input := &wellarchitected.ListProfilesInput{}
         output := &wellarchitected.ListProfilesOutput{}
@@ -665,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProfiles", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProfileShares", func(t *testing.T) {
+        input := &wellarchitected.ListProfileSharesInput{}
+        output := &wellarchitected.ListProfileSharesOutput{}
+
+        mockClient.On("ListProfileShares", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProfileShares(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -736,19 +736,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkloadShares", func(t *testing.T) {
-        input := &wellarchitected.ListWorkloadSharesInput{}
-        output := &wellarchitected.ListWorkloadSharesOutput{}
-
-        mockClient.On("ListWorkloadShares", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorkloadShares(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorkloads", func(t *testing.T) {
         input := &wellarchitected.ListWorkloadsInput{}
         output := &wellarchitected.ListWorkloadsOutput{}
@@ -756,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkloads", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkloads(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkloadShares", func(t *testing.T) {
+        input := &wellarchitected.ListWorkloadSharesInput{}
+        output := &wellarchitected.ListWorkloadSharesOutput{}
+
+        mockClient.On("ListWorkloadShares", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkloadShares(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateReviewTemplate", func(t *testing.T) {
-        input := &wellarchitected.UpdateReviewTemplateInput{}
-        output := &wellarchitected.UpdateReviewTemplateOutput{}
-
-        mockClient.On("UpdateReviewTemplate", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateReviewTemplate(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateReviewTemplateAnswer", func(t *testing.T) {
         input := &wellarchitected.UpdateReviewTemplateAnswerInput{}
         output := &wellarchitected.UpdateReviewTemplateAnswerOutput{}
@@ -873,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateReviewTemplateAnswer", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateReviewTemplateAnswer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateReviewTemplate", func(t *testing.T) {
+        input := &wellarchitected.UpdateReviewTemplateInput{}
+        output := &wellarchitected.UpdateReviewTemplateOutput{}
+
+        mockClient.On("UpdateReviewTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateReviewTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServices", func(t *testing.T) {
-        input := &ecs.ListServicesInput{}
-        output := &ecs.ListServicesOutput{}
-
-        mockClient.On("ListServices", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServices(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListServicesByNamespace", func(t *testing.T) {
         input := &ecs.ListServicesByNamespaceInput{}
         output := &ecs.ListServicesByNamespaceOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServicesByNamespace", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServicesByNamespace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServices", func(t *testing.T) {
+        input := &ecs.ListServicesInput{}
+        output := &ecs.ListServicesOutput{}
+
+        mockClient.On("ListServices", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServices(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPutAccountSetting", func(t *testing.T) {
-        input := &ecs.PutAccountSettingInput{}
-        output := &ecs.PutAccountSettingOutput{}
-
-        mockClient.On("PutAccountSetting", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PutAccountSetting(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPutAccountSettingDefault", func(t *testing.T) {
         input := &ecs.PutAccountSettingDefaultInput{}
         output := &ecs.PutAccountSettingDefaultOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAccountSettingDefault", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAccountSettingDefault(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountSetting", func(t *testing.T) {
+        input := &ecs.PutAccountSettingInput{}
+        output := &ecs.PutAccountSettingOutput{}
+
+        mockClient.On("PutAccountSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountSetting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

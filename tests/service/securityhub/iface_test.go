@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeStandards", func(t *testing.T) {
-        input := &securityhub.DescribeStandardsInput{}
-        output := &securityhub.DescribeStandardsOutput{}
-
-        mockClient.On("DescribeStandards", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStandards(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeStandardsControls", func(t *testing.T) {
         input := &securityhub.DescribeStandardsControlsInput{}
         output := &securityhub.DescribeStandardsControlsOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStandardsControls", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStandardsControls(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeStandards", func(t *testing.T) {
+        input := &securityhub.DescribeStandardsInput{}
+        output := &securityhub.DescribeStandardsOutput{}
+
+        mockClient.On("DescribeStandards", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStandards(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,19 +580,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConfigurationPolicy", func(t *testing.T) {
-        input := &securityhub.GetConfigurationPolicyInput{}
-        output := &securityhub.GetConfigurationPolicyOutput{}
-
-        mockClient.On("GetConfigurationPolicy", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetConfigurationPolicy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetConfigurationPolicyAssociation", func(t *testing.T) {
         input := &securityhub.GetConfigurationPolicyAssociationInput{}
         output := &securityhub.GetConfigurationPolicyAssociationOutput{}
@@ -600,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfigurationPolicyAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfigurationPolicyAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfigurationPolicy", func(t *testing.T) {
+        input := &securityhub.GetConfigurationPolicyInput{}
+        output := &securityhub.GetConfigurationPolicyOutput{}
+
+        mockClient.On("GetConfigurationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfigurationPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

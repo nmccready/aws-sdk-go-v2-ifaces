@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeBroker", func(t *testing.T) {
-        input := &mq.DescribeBrokerInput{}
-        output := &mq.DescribeBrokerOutput{}
-
-        mockClient.On("DescribeBroker", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeBroker(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeBrokerEngineTypes", func(t *testing.T) {
         input := &mq.DescribeBrokerEngineTypesInput{}
         output := &mq.DescribeBrokerEngineTypesOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeBrokerEngineTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeBrokerEngineTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeBroker", func(t *testing.T) {
+        input := &mq.DescribeBrokerInput{}
+        output := &mq.DescribeBrokerOutput{}
+
+        mockClient.On("DescribeBroker", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeBroker(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

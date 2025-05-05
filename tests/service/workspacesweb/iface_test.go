@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTrustStore", func(t *testing.T) {
-        input := &workspacesweb.GetTrustStoreInput{}
-        output := &workspacesweb.GetTrustStoreOutput{}
-
-        mockClient.On("GetTrustStore", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTrustStore(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetTrustStoreCertificate", func(t *testing.T) {
         input := &workspacesweb.GetTrustStoreCertificateInput{}
         output := &workspacesweb.GetTrustStoreCertificateOutput{}
@@ -587,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTrustStoreCertificate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTrustStoreCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrustStore", func(t *testing.T) {
+        input := &workspacesweb.GetTrustStoreInput{}
+        output := &workspacesweb.GetTrustStoreOutput{}
+
+        mockClient.On("GetTrustStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrustStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

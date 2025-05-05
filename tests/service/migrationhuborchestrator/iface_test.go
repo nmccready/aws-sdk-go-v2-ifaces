@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTemplates", func(t *testing.T) {
+        input := &migrationhuborchestrator.ListTemplatesInput{}
+        output := &migrationhuborchestrator.ListTemplatesOutput{}
+
+        mockClient.On("ListTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTemplateStepGroups", func(t *testing.T) {
         input := &migrationhuborchestrator.ListTemplateStepGroupsInput{}
         output := &migrationhuborchestrator.ListTemplateStepGroupsOutput{}
@@ -268,13 +281,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTemplates", func(t *testing.T) {
-        input := &migrationhuborchestrator.ListTemplatesInput{}
-        output := &migrationhuborchestrator.ListTemplatesOutput{}
+    t.Run("TestListWorkflows", func(t *testing.T) {
+        input := &migrationhuborchestrator.ListWorkflowsInput{}
+        output := &migrationhuborchestrator.ListWorkflowsOutput{}
 
-        mockClient.On("ListTemplates", ctx, input).Return(output, nil)
+        mockClient.On("ListWorkflows", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListTemplates(ctx, input)
+        result, err := mockClient.ListWorkflows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -301,19 +314,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkflowSteps", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkflowSteps(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListWorkflows", func(t *testing.T) {
-        input := &migrationhuborchestrator.ListWorkflowsInput{}
-        output := &migrationhuborchestrator.ListWorkflowsOutput{}
-
-        mockClient.On("ListWorkflows", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorkflows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

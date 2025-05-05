@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteRun", func(t *testing.T) {
-        input := &omics.DeleteRunInput{}
-        output := &omics.DeleteRunOutput{}
-
-        mockClient.On("DeleteRun", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteRun(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteRunCache", func(t *testing.T) {
         input := &omics.DeleteRunCacheInput{}
         output := &omics.DeleteRunCacheOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRunCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRunCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRun", func(t *testing.T) {
+        input := &omics.DeleteRunInput{}
+        output := &omics.DeleteRunOutput{}
+
+        mockClient.On("DeleteRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetReadSet", func(t *testing.T) {
-        input := &omics.GetReadSetInput{}
-        output := &omics.GetReadSetOutput{}
-
-        mockClient.On("GetReadSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetReadSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetReadSetActivationJob", func(t *testing.T) {
         input := &omics.GetReadSetActivationJobInput{}
         output := &omics.GetReadSetActivationJobOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetReadSetExportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetReadSetExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetReadSet", func(t *testing.T) {
+        input := &omics.GetReadSetInput{}
+        output := &omics.GetReadSetOutput{}
+
+        mockClient.On("GetReadSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetReadSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetRun", func(t *testing.T) {
-        input := &omics.GetRunInput{}
-        output := &omics.GetRunOutput{}
-
-        mockClient.On("GetRun", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetRun(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetRunCache", func(t *testing.T) {
         input := &omics.GetRunCacheInput{}
         output := &omics.GetRunCacheOutput{}
@@ -587,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRunCache", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRunCache(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRun", func(t *testing.T) {
+        input := &omics.GetRunInput{}
+        output := &omics.GetRunOutput{}
+
+        mockClient.On("GetRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,19 +710,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAnnotationStoreVersions", func(t *testing.T) {
-        input := &omics.ListAnnotationStoreVersionsInput{}
-        output := &omics.ListAnnotationStoreVersionsOutput{}
-
-        mockClient.On("ListAnnotationStoreVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAnnotationStoreVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAnnotationStores", func(t *testing.T) {
         input := &omics.ListAnnotationStoresInput{}
         output := &omics.ListAnnotationStoresOutput{}
@@ -730,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAnnotationStores", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAnnotationStores(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAnnotationStoreVersions", func(t *testing.T) {
+        input := &omics.ListAnnotationStoreVersionsInput{}
+        output := &omics.ListAnnotationStoreVersionsOutput{}
+
+        mockClient.On("ListAnnotationStoreVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAnnotationStoreVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReadSetUploadParts", func(t *testing.T) {
-        input := &omics.ListReadSetUploadPartsInput{}
-        output := &omics.ListReadSetUploadPartsOutput{}
-
-        mockClient.On("ListReadSetUploadParts", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListReadSetUploadParts(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListReadSets", func(t *testing.T) {
         input := &omics.ListReadSetsInput{}
         output := &omics.ListReadSetsOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReadSets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReadSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReadSetUploadParts", func(t *testing.T) {
+        input := &omics.ListReadSetUploadPartsInput{}
+        output := &omics.ListReadSetUploadPartsOutput{}
+
+        mockClient.On("ListReadSetUploadParts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReadSetUploadParts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,19 +827,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReferenceStores", func(t *testing.T) {
-        input := &omics.ListReferenceStoresInput{}
-        output := &omics.ListReferenceStoresOutput{}
-
-        mockClient.On("ListReferenceStores", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListReferenceStores(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListReferences", func(t *testing.T) {
         input := &omics.ListReferencesInput{}
         output := &omics.ListReferencesOutput{}
@@ -847,6 +834,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReferences", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReferences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReferenceStores", func(t *testing.T) {
+        input := &omics.ListReferenceStoresInput{}
+        output := &omics.ListReferenceStoresOutput{}
+
+        mockClient.On("ListReferenceStores", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReferenceStores(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -879,19 +879,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRunTasks", func(t *testing.T) {
-        input := &omics.ListRunTasksInput{}
-        output := &omics.ListRunTasksOutput{}
-
-        mockClient.On("ListRunTasks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRunTasks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRuns", func(t *testing.T) {
         input := &omics.ListRunsInput{}
         output := &omics.ListRunsOutput{}
@@ -899,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRuns", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRunTasks", func(t *testing.T) {
+        input := &omics.ListRunTasksInput{}
+        output := &omics.ListRunTasksOutput{}
+
+        mockClient.On("ListRunTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRunTasks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -60,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateAgent", func(t *testing.T) {
-        input := &bedrockagent.CreateAgentInput{}
-        output := &bedrockagent.CreateAgentOutput{}
-
-        mockClient.On("CreateAgent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateAgent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateAgentActionGroup", func(t *testing.T) {
         input := &bedrockagent.CreateAgentActionGroupInput{}
         output := &bedrockagent.CreateAgentActionGroupOutput{}
@@ -99,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAgent", func(t *testing.T) {
+        input := &bedrockagent.CreateAgentInput{}
+        output := &bedrockagent.CreateAgentOutput{}
+
+        mockClient.On("CreateAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataSource", func(t *testing.T) {
         input := &bedrockagent.CreateDataSourceInput{}
         output := &bedrockagent.CreateDataSourceOutput{}
@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateFlow", func(t *testing.T) {
-        input := &bedrockagent.CreateFlowInput{}
-        output := &bedrockagent.CreateFlowOutput{}
-
-        mockClient.On("CreateFlow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateFlow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateFlowAlias", func(t *testing.T) {
         input := &bedrockagent.CreateFlowAliasInput{}
         output := &bedrockagent.CreateFlowAliasOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateFlowAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateFlowAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateFlow", func(t *testing.T) {
+        input := &bedrockagent.CreateFlowInput{}
+        output := &bedrockagent.CreateFlowOutput{}
+
+        mockClient.On("CreateFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAgent", func(t *testing.T) {
-        input := &bedrockagent.DeleteAgentInput{}
-        output := &bedrockagent.DeleteAgentOutput{}
-
-        mockClient.On("DeleteAgent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAgent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAgentActionGroup", func(t *testing.T) {
         input := &bedrockagent.DeleteAgentActionGroupInput{}
         output := &bedrockagent.DeleteAgentActionGroupOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAgentAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAgentAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAgent", func(t *testing.T) {
+        input := &bedrockagent.DeleteAgentInput{}
+        output := &bedrockagent.DeleteAgentOutput{}
+
+        mockClient.On("DeleteAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteFlow", func(t *testing.T) {
-        input := &bedrockagent.DeleteFlowInput{}
-        output := &bedrockagent.DeleteFlowOutput{}
-
-        mockClient.On("DeleteFlow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteFlow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteFlowAlias", func(t *testing.T) {
         input := &bedrockagent.DeleteFlowAliasInput{}
         output := &bedrockagent.DeleteFlowAliasOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFlowAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFlowAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteFlow", func(t *testing.T) {
+        input := &bedrockagent.DeleteFlowInput{}
+        output := &bedrockagent.DeleteFlowOutput{}
+
+        mockClient.On("DeleteFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteKnowledgeBase", func(t *testing.T) {
-        input := &bedrockagent.DeleteKnowledgeBaseInput{}
-        output := &bedrockagent.DeleteKnowledgeBaseOutput{}
-
-        mockClient.On("DeleteKnowledgeBase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteKnowledgeBase(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteKnowledgeBaseDocuments", func(t *testing.T) {
         input := &bedrockagent.DeleteKnowledgeBaseDocumentsInput{}
         output := &bedrockagent.DeleteKnowledgeBaseDocumentsOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteKnowledgeBaseDocuments", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteKnowledgeBaseDocuments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteKnowledgeBase", func(t *testing.T) {
+        input := &bedrockagent.DeleteKnowledgeBaseInput{}
+        output := &bedrockagent.DeleteKnowledgeBaseOutput{}
+
+        mockClient.On("DeleteKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteKnowledgeBase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAgent", func(t *testing.T) {
-        input := &bedrockagent.GetAgentInput{}
-        output := &bedrockagent.GetAgentOutput{}
-
-        mockClient.On("GetAgent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAgent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAgentActionGroup", func(t *testing.T) {
         input := &bedrockagent.GetAgentActionGroupInput{}
         output := &bedrockagent.GetAgentActionGroupOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentCollaborator", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentCollaborator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgent", func(t *testing.T) {
+        input := &bedrockagent.GetAgentInput{}
+        output := &bedrockagent.GetAgentOutput{}
+
+        mockClient.On("GetAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFlow", func(t *testing.T) {
-        input := &bedrockagent.GetFlowInput{}
-        output := &bedrockagent.GetFlowOutput{}
-
-        mockClient.On("GetFlow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFlow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetFlowAlias", func(t *testing.T) {
         input := &bedrockagent.GetFlowAliasInput{}
         output := &bedrockagent.GetFlowAliasOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFlowAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFlowAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFlow", func(t *testing.T) {
+        input := &bedrockagent.GetFlowInput{}
+        output := &bedrockagent.GetFlowOutput{}
+
+        mockClient.On("GetFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetKnowledgeBase", func(t *testing.T) {
-        input := &bedrockagent.GetKnowledgeBaseInput{}
-        output := &bedrockagent.GetKnowledgeBaseOutput{}
-
-        mockClient.On("GetKnowledgeBase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetKnowledgeBase(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetKnowledgeBaseDocuments", func(t *testing.T) {
         input := &bedrockagent.GetKnowledgeBaseDocumentsInput{}
         output := &bedrockagent.GetKnowledgeBaseDocumentsOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetKnowledgeBaseDocuments", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetKnowledgeBaseDocuments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetKnowledgeBase", func(t *testing.T) {
+        input := &bedrockagent.GetKnowledgeBaseInput{}
+        output := &bedrockagent.GetKnowledgeBaseOutput{}
+
+        mockClient.On("GetKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetKnowledgeBase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAgentVersions", func(t *testing.T) {
-        input := &bedrockagent.ListAgentVersionsInput{}
-        output := &bedrockagent.ListAgentVersionsOutput{}
-
-        mockClient.On("ListAgentVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAgentVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAgents", func(t *testing.T) {
         input := &bedrockagent.ListAgentsInput{}
         output := &bedrockagent.ListAgentsOutput{}
@@ -626,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAgents", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAgents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentVersions", func(t *testing.T) {
+        input := &bedrockagent.ListAgentVersionsInput{}
+        output := &bedrockagent.ListAgentVersionsOutput{}
+
+        mockClient.On("ListAgentVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFlowVersions", func(t *testing.T) {
-        input := &bedrockagent.ListFlowVersionsInput{}
-        output := &bedrockagent.ListFlowVersionsOutput{}
-
-        mockClient.On("ListFlowVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListFlowVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListFlows", func(t *testing.T) {
         input := &bedrockagent.ListFlowsInput{}
         output := &bedrockagent.ListFlowsOutput{}
@@ -678,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFlows", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFlows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFlowVersions", func(t *testing.T) {
+        input := &bedrockagent.ListFlowVersionsInput{}
+        output := &bedrockagent.ListFlowVersionsOutput{}
+
+        mockClient.On("ListFlowVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFlowVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,19 +827,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateAgent", func(t *testing.T) {
-        input := &bedrockagent.UpdateAgentInput{}
-        output := &bedrockagent.UpdateAgentOutput{}
-
-        mockClient.On("UpdateAgent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateAgent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateAgentActionGroup", func(t *testing.T) {
         input := &bedrockagent.UpdateAgentActionGroupInput{}
         output := &bedrockagent.UpdateAgentActionGroupOutput{}
@@ -879,6 +866,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAgent", func(t *testing.T) {
+        input := &bedrockagent.UpdateAgentInput{}
+        output := &bedrockagent.UpdateAgentOutput{}
+
+        mockClient.On("UpdateAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateAgentKnowledgeBase", func(t *testing.T) {
         input := &bedrockagent.UpdateAgentKnowledgeBaseInput{}
         output := &bedrockagent.UpdateAgentKnowledgeBaseOutput{}
@@ -905,19 +905,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateFlow", func(t *testing.T) {
-        input := &bedrockagent.UpdateFlowInput{}
-        output := &bedrockagent.UpdateFlowOutput{}
-
-        mockClient.On("UpdateFlow", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateFlow(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateFlowAlias", func(t *testing.T) {
         input := &bedrockagent.UpdateFlowAliasInput{}
         output := &bedrockagent.UpdateFlowAliasOutput{}
@@ -925,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateFlowAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateFlowAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateFlow", func(t *testing.T) {
+        input := &bedrockagent.UpdateFlowInput{}
+        output := &bedrockagent.UpdateFlowOutput{}
+
+        mockClient.On("UpdateFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

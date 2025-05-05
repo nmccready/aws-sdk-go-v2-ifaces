@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateSourceRepository", func(t *testing.T) {
-        input := &codecatalyst.CreateSourceRepositoryInput{}
-        output := &codecatalyst.CreateSourceRepositoryOutput{}
-
-        mockClient.On("CreateSourceRepository", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateSourceRepository(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateSourceRepositoryBranch", func(t *testing.T) {
         input := &codecatalyst.CreateSourceRepositoryBranchInput{}
         output := &codecatalyst.CreateSourceRepositoryBranchOutput{}
@@ -93,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateSourceRepositoryBranch", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateSourceRepositoryBranch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSourceRepository", func(t *testing.T) {
+        input := &codecatalyst.CreateSourceRepositoryInput{}
+        output := &codecatalyst.CreateSourceRepositoryOutput{}
+
+        mockClient.On("CreateSourceRepository", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSourceRepository(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSourceRepository", func(t *testing.T) {
-        input := &codecatalyst.GetSourceRepositoryInput{}
-        output := &codecatalyst.GetSourceRepositoryOutput{}
-
-        mockClient.On("GetSourceRepository", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSourceRepository(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSourceRepositoryCloneUrls", func(t *testing.T) {
         input := &codecatalyst.GetSourceRepositoryCloneUrlsInput{}
         output := &codecatalyst.GetSourceRepositoryCloneUrlsOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSourceRepositoryCloneUrls", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSourceRepositoryCloneUrls(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSourceRepository", func(t *testing.T) {
+        input := &codecatalyst.GetSourceRepositoryInput{}
+        output := &codecatalyst.GetSourceRepositoryOutput{}
+
+        mockClient.On("GetSourceRepository", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSourceRepository(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

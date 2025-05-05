@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateProject", func(t *testing.T) {
-        input := &evidently.UpdateProjectInput{}
-        output := &evidently.UpdateProjectOutput{}
-
-        mockClient.On("UpdateProject", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateProject(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateProjectDataDelivery", func(t *testing.T) {
         input := &evidently.UpdateProjectDataDeliveryInput{}
         output := &evidently.UpdateProjectDataDeliveryOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateProjectDataDelivery", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateProjectDataDelivery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProject", func(t *testing.T) {
+        input := &evidently.UpdateProjectInput{}
+        output := &evidently.UpdateProjectOutput{}
+
+        mockClient.On("UpdateProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

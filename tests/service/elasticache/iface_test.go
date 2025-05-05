@@ -593,19 +593,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeServerlessCacheSnapshots", func(t *testing.T) {
-        input := &elasticache.DescribeServerlessCacheSnapshotsInput{}
-        output := &elasticache.DescribeServerlessCacheSnapshotsOutput{}
-
-        mockClient.On("DescribeServerlessCacheSnapshots", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeServerlessCacheSnapshots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeServerlessCaches", func(t *testing.T) {
         input := &elasticache.DescribeServerlessCachesInput{}
         output := &elasticache.DescribeServerlessCachesOutput{}
@@ -613,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeServerlessCaches", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeServerlessCaches(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeServerlessCacheSnapshots", func(t *testing.T) {
+        input := &elasticache.DescribeServerlessCacheSnapshotsInput{}
+        output := &elasticache.DescribeServerlessCacheSnapshotsOutput{}
+
+        mockClient.On("DescribeServerlessCacheSnapshots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServerlessCacheSnapshots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

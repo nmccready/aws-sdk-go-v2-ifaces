@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCampaignState", func(t *testing.T) {
-        input := &connectcampaigns.GetCampaignStateInput{}
-        output := &connectcampaigns.GetCampaignStateOutput{}
-
-        mockClient.On("GetCampaignState", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCampaignState(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCampaignStateBatch", func(t *testing.T) {
         input := &connectcampaigns.GetCampaignStateBatchInput{}
         output := &connectcampaigns.GetCampaignStateBatchOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCampaignStateBatch", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCampaignStateBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCampaignState", func(t *testing.T) {
+        input := &connectcampaigns.GetCampaignStateInput{}
+        output := &connectcampaigns.GetCampaignStateOutput{}
+
+        mockClient.On("GetCampaignState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCampaignState(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

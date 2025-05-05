@@ -125,19 +125,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateDBCluster", func(t *testing.T) {
-        input := &neptune.CreateDBClusterInput{}
-        output := &neptune.CreateDBClusterOutput{}
-
-        mockClient.On("CreateDBCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateDBCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateDBClusterEndpoint", func(t *testing.T) {
         input := &neptune.CreateDBClusterEndpointInput{}
         output := &neptune.CreateDBClusterEndpointOutput{}
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDBClusterEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDBClusterEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDBCluster", func(t *testing.T) {
+        input := &neptune.CreateDBClusterInput{}
+        output := &neptune.CreateDBClusterOutput{}
+
+        mockClient.On("CreateDBCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDBCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDBCluster", func(t *testing.T) {
-        input := &neptune.DeleteDBClusterInput{}
-        output := &neptune.DeleteDBClusterOutput{}
-
-        mockClient.On("DeleteDBCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDBCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDBClusterEndpoint", func(t *testing.T) {
         input := &neptune.DeleteDBClusterEndpointInput{}
         output := &neptune.DeleteDBClusterEndpointOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDBClusterEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDBClusterEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDBCluster", func(t *testing.T) {
+        input := &neptune.DeleteDBClusterInput{}
+        output := &neptune.DeleteDBClusterOutput{}
+
+        mockClient.On("DeleteDBCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDBCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDBClusters", func(t *testing.T) {
+        input := &neptune.DescribeDBClustersInput{}
+        output := &neptune.DescribeDBClustersOutput{}
+
+        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDBClusterSnapshotAttributes", func(t *testing.T) {
         input := &neptune.DescribeDBClusterSnapshotAttributesInput{}
         output := &neptune.DescribeDBClusterSnapshotAttributesOutput{}
@@ -418,19 +431,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDBClusterSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDBClusterSnapshots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeDBClusters", func(t *testing.T) {
-        input := &neptune.DescribeDBClustersInput{}
-        output := &neptune.DescribeDBClustersOutput{}
-
-        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDBClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
-        input := &neptune.DescribeEventSubscriptionsInput{}
-        output := &neptune.DescribeEventSubscriptionsOutput{}
-
-        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &neptune.DescribeEventsInput{}
         output := &neptune.DescribeEventsOutput{}
@@ -561,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
+        input := &neptune.DescribeEventSubscriptionsInput{}
+        output := &neptune.DescribeEventSubscriptionsOutput{}
+
+        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyDBCluster", func(t *testing.T) {
-        input := &neptune.ModifyDBClusterInput{}
-        output := &neptune.ModifyDBClusterOutput{}
-
-        mockClient.On("ModifyDBCluster", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyDBCluster(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyDBClusterEndpoint", func(t *testing.T) {
         input := &neptune.ModifyDBClusterEndpointInput{}
         output := &neptune.ModifyDBClusterEndpointOutput{}
@@ -678,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyDBClusterEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyDBClusterEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyDBCluster", func(t *testing.T) {
+        input := &neptune.ModifyDBClusterInput{}
+        output := &neptune.ModifyDBClusterOutput{}
+
+        mockClient.On("ModifyDBCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyDBCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

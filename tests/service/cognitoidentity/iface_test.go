@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetId", func(t *testing.T) {
-        input := &cognitoidentity.GetIdInput{}
-        output := &cognitoidentity.GetIdOutput{}
-
-        mockClient.On("GetId", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetId(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetIdentityPoolRoles", func(t *testing.T) {
         input := &cognitoidentity.GetIdentityPoolRolesInput{}
         output := &cognitoidentity.GetIdentityPoolRolesOutput{}
@@ -138,13 +125,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetOpenIdToken", func(t *testing.T) {
-        input := &cognitoidentity.GetOpenIdTokenInput{}
-        output := &cognitoidentity.GetOpenIdTokenOutput{}
+    t.Run("TestGetId", func(t *testing.T) {
+        input := &cognitoidentity.GetIdInput{}
+        output := &cognitoidentity.GetIdOutput{}
 
-        mockClient.On("GetOpenIdToken", ctx, input).Return(output, nil)
+        mockClient.On("GetId", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetOpenIdToken(ctx, input)
+        result, err := mockClient.GetId(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOpenIdTokenForDeveloperIdentity", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOpenIdTokenForDeveloperIdentity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetOpenIdToken", func(t *testing.T) {
+        input := &cognitoidentity.GetOpenIdTokenInput{}
+        output := &cognitoidentity.GetOpenIdTokenOutput{}
+
+        mockClient.On("GetOpenIdToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOpenIdToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

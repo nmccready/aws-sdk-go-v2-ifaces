@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeApplicationVersions", func(t *testing.T) {
-        input := &elasticbeanstalk.DescribeApplicationVersionsInput{}
-        output := &elasticbeanstalk.DescribeApplicationVersionsOutput{}
-
-        mockClient.On("DescribeApplicationVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeApplicationVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeApplications", func(t *testing.T) {
         input := &elasticbeanstalk.DescribeApplicationsInput{}
         output := &elasticbeanstalk.DescribeApplicationsOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApplicationVersions", func(t *testing.T) {
+        input := &elasticbeanstalk.DescribeApplicationVersionsInput{}
+        output := &elasticbeanstalk.DescribeApplicationVersionsOutput{}
+
+        mockClient.On("DescribeApplicationVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplicationVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

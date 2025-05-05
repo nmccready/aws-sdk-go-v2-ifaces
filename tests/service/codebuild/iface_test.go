@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBuildBatches", func(t *testing.T) {
-        input := &codebuild.ListBuildBatchesInput{}
-        output := &codebuild.ListBuildBatchesOutput{}
-
-        mockClient.On("ListBuildBatches", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListBuildBatches(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListBuildBatchesForProject", func(t *testing.T) {
         input := &codebuild.ListBuildBatchesForProjectInput{}
         output := &codebuild.ListBuildBatchesForProjectOutput{}
@@ -385,13 +372,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBuilds", func(t *testing.T) {
-        input := &codebuild.ListBuildsInput{}
-        output := &codebuild.ListBuildsOutput{}
+    t.Run("TestListBuildBatches", func(t *testing.T) {
+        input := &codebuild.ListBuildBatchesInput{}
+        output := &codebuild.ListBuildBatchesOutput{}
 
-        mockClient.On("ListBuilds", ctx, input).Return(output, nil)
+        mockClient.On("ListBuildBatches", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListBuilds(ctx, input)
+        result, err := mockClient.ListBuildBatches(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBuildsForProject", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBuildsForProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBuilds", func(t *testing.T) {
+        input := &codebuild.ListBuildsInput{}
+        output := &codebuild.ListBuildsOutput{}
+
+        mockClient.On("ListBuilds", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBuilds(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReports", func(t *testing.T) {
-        input := &codebuild.ListReportsInput{}
-        output := &codebuild.ListReportsOutput{}
-
-        mockClient.On("ListReports", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListReports(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListReportsForReportGroup", func(t *testing.T) {
         input := &codebuild.ListReportsForReportGroupInput{}
         output := &codebuild.ListReportsForReportGroupOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReportsForReportGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReportsForReportGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReports", func(t *testing.T) {
+        input := &codebuild.ListReportsInput{}
+        output := &codebuild.ListReportsOutput{}
+
+        mockClient.On("ListReports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestRetryBuild", func(t *testing.T) {
-        input := &codebuild.RetryBuildInput{}
-        output := &codebuild.RetryBuildOutput{}
-
-        mockClient.On("RetryBuild", ctx, input).Return(output, nil)
-
-        result, err := mockClient.RetryBuild(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestRetryBuildBatch", func(t *testing.T) {
         input := &codebuild.RetryBuildBatchInput{}
         output := &codebuild.RetryBuildBatchOutput{}
@@ -567,13 +554,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartBuild", func(t *testing.T) {
-        input := &codebuild.StartBuildInput{}
-        output := &codebuild.StartBuildOutput{}
+    t.Run("TestRetryBuild", func(t *testing.T) {
+        input := &codebuild.RetryBuildInput{}
+        output := &codebuild.RetryBuildOutput{}
 
-        mockClient.On("StartBuild", ctx, input).Return(output, nil)
+        mockClient.On("RetryBuild", ctx, input).Return(output, nil)
 
-        result, err := mockClient.StartBuild(ctx, input)
+        result, err := mockClient.RetryBuild(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,13 +580,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStopBuild", func(t *testing.T) {
-        input := &codebuild.StopBuildInput{}
-        output := &codebuild.StopBuildOutput{}
+    t.Run("TestStartBuild", func(t *testing.T) {
+        input := &codebuild.StartBuildInput{}
+        output := &codebuild.StartBuildOutput{}
 
-        mockClient.On("StopBuild", ctx, input).Return(output, nil)
+        mockClient.On("StartBuild", ctx, input).Return(output, nil)
 
-        result, err := mockClient.StopBuild(ctx, input)
+        result, err := mockClient.StartBuild(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -613,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopBuildBatch", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopBuildBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopBuild", func(t *testing.T) {
+        input := &codebuild.StopBuildInput{}
+        output := &codebuild.StopBuildOutput{}
+
+        mockClient.On("StopBuild", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopBuild(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

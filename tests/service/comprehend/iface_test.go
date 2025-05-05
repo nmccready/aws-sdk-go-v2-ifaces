@@ -619,19 +619,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDocumentClassifierSummaries", func(t *testing.T) {
-        input := &comprehend.ListDocumentClassifierSummariesInput{}
-        output := &comprehend.ListDocumentClassifierSummariesOutput{}
-
-        mockClient.On("ListDocumentClassifierSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDocumentClassifierSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDocumentClassifiers", func(t *testing.T) {
         input := &comprehend.ListDocumentClassifiersInput{}
         output := &comprehend.ListDocumentClassifiersOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDocumentClassifiers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDocumentClassifiers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDocumentClassifierSummaries", func(t *testing.T) {
+        input := &comprehend.ListDocumentClassifierSummariesInput{}
+        output := &comprehend.ListDocumentClassifierSummariesOutput{}
+
+        mockClient.On("ListDocumentClassifierSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDocumentClassifierSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,19 +684,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEntityRecognizerSummaries", func(t *testing.T) {
-        input := &comprehend.ListEntityRecognizerSummariesInput{}
-        output := &comprehend.ListEntityRecognizerSummariesOutput{}
-
-        mockClient.On("ListEntityRecognizerSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListEntityRecognizerSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListEntityRecognizers", func(t *testing.T) {
         input := &comprehend.ListEntityRecognizersInput{}
         output := &comprehend.ListEntityRecognizersOutput{}
@@ -704,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEntityRecognizers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEntityRecognizers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEntityRecognizerSummaries", func(t *testing.T) {
+        input := &comprehend.ListEntityRecognizerSummariesInput{}
+        output := &comprehend.ListEntityRecognizerSummariesOutput{}
+
+        mockClient.On("ListEntityRecognizerSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEntityRecognizerSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

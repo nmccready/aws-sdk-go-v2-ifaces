@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServices", func(t *testing.T) {
-        input := &apprunner.ListServicesInput{}
-        output := &apprunner.ListServicesOutput{}
-
-        mockClient.On("ListServices", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServices(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListServicesForAutoScalingConfiguration", func(t *testing.T) {
         input := &apprunner.ListServicesForAutoScalingConfigurationInput{}
         output := &apprunner.ListServicesForAutoScalingConfigurationOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServicesForAutoScalingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServicesForAutoScalingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServices", func(t *testing.T) {
+        input := &apprunner.ListServicesInput{}
+        output := &apprunner.ListServicesOutput{}
+
+        mockClient.On("ListServices", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServices(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

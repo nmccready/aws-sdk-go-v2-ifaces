@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteWebApp", func(t *testing.T) {
-        input := &transfer.DeleteWebAppInput{}
-        output := &transfer.DeleteWebAppOutput{}
-
-        mockClient.On("DeleteWebApp", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteWebApp(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteWebAppCustomization", func(t *testing.T) {
         input := &transfer.DeleteWebAppCustomizationInput{}
         output := &transfer.DeleteWebAppCustomizationOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWebAppCustomization", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWebAppCustomization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWebApp", func(t *testing.T) {
+        input := &transfer.DeleteWebAppInput{}
+        output := &transfer.DeleteWebAppOutput{}
+
+        mockClient.On("DeleteWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeWebApp", func(t *testing.T) {
-        input := &transfer.DescribeWebAppInput{}
-        output := &transfer.DescribeWebAppOutput{}
-
-        mockClient.On("DescribeWebApp", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeWebApp(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeWebAppCustomization", func(t *testing.T) {
         input := &transfer.DescribeWebAppCustomizationInput{}
         output := &transfer.DescribeWebAppCustomizationOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWebAppCustomization", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWebAppCustomization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWebApp", func(t *testing.T) {
+        input := &transfer.DescribeWebAppInput{}
+        output := &transfer.DescribeWebAppOutput{}
+
+        mockClient.On("DescribeWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWebApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,19 +905,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateWebApp", func(t *testing.T) {
-        input := &transfer.UpdateWebAppInput{}
-        output := &transfer.UpdateWebAppOutput{}
-
-        mockClient.On("UpdateWebApp", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateWebApp(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateWebAppCustomization", func(t *testing.T) {
         input := &transfer.UpdateWebAppCustomizationInput{}
         output := &transfer.UpdateWebAppCustomizationOutput{}
@@ -925,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateWebAppCustomization", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateWebAppCustomization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWebApp", func(t *testing.T) {
+        input := &transfer.UpdateWebAppInput{}
+        output := &transfer.UpdateWebAppOutput{}
+
+        mockClient.On("UpdateWebApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWebApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

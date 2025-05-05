@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteDelivery", func(t *testing.T) {
-        input := &cloudwatchlogs.DeleteDeliveryInput{}
-        output := &cloudwatchlogs.DeleteDeliveryOutput{}
-
-        mockClient.On("DeleteDelivery", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteDelivery(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteDeliveryDestination", func(t *testing.T) {
         input := &cloudwatchlogs.DeleteDeliveryDestinationInput{}
         output := &cloudwatchlogs.DeleteDeliveryDestinationOutput{}
@@ -184,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDeliveryDestinationPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDeliveryDestinationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDelivery", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteDeliveryInput{}
+        output := &cloudwatchlogs.DeleteDeliveryOutput{}
+
+        mockClient.On("DeleteDelivery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDelivery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDelivery", func(t *testing.T) {
-        input := &cloudwatchlogs.GetDeliveryInput{}
-        output := &cloudwatchlogs.GetDeliveryOutput{}
-
-        mockClient.On("GetDelivery", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDelivery(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDeliveryDestination", func(t *testing.T) {
         input := &cloudwatchlogs.GetDeliveryDestinationInput{}
         output := &cloudwatchlogs.GetDeliveryDestinationOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDeliveryDestinationPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDeliveryDestinationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDelivery", func(t *testing.T) {
+        input := &cloudwatchlogs.GetDeliveryInput{}
+        output := &cloudwatchlogs.GetDeliveryOutput{}
+
+        mockClient.On("GetDelivery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDelivery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

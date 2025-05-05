@@ -463,13 +463,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFindingStatistics", func(t *testing.T) {
-        input := &macie2.GetFindingStatisticsInput{}
-        output := &macie2.GetFindingStatisticsOutput{}
+    t.Run("TestGetFindingsFilter", func(t *testing.T) {
+        input := &macie2.GetFindingsFilterInput{}
+        output := &macie2.GetFindingsFilterOutput{}
 
-        mockClient.On("GetFindingStatistics", ctx, input).Return(output, nil)
+        mockClient.On("GetFindingsFilter", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetFindingStatistics(ctx, input)
+        result, err := mockClient.GetFindingsFilter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,19 +489,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFindingsFilter", func(t *testing.T) {
-        input := &macie2.GetFindingsFilterInput{}
-        output := &macie2.GetFindingsFilterOutput{}
-
-        mockClient.On("GetFindingsFilter", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFindingsFilter(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetFindingsPublicationConfiguration", func(t *testing.T) {
         input := &macie2.GetFindingsPublicationConfigurationInput{}
         output := &macie2.GetFindingsPublicationConfigurationOutput{}
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFindingsPublicationConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFindingsPublicationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFindingStatistics", func(t *testing.T) {
+        input := &macie2.GetFindingStatisticsInput{}
+        output := &macie2.GetFindingStatisticsOutput{}
+
+        mockClient.On("GetFindingStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindingStatistics(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,19 +593,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSensitiveDataOccurrences", func(t *testing.T) {
-        input := &macie2.GetSensitiveDataOccurrencesInput{}
-        output := &macie2.GetSensitiveDataOccurrencesOutput{}
-
-        mockClient.On("GetSensitiveDataOccurrences", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSensitiveDataOccurrences(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSensitiveDataOccurrencesAvailability", func(t *testing.T) {
         input := &macie2.GetSensitiveDataOccurrencesAvailabilityInput{}
         output := &macie2.GetSensitiveDataOccurrencesAvailabilityOutput{}
@@ -613,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSensitiveDataOccurrencesAvailability", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSensitiveDataOccurrencesAvailability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSensitiveDataOccurrences", func(t *testing.T) {
+        input := &macie2.GetSensitiveDataOccurrencesInput{}
+        output := &macie2.GetSensitiveDataOccurrencesOutput{}
+
+        mockClient.On("GetSensitiveDataOccurrences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSensitiveDataOccurrences(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,19 +723,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFindings", func(t *testing.T) {
-        input := &macie2.ListFindingsInput{}
-        output := &macie2.ListFindingsOutput{}
-
-        mockClient.On("ListFindings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListFindings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListFindingsFilters", func(t *testing.T) {
         input := &macie2.ListFindingsFiltersInput{}
         output := &macie2.ListFindingsFiltersOutput{}
@@ -743,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFindingsFilters", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFindingsFilters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFindings", func(t *testing.T) {
+        input := &macie2.ListFindingsInput{}
+        output := &macie2.ListFindingsOutput{}
+
+        mockClient.On("ListFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFindings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1035,19 +1035,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateResourceProfile", func(t *testing.T) {
-        input := &macie2.UpdateResourceProfileInput{}
-        output := &macie2.UpdateResourceProfileOutput{}
-
-        mockClient.On("UpdateResourceProfile", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateResourceProfile(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateResourceProfileDetections", func(t *testing.T) {
         input := &macie2.UpdateResourceProfileDetectionsInput{}
         output := &macie2.UpdateResourceProfileDetectionsOutput{}
@@ -1055,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateResourceProfileDetections", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateResourceProfileDetections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResourceProfile", func(t *testing.T) {
+        input := &macie2.UpdateResourceProfileInput{}
+        output := &macie2.UpdateResourceProfileOutput{}
+
+        mockClient.On("UpdateResourceProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResourceProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

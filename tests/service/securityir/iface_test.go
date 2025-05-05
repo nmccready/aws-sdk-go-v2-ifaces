@@ -73,19 +73,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateCase", func(t *testing.T) {
-        input := &securityir.CreateCaseInput{}
-        output := &securityir.CreateCaseOutput{}
-
-        mockClient.On("CreateCase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateCase(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateCaseComment", func(t *testing.T) {
         input := &securityir.CreateCaseCommentInput{}
         output := &securityir.CreateCaseCommentOutput{}
@@ -99,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCase", func(t *testing.T) {
+        input := &securityir.CreateCaseInput{}
+        output := &securityir.CreateCaseOutput{}
+
+        mockClient.On("CreateCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMembership", func(t *testing.T) {
         input := &securityir.CreateMembershipInput{}
         output := &securityir.CreateMembershipOutput{}
@@ -106,19 +106,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateMembership", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateMembership(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetCase", func(t *testing.T) {
-        input := &securityir.GetCaseInput{}
-        output := &securityir.GetCaseOutput{}
-
-        mockClient.On("GetCase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCaseAttachmentUploadUrl", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCaseAttachmentUploadUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCase", func(t *testing.T) {
+        input := &securityir.GetCaseInput{}
+        output := &securityir.GetCaseOutput{}
+
+        mockClient.On("GetCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateCase", func(t *testing.T) {
-        input := &securityir.UpdateCaseInput{}
-        output := &securityir.UpdateCaseOutput{}
-
-        mockClient.On("UpdateCase", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateCase(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateCaseComment", func(t *testing.T) {
         input := &securityir.UpdateCaseCommentInput{}
         output := &securityir.UpdateCaseCommentOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCaseComment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCaseComment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCase", func(t *testing.T) {
+        input := &securityir.UpdateCaseInput{}
+        output := &securityir.UpdateCaseOutput{}
+
+        mockClient.On("UpdateCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
