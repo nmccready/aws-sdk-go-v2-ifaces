@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInvocations", func(t *testing.T) {
-        input := &bedrockagentruntime.ListInvocationsInput{}
-        output := &bedrockagentruntime.ListInvocationsOutput{}
-
-        mockClient.On("ListInvocations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInvocations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInvocationSteps", func(t *testing.T) {
         input := &bedrockagentruntime.ListInvocationStepsInput{}
         output := &bedrockagentruntime.ListInvocationStepsOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInvocationSteps", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInvocationSteps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInvocations", func(t *testing.T) {
+        input := &bedrockagentruntime.ListInvocationsInput{}
+        output := &bedrockagentruntime.ListInvocationsOutput{}
+
+        mockClient.On("ListInvocations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvocations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRetrieve", func(t *testing.T) {
+        input := &bedrockagentruntime.RetrieveInput{}
+        output := &bedrockagentruntime.RetrieveOutput{}
+
+        mockClient.On("Retrieve", ctx, input).Return(output, nil)
+
+        result, err := mockClient.Retrieve(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRetrieveAndGenerate", func(t *testing.T) {
         input := &bedrockagentruntime.RetrieveAndGenerateInput{}
         output := &bedrockagentruntime.RetrieveAndGenerateOutput{}
@@ -353,19 +366,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("RetrieveAndGenerateStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.RetrieveAndGenerateStream(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestRetrieve", func(t *testing.T) {
-        input := &bedrockagentruntime.RetrieveInput{}
-        output := &bedrockagentruntime.RetrieveOutput{}
-
-        mockClient.On("Retrieve", ctx, input).Return(output, nil)
-
-        result, err := mockClient.Retrieve(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeWorkspaceConfiguration", func(t *testing.T) {
-        input := &amp.DescribeWorkspaceConfigurationInput{}
-        output := &amp.DescribeWorkspaceConfigurationOutput{}
-
-        mockClient.On("DescribeWorkspaceConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeWorkspaceConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeWorkspace", func(t *testing.T) {
         input := &amp.DescribeWorkspaceInput{}
         output := &amp.DescribeWorkspaceOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWorkspace", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWorkspaceConfiguration", func(t *testing.T) {
+        input := &amp.DescribeWorkspaceConfigurationInput{}
+        output := &amp.DescribeWorkspaceConfigurationOutput{}
+
+        mockClient.On("DescribeWorkspaceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorkspaceConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStreamSessionsByAccount", func(t *testing.T) {
-        input := &gameliftstreams.ListStreamSessionsByAccountInput{}
-        output := &gameliftstreams.ListStreamSessionsByAccountOutput{}
-
-        mockClient.On("ListStreamSessionsByAccount", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStreamSessionsByAccount(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStreamSessions", func(t *testing.T) {
         input := &gameliftstreams.ListStreamSessionsInput{}
         output := &gameliftstreams.ListStreamSessionsOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStreamSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStreamSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStreamSessionsByAccount", func(t *testing.T) {
+        input := &gameliftstreams.ListStreamSessionsByAccountInput{}
+        output := &gameliftstreams.ListStreamSessionsByAccountOutput{}
+
+        mockClient.On("ListStreamSessionsByAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStreamSessionsByAccount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateTableBucket", func(t *testing.T) {
-        input := &s3tables.CreateTableBucketInput{}
-        output := &s3tables.CreateTableBucketOutput{}
-
-        mockClient.On("CreateTableBucket", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateTableBucket(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateTable", func(t *testing.T) {
         input := &s3tables.CreateTableInput{}
         output := &s3tables.CreateTableOutput{}
@@ -67,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTableBucket", func(t *testing.T) {
+        input := &s3tables.CreateTableBucketInput{}
+        output := &s3tables.CreateTableBucketOutput{}
+
+        mockClient.On("CreateTableBucket", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTableBucket(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,13 +86,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteTableBucketEncryption", func(t *testing.T) {
-        input := &s3tables.DeleteTableBucketEncryptionInput{}
-        output := &s3tables.DeleteTableBucketEncryptionOutput{}
+    t.Run("TestDeleteTable", func(t *testing.T) {
+        input := &s3tables.DeleteTableInput{}
+        output := &s3tables.DeleteTableOutput{}
 
-        mockClient.On("DeleteTableBucketEncryption", ctx, input).Return(output, nil)
+        mockClient.On("DeleteTable", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeleteTableBucketEncryption(ctx, input)
+        result, err := mockClient.DeleteTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTableBucketEncryption", func(t *testing.T) {
+        input := &s3tables.DeleteTableBucketEncryptionInput{}
+        output := &s3tables.DeleteTableBucketEncryptionOutput{}
+
+        mockClient.On("DeleteTableBucketEncryption", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTableBucketEncryption(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTableBucketPolicy", func(t *testing.T) {
         input := &s3tables.DeleteTableBucketPolicyInput{}
         output := &s3tables.DeleteTableBucketPolicyOutput{}
@@ -119,19 +132,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTableBucketPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTableBucketPolicy(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteTable", func(t *testing.T) {
-        input := &s3tables.DeleteTableInput{}
-        output := &s3tables.DeleteTableOutput{}
-
-        mockClient.On("DeleteTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,13 +164,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetTableBucketEncryption", func(t *testing.T) {
-        input := &s3tables.GetTableBucketEncryptionInput{}
-        output := &s3tables.GetTableBucketEncryptionOutput{}
+    t.Run("TestGetTable", func(t *testing.T) {
+        input := &s3tables.GetTableInput{}
+        output := &s3tables.GetTableOutput{}
 
-        mockClient.On("GetTableBucketEncryption", ctx, input).Return(output, nil)
+        mockClient.On("GetTable", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetTableBucketEncryption(ctx, input)
+        result, err := mockClient.GetTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTableBucket", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTableBucket(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableBucketEncryption", func(t *testing.T) {
+        input := &s3tables.GetTableBucketEncryptionInput{}
+        output := &s3tables.GetTableBucketEncryptionOutput{}
+
+        mockClient.On("GetTableBucketEncryption", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableBucketEncryption(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -223,19 +236,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTableEncryption", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTableEncryption(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetTable", func(t *testing.T) {
-        input := &s3tables.GetTableInput{}
-        output := &s3tables.GetTableOutput{}
-
-        mockClient.On("GetTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -39,8 +39,8 @@ type IClient interface {
  DescribeLocationObjectStorage(ctx context.Context, params *DescribeLocationObjectStorageInput, optFns ...func(*Options)) (*DescribeLocationObjectStorageOutput, error) 
  DescribeLocationS3(ctx context.Context, params *DescribeLocationS3Input, optFns ...func(*Options)) (*DescribeLocationS3Output, error) 
  DescribeLocationSmb(ctx context.Context, params *DescribeLocationSmbInput, optFns ...func(*Options)) (*DescribeLocationSmbOutput, error) 
- DescribeTaskExecution(ctx context.Context, params *DescribeTaskExecutionInput, optFns ...func(*Options)) (*DescribeTaskExecutionOutput, error) 
  DescribeTask(ctx context.Context, params *DescribeTaskInput, optFns ...func(*Options)) (*DescribeTaskOutput, error) 
+ DescribeTaskExecution(ctx context.Context, params *DescribeTaskExecutionInput, optFns ...func(*Options)) (*DescribeTaskExecutionOutput, error) 
  ListAgents(ctx context.Context, params *ListAgentsInput, optFns ...func(*Options)) (*ListAgentsOutput, error) 
  ListLocations(ctx context.Context, params *ListLocationsInput, optFns ...func(*Options)) (*ListLocationsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
@@ -61,6 +61,6 @@ type IClient interface {
  UpdateLocationObjectStorage(ctx context.Context, params *UpdateLocationObjectStorageInput, optFns ...func(*Options)) (*UpdateLocationObjectStorageOutput, error) 
  UpdateLocationS3(ctx context.Context, params *UpdateLocationS3Input, optFns ...func(*Options)) (*UpdateLocationS3Output, error) 
  UpdateLocationSmb(ctx context.Context, params *UpdateLocationSmbInput, optFns ...func(*Options)) (*UpdateLocationSmbOutput, error) 
- UpdateTaskExecution(ctx context.Context, params *UpdateTaskExecutionInput, optFns ...func(*Options)) (*UpdateTaskExecutionOutput, error) 
  UpdateTask(ctx context.Context, params *UpdateTaskInput, optFns ...func(*Options)) (*UpdateTaskOutput, error) 
+ UpdateTaskExecution(ctx context.Context, params *UpdateTaskExecutionInput, optFns ...func(*Options)) (*UpdateTaskExecutionOutput, error) 
 }

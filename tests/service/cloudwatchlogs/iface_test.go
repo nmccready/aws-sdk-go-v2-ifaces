@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListLogGroupsForQuery", func(t *testing.T) {
-        input := &cloudwatchlogs.ListLogGroupsForQueryInput{}
-        output := &cloudwatchlogs.ListLogGroupsForQueryOutput{}
-
-        mockClient.On("ListLogGroupsForQuery", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLogGroupsForQuery(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListLogGroups", func(t *testing.T) {
         input := &cloudwatchlogs.ListLogGroupsInput{}
         output := &cloudwatchlogs.ListLogGroupsOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLogGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLogGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLogGroupsForQuery", func(t *testing.T) {
+        input := &cloudwatchlogs.ListLogGroupsForQueryInput{}
+        output := &cloudwatchlogs.ListLogGroupsForQueryOutput{}
+
+        mockClient.On("ListLogGroupsForQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLogGroupsForQuery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -177,19 +177,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDataIntegrationFlowExecution", func(t *testing.T) {
-        input := &supplychain.GetDataIntegrationFlowExecutionInput{}
-        output := &supplychain.GetDataIntegrationFlowExecutionOutput{}
-
-        mockClient.On("GetDataIntegrationFlowExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDataIntegrationFlowExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDataIntegrationFlow", func(t *testing.T) {
         input := &supplychain.GetDataIntegrationFlowInput{}
         output := &supplychain.GetDataIntegrationFlowOutput{}
@@ -197,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataIntegrationFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataIntegrationFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataIntegrationFlowExecution", func(t *testing.T) {
+        input := &supplychain.GetDataIntegrationFlowExecutionInput{}
+        output := &supplychain.GetDataIntegrationFlowExecutionOutput{}
+
+        mockClient.On("GetDataIntegrationFlowExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataIntegrationFlowExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

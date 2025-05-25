@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateInvalidationForDistributionTenant", func(t *testing.T) {
-        input := &cloudfront.CreateInvalidationForDistributionTenantInput{}
-        output := &cloudfront.CreateInvalidationForDistributionTenantOutput{}
-
-        mockClient.On("CreateInvalidationForDistributionTenant", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateInvalidationForDistributionTenant(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateInvalidation", func(t *testing.T) {
         input := &cloudfront.CreateInvalidationInput{}
         output := &cloudfront.CreateInvalidationOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateInvalidation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateInvalidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateInvalidationForDistributionTenant", func(t *testing.T) {
+        input := &cloudfront.CreateInvalidationForDistributionTenantInput{}
+        output := &cloudfront.CreateInvalidationForDistributionTenantOutput{}
+
+        mockClient.On("CreateInvalidationForDistributionTenant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInvalidationForDistributionTenant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,19 +723,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCachePolicyConfig", func(t *testing.T) {
-        input := &cloudfront.GetCachePolicyConfigInput{}
-        output := &cloudfront.GetCachePolicyConfigOutput{}
-
-        mockClient.On("GetCachePolicyConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCachePolicyConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCachePolicy", func(t *testing.T) {
         input := &cloudfront.GetCachePolicyInput{}
         output := &cloudfront.GetCachePolicyOutput{}
@@ -749,13 +736,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCloudFrontOriginAccessIdentityConfig", func(t *testing.T) {
-        input := &cloudfront.GetCloudFrontOriginAccessIdentityConfigInput{}
-        output := &cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput{}
+    t.Run("TestGetCachePolicyConfig", func(t *testing.T) {
+        input := &cloudfront.GetCachePolicyConfigInput{}
+        output := &cloudfront.GetCachePolicyConfigOutput{}
 
-        mockClient.On("GetCloudFrontOriginAccessIdentityConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetCachePolicyConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetCloudFrontOriginAccessIdentityConfig(ctx, input)
+        result, err := mockClient.GetCachePolicyConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,13 +762,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConnectionGroupByRoutingEndpoint", func(t *testing.T) {
-        input := &cloudfront.GetConnectionGroupByRoutingEndpointInput{}
-        output := &cloudfront.GetConnectionGroupByRoutingEndpointOutput{}
+    t.Run("TestGetCloudFrontOriginAccessIdentityConfig", func(t *testing.T) {
+        input := &cloudfront.GetCloudFrontOriginAccessIdentityConfigInput{}
+        output := &cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput{}
 
-        mockClient.On("GetConnectionGroupByRoutingEndpoint", ctx, input).Return(output, nil)
+        mockClient.On("GetCloudFrontOriginAccessIdentityConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetConnectionGroupByRoutingEndpoint(ctx, input)
+        result, err := mockClient.GetCloudFrontOriginAccessIdentityConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,13 +788,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetContinuousDeploymentPolicyConfig", func(t *testing.T) {
-        input := &cloudfront.GetContinuousDeploymentPolicyConfigInput{}
-        output := &cloudfront.GetContinuousDeploymentPolicyConfigOutput{}
+    t.Run("TestGetConnectionGroupByRoutingEndpoint", func(t *testing.T) {
+        input := &cloudfront.GetConnectionGroupByRoutingEndpointInput{}
+        output := &cloudfront.GetConnectionGroupByRoutingEndpointOutput{}
 
-        mockClient.On("GetContinuousDeploymentPolicyConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetConnectionGroupByRoutingEndpoint", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetContinuousDeploymentPolicyConfig(ctx, input)
+        result, err := mockClient.GetConnectionGroupByRoutingEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,13 +814,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDistributionConfig", func(t *testing.T) {
-        input := &cloudfront.GetDistributionConfigInput{}
-        output := &cloudfront.GetDistributionConfigOutput{}
+    t.Run("TestGetContinuousDeploymentPolicyConfig", func(t *testing.T) {
+        input := &cloudfront.GetContinuousDeploymentPolicyConfigInput{}
+        output := &cloudfront.GetContinuousDeploymentPolicyConfigOutput{}
 
-        mockClient.On("GetDistributionConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetContinuousDeploymentPolicyConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetDistributionConfig(ctx, input)
+        result, err := mockClient.GetContinuousDeploymentPolicyConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,13 +840,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDistributionTenantByDomain", func(t *testing.T) {
-        input := &cloudfront.GetDistributionTenantByDomainInput{}
-        output := &cloudfront.GetDistributionTenantByDomainOutput{}
+    t.Run("TestGetDistributionConfig", func(t *testing.T) {
+        input := &cloudfront.GetDistributionConfigInput{}
+        output := &cloudfront.GetDistributionConfigOutput{}
 
-        mockClient.On("GetDistributionTenantByDomain", ctx, input).Return(output, nil)
+        mockClient.On("GetDistributionConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetDistributionTenantByDomain(ctx, input)
+        result, err := mockClient.GetDistributionConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -879,13 +866,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFieldLevelEncryptionConfig", func(t *testing.T) {
-        input := &cloudfront.GetFieldLevelEncryptionConfigInput{}
-        output := &cloudfront.GetFieldLevelEncryptionConfigOutput{}
+    t.Run("TestGetDistributionTenantByDomain", func(t *testing.T) {
+        input := &cloudfront.GetDistributionTenantByDomainInput{}
+        output := &cloudfront.GetDistributionTenantByDomainOutput{}
 
-        mockClient.On("GetFieldLevelEncryptionConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetDistributionTenantByDomain", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetFieldLevelEncryptionConfig(ctx, input)
+        result, err := mockClient.GetDistributionTenantByDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,13 +892,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFieldLevelEncryptionProfileConfig", func(t *testing.T) {
-        input := &cloudfront.GetFieldLevelEncryptionProfileConfigInput{}
-        output := &cloudfront.GetFieldLevelEncryptionProfileConfigOutput{}
+    t.Run("TestGetFieldLevelEncryptionConfig", func(t *testing.T) {
+        input := &cloudfront.GetFieldLevelEncryptionConfigInput{}
+        output := &cloudfront.GetFieldLevelEncryptionConfigOutput{}
 
-        mockClient.On("GetFieldLevelEncryptionProfileConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetFieldLevelEncryptionConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetFieldLevelEncryptionProfileConfig(ctx, input)
+        result, err := mockClient.GetFieldLevelEncryptionConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -931,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFieldLevelEncryptionProfileConfig", func(t *testing.T) {
+        input := &cloudfront.GetFieldLevelEncryptionProfileConfigInput{}
+        output := &cloudfront.GetFieldLevelEncryptionProfileConfigOutput{}
+
+        mockClient.On("GetFieldLevelEncryptionProfileConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFieldLevelEncryptionProfileConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFunction", func(t *testing.T) {
         input := &cloudfront.GetFunctionInput{}
         output := &cloudfront.GetFunctionOutput{}
@@ -938,19 +938,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFunction", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFunction(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetInvalidationForDistributionTenant", func(t *testing.T) {
-        input := &cloudfront.GetInvalidationForDistributionTenantInput{}
-        output := &cloudfront.GetInvalidationForDistributionTenantOutput{}
-
-        mockClient.On("GetInvalidationForDistributionTenant", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetInvalidationForDistributionTenant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -970,13 +957,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetKeyGroupConfig", func(t *testing.T) {
-        input := &cloudfront.GetKeyGroupConfigInput{}
-        output := &cloudfront.GetKeyGroupConfigOutput{}
+    t.Run("TestGetInvalidationForDistributionTenant", func(t *testing.T) {
+        input := &cloudfront.GetInvalidationForDistributionTenantInput{}
+        output := &cloudfront.GetInvalidationForDistributionTenantOutput{}
 
-        mockClient.On("GetKeyGroupConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetInvalidationForDistributionTenant", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetKeyGroupConfig(ctx, input)
+        result, err := mockClient.GetInvalidationForDistributionTenant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -990,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetKeyGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetKeyGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetKeyGroupConfig", func(t *testing.T) {
+        input := &cloudfront.GetKeyGroupConfigInput{}
+        output := &cloudfront.GetKeyGroupConfigOutput{}
+
+        mockClient.On("GetKeyGroupConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetKeyGroupConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,19 +1022,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetOriginAccessControlConfig", func(t *testing.T) {
-        input := &cloudfront.GetOriginAccessControlConfigInput{}
-        output := &cloudfront.GetOriginAccessControlConfigOutput{}
-
-        mockClient.On("GetOriginAccessControlConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetOriginAccessControlConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetOriginAccessControl", func(t *testing.T) {
         input := &cloudfront.GetOriginAccessControlInput{}
         output := &cloudfront.GetOriginAccessControlOutput{}
@@ -1048,13 +1035,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetOriginRequestPolicyConfig", func(t *testing.T) {
-        input := &cloudfront.GetOriginRequestPolicyConfigInput{}
-        output := &cloudfront.GetOriginRequestPolicyConfigOutput{}
+    t.Run("TestGetOriginAccessControlConfig", func(t *testing.T) {
+        input := &cloudfront.GetOriginAccessControlConfigInput{}
+        output := &cloudfront.GetOriginAccessControlConfigOutput{}
 
-        mockClient.On("GetOriginRequestPolicyConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetOriginAccessControlConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetOriginRequestPolicyConfig(ctx, input)
+        result, err := mockClient.GetOriginAccessControlConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1074,13 +1061,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetPublicKeyConfig", func(t *testing.T) {
-        input := &cloudfront.GetPublicKeyConfigInput{}
-        output := &cloudfront.GetPublicKeyConfigOutput{}
+    t.Run("TestGetOriginRequestPolicyConfig", func(t *testing.T) {
+        input := &cloudfront.GetOriginRequestPolicyConfigInput{}
+        output := &cloudfront.GetOriginRequestPolicyConfigOutput{}
 
-        mockClient.On("GetPublicKeyConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetOriginRequestPolicyConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetPublicKeyConfig(ctx, input)
+        result, err := mockClient.GetOriginRequestPolicyConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1100,6 +1087,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPublicKeyConfig", func(t *testing.T) {
+        input := &cloudfront.GetPublicKeyConfigInput{}
+        output := &cloudfront.GetPublicKeyConfigOutput{}
+
+        mockClient.On("GetPublicKeyConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPublicKeyConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRealtimeLogConfig", func(t *testing.T) {
         input := &cloudfront.GetRealtimeLogConfigInput{}
         output := &cloudfront.GetRealtimeLogConfigOutput{}
@@ -1107,19 +1107,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRealtimeLogConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRealtimeLogConfig(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetResponseHeadersPolicyConfig", func(t *testing.T) {
-        input := &cloudfront.GetResponseHeadersPolicyConfigInput{}
-        output := &cloudfront.GetResponseHeadersPolicyConfigOutput{}
-
-        mockClient.On("GetResponseHeadersPolicyConfig", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetResponseHeadersPolicyConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1139,13 +1126,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetStreamingDistributionConfig", func(t *testing.T) {
-        input := &cloudfront.GetStreamingDistributionConfigInput{}
-        output := &cloudfront.GetStreamingDistributionConfigOutput{}
+    t.Run("TestGetResponseHeadersPolicyConfig", func(t *testing.T) {
+        input := &cloudfront.GetResponseHeadersPolicyConfigInput{}
+        output := &cloudfront.GetResponseHeadersPolicyConfigOutput{}
 
-        mockClient.On("GetStreamingDistributionConfig", ctx, input).Return(output, nil)
+        mockClient.On("GetResponseHeadersPolicyConfig", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetStreamingDistributionConfig(ctx, input)
+        result, err := mockClient.GetResponseHeadersPolicyConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1159,6 +1146,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetStreamingDistribution", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetStreamingDistribution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetStreamingDistributionConfig", func(t *testing.T) {
+        input := &cloudfront.GetStreamingDistributionConfigInput{}
+        output := &cloudfront.GetStreamingDistributionConfigOutput{}
+
+        mockClient.On("GetStreamingDistributionConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStreamingDistributionConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1250,6 +1250,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContinuousDeploymentPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContinuousDeploymentPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributionTenants", func(t *testing.T) {
+        input := &cloudfront.ListDistributionTenantsInput{}
+        output := &cloudfront.ListDistributionTenantsOutput{}
+
+        mockClient.On("ListDistributionTenants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionTenants(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributionTenantsByCustomization", func(t *testing.T) {
+        input := &cloudfront.ListDistributionTenantsByCustomizationInput{}
+        output := &cloudfront.ListDistributionTenantsByCustomizationOutput{}
+
+        mockClient.On("ListDistributionTenantsByCustomization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionTenantsByCustomization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributions", func(t *testing.T) {
+        input := &cloudfront.ListDistributionsInput{}
+        output := &cloudfront.ListDistributionsOutput{}
+
+        mockClient.On("ListDistributions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1373,45 +1412,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDistributions", func(t *testing.T) {
-        input := &cloudfront.ListDistributionsInput{}
-        output := &cloudfront.ListDistributionsOutput{}
-
-        mockClient.On("ListDistributions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListDistributionTenantsByCustomization", func(t *testing.T) {
-        input := &cloudfront.ListDistributionTenantsByCustomizationInput{}
-        output := &cloudfront.ListDistributionTenantsByCustomizationOutput{}
-
-        mockClient.On("ListDistributionTenantsByCustomization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributionTenantsByCustomization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListDistributionTenants", func(t *testing.T) {
-        input := &cloudfront.ListDistributionTenantsInput{}
-        output := &cloudfront.ListDistributionTenantsOutput{}
-
-        mockClient.On("ListDistributionTenants", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributionTenants(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDomainConflicts", func(t *testing.T) {
         input := &cloudfront.ListDomainConflictsInput{}
         output := &cloudfront.ListDomainConflictsOutput{}
@@ -1464,19 +1464,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInvalidationsForDistributionTenant", func(t *testing.T) {
-        input := &cloudfront.ListInvalidationsForDistributionTenantInput{}
-        output := &cloudfront.ListInvalidationsForDistributionTenantOutput{}
-
-        mockClient.On("ListInvalidationsForDistributionTenant", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInvalidationsForDistributionTenant(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInvalidations", func(t *testing.T) {
         input := &cloudfront.ListInvalidationsInput{}
         output := &cloudfront.ListInvalidationsOutput{}
@@ -1484,6 +1471,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInvalidations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInvalidations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInvalidationsForDistributionTenant", func(t *testing.T) {
+        input := &cloudfront.ListInvalidationsForDistributionTenantInput{}
+        output := &cloudfront.ListInvalidationsForDistributionTenantOutput{}
+
+        mockClient.On("ListInvalidationsForDistributionTenant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvalidationsForDistributionTenant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

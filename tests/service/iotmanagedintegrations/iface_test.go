@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateOtaTaskConfiguration", func(t *testing.T) {
-        input := &iotmanagedintegrations.CreateOtaTaskConfigurationInput{}
-        output := &iotmanagedintegrations.CreateOtaTaskConfigurationOutput{}
-
-        mockClient.On("CreateOtaTaskConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateOtaTaskConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateOtaTask", func(t *testing.T) {
         input := &iotmanagedintegrations.CreateOtaTaskInput{}
         output := &iotmanagedintegrations.CreateOtaTaskOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateOtaTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateOtaTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateOtaTaskConfiguration", func(t *testing.T) {
+        input := &iotmanagedintegrations.CreateOtaTaskConfigurationInput{}
+        output := &iotmanagedintegrations.CreateOtaTaskConfigurationOutput{}
+
+        mockClient.On("CreateOtaTaskConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateOtaTaskConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteOtaTaskConfiguration", func(t *testing.T) {
-        input := &iotmanagedintegrations.DeleteOtaTaskConfigurationInput{}
-        output := &iotmanagedintegrations.DeleteOtaTaskConfigurationOutput{}
-
-        mockClient.On("DeleteOtaTaskConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteOtaTaskConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteOtaTask", func(t *testing.T) {
         input := &iotmanagedintegrations.DeleteOtaTaskInput{}
         output := &iotmanagedintegrations.DeleteOtaTaskOutput{}
@@ -223,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOtaTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOtaTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteOtaTaskConfiguration", func(t *testing.T) {
+        input := &iotmanagedintegrations.DeleteOtaTaskConfigurationInput{}
+        output := &iotmanagedintegrations.DeleteOtaTaskConfigurationOutput{}
+
+        mockClient.On("DeleteOtaTaskConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteOtaTaskConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetManagedThing", func(t *testing.T) {
+        input := &iotmanagedintegrations.GetManagedThingInput{}
+        output := &iotmanagedintegrations.GetManagedThingOutput{}
+
+        mockClient.On("GetManagedThing", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedThing(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetManagedThingCapabilities", func(t *testing.T) {
         input := &iotmanagedintegrations.GetManagedThingCapabilitiesInput{}
         output := &iotmanagedintegrations.GetManagedThingCapabilitiesOutput{}
@@ -353,19 +366,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetManagedThingConnectivityData", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetManagedThingConnectivityData(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetManagedThing", func(t *testing.T) {
-        input := &iotmanagedintegrations.GetManagedThingInput{}
-        output := &iotmanagedintegrations.GetManagedThingOutput{}
-
-        mockClient.On("GetManagedThing", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetManagedThing(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,19 +411,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetOtaTaskConfiguration", func(t *testing.T) {
-        input := &iotmanagedintegrations.GetOtaTaskConfigurationInput{}
-        output := &iotmanagedintegrations.GetOtaTaskConfigurationOutput{}
-
-        mockClient.On("GetOtaTaskConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetOtaTaskConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetOtaTask", func(t *testing.T) {
         input := &iotmanagedintegrations.GetOtaTaskInput{}
         output := &iotmanagedintegrations.GetOtaTaskOutput{}
@@ -431,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOtaTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOtaTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetOtaTaskConfiguration", func(t *testing.T) {
+        input := &iotmanagedintegrations.GetOtaTaskConfigurationInput{}
+        output := &iotmanagedintegrations.GetOtaTaskConfigurationOutput{}
+
+        mockClient.On("GetOtaTaskConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOtaTaskConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

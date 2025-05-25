@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyListenerAttributes", func(t *testing.T) {
-        input := &elasticloadbalancingv2.ModifyListenerAttributesInput{}
-        output := &elasticloadbalancingv2.ModifyListenerAttributesOutput{}
-
-        mockClient.On("ModifyListenerAttributes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyListenerAttributes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyListener", func(t *testing.T) {
         input := &elasticloadbalancingv2.ModifyListenerInput{}
         output := &elasticloadbalancingv2.ModifyListenerOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyListener", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyListener(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyListenerAttributes", func(t *testing.T) {
+        input := &elasticloadbalancingv2.ModifyListenerAttributesInput{}
+        output := &elasticloadbalancingv2.ModifyListenerAttributesOutput{}
+
+        mockClient.On("ModifyListenerAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyListenerAttributes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,19 +554,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyTargetGroupAttributes", func(t *testing.T) {
-        input := &elasticloadbalancingv2.ModifyTargetGroupAttributesInput{}
-        output := &elasticloadbalancingv2.ModifyTargetGroupAttributesOutput{}
-
-        mockClient.On("ModifyTargetGroupAttributes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyTargetGroupAttributes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyTargetGroup", func(t *testing.T) {
         input := &elasticloadbalancingv2.ModifyTargetGroupInput{}
         output := &elasticloadbalancingv2.ModifyTargetGroupOutput{}
@@ -574,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyTargetGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyTargetGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyTargetGroupAttributes", func(t *testing.T) {
+        input := &elasticloadbalancingv2.ModifyTargetGroupAttributesInput{}
+        output := &elasticloadbalancingv2.ModifyTargetGroupAttributesOutput{}
+
+        mockClient.On("ModifyTargetGroupAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyTargetGroupAttributes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

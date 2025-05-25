@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartCanaryDryRun", func(t *testing.T) {
-        input := &synthetics.StartCanaryDryRunInput{}
-        output := &synthetics.StartCanaryDryRunOutput{}
-
-        mockClient.On("StartCanaryDryRun", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StartCanaryDryRun(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStartCanary", func(t *testing.T) {
         input := &synthetics.StartCanaryInput{}
         output := &synthetics.StartCanaryOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartCanary", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartCanary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartCanaryDryRun", func(t *testing.T) {
+        input := &synthetics.StartCanaryDryRunInput{}
+        output := &synthetics.StartCanaryDryRunOutput{}
+
+        mockClient.On("StartCanaryDryRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCanaryDryRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

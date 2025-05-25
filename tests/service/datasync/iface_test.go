@@ -411,19 +411,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeTaskExecution", func(t *testing.T) {
-        input := &datasync.DescribeTaskExecutionInput{}
-        output := &datasync.DescribeTaskExecutionOutput{}
-
-        mockClient.On("DescribeTaskExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTaskExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeTask", func(t *testing.T) {
         input := &datasync.DescribeTaskInput{}
         output := &datasync.DescribeTaskOutput{}
@@ -431,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTaskExecution", func(t *testing.T) {
+        input := &datasync.DescribeTaskExecutionInput{}
+        output := &datasync.DescribeTaskExecutionOutput{}
+
+        mockClient.On("DescribeTaskExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTaskExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,19 +697,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateTaskExecution", func(t *testing.T) {
-        input := &datasync.UpdateTaskExecutionInput{}
-        output := &datasync.UpdateTaskExecutionOutput{}
-
-        mockClient.On("UpdateTaskExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateTaskExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateTask", func(t *testing.T) {
         input := &datasync.UpdateTaskInput{}
         output := &datasync.UpdateTaskOutput{}
@@ -717,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTaskExecution", func(t *testing.T) {
+        input := &datasync.UpdateTaskExecutionInput{}
+        output := &datasync.UpdateTaskExecutionOutput{}
+
+        mockClient.On("UpdateTaskExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTaskExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

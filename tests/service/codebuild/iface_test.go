@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBuildBatchesForProject", func(t *testing.T) {
-        input := &codebuild.ListBuildBatchesForProjectInput{}
-        output := &codebuild.ListBuildBatchesForProjectOutput{}
-
-        mockClient.On("ListBuildBatchesForProject", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListBuildBatchesForProject(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListBuildBatches", func(t *testing.T) {
         input := &codebuild.ListBuildBatchesInput{}
         output := &codebuild.ListBuildBatchesOutput{}
@@ -411,13 +398,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBuildsForProject", func(t *testing.T) {
-        input := &codebuild.ListBuildsForProjectInput{}
-        output := &codebuild.ListBuildsForProjectOutput{}
+    t.Run("TestListBuildBatchesForProject", func(t *testing.T) {
+        input := &codebuild.ListBuildBatchesForProjectInput{}
+        output := &codebuild.ListBuildBatchesForProjectOutput{}
 
-        mockClient.On("ListBuildsForProject", ctx, input).Return(output, nil)
+        mockClient.On("ListBuildBatchesForProject", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListBuildsForProject(ctx, input)
+        result, err := mockClient.ListBuildBatchesForProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -431,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBuilds", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBuilds(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBuildsForProject", func(t *testing.T) {
+        input := &codebuild.ListBuildsForProjectInput{}
+        output := &codebuild.ListBuildsForProjectOutput{}
+
+        mockClient.On("ListBuildsForProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBuildsForProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListReportsForReportGroup", func(t *testing.T) {
-        input := &codebuild.ListReportsForReportGroupInput{}
-        output := &codebuild.ListReportsForReportGroupOutput{}
-
-        mockClient.On("ListReportsForReportGroup", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListReportsForReportGroup(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListReports", func(t *testing.T) {
         input := &codebuild.ListReportsInput{}
         output := &codebuild.ListReportsOutput{}
@@ -528,13 +515,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSandboxesForProject", func(t *testing.T) {
-        input := &codebuild.ListSandboxesForProjectInput{}
-        output := &codebuild.ListSandboxesForProjectOutput{}
+    t.Run("TestListReportsForReportGroup", func(t *testing.T) {
+        input := &codebuild.ListReportsForReportGroupInput{}
+        output := &codebuild.ListReportsForReportGroupOutput{}
 
-        mockClient.On("ListSandboxesForProject", ctx, input).Return(output, nil)
+        mockClient.On("ListReportsForReportGroup", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListSandboxesForProject(ctx, input)
+        result, err := mockClient.ListReportsForReportGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSandboxes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSandboxes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSandboxesForProject", func(t *testing.T) {
+        input := &codebuild.ListSandboxesForProjectInput{}
+        output := &codebuild.ListSandboxesForProjectOutput{}
+
+        mockClient.On("ListSandboxesForProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSandboxesForProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestRetryBuildBatch", func(t *testing.T) {
-        input := &codebuild.RetryBuildBatchInput{}
-        output := &codebuild.RetryBuildBatchOutput{}
-
-        mockClient.On("RetryBuildBatch", ctx, input).Return(output, nil)
-
-        result, err := mockClient.RetryBuildBatch(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestRetryBuild", func(t *testing.T) {
         input := &codebuild.RetryBuildInput{}
         output := &codebuild.RetryBuildOutput{}
@@ -632,13 +619,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStartBuildBatch", func(t *testing.T) {
-        input := &codebuild.StartBuildBatchInput{}
-        output := &codebuild.StartBuildBatchOutput{}
+    t.Run("TestRetryBuildBatch", func(t *testing.T) {
+        input := &codebuild.RetryBuildBatchInput{}
+        output := &codebuild.RetryBuildBatchOutput{}
 
-        mockClient.On("StartBuildBatch", ctx, input).Return(output, nil)
+        mockClient.On("RetryBuildBatch", ctx, input).Return(output, nil)
 
-        result, err := mockClient.StartBuildBatch(ctx, input)
+        result, err := mockClient.RetryBuildBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartBuildBatch", func(t *testing.T) {
+        input := &codebuild.StartBuildBatchInput{}
+        output := &codebuild.StartBuildBatchOutput{}
+
+        mockClient.On("StartBuildBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartBuildBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartCommandExecution", func(t *testing.T) {
         input := &codebuild.StartCommandExecutionInput{}
         output := &codebuild.StartCommandExecutionOutput{}
@@ -665,19 +665,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartCommandExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartCommandExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestStartSandboxConnection", func(t *testing.T) {
-        input := &codebuild.StartSandboxConnectionInput{}
-        output := &codebuild.StartSandboxConnectionOutput{}
-
-        mockClient.On("StartSandboxConnection", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StartSandboxConnection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,13 +684,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestStopBuildBatch", func(t *testing.T) {
-        input := &codebuild.StopBuildBatchInput{}
-        output := &codebuild.StopBuildBatchOutput{}
+    t.Run("TestStartSandboxConnection", func(t *testing.T) {
+        input := &codebuild.StartSandboxConnectionInput{}
+        output := &codebuild.StartSandboxConnectionOutput{}
 
-        mockClient.On("StopBuildBatch", ctx, input).Return(output, nil)
+        mockClient.On("StartSandboxConnection", ctx, input).Return(output, nil)
 
-        result, err := mockClient.StopBuildBatch(ctx, input)
+        result, err := mockClient.StartSandboxConnection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -717,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopBuild", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopBuild(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopBuildBatch", func(t *testing.T) {
+        input := &codebuild.StopBuildBatchInput{}
+        output := &codebuild.StopBuildBatchOutput{}
+
+        mockClient.On("StopBuildBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopBuildBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
