@@ -16,6 +16,8 @@ type IClient interface {
  CancelSubscription(ctx context.Context, params *CancelSubscriptionInput, optFns ...func(*Options)) (*CancelSubscriptionOutput, error) 
  Chat(ctx context.Context, params *ChatInput, optFns ...func(*Options)) (*ChatOutput, error) 
  ChatSync(ctx context.Context, params *ChatSyncInput, optFns ...func(*Options)) (*ChatSyncOutput, error) 
+ CheckDocumentAccess(ctx context.Context, params *CheckDocumentAccessInput, optFns ...func(*Options)) (*CheckDocumentAccessOutput, error) 
+ CreateAnonymousWebExperienceUrl(ctx context.Context, params *CreateAnonymousWebExperienceUrlInput, optFns ...func(*Options)) (*CreateAnonymousWebExperienceUrlOutput, error) 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateDataAccessor(ctx context.Context, params *CreateDataAccessorInput, optFns ...func(*Options)) (*CreateDataAccessorOutput, error) 
  CreateDataSource(ctx context.Context, params *CreateDataSourceInput, optFns ...func(*Options)) (*CreateDataSourceOutput, error) 

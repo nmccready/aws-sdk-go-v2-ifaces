@@ -840,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyEndpointEncryptionMode", func(t *testing.T) {
+        input := &workspaces.ModifyEndpointEncryptionModeInput{}
+        output := &workspaces.ModifyEndpointEncryptionModeOutput{}
+
+        mockClient.On("ModifyEndpointEncryptionMode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyEndpointEncryptionMode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifySamlProperties", func(t *testing.T) {
         input := &workspaces.ModifySamlPropertiesInput{}
         output := &workspaces.ModifySamlPropertiesOutput{}

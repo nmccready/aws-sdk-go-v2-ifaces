@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataLakeNamespace", func(t *testing.T) {
+        input := &supplychain.CreateDataLakeNamespaceInput{}
+        output := &supplychain.CreateDataLakeNamespaceOutput{}
+
+        mockClient.On("CreateDataLakeNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataLakeNamespace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateInstance", func(t *testing.T) {
         input := &supplychain.CreateInstanceInput{}
         output := &supplychain.CreateInstanceOutput{}
@@ -112,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataLakeNamespace", func(t *testing.T) {
+        input := &supplychain.DeleteDataLakeNamespaceInput{}
+        output := &supplychain.DeleteDataLakeNamespaceOutput{}
+
+        mockClient.On("DeleteDataLakeNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataLakeNamespace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteInstance", func(t *testing.T) {
         input := &supplychain.DeleteInstanceInput{}
         output := &supplychain.DeleteInstanceOutput{}
@@ -132,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBillOfMaterialsImportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBillOfMaterialsImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataIntegrationEvent", func(t *testing.T) {
+        input := &supplychain.GetDataIntegrationEventInput{}
+        output := &supplychain.GetDataIntegrationEventOutput{}
+
+        mockClient.On("GetDataIntegrationEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataIntegrationEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataIntegrationFlowExecution", func(t *testing.T) {
+        input := &supplychain.GetDataIntegrationFlowExecutionInput{}
+        output := &supplychain.GetDataIntegrationFlowExecutionOutput{}
+
+        mockClient.On("GetDataIntegrationFlowExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataIntegrationFlowExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataLakeNamespace", func(t *testing.T) {
+        input := &supplychain.GetDataLakeNamespaceInput{}
+        output := &supplychain.GetDataLakeNamespaceOutput{}
+
+        mockClient.On("GetDataLakeNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataLakeNamespace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInstance", func(t *testing.T) {
         input := &supplychain.GetInstanceInput{}
         output := &supplychain.GetInstanceOutput{}
@@ -171,6 +236,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataIntegrationEvents", func(t *testing.T) {
+        input := &supplychain.ListDataIntegrationEventsInput{}
+        output := &supplychain.ListDataIntegrationEventsOutput{}
+
+        mockClient.On("ListDataIntegrationEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataIntegrationEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataIntegrationFlowExecutions", func(t *testing.T) {
+        input := &supplychain.ListDataIntegrationFlowExecutionsInput{}
+        output := &supplychain.ListDataIntegrationFlowExecutionsOutput{}
+
+        mockClient.On("ListDataIntegrationFlowExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataIntegrationFlowExecutions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -197,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataLakeDatasets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataLakeDatasets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataLakeNamespaces", func(t *testing.T) {
+        input := &supplychain.ListDataLakeNamespacesInput{}
+        output := &supplychain.ListDataLakeNamespacesOutput{}
+
+        mockClient.On("ListDataLakeNamespaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataLakeNamespaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDataLakeDataset", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDataLakeDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataLakeNamespace", func(t *testing.T) {
+        input := &supplychain.UpdateDataLakeNamespaceInput{}
+        output := &supplychain.UpdateDataLakeNamespaceOutput{}
+
+        mockClient.On("UpdateDataLakeNamespace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataLakeNamespace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

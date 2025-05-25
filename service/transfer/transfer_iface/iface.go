@@ -63,6 +63,8 @@ type IClient interface {
  SendWorkflowStepState(ctx context.Context, params *SendWorkflowStepStateInput, optFns ...func(*Options)) (*SendWorkflowStepStateOutput, error) 
  StartDirectoryListing(ctx context.Context, params *StartDirectoryListingInput, optFns ...func(*Options)) (*StartDirectoryListingOutput, error) 
  StartFileTransfer(ctx context.Context, params *StartFileTransferInput, optFns ...func(*Options)) (*StartFileTransferOutput, error) 
+ StartRemoteDelete(ctx context.Context, params *StartRemoteDeleteInput, optFns ...func(*Options)) (*StartRemoteDeleteOutput, error) 
+ StartRemoteMove(ctx context.Context, params *StartRemoteMoveInput, optFns ...func(*Options)) (*StartRemoteMoveOutput, error) 
  StartServer(ctx context.Context, params *StartServerInput, optFns ...func(*Options)) (*StartServerOutput, error) 
  StopServer(ctx context.Context, params *StopServerInput, optFns ...func(*Options)) (*StopServerOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 

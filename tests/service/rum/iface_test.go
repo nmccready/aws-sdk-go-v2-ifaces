@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &rum.DeleteResourcePolicyInput{}
+        output := &rum.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRumMetricsDestination", func(t *testing.T) {
         input := &rum.DeleteRumMetricsDestinationInput{}
         output := &rum.DeleteRumMetricsDestinationOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRumMetricsDestination", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRumMetricsDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAppMonitorData", func(t *testing.T) {
+        input := &rum.GetAppMonitorDataInput{}
+        output := &rum.GetAppMonitorDataOutput{}
+
+        mockClient.On("GetAppMonitorData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAppMonitorData(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,13 +151,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAppMonitorData", func(t *testing.T) {
-        input := &rum.GetAppMonitorDataInput{}
-        output := &rum.GetAppMonitorDataOutput{}
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &rum.GetResourcePolicyInput{}
+        output := &rum.GetResourcePolicyOutput{}
 
-        mockClient.On("GetAppMonitorData", ctx, input).Return(output, nil)
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetAppMonitorData(ctx, input)
+        result, err := mockClient.GetResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -171,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &rum.PutResourcePolicyInput{}
+        output := &rum.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

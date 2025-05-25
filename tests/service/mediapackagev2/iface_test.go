@@ -333,6 +333,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestResetChannelState", func(t *testing.T) {
+        input := &mediapackagev2.ResetChannelStateInput{}
+        output := &mediapackagev2.ResetChannelStateOutput{}
+
+        mockClient.On("ResetChannelState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResetChannelState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestResetOriginEndpointState", func(t *testing.T) {
+        input := &mediapackagev2.ResetOriginEndpointStateInput{}
+        output := &mediapackagev2.ResetOriginEndpointStateOutput{}
+
+        mockClient.On("ResetOriginEndpointState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResetOriginEndpointState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &mediapackagev2.TagResourceInput{}
         output := &mediapackagev2.TagResourceOutput{}

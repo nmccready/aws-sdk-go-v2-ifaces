@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateReservation", func(t *testing.T) {
+        input := &redshiftserverless.CreateReservationInput{}
+        output := &redshiftserverless.CreateReservationOutput{}
+
+        mockClient.On("CreateReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateScheduledAction", func(t *testing.T) {
         input := &redshiftserverless.CreateScheduledActionInput{}
         output := &redshiftserverless.CreateScheduledActionOutput{}
@@ -333,6 +346,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetReservation", func(t *testing.T) {
+        input := &redshiftserverless.GetReservationInput{}
+        output := &redshiftserverless.GetReservationOutput{}
+
+        mockClient.On("GetReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetReservationOffering", func(t *testing.T) {
+        input := &redshiftserverless.GetReservationOfferingInput{}
+        output := &redshiftserverless.GetReservationOfferingOutput{}
+
+        mockClient.On("GetReservationOffering", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetReservationOffering(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetResourcePolicy", func(t *testing.T) {
         input := &redshiftserverless.GetResourcePolicyInput{}
         output := &redshiftserverless.GetResourcePolicyOutput{}
@@ -483,6 +522,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRecoveryPoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRecoveryPoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReservationOfferings", func(t *testing.T) {
+        input := &redshiftserverless.ListReservationOfferingsInput{}
+        output := &redshiftserverless.ListReservationOfferingsOutput{}
+
+        mockClient.On("ListReservationOfferings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReservationOfferings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListReservations", func(t *testing.T) {
+        input := &redshiftserverless.ListReservationsInput{}
+        output := &redshiftserverless.ListReservationsOutput{}
+
+        mockClient.On("ListReservations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReservations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

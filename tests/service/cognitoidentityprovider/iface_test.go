@@ -918,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTokensFromRefreshToken", func(t *testing.T) {
+        input := &cognitoidentityprovider.GetTokensFromRefreshTokenInput{}
+        output := &cognitoidentityprovider.GetTokensFromRefreshTokenOutput{}
+
+        mockClient.On("GetTokensFromRefreshToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTokensFromRefreshToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetUICustomization", func(t *testing.T) {
         input := &cognitoidentityprovider.GetUICustomizationInput{}
         output := &cognitoidentityprovider.GetUICustomizationOutput{}

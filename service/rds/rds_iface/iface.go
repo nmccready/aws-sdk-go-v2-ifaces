@@ -80,6 +80,7 @@ type IClient interface {
  DescribeDBInstanceAutomatedBackups(ctx context.Context, params *DescribeDBInstanceAutomatedBackupsInput, optFns ...func(*Options)) (*DescribeDBInstanceAutomatedBackupsOutput, error) 
  DescribeDBInstances(ctx context.Context, params *DescribeDBInstancesInput, optFns ...func(*Options)) (*DescribeDBInstancesOutput, error) 
  DescribeDBLogFiles(ctx context.Context, params *DescribeDBLogFilesInput, optFns ...func(*Options)) (*DescribeDBLogFilesOutput, error) 
+ DescribeDBMajorEngineVersions(ctx context.Context, params *DescribeDBMajorEngineVersionsInput, optFns ...func(*Options)) (*DescribeDBMajorEngineVersionsOutput, error) 
  DescribeDBParameterGroups(ctx context.Context, params *DescribeDBParameterGroupsInput, optFns ...func(*Options)) (*DescribeDBParameterGroupsOutput, error) 
  DescribeDBParameters(ctx context.Context, params *DescribeDBParametersInput, optFns ...func(*Options)) (*DescribeDBParametersOutput, error) 
  DescribeDBProxies(ctx context.Context, params *DescribeDBProxiesInput, optFns ...func(*Options)) (*DescribeDBProxiesOutput, error) 

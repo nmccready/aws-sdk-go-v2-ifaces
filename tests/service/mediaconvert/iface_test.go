@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestProbe", func(t *testing.T) {
+        input := &mediaconvert.ProbeInput{}
+        output := &mediaconvert.ProbeOutput{}
+
+        mockClient.On("Probe", ctx, input).Return(output, nil)
+
+        result, err := mockClient.Probe(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutPolicy", func(t *testing.T) {
         input := &mediaconvert.PutPolicyInput{}
         output := &mediaconvert.PutPolicyOutput{}

@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateQueryLoggingConfiguration", func(t *testing.T) {
+        input := &amp.CreateQueryLoggingConfigurationInput{}
+        output := &amp.CreateQueryLoggingConfigurationOutput{}
+
+        mockClient.On("CreateQueryLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQueryLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRuleGroupsNamespace", func(t *testing.T) {
         input := &amp.CreateRuleGroupsNamespaceInput{}
         output := &amp.CreateRuleGroupsNamespaceOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLoggingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQueryLoggingConfiguration", func(t *testing.T) {
+        input := &amp.DeleteQueryLoggingConfigurationInput{}
+        output := &amp.DeleteQueryLoggingConfigurationOutput{}
+
+        mockClient.On("DeleteQueryLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQueryLoggingConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeQueryLoggingConfiguration", func(t *testing.T) {
+        input := &amp.DescribeQueryLoggingConfigurationInput{}
+        output := &amp.DescribeQueryLoggingConfigurationOutput{}
+
+        mockClient.On("DescribeQueryLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeQueryLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeRuleGroupsNamespace", func(t *testing.T) {
         input := &amp.DescribeRuleGroupsNamespaceInput{}
         output := &amp.DescribeRuleGroupsNamespaceOutput{}
@@ -210,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeScraper", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeScraper(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWorkspaceConfiguration", func(t *testing.T) {
+        input := &amp.DescribeWorkspaceConfigurationInput{}
+        output := &amp.DescribeWorkspaceConfigurationOutput{}
+
+        mockClient.On("DescribeWorkspaceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorkspaceConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateQueryLoggingConfiguration", func(t *testing.T) {
+        input := &amp.UpdateQueryLoggingConfigurationInput{}
+        output := &amp.UpdateQueryLoggingConfigurationOutput{}
+
+        mockClient.On("UpdateQueryLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQueryLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateScraper", func(t *testing.T) {
         input := &amp.UpdateScraperInput{}
         output := &amp.UpdateScraperOutput{}
@@ -379,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateWorkspaceAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateWorkspaceAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkspaceConfiguration", func(t *testing.T) {
+        input := &amp.UpdateWorkspaceConfigurationInput{}
+        output := &amp.UpdateWorkspaceConfigurationOutput{}
+
+        mockClient.On("UpdateWorkspaceConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspaceConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

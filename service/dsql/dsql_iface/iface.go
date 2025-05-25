@@ -11,10 +11,9 @@ import (
 type IClient interface {
  Options() Options 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
- CreateMultiRegionClusters(ctx context.Context, params *CreateMultiRegionClustersInput, optFns ...func(*Options)) (*CreateMultiRegionClustersOutput, error) 
  DeleteCluster(ctx context.Context, params *DeleteClusterInput, optFns ...func(*Options)) (*DeleteClusterOutput, error) 
- DeleteMultiRegionClusters(ctx context.Context, params *DeleteMultiRegionClustersInput, optFns ...func(*Options)) (*DeleteMultiRegionClustersOutput, error) 
  GetCluster(ctx context.Context, params *GetClusterInput, optFns ...func(*Options)) (*GetClusterOutput, error) 
+ GetVpcEndpointServiceName(ctx context.Context, params *GetVpcEndpointServiceNameInput, optFns ...func(*Options)) (*GetVpcEndpointServiceNameOutput, error) 
  ListClusters(ctx context.Context, params *ListClustersInput, optFns ...func(*Options)) (*ListClustersOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 

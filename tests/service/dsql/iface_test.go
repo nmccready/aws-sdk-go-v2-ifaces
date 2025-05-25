@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateMultiRegionClusters", func(t *testing.T) {
-        input := &dsql.CreateMultiRegionClustersInput{}
-        output := &dsql.CreateMultiRegionClustersOutput{}
-
-        mockClient.On("CreateMultiRegionClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateMultiRegionClusters(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteCluster", func(t *testing.T) {
         input := &dsql.DeleteClusterInput{}
         output := &dsql.DeleteClusterOutput{}
@@ -73,19 +60,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteMultiRegionClusters", func(t *testing.T) {
-        input := &dsql.DeleteMultiRegionClustersInput{}
-        output := &dsql.DeleteMultiRegionClustersOutput{}
-
-        mockClient.On("DeleteMultiRegionClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteMultiRegionClusters(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCluster", func(t *testing.T) {
         input := &dsql.GetClusterInput{}
         output := &dsql.GetClusterOutput{}
@@ -93,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVpcEndpointServiceName", func(t *testing.T) {
+        input := &dsql.GetVpcEndpointServiceNameInput{}
+        output := &dsql.GetVpcEndpointServiceNameOutput{}
+
+        mockClient.On("GetVpcEndpointServiceName", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVpcEndpointServiceName(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePromptRouter", func(t *testing.T) {
+        input := &bedrock.CreatePromptRouterInput{}
+        output := &bedrock.CreatePromptRouterOutput{}
+
+        mockClient.On("CreatePromptRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePromptRouter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateProvisionedModelThroughput", func(t *testing.T) {
         input := &bedrock.CreateProvisionedModelThroughputInput{}
         output := &bedrock.CreateProvisionedModelThroughputOutput{}
@@ -249,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteModelInvocationLoggingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteModelInvocationLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePromptRouter", func(t *testing.T) {
+        input := &bedrock.DeletePromptRouterInput{}
+        output := &bedrock.DeletePromptRouterOutput{}
+
+        mockClient.On("DeletePromptRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePromptRouter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

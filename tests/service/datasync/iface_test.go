@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestAddStorageSystem", func(t *testing.T) {
-        input := &datasync.AddStorageSystemInput{}
-        output := &datasync.AddStorageSystemOutput{}
-
-        mockClient.On("AddStorageSystem", ctx, input).Return(output, nil)
-
-        result, err := mockClient.AddStorageSystem(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCancelTaskExecution", func(t *testing.T) {
         input := &datasync.CancelTaskExecutionInput{}
         output := &datasync.CancelTaskExecutionOutput{}
@@ -281,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDiscoveryJob", func(t *testing.T) {
-        input := &datasync.DescribeDiscoveryJobInput{}
-        output := &datasync.DescribeDiscoveryJobOutput{}
-
-        mockClient.On("DescribeDiscoveryJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDiscoveryJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeLocationAzureBlob", func(t *testing.T) {
         input := &datasync.DescribeLocationAzureBlobInput{}
         output := &datasync.DescribeLocationAzureBlobOutput{}
@@ -437,39 +411,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeStorageSystem", func(t *testing.T) {
-        input := &datasync.DescribeStorageSystemInput{}
-        output := &datasync.DescribeStorageSystemOutput{}
+    t.Run("TestDescribeTaskExecution", func(t *testing.T) {
+        input := &datasync.DescribeTaskExecutionInput{}
+        output := &datasync.DescribeTaskExecutionOutput{}
 
-        mockClient.On("DescribeStorageSystem", ctx, input).Return(output, nil)
+        mockClient.On("DescribeTaskExecution", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeStorageSystem(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeStorageSystemResourceMetrics", func(t *testing.T) {
-        input := &datasync.DescribeStorageSystemResourceMetricsInput{}
-        output := &datasync.DescribeStorageSystemResourceMetricsOutput{}
-
-        mockClient.On("DescribeStorageSystemResourceMetrics", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStorageSystemResourceMetrics(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeStorageSystemResources", func(t *testing.T) {
-        input := &datasync.DescribeStorageSystemResourcesInput{}
-        output := &datasync.DescribeStorageSystemResourcesOutput{}
-
-        mockClient.On("DescribeStorageSystemResources", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStorageSystemResources(ctx, input)
+        result, err := mockClient.DescribeTaskExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,32 +437,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeTaskExecution", func(t *testing.T) {
-        input := &datasync.DescribeTaskExecutionInput{}
-        output := &datasync.DescribeTaskExecutionOutput{}
-
-        mockClient.On("DescribeTaskExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTaskExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGenerateRecommendations", func(t *testing.T) {
-        input := &datasync.GenerateRecommendationsInput{}
-        output := &datasync.GenerateRecommendationsOutput{}
-
-        mockClient.On("GenerateRecommendations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GenerateRecommendations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAgents", func(t *testing.T) {
         input := &datasync.ListAgentsInput{}
         output := &datasync.ListAgentsOutput{}
@@ -528,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDiscoveryJobs", func(t *testing.T) {
-        input := &datasync.ListDiscoveryJobsInput{}
-        output := &datasync.ListDiscoveryJobsOutput{}
-
-        mockClient.On("ListDiscoveryJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDiscoveryJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListLocations", func(t *testing.T) {
         input := &datasync.ListLocationsInput{}
         output := &datasync.ListLocationsOutput{}
@@ -548,19 +457,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLocations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLocations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListStorageSystems", func(t *testing.T) {
-        input := &datasync.ListStorageSystemsInput{}
-        output := &datasync.ListStorageSystemsOutput{}
-
-        mockClient.On("ListStorageSystems", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStorageSystems(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,32 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestRemoveStorageSystem", func(t *testing.T) {
-        input := &datasync.RemoveStorageSystemInput{}
-        output := &datasync.RemoveStorageSystemOutput{}
-
-        mockClient.On("RemoveStorageSystem", ctx, input).Return(output, nil)
-
-        result, err := mockClient.RemoveStorageSystem(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestStartDiscoveryJob", func(t *testing.T) {
-        input := &datasync.StartDiscoveryJobInput{}
-        output := &datasync.StartDiscoveryJobOutput{}
-
-        mockClient.On("StartDiscoveryJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StartDiscoveryJob(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestStartTaskExecution", func(t *testing.T) {
         input := &datasync.StartTaskExecutionInput{}
         output := &datasync.StartTaskExecutionOutput{}
@@ -639,19 +509,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartTaskExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartTaskExecution(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestStopDiscoveryJob", func(t *testing.T) {
-        input := &datasync.StopDiscoveryJobInput{}
-        output := &datasync.StopDiscoveryJobOutput{}
-
-        mockClient.On("StopDiscoveryJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.StopDiscoveryJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -691,19 +548,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAgent", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAgent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestUpdateDiscoveryJob", func(t *testing.T) {
-        input := &datasync.UpdateDiscoveryJobInput{}
-        output := &datasync.UpdateDiscoveryJobOutput{}
-
-        mockClient.On("UpdateDiscoveryJob", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateDiscoveryJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,13 +697,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateStorageSystem", func(t *testing.T) {
-        input := &datasync.UpdateStorageSystemInput{}
-        output := &datasync.UpdateStorageSystemOutput{}
+    t.Run("TestUpdateTaskExecution", func(t *testing.T) {
+        input := &datasync.UpdateTaskExecutionInput{}
+        output := &datasync.UpdateTaskExecutionOutput{}
 
-        mockClient.On("UpdateStorageSystem", ctx, input).Return(output, nil)
+        mockClient.On("UpdateTaskExecution", ctx, input).Return(output, nil)
 
-        result, err := mockClient.UpdateStorageSystem(ctx, input)
+        result, err := mockClient.UpdateTaskExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -873,19 +717,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTask(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestUpdateTaskExecution", func(t *testing.T) {
-        input := &datasync.UpdateTaskExecutionInput{}
-        output := &datasync.UpdateTaskExecutionOutput{}
-
-        mockClient.On("UpdateTaskExecution", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateTaskExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

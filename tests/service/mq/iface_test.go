@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConfiguration", func(t *testing.T) {
+        input := &mq.DeleteConfigurationInput{}
+        output := &mq.DeleteConfigurationOutput{}
+
+        mockClient.On("DeleteConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTags", func(t *testing.T) {
         input := &mq.DeleteTagsInput{}
         output := &mq.DeleteTagsOutput{}

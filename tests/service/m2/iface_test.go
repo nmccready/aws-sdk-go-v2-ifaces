@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataSetExportTask", func(t *testing.T) {
+        input := &m2.CreateDataSetExportTaskInput{}
+        output := &m2.CreateDataSetExportTaskOutput{}
+
+        mockClient.On("CreateDataSetExportTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataSetExportTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataSetImportTask", func(t *testing.T) {
         input := &m2.CreateDataSetImportTaskInput{}
         output := &m2.CreateDataSetImportTaskOutput{}
@@ -190,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataSetExportTask", func(t *testing.T) {
+        input := &m2.GetDataSetExportTaskInput{}
+        output := &m2.GetDataSetExportTaskOutput{}
+
+        mockClient.On("GetDataSetExportTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataSetExportTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataSetImportTask", func(t *testing.T) {
         input := &m2.GetDataSetImportTaskInput{}
         output := &m2.GetDataSetImportTaskOutput{}
@@ -301,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBatchJobRestartPoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBatchJobRestartPoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataSetExportHistory", func(t *testing.T) {
+        input := &m2.ListDataSetExportHistoryInput{}
+        output := &m2.ListDataSetExportHistoryOutput{}
+
+        mockClient.On("ListDataSetExportHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataSetExportHistory(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

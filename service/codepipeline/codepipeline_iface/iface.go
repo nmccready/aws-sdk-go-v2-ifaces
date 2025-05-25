@@ -28,6 +28,7 @@ type IClient interface {
  GetThirdPartyJobDetails(ctx context.Context, params *GetThirdPartyJobDetailsInput, optFns ...func(*Options)) (*GetThirdPartyJobDetailsOutput, error) 
  ListActionExecutions(ctx context.Context, params *ListActionExecutionsInput, optFns ...func(*Options)) (*ListActionExecutionsOutput, error) 
  ListActionTypes(ctx context.Context, params *ListActionTypesInput, optFns ...func(*Options)) (*ListActionTypesOutput, error) 
+ ListDeployActionExecutionTargets(ctx context.Context, params *ListDeployActionExecutionTargetsInput, optFns ...func(*Options)) (*ListDeployActionExecutionTargetsOutput, error) 
  ListPipelineExecutions(ctx context.Context, params *ListPipelineExecutionsInput, optFns ...func(*Options)) (*ListPipelineExecutionsOutput, error) 
  ListPipelines(ctx context.Context, params *ListPipelinesInput, optFns ...func(*Options)) (*ListPipelinesOutput, error) 
  ListRuleExecutions(ctx context.Context, params *ListRuleExecutionsInput, optFns ...func(*Options)) (*ListRuleExecutionsOutput, error) 

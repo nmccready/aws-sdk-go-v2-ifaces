@@ -944,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDBMajorEngineVersions", func(t *testing.T) {
+        input := &rds.DescribeDBMajorEngineVersionsInput{}
+        output := &rds.DescribeDBMajorEngineVersionsOutput{}
+
+        mockClient.On("DescribeDBMajorEngineVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBMajorEngineVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDBParameterGroups", func(t *testing.T) {
         input := &rds.DescribeDBParameterGroupsInput{}
         output := &rds.DescribeDBParameterGroupsOutput{}
