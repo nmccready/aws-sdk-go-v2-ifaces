@@ -12,6 +12,7 @@ type IClient interface {
  Options() Options 
  CancelBatchJobExecution(ctx context.Context, params *CancelBatchJobExecutionInput, optFns ...func(*Options)) (*CancelBatchJobExecutionOutput, error) 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
+ CreateDataSetExportTask(ctx context.Context, params *CreateDataSetExportTaskInput, optFns ...func(*Options)) (*CreateDataSetExportTaskOutput, error) 
  CreateDataSetImportTask(ctx context.Context, params *CreateDataSetImportTaskInput, optFns ...func(*Options)) (*CreateDataSetImportTaskOutput, error) 
  CreateDeployment(ctx context.Context, params *CreateDeploymentInput, optFns ...func(*Options)) (*CreateDeploymentOutput, error) 
  CreateEnvironment(ctx context.Context, params *CreateEnvironmentInput, optFns ...func(*Options)) (*CreateEnvironmentOutput, error) 
@@ -22,6 +23,7 @@ type IClient interface {
  GetApplicationVersion(ctx context.Context, params *GetApplicationVersionInput, optFns ...func(*Options)) (*GetApplicationVersionOutput, error) 
  GetBatchJobExecution(ctx context.Context, params *GetBatchJobExecutionInput, optFns ...func(*Options)) (*GetBatchJobExecutionOutput, error) 
  GetDataSetDetails(ctx context.Context, params *GetDataSetDetailsInput, optFns ...func(*Options)) (*GetDataSetDetailsOutput, error) 
+ GetDataSetExportTask(ctx context.Context, params *GetDataSetExportTaskInput, optFns ...func(*Options)) (*GetDataSetExportTaskOutput, error) 
  GetDataSetImportTask(ctx context.Context, params *GetDataSetImportTaskInput, optFns ...func(*Options)) (*GetDataSetImportTaskOutput, error) 
  GetDeployment(ctx context.Context, params *GetDeploymentInput, optFns ...func(*Options)) (*GetDeploymentOutput, error) 
  GetEnvironment(ctx context.Context, params *GetEnvironmentInput, optFns ...func(*Options)) (*GetEnvironmentOutput, error) 
@@ -31,6 +33,7 @@ type IClient interface {
  ListBatchJobDefinitions(ctx context.Context, params *ListBatchJobDefinitionsInput, optFns ...func(*Options)) (*ListBatchJobDefinitionsOutput, error) 
  ListBatchJobExecutions(ctx context.Context, params *ListBatchJobExecutionsInput, optFns ...func(*Options)) (*ListBatchJobExecutionsOutput, error) 
  ListBatchJobRestartPoints(ctx context.Context, params *ListBatchJobRestartPointsInput, optFns ...func(*Options)) (*ListBatchJobRestartPointsOutput, error) 
+ ListDataSetExportHistory(ctx context.Context, params *ListDataSetExportHistoryInput, optFns ...func(*Options)) (*ListDataSetExportHistoryOutput, error) 
  ListDataSetImportHistory(ctx context.Context, params *ListDataSetImportHistoryInput, optFns ...func(*Options)) (*ListDataSetImportHistoryOutput, error) 
  ListDataSets(ctx context.Context, params *ListDataSetsInput, optFns ...func(*Options)) (*ListDataSetsOutput, error) 
  ListDeployments(ctx context.Context, params *ListDeploymentsInput, optFns ...func(*Options)) (*ListDeploymentsOutput, error) 

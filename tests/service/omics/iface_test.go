@@ -255,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWorkflowVersion", func(t *testing.T) {
+        input := &omics.CreateWorkflowVersionInput{}
+        output := &omics.CreateWorkflowVersionOutput{}
+
+        mockClient.On("CreateWorkflowVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWorkflowVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAnnotationStore", func(t *testing.T) {
         input := &omics.DeleteAnnotationStoreInput{}
         output := &omics.DeleteAnnotationStoreOutput{}
@@ -405,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWorkflow", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWorkflowVersion", func(t *testing.T) {
+        input := &omics.DeleteWorkflowVersionInput{}
+        output := &omics.DeleteWorkflowVersionOutput{}
+
+        mockClient.On("DeleteWorkflowVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWorkflowVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,6 +723,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetWorkflowVersion", func(t *testing.T) {
+        input := &omics.GetWorkflowVersionInput{}
+        output := &omics.GetWorkflowVersionOutput{}
+
+        mockClient.On("GetWorkflowVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWorkflowVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAnnotationImportJobs", func(t *testing.T) {
         input := &omics.ListAnnotationImportJobsInput{}
         output := &omics.ListAnnotationImportJobsOutput{}
@@ -983,6 +1022,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListWorkflowVersions", func(t *testing.T) {
+        input := &omics.ListWorkflowVersionsInput{}
+        output := &omics.ListWorkflowVersionsOutput{}
+
+        mockClient.On("ListWorkflowVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkflowVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutS3AccessPolicy", func(t *testing.T) {
         input := &omics.PutS3AccessPolicyInput{}
         output := &omics.PutS3AccessPolicyOutput{}
@@ -1198,6 +1250,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateWorkflow", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkflowVersion", func(t *testing.T) {
+        input := &omics.UpdateWorkflowVersionInput{}
+        output := &omics.UpdateWorkflowVersionOutput{}
+
+        mockClient.On("UpdateWorkflowVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkflowVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

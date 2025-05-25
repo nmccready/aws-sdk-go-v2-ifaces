@@ -59,4 +59,43 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &bedrockdataautomationruntime.ListTagsForResourceInput{}
+        output := &bedrockdataautomationruntime.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &bedrockdataautomationruntime.TagResourceInput{}
+        output := &bedrockdataautomationruntime.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &bedrockdataautomationruntime.UntagResourceInput{}
+        output := &bedrockdataautomationruntime.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

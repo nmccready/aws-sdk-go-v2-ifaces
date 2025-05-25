@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &verifiedpermissions.ListTagsForResourceInput{}
+        output := &verifiedpermissions.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutSchema", func(t *testing.T) {
         input := &verifiedpermissions.PutSchemaInput{}
         output := &verifiedpermissions.PutSchemaOutput{}
@@ -327,6 +340,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutSchema", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutSchema(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &verifiedpermissions.TagResourceInput{}
+        output := &verifiedpermissions.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &verifiedpermissions.UntagResourceInput{}
+        output := &verifiedpermissions.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchUpdateExclusionWindows", func(t *testing.T) {
+        input := &applicationsignals.BatchUpdateExclusionWindowsInput{}
+        output := &applicationsignals.BatchUpdateExclusionWindowsOutput{}
+
+        mockClient.On("BatchUpdateExclusionWindows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateExclusionWindows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateServiceLevelObjective", func(t *testing.T) {
         input := &applicationsignals.CreateServiceLevelObjectiveInput{}
         output := &applicationsignals.CreateServiceLevelObjectiveOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServiceDependents", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServiceDependents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceLevelObjectiveExclusionWindows", func(t *testing.T) {
+        input := &applicationsignals.ListServiceLevelObjectiveExclusionWindowsInput{}
+        output := &applicationsignals.ListServiceLevelObjectiveExclusionWindowsOutput{}
+
+        mockClient.On("ListServiceLevelObjectiveExclusionWindows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceLevelObjectiveExclusionWindows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

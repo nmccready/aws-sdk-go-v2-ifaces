@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccountInformation", func(t *testing.T) {
+        input := &account.GetAccountInformationInput{}
+        output := &account.GetAccountInformationOutput{}
+
+        mockClient.On("GetAccountInformation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountInformation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAlternateContact", func(t *testing.T) {
         input := &account.GetAlternateContactInput{}
         output := &account.GetAlternateContactOutput{}
@@ -145,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRegions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRegions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountName", func(t *testing.T) {
+        input := &account.PutAccountNameInput{}
+        output := &account.PutAccountNameOutput{}
+
+        mockClient.On("PutAccountName", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountName(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePersistentAppUI", func(t *testing.T) {
+        input := &emr.CreatePersistentAppUIInput{}
+        output := &emr.CreatePersistentAppUIOutput{}
+
+        mockClient.On("CreatePersistentAppUI", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePersistentAppUI(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSecurityConfiguration", func(t *testing.T) {
         input := &emr.CreateSecurityConfigurationInput{}
         output := &emr.CreateSecurityConfigurationOutput{}
@@ -216,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribePersistentAppUI", func(t *testing.T) {
+        input := &emr.DescribePersistentAppUIInput{}
+        output := &emr.DescribePersistentAppUIOutput{}
+
+        mockClient.On("DescribePersistentAppUI", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePersistentAppUI(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeReleaseLabel", func(t *testing.T) {
         input := &emr.DescribeReleaseLabelInput{}
         output := &emr.DescribeReleaseLabelOutput{}
@@ -314,6 +340,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetManagedScalingPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetManagedScalingPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetOnClusterAppUIPresignedURL", func(t *testing.T) {
+        input := &emr.GetOnClusterAppUIPresignedURLInput{}
+        output := &emr.GetOnClusterAppUIPresignedURLOutput{}
+
+        mockClient.On("GetOnClusterAppUIPresignedURL", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOnClusterAppUIPresignedURL(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPersistentAppUIPresignedURL", func(t *testing.T) {
+        input := &emr.GetPersistentAppUIPresignedURLInput{}
+        output := &emr.GetPersistentAppUIPresignedURLOutput{}
+
+        mockClient.On("GetPersistentAppUIPresignedURL", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPersistentAppUIPresignedURL(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

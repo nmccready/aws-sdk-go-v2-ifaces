@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestBatchGetSchema", func(t *testing.T) {
-        input := &cleanrooms.BatchGetSchemaInput{}
-        output := &cleanrooms.BatchGetSchemaOutput{}
-
-        mockClient.On("BatchGetSchema", ctx, input).Return(output, nil)
-
-        result, err := mockClient.BatchGetSchema(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestBatchGetSchemaAnalysisRule", func(t *testing.T) {
         input := &cleanrooms.BatchGetSchemaAnalysisRuleInput{}
         output := &cleanrooms.BatchGetSchemaAnalysisRuleOutput{}
@@ -67,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetSchemaAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetSchemaAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetSchema", func(t *testing.T) {
+        input := &cleanrooms.BatchGetSchemaInput{}
+        output := &cleanrooms.BatchGetSchemaOutput{}
+
+        mockClient.On("BatchGetSchema", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetSchema(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateConfiguredTable", func(t *testing.T) {
-        input := &cleanrooms.CreateConfiguredTableInput{}
-        output := &cleanrooms.CreateConfiguredTableOutput{}
-
-        mockClient.On("CreateConfiguredTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateConfiguredTable(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateConfiguredTableAnalysisRule", func(t *testing.T) {
         input := &cleanrooms.CreateConfiguredTableAnalysisRuleInput{}
         output := &cleanrooms.CreateConfiguredTableAnalysisRuleOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateConfiguredTableAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateConfiguredTableAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("CreateConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfiguredTableAssociationAnalysisRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,13 +151,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
-        input := &cleanrooms.CreateConfiguredTableAssociationAnalysisRuleInput{}
-        output := &cleanrooms.CreateConfiguredTableAssociationAnalysisRuleOutput{}
+    t.Run("TestCreateConfiguredTable", func(t *testing.T) {
+        input := &cleanrooms.CreateConfiguredTableInput{}
+        output := &cleanrooms.CreateConfiguredTableOutput{}
 
-        mockClient.On("CreateConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+        mockClient.On("CreateConfiguredTable", ctx, input).Return(output, nil)
 
-        result, err := mockClient.CreateConfiguredTableAssociationAnalysisRule(ctx, input)
+        result, err := mockClient.CreateConfiguredTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteConfiguredTable", func(t *testing.T) {
-        input := &cleanrooms.DeleteConfiguredTableInput{}
-        output := &cleanrooms.DeleteConfiguredTableOutput{}
-
-        mockClient.On("DeleteConfiguredTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteConfiguredTable(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteConfiguredTableAnalysisRule", func(t *testing.T) {
         input := &cleanrooms.DeleteConfiguredTableAnalysisRuleInput{}
         output := &cleanrooms.DeleteConfiguredTableAnalysisRuleOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConfiguredTableAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConfiguredTableAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("DeleteConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguredTableAssociationAnalysisRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,13 +294,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
-        input := &cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleInput{}
-        output := &cleanrooms.DeleteConfiguredTableAssociationAnalysisRuleOutput{}
+    t.Run("TestDeleteConfiguredTable", func(t *testing.T) {
+        input := &cleanrooms.DeleteConfiguredTableInput{}
+        output := &cleanrooms.DeleteConfiguredTableOutput{}
 
-        mockClient.On("DeleteConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+        mockClient.On("DeleteConfiguredTable", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DeleteConfiguredTableAssociationAnalysisRule(ctx, input)
+        result, err := mockClient.DeleteConfiguredTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCollaboration", func(t *testing.T) {
-        input := &cleanrooms.GetCollaborationInput{}
-        output := &cleanrooms.GetCollaborationOutput{}
-
-        mockClient.On("GetCollaboration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCollaboration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCollaborationAnalysisTemplate", func(t *testing.T) {
         input := &cleanrooms.GetCollaborationAnalysisTemplateInput{}
         output := &cleanrooms.GetCollaborationAnalysisTemplateOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCollaborationConfiguredAudienceModelAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCollaborationConfiguredAudienceModelAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCollaboration", func(t *testing.T) {
+        input := &cleanrooms.GetCollaborationInput{}
+        output := &cleanrooms.GetCollaborationOutput{}
+
+        mockClient.On("GetCollaboration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCollaboration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConfiguredTable", func(t *testing.T) {
-        input := &cleanrooms.GetConfiguredTableInput{}
-        output := &cleanrooms.GetConfiguredTableOutput{}
-
-        mockClient.On("GetConfiguredTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetConfiguredTable(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetConfiguredTableAnalysisRule", func(t *testing.T) {
         input := &cleanrooms.GetConfiguredTableAnalysisRuleInput{}
         output := &cleanrooms.GetConfiguredTableAnalysisRuleOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfiguredTableAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfiguredTableAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("GetConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfiguredTableAssociationAnalysisRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,13 +502,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
-        input := &cleanrooms.GetConfiguredTableAssociationAnalysisRuleInput{}
-        output := &cleanrooms.GetConfiguredTableAssociationAnalysisRuleOutput{}
+    t.Run("TestGetConfiguredTable", func(t *testing.T) {
+        input := &cleanrooms.GetConfiguredTableInput{}
+        output := &cleanrooms.GetConfiguredTableOutput{}
 
-        mockClient.On("GetConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+        mockClient.On("GetConfiguredTable", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetConfiguredTableAssociationAnalysisRule(ctx, input)
+        result, err := mockClient.GetConfiguredTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetProtectedJob", func(t *testing.T) {
+        input := &cleanrooms.GetProtectedJobInput{}
+        output := &cleanrooms.GetProtectedJobOutput{}
+
+        mockClient.On("GetProtectedJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProtectedJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetProtectedQuery", func(t *testing.T) {
         input := &cleanrooms.GetProtectedQueryInput{}
         output := &cleanrooms.GetProtectedQueryOutput{}
@@ -580,19 +593,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSchema", func(t *testing.T) {
-        input := &cleanrooms.GetSchemaInput{}
-        output := &cleanrooms.GetSchemaOutput{}
-
-        mockClient.On("GetSchema", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSchema(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSchemaAnalysisRule", func(t *testing.T) {
         input := &cleanrooms.GetSchemaAnalysisRuleInput{}
         output := &cleanrooms.GetSchemaAnalysisRuleOutput{}
@@ -600,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSchemaAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSchemaAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSchema", func(t *testing.T) {
+        input := &cleanrooms.GetSchemaInput{}
+        output := &cleanrooms.GetSchemaOutput{}
+
+        mockClient.On("GetSchema", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSchema(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,19 +671,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCollaborationPrivacyBudgetTemplates", func(t *testing.T) {
-        input := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesInput{}
-        output := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesOutput{}
-
-        mockClient.On("ListCollaborationPrivacyBudgetTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListCollaborationPrivacyBudgetTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListCollaborationPrivacyBudgets", func(t *testing.T) {
         input := &cleanrooms.ListCollaborationPrivacyBudgetsInput{}
         output := &cleanrooms.ListCollaborationPrivacyBudgetsOutput{}
@@ -678,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCollaborationPrivacyBudgets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCollaborationPrivacyBudgets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCollaborationPrivacyBudgetTemplates", func(t *testing.T) {
+        input := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesInput{}
+        output := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesOutput{}
+
+        mockClient.On("ListCollaborationPrivacyBudgetTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationPrivacyBudgetTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,6 +801,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPrivacyBudgets", func(t *testing.T) {
+        input := &cleanrooms.ListPrivacyBudgetsInput{}
+        output := &cleanrooms.ListPrivacyBudgetsOutput{}
+
+        mockClient.On("ListPrivacyBudgets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPrivacyBudgets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPrivacyBudgetTemplates", func(t *testing.T) {
         input := &cleanrooms.ListPrivacyBudgetTemplatesInput{}
         output := &cleanrooms.ListPrivacyBudgetTemplatesOutput{}
@@ -801,13 +827,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPrivacyBudgets", func(t *testing.T) {
-        input := &cleanrooms.ListPrivacyBudgetsInput{}
-        output := &cleanrooms.ListPrivacyBudgetsOutput{}
+    t.Run("TestListProtectedJobs", func(t *testing.T) {
+        input := &cleanrooms.ListProtectedJobsInput{}
+        output := &cleanrooms.ListProtectedJobsOutput{}
 
-        mockClient.On("ListPrivacyBudgets", ctx, input).Return(output, nil)
+        mockClient.On("ListProtectedJobs", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListPrivacyBudgets(ctx, input)
+        result, err := mockClient.ListProtectedJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -873,6 +899,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PreviewPrivacyImpact", ctx, input).Return(output, nil)
 
         result, err := mockClient.PreviewPrivacyImpact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartProtectedJob", func(t *testing.T) {
+        input := &cleanrooms.StartProtectedJobInput{}
+        output := &cleanrooms.StartProtectedJobOutput{}
+
+        mockClient.On("StartProtectedJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartProtectedJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,19 +996,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateConfiguredTable", func(t *testing.T) {
-        input := &cleanrooms.UpdateConfiguredTableInput{}
-        output := &cleanrooms.UpdateConfiguredTableOutput{}
-
-        mockClient.On("UpdateConfiguredTable", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateConfiguredTable(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateConfiguredTableAnalysisRule", func(t *testing.T) {
         input := &cleanrooms.UpdateConfiguredTableAnalysisRuleInput{}
         output := &cleanrooms.UpdateConfiguredTableAnalysisRuleOutput{}
@@ -977,6 +1003,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConfiguredTableAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConfiguredTableAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput{}
+        output := &cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput{}
+
+        mockClient.On("UpdateConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConfiguredTableAssociationAnalysisRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -996,13 +1035,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateConfiguredTableAssociationAnalysisRule", func(t *testing.T) {
-        input := &cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleInput{}
-        output := &cleanrooms.UpdateConfiguredTableAssociationAnalysisRuleOutput{}
+    t.Run("TestUpdateConfiguredTable", func(t *testing.T) {
+        input := &cleanrooms.UpdateConfiguredTableInput{}
+        output := &cleanrooms.UpdateConfiguredTableOutput{}
 
-        mockClient.On("UpdateConfiguredTableAssociationAnalysisRule", ctx, input).Return(output, nil)
+        mockClient.On("UpdateConfiguredTable", ctx, input).Return(output, nil)
 
-        result, err := mockClient.UpdateConfiguredTableAssociationAnalysisRule(ctx, input)
+        result, err := mockClient.UpdateConfiguredTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1055,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePrivacyBudgetTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePrivacyBudgetTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProtectedJob", func(t *testing.T) {
+        input := &cleanrooms.UpdateProtectedJobInput{}
+        output := &cleanrooms.UpdateProtectedJobOutput{}
+
+        mockClient.On("UpdateProtectedJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProtectedJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

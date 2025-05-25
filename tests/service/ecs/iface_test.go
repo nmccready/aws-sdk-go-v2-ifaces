@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStopServiceDeployment", func(t *testing.T) {
+        input := &ecs.StopServiceDeploymentInput{}
+        output := &ecs.StopServiceDeploymentOutput{}
+
+        mockClient.On("StopServiceDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopServiceDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopTask", func(t *testing.T) {
         input := &ecs.StopTaskInput{}
         output := &ecs.StopTaskOutput{}

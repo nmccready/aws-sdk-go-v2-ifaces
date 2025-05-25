@@ -69,6 +69,7 @@ type IClient interface {
  ListIntegrations(ctx context.Context, params *ListIntegrationsInput, optFns ...func(*Options)) (*ListIntegrationsOutput, error) 
  ListLogAnomalyDetectors(ctx context.Context, params *ListLogAnomalyDetectorsInput, optFns ...func(*Options)) (*ListLogAnomalyDetectorsOutput, error) 
  ListLogGroupsForQuery(ctx context.Context, params *ListLogGroupsForQueryInput, optFns ...func(*Options)) (*ListLogGroupsForQueryOutput, error) 
+ ListLogGroups(ctx context.Context, params *ListLogGroupsInput, optFns ...func(*Options)) (*ListLogGroupsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListTagsLogGroup(ctx context.Context, params *ListTagsLogGroupInput, optFns ...func(*Options)) (*ListTagsLogGroupOutput, error) 
  PutAccountPolicy(ctx context.Context, params *PutAccountPolicyInput, optFns ...func(*Options)) (*PutAccountPolicyOutput, error) 

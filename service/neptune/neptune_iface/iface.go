@@ -79,4 +79,5 @@ type IClient interface {
  RestoreDBClusterToPointInTime(ctx context.Context, params *RestoreDBClusterToPointInTimeInput, optFns ...func(*Options)) (*RestoreDBClusterToPointInTimeOutput, error) 
  StartDBCluster(ctx context.Context, params *StartDBClusterInput, optFns ...func(*Options)) (*StartDBClusterOutput, error) 
  StopDBCluster(ctx context.Context, params *StopDBClusterInput, optFns ...func(*Options)) (*StopDBClusterOutput, error) 
+ SwitchoverGlobalCluster(ctx context.Context, params *SwitchoverGlobalClusterInput, optFns ...func(*Options)) (*SwitchoverGlobalClusterOutput, error) 
 }

@@ -33,6 +33,7 @@ type IClient interface {
  EnableDelegatedAdminAccount(ctx context.Context, params *EnableDelegatedAdminAccountInput, optFns ...func(*Options)) (*EnableDelegatedAdminAccountOutput, error) 
  GetCisScanReport(ctx context.Context, params *GetCisScanReportInput, optFns ...func(*Options)) (*GetCisScanReportOutput, error) 
  GetCisScanResultDetails(ctx context.Context, params *GetCisScanResultDetailsInput, optFns ...func(*Options)) (*GetCisScanResultDetailsOutput, error) 
+ GetClustersForImage(ctx context.Context, params *GetClustersForImageInput, optFns ...func(*Options)) (*GetClustersForImageOutput, error) 
  GetConfiguration(ctx context.Context, params *GetConfigurationInput, optFns ...func(*Options)) (*GetConfigurationOutput, error) 
  GetDelegatedAdminAccount(ctx context.Context, params *GetDelegatedAdminAccountInput, optFns ...func(*Options)) (*GetDelegatedAdminAccountOutput, error) 
  GetEc2DeepInspectionConfiguration(ctx context.Context, params *GetEc2DeepInspectionConfigurationInput, optFns ...func(*Options)) (*GetEc2DeepInspectionConfigurationOutput, error) 

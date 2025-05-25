@@ -307,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCluster", func(t *testing.T) {
+        input := &route53recoverycontrolconfig.UpdateClusterInput{}
+        output := &route53recoverycontrolconfig.UpdateClusterOutput{}
+
+        mockClient.On("UpdateCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateControlPanel", func(t *testing.T) {
         input := &route53recoverycontrolconfig.UpdateControlPanelInput{}
         output := &route53recoverycontrolconfig.UpdateControlPanelOutput{}

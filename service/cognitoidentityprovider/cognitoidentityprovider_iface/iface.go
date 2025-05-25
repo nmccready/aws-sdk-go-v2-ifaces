@@ -78,6 +78,7 @@ type IClient interface {
  GetIdentityProviderByIdentifier(ctx context.Context, params *GetIdentityProviderByIdentifierInput, optFns ...func(*Options)) (*GetIdentityProviderByIdentifierOutput, error) 
  GetLogDeliveryConfiguration(ctx context.Context, params *GetLogDeliveryConfigurationInput, optFns ...func(*Options)) (*GetLogDeliveryConfigurationOutput, error) 
  GetSigningCertificate(ctx context.Context, params *GetSigningCertificateInput, optFns ...func(*Options)) (*GetSigningCertificateOutput, error) 
+ GetTokensFromRefreshToken(ctx context.Context, params *GetTokensFromRefreshTokenInput, optFns ...func(*Options)) (*GetTokensFromRefreshTokenOutput, error) 
  GetUICustomization(ctx context.Context, params *GetUICustomizationInput, optFns ...func(*Options)) (*GetUICustomizationOutput, error) 
  GetUser(ctx context.Context, params *GetUserInput, optFns ...func(*Options)) (*GetUserOutput, error) 
  GetUserAttributeVerificationCode(ctx context.Context, params *GetUserAttributeVerificationCodeInput, optFns ...func(*Options)) (*GetUserAttributeVerificationCodeOutput, error) 

@@ -31,6 +31,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateCluster(ctx context.Context, params *UpdateClusterInput, optFns ...func(*Options)) (*UpdateClusterOutput, error) 
  UpdateControlPanel(ctx context.Context, params *UpdateControlPanelInput, optFns ...func(*Options)) (*UpdateControlPanelOutput, error) 
  UpdateRoutingControl(ctx context.Context, params *UpdateRoutingControlInput, optFns ...func(*Options)) (*UpdateRoutingControlOutput, error) 
  UpdateSafetyRule(ctx context.Context, params *UpdateSafetyRuleInput, optFns ...func(*Options)) (*UpdateSafetyRuleOutput, error) 

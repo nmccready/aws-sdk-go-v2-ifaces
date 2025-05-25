@@ -33,6 +33,8 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutChannelPolicy(ctx context.Context, params *PutChannelPolicyInput, optFns ...func(*Options)) (*PutChannelPolicyOutput, error) 
  PutOriginEndpointPolicy(ctx context.Context, params *PutOriginEndpointPolicyInput, optFns ...func(*Options)) (*PutOriginEndpointPolicyOutput, error) 
+ ResetChannelState(ctx context.Context, params *ResetChannelStateInput, optFns ...func(*Options)) (*ResetChannelStateOutput, error) 
+ ResetOriginEndpointState(ctx context.Context, params *ResetOriginEndpointStateInput, optFns ...func(*Options)) (*ResetOriginEndpointStateOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateChannel(ctx context.Context, params *UpdateChannelInput, optFns ...func(*Options)) (*UpdateChannelOutput, error) 

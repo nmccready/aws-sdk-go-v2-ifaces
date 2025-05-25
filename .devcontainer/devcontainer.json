@@ -9,7 +9,8 @@
 			"nodeGypDependencies": true,
 			"version": "20.18.3",
 			"nvmVersion": "latest"
-		}
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.

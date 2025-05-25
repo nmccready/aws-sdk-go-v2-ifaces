@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSdiSource", func(t *testing.T) {
+        input := &medialive.CreateSdiSourceInput{}
+        output := &medialive.CreateSdiSourceOutput{}
+
+        mockClient.On("CreateSdiSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSdiSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSignalMap", func(t *testing.T) {
         input := &medialive.CreateSignalMapInput{}
         output := &medialive.CreateSignalMapOutput{}
@@ -541,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSdiSource", func(t *testing.T) {
+        input := &medialive.DeleteSdiSourceInput{}
+        output := &medialive.DeleteSdiSourceOutput{}
+
+        mockClient.On("DeleteSdiSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSdiSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteSignalMap", func(t *testing.T) {
         input := &medialive.DeleteSignalMapInput{}
         output := &medialive.DeleteSignalMapOutput{}
@@ -756,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSdiSource", func(t *testing.T) {
+        input := &medialive.DescribeSdiSourceInput{}
+        output := &medialive.DescribeSdiSourceOutput{}
+
+        mockClient.On("DescribeSdiSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSdiSource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1055,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReservations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReservations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSdiSources", func(t *testing.T) {
+        input := &medialive.ListSdiSourcesInput{}
+        output := &medialive.ListSdiSourcesOutput{}
+
+        mockClient.On("ListSdiSources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSdiSources(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1523,6 +1575,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateReservation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSdiSource", func(t *testing.T) {
+        input := &medialive.UpdateSdiSourceInput{}
+        output := &medialive.UpdateSdiSourceOutput{}
+
+        mockClient.On("UpdateSdiSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSdiSource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

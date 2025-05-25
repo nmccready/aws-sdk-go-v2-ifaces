@@ -72,6 +72,7 @@ type IClient interface {
  ModifyAccount(ctx context.Context, params *ModifyAccountInput, optFns ...func(*Options)) (*ModifyAccountOutput, error) 
  ModifyCertificateBasedAuthProperties(ctx context.Context, params *ModifyCertificateBasedAuthPropertiesInput, optFns ...func(*Options)) (*ModifyCertificateBasedAuthPropertiesOutput, error) 
  ModifyClientProperties(ctx context.Context, params *ModifyClientPropertiesInput, optFns ...func(*Options)) (*ModifyClientPropertiesOutput, error) 
+ ModifyEndpointEncryptionMode(ctx context.Context, params *ModifyEndpointEncryptionModeInput, optFns ...func(*Options)) (*ModifyEndpointEncryptionModeOutput, error) 
  ModifySamlProperties(ctx context.Context, params *ModifySamlPropertiesInput, optFns ...func(*Options)) (*ModifySamlPropertiesOutput, error) 
  ModifySelfservicePermissions(ctx context.Context, params *ModifySelfservicePermissionsInput, optFns ...func(*Options)) (*ModifySelfservicePermissionsOutput, error) 
  ModifyStreamingProperties(ctx context.Context, params *ModifyStreamingPropertiesInput, optFns ...func(*Options)) (*ModifyStreamingPropertiesOutput, error) 

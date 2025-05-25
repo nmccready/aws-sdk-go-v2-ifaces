@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetClustersForImage", func(t *testing.T) {
+        input := &inspector2.GetClustersForImageInput{}
+        output := &inspector2.GetClustersForImageOutput{}
+
+        mockClient.On("GetClustersForImage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetClustersForImage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetConfiguration", func(t *testing.T) {
         input := &inspector2.GetConfigurationInput{}
         output := &inspector2.GetConfigurationOutput{}

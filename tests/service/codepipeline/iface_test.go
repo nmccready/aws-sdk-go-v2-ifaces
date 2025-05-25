@@ -268,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDeployActionExecutionTargets", func(t *testing.T) {
+        input := &codepipeline.ListDeployActionExecutionTargetsInput{}
+        output := &codepipeline.ListDeployActionExecutionTargetsOutput{}
+
+        mockClient.On("ListDeployActionExecutionTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeployActionExecutionTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPipelineExecutions", func(t *testing.T) {
         input := &codepipeline.ListPipelineExecutionsInput{}
         output := &codepipeline.ListPipelineExecutionsOutput{}

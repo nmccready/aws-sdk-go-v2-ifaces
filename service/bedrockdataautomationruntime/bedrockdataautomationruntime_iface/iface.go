@@ -12,4 +12,7 @@ type IClient interface {
  Options() Options 
  GetDataAutomationStatus(ctx context.Context, params *GetDataAutomationStatusInput, optFns ...func(*Options)) (*GetDataAutomationStatusOutput, error) 
  InvokeDataAutomationAsync(ctx context.Context, params *InvokeDataAutomationAsyncInput, optFns ...func(*Options)) (*InvokeDataAutomationAsyncOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

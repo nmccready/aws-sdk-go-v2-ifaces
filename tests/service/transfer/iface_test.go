@@ -723,6 +723,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartRemoteDelete", func(t *testing.T) {
+        input := &transfer.StartRemoteDeleteInput{}
+        output := &transfer.StartRemoteDeleteOutput{}
+
+        mockClient.On("StartRemoteDelete", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRemoteDelete(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartRemoteMove", func(t *testing.T) {
+        input := &transfer.StartRemoteMoveInput{}
+        output := &transfer.StartRemoteMoveOutput{}
+
+        mockClient.On("StartRemoteMove", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRemoteMove(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartServer", func(t *testing.T) {
         input := &transfer.StartServerInput{}
         output := &transfer.StartServerOutput{}

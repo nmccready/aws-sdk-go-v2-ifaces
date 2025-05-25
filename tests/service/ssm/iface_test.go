@@ -853,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccessToken", func(t *testing.T) {
+        input := &ssm.GetAccessTokenInput{}
+        output := &ssm.GetAccessTokenOutput{}
+
+        mockClient.On("GetAccessToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccessToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAutomationExecution", func(t *testing.T) {
         input := &ssm.GetAutomationExecutionInput{}
         output := &ssm.GetAutomationExecutionOutput{}
@@ -1614,6 +1627,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendCommand", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendCommand(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAccessRequest", func(t *testing.T) {
+        input := &ssm.StartAccessRequestInput{}
+        output := &ssm.StartAccessRequestOutput{}
+
+        mockClient.On("StartAccessRequest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAccessRequest(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

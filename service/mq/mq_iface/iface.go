@@ -15,6 +15,7 @@ type IClient interface {
  CreateTags(ctx context.Context, params *CreateTagsInput, optFns ...func(*Options)) (*CreateTagsOutput, error) 
  CreateUser(ctx context.Context, params *CreateUserInput, optFns ...func(*Options)) (*CreateUserOutput, error) 
  DeleteBroker(ctx context.Context, params *DeleteBrokerInput, optFns ...func(*Options)) (*DeleteBrokerOutput, error) 
+ DeleteConfiguration(ctx context.Context, params *DeleteConfigurationInput, optFns ...func(*Options)) (*DeleteConfigurationOutput, error) 
  DeleteTags(ctx context.Context, params *DeleteTagsInput, optFns ...func(*Options)) (*DeleteTagsOutput, error) 
  DeleteUser(ctx context.Context, params *DeleteUserInput, optFns ...func(*Options)) (*DeleteUserOutput, error) 
  DescribeBroker(ctx context.Context, params *DescribeBrokerInput, optFns ...func(*Options)) (*DescribeBrokerOutput, error) 

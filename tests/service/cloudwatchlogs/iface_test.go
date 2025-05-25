@@ -801,6 +801,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListLogGroups", func(t *testing.T) {
+        input := &cloudwatchlogs.ListLogGroupsInput{}
+        output := &cloudwatchlogs.ListLogGroupsOutput{}
+
+        mockClient.On("ListLogGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLogGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &cloudwatchlogs.ListTagsForResourceInput{}
         output := &cloudwatchlogs.ListTagsForResourceOutput{}

@@ -112,6 +112,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCheckDocumentAccess", func(t *testing.T) {
+        input := &qbusiness.CheckDocumentAccessInput{}
+        output := &qbusiness.CheckDocumentAccessOutput{}
+
+        mockClient.On("CheckDocumentAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CheckDocumentAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAnonymousWebExperienceUrl", func(t *testing.T) {
+        input := &qbusiness.CreateAnonymousWebExperienceUrlInput{}
+        output := &qbusiness.CreateAnonymousWebExperienceUrlOutput{}
+
+        mockClient.On("CreateAnonymousWebExperienceUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAnonymousWebExperienceUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateApplication", func(t *testing.T) {
         input := &qbusiness.CreateApplicationInput{}
         output := &qbusiness.CreateApplicationOutput{}

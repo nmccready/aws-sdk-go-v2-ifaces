@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeFlowOperation", func(t *testing.T) {
+        input := &networkfirewall.DescribeFlowOperationInput{}
+        output := &networkfirewall.DescribeFlowOperationOutput{}
+
+        mockClient.On("DescribeFlowOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFlowOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeLoggingConfiguration", func(t *testing.T) {
         input := &networkfirewall.DescribeLoggingConfigurationInput{}
         output := &networkfirewall.DescribeLoggingConfigurationOutput{}
@@ -333,6 +346,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFlowOperationResults", func(t *testing.T) {
+        input := &networkfirewall.ListFlowOperationResultsInput{}
+        output := &networkfirewall.ListFlowOperationResultsOutput{}
+
+        mockClient.On("ListFlowOperationResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFlowOperationResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFlowOperations", func(t *testing.T) {
+        input := &networkfirewall.ListFlowOperationsInput{}
+        output := &networkfirewall.ListFlowOperationsOutput{}
+
+        mockClient.On("ListFlowOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFlowOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRuleGroups", func(t *testing.T) {
         input := &networkfirewall.ListRuleGroupsInput{}
         output := &networkfirewall.ListRuleGroupsOutput{}
@@ -392,6 +431,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAnalysisReport", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAnalysisReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartFlowCapture", func(t *testing.T) {
+        input := &networkfirewall.StartFlowCaptureInput{}
+        output := &networkfirewall.StartFlowCaptureOutput{}
+
+        mockClient.On("StartFlowCapture", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartFlowCapture(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartFlowFlush", func(t *testing.T) {
+        input := &networkfirewall.StartFlowFlushInput{}
+        output := &networkfirewall.StartFlowFlushOutput{}
+
+        mockClient.On("StartFlowFlush", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartFlowFlush(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

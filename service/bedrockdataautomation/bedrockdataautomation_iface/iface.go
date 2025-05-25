@@ -19,6 +19,9 @@ type IClient interface {
  GetDataAutomationProject(ctx context.Context, params *GetDataAutomationProjectInput, optFns ...func(*Options)) (*GetDataAutomationProjectOutput, error) 
  ListBlueprints(ctx context.Context, params *ListBlueprintsInput, optFns ...func(*Options)) (*ListBlueprintsOutput, error) 
  ListDataAutomationProjects(ctx context.Context, params *ListDataAutomationProjectsInput, optFns ...func(*Options)) (*ListDataAutomationProjectsOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateBlueprint(ctx context.Context, params *UpdateBlueprintInput, optFns ...func(*Options)) (*UpdateBlueprintOutput, error) 
  UpdateDataAutomationProject(ctx context.Context, params *UpdateDataAutomationProjectInput, optFns ...func(*Options)) (*UpdateDataAutomationProjectOutput, error) 
 }

@@ -27,10 +27,14 @@ cp ../../.prototools .
 git checkout main
 git pull -p
 
-# get the latest tag version by using git tag command and sort it by version where version starts with v\d+.\d+.\d+
-AWS_SDK_VERSION=$(git tag | grep -E "^v[0-9]+\.[0-9]+\.[0-9]+$" | sort -V | tail -n 1)
+# get the latest tag period
+# AWS SDK V2 has changed to almost daily releases with no real root verion
+# the typical release looks like "release-YYYY-MM-DD", which encapsulates a bunch of package releases.
+# to see some grouped releases use:
+#   git for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | head -n 20
+MOST_RECENT_TAG=$(git for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | head -n 1)
 # explicit checkout of the tagged version
-git checkout "$AWS_SDK_VERSION"
+git checkout "$MOST_RECENT_TAG"
 
 cd "$ORIG_DIR"
 
@@ -40,4 +44,4 @@ rm -rf go.sum go.mod vendor
 
 echo "module github.com/nmccready/aws-sdk-go-v2-ifaces
 
-go 1.22" > go.mod
+go 1.23" > go.mod

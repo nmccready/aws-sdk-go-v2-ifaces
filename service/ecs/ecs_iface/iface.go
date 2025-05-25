@@ -54,6 +54,7 @@ type IClient interface {
  RegisterTaskDefinition(ctx context.Context, params *RegisterTaskDefinitionInput, optFns ...func(*Options)) (*RegisterTaskDefinitionOutput, error) 
  RunTask(ctx context.Context, params *RunTaskInput, optFns ...func(*Options)) (*RunTaskOutput, error) 
  StartTask(ctx context.Context, params *StartTaskInput, optFns ...func(*Options)) (*StartTaskOutput, error) 
+ StopServiceDeployment(ctx context.Context, params *StopServiceDeploymentInput, optFns ...func(*Options)) (*StopServiceDeploymentOutput, error) 
  StopTask(ctx context.Context, params *StopTaskInput, optFns ...func(*Options)) (*StopTaskOutput, error) 
  SubmitAttachmentStateChanges(ctx context.Context, params *SubmitAttachmentStateChangesInput, optFns ...func(*Options)) (*SubmitAttachmentStateChangesOutput, error) 
  SubmitContainerStateChange(ctx context.Context, params *SubmitContainerStateChangeInput, optFns ...func(*Options)) (*SubmitContainerStateChangeOutput, error) 

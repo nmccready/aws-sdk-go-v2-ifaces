@@ -930,4 +930,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestSwitchoverGlobalCluster", func(t *testing.T) {
+        input := &neptune.SwitchoverGlobalClusterInput{}
+        output := &neptune.SwitchoverGlobalClusterOutput{}
+
+        mockClient.On("SwitchoverGlobalCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SwitchoverGlobalCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

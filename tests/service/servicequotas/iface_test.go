@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSupportCase", func(t *testing.T) {
+        input := &servicequotas.CreateSupportCaseInput{}
+        output := &servicequotas.CreateSupportCaseOutput{}
+
+        mockClient.On("CreateSupportCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSupportCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteServiceQuotaIncreaseRequestFromTemplate", func(t *testing.T) {
         input := &servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput{}
         output := &servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput{}
