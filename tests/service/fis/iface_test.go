@@ -203,19 +203,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListExperiments", func(t *testing.T) {
-        input := &fis.ListExperimentsInput{}
-        output := &fis.ListExperimentsOutput{}
-
-        mockClient.On("ListExperiments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListExperiments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListExperimentTargetAccountConfigurations", func(t *testing.T) {
         input := &fis.ListExperimentTargetAccountConfigurationsInput{}
         output := &fis.ListExperimentTargetAccountConfigurationsOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListExperimentTemplates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListExperimentTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExperiments", func(t *testing.T) {
+        input := &fis.ListExperimentsInput{}
+        output := &fis.ListExperimentsOutput{}
+
+        mockClient.On("ListExperiments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExperiments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

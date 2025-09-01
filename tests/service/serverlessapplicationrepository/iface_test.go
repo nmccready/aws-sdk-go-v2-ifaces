@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListApplications", func(t *testing.T) {
-        input := &serverlessapplicationrepository.ListApplicationsInput{}
-        output := &serverlessapplicationrepository.ListApplicationsOutput{}
-
-        mockClient.On("ListApplications", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListApplications(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListApplicationVersions", func(t *testing.T) {
         input := &serverlessapplicationrepository.ListApplicationVersionsInput{}
         output := &serverlessapplicationrepository.ListApplicationVersionsOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApplicationVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApplicationVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApplications", func(t *testing.T) {
+        input := &serverlessapplicationrepository.ListApplicationsInput{}
+        output := &serverlessapplicationrepository.ListApplicationsOutput{}
+
+        mockClient.On("ListApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

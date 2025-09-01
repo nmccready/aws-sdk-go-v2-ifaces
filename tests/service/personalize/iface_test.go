@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSolutions", func(t *testing.T) {
-        input := &personalize.ListSolutionsInput{}
-        output := &personalize.ListSolutionsOutput{}
-
-        mockClient.On("ListSolutions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSolutions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSolutionVersions", func(t *testing.T) {
         input := &personalize.ListSolutionVersionsInput{}
         output := &personalize.ListSolutionVersionsOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSolutionVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSolutionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSolutions", func(t *testing.T) {
+        input := &personalize.ListSolutionsInput{}
+        output := &personalize.ListSolutionsOutput{}
+
+        mockClient.On("ListSolutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSolutions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

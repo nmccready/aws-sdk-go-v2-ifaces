@@ -489,19 +489,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeConnectionAliases", func(t *testing.T) {
-        input := &workspaces.DescribeConnectionAliasesInput{}
-        output := &workspaces.DescribeConnectionAliasesOutput{}
-
-        mockClient.On("DescribeConnectionAliases", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeConnectionAliases(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeConnectionAliasPermissions", func(t *testing.T) {
         input := &workspaces.DescribeConnectionAliasPermissionsInput{}
         output := &workspaces.DescribeConnectionAliasPermissionsOutput{}
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeConnectionAliasPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeConnectionAliasPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeConnectionAliases", func(t *testing.T) {
+        input := &workspaces.DescribeConnectionAliasesInput{}
+        output := &workspaces.DescribeConnectionAliasesOutput{}
+
+        mockClient.On("DescribeConnectionAliases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConnectionAliases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -632,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeWorkspaceSnapshots", func(t *testing.T) {
+        input := &workspaces.DescribeWorkspaceSnapshotsInput{}
+        output := &workspaces.DescribeWorkspaceSnapshotsOutput{}
+
+        mockClient.On("DescribeWorkspaceSnapshots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorkspaceSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeWorkspaces", func(t *testing.T) {
         input := &workspaces.DescribeWorkspacesInput{}
         output := &workspaces.DescribeWorkspacesOutput{}
@@ -658,13 +671,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeWorkspaceSnapshots", func(t *testing.T) {
-        input := &workspaces.DescribeWorkspaceSnapshotsInput{}
-        output := &workspaces.DescribeWorkspaceSnapshotsOutput{}
+    t.Run("TestDescribeWorkspacesPoolSessions", func(t *testing.T) {
+        input := &workspaces.DescribeWorkspacesPoolSessionsInput{}
+        output := &workspaces.DescribeWorkspacesPoolSessionsOutput{}
 
-        mockClient.On("DescribeWorkspaceSnapshots", ctx, input).Return(output, nil)
+        mockClient.On("DescribeWorkspacesPoolSessions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeWorkspaceSnapshots(ctx, input)
+        result, err := mockClient.DescribeWorkspacesPoolSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -678,19 +691,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeWorkspacesPools", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeWorkspacesPools(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeWorkspacesPoolSessions", func(t *testing.T) {
-        input := &workspaces.DescribeWorkspacesPoolSessionsInput{}
-        output := &workspaces.DescribeWorkspacesPoolSessionsOutput{}
-
-        mockClient.On("DescribeWorkspacesPoolSessions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeWorkspacesPoolSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

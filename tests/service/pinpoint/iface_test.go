@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetCampaigns", func(t *testing.T) {
-        input := &pinpoint.GetCampaignsInput{}
-        output := &pinpoint.GetCampaignsOutput{}
-
-        mockClient.On("GetCampaigns", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetCampaigns(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetCampaignVersion", func(t *testing.T) {
         input := &pinpoint.GetCampaignVersionInput{}
         output := &pinpoint.GetCampaignVersionOutput{}
@@ -691,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCampaignVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCampaignVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCampaigns", func(t *testing.T) {
+        input := &pinpoint.GetCampaignsInput{}
+        output := &pinpoint.GetCampaignsOutput{}
+
+        mockClient.On("GetCampaigns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCampaigns(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,19 +1022,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSegments", func(t *testing.T) {
-        input := &pinpoint.GetSegmentsInput{}
-        output := &pinpoint.GetSegmentsOutput{}
-
-        mockClient.On("GetSegments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSegments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSegmentVersion", func(t *testing.T) {
         input := &pinpoint.GetSegmentVersionInput{}
         output := &pinpoint.GetSegmentVersionOutput{}
@@ -1055,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSegmentVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSegmentVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSegments", func(t *testing.T) {
+        input := &pinpoint.GetSegmentsInput{}
+        output := &pinpoint.GetSegmentsOutput{}
+
+        mockClient.On("GetSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSegments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,19 +1152,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTemplates", func(t *testing.T) {
-        input := &pinpoint.ListTemplatesInput{}
-        output := &pinpoint.ListTemplatesOutput{}
-
-        mockClient.On("ListTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTemplateVersions", func(t *testing.T) {
         input := &pinpoint.ListTemplateVersionsInput{}
         output := &pinpoint.ListTemplateVersionsOutput{}
@@ -1172,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTemplateVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTemplateVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTemplates", func(t *testing.T) {
+        input := &pinpoint.ListTemplatesInput{}
+        output := &pinpoint.ListTemplatesOutput{}
+
+        mockClient.On("ListTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1191,19 +1191,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestPutEvents", func(t *testing.T) {
-        input := &pinpoint.PutEventsInput{}
-        output := &pinpoint.PutEventsOutput{}
-
-        mockClient.On("PutEvents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PutEvents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestPutEventStream", func(t *testing.T) {
         input := &pinpoint.PutEventStreamInput{}
         output := &pinpoint.PutEventStreamOutput{}
@@ -1211,6 +1198,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutEventStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutEventStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutEvents", func(t *testing.T) {
+        input := &pinpoint.PutEventsInput{}
+        output := &pinpoint.PutEventsOutput{}
+
+        mockClient.On("PutEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutEvents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

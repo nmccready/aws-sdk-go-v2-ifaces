@@ -242,13 +242,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkspaces", func(t *testing.T) {
-        input := &grafana.ListWorkspacesInput{}
-        output := &grafana.ListWorkspacesOutput{}
+    t.Run("TestListWorkspaceServiceAccountTokens", func(t *testing.T) {
+        input := &grafana.ListWorkspaceServiceAccountTokensInput{}
+        output := &grafana.ListWorkspaceServiceAccountTokensOutput{}
 
-        mockClient.On("ListWorkspaces", ctx, input).Return(output, nil)
+        mockClient.On("ListWorkspaceServiceAccountTokens", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListWorkspaces(ctx, input)
+        result, err := mockClient.ListWorkspaceServiceAccountTokens(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -268,13 +268,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkspaceServiceAccountTokens", func(t *testing.T) {
-        input := &grafana.ListWorkspaceServiceAccountTokensInput{}
-        output := &grafana.ListWorkspaceServiceAccountTokensOutput{}
+    t.Run("TestListWorkspaces", func(t *testing.T) {
+        input := &grafana.ListWorkspacesInput{}
+        output := &grafana.ListWorkspacesOutput{}
 
-        mockClient.On("ListWorkspaceServiceAccountTokens", ctx, input).Return(output, nil)
+        mockClient.On("ListWorkspaces", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListWorkspaceServiceAccountTokens(ctx, input)
+        result, err := mockClient.ListWorkspaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteObjects", func(t *testing.T) {
-        input := &s3.DeleteObjectsInput{}
-        output := &s3.DeleteObjectsOutput{}
-
-        mockClient.On("DeleteObjects", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteObjects(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteObjectTagging", func(t *testing.T) {
         input := &s3.DeleteObjectTaggingInput{}
         output := &s3.DeleteObjectTaggingOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteObjectTagging", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteObjectTagging(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteObjects", func(t *testing.T) {
+        input := &s3.DeleteObjectsInput{}
+        output := &s3.DeleteObjectsOutput{}
+
+        mockClient.On("DeleteObjects", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteObjects(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,6 +905,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListObjectVersions", func(t *testing.T) {
+        input := &s3.ListObjectVersionsInput{}
+        output := &s3.ListObjectVersionsOutput{}
+
+        mockClient.On("ListObjectVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListObjectVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListObjects", func(t *testing.T) {
         input := &s3.ListObjectsInput{}
         output := &s3.ListObjectsOutput{}
@@ -925,19 +938,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListObjectsV2", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListObjectsV2(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListObjectVersions", func(t *testing.T) {
-        input := &s3.ListObjectVersionsInput{}
-        output := &s3.ListObjectVersionsOutput{}
-
-        mockClient.On("ListObjectVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListObjectVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

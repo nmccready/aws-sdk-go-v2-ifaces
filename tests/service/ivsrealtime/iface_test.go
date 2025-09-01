@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStages", func(t *testing.T) {
-        input := &ivsrealtime.ListStagesInput{}
-        output := &ivsrealtime.ListStagesOutput{}
-
-        mockClient.On("ListStages", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStages(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStageSessions", func(t *testing.T) {
         input := &ivsrealtime.ListStageSessionsInput{}
         output := &ivsrealtime.ListStageSessionsOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStageSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStageSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStages", func(t *testing.T) {
+        input := &ivsrealtime.ListStagesInput{}
+        output := &ivsrealtime.ListStagesOutput{}
+
+        mockClient.On("ListStages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

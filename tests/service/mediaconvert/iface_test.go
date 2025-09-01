@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListJobs", func(t *testing.T) {
-        input := &mediaconvert.ListJobsInput{}
-        output := &mediaconvert.ListJobsOutput{}
-
-        mockClient.On("ListJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListJobTemplates", func(t *testing.T) {
         input := &mediaconvert.ListJobTemplatesInput{}
         output := &mediaconvert.ListJobTemplatesOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobTemplates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobs", func(t *testing.T) {
+        input := &mediaconvert.ListJobsInput{}
+        output := &mediaconvert.ListJobsOutput{}
+
+        mockClient.On("ListJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

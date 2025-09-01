@@ -619,19 +619,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListOfferings", func(t *testing.T) {
-        input := &devicefarm.ListOfferingsInput{}
-        output := &devicefarm.ListOfferingsOutput{}
-
-        mockClient.On("ListOfferings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListOfferings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListOfferingTransactions", func(t *testing.T) {
         input := &devicefarm.ListOfferingTransactionsInput{}
         output := &devicefarm.ListOfferingTransactionsOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOfferingTransactions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOfferingTransactions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOfferings", func(t *testing.T) {
+        input := &devicefarm.ListOfferingsInput{}
+        output := &devicefarm.ListOfferingsOutput{}
+
+        mockClient.On("ListOfferings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOfferings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

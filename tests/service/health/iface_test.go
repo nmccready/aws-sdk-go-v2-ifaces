@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeEventTypes", func(t *testing.T) {
+        input := &health.DescribeEventTypesInput{}
+        output := &health.DescribeEventTypesOutput{}
+
+        mockClient.On("DescribeEventTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &health.DescribeEventsInput{}
         output := &health.DescribeEventsOutput{}
@@ -158,19 +171,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEventsForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEventsForOrganization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeEventTypes", func(t *testing.T) {
-        input := &health.DescribeEventTypesInput{}
-        output := &health.DescribeEventTypesOutput{}
-
-        mockClient.On("DescribeEventTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

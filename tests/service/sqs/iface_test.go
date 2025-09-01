@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListQueues", func(t *testing.T) {
-        input := &sqs.ListQueuesInput{}
-        output := &sqs.ListQueuesOutput{}
-
-        mockClient.On("ListQueues", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListQueues(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListQueueTags", func(t *testing.T) {
         input := &sqs.ListQueueTagsInput{}
         output := &sqs.ListQueueTagsOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListQueueTags", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListQueueTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQueues", func(t *testing.T) {
+        input := &sqs.ListQueuesInput{}
+        output := &sqs.ListQueuesOutput{}
+
+        mockClient.On("ListQueues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQueues(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

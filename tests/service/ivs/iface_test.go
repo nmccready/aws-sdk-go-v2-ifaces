@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStreams", func(t *testing.T) {
-        input := &ivs.ListStreamsInput{}
-        output := &ivs.ListStreamsOutput{}
-
-        mockClient.On("ListStreams", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStreams(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStreamSessions", func(t *testing.T) {
         input := &ivs.ListStreamSessionsInput{}
         output := &ivs.ListStreamSessionsOutput{}
@@ -379,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStreamSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStreamSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStreams", func(t *testing.T) {
+        input := &ivs.ListStreamsInput{}
+        output := &ivs.ListStreamsOutput{}
+
+        mockClient.On("ListStreams", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStreams(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

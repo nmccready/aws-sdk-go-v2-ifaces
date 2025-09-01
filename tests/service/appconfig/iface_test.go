@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDeployments", func(t *testing.T) {
-        input := &appconfig.ListDeploymentsInput{}
-        output := &appconfig.ListDeploymentsOutput{}
-
-        mockClient.On("ListDeployments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDeployments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDeploymentStrategies", func(t *testing.T) {
         input := &appconfig.ListDeploymentStrategiesInput{}
         output := &appconfig.ListDeploymentStrategiesOutput{}
@@ -392,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDeploymentStrategies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDeploymentStrategies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDeployments", func(t *testing.T) {
+        input := &appconfig.ListDeploymentsInput{}
+        output := &appconfig.ListDeploymentsOutput{}
+
+        mockClient.On("ListDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeployments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

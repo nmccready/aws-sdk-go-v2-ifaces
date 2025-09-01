@@ -10,6 +10,6 @@ import (
 // IClient defines the interface for ec2instanceconnect
 type IClient interface {
  Options() Options 
- SendSerialConsoleSSHPublicKey(ctx context.Context, params *SendSerialConsoleSSHPublicKeyInput, optFns ...func(*Options)) (*SendSerialConsoleSSHPublicKeyOutput, error) 
  SendSSHPublicKey(ctx context.Context, params *SendSSHPublicKeyInput, optFns ...func(*Options)) (*SendSSHPublicKeyOutput, error) 
+ SendSerialConsoleSSHPublicKey(ctx context.Context, params *SendSerialConsoleSSHPublicKeyInput, optFns ...func(*Options)) (*SendSerialConsoleSSHPublicKeyOutput, error) 
 }

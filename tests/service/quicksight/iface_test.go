@@ -1581,19 +1581,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDashboards", func(t *testing.T) {
-        input := &quicksight.ListDashboardsInput{}
-        output := &quicksight.ListDashboardsOutput{}
-
-        mockClient.On("ListDashboards", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDashboards(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDashboardVersions", func(t *testing.T) {
         input := &quicksight.ListDashboardVersionsInput{}
         output := &quicksight.ListDashboardVersionsOutput{}
@@ -1601,6 +1588,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDashboardVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDashboardVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDashboards", func(t *testing.T) {
+        input := &quicksight.ListDashboardsInput{}
+        output := &quicksight.ListDashboardsOutput{}
+
+        mockClient.On("ListDashboards", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDashboards(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1815,19 +1815,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTemplates", func(t *testing.T) {
-        input := &quicksight.ListTemplatesInput{}
-        output := &quicksight.ListTemplatesOutput{}
-
-        mockClient.On("ListTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTemplateVersions", func(t *testing.T) {
         input := &quicksight.ListTemplateVersionsInput{}
         output := &quicksight.ListTemplateVersionsOutput{}
@@ -1835,6 +1822,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTemplateVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTemplateVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTemplates", func(t *testing.T) {
+        input := &quicksight.ListTemplatesInput{}
+        output := &quicksight.ListTemplatesOutput{}
+
+        mockClient.On("ListTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1854,19 +1854,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListThemes", func(t *testing.T) {
-        input := &quicksight.ListThemesInput{}
-        output := &quicksight.ListThemesOutput{}
-
-        mockClient.On("ListThemes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListThemes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListThemeVersions", func(t *testing.T) {
         input := &quicksight.ListThemeVersionsInput{}
         output := &quicksight.ListThemeVersionsOutput{}
@@ -1874,6 +1861,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListThemeVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListThemeVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThemes", func(t *testing.T) {
+        input := &quicksight.ListThemesInput{}
+        output := &quicksight.ListThemesOutput{}
+
+        mockClient.On("ListThemes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThemes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

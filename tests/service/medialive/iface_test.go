@@ -970,19 +970,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInputDevices", func(t *testing.T) {
-        input := &medialive.ListInputDevicesInput{}
-        output := &medialive.ListInputDevicesOutput{}
-
-        mockClient.On("ListInputDevices", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInputDevices(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInputDeviceTransfers", func(t *testing.T) {
         input := &medialive.ListInputDeviceTransfersInput{}
         output := &medialive.ListInputDeviceTransfersOutput{}
@@ -996,13 +983,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInputs", func(t *testing.T) {
-        input := &medialive.ListInputsInput{}
-        output := &medialive.ListInputsOutput{}
+    t.Run("TestListInputDevices", func(t *testing.T) {
+        input := &medialive.ListInputDevicesInput{}
+        output := &medialive.ListInputDevicesOutput{}
 
-        mockClient.On("ListInputs", ctx, input).Return(output, nil)
+        mockClient.On("ListInputDevices", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListInputs(ctx, input)
+        result, err := mockClient.ListInputDevices(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,13 +1009,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMultiplexes", func(t *testing.T) {
-        input := &medialive.ListMultiplexesInput{}
-        output := &medialive.ListMultiplexesOutput{}
+    t.Run("TestListInputs", func(t *testing.T) {
+        input := &medialive.ListInputsInput{}
+        output := &medialive.ListInputsOutput{}
 
-        mockClient.On("ListMultiplexes", ctx, input).Return(output, nil)
+        mockClient.On("ListInputs", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListMultiplexes(ctx, input)
+        result, err := mockClient.ListInputs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1042,6 +1029,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListMultiplexPrograms", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListMultiplexPrograms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMultiplexes", func(t *testing.T) {
+        input := &medialive.ListMultiplexesInput{}
+        output := &medialive.ListMultiplexesOutput{}
+
+        mockClient.On("ListMultiplexes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMultiplexes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

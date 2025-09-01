@@ -632,19 +632,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorlds", func(t *testing.T) {
-        input := &robomaker.ListWorldsInput{}
-        output := &robomaker.ListWorldsOutput{}
-
-        mockClient.On("ListWorlds", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorlds(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorldTemplates", func(t *testing.T) {
         input := &robomaker.ListWorldTemplatesInput{}
         output := &robomaker.ListWorldTemplatesOutput{}
@@ -652,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorldTemplates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorldTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorlds", func(t *testing.T) {
+        input := &robomaker.ListWorldsInput{}
+        output := &robomaker.ListWorldsOutput{}
+
+        mockClient.On("ListWorlds", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorlds(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

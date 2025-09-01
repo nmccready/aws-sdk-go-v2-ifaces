@@ -1893,19 +1893,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListContactFlows", func(t *testing.T) {
-        input := &connect.ListContactFlowsInput{}
-        output := &connect.ListContactFlowsOutput{}
-
-        mockClient.On("ListContactFlows", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListContactFlows(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListContactFlowVersions", func(t *testing.T) {
         input := &connect.ListContactFlowVersionsInput{}
         output := &connect.ListContactFlowVersionsOutput{}
@@ -1913,6 +1900,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContactFlowVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContactFlowVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContactFlows", func(t *testing.T) {
+        input := &connect.ListContactFlowsInput{}
+        output := &connect.ListContactFlowsOutput{}
+
+        mockClient.On("ListContactFlows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContactFlows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1945,19 +1945,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEvaluationForms", func(t *testing.T) {
-        input := &connect.ListEvaluationFormsInput{}
-        output := &connect.ListEvaluationFormsOutput{}
-
-        mockClient.On("ListEvaluationForms", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListEvaluationForms(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListEvaluationFormVersions", func(t *testing.T) {
         input := &connect.ListEvaluationFormVersionsInput{}
         output := &connect.ListEvaluationFormVersionsOutput{}
@@ -1965,6 +1952,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEvaluationFormVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEvaluationFormVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEvaluationForms", func(t *testing.T) {
+        input := &connect.ListEvaluationFormsInput{}
+        output := &connect.ListEvaluationFormsOutput{}
+
+        mockClient.On("ListEvaluationForms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEvaluationForms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2023,19 +2023,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInstances", func(t *testing.T) {
-        input := &connect.ListInstancesInput{}
-        output := &connect.ListInstancesOutput{}
-
-        mockClient.On("ListInstances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInstances(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInstanceStorageConfigs", func(t *testing.T) {
         input := &connect.ListInstanceStorageConfigsInput{}
         output := &connect.ListInstanceStorageConfigsOutput{}
@@ -2043,6 +2030,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInstanceStorageConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInstanceStorageConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInstances", func(t *testing.T) {
+        input := &connect.ListInstancesInput{}
+        output := &connect.ListInstancesOutput{}
+
+        mockClient.On("ListInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInstances(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2309,19 +2309,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTrafficDistributionGroups", func(t *testing.T) {
-        input := &connect.ListTrafficDistributionGroupsInput{}
-        output := &connect.ListTrafficDistributionGroupsOutput{}
-
-        mockClient.On("ListTrafficDistributionGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTrafficDistributionGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTrafficDistributionGroupUsers", func(t *testing.T) {
         input := &connect.ListTrafficDistributionGroupUsersInput{}
         output := &connect.ListTrafficDistributionGroupUsersOutput{}
@@ -2329,6 +2316,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTrafficDistributionGroupUsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTrafficDistributionGroupUsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrafficDistributionGroups", func(t *testing.T) {
+        input := &connect.ListTrafficDistributionGroupsInput{}
+        output := &connect.ListTrafficDistributionGroupsOutput{}
+
+        mockClient.On("ListTrafficDistributionGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrafficDistributionGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2387,19 +2387,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListViews", func(t *testing.T) {
-        input := &connect.ListViewsInput{}
-        output := &connect.ListViewsOutput{}
-
-        mockClient.On("ListViews", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListViews(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListViewVersions", func(t *testing.T) {
         input := &connect.ListViewVersionsInput{}
         output := &connect.ListViewVersionsOutput{}
@@ -2407,6 +2394,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListViewVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListViewVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListViews", func(t *testing.T) {
+        input := &connect.ListViewsInput{}
+        output := &connect.ListViewsOutput{}
+
+        mockClient.On("ListViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListViews(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -437,19 +437,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListModels", func(t *testing.T) {
-        input := &lookoutequipment.ListModelsInput{}
-        output := &lookoutequipment.ListModelsOutput{}
-
-        mockClient.On("ListModels", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListModels(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListModelVersions", func(t *testing.T) {
         input := &lookoutequipment.ListModelVersionsInput{}
         output := &lookoutequipment.ListModelVersionsOutput{}
@@ -457,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListModelVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListModelVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListModels", func(t *testing.T) {
+        input := &lookoutequipment.ListModelsInput{}
+        output := &lookoutequipment.ListModelsOutput{}
+
+        mockClient.On("ListModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
