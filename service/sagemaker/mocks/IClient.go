@@ -125,6 +125,80 @@ func (_m *IClient) AssociateTrialComponent(ctx context.Context, params *sagemake
 	return r0, r1
 }
 
+// AttachClusterNodeVolume provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AttachClusterNodeVolume(ctx context.Context, params *sagemaker.AttachClusterNodeVolumeInput, optFns ...func(*sagemaker.Options)) (*sagemaker.AttachClusterNodeVolumeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AttachClusterNodeVolume")
+	}
+
+	var r0 *sagemaker.AttachClusterNodeVolumeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.AttachClusterNodeVolumeInput, ...func(*sagemaker.Options)) (*sagemaker.AttachClusterNodeVolumeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.AttachClusterNodeVolumeInput, ...func(*sagemaker.Options)) *sagemaker.AttachClusterNodeVolumeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.AttachClusterNodeVolumeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.AttachClusterNodeVolumeInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchAddClusterNodes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchAddClusterNodes(ctx context.Context, params *sagemaker.BatchAddClusterNodesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.BatchAddClusterNodesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchAddClusterNodes")
+	}
+
+	var r0 *sagemaker.BatchAddClusterNodesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.BatchAddClusterNodesInput, ...func(*sagemaker.Options)) (*sagemaker.BatchAddClusterNodesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.BatchAddClusterNodesInput, ...func(*sagemaker.Options)) *sagemaker.BatchAddClusterNodesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.BatchAddClusterNodesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.BatchAddClusterNodesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchDeleteClusterNodes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchDeleteClusterNodes(ctx context.Context, params *sagemaker.BatchDeleteClusterNodesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.BatchDeleteClusterNodesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1116,6 +1190,43 @@ func (_m *IClient) CreateHub(ctx context.Context, params *sagemaker.CreateHubInp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateHubInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateHubContentPresignedUrls provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateHubContentPresignedUrls(ctx context.Context, params *sagemaker.CreateHubContentPresignedUrlsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateHubContentPresignedUrlsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateHubContentPresignedUrls")
+	}
+
+	var r0 *sagemaker.CreateHubContentPresignedUrlsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateHubContentPresignedUrlsInput, ...func(*sagemaker.Options)) (*sagemaker.CreateHubContentPresignedUrlsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateHubContentPresignedUrlsInput, ...func(*sagemaker.Options)) *sagemaker.CreateHubContentPresignedUrlsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateHubContentPresignedUrlsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateHubContentPresignedUrlsInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4972,6 +5083,43 @@ func (_m *IClient) DescribeCluster(ctx context.Context, params *sagemaker.Descri
 	return r0, r1
 }
 
+// DescribeClusterEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeClusterEvent(ctx context.Context, params *sagemaker.DescribeClusterEventInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeClusterEvent")
+	}
+
+	var r0 *sagemaker.DescribeClusterEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeClusterEventInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeClusterEventInput, ...func(*sagemaker.Options)) *sagemaker.DescribeClusterEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeClusterEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeClusterEventInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeClusterNode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeClusterNode(ctx context.Context, params *sagemaker.DescribeClusterNodeInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterNodeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6748,6 +6896,43 @@ func (_m *IClient) DescribeProject(ctx context.Context, params *sagemaker.Descri
 	return r0, r1
 }
 
+// DescribeReservedCapacity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeReservedCapacity(ctx context.Context, params *sagemaker.DescribeReservedCapacityInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeReservedCapacityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeReservedCapacity")
+	}
+
+	var r0 *sagemaker.DescribeReservedCapacityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeReservedCapacityInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeReservedCapacityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeReservedCapacityInput, ...func(*sagemaker.Options)) *sagemaker.DescribeReservedCapacityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeReservedCapacityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeReservedCapacityInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeSpace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeSpace(ctx context.Context, params *sagemaker.DescribeSpaceInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeSpaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7147,6 +7332,43 @@ func (_m *IClient) DescribeWorkteam(ctx context.Context, params *sagemaker.Descr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeWorkteamInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DetachClusterNodeVolume provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DetachClusterNodeVolume(ctx context.Context, params *sagemaker.DetachClusterNodeVolumeInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DetachClusterNodeVolumeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DetachClusterNodeVolume")
+	}
+
+	var r0 *sagemaker.DetachClusterNodeVolumeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DetachClusterNodeVolumeInput, ...func(*sagemaker.Options)) (*sagemaker.DetachClusterNodeVolumeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DetachClusterNodeVolumeInput, ...func(*sagemaker.Options)) *sagemaker.DetachClusterNodeVolumeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DetachClusterNodeVolumeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DetachClusterNodeVolumeInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7850,6 +8072,43 @@ func (_m *IClient) ListCandidatesForAutoMLJob(ctx context.Context, params *sagem
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListCandidatesForAutoMLJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListClusterEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClusterEvents(ctx context.Context, params *sagemaker.ListClusterEventsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListClusterEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClusterEvents")
+	}
+
+	var r0 *sagemaker.ListClusterEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterEventsInput, ...func(*sagemaker.Options)) (*sagemaker.ListClusterEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterEventsInput, ...func(*sagemaker.Options)) *sagemaker.ListClusterEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListClusterEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListClusterEventsInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9856,6 +10115,43 @@ func (_m *IClient) ListPipelineParametersForExecution(ctx context.Context, param
 	return r0, r1
 }
 
+// ListPipelineVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPipelineVersions(ctx context.Context, params *sagemaker.ListPipelineVersionsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListPipelineVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPipelineVersions")
+	}
+
+	var r0 *sagemaker.ListPipelineVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListPipelineVersionsInput, ...func(*sagemaker.Options)) (*sagemaker.ListPipelineVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListPipelineVersionsInput, ...func(*sagemaker.Options)) *sagemaker.ListPipelineVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListPipelineVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListPipelineVersionsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPipelines provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPipelines(ctx context.Context, params *sagemaker.ListPipelinesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListPipelinesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10403,6 +10699,43 @@ func (_m *IClient) ListTrials(ctx context.Context, params *sagemaker.ListTrialsI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListTrialsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListUltraServersByReservedCapacity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUltraServersByReservedCapacity(ctx context.Context, params *sagemaker.ListUltraServersByReservedCapacityInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListUltraServersByReservedCapacityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUltraServersByReservedCapacity")
+	}
+
+	var r0 *sagemaker.ListUltraServersByReservedCapacityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListUltraServersByReservedCapacityInput, ...func(*sagemaker.Options)) (*sagemaker.ListUltraServersByReservedCapacityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListUltraServersByReservedCapacityInput, ...func(*sagemaker.Options)) *sagemaker.ListUltraServersByReservedCapacityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListUltraServersByReservedCapacityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListUltraServersByReservedCapacityInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -11087,6 +11420,43 @@ func (_m *IClient) StartPipelineExecution(ctx context.Context, params *sagemaker
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StartPipelineExecutionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartSession(ctx context.Context, params *sagemaker.StartSessionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.StartSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartSession")
+	}
+
+	var r0 *sagemaker.StartSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StartSessionInput, ...func(*sagemaker.Options)) (*sagemaker.StartSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StartSessionInput, ...func(*sagemaker.Options)) *sagemaker.StartSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.StartSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StartSessionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12974,6 +13344,43 @@ func (_m *IClient) UpdatePipelineExecution(ctx context.Context, params *sagemake
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdatePipelineExecutionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePipelineVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePipelineVersion(ctx context.Context, params *sagemaker.UpdatePipelineVersionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdatePipelineVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePipelineVersion")
+	}
+
+	var r0 *sagemaker.UpdatePipelineVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdatePipelineVersionInput, ...func(*sagemaker.Options)) (*sagemaker.UpdatePipelineVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdatePipelineVersionInput, ...func(*sagemaker.Options)) *sagemaker.UpdatePipelineVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdatePipelineVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdatePipelineVersionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

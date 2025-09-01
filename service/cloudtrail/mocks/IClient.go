@@ -718,6 +718,43 @@ func (_m *IClient) GetDashboard(ctx context.Context, params *cloudtrail.GetDashb
 	return r0, r1
 }
 
+// GetEventConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEventConfiguration(ctx context.Context, params *cloudtrail.GetEventConfigurationInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.GetEventConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEventConfiguration")
+	}
+
+	var r0 *cloudtrail.GetEventConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.GetEventConfigurationInput, ...func(*cloudtrail.Options)) (*cloudtrail.GetEventConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.GetEventConfigurationInput, ...func(*cloudtrail.Options)) *cloudtrail.GetEventConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.GetEventConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.GetEventConfigurationInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEventDataStore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEventDataStore(ctx context.Context, params *cloudtrail.GetEventDataStoreInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.GetEventDataStoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1437,6 +1474,43 @@ func (_m *IClient) Options() cloudtrail.Options {
 	}
 
 	return r0
+}
+
+// PutEventConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutEventConfiguration(ctx context.Context, params *cloudtrail.PutEventConfigurationInput, optFns ...func(*cloudtrail.Options)) (*cloudtrail.PutEventConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutEventConfiguration")
+	}
+
+	var r0 *cloudtrail.PutEventConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.PutEventConfigurationInput, ...func(*cloudtrail.Options)) (*cloudtrail.PutEventConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudtrail.PutEventConfigurationInput, ...func(*cloudtrail.Options)) *cloudtrail.PutEventConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudtrail.PutEventConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudtrail.PutEventConfigurationInput, ...func(*cloudtrail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutEventSelectors provides a mock function with given fields: ctx, params, optFns

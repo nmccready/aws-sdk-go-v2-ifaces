@@ -47,6 +47,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWhatsAppMessageTemplate", func(t *testing.T) {
+        input := &socialmessaging.CreateWhatsAppMessageTemplateInput{}
+        output := &socialmessaging.CreateWhatsAppMessageTemplateOutput{}
+
+        mockClient.On("CreateWhatsAppMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWhatsAppMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWhatsAppMessageTemplateFromLibrary", func(t *testing.T) {
+        input := &socialmessaging.CreateWhatsAppMessageTemplateFromLibraryInput{}
+        output := &socialmessaging.CreateWhatsAppMessageTemplateFromLibraryOutput{}
+
+        mockClient.On("CreateWhatsAppMessageTemplateFromLibrary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWhatsAppMessageTemplateFromLibrary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWhatsAppMessageTemplateMedia", func(t *testing.T) {
+        input := &socialmessaging.CreateWhatsAppMessageTemplateMediaInput{}
+        output := &socialmessaging.CreateWhatsAppMessageTemplateMediaOutput{}
+
+        mockClient.On("CreateWhatsAppMessageTemplateMedia", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWhatsAppMessageTemplateMedia(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteWhatsAppMessageMedia", func(t *testing.T) {
         input := &socialmessaging.DeleteWhatsAppMessageMediaInput{}
         output := &socialmessaging.DeleteWhatsAppMessageMediaOutput{}
@@ -54,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWhatsAppMessageMedia", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWhatsAppMessageMedia(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWhatsAppMessageTemplate", func(t *testing.T) {
+        input := &socialmessaging.DeleteWhatsAppMessageTemplateInput{}
+        output := &socialmessaging.DeleteWhatsAppMessageTemplateOutput{}
+
+        mockClient.On("DeleteWhatsAppMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWhatsAppMessageTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetWhatsAppMessageTemplate", func(t *testing.T) {
+        input := &socialmessaging.GetWhatsAppMessageTemplateInput{}
+        output := &socialmessaging.GetWhatsAppMessageTemplateOutput{}
+
+        mockClient.On("GetWhatsAppMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWhatsAppMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListLinkedWhatsAppBusinessAccounts", func(t *testing.T) {
         input := &socialmessaging.ListLinkedWhatsAppBusinessAccountsInput{}
         output := &socialmessaging.ListLinkedWhatsAppBusinessAccountsOutput{}
@@ -132,6 +197,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWhatsAppMessageTemplates", func(t *testing.T) {
+        input := &socialmessaging.ListWhatsAppMessageTemplatesInput{}
+        output := &socialmessaging.ListWhatsAppMessageTemplatesOutput{}
+
+        mockClient.On("ListWhatsAppMessageTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWhatsAppMessageTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWhatsAppTemplateLibrary", func(t *testing.T) {
+        input := &socialmessaging.ListWhatsAppTemplateLibraryInput{}
+        output := &socialmessaging.ListWhatsAppTemplateLibraryOutput{}
+
+        mockClient.On("ListWhatsAppTemplateLibrary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWhatsAppTemplateLibrary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -197,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWhatsAppMessageTemplate", func(t *testing.T) {
+        input := &socialmessaging.UpdateWhatsAppMessageTemplateInput{}
+        output := &socialmessaging.UpdateWhatsAppMessageTemplateOutput{}
+
+        mockClient.On("UpdateWhatsAppMessageTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWhatsAppMessageTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

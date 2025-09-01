@@ -163,6 +163,43 @@ func (_m *IClient) CopySnapshotAndUpdateVolume(ctx context.Context, params *fsx.
 	return r0, r1
 }
 
+// CreateAndAttachS3AccessPoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAndAttachS3AccessPoint(ctx context.Context, params *fsx.CreateAndAttachS3AccessPointInput, optFns ...func(*fsx.Options)) (*fsx.CreateAndAttachS3AccessPointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAndAttachS3AccessPoint")
+	}
+
+	var r0 *fsx.CreateAndAttachS3AccessPointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *fsx.CreateAndAttachS3AccessPointInput, ...func(*fsx.Options)) (*fsx.CreateAndAttachS3AccessPointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *fsx.CreateAndAttachS3AccessPointInput, ...func(*fsx.Options)) *fsx.CreateAndAttachS3AccessPointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*fsx.CreateAndAttachS3AccessPointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *fsx.CreateAndAttachS3AccessPointInput, ...func(*fsx.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBackup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBackup(ctx context.Context, params *fsx.CreateBackupInput, optFns ...func(*fsx.Options)) (*fsx.CreateBackupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1014,6 +1051,43 @@ func (_m *IClient) DescribeFileSystems(ctx context.Context, params *fsx.Describe
 	return r0, r1
 }
 
+// DescribeS3AccessPointAttachments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeS3AccessPointAttachments(ctx context.Context, params *fsx.DescribeS3AccessPointAttachmentsInput, optFns ...func(*fsx.Options)) (*fsx.DescribeS3AccessPointAttachmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeS3AccessPointAttachments")
+	}
+
+	var r0 *fsx.DescribeS3AccessPointAttachmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *fsx.DescribeS3AccessPointAttachmentsInput, ...func(*fsx.Options)) (*fsx.DescribeS3AccessPointAttachmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *fsx.DescribeS3AccessPointAttachmentsInput, ...func(*fsx.Options)) *fsx.DescribeS3AccessPointAttachmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*fsx.DescribeS3AccessPointAttachmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *fsx.DescribeS3AccessPointAttachmentsInput, ...func(*fsx.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeSharedVpcConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeSharedVpcConfiguration(ctx context.Context, params *fsx.DescribeSharedVpcConfigurationInput, optFns ...func(*fsx.Options)) (*fsx.DescribeSharedVpcConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1154,6 +1228,43 @@ func (_m *IClient) DescribeVolumes(ctx context.Context, params *fsx.DescribeVolu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *fsx.DescribeVolumesInput, ...func(*fsx.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DetachAndDeleteS3AccessPoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DetachAndDeleteS3AccessPoint(ctx context.Context, params *fsx.DetachAndDeleteS3AccessPointInput, optFns ...func(*fsx.Options)) (*fsx.DetachAndDeleteS3AccessPointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DetachAndDeleteS3AccessPoint")
+	}
+
+	var r0 *fsx.DetachAndDeleteS3AccessPointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *fsx.DetachAndDeleteS3AccessPointInput, ...func(*fsx.Options)) (*fsx.DetachAndDeleteS3AccessPointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *fsx.DetachAndDeleteS3AccessPointInput, ...func(*fsx.Options)) *fsx.DetachAndDeleteS3AccessPointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*fsx.DetachAndDeleteS3AccessPointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *fsx.DetachAndDeleteS3AccessPointInput, ...func(*fsx.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

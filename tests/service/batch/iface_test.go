@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateServiceEnvironment", func(t *testing.T) {
+        input := &batch.CreateServiceEnvironmentInput{}
+        output := &batch.CreateServiceEnvironmentOutput{}
+
+        mockClient.On("CreateServiceEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateServiceEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteComputeEnvironment", func(t *testing.T) {
         input := &batch.DeleteComputeEnvironmentInput{}
         output := &batch.DeleteComputeEnvironmentOutput{}
@@ -145,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSchedulingPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSchedulingPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteServiceEnvironment", func(t *testing.T) {
+        input := &batch.DeleteServiceEnvironmentInput{}
+        output := &batch.DeleteServiceEnvironmentOutput{}
+
+        mockClient.On("DeleteServiceEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteServiceEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,6 +268,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeServiceEnvironments", func(t *testing.T) {
+        input := &batch.DescribeServiceEnvironmentsInput{}
+        output := &batch.DescribeServiceEnvironmentsOutput{}
+
+        mockClient.On("DescribeServiceEnvironments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServiceEnvironments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeServiceJob", func(t *testing.T) {
+        input := &batch.DescribeServiceJobInput{}
+        output := &batch.DescribeServiceJobOutput{}
+
+        mockClient.On("DescribeServiceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServiceJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetJobQueueSnapshot", func(t *testing.T) {
         input := &batch.GetJobQueueSnapshotInput{}
         output := &batch.GetJobQueueSnapshotOutput{}
@@ -307,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListServiceJobs", func(t *testing.T) {
+        input := &batch.ListServiceJobsInput{}
+        output := &batch.ListServiceJobsOutput{}
+
+        mockClient.On("ListServiceJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &batch.ListTagsForResourceInput{}
         output := &batch.ListTagsForResourceOutput{}
@@ -346,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSubmitServiceJob", func(t *testing.T) {
+        input := &batch.SubmitServiceJobInput{}
+        output := &batch.SubmitServiceJobOutput{}
+
+        mockClient.On("SubmitServiceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SubmitServiceJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &batch.TagResourceInput{}
         output := &batch.TagResourceOutput{}
@@ -366,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("TerminateJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.TerminateJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTerminateServiceJob", func(t *testing.T) {
+        input := &batch.TerminateServiceJobInput{}
+        output := &batch.TerminateServiceJobOutput{}
+
+        mockClient.On("TerminateServiceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateServiceJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -431,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSchedulingPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSchedulingPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateServiceEnvironment", func(t *testing.T) {
+        input := &batch.UpdateServiceEnvironmentInput{}
+        output := &batch.UpdateServiceEnvironmentOutput{}
+
+        mockClient.On("UpdateServiceEnvironment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateServiceEnvironment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

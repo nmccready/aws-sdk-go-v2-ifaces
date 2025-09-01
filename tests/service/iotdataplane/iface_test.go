@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConnection", func(t *testing.T) {
+        input := &iotdataplane.DeleteConnectionInput{}
+        output := &iotdataplane.DeleteConnectionOutput{}
+
+        mockClient.On("DeleteConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteThingShadow", func(t *testing.T) {
         input := &iotdataplane.DeleteThingShadowInput{}
         output := &iotdataplane.DeleteThingShadowOutput{}

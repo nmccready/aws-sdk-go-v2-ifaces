@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateSessionLogger", func(t *testing.T) {
+        input := &workspacesweb.AssociateSessionLoggerInput{}
+        output := &workspacesweb.AssociateSessionLoggerOutput{}
+
+        mockClient.On("AssociateSessionLogger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSessionLogger(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateTrustStore", func(t *testing.T) {
         input := &workspacesweb.AssociateTrustStoreInput{}
         output := &workspacesweb.AssociateTrustStoreOutput{}
@@ -197,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreatePortal", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreatePortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSessionLogger", func(t *testing.T) {
+        input := &workspacesweb.CreateSessionLoggerInput{}
+        output := &workspacesweb.CreateSessionLoggerOutput{}
+
+        mockClient.On("CreateSessionLogger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSessionLogger(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSessionLogger", func(t *testing.T) {
+        input := &workspacesweb.DeleteSessionLoggerInput{}
+        output := &workspacesweb.DeleteSessionLoggerOutput{}
+
+        mockClient.On("DeleteSessionLogger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSessionLogger(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTrustStore", func(t *testing.T) {
         input := &workspacesweb.DeleteTrustStoreInput{}
         output := &workspacesweb.DeleteTrustStoreOutput{}
@@ -405,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateNetworkSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateNetworkSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateSessionLogger", func(t *testing.T) {
+        input := &workspacesweb.DisassociateSessionLoggerInput{}
+        output := &workspacesweb.DisassociateSessionLoggerOutput{}
+
+        mockClient.On("DisassociateSessionLogger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSessionLogger(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSessionLogger", func(t *testing.T) {
+        input := &workspacesweb.GetSessionLoggerInput{}
+        output := &workspacesweb.GetSessionLoggerOutput{}
+
+        mockClient.On("GetSessionLogger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSessionLogger(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTrustStore", func(t *testing.T) {
         input := &workspacesweb.GetTrustStoreInput{}
         output := &workspacesweb.GetTrustStoreOutput{}
@@ -691,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPortals", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPortals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSessionLoggers", func(t *testing.T) {
+        input := &workspacesweb.ListSessionLoggersInput{}
+        output := &workspacesweb.ListSessionLoggersOutput{}
+
+        mockClient.On("ListSessionLoggers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessionLoggers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -873,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePortal", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSessionLogger", func(t *testing.T) {
+        input := &workspacesweb.UpdateSessionLoggerInput{}
+        output := &workspacesweb.UpdateSessionLoggerOutput{}
+
+        mockClient.On("UpdateSessionLogger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSessionLogger(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

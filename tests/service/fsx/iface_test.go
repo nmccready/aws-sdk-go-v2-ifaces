@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAndAttachS3AccessPoint", func(t *testing.T) {
+        input := &fsx.CreateAndAttachS3AccessPointInput{}
+        output := &fsx.CreateAndAttachS3AccessPointOutput{}
+
+        mockClient.On("CreateAndAttachS3AccessPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAndAttachS3AccessPoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBackup", func(t *testing.T) {
         input := &fsx.CreateBackupInput{}
         output := &fsx.CreateBackupOutput{}
@@ -385,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeS3AccessPointAttachments", func(t *testing.T) {
+        input := &fsx.DescribeS3AccessPointAttachmentsInput{}
+        output := &fsx.DescribeS3AccessPointAttachmentsOutput{}
+
+        mockClient.On("DescribeS3AccessPointAttachments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeS3AccessPointAttachments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeSharedVpcConfiguration", func(t *testing.T) {
         input := &fsx.DescribeSharedVpcConfigurationInput{}
         output := &fsx.DescribeSharedVpcConfigurationOutput{}
@@ -431,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeVolumes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeVolumes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDetachAndDeleteS3AccessPoint", func(t *testing.T) {
+        input := &fsx.DetachAndDeleteS3AccessPointInput{}
+        output := &fsx.DetachAndDeleteS3AccessPointOutput{}
+
+        mockClient.On("DetachAndDeleteS3AccessPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DetachAndDeleteS3AccessPoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

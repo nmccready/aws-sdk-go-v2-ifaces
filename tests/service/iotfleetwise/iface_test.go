@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDecoderManifestSignals", func(t *testing.T) {
-        input := &iotfleetwise.ListDecoderManifestSignalsInput{}
-        output := &iotfleetwise.ListDecoderManifestSignalsOutput{}
-
-        mockClient.On("ListDecoderManifestSignals", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDecoderManifestSignals(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDecoderManifests", func(t *testing.T) {
         input := &iotfleetwise.ListDecoderManifestsInput{}
         output := &iotfleetwise.ListDecoderManifestsOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDecoderManifests", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDecoderManifests(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDecoderManifestSignals", func(t *testing.T) {
+        input := &iotfleetwise.ListDecoderManifestSignalsInput{}
+        output := &iotfleetwise.ListDecoderManifestSignalsOutput{}
+
+        mockClient.On("ListDecoderManifestSignals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDecoderManifestSignals(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

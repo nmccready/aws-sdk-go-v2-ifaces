@@ -163,6 +163,43 @@ func (_m *IClient) GetInvoiceUnit(ctx context.Context, params *invoicing.GetInvo
 	return r0, r1
 }
 
+// ListInvoiceSummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInvoiceSummaries(ctx context.Context, params *invoicing.ListInvoiceSummariesInput, optFns ...func(*invoicing.Options)) (*invoicing.ListInvoiceSummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInvoiceSummaries")
+	}
+
+	var r0 *invoicing.ListInvoiceSummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListInvoiceSummariesInput, ...func(*invoicing.Options)) (*invoicing.ListInvoiceSummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListInvoiceSummariesInput, ...func(*invoicing.Options)) *invoicing.ListInvoiceSummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.ListInvoiceSummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.ListInvoiceSummariesInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListInvoiceUnits provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListInvoiceUnits(ctx context.Context, params *invoicing.ListInvoiceUnitsInput, optFns ...func(*invoicing.Options)) (*invoicing.ListInvoiceUnitsOutput, error) {
 	_va := make([]interface{}, len(optFns))

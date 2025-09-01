@@ -1236,6 +1236,43 @@ func (_m *IClient) CreateDevEndpoint(ctx context.Context, params *glue.CreateDev
 	return r0, r1
 }
 
+// CreateGlueIdentityCenterConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateGlueIdentityCenterConfiguration(ctx context.Context, params *glue.CreateGlueIdentityCenterConfigurationInput, optFns ...func(*glue.Options)) (*glue.CreateGlueIdentityCenterConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateGlueIdentityCenterConfiguration")
+	}
+
+	var r0 *glue.CreateGlueIdentityCenterConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) (*glue.CreateGlueIdentityCenterConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) *glue.CreateGlueIdentityCenterConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateGlueIdentityCenterConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateIntegration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateIntegration(ctx context.Context, params *glue.CreateIntegrationInput, optFns ...func(*glue.Options)) (*glue.CreateIntegrationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2338,6 +2375,43 @@ func (_m *IClient) DeleteDevEndpoint(ctx context.Context, params *glue.DeleteDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteGlueIdentityCenterConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGlueIdentityCenterConfiguration(ctx context.Context, params *glue.DeleteGlueIdentityCenterConfigurationInput, optFns ...func(*glue.Options)) (*glue.DeleteGlueIdentityCenterConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGlueIdentityCenterConfiguration")
+	}
+
+	var r0 *glue.DeleteGlueIdentityCenterConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) (*glue.DeleteGlueIdentityCenterConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) *glue.DeleteGlueIdentityCenterConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteGlueIdentityCenterConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4373,6 +4447,43 @@ func (_m *IClient) GetEntityRecords(ctx context.Context, params *glue.GetEntityR
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetEntityRecordsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetGlueIdentityCenterConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetGlueIdentityCenterConfiguration(ctx context.Context, params *glue.GetGlueIdentityCenterConfigurationInput, optFns ...func(*glue.Options)) (*glue.GetGlueIdentityCenterConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetGlueIdentityCenterConfiguration")
+	}
+
+	var r0 *glue.GetGlueIdentityCenterConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) (*glue.GetGlueIdentityCenterConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) *glue.GetGlueIdentityCenterConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetGlueIdentityCenterConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8831,6 +8942,43 @@ func (_m *IClient) UpdateDevEndpoint(ctx context.Context, params *glue.UpdateDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateGlueIdentityCenterConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateGlueIdentityCenterConfiguration(ctx context.Context, params *glue.UpdateGlueIdentityCenterConfigurationInput, optFns ...func(*glue.Options)) (*glue.UpdateGlueIdentityCenterConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateGlueIdentityCenterConfiguration")
+	}
+
+	var r0 *glue.UpdateGlueIdentityCenterConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) (*glue.UpdateGlueIdentityCenterConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) *glue.UpdateGlueIdentityCenterConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateGlueIdentityCenterConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateGlueIdentityCenterConfigurationInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListGraphSnapshots", func(t *testing.T) {
-        input := &neptunegraph.ListGraphSnapshotsInput{}
-        output := &neptunegraph.ListGraphSnapshotsOutput{}
-
-        mockClient.On("ListGraphSnapshots", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGraphSnapshots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListGraphs", func(t *testing.T) {
         input := &neptunegraph.ListGraphsInput{}
         output := &neptunegraph.ListGraphsOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGraphs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGraphs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGraphSnapshots", func(t *testing.T) {
+        input := &neptunegraph.ListGraphSnapshotsInput{}
+        output := &neptunegraph.ListGraphSnapshotsOutput{}
+
+        mockClient.On("ListGraphSnapshots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGraphSnapshots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartGraph", func(t *testing.T) {
+        input := &neptunegraph.StartGraphInput{}
+        output := &neptunegraph.StartGraphOutput{}
+
+        mockClient.On("StartGraph", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartGraph(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartImportTask", func(t *testing.T) {
         input := &neptunegraph.StartImportTaskInput{}
         output := &neptunegraph.StartImportTaskOutput{}
@@ -405,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartImportTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartImportTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopGraph", func(t *testing.T) {
+        input := &neptunegraph.StopGraphInput{}
+        output := &neptunegraph.StopGraphOutput{}
+
+        mockClient.On("StopGraph", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopGraph(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

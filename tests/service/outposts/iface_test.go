@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetOutpostBillingInformation", func(t *testing.T) {
+        input := &outposts.GetOutpostBillingInformationInput{}
+        output := &outposts.GetOutpostBillingInformationOutput{}
+
+        mockClient.On("GetOutpostBillingInformation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOutpostBillingInformation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetOutpostInstanceTypes", func(t *testing.T) {
         input := &outposts.GetOutpostInstanceTypesInput{}
         output := &outposts.GetOutpostInstanceTypesOutput{}

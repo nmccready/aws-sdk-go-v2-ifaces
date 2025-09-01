@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateGovernedTerms", func(t *testing.T) {
+        input := &datazone.AssociateGovernedTermsInput{}
+        output := &datazone.AssociateGovernedTermsOutput{}
+
+        mockClient.On("AssociateGovernedTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateGovernedTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelMetadataGenerationRun", func(t *testing.T) {
         input := &datazone.CancelMetadataGenerationRunInput{}
         output := &datazone.CancelMetadataGenerationRunOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAccountPool", func(t *testing.T) {
+        input := &datazone.CreateAccountPoolInput{}
+        output := &datazone.CreateAccountPoolOutput{}
+
+        mockClient.On("CreateAccountPool", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAccountPool(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAccountPool", func(t *testing.T) {
+        input := &datazone.DeleteAccountPoolInput{}
+        output := &datazone.DeleteAccountPoolOutput{}
+
+        mockClient.On("DeleteAccountPool", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccountPool(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAsset", func(t *testing.T) {
         input := &datazone.DeleteAssetInput{}
         output := &datazone.DeleteAssetOutput{}
@@ -782,6 +821,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateEnvironmentRole", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateEnvironmentRole(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateGovernedTerms", func(t *testing.T) {
+        input := &datazone.DisassociateGovernedTermsInput{}
+        output := &datazone.DisassociateGovernedTermsOutput{}
+
+        mockClient.On("DisassociateGovernedTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateGovernedTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccountPool", func(t *testing.T) {
+        input := &datazone.GetAccountPoolInput{}
+        output := &datazone.GetAccountPoolOutput{}
+
+        mockClient.On("GetAccountPool", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountPool(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1230,6 +1295,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAccountPools", func(t *testing.T) {
+        input := &datazone.ListAccountPoolsInput{}
+        output := &datazone.ListAccountPoolsOutput{}
+
+        mockClient.On("ListAccountPools", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccountPools(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAccountsInAccountPool", func(t *testing.T) {
+        input := &datazone.ListAccountsInAccountPoolInput{}
+        output := &datazone.ListAccountsInAccountPoolOutput{}
+
+        mockClient.On("ListAccountsInAccountPool", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccountsInAccountPool(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAssetFilters", func(t *testing.T) {
         input := &datazone.ListAssetFiltersInput{}
         output := &datazone.ListAssetFiltersOutput{}
@@ -1321,19 +1412,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
-        input := &datazone.ListDomainUnitsForParentInput{}
-        output := &datazone.ListDomainUnitsForParentOutput{}
-
-        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDomains", func(t *testing.T) {
         input := &datazone.ListDomainsInput{}
         output := &datazone.ListDomainsOutput{}
@@ -1341,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDomains", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
+        input := &datazone.ListDomainUnitsForParentInput{}
+        output := &datazone.ListDomainUnitsForParentOutput{}
+
+        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1581,19 +1672,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSubscriptionTargets", func(t *testing.T) {
-        input := &datazone.ListSubscriptionTargetsInput{}
-        output := &datazone.ListSubscriptionTargetsOutput{}
-
-        mockClient.On("ListSubscriptionTargets", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSubscriptionTargets(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSubscriptions", func(t *testing.T) {
         input := &datazone.ListSubscriptionsInput{}
         output := &datazone.ListSubscriptionsOutput{}
@@ -1601,6 +1679,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSubscriptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubscriptionTargets", func(t *testing.T) {
+        input := &datazone.ListSubscriptionTargetsInput{}
+        output := &datazone.ListSubscriptionTargetsOutput{}
+
+        mockClient.On("ListSubscriptionTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptionTargets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1848,6 +1939,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAccountPool", func(t *testing.T) {
+        input := &datazone.UpdateAccountPoolInput{}
+        output := &datazone.UpdateAccountPoolOutput{}
+
+        mockClient.On("UpdateAccountPool", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccountPool(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

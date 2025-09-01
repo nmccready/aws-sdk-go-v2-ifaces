@@ -162,6 +162,43 @@ func (_m *IClient) AssociateNetworkSettings(ctx context.Context, params *workspa
 	return r0, r1
 }
 
+// AssociateSessionLogger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateSessionLogger(ctx context.Context, params *workspacesweb.AssociateSessionLoggerInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.AssociateSessionLoggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateSessionLogger")
+	}
+
+	var r0 *workspacesweb.AssociateSessionLoggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.AssociateSessionLoggerInput, ...func(*workspacesweb.Options)) (*workspacesweb.AssociateSessionLoggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.AssociateSessionLoggerInput, ...func(*workspacesweb.Options)) *workspacesweb.AssociateSessionLoggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.AssociateSessionLoggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.AssociateSessionLoggerInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateTrustStore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateTrustStore(ctx context.Context, params *workspacesweb.AssociateTrustStoreInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.AssociateTrustStoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -487,6 +524,43 @@ func (_m *IClient) CreatePortal(ctx context.Context, params *workspacesweb.Creat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.CreatePortalInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSessionLogger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSessionLogger(ctx context.Context, params *workspacesweb.CreateSessionLoggerInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.CreateSessionLoggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSessionLogger")
+	}
+
+	var r0 *workspacesweb.CreateSessionLoggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.CreateSessionLoggerInput, ...func(*workspacesweb.Options)) (*workspacesweb.CreateSessionLoggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.CreateSessionLoggerInput, ...func(*workspacesweb.Options)) *workspacesweb.CreateSessionLoggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.CreateSessionLoggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.CreateSessionLoggerInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -828,6 +902,43 @@ func (_m *IClient) DeletePortal(ctx context.Context, params *workspacesweb.Delet
 	return r0, r1
 }
 
+// DeleteSessionLogger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSessionLogger(ctx context.Context, params *workspacesweb.DeleteSessionLoggerInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DeleteSessionLoggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSessionLogger")
+	}
+
+	var r0 *workspacesweb.DeleteSessionLoggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DeleteSessionLoggerInput, ...func(*workspacesweb.Options)) (*workspacesweb.DeleteSessionLoggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DeleteSessionLoggerInput, ...func(*workspacesweb.Options)) *workspacesweb.DeleteSessionLoggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.DeleteSessionLoggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.DeleteSessionLoggerInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteTrustStore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteTrustStore(ctx context.Context, params *workspacesweb.DeleteTrustStoreInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DeleteTrustStoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1079,6 +1190,43 @@ func (_m *IClient) DisassociateNetworkSettings(ctx context.Context, params *work
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.DisassociateNetworkSettingsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateSessionLogger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateSessionLogger(ctx context.Context, params *workspacesweb.DisassociateSessionLoggerInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.DisassociateSessionLoggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateSessionLogger")
+	}
+
+	var r0 *workspacesweb.DisassociateSessionLoggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DisassociateSessionLoggerInput, ...func(*workspacesweb.Options)) (*workspacesweb.DisassociateSessionLoggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.DisassociateSessionLoggerInput, ...func(*workspacesweb.Options)) *workspacesweb.DisassociateSessionLoggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.DisassociateSessionLoggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.DisassociateSessionLoggerInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1531,6 +1679,43 @@ func (_m *IClient) GetSession(ctx context.Context, params *workspacesweb.GetSess
 	return r0, r1
 }
 
+// GetSessionLogger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSessionLogger(ctx context.Context, params *workspacesweb.GetSessionLoggerInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.GetSessionLoggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSessionLogger")
+	}
+
+	var r0 *workspacesweb.GetSessionLoggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.GetSessionLoggerInput, ...func(*workspacesweb.Options)) (*workspacesweb.GetSessionLoggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.GetSessionLoggerInput, ...func(*workspacesweb.Options)) *workspacesweb.GetSessionLoggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.GetSessionLoggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.GetSessionLoggerInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTrustStore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTrustStore(ctx context.Context, params *workspacesweb.GetTrustStoreInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.GetTrustStoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1893,6 +2078,43 @@ func (_m *IClient) ListPortals(ctx context.Context, params *workspacesweb.ListPo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.ListPortalsInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSessionLoggers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSessionLoggers(ctx context.Context, params *workspacesweb.ListSessionLoggersInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.ListSessionLoggersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSessionLoggers")
+	}
+
+	var r0 *workspacesweb.ListSessionLoggersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ListSessionLoggersInput, ...func(*workspacesweb.Options)) (*workspacesweb.ListSessionLoggersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.ListSessionLoggersInput, ...func(*workspacesweb.Options)) *workspacesweb.ListSessionLoggersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.ListSessionLoggersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.ListSessionLoggersInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2429,6 +2651,43 @@ func (_m *IClient) UpdatePortal(ctx context.Context, params *workspacesweb.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.UpdatePortalInput, ...func(*workspacesweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSessionLogger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSessionLogger(ctx context.Context, params *workspacesweb.UpdateSessionLoggerInput, optFns ...func(*workspacesweb.Options)) (*workspacesweb.UpdateSessionLoggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSessionLogger")
+	}
+
+	var r0 *workspacesweb.UpdateSessionLoggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.UpdateSessionLoggerInput, ...func(*workspacesweb.Options)) (*workspacesweb.UpdateSessionLoggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspacesweb.UpdateSessionLoggerInput, ...func(*workspacesweb.Options)) *workspacesweb.UpdateSessionLoggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspacesweb.UpdateSessionLoggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspacesweb.UpdateSessionLoggerInput, ...func(*workspacesweb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

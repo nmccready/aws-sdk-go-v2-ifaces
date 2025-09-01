@@ -515,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTerms", func(t *testing.T) {
+        input := &cognitoidentityprovider.CreateTermsInput{}
+        output := &cognitoidentityprovider.CreateTermsOutput{}
+
+        mockClient.On("CreateTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateUserImportJob", func(t *testing.T) {
         input := &cognitoidentityprovider.CreateUserImportJobInput{}
         output := &cognitoidentityprovider.CreateUserImportJobOutput{}
@@ -613,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteResourceServer", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteResourceServer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTerms", func(t *testing.T) {
+        input := &cognitoidentityprovider.DeleteTermsInput{}
+        output := &cognitoidentityprovider.DeleteTermsOutput{}
+
+        mockClient.On("DeleteTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTerms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeRiskConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeRiskConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTerms", func(t *testing.T) {
+        input := &cognitoidentityprovider.DescribeTermsInput{}
+        output := &cognitoidentityprovider.DescribeTermsOutput{}
+
+        mockClient.On("DescribeTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTerms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1081,6 +1120,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTerms", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListTermsInput{}
+        output := &cognitoidentityprovider.ListTermsOutput{}
+
+        mockClient.On("ListTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTerms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1432,6 +1484,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateResourceServer", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateResourceServer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTerms", func(t *testing.T) {
+        input := &cognitoidentityprovider.UpdateTermsInput{}
+        output := &cognitoidentityprovider.UpdateTermsOutput{}
+
+        mockClient.On("UpdateTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTerms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

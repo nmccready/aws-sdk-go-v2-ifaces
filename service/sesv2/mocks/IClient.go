@@ -569,6 +569,80 @@ func (_m *IClient) CreateMultiRegionEndpoint(ctx context.Context, params *sesv2.
 	return r0, r1
 }
 
+// CreateTenant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTenant(ctx context.Context, params *sesv2.CreateTenantInput, optFns ...func(*sesv2.Options)) (*sesv2.CreateTenantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTenant")
+	}
+
+	var r0 *sesv2.CreateTenantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.CreateTenantInput, ...func(*sesv2.Options)) (*sesv2.CreateTenantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.CreateTenantInput, ...func(*sesv2.Options)) *sesv2.CreateTenantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.CreateTenantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.CreateTenantInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateTenantResourceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTenantResourceAssociation(ctx context.Context, params *sesv2.CreateTenantResourceAssociationInput, optFns ...func(*sesv2.Options)) (*sesv2.CreateTenantResourceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTenantResourceAssociation")
+	}
+
+	var r0 *sesv2.CreateTenantResourceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.CreateTenantResourceAssociationInput, ...func(*sesv2.Options)) (*sesv2.CreateTenantResourceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.CreateTenantResourceAssociationInput, ...func(*sesv2.Options)) *sesv2.CreateTenantResourceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.CreateTenantResourceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.CreateTenantResourceAssociationInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteConfigurationSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteConfigurationSet(ctx context.Context, params *sesv2.DeleteConfigurationSetInput, optFns ...func(*sesv2.Options)) (*sesv2.DeleteConfigurationSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -968,6 +1042,80 @@ func (_m *IClient) DeleteSuppressedDestination(ctx context.Context, params *sesv
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.DeleteSuppressedDestinationInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTenant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTenant(ctx context.Context, params *sesv2.DeleteTenantInput, optFns ...func(*sesv2.Options)) (*sesv2.DeleteTenantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTenant")
+	}
+
+	var r0 *sesv2.DeleteTenantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.DeleteTenantInput, ...func(*sesv2.Options)) (*sesv2.DeleteTenantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.DeleteTenantInput, ...func(*sesv2.Options)) *sesv2.DeleteTenantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.DeleteTenantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.DeleteTenantInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTenantResourceAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTenantResourceAssociation(ctx context.Context, params *sesv2.DeleteTenantResourceAssociationInput, optFns ...func(*sesv2.Options)) (*sesv2.DeleteTenantResourceAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTenantResourceAssociation")
+	}
+
+	var r0 *sesv2.DeleteTenantResourceAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.DeleteTenantResourceAssociationInput, ...func(*sesv2.Options)) (*sesv2.DeleteTenantResourceAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.DeleteTenantResourceAssociationInput, ...func(*sesv2.Options)) *sesv2.DeleteTenantResourceAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.DeleteTenantResourceAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.DeleteTenantResourceAssociationInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1753,6 +1901,43 @@ func (_m *IClient) GetMultiRegionEndpoint(ctx context.Context, params *sesv2.Get
 	return r0, r1
 }
 
+// GetReputationEntity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetReputationEntity(ctx context.Context, params *sesv2.GetReputationEntityInput, optFns ...func(*sesv2.Options)) (*sesv2.GetReputationEntityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetReputationEntity")
+	}
+
+	var r0 *sesv2.GetReputationEntityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.GetReputationEntityInput, ...func(*sesv2.Options)) (*sesv2.GetReputationEntityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.GetReputationEntityInput, ...func(*sesv2.Options)) *sesv2.GetReputationEntityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.GetReputationEntityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.GetReputationEntityInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSuppressedDestination provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSuppressedDestination(ctx context.Context, params *sesv2.GetSuppressedDestinationInput, optFns ...func(*sesv2.Options)) (*sesv2.GetSuppressedDestinationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1782,6 +1967,43 @@ func (_m *IClient) GetSuppressedDestination(ctx context.Context, params *sesv2.G
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.GetSuppressedDestinationInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTenant provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTenant(ctx context.Context, params *sesv2.GetTenantInput, optFns ...func(*sesv2.Options)) (*sesv2.GetTenantOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTenant")
+	}
+
+	var r0 *sesv2.GetTenantOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.GetTenantInput, ...func(*sesv2.Options)) (*sesv2.GetTenantOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.GetTenantInput, ...func(*sesv2.Options)) *sesv2.GetTenantOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.GetTenantOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.GetTenantInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2271,6 +2493,80 @@ func (_m *IClient) ListRecommendations(ctx context.Context, params *sesv2.ListRe
 	return r0, r1
 }
 
+// ListReputationEntities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListReputationEntities(ctx context.Context, params *sesv2.ListReputationEntitiesInput, optFns ...func(*sesv2.Options)) (*sesv2.ListReputationEntitiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListReputationEntities")
+	}
+
+	var r0 *sesv2.ListReputationEntitiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListReputationEntitiesInput, ...func(*sesv2.Options)) (*sesv2.ListReputationEntitiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListReputationEntitiesInput, ...func(*sesv2.Options)) *sesv2.ListReputationEntitiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.ListReputationEntitiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListReputationEntitiesInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourceTenants provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourceTenants(ctx context.Context, params *sesv2.ListResourceTenantsInput, optFns ...func(*sesv2.Options)) (*sesv2.ListResourceTenantsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourceTenants")
+	}
+
+	var r0 *sesv2.ListResourceTenantsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListResourceTenantsInput, ...func(*sesv2.Options)) (*sesv2.ListResourceTenantsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListResourceTenantsInput, ...func(*sesv2.Options)) *sesv2.ListResourceTenantsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.ListResourceTenantsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListResourceTenantsInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListSuppressedDestinations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListSuppressedDestinations(ctx context.Context, params *sesv2.ListSuppressedDestinationsInput, optFns ...func(*sesv2.Options)) (*sesv2.ListSuppressedDestinationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2337,6 +2633,80 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *sesv2.ListTa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListTagsForResourceInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTenantResources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTenantResources(ctx context.Context, params *sesv2.ListTenantResourcesInput, optFns ...func(*sesv2.Options)) (*sesv2.ListTenantResourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTenantResources")
+	}
+
+	var r0 *sesv2.ListTenantResourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListTenantResourcesInput, ...func(*sesv2.Options)) (*sesv2.ListTenantResourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListTenantResourcesInput, ...func(*sesv2.Options)) *sesv2.ListTenantResourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.ListTenantResourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListTenantResourcesInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTenants provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTenants(ctx context.Context, params *sesv2.ListTenantsInput, optFns ...func(*sesv2.Options)) (*sesv2.ListTenantsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTenants")
+	}
+
+	var r0 *sesv2.ListTenantsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListTenantsInput, ...func(*sesv2.Options)) (*sesv2.ListTenantsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListTenantsInput, ...func(*sesv2.Options)) *sesv2.ListTenantsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.ListTenantsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListTenantsInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3613,6 +3983,80 @@ func (_m *IClient) UpdateEmailTemplate(ctx context.Context, params *sesv2.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.UpdateEmailTemplateInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateReputationEntityCustomerManagedStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateReputationEntityCustomerManagedStatus(ctx context.Context, params *sesv2.UpdateReputationEntityCustomerManagedStatusInput, optFns ...func(*sesv2.Options)) (*sesv2.UpdateReputationEntityCustomerManagedStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateReputationEntityCustomerManagedStatus")
+	}
+
+	var r0 *sesv2.UpdateReputationEntityCustomerManagedStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.UpdateReputationEntityCustomerManagedStatusInput, ...func(*sesv2.Options)) (*sesv2.UpdateReputationEntityCustomerManagedStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.UpdateReputationEntityCustomerManagedStatusInput, ...func(*sesv2.Options)) *sesv2.UpdateReputationEntityCustomerManagedStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.UpdateReputationEntityCustomerManagedStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.UpdateReputationEntityCustomerManagedStatusInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateReputationEntityPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateReputationEntityPolicy(ctx context.Context, params *sesv2.UpdateReputationEntityPolicyInput, optFns ...func(*sesv2.Options)) (*sesv2.UpdateReputationEntityPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateReputationEntityPolicy")
+	}
+
+	var r0 *sesv2.UpdateReputationEntityPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.UpdateReputationEntityPolicyInput, ...func(*sesv2.Options)) (*sesv2.UpdateReputationEntityPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.UpdateReputationEntityPolicyInput, ...func(*sesv2.Options)) *sesv2.UpdateReputationEntityPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.UpdateReputationEntityPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.UpdateReputationEntityPolicyInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

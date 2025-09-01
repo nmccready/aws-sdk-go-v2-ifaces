@@ -710,6 +710,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetLogObject", func(t *testing.T) {
+        input := &cloudwatchlogs.GetLogObjectInput{}
+        output := &cloudwatchlogs.GetLogObjectOutput{}
+
+        mockClient.On("GetLogObject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLogObject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLogRecord", func(t *testing.T) {
         input := &cloudwatchlogs.GetLogRecordInput{}
         output := &cloudwatchlogs.GetLogRecordOutput{}

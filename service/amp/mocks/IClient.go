@@ -348,6 +348,43 @@ func (_m *IClient) DeleteQueryLoggingConfiguration(ctx context.Context, params *
 	return r0, r1
 }
 
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *amp.DeleteResourcePolicyInput, optFns ...func(*amp.Options)) (*amp.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *amp.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DeleteResourcePolicyInput, ...func(*amp.Options)) (*amp.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DeleteResourcePolicyInput, ...func(*amp.Options)) *amp.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.DeleteResourcePolicyInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteRuleGroupsNamespace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteRuleGroupsNamespace(ctx context.Context, params *amp.DeleteRuleGroupsNamespaceInput, optFns ...func(*amp.Options)) (*amp.DeleteRuleGroupsNamespaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +599,43 @@ func (_m *IClient) DescribeQueryLoggingConfiguration(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *amp.DescribeQueryLoggingConfigurationInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeResourcePolicy(ctx context.Context, params *amp.DescribeResourcePolicyInput, optFns ...func(*amp.Options)) (*amp.DescribeResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeResourcePolicy")
+	}
+
+	var r0 *amp.DescribeResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DescribeResourcePolicyInput, ...func(*amp.Options)) (*amp.DescribeResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DescribeResourcePolicyInput, ...func(*amp.Options)) *amp.DescribeResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.DescribeResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.DescribeResourcePolicyInput, ...func(*amp.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -950,6 +1024,43 @@ func (_m *IClient) PutAlertManagerDefinition(ctx context.Context, params *amp.Pu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *amp.PutAlertManagerDefinitionInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *amp.PutResourcePolicyInput, optFns ...func(*amp.Options)) (*amp.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *amp.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.PutResourcePolicyInput, ...func(*amp.Options)) (*amp.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.PutResourcePolicyInput, ...func(*amp.Options)) *amp.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.PutResourcePolicyInput, ...func(*amp.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

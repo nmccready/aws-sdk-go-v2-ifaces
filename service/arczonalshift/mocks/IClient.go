@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CancelPracticeRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelPracticeRun(ctx context.Context, params *arczonalshift.CancelPracticeRunInput, optFns ...func(*arczonalshift.Options)) (*arczonalshift.CancelPracticeRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelPracticeRun")
+	}
+
+	var r0 *arczonalshift.CancelPracticeRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *arczonalshift.CancelPracticeRunInput, ...func(*arczonalshift.Options)) (*arczonalshift.CancelPracticeRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *arczonalshift.CancelPracticeRunInput, ...func(*arczonalshift.Options)) *arczonalshift.CancelPracticeRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*arczonalshift.CancelPracticeRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *arczonalshift.CancelPracticeRunInput, ...func(*arczonalshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelZonalShift provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelZonalShift(ctx context.Context, params *arczonalshift.CancelZonalShiftInput, optFns ...func(*arczonalshift.Options)) (*arczonalshift.CancelZonalShiftOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -327,6 +364,43 @@ func (_m *IClient) Options() arczonalshift.Options {
 	}
 
 	return r0
+}
+
+// StartPracticeRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartPracticeRun(ctx context.Context, params *arczonalshift.StartPracticeRunInput, optFns ...func(*arczonalshift.Options)) (*arczonalshift.StartPracticeRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartPracticeRun")
+	}
+
+	var r0 *arczonalshift.StartPracticeRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *arczonalshift.StartPracticeRunInput, ...func(*arczonalshift.Options)) (*arczonalshift.StartPracticeRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *arczonalshift.StartPracticeRunInput, ...func(*arczonalshift.Options)) *arczonalshift.StartPracticeRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*arczonalshift.StartPracticeRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *arczonalshift.StartPracticeRunInput, ...func(*arczonalshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartZonalShift provides a mock function with given fields: ctx, params, optFns

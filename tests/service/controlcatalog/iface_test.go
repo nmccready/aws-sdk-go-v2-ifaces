@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListControlMappings", func(t *testing.T) {
+        input := &controlcatalog.ListControlMappingsInput{}
+        output := &controlcatalog.ListControlMappingsOutput{}
+
+        mockClient.On("ListControlMappings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListControlMappings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListControls", func(t *testing.T) {
         input := &controlcatalog.ListControlsInput{}
         output := &controlcatalog.ListControlsOutput{}

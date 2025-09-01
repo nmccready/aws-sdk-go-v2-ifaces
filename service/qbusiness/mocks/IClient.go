@@ -347,6 +347,43 @@ func (_m *IClient) CreateApplication(ctx context.Context, params *qbusiness.Crea
 	return r0, r1
 }
 
+// CreateChatResponseConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateChatResponseConfiguration(ctx context.Context, params *qbusiness.CreateChatResponseConfigurationInput, optFns ...func(*qbusiness.Options)) (*qbusiness.CreateChatResponseConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateChatResponseConfiguration")
+	}
+
+	var r0 *qbusiness.CreateChatResponseConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CreateChatResponseConfigurationInput, ...func(*qbusiness.Options)) (*qbusiness.CreateChatResponseConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.CreateChatResponseConfigurationInput, ...func(*qbusiness.Options)) *qbusiness.CreateChatResponseConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.CreateChatResponseConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.CreateChatResponseConfigurationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDataAccessor provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDataAccessor(ctx context.Context, params *qbusiness.CreateDataAccessorInput, optFns ...func(*qbusiness.Options)) (*qbusiness.CreateDataAccessorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -746,6 +783,43 @@ func (_m *IClient) DeleteChatControlsConfiguration(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.DeleteChatControlsConfigurationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteChatResponseConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteChatResponseConfiguration(ctx context.Context, params *qbusiness.DeleteChatResponseConfigurationInput, optFns ...func(*qbusiness.Options)) (*qbusiness.DeleteChatResponseConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteChatResponseConfiguration")
+	}
+
+	var r0 *qbusiness.DeleteChatResponseConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DeleteChatResponseConfigurationInput, ...func(*qbusiness.Options)) (*qbusiness.DeleteChatResponseConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.DeleteChatResponseConfigurationInput, ...func(*qbusiness.Options)) *qbusiness.DeleteChatResponseConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.DeleteChatResponseConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.DeleteChatResponseConfigurationInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1198,6 +1272,43 @@ func (_m *IClient) GetChatControlsConfiguration(ctx context.Context, params *qbu
 	return r0, r1
 }
 
+// GetChatResponseConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetChatResponseConfiguration(ctx context.Context, params *qbusiness.GetChatResponseConfigurationInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetChatResponseConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetChatResponseConfiguration")
+	}
+
+	var r0 *qbusiness.GetChatResponseConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetChatResponseConfigurationInput, ...func(*qbusiness.Options)) (*qbusiness.GetChatResponseConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetChatResponseConfigurationInput, ...func(*qbusiness.Options)) *qbusiness.GetChatResponseConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.GetChatResponseConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetChatResponseConfigurationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataAccessor provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataAccessor(ctx context.Context, params *qbusiness.GetDataAccessorInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetDataAccessorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1264,6 +1375,43 @@ func (_m *IClient) GetDataSource(ctx context.Context, params *qbusiness.GetDataS
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetDataSourceInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDocumentContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDocumentContent(ctx context.Context, params *qbusiness.GetDocumentContentInput, optFns ...func(*qbusiness.Options)) (*qbusiness.GetDocumentContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDocumentContent")
+	}
+
+	var r0 *qbusiness.GetDocumentContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetDocumentContentInput, ...func(*qbusiness.Options)) (*qbusiness.GetDocumentContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.GetDocumentContentInput, ...func(*qbusiness.Options)) *qbusiness.GetDocumentContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.GetDocumentContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.GetDocumentContentInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1634,6 +1782,43 @@ func (_m *IClient) ListAttachments(ctx context.Context, params *qbusiness.ListAt
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListAttachmentsInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChatResponseConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChatResponseConfigurations(ctx context.Context, params *qbusiness.ListChatResponseConfigurationsInput, optFns ...func(*qbusiness.Options)) (*qbusiness.ListChatResponseConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChatResponseConfigurations")
+	}
+
+	var r0 *qbusiness.ListChatResponseConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListChatResponseConfigurationsInput, ...func(*qbusiness.Options)) (*qbusiness.ListChatResponseConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.ListChatResponseConfigurationsInput, ...func(*qbusiness.Options)) *qbusiness.ListChatResponseConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.ListChatResponseConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.ListChatResponseConfigurationsInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2577,6 +2762,43 @@ func (_m *IClient) UpdateChatControlsConfiguration(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.UpdateChatControlsConfigurationInput, ...func(*qbusiness.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateChatResponseConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateChatResponseConfiguration(ctx context.Context, params *qbusiness.UpdateChatResponseConfigurationInput, optFns ...func(*qbusiness.Options)) (*qbusiness.UpdateChatResponseConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateChatResponseConfiguration")
+	}
+
+	var r0 *qbusiness.UpdateChatResponseConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.UpdateChatResponseConfigurationInput, ...func(*qbusiness.Options)) (*qbusiness.UpdateChatResponseConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qbusiness.UpdateChatResponseConfigurationInput, ...func(*qbusiness.Options)) *qbusiness.UpdateChatResponseConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qbusiness.UpdateChatResponseConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qbusiness.UpdateChatResponseConfigurationInput, ...func(*qbusiness.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

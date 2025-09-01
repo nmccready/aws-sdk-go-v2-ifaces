@@ -459,6 +459,43 @@ func (_m *IClient) GetConnectInstanceConfig(ctx context.Context, params *connect
 	return r0, r1
 }
 
+// GetInstanceCommunicationLimits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInstanceCommunicationLimits(ctx context.Context, params *connectcampaignsv2.GetInstanceCommunicationLimitsInput, optFns ...func(*connectcampaignsv2.Options)) (*connectcampaignsv2.GetInstanceCommunicationLimitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInstanceCommunicationLimits")
+	}
+
+	var r0 *connectcampaignsv2.GetInstanceCommunicationLimitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcampaignsv2.GetInstanceCommunicationLimitsInput, ...func(*connectcampaignsv2.Options)) (*connectcampaignsv2.GetInstanceCommunicationLimitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcampaignsv2.GetInstanceCommunicationLimitsInput, ...func(*connectcampaignsv2.Options)) *connectcampaignsv2.GetInstanceCommunicationLimitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcampaignsv2.GetInstanceCommunicationLimitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcampaignsv2.GetInstanceCommunicationLimitsInput, ...func(*connectcampaignsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetInstanceOnboardingJobStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetInstanceOnboardingJobStatus(ctx context.Context, params *connectcampaignsv2.GetInstanceOnboardingJobStatusInput, optFns ...func(*connectcampaignsv2.Options)) (*connectcampaignsv2.GetInstanceOnboardingJobStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -691,6 +728,43 @@ func (_m *IClient) PutConnectInstanceIntegration(ctx context.Context, params *co
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcampaignsv2.PutConnectInstanceIntegrationInput, ...func(*connectcampaignsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutInstanceCommunicationLimits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutInstanceCommunicationLimits(ctx context.Context, params *connectcampaignsv2.PutInstanceCommunicationLimitsInput, optFns ...func(*connectcampaignsv2.Options)) (*connectcampaignsv2.PutInstanceCommunicationLimitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutInstanceCommunicationLimits")
+	}
+
+	var r0 *connectcampaignsv2.PutInstanceCommunicationLimitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcampaignsv2.PutInstanceCommunicationLimitsInput, ...func(*connectcampaignsv2.Options)) (*connectcampaignsv2.PutInstanceCommunicationLimitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcampaignsv2.PutInstanceCommunicationLimitsInput, ...func(*connectcampaignsv2.Options)) *connectcampaignsv2.PutInstanceCommunicationLimitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcampaignsv2.PutInstanceCommunicationLimitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcampaignsv2.PutInstanceCommunicationLimitsInput, ...func(*connectcampaignsv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

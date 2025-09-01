@@ -3752,6 +3752,43 @@ func (_m *IClient) DescribeDomainConfiguration(ctx context.Context, params *iot.
 	return r0, r1
 }
 
+// DescribeEncryptionConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeEncryptionConfiguration(ctx context.Context, params *iot.DescribeEncryptionConfigurationInput, optFns ...func(*iot.Options)) (*iot.DescribeEncryptionConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeEncryptionConfiguration")
+	}
+
+	var r0 *iot.DescribeEncryptionConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iot.DescribeEncryptionConfigurationInput, ...func(*iot.Options)) (*iot.DescribeEncryptionConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iot.DescribeEncryptionConfigurationInput, ...func(*iot.Options)) *iot.DescribeEncryptionConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iot.DescribeEncryptionConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iot.DescribeEncryptionConfigurationInput, ...func(*iot.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeEndpoint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeEndpoint(ctx context.Context, params *iot.DescribeEndpointInput, optFns ...func(*iot.Options)) (*iot.DescribeEndpointOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9312,6 +9349,43 @@ func (_m *IClient) UpdateDynamicThingGroup(ctx context.Context, params *iot.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iot.UpdateDynamicThingGroupInput, ...func(*iot.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateEncryptionConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEncryptionConfiguration(ctx context.Context, params *iot.UpdateEncryptionConfigurationInput, optFns ...func(*iot.Options)) (*iot.UpdateEncryptionConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEncryptionConfiguration")
+	}
+
+	var r0 *iot.UpdateEncryptionConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iot.UpdateEncryptionConfigurationInput, ...func(*iot.Options)) (*iot.UpdateEncryptionConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iot.UpdateEncryptionConfigurationInput, ...func(*iot.Options)) *iot.UpdateEncryptionConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iot.UpdateEncryptionConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iot.UpdateEncryptionConfigurationInput, ...func(*iot.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

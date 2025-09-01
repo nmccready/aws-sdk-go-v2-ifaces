@@ -162,6 +162,43 @@ func (_m *IClient) GetComponent(ctx context.Context, params *ssmsap.GetComponent
 	return r0, r1
 }
 
+// GetConfigurationCheckOperation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConfigurationCheckOperation(ctx context.Context, params *ssmsap.GetConfigurationCheckOperationInput, optFns ...func(*ssmsap.Options)) (*ssmsap.GetConfigurationCheckOperationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConfigurationCheckOperation")
+	}
+
+	var r0 *ssmsap.GetConfigurationCheckOperationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.GetConfigurationCheckOperationInput, ...func(*ssmsap.Options)) (*ssmsap.GetConfigurationCheckOperationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.GetConfigurationCheckOperationInput, ...func(*ssmsap.Options)) *ssmsap.GetConfigurationCheckOperationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssmsap.GetConfigurationCheckOperationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.GetConfigurationCheckOperationInput, ...func(*ssmsap.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDatabase provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDatabase(ctx context.Context, params *ssmsap.GetDatabaseInput, optFns ...func(*ssmsap.Options)) (*ssmsap.GetDatabaseOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -347,6 +384,80 @@ func (_m *IClient) ListComponents(ctx context.Context, params *ssmsap.ListCompon
 	return r0, r1
 }
 
+// ListConfigurationCheckDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConfigurationCheckDefinitions(ctx context.Context, params *ssmsap.ListConfigurationCheckDefinitionsInput, optFns ...func(*ssmsap.Options)) (*ssmsap.ListConfigurationCheckDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConfigurationCheckDefinitions")
+	}
+
+	var r0 *ssmsap.ListConfigurationCheckDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListConfigurationCheckDefinitionsInput, ...func(*ssmsap.Options)) (*ssmsap.ListConfigurationCheckDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListConfigurationCheckDefinitionsInput, ...func(*ssmsap.Options)) *ssmsap.ListConfigurationCheckDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssmsap.ListConfigurationCheckDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.ListConfigurationCheckDefinitionsInput, ...func(*ssmsap.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConfigurationCheckOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConfigurationCheckOperations(ctx context.Context, params *ssmsap.ListConfigurationCheckOperationsInput, optFns ...func(*ssmsap.Options)) (*ssmsap.ListConfigurationCheckOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConfigurationCheckOperations")
+	}
+
+	var r0 *ssmsap.ListConfigurationCheckOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListConfigurationCheckOperationsInput, ...func(*ssmsap.Options)) (*ssmsap.ListConfigurationCheckOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListConfigurationCheckOperationsInput, ...func(*ssmsap.Options)) *ssmsap.ListConfigurationCheckOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssmsap.ListConfigurationCheckOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.ListConfigurationCheckOperationsInput, ...func(*ssmsap.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDatabases provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDatabases(ctx context.Context, params *ssmsap.ListDatabasesInput, optFns ...func(*ssmsap.Options)) (*ssmsap.ListDatabasesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -450,6 +561,80 @@ func (_m *IClient) ListOperations(ctx context.Context, params *ssmsap.ListOperat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.ListOperationsInput, ...func(*ssmsap.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSubCheckResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSubCheckResults(ctx context.Context, params *ssmsap.ListSubCheckResultsInput, optFns ...func(*ssmsap.Options)) (*ssmsap.ListSubCheckResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSubCheckResults")
+	}
+
+	var r0 *ssmsap.ListSubCheckResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListSubCheckResultsInput, ...func(*ssmsap.Options)) (*ssmsap.ListSubCheckResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListSubCheckResultsInput, ...func(*ssmsap.Options)) *ssmsap.ListSubCheckResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssmsap.ListSubCheckResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.ListSubCheckResultsInput, ...func(*ssmsap.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSubCheckRuleResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSubCheckRuleResults(ctx context.Context, params *ssmsap.ListSubCheckRuleResultsInput, optFns ...func(*ssmsap.Options)) (*ssmsap.ListSubCheckRuleResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSubCheckRuleResults")
+	}
+
+	var r0 *ssmsap.ListSubCheckRuleResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListSubCheckRuleResultsInput, ...func(*ssmsap.Options)) (*ssmsap.ListSubCheckRuleResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.ListSubCheckRuleResultsInput, ...func(*ssmsap.Options)) *ssmsap.ListSubCheckRuleResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssmsap.ListSubCheckRuleResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.ListSubCheckRuleResultsInput, ...func(*ssmsap.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -653,6 +838,43 @@ func (_m *IClient) StartApplicationRefresh(ctx context.Context, params *ssmsap.S
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.StartApplicationRefreshInput, ...func(*ssmsap.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartConfigurationChecks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartConfigurationChecks(ctx context.Context, params *ssmsap.StartConfigurationChecksInput, optFns ...func(*ssmsap.Options)) (*ssmsap.StartConfigurationChecksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartConfigurationChecks")
+	}
+
+	var r0 *ssmsap.StartConfigurationChecksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.StartConfigurationChecksInput, ...func(*ssmsap.Options)) (*ssmsap.StartConfigurationChecksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssmsap.StartConfigurationChecksInput, ...func(*ssmsap.Options)) *ssmsap.StartConfigurationChecksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssmsap.StartConfigurationChecksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssmsap.StartConfigurationChecksInput, ...func(*ssmsap.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

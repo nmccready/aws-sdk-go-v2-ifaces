@@ -34,6 +34,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAccountAssociation", func(t *testing.T) {
+        input := &iotmanagedintegrations.CreateAccountAssociationInput{}
+        output := &iotmanagedintegrations.CreateAccountAssociationOutput{}
+
+        mockClient.On("CreateAccountAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAccountAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCloudConnector", func(t *testing.T) {
+        input := &iotmanagedintegrations.CreateCloudConnectorInput{}
+        output := &iotmanagedintegrations.CreateCloudConnectorOutput{}
+
+        mockClient.On("CreateCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConnectorDestination", func(t *testing.T) {
+        input := &iotmanagedintegrations.CreateConnectorDestinationInput{}
+        output := &iotmanagedintegrations.CreateConnectorDestinationOutput{}
+
+        mockClient.On("CreateConnectorDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnectorDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCredentialLocker", func(t *testing.T) {
         input := &iotmanagedintegrations.CreateCredentialLockerInput{}
         output := &iotmanagedintegrations.CreateCredentialLockerOutput{}
@@ -138,6 +177,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAccountAssociation", func(t *testing.T) {
+        input := &iotmanagedintegrations.DeleteAccountAssociationInput{}
+        output := &iotmanagedintegrations.DeleteAccountAssociationOutput{}
+
+        mockClient.On("DeleteAccountAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccountAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCloudConnector", func(t *testing.T) {
+        input := &iotmanagedintegrations.DeleteCloudConnectorInput{}
+        output := &iotmanagedintegrations.DeleteCloudConnectorOutput{}
+
+        mockClient.On("DeleteCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConnectorDestination", func(t *testing.T) {
+        input := &iotmanagedintegrations.DeleteConnectorDestinationInput{}
+        output := &iotmanagedintegrations.DeleteConnectorDestinationOutput{}
+
+        mockClient.On("DeleteConnectorDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnectorDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCredentialLocker", func(t *testing.T) {
         input := &iotmanagedintegrations.DeleteCredentialLockerInput{}
         output := &iotmanagedintegrations.DeleteCredentialLockerOutput{}
@@ -236,6 +314,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteProvisioningProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteProvisioningProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeregisterAccountAssociation", func(t *testing.T) {
+        input := &iotmanagedintegrations.DeregisterAccountAssociationInput{}
+        output := &iotmanagedintegrations.DeregisterAccountAssociationOutput{}
+
+        mockClient.On("DeregisterAccountAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterAccountAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccountAssociation", func(t *testing.T) {
+        input := &iotmanagedintegrations.GetAccountAssociationInput{}
+        output := &iotmanagedintegrations.GetAccountAssociationOutput{}
+
+        mockClient.On("GetAccountAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCloudConnector", func(t *testing.T) {
+        input := &iotmanagedintegrations.GetCloudConnectorInput{}
+        output := &iotmanagedintegrations.GetCloudConnectorOutput{}
+
+        mockClient.On("GetCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnectorDestination", func(t *testing.T) {
+        input := &iotmanagedintegrations.GetConnectorDestinationInput{}
+        output := &iotmanagedintegrations.GetConnectorDestinationOutput{}
+
+        mockClient.On("GetConnectorDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnectorDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,6 +606,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAccountAssociations", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListAccountAssociationsInput{}
+        output := &iotmanagedintegrations.ListAccountAssociationsOutput{}
+
+        mockClient.On("ListAccountAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccountAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCloudConnectors", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListCloudConnectorsInput{}
+        output := &iotmanagedintegrations.ListCloudConnectorsOutput{}
+
+        mockClient.On("ListCloudConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCloudConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConnectorDestinations", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListConnectorDestinationsInput{}
+        output := &iotmanagedintegrations.ListConnectorDestinationsOutput{}
+
+        mockClient.On("ListConnectorDestinations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectorDestinations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCredentialLockers", func(t *testing.T) {
         input := &iotmanagedintegrations.ListCredentialLockersInput{}
         output := &iotmanagedintegrations.ListCredentialLockersOutput{}
@@ -502,6 +671,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDeviceDiscoveries", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListDeviceDiscoveriesInput{}
+        output := &iotmanagedintegrations.ListDeviceDiscoveriesOutput{}
+
+        mockClient.On("ListDeviceDiscoveries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeviceDiscoveries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDiscoveredDevices", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListDiscoveredDevicesInput{}
+        output := &iotmanagedintegrations.ListDiscoveredDevicesOutput{}
+
+        mockClient.On("ListDiscoveredDevices", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDiscoveredDevices(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEventLogConfigurations", func(t *testing.T) {
         input := &iotmanagedintegrations.ListEventLogConfigurationsInput{}
         output := &iotmanagedintegrations.ListEventLogConfigurationsOutput{}
@@ -515,13 +710,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListManagedThingSchemas", func(t *testing.T) {
-        input := &iotmanagedintegrations.ListManagedThingSchemasInput{}
-        output := &iotmanagedintegrations.ListManagedThingSchemasOutput{}
+    t.Run("TestListManagedThingAccountAssociations", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListManagedThingAccountAssociationsInput{}
+        output := &iotmanagedintegrations.ListManagedThingAccountAssociationsOutput{}
 
-        mockClient.On("ListManagedThingSchemas", ctx, input).Return(output, nil)
+        mockClient.On("ListManagedThingAccountAssociations", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListManagedThingSchemas(ctx, input)
+        result, err := mockClient.ListManagedThingAccountAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -535,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListManagedThings", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListManagedThings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedThingSchemas", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListManagedThingSchemasInput{}
+        output := &iotmanagedintegrations.ListManagedThingSchemasOutput{}
+
+        mockClient.On("ListManagedThingSchemas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedThingSchemas(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,6 +827,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListTagsForResourceInput{}
+        output := &iotmanagedintegrations.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutDefaultEncryptionConfiguration", func(t *testing.T) {
         input := &iotmanagedintegrations.PutDefaultEncryptionConfigurationInput{}
         output := &iotmanagedintegrations.PutDefaultEncryptionConfigurationOutput{}
@@ -658,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRegisterAccountAssociation", func(t *testing.T) {
+        input := &iotmanagedintegrations.RegisterAccountAssociationInput{}
+        output := &iotmanagedintegrations.RegisterAccountAssociationOutput{}
+
+        mockClient.On("RegisterAccountAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterAccountAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRegisterCustomEndpoint", func(t *testing.T) {
         input := &iotmanagedintegrations.RegisterCustomEndpointInput{}
         output := &iotmanagedintegrations.RegisterCustomEndpointOutput{}
@@ -684,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendConnectorEvent", func(t *testing.T) {
+        input := &iotmanagedintegrations.SendConnectorEventInput{}
+        output := &iotmanagedintegrations.SendConnectorEventOutput{}
+
+        mockClient.On("SendConnectorEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendConnectorEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSendManagedThingCommand", func(t *testing.T) {
         input := &iotmanagedintegrations.SendManagedThingCommandInput{}
         output := &iotmanagedintegrations.SendManagedThingCommandOutput{}
@@ -697,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartAccountAssociationRefresh", func(t *testing.T) {
+        input := &iotmanagedintegrations.StartAccountAssociationRefreshInput{}
+        output := &iotmanagedintegrations.StartAccountAssociationRefreshOutput{}
+
+        mockClient.On("StartAccountAssociationRefresh", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAccountAssociationRefresh(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartDeviceDiscovery", func(t *testing.T) {
         input := &iotmanagedintegrations.StartDeviceDiscoveryInput{}
         output := &iotmanagedintegrations.StartDeviceDiscoveryOutput{}
@@ -704,6 +964,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartDeviceDiscovery", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartDeviceDiscovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &iotmanagedintegrations.TagResourceInput{}
+        output := &iotmanagedintegrations.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &iotmanagedintegrations.UntagResourceInput{}
+        output := &iotmanagedintegrations.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAccountAssociation", func(t *testing.T) {
+        input := &iotmanagedintegrations.UpdateAccountAssociationInput{}
+        output := &iotmanagedintegrations.UpdateAccountAssociationOutput{}
+
+        mockClient.On("UpdateAccountAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccountAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCloudConnector", func(t *testing.T) {
+        input := &iotmanagedintegrations.UpdateCloudConnectorInput{}
+        output := &iotmanagedintegrations.UpdateCloudConnectorOutput{}
+
+        mockClient.On("UpdateCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConnectorDestination", func(t *testing.T) {
+        input := &iotmanagedintegrations.UpdateConnectorDestinationInput{}
+        output := &iotmanagedintegrations.UpdateConnectorDestinationOutput{}
+
+        mockClient.On("UpdateConnectorDestination", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConnectorDestination(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

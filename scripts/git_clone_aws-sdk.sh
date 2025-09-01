@@ -44,4 +44,4 @@ rm -rf go.sum go.mod vendor
 
 echo "module github.com/nmccready/aws-sdk-go-v2-ifaces
 
-go 1.23" > go.mod
+go 1.24" > go.mod

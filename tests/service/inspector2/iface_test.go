@@ -47,6 +47,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchAssociateCodeSecurityScanConfiguration", func(t *testing.T) {
+        input := &inspector2.BatchAssociateCodeSecurityScanConfigurationInput{}
+        output := &inspector2.BatchAssociateCodeSecurityScanConfigurationOutput{}
+
+        mockClient.On("BatchAssociateCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchAssociateCodeSecurityScanConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDisassociateCodeSecurityScanConfiguration", func(t *testing.T) {
+        input := &inspector2.BatchDisassociateCodeSecurityScanConfigurationInput{}
+        output := &inspector2.BatchDisassociateCodeSecurityScanConfigurationOutput{}
+
+        mockClient.On("BatchDisassociateCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDisassociateCodeSecurityScanConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetAccountStatus", func(t *testing.T) {
         input := &inspector2.BatchGetAccountStatusInput{}
         output := &inspector2.BatchGetAccountStatusOutput{}
@@ -164,6 +190,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCodeSecurityIntegration", func(t *testing.T) {
+        input := &inspector2.CreateCodeSecurityIntegrationInput{}
+        output := &inspector2.CreateCodeSecurityIntegrationOutput{}
+
+        mockClient.On("CreateCodeSecurityIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCodeSecurityIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCodeSecurityScanConfiguration", func(t *testing.T) {
+        input := &inspector2.CreateCodeSecurityScanConfigurationInput{}
+        output := &inspector2.CreateCodeSecurityScanConfigurationOutput{}
+
+        mockClient.On("CreateCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCodeSecurityScanConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFilter", func(t *testing.T) {
         input := &inspector2.CreateFilterInput{}
         output := &inspector2.CreateFilterOutput{}
@@ -210,6 +262,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCisScanConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCisScanConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCodeSecurityIntegration", func(t *testing.T) {
+        input := &inspector2.DeleteCodeSecurityIntegrationInput{}
+        output := &inspector2.DeleteCodeSecurityIntegrationOutput{}
+
+        mockClient.On("DeleteCodeSecurityIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCodeSecurityIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCodeSecurityScanConfiguration", func(t *testing.T) {
+        input := &inspector2.DeleteCodeSecurityScanConfigurationInput{}
+        output := &inspector2.DeleteCodeSecurityScanConfigurationOutput{}
+
+        mockClient.On("DeleteCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCodeSecurityScanConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +418,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetClustersForImage", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetClustersForImage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCodeSecurityIntegration", func(t *testing.T) {
+        input := &inspector2.GetCodeSecurityIntegrationInput{}
+        output := &inspector2.GetCodeSecurityIntegrationOutput{}
+
+        mockClient.On("GetCodeSecurityIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCodeSecurityIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCodeSecurityScan", func(t *testing.T) {
+        input := &inspector2.GetCodeSecurityScanInput{}
+        output := &inspector2.GetCodeSecurityScanOutput{}
+
+        mockClient.On("GetCodeSecurityScan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCodeSecurityScan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCodeSecurityScanConfiguration", func(t *testing.T) {
+        input := &inspector2.GetCodeSecurityScanConfigurationInput{}
+        output := &inspector2.GetCodeSecurityScanConfigurationOutput{}
+
+        mockClient.On("GetCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCodeSecurityScanConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -496,6 +613,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCisScans", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCisScans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCodeSecurityIntegrations", func(t *testing.T) {
+        input := &inspector2.ListCodeSecurityIntegrationsInput{}
+        output := &inspector2.ListCodeSecurityIntegrationsOutput{}
+
+        mockClient.On("ListCodeSecurityIntegrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCodeSecurityIntegrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCodeSecurityScanConfigurationAssociations", func(t *testing.T) {
+        input := &inspector2.ListCodeSecurityScanConfigurationAssociationsInput{}
+        output := &inspector2.ListCodeSecurityScanConfigurationAssociationsOutput{}
+
+        mockClient.On("ListCodeSecurityScanConfigurationAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCodeSecurityScanConfigurationAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCodeSecurityScanConfigurations", func(t *testing.T) {
+        input := &inspector2.ListCodeSecurityScanConfigurationsInput{}
+        output := &inspector2.ListCodeSecurityScanConfigurationsOutput{}
+
+        mockClient.On("ListCodeSecurityScanConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCodeSecurityScanConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartCodeSecurityScan", func(t *testing.T) {
+        input := &inspector2.StartCodeSecurityScanInput{}
+        output := &inspector2.StartCodeSecurityScanOutput{}
+
+        mockClient.On("StartCodeSecurityScan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCodeSecurityScan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopCisSession", func(t *testing.T) {
         input := &inspector2.StopCisSessionInput{}
         output := &inspector2.StopCisSessionOutput{}
@@ -730,6 +899,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCisScanConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCisScanConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCodeSecurityIntegration", func(t *testing.T) {
+        input := &inspector2.UpdateCodeSecurityIntegrationInput{}
+        output := &inspector2.UpdateCodeSecurityIntegrationOutput{}
+
+        mockClient.On("UpdateCodeSecurityIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCodeSecurityIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCodeSecurityScanConfiguration", func(t *testing.T) {
+        input := &inspector2.UpdateCodeSecurityScanConfigurationInput{}
+        output := &inspector2.UpdateCodeSecurityScanConfigurationOutput{}
+
+        mockClient.On("UpdateCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCodeSecurityScanConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +983,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateOrgEc2DeepInspectionConfiguration", func(t *testing.T) {
-        input := &inspector2.UpdateOrgEc2DeepInspectionConfigurationInput{}
-        output := &inspector2.UpdateOrgEc2DeepInspectionConfigurationOutput{}
-
-        mockClient.On("UpdateOrgEc2DeepInspectionConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateOrgEc2DeepInspectionConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateOrganizationConfiguration", func(t *testing.T) {
         input := &inspector2.UpdateOrganizationConfigurationInput{}
         output := &inspector2.UpdateOrganizationConfigurationOutput{}
@@ -808,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOrganizationConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOrganizationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOrgEc2DeepInspectionConfiguration", func(t *testing.T) {
+        input := &inspector2.UpdateOrgEc2DeepInspectionConfigurationInput{}
+        output := &inspector2.UpdateOrgEc2DeepInspectionConfigurationOutput{}
+
+        mockClient.On("UpdateOrgEc2DeepInspectionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOrgEc2DeepInspectionConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

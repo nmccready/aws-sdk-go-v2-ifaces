@@ -58,6 +58,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListTrainedModelInferenceJobs(ctx context.Context, params *ListTrainedModelInferenceJobsInput, optFns ...func(*Options)) (*ListTrainedModelInferenceJobsOutput, error) 
  ListTrainedModels(ctx context.Context, params *ListTrainedModelsInput, optFns ...func(*Options)) (*ListTrainedModelsOutput, error) 
+ ListTrainedModelVersions(ctx context.Context, params *ListTrainedModelVersionsInput, optFns ...func(*Options)) (*ListTrainedModelVersionsOutput, error) 
  ListTrainingDatasets(ctx context.Context, params *ListTrainingDatasetsInput, optFns ...func(*Options)) (*ListTrainingDatasetsOutput, error) 
  PutConfiguredAudienceModelPolicy(ctx context.Context, params *PutConfiguredAudienceModelPolicyInput, optFns ...func(*Options)) (*PutConfiguredAudienceModelPolicyOutput, error) 
  PutMLConfiguration(ctx context.Context, params *PutMLConfigurationInput, optFns ...func(*Options)) (*PutMLConfigurationOutput, error) 

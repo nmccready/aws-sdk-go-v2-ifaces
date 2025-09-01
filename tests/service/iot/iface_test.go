@@ -1347,6 +1347,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeEncryptionConfiguration", func(t *testing.T) {
+        input := &iot.DescribeEncryptionConfigurationInput{}
+        output := &iot.DescribeEncryptionConfigurationOutput{}
+
+        mockClient.On("DescribeEncryptionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEncryptionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEndpoint", func(t *testing.T) {
         input := &iot.DescribeEndpointInput{}
         output := &iot.DescribeEndpointOutput{}
@@ -2283,19 +2296,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListJobTemplates", func(t *testing.T) {
-        input := &iot.ListJobTemplatesInput{}
-        output := &iot.ListJobTemplatesOutput{}
-
-        mockClient.On("ListJobTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListJobTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListJobs", func(t *testing.T) {
         input := &iot.ListJobsInput{}
         output := &iot.ListJobsOutput{}
@@ -2303,6 +2303,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobTemplates", func(t *testing.T) {
+        input := &iot.ListJobTemplatesInput{}
+        output := &iot.ListJobTemplatesOutput{}
+
+        mockClient.On("ListJobTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2374,19 +2387,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPackageVersions", func(t *testing.T) {
-        input := &iot.ListPackageVersionsInput{}
-        output := &iot.ListPackageVersionsOutput{}
-
-        mockClient.On("ListPackageVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPackageVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListPackages", func(t *testing.T) {
         input := &iot.ListPackagesInput{}
         output := &iot.ListPackagesOutput{}
@@ -2394,6 +2394,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPackages", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPackages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPackageVersions", func(t *testing.T) {
+        input := &iot.ListPackageVersionsInput{}
+        output := &iot.ListPackageVersionsOutput{}
+
+        mockClient.On("ListPackageVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPackageVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2478,19 +2491,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProvisioningTemplateVersions", func(t *testing.T) {
-        input := &iot.ListProvisioningTemplateVersionsInput{}
-        output := &iot.ListProvisioningTemplateVersionsOutput{}
-
-        mockClient.On("ListProvisioningTemplateVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListProvisioningTemplateVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListProvisioningTemplates", func(t *testing.T) {
         input := &iot.ListProvisioningTemplatesInput{}
         output := &iot.ListProvisioningTemplatesOutput{}
@@ -2498,6 +2498,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProvisioningTemplates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProvisioningTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProvisioningTemplateVersions", func(t *testing.T) {
+        input := &iot.ListProvisioningTemplateVersionsInput{}
+        output := &iot.ListProvisioningTemplateVersionsOutput{}
+
+        mockClient.On("ListProvisioningTemplateVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProvisioningTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2712,19 +2725,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListThingTypes", func(t *testing.T) {
-        input := &iot.ListThingTypesInput{}
-        output := &iot.ListThingTypesOutput{}
-
-        mockClient.On("ListThingTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListThingTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListThings", func(t *testing.T) {
         input := &iot.ListThingsInput{}
         output := &iot.ListThingsOutput{}
@@ -2758,6 +2758,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListThingsInThingGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListThingsInThingGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThingTypes", func(t *testing.T) {
+        input := &iot.ListThingTypesInput{}
+        output := &iot.ListThingTypesOutput{}
+
+        mockClient.On("ListThingTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThingTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3291,6 +3304,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDynamicThingGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDynamicThingGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateEncryptionConfiguration", func(t *testing.T) {
+        input := &iot.UpdateEncryptionConfigurationInput{}
+        output := &iot.UpdateEncryptionConfigurationOutput{}
+
+        mockClient.On("UpdateEncryptionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEncryptionConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

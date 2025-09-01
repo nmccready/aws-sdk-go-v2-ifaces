@@ -385,6 +385,43 @@ func (_m *IClient) CreateTemplate(ctx context.Context, params *connectcases.Crea
 	return r0, r1
 }
 
+// DeleteCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCase(ctx context.Context, params *connectcases.DeleteCaseInput, optFns ...func(*connectcases.Options)) (*connectcases.DeleteCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCase")
+	}
+
+	var r0 *connectcases.DeleteCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.DeleteCaseInput, ...func(*connectcases.Options)) (*connectcases.DeleteCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.DeleteCaseInput, ...func(*connectcases.Options)) *connectcases.DeleteCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.DeleteCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.DeleteCaseInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCaseRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCaseRule(ctx context.Context, params *connectcases.DeleteCaseRuleInput, optFns ...func(*connectcases.Options)) (*connectcases.DeleteCaseRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +562,43 @@ func (_m *IClient) DeleteLayout(ctx context.Context, params *connectcases.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.DeleteLayoutInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRelatedItem provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRelatedItem(ctx context.Context, params *connectcases.DeleteRelatedItemInput, optFns ...func(*connectcases.Options)) (*connectcases.DeleteRelatedItemOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRelatedItem")
+	}
+
+	var r0 *connectcases.DeleteRelatedItemOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.DeleteRelatedItemInput, ...func(*connectcases.Options)) (*connectcases.DeleteRelatedItemOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.DeleteRelatedItemInput, ...func(*connectcases.Options)) *connectcases.DeleteRelatedItemOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.DeleteRelatedItemOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.DeleteRelatedItemInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

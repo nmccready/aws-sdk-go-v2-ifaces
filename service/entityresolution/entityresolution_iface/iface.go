@@ -21,6 +21,7 @@ type IClient interface {
  DeleteMatchingWorkflow(ctx context.Context, params *DeleteMatchingWorkflowInput, optFns ...func(*Options)) (*DeleteMatchingWorkflowOutput, error) 
  DeletePolicyStatement(ctx context.Context, params *DeletePolicyStatementInput, optFns ...func(*Options)) (*DeletePolicyStatementOutput, error) 
  DeleteSchemaMapping(ctx context.Context, params *DeleteSchemaMappingInput, optFns ...func(*Options)) (*DeleteSchemaMappingOutput, error) 
+ GenerateMatchId(ctx context.Context, params *GenerateMatchIdInput, optFns ...func(*Options)) (*GenerateMatchIdOutput, error) 
  GetIdMappingJob(ctx context.Context, params *GetIdMappingJobInput, optFns ...func(*Options)) (*GetIdMappingJobOutput, error) 
  GetIdMappingWorkflow(ctx context.Context, params *GetIdMappingWorkflowInput, optFns ...func(*Options)) (*GetIdMappingWorkflowOutput, error) 
  GetIdNamespace(ctx context.Context, params *GetIdNamespaceInput, optFns ...func(*Options)) (*GetIdNamespaceOutput, error) 

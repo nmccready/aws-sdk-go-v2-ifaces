@@ -47,6 +47,84 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelAutomatedReasoningPolicyBuildWorkflow", func(t *testing.T) {
+        input := &bedrock.CancelAutomatedReasoningPolicyBuildWorkflowInput{}
+        output := &bedrock.CancelAutomatedReasoningPolicyBuildWorkflowOutput{}
+
+        mockClient.On("CancelAutomatedReasoningPolicyBuildWorkflow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelAutomatedReasoningPolicyBuildWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAutomatedReasoningPolicy", func(t *testing.T) {
+        input := &bedrock.CreateAutomatedReasoningPolicyInput{}
+        output := &bedrock.CreateAutomatedReasoningPolicyOutput{}
+
+        mockClient.On("CreateAutomatedReasoningPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAutomatedReasoningPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAutomatedReasoningPolicyTestCase", func(t *testing.T) {
+        input := &bedrock.CreateAutomatedReasoningPolicyTestCaseInput{}
+        output := &bedrock.CreateAutomatedReasoningPolicyTestCaseOutput{}
+
+        mockClient.On("CreateAutomatedReasoningPolicyTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAutomatedReasoningPolicyTestCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAutomatedReasoningPolicyVersion", func(t *testing.T) {
+        input := &bedrock.CreateAutomatedReasoningPolicyVersionInput{}
+        output := &bedrock.CreateAutomatedReasoningPolicyVersionOutput{}
+
+        mockClient.On("CreateAutomatedReasoningPolicyVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAutomatedReasoningPolicyVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCustomModel", func(t *testing.T) {
+        input := &bedrock.CreateCustomModelInput{}
+        output := &bedrock.CreateCustomModelOutput{}
+
+        mockClient.On("CreateCustomModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCustomModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCustomModelDeployment", func(t *testing.T) {
+        input := &bedrock.CreateCustomModelDeploymentInput{}
+        output := &bedrock.CreateCustomModelDeploymentOutput{}
+
+        mockClient.On("CreateCustomModelDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCustomModelDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvaluationJob", func(t *testing.T) {
         input := &bedrock.CreateEvaluationJobInput{}
         output := &bedrock.CreateEvaluationJobOutput{}
@@ -54,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateEvaluationJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateEvaluationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateFoundationModelAgreement", func(t *testing.T) {
+        input := &bedrock.CreateFoundationModelAgreementInput{}
+        output := &bedrock.CreateFoundationModelAgreementOutput{}
+
+        mockClient.On("CreateFoundationModelAgreement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateFoundationModelAgreement(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +281,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAutomatedReasoningPolicy", func(t *testing.T) {
+        input := &bedrock.DeleteAutomatedReasoningPolicyInput{}
+        output := &bedrock.DeleteAutomatedReasoningPolicyOutput{}
+
+        mockClient.On("DeleteAutomatedReasoningPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAutomatedReasoningPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAutomatedReasoningPolicyBuildWorkflow", func(t *testing.T) {
+        input := &bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowInput{}
+        output := &bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowOutput{}
+
+        mockClient.On("DeleteAutomatedReasoningPolicyBuildWorkflow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAutomatedReasoningPolicyBuildWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAutomatedReasoningPolicyTestCase", func(t *testing.T) {
+        input := &bedrock.DeleteAutomatedReasoningPolicyTestCaseInput{}
+        output := &bedrock.DeleteAutomatedReasoningPolicyTestCaseOutput{}
+
+        mockClient.On("DeleteAutomatedReasoningPolicyTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAutomatedReasoningPolicyTestCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCustomModel", func(t *testing.T) {
         input := &bedrock.DeleteCustomModelInput{}
         output := &bedrock.DeleteCustomModelOutput{}
@@ -197,6 +327,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCustomModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCustomModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCustomModelDeployment", func(t *testing.T) {
+        input := &bedrock.DeleteCustomModelDeploymentInput{}
+        output := &bedrock.DeleteCustomModelDeploymentOutput{}
+
+        mockClient.On("DeleteCustomModelDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCustomModelDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteFoundationModelAgreement", func(t *testing.T) {
+        input := &bedrock.DeleteFoundationModelAgreementInput{}
+        output := &bedrock.DeleteFoundationModelAgreementOutput{}
+
+        mockClient.On("DeleteFoundationModelAgreement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFoundationModelAgreement(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +463,110 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestExportAutomatedReasoningPolicyVersion", func(t *testing.T) {
+        input := &bedrock.ExportAutomatedReasoningPolicyVersionInput{}
+        output := &bedrock.ExportAutomatedReasoningPolicyVersionOutput{}
+
+        mockClient.On("ExportAutomatedReasoningPolicyVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportAutomatedReasoningPolicyVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicy", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicyAnnotations", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyAnnotationsInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyAnnotationsOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicyAnnotations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicyAnnotations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicyBuildWorkflow", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyBuildWorkflowInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyBuildWorkflowOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicyBuildWorkflow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicyBuildWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicyBuildWorkflowResultAssets", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicyBuildWorkflowResultAssets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicyBuildWorkflowResultAssets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicyNextScenario", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyNextScenarioInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyNextScenarioOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicyNextScenario", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicyNextScenario(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicyTestCase", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyTestCaseInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyTestCaseOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicyTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicyTestCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutomatedReasoningPolicyTestResult", func(t *testing.T) {
+        input := &bedrock.GetAutomatedReasoningPolicyTestResultInput{}
+        output := &bedrock.GetAutomatedReasoningPolicyTestResultOutput{}
+
+        mockClient.On("GetAutomatedReasoningPolicyTestResult", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutomatedReasoningPolicyTestResult(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCustomModel", func(t *testing.T) {
         input := &bedrock.GetCustomModelInput{}
         output := &bedrock.GetCustomModelOutput{}
@@ -314,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCustomModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCustomModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomModelDeployment", func(t *testing.T) {
+        input := &bedrock.GetCustomModelDeploymentInput{}
+        output := &bedrock.GetCustomModelDeploymentOutput{}
+
+        mockClient.On("GetCustomModelDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomModelDeployment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFoundationModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFoundationModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFoundationModelAvailability", func(t *testing.T) {
+        input := &bedrock.GetFoundationModelAvailabilityInput{}
+        output := &bedrock.GetFoundationModelAvailabilityOutput{}
+
+        mockClient.On("GetFoundationModelAvailability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFoundationModelAvailability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,6 +775,84 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetUseCaseForModelAccess", func(t *testing.T) {
+        input := &bedrock.GetUseCaseForModelAccessInput{}
+        output := &bedrock.GetUseCaseForModelAccessOutput{}
+
+        mockClient.On("GetUseCaseForModelAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUseCaseForModelAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutomatedReasoningPolicies", func(t *testing.T) {
+        input := &bedrock.ListAutomatedReasoningPoliciesInput{}
+        output := &bedrock.ListAutomatedReasoningPoliciesOutput{}
+
+        mockClient.On("ListAutomatedReasoningPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutomatedReasoningPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutomatedReasoningPolicyBuildWorkflows", func(t *testing.T) {
+        input := &bedrock.ListAutomatedReasoningPolicyBuildWorkflowsInput{}
+        output := &bedrock.ListAutomatedReasoningPolicyBuildWorkflowsOutput{}
+
+        mockClient.On("ListAutomatedReasoningPolicyBuildWorkflows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutomatedReasoningPolicyBuildWorkflows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutomatedReasoningPolicyTestCases", func(t *testing.T) {
+        input := &bedrock.ListAutomatedReasoningPolicyTestCasesInput{}
+        output := &bedrock.ListAutomatedReasoningPolicyTestCasesOutput{}
+
+        mockClient.On("ListAutomatedReasoningPolicyTestCases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutomatedReasoningPolicyTestCases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutomatedReasoningPolicyTestResults", func(t *testing.T) {
+        input := &bedrock.ListAutomatedReasoningPolicyTestResultsInput{}
+        output := &bedrock.ListAutomatedReasoningPolicyTestResultsOutput{}
+
+        mockClient.On("ListAutomatedReasoningPolicyTestResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutomatedReasoningPolicyTestResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomModelDeployments", func(t *testing.T) {
+        input := &bedrock.ListCustomModelDeploymentsInput{}
+        output := &bedrock.ListCustomModelDeploymentsOutput{}
+
+        mockClient.On("ListCustomModelDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomModelDeployments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCustomModels", func(t *testing.T) {
         input := &bedrock.ListCustomModelsInput{}
         output := &bedrock.ListCustomModelsOutput{}
@@ -509,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEvaluationJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEvaluationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFoundationModelAgreementOffers", func(t *testing.T) {
+        input := &bedrock.ListFoundationModelAgreementOffersInput{}
+        output := &bedrock.ListFoundationModelAgreementOffersOutput{}
+
+        mockClient.On("ListFoundationModelAgreementOffers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFoundationModelAgreementOffers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,6 +1061,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutUseCaseForModelAccess", func(t *testing.T) {
+        input := &bedrock.PutUseCaseForModelAccessInput{}
+        output := &bedrock.PutUseCaseForModelAccessOutput{}
+
+        mockClient.On("PutUseCaseForModelAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutUseCaseForModelAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRegisterMarketplaceModelEndpoint", func(t *testing.T) {
         input := &bedrock.RegisterMarketplaceModelEndpointInput{}
         output := &bedrock.RegisterMarketplaceModelEndpointOutput{}
@@ -691,6 +1081,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterMarketplaceModelEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterMarketplaceModelEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAutomatedReasoningPolicyBuildWorkflow", func(t *testing.T) {
+        input := &bedrock.StartAutomatedReasoningPolicyBuildWorkflowInput{}
+        output := &bedrock.StartAutomatedReasoningPolicyBuildWorkflowOutput{}
+
+        mockClient.On("StartAutomatedReasoningPolicyBuildWorkflow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAutomatedReasoningPolicyBuildWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAutomatedReasoningPolicyTestWorkflow", func(t *testing.T) {
+        input := &bedrock.StartAutomatedReasoningPolicyTestWorkflowInput{}
+        output := &bedrock.StartAutomatedReasoningPolicyTestWorkflowOutput{}
+
+        mockClient.On("StartAutomatedReasoningPolicyTestWorkflow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAutomatedReasoningPolicyTestWorkflow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +1172,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutomatedReasoningPolicy", func(t *testing.T) {
+        input := &bedrock.UpdateAutomatedReasoningPolicyInput{}
+        output := &bedrock.UpdateAutomatedReasoningPolicyOutput{}
+
+        mockClient.On("UpdateAutomatedReasoningPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutomatedReasoningPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutomatedReasoningPolicyAnnotations", func(t *testing.T) {
+        input := &bedrock.UpdateAutomatedReasoningPolicyAnnotationsInput{}
+        output := &bedrock.UpdateAutomatedReasoningPolicyAnnotationsOutput{}
+
+        mockClient.On("UpdateAutomatedReasoningPolicyAnnotations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutomatedReasoningPolicyAnnotations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutomatedReasoningPolicyTestCase", func(t *testing.T) {
+        input := &bedrock.UpdateAutomatedReasoningPolicyTestCaseInput{}
+        output := &bedrock.UpdateAutomatedReasoningPolicyTestCaseOutput{}
+
+        mockClient.On("UpdateAutomatedReasoningPolicyTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutomatedReasoningPolicyTestCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

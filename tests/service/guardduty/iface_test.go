@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateThreatEntitySet", func(t *testing.T) {
+        input := &guardduty.CreateThreatEntitySetInput{}
+        output := &guardduty.CreateThreatEntitySetOutput{}
+
+        mockClient.On("CreateThreatEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateThreatEntitySet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateThreatIntelSet", func(t *testing.T) {
         input := &guardduty.CreateThreatIntelSetInput{}
         output := &guardduty.CreateThreatIntelSetOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateThreatIntelSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateThreatIntelSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTrustedEntitySet", func(t *testing.T) {
+        input := &guardduty.CreateTrustedEntitySetInput{}
+        output := &guardduty.CreateTrustedEntitySetOutput{}
+
+        mockClient.On("CreateTrustedEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTrustedEntitySet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteIPSet", func(t *testing.T) {
-        input := &guardduty.DeleteIPSetInput{}
-        output := &guardduty.DeleteIPSetOutput{}
-
-        mockClient.On("DeleteIPSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteIPSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteInvitations", func(t *testing.T) {
         input := &guardduty.DeleteInvitationsInput{}
         output := &guardduty.DeleteInvitationsOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteInvitations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteInvitations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIPSet", func(t *testing.T) {
+        input := &guardduty.DeleteIPSetInput{}
+        output := &guardduty.DeleteIPSetOutput{}
+
+        mockClient.On("DeleteIPSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIPSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteThreatEntitySet", func(t *testing.T) {
+        input := &guardduty.DeleteThreatEntitySetInput{}
+        output := &guardduty.DeleteThreatEntitySetOutput{}
+
+        mockClient.On("DeleteThreatEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteThreatEntitySet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteThreatIntelSet", func(t *testing.T) {
         input := &guardduty.DeleteThreatIntelSetInput{}
         output := &guardduty.DeleteThreatIntelSetOutput{}
@@ -288,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteThreatIntelSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteThreatIntelSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTrustedEntitySet", func(t *testing.T) {
+        input := &guardduty.DeleteTrustedEntitySetInput{}
+        output := &guardduty.DeleteTrustedEntitySetOutput{}
+
+        mockClient.On("DeleteTrustedEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTrustedEntitySet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetIPSet", func(t *testing.T) {
-        input := &guardduty.GetIPSetInput{}
-        output := &guardduty.GetIPSetOutput{}
-
-        mockClient.On("GetIPSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetIPSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetInvitationsCount", func(t *testing.T) {
         input := &guardduty.GetInvitationsCountInput{}
         output := &guardduty.GetInvitationsCountOutput{}
@@ -496,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInvitationsCount", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInvitationsCount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIPSet", func(t *testing.T) {
+        input := &guardduty.GetIPSetInput{}
+        output := &guardduty.GetIPSetOutput{}
+
+        mockClient.On("GetIPSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIPSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetThreatEntitySet", func(t *testing.T) {
+        input := &guardduty.GetThreatEntitySetInput{}
+        output := &guardduty.GetThreatEntitySetOutput{}
+
+        mockClient.On("GetThreatEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetThreatEntitySet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetThreatIntelSet", func(t *testing.T) {
         input := &guardduty.GetThreatIntelSetInput{}
         output := &guardduty.GetThreatIntelSetOutput{}
@@ -600,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetThreatIntelSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetThreatIntelSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrustedEntitySet", func(t *testing.T) {
+        input := &guardduty.GetTrustedEntitySetInput{}
+        output := &guardduty.GetTrustedEntitySetOutput{}
+
+        mockClient.On("GetTrustedEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrustedEntitySet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,19 +762,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListIPSets", func(t *testing.T) {
-        input := &guardduty.ListIPSetsInput{}
-        output := &guardduty.ListIPSetsOutput{}
-
-        mockClient.On("ListIPSets", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListIPSets(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInvitations", func(t *testing.T) {
         input := &guardduty.ListInvitationsInput{}
         output := &guardduty.ListInvitationsOutput{}
@@ -704,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInvitations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInvitations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIPSets", func(t *testing.T) {
+        input := &guardduty.ListIPSetsInput{}
+        output := &guardduty.ListIPSetsOutput{}
+
+        mockClient.On("ListIPSets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIPSets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListThreatEntitySets", func(t *testing.T) {
+        input := &guardduty.ListThreatEntitySetsInput{}
+        output := &guardduty.ListThreatEntitySetsOutput{}
+
+        mockClient.On("ListThreatEntitySets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThreatEntitySets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListThreatIntelSets", func(t *testing.T) {
         input := &guardduty.ListThreatIntelSetsInput{}
         output := &guardduty.ListThreatIntelSetsOutput{}
@@ -782,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListThreatIntelSets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListThreatIntelSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrustedEntitySets", func(t *testing.T) {
+        input := &guardduty.ListTrustedEntitySetsInput{}
+        output := &guardduty.ListTrustedEntitySetsOutput{}
+
+        mockClient.On("ListTrustedEntitySets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrustedEntitySets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -983,6 +1087,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateThreatEntitySet", func(t *testing.T) {
+        input := &guardduty.UpdateThreatEntitySetInput{}
+        output := &guardduty.UpdateThreatEntitySetOutput{}
+
+        mockClient.On("UpdateThreatEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateThreatEntitySet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateThreatIntelSet", func(t *testing.T) {
         input := &guardduty.UpdateThreatIntelSetInput{}
         output := &guardduty.UpdateThreatIntelSetOutput{}
@@ -990,6 +1107,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateThreatIntelSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateThreatIntelSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTrustedEntitySet", func(t *testing.T) {
+        input := &guardduty.UpdateTrustedEntitySetInput{}
+        output := &guardduty.UpdateTrustedEntitySetOutput{}
+
+        mockClient.On("UpdateTrustedEntitySet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTrustedEntitySet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

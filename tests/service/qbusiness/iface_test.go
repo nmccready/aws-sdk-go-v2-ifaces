@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateChatResponseConfiguration", func(t *testing.T) {
+        input := &qbusiness.CreateChatResponseConfigurationInput{}
+        output := &qbusiness.CreateChatResponseConfigurationOutput{}
+
+        mockClient.On("CreateChatResponseConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChatResponseConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataAccessor", func(t *testing.T) {
         input := &qbusiness.CreateDataAccessorInput{}
         output := &qbusiness.CreateDataAccessorOutput{}
@@ -288,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteChatControlsConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteChatControlsConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteChatResponseConfiguration", func(t *testing.T) {
+        input := &qbusiness.DeleteChatResponseConfigurationInput{}
+        output := &qbusiness.DeleteChatResponseConfigurationOutput{}
+
+        mockClient.On("DeleteChatResponseConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteChatResponseConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetChatResponseConfiguration", func(t *testing.T) {
+        input := &qbusiness.GetChatResponseConfigurationInput{}
+        output := &qbusiness.GetChatResponseConfigurationOutput{}
+
+        mockClient.On("GetChatResponseConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetChatResponseConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataAccessor", func(t *testing.T) {
         input := &qbusiness.GetDataAccessorInput{}
         output := &qbusiness.GetDataAccessorOutput{}
@@ -470,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDocumentContent", func(t *testing.T) {
+        input := &qbusiness.GetDocumentContentInput{}
+        output := &qbusiness.GetDocumentContentOutput{}
+
+        mockClient.On("GetDocumentContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDocumentContent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,6 +658,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListChatResponseConfigurations", func(t *testing.T) {
+        input := &qbusiness.ListChatResponseConfigurationsInput{}
+        output := &qbusiness.ListChatResponseConfigurationsOutput{}
+
+        mockClient.On("ListChatResponseConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChatResponseConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListConversations", func(t *testing.T) {
         input := &qbusiness.ListConversationsInput{}
         output := &qbusiness.ListConversationsOutput{}
@@ -632,19 +697,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDataSourceSyncJobs", func(t *testing.T) {
-        input := &qbusiness.ListDataSourceSyncJobsInput{}
-        output := &qbusiness.ListDataSourceSyncJobsOutput{}
-
-        mockClient.On("ListDataSourceSyncJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDataSourceSyncJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDataSources", func(t *testing.T) {
         input := &qbusiness.ListDataSourcesInput{}
         output := &qbusiness.ListDataSourcesOutput{}
@@ -652,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataSourceSyncJobs", func(t *testing.T) {
+        input := &qbusiness.ListDataSourceSyncJobsInput{}
+        output := &qbusiness.ListDataSourceSyncJobsOutput{}
+
+        mockClient.On("ListDataSourceSyncJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataSourceSyncJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,6 +788,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPlugins", func(t *testing.T) {
+        input := &qbusiness.ListPluginsInput{}
+        output := &qbusiness.ListPluginsOutput{}
+
+        mockClient.On("ListPlugins", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPlugins(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPluginTypeActions", func(t *testing.T) {
         input := &qbusiness.ListPluginTypeActionsInput{}
         output := &qbusiness.ListPluginTypeActionsOutput{}
@@ -743,19 +821,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPluginTypeMetadata", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPluginTypeMetadata(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListPlugins", func(t *testing.T) {
-        input := &qbusiness.ListPluginsInput{}
-        output := &qbusiness.ListPluginsOutput{}
-
-        mockClient.On("ListPlugins", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPlugins(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -925,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateChatControlsConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateChatControlsConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChatResponseConfiguration", func(t *testing.T) {
+        input := &qbusiness.UpdateChatResponseConfigurationInput{}
+        output := &qbusiness.UpdateChatResponseConfigurationOutput{}
+
+        mockClient.On("UpdateChatResponseConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChatResponseConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

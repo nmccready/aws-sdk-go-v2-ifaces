@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeImageScanFindings", func(t *testing.T) {
-        input := &ecr.DescribeImageScanFindingsInput{}
-        output := &ecr.DescribeImageScanFindingsOutput{}
-
-        mockClient.On("DescribeImageScanFindings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeImageScanFindings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeImages", func(t *testing.T) {
         input := &ecr.DescribeImagesInput{}
         output := &ecr.DescribeImagesOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeImages", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeImages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeImageScanFindings", func(t *testing.T) {
+        input := &ecr.DescribeImageScanFindingsInput{}
+        output := &ecr.DescribeImageScanFindingsOutput{}
+
+        mockClient.On("DescribeImageScanFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeImageScanFindings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

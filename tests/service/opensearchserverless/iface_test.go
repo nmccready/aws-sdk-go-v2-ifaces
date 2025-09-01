@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIndex", func(t *testing.T) {
+        input := &opensearchserverless.CreateIndexInput{}
+        output := &opensearchserverless.CreateIndexOutput{}
+
+        mockClient.On("CreateIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIndex(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLifecyclePolicy", func(t *testing.T) {
         input := &opensearchserverless.CreateLifecyclePolicyInput{}
         output := &opensearchserverless.CreateLifecyclePolicyOutput{}
@@ -190,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIndex", func(t *testing.T) {
+        input := &opensearchserverless.DeleteIndexInput{}
+        output := &opensearchserverless.DeleteIndexOutput{}
+
+        mockClient.On("DeleteIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIndex(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLifecyclePolicy", func(t *testing.T) {
         input := &opensearchserverless.DeleteLifecyclePolicyInput{}
         output := &opensearchserverless.DeleteLifecyclePolicyOutput{}
@@ -262,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIndex", func(t *testing.T) {
+        input := &opensearchserverless.GetIndexInput{}
+        output := &opensearchserverless.GetIndexOutput{}
+
+        mockClient.On("GetIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIndex(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCollection", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCollection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIndex", func(t *testing.T) {
+        input := &opensearchserverless.UpdateIndexInput{}
+        output := &opensearchserverless.UpdateIndexOutput{}
+
+        mockClient.On("UpdateIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIndex(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

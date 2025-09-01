@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelPracticeRun", func(t *testing.T) {
+        input := &arczonalshift.CancelPracticeRunInput{}
+        output := &arczonalshift.CancelPracticeRunOutput{}
+
+        mockClient.On("CancelPracticeRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelPracticeRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelZonalShift", func(t *testing.T) {
         input := &arczonalshift.CancelZonalShiftInput{}
         output := &arczonalshift.CancelZonalShiftOutput{}
@@ -132,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListZonalShifts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListZonalShifts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartPracticeRun", func(t *testing.T) {
+        input := &arczonalshift.StartPracticeRunInput{}
+        output := &arczonalshift.StartPracticeRunOutput{}
+
+        mockClient.On("StartPracticeRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartPracticeRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

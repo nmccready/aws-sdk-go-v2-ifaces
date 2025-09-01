@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTestRuns", func(t *testing.T) {
+        input := &apptest.ListTestRunsInput{}
+        output := &apptest.ListTestRunsOutput{}
+
+        mockClient.On("ListTestRuns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTestRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTestRunSteps", func(t *testing.T) {
         input := &apptest.ListTestRunStepsInput{}
         output := &apptest.ListTestRunStepsOutput{}
@@ -236,19 +249,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTestRunTestCases", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTestRunTestCases(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListTestRuns", func(t *testing.T) {
-        input := &apptest.ListTestRunsInput{}
-        output := &apptest.ListTestRunsOutput{}
-
-        mockClient.On("ListTestRuns", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTestRuns(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

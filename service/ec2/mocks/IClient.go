@@ -2901,6 +2901,43 @@ func (_m *IClient) CreateImage(ctx context.Context, params *ec2.CreateImageInput
 	return r0, r1
 }
 
+// CreateImageUsageReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateImageUsageReport(ctx context.Context, params *ec2.CreateImageUsageReportInput, optFns ...func(*ec2.Options)) (*ec2.CreateImageUsageReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateImageUsageReport")
+	}
+
+	var r0 *ec2.CreateImageUsageReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateImageUsageReportInput, ...func(*ec2.Options)) (*ec2.CreateImageUsageReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateImageUsageReportInput, ...func(*ec2.Options)) *ec2.CreateImageUsageReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateImageUsageReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateImageUsageReportInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateInstanceConnectEndpoint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateInstanceConnectEndpoint(ctx context.Context, params *ec2.CreateInstanceConnectEndpointInput, optFns ...func(*ec2.Options)) (*ec2.CreateInstanceConnectEndpointOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6038,6 +6075,43 @@ func (_m *IClient) DeleteFpgaImage(ctx context.Context, params *ec2.DeleteFpgaIm
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteFpgaImageInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteImageUsageReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteImageUsageReport(ctx context.Context, params *ec2.DeleteImageUsageReportInput, optFns ...func(*ec2.Options)) (*ec2.DeleteImageUsageReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteImageUsageReport")
+	}
+
+	var r0 *ec2.DeleteImageUsageReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteImageUsageReportInput, ...func(*ec2.Options)) (*ec2.DeleteImageUsageReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteImageUsageReportInput, ...func(*ec2.Options)) *ec2.DeleteImageUsageReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteImageUsageReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteImageUsageReportInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9376,6 +9450,80 @@ func (_m *IClient) DescribeCapacityBlockOfferings(ctx context.Context, params *e
 	return r0, r1
 }
 
+// DescribeCapacityBlockStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCapacityBlockStatus(ctx context.Context, params *ec2.DescribeCapacityBlockStatusInput, optFns ...func(*ec2.Options)) (*ec2.DescribeCapacityBlockStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCapacityBlockStatus")
+	}
+
+	var r0 *ec2.DescribeCapacityBlockStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeCapacityBlockStatusInput, ...func(*ec2.Options)) (*ec2.DescribeCapacityBlockStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeCapacityBlockStatusInput, ...func(*ec2.Options)) *ec2.DescribeCapacityBlockStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeCapacityBlockStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeCapacityBlockStatusInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCapacityBlocks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCapacityBlocks(ctx context.Context, params *ec2.DescribeCapacityBlocksInput, optFns ...func(*ec2.Options)) (*ec2.DescribeCapacityBlocksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCapacityBlocks")
+	}
+
+	var r0 *ec2.DescribeCapacityBlocksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeCapacityBlocksInput, ...func(*ec2.Options)) (*ec2.DescribeCapacityBlocksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeCapacityBlocksInput, ...func(*ec2.Options)) *ec2.DescribeCapacityBlocksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeCapacityBlocksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeCapacityBlocksInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeCapacityReservationBillingRequests provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeCapacityReservationBillingRequests(ctx context.Context, params *ec2.DescribeCapacityReservationBillingRequestsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeCapacityReservationBillingRequestsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10626,6 +10774,117 @@ func (_m *IClient) DescribeImageAttribute(ctx context.Context, params *ec2.Descr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeImageAttributeInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeImageReferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeImageReferences(ctx context.Context, params *ec2.DescribeImageReferencesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeImageReferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeImageReferences")
+	}
+
+	var r0 *ec2.DescribeImageReferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeImageReferencesInput, ...func(*ec2.Options)) (*ec2.DescribeImageReferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeImageReferencesInput, ...func(*ec2.Options)) *ec2.DescribeImageReferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeImageReferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeImageReferencesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeImageUsageReportEntries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeImageUsageReportEntries(ctx context.Context, params *ec2.DescribeImageUsageReportEntriesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeImageUsageReportEntriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeImageUsageReportEntries")
+	}
+
+	var r0 *ec2.DescribeImageUsageReportEntriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeImageUsageReportEntriesInput, ...func(*ec2.Options)) (*ec2.DescribeImageUsageReportEntriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeImageUsageReportEntriesInput, ...func(*ec2.Options)) *ec2.DescribeImageUsageReportEntriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeImageUsageReportEntriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeImageUsageReportEntriesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeImageUsageReports provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeImageUsageReports(ctx context.Context, params *ec2.DescribeImageUsageReportsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeImageUsageReportsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeImageUsageReports")
+	}
+
+	var r0 *ec2.DescribeImageUsageReportsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeImageUsageReportsInput, ...func(*ec2.Options)) (*ec2.DescribeImageUsageReportsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeImageUsageReportsInput, ...func(*ec2.Options)) *ec2.DescribeImageUsageReportsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeImageUsageReportsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeImageUsageReportsInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -17590,6 +17849,43 @@ func (_m *IClient) ExportVerifiedAccessInstanceClientConfiguration(ctx context.C
 	return r0, r1
 }
 
+// GetActiveVpnTunnelStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetActiveVpnTunnelStatus(ctx context.Context, params *ec2.GetActiveVpnTunnelStatusInput, optFns ...func(*ec2.Options)) (*ec2.GetActiveVpnTunnelStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetActiveVpnTunnelStatus")
+	}
+
+	var r0 *ec2.GetActiveVpnTunnelStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetActiveVpnTunnelStatusInput, ...func(*ec2.Options)) (*ec2.GetActiveVpnTunnelStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetActiveVpnTunnelStatusInput, ...func(*ec2.Options)) *ec2.GetActiveVpnTunnelStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetActiveVpnTunnelStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetActiveVpnTunnelStatusInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAllowedImagesSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAllowedImagesSettings(ctx context.Context, params *ec2.GetAllowedImagesSettingsInput, optFns ...func(*ec2.Options)) (*ec2.GetAllowedImagesSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -20505,6 +20801,43 @@ func (_m *IClient) ModifyInstanceCapacityReservationAttributes(ctx context.Conte
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyInstanceCapacityReservationAttributesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyInstanceConnectEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyInstanceConnectEndpoint(ctx context.Context, params *ec2.ModifyInstanceConnectEndpointInput, optFns ...func(*ec2.Options)) (*ec2.ModifyInstanceConnectEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyInstanceConnectEndpoint")
+	}
+
+	var r0 *ec2.ModifyInstanceConnectEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyInstanceConnectEndpointInput, ...func(*ec2.Options)) (*ec2.ModifyInstanceConnectEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyInstanceConnectEndpointInput, ...func(*ec2.Options)) *ec2.ModifyInstanceConnectEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyInstanceConnectEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyInstanceConnectEndpointInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

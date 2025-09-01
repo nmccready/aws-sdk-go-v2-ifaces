@@ -1051,6 +1051,43 @@ func (_m *IClient) DescribeInsight(ctx context.Context, params *eks.DescribeInsi
 	return r0, r1
 }
 
+// DescribeInsightsRefresh provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeInsightsRefresh(ctx context.Context, params *eks.DescribeInsightsRefreshInput, optFns ...func(*eks.Options)) (*eks.DescribeInsightsRefreshOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeInsightsRefresh")
+	}
+
+	var r0 *eks.DescribeInsightsRefreshOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DescribeInsightsRefreshInput, ...func(*eks.Options)) (*eks.DescribeInsightsRefreshOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DescribeInsightsRefreshInput, ...func(*eks.Options)) *eks.DescribeInsightsRefreshOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.DescribeInsightsRefreshOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.DescribeInsightsRefreshInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeNodegroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeNodegroup(ctx context.Context, params *eks.DescribeNodegroupInput, optFns ...func(*eks.Options)) (*eks.DescribeNodegroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1764,6 +1801,43 @@ func (_m *IClient) RegisterCluster(ctx context.Context, params *eks.RegisterClus
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.RegisterClusterInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartInsightsRefresh provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartInsightsRefresh(ctx context.Context, params *eks.StartInsightsRefreshInput, optFns ...func(*eks.Options)) (*eks.StartInsightsRefreshOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartInsightsRefresh")
+	}
+
+	var r0 *eks.StartInsightsRefreshOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.StartInsightsRefreshInput, ...func(*eks.Options)) (*eks.StartInsightsRefreshOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.StartInsightsRefreshInput, ...func(*eks.Options)) *eks.StartInsightsRefreshOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.StartInsightsRefreshOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.StartInsightsRefreshInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -34,6 +34,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTelemetryRule", func(t *testing.T) {
+        input := &observabilityadmin.CreateTelemetryRuleInput{}
+        output := &observabilityadmin.CreateTelemetryRuleOutput{}
+
+        mockClient.On("CreateTelemetryRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTelemetryRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTelemetryRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.CreateTelemetryRuleForOrganizationInput{}
+        output := &observabilityadmin.CreateTelemetryRuleForOrganizationOutput{}
+
+        mockClient.On("CreateTelemetryRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTelemetryRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTelemetryRule", func(t *testing.T) {
+        input := &observabilityadmin.DeleteTelemetryRuleInput{}
+        output := &observabilityadmin.DeleteTelemetryRuleOutput{}
+
+        mockClient.On("DeleteTelemetryRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTelemetryRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTelemetryRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.DeleteTelemetryRuleForOrganizationInput{}
+        output := &observabilityadmin.DeleteTelemetryRuleForOrganizationOutput{}
+
+        mockClient.On("DeleteTelemetryRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTelemetryRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTelemetryEvaluationStatus", func(t *testing.T) {
         input := &observabilityadmin.GetTelemetryEvaluationStatusInput{}
         output := &observabilityadmin.GetTelemetryEvaluationStatusOutput{}
@@ -60,6 +112,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTelemetryRule", func(t *testing.T) {
+        input := &observabilityadmin.GetTelemetryRuleInput{}
+        output := &observabilityadmin.GetTelemetryRuleOutput{}
+
+        mockClient.On("GetTelemetryRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTelemetryRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTelemetryRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.GetTelemetryRuleForOrganizationInput{}
+        output := &observabilityadmin.GetTelemetryRuleForOrganizationOutput{}
+
+        mockClient.On("GetTelemetryRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTelemetryRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListResourceTelemetry", func(t *testing.T) {
         input := &observabilityadmin.ListResourceTelemetryInput{}
         output := &observabilityadmin.ListResourceTelemetryOutput{}
@@ -80,6 +158,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResourceTelemetryForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResourceTelemetryForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &observabilityadmin.ListTagsForResourceInput{}
+        output := &observabilityadmin.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTelemetryRules", func(t *testing.T) {
+        input := &observabilityadmin.ListTelemetryRulesInput{}
+        output := &observabilityadmin.ListTelemetryRulesOutput{}
+
+        mockClient.On("ListTelemetryRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTelemetryRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTelemetryRulesForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.ListTelemetryRulesForOrganizationInput{}
+        output := &observabilityadmin.ListTelemetryRulesForOrganizationOutput{}
+
+        mockClient.On("ListTelemetryRulesForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTelemetryRulesForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +249,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopTelemetryEvaluationForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopTelemetryEvaluationForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &observabilityadmin.TagResourceInput{}
+        output := &observabilityadmin.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &observabilityadmin.UntagResourceInput{}
+        output := &observabilityadmin.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTelemetryRule", func(t *testing.T) {
+        input := &observabilityadmin.UpdateTelemetryRuleInput{}
+        output := &observabilityadmin.UpdateTelemetryRuleOutput{}
+
+        mockClient.On("UpdateTelemetryRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTelemetryRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTelemetryRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.UpdateTelemetryRuleForOrganizationInput{}
+        output := &observabilityadmin.UpdateTelemetryRuleForOrganizationOutput{}
+
+        mockClient.On("UpdateTelemetryRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTelemetryRuleForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

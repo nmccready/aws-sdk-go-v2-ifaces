@@ -606,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAgentVersions", func(t *testing.T) {
-        input := &bedrockagent.ListAgentVersionsInput{}
-        output := &bedrockagent.ListAgentVersionsOutput{}
-
-        mockClient.On("ListAgentVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAgentVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAgents", func(t *testing.T) {
         input := &bedrockagent.ListAgentsInput{}
         output := &bedrockagent.ListAgentsOutput{}
@@ -626,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAgents", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAgents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentVersions", func(t *testing.T) {
+        input := &bedrockagent.ListAgentVersionsInput{}
+        output := &bedrockagent.ListAgentVersionsOutput{}
+
+        mockClient.On("ListAgentVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFlowVersions", func(t *testing.T) {
-        input := &bedrockagent.ListFlowVersionsInput{}
-        output := &bedrockagent.ListFlowVersionsOutput{}
-
-        mockClient.On("ListFlowVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListFlowVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListFlows", func(t *testing.T) {
         input := &bedrockagent.ListFlowsInput{}
         output := &bedrockagent.ListFlowsOutput{}
@@ -678,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFlows", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFlows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFlowVersions", func(t *testing.T) {
+        input := &bedrockagent.ListFlowVersionsInput{}
+        output := &bedrockagent.ListFlowVersionsOutput{}
+
+        mockClient.On("ListFlowVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFlowVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

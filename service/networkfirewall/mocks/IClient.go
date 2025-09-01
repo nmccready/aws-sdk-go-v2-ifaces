@@ -14,6 +14,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// AcceptNetworkFirewallTransitGatewayAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcceptNetworkFirewallTransitGatewayAttachment(ctx context.Context, params *networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcceptNetworkFirewallTransitGatewayAttachment")
+	}
+
+	var r0 *networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) (*networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) *networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AssociateAvailabilityZones provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateAvailabilityZones(ctx context.Context, params *networkfirewall.AssociateAvailabilityZonesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.AssociateAvailabilityZonesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateAvailabilityZones")
+	}
+
+	var r0 *networkfirewall.AssociateAvailabilityZonesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.AssociateAvailabilityZonesInput, ...func(*networkfirewall.Options)) (*networkfirewall.AssociateAvailabilityZonesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.AssociateAvailabilityZonesInput, ...func(*networkfirewall.Options)) *networkfirewall.AssociateAvailabilityZonesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.AssociateAvailabilityZonesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.AssociateAvailabilityZonesInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateFirewallPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateFirewallPolicy(ctx context.Context, params *networkfirewall.AssociateFirewallPolicyInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.AssociateFirewallPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -236,6 +310,43 @@ func (_m *IClient) CreateTLSInspectionConfiguration(ctx context.Context, params 
 	return r0, r1
 }
 
+// CreateVpcEndpointAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateVpcEndpointAssociation(ctx context.Context, params *networkfirewall.CreateVpcEndpointAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateVpcEndpointAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateVpcEndpointAssociation")
+	}
+
+	var r0 *networkfirewall.CreateVpcEndpointAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.CreateVpcEndpointAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.CreateVpcEndpointAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.CreateVpcEndpointAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteFirewall provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteFirewall(ctx context.Context, params *networkfirewall.DeleteFirewallInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteFirewallOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -302,6 +413,43 @@ func (_m *IClient) DeleteFirewallPolicy(ctx context.Context, params *networkfire
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteFirewallPolicyInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteNetworkFirewallTransitGatewayAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNetworkFirewallTransitGatewayAttachment(ctx context.Context, params *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNetworkFirewallTransitGatewayAttachment")
+	}
+
+	var r0 *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -421,6 +569,43 @@ func (_m *IClient) DeleteTLSInspectionConfiguration(ctx context.Context, params 
 	return r0, r1
 }
 
+// DeleteVpcEndpointAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteVpcEndpointAssociation(ctx context.Context, params *networkfirewall.DeleteVpcEndpointAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteVpcEndpointAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteVpcEndpointAssociation")
+	}
+
+	var r0 *networkfirewall.DeleteVpcEndpointAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteVpcEndpointAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.DeleteVpcEndpointAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DeleteVpcEndpointAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeFirewall provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeFirewall(ctx context.Context, params *networkfirewall.DescribeFirewallInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -450,6 +635,43 @@ func (_m *IClient) DescribeFirewall(ctx context.Context, params *networkfirewall
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeFirewallInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeFirewallMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeFirewallMetadata(ctx context.Context, params *networkfirewall.DescribeFirewallMetadataInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeFirewallMetadata")
+	}
+
+	var r0 *networkfirewall.DescribeFirewallMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeFirewallMetadataInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeFirewallMetadataInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeFirewallMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DescribeFirewallMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeFirewallMetadataInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -680,6 +902,43 @@ func (_m *IClient) DescribeRuleGroupMetadata(ctx context.Context, params *networ
 	return r0, r1
 }
 
+// DescribeRuleGroupSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeRuleGroupSummary(ctx context.Context, params *networkfirewall.DescribeRuleGroupSummaryInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeRuleGroupSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeRuleGroupSummary")
+	}
+
+	var r0 *networkfirewall.DescribeRuleGroupSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeRuleGroupSummaryInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeRuleGroupSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeRuleGroupSummaryInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeRuleGroupSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DescribeRuleGroupSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeRuleGroupSummaryInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTLSInspectionConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTLSInspectionConfiguration(ctx context.Context, params *networkfirewall.DescribeTLSInspectionConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeTLSInspectionConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -709,6 +968,80 @@ func (_m *IClient) DescribeTLSInspectionConfiguration(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeTLSInspectionConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeVpcEndpointAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeVpcEndpointAssociation(ctx context.Context, params *networkfirewall.DescribeVpcEndpointAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeVpcEndpointAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeVpcEndpointAssociation")
+	}
+
+	var r0 *networkfirewall.DescribeVpcEndpointAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeVpcEndpointAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeVpcEndpointAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DescribeVpcEndpointAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateAvailabilityZones provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateAvailabilityZones(ctx context.Context, params *networkfirewall.DisassociateAvailabilityZonesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DisassociateAvailabilityZonesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateAvailabilityZones")
+	}
+
+	var r0 *networkfirewall.DisassociateAvailabilityZonesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DisassociateAvailabilityZonesInput, ...func(*networkfirewall.Options)) (*networkfirewall.DisassociateAvailabilityZonesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DisassociateAvailabilityZonesInput, ...func(*networkfirewall.Options)) *networkfirewall.DisassociateAvailabilityZonesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DisassociateAvailabilityZonesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DisassociateAvailabilityZonesInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1087,6 +1420,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *networkfirew
 	return r0, r1
 }
 
+// ListVpcEndpointAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListVpcEndpointAssociations(ctx context.Context, params *networkfirewall.ListVpcEndpointAssociationsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListVpcEndpointAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListVpcEndpointAssociations")
+	}
+
+	var r0 *networkfirewall.ListVpcEndpointAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListVpcEndpointAssociationsInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListVpcEndpointAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListVpcEndpointAssociationsInput, ...func(*networkfirewall.Options)) *networkfirewall.ListVpcEndpointAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.ListVpcEndpointAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListVpcEndpointAssociationsInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() networkfirewall.Options {
 	ret := _m.Called()
@@ -1134,6 +1504,43 @@ func (_m *IClient) PutResourcePolicy(ctx context.Context, params *networkfirewal
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.PutResourcePolicyInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RejectNetworkFirewallTransitGatewayAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RejectNetworkFirewallTransitGatewayAttachment(ctx context.Context, params *networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RejectNetworkFirewallTransitGatewayAttachment")
+	}
+
+	var r0 *networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) (*networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) *networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1319,6 +1726,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *networkfirewall.Un
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UntagResourceInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAvailabilityZoneChangeProtection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAvailabilityZoneChangeProtection(ctx context.Context, params *networkfirewall.UpdateAvailabilityZoneChangeProtectionInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateAvailabilityZoneChangeProtectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAvailabilityZoneChangeProtection")
+	}
+
+	var r0 *networkfirewall.UpdateAvailabilityZoneChangeProtectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateAvailabilityZoneChangeProtectionInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateAvailabilityZoneChangeProtectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateAvailabilityZoneChangeProtectionInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateAvailabilityZoneChangeProtectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.UpdateAvailabilityZoneChangeProtectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateAvailabilityZoneChangeProtectionInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

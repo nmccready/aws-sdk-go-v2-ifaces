@@ -346,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListParticipantReplicas", func(t *testing.T) {
+        input := &ivsrealtime.ListParticipantReplicasInput{}
+        output := &ivsrealtime.ListParticipantReplicasOutput{}
+
+        mockClient.On("ListParticipantReplicas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListParticipantReplicas(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListParticipants", func(t *testing.T) {
         input := &ivsrealtime.ListParticipantsInput{}
         output := &ivsrealtime.ListParticipantsOutput{}
@@ -372,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStageSessions", func(t *testing.T) {
-        input := &ivsrealtime.ListStageSessionsInput{}
-        output := &ivsrealtime.ListStageSessionsOutput{}
-
-        mockClient.On("ListStageSessions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStageSessions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStages", func(t *testing.T) {
         input := &ivsrealtime.ListStagesInput{}
         output := &ivsrealtime.ListStagesOutput{}
@@ -392,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStages", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStageSessions", func(t *testing.T) {
+        input := &ivsrealtime.ListStageSessionsInput{}
+        output := &ivsrealtime.ListStageSessionsOutput{}
+
+        mockClient.On("ListStageSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStageSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -437,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartParticipantReplication", func(t *testing.T) {
+        input := &ivsrealtime.StartParticipantReplicationInput{}
+        output := &ivsrealtime.StartParticipantReplicationOutput{}
+
+        mockClient.On("StartParticipantReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartParticipantReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopComposition", func(t *testing.T) {
         input := &ivsrealtime.StopCompositionInput{}
         output := &ivsrealtime.StopCompositionOutput{}
@@ -444,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopComposition", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopComposition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopParticipantReplication", func(t *testing.T) {
+        input := &ivsrealtime.StopParticipantReplicationInput{}
+        output := &ivsrealtime.StopParticipantReplicationOutput{}
+
+        mockClient.On("StopParticipantReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopParticipantReplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

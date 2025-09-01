@@ -632,19 +632,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetMailDomain", func(t *testing.T) {
-        input := &workmail.GetMailDomainInput{}
-        output := &workmail.GetMailDomainOutput{}
-
-        mockClient.On("GetMailDomain", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetMailDomain(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetMailboxDetails", func(t *testing.T) {
         input := &workmail.GetMailboxDetailsInput{}
         output := &workmail.GetMailboxDetailsOutput{}
@@ -652,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetMailboxDetails", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetMailboxDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMailDomain", func(t *testing.T) {
+        input := &workmail.GetMailDomainInput{}
+        output := &workmail.GetMailDomainOutput{}
+
+        mockClient.On("GetMailDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMailDomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMailDomains", func(t *testing.T) {
-        input := &workmail.ListMailDomainsInput{}
-        output := &workmail.ListMailDomainsOutput{}
-
-        mockClient.On("ListMailDomains", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListMailDomains(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListMailboxExportJobs", func(t *testing.T) {
         input := &workmail.ListMailboxExportJobsInput{}
         output := &workmail.ListMailboxExportJobsOutput{}
@@ -821,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListMailboxPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListMailboxPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMailDomains", func(t *testing.T) {
+        input := &workmail.ListMailDomainsInput{}
+        output := &workmail.ListMailDomainsOutput{}
+
+        mockClient.On("ListMailDomains", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMailDomains(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

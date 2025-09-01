@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCountTokens", func(t *testing.T) {
+        input := &bedrockruntime.CountTokensInput{}
+        output := &bedrockruntime.CountTokensOutput{}
+
+        mockClient.On("CountTokens", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CountTokens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAsyncInvoke", func(t *testing.T) {
         input := &bedrockruntime.GetAsyncInvokeInput{}
         output := &bedrockruntime.GetAsyncInvokeOutput{}

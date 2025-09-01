@@ -10,12 +10,25 @@ import (
 // IClient defines the interface for observabilityadmin
 type IClient interface {
  Options() Options 
+ CreateTelemetryRule(ctx context.Context, params *CreateTelemetryRuleInput, optFns ...func(*Options)) (*CreateTelemetryRuleOutput, error) 
+ CreateTelemetryRuleForOrganization(ctx context.Context, params *CreateTelemetryRuleForOrganizationInput, optFns ...func(*Options)) (*CreateTelemetryRuleForOrganizationOutput, error) 
+ DeleteTelemetryRule(ctx context.Context, params *DeleteTelemetryRuleInput, optFns ...func(*Options)) (*DeleteTelemetryRuleOutput, error) 
+ DeleteTelemetryRuleForOrganization(ctx context.Context, params *DeleteTelemetryRuleForOrganizationInput, optFns ...func(*Options)) (*DeleteTelemetryRuleForOrganizationOutput, error) 
  GetTelemetryEvaluationStatus(ctx context.Context, params *GetTelemetryEvaluationStatusInput, optFns ...func(*Options)) (*GetTelemetryEvaluationStatusOutput, error) 
  GetTelemetryEvaluationStatusForOrganization(ctx context.Context, params *GetTelemetryEvaluationStatusForOrganizationInput, optFns ...func(*Options)) (*GetTelemetryEvaluationStatusForOrganizationOutput, error) 
+ GetTelemetryRule(ctx context.Context, params *GetTelemetryRuleInput, optFns ...func(*Options)) (*GetTelemetryRuleOutput, error) 
+ GetTelemetryRuleForOrganization(ctx context.Context, params *GetTelemetryRuleForOrganizationInput, optFns ...func(*Options)) (*GetTelemetryRuleForOrganizationOutput, error) 
  ListResourceTelemetry(ctx context.Context, params *ListResourceTelemetryInput, optFns ...func(*Options)) (*ListResourceTelemetryOutput, error) 
  ListResourceTelemetryForOrganization(ctx context.Context, params *ListResourceTelemetryForOrganizationInput, optFns ...func(*Options)) (*ListResourceTelemetryForOrganizationOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ ListTelemetryRules(ctx context.Context, params *ListTelemetryRulesInput, optFns ...func(*Options)) (*ListTelemetryRulesOutput, error) 
+ ListTelemetryRulesForOrganization(ctx context.Context, params *ListTelemetryRulesForOrganizationInput, optFns ...func(*Options)) (*ListTelemetryRulesForOrganizationOutput, error) 
  StartTelemetryEvaluation(ctx context.Context, params *StartTelemetryEvaluationInput, optFns ...func(*Options)) (*StartTelemetryEvaluationOutput, error) 
  StartTelemetryEvaluationForOrganization(ctx context.Context, params *StartTelemetryEvaluationForOrganizationInput, optFns ...func(*Options)) (*StartTelemetryEvaluationForOrganizationOutput, error) 
  StopTelemetryEvaluation(ctx context.Context, params *StopTelemetryEvaluationInput, optFns ...func(*Options)) (*StopTelemetryEvaluationOutput, error) 
  StopTelemetryEvaluationForOrganization(ctx context.Context, params *StopTelemetryEvaluationForOrganizationInput, optFns ...func(*Options)) (*StopTelemetryEvaluationForOrganizationOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateTelemetryRule(ctx context.Context, params *UpdateTelemetryRuleInput, optFns ...func(*Options)) (*UpdateTelemetryRuleOutput, error) 
+ UpdateTelemetryRuleForOrganization(ctx context.Context, params *UpdateTelemetryRuleForOrganizationInput, optFns ...func(*Options)) (*UpdateTelemetryRuleForOrganizationOutput, error) 
 }

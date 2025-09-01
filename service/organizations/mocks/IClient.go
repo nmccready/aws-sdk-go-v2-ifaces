@@ -1272,6 +1272,43 @@ func (_m *IClient) ListAccountsForParent(ctx context.Context, params *organizati
 	return r0, r1
 }
 
+// ListAccountsWithInvalidEffectivePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAccountsWithInvalidEffectivePolicy(ctx context.Context, params *organizations.ListAccountsWithInvalidEffectivePolicyInput, optFns ...func(*organizations.Options)) (*organizations.ListAccountsWithInvalidEffectivePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAccountsWithInvalidEffectivePolicy")
+	}
+
+	var r0 *organizations.ListAccountsWithInvalidEffectivePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListAccountsWithInvalidEffectivePolicyInput, ...func(*organizations.Options)) (*organizations.ListAccountsWithInvalidEffectivePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListAccountsWithInvalidEffectivePolicyInput, ...func(*organizations.Options)) *organizations.ListAccountsWithInvalidEffectivePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.ListAccountsWithInvalidEffectivePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.ListAccountsWithInvalidEffectivePolicyInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListChildren provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListChildren(ctx context.Context, params *organizations.ListChildrenInput, optFns ...func(*organizations.Options)) (*organizations.ListChildrenOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1412,6 +1449,43 @@ func (_m *IClient) ListDelegatedServicesForAccount(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *organizations.ListDelegatedServicesForAccountInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEffectivePolicyValidationErrors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEffectivePolicyValidationErrors(ctx context.Context, params *organizations.ListEffectivePolicyValidationErrorsInput, optFns ...func(*organizations.Options)) (*organizations.ListEffectivePolicyValidationErrorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEffectivePolicyValidationErrors")
+	}
+
+	var r0 *organizations.ListEffectivePolicyValidationErrorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListEffectivePolicyValidationErrorsInput, ...func(*organizations.Options)) (*organizations.ListEffectivePolicyValidationErrorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListEffectivePolicyValidationErrorsInput, ...func(*organizations.Options)) *organizations.ListEffectivePolicyValidationErrorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.ListEffectivePolicyValidationErrorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.ListEffectivePolicyValidationErrorsInput, ...func(*organizations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

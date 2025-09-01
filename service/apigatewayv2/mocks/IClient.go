@@ -385,6 +385,43 @@ func (_m *IClient) CreateRouteResponse(ctx context.Context, params *apigatewayv2
 	return r0, r1
 }
 
+// CreateRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRoutingRule(ctx context.Context, params *apigatewayv2.CreateRoutingRuleInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRoutingRule")
+	}
+
+	var r0 *apigatewayv2.CreateRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreateRoutingRuleInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreateRoutingRuleInput, ...func(*apigatewayv2.Options)) *apigatewayv2.CreateRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.CreateRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.CreateRoutingRuleInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateStage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateStage(ctx context.Context, params *apigatewayv2.CreateStageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateStageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -969,6 +1006,43 @@ func (_m *IClient) DeleteRouteSettings(ctx context.Context, params *apigatewayv2
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeleteRouteSettingsInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRoutingRule(ctx context.Context, params *apigatewayv2.DeleteRoutingRuleInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRoutingRule")
+	}
+
+	var r0 *apigatewayv2.DeleteRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeleteRoutingRuleInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeleteRoutingRuleInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DeleteRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DeleteRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeleteRoutingRuleInput, ...func(*apigatewayv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1865,6 +1939,43 @@ func (_m *IClient) GetRoutes(ctx context.Context, params *apigatewayv2.GetRoutes
 	return r0, r1
 }
 
+// GetRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRoutingRule(ctx context.Context, params *apigatewayv2.GetRoutingRuleInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRoutingRule")
+	}
+
+	var r0 *apigatewayv2.GetRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetRoutingRuleInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.GetRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetRoutingRuleInput, ...func(*apigatewayv2.Options)) *apigatewayv2.GetRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.GetRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.GetRoutingRuleInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetStage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetStage(ctx context.Context, params *apigatewayv2.GetStageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetStageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2087,6 +2198,43 @@ func (_m *IClient) ImportApi(ctx context.Context, params *apigatewayv2.ImportApi
 	return r0, r1
 }
 
+// ListRoutingRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRoutingRules(ctx context.Context, params *apigatewayv2.ListRoutingRulesInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.ListRoutingRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRoutingRules")
+	}
+
+	var r0 *apigatewayv2.ListRoutingRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListRoutingRulesInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.ListRoutingRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListRoutingRulesInput, ...func(*apigatewayv2.Options)) *apigatewayv2.ListRoutingRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.ListRoutingRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.ListRoutingRulesInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() apigatewayv2.Options {
 	ret := _m.Called()
@@ -2103,6 +2251,43 @@ func (_m *IClient) Options() apigatewayv2.Options {
 	}
 
 	return r0
+}
+
+// PutRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutRoutingRule(ctx context.Context, params *apigatewayv2.PutRoutingRuleInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.PutRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutRoutingRule")
+	}
+
+	var r0 *apigatewayv2.PutRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PutRoutingRuleInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.PutRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PutRoutingRuleInput, ...func(*apigatewayv2.Options)) *apigatewayv2.PutRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.PutRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.PutRoutingRuleInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // ReimportApi provides a mock function with given fields: ctx, params, optFns

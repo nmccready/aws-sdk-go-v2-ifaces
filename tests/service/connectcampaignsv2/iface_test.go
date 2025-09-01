@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetInstanceCommunicationLimits", func(t *testing.T) {
+        input := &connectcampaignsv2.GetInstanceCommunicationLimitsInput{}
+        output := &connectcampaignsv2.GetInstanceCommunicationLimitsOutput{}
+
+        mockClient.On("GetInstanceCommunicationLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInstanceCommunicationLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInstanceOnboardingJobStatus", func(t *testing.T) {
         input := &connectcampaignsv2.GetInstanceOnboardingJobStatusInput{}
         output := &connectcampaignsv2.GetInstanceOnboardingJobStatusOutput{}
@@ -262,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutConnectInstanceIntegration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutConnectInstanceIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutInstanceCommunicationLimits", func(t *testing.T) {
+        input := &connectcampaignsv2.PutInstanceCommunicationLimitsInput{}
+        output := &connectcampaignsv2.PutInstanceCommunicationLimitsOutput{}
+
+        mockClient.On("PutInstanceCommunicationLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutInstanceCommunicationLimits(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
