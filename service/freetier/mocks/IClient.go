@@ -15,6 +15,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// GetAccountActivity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountActivity(ctx context.Context, params *freetier.GetAccountActivityInput, optFns ...func(*freetier.Options)) (*freetier.GetAccountActivityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountActivity")
+	}
+
+	var r0 *freetier.GetAccountActivityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.GetAccountActivityInput, ...func(*freetier.Options)) (*freetier.GetAccountActivityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.GetAccountActivityInput, ...func(*freetier.Options)) *freetier.GetAccountActivityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*freetier.GetAccountActivityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *freetier.GetAccountActivityInput, ...func(*freetier.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAccountPlanState provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountPlanState(ctx context.Context, params *freetier.GetAccountPlanStateInput, optFns ...func(*freetier.Options)) (*freetier.GetAccountPlanStateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountPlanState")
+	}
+
+	var r0 *freetier.GetAccountPlanStateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.GetAccountPlanStateInput, ...func(*freetier.Options)) (*freetier.GetAccountPlanStateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.GetAccountPlanStateInput, ...func(*freetier.Options)) *freetier.GetAccountPlanStateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*freetier.GetAccountPlanStateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *freetier.GetAccountPlanStateInput, ...func(*freetier.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFreeTierUsage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFreeTierUsage(ctx context.Context, params *freetier.GetFreeTierUsageInput, optFns ...func(*freetier.Options)) (*freetier.GetFreeTierUsageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -52,6 +126,43 @@ func (_m *IClient) GetFreeTierUsage(ctx context.Context, params *freetier.GetFre
 	return r0, r1
 }
 
+// ListAccountActivities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAccountActivities(ctx context.Context, params *freetier.ListAccountActivitiesInput, optFns ...func(*freetier.Options)) (*freetier.ListAccountActivitiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAccountActivities")
+	}
+
+	var r0 *freetier.ListAccountActivitiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.ListAccountActivitiesInput, ...func(*freetier.Options)) (*freetier.ListAccountActivitiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.ListAccountActivitiesInput, ...func(*freetier.Options)) *freetier.ListAccountActivitiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*freetier.ListAccountActivitiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *freetier.ListAccountActivitiesInput, ...func(*freetier.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() freetier.Options {
 	ret := _m.Called()
@@ -68,6 +179,43 @@ func (_m *IClient) Options() freetier.Options {
 	}
 
 	return r0
+}
+
+// UpgradeAccountPlan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpgradeAccountPlan(ctx context.Context, params *freetier.UpgradeAccountPlanInput, optFns ...func(*freetier.Options)) (*freetier.UpgradeAccountPlanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpgradeAccountPlan")
+	}
+
+	var r0 *freetier.UpgradeAccountPlanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.UpgradeAccountPlanInput, ...func(*freetier.Options)) (*freetier.UpgradeAccountPlanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *freetier.UpgradeAccountPlanInput, ...func(*freetier.Options)) *freetier.UpgradeAccountPlanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*freetier.UpgradeAccountPlanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *freetier.UpgradeAccountPlanInput, ...func(*freetier.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

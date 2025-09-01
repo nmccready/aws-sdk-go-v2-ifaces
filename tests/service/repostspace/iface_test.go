@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchAddChannelRoleToAccessors", func(t *testing.T) {
+        input := &repostspace.BatchAddChannelRoleToAccessorsInput{}
+        output := &repostspace.BatchAddChannelRoleToAccessorsOutput{}
+
+        mockClient.On("BatchAddChannelRoleToAccessors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchAddChannelRoleToAccessors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchAddRole", func(t *testing.T) {
         input := &repostspace.BatchAddRoleInput{}
         output := &repostspace.BatchAddRoleOutput{}
@@ -47,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchRemoveChannelRoleFromAccessors", func(t *testing.T) {
+        input := &repostspace.BatchRemoveChannelRoleFromAccessorsInput{}
+        output := &repostspace.BatchRemoveChannelRoleFromAccessorsOutput{}
+
+        mockClient.On("BatchRemoveChannelRoleFromAccessors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchRemoveChannelRoleFromAccessors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchRemoveRole", func(t *testing.T) {
         input := &repostspace.BatchRemoveRoleInput{}
         output := &repostspace.BatchRemoveRoleOutput{}
@@ -54,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchRemoveRole", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchRemoveRole(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateChannel", func(t *testing.T) {
+        input := &repostspace.CreateChannelInput{}
+        output := &repostspace.CreateChannelOutput{}
+
+        mockClient.On("CreateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetChannel", func(t *testing.T) {
+        input := &repostspace.GetChannelInput{}
+        output := &repostspace.GetChannelOutput{}
+
+        mockClient.On("GetChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSpace", func(t *testing.T) {
         input := &repostspace.GetSpaceInput{}
         output := &repostspace.GetSpaceOutput{}
@@ -106,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSpace", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSpace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannels", func(t *testing.T) {
+        input := &repostspace.ListChannelsInput{}
+        output := &repostspace.ListChannelsOutput{}
+
+        mockClient.On("ListChannels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChannel", func(t *testing.T) {
+        input := &repostspace.UpdateChannelInput{}
+        output := &repostspace.UpdateChannelOutput{}
+
+        mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

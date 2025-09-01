@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDomainLayout", func(t *testing.T) {
+        input := &customerprofiles.CreateDomainLayoutInput{}
+        output := &customerprofiles.CreateDomainLayoutOutput{}
+
+        mockClient.On("CreateDomainLayout", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDomainLayout(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEventStream", func(t *testing.T) {
         input := &customerprofiles.CreateEventStreamInput{}
         output := &customerprofiles.CreateEventStreamOutput{}
@@ -190,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateUploadJob", func(t *testing.T) {
+        input := &customerprofiles.CreateUploadJobInput{}
+        output := &customerprofiles.CreateUploadJobOutput{}
+
+        mockClient.On("CreateUploadJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateUploadJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCalculatedAttributeDefinition", func(t *testing.T) {
         input := &customerprofiles.DeleteCalculatedAttributeDefinitionInput{}
         output := &customerprofiles.DeleteCalculatedAttributeDefinitionOutput{}
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDomainLayout", func(t *testing.T) {
+        input := &customerprofiles.DeleteDomainLayoutInput{}
+        output := &customerprofiles.DeleteDomainLayoutOutput{}
+
+        mockClient.On("DeleteDomainLayout", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDomainLayout(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDomainLayout", func(t *testing.T) {
+        input := &customerprofiles.GetDomainLayoutInput{}
+        output := &customerprofiles.GetDomainLayoutOutput{}
+
+        mockClient.On("GetDomainLayout", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDomainLayout(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEventStream", func(t *testing.T) {
         input := &customerprofiles.GetEventStreamInput{}
         output := &customerprofiles.GetEventStreamOutput{}
@@ -554,6 +606,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetUploadJob", func(t *testing.T) {
+        input := &customerprofiles.GetUploadJobInput{}
+        output := &customerprofiles.GetUploadJobOutput{}
+
+        mockClient.On("GetUploadJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUploadJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetUploadJobPath", func(t *testing.T) {
+        input := &customerprofiles.GetUploadJobPathInput{}
+        output := &customerprofiles.GetUploadJobPathOutput{}
+
+        mockClient.On("GetUploadJobPath", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUploadJobPath(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWorkflow", func(t *testing.T) {
         input := &customerprofiles.GetWorkflowInput{}
         output := &customerprofiles.GetWorkflowOutput{}
@@ -613,6 +691,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCalculatedAttributesForProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCalculatedAttributesForProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDomainLayouts", func(t *testing.T) {
+        input := &customerprofiles.ListDomainLayoutsInput{}
+        output := &customerprofiles.ListDomainLayoutsOutput{}
+
+        mockClient.On("ListDomainLayouts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainLayouts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,13 +801,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProfileObjectTypeTemplates", func(t *testing.T) {
-        input := &customerprofiles.ListProfileObjectTypeTemplatesInput{}
-        output := &customerprofiles.ListProfileObjectTypeTemplatesOutput{}
+    t.Run("TestListProfileObjects", func(t *testing.T) {
+        input := &customerprofiles.ListProfileObjectsInput{}
+        output := &customerprofiles.ListProfileObjectsOutput{}
 
-        mockClient.On("ListProfileObjectTypeTemplates", ctx, input).Return(output, nil)
+        mockClient.On("ListProfileObjects", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListProfileObjectTypeTemplates(ctx, input)
+        result, err := mockClient.ListProfileObjects(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -736,13 +827,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProfileObjects", func(t *testing.T) {
-        input := &customerprofiles.ListProfileObjectsInput{}
-        output := &customerprofiles.ListProfileObjectsOutput{}
+    t.Run("TestListProfileObjectTypeTemplates", func(t *testing.T) {
+        input := &customerprofiles.ListProfileObjectTypeTemplatesInput{}
+        output := &customerprofiles.ListProfileObjectTypeTemplatesOutput{}
 
-        mockClient.On("ListProfileObjects", ctx, input).Return(output, nil)
+        mockClient.On("ListProfileObjectTypeTemplates", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListProfileObjects(ctx, input)
+        result, err := mockClient.ListProfileObjectTypeTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -782,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListUploadJobs", func(t *testing.T) {
+        input := &customerprofiles.ListUploadJobsInput{}
+        output := &customerprofiles.ListUploadJobsOutput{}
+
+        mockClient.On("ListUploadJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUploadJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -866,6 +970,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartUploadJob", func(t *testing.T) {
+        input := &customerprofiles.StartUploadJobInput{}
+        output := &customerprofiles.StartUploadJobOutput{}
+
+        mockClient.On("StartUploadJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartUploadJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopUploadJob", func(t *testing.T) {
+        input := &customerprofiles.StopUploadJobInput{}
+        output := &customerprofiles.StopUploadJobOutput{}
+
+        mockClient.On("StopUploadJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopUploadJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &customerprofiles.TagResourceInput{}
         output := &customerprofiles.TagResourceOutput{}
@@ -912,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDomainLayout", func(t *testing.T) {
+        input := &customerprofiles.UpdateDomainLayoutInput{}
+        output := &customerprofiles.UpdateDomainLayoutOutput{}
+
+        mockClient.On("UpdateDomainLayout", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDomainLayout(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

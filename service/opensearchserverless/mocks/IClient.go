@@ -236,6 +236,43 @@ func (_m *IClient) CreateCollection(ctx context.Context, params *opensearchserve
 	return r0, r1
 }
 
+// CreateIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIndex(ctx context.Context, params *opensearchserverless.CreateIndexInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIndex")
+	}
+
+	var r0 *opensearchserverless.CreateIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateIndexInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateIndexInput, ...func(*opensearchserverless.Options)) *opensearchserverless.CreateIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.CreateIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CreateIndexInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateLifecyclePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateLifecyclePolicy(ctx context.Context, params *opensearchserverless.CreateLifecyclePolicyInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateLifecyclePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -458,6 +495,43 @@ func (_m *IClient) DeleteCollection(ctx context.Context, params *opensearchserve
 	return r0, r1
 }
 
+// DeleteIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIndex(ctx context.Context, params *opensearchserverless.DeleteIndexInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIndex")
+	}
+
+	var r0 *opensearchserverless.DeleteIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.DeleteIndexInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.DeleteIndexInput, ...func(*opensearchserverless.Options)) *opensearchserverless.DeleteIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.DeleteIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.DeleteIndexInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteLifecyclePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteLifecyclePolicy(ctx context.Context, params *opensearchserverless.DeleteLifecyclePolicyInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteLifecyclePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -672,6 +746,43 @@ func (_m *IClient) GetAccountSettings(ctx context.Context, params *opensearchser
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.GetAccountSettingsInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIndex(ctx context.Context, params *opensearchserverless.GetIndexInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.GetIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIndex")
+	}
+
+	var r0 *opensearchserverless.GetIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.GetIndexInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.GetIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.GetIndexInput, ...func(*opensearchserverless.Options)) *opensearchserverless.GetIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.GetIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.GetIndexInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1245,6 +1356,43 @@ func (_m *IClient) UpdateCollection(ctx context.Context, params *opensearchserve
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.UpdateCollectionInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIndex(ctx context.Context, params *opensearchserverless.UpdateIndexInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.UpdateIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIndex")
+	}
+
+	var r0 *opensearchserverless.UpdateIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.UpdateIndexInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.UpdateIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.UpdateIndexInput, ...func(*opensearchserverless.Options)) *opensearchserverless.UpdateIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.UpdateIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.UpdateIndexInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

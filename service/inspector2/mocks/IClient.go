@@ -52,6 +52,80 @@ func (_m *IClient) AssociateMember(ctx context.Context, params *inspector2.Assoc
 	return r0, r1
 }
 
+// BatchAssociateCodeSecurityScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchAssociateCodeSecurityScanConfiguration(ctx context.Context, params *inspector2.BatchAssociateCodeSecurityScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.BatchAssociateCodeSecurityScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchAssociateCodeSecurityScanConfiguration")
+	}
+
+	var r0 *inspector2.BatchAssociateCodeSecurityScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.BatchAssociateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.BatchAssociateCodeSecurityScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.BatchAssociateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.BatchAssociateCodeSecurityScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.BatchAssociateCodeSecurityScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.BatchAssociateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDisassociateCodeSecurityScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDisassociateCodeSecurityScanConfiguration(ctx context.Context, params *inspector2.BatchDisassociateCodeSecurityScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.BatchDisassociateCodeSecurityScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDisassociateCodeSecurityScanConfiguration")
+	}
+
+	var r0 *inspector2.BatchDisassociateCodeSecurityScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.BatchDisassociateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.BatchDisassociateCodeSecurityScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.BatchDisassociateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.BatchDisassociateCodeSecurityScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.BatchDisassociateCodeSecurityScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.BatchDisassociateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetAccountStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetAccountStatus(ctx context.Context, params *inspector2.BatchGetAccountStatusInput, optFns ...func(*inspector2.Options)) (*inspector2.BatchGetAccountStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -385,6 +459,80 @@ func (_m *IClient) CreateCisScanConfiguration(ctx context.Context, params *inspe
 	return r0, r1
 }
 
+// CreateCodeSecurityIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCodeSecurityIntegration(ctx context.Context, params *inspector2.CreateCodeSecurityIntegrationInput, optFns ...func(*inspector2.Options)) (*inspector2.CreateCodeSecurityIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCodeSecurityIntegration")
+	}
+
+	var r0 *inspector2.CreateCodeSecurityIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.CreateCodeSecurityIntegrationInput, ...func(*inspector2.Options)) (*inspector2.CreateCodeSecurityIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.CreateCodeSecurityIntegrationInput, ...func(*inspector2.Options)) *inspector2.CreateCodeSecurityIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.CreateCodeSecurityIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.CreateCodeSecurityIntegrationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCodeSecurityScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCodeSecurityScanConfiguration(ctx context.Context, params *inspector2.CreateCodeSecurityScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.CreateCodeSecurityScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCodeSecurityScanConfiguration")
+	}
+
+	var r0 *inspector2.CreateCodeSecurityScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.CreateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.CreateCodeSecurityScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.CreateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.CreateCodeSecurityScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.CreateCodeSecurityScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.CreateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFilter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFilter(ctx context.Context, params *inspector2.CreateFilterInput, optFns ...func(*inspector2.Options)) (*inspector2.CreateFilterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +673,80 @@ func (_m *IClient) DeleteCisScanConfiguration(ctx context.Context, params *inspe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.DeleteCisScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCodeSecurityIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCodeSecurityIntegration(ctx context.Context, params *inspector2.DeleteCodeSecurityIntegrationInput, optFns ...func(*inspector2.Options)) (*inspector2.DeleteCodeSecurityIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCodeSecurityIntegration")
+	}
+
+	var r0 *inspector2.DeleteCodeSecurityIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.DeleteCodeSecurityIntegrationInput, ...func(*inspector2.Options)) (*inspector2.DeleteCodeSecurityIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.DeleteCodeSecurityIntegrationInput, ...func(*inspector2.Options)) *inspector2.DeleteCodeSecurityIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.DeleteCodeSecurityIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.DeleteCodeSecurityIntegrationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCodeSecurityScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCodeSecurityScanConfiguration(ctx context.Context, params *inspector2.DeleteCodeSecurityScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.DeleteCodeSecurityScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCodeSecurityScanConfiguration")
+	}
+
+	var r0 *inspector2.DeleteCodeSecurityScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.DeleteCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.DeleteCodeSecurityScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.DeleteCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.DeleteCodeSecurityScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.DeleteCodeSecurityScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.DeleteCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -895,6 +1117,117 @@ func (_m *IClient) GetClustersForImage(ctx context.Context, params *inspector2.G
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.GetClustersForImageInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCodeSecurityIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCodeSecurityIntegration(ctx context.Context, params *inspector2.GetCodeSecurityIntegrationInput, optFns ...func(*inspector2.Options)) (*inspector2.GetCodeSecurityIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCodeSecurityIntegration")
+	}
+
+	var r0 *inspector2.GetCodeSecurityIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetCodeSecurityIntegrationInput, ...func(*inspector2.Options)) (*inspector2.GetCodeSecurityIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetCodeSecurityIntegrationInput, ...func(*inspector2.Options)) *inspector2.GetCodeSecurityIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.GetCodeSecurityIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.GetCodeSecurityIntegrationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCodeSecurityScan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCodeSecurityScan(ctx context.Context, params *inspector2.GetCodeSecurityScanInput, optFns ...func(*inspector2.Options)) (*inspector2.GetCodeSecurityScanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCodeSecurityScan")
+	}
+
+	var r0 *inspector2.GetCodeSecurityScanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetCodeSecurityScanInput, ...func(*inspector2.Options)) (*inspector2.GetCodeSecurityScanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetCodeSecurityScanInput, ...func(*inspector2.Options)) *inspector2.GetCodeSecurityScanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.GetCodeSecurityScanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.GetCodeSecurityScanInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCodeSecurityScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCodeSecurityScanConfiguration(ctx context.Context, params *inspector2.GetCodeSecurityScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.GetCodeSecurityScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCodeSecurityScanConfiguration")
+	}
+
+	var r0 *inspector2.GetCodeSecurityScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.GetCodeSecurityScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.GetCodeSecurityScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.GetCodeSecurityScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.GetCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1339,6 +1672,117 @@ func (_m *IClient) ListCisScans(ctx context.Context, params *inspector2.ListCisS
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListCisScansInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCodeSecurityIntegrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCodeSecurityIntegrations(ctx context.Context, params *inspector2.ListCodeSecurityIntegrationsInput, optFns ...func(*inspector2.Options)) (*inspector2.ListCodeSecurityIntegrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCodeSecurityIntegrations")
+	}
+
+	var r0 *inspector2.ListCodeSecurityIntegrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListCodeSecurityIntegrationsInput, ...func(*inspector2.Options)) (*inspector2.ListCodeSecurityIntegrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListCodeSecurityIntegrationsInput, ...func(*inspector2.Options)) *inspector2.ListCodeSecurityIntegrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.ListCodeSecurityIntegrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListCodeSecurityIntegrationsInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCodeSecurityScanConfigurationAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCodeSecurityScanConfigurationAssociations(ctx context.Context, params *inspector2.ListCodeSecurityScanConfigurationAssociationsInput, optFns ...func(*inspector2.Options)) (*inspector2.ListCodeSecurityScanConfigurationAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCodeSecurityScanConfigurationAssociations")
+	}
+
+	var r0 *inspector2.ListCodeSecurityScanConfigurationAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListCodeSecurityScanConfigurationAssociationsInput, ...func(*inspector2.Options)) (*inspector2.ListCodeSecurityScanConfigurationAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListCodeSecurityScanConfigurationAssociationsInput, ...func(*inspector2.Options)) *inspector2.ListCodeSecurityScanConfigurationAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.ListCodeSecurityScanConfigurationAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListCodeSecurityScanConfigurationAssociationsInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCodeSecurityScanConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCodeSecurityScanConfigurations(ctx context.Context, params *inspector2.ListCodeSecurityScanConfigurationsInput, optFns ...func(*inspector2.Options)) (*inspector2.ListCodeSecurityScanConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCodeSecurityScanConfigurations")
+	}
+
+	var r0 *inspector2.ListCodeSecurityScanConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListCodeSecurityScanConfigurationsInput, ...func(*inspector2.Options)) (*inspector2.ListCodeSecurityScanConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListCodeSecurityScanConfigurationsInput, ...func(*inspector2.Options)) *inspector2.ListCodeSecurityScanConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.ListCodeSecurityScanConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListCodeSecurityScanConfigurationsInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1883,6 +2327,43 @@ func (_m *IClient) StartCisSession(ctx context.Context, params *inspector2.Start
 	return r0, r1
 }
 
+// StartCodeSecurityScan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartCodeSecurityScan(ctx context.Context, params *inspector2.StartCodeSecurityScanInput, optFns ...func(*inspector2.Options)) (*inspector2.StartCodeSecurityScanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartCodeSecurityScan")
+	}
+
+	var r0 *inspector2.StartCodeSecurityScanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.StartCodeSecurityScanInput, ...func(*inspector2.Options)) (*inspector2.StartCodeSecurityScanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.StartCodeSecurityScanInput, ...func(*inspector2.Options)) *inspector2.StartCodeSecurityScanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.StartCodeSecurityScanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.StartCodeSecurityScanInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopCisSession provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopCisSession(ctx context.Context, params *inspector2.StopCisSessionInput, optFns ...func(*inspector2.Options)) (*inspector2.StopCisSessionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2023,6 +2504,80 @@ func (_m *IClient) UpdateCisScanConfiguration(ctx context.Context, params *inspe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.UpdateCisScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCodeSecurityIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCodeSecurityIntegration(ctx context.Context, params *inspector2.UpdateCodeSecurityIntegrationInput, optFns ...func(*inspector2.Options)) (*inspector2.UpdateCodeSecurityIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCodeSecurityIntegration")
+	}
+
+	var r0 *inspector2.UpdateCodeSecurityIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateCodeSecurityIntegrationInput, ...func(*inspector2.Options)) (*inspector2.UpdateCodeSecurityIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateCodeSecurityIntegrationInput, ...func(*inspector2.Options)) *inspector2.UpdateCodeSecurityIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.UpdateCodeSecurityIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.UpdateCodeSecurityIntegrationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCodeSecurityScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCodeSecurityScanConfiguration(ctx context.Context, params *inspector2.UpdateCodeSecurityScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.UpdateCodeSecurityScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCodeSecurityScanConfiguration")
+	}
+
+	var r0 *inspector2.UpdateCodeSecurityScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.UpdateCodeSecurityScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.UpdateCodeSecurityScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.UpdateCodeSecurityScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.UpdateCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

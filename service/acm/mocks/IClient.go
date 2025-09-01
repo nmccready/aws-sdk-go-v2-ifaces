@@ -551,6 +551,43 @@ func (_m *IClient) ResendValidationEmail(ctx context.Context, params *acm.Resend
 	return r0, r1
 }
 
+// RevokeCertificate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeCertificate(ctx context.Context, params *acm.RevokeCertificateInput, optFns ...func(*acm.Options)) (*acm.RevokeCertificateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeCertificate")
+	}
+
+	var r0 *acm.RevokeCertificateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.RevokeCertificateInput, ...func(*acm.Options)) (*acm.RevokeCertificateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.RevokeCertificateInput, ...func(*acm.Options)) *acm.RevokeCertificateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.RevokeCertificateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.RevokeCertificateInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateCertificateOptions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateCertificateOptions(ctx context.Context, params *acm.UpdateCertificateOptionsInput, optFns ...func(*acm.Options)) (*acm.UpdateCertificateOptionsOutput, error) {
 	_va := make([]interface{}, len(optFns))

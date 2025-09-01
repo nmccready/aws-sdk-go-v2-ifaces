@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRoutingRule", func(t *testing.T) {
+        input := &apigatewayv2.CreateRoutingRuleInput{}
+        output := &apigatewayv2.CreateRoutingRuleOutput{}
+
+        mockClient.On("CreateRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRoutingRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateStage", func(t *testing.T) {
         input := &apigatewayv2.CreateStageInput{}
         output := &apigatewayv2.CreateStageOutput{}
@@ -366,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRouteSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRouteSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRoutingRule", func(t *testing.T) {
+        input := &apigatewayv2.DeleteRoutingRuleInput{}
+        output := &apigatewayv2.DeleteRoutingRuleOutput{}
+
+        mockClient.On("DeleteRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRoutingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,19 +632,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetModelTemplate", func(t *testing.T) {
-        input := &apigatewayv2.GetModelTemplateInput{}
-        output := &apigatewayv2.GetModelTemplateOutput{}
-
-        mockClient.On("GetModelTemplate", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetModelTemplate(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetModels", func(t *testing.T) {
         input := &apigatewayv2.GetModelsInput{}
         output := &apigatewayv2.GetModelsOutput{}
@@ -626,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetModels", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetModelTemplate", func(t *testing.T) {
+        input := &apigatewayv2.GetModelTemplateInput{}
+        output := &apigatewayv2.GetModelTemplateOutput{}
+
+        mockClient.On("GetModelTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModelTemplate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -678,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRoutes", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRoutes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRoutingRule", func(t *testing.T) {
+        input := &apigatewayv2.GetRoutingRuleInput{}
+        output := &apigatewayv2.GetRoutingRuleOutput{}
+
+        mockClient.On("GetRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRoutingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +795,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ImportApi", ctx, input).Return(output, nil)
 
         result, err := mockClient.ImportApi(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRoutingRules", func(t *testing.T) {
+        input := &apigatewayv2.ListRoutingRulesInput{}
+        output := &apigatewayv2.ListRoutingRulesOutput{}
+
+        mockClient.On("ListRoutingRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRoutingRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutRoutingRule", func(t *testing.T) {
+        input := &apigatewayv2.PutRoutingRuleInput{}
+        output := &apigatewayv2.PutRoutingRuleOutput{}
+
+        mockClient.On("PutRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutRoutingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

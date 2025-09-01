@@ -10,5 +10,9 @@ import (
 // IClient defines the interface for freetier
 type IClient interface {
  Options() Options 
+ GetAccountActivity(ctx context.Context, params *GetAccountActivityInput, optFns ...func(*Options)) (*GetAccountActivityOutput, error) 
+ GetAccountPlanState(ctx context.Context, params *GetAccountPlanStateInput, optFns ...func(*Options)) (*GetAccountPlanStateOutput, error) 
  GetFreeTierUsage(ctx context.Context, params *GetFreeTierUsageInput, optFns ...func(*Options)) (*GetFreeTierUsageOutput, error) 
+ ListAccountActivities(ctx context.Context, params *ListAccountActivitiesInput, optFns ...func(*Options)) (*ListAccountActivitiesOutput, error) 
+ UpgradeAccountPlan(ctx context.Context, params *UpgradeAccountPlanInput, optFns ...func(*Options)) (*UpgradeAccountPlanOutput, error) 
 }

@@ -671,6 +671,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListImages", func(t *testing.T) {
+        input := &imagebuilder.ListImagesInput{}
+        output := &imagebuilder.ListImagesOutput{}
+
+        mockClient.On("ListImages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListImages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListImageScanFindingAggregations", func(t *testing.T) {
         input := &imagebuilder.ListImageScanFindingAggregationsInput{}
         output := &imagebuilder.ListImageScanFindingAggregationsOutput{}
@@ -691,19 +704,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListImageScanFindings", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListImageScanFindings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListImages", func(t *testing.T) {
-        input := &imagebuilder.ListImagesInput{}
-        output := &imagebuilder.ListImagesOutput{}
-
-        mockClient.On("ListImages", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListImages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,19 +814,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkflowStepExecutions", func(t *testing.T) {
-        input := &imagebuilder.ListWorkflowStepExecutionsInput{}
-        output := &imagebuilder.ListWorkflowStepExecutionsOutput{}
-
-        mockClient.On("ListWorkflowStepExecutions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorkflowStepExecutions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorkflows", func(t *testing.T) {
         input := &imagebuilder.ListWorkflowsInput{}
         output := &imagebuilder.ListWorkflowsOutput{}
@@ -834,6 +821,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkflows", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkflows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkflowStepExecutions", func(t *testing.T) {
+        input := &imagebuilder.ListWorkflowStepExecutionsInput{}
+        output := &imagebuilder.ListWorkflowStepExecutionsOutput{}
+
+        mockClient.On("ListWorkflowStepExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkflowStepExecutions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

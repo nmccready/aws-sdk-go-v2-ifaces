@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetConfigurationCheckOperation", func(t *testing.T) {
+        input := &ssmsap.GetConfigurationCheckOperationInput{}
+        output := &ssmsap.GetConfigurationCheckOperationOutput{}
+
+        mockClient.On("GetConfigurationCheckOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfigurationCheckOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDatabase", func(t *testing.T) {
         input := &ssmsap.GetDatabaseInput{}
         output := &ssmsap.GetDatabaseOutput{}
@@ -151,6 +164,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConfigurationCheckDefinitions", func(t *testing.T) {
+        input := &ssmsap.ListConfigurationCheckDefinitionsInput{}
+        output := &ssmsap.ListConfigurationCheckDefinitionsOutput{}
+
+        mockClient.On("ListConfigurationCheckDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfigurationCheckDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConfigurationCheckOperations", func(t *testing.T) {
+        input := &ssmsap.ListConfigurationCheckOperationsInput{}
+        output := &ssmsap.ListConfigurationCheckOperationsOutput{}
+
+        mockClient.On("ListConfigurationCheckOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfigurationCheckOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDatabases", func(t *testing.T) {
         input := &ssmsap.ListDatabasesInput{}
         output := &ssmsap.ListDatabasesOutput{}
@@ -184,6 +223,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOperations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubCheckResults", func(t *testing.T) {
+        input := &ssmsap.ListSubCheckResultsInput{}
+        output := &ssmsap.ListSubCheckResultsOutput{}
+
+        mockClient.On("ListSubCheckResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubCheckResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubCheckRuleResults", func(t *testing.T) {
+        input := &ssmsap.ListSubCheckRuleResultsInput{}
+        output := &ssmsap.ListSubCheckRuleResultsOutput{}
+
+        mockClient.On("ListSubCheckRuleResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubCheckRuleResults(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -249,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartApplicationRefresh", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartApplicationRefresh(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartConfigurationChecks", func(t *testing.T) {
+        input := &ssmsap.StartConfigurationChecksInput{}
+        output := &ssmsap.StartConfigurationChecksOutput{}
+
+        mockClient.On("StartConfigurationChecks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartConfigurationChecks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

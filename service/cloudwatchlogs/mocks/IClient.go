@@ -1939,6 +1939,43 @@ func (_m *IClient) GetLogGroupFields(ctx context.Context, params *cloudwatchlogs
 	return r0, r1
 }
 
+// GetLogObject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLogObject(ctx context.Context, params *cloudwatchlogs.GetLogObjectInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLogObjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLogObject")
+	}
+
+	var r0 *cloudwatchlogs.GetLogObjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetLogObjectInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLogObjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetLogObjectInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.GetLogObjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.GetLogObjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetLogObjectInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetLogRecord provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetLogRecord(ctx context.Context, params *cloudwatchlogs.GetLogRecordInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLogRecordOutput, error) {
 	_va := make([]interface{}, len(optFns))

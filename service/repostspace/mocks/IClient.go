@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchAddChannelRoleToAccessors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchAddChannelRoleToAccessors(ctx context.Context, params *repostspace.BatchAddChannelRoleToAccessorsInput, optFns ...func(*repostspace.Options)) (*repostspace.BatchAddChannelRoleToAccessorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchAddChannelRoleToAccessors")
+	}
+
+	var r0 *repostspace.BatchAddChannelRoleToAccessorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.BatchAddChannelRoleToAccessorsInput, ...func(*repostspace.Options)) (*repostspace.BatchAddChannelRoleToAccessorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.BatchAddChannelRoleToAccessorsInput, ...func(*repostspace.Options)) *repostspace.BatchAddChannelRoleToAccessorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*repostspace.BatchAddChannelRoleToAccessorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.BatchAddChannelRoleToAccessorsInput, ...func(*repostspace.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchAddRole provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchAddRole(ctx context.Context, params *repostspace.BatchAddRoleInput, optFns ...func(*repostspace.Options)) (*repostspace.BatchAddRoleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -51,6 +88,43 @@ func (_m *IClient) BatchAddRole(ctx context.Context, params *repostspace.BatchAd
 	return r0, r1
 }
 
+// BatchRemoveChannelRoleFromAccessors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchRemoveChannelRoleFromAccessors(ctx context.Context, params *repostspace.BatchRemoveChannelRoleFromAccessorsInput, optFns ...func(*repostspace.Options)) (*repostspace.BatchRemoveChannelRoleFromAccessorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchRemoveChannelRoleFromAccessors")
+	}
+
+	var r0 *repostspace.BatchRemoveChannelRoleFromAccessorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.BatchRemoveChannelRoleFromAccessorsInput, ...func(*repostspace.Options)) (*repostspace.BatchRemoveChannelRoleFromAccessorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.BatchRemoveChannelRoleFromAccessorsInput, ...func(*repostspace.Options)) *repostspace.BatchRemoveChannelRoleFromAccessorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*repostspace.BatchRemoveChannelRoleFromAccessorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.BatchRemoveChannelRoleFromAccessorsInput, ...func(*repostspace.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchRemoveRole provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchRemoveRole(ctx context.Context, params *repostspace.BatchRemoveRoleInput, optFns ...func(*repostspace.Options)) (*repostspace.BatchRemoveRoleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -80,6 +154,43 @@ func (_m *IClient) BatchRemoveRole(ctx context.Context, params *repostspace.Batc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.BatchRemoveRoleInput, ...func(*repostspace.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateChannel(ctx context.Context, params *repostspace.CreateChannelInput, optFns ...func(*repostspace.Options)) (*repostspace.CreateChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateChannel")
+	}
+
+	var r0 *repostspace.CreateChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.CreateChannelInput, ...func(*repostspace.Options)) (*repostspace.CreateChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.CreateChannelInput, ...func(*repostspace.Options)) *repostspace.CreateChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*repostspace.CreateChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.CreateChannelInput, ...func(*repostspace.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -199,6 +310,43 @@ func (_m *IClient) DeregisterAdmin(ctx context.Context, params *repostspace.Dere
 	return r0, r1
 }
 
+// GetChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetChannel(ctx context.Context, params *repostspace.GetChannelInput, optFns ...func(*repostspace.Options)) (*repostspace.GetChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetChannel")
+	}
+
+	var r0 *repostspace.GetChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.GetChannelInput, ...func(*repostspace.Options)) (*repostspace.GetChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.GetChannelInput, ...func(*repostspace.Options)) *repostspace.GetChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*repostspace.GetChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.GetChannelInput, ...func(*repostspace.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSpace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSpace(ctx context.Context, params *repostspace.GetSpaceInput, optFns ...func(*repostspace.Options)) (*repostspace.GetSpaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +376,43 @@ func (_m *IClient) GetSpace(ctx context.Context, params *repostspace.GetSpaceInp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.GetSpaceInput, ...func(*repostspace.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChannels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChannels(ctx context.Context, params *repostspace.ListChannelsInput, optFns ...func(*repostspace.Options)) (*repostspace.ListChannelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChannels")
+	}
+
+	var r0 *repostspace.ListChannelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.ListChannelsInput, ...func(*repostspace.Options)) (*repostspace.ListChannelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.ListChannelsInput, ...func(*repostspace.Options)) *repostspace.ListChannelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*repostspace.ListChannelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.ListChannelsInput, ...func(*repostspace.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -468,6 +653,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *repostspace.UntagR
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.UntagResourceInput, ...func(*repostspace.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateChannel(ctx context.Context, params *repostspace.UpdateChannelInput, optFns ...func(*repostspace.Options)) (*repostspace.UpdateChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateChannel")
+	}
+
+	var r0 *repostspace.UpdateChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.UpdateChannelInput, ...func(*repostspace.Options)) (*repostspace.UpdateChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *repostspace.UpdateChannelInput, ...func(*repostspace.Options)) *repostspace.UpdateChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*repostspace.UpdateChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *repostspace.UpdateChannelInput, ...func(*repostspace.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

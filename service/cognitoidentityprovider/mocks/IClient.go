@@ -1384,6 +1384,43 @@ func (_m *IClient) CreateResourceServer(ctx context.Context, params *cognitoiden
 	return r0, r1
 }
 
+// CreateTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTerms(ctx context.Context, params *cognitoidentityprovider.CreateTermsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTerms")
+	}
+
+	var r0 *cognitoidentityprovider.CreateTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateTermsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateTermsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.CreateTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.CreateTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CreateTermsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateUserImportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateUserImportJob(ctx context.Context, params *cognitoidentityprovider.CreateUserImportJobInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateUserImportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1672,6 +1709,43 @@ func (_m *IClient) DeleteResourceServer(ctx context.Context, params *cognitoiden
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteResourceServerInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTerms(ctx context.Context, params *cognitoidentityprovider.DeleteTermsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTerms")
+	}
+
+	var r0 *cognitoidentityprovider.DeleteTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteTermsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteTermsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DeleteTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DeleteTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteTermsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2079,6 +2153,43 @@ func (_m *IClient) DescribeRiskConfiguration(ctx context.Context, params *cognit
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeRiskConfigurationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTerms(ctx context.Context, params *cognitoidentityprovider.DescribeTermsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTerms")
+	}
+
+	var r0 *cognitoidentityprovider.DescribeTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeTermsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeTermsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DescribeTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DescribeTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeTermsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3004,6 +3115,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *cognitoident
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListTagsForResourceInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTerms(ctx context.Context, params *cognitoidentityprovider.ListTermsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTerms")
+	}
+
+	var r0 *cognitoidentityprovider.ListTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListTermsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListTermsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListTermsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4021,6 +4169,43 @@ func (_m *IClient) UpdateResourceServer(ctx context.Context, params *cognitoiden
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateResourceServerInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTerms(ctx context.Context, params *cognitoidentityprovider.UpdateTermsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTerms")
+	}
+
+	var r0 *cognitoidentityprovider.UpdateTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateTermsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateTermsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.UpdateTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.UpdateTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateTermsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

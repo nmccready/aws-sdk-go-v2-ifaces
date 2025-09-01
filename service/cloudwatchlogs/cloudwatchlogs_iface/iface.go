@@ -62,6 +62,7 @@ type IClient interface {
  GetLogAnomalyDetector(ctx context.Context, params *GetLogAnomalyDetectorInput, optFns ...func(*Options)) (*GetLogAnomalyDetectorOutput, error) 
  GetLogEvents(ctx context.Context, params *GetLogEventsInput, optFns ...func(*Options)) (*GetLogEventsOutput, error) 
  GetLogGroupFields(ctx context.Context, params *GetLogGroupFieldsInput, optFns ...func(*Options)) (*GetLogGroupFieldsOutput, error) 
+ GetLogObject(ctx context.Context, params *GetLogObjectInput, optFns ...func(*Options)) (*GetLogObjectOutput, error) 
  GetLogRecord(ctx context.Context, params *GetLogRecordInput, optFns ...func(*Options)) (*GetLogRecordOutput, error) 
  GetQueryResults(ctx context.Context, params *GetQueryResultsInput, optFns ...func(*Options)) (*GetQueryResultsOutput, error) 
  GetTransformer(ctx context.Context, params *GetTransformerInput, optFns ...func(*Options)) (*GetTransformerOutput, error) 

@@ -496,6 +496,43 @@ func (_m *IClient) GetCostAndUsage(ctx context.Context, params *costexplorer.Get
 	return r0, r1
 }
 
+// GetCostAndUsageComparisons provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCostAndUsageComparisons(ctx context.Context, params *costexplorer.GetCostAndUsageComparisonsInput, optFns ...func(*costexplorer.Options)) (*costexplorer.GetCostAndUsageComparisonsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCostAndUsageComparisons")
+	}
+
+	var r0 *costexplorer.GetCostAndUsageComparisonsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.GetCostAndUsageComparisonsInput, ...func(*costexplorer.Options)) (*costexplorer.GetCostAndUsageComparisonsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.GetCostAndUsageComparisonsInput, ...func(*costexplorer.Options)) *costexplorer.GetCostAndUsageComparisonsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*costexplorer.GetCostAndUsageComparisonsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.GetCostAndUsageComparisonsInput, ...func(*costexplorer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCostAndUsageWithResources provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCostAndUsageWithResources(ctx context.Context, params *costexplorer.GetCostAndUsageWithResourcesInput, optFns ...func(*costexplorer.Options)) (*costexplorer.GetCostAndUsageWithResourcesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +599,43 @@ func (_m *IClient) GetCostCategories(ctx context.Context, params *costexplorer.G
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.GetCostCategoriesInput, ...func(*costexplorer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCostComparisonDrivers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCostComparisonDrivers(ctx context.Context, params *costexplorer.GetCostComparisonDriversInput, optFns ...func(*costexplorer.Options)) (*costexplorer.GetCostComparisonDriversOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCostComparisonDrivers")
+	}
+
+	var r0 *costexplorer.GetCostComparisonDriversOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.GetCostComparisonDriversInput, ...func(*costexplorer.Options)) (*costexplorer.GetCostComparisonDriversOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *costexplorer.GetCostComparisonDriversInput, ...func(*costexplorer.Options)) *costexplorer.GetCostComparisonDriversOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*costexplorer.GetCostComparisonDriversOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *costexplorer.GetCostComparisonDriversInput, ...func(*costexplorer.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

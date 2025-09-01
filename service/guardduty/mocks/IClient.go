@@ -385,6 +385,43 @@ func (_m *IClient) CreateSampleFindings(ctx context.Context, params *guardduty.C
 	return r0, r1
 }
 
+// CreateThreatEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateThreatEntitySet(ctx context.Context, params *guardduty.CreateThreatEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateThreatEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateThreatEntitySet")
+	}
+
+	var r0 *guardduty.CreateThreatEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateThreatEntitySetInput, ...func(*guardduty.Options)) (*guardduty.CreateThreatEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateThreatEntitySetInput, ...func(*guardduty.Options)) *guardduty.CreateThreatEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.CreateThreatEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.CreateThreatEntitySetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateThreatIntelSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateThreatIntelSet(ctx context.Context, params *guardduty.CreateThreatIntelSetInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateThreatIntelSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +451,43 @@ func (_m *IClient) CreateThreatIntelSet(ctx context.Context, params *guardduty.C
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.CreateThreatIntelSetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateTrustedEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTrustedEntitySet(ctx context.Context, params *guardduty.CreateTrustedEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateTrustedEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTrustedEntitySet")
+	}
+
+	var r0 *guardduty.CreateTrustedEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateTrustedEntitySetInput, ...func(*guardduty.Options)) (*guardduty.CreateTrustedEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateTrustedEntitySetInput, ...func(*guardduty.Options)) *guardduty.CreateTrustedEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.CreateTrustedEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.CreateTrustedEntitySetInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -718,6 +792,43 @@ func (_m *IClient) DeletePublishingDestination(ctx context.Context, params *guar
 	return r0, r1
 }
 
+// DeleteThreatEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteThreatEntitySet(ctx context.Context, params *guardduty.DeleteThreatEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.DeleteThreatEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteThreatEntitySet")
+	}
+
+	var r0 *guardduty.DeleteThreatEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteThreatEntitySetInput, ...func(*guardduty.Options)) (*guardduty.DeleteThreatEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteThreatEntitySetInput, ...func(*guardduty.Options)) *guardduty.DeleteThreatEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.DeleteThreatEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.DeleteThreatEntitySetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteThreatIntelSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteThreatIntelSet(ctx context.Context, params *guardduty.DeleteThreatIntelSetInput, optFns ...func(*guardduty.Options)) (*guardduty.DeleteThreatIntelSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +858,43 @@ func (_m *IClient) DeleteThreatIntelSet(ctx context.Context, params *guardduty.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.DeleteThreatIntelSetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTrustedEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTrustedEntitySet(ctx context.Context, params *guardduty.DeleteTrustedEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.DeleteTrustedEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTrustedEntitySet")
+	}
+
+	var r0 *guardduty.DeleteTrustedEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteTrustedEntitySetInput, ...func(*guardduty.Options)) (*guardduty.DeleteTrustedEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteTrustedEntitySetInput, ...func(*guardduty.Options)) *guardduty.DeleteTrustedEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.DeleteTrustedEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.DeleteTrustedEntitySetInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1606,6 +1754,43 @@ func (_m *IClient) GetRemainingFreeTrialDays(ctx context.Context, params *guardd
 	return r0, r1
 }
 
+// GetThreatEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetThreatEntitySet(ctx context.Context, params *guardduty.GetThreatEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.GetThreatEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetThreatEntitySet")
+	}
+
+	var r0 *guardduty.GetThreatEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetThreatEntitySetInput, ...func(*guardduty.Options)) (*guardduty.GetThreatEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetThreatEntitySetInput, ...func(*guardduty.Options)) *guardduty.GetThreatEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetThreatEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetThreatEntitySetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetThreatIntelSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetThreatIntelSet(ctx context.Context, params *guardduty.GetThreatIntelSetInput, optFns ...func(*guardduty.Options)) (*guardduty.GetThreatIntelSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1635,6 +1820,43 @@ func (_m *IClient) GetThreatIntelSet(ctx context.Context, params *guardduty.GetT
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetThreatIntelSetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTrustedEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrustedEntitySet(ctx context.Context, params *guardduty.GetTrustedEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.GetTrustedEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrustedEntitySet")
+	}
+
+	var r0 *guardduty.GetTrustedEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetTrustedEntitySetInput, ...func(*guardduty.Options)) (*guardduty.GetTrustedEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetTrustedEntitySetInput, ...func(*guardduty.Options)) *guardduty.GetTrustedEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetTrustedEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetTrustedEntitySetInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2124,6 +2346,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *guardduty.Li
 	return r0, r1
 }
 
+// ListThreatEntitySets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListThreatEntitySets(ctx context.Context, params *guardduty.ListThreatEntitySetsInput, optFns ...func(*guardduty.Options)) (*guardduty.ListThreatEntitySetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListThreatEntitySets")
+	}
+
+	var r0 *guardduty.ListThreatEntitySetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListThreatEntitySetsInput, ...func(*guardduty.Options)) (*guardduty.ListThreatEntitySetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListThreatEntitySetsInput, ...func(*guardduty.Options)) *guardduty.ListThreatEntitySetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListThreatEntitySetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListThreatEntitySetsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListThreatIntelSets provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListThreatIntelSets(ctx context.Context, params *guardduty.ListThreatIntelSetsInput, optFns ...func(*guardduty.Options)) (*guardduty.ListThreatIntelSetsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2153,6 +2412,43 @@ func (_m *IClient) ListThreatIntelSets(ctx context.Context, params *guardduty.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListThreatIntelSetsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTrustedEntitySets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTrustedEntitySets(ctx context.Context, params *guardduty.ListTrustedEntitySetsInput, optFns ...func(*guardduty.Options)) (*guardduty.ListTrustedEntitySetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTrustedEntitySets")
+	}
+
+	var r0 *guardduty.ListTrustedEntitySetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListTrustedEntitySetsInput, ...func(*guardduty.Options)) (*guardduty.ListTrustedEntitySetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListTrustedEntitySetsInput, ...func(*guardduty.Options)) *guardduty.ListTrustedEntitySetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListTrustedEntitySetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListTrustedEntitySetsInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2734,6 +3030,43 @@ func (_m *IClient) UpdatePublishingDestination(ctx context.Context, params *guar
 	return r0, r1
 }
 
+// UpdateThreatEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateThreatEntitySet(ctx context.Context, params *guardduty.UpdateThreatEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.UpdateThreatEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateThreatEntitySet")
+	}
+
+	var r0 *guardduty.UpdateThreatEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateThreatEntitySetInput, ...func(*guardduty.Options)) (*guardduty.UpdateThreatEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateThreatEntitySetInput, ...func(*guardduty.Options)) *guardduty.UpdateThreatEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.UpdateThreatEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.UpdateThreatEntitySetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateThreatIntelSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateThreatIntelSet(ctx context.Context, params *guardduty.UpdateThreatIntelSetInput, optFns ...func(*guardduty.Options)) (*guardduty.UpdateThreatIntelSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2763,6 +3096,43 @@ func (_m *IClient) UpdateThreatIntelSet(ctx context.Context, params *guardduty.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.UpdateThreatIntelSetInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTrustedEntitySet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTrustedEntitySet(ctx context.Context, params *guardduty.UpdateTrustedEntitySetInput, optFns ...func(*guardduty.Options)) (*guardduty.UpdateTrustedEntitySetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTrustedEntitySet")
+	}
+
+	var r0 *guardduty.UpdateTrustedEntitySetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateTrustedEntitySetInput, ...func(*guardduty.Options)) (*guardduty.UpdateTrustedEntitySetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateTrustedEntitySetInput, ...func(*guardduty.Options)) *guardduty.UpdateTrustedEntitySetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.UpdateTrustedEntitySetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.UpdateTrustedEntitySetInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

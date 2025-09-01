@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRecipeVersions", func(t *testing.T) {
-        input := &databrew.ListRecipeVersionsInput{}
-        output := &databrew.ListRecipeVersionsOutput{}
-
-        mockClient.On("ListRecipeVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRecipeVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRecipes", func(t *testing.T) {
         input := &databrew.ListRecipesInput{}
         output := &databrew.ListRecipesOutput{}
@@ -379,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRecipes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRecipes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecipeVersions", func(t *testing.T) {
+        input := &databrew.ListRecipeVersionsInput{}
+        output := &databrew.ListRecipeVersionsOutput{}
+
+        mockClient.On("ListRecipeVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecipeVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

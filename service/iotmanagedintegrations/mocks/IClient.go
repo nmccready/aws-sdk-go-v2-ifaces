@@ -15,6 +15,117 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateAccountAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAccountAssociation(ctx context.Context, params *iotmanagedintegrations.CreateAccountAssociationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateAccountAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAccountAssociation")
+	}
+
+	var r0 *iotmanagedintegrations.CreateAccountAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.CreateAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateAccountAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.CreateAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.CreateAccountAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.CreateAccountAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.CreateAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCloudConnector(ctx context.Context, params *iotmanagedintegrations.CreateCloudConnectorInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCloudConnector")
+	}
+
+	var r0 *iotmanagedintegrations.CreateCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.CreateCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.CreateCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.CreateCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.CreateCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.CreateCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateConnectorDestination provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConnectorDestination(ctx context.Context, params *iotmanagedintegrations.CreateConnectorDestinationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateConnectorDestinationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConnectorDestination")
+	}
+
+	var r0 *iotmanagedintegrations.CreateConnectorDestinationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.CreateConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateConnectorDestinationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.CreateConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.CreateConnectorDestinationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.CreateConnectorDestinationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.CreateConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCredentialLocker provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCredentialLocker(ctx context.Context, params *iotmanagedintegrations.CreateCredentialLockerInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.CreateCredentialLockerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -311,6 +422,117 @@ func (_m *IClient) CreateProvisioningProfile(ctx context.Context, params *iotman
 	return r0, r1
 }
 
+// DeleteAccountAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAccountAssociation(ctx context.Context, params *iotmanagedintegrations.DeleteAccountAssociationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteAccountAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAccountAssociation")
+	}
+
+	var r0 *iotmanagedintegrations.DeleteAccountAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeleteAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteAccountAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeleteAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.DeleteAccountAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.DeleteAccountAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.DeleteAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCloudConnector(ctx context.Context, params *iotmanagedintegrations.DeleteCloudConnectorInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCloudConnector")
+	}
+
+	var r0 *iotmanagedintegrations.DeleteCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeleteCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeleteCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.DeleteCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.DeleteCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.DeleteCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConnectorDestination provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnectorDestination(ctx context.Context, params *iotmanagedintegrations.DeleteConnectorDestinationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteConnectorDestinationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnectorDestination")
+	}
+
+	var r0 *iotmanagedintegrations.DeleteConnectorDestinationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeleteConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteConnectorDestinationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeleteConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.DeleteConnectorDestinationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.DeleteConnectorDestinationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.DeleteConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCredentialLocker provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCredentialLocker(ctx context.Context, params *iotmanagedintegrations.DeleteCredentialLockerInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeleteCredentialLockerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +821,154 @@ func (_m *IClient) DeleteProvisioningProfile(ctx context.Context, params *iotman
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.DeleteProvisioningProfileInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeregisterAccountAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterAccountAssociation(ctx context.Context, params *iotmanagedintegrations.DeregisterAccountAssociationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeregisterAccountAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterAccountAssociation")
+	}
+
+	var r0 *iotmanagedintegrations.DeregisterAccountAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeregisterAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.DeregisterAccountAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.DeregisterAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.DeregisterAccountAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.DeregisterAccountAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.DeregisterAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAccountAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountAssociation(ctx context.Context, params *iotmanagedintegrations.GetAccountAssociationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.GetAccountAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountAssociation")
+	}
+
+	var r0 *iotmanagedintegrations.GetAccountAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.GetAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.GetAccountAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.GetAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.GetAccountAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.GetAccountAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.GetAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCloudConnector(ctx context.Context, params *iotmanagedintegrations.GetCloudConnectorInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.GetCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCloudConnector")
+	}
+
+	var r0 *iotmanagedintegrations.GetCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.GetCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.GetCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.GetCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.GetCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.GetCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.GetCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConnectorDestination provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnectorDestination(ctx context.Context, params *iotmanagedintegrations.GetConnectorDestinationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.GetConnectorDestinationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnectorDestination")
+	}
+
+	var r0 *iotmanagedintegrations.GetConnectorDestinationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.GetConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.GetConnectorDestinationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.GetConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.GetConnectorDestinationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.GetConnectorDestinationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.GetConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1273,6 +1643,117 @@ func (_m *IClient) GetSchemaVersion(ctx context.Context, params *iotmanagedinteg
 	return r0, r1
 }
 
+// ListAccountAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAccountAssociations(ctx context.Context, params *iotmanagedintegrations.ListAccountAssociationsInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListAccountAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAccountAssociations")
+	}
+
+	var r0 *iotmanagedintegrations.ListAccountAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListAccountAssociationsInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListAccountAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListAccountAssociationsInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListAccountAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListAccountAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListAccountAssociationsInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCloudConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCloudConnectors(ctx context.Context, params *iotmanagedintegrations.ListCloudConnectorsInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListCloudConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCloudConnectors")
+	}
+
+	var r0 *iotmanagedintegrations.ListCloudConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListCloudConnectorsInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListCloudConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListCloudConnectorsInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListCloudConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListCloudConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListCloudConnectorsInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConnectorDestinations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectorDestinations(ctx context.Context, params *iotmanagedintegrations.ListConnectorDestinationsInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListConnectorDestinationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectorDestinations")
+	}
+
+	var r0 *iotmanagedintegrations.ListConnectorDestinationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListConnectorDestinationsInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListConnectorDestinationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListConnectorDestinationsInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListConnectorDestinationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListConnectorDestinationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListConnectorDestinationsInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCredentialLockers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCredentialLockers(ctx context.Context, params *iotmanagedintegrations.ListCredentialLockersInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListCredentialLockersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1347,6 +1828,80 @@ func (_m *IClient) ListDestinations(ctx context.Context, params *iotmanagedinteg
 	return r0, r1
 }
 
+// ListDeviceDiscoveries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDeviceDiscoveries(ctx context.Context, params *iotmanagedintegrations.ListDeviceDiscoveriesInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListDeviceDiscoveriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDeviceDiscoveries")
+	}
+
+	var r0 *iotmanagedintegrations.ListDeviceDiscoveriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListDeviceDiscoveriesInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListDeviceDiscoveriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListDeviceDiscoveriesInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListDeviceDiscoveriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListDeviceDiscoveriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListDeviceDiscoveriesInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDiscoveredDevices provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDiscoveredDevices(ctx context.Context, params *iotmanagedintegrations.ListDiscoveredDevicesInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListDiscoveredDevicesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDiscoveredDevices")
+	}
+
+	var r0 *iotmanagedintegrations.ListDiscoveredDevicesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListDiscoveredDevicesInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListDiscoveredDevicesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListDiscoveredDevicesInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListDiscoveredDevicesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListDiscoveredDevicesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListDiscoveredDevicesInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEventLogConfigurations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEventLogConfigurations(ctx context.Context, params *iotmanagedintegrations.ListEventLogConfigurationsInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListEventLogConfigurationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1376,6 +1931,43 @@ func (_m *IClient) ListEventLogConfigurations(ctx context.Context, params *iotma
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListEventLogConfigurationsInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListManagedThingAccountAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListManagedThingAccountAssociations(ctx context.Context, params *iotmanagedintegrations.ListManagedThingAccountAssociationsInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListManagedThingAccountAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListManagedThingAccountAssociations")
+	}
+
+	var r0 *iotmanagedintegrations.ListManagedThingAccountAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListManagedThingAccountAssociationsInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListManagedThingAccountAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListManagedThingAccountAssociationsInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListManagedThingAccountAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListManagedThingAccountAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListManagedThingAccountAssociationsInput, ...func(*iotmanagedintegrations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1680,6 +2272,43 @@ func (_m *IClient) ListSchemaVersions(ctx context.Context, params *iotmanagedint
 	return r0, r1
 }
 
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *iotmanagedintegrations.ListTagsForResourceInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *iotmanagedintegrations.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListTagsForResourceInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.ListTagsForResourceInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.ListTagsForResourceInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() iotmanagedintegrations.Options {
 	ret := _m.Called()
@@ -1809,6 +2438,43 @@ func (_m *IClient) PutRuntimeLogConfiguration(ctx context.Context, params *iotma
 	return r0, r1
 }
 
+// RegisterAccountAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterAccountAssociation(ctx context.Context, params *iotmanagedintegrations.RegisterAccountAssociationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.RegisterAccountAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterAccountAssociation")
+	}
+
+	var r0 *iotmanagedintegrations.RegisterAccountAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.RegisterAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.RegisterAccountAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.RegisterAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.RegisterAccountAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.RegisterAccountAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.RegisterAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RegisterCustomEndpoint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RegisterCustomEndpoint(ctx context.Context, params *iotmanagedintegrations.RegisterCustomEndpointInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.RegisterCustomEndpointOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1883,6 +2549,43 @@ func (_m *IClient) ResetRuntimeLogConfiguration(ctx context.Context, params *iot
 	return r0, r1
 }
 
+// SendConnectorEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendConnectorEvent(ctx context.Context, params *iotmanagedintegrations.SendConnectorEventInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.SendConnectorEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendConnectorEvent")
+	}
+
+	var r0 *iotmanagedintegrations.SendConnectorEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.SendConnectorEventInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.SendConnectorEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.SendConnectorEventInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.SendConnectorEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.SendConnectorEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.SendConnectorEventInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SendManagedThingCommand provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SendManagedThingCommand(ctx context.Context, params *iotmanagedintegrations.SendManagedThingCommandInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.SendManagedThingCommandOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1920,6 +2623,43 @@ func (_m *IClient) SendManagedThingCommand(ctx context.Context, params *iotmanag
 	return r0, r1
 }
 
+// StartAccountAssociationRefresh provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAccountAssociationRefresh(ctx context.Context, params *iotmanagedintegrations.StartAccountAssociationRefreshInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.StartAccountAssociationRefreshOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAccountAssociationRefresh")
+	}
+
+	var r0 *iotmanagedintegrations.StartAccountAssociationRefreshOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.StartAccountAssociationRefreshInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.StartAccountAssociationRefreshOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.StartAccountAssociationRefreshInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.StartAccountAssociationRefreshOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.StartAccountAssociationRefreshOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.StartAccountAssociationRefreshInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartDeviceDiscovery provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartDeviceDiscovery(ctx context.Context, params *iotmanagedintegrations.StartDeviceDiscoveryInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.StartDeviceDiscoveryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1949,6 +2689,191 @@ func (_m *IClient) StartDeviceDiscovery(ctx context.Context, params *iotmanagedi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.StartDeviceDiscoveryInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *iotmanagedintegrations.TagResourceInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *iotmanagedintegrations.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.TagResourceInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.TagResourceInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.TagResourceInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *iotmanagedintegrations.UntagResourceInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *iotmanagedintegrations.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UntagResourceInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UntagResourceInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.UntagResourceInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAccountAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAccountAssociation(ctx context.Context, params *iotmanagedintegrations.UpdateAccountAssociationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UpdateAccountAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAccountAssociation")
+	}
+
+	var r0 *iotmanagedintegrations.UpdateAccountAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UpdateAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UpdateAccountAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UpdateAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.UpdateAccountAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.UpdateAccountAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.UpdateAccountAssociationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCloudConnector(ctx context.Context, params *iotmanagedintegrations.UpdateCloudConnectorInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UpdateCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCloudConnector")
+	}
+
+	var r0 *iotmanagedintegrations.UpdateCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UpdateCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UpdateCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UpdateCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.UpdateCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.UpdateCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.UpdateCloudConnectorInput, ...func(*iotmanagedintegrations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnectorDestination provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnectorDestination(ctx context.Context, params *iotmanagedintegrations.UpdateConnectorDestinationInput, optFns ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UpdateConnectorDestinationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnectorDestination")
+	}
+
+	var r0 *iotmanagedintegrations.UpdateConnectorDestinationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UpdateConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) (*iotmanagedintegrations.UpdateConnectorDestinationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotmanagedintegrations.UpdateConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) *iotmanagedintegrations.UpdateConnectorDestinationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotmanagedintegrations.UpdateConnectorDestinationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotmanagedintegrations.UpdateConnectorDestinationInput, ...func(*iotmanagedintegrations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

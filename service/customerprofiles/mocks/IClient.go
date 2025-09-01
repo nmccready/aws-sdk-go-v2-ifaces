@@ -200,6 +200,43 @@ func (_m *IClient) CreateDomain(ctx context.Context, params *customerprofiles.Cr
 	return r0, r1
 }
 
+// CreateDomainLayout provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDomainLayout(ctx context.Context, params *customerprofiles.CreateDomainLayoutInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateDomainLayoutOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDomainLayout")
+	}
+
+	var r0 *customerprofiles.CreateDomainLayoutOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateDomainLayoutInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateDomainLayoutOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateDomainLayoutInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateDomainLayoutOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateDomainLayoutOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateDomainLayoutInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEventStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEventStream(ctx context.Context, params *customerprofiles.CreateEventStreamInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateEventStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -459,6 +496,43 @@ func (_m *IClient) CreateSegmentSnapshot(ctx context.Context, params *customerpr
 	return r0, r1
 }
 
+// CreateUploadJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateUploadJob(ctx context.Context, params *customerprofiles.CreateUploadJobInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateUploadJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateUploadJob")
+	}
+
+	var r0 *customerprofiles.CreateUploadJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateUploadJobInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateUploadJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateUploadJobInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateUploadJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateUploadJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateUploadJobInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCalculatedAttributeDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCalculatedAttributeDefinition(ctx context.Context, params *customerprofiles.DeleteCalculatedAttributeDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteCalculatedAttributeDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +599,43 @@ func (_m *IClient) DeleteDomain(ctx context.Context, params *customerprofiles.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteDomainInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDomainLayout provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDomainLayout(ctx context.Context, params *customerprofiles.DeleteDomainLayoutInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteDomainLayoutOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDomainLayout")
+	}
+
+	var r0 *customerprofiles.DeleteDomainLayoutOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteDomainLayoutInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteDomainLayoutOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteDomainLayoutInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteDomainLayoutOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteDomainLayoutOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteDomainLayoutInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1051,6 +1162,43 @@ func (_m *IClient) GetDomain(ctx context.Context, params *customerprofiles.GetDo
 	return r0, r1
 }
 
+// GetDomainLayout provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDomainLayout(ctx context.Context, params *customerprofiles.GetDomainLayoutInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetDomainLayoutOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDomainLayout")
+	}
+
+	var r0 *customerprofiles.GetDomainLayoutOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetDomainLayoutInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetDomainLayoutOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetDomainLayoutInput, ...func(*customerprofiles.Options)) *customerprofiles.GetDomainLayoutOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetDomainLayoutOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetDomainLayoutInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEventStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEventStream(ctx context.Context, params *customerprofiles.GetEventStreamInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetEventStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1495,6 +1643,80 @@ func (_m *IClient) GetSimilarProfiles(ctx context.Context, params *customerprofi
 	return r0, r1
 }
 
+// GetUploadJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUploadJob(ctx context.Context, params *customerprofiles.GetUploadJobInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetUploadJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUploadJob")
+	}
+
+	var r0 *customerprofiles.GetUploadJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetUploadJobInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetUploadJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetUploadJobInput, ...func(*customerprofiles.Options)) *customerprofiles.GetUploadJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetUploadJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetUploadJobInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetUploadJobPath provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUploadJobPath(ctx context.Context, params *customerprofiles.GetUploadJobPathInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetUploadJobPathOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUploadJobPath")
+	}
+
+	var r0 *customerprofiles.GetUploadJobPathOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetUploadJobPathInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetUploadJobPathOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetUploadJobPathInput, ...func(*customerprofiles.Options)) *customerprofiles.GetUploadJobPathOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetUploadJobPathOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetUploadJobPathInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetWorkflow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetWorkflow(ctx context.Context, params *customerprofiles.GetWorkflowInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetWorkflowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1672,6 +1894,43 @@ func (_m *IClient) ListCalculatedAttributesForProfile(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListCalculatedAttributesForProfileInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDomainLayouts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDomainLayouts(ctx context.Context, params *customerprofiles.ListDomainLayoutsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListDomainLayoutsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDomainLayouts")
+	}
+
+	var r0 *customerprofiles.ListDomainLayoutsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListDomainLayoutsInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListDomainLayoutsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListDomainLayoutsInput, ...func(*customerprofiles.Options)) *customerprofiles.ListDomainLayoutsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListDomainLayoutsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListDomainLayoutsInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2161,6 +2420,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *customerprof
 	return r0, r1
 }
 
+// ListUploadJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUploadJobs(ctx context.Context, params *customerprofiles.ListUploadJobsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListUploadJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUploadJobs")
+	}
+
+	var r0 *customerprofiles.ListUploadJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListUploadJobsInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListUploadJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListUploadJobsInput, ...func(*customerprofiles.Options)) *customerprofiles.ListUploadJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListUploadJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListUploadJobsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListWorkflows provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListWorkflows(ctx context.Context, params *customerprofiles.ListWorkflowsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListWorkflowsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2401,6 +2697,80 @@ func (_m *IClient) SearchProfiles(ctx context.Context, params *customerprofiles.
 	return r0, r1
 }
 
+// StartUploadJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartUploadJob(ctx context.Context, params *customerprofiles.StartUploadJobInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.StartUploadJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartUploadJob")
+	}
+
+	var r0 *customerprofiles.StartUploadJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StartUploadJobInput, ...func(*customerprofiles.Options)) (*customerprofiles.StartUploadJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StartUploadJobInput, ...func(*customerprofiles.Options)) *customerprofiles.StartUploadJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.StartUploadJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.StartUploadJobInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopUploadJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopUploadJob(ctx context.Context, params *customerprofiles.StopUploadJobInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.StopUploadJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopUploadJob")
+	}
+
+	var r0 *customerprofiles.StopUploadJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StopUploadJobInput, ...func(*customerprofiles.Options)) (*customerprofiles.StopUploadJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StopUploadJobInput, ...func(*customerprofiles.Options)) *customerprofiles.StopUploadJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.StopUploadJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.StopUploadJobInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *customerprofiles.TagResourceInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2541,6 +2911,43 @@ func (_m *IClient) UpdateDomain(ctx context.Context, params *customerprofiles.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.UpdateDomainInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDomainLayout provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDomainLayout(ctx context.Context, params *customerprofiles.UpdateDomainLayoutInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.UpdateDomainLayoutOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDomainLayout")
+	}
+
+	var r0 *customerprofiles.UpdateDomainLayoutOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.UpdateDomainLayoutInput, ...func(*customerprofiles.Options)) (*customerprofiles.UpdateDomainLayoutOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.UpdateDomainLayoutInput, ...func(*customerprofiles.Options)) *customerprofiles.UpdateDomainLayoutOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.UpdateDomainLayoutOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.UpdateDomainLayoutInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

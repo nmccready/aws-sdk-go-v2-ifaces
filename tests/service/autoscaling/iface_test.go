@@ -47,19 +47,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestAttachLoadBalancerTargetGroups", func(t *testing.T) {
-        input := &autoscaling.AttachLoadBalancerTargetGroupsInput{}
-        output := &autoscaling.AttachLoadBalancerTargetGroupsOutput{}
-
-        mockClient.On("AttachLoadBalancerTargetGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.AttachLoadBalancerTargetGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestAttachLoadBalancers", func(t *testing.T) {
         input := &autoscaling.AttachLoadBalancersInput{}
         output := &autoscaling.AttachLoadBalancersOutput{}
@@ -67,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("AttachLoadBalancers", ctx, input).Return(output, nil)
 
         result, err := mockClient.AttachLoadBalancers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAttachLoadBalancerTargetGroups", func(t *testing.T) {
+        input := &autoscaling.AttachLoadBalancerTargetGroupsInput{}
+        output := &autoscaling.AttachLoadBalancerTargetGroupsOutput{}
+
+        mockClient.On("AttachLoadBalancerTargetGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AttachLoadBalancerTargetGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,19 +372,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeLifecycleHookTypes", func(t *testing.T) {
-        input := &autoscaling.DescribeLifecycleHookTypesInput{}
-        output := &autoscaling.DescribeLifecycleHookTypesOutput{}
-
-        mockClient.On("DescribeLifecycleHookTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeLifecycleHookTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeLifecycleHooks", func(t *testing.T) {
         input := &autoscaling.DescribeLifecycleHooksInput{}
         output := &autoscaling.DescribeLifecycleHooksOutput{}
@@ -398,13 +385,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeLoadBalancerTargetGroups", func(t *testing.T) {
-        input := &autoscaling.DescribeLoadBalancerTargetGroupsInput{}
-        output := &autoscaling.DescribeLoadBalancerTargetGroupsOutput{}
+    t.Run("TestDescribeLifecycleHookTypes", func(t *testing.T) {
+        input := &autoscaling.DescribeLifecycleHookTypesInput{}
+        output := &autoscaling.DescribeLifecycleHookTypesOutput{}
 
-        mockClient.On("DescribeLoadBalancerTargetGroups", ctx, input).Return(output, nil)
+        mockClient.On("DescribeLifecycleHookTypes", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeLoadBalancerTargetGroups(ctx, input)
+        result, err := mockClient.DescribeLifecycleHookTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeLoadBalancers", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeLoadBalancers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeLoadBalancerTargetGroups", func(t *testing.T) {
+        input := &autoscaling.DescribeLoadBalancerTargetGroupsInput{}
+        output := &autoscaling.DescribeLoadBalancerTargetGroupsOutput{}
+
+        mockClient.On("DescribeLoadBalancerTargetGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeLoadBalancerTargetGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDetachLoadBalancerTargetGroups", func(t *testing.T) {
-        input := &autoscaling.DetachLoadBalancerTargetGroupsInput{}
-        output := &autoscaling.DetachLoadBalancerTargetGroupsOutput{}
-
-        mockClient.On("DetachLoadBalancerTargetGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DetachLoadBalancerTargetGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDetachLoadBalancers", func(t *testing.T) {
         input := &autoscaling.DetachLoadBalancersInput{}
         output := &autoscaling.DetachLoadBalancersOutput{}
@@ -587,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DetachLoadBalancers", ctx, input).Return(output, nil)
 
         result, err := mockClient.DetachLoadBalancers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDetachLoadBalancerTargetGroups", func(t *testing.T) {
+        input := &autoscaling.DetachLoadBalancerTargetGroupsInput{}
+        output := &autoscaling.DetachLoadBalancerTargetGroupsOutput{}
+
+        mockClient.On("DetachLoadBalancerTargetGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DetachLoadBalancerTargetGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

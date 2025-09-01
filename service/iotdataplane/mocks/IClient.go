@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// DeleteConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnection(ctx context.Context, params *iotdataplane.DeleteConnectionInput, optFns ...func(*iotdataplane.Options)) (*iotdataplane.DeleteConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnection")
+	}
+
+	var r0 *iotdataplane.DeleteConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.DeleteConnectionInput, ...func(*iotdataplane.Options)) (*iotdataplane.DeleteConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.DeleteConnectionInput, ...func(*iotdataplane.Options)) *iotdataplane.DeleteConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotdataplane.DeleteConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotdataplane.DeleteConnectionInput, ...func(*iotdataplane.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteThingShadow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteThingShadow(ctx context.Context, params *iotdataplane.DeleteThingShadowInput, optFns ...func(*iotdataplane.Options)) (*iotdataplane.DeleteThingShadowOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -22,6 +22,7 @@ type IClient interface {
  GetConnection(ctx context.Context, params *GetConnectionInput, optFns ...func(*Options)) (*GetConnectionOutput, error) 
  GetOrder(ctx context.Context, params *GetOrderInput, optFns ...func(*Options)) (*GetOrderOutput, error) 
  GetOutpost(ctx context.Context, params *GetOutpostInput, optFns ...func(*Options)) (*GetOutpostOutput, error) 
+ GetOutpostBillingInformation(ctx context.Context, params *GetOutpostBillingInformationInput, optFns ...func(*Options)) (*GetOutpostBillingInformationOutput, error) 
  GetOutpostInstanceTypes(ctx context.Context, params *GetOutpostInstanceTypesInput, optFns ...func(*Options)) (*GetOutpostInstanceTypesOutput, error) 
  GetOutpostSupportedInstanceTypes(ctx context.Context, params *GetOutpostSupportedInstanceTypesInput, optFns ...func(*Options)) (*GetOutpostSupportedInstanceTypesOutput, error) 
  GetSite(ctx context.Context, params *GetSiteInput, optFns ...func(*Options)) (*GetSiteOutput, error) 

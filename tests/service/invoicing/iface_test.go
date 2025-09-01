@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInvoiceSummaries", func(t *testing.T) {
+        input := &invoicing.ListInvoiceSummariesInput{}
+        output := &invoicing.ListInvoiceSummariesOutput{}
+
+        mockClient.On("ListInvoiceSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvoiceSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListInvoiceUnits", func(t *testing.T) {
         input := &invoicing.ListInvoiceUnitsInput{}
         output := &invoicing.ListInvoiceUnitsOutput{}

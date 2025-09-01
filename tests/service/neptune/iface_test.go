@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDBClusters", func(t *testing.T) {
+        input := &neptune.DescribeDBClustersInput{}
+        output := &neptune.DescribeDBClustersOutput{}
+
+        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDBClusterSnapshotAttributes", func(t *testing.T) {
         input := &neptune.DescribeDBClusterSnapshotAttributesInput{}
         output := &neptune.DescribeDBClusterSnapshotAttributesOutput{}
@@ -418,19 +431,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDBClusterSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDBClusterSnapshots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeDBClusters", func(t *testing.T) {
-        input := &neptune.DescribeDBClustersInput{}
-        output := &neptune.DescribeDBClustersOutput{}
-
-        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDBClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
-        input := &neptune.DescribeEventSubscriptionsInput{}
-        output := &neptune.DescribeEventSubscriptionsOutput{}
-
-        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &neptune.DescribeEventsInput{}
         output := &neptune.DescribeEventsOutput{}
@@ -561,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
+        input := &neptune.DescribeEventSubscriptionsInput{}
+        output := &neptune.DescribeEventSubscriptionsOutput{}
+
+        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -14,6 +14,7 @@ type IClient interface {
  CreateInvoiceUnit(ctx context.Context, params *CreateInvoiceUnitInput, optFns ...func(*Options)) (*CreateInvoiceUnitOutput, error) 
  DeleteInvoiceUnit(ctx context.Context, params *DeleteInvoiceUnitInput, optFns ...func(*Options)) (*DeleteInvoiceUnitOutput, error) 
  GetInvoiceUnit(ctx context.Context, params *GetInvoiceUnitInput, optFns ...func(*Options)) (*GetInvoiceUnitOutput, error) 
+ ListInvoiceSummaries(ctx context.Context, params *ListInvoiceSummariesInput, optFns ...func(*Options)) (*ListInvoiceSummariesOutput, error) 
  ListInvoiceUnits(ctx context.Context, params *ListInvoiceUnitsInput, optFns ...func(*Options)) (*ListInvoiceUnitsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 

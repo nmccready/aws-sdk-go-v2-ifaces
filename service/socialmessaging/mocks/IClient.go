@@ -51,6 +51,117 @@ func (_m *IClient) AssociateWhatsAppBusinessAccount(ctx context.Context, params 
 	return r0, r1
 }
 
+// CreateWhatsAppMessageTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWhatsAppMessageTemplate(ctx context.Context, params *socialmessaging.CreateWhatsAppMessageTemplateInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.CreateWhatsAppMessageTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWhatsAppMessageTemplate")
+	}
+
+	var r0 *socialmessaging.CreateWhatsAppMessageTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) (*socialmessaging.CreateWhatsAppMessageTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) *socialmessaging.CreateWhatsAppMessageTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.CreateWhatsAppMessageTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateWhatsAppMessageTemplateFromLibrary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWhatsAppMessageTemplateFromLibrary(ctx context.Context, params *socialmessaging.CreateWhatsAppMessageTemplateFromLibraryInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.CreateWhatsAppMessageTemplateFromLibraryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWhatsAppMessageTemplateFromLibrary")
+	}
+
+	var r0 *socialmessaging.CreateWhatsAppMessageTemplateFromLibraryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateFromLibraryInput, ...func(*socialmessaging.Options)) (*socialmessaging.CreateWhatsAppMessageTemplateFromLibraryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateFromLibraryInput, ...func(*socialmessaging.Options)) *socialmessaging.CreateWhatsAppMessageTemplateFromLibraryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.CreateWhatsAppMessageTemplateFromLibraryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateFromLibraryInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateWhatsAppMessageTemplateMedia provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWhatsAppMessageTemplateMedia(ctx context.Context, params *socialmessaging.CreateWhatsAppMessageTemplateMediaInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.CreateWhatsAppMessageTemplateMediaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWhatsAppMessageTemplateMedia")
+	}
+
+	var r0 *socialmessaging.CreateWhatsAppMessageTemplateMediaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateMediaInput, ...func(*socialmessaging.Options)) (*socialmessaging.CreateWhatsAppMessageTemplateMediaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateMediaInput, ...func(*socialmessaging.Options)) *socialmessaging.CreateWhatsAppMessageTemplateMediaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.CreateWhatsAppMessageTemplateMediaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.CreateWhatsAppMessageTemplateMediaInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteWhatsAppMessageMedia provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteWhatsAppMessageMedia(ctx context.Context, params *socialmessaging.DeleteWhatsAppMessageMediaInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.DeleteWhatsAppMessageMediaOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -80,6 +191,43 @@ func (_m *IClient) DeleteWhatsAppMessageMedia(ctx context.Context, params *socia
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.DeleteWhatsAppMessageMediaInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWhatsAppMessageTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWhatsAppMessageTemplate(ctx context.Context, params *socialmessaging.DeleteWhatsAppMessageTemplateInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.DeleteWhatsAppMessageTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWhatsAppMessageTemplate")
+	}
+
+	var r0 *socialmessaging.DeleteWhatsAppMessageTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.DeleteWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) (*socialmessaging.DeleteWhatsAppMessageTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.DeleteWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) *socialmessaging.DeleteWhatsAppMessageTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.DeleteWhatsAppMessageTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.DeleteWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -236,6 +384,43 @@ func (_m *IClient) GetWhatsAppMessageMedia(ctx context.Context, params *socialme
 	return r0, r1
 }
 
+// GetWhatsAppMessageTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetWhatsAppMessageTemplate(ctx context.Context, params *socialmessaging.GetWhatsAppMessageTemplateInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppMessageTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetWhatsAppMessageTemplate")
+	}
+
+	var r0 *socialmessaging.GetWhatsAppMessageTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.GetWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppMessageTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.GetWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) *socialmessaging.GetWhatsAppMessageTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.GetWhatsAppMessageTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.GetWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListLinkedWhatsAppBusinessAccounts provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListLinkedWhatsAppBusinessAccounts(ctx context.Context, params *socialmessaging.ListLinkedWhatsAppBusinessAccountsInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.ListLinkedWhatsAppBusinessAccountsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -302,6 +487,80 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *socialmessag
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.ListTagsForResourceInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWhatsAppMessageTemplates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWhatsAppMessageTemplates(ctx context.Context, params *socialmessaging.ListWhatsAppMessageTemplatesInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.ListWhatsAppMessageTemplatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWhatsAppMessageTemplates")
+	}
+
+	var r0 *socialmessaging.ListWhatsAppMessageTemplatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.ListWhatsAppMessageTemplatesInput, ...func(*socialmessaging.Options)) (*socialmessaging.ListWhatsAppMessageTemplatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.ListWhatsAppMessageTemplatesInput, ...func(*socialmessaging.Options)) *socialmessaging.ListWhatsAppMessageTemplatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.ListWhatsAppMessageTemplatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.ListWhatsAppMessageTemplatesInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWhatsAppTemplateLibrary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWhatsAppTemplateLibrary(ctx context.Context, params *socialmessaging.ListWhatsAppTemplateLibraryInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.ListWhatsAppTemplateLibraryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWhatsAppTemplateLibrary")
+	}
+
+	var r0 *socialmessaging.ListWhatsAppTemplateLibraryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.ListWhatsAppTemplateLibraryInput, ...func(*socialmessaging.Options)) (*socialmessaging.ListWhatsAppTemplateLibraryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.ListWhatsAppTemplateLibraryInput, ...func(*socialmessaging.Options)) *socialmessaging.ListWhatsAppTemplateLibraryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.ListWhatsAppTemplateLibraryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.ListWhatsAppTemplateLibraryInput, ...func(*socialmessaging.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -505,6 +764,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *socialmessaging.Un
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.UntagResourceInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWhatsAppMessageTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWhatsAppMessageTemplate(ctx context.Context, params *socialmessaging.UpdateWhatsAppMessageTemplateInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.UpdateWhatsAppMessageTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWhatsAppMessageTemplate")
+	}
+
+	var r0 *socialmessaging.UpdateWhatsAppMessageTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.UpdateWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) (*socialmessaging.UpdateWhatsAppMessageTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.UpdateWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) *socialmessaging.UpdateWhatsAppMessageTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.UpdateWhatsAppMessageTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.UpdateWhatsAppMessageTemplateInput, ...func(*socialmessaging.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

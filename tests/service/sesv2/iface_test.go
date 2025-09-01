@@ -229,6 +229,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTenant", func(t *testing.T) {
+        input := &sesv2.CreateTenantInput{}
+        output := &sesv2.CreateTenantOutput{}
+
+        mockClient.On("CreateTenant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTenant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTenantResourceAssociation", func(t *testing.T) {
+        input := &sesv2.CreateTenantResourceAssociationInput{}
+        output := &sesv2.CreateTenantResourceAssociationOutput{}
+
+        mockClient.On("CreateTenantResourceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTenantResourceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteConfigurationSet", func(t *testing.T) {
         input := &sesv2.DeleteConfigurationSetInput{}
         output := &sesv2.DeleteConfigurationSetOutput{}
@@ -366,6 +392,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSuppressedDestination", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSuppressedDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTenant", func(t *testing.T) {
+        input := &sesv2.DeleteTenantInput{}
+        output := &sesv2.DeleteTenantOutput{}
+
+        mockClient.On("DeleteTenant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTenant(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTenantResourceAssociation", func(t *testing.T) {
+        input := &sesv2.DeleteTenantResourceAssociationInput{}
+        output := &sesv2.DeleteTenantResourceAssociationOutput{}
+
+        mockClient.On("DeleteTenantResourceAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTenantResourceAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -645,6 +697,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetReputationEntity", func(t *testing.T) {
+        input := &sesv2.GetReputationEntityInput{}
+        output := &sesv2.GetReputationEntityOutput{}
+
+        mockClient.On("GetReputationEntity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetReputationEntity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSuppressedDestination", func(t *testing.T) {
         input := &sesv2.GetSuppressedDestinationInput{}
         output := &sesv2.GetSuppressedDestinationOutput{}
@@ -652,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSuppressedDestination", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSuppressedDestination(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTenant", func(t *testing.T) {
+        input := &sesv2.GetTenantInput{}
+        output := &sesv2.GetTenantOutput{}
+
+        mockClient.On("GetTenant", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTenant(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,6 +905,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListReputationEntities", func(t *testing.T) {
+        input := &sesv2.ListReputationEntitiesInput{}
+        output := &sesv2.ListReputationEntitiesOutput{}
+
+        mockClient.On("ListReputationEntities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReputationEntities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourceTenants", func(t *testing.T) {
+        input := &sesv2.ListResourceTenantsInput{}
+        output := &sesv2.ListResourceTenantsOutput{}
+
+        mockClient.On("ListResourceTenants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceTenants(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListSuppressedDestinations", func(t *testing.T) {
         input := &sesv2.ListSuppressedDestinationsInput{}
         output := &sesv2.ListSuppressedDestinationsOutput{}
@@ -847,6 +951,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTenantResources", func(t *testing.T) {
+        input := &sesv2.ListTenantResourcesInput{}
+        output := &sesv2.ListTenantResourcesOutput{}
+
+        mockClient.On("ListTenantResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTenantResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTenants", func(t *testing.T) {
+        input := &sesv2.ListTenantsInput{}
+        output := &sesv2.ListTenantsOutput{}
+
+        mockClient.On("ListTenants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTenants(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1289,6 +1419,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateEmailTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateEmailTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateReputationEntityCustomerManagedStatus", func(t *testing.T) {
+        input := &sesv2.UpdateReputationEntityCustomerManagedStatusInput{}
+        output := &sesv2.UpdateReputationEntityCustomerManagedStatusOutput{}
+
+        mockClient.On("UpdateReputationEntityCustomerManagedStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateReputationEntityCustomerManagedStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateReputationEntityPolicy", func(t *testing.T) {
+        input := &sesv2.UpdateReputationEntityPolicyInput{}
+        output := &sesv2.UpdateReputationEntityPolicyOutput{}
+
+        mockClient.On("UpdateReputationEntityPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateReputationEntityPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

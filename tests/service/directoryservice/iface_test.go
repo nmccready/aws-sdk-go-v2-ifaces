@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateHybridAD", func(t *testing.T) {
+        input := &directoryservice.CreateHybridADInput{}
+        output := &directoryservice.CreateHybridADOutput{}
+
+        mockClient.On("CreateHybridAD", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHybridAD(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLogSubscription", func(t *testing.T) {
         input := &directoryservice.CreateLogSubscriptionInput{}
         output := &directoryservice.CreateLogSubscriptionOutput{}
@@ -210,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTrust", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTrust(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteADAssessment", func(t *testing.T) {
+        input := &directoryservice.DeleteADAssessmentInput{}
+        output := &directoryservice.DeleteADAssessmentOutput{}
+
+        mockClient.On("DeleteADAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteADAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +333,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeADAssessment", func(t *testing.T) {
+        input := &directoryservice.DescribeADAssessmentInput{}
+        output := &directoryservice.DescribeADAssessmentOutput{}
+
+        mockClient.On("DescribeADAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeADAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCAEnrollmentPolicy", func(t *testing.T) {
+        input := &directoryservice.DescribeCAEnrollmentPolicyInput{}
+        output := &directoryservice.DescribeCAEnrollmentPolicyOutput{}
+
+        mockClient.On("DescribeCAEnrollmentPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCAEnrollmentPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCertificate", func(t *testing.T) {
         input := &directoryservice.DescribeCertificateInput{}
         output := &directoryservice.DescribeCertificateOutput{}
@@ -392,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEventTopics", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEventTopics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeHybridADUpdate", func(t *testing.T) {
+        input := &directoryservice.DescribeHybridADUpdateInput{}
+        output := &directoryservice.DescribeHybridADUpdateOutput{}
+
+        mockClient.On("DescribeHybridADUpdate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeHybridADUpdate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableCAEnrollmentPolicy", func(t *testing.T) {
+        input := &directoryservice.DisableCAEnrollmentPolicyInput{}
+        output := &directoryservice.DisableCAEnrollmentPolicyOutput{}
+
+        mockClient.On("DisableCAEnrollmentPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableCAEnrollmentPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableClientAuthentication", func(t *testing.T) {
         input := &directoryservice.DisableClientAuthenticationInput{}
         output := &directoryservice.DisableClientAuthenticationOutput{}
@@ -548,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisableSso", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisableSso(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableCAEnrollmentPolicy", func(t *testing.T) {
+        input := &directoryservice.EnableCAEnrollmentPolicyInput{}
+        output := &directoryservice.EnableCAEnrollmentPolicyOutput{}
+
+        mockClient.On("EnableCAEnrollmentPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableCAEnrollmentPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -639,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSnapshotLimits", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSnapshotLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListADAssessments", func(t *testing.T) {
+        input := &directoryservice.ListADAssessmentsInput{}
+        output := &directoryservice.ListADAssessmentsOutput{}
+
+        mockClient.On("ListADAssessments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListADAssessments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,6 +931,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartADAssessment", func(t *testing.T) {
+        input := &directoryservice.StartADAssessmentInput{}
+        output := &directoryservice.StartADAssessmentOutput{}
+
+        mockClient.On("StartADAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartADAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartSchemaExtension", func(t *testing.T) {
         input := &directoryservice.StartSchemaExtensionInput{}
         output := &directoryservice.StartSchemaExtensionOutput{}
@@ -873,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDirectorySetup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDirectorySetup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateHybridAD", func(t *testing.T) {
+        input := &directoryservice.UpdateHybridADInput{}
+        output := &directoryservice.UpdateHybridADOutput{}
+
+        mockClient.On("UpdateHybridAD", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHybridAD(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

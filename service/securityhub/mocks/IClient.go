@@ -458,6 +458,43 @@ func (_m *IClient) BatchUpdateFindings(ctx context.Context, params *securityhub.
 	return r0, r1
 }
 
+// BatchUpdateFindingsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateFindingsV2(ctx context.Context, params *securityhub.BatchUpdateFindingsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.BatchUpdateFindingsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateFindingsV2")
+	}
+
+	var r0 *securityhub.BatchUpdateFindingsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.BatchUpdateFindingsV2Input, ...func(*securityhub.Options)) (*securityhub.BatchUpdateFindingsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.BatchUpdateFindingsV2Input, ...func(*securityhub.Options)) *securityhub.BatchUpdateFindingsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.BatchUpdateFindingsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.BatchUpdateFindingsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchUpdateStandardsControlAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchUpdateStandardsControlAssociations(ctx context.Context, params *securityhub.BatchUpdateStandardsControlAssociationsInput, optFns ...func(*securityhub.Options)) (*securityhub.BatchUpdateStandardsControlAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -487,6 +524,43 @@ func (_m *IClient) BatchUpdateStandardsControlAssociations(ctx context.Context, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.BatchUpdateStandardsControlAssociationsInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ConnectorRegistrationsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ConnectorRegistrationsV2(ctx context.Context, params *securityhub.ConnectorRegistrationsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ConnectorRegistrationsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ConnectorRegistrationsV2")
+	}
+
+	var r0 *securityhub.ConnectorRegistrationsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ConnectorRegistrationsV2Input, ...func(*securityhub.Options)) (*securityhub.ConnectorRegistrationsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ConnectorRegistrationsV2Input, ...func(*securityhub.Options)) *securityhub.ConnectorRegistrationsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ConnectorRegistrationsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ConnectorRegistrationsV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -532,6 +606,43 @@ func (_m *IClient) CreateActionTarget(ctx context.Context, params *securityhub.C
 	return r0, r1
 }
 
+// CreateAggregatorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAggregatorV2(ctx context.Context, params *securityhub.CreateAggregatorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.CreateAggregatorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAggregatorV2")
+	}
+
+	var r0 *securityhub.CreateAggregatorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateAggregatorV2Input, ...func(*securityhub.Options)) (*securityhub.CreateAggregatorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateAggregatorV2Input, ...func(*securityhub.Options)) *securityhub.CreateAggregatorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.CreateAggregatorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CreateAggregatorV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAutomationRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAutomationRule(ctx context.Context, params *securityhub.CreateAutomationRuleInput, optFns ...func(*securityhub.Options)) (*securityhub.CreateAutomationRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -569,6 +680,43 @@ func (_m *IClient) CreateAutomationRule(ctx context.Context, params *securityhub
 	return r0, r1
 }
 
+// CreateAutomationRuleV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutomationRuleV2(ctx context.Context, params *securityhub.CreateAutomationRuleV2Input, optFns ...func(*securityhub.Options)) (*securityhub.CreateAutomationRuleV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutomationRuleV2")
+	}
+
+	var r0 *securityhub.CreateAutomationRuleV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateAutomationRuleV2Input, ...func(*securityhub.Options)) (*securityhub.CreateAutomationRuleV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateAutomationRuleV2Input, ...func(*securityhub.Options)) *securityhub.CreateAutomationRuleV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.CreateAutomationRuleV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CreateAutomationRuleV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateConfigurationPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateConfigurationPolicy(ctx context.Context, params *securityhub.CreateConfigurationPolicyInput, optFns ...func(*securityhub.Options)) (*securityhub.CreateConfigurationPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -598,6 +746,43 @@ func (_m *IClient) CreateConfigurationPolicy(ctx context.Context, params *securi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CreateConfigurationPolicyInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateConnectorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConnectorV2(ctx context.Context, params *securityhub.CreateConnectorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.CreateConnectorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConnectorV2")
+	}
+
+	var r0 *securityhub.CreateConnectorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateConnectorV2Input, ...func(*securityhub.Options)) (*securityhub.CreateConnectorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateConnectorV2Input, ...func(*securityhub.Options)) *securityhub.CreateConnectorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.CreateConnectorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CreateConnectorV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -717,6 +902,43 @@ func (_m *IClient) CreateMembers(ctx context.Context, params *securityhub.Create
 	return r0, r1
 }
 
+// CreateTicketV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTicketV2(ctx context.Context, params *securityhub.CreateTicketV2Input, optFns ...func(*securityhub.Options)) (*securityhub.CreateTicketV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTicketV2")
+	}
+
+	var r0 *securityhub.CreateTicketV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateTicketV2Input, ...func(*securityhub.Options)) (*securityhub.CreateTicketV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateTicketV2Input, ...func(*securityhub.Options)) *securityhub.CreateTicketV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.CreateTicketV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CreateTicketV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeclineInvitations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeclineInvitations(ctx context.Context, params *securityhub.DeclineInvitationsInput, optFns ...func(*securityhub.Options)) (*securityhub.DeclineInvitationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -791,6 +1013,80 @@ func (_m *IClient) DeleteActionTarget(ctx context.Context, params *securityhub.D
 	return r0, r1
 }
 
+// DeleteAggregatorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAggregatorV2(ctx context.Context, params *securityhub.DeleteAggregatorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DeleteAggregatorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAggregatorV2")
+	}
+
+	var r0 *securityhub.DeleteAggregatorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteAggregatorV2Input, ...func(*securityhub.Options)) (*securityhub.DeleteAggregatorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteAggregatorV2Input, ...func(*securityhub.Options)) *securityhub.DeleteAggregatorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DeleteAggregatorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DeleteAggregatorV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAutomationRuleV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAutomationRuleV2(ctx context.Context, params *securityhub.DeleteAutomationRuleV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DeleteAutomationRuleV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAutomationRuleV2")
+	}
+
+	var r0 *securityhub.DeleteAutomationRuleV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteAutomationRuleV2Input, ...func(*securityhub.Options)) (*securityhub.DeleteAutomationRuleV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteAutomationRuleV2Input, ...func(*securityhub.Options)) *securityhub.DeleteAutomationRuleV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DeleteAutomationRuleV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DeleteAutomationRuleV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteConfigurationPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteConfigurationPolicy(ctx context.Context, params *securityhub.DeleteConfigurationPolicyInput, optFns ...func(*securityhub.Options)) (*securityhub.DeleteConfigurationPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -820,6 +1116,43 @@ func (_m *IClient) DeleteConfigurationPolicy(ctx context.Context, params *securi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DeleteConfigurationPolicyInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConnectorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnectorV2(ctx context.Context, params *securityhub.DeleteConnectorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DeleteConnectorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnectorV2")
+	}
+
+	var r0 *securityhub.DeleteConnectorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteConnectorV2Input, ...func(*securityhub.Options)) (*securityhub.DeleteConnectorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteConnectorV2Input, ...func(*securityhub.Options)) *securityhub.DeleteConnectorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DeleteConnectorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DeleteConnectorV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1124,6 +1457,80 @@ func (_m *IClient) DescribeProducts(ctx context.Context, params *securityhub.Des
 	return r0, r1
 }
 
+// DescribeProductsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeProductsV2(ctx context.Context, params *securityhub.DescribeProductsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DescribeProductsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeProductsV2")
+	}
+
+	var r0 *securityhub.DescribeProductsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DescribeProductsV2Input, ...func(*securityhub.Options)) (*securityhub.DescribeProductsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DescribeProductsV2Input, ...func(*securityhub.Options)) *securityhub.DescribeProductsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DescribeProductsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DescribeProductsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSecurityHubV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSecurityHubV2(ctx context.Context, params *securityhub.DescribeSecurityHubV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DescribeSecurityHubV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSecurityHubV2")
+	}
+
+	var r0 *securityhub.DescribeSecurityHubV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DescribeSecurityHubV2Input, ...func(*securityhub.Options)) (*securityhub.DescribeSecurityHubV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DescribeSecurityHubV2Input, ...func(*securityhub.Options)) *securityhub.DescribeSecurityHubV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DescribeSecurityHubV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DescribeSecurityHubV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeStandards provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeStandards(ctx context.Context, params *securityhub.DescribeStandardsInput, optFns ...func(*securityhub.Options)) (*securityhub.DescribeStandardsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1301,6 +1708,43 @@ func (_m *IClient) DisableSecurityHub(ctx context.Context, params *securityhub.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DisableSecurityHubInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisableSecurityHubV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableSecurityHubV2(ctx context.Context, params *securityhub.DisableSecurityHubV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DisableSecurityHubV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableSecurityHubV2")
+	}
+
+	var r0 *securityhub.DisableSecurityHubV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DisableSecurityHubV2Input, ...func(*securityhub.Options)) (*securityhub.DisableSecurityHubV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DisableSecurityHubV2Input, ...func(*securityhub.Options)) *securityhub.DisableSecurityHubV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DisableSecurityHubV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DisableSecurityHubV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1531,6 +1975,43 @@ func (_m *IClient) EnableSecurityHub(ctx context.Context, params *securityhub.En
 	return r0, r1
 }
 
+// EnableSecurityHubV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableSecurityHubV2(ctx context.Context, params *securityhub.EnableSecurityHubV2Input, optFns ...func(*securityhub.Options)) (*securityhub.EnableSecurityHubV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableSecurityHubV2")
+	}
+
+	var r0 *securityhub.EnableSecurityHubV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.EnableSecurityHubV2Input, ...func(*securityhub.Options)) (*securityhub.EnableSecurityHubV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.EnableSecurityHubV2Input, ...func(*securityhub.Options)) *securityhub.EnableSecurityHubV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.EnableSecurityHubV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.EnableSecurityHubV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAdministratorAccount provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAdministratorAccount(ctx context.Context, params *securityhub.GetAdministratorAccountInput, optFns ...func(*securityhub.Options)) (*securityhub.GetAdministratorAccountOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1560,6 +2041,80 @@ func (_m *IClient) GetAdministratorAccount(ctx context.Context, params *security
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetAdministratorAccountInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAggregatorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAggregatorV2(ctx context.Context, params *securityhub.GetAggregatorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetAggregatorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAggregatorV2")
+	}
+
+	var r0 *securityhub.GetAggregatorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetAggregatorV2Input, ...func(*securityhub.Options)) (*securityhub.GetAggregatorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetAggregatorV2Input, ...func(*securityhub.Options)) *securityhub.GetAggregatorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetAggregatorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetAggregatorV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomationRuleV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomationRuleV2(ctx context.Context, params *securityhub.GetAutomationRuleV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetAutomationRuleV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomationRuleV2")
+	}
+
+	var r0 *securityhub.GetAutomationRuleV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetAutomationRuleV2Input, ...func(*securityhub.Options)) (*securityhub.GetAutomationRuleV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetAutomationRuleV2Input, ...func(*securityhub.Options)) *securityhub.GetAutomationRuleV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetAutomationRuleV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetAutomationRuleV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1634,6 +2189,43 @@ func (_m *IClient) GetConfigurationPolicyAssociation(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetConfigurationPolicyAssociationInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConnectorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnectorV2(ctx context.Context, params *securityhub.GetConnectorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetConnectorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnectorV2")
+	}
+
+	var r0 *securityhub.GetConnectorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetConnectorV2Input, ...func(*securityhub.Options)) (*securityhub.GetConnectorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetConnectorV2Input, ...func(*securityhub.Options)) *securityhub.GetConnectorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetConnectorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetConnectorV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1753,6 +2345,43 @@ func (_m *IClient) GetFindingHistory(ctx context.Context, params *securityhub.Ge
 	return r0, r1
 }
 
+// GetFindingStatisticsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFindingStatisticsV2(ctx context.Context, params *securityhub.GetFindingStatisticsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetFindingStatisticsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFindingStatisticsV2")
+	}
+
+	var r0 *securityhub.GetFindingStatisticsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetFindingStatisticsV2Input, ...func(*securityhub.Options)) (*securityhub.GetFindingStatisticsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetFindingStatisticsV2Input, ...func(*securityhub.Options)) *securityhub.GetFindingStatisticsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetFindingStatisticsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetFindingStatisticsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFindings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFindings(ctx context.Context, params *securityhub.GetFindingsInput, optFns ...func(*securityhub.Options)) (*securityhub.GetFindingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1782,6 +2411,43 @@ func (_m *IClient) GetFindings(ctx context.Context, params *securityhub.GetFindi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetFindingsInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFindingsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFindingsV2(ctx context.Context, params *securityhub.GetFindingsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetFindingsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFindingsV2")
+	}
+
+	var r0 *securityhub.GetFindingsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetFindingsV2Input, ...func(*securityhub.Options)) (*securityhub.GetFindingsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetFindingsV2Input, ...func(*securityhub.Options)) *securityhub.GetFindingsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetFindingsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetFindingsV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1975,6 +2641,80 @@ func (_m *IClient) GetMembers(ctx context.Context, params *securityhub.GetMember
 	return r0, r1
 }
 
+// GetResourcesStatisticsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcesStatisticsV2(ctx context.Context, params *securityhub.GetResourcesStatisticsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetResourcesStatisticsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcesStatisticsV2")
+	}
+
+	var r0 *securityhub.GetResourcesStatisticsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetResourcesStatisticsV2Input, ...func(*securityhub.Options)) (*securityhub.GetResourcesStatisticsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetResourcesStatisticsV2Input, ...func(*securityhub.Options)) *securityhub.GetResourcesStatisticsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetResourcesStatisticsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetResourcesStatisticsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResourcesV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcesV2(ctx context.Context, params *securityhub.GetResourcesV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetResourcesV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcesV2")
+	}
+
+	var r0 *securityhub.GetResourcesV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetResourcesV2Input, ...func(*securityhub.Options)) (*securityhub.GetResourcesV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetResourcesV2Input, ...func(*securityhub.Options)) *securityhub.GetResourcesV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetResourcesV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetResourcesV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSecurityControlDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSecurityControlDefinition(ctx context.Context, params *securityhub.GetSecurityControlDefinitionInput, optFns ...func(*securityhub.Options)) (*securityhub.GetSecurityControlDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2049,6 +2789,43 @@ func (_m *IClient) InviteMembers(ctx context.Context, params *securityhub.Invite
 	return r0, r1
 }
 
+// ListAggregatorsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAggregatorsV2(ctx context.Context, params *securityhub.ListAggregatorsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListAggregatorsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAggregatorsV2")
+	}
+
+	var r0 *securityhub.ListAggregatorsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListAggregatorsV2Input, ...func(*securityhub.Options)) (*securityhub.ListAggregatorsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListAggregatorsV2Input, ...func(*securityhub.Options)) *securityhub.ListAggregatorsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListAggregatorsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListAggregatorsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAutomationRules provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAutomationRules(ctx context.Context, params *securityhub.ListAutomationRulesInput, optFns ...func(*securityhub.Options)) (*securityhub.ListAutomationRulesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2078,6 +2855,43 @@ func (_m *IClient) ListAutomationRules(ctx context.Context, params *securityhub.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListAutomationRulesInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutomationRulesV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutomationRulesV2(ctx context.Context, params *securityhub.ListAutomationRulesV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListAutomationRulesV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutomationRulesV2")
+	}
+
+	var r0 *securityhub.ListAutomationRulesV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListAutomationRulesV2Input, ...func(*securityhub.Options)) (*securityhub.ListAutomationRulesV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListAutomationRulesV2Input, ...func(*securityhub.Options)) *securityhub.ListAutomationRulesV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListAutomationRulesV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListAutomationRulesV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2152,6 +2966,43 @@ func (_m *IClient) ListConfigurationPolicyAssociations(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListConfigurationPolicyAssociationsInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConnectorsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectorsV2(ctx context.Context, params *securityhub.ListConnectorsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListConnectorsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectorsV2")
+	}
+
+	var r0 *securityhub.ListConnectorsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListConnectorsV2Input, ...func(*securityhub.Options)) (*securityhub.ListConnectorsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListConnectorsV2Input, ...func(*securityhub.Options)) *securityhub.ListConnectorsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListConnectorsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListConnectorsV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2659,6 +3510,80 @@ func (_m *IClient) UpdateActionTarget(ctx context.Context, params *securityhub.U
 	return r0, r1
 }
 
+// UpdateAggregatorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAggregatorV2(ctx context.Context, params *securityhub.UpdateAggregatorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.UpdateAggregatorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAggregatorV2")
+	}
+
+	var r0 *securityhub.UpdateAggregatorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateAggregatorV2Input, ...func(*securityhub.Options)) (*securityhub.UpdateAggregatorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateAggregatorV2Input, ...func(*securityhub.Options)) *securityhub.UpdateAggregatorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.UpdateAggregatorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.UpdateAggregatorV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAutomationRuleV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAutomationRuleV2(ctx context.Context, params *securityhub.UpdateAutomationRuleV2Input, optFns ...func(*securityhub.Options)) (*securityhub.UpdateAutomationRuleV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAutomationRuleV2")
+	}
+
+	var r0 *securityhub.UpdateAutomationRuleV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateAutomationRuleV2Input, ...func(*securityhub.Options)) (*securityhub.UpdateAutomationRuleV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateAutomationRuleV2Input, ...func(*securityhub.Options)) *securityhub.UpdateAutomationRuleV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.UpdateAutomationRuleV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.UpdateAutomationRuleV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateConfigurationPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateConfigurationPolicy(ctx context.Context, params *securityhub.UpdateConfigurationPolicyInput, optFns ...func(*securityhub.Options)) (*securityhub.UpdateConfigurationPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2688,6 +3613,43 @@ func (_m *IClient) UpdateConfigurationPolicy(ctx context.Context, params *securi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.UpdateConfigurationPolicyInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnectorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnectorV2(ctx context.Context, params *securityhub.UpdateConnectorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.UpdateConnectorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnectorV2")
+	}
+
+	var r0 *securityhub.UpdateConnectorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateConnectorV2Input, ...func(*securityhub.Options)) (*securityhub.UpdateConnectorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateConnectorV2Input, ...func(*securityhub.Options)) *securityhub.UpdateConnectorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.UpdateConnectorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.UpdateConnectorV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCostAndUsageComparisons", func(t *testing.T) {
+        input := &costexplorer.GetCostAndUsageComparisonsInput{}
+        output := &costexplorer.GetCostAndUsageComparisonsOutput{}
+
+        mockClient.On("GetCostAndUsageComparisons", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCostAndUsageComparisons(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCostAndUsageWithResources", func(t *testing.T) {
         input := &costexplorer.GetCostAndUsageWithResourcesInput{}
         output := &costexplorer.GetCostAndUsageWithResourcesOutput{}
@@ -223,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCostCategories", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCostCategories(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCostComparisonDrivers", func(t *testing.T) {
+        input := &costexplorer.GetCostComparisonDriversInput{}
+        output := &costexplorer.GetCostComparisonDriversOutput{}
+
+        mockClient.On("GetCostComparisonDrivers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCostComparisonDrivers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

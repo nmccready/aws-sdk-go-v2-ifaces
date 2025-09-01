@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBucketMetadataConfiguration", func(t *testing.T) {
+        input := &s3.CreateBucketMetadataConfigurationInput{}
+        output := &s3.CreateBucketMetadataConfigurationOutput{}
+
+        mockClient.On("CreateBucketMetadataConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBucketMetadataConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBucketMetadataTableConfiguration", func(t *testing.T) {
         input := &s3.CreateBucketMetadataTableConfigurationInput{}
         output := &s3.CreateBucketMetadataTableConfigurationOutput{}
@@ -216,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteBucketMetadataConfiguration", func(t *testing.T) {
+        input := &s3.DeleteBucketMetadataConfigurationInput{}
+        output := &s3.DeleteBucketMetadataConfigurationOutput{}
+
+        mockClient.On("DeleteBucketMetadataConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBucketMetadataConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteBucketMetadataTableConfiguration", func(t *testing.T) {
         input := &s3.DeleteBucketMetadataTableConfigurationInput{}
         output := &s3.DeleteBucketMetadataTableConfigurationOutput{}
@@ -320,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteObjectTagging", func(t *testing.T) {
-        input := &s3.DeleteObjectTaggingInput{}
-        output := &s3.DeleteObjectTaggingOutput{}
-
-        mockClient.On("DeleteObjectTagging", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteObjectTagging(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteObjects", func(t *testing.T) {
         input := &s3.DeleteObjectsInput{}
         output := &s3.DeleteObjectsOutput{}
@@ -340,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteObjects", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteObjects(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteObjectTagging", func(t *testing.T) {
+        input := &s3.DeleteObjectTaggingInput{}
+        output := &s3.DeleteObjectTaggingOutput{}
+
+        mockClient.On("DeleteObjectTagging", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteObjectTagging(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBucketLogging", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBucketLogging(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBucketMetadataConfiguration", func(t *testing.T) {
+        input := &s3.GetBucketMetadataConfigurationInput{}
+        output := &s3.GetBucketMetadataConfigurationOutput{}
+
+        mockClient.On("GetBucketMetadataConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBucketMetadataConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -866,19 +905,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListObjectVersions", func(t *testing.T) {
-        input := &s3.ListObjectVersionsInput{}
-        output := &s3.ListObjectVersionsOutput{}
-
-        mockClient.On("ListObjectVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListObjectVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListObjects", func(t *testing.T) {
         input := &s3.ListObjectsInput{}
         output := &s3.ListObjectsOutput{}
@@ -899,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListObjectsV2", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListObjectsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListObjectVersions", func(t *testing.T) {
+        input := &s3.ListObjectVersionsInput{}
+        output := &s3.ListObjectVersionsOutput{}
+
+        mockClient.On("ListObjectVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListObjectVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1243,6 +1282,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRenameObject", func(t *testing.T) {
+        input := &s3.RenameObjectInput{}
+        output := &s3.RenameObjectOutput{}
+
+        mockClient.On("RenameObject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RenameObject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRestoreObject", func(t *testing.T) {
         input := &s3.RestoreObjectInput{}
         output := &s3.RestoreObjectOutput{}
@@ -1263,6 +1315,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("SelectObjectContent", ctx, input).Return(output, nil)
 
         result, err := mockClient.SelectObjectContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBucketMetadataInventoryTableConfiguration", func(t *testing.T) {
+        input := &s3.UpdateBucketMetadataInventoryTableConfigurationInput{}
+        output := &s3.UpdateBucketMetadataInventoryTableConfigurationOutput{}
+
+        mockClient.On("UpdateBucketMetadataInventoryTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBucketMetadataInventoryTableConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBucketMetadataJournalTableConfiguration", func(t *testing.T) {
+        input := &s3.UpdateBucketMetadataJournalTableConfigurationInput{}
+        output := &s3.UpdateBucketMetadataJournalTableConfigurationOutput{}
+
+        mockClient.On("UpdateBucketMetadataJournalTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBucketMetadataJournalTableConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

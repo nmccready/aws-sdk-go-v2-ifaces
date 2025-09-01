@@ -496,6 +496,43 @@ func (_m *IClient) CreateBulkImportJob(ctx context.Context, params *iotsitewise.
 	return r0, r1
 }
 
+// CreateComputationModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateComputationModel(ctx context.Context, params *iotsitewise.CreateComputationModelInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateComputationModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateComputationModel")
+	}
+
+	var r0 *iotsitewise.CreateComputationModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateComputationModelInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateComputationModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateComputationModelInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateComputationModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateComputationModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateComputationModelInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDashboard provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDashboard(ctx context.Context, params *iotsitewise.CreateDashboardInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateDashboardOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +858,80 @@ func (_m *IClient) DeleteAssetModelCompositeModel(ctx context.Context, params *i
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteAssetModelCompositeModelInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAssetModelInterfaceRelationship provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAssetModelInterfaceRelationship(ctx context.Context, params *iotsitewise.DeleteAssetModelInterfaceRelationshipInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteAssetModelInterfaceRelationshipOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAssetModelInterfaceRelationship")
+	}
+
+	var r0 *iotsitewise.DeleteAssetModelInterfaceRelationshipOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeleteAssetModelInterfaceRelationshipOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) *iotsitewise.DeleteAssetModelInterfaceRelationshipOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeleteAssetModelInterfaceRelationshipOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteComputationModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteComputationModel(ctx context.Context, params *iotsitewise.DeleteComputationModelInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteComputationModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteComputationModel")
+	}
+
+	var r0 *iotsitewise.DeleteComputationModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteComputationModelInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeleteComputationModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteComputationModelInput, ...func(*iotsitewise.Options)) *iotsitewise.DeleteComputationModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeleteComputationModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteComputationModelInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1273,6 +1384,43 @@ func (_m *IClient) DescribeAssetModelCompositeModel(ctx context.Context, params 
 	return r0, r1
 }
 
+// DescribeAssetModelInterfaceRelationship provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAssetModelInterfaceRelationship(ctx context.Context, params *iotsitewise.DescribeAssetModelInterfaceRelationshipInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeAssetModelInterfaceRelationshipOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAssetModelInterfaceRelationship")
+	}
+
+	var r0 *iotsitewise.DescribeAssetModelInterfaceRelationshipOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeAssetModelInterfaceRelationshipOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeAssetModelInterfaceRelationshipOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeAssetModelInterfaceRelationshipOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAssetProperty provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAssetProperty(ctx context.Context, params *iotsitewise.DescribeAssetPropertyInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeAssetPropertyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1339,6 +1487,80 @@ func (_m *IClient) DescribeBulkImportJob(ctx context.Context, params *iotsitewis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeBulkImportJobInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeComputationModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeComputationModel(ctx context.Context, params *iotsitewise.DescribeComputationModelInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeComputationModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeComputationModel")
+	}
+
+	var r0 *iotsitewise.DescribeComputationModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeComputationModelInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeComputationModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeComputationModelInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeComputationModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeComputationModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeComputationModelInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeComputationModelExecutionSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeComputationModelExecutionSummary(ctx context.Context, params *iotsitewise.DescribeComputationModelExecutionSummaryInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeComputationModelExecutionSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeComputationModelExecutionSummary")
+	}
+
+	var r0 *iotsitewise.DescribeComputationModelExecutionSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeComputationModelExecutionSummaryInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeComputationModelExecutionSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeComputationModelExecutionSummaryInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeComputationModelExecutionSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeComputationModelExecutionSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeComputationModelExecutionSummaryInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1450,6 +1672,43 @@ func (_m *IClient) DescribeDefaultEncryptionConfiguration(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeDefaultEncryptionConfigurationInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeExecution(ctx context.Context, params *iotsitewise.DescribeExecutionInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeExecution")
+	}
+
+	var r0 *iotsitewise.DescribeExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeExecutionInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeExecutionInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeExecutionInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2457,6 +2716,117 @@ func (_m *IClient) ListCompositionRelationships(ctx context.Context, params *iot
 	return r0, r1
 }
 
+// ListComputationModelDataBindingUsages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListComputationModelDataBindingUsages(ctx context.Context, params *iotsitewise.ListComputationModelDataBindingUsagesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListComputationModelDataBindingUsagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListComputationModelDataBindingUsages")
+	}
+
+	var r0 *iotsitewise.ListComputationModelDataBindingUsagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListComputationModelDataBindingUsagesInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListComputationModelDataBindingUsagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListComputationModelDataBindingUsagesInput, ...func(*iotsitewise.Options)) *iotsitewise.ListComputationModelDataBindingUsagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListComputationModelDataBindingUsagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListComputationModelDataBindingUsagesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListComputationModelResolveToResources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListComputationModelResolveToResources(ctx context.Context, params *iotsitewise.ListComputationModelResolveToResourcesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListComputationModelResolveToResourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListComputationModelResolveToResources")
+	}
+
+	var r0 *iotsitewise.ListComputationModelResolveToResourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListComputationModelResolveToResourcesInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListComputationModelResolveToResourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListComputationModelResolveToResourcesInput, ...func(*iotsitewise.Options)) *iotsitewise.ListComputationModelResolveToResourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListComputationModelResolveToResourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListComputationModelResolveToResourcesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListComputationModels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListComputationModels(ctx context.Context, params *iotsitewise.ListComputationModelsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListComputationModelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListComputationModels")
+	}
+
+	var r0 *iotsitewise.ListComputationModelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListComputationModelsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListComputationModelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListComputationModelsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListComputationModelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListComputationModelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListComputationModelsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDashboards provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDashboards(ctx context.Context, params *iotsitewise.ListDashboardsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListDashboardsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2531,6 +2901,43 @@ func (_m *IClient) ListDatasets(ctx context.Context, params *iotsitewise.ListDat
 	return r0, r1
 }
 
+// ListExecutions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExecutions(ctx context.Context, params *iotsitewise.ListExecutionsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListExecutionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExecutions")
+	}
+
+	var r0 *iotsitewise.ListExecutionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListExecutionsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListExecutionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListExecutionsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListExecutionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListExecutionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListExecutionsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListGateways provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListGateways(ctx context.Context, params *iotsitewise.ListGatewaysInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListGatewaysOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2560,6 +2967,43 @@ func (_m *IClient) ListGateways(ctx context.Context, params *iotsitewise.ListGat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListGatewaysInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInterfaceRelationships provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInterfaceRelationships(ctx context.Context, params *iotsitewise.ListInterfaceRelationshipsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListInterfaceRelationshipsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInterfaceRelationships")
+	}
+
+	var r0 *iotsitewise.ListInterfaceRelationshipsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListInterfaceRelationshipsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListInterfaceRelationshipsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListInterfaceRelationshipsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListInterfaceRelationshipsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListInterfaceRelationshipsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListInterfaceRelationshipsInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2769,6 +3213,43 @@ func (_m *IClient) Options() iotsitewise.Options {
 	}
 
 	return r0
+}
+
+// PutAssetModelInterfaceRelationship provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAssetModelInterfaceRelationship(ctx context.Context, params *iotsitewise.PutAssetModelInterfaceRelationshipInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.PutAssetModelInterfaceRelationshipOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAssetModelInterfaceRelationship")
+	}
+
+	var r0 *iotsitewise.PutAssetModelInterfaceRelationshipOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.PutAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) (*iotsitewise.PutAssetModelInterfaceRelationshipOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.PutAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) *iotsitewise.PutAssetModelInterfaceRelationshipOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.PutAssetModelInterfaceRelationshipOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.PutAssetModelInterfaceRelationshipInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutDefaultEncryptionConfiguration provides a mock function with given fields: ctx, params, optFns
@@ -3133,6 +3614,43 @@ func (_m *IClient) UpdateAssetProperty(ctx context.Context, params *iotsitewise.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateAssetPropertyInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateComputationModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateComputationModel(ctx context.Context, params *iotsitewise.UpdateComputationModelInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.UpdateComputationModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateComputationModel")
+	}
+
+	var r0 *iotsitewise.UpdateComputationModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateComputationModelInput, ...func(*iotsitewise.Options)) (*iotsitewise.UpdateComputationModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateComputationModelInput, ...func(*iotsitewise.Options)) *iotsitewise.UpdateComputationModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.UpdateComputationModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateComputationModelInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

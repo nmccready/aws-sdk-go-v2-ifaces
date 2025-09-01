@@ -52,6 +52,228 @@ func (_m *IClient) BatchDeleteEvaluationJob(ctx context.Context, params *bedrock
 	return r0, r1
 }
 
+// CancelAutomatedReasoningPolicyBuildWorkflow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*bedrock.Options)) (*bedrock.CancelAutomatedReasoningPolicyBuildWorkflowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelAutomatedReasoningPolicyBuildWorkflow")
+	}
+
+	var r0 *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) (*bedrock.CancelAutomatedReasoningPolicyBuildWorkflowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CancelAutomatedReasoningPolicyBuildWorkflowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAutomatedReasoningPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutomatedReasoningPolicy(ctx context.Context, params *bedrock.CreateAutomatedReasoningPolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateAutomatedReasoningPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutomatedReasoningPolicy")
+	}
+
+	var r0 *bedrock.CreateAutomatedReasoningPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) (*bedrock.CreateAutomatedReasoningPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) *bedrock.CreateAutomatedReasoningPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateAutomatedReasoningPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAutomatedReasoningPolicyTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutomatedReasoningPolicyTestCase(ctx context.Context, params *bedrock.CreateAutomatedReasoningPolicyTestCaseInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateAutomatedReasoningPolicyTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutomatedReasoningPolicyTestCase")
+	}
+
+	var r0 *bedrock.CreateAutomatedReasoningPolicyTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) (*bedrock.CreateAutomatedReasoningPolicyTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) *bedrock.CreateAutomatedReasoningPolicyTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateAutomatedReasoningPolicyTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAutomatedReasoningPolicyVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutomatedReasoningPolicyVersion(ctx context.Context, params *bedrock.CreateAutomatedReasoningPolicyVersionInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateAutomatedReasoningPolicyVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutomatedReasoningPolicyVersion")
+	}
+
+	var r0 *bedrock.CreateAutomatedReasoningPolicyVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyVersionInput, ...func(*bedrock.Options)) (*bedrock.CreateAutomatedReasoningPolicyVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyVersionInput, ...func(*bedrock.Options)) *bedrock.CreateAutomatedReasoningPolicyVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateAutomatedReasoningPolicyVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateAutomatedReasoningPolicyVersionInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCustomModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCustomModel(ctx context.Context, params *bedrock.CreateCustomModelInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateCustomModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCustomModel")
+	}
+
+	var r0 *bedrock.CreateCustomModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateCustomModelInput, ...func(*bedrock.Options)) (*bedrock.CreateCustomModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateCustomModelInput, ...func(*bedrock.Options)) *bedrock.CreateCustomModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateCustomModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateCustomModelInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCustomModelDeployment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCustomModelDeployment(ctx context.Context, params *bedrock.CreateCustomModelDeploymentInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateCustomModelDeploymentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCustomModelDeployment")
+	}
+
+	var r0 *bedrock.CreateCustomModelDeploymentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateCustomModelDeploymentInput, ...func(*bedrock.Options)) (*bedrock.CreateCustomModelDeploymentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateCustomModelDeploymentInput, ...func(*bedrock.Options)) *bedrock.CreateCustomModelDeploymentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateCustomModelDeploymentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateCustomModelDeploymentInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEvaluationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEvaluationJob(ctx context.Context, params *bedrock.CreateEvaluationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateEvaluationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +303,43 @@ func (_m *IClient) CreateEvaluationJob(ctx context.Context, params *bedrock.Crea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateEvaluationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateFoundationModelAgreement provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateFoundationModelAgreement(ctx context.Context, params *bedrock.CreateFoundationModelAgreementInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateFoundationModelAgreementOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateFoundationModelAgreement")
+	}
+
+	var r0 *bedrock.CreateFoundationModelAgreementOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateFoundationModelAgreementInput, ...func(*bedrock.Options)) (*bedrock.CreateFoundationModelAgreementOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateFoundationModelAgreementInput, ...func(*bedrock.Options)) *bedrock.CreateFoundationModelAgreementOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateFoundationModelAgreementOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateFoundationModelAgreementInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -459,6 +718,117 @@ func (_m *IClient) CreateProvisionedModelThroughput(ctx context.Context, params 
 	return r0, r1
 }
 
+// DeleteAutomatedReasoningPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAutomatedReasoningPolicy(ctx context.Context, params *bedrock.DeleteAutomatedReasoningPolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteAutomatedReasoningPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAutomatedReasoningPolicy")
+	}
+
+	var r0 *bedrock.DeleteAutomatedReasoningPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) (*bedrock.DeleteAutomatedReasoningPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) *bedrock.DeleteAutomatedReasoningPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteAutomatedReasoningPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAutomatedReasoningPolicyBuildWorkflow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAutomatedReasoningPolicyBuildWorkflow")
+	}
+
+	var r0 *bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) (*bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) *bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAutomatedReasoningPolicyTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAutomatedReasoningPolicyTestCase(ctx context.Context, params *bedrock.DeleteAutomatedReasoningPolicyTestCaseInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteAutomatedReasoningPolicyTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAutomatedReasoningPolicyTestCase")
+	}
+
+	var r0 *bedrock.DeleteAutomatedReasoningPolicyTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) (*bedrock.DeleteAutomatedReasoningPolicyTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) *bedrock.DeleteAutomatedReasoningPolicyTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteAutomatedReasoningPolicyTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCustomModel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCustomModel(ctx context.Context, params *bedrock.DeleteCustomModelInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteCustomModelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -488,6 +858,80 @@ func (_m *IClient) DeleteCustomModel(ctx context.Context, params *bedrock.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteCustomModelInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCustomModelDeployment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCustomModelDeployment(ctx context.Context, params *bedrock.DeleteCustomModelDeploymentInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteCustomModelDeploymentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCustomModelDeployment")
+	}
+
+	var r0 *bedrock.DeleteCustomModelDeploymentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteCustomModelDeploymentInput, ...func(*bedrock.Options)) (*bedrock.DeleteCustomModelDeploymentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteCustomModelDeploymentInput, ...func(*bedrock.Options)) *bedrock.DeleteCustomModelDeploymentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteCustomModelDeploymentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteCustomModelDeploymentInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteFoundationModelAgreement provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFoundationModelAgreement(ctx context.Context, params *bedrock.DeleteFoundationModelAgreementInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteFoundationModelAgreementOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFoundationModelAgreement")
+	}
+
+	var r0 *bedrock.DeleteFoundationModelAgreementOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteFoundationModelAgreementInput, ...func(*bedrock.Options)) (*bedrock.DeleteFoundationModelAgreementOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteFoundationModelAgreementInput, ...func(*bedrock.Options)) *bedrock.DeleteFoundationModelAgreementOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteFoundationModelAgreementOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteFoundationModelAgreementInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +1236,302 @@ func (_m *IClient) DeregisterMarketplaceModelEndpoint(ctx context.Context, param
 	return r0, r1
 }
 
+// ExportAutomatedReasoningPolicyVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExportAutomatedReasoningPolicyVersion(ctx context.Context, params *bedrock.ExportAutomatedReasoningPolicyVersionInput, optFns ...func(*bedrock.Options)) (*bedrock.ExportAutomatedReasoningPolicyVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExportAutomatedReasoningPolicyVersion")
+	}
+
+	var r0 *bedrock.ExportAutomatedReasoningPolicyVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ExportAutomatedReasoningPolicyVersionInput, ...func(*bedrock.Options)) (*bedrock.ExportAutomatedReasoningPolicyVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ExportAutomatedReasoningPolicyVersionInput, ...func(*bedrock.Options)) *bedrock.ExportAutomatedReasoningPolicyVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ExportAutomatedReasoningPolicyVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ExportAutomatedReasoningPolicyVersionInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicy(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicy")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicyAnnotations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicyAnnotations(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyAnnotationsInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyAnnotationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicyAnnotations")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyAnnotationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyAnnotationsInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyAnnotationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyAnnotationsInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyAnnotationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyAnnotationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyAnnotationsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicyBuildWorkflow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyBuildWorkflowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicyBuildWorkflow")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyBuildWorkflowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyBuildWorkflowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyBuildWorkflowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyBuildWorkflowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicyBuildWorkflowResultAssets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicyBuildWorkflowResultAssets(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicyBuildWorkflowResultAssets")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyBuildWorkflowResultAssetsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicyNextScenario provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicyNextScenario(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyNextScenarioInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyNextScenarioOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicyNextScenario")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyNextScenarioOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyNextScenarioInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyNextScenarioOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyNextScenarioInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyNextScenarioOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyNextScenarioOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyNextScenarioInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicyTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicyTestCase(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyTestCaseInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicyTestCase")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutomatedReasoningPolicyTestResult provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutomatedReasoningPolicyTestResult(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyTestResultInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyTestResultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutomatedReasoningPolicyTestResult")
+	}
+
+	var r0 *bedrock.GetAutomatedReasoningPolicyTestResultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyTestResultInput, ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyTestResultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyTestResultInput, ...func(*bedrock.Options)) *bedrock.GetAutomatedReasoningPolicyTestResultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAutomatedReasoningPolicyTestResultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAutomatedReasoningPolicyTestResultInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCustomModel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCustomModel(ctx context.Context, params *bedrock.GetCustomModelInput, optFns ...func(*bedrock.Options)) (*bedrock.GetCustomModelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +1561,43 @@ func (_m *IClient) GetCustomModel(ctx context.Context, params *bedrock.GetCustom
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetCustomModelInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomModelDeployment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomModelDeployment(ctx context.Context, params *bedrock.GetCustomModelDeploymentInput, optFns ...func(*bedrock.Options)) (*bedrock.GetCustomModelDeploymentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomModelDeployment")
+	}
+
+	var r0 *bedrock.GetCustomModelDeploymentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetCustomModelDeploymentInput, ...func(*bedrock.Options)) (*bedrock.GetCustomModelDeploymentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetCustomModelDeploymentInput, ...func(*bedrock.Options)) *bedrock.GetCustomModelDeploymentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetCustomModelDeploymentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetCustomModelDeploymentInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -895,6 +1672,43 @@ func (_m *IClient) GetFoundationModel(ctx context.Context, params *bedrock.GetFo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetFoundationModelInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFoundationModelAvailability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFoundationModelAvailability(ctx context.Context, params *bedrock.GetFoundationModelAvailabilityInput, optFns ...func(*bedrock.Options)) (*bedrock.GetFoundationModelAvailabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFoundationModelAvailability")
+	}
+
+	var r0 *bedrock.GetFoundationModelAvailabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetFoundationModelAvailabilityInput, ...func(*bedrock.Options)) (*bedrock.GetFoundationModelAvailabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetFoundationModelAvailabilityInput, ...func(*bedrock.Options)) *bedrock.GetFoundationModelAvailabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetFoundationModelAvailabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetFoundationModelAvailabilityInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1310,6 +2124,228 @@ func (_m *IClient) GetProvisionedModelThroughput(ctx context.Context, params *be
 	return r0, r1
 }
 
+// GetUseCaseForModelAccess provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUseCaseForModelAccess(ctx context.Context, params *bedrock.GetUseCaseForModelAccessInput, optFns ...func(*bedrock.Options)) (*bedrock.GetUseCaseForModelAccessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUseCaseForModelAccess")
+	}
+
+	var r0 *bedrock.GetUseCaseForModelAccessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetUseCaseForModelAccessInput, ...func(*bedrock.Options)) (*bedrock.GetUseCaseForModelAccessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetUseCaseForModelAccessInput, ...func(*bedrock.Options)) *bedrock.GetUseCaseForModelAccessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetUseCaseForModelAccessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetUseCaseForModelAccessInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutomatedReasoningPolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutomatedReasoningPolicies(ctx context.Context, params *bedrock.ListAutomatedReasoningPoliciesInput, optFns ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutomatedReasoningPolicies")
+	}
+
+	var r0 *bedrock.ListAutomatedReasoningPoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPoliciesInput, ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPoliciesInput, ...func(*bedrock.Options)) *bedrock.ListAutomatedReasoningPoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListAutomatedReasoningPoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListAutomatedReasoningPoliciesInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutomatedReasoningPolicyBuildWorkflows provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutomatedReasoningPolicyBuildWorkflows(ctx context.Context, params *bedrock.ListAutomatedReasoningPolicyBuildWorkflowsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPolicyBuildWorkflowsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutomatedReasoningPolicyBuildWorkflows")
+	}
+
+	var r0 *bedrock.ListAutomatedReasoningPolicyBuildWorkflowsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyBuildWorkflowsInput, ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPolicyBuildWorkflowsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyBuildWorkflowsInput, ...func(*bedrock.Options)) *bedrock.ListAutomatedReasoningPolicyBuildWorkflowsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListAutomatedReasoningPolicyBuildWorkflowsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyBuildWorkflowsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutomatedReasoningPolicyTestCases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutomatedReasoningPolicyTestCases(ctx context.Context, params *bedrock.ListAutomatedReasoningPolicyTestCasesInput, optFns ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPolicyTestCasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutomatedReasoningPolicyTestCases")
+	}
+
+	var r0 *bedrock.ListAutomatedReasoningPolicyTestCasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyTestCasesInput, ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPolicyTestCasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyTestCasesInput, ...func(*bedrock.Options)) *bedrock.ListAutomatedReasoningPolicyTestCasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListAutomatedReasoningPolicyTestCasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyTestCasesInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutomatedReasoningPolicyTestResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutomatedReasoningPolicyTestResults(ctx context.Context, params *bedrock.ListAutomatedReasoningPolicyTestResultsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPolicyTestResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutomatedReasoningPolicyTestResults")
+	}
+
+	var r0 *bedrock.ListAutomatedReasoningPolicyTestResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyTestResultsInput, ...func(*bedrock.Options)) (*bedrock.ListAutomatedReasoningPolicyTestResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyTestResultsInput, ...func(*bedrock.Options)) *bedrock.ListAutomatedReasoningPolicyTestResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListAutomatedReasoningPolicyTestResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListAutomatedReasoningPolicyTestResultsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCustomModelDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomModelDeployments(ctx context.Context, params *bedrock.ListCustomModelDeploymentsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListCustomModelDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomModelDeployments")
+	}
+
+	var r0 *bedrock.ListCustomModelDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListCustomModelDeploymentsInput, ...func(*bedrock.Options)) (*bedrock.ListCustomModelDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListCustomModelDeploymentsInput, ...func(*bedrock.Options)) *bedrock.ListCustomModelDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListCustomModelDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListCustomModelDeploymentsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCustomModels provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCustomModels(ctx context.Context, params *bedrock.ListCustomModelsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListCustomModelsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1376,6 +2412,43 @@ func (_m *IClient) ListEvaluationJobs(ctx context.Context, params *bedrock.ListE
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListEvaluationJobsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFoundationModelAgreementOffers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFoundationModelAgreementOffers(ctx context.Context, params *bedrock.ListFoundationModelAgreementOffersInput, optFns ...func(*bedrock.Options)) (*bedrock.ListFoundationModelAgreementOffersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFoundationModelAgreementOffers")
+	}
+
+	var r0 *bedrock.ListFoundationModelAgreementOffersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListFoundationModelAgreementOffersInput, ...func(*bedrock.Options)) (*bedrock.ListFoundationModelAgreementOffersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListFoundationModelAgreementOffersInput, ...func(*bedrock.Options)) *bedrock.ListFoundationModelAgreementOffersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListFoundationModelAgreementOffersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListFoundationModelAgreementOffersInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1883,6 +2956,43 @@ func (_m *IClient) PutModelInvocationLoggingConfiguration(ctx context.Context, p
 	return r0, r1
 }
 
+// PutUseCaseForModelAccess provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutUseCaseForModelAccess(ctx context.Context, params *bedrock.PutUseCaseForModelAccessInput, optFns ...func(*bedrock.Options)) (*bedrock.PutUseCaseForModelAccessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutUseCaseForModelAccess")
+	}
+
+	var r0 *bedrock.PutUseCaseForModelAccessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutUseCaseForModelAccessInput, ...func(*bedrock.Options)) (*bedrock.PutUseCaseForModelAccessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutUseCaseForModelAccessInput, ...func(*bedrock.Options)) *bedrock.PutUseCaseForModelAccessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutUseCaseForModelAccessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutUseCaseForModelAccessInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RegisterMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RegisterMarketplaceModelEndpoint(ctx context.Context, params *bedrock.RegisterMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.RegisterMarketplaceModelEndpointOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1912,6 +3022,80 @@ func (_m *IClient) RegisterMarketplaceModelEndpoint(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.RegisterMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAutomatedReasoningPolicyBuildWorkflow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *bedrock.StartAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*bedrock.Options)) (*bedrock.StartAutomatedReasoningPolicyBuildWorkflowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAutomatedReasoningPolicyBuildWorkflow")
+	}
+
+	var r0 *bedrock.StartAutomatedReasoningPolicyBuildWorkflowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) (*bedrock.StartAutomatedReasoningPolicyBuildWorkflowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) *bedrock.StartAutomatedReasoningPolicyBuildWorkflowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StartAutomatedReasoningPolicyBuildWorkflowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAutomatedReasoningPolicyTestWorkflow provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAutomatedReasoningPolicyTestWorkflow(ctx context.Context, params *bedrock.StartAutomatedReasoningPolicyTestWorkflowInput, optFns ...func(*bedrock.Options)) (*bedrock.StartAutomatedReasoningPolicyTestWorkflowOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAutomatedReasoningPolicyTestWorkflow")
+	}
+
+	var r0 *bedrock.StartAutomatedReasoningPolicyTestWorkflowOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyTestWorkflowInput, ...func(*bedrock.Options)) (*bedrock.StartAutomatedReasoningPolicyTestWorkflowOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyTestWorkflowInput, ...func(*bedrock.Options)) *bedrock.StartAutomatedReasoningPolicyTestWorkflowOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StartAutomatedReasoningPolicyTestWorkflowOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyTestWorkflowInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2097,6 +3281,117 @@ func (_m *IClient) UntagResource(ctx context.Context, params *bedrock.UntagResou
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UntagResourceInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAutomatedReasoningPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAutomatedReasoningPolicy(ctx context.Context, params *bedrock.UpdateAutomatedReasoningPolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.UpdateAutomatedReasoningPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAutomatedReasoningPolicy")
+	}
+
+	var r0 *bedrock.UpdateAutomatedReasoningPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) (*bedrock.UpdateAutomatedReasoningPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) *bedrock.UpdateAutomatedReasoningPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.UpdateAutomatedReasoningPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAutomatedReasoningPolicyAnnotations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAutomatedReasoningPolicyAnnotations(ctx context.Context, params *bedrock.UpdateAutomatedReasoningPolicyAnnotationsInput, optFns ...func(*bedrock.Options)) (*bedrock.UpdateAutomatedReasoningPolicyAnnotationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAutomatedReasoningPolicyAnnotations")
+	}
+
+	var r0 *bedrock.UpdateAutomatedReasoningPolicyAnnotationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyAnnotationsInput, ...func(*bedrock.Options)) (*bedrock.UpdateAutomatedReasoningPolicyAnnotationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyAnnotationsInput, ...func(*bedrock.Options)) *bedrock.UpdateAutomatedReasoningPolicyAnnotationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.UpdateAutomatedReasoningPolicyAnnotationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyAnnotationsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAutomatedReasoningPolicyTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAutomatedReasoningPolicyTestCase(ctx context.Context, params *bedrock.UpdateAutomatedReasoningPolicyTestCaseInput, optFns ...func(*bedrock.Options)) (*bedrock.UpdateAutomatedReasoningPolicyTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAutomatedReasoningPolicyTestCase")
+	}
+
+	var r0 *bedrock.UpdateAutomatedReasoningPolicyTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) (*bedrock.UpdateAutomatedReasoningPolicyTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) *bedrock.UpdateAutomatedReasoningPolicyTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.UpdateAutomatedReasoningPolicyTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateAutomatedReasoningPolicyTestCaseInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

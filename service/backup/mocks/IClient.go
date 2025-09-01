@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateBackupVaultMpaApprovalTeam provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateBackupVaultMpaApprovalTeam(ctx context.Context, params *backup.AssociateBackupVaultMpaApprovalTeamInput, optFns ...func(*backup.Options)) (*backup.AssociateBackupVaultMpaApprovalTeamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateBackupVaultMpaApprovalTeam")
+	}
+
+	var r0 *backup.AssociateBackupVaultMpaApprovalTeamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.AssociateBackupVaultMpaApprovalTeamInput, ...func(*backup.Options)) (*backup.AssociateBackupVaultMpaApprovalTeamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.AssociateBackupVaultMpaApprovalTeamInput, ...func(*backup.Options)) *backup.AssociateBackupVaultMpaApprovalTeamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.AssociateBackupVaultMpaApprovalTeamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.AssociateBackupVaultMpaApprovalTeamInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelLegalHold provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelLegalHold(ctx context.Context, params *backup.CancelLegalHoldInput, optFns ...func(*backup.Options)) (*backup.CancelLegalHoldOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -303,6 +340,43 @@ func (_m *IClient) CreateReportPlan(ctx context.Context, params *backup.CreateRe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.CreateReportPlanInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRestoreAccessBackupVault provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRestoreAccessBackupVault(ctx context.Context, params *backup.CreateRestoreAccessBackupVaultInput, optFns ...func(*backup.Options)) (*backup.CreateRestoreAccessBackupVaultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRestoreAccessBackupVault")
+	}
+
+	var r0 *backup.CreateRestoreAccessBackupVaultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.CreateRestoreAccessBackupVaultInput, ...func(*backup.Options)) (*backup.CreateRestoreAccessBackupVaultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.CreateRestoreAccessBackupVaultInput, ...func(*backup.Options)) *backup.CreateRestoreAccessBackupVaultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.CreateRestoreAccessBackupVaultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.CreateRestoreAccessBackupVaultInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1191,6 +1265,43 @@ func (_m *IClient) DescribeRestoreJob(ctx context.Context, params *backup.Descri
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.DescribeRestoreJobInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateBackupVaultMpaApprovalTeam provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateBackupVaultMpaApprovalTeam(ctx context.Context, params *backup.DisassociateBackupVaultMpaApprovalTeamInput, optFns ...func(*backup.Options)) (*backup.DisassociateBackupVaultMpaApprovalTeamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateBackupVaultMpaApprovalTeam")
+	}
+
+	var r0 *backup.DisassociateBackupVaultMpaApprovalTeamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DisassociateBackupVaultMpaApprovalTeamInput, ...func(*backup.Options)) (*backup.DisassociateBackupVaultMpaApprovalTeamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DisassociateBackupVaultMpaApprovalTeamInput, ...func(*backup.Options)) *backup.DisassociateBackupVaultMpaApprovalTeamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.DisassociateBackupVaultMpaApprovalTeamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.DisassociateBackupVaultMpaApprovalTeamInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2531,6 +2642,43 @@ func (_m *IClient) ListReportPlans(ctx context.Context, params *backup.ListRepor
 	return r0, r1
 }
 
+// ListRestoreAccessBackupVaults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRestoreAccessBackupVaults(ctx context.Context, params *backup.ListRestoreAccessBackupVaultsInput, optFns ...func(*backup.Options)) (*backup.ListRestoreAccessBackupVaultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRestoreAccessBackupVaults")
+	}
+
+	var r0 *backup.ListRestoreAccessBackupVaultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListRestoreAccessBackupVaultsInput, ...func(*backup.Options)) (*backup.ListRestoreAccessBackupVaultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListRestoreAccessBackupVaultsInput, ...func(*backup.Options)) *backup.ListRestoreAccessBackupVaultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListRestoreAccessBackupVaultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListRestoreAccessBackupVaultsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListRestoreJobSummaries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListRestoreJobSummaries(ctx context.Context, params *backup.ListRestoreJobSummariesInput, optFns ...func(*backup.Options)) (*backup.ListRestoreJobSummariesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2911,6 +3059,43 @@ func (_m *IClient) PutRestoreValidationResult(ctx context.Context, params *backu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.PutRestoreValidationResultInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RevokeRestoreAccessBackupVault provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeRestoreAccessBackupVault(ctx context.Context, params *backup.RevokeRestoreAccessBackupVaultInput, optFns ...func(*backup.Options)) (*backup.RevokeRestoreAccessBackupVaultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeRestoreAccessBackupVault")
+	}
+
+	var r0 *backup.RevokeRestoreAccessBackupVaultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.RevokeRestoreAccessBackupVaultInput, ...func(*backup.Options)) (*backup.RevokeRestoreAccessBackupVaultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.RevokeRestoreAccessBackupVaultInput, ...func(*backup.Options)) *backup.RevokeRestoreAccessBackupVaultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.RevokeRestoreAccessBackupVaultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.RevokeRestoreAccessBackupVaultInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

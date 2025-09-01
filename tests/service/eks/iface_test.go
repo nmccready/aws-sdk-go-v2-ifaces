@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeInsightsRefresh", func(t *testing.T) {
+        input := &eks.DescribeInsightsRefreshInput{}
+        output := &eks.DescribeInsightsRefreshOutput{}
+
+        mockClient.On("DescribeInsightsRefresh", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInsightsRefresh(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeNodegroup", func(t *testing.T) {
         input := &eks.DescribeNodegroupInput{}
         output := &eks.DescribeNodegroupOutput{}
@@ -639,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartInsightsRefresh", func(t *testing.T) {
+        input := &eks.StartInsightsRefreshInput{}
+        output := &eks.StartInsightsRefreshOutput{}
+
+        mockClient.On("StartInsightsRefresh", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartInsightsRefresh(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

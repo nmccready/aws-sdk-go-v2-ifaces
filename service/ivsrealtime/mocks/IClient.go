@@ -903,6 +903,43 @@ func (_m *IClient) ListParticipantEvents(ctx context.Context, params *ivsrealtim
 	return r0, r1
 }
 
+// ListParticipantReplicas provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListParticipantReplicas(ctx context.Context, params *ivsrealtime.ListParticipantReplicasInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.ListParticipantReplicasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListParticipantReplicas")
+	}
+
+	var r0 *ivsrealtime.ListParticipantReplicasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.ListParticipantReplicasInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.ListParticipantReplicasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.ListParticipantReplicasInput, ...func(*ivsrealtime.Options)) *ivsrealtime.ListParticipantReplicasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.ListParticipantReplicasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.ListParticipantReplicasInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListParticipants provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListParticipants(ctx context.Context, params *ivsrealtime.ListParticipantsInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.ListParticipantsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1180,6 +1217,43 @@ func (_m *IClient) StartComposition(ctx context.Context, params *ivsrealtime.Sta
 	return r0, r1
 }
 
+// StartParticipantReplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartParticipantReplication(ctx context.Context, params *ivsrealtime.StartParticipantReplicationInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.StartParticipantReplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartParticipantReplication")
+	}
+
+	var r0 *ivsrealtime.StartParticipantReplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.StartParticipantReplicationInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.StartParticipantReplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.StartParticipantReplicationInput, ...func(*ivsrealtime.Options)) *ivsrealtime.StartParticipantReplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.StartParticipantReplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.StartParticipantReplicationInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopComposition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopComposition(ctx context.Context, params *ivsrealtime.StopCompositionInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.StopCompositionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1209,6 +1283,43 @@ func (_m *IClient) StopComposition(ctx context.Context, params *ivsrealtime.Stop
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.StopCompositionInput, ...func(*ivsrealtime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopParticipantReplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopParticipantReplication(ctx context.Context, params *ivsrealtime.StopParticipantReplicationInput, optFns ...func(*ivsrealtime.Options)) (*ivsrealtime.StopParticipantReplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopParticipantReplication")
+	}
+
+	var r0 *ivsrealtime.StopParticipantReplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.StopParticipantReplicationInput, ...func(*ivsrealtime.Options)) (*ivsrealtime.StopParticipantReplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivsrealtime.StopParticipantReplicationInput, ...func(*ivsrealtime.Options)) *ivsrealtime.StopParticipantReplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivsrealtime.StopParticipantReplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivsrealtime.StopParticipantReplicationInput, ...func(*ivsrealtime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

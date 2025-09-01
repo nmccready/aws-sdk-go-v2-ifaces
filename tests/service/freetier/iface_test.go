@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccountActivity", func(t *testing.T) {
+        input := &freetier.GetAccountActivityInput{}
+        output := &freetier.GetAccountActivityOutput{}
+
+        mockClient.On("GetAccountActivity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountActivity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccountPlanState", func(t *testing.T) {
+        input := &freetier.GetAccountPlanStateInput{}
+        output := &freetier.GetAccountPlanStateOutput{}
+
+        mockClient.On("GetAccountPlanState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountPlanState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFreeTierUsage", func(t *testing.T) {
         input := &freetier.GetFreeTierUsageInput{}
         output := &freetier.GetFreeTierUsageOutput{}
@@ -41,6 +67,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFreeTierUsage", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFreeTierUsage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAccountActivities", func(t *testing.T) {
+        input := &freetier.ListAccountActivitiesInput{}
+        output := &freetier.ListAccountActivitiesOutput{}
+
+        mockClient.On("ListAccountActivities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccountActivities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpgradeAccountPlan", func(t *testing.T) {
+        input := &freetier.UpgradeAccountPlanInput{}
+        output := &freetier.UpgradeAccountPlanOutput{}
+
+        mockClient.On("UpgradeAccountPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpgradeAccountPlan(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCase", func(t *testing.T) {
+        input := &connectcases.DeleteCaseInput{}
+        output := &connectcases.DeleteCaseOutput{}
+
+        mockClient.On("DeleteCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCaseRule", func(t *testing.T) {
         input := &connectcases.DeleteCaseRuleInput{}
         output := &connectcases.DeleteCaseRuleOutput{}
@@ -210,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLayout", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLayout(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRelatedItem", func(t *testing.T) {
+        input := &connectcases.DeleteRelatedItemInput{}
+        output := &connectcases.DeleteRelatedItemOutput{}
+
+        mockClient.On("DeleteRelatedItem", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRelatedItem(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

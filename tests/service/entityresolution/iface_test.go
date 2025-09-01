@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGenerateMatchId", func(t *testing.T) {
+        input := &entityresolution.GenerateMatchIdInput{}
+        output := &entityresolution.GenerateMatchIdOutput{}
+
+        mockClient.On("GenerateMatchId", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateMatchId(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetIdMappingJob", func(t *testing.T) {
         input := &entityresolution.GetIdMappingJobInput{}
         output := &entityresolution.GetIdMappingJobOutput{}

@@ -1383,6 +1383,43 @@ func (_m *IClient) DescribeConnectionAliases(ctx context.Context, params *worksp
 	return r0, r1
 }
 
+// DescribeCustomWorkspaceImageImport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCustomWorkspaceImageImport(ctx context.Context, params *workspaces.DescribeCustomWorkspaceImageImportInput, optFns ...func(*workspaces.Options)) (*workspaces.DescribeCustomWorkspaceImageImportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCustomWorkspaceImageImport")
+	}
+
+	var r0 *workspaces.DescribeCustomWorkspaceImageImportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspaces.DescribeCustomWorkspaceImageImportInput, ...func(*workspaces.Options)) (*workspaces.DescribeCustomWorkspaceImageImportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspaces.DescribeCustomWorkspaceImageImportInput, ...func(*workspaces.Options)) *workspaces.DescribeCustomWorkspaceImageImportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspaces.DescribeCustomWorkspaceImageImportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspaces.DescribeCustomWorkspaceImageImportInput, ...func(*workspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeImageAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeImageAssociations(ctx context.Context, params *workspaces.DescribeImageAssociationsInput, optFns ...func(*workspaces.Options)) (*workspaces.DescribeImageAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2041,6 +2078,43 @@ func (_m *IClient) ImportClientBranding(ctx context.Context, params *workspaces.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *workspaces.ImportClientBrandingInput, ...func(*workspaces.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ImportCustomWorkspaceImage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ImportCustomWorkspaceImage(ctx context.Context, params *workspaces.ImportCustomWorkspaceImageInput, optFns ...func(*workspaces.Options)) (*workspaces.ImportCustomWorkspaceImageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ImportCustomWorkspaceImage")
+	}
+
+	var r0 *workspaces.ImportCustomWorkspaceImageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *workspaces.ImportCustomWorkspaceImageInput, ...func(*workspaces.Options)) (*workspaces.ImportCustomWorkspaceImageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *workspaces.ImportCustomWorkspaceImageInput, ...func(*workspaces.Options)) *workspaces.ImportCustomWorkspaceImageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*workspaces.ImportCustomWorkspaceImageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *workspaces.ImportCustomWorkspaceImageInput, ...func(*workspaces.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

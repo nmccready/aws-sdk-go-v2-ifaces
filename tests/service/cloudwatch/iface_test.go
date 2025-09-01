@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMetricStreams", func(t *testing.T) {
-        input := &cloudwatch.ListMetricStreamsInput{}
-        output := &cloudwatch.ListMetricStreamsOutput{}
-
-        mockClient.On("ListMetricStreams", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListMetricStreams(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListMetrics", func(t *testing.T) {
         input := &cloudwatch.ListMetricsInput{}
         output := &cloudwatch.ListMetricsOutput{}
@@ -340,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListMetrics", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMetricStreams", func(t *testing.T) {
+        input := &cloudwatch.ListMetricStreamsInput{}
+        output := &cloudwatch.ListMetricStreamsOutput{}
+
+        mockClient.On("ListMetricStreams", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMetricStreams(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

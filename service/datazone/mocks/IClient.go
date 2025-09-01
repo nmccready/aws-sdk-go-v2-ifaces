@@ -200,6 +200,43 @@ func (_m *IClient) AssociateEnvironmentRole(ctx context.Context, params *datazon
 	return r0, r1
 }
 
+// AssociateGovernedTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateGovernedTerms(ctx context.Context, params *datazone.AssociateGovernedTermsInput, optFns ...func(*datazone.Options)) (*datazone.AssociateGovernedTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateGovernedTerms")
+	}
+
+	var r0 *datazone.AssociateGovernedTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.AssociateGovernedTermsInput, ...func(*datazone.Options)) (*datazone.AssociateGovernedTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.AssociateGovernedTermsInput, ...func(*datazone.Options)) *datazone.AssociateGovernedTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.AssociateGovernedTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.AssociateGovernedTermsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelMetadataGenerationRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelMetadataGenerationRun(ctx context.Context, params *datazone.CancelMetadataGenerationRunInput, optFns ...func(*datazone.Options)) (*datazone.CancelMetadataGenerationRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +303,43 @@ func (_m *IClient) CancelSubscription(ctx context.Context, params *datazone.Canc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CancelSubscriptionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAccountPool provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAccountPool(ctx context.Context, params *datazone.CreateAccountPoolInput, optFns ...func(*datazone.Options)) (*datazone.CreateAccountPoolOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAccountPool")
+	}
+
+	var r0 *datazone.CreateAccountPoolOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateAccountPoolInput, ...func(*datazone.Options)) (*datazone.CreateAccountPoolOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateAccountPoolInput, ...func(*datazone.Options)) *datazone.CreateAccountPoolOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateAccountPoolOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateAccountPoolInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1236,6 +1310,43 @@ func (_m *IClient) CreateUserProfile(ctx context.Context, params *datazone.Creat
 	return r0, r1
 }
 
+// DeleteAccountPool provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAccountPool(ctx context.Context, params *datazone.DeleteAccountPoolInput, optFns ...func(*datazone.Options)) (*datazone.DeleteAccountPoolOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAccountPool")
+	}
+
+	var r0 *datazone.DeleteAccountPoolOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteAccountPoolInput, ...func(*datazone.Options)) (*datazone.DeleteAccountPoolOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteAccountPoolInput, ...func(*datazone.Options)) *datazone.DeleteAccountPoolOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteAccountPoolOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteAccountPoolInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAsset provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAsset(ctx context.Context, params *datazone.DeleteAssetInput, optFns ...func(*datazone.Options)) (*datazone.DeleteAssetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2153,6 +2264,80 @@ func (_m *IClient) DisassociateEnvironmentRole(ctx context.Context, params *data
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DisassociateEnvironmentRoleInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateGovernedTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateGovernedTerms(ctx context.Context, params *datazone.DisassociateGovernedTermsInput, optFns ...func(*datazone.Options)) (*datazone.DisassociateGovernedTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateGovernedTerms")
+	}
+
+	var r0 *datazone.DisassociateGovernedTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DisassociateGovernedTermsInput, ...func(*datazone.Options)) (*datazone.DisassociateGovernedTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DisassociateGovernedTermsInput, ...func(*datazone.Options)) *datazone.DisassociateGovernedTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DisassociateGovernedTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DisassociateGovernedTermsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAccountPool provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountPool(ctx context.Context, params *datazone.GetAccountPoolInput, optFns ...func(*datazone.Options)) (*datazone.GetAccountPoolOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountPool")
+	}
+
+	var r0 *datazone.GetAccountPoolOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetAccountPoolInput, ...func(*datazone.Options)) (*datazone.GetAccountPoolOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetAccountPoolInput, ...func(*datazone.Options)) *datazone.GetAccountPoolOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetAccountPoolOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetAccountPoolInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3411,6 +3596,80 @@ func (_m *IClient) GetUserProfile(ctx context.Context, params *datazone.GetUserP
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetUserProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAccountPools provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAccountPools(ctx context.Context, params *datazone.ListAccountPoolsInput, optFns ...func(*datazone.Options)) (*datazone.ListAccountPoolsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAccountPools")
+	}
+
+	var r0 *datazone.ListAccountPoolsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListAccountPoolsInput, ...func(*datazone.Options)) (*datazone.ListAccountPoolsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListAccountPoolsInput, ...func(*datazone.Options)) *datazone.ListAccountPoolsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListAccountPoolsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListAccountPoolsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAccountsInAccountPool provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAccountsInAccountPool(ctx context.Context, params *datazone.ListAccountsInAccountPoolInput, optFns ...func(*datazone.Options)) (*datazone.ListAccountsInAccountPoolOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAccountsInAccountPool")
+	}
+
+	var r0 *datazone.ListAccountsInAccountPoolOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListAccountsInAccountPoolInput, ...func(*datazone.Options)) (*datazone.ListAccountsInAccountPoolOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListAccountsInAccountPoolInput, ...func(*datazone.Options)) *datazone.ListAccountsInAccountPoolOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListAccountsInAccountPoolOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListAccountsInAccountPoolInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5205,6 +5464,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *datazone.UntagReso
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UntagResourceInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAccountPool provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAccountPool(ctx context.Context, params *datazone.UpdateAccountPoolInput, optFns ...func(*datazone.Options)) (*datazone.UpdateAccountPoolOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAccountPool")
+	}
+
+	var r0 *datazone.UpdateAccountPoolOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateAccountPoolInput, ...func(*datazone.Options)) (*datazone.UpdateAccountPoolOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateAccountPoolInput, ...func(*datazone.Options)) *datazone.UpdateAccountPoolOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateAccountPoolOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateAccountPoolInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

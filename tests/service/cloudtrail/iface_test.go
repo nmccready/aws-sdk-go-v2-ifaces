@@ -281,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEventConfiguration", func(t *testing.T) {
+        input := &cloudtrail.GetEventConfigurationInput{}
+        output := &cloudtrail.GetEventConfigurationOutput{}
+
+        mockClient.On("GetEventConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEventConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEventDataStore", func(t *testing.T) {
         input := &cloudtrail.GetEventDataStoreInput{}
         output := &cloudtrail.GetEventDataStoreOutput{}
@@ -522,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("LookupEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.LookupEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutEventConfiguration", func(t *testing.T) {
+        input := &cloudtrail.PutEventConfigurationInput{}
+        output := &cloudtrail.PutEventConfigurationOutput{}
+
+        mockClient.On("PutEventConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutEventConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

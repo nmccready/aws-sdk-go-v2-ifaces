@@ -1068,6 +1068,43 @@ func (_m *IClient) StartExportTask(ctx context.Context, params *neptunegraph.Sta
 	return r0, r1
 }
 
+// StartGraph provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartGraph(ctx context.Context, params *neptunegraph.StartGraphInput, optFns ...func(*neptunegraph.Options)) (*neptunegraph.StartGraphOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartGraph")
+	}
+
+	var r0 *neptunegraph.StartGraphOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunegraph.StartGraphInput, ...func(*neptunegraph.Options)) (*neptunegraph.StartGraphOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunegraph.StartGraphInput, ...func(*neptunegraph.Options)) *neptunegraph.StartGraphOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunegraph.StartGraphOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunegraph.StartGraphInput, ...func(*neptunegraph.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartImportTask provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartImportTask(ctx context.Context, params *neptunegraph.StartImportTaskInput, optFns ...func(*neptunegraph.Options)) (*neptunegraph.StartImportTaskOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1097,6 +1134,43 @@ func (_m *IClient) StartImportTask(ctx context.Context, params *neptunegraph.Sta
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *neptunegraph.StartImportTaskInput, ...func(*neptunegraph.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopGraph provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopGraph(ctx context.Context, params *neptunegraph.StopGraphInput, optFns ...func(*neptunegraph.Options)) (*neptunegraph.StopGraphOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopGraph")
+	}
+
+	var r0 *neptunegraph.StopGraphOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunegraph.StopGraphInput, ...func(*neptunegraph.Options)) (*neptunegraph.StopGraphOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunegraph.StopGraphInput, ...func(*neptunegraph.Options)) *neptunegraph.StopGraphOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunegraph.StopGraphOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunegraph.StopGraphInput, ...func(*neptunegraph.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

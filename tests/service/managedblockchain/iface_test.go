@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProposalVotes", func(t *testing.T) {
-        input := &managedblockchain.ListProposalVotesInput{}
-        output := &managedblockchain.ListProposalVotesOutput{}
-
-        mockClient.On("ListProposalVotes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListProposalVotes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListProposals", func(t *testing.T) {
         input := &managedblockchain.ListProposalsInput{}
         output := &managedblockchain.ListProposalsOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProposals", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProposals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProposalVotes", func(t *testing.T) {
+        input := &managedblockchain.ListProposalVotesInput{}
+        output := &managedblockchain.ListProposalVotesOutput{}
+
+        mockClient.On("ListProposalVotes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProposalVotes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

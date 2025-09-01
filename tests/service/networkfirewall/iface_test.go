@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcceptNetworkFirewallTransitGatewayAttachment", func(t *testing.T) {
+        input := &networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentInput{}
+        output := &networkfirewall.AcceptNetworkFirewallTransitGatewayAttachmentOutput{}
+
+        mockClient.On("AcceptNetworkFirewallTransitGatewayAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcceptNetworkFirewallTransitGatewayAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAssociateAvailabilityZones", func(t *testing.T) {
+        input := &networkfirewall.AssociateAvailabilityZonesInput{}
+        output := &networkfirewall.AssociateAvailabilityZonesOutput{}
+
+        mockClient.On("AssociateAvailabilityZones", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateAvailabilityZones(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateFirewallPolicy", func(t *testing.T) {
         input := &networkfirewall.AssociateFirewallPolicyInput{}
         output := &networkfirewall.AssociateFirewallPolicyOutput{}
@@ -112,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVpcEndpointAssociation", func(t *testing.T) {
+        input := &networkfirewall.CreateVpcEndpointAssociationInput{}
+        output := &networkfirewall.CreateVpcEndpointAssociationOutput{}
+
+        mockClient.On("CreateVpcEndpointAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVpcEndpointAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteFirewall", func(t *testing.T) {
         input := &networkfirewall.DeleteFirewallInput{}
         output := &networkfirewall.DeleteFirewallOutput{}
@@ -132,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFirewallPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFirewallPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteNetworkFirewallTransitGatewayAttachment", func(t *testing.T) {
+        input := &networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentInput{}
+        output := &networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput{}
+
+        mockClient.On("DeleteNetworkFirewallTransitGatewayAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNetworkFirewallTransitGatewayAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVpcEndpointAssociation", func(t *testing.T) {
+        input := &networkfirewall.DeleteVpcEndpointAssociationInput{}
+        output := &networkfirewall.DeleteVpcEndpointAssociationOutput{}
+
+        mockClient.On("DeleteVpcEndpointAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpcEndpointAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeFirewall", func(t *testing.T) {
         input := &networkfirewall.DescribeFirewallInput{}
         output := &networkfirewall.DescribeFirewallOutput{}
@@ -184,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeFirewall", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeFirewall(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeFirewallMetadata", func(t *testing.T) {
+        input := &networkfirewall.DescribeFirewallMetadataInput{}
+        output := &networkfirewall.DescribeFirewallMetadataOutput{}
+
+        mockClient.On("DescribeFirewallMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFirewallMetadata(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -268,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeRuleGroupSummary", func(t *testing.T) {
+        input := &networkfirewall.DescribeRuleGroupSummaryInput{}
+        output := &networkfirewall.DescribeRuleGroupSummaryOutput{}
+
+        mockClient.On("DescribeRuleGroupSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRuleGroupSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTLSInspectionConfiguration", func(t *testing.T) {
         input := &networkfirewall.DescribeTLSInspectionConfigurationInput{}
         output := &networkfirewall.DescribeTLSInspectionConfigurationOutput{}
@@ -275,6 +366,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTLSInspectionConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTLSInspectionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeVpcEndpointAssociation", func(t *testing.T) {
+        input := &networkfirewall.DescribeVpcEndpointAssociationInput{}
+        output := &networkfirewall.DescribeVpcEndpointAssociationOutput{}
+
+        mockClient.On("DescribeVpcEndpointAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpcEndpointAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateAvailabilityZones", func(t *testing.T) {
+        input := &networkfirewall.DisassociateAvailabilityZonesInput{}
+        output := &networkfirewall.DisassociateAvailabilityZonesOutput{}
+
+        mockClient.On("DisassociateAvailabilityZones", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateAvailabilityZones(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTLSInspectionConfigurations", func(t *testing.T) {
-        input := &networkfirewall.ListTLSInspectionConfigurationsInput{}
-        output := &networkfirewall.ListTLSInspectionConfigurationsOutput{}
-
-        mockClient.On("ListTLSInspectionConfigurations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTLSInspectionConfigurations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &networkfirewall.ListTagsForResourceInput{}
         output := &networkfirewall.ListTagsForResourceOutput{}
@@ -411,6 +515,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTLSInspectionConfigurations", func(t *testing.T) {
+        input := &networkfirewall.ListTLSInspectionConfigurationsInput{}
+        output := &networkfirewall.ListTLSInspectionConfigurationsOutput{}
+
+        mockClient.On("ListTLSInspectionConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTLSInspectionConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVpcEndpointAssociations", func(t *testing.T) {
+        input := &networkfirewall.ListVpcEndpointAssociationsInput{}
+        output := &networkfirewall.ListVpcEndpointAssociationsOutput{}
+
+        mockClient.On("ListVpcEndpointAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVpcEndpointAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutResourcePolicy", func(t *testing.T) {
         input := &networkfirewall.PutResourcePolicyInput{}
         output := &networkfirewall.PutResourcePolicyOutput{}
@@ -418,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRejectNetworkFirewallTransitGatewayAttachment", func(t *testing.T) {
+        input := &networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentInput{}
+        output := &networkfirewall.RejectNetworkFirewallTransitGatewayAttachmentOutput{}
+
+        mockClient.On("RejectNetworkFirewallTransitGatewayAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RejectNetworkFirewallTransitGatewayAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAvailabilityZoneChangeProtection", func(t *testing.T) {
+        input := &networkfirewall.UpdateAvailabilityZoneChangeProtectionInput{}
+        output := &networkfirewall.UpdateAvailabilityZoneChangeProtectionOutput{}
+
+        mockClient.On("UpdateAvailabilityZoneChangeProtection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAvailabilityZoneChangeProtection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

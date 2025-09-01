@@ -385,6 +385,43 @@ func (_m *IClient) CreateDirectory(ctx context.Context, params *directoryservice
 	return r0, r1
 }
 
+// CreateHybridAD provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateHybridAD(ctx context.Context, params *directoryservice.CreateHybridADInput, optFns ...func(*directoryservice.Options)) (*directoryservice.CreateHybridADOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateHybridAD")
+	}
+
+	var r0 *directoryservice.CreateHybridADOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.CreateHybridADInput, ...func(*directoryservice.Options)) (*directoryservice.CreateHybridADOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.CreateHybridADInput, ...func(*directoryservice.Options)) *directoryservice.CreateHybridADOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.CreateHybridADOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.CreateHybridADInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateLogSubscription provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateLogSubscription(ctx context.Context, params *directoryservice.CreateLogSubscriptionInput, optFns ...func(*directoryservice.Options)) (*directoryservice.CreateLogSubscriptionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +562,43 @@ func (_m *IClient) CreateTrust(ctx context.Context, params *directoryservice.Cre
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.CreateTrustInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteADAssessment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteADAssessment(ctx context.Context, params *directoryservice.DeleteADAssessmentInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DeleteADAssessmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteADAssessment")
+	}
+
+	var r0 *directoryservice.DeleteADAssessmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DeleteADAssessmentInput, ...func(*directoryservice.Options)) (*directoryservice.DeleteADAssessmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DeleteADAssessmentInput, ...func(*directoryservice.Options)) *directoryservice.DeleteADAssessmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.DeleteADAssessmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DeleteADAssessmentInput, ...func(*directoryservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +866,80 @@ func (_m *IClient) DeregisterEventTopic(ctx context.Context, params *directoryse
 	return r0, r1
 }
 
+// DescribeADAssessment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeADAssessment(ctx context.Context, params *directoryservice.DescribeADAssessmentInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DescribeADAssessmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeADAssessment")
+	}
+
+	var r0 *directoryservice.DescribeADAssessmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DescribeADAssessmentInput, ...func(*directoryservice.Options)) (*directoryservice.DescribeADAssessmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DescribeADAssessmentInput, ...func(*directoryservice.Options)) *directoryservice.DescribeADAssessmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.DescribeADAssessmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DescribeADAssessmentInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCAEnrollmentPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCAEnrollmentPolicy(ctx context.Context, params *directoryservice.DescribeCAEnrollmentPolicyInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DescribeCAEnrollmentPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCAEnrollmentPolicy")
+	}
+
+	var r0 *directoryservice.DescribeCAEnrollmentPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DescribeCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) (*directoryservice.DescribeCAEnrollmentPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DescribeCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) *directoryservice.DescribeCAEnrollmentPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.DescribeCAEnrollmentPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DescribeCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeCertificate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeCertificate(ctx context.Context, params *directoryservice.DescribeCertificateInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DescribeCertificateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1043,6 +1191,43 @@ func (_m *IClient) DescribeEventTopics(ctx context.Context, params *directoryser
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DescribeEventTopicsInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeHybridADUpdate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeHybridADUpdate(ctx context.Context, params *directoryservice.DescribeHybridADUpdateInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DescribeHybridADUpdateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeHybridADUpdate")
+	}
+
+	var r0 *directoryservice.DescribeHybridADUpdateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DescribeHybridADUpdateInput, ...func(*directoryservice.Options)) (*directoryservice.DescribeHybridADUpdateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DescribeHybridADUpdateInput, ...func(*directoryservice.Options)) *directoryservice.DescribeHybridADUpdateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.DescribeHybridADUpdateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DescribeHybridADUpdateInput, ...func(*directoryservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1310,6 +1495,43 @@ func (_m *IClient) DescribeUpdateDirectory(ctx context.Context, params *director
 	return r0, r1
 }
 
+// DisableCAEnrollmentPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableCAEnrollmentPolicy(ctx context.Context, params *directoryservice.DisableCAEnrollmentPolicyInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DisableCAEnrollmentPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableCAEnrollmentPolicy")
+	}
+
+	var r0 *directoryservice.DisableCAEnrollmentPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DisableCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) (*directoryservice.DisableCAEnrollmentPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.DisableCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) *directoryservice.DisableCAEnrollmentPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.DisableCAEnrollmentPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DisableCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisableClientAuthentication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisableClientAuthentication(ctx context.Context, params *directoryservice.DisableClientAuthenticationInput, optFns ...func(*directoryservice.Options)) (*directoryservice.DisableClientAuthenticationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1487,6 +1709,43 @@ func (_m *IClient) DisableSso(ctx context.Context, params *directoryservice.Disa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.DisableSsoInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableCAEnrollmentPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableCAEnrollmentPolicy(ctx context.Context, params *directoryservice.EnableCAEnrollmentPolicyInput, optFns ...func(*directoryservice.Options)) (*directoryservice.EnableCAEnrollmentPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableCAEnrollmentPolicy")
+	}
+
+	var r0 *directoryservice.EnableCAEnrollmentPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.EnableCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) (*directoryservice.EnableCAEnrollmentPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.EnableCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) *directoryservice.EnableCAEnrollmentPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.EnableCAEnrollmentPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.EnableCAEnrollmentPolicyInput, ...func(*directoryservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1746,6 +2005,43 @@ func (_m *IClient) GetSnapshotLimits(ctx context.Context, params *directoryservi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.GetSnapshotLimitsInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListADAssessments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListADAssessments(ctx context.Context, params *directoryservice.ListADAssessmentsInput, optFns ...func(*directoryservice.Options)) (*directoryservice.ListADAssessmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListADAssessments")
+	}
+
+	var r0 *directoryservice.ListADAssessmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.ListADAssessmentsInput, ...func(*directoryservice.Options)) (*directoryservice.ListADAssessmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.ListADAssessmentsInput, ...func(*directoryservice.Options)) *directoryservice.ListADAssessmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.ListADAssessmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.ListADAssessmentsInput, ...func(*directoryservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2290,6 +2586,43 @@ func (_m *IClient) ShareDirectory(ctx context.Context, params *directoryservice.
 	return r0, r1
 }
 
+// StartADAssessment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartADAssessment(ctx context.Context, params *directoryservice.StartADAssessmentInput, optFns ...func(*directoryservice.Options)) (*directoryservice.StartADAssessmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartADAssessment")
+	}
+
+	var r0 *directoryservice.StartADAssessmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.StartADAssessmentInput, ...func(*directoryservice.Options)) (*directoryservice.StartADAssessmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.StartADAssessmentInput, ...func(*directoryservice.Options)) *directoryservice.StartADAssessmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.StartADAssessmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.StartADAssessmentInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartSchemaExtension provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartSchemaExtension(ctx context.Context, params *directoryservice.StartSchemaExtensionInput, optFns ...func(*directoryservice.Options)) (*directoryservice.StartSchemaExtensionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2430,6 +2763,43 @@ func (_m *IClient) UpdateDirectorySetup(ctx context.Context, params *directoryse
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.UpdateDirectorySetupInput, ...func(*directoryservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateHybridAD provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHybridAD(ctx context.Context, params *directoryservice.UpdateHybridADInput, optFns ...func(*directoryservice.Options)) (*directoryservice.UpdateHybridADOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHybridAD")
+	}
+
+	var r0 *directoryservice.UpdateHybridADOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.UpdateHybridADInput, ...func(*directoryservice.Options)) (*directoryservice.UpdateHybridADOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directoryservice.UpdateHybridADInput, ...func(*directoryservice.Options)) *directoryservice.UpdateHybridADOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directoryservice.UpdateHybridADOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directoryservice.UpdateHybridADInput, ...func(*directoryservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
