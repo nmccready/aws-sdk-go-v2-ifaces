@@ -70,7 +70,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudcontrol v1.29.4
 	github.com/aws/aws-sdk-go-v2/service/clouddirectory v1.30.4
 	github.com/aws/aws-sdk-go-v2/service/cloudformation v1.71.0
-	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.57.0
+	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.58.0
 	github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore v1.12.15
 	github.com/aws/aws-sdk-go-v2/service/cloudhsm v1.29.13
 	github.com/aws/aws-sdk-go-v2/service/cloudhsmv2 v1.34.12
@@ -80,7 +80,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudtraildata v1.17.5
 	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.52.4
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchevents v1.32.14
-	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.60.1
+	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.61.0
 	github.com/aws/aws-sdk-go-v2/service/codeartifact v1.38.13
 	github.com/aws/aws-sdk-go-v2/service/codebuild v1.68.5
 	github.com/aws/aws-sdk-go-v2/service/codecatalyst v1.21.4
@@ -415,7 +415,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.34.1
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.12
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -430,14 +430,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.14 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.14 // indirect
 	github.com/aws/smithy-go v1.23.2 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
