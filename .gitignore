@@ -8,3 +8,4 @@ node_modules
 go.sum
 package-lock.json
 coverage.txt
+scripts/logs/*

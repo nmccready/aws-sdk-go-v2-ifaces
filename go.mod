@@ -70,7 +70,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudcontrol v1.29.4
 	github.com/aws/aws-sdk-go-v2/service/clouddirectory v1.30.4
 	github.com/aws/aws-sdk-go-v2/service/cloudformation v1.71.0
-	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.57.0
+	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.58.0
 	github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore v1.12.15
 	github.com/aws/aws-sdk-go-v2/service/cloudhsm v1.29.13
 	github.com/aws/aws-sdk-go-v2/service/cloudhsmv2 v1.34.12
@@ -80,7 +80,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudtraildata v1.17.5
 	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.52.4
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchevents v1.32.14
-	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.60.1
+	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.61.0
 	github.com/aws/aws-sdk-go-v2/service/codeartifact v1.38.13
 	github.com/aws/aws-sdk-go-v2/service/codebuild v1.68.5
 	github.com/aws/aws-sdk-go-v2/service/codecatalyst v1.21.4
