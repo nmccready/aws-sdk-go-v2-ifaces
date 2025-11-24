@@ -489,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetManagedThingCertificate", func(t *testing.T) {
+        input := &iotmanagedintegrations.GetManagedThingCertificateInput{}
+        output := &iotmanagedintegrations.GetManagedThingCertificateOutput{}
+
+        mockClient.On("GetManagedThingCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedThingCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetManagedThingConnectivityData", func(t *testing.T) {
         input := &iotmanagedintegrations.GetManagedThingConnectivityDataInput{}
         output := &iotmanagedintegrations.GetManagedThingConnectivityDataOutput{}
@@ -723,19 +736,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListManagedThingSchemas", func(t *testing.T) {
-        input := &iotmanagedintegrations.ListManagedThingSchemasInput{}
-        output := &iotmanagedintegrations.ListManagedThingSchemasOutput{}
-
-        mockClient.On("ListManagedThingSchemas", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListManagedThingSchemas(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListManagedThings", func(t *testing.T) {
         input := &iotmanagedintegrations.ListManagedThingsInput{}
         output := &iotmanagedintegrations.ListManagedThingsOutput{}
@@ -743,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListManagedThings", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListManagedThings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListManagedThingSchemas", func(t *testing.T) {
+        input := &iotmanagedintegrations.ListManagedThingSchemasInput{}
+        output := &iotmanagedintegrations.ListManagedThingSchemasOutput{}
+
+        mockClient.On("ListManagedThingSchemas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListManagedThingSchemas(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

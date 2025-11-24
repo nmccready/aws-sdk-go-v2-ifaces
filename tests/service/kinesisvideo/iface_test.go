@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeStreamStorageConfiguration", func(t *testing.T) {
+        input := &kinesisvideo.DescribeStreamStorageConfigurationInput{}
+        output := &kinesisvideo.DescribeStreamStorageConfigurationOutput{}
+
+        mockClient.On("DescribeStreamStorageConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStreamStorageConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataEndpoint", func(t *testing.T) {
         input := &kinesisvideo.GetDataEndpointInput{}
         output := &kinesisvideo.GetDataEndpointOutput{}
@@ -418,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateStreamStorageConfiguration", func(t *testing.T) {
+        input := &kinesisvideo.UpdateStreamStorageConfigurationInput{}
+        output := &kinesisvideo.UpdateStreamStorageConfigurationOutput{}
+
+        mockClient.On("UpdateStreamStorageConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateStreamStorageConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

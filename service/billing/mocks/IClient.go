@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateSourceViews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateSourceViews(ctx context.Context, params *billing.AssociateSourceViewsInput, optFns ...func(*billing.Options)) (*billing.AssociateSourceViewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateSourceViews")
+	}
+
+	var r0 *billing.AssociateSourceViewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.AssociateSourceViewsInput, ...func(*billing.Options)) (*billing.AssociateSourceViewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.AssociateSourceViewsInput, ...func(*billing.Options)) *billing.AssociateSourceViewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.AssociateSourceViewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.AssociateSourceViewsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBillingView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBillingView(ctx context.Context, params *billing.CreateBillingViewInput, optFns ...func(*billing.Options)) (*billing.CreateBillingViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +118,43 @@ func (_m *IClient) DeleteBillingView(ctx context.Context, params *billing.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.DeleteBillingViewInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateSourceViews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateSourceViews(ctx context.Context, params *billing.DisassociateSourceViewsInput, optFns ...func(*billing.Options)) (*billing.DisassociateSourceViewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateSourceViews")
+	}
+
+	var r0 *billing.DisassociateSourceViewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.DisassociateSourceViewsInput, ...func(*billing.Options)) (*billing.DisassociateSourceViewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.DisassociateSourceViewsInput, ...func(*billing.Options)) *billing.DisassociateSourceViewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.DisassociateSourceViewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.DisassociateSourceViewsInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

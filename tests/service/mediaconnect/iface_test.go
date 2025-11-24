@@ -112,6 +112,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetRouterInput", func(t *testing.T) {
+        input := &mediaconnect.BatchGetRouterInputInput{}
+        output := &mediaconnect.BatchGetRouterInputOutput{}
+
+        mockClient.On("BatchGetRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetRouterNetworkInterface", func(t *testing.T) {
+        input := &mediaconnect.BatchGetRouterNetworkInterfaceInput{}
+        output := &mediaconnect.BatchGetRouterNetworkInterfaceOutput{}
+
+        mockClient.On("BatchGetRouterNetworkInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetRouterNetworkInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.BatchGetRouterOutputInput{}
+        output := &mediaconnect.BatchGetRouterOutputOutput{}
+
+        mockClient.On("BatchGetRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBridge", func(t *testing.T) {
         input := &mediaconnect.CreateBridgeInput{}
         output := &mediaconnect.CreateBridgeOutput{}
@@ -151,6 +190,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRouterInput", func(t *testing.T) {
+        input := &mediaconnect.CreateRouterInputInput{}
+        output := &mediaconnect.CreateRouterInputOutput{}
+
+        mockClient.On("CreateRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRouterNetworkInterface", func(t *testing.T) {
+        input := &mediaconnect.CreateRouterNetworkInterfaceInput{}
+        output := &mediaconnect.CreateRouterNetworkInterfaceOutput{}
+
+        mockClient.On("CreateRouterNetworkInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRouterNetworkInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.CreateRouterOutputInput{}
+        output := &mediaconnect.CreateRouterOutputOutput{}
+
+        mockClient.On("CreateRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteBridge", func(t *testing.T) {
         input := &mediaconnect.DeleteBridgeInput{}
         output := &mediaconnect.DeleteBridgeOutput{}
@@ -184,6 +262,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRouterInput", func(t *testing.T) {
+        input := &mediaconnect.DeleteRouterInputInput{}
+        output := &mediaconnect.DeleteRouterInputOutput{}
+
+        mockClient.On("DeleteRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRouterNetworkInterface", func(t *testing.T) {
+        input := &mediaconnect.DeleteRouterNetworkInterfaceInput{}
+        output := &mediaconnect.DeleteRouterNetworkInterfaceOutput{}
+
+        mockClient.On("DeleteRouterNetworkInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRouterNetworkInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.DeleteRouterOutputInput{}
+        output := &mediaconnect.DeleteRouterOutputOutput{}
+
+        mockClient.On("DeleteRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRouterOutput(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +424,71 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetRouterInput", func(t *testing.T) {
+        input := &mediaconnect.GetRouterInputInput{}
+        output := &mediaconnect.GetRouterInputOutput{}
+
+        mockClient.On("GetRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRouterInputSourceMetadata", func(t *testing.T) {
+        input := &mediaconnect.GetRouterInputSourceMetadataInput{}
+        output := &mediaconnect.GetRouterInputSourceMetadataOutput{}
+
+        mockClient.On("GetRouterInputSourceMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRouterInputSourceMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRouterInputThumbnail", func(t *testing.T) {
+        input := &mediaconnect.GetRouterInputThumbnailInput{}
+        output := &mediaconnect.GetRouterInputThumbnailOutput{}
+
+        mockClient.On("GetRouterInputThumbnail", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRouterInputThumbnail(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRouterNetworkInterface", func(t *testing.T) {
+        input := &mediaconnect.GetRouterNetworkInterfaceInput{}
+        output := &mediaconnect.GetRouterNetworkInterfaceOutput{}
+
+        mockClient.On("GetRouterNetworkInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRouterNetworkInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.GetRouterOutputInput{}
+        output := &mediaconnect.GetRouterOutputOutput{}
+
+        mockClient.On("GetRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGrantFlowEntitlements", func(t *testing.T) {
         input := &mediaconnect.GrantFlowEntitlementsInput{}
         output := &mediaconnect.GrantFlowEntitlementsOutput{}
@@ -405,6 +587,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListReservations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListReservations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRouterInputs", func(t *testing.T) {
+        input := &mediaconnect.ListRouterInputsInput{}
+        output := &mediaconnect.ListRouterInputsOutput{}
+
+        mockClient.On("ListRouterInputs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRouterInputs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRouterNetworkInterfaces", func(t *testing.T) {
+        input := &mediaconnect.ListRouterNetworkInterfacesInput{}
+        output := &mediaconnect.ListRouterNetworkInterfacesOutput{}
+
+        mockClient.On("ListRouterNetworkInterfaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRouterNetworkInterfaces(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRouterOutputs", func(t *testing.T) {
+        input := &mediaconnect.ListRouterOutputsInput{}
+        output := &mediaconnect.ListRouterOutputsOutput{}
+
+        mockClient.On("ListRouterOutputs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRouterOutputs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagsForGlobalResource", func(t *testing.T) {
+        input := &mediaconnect.ListTagsForGlobalResourceInput{}
+        output := &mediaconnect.ListTagsForGlobalResourceOutput{}
+
+        mockClient.On("ListTagsForGlobalResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForGlobalResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +749,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRestartRouterInput", func(t *testing.T) {
+        input := &mediaconnect.RestartRouterInputInput{}
+        output := &mediaconnect.RestartRouterInputOutput{}
+
+        mockClient.On("RestartRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestartRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRestartRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.RestartRouterOutputInput{}
+        output := &mediaconnect.RestartRouterOutputOutput{}
+
+        mockClient.On("RestartRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestartRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRevokeFlowEntitlement", func(t *testing.T) {
         input := &mediaconnect.RevokeFlowEntitlementInput{}
         output := &mediaconnect.RevokeFlowEntitlementOutput{}
@@ -541,6 +801,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartRouterInput", func(t *testing.T) {
+        input := &mediaconnect.StartRouterInputInput{}
+        output := &mediaconnect.StartRouterInputOutput{}
+
+        mockClient.On("StartRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.StartRouterOutputInput{}
+        output := &mediaconnect.StartRouterOutputOutput{}
+
+        mockClient.On("StartRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopFlow", func(t *testing.T) {
         input := &mediaconnect.StopFlowInput{}
         output := &mediaconnect.StopFlowOutput{}
@@ -554,6 +840,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStopRouterInput", func(t *testing.T) {
+        input := &mediaconnect.StopRouterInputInput{}
+        output := &mediaconnect.StopRouterInputOutput{}
+
+        mockClient.On("StopRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.StopRouterOutputInput{}
+        output := &mediaconnect.StopRouterOutputOutput{}
+
+        mockClient.On("StopRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagGlobalResource", func(t *testing.T) {
+        input := &mediaconnect.TagGlobalResourceInput{}
+        output := &mediaconnect.TagGlobalResourceOutput{}
+
+        mockClient.On("TagGlobalResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagGlobalResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &mediaconnect.TagResourceInput{}
         output := &mediaconnect.TagResourceOutput{}
@@ -561,6 +886,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("TagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTakeRouterInput", func(t *testing.T) {
+        input := &mediaconnect.TakeRouterInputInput{}
+        output := &mediaconnect.TakeRouterInputOutput{}
+
+        mockClient.On("TakeRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TakeRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagGlobalResource", func(t *testing.T) {
+        input := &mediaconnect.UntagGlobalResourceInput{}
+        output := &mediaconnect.UntagGlobalResourceOutput{}
+
+        mockClient.On("UntagGlobalResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagGlobalResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -704,6 +1055,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGatewayInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGatewayInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRouterInput", func(t *testing.T) {
+        input := &mediaconnect.UpdateRouterInputInput{}
+        output := &mediaconnect.UpdateRouterInputOutput{}
+
+        mockClient.On("UpdateRouterInput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRouterInput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRouterNetworkInterface", func(t *testing.T) {
+        input := &mediaconnect.UpdateRouterNetworkInterfaceInput{}
+        output := &mediaconnect.UpdateRouterNetworkInterfaceOutput{}
+
+        mockClient.On("UpdateRouterNetworkInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRouterNetworkInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRouterOutput", func(t *testing.T) {
+        input := &mediaconnect.UpdateRouterOutputInput{}
+        output := &mediaconnect.UpdateRouterOutputOutput{}
+
+        mockClient.On("UpdateRouterOutput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRouterOutput(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

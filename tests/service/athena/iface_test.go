@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDataCatalog", func(t *testing.T) {
-        input := &athena.GetDataCatalogInput{}
-        output := &athena.GetDataCatalogOutput{}
-
-        mockClient.On("GetDataCatalog", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDataCatalog(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDatabase", func(t *testing.T) {
         input := &athena.GetDatabaseInput{}
         output := &athena.GetDatabaseOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDatabase", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataCatalog", func(t *testing.T) {
+        input := &athena.GetDataCatalogInput{}
+        output := &athena.GetDataCatalogOutput{}
+
+        mockClient.On("GetDataCatalog", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataCatalog(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -437,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourceDashboard", func(t *testing.T) {
+        input := &athena.GetResourceDashboardInput{}
+        output := &athena.GetResourceDashboardOutput{}
+
+        mockClient.On("GetResourceDashboard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourceDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSession", func(t *testing.T) {
         input := &athena.GetSessionInput{}
         output := &athena.GetSessionOutput{}
@@ -444,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSessionEndpoint", func(t *testing.T) {
+        input := &athena.GetSessionEndpointInput{}
+        output := &athena.GetSessionEndpointOutput{}
+
+        mockClient.On("GetSessionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSessionEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +567,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDataCatalogs", func(t *testing.T) {
-        input := &athena.ListDataCatalogsInput{}
-        output := &athena.ListDataCatalogsOutput{}
-
-        mockClient.On("ListDataCatalogs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDataCatalogs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDatabases", func(t *testing.T) {
         input := &athena.ListDatabasesInput{}
         output := &athena.ListDatabasesOutput{}
@@ -561,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDatabases", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDatabases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataCatalogs", func(t *testing.T) {
+        input := &athena.ListDataCatalogsInput{}
+        output := &athena.ListDataCatalogsOutput{}
+
+        mockClient.On("ListDataCatalogs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataCatalogs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

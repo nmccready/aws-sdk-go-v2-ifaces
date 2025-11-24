@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateActionConnector", func(t *testing.T) {
+        input := &quicksight.CreateActionConnectorInput{}
+        output := &quicksight.CreateActionConnectorOutput{}
+
+        mockClient.On("CreateActionConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateActionConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAnalysis", func(t *testing.T) {
         input := &quicksight.CreateAnalysisInput{}
         output := &quicksight.CreateAnalysisOutput{}
@@ -398,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAccountCustomPermission", func(t *testing.T) {
+        input := &quicksight.DeleteAccountCustomPermissionInput{}
+        output := &quicksight.DeleteAccountCustomPermissionOutput{}
+
+        mockClient.On("DeleteAccountCustomPermission", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccountCustomPermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAccountSubscription", func(t *testing.T) {
         input := &quicksight.DeleteAccountSubscriptionInput{}
         output := &quicksight.DeleteAccountSubscriptionOutput{}
@@ -405,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAccountSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAccountSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteActionConnector", func(t *testing.T) {
+        input := &quicksight.DeleteActionConnectorInput{}
+        output := &quicksight.DeleteActionConnectorOutput{}
+
+        mockClient.On("DeleteActionConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteActionConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAccountCustomPermission", func(t *testing.T) {
+        input := &quicksight.DescribeAccountCustomPermissionInput{}
+        output := &quicksight.DescribeAccountCustomPermissionOutput{}
+
+        mockClient.On("DescribeAccountCustomPermission", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAccountCustomPermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAccountSettings", func(t *testing.T) {
         input := &quicksight.DescribeAccountSettingsInput{}
         output := &quicksight.DescribeAccountSettingsOutput{}
@@ -821,6 +873,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAccountSubscription", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAccountSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeActionConnector", func(t *testing.T) {
+        input := &quicksight.DescribeActionConnectorInput{}
+        output := &quicksight.DescribeActionConnectorOutput{}
+
+        mockClient.On("DescribeActionConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeActionConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeActionConnectorPermissions", func(t *testing.T) {
+        input := &quicksight.DescribeActionConnectorPermissionsInput{}
+        output := &quicksight.DescribeActionConnectorPermissionsOutput{}
+
+        mockClient.On("DescribeActionConnectorPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeActionConnectorPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1503,6 +1581,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFlowMetadata", func(t *testing.T) {
+        input := &quicksight.GetFlowMetadataInput{}
+        output := &quicksight.GetFlowMetadataOutput{}
+
+        mockClient.On("GetFlowMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFlowMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFlowPermissions", func(t *testing.T) {
+        input := &quicksight.GetFlowPermissionsInput{}
+        output := &quicksight.GetFlowPermissionsOutput{}
+
+        mockClient.On("GetFlowPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFlowPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSessionEmbedUrl", func(t *testing.T) {
         input := &quicksight.GetSessionEmbedUrlInput{}
         output := &quicksight.GetSessionEmbedUrlOutput{}
@@ -1510,6 +1614,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSessionEmbedUrl", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSessionEmbedUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListActionConnectors", func(t *testing.T) {
+        input := &quicksight.ListActionConnectorsInput{}
+        output := &quicksight.ListActionConnectorsOutput{}
+
+        mockClient.On("ListActionConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListActionConnectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1581,19 +1698,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDashboardVersions", func(t *testing.T) {
-        input := &quicksight.ListDashboardVersionsInput{}
-        output := &quicksight.ListDashboardVersionsOutput{}
-
-        mockClient.On("ListDashboardVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDashboardVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDashboards", func(t *testing.T) {
         input := &quicksight.ListDashboardsInput{}
         output := &quicksight.ListDashboardsOutput{}
@@ -1601,6 +1705,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDashboards", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDashboards(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDashboardVersions", func(t *testing.T) {
+        input := &quicksight.ListDashboardVersionsInput{}
+        output := &quicksight.ListDashboardVersionsOutput{}
+
+        mockClient.On("ListDashboardVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDashboardVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1627,6 +1744,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFlows", func(t *testing.T) {
+        input := &quicksight.ListFlowsInput{}
+        output := &quicksight.ListFlowsOutput{}
+
+        mockClient.On("ListFlows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFlows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1815,19 +1945,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTemplateVersions", func(t *testing.T) {
-        input := &quicksight.ListTemplateVersionsInput{}
-        output := &quicksight.ListTemplateVersionsOutput{}
-
-        mockClient.On("ListTemplateVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTemplateVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTemplates", func(t *testing.T) {
         input := &quicksight.ListTemplatesInput{}
         output := &quicksight.ListTemplatesOutput{}
@@ -1835,6 +1952,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTemplates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTemplateVersions", func(t *testing.T) {
+        input := &quicksight.ListTemplateVersionsInput{}
+        output := &quicksight.ListTemplateVersionsOutput{}
+
+        mockClient.On("ListTemplateVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1854,19 +1984,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListThemeVersions", func(t *testing.T) {
-        input := &quicksight.ListThemeVersionsInput{}
-        output := &quicksight.ListThemeVersionsOutput{}
-
-        mockClient.On("ListThemeVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListThemeVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListThemes", func(t *testing.T) {
         input := &quicksight.ListThemesInput{}
         output := &quicksight.ListThemesOutput{}
@@ -1874,6 +1991,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListThemes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListThemes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThemeVersions", func(t *testing.T) {
+        input := &quicksight.ListThemeVersionsInput{}
+        output := &quicksight.ListThemeVersionsOutput{}
+
+        mockClient.On("ListThemeVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThemeVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2010,6 +2140,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchActionConnectors", func(t *testing.T) {
+        input := &quicksight.SearchActionConnectorsInput{}
+        output := &quicksight.SearchActionConnectorsOutput{}
+
+        mockClient.On("SearchActionConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchActionConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchAnalyses", func(t *testing.T) {
         input := &quicksight.SearchAnalysesInput{}
         output := &quicksight.SearchAnalysesOutput{}
@@ -2056,6 +2199,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchFlows", func(t *testing.T) {
+        input := &quicksight.SearchFlowsInput{}
+        output := &quicksight.SearchFlowsOutput{}
+
+        mockClient.On("SearchFlows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchFlows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2192,6 +2348,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAccountCustomPermission", func(t *testing.T) {
+        input := &quicksight.UpdateAccountCustomPermissionInput{}
+        output := &quicksight.UpdateAccountCustomPermissionOutput{}
+
+        mockClient.On("UpdateAccountCustomPermission", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccountCustomPermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateAccountSettings", func(t *testing.T) {
         input := &quicksight.UpdateAccountSettingsInput{}
         output := &quicksight.UpdateAccountSettingsOutput{}
@@ -2199,6 +2368,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateActionConnector", func(t *testing.T) {
+        input := &quicksight.UpdateActionConnectorInput{}
+        output := &quicksight.UpdateActionConnectorOutput{}
+
+        mockClient.On("UpdateActionConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateActionConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateActionConnectorPermissions", func(t *testing.T) {
+        input := &quicksight.UpdateActionConnectorPermissionsInput{}
+        output := &quicksight.UpdateActionConnectorPermissionsOutput{}
+
+        mockClient.On("UpdateActionConnectorPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateActionConnectorPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2420,6 +2615,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDefaultQBusinessApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDefaultQBusinessApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateFlowPermissions", func(t *testing.T) {
+        input := &quicksight.UpdateFlowPermissionsInput{}
+        output := &quicksight.UpdateFlowPermissionsOutput{}
+
+        mockClient.On("UpdateFlowPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFlowPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

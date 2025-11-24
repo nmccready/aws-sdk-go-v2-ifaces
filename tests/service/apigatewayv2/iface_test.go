@@ -138,6 +138,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePortal", func(t *testing.T) {
+        input := &apigatewayv2.CreatePortalInput{}
+        output := &apigatewayv2.CreatePortalOutput{}
+
+        mockClient.On("CreatePortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePortalProduct", func(t *testing.T) {
+        input := &apigatewayv2.CreatePortalProductInput{}
+        output := &apigatewayv2.CreatePortalProductOutput{}
+
+        mockClient.On("CreatePortalProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePortalProduct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProductPage", func(t *testing.T) {
+        input := &apigatewayv2.CreateProductPageInput{}
+        output := &apigatewayv2.CreateProductPageOutput{}
+
+        mockClient.On("CreateProductPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProductPage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProductRestEndpointPage", func(t *testing.T) {
+        input := &apigatewayv2.CreateProductRestEndpointPageInput{}
+        output := &apigatewayv2.CreateProductRestEndpointPageOutput{}
+
+        mockClient.On("CreateProductRestEndpointPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProductRestEndpointPage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRoute", func(t *testing.T) {
         input := &apigatewayv2.CreateRouteInput{}
         output := &apigatewayv2.CreateRouteOutput{}
@@ -333,6 +385,71 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeletePortal", func(t *testing.T) {
+        input := &apigatewayv2.DeletePortalInput{}
+        output := &apigatewayv2.DeletePortalOutput{}
+
+        mockClient.On("DeletePortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePortalProduct", func(t *testing.T) {
+        input := &apigatewayv2.DeletePortalProductInput{}
+        output := &apigatewayv2.DeletePortalProductOutput{}
+
+        mockClient.On("DeletePortalProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePortalProduct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePortalProductSharingPolicy", func(t *testing.T) {
+        input := &apigatewayv2.DeletePortalProductSharingPolicyInput{}
+        output := &apigatewayv2.DeletePortalProductSharingPolicyOutput{}
+
+        mockClient.On("DeletePortalProductSharingPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePortalProductSharingPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProductPage", func(t *testing.T) {
+        input := &apigatewayv2.DeleteProductPageInput{}
+        output := &apigatewayv2.DeleteProductPageOutput{}
+
+        mockClient.On("DeleteProductPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProductPage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProductRestEndpointPage", func(t *testing.T) {
+        input := &apigatewayv2.DeleteProductRestEndpointPageInput{}
+        output := &apigatewayv2.DeleteProductRestEndpointPageOutput{}
+
+        mockClient.On("DeleteProductRestEndpointPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProductRestEndpointPage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRoute", func(t *testing.T) {
         input := &apigatewayv2.DeleteRouteInput{}
         output := &apigatewayv2.DeleteRouteOutput{}
@@ -418,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVpcLink", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVpcLink(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisablePortal", func(t *testing.T) {
+        input := &apigatewayv2.DisablePortalInput{}
+        output := &apigatewayv2.DisablePortalOutput{}
+
+        mockClient.On("DisablePortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisablePortal(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -632,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetModels", func(t *testing.T) {
+        input := &apigatewayv2.GetModelsInput{}
+        output := &apigatewayv2.GetModelsOutput{}
+
+        mockClient.On("GetModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetModelTemplate", func(t *testing.T) {
         input := &apigatewayv2.GetModelTemplateInput{}
         output := &apigatewayv2.GetModelTemplateOutput{}
@@ -645,13 +788,65 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetModels", func(t *testing.T) {
-        input := &apigatewayv2.GetModelsInput{}
-        output := &apigatewayv2.GetModelsOutput{}
+    t.Run("TestGetPortal", func(t *testing.T) {
+        input := &apigatewayv2.GetPortalInput{}
+        output := &apigatewayv2.GetPortalOutput{}
 
-        mockClient.On("GetModels", ctx, input).Return(output, nil)
+        mockClient.On("GetPortal", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetModels(ctx, input)
+        result, err := mockClient.GetPortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPortalProduct", func(t *testing.T) {
+        input := &apigatewayv2.GetPortalProductInput{}
+        output := &apigatewayv2.GetPortalProductOutput{}
+
+        mockClient.On("GetPortalProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPortalProduct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPortalProductSharingPolicy", func(t *testing.T) {
+        input := &apigatewayv2.GetPortalProductSharingPolicyInput{}
+        output := &apigatewayv2.GetPortalProductSharingPolicyOutput{}
+
+        mockClient.On("GetPortalProductSharingPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPortalProductSharingPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProductPage", func(t *testing.T) {
+        input := &apigatewayv2.GetProductPageInput{}
+        output := &apigatewayv2.GetProductPageOutput{}
+
+        mockClient.On("GetProductPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProductPage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProductRestEndpointPage", func(t *testing.T) {
+        input := &apigatewayv2.GetProductRestEndpointPageInput{}
+        output := &apigatewayv2.GetProductRestEndpointPageOutput{}
+
+        mockClient.On("GetProductRestEndpointPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProductRestEndpointPage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,6 +996,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPortalProducts", func(t *testing.T) {
+        input := &apigatewayv2.ListPortalProductsInput{}
+        output := &apigatewayv2.ListPortalProductsOutput{}
+
+        mockClient.On("ListPortalProducts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPortalProducts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPortals", func(t *testing.T) {
+        input := &apigatewayv2.ListPortalsInput{}
+        output := &apigatewayv2.ListPortalsOutput{}
+
+        mockClient.On("ListPortals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPortals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProductPages", func(t *testing.T) {
+        input := &apigatewayv2.ListProductPagesInput{}
+        output := &apigatewayv2.ListProductPagesOutput{}
+
+        mockClient.On("ListProductPages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProductPages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProductRestEndpointPages", func(t *testing.T) {
+        input := &apigatewayv2.ListProductRestEndpointPagesInput{}
+        output := &apigatewayv2.ListProductRestEndpointPagesOutput{}
+
+        mockClient.On("ListProductRestEndpointPages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProductRestEndpointPages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRoutingRules", func(t *testing.T) {
         input := &apigatewayv2.ListRoutingRulesInput{}
         output := &apigatewayv2.ListRoutingRulesOutput{}
@@ -808,6 +1055,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRoutingRules", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRoutingRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPreviewPortal", func(t *testing.T) {
+        input := &apigatewayv2.PreviewPortalInput{}
+        output := &apigatewayv2.PreviewPortalOutput{}
+
+        mockClient.On("PreviewPortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PreviewPortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPublishPortal", func(t *testing.T) {
+        input := &apigatewayv2.PublishPortalInput{}
+        output := &apigatewayv2.PublishPortalOutput{}
+
+        mockClient.On("PublishPortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PublishPortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutPortalProductSharingPolicy", func(t *testing.T) {
+        input := &apigatewayv2.PutPortalProductSharingPolicyInput{}
+        output := &apigatewayv2.PutPortalProductSharingPolicyOutput{}
+
+        mockClient.On("PutPortalProductSharingPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutPortalProductSharingPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -977,6 +1263,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateModel", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePortal", func(t *testing.T) {
+        input := &apigatewayv2.UpdatePortalInput{}
+        output := &apigatewayv2.UpdatePortalOutput{}
+
+        mockClient.On("UpdatePortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePortalProduct", func(t *testing.T) {
+        input := &apigatewayv2.UpdatePortalProductInput{}
+        output := &apigatewayv2.UpdatePortalProductOutput{}
+
+        mockClient.On("UpdatePortalProduct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePortalProduct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProductPage", func(t *testing.T) {
+        input := &apigatewayv2.UpdateProductPageInput{}
+        output := &apigatewayv2.UpdateProductPageOutput{}
+
+        mockClient.On("UpdateProductPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProductPage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProductRestEndpointPage", func(t *testing.T) {
+        input := &apigatewayv2.UpdateProductRestEndpointPageInput{}
+        output := &apigatewayv2.UpdateProductRestEndpointPageOutput{}
+
+        mockClient.On("UpdateProductRestEndpointPage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProductRestEndpointPage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

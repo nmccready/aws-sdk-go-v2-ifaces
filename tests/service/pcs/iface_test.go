@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCluster", func(t *testing.T) {
+        input := &pcs.UpdateClusterInput{}
+        output := &pcs.UpdateClusterOutput{}
+
+        mockClient.On("UpdateCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateComputeNodeGroup", func(t *testing.T) {
         input := &pcs.UpdateComputeNodeGroupInput{}
         output := &pcs.UpdateComputeNodeGroupOutput{}

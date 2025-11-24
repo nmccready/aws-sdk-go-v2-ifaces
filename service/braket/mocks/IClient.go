@@ -163,6 +163,80 @@ func (_m *IClient) CreateQuantumTask(ctx context.Context, params *braket.CreateQ
 	return r0, r1
 }
 
+// CreateSpendingLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSpendingLimit(ctx context.Context, params *braket.CreateSpendingLimitInput, optFns ...func(*braket.Options)) (*braket.CreateSpendingLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSpendingLimit")
+	}
+
+	var r0 *braket.CreateSpendingLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.CreateSpendingLimitInput, ...func(*braket.Options)) (*braket.CreateSpendingLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.CreateSpendingLimitInput, ...func(*braket.Options)) *braket.CreateSpendingLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*braket.CreateSpendingLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *braket.CreateSpendingLimitInput, ...func(*braket.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSpendingLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSpendingLimit(ctx context.Context, params *braket.DeleteSpendingLimitInput, optFns ...func(*braket.Options)) (*braket.DeleteSpendingLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSpendingLimit")
+	}
+
+	var r0 *braket.DeleteSpendingLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.DeleteSpendingLimitInput, ...func(*braket.Options)) (*braket.DeleteSpendingLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.DeleteSpendingLimitInput, ...func(*braket.Options)) *braket.DeleteSpendingLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*braket.DeleteSpendingLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *braket.DeleteSpendingLimitInput, ...func(*braket.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDevice provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDevice(ctx context.Context, params *braket.GetDeviceInput, optFns ...func(*braket.Options)) (*braket.GetDeviceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -440,6 +514,43 @@ func (_m *IClient) SearchQuantumTasks(ctx context.Context, params *braket.Search
 	return r0, r1
 }
 
+// SearchSpendingLimits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchSpendingLimits(ctx context.Context, params *braket.SearchSpendingLimitsInput, optFns ...func(*braket.Options)) (*braket.SearchSpendingLimitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchSpendingLimits")
+	}
+
+	var r0 *braket.SearchSpendingLimitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.SearchSpendingLimitsInput, ...func(*braket.Options)) (*braket.SearchSpendingLimitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.SearchSpendingLimitsInput, ...func(*braket.Options)) *braket.SearchSpendingLimitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*braket.SearchSpendingLimitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *braket.SearchSpendingLimitsInput, ...func(*braket.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *braket.TagResourceInput, optFns ...func(*braket.Options)) (*braket.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -506,6 +617,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *braket.UntagResour
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *braket.UntagResourceInput, ...func(*braket.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSpendingLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSpendingLimit(ctx context.Context, params *braket.UpdateSpendingLimitInput, optFns ...func(*braket.Options)) (*braket.UpdateSpendingLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSpendingLimit")
+	}
+
+	var r0 *braket.UpdateSpendingLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.UpdateSpendingLimitInput, ...func(*braket.Options)) (*braket.UpdateSpendingLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *braket.UpdateSpendingLimitInput, ...func(*braket.Options)) *braket.UpdateSpendingLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*braket.UpdateSpendingLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *braket.UpdateSpendingLimitInput, ...func(*braket.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

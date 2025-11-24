@@ -502,19 +502,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStudioSessionMappings", func(t *testing.T) {
-        input := &emr.ListStudioSessionMappingsInput{}
-        output := &emr.ListStudioSessionMappingsOutput{}
-
-        mockClient.On("ListStudioSessionMappings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStudioSessionMappings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStudios", func(t *testing.T) {
         input := &emr.ListStudiosInput{}
         output := &emr.ListStudiosOutput{}
@@ -522,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStudios", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStudios(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStudioSessionMappings", func(t *testing.T) {
+        input := &emr.ListStudioSessionMappingsInput{}
+        output := &emr.ListStudioSessionMappingsOutput{}
+
+        mockClient.On("ListStudioSessionMappings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStudioSessionMappings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

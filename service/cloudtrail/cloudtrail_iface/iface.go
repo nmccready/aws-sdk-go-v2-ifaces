@@ -43,6 +43,7 @@ type IClient interface {
  ListEventDataStores(ctx context.Context, params *ListEventDataStoresInput, optFns ...func(*Options)) (*ListEventDataStoresOutput, error) 
  ListImportFailures(ctx context.Context, params *ListImportFailuresInput, optFns ...func(*Options)) (*ListImportFailuresOutput, error) 
  ListImports(ctx context.Context, params *ListImportsInput, optFns ...func(*Options)) (*ListImportsOutput, error) 
+ ListInsightsData(ctx context.Context, params *ListInsightsDataInput, optFns ...func(*Options)) (*ListInsightsDataOutput, error) 
  ListInsightsMetricData(ctx context.Context, params *ListInsightsMetricDataInput, optFns ...func(*Options)) (*ListInsightsMetricDataOutput, error) 
  ListPublicKeys(ctx context.Context, params *ListPublicKeysInput, optFns ...func(*Options)) (*ListPublicKeysOutput, error) 
  ListQueries(ctx context.Context, params *ListQueriesInput, optFns ...func(*Options)) (*ListQueriesOutput, error) 

@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AcceptDelegationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcceptDelegationRequest(ctx context.Context, params *iam.AcceptDelegationRequestInput, optFns ...func(*iam.Options)) (*iam.AcceptDelegationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcceptDelegationRequest")
+	}
+
+	var r0 *iam.AcceptDelegationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.AcceptDelegationRequestInput, ...func(*iam.Options)) (*iam.AcceptDelegationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.AcceptDelegationRequestInput, ...func(*iam.Options)) *iam.AcceptDelegationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.AcceptDelegationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.AcceptDelegationRequestInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddClientIDToOpenIDConnectProvider provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddClientIDToOpenIDConnectProvider(ctx context.Context, params *iam.AddClientIDToOpenIDConnectProviderInput, optFns ...func(*iam.Options)) (*iam.AddClientIDToOpenIDConnectProviderOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) AddUserToGroup(ctx context.Context, params *iam.AddUserToGrou
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.AddUserToGroupInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AssociateDelegationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateDelegationRequest(ctx context.Context, params *iam.AssociateDelegationRequestInput, optFns ...func(*iam.Options)) (*iam.AssociateDelegationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateDelegationRequest")
+	}
+
+	var r0 *iam.AssociateDelegationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.AssociateDelegationRequestInput, ...func(*iam.Options)) (*iam.AssociateDelegationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.AssociateDelegationRequestInput, ...func(*iam.Options)) *iam.AssociateDelegationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.AssociateDelegationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.AssociateDelegationRequestInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -340,6 +414,43 @@ func (_m *IClient) CreateAccountAlias(ctx context.Context, params *iam.CreateAcc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.CreateAccountAliasInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDelegationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDelegationRequest(ctx context.Context, params *iam.CreateDelegationRequestInput, optFns ...func(*iam.Options)) (*iam.CreateDelegationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDelegationRequest")
+	}
+
+	var r0 *iam.CreateDelegationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.CreateDelegationRequestInput, ...func(*iam.Options)) (*iam.CreateDelegationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.CreateDelegationRequestInput, ...func(*iam.Options)) *iam.CreateDelegationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.CreateDelegationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.CreateDelegationRequestInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1865,6 +1976,43 @@ func (_m *IClient) DisableOrganizationsRootSessions(ctx context.Context, params 
 	return r0, r1
 }
 
+// DisableOutboundWebIdentityFederation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableOutboundWebIdentityFederation(ctx context.Context, params *iam.DisableOutboundWebIdentityFederationInput, optFns ...func(*iam.Options)) (*iam.DisableOutboundWebIdentityFederationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableOutboundWebIdentityFederation")
+	}
+
+	var r0 *iam.DisableOutboundWebIdentityFederationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.DisableOutboundWebIdentityFederationInput, ...func(*iam.Options)) (*iam.DisableOutboundWebIdentityFederationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.DisableOutboundWebIdentityFederationInput, ...func(*iam.Options)) *iam.DisableOutboundWebIdentityFederationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.DisableOutboundWebIdentityFederationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.DisableOutboundWebIdentityFederationInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableMFADevice provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableMFADevice(ctx context.Context, params *iam.EnableMFADeviceInput, optFns ...func(*iam.Options)) (*iam.EnableMFADeviceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1968,6 +2116,43 @@ func (_m *IClient) EnableOrganizationsRootSessions(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.EnableOrganizationsRootSessionsInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableOutboundWebIdentityFederation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableOutboundWebIdentityFederation(ctx context.Context, params *iam.EnableOutboundWebIdentityFederationInput, optFns ...func(*iam.Options)) (*iam.EnableOutboundWebIdentityFederationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableOutboundWebIdentityFederation")
+	}
+
+	var r0 *iam.EnableOutboundWebIdentityFederationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.EnableOutboundWebIdentityFederationInput, ...func(*iam.Options)) (*iam.EnableOutboundWebIdentityFederationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.EnableOutboundWebIdentityFederationInput, ...func(*iam.Options)) *iam.EnableOutboundWebIdentityFederationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.EnableOutboundWebIdentityFederationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.EnableOutboundWebIdentityFederationInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2346,6 +2531,43 @@ func (_m *IClient) GetCredentialReport(ctx context.Context, params *iam.GetCrede
 	return r0, r1
 }
 
+// GetDelegationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDelegationRequest(ctx context.Context, params *iam.GetDelegationRequestInput, optFns ...func(*iam.Options)) (*iam.GetDelegationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDelegationRequest")
+	}
+
+	var r0 *iam.GetDelegationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetDelegationRequestInput, ...func(*iam.Options)) (*iam.GetDelegationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetDelegationRequestInput, ...func(*iam.Options)) *iam.GetDelegationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.GetDelegationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetDelegationRequestInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetGroup(ctx context.Context, params *iam.GetGroupInput, optFns ...func(*iam.Options)) (*iam.GetGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2412,6 +2634,43 @@ func (_m *IClient) GetGroupPolicy(ctx context.Context, params *iam.GetGroupPolic
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetGroupPolicyInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetHumanReadableSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetHumanReadableSummary(ctx context.Context, params *iam.GetHumanReadableSummaryInput, optFns ...func(*iam.Options)) (*iam.GetHumanReadableSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetHumanReadableSummary")
+	}
+
+	var r0 *iam.GetHumanReadableSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetHumanReadableSummaryInput, ...func(*iam.Options)) (*iam.GetHumanReadableSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetHumanReadableSummaryInput, ...func(*iam.Options)) *iam.GetHumanReadableSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.GetHumanReadableSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetHumanReadableSummaryInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2597,6 +2856,43 @@ func (_m *IClient) GetOrganizationsAccessReport(ctx context.Context, params *iam
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetOrganizationsAccessReportInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetOutboundWebIdentityFederationInfo provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOutboundWebIdentityFederationInfo(ctx context.Context, params *iam.GetOutboundWebIdentityFederationInfoInput, optFns ...func(*iam.Options)) (*iam.GetOutboundWebIdentityFederationInfoOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOutboundWebIdentityFederationInfo")
+	}
+
+	var r0 *iam.GetOutboundWebIdentityFederationInfoOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetOutboundWebIdentityFederationInfoInput, ...func(*iam.Options)) (*iam.GetOutboundWebIdentityFederationInfoOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetOutboundWebIdentityFederationInfoInput, ...func(*iam.Options)) *iam.GetOutboundWebIdentityFederationInfoOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.GetOutboundWebIdentityFederationInfoOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetOutboundWebIdentityFederationInfoInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3226,6 +3522,43 @@ func (_m *IClient) ListAttachedUserPolicies(ctx context.Context, params *iam.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.ListAttachedUserPoliciesInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDelegationRequests provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDelegationRequests(ctx context.Context, params *iam.ListDelegationRequestsInput, optFns ...func(*iam.Options)) (*iam.ListDelegationRequestsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDelegationRequests")
+	}
+
+	var r0 *iam.ListDelegationRequestsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.ListDelegationRequestsInput, ...func(*iam.Options)) (*iam.ListDelegationRequestsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.ListDelegationRequestsInput, ...func(*iam.Options)) *iam.ListDelegationRequestsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.ListDelegationRequestsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.ListDelegationRequestsInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4547,6 +4880,43 @@ func (_m *IClient) PutUserPolicy(ctx context.Context, params *iam.PutUserPolicyI
 	return r0, r1
 }
 
+// RejectDelegationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RejectDelegationRequest(ctx context.Context, params *iam.RejectDelegationRequestInput, optFns ...func(*iam.Options)) (*iam.RejectDelegationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RejectDelegationRequest")
+	}
+
+	var r0 *iam.RejectDelegationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.RejectDelegationRequestInput, ...func(*iam.Options)) (*iam.RejectDelegationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.RejectDelegationRequestInput, ...func(*iam.Options)) *iam.RejectDelegationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.RejectDelegationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.RejectDelegationRequestInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RemoveClientIDFromOpenIDConnectProvider provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RemoveClientIDFromOpenIDConnectProvider(ctx context.Context, params *iam.RemoveClientIDFromOpenIDConnectProviderInput, optFns ...func(*iam.Options)) (*iam.RemoveClientIDFromOpenIDConnectProviderOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4724,6 +5094,43 @@ func (_m *IClient) ResyncMFADevice(ctx context.Context, params *iam.ResyncMFADev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.ResyncMFADeviceInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendDelegationToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendDelegationToken(ctx context.Context, params *iam.SendDelegationTokenInput, optFns ...func(*iam.Options)) (*iam.SendDelegationTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendDelegationToken")
+	}
+
+	var r0 *iam.SendDelegationTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.SendDelegationTokenInput, ...func(*iam.Options)) (*iam.SendDelegationTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.SendDelegationTokenInput, ...func(*iam.Options)) *iam.SendDelegationTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.SendDelegationTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.SendDelegationTokenInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5575,6 +5982,43 @@ func (_m *IClient) UpdateAssumeRolePolicy(ctx context.Context, params *iam.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.UpdateAssumeRolePolicyInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDelegationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDelegationRequest(ctx context.Context, params *iam.UpdateDelegationRequestInput, optFns ...func(*iam.Options)) (*iam.UpdateDelegationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDelegationRequest")
+	}
+
+	var r0 *iam.UpdateDelegationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.UpdateDelegationRequestInput, ...func(*iam.Options)) (*iam.UpdateDelegationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.UpdateDelegationRequestInput, ...func(*iam.Options)) *iam.UpdateDelegationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.UpdateDelegationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.UpdateDelegationRequestInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

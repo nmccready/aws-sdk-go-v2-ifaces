@@ -697,19 +697,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDataSourceSyncJobs", func(t *testing.T) {
-        input := &qbusiness.ListDataSourceSyncJobsInput{}
-        output := &qbusiness.ListDataSourceSyncJobsOutput{}
-
-        mockClient.On("ListDataSourceSyncJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDataSourceSyncJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDataSources", func(t *testing.T) {
         input := &qbusiness.ListDataSourcesInput{}
         output := &qbusiness.ListDataSourcesOutput{}
@@ -717,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataSourceSyncJobs", func(t *testing.T) {
+        input := &qbusiness.ListDataSourceSyncJobsInput{}
+        output := &qbusiness.ListDataSourceSyncJobsOutput{}
+
+        mockClient.On("ListDataSourceSyncJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataSourceSyncJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,6 +788,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPlugins", func(t *testing.T) {
+        input := &qbusiness.ListPluginsInput{}
+        output := &qbusiness.ListPluginsOutput{}
+
+        mockClient.On("ListPlugins", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPlugins(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPluginTypeActions", func(t *testing.T) {
         input := &qbusiness.ListPluginTypeActionsInput{}
         output := &qbusiness.ListPluginTypeActionsOutput{}
@@ -808,19 +821,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPluginTypeMetadata", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPluginTypeMetadata(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListPlugins", func(t *testing.T) {
-        input := &qbusiness.ListPluginsInput{}
-        output := &qbusiness.ListPluginsOutput{}
-
-        mockClient.On("ListPlugins", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPlugins(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

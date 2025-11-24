@@ -346,19 +346,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteObjectTagging", func(t *testing.T) {
-        input := &s3.DeleteObjectTaggingInput{}
-        output := &s3.DeleteObjectTaggingOutput{}
-
-        mockClient.On("DeleteObjectTagging", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteObjectTagging(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteObjects", func(t *testing.T) {
         input := &s3.DeleteObjectsInput{}
         output := &s3.DeleteObjectsOutput{}
@@ -372,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteObjectTagging", func(t *testing.T) {
+        input := &s3.DeleteObjectTaggingInput{}
+        output := &s3.DeleteObjectTaggingOutput{}
+
+        mockClient.On("DeleteObjectTagging", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteObjectTagging(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePublicAccessBlock", func(t *testing.T) {
         input := &s3.DeletePublicAccessBlockInput{}
         output := &s3.DeletePublicAccessBlockOutput{}
@@ -379,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePublicAccessBlock", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePublicAccessBlock(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBucketAbac", func(t *testing.T) {
+        input := &s3.GetBucketAbacInput{}
+        output := &s3.GetBucketAbacOutput{}
+
+        mockClient.On("GetBucketAbac", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBucketAbac(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,19 +918,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListObjectVersions", func(t *testing.T) {
-        input := &s3.ListObjectVersionsInput{}
-        output := &s3.ListObjectVersionsOutput{}
-
-        mockClient.On("ListObjectVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListObjectVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListObjects", func(t *testing.T) {
         input := &s3.ListObjectsInput{}
         output := &s3.ListObjectsOutput{}
@@ -944,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListObjectVersions", func(t *testing.T) {
+        input := &s3.ListObjectVersionsInput{}
+        output := &s3.ListObjectVersionsOutput{}
+
+        mockClient.On("ListObjectVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListObjectVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListParts", func(t *testing.T) {
         input := &s3.ListPartsInput{}
         output := &s3.ListPartsOutput{}
@@ -951,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListParts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListParts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutBucketAbac", func(t *testing.T) {
+        input := &s3.PutBucketAbacInput{}
+        output := &s3.PutBucketAbacOutput{}
+
+        mockClient.On("PutBucketAbac", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutBucketAbac(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -73,6 +73,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelMetadataModelConversion", func(t *testing.T) {
+        input := &databasemigrationservice.CancelMetadataModelConversionInput{}
+        output := &databasemigrationservice.CancelMetadataModelConversionOutput{}
+
+        mockClient.On("CancelMetadataModelConversion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelMetadataModelConversion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCancelMetadataModelCreation", func(t *testing.T) {
+        input := &databasemigrationservice.CancelMetadataModelCreationInput{}
+        output := &databasemigrationservice.CancelMetadataModelCreationOutput{}
+
+        mockClient.On("CancelMetadataModelCreation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelMetadataModelCreation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelReplicationTaskAssessmentRun", func(t *testing.T) {
         input := &databasemigrationservice.CancelReplicationTaskAssessmentRunInput{}
         output := &databasemigrationservice.CancelReplicationTaskAssessmentRunOutput{}
@@ -515,6 +541,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeEndpoints", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeEndpointsInput{}
+        output := &databasemigrationservice.DescribeEndpointsOutput{}
+
+        mockClient.On("DescribeEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEndpointSettings", func(t *testing.T) {
         input := &databasemigrationservice.DescribeEndpointSettingsInput{}
         output := &databasemigrationservice.DescribeEndpointSettingsOutput{}
@@ -535,19 +574,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEndpointTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEndpointTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeEndpoints", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeEndpointsInput{}
-        output := &databasemigrationservice.DescribeEndpointsOutput{}
-
-        mockClient.On("DescribeEndpoints", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,19 +606,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeEventSubscriptionsInput{}
-        output := &databasemigrationservice.DescribeEventSubscriptionsOutput{}
-
-        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEvents", func(t *testing.T) {
         input := &databasemigrationservice.DescribeEventsInput{}
         output := &databasemigrationservice.DescribeEventsOutput{}
@@ -600,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeEventSubscriptionsInput{}
+        output := &databasemigrationservice.DescribeEventSubscriptionsOutput{}
+
+        mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEventSubscriptions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,6 +723,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeMetadataModel", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeMetadataModelInput{}
+        output := &databasemigrationservice.DescribeMetadataModelOutput{}
+
+        mockClient.On("DescribeMetadataModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetadataModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeMetadataModelAssessments", func(t *testing.T) {
         input := &databasemigrationservice.DescribeMetadataModelAssessmentsInput{}
         output := &databasemigrationservice.DescribeMetadataModelAssessmentsOutput{}
@@ -710,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeMetadataModelChildren", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeMetadataModelChildrenInput{}
+        output := &databasemigrationservice.DescribeMetadataModelChildrenOutput{}
+
+        mockClient.On("DescribeMetadataModelChildren", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetadataModelChildren(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeMetadataModelConversions", func(t *testing.T) {
         input := &databasemigrationservice.DescribeMetadataModelConversionsInput{}
         output := &databasemigrationservice.DescribeMetadataModelConversionsOutput{}
@@ -717,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMetadataModelConversions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMetadataModelConversions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMetadataModelCreations", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeMetadataModelCreationsInput{}
+        output := &databasemigrationservice.DescribeMetadataModelCreationsOutput{}
+
+        mockClient.On("DescribeMetadataModelCreations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetadataModelCreations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeReplicationInstances", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeReplicationInstancesInput{}
+        output := &databasemigrationservice.DescribeReplicationInstancesOutput{}
+
+        mockClient.On("DescribeReplicationInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeReplicationInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeReplicationInstanceTaskLogs", func(t *testing.T) {
         input := &databasemigrationservice.DescribeReplicationInstanceTaskLogsInput{}
         output := &databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput{}
@@ -866,13 +944,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeReplicationInstances", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeReplicationInstancesInput{}
-        output := &databasemigrationservice.DescribeReplicationInstancesOutput{}
+    t.Run("TestDescribeReplications", func(t *testing.T) {
+        input := &databasemigrationservice.DescribeReplicationsInput{}
+        output := &databasemigrationservice.DescribeReplicationsOutput{}
 
-        mockClient.On("DescribeReplicationInstances", ctx, input).Return(output, nil)
+        mockClient.On("DescribeReplications", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeReplicationInstances(ctx, input)
+        result, err := mockClient.DescribeReplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -957,19 +1035,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeReplications", func(t *testing.T) {
-        input := &databasemigrationservice.DescribeReplicationsInput{}
-        output := &databasemigrationservice.DescribeReplicationsOutput{}
-
-        mockClient.On("DescribeReplications", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeReplications(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeSchemas", func(t *testing.T) {
         input := &databasemigrationservice.DescribeSchemasInput{}
         output := &databasemigrationservice.DescribeSchemasOutput{}
@@ -1003,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ExportMetadataModelAssessment", ctx, input).Return(output, nil)
 
         result, err := mockClient.ExportMetadataModelAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTargetSelectionRules", func(t *testing.T) {
+        input := &databasemigrationservice.GetTargetSelectionRulesInput{}
+        output := &databasemigrationservice.GetTargetSelectionRulesOutput{}
+
+        mockClient.On("GetTargetSelectionRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTargetSelectionRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1315,6 +1393,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartMetadataModelConversion", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartMetadataModelConversion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartMetadataModelCreation", func(t *testing.T) {
+        input := &databasemigrationservice.StartMetadataModelCreationInput{}
+        output := &databasemigrationservice.StartMetadataModelCreationOutput{}
+
+        mockClient.On("StartMetadataModelCreation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMetadataModelCreation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

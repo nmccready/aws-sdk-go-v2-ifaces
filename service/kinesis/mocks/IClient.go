@@ -237,6 +237,43 @@ func (_m *IClient) DeregisterStreamConsumer(ctx context.Context, params *kinesis
 	return r0, r1
 }
 
+// DescribeAccountSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAccountSettings(ctx context.Context, params *kinesis.DescribeAccountSettingsInput, optFns ...func(*kinesis.Options)) (*kinesis.DescribeAccountSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAccountSettings")
+	}
+
+	var r0 *kinesis.DescribeAccountSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DescribeAccountSettingsInput, ...func(*kinesis.Options)) (*kinesis.DescribeAccountSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DescribeAccountSettingsInput, ...func(*kinesis.Options)) *kinesis.DescribeAccountSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.DescribeAccountSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DescribeAccountSettingsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeLimits provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeLimits(ctx context.Context, params *kinesis.DescribeLimitsInput, optFns ...func(*kinesis.Options)) (*kinesis.DescribeLimitsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1254,6 +1291,80 @@ func (_m *IClient) UntagResource(ctx context.Context, params *kinesis.UntagResou
 	return r0, r1
 }
 
+// UpdateAccountSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAccountSettings(ctx context.Context, params *kinesis.UpdateAccountSettingsInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateAccountSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAccountSettings")
+	}
+
+	var r0 *kinesis.UpdateAccountSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateAccountSettingsInput, ...func(*kinesis.Options)) (*kinesis.UpdateAccountSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateAccountSettingsInput, ...func(*kinesis.Options)) *kinesis.UpdateAccountSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateAccountSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateAccountSettingsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMaxRecordSize provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMaxRecordSize(ctx context.Context, params *kinesis.UpdateMaxRecordSizeInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateMaxRecordSizeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMaxRecordSize")
+	}
+
+	var r0 *kinesis.UpdateMaxRecordSizeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateMaxRecordSizeInput, ...func(*kinesis.Options)) (*kinesis.UpdateMaxRecordSizeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateMaxRecordSizeInput, ...func(*kinesis.Options)) *kinesis.UpdateMaxRecordSizeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateMaxRecordSizeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateMaxRecordSizeInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateShardCount provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateShardCount(ctx context.Context, params *kinesis.UpdateShardCountInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateShardCountOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1320,6 +1431,43 @@ func (_m *IClient) UpdateStreamMode(ctx context.Context, params *kinesis.UpdateS
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateStreamModeInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateStreamWarmThroughput provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateStreamWarmThroughput(ctx context.Context, params *kinesis.UpdateStreamWarmThroughputInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateStreamWarmThroughputOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateStreamWarmThroughput")
+	}
+
+	var r0 *kinesis.UpdateStreamWarmThroughputOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateStreamWarmThroughputInput, ...func(*kinesis.Options)) (*kinesis.UpdateStreamWarmThroughputOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateStreamWarmThroughputInput, ...func(*kinesis.Options)) *kinesis.UpdateStreamWarmThroughputOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateStreamWarmThroughputOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateStreamWarmThroughputInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

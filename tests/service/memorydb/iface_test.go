@@ -307,6 +307,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeMultiRegionParameterGroups", func(t *testing.T) {
+        input := &memorydb.DescribeMultiRegionParameterGroupsInput{}
+        output := &memorydb.DescribeMultiRegionParameterGroupsOutput{}
+
+        mockClient.On("DescribeMultiRegionParameterGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMultiRegionParameterGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMultiRegionParameters", func(t *testing.T) {
+        input := &memorydb.DescribeMultiRegionParametersInput{}
+        output := &memorydb.DescribeMultiRegionParametersOutput{}
+
+        mockClient.On("DescribeMultiRegionParameters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMultiRegionParameters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeParameterGroups", func(t *testing.T) {
         input := &memorydb.DescribeParameterGroupsInput{}
         output := &memorydb.DescribeParameterGroupsOutput{}

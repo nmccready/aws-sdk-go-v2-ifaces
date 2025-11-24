@@ -31,6 +31,8 @@ type IClient interface {
  DescribeEngineVersions(ctx context.Context, params *DescribeEngineVersionsInput, optFns ...func(*Options)) (*DescribeEngineVersionsOutput, error) 
  DescribeEvents(ctx context.Context, params *DescribeEventsInput, optFns ...func(*Options)) (*DescribeEventsOutput, error) 
  DescribeMultiRegionClusters(ctx context.Context, params *DescribeMultiRegionClustersInput, optFns ...func(*Options)) (*DescribeMultiRegionClustersOutput, error) 
+ DescribeMultiRegionParameterGroups(ctx context.Context, params *DescribeMultiRegionParameterGroupsInput, optFns ...func(*Options)) (*DescribeMultiRegionParameterGroupsOutput, error) 
+ DescribeMultiRegionParameters(ctx context.Context, params *DescribeMultiRegionParametersInput, optFns ...func(*Options)) (*DescribeMultiRegionParametersOutput, error) 
  DescribeParameterGroups(ctx context.Context, params *DescribeParameterGroupsInput, optFns ...func(*Options)) (*DescribeParameterGroupsOutput, error) 
  DescribeParameters(ctx context.Context, params *DescribeParametersInput, optFns ...func(*Options)) (*DescribeParametersOutput, error) 
  DescribeReservedNodes(ctx context.Context, params *DescribeReservedNodesInput, optFns ...func(*Options)) (*DescribeReservedNodesOutput, error) 

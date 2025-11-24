@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateOrganizationalUnit", func(t *testing.T) {
+        input := &notifications.AssociateOrganizationalUnitInput{}
+        output := &notifications.AssociateOrganizationalUnitOutput{}
+
+        mockClient.On("AssociateOrganizationalUnit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateOrganizationalUnit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEventRule", func(t *testing.T) {
         input := &notifications.CreateEventRuleInput{}
         output := &notifications.CreateEventRuleOutput{}
@@ -184,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateManagedNotificationAdditionalChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateManagedNotificationAdditionalChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateOrganizationalUnit", func(t *testing.T) {
+        input := &notifications.DisassociateOrganizationalUnitInput{}
+        output := &notifications.DisassociateOrganizationalUnitOutput{}
+
+        mockClient.On("DisassociateOrganizationalUnit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateOrganizationalUnit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMemberAccounts", func(t *testing.T) {
+        input := &notifications.ListMemberAccountsInput{}
+        output := &notifications.ListMemberAccountsOutput{}
+
+        mockClient.On("ListMemberAccounts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMemberAccounts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNotificationConfigurations", func(t *testing.T) {
         input := &notifications.ListNotificationConfigurationsInput{}
         output := &notifications.ListNotificationConfigurationsOutput{}
@@ -405,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListNotificationHubs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListNotificationHubs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOrganizationalUnits", func(t *testing.T) {
+        input := &notifications.ListOrganizationalUnitsInput{}
+        output := &notifications.ListOrganizationalUnitsOutput{}
+
+        mockClient.On("ListOrganizationalUnits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOrganizationalUnits(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

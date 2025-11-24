@@ -52,6 +52,43 @@ func (_m *IClient) CreateAlertManagerDefinition(ctx context.Context, params *amp
 	return r0, r1
 }
 
+// CreateAnomalyDetector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAnomalyDetector(ctx context.Context, params *amp.CreateAnomalyDetectorInput, optFns ...func(*amp.Options)) (*amp.CreateAnomalyDetectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAnomalyDetector")
+	}
+
+	var r0 *amp.CreateAnomalyDetectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.CreateAnomalyDetectorInput, ...func(*amp.Options)) (*amp.CreateAnomalyDetectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.CreateAnomalyDetectorInput, ...func(*amp.Options)) *amp.CreateAnomalyDetectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.CreateAnomalyDetectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.CreateAnomalyDetectorInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateLoggingConfiguration(ctx context.Context, params *amp.CreateLoggingConfigurationInput, optFns ...func(*amp.Options)) (*amp.CreateLoggingConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -274,6 +311,43 @@ func (_m *IClient) DeleteAlertManagerDefinition(ctx context.Context, params *amp
 	return r0, r1
 }
 
+// DeleteAnomalyDetector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAnomalyDetector(ctx context.Context, params *amp.DeleteAnomalyDetectorInput, optFns ...func(*amp.Options)) (*amp.DeleteAnomalyDetectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAnomalyDetector")
+	}
+
+	var r0 *amp.DeleteAnomalyDetectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DeleteAnomalyDetectorInput, ...func(*amp.Options)) (*amp.DeleteAnomalyDetectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DeleteAnomalyDetectorInput, ...func(*amp.Options)) *amp.DeleteAnomalyDetectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.DeleteAnomalyDetectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.DeleteAnomalyDetectorInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteLoggingConfiguration(ctx context.Context, params *amp.DeleteLoggingConfigurationInput, optFns ...func(*amp.Options)) (*amp.DeleteLoggingConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -459,6 +533,43 @@ func (_m *IClient) DeleteScraper(ctx context.Context, params *amp.DeleteScraperI
 	return r0, r1
 }
 
+// DeleteScraperLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteScraperLoggingConfiguration(ctx context.Context, params *amp.DeleteScraperLoggingConfigurationInput, optFns ...func(*amp.Options)) (*amp.DeleteScraperLoggingConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteScraperLoggingConfiguration")
+	}
+
+	var r0 *amp.DeleteScraperLoggingConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DeleteScraperLoggingConfigurationInput, ...func(*amp.Options)) (*amp.DeleteScraperLoggingConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DeleteScraperLoggingConfigurationInput, ...func(*amp.Options)) *amp.DeleteScraperLoggingConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.DeleteScraperLoggingConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.DeleteScraperLoggingConfigurationInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteWorkspace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteWorkspace(ctx context.Context, params *amp.DeleteWorkspaceInput, optFns ...func(*amp.Options)) (*amp.DeleteWorkspaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +636,43 @@ func (_m *IClient) DescribeAlertManagerDefinition(ctx context.Context, params *a
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *amp.DescribeAlertManagerDefinitionInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAnomalyDetector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAnomalyDetector(ctx context.Context, params *amp.DescribeAnomalyDetectorInput, optFns ...func(*amp.Options)) (*amp.DescribeAnomalyDetectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAnomalyDetector")
+	}
+
+	var r0 *amp.DescribeAnomalyDetectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DescribeAnomalyDetectorInput, ...func(*amp.Options)) (*amp.DescribeAnomalyDetectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DescribeAnomalyDetectorInput, ...func(*amp.Options)) *amp.DescribeAnomalyDetectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.DescribeAnomalyDetectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.DescribeAnomalyDetectorInput, ...func(*amp.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -718,6 +866,43 @@ func (_m *IClient) DescribeScraper(ctx context.Context, params *amp.DescribeScra
 	return r0, r1
 }
 
+// DescribeScraperLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeScraperLoggingConfiguration(ctx context.Context, params *amp.DescribeScraperLoggingConfigurationInput, optFns ...func(*amp.Options)) (*amp.DescribeScraperLoggingConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeScraperLoggingConfiguration")
+	}
+
+	var r0 *amp.DescribeScraperLoggingConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DescribeScraperLoggingConfigurationInput, ...func(*amp.Options)) (*amp.DescribeScraperLoggingConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.DescribeScraperLoggingConfigurationInput, ...func(*amp.Options)) *amp.DescribeScraperLoggingConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.DescribeScraperLoggingConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.DescribeScraperLoggingConfigurationInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeWorkspace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeWorkspace(ctx context.Context, params *amp.DescribeWorkspaceInput, optFns ...func(*amp.Options)) (*amp.DescribeWorkspaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +1006,43 @@ func (_m *IClient) GetDefaultScraperConfiguration(ctx context.Context, params *a
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *amp.GetDefaultScraperConfigurationInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAnomalyDetectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAnomalyDetectors(ctx context.Context, params *amp.ListAnomalyDetectorsInput, optFns ...func(*amp.Options)) (*amp.ListAnomalyDetectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAnomalyDetectors")
+	}
+
+	var r0 *amp.ListAnomalyDetectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.ListAnomalyDetectorsInput, ...func(*amp.Options)) (*amp.ListAnomalyDetectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.ListAnomalyDetectorsInput, ...func(*amp.Options)) *amp.ListAnomalyDetectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.ListAnomalyDetectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.ListAnomalyDetectorsInput, ...func(*amp.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1024,6 +1246,43 @@ func (_m *IClient) PutAlertManagerDefinition(ctx context.Context, params *amp.Pu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *amp.PutAlertManagerDefinitionInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutAnomalyDetector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAnomalyDetector(ctx context.Context, params *amp.PutAnomalyDetectorInput, optFns ...func(*amp.Options)) (*amp.PutAnomalyDetectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAnomalyDetector")
+	}
+
+	var r0 *amp.PutAnomalyDetectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.PutAnomalyDetectorInput, ...func(*amp.Options)) (*amp.PutAnomalyDetectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.PutAnomalyDetectorInput, ...func(*amp.Options)) *amp.PutAnomalyDetectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.PutAnomalyDetectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.PutAnomalyDetectorInput, ...func(*amp.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1283,6 +1542,43 @@ func (_m *IClient) UpdateScraper(ctx context.Context, params *amp.UpdateScraperI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *amp.UpdateScraperInput, ...func(*amp.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateScraperLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateScraperLoggingConfiguration(ctx context.Context, params *amp.UpdateScraperLoggingConfigurationInput, optFns ...func(*amp.Options)) (*amp.UpdateScraperLoggingConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateScraperLoggingConfiguration")
+	}
+
+	var r0 *amp.UpdateScraperLoggingConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.UpdateScraperLoggingConfigurationInput, ...func(*amp.Options)) (*amp.UpdateScraperLoggingConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *amp.UpdateScraperLoggingConfigurationInput, ...func(*amp.Options)) *amp.UpdateScraperLoggingConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*amp.UpdateScraperLoggingConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *amp.UpdateScraperLoggingConfigurationInput, ...func(*amp.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -450,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchAllRelatedItems", func(t *testing.T) {
+        input := &connectcases.SearchAllRelatedItemsInput{}
+        output := &connectcases.SearchAllRelatedItemsOutput{}
+
+        mockClient.On("SearchAllRelatedItems", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchAllRelatedItems(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchCases", func(t *testing.T) {
         input := &connectcases.SearchCasesInput{}
         output := &connectcases.SearchCasesOutput{}

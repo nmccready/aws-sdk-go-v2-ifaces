@@ -89,6 +89,43 @@ func (_m *IClient) CreateCluster(ctx context.Context, params *ecs.CreateClusterI
 	return r0, r1
 }
 
+// CreateExpressGatewayService provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateExpressGatewayService(ctx context.Context, params *ecs.CreateExpressGatewayServiceInput, optFns ...func(*ecs.Options)) (*ecs.CreateExpressGatewayServiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateExpressGatewayService")
+	}
+
+	var r0 *ecs.CreateExpressGatewayServiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.CreateExpressGatewayServiceInput, ...func(*ecs.Options)) (*ecs.CreateExpressGatewayServiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.CreateExpressGatewayServiceInput, ...func(*ecs.Options)) *ecs.CreateExpressGatewayServiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.CreateExpressGatewayServiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.CreateExpressGatewayServiceInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateService provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateService(ctx context.Context, params *ecs.CreateServiceInput, optFns ...func(*ecs.Options)) (*ecs.CreateServiceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -303,6 +340,43 @@ func (_m *IClient) DeleteCluster(ctx context.Context, params *ecs.DeleteClusterI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DeleteClusterInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteExpressGatewayService provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteExpressGatewayService(ctx context.Context, params *ecs.DeleteExpressGatewayServiceInput, optFns ...func(*ecs.Options)) (*ecs.DeleteExpressGatewayServiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteExpressGatewayService")
+	}
+
+	var r0 *ecs.DeleteExpressGatewayServiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DeleteExpressGatewayServiceInput, ...func(*ecs.Options)) (*ecs.DeleteExpressGatewayServiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DeleteExpressGatewayServiceInput, ...func(*ecs.Options)) *ecs.DeleteExpressGatewayServiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DeleteExpressGatewayServiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DeleteExpressGatewayServiceInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -599,6 +673,43 @@ func (_m *IClient) DescribeContainerInstances(ctx context.Context, params *ecs.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeContainerInstancesInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeExpressGatewayService provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeExpressGatewayService(ctx context.Context, params *ecs.DescribeExpressGatewayServiceInput, optFns ...func(*ecs.Options)) (*ecs.DescribeExpressGatewayServiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeExpressGatewayService")
+	}
+
+	var r0 *ecs.DescribeExpressGatewayServiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeExpressGatewayServiceInput, ...func(*ecs.Options)) (*ecs.DescribeExpressGatewayServiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeExpressGatewayServiceInput, ...func(*ecs.Options)) *ecs.DescribeExpressGatewayServiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeExpressGatewayServiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeExpressGatewayServiceInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2097,6 +2208,43 @@ func (_m *IClient) UpdateContainerInstancesState(ctx context.Context, params *ec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.UpdateContainerInstancesStateInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateExpressGatewayService provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExpressGatewayService(ctx context.Context, params *ecs.UpdateExpressGatewayServiceInput, optFns ...func(*ecs.Options)) (*ecs.UpdateExpressGatewayServiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExpressGatewayService")
+	}
+
+	var r0 *ecs.UpdateExpressGatewayServiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.UpdateExpressGatewayServiceInput, ...func(*ecs.Options)) (*ecs.UpdateExpressGatewayServiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.UpdateExpressGatewayServiceInput, ...func(*ecs.Options)) *ecs.UpdateExpressGatewayServiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.UpdateExpressGatewayServiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.UpdateExpressGatewayServiceInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

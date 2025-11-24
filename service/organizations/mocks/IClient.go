@@ -865,6 +865,43 @@ func (_m *IClient) DescribeResourcePolicy(ctx context.Context, params *organizat
 	return r0, r1
 }
 
+// DescribeResponsibilityTransfer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeResponsibilityTransfer(ctx context.Context, params *organizations.DescribeResponsibilityTransferInput, optFns ...func(*organizations.Options)) (*organizations.DescribeResponsibilityTransferOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeResponsibilityTransfer")
+	}
+
+	var r0 *organizations.DescribeResponsibilityTransferOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.DescribeResponsibilityTransferInput, ...func(*organizations.Options)) (*organizations.DescribeResponsibilityTransferOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.DescribeResponsibilityTransferInput, ...func(*organizations.Options)) *organizations.DescribeResponsibilityTransferOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.DescribeResponsibilityTransferOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.DescribeResponsibilityTransferInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DetachPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DetachPolicy(ctx context.Context, params *organizations.DetachPolicyInput, optFns ...func(*organizations.Options)) (*organizations.DetachPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1116,6 +1153,43 @@ func (_m *IClient) InviteAccountToOrganization(ctx context.Context, params *orga
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *organizations.InviteAccountToOrganizationInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// InviteOrganizationToTransferResponsibility provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InviteOrganizationToTransferResponsibility(ctx context.Context, params *organizations.InviteOrganizationToTransferResponsibilityInput, optFns ...func(*organizations.Options)) (*organizations.InviteOrganizationToTransferResponsibilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InviteOrganizationToTransferResponsibility")
+	}
+
+	var r0 *organizations.InviteOrganizationToTransferResponsibilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.InviteOrganizationToTransferResponsibilityInput, ...func(*organizations.Options)) (*organizations.InviteOrganizationToTransferResponsibilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.InviteOrganizationToTransferResponsibilityInput, ...func(*organizations.Options)) *organizations.InviteOrganizationToTransferResponsibilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.InviteOrganizationToTransferResponsibilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.InviteOrganizationToTransferResponsibilityInput, ...func(*organizations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1568,6 +1642,43 @@ func (_m *IClient) ListHandshakesForOrganization(ctx context.Context, params *or
 	return r0, r1
 }
 
+// ListInboundResponsibilityTransfers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInboundResponsibilityTransfers(ctx context.Context, params *organizations.ListInboundResponsibilityTransfersInput, optFns ...func(*organizations.Options)) (*organizations.ListInboundResponsibilityTransfersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInboundResponsibilityTransfers")
+	}
+
+	var r0 *organizations.ListInboundResponsibilityTransfersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListInboundResponsibilityTransfersInput, ...func(*organizations.Options)) (*organizations.ListInboundResponsibilityTransfersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListInboundResponsibilityTransfersInput, ...func(*organizations.Options)) *organizations.ListInboundResponsibilityTransfersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.ListInboundResponsibilityTransfersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.ListInboundResponsibilityTransfersInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListOrganizationalUnitsForParent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListOrganizationalUnitsForParent(ctx context.Context, params *organizations.ListOrganizationalUnitsForParentInput, optFns ...func(*organizations.Options)) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1597,6 +1708,43 @@ func (_m *IClient) ListOrganizationalUnitsForParent(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *organizations.ListOrganizationalUnitsForParentInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListOutboundResponsibilityTransfers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOutboundResponsibilityTransfers(ctx context.Context, params *organizations.ListOutboundResponsibilityTransfersInput, optFns ...func(*organizations.Options)) (*organizations.ListOutboundResponsibilityTransfersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOutboundResponsibilityTransfers")
+	}
+
+	var r0 *organizations.ListOutboundResponsibilityTransfersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListOutboundResponsibilityTransfersInput, ...func(*organizations.Options)) (*organizations.ListOutboundResponsibilityTransfersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.ListOutboundResponsibilityTransfersInput, ...func(*organizations.Options)) *organizations.ListOutboundResponsibilityTransfersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.ListOutboundResponsibilityTransfersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.ListOutboundResponsibilityTransfersInput, ...func(*organizations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2030,6 +2178,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *organizations.TagRes
 	return r0, r1
 }
 
+// TerminateResponsibilityTransfer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TerminateResponsibilityTransfer(ctx context.Context, params *organizations.TerminateResponsibilityTransferInput, optFns ...func(*organizations.Options)) (*organizations.TerminateResponsibilityTransferOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TerminateResponsibilityTransfer")
+	}
+
+	var r0 *organizations.TerminateResponsibilityTransferOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.TerminateResponsibilityTransferInput, ...func(*organizations.Options)) (*organizations.TerminateResponsibilityTransferOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.TerminateResponsibilityTransferInput, ...func(*organizations.Options)) *organizations.TerminateResponsibilityTransferOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.TerminateResponsibilityTransferOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.TerminateResponsibilityTransferInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UntagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UntagResource(ctx context.Context, params *organizations.UntagResourceInput, optFns ...func(*organizations.Options)) (*organizations.UntagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2133,6 +2318,43 @@ func (_m *IClient) UpdatePolicy(ctx context.Context, params *organizations.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *organizations.UpdatePolicyInput, ...func(*organizations.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateResponsibilityTransfer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateResponsibilityTransfer(ctx context.Context, params *organizations.UpdateResponsibilityTransferInput, optFns ...func(*organizations.Options)) (*organizations.UpdateResponsibilityTransferOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateResponsibilityTransfer")
+	}
+
+	var r0 *organizations.UpdateResponsibilityTransferOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.UpdateResponsibilityTransferInput, ...func(*organizations.Options)) (*organizations.UpdateResponsibilityTransferOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *organizations.UpdateResponsibilityTransferInput, ...func(*organizations.Options)) *organizations.UpdateResponsibilityTransferOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*organizations.UpdateResponsibilityTransferOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *organizations.UpdateResponsibilityTransferInput, ...func(*organizations.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

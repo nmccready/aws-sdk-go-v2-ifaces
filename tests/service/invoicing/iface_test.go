@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateProcurementPortalPreference", func(t *testing.T) {
+        input := &invoicing.CreateProcurementPortalPreferenceInput{}
+        output := &invoicing.CreateProcurementPortalPreferenceOutput{}
+
+        mockClient.On("CreateProcurementPortalPreference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProcurementPortalPreference(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteInvoiceUnit", func(t *testing.T) {
         input := &invoicing.DeleteInvoiceUnitInput{}
         output := &invoicing.DeleteInvoiceUnitOutput{}
@@ -73,6 +86,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteProcurementPortalPreference", func(t *testing.T) {
+        input := &invoicing.DeleteProcurementPortalPreferenceInput{}
+        output := &invoicing.DeleteProcurementPortalPreferenceOutput{}
+
+        mockClient.On("DeleteProcurementPortalPreference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProcurementPortalPreference(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInvoicePDF", func(t *testing.T) {
+        input := &invoicing.GetInvoicePDFInput{}
+        output := &invoicing.GetInvoicePDFOutput{}
+
+        mockClient.On("GetInvoicePDF", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInvoicePDF(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInvoiceUnit", func(t *testing.T) {
         input := &invoicing.GetInvoiceUnitInput{}
         output := &invoicing.GetInvoiceUnitOutput{}
@@ -80,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInvoiceUnit", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInvoiceUnit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProcurementPortalPreference", func(t *testing.T) {
+        input := &invoicing.GetProcurementPortalPreferenceInput{}
+        output := &invoicing.GetProcurementPortalPreferenceOutput{}
+
+        mockClient.On("GetProcurementPortalPreference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProcurementPortalPreference(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -112,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListProcurementPortalPreferences", func(t *testing.T) {
+        input := &invoicing.ListProcurementPortalPreferencesInput{}
+        output := &invoicing.ListProcurementPortalPreferencesOutput{}
+
+        mockClient.On("ListProcurementPortalPreferences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProcurementPortalPreferences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &invoicing.ListTagsForResourceInput{}
         output := &invoicing.ListTagsForResourceOutput{}
@@ -119,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutProcurementPortalPreference", func(t *testing.T) {
+        input := &invoicing.PutProcurementPortalPreferenceInput{}
+        output := &invoicing.PutProcurementPortalPreferenceOutput{}
+
+        mockClient.On("PutProcurementPortalPreference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutProcurementPortalPreference(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -158,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInvoiceUnit", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInvoiceUnit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProcurementPortalPreferenceStatus", func(t *testing.T) {
+        input := &invoicing.UpdateProcurementPortalPreferenceStatusInput{}
+        output := &invoicing.UpdateProcurementPortalPreferenceStatusOutput{}
+
+        mockClient.On("UpdateProcurementPortalPreferenceStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProcurementPortalPreferenceStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

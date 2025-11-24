@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAnomalyDetector", func(t *testing.T) {
+        input := &amp.CreateAnomalyDetectorInput{}
+        output := &amp.CreateAnomalyDetectorOutput{}
+
+        mockClient.On("CreateAnomalyDetector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAnomalyDetector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLoggingConfiguration", func(t *testing.T) {
         input := &amp.CreateLoggingConfigurationInput{}
         output := &amp.CreateLoggingConfigurationOutput{}
@@ -125,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAnomalyDetector", func(t *testing.T) {
+        input := &amp.DeleteAnomalyDetectorInput{}
+        output := &amp.DeleteAnomalyDetectorOutput{}
+
+        mockClient.On("DeleteAnomalyDetector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAnomalyDetector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLoggingConfiguration", func(t *testing.T) {
         input := &amp.DeleteLoggingConfigurationInput{}
         output := &amp.DeleteLoggingConfigurationOutput{}
@@ -190,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteScraperLoggingConfiguration", func(t *testing.T) {
+        input := &amp.DeleteScraperLoggingConfigurationInput{}
+        output := &amp.DeleteScraperLoggingConfigurationOutput{}
+
+        mockClient.On("DeleteScraperLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteScraperLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteWorkspace", func(t *testing.T) {
         input := &amp.DeleteWorkspaceInput{}
         output := &amp.DeleteWorkspaceOutput{}
@@ -210,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAlertManagerDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAlertManagerDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAnomalyDetector", func(t *testing.T) {
+        input := &amp.DescribeAnomalyDetectorInput{}
+        output := &amp.DescribeAnomalyDetectorOutput{}
+
+        mockClient.On("DescribeAnomalyDetector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAnomalyDetector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeScraperLoggingConfiguration", func(t *testing.T) {
+        input := &amp.DescribeScraperLoggingConfigurationInput{}
+        output := &amp.DescribeScraperLoggingConfigurationOutput{}
+
+        mockClient.On("DescribeScraperLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeScraperLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeWorkspace", func(t *testing.T) {
         input := &amp.DescribeWorkspaceInput{}
         output := &amp.DescribeWorkspaceOutput{}
@@ -314,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDefaultScraperConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDefaultScraperConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAnomalyDetectors", func(t *testing.T) {
+        input := &amp.ListAnomalyDetectorsInput{}
+        output := &amp.ListAnomalyDetectorsOutput{}
+
+        mockClient.On("ListAnomalyDetectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAnomalyDetectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -379,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAlertManagerDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAlertManagerDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAnomalyDetector", func(t *testing.T) {
+        input := &amp.PutAnomalyDetectorInput{}
+        output := &amp.PutAnomalyDetectorOutput{}
+
+        mockClient.On("PutAnomalyDetector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAnomalyDetector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -470,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateScraper", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateScraper(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateScraperLoggingConfiguration", func(t *testing.T) {
+        input := &amp.UpdateScraperLoggingConfigurationInput{}
+        output := &amp.UpdateScraperLoggingConfigurationOutput{}
+
+        mockClient.On("UpdateScraperLoggingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateScraperLoggingConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

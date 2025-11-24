@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTableBucketMetricsConfiguration", func(t *testing.T) {
+        input := &s3tables.DeleteTableBucketMetricsConfigurationInput{}
+        output := &s3tables.DeleteTableBucketMetricsConfigurationOutput{}
+
+        mockClient.On("DeleteTableBucketMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTableBucketMetricsConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTableBucketPolicy", func(t *testing.T) {
         input := &s3tables.DeleteTableBucketPolicyInput{}
         output := &s3tables.DeleteTableBucketPolicyOutput{}
@@ -210,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTableBucketMaintenanceConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTableBucketMaintenanceConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableBucketMetricsConfiguration", func(t *testing.T) {
+        input := &s3tables.GetTableBucketMetricsConfigurationInput{}
+        output := &s3tables.GetTableBucketMetricsConfigurationOutput{}
+
+        mockClient.On("GetTableBucketMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableBucketMetricsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &s3tables.ListTagsForResourceInput{}
+        output := &s3tables.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutTableBucketEncryption", func(t *testing.T) {
         input := &s3tables.PutTableBucketEncryptionInput{}
         output := &s3tables.PutTableBucketEncryptionOutput{}
@@ -353,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutTableBucketMaintenanceConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutTableBucketMaintenanceConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTableBucketMetricsConfiguration", func(t *testing.T) {
+        input := &s3tables.PutTableBucketMetricsConfigurationInput{}
+        output := &s3tables.PutTableBucketMetricsConfigurationOutput{}
+
+        mockClient.On("PutTableBucketMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTableBucketMetricsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -405,6 +457,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("RenameTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.RenameTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &s3tables.TagResourceInput{}
+        output := &s3tables.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &s3tables.UntagResourceInput{}
+        output := &s3tables.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

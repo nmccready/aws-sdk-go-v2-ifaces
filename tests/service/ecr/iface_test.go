@@ -216,6 +216,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSigningConfiguration", func(t *testing.T) {
+        input := &ecr.DeleteSigningConfigurationInput{}
+        output := &ecr.DeleteSigningConfigurationOutput{}
+
+        mockClient.On("DeleteSigningConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSigningConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeregisterPullTimeUpdateExclusion", func(t *testing.T) {
+        input := &ecr.DeregisterPullTimeUpdateExclusionInput{}
+        output := &ecr.DeregisterPullTimeUpdateExclusionOutput{}
+
+        mockClient.On("DeregisterPullTimeUpdateExclusion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterPullTimeUpdateExclusion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeImageReplicationStatus", func(t *testing.T) {
         input := &ecr.DescribeImageReplicationStatusInput{}
         output := &ecr.DescribeImageReplicationStatusOutput{}
@@ -223,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeImageReplicationStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeImageReplicationStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeImages", func(t *testing.T) {
+        input := &ecr.DescribeImagesInput{}
+        output := &ecr.DescribeImagesOutput{}
+
+        mockClient.On("DescribeImages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeImages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,13 +281,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeImages", func(t *testing.T) {
-        input := &ecr.DescribeImagesInput{}
-        output := &ecr.DescribeImagesOutput{}
+    t.Run("TestDescribeImageSigningStatus", func(t *testing.T) {
+        input := &ecr.DescribeImageSigningStatusInput{}
+        output := &ecr.DescribeImageSigningStatusOutput{}
 
-        mockClient.On("DescribeImages", ctx, input).Return(output, nil)
+        mockClient.On("DescribeImageSigningStatus", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeImages(ctx, input)
+        result, err := mockClient.DescribeImageSigningStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSigningConfiguration", func(t *testing.T) {
+        input := &ecr.GetSigningConfigurationInput{}
+        output := &ecr.GetSigningConfigurationOutput{}
+
+        mockClient.On("GetSigningConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSigningConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInitiateLayerUpload", func(t *testing.T) {
         input := &ecr.InitiateLayerUploadInput{}
         output := &ecr.InitiateLayerUploadOutput{}
@@ -424,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListImageReferrers", func(t *testing.T) {
+        input := &ecr.ListImageReferrersInput{}
+        output := &ecr.ListImageReferrersOutput{}
+
+        mockClient.On("ListImageReferrers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListImageReferrers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListImages", func(t *testing.T) {
         input := &ecr.ListImagesInput{}
         output := &ecr.ListImagesOutput{}
@@ -431,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListImages", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListImages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPullTimeUpdateExclusions", func(t *testing.T) {
+        input := &ecr.ListPullTimeUpdateExclusionsInput{}
+        output := &ecr.ListPullTimeUpdateExclusionsOutput{}
+
+        mockClient.On("ListPullTimeUpdateExclusions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPullTimeUpdateExclusions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,6 +632,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutSigningConfiguration", func(t *testing.T) {
+        input := &ecr.PutSigningConfigurationInput{}
+        output := &ecr.PutSigningConfigurationOutput{}
+
+        mockClient.On("PutSigningConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutSigningConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterPullTimeUpdateExclusion", func(t *testing.T) {
+        input := &ecr.RegisterPullTimeUpdateExclusionInput{}
+        output := &ecr.RegisterPullTimeUpdateExclusionOutput{}
+
+        mockClient.On("RegisterPullTimeUpdateExclusion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterPullTimeUpdateExclusion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSetRepositoryPolicy", func(t *testing.T) {
         input := &ecr.SetRepositoryPolicyInput{}
         output := &ecr.SetRepositoryPolicyOutput{}
@@ -613,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateImageStorageClass", func(t *testing.T) {
+        input := &ecr.UpdateImageStorageClassInput{}
+        output := &ecr.UpdateImageStorageClassOutput{}
+
+        mockClient.On("UpdateImageStorageClass", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateImageStorageClass(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

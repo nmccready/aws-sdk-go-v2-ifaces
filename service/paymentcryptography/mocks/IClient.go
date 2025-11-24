@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AddKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddKeyReplicationRegions(ctx context.Context, params *paymentcryptography.AddKeyReplicationRegionsInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.AddKeyReplicationRegionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddKeyReplicationRegions")
+	}
+
+	var r0 *paymentcryptography.AddKeyReplicationRegionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.AddKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.AddKeyReplicationRegionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.AddKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) *paymentcryptography.AddKeyReplicationRegionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.AddKeyReplicationRegionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.AddKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAlias provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAlias(ctx context.Context, params *paymentcryptography.CreateAliasInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.CreateAliasOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -162,6 +199,80 @@ func (_m *IClient) DeleteKey(ctx context.Context, params *paymentcryptography.De
 	return r0, r1
 }
 
+// DisableDefaultKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableDefaultKeyReplicationRegions(ctx context.Context, params *paymentcryptography.DisableDefaultKeyReplicationRegionsInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.DisableDefaultKeyReplicationRegionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableDefaultKeyReplicationRegions")
+	}
+
+	var r0 *paymentcryptography.DisableDefaultKeyReplicationRegionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.DisableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.DisableDefaultKeyReplicationRegionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.DisableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) *paymentcryptography.DisableDefaultKeyReplicationRegionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.DisableDefaultKeyReplicationRegionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.DisableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableDefaultKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableDefaultKeyReplicationRegions(ctx context.Context, params *paymentcryptography.EnableDefaultKeyReplicationRegionsInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.EnableDefaultKeyReplicationRegionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableDefaultKeyReplicationRegions")
+	}
+
+	var r0 *paymentcryptography.EnableDefaultKeyReplicationRegionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.EnableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.EnableDefaultKeyReplicationRegionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.EnableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) *paymentcryptography.EnableDefaultKeyReplicationRegionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.EnableDefaultKeyReplicationRegionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.EnableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ExportKey provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ExportKey(ctx context.Context, params *paymentcryptography.ExportKeyInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.ExportKeyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +339,80 @@ func (_m *IClient) GetAlias(ctx context.Context, params *paymentcryptography.Get
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.GetAliasInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCertificateSigningRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCertificateSigningRequest(ctx context.Context, params *paymentcryptography.GetCertificateSigningRequestInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.GetCertificateSigningRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCertificateSigningRequest")
+	}
+
+	var r0 *paymentcryptography.GetCertificateSigningRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetCertificateSigningRequestInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.GetCertificateSigningRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetCertificateSigningRequestInput, ...func(*paymentcryptography.Options)) *paymentcryptography.GetCertificateSigningRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.GetCertificateSigningRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.GetCertificateSigningRequestInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDefaultKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDefaultKeyReplicationRegions(ctx context.Context, params *paymentcryptography.GetDefaultKeyReplicationRegionsInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.GetDefaultKeyReplicationRegionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDefaultKeyReplicationRegions")
+	}
+
+	var r0 *paymentcryptography.GetDefaultKeyReplicationRegionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.GetDefaultKeyReplicationRegionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) *paymentcryptography.GetDefaultKeyReplicationRegionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.GetDefaultKeyReplicationRegionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.GetDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -548,6 +733,43 @@ func (_m *IClient) Options() paymentcryptography.Options {
 	}
 
 	return r0
+}
+
+// RemoveKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveKeyReplicationRegions(ctx context.Context, params *paymentcryptography.RemoveKeyReplicationRegionsInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.RemoveKeyReplicationRegionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveKeyReplicationRegions")
+	}
+
+	var r0 *paymentcryptography.RemoveKeyReplicationRegionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.RemoveKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.RemoveKeyReplicationRegionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.RemoveKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) *paymentcryptography.RemoveKeyReplicationRegionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.RemoveKeyReplicationRegionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.RemoveKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // RestoreKey provides a mock function with given fields: ctx, params, optFns

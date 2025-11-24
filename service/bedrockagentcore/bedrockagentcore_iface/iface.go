@@ -10,9 +10,14 @@ import (
 // IClient defines the interface for bedrockagentcore
 type IClient interface {
  Options() Options 
+ BatchCreateMemoryRecords(ctx context.Context, params *BatchCreateMemoryRecordsInput, optFns ...func(*Options)) (*BatchCreateMemoryRecordsOutput, error) 
+ BatchDeleteMemoryRecords(ctx context.Context, params *BatchDeleteMemoryRecordsInput, optFns ...func(*Options)) (*BatchDeleteMemoryRecordsOutput, error) 
+ BatchUpdateMemoryRecords(ctx context.Context, params *BatchUpdateMemoryRecordsInput, optFns ...func(*Options)) (*BatchUpdateMemoryRecordsOutput, error) 
+ CompleteResourceTokenAuth(ctx context.Context, params *CompleteResourceTokenAuthInput, optFns ...func(*Options)) (*CompleteResourceTokenAuthOutput, error) 
  CreateEvent(ctx context.Context, params *CreateEventInput, optFns ...func(*Options)) (*CreateEventOutput, error) 
  DeleteEvent(ctx context.Context, params *DeleteEventInput, optFns ...func(*Options)) (*DeleteEventOutput, error) 
  DeleteMemoryRecord(ctx context.Context, params *DeleteMemoryRecordInput, optFns ...func(*Options)) (*DeleteMemoryRecordOutput, error) 
+ GetAgentCard(ctx context.Context, params *GetAgentCardInput, optFns ...func(*Options)) (*GetAgentCardOutput, error) 
  GetBrowserSession(ctx context.Context, params *GetBrowserSessionInput, optFns ...func(*Options)) (*GetBrowserSessionOutput, error) 
  GetCodeInterpreterSession(ctx context.Context, params *GetCodeInterpreterSessionInput, optFns ...func(*Options)) (*GetCodeInterpreterSessionOutput, error) 
  GetEvent(ctx context.Context, params *GetEventInput, optFns ...func(*Options)) (*GetEventOutput, error) 
@@ -28,12 +33,15 @@ type IClient interface {
  ListBrowserSessions(ctx context.Context, params *ListBrowserSessionsInput, optFns ...func(*Options)) (*ListBrowserSessionsOutput, error) 
  ListCodeInterpreterSessions(ctx context.Context, params *ListCodeInterpreterSessionsInput, optFns ...func(*Options)) (*ListCodeInterpreterSessionsOutput, error) 
  ListEvents(ctx context.Context, params *ListEventsInput, optFns ...func(*Options)) (*ListEventsOutput, error) 
+ ListMemoryExtractionJobs(ctx context.Context, params *ListMemoryExtractionJobsInput, optFns ...func(*Options)) (*ListMemoryExtractionJobsOutput, error) 
  ListMemoryRecords(ctx context.Context, params *ListMemoryRecordsInput, optFns ...func(*Options)) (*ListMemoryRecordsOutput, error) 
  ListSessions(ctx context.Context, params *ListSessionsInput, optFns ...func(*Options)) (*ListSessionsOutput, error) 
  RetrieveMemoryRecords(ctx context.Context, params *RetrieveMemoryRecordsInput, optFns ...func(*Options)) (*RetrieveMemoryRecordsOutput, error) 
  StartBrowserSession(ctx context.Context, params *StartBrowserSessionInput, optFns ...func(*Options)) (*StartBrowserSessionOutput, error) 
  StartCodeInterpreterSession(ctx context.Context, params *StartCodeInterpreterSessionInput, optFns ...func(*Options)) (*StartCodeInterpreterSessionOutput, error) 
+ StartMemoryExtractionJob(ctx context.Context, params *StartMemoryExtractionJobInput, optFns ...func(*Options)) (*StartMemoryExtractionJobOutput, error) 
  StopBrowserSession(ctx context.Context, params *StopBrowserSessionInput, optFns ...func(*Options)) (*StopBrowserSessionOutput, error) 
  StopCodeInterpreterSession(ctx context.Context, params *StopCodeInterpreterSessionInput, optFns ...func(*Options)) (*StopCodeInterpreterSessionOutput, error) 
+ StopRuntimeSession(ctx context.Context, params *StopRuntimeSessionInput, optFns ...func(*Options)) (*StopRuntimeSessionOutput, error) 
  UpdateBrowserStream(ctx context.Context, params *UpdateBrowserStreamInput, optFns ...func(*Options)) (*UpdateBrowserStreamOutput, error) 
 }

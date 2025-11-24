@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePipelineEndpoint", func(t *testing.T) {
+        input := &osis.CreatePipelineEndpointInput{}
+        output := &osis.CreatePipelineEndpointOutput{}
+
+        mockClient.On("CreatePipelineEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePipelineEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePipeline", func(t *testing.T) {
         input := &osis.DeletePipelineInput{}
         output := &osis.DeletePipelineOutput{}
@@ -54,6 +67,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePipeline", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePipelineEndpoint", func(t *testing.T) {
+        input := &osis.DeletePipelineEndpointInput{}
+        output := &osis.DeletePipelineEndpointOutput{}
+
+        mockClient.On("DeletePipelineEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePipelineEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &osis.DeleteResourcePolicyInput{}
+        output := &osis.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &osis.GetResourcePolicyInput{}
+        output := &osis.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPipelineBlueprints", func(t *testing.T) {
         input := &osis.ListPipelineBlueprintsInput{}
         output := &osis.ListPipelineBlueprintsOutput{}
@@ -106,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPipelineBlueprints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPipelineBlueprints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPipelineEndpointConnections", func(t *testing.T) {
+        input := &osis.ListPipelineEndpointConnectionsInput{}
+        output := &osis.ListPipelineEndpointConnectionsOutput{}
+
+        mockClient.On("ListPipelineEndpointConnections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPipelineEndpointConnections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPipelineEndpoints", func(t *testing.T) {
+        input := &osis.ListPipelineEndpointsInput{}
+        output := &osis.ListPipelineEndpointsOutput{}
+
+        mockClient.On("ListPipelineEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPipelineEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +210,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &osis.PutResourcePolicyInput{}
+        output := &osis.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRevokePipelineEndpointConnections", func(t *testing.T) {
+        input := &osis.RevokePipelineEndpointConnectionsInput{}
+        output := &osis.RevokePipelineEndpointConnectionsOutput{}
+
+        mockClient.On("RevokePipelineEndpointConnections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokePipelineEndpointConnections(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

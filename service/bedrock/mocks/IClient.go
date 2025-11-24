@@ -903,6 +903,43 @@ func (_m *IClient) DeleteCustomModelDeployment(ctx context.Context, params *bedr
 	return r0, r1
 }
 
+// DeleteEnforcedGuardrailConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEnforcedGuardrailConfiguration(ctx context.Context, params *bedrock.DeleteEnforcedGuardrailConfigurationInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteEnforcedGuardrailConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEnforcedGuardrailConfiguration")
+	}
+
+	var r0 *bedrock.DeleteEnforcedGuardrailConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteEnforcedGuardrailConfigurationInput, ...func(*bedrock.Options)) (*bedrock.DeleteEnforcedGuardrailConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteEnforcedGuardrailConfigurationInput, ...func(*bedrock.Options)) *bedrock.DeleteEnforcedGuardrailConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteEnforcedGuardrailConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteEnforcedGuardrailConfigurationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteFoundationModelAgreement provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteFoundationModelAgreement(ctx context.Context, params *bedrock.DeleteFoundationModelAgreementInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteFoundationModelAgreementOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2383,6 +2420,43 @@ func (_m *IClient) ListCustomModels(ctx context.Context, params *bedrock.ListCus
 	return r0, r1
 }
 
+// ListEnforcedGuardrailsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEnforcedGuardrailsConfiguration(ctx context.Context, params *bedrock.ListEnforcedGuardrailsConfigurationInput, optFns ...func(*bedrock.Options)) (*bedrock.ListEnforcedGuardrailsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEnforcedGuardrailsConfiguration")
+	}
+
+	var r0 *bedrock.ListEnforcedGuardrailsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListEnforcedGuardrailsConfigurationInput, ...func(*bedrock.Options)) (*bedrock.ListEnforcedGuardrailsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListEnforcedGuardrailsConfigurationInput, ...func(*bedrock.Options)) *bedrock.ListEnforcedGuardrailsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListEnforcedGuardrailsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListEnforcedGuardrailsConfigurationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEvaluationJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEvaluationJobs(ctx context.Context, params *bedrock.ListEvaluationJobsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListEvaluationJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2917,6 +2991,43 @@ func (_m *IClient) Options() bedrock.Options {
 	}
 
 	return r0
+}
+
+// PutEnforcedGuardrailConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutEnforcedGuardrailConfiguration(ctx context.Context, params *bedrock.PutEnforcedGuardrailConfigurationInput, optFns ...func(*bedrock.Options)) (*bedrock.PutEnforcedGuardrailConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutEnforcedGuardrailConfiguration")
+	}
+
+	var r0 *bedrock.PutEnforcedGuardrailConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutEnforcedGuardrailConfigurationInput, ...func(*bedrock.Options)) (*bedrock.PutEnforcedGuardrailConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutEnforcedGuardrailConfigurationInput, ...func(*bedrock.Options)) *bedrock.PutEnforcedGuardrailConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutEnforcedGuardrailConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutEnforcedGuardrailConfigurationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutModelInvocationLoggingConfiguration provides a mock function with given fields: ctx, params, optFns

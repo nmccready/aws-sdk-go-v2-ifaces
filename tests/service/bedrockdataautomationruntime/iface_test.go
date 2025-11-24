@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeDataAutomation", func(t *testing.T) {
+        input := &bedrockdataautomationruntime.InvokeDataAutomationInput{}
+        output := &bedrockdataautomationruntime.InvokeDataAutomationOutput{}
+
+        mockClient.On("InvokeDataAutomation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeDataAutomation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeDataAutomationAsync", func(t *testing.T) {
         input := &bedrockdataautomationruntime.InvokeDataAutomationAsyncInput{}
         output := &bedrockdataautomationruntime.InvokeDataAutomationAsyncOutput{}

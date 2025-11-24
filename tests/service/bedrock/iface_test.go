@@ -346,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteEnforcedGuardrailConfiguration", func(t *testing.T) {
+        input := &bedrock.DeleteEnforcedGuardrailConfigurationInput{}
+        output := &bedrock.DeleteEnforcedGuardrailConfigurationOutput{}
+
+        mockClient.On("DeleteEnforcedGuardrailConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEnforcedGuardrailConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteFoundationModelAgreement", func(t *testing.T) {
         input := &bedrock.DeleteFoundationModelAgreementInput{}
         output := &bedrock.DeleteFoundationModelAgreementOutput{}
@@ -866,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListEnforcedGuardrailsConfiguration", func(t *testing.T) {
+        input := &bedrock.ListEnforcedGuardrailsConfigurationInput{}
+        output := &bedrock.ListEnforcedGuardrailsConfigurationOutput{}
+
+        mockClient.On("ListEnforcedGuardrailsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnforcedGuardrailsConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEvaluationJobs", func(t *testing.T) {
         input := &bedrock.ListEvaluationJobsInput{}
         output := &bedrock.ListEvaluationJobsOutput{}
@@ -1042,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutEnforcedGuardrailConfiguration", func(t *testing.T) {
+        input := &bedrock.PutEnforcedGuardrailConfigurationInput{}
+        output := &bedrock.PutEnforcedGuardrailConfigurationOutput{}
+
+        mockClient.On("PutEnforcedGuardrailConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutEnforcedGuardrailConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

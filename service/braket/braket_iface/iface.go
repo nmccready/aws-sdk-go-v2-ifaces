@@ -14,6 +14,8 @@ type IClient interface {
  CancelQuantumTask(ctx context.Context, params *CancelQuantumTaskInput, optFns ...func(*Options)) (*CancelQuantumTaskOutput, error) 
  CreateJob(ctx context.Context, params *CreateJobInput, optFns ...func(*Options)) (*CreateJobOutput, error) 
  CreateQuantumTask(ctx context.Context, params *CreateQuantumTaskInput, optFns ...func(*Options)) (*CreateQuantumTaskOutput, error) 
+ CreateSpendingLimit(ctx context.Context, params *CreateSpendingLimitInput, optFns ...func(*Options)) (*CreateSpendingLimitOutput, error) 
+ DeleteSpendingLimit(ctx context.Context, params *DeleteSpendingLimitInput, optFns ...func(*Options)) (*DeleteSpendingLimitOutput, error) 
  GetDevice(ctx context.Context, params *GetDeviceInput, optFns ...func(*Options)) (*GetDeviceOutput, error) 
  GetJob(ctx context.Context, params *GetJobInput, optFns ...func(*Options)) (*GetJobOutput, error) 
  GetQuantumTask(ctx context.Context, params *GetQuantumTaskInput, optFns ...func(*Options)) (*GetQuantumTaskOutput, error) 
@@ -21,6 +23,8 @@ type IClient interface {
  SearchDevices(ctx context.Context, params *SearchDevicesInput, optFns ...func(*Options)) (*SearchDevicesOutput, error) 
  SearchJobs(ctx context.Context, params *SearchJobsInput, optFns ...func(*Options)) (*SearchJobsOutput, error) 
  SearchQuantumTasks(ctx context.Context, params *SearchQuantumTasksInput, optFns ...func(*Options)) (*SearchQuantumTasksOutput, error) 
+ SearchSpendingLimits(ctx context.Context, params *SearchSpendingLimitsInput, optFns ...func(*Options)) (*SearchSpendingLimitsOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateSpendingLimit(ctx context.Context, params *UpdateSpendingLimitInput, optFns ...func(*Options)) (*UpdateSpendingLimitOutput, error) 
 }

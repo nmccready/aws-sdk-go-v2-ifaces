@@ -34,6 +34,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchCreateMemoryRecords", func(t *testing.T) {
+        input := &bedrockagentcore.BatchCreateMemoryRecordsInput{}
+        output := &bedrockagentcore.BatchCreateMemoryRecordsOutput{}
+
+        mockClient.On("BatchCreateMemoryRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchCreateMemoryRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteMemoryRecords", func(t *testing.T) {
+        input := &bedrockagentcore.BatchDeleteMemoryRecordsInput{}
+        output := &bedrockagentcore.BatchDeleteMemoryRecordsOutput{}
+
+        mockClient.On("BatchDeleteMemoryRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteMemoryRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateMemoryRecords", func(t *testing.T) {
+        input := &bedrockagentcore.BatchUpdateMemoryRecordsInput{}
+        output := &bedrockagentcore.BatchUpdateMemoryRecordsOutput{}
+
+        mockClient.On("BatchUpdateMemoryRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateMemoryRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCompleteResourceTokenAuth", func(t *testing.T) {
+        input := &bedrockagentcore.CompleteResourceTokenAuthInput{}
+        output := &bedrockagentcore.CompleteResourceTokenAuthOutput{}
+
+        mockClient.On("CompleteResourceTokenAuth", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CompleteResourceTokenAuth(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvent", func(t *testing.T) {
         input := &bedrockagentcore.CreateEventInput{}
         output := &bedrockagentcore.CreateEventOutput{}
@@ -67,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteMemoryRecord", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteMemoryRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentCard", func(t *testing.T) {
+        input := &bedrockagentcore.GetAgentCardInput{}
+        output := &bedrockagentcore.GetAgentCardOutput{}
+
+        mockClient.On("GetAgentCard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentCard(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -268,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMemoryExtractionJobs", func(t *testing.T) {
+        input := &bedrockagentcore.ListMemoryExtractionJobsInput{}
+        output := &bedrockagentcore.ListMemoryExtractionJobsOutput{}
+
+        mockClient.On("ListMemoryExtractionJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMemoryExtractionJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMemoryRecords", func(t *testing.T) {
         input := &bedrockagentcore.ListMemoryRecordsInput{}
         output := &bedrockagentcore.ListMemoryRecordsOutput{}
@@ -333,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartMemoryExtractionJob", func(t *testing.T) {
+        input := &bedrockagentcore.StartMemoryExtractionJobInput{}
+        output := &bedrockagentcore.StartMemoryExtractionJobOutput{}
+
+        mockClient.On("StartMemoryExtractionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMemoryExtractionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopBrowserSession", func(t *testing.T) {
         input := &bedrockagentcore.StopBrowserSessionInput{}
         output := &bedrockagentcore.StopBrowserSessionOutput{}
@@ -353,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopCodeInterpreterSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopCodeInterpreterSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopRuntimeSession", func(t *testing.T) {
+        input := &bedrockagentcore.StopRuntimeSessionInput{}
+        output := &bedrockagentcore.StopRuntimeSessionOutput{}
+
+        mockClient.On("StopRuntimeSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopRuntimeSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

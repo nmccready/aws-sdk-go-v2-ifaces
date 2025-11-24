@@ -200,6 +200,43 @@ func (_m *IClient) CreateCollaboration(ctx context.Context, params *cleanrooms.C
 	return r0, r1
 }
 
+// CreateCollaborationChangeRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCollaborationChangeRequest(ctx context.Context, params *cleanrooms.CreateCollaborationChangeRequestInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateCollaborationChangeRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCollaborationChangeRequest")
+	}
+
+	var r0 *cleanrooms.CreateCollaborationChangeRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) (*cleanrooms.CreateCollaborationChangeRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) *cleanrooms.CreateCollaborationChangeRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.CreateCollaborationChangeRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.CreateCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateConfiguredAudienceModelAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateConfiguredAudienceModelAssociation(ctx context.Context, params *cleanrooms.CreateConfiguredAudienceModelAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateConfiguredAudienceModelAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1088,6 +1125,43 @@ func (_m *IClient) GetCollaborationAnalysisTemplate(ctx context.Context, params 
 	return r0, r1
 }
 
+// GetCollaborationChangeRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCollaborationChangeRequest(ctx context.Context, params *cleanrooms.GetCollaborationChangeRequestInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetCollaborationChangeRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCollaborationChangeRequest")
+	}
+
+	var r0 *cleanrooms.GetCollaborationChangeRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetCollaborationChangeRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) *cleanrooms.GetCollaborationChangeRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetCollaborationChangeRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCollaborationConfiguredAudienceModelAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCollaborationConfiguredAudienceModelAssociation(ctx context.Context, params *cleanrooms.GetCollaborationConfiguredAudienceModelAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetCollaborationConfiguredAudienceModelAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1746,6 +1820,43 @@ func (_m *IClient) ListCollaborationAnalysisTemplates(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListCollaborationAnalysisTemplatesInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCollaborationChangeRequests provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCollaborationChangeRequests(ctx context.Context, params *cleanrooms.ListCollaborationChangeRequestsInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListCollaborationChangeRequestsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCollaborationChangeRequests")
+	}
+
+	var r0 *cleanrooms.ListCollaborationChangeRequestsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListCollaborationChangeRequestsInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListCollaborationChangeRequestsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListCollaborationChangeRequestsInput, ...func(*cleanrooms.Options)) *cleanrooms.ListCollaborationChangeRequestsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListCollaborationChangeRequestsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListCollaborationChangeRequestsInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

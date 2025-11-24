@@ -792,6 +792,80 @@ func (_m *IClient) DescribeMultiRegionClusters(ctx context.Context, params *memo
 	return r0, r1
 }
 
+// DescribeMultiRegionParameterGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMultiRegionParameterGroups(ctx context.Context, params *memorydb.DescribeMultiRegionParameterGroupsInput, optFns ...func(*memorydb.Options)) (*memorydb.DescribeMultiRegionParameterGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMultiRegionParameterGroups")
+	}
+
+	var r0 *memorydb.DescribeMultiRegionParameterGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *memorydb.DescribeMultiRegionParameterGroupsInput, ...func(*memorydb.Options)) (*memorydb.DescribeMultiRegionParameterGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *memorydb.DescribeMultiRegionParameterGroupsInput, ...func(*memorydb.Options)) *memorydb.DescribeMultiRegionParameterGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*memorydb.DescribeMultiRegionParameterGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *memorydb.DescribeMultiRegionParameterGroupsInput, ...func(*memorydb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeMultiRegionParameters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMultiRegionParameters(ctx context.Context, params *memorydb.DescribeMultiRegionParametersInput, optFns ...func(*memorydb.Options)) (*memorydb.DescribeMultiRegionParametersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMultiRegionParameters")
+	}
+
+	var r0 *memorydb.DescribeMultiRegionParametersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *memorydb.DescribeMultiRegionParametersInput, ...func(*memorydb.Options)) (*memorydb.DescribeMultiRegionParametersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *memorydb.DescribeMultiRegionParametersInput, ...func(*memorydb.Options)) *memorydb.DescribeMultiRegionParametersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*memorydb.DescribeMultiRegionParametersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *memorydb.DescribeMultiRegionParametersInput, ...func(*memorydb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeParameterGroups provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeParameterGroups(ctx context.Context, params *memorydb.DescribeParameterGroupsInput, optFns ...func(*memorydb.Options)) (*memorydb.DescribeParameterGroupsOutput, error) {
 	_va := make([]interface{}, len(optFns))

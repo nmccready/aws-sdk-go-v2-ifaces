@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteGroupingConfiguration", func(t *testing.T) {
+        input := &applicationsignals.DeleteGroupingConfigurationInput{}
+        output := &applicationsignals.DeleteGroupingConfigurationOutput{}
+
+        mockClient.On("DeleteGroupingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGroupingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteServiceLevelObjective", func(t *testing.T) {
         input := &applicationsignals.DeleteServiceLevelObjectiveInput{}
         output := &applicationsignals.DeleteServiceLevelObjectiveOutput{}
@@ -106,6 +119,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetServiceLevelObjective", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetServiceLevelObjective(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAuditFindings", func(t *testing.T) {
+        input := &applicationsignals.ListAuditFindingsInput{}
+        output := &applicationsignals.ListAuditFindingsOutput{}
+
+        mockClient.On("ListAuditFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAuditFindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEntityEvents", func(t *testing.T) {
+        input := &applicationsignals.ListEntityEventsInput{}
+        output := &applicationsignals.ListEntityEventsOutput{}
+
+        mockClient.On("ListEntityEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEntityEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGroupingAttributeDefinitions", func(t *testing.T) {
+        input := &applicationsignals.ListGroupingAttributeDefinitionsInput{}
+        output := &applicationsignals.ListGroupingAttributeDefinitionsOutput{}
+
+        mockClient.On("ListGroupingAttributeDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroupingAttributeDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListServiceStates", func(t *testing.T) {
+        input := &applicationsignals.ListServiceStatesInput{}
+        output := &applicationsignals.ListServiceStatesOutput{}
+
+        mockClient.On("ListServiceStates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceStates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &applicationsignals.ListTagsForResourceInput{}
         output := &applicationsignals.ListTagsForResourceOutput{}
@@ -197,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutGroupingConfiguration", func(t *testing.T) {
+        input := &applicationsignals.PutGroupingConfigurationInput{}
+        output := &applicationsignals.PutGroupingConfigurationOutput{}
+
+        mockClient.On("PutGroupingConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutGroupingConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

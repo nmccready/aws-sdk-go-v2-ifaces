@@ -242,19 +242,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInvocationSteps", func(t *testing.T) {
-        input := &bedrockagentruntime.ListInvocationStepsInput{}
-        output := &bedrockagentruntime.ListInvocationStepsOutput{}
-
-        mockClient.On("ListInvocationSteps", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInvocationSteps(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInvocations", func(t *testing.T) {
         input := &bedrockagentruntime.ListInvocationsInput{}
         output := &bedrockagentruntime.ListInvocationsOutput{}
@@ -262,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInvocations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInvocations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInvocationSteps", func(t *testing.T) {
+        input := &bedrockagentruntime.ListInvocationStepsInput{}
+        output := &bedrockagentruntime.ListInvocationStepsOutput{}
+
+        mockClient.On("ListInvocationSteps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvocationSteps(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

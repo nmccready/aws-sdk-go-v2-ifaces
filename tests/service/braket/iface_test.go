@@ -86,6 +86,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSpendingLimit", func(t *testing.T) {
+        input := &braket.CreateSpendingLimitInput{}
+        output := &braket.CreateSpendingLimitOutput{}
+
+        mockClient.On("CreateSpendingLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSpendingLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSpendingLimit", func(t *testing.T) {
+        input := &braket.DeleteSpendingLimitInput{}
+        output := &braket.DeleteSpendingLimitOutput{}
+
+        mockClient.On("DeleteSpendingLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSpendingLimit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDevice", func(t *testing.T) {
         input := &braket.GetDeviceInput{}
         output := &braket.GetDeviceOutput{}
@@ -177,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchSpendingLimits", func(t *testing.T) {
+        input := &braket.SearchSpendingLimitsInput{}
+        output := &braket.SearchSpendingLimitsOutput{}
+
+        mockClient.On("SearchSpendingLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchSpendingLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &braket.TagResourceInput{}
         output := &braket.TagResourceOutput{}
@@ -197,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSpendingLimit", func(t *testing.T) {
+        input := &braket.UpdateSpendingLimitInput{}
+        output := &braket.UpdateSpendingLimitOutput{}
+
+        mockClient.On("UpdateSpendingLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSpendingLimit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

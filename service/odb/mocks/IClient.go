@@ -51,6 +51,43 @@ func (_m *IClient) AcceptMarketplaceRegistration(ctx context.Context, params *od
 	return r0, r1
 }
 
+// AssociateIamRoleToResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateIamRoleToResource(ctx context.Context, params *odb.AssociateIamRoleToResourceInput, optFns ...func(*odb.Options)) (*odb.AssociateIamRoleToResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateIamRoleToResource")
+	}
+
+	var r0 *odb.AssociateIamRoleToResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.AssociateIamRoleToResourceInput, ...func(*odb.Options)) (*odb.AssociateIamRoleToResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.AssociateIamRoleToResourceInput, ...func(*odb.Options)) *odb.AssociateIamRoleToResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.AssociateIamRoleToResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.AssociateIamRoleToResourceInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCloudAutonomousVmCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCloudAutonomousVmCluster(ctx context.Context, params *odb.CreateCloudAutonomousVmClusterInput, optFns ...func(*odb.Options)) (*odb.CreateCloudAutonomousVmClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -413,6 +450,43 @@ func (_m *IClient) DeleteOdbPeeringConnection(ctx context.Context, params *odb.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.DeleteOdbPeeringConnectionInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateIamRoleFromResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateIamRoleFromResource(ctx context.Context, params *odb.DisassociateIamRoleFromResourceInput, optFns ...func(*odb.Options)) (*odb.DisassociateIamRoleFromResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateIamRoleFromResource")
+	}
+
+	var r0 *odb.DisassociateIamRoleFromResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DisassociateIamRoleFromResourceInput, ...func(*odb.Options)) (*odb.DisassociateIamRoleFromResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DisassociateIamRoleFromResourceInput, ...func(*odb.Options)) *odb.DisassociateIamRoleFromResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DisassociateIamRoleFromResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DisassociateIamRoleFromResourceInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1504,6 +1578,43 @@ func (_m *IClient) UpdateOdbNetwork(ctx context.Context, params *odb.UpdateOdbNe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateOdbNetworkInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateOdbPeeringConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateOdbPeeringConnection(ctx context.Context, params *odb.UpdateOdbPeeringConnectionInput, optFns ...func(*odb.Options)) (*odb.UpdateOdbPeeringConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateOdbPeeringConnection")
+	}
+
+	var r0 *odb.UpdateOdbPeeringConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateOdbPeeringConnectionInput, ...func(*odb.Options)) (*odb.UpdateOdbPeeringConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateOdbPeeringConnectionInput, ...func(*odb.Options)) *odb.UpdateOdbPeeringConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateOdbPeeringConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateOdbPeeringConnectionInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

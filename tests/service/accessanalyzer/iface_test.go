@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFindingV2", func(t *testing.T) {
-        input := &accessanalyzer.GetFindingV2Input{}
-        output := &accessanalyzer.GetFindingV2Output{}
-
-        mockClient.On("GetFindingV2", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFindingV2(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetFindingsStatistics", func(t *testing.T) {
         input := &accessanalyzer.GetFindingsStatisticsInput{}
         output := &accessanalyzer.GetFindingsStatisticsOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFindingsStatistics", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFindingsStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFindingV2", func(t *testing.T) {
+        input := &accessanalyzer.GetFindingV2Input{}
+        output := &accessanalyzer.GetFindingV2Output{}
+
+        mockClient.On("GetFindingV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindingV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

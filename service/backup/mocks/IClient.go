@@ -459,6 +459,43 @@ func (_m *IClient) CreateRestoreTestingSelection(ctx context.Context, params *ba
 	return r0, r1
 }
 
+// CreateTieringConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTieringConfiguration(ctx context.Context, params *backup.CreateTieringConfigurationInput, optFns ...func(*backup.Options)) (*backup.CreateTieringConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTieringConfiguration")
+	}
+
+	var r0 *backup.CreateTieringConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.CreateTieringConfigurationInput, ...func(*backup.Options)) (*backup.CreateTieringConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.CreateTieringConfigurationInput, ...func(*backup.Options)) *backup.CreateTieringConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.CreateTieringConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.CreateTieringConfigurationInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteBackupPlan provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteBackupPlan(ctx context.Context, params *backup.DeleteBackupPlanInput, optFns ...func(*backup.Options)) (*backup.DeleteBackupPlanOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -866,6 +903,43 @@ func (_m *IClient) DeleteRestoreTestingSelection(ctx context.Context, params *ba
 	return r0, r1
 }
 
+// DeleteTieringConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTieringConfiguration(ctx context.Context, params *backup.DeleteTieringConfigurationInput, optFns ...func(*backup.Options)) (*backup.DeleteTieringConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTieringConfiguration")
+	}
+
+	var r0 *backup.DeleteTieringConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DeleteTieringConfigurationInput, ...func(*backup.Options)) (*backup.DeleteTieringConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DeleteTieringConfigurationInput, ...func(*backup.Options)) *backup.DeleteTieringConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.DeleteTieringConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.DeleteTieringConfigurationInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeBackupJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeBackupJob(ctx context.Context, params *backup.DescribeBackupJobInput, optFns ...func(*backup.Options)) (*backup.DescribeBackupJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1265,6 +1339,43 @@ func (_m *IClient) DescribeRestoreJob(ctx context.Context, params *backup.Descri
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.DescribeRestoreJobInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeScanJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeScanJob(ctx context.Context, params *backup.DescribeScanJobInput, optFns ...func(*backup.Options)) (*backup.DescribeScanJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeScanJob")
+	}
+
+	var r0 *backup.DescribeScanJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DescribeScanJobInput, ...func(*backup.Options)) (*backup.DescribeScanJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DescribeScanJobInput, ...func(*backup.Options)) *backup.DescribeScanJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.DescribeScanJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.DescribeScanJobInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1931,6 +2042,43 @@ func (_m *IClient) GetSupportedResourceTypes(ctx context.Context, params *backup
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.GetSupportedResourceTypesInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTieringConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTieringConfiguration(ctx context.Context, params *backup.GetTieringConfigurationInput, optFns ...func(*backup.Options)) (*backup.GetTieringConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTieringConfiguration")
+	}
+
+	var r0 *backup.GetTieringConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.GetTieringConfigurationInput, ...func(*backup.Options)) (*backup.GetTieringConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.GetTieringConfigurationInput, ...func(*backup.Options)) *backup.GetTieringConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.GetTieringConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.GetTieringConfigurationInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2864,6 +3012,80 @@ func (_m *IClient) ListRestoreTestingSelections(ctx context.Context, params *bac
 	return r0, r1
 }
 
+// ListScanJobSummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListScanJobSummaries(ctx context.Context, params *backup.ListScanJobSummariesInput, optFns ...func(*backup.Options)) (*backup.ListScanJobSummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListScanJobSummaries")
+	}
+
+	var r0 *backup.ListScanJobSummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListScanJobSummariesInput, ...func(*backup.Options)) (*backup.ListScanJobSummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListScanJobSummariesInput, ...func(*backup.Options)) *backup.ListScanJobSummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListScanJobSummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListScanJobSummariesInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListScanJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListScanJobs(ctx context.Context, params *backup.ListScanJobsInput, optFns ...func(*backup.Options)) (*backup.ListScanJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListScanJobs")
+	}
+
+	var r0 *backup.ListScanJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListScanJobsInput, ...func(*backup.Options)) (*backup.ListScanJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListScanJobsInput, ...func(*backup.Options)) *backup.ListScanJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListScanJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListScanJobsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTags provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTags(ctx context.Context, params *backup.ListTagsInput, optFns ...func(*backup.Options)) (*backup.ListTagsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2893,6 +3115,43 @@ func (_m *IClient) ListTags(ctx context.Context, params *backup.ListTagsInput, o
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListTagsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTieringConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTieringConfigurations(ctx context.Context, params *backup.ListTieringConfigurationsInput, optFns ...func(*backup.Options)) (*backup.ListTieringConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTieringConfigurations")
+	}
+
+	var r0 *backup.ListTieringConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListTieringConfigurationsInput, ...func(*backup.Options)) (*backup.ListTieringConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListTieringConfigurationsInput, ...func(*backup.Options)) *backup.ListTieringConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListTieringConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListTieringConfigurationsInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3244,6 +3503,43 @@ func (_m *IClient) StartRestoreJob(ctx context.Context, params *backup.StartRest
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.StartRestoreJobInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartScanJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartScanJob(ctx context.Context, params *backup.StartScanJobInput, optFns ...func(*backup.Options)) (*backup.StartScanJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartScanJob")
+	}
+
+	var r0 *backup.StartScanJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.StartScanJobInput, ...func(*backup.Options)) (*backup.StartScanJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.StartScanJobInput, ...func(*backup.Options)) *backup.StartScanJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.StartScanJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.StartScanJobInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3688,6 +3984,43 @@ func (_m *IClient) UpdateRestoreTestingSelection(ctx context.Context, params *ba
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.UpdateRestoreTestingSelectionInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTieringConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTieringConfiguration(ctx context.Context, params *backup.UpdateTieringConfigurationInput, optFns ...func(*backup.Options)) (*backup.UpdateTieringConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTieringConfiguration")
+	}
+
+	var r0 *backup.UpdateTieringConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.UpdateTieringConfigurationInput, ...func(*backup.Options)) (*backup.UpdateTieringConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.UpdateTieringConfigurationInput, ...func(*backup.Options)) *backup.UpdateTieringConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.UpdateTieringConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.UpdateTieringConfigurationInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

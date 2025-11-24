@@ -126,6 +126,43 @@ func (_m *IClient) CreateServiceLevelObjective(ctx context.Context, params *appl
 	return r0, r1
 }
 
+// DeleteGroupingConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGroupingConfiguration(ctx context.Context, params *applicationsignals.DeleteGroupingConfigurationInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.DeleteGroupingConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGroupingConfiguration")
+	}
+
+	var r0 *applicationsignals.DeleteGroupingConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.DeleteGroupingConfigurationInput, ...func(*applicationsignals.Options)) (*applicationsignals.DeleteGroupingConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.DeleteGroupingConfigurationInput, ...func(*applicationsignals.Options)) *applicationsignals.DeleteGroupingConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.DeleteGroupingConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.DeleteGroupingConfigurationInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteServiceLevelObjective provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteServiceLevelObjective(ctx context.Context, params *applicationsignals.DeleteServiceLevelObjectiveInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.DeleteServiceLevelObjectiveOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +266,117 @@ func (_m *IClient) GetServiceLevelObjective(ctx context.Context, params *applica
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.GetServiceLevelObjectiveInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAuditFindings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAuditFindings(ctx context.Context, params *applicationsignals.ListAuditFindingsInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ListAuditFindingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAuditFindings")
+	}
+
+	var r0 *applicationsignals.ListAuditFindingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListAuditFindingsInput, ...func(*applicationsignals.Options)) (*applicationsignals.ListAuditFindingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListAuditFindingsInput, ...func(*applicationsignals.Options)) *applicationsignals.ListAuditFindingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.ListAuditFindingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ListAuditFindingsInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEntityEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEntityEvents(ctx context.Context, params *applicationsignals.ListEntityEventsInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ListEntityEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEntityEvents")
+	}
+
+	var r0 *applicationsignals.ListEntityEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListEntityEventsInput, ...func(*applicationsignals.Options)) (*applicationsignals.ListEntityEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListEntityEventsInput, ...func(*applicationsignals.Options)) *applicationsignals.ListEntityEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.ListEntityEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ListEntityEventsInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGroupingAttributeDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGroupingAttributeDefinitions(ctx context.Context, params *applicationsignals.ListGroupingAttributeDefinitionsInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ListGroupingAttributeDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGroupingAttributeDefinitions")
+	}
+
+	var r0 *applicationsignals.ListGroupingAttributeDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListGroupingAttributeDefinitionsInput, ...func(*applicationsignals.Options)) (*applicationsignals.ListGroupingAttributeDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListGroupingAttributeDefinitionsInput, ...func(*applicationsignals.Options)) *applicationsignals.ListGroupingAttributeDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.ListGroupingAttributeDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ListGroupingAttributeDefinitionsInput, ...func(*applicationsignals.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -422,6 +570,43 @@ func (_m *IClient) ListServiceOperations(ctx context.Context, params *applicatio
 	return r0, r1
 }
 
+// ListServiceStates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListServiceStates(ctx context.Context, params *applicationsignals.ListServiceStatesInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ListServiceStatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListServiceStates")
+	}
+
+	var r0 *applicationsignals.ListServiceStatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListServiceStatesInput, ...func(*applicationsignals.Options)) (*applicationsignals.ListServiceStatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListServiceStatesInput, ...func(*applicationsignals.Options)) *applicationsignals.ListServiceStatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.ListServiceStatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ListServiceStatesInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListServices provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListServices(ctx context.Context, params *applicationsignals.ListServicesInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ListServicesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -512,6 +697,43 @@ func (_m *IClient) Options() applicationsignals.Options {
 	}
 
 	return r0
+}
+
+// PutGroupingConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutGroupingConfiguration(ctx context.Context, params *applicationsignals.PutGroupingConfigurationInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.PutGroupingConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutGroupingConfiguration")
+	}
+
+	var r0 *applicationsignals.PutGroupingConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.PutGroupingConfigurationInput, ...func(*applicationsignals.Options)) (*applicationsignals.PutGroupingConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.PutGroupingConfigurationInput, ...func(*applicationsignals.Options)) *applicationsignals.PutGroupingConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.PutGroupingConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.PutGroupingConfigurationInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartDiscovery provides a mock function with given fields: ctx, params, optFns

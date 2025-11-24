@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeResponsibilityTransfer", func(t *testing.T) {
+        input := &organizations.DescribeResponsibilityTransferInput{}
+        output := &organizations.DescribeResponsibilityTransferOutput{}
+
+        mockClient.On("DescribeResponsibilityTransfer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeResponsibilityTransfer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDetachPolicy", func(t *testing.T) {
         input := &organizations.DetachPolicyInput{}
         output := &organizations.DetachPolicyOutput{}
@@ -372,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestEnableAWSServiceAccess", func(t *testing.T) {
-        input := &organizations.EnableAWSServiceAccessInput{}
-        output := &organizations.EnableAWSServiceAccessOutput{}
-
-        mockClient.On("EnableAWSServiceAccess", ctx, input).Return(output, nil)
-
-        result, err := mockClient.EnableAWSServiceAccess(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestEnableAllFeatures", func(t *testing.T) {
         input := &organizations.EnableAllFeaturesInput{}
         output := &organizations.EnableAllFeaturesOutput{}
@@ -392,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableAllFeatures", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableAllFeatures(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableAWSServiceAccess", func(t *testing.T) {
+        input := &organizations.EnableAWSServiceAccessInput{}
+        output := &organizations.EnableAWSServiceAccessOutput{}
+
+        mockClient.On("EnableAWSServiceAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableAWSServiceAccess(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInviteOrganizationToTransferResponsibility", func(t *testing.T) {
+        input := &organizations.InviteOrganizationToTransferResponsibilityInput{}
+        output := &organizations.InviteOrganizationToTransferResponsibilityOutput{}
+
+        mockClient.On("InviteOrganizationToTransferResponsibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InviteOrganizationToTransferResponsibility(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestLeaveOrganization", func(t *testing.T) {
         input := &organizations.LeaveOrganizationInput{}
         output := &organizations.LeaveOrganizationOutput{}
@@ -431,19 +457,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("LeaveOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.LeaveOrganization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListAWSServiceAccessForOrganization", func(t *testing.T) {
-        input := &organizations.ListAWSServiceAccessForOrganizationInput{}
-        output := &organizations.ListAWSServiceAccessForOrganizationOutput{}
-
-        mockClient.On("ListAWSServiceAccessForOrganization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAWSServiceAccessForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAccountsWithInvalidEffectivePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAccountsWithInvalidEffectivePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAWSServiceAccessForOrganization", func(t *testing.T) {
+        input := &organizations.ListAWSServiceAccessForOrganizationInput{}
+        output := &organizations.ListAWSServiceAccessForOrganizationOutput{}
+
+        mockClient.On("ListAWSServiceAccessForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAWSServiceAccessForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInboundResponsibilityTransfers", func(t *testing.T) {
+        input := &organizations.ListInboundResponsibilityTransfersInput{}
+        output := &organizations.ListInboundResponsibilityTransfersOutput{}
+
+        mockClient.On("ListInboundResponsibilityTransfers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInboundResponsibilityTransfers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListOrganizationalUnitsForParent", func(t *testing.T) {
         input := &organizations.ListOrganizationalUnitsForParentInput{}
         output := &organizations.ListOrganizationalUnitsForParentOutput{}
@@ -587,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOrganizationalUnitsForParent", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOrganizationalUnitsForParent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOutboundResponsibilityTransfers", func(t *testing.T) {
+        input := &organizations.ListOutboundResponsibilityTransfersInput{}
+        output := &organizations.ListOutboundResponsibilityTransfersOutput{}
+
+        mockClient.On("ListOutboundResponsibilityTransfers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOutboundResponsibilityTransfers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -736,6 +788,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTerminateResponsibilityTransfer", func(t *testing.T) {
+        input := &organizations.TerminateResponsibilityTransferInput{}
+        output := &organizations.TerminateResponsibilityTransferOutput{}
+
+        mockClient.On("TerminateResponsibilityTransfer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateResponsibilityTransfer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUntagResource", func(t *testing.T) {
         input := &organizations.UntagResourceInput{}
         output := &organizations.UntagResourceOutput{}
@@ -769,6 +834,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResponsibilityTransfer", func(t *testing.T) {
+        input := &organizations.UpdateResponsibilityTransferInput{}
+        output := &organizations.UpdateResponsibilityTransferOutput{}
+
+        mockClient.On("UpdateResponsibilityTransfer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResponsibilityTransfer(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateSourceViews", func(t *testing.T) {
+        input := &billing.AssociateSourceViewsInput{}
+        output := &billing.AssociateSourceViewsOutput{}
+
+        mockClient.On("AssociateSourceViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSourceViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBillingView", func(t *testing.T) {
         input := &billing.CreateBillingViewInput{}
         output := &billing.CreateBillingViewOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBillingView", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBillingView(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateSourceViews", func(t *testing.T) {
+        input := &billing.DisassociateSourceViewsInput{}
+        output := &billing.DisassociateSourceViewsOutput{}
+
+        mockClient.On("DisassociateSourceViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSourceViews(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

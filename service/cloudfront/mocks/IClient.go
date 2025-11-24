@@ -1680,6 +1680,43 @@ func (_m *IClient) DeleteRealtimeLogConfig(ctx context.Context, params *cloudfro
 	return r0, r1
 }
 
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *cloudfront.DeleteResourcePolicyInput, optFns ...func(*cloudfront.Options)) (*cloudfront.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *cloudfront.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DeleteResourcePolicyInput, ...func(*cloudfront.Options)) (*cloudfront.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DeleteResourcePolicyInput, ...func(*cloudfront.Options)) *cloudfront.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.DeleteResourcePolicyInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteResponseHeadersPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteResponseHeadersPolicy(ctx context.Context, params *cloudfront.DeleteResponseHeadersPolicyInput, optFns ...func(*cloudfront.Options)) (*cloudfront.DeleteResponseHeadersPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3086,6 +3123,43 @@ func (_m *IClient) GetRealtimeLogConfig(ctx context.Context, params *cloudfront.
 	return r0, r1
 }
 
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *cloudfront.GetResourcePolicyInput, optFns ...func(*cloudfront.Options)) (*cloudfront.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *cloudfront.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.GetResourcePolicyInput, ...func(*cloudfront.Options)) (*cloudfront.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.GetResourcePolicyInput, ...func(*cloudfront.Options)) *cloudfront.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.GetResourcePolicyInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetResponseHeadersPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetResponseHeadersPolicy(ctx context.Context, params *cloudfront.GetResponseHeadersPolicyInput, optFns ...func(*cloudfront.Options)) (*cloudfront.GetResponseHeadersPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3781,6 +3855,43 @@ func (_m *IClient) ListDistributionsByOriginRequestPolicyId(ctx context.Context,
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListDistributionsByOriginRequestPolicyIdInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDistributionsByOwnedResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDistributionsByOwnedResource(ctx context.Context, params *cloudfront.ListDistributionsByOwnedResourceInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByOwnedResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDistributionsByOwnedResource")
+	}
+
+	var r0 *cloudfront.ListDistributionsByOwnedResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListDistributionsByOwnedResourceInput, ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByOwnedResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListDistributionsByOwnedResourceInput, ...func(*cloudfront.Options)) *cloudfront.ListDistributionsByOwnedResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.ListDistributionsByOwnedResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListDistributionsByOwnedResourceInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4584,6 +4695,43 @@ func (_m *IClient) PublishFunction(ctx context.Context, params *cloudfront.Publi
 	return r0, r1
 }
 
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *cloudfront.PutResourcePolicyInput, optFns ...func(*cloudfront.Options)) (*cloudfront.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *cloudfront.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.PutResourcePolicyInput, ...func(*cloudfront.Options)) (*cloudfront.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.PutResourcePolicyInput, ...func(*cloudfront.Options)) *cloudfront.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.PutResourcePolicyInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *cloudfront.TagResourceInput, optFns ...func(*cloudfront.Options)) (*cloudfront.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4687,6 +4835,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *cloudfront.UntagRe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.UntagResourceInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAnycastIpList provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAnycastIpList(ctx context.Context, params *cloudfront.UpdateAnycastIpListInput, optFns ...func(*cloudfront.Options)) (*cloudfront.UpdateAnycastIpListOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAnycastIpList")
+	}
+
+	var r0 *cloudfront.UpdateAnycastIpListOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.UpdateAnycastIpListInput, ...func(*cloudfront.Options)) (*cloudfront.UpdateAnycastIpListOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.UpdateAnycastIpListInput, ...func(*cloudfront.Options)) *cloudfront.UpdateAnycastIpListOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.UpdateAnycastIpListOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.UpdateAnycastIpListInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

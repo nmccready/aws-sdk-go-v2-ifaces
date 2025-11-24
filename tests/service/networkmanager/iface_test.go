@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateConnectPeer", func(t *testing.T) {
-        input := &networkmanager.CreateConnectPeerInput{}
-        output := &networkmanager.CreateConnectPeerOutput{}
-
-        mockClient.On("CreateConnectPeer", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateConnectPeer(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateConnection", func(t *testing.T) {
         input := &networkmanager.CreateConnectionInput{}
         output := &networkmanager.CreateConnectionOutput{}
@@ -138,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConnectPeer", func(t *testing.T) {
+        input := &networkmanager.CreateConnectPeerInput{}
+        output := &networkmanager.CreateConnectPeerOutput{}
+
+        mockClient.On("CreateConnectPeer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnectPeer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCoreNetwork", func(t *testing.T) {
         input := &networkmanager.CreateCoreNetworkInput{}
         output := &networkmanager.CreateCoreNetworkOutput{}
@@ -145,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCoreNetwork", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCoreNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCoreNetworkPrefixListAssociation", func(t *testing.T) {
+        input := &networkmanager.CreateCoreNetworkPrefixListAssociationInput{}
+        output := &networkmanager.CreateCoreNetworkPrefixListAssociationOutput{}
+
+        mockClient.On("CreateCoreNetworkPrefixListAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCoreNetworkPrefixListAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteConnectPeer", func(t *testing.T) {
-        input := &networkmanager.DeleteConnectPeerInput{}
-        output := &networkmanager.DeleteConnectPeerOutput{}
-
-        mockClient.On("DeleteConnectPeer", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteConnectPeer(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteConnection", func(t *testing.T) {
         input := &networkmanager.DeleteConnectionInput{}
         output := &networkmanager.DeleteConnectionOutput{}
@@ -301,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConnectPeer", func(t *testing.T) {
+        input := &networkmanager.DeleteConnectPeerInput{}
+        output := &networkmanager.DeleteConnectPeerOutput{}
+
+        mockClient.On("DeleteConnectPeer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnectPeer(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCoreNetworkPolicyVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCoreNetworkPolicyVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCoreNetworkPrefixListAssociation", func(t *testing.T) {
+        input := &networkmanager.DeleteCoreNetworkPrefixListAssociationInput{}
+        output := &networkmanager.DeleteCoreNetworkPrefixListAssociationOutput{}
+
+        mockClient.On("DeleteCoreNetworkPrefixListAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCoreNetworkPrefixListAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +541,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetConnections", func(t *testing.T) {
+        input := &networkmanager.GetConnectionsInput{}
+        output := &networkmanager.GetConnectionsOutput{}
+
+        mockClient.On("GetConnections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetConnectPeer", func(t *testing.T) {
         input := &networkmanager.GetConnectPeerInput{}
         output := &networkmanager.GetConnectPeerOutput{}
@@ -535,19 +574,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConnectPeerAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConnectPeerAssociations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetConnections", func(t *testing.T) {
-        input := &networkmanager.GetConnectionsInput{}
-        output := &networkmanager.GetConnectionsOutput{}
-
-        mockClient.On("GetConnections", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetConnections(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -762,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSiteToSiteVpnAttachment", func(t *testing.T) {
-        input := &networkmanager.GetSiteToSiteVpnAttachmentInput{}
-        output := &networkmanager.GetSiteToSiteVpnAttachmentOutput{}
-
-        mockClient.On("GetSiteToSiteVpnAttachment", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSiteToSiteVpnAttachment(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSites", func(t *testing.T) {
         input := &networkmanager.GetSitesInput{}
         output := &networkmanager.GetSitesOutput{}
@@ -782,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSites", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSites(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSiteToSiteVpnAttachment", func(t *testing.T) {
+        input := &networkmanager.GetSiteToSiteVpnAttachmentInput{}
+        output := &networkmanager.GetSiteToSiteVpnAttachmentOutput{}
+
+        mockClient.On("GetSiteToSiteVpnAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSiteToSiteVpnAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAttachmentRoutingPolicyAssociations", func(t *testing.T) {
+        input := &networkmanager.ListAttachmentRoutingPolicyAssociationsInput{}
+        output := &networkmanager.ListAttachmentRoutingPolicyAssociationsOutput{}
+
+        mockClient.On("ListAttachmentRoutingPolicyAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAttachmentRoutingPolicyAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAttachments", func(t *testing.T) {
         input := &networkmanager.ListAttachmentsInput{}
         output := &networkmanager.ListAttachmentsOutput{}
@@ -886,6 +925,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCoreNetworkPolicyVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCoreNetworkPolicyVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCoreNetworkPrefixListAssociations", func(t *testing.T) {
+        input := &networkmanager.ListCoreNetworkPrefixListAssociationsInput{}
+        output := &networkmanager.ListCoreNetworkPrefixListAssociationsOutput{}
+
+        mockClient.On("ListCoreNetworkPrefixListAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCoreNetworkPrefixListAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCoreNetworkRoutingInformation", func(t *testing.T) {
+        input := &networkmanager.ListCoreNetworkRoutingInformationInput{}
+        output := &networkmanager.ListCoreNetworkRoutingInformationOutput{}
+
+        mockClient.On("ListCoreNetworkRoutingInformation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCoreNetworkRoutingInformation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -944,6 +1009,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutAttachmentRoutingPolicyLabel", func(t *testing.T) {
+        input := &networkmanager.PutAttachmentRoutingPolicyLabelInput{}
+        output := &networkmanager.PutAttachmentRoutingPolicyLabelOutput{}
+
+        mockClient.On("PutAttachmentRoutingPolicyLabel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAttachmentRoutingPolicyLabel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutCoreNetworkPolicy", func(t *testing.T) {
         input := &networkmanager.PutCoreNetworkPolicyInput{}
         output := &networkmanager.PutCoreNetworkPolicyOutput{}
@@ -990,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RejectAttachment", ctx, input).Return(output, nil)
 
         result, err := mockClient.RejectAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRemoveAttachmentRoutingPolicyLabel", func(t *testing.T) {
+        input := &networkmanager.RemoveAttachmentRoutingPolicyLabelInput{}
+        output := &networkmanager.RemoveAttachmentRoutingPolicyLabelOutput{}
+
+        mockClient.On("RemoveAttachmentRoutingPolicyLabel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveAttachmentRoutingPolicyLabel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

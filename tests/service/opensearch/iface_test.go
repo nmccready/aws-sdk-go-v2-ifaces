@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIndex", func(t *testing.T) {
+        input := &opensearch.CreateIndexInput{}
+        output := &opensearch.CreateIndexOutput{}
+
+        mockClient.On("CreateIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIndex(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateOutboundConnection", func(t *testing.T) {
         input := &opensearch.CreateOutboundConnectionInput{}
         output := &opensearch.CreateOutboundConnectionOutput{}
@@ -275,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteInboundConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteInboundConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIndex", func(t *testing.T) {
+        input := &opensearch.DeleteIndexInput{}
+        output := &opensearch.DeleteIndexOutput{}
+
+        mockClient.On("DeleteIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIndex(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -580,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDefaultApplicationSetting", func(t *testing.T) {
+        input := &opensearch.GetDefaultApplicationSettingInput{}
+        output := &opensearch.GetDefaultApplicationSettingOutput{}
+
+        mockClient.On("GetDefaultApplicationSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDefaultApplicationSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDirectQueryDataSource", func(t *testing.T) {
         input := &opensearch.GetDirectQueryDataSourceInput{}
         output := &opensearch.GetDirectQueryDataSourceOutput{}
@@ -600,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDomainMaintenanceStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDomainMaintenanceStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIndex", func(t *testing.T) {
+        input := &opensearch.GetIndexInput{}
+        output := &opensearch.GetIndexOutput{}
+
+        mockClient.On("GetIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIndex(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -840,6 +892,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutDefaultApplicationSetting", func(t *testing.T) {
+        input := &opensearch.PutDefaultApplicationSettingInput{}
+        output := &opensearch.PutDefaultApplicationSettingOutput{}
+
+        mockClient.On("PutDefaultApplicationSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutDefaultApplicationSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRejectInboundConnection", func(t *testing.T) {
         input := &opensearch.RejectInboundConnectionInput{}
         output := &opensearch.RejectInboundConnectionOutput{}
@@ -951,6 +1016,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDomainConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDomainConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIndex", func(t *testing.T) {
+        input := &opensearch.UpdateIndexInput{}
+        output := &opensearch.UpdateIndexOutput{}
+
+        mockClient.On("UpdateIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIndex(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -459,6 +459,43 @@ func (_m *IClient) DescribeStream(ctx context.Context, params *kinesisvideo.Desc
 	return r0, r1
 }
 
+// DescribeStreamStorageConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeStreamStorageConfiguration(ctx context.Context, params *kinesisvideo.DescribeStreamStorageConfigurationInput, optFns ...func(*kinesisvideo.Options)) (*kinesisvideo.DescribeStreamStorageConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeStreamStorageConfiguration")
+	}
+
+	var r0 *kinesisvideo.DescribeStreamStorageConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisvideo.DescribeStreamStorageConfigurationInput, ...func(*kinesisvideo.Options)) (*kinesisvideo.DescribeStreamStorageConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisvideo.DescribeStreamStorageConfigurationInput, ...func(*kinesisvideo.Options)) *kinesisvideo.DescribeStreamStorageConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisvideo.DescribeStreamStorageConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisvideo.DescribeStreamStorageConfigurationInput, ...func(*kinesisvideo.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataEndpoint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataEndpoint(ctx context.Context, params *kinesisvideo.GetDataEndpointInput, optFns ...func(*kinesisvideo.Options)) (*kinesisvideo.GetDataEndpointOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1135,6 +1172,43 @@ func (_m *IClient) UpdateStream(ctx context.Context, params *kinesisvideo.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesisvideo.UpdateStreamInput, ...func(*kinesisvideo.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateStreamStorageConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateStreamStorageConfiguration(ctx context.Context, params *kinesisvideo.UpdateStreamStorageConfigurationInput, optFns ...func(*kinesisvideo.Options)) (*kinesisvideo.UpdateStreamStorageConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateStreamStorageConfiguration")
+	}
+
+	var r0 *kinesisvideo.UpdateStreamStorageConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisvideo.UpdateStreamStorageConfigurationInput, ...func(*kinesisvideo.Options)) (*kinesisvideo.UpdateStreamStorageConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisvideo.UpdateStreamStorageConfigurationInput, ...func(*kinesisvideo.Options)) *kinesisvideo.UpdateStreamStorageConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisvideo.UpdateStreamStorageConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisvideo.UpdateStreamStorageConfigurationInput, ...func(*kinesisvideo.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

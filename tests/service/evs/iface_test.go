@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateEipToVlan", func(t *testing.T) {
+        input := &evs.AssociateEipToVlanInput{}
+        output := &evs.AssociateEipToVlanOutput{}
+
+        mockClient.On("AssociateEipToVlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateEipToVlan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEnvironment", func(t *testing.T) {
         input := &evs.CreateEnvironmentInput{}
         output := &evs.CreateEnvironmentOutput{}
@@ -86,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateEipFromVlan", func(t *testing.T) {
+        input := &evs.DisassociateEipFromVlanInput{}
+        output := &evs.DisassociateEipFromVlanOutput{}
+
+        mockClient.On("DisassociateEipFromVlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateEipFromVlan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEnvironment", func(t *testing.T) {
         input := &evs.GetEnvironmentInput{}
         output := &evs.GetEnvironmentOutput{}
@@ -112,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironmentVlans", func(t *testing.T) {
-        input := &evs.ListEnvironmentVlansInput{}
-        output := &evs.ListEnvironmentVlansOutput{}
-
-        mockClient.On("ListEnvironmentVlans", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListEnvironmentVlans(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListEnvironments", func(t *testing.T) {
         input := &evs.ListEnvironmentsInput{}
         output := &evs.ListEnvironmentsOutput{}
@@ -132,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEnvironments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEnvironmentVlans", func(t *testing.T) {
+        input := &evs.ListEnvironmentVlansInput{}
+        output := &evs.ListEnvironmentVlansOutput{}
+
+        mockClient.On("ListEnvironmentVlans", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnvironmentVlans(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -1532,6 +1532,43 @@ func (_m *IClient) ListOauth2CredentialProviders(ctx context.Context, params *be
 	return r0, r1
 }
 
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *bedrockagentcorecontrol.ListTagsForResourceInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListTagsForResourceInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListTagsForResourceInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListTagsForResourceInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListWorkloadIdentities provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListWorkloadIdentities(ctx context.Context, params *bedrockagentcorecontrol.ListWorkloadIdentitiesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListWorkloadIdentitiesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1616,6 +1653,117 @@ func (_m *IClient) SetTokenVaultCMK(ctx context.Context, params *bedrockagentcor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.SetTokenVaultCMKInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SynchronizeGatewayTargets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SynchronizeGatewayTargets(ctx context.Context, params *bedrockagentcorecontrol.SynchronizeGatewayTargetsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.SynchronizeGatewayTargetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SynchronizeGatewayTargets")
+	}
+
+	var r0 *bedrockagentcorecontrol.SynchronizeGatewayTargetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.SynchronizeGatewayTargetsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.SynchronizeGatewayTargetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.SynchronizeGatewayTargetsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.SynchronizeGatewayTargetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.SynchronizeGatewayTargetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.SynchronizeGatewayTargetsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *bedrockagentcorecontrol.TagResourceInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *bedrockagentcorecontrol.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.TagResourceInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.TagResourceInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.TagResourceInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *bedrockagentcorecontrol.UntagResourceInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *bedrockagentcorecontrol.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UntagResourceInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UntagResourceInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UntagResourceInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

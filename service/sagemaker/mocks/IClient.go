@@ -273,6 +273,80 @@ func (_m *IClient) BatchDescribeModelPackage(ctx context.Context, params *sagema
 	return r0, r1
 }
 
+// BatchRebootClusterNodes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchRebootClusterNodes(ctx context.Context, params *sagemaker.BatchRebootClusterNodesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.BatchRebootClusterNodesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchRebootClusterNodes")
+	}
+
+	var r0 *sagemaker.BatchRebootClusterNodesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.BatchRebootClusterNodesInput, ...func(*sagemaker.Options)) (*sagemaker.BatchRebootClusterNodesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.BatchRebootClusterNodesInput, ...func(*sagemaker.Options)) *sagemaker.BatchRebootClusterNodesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.BatchRebootClusterNodesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.BatchRebootClusterNodesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchReplaceClusterNodes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchReplaceClusterNodes(ctx context.Context, params *sagemaker.BatchReplaceClusterNodesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.BatchReplaceClusterNodesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchReplaceClusterNodes")
+	}
+
+	var r0 *sagemaker.BatchReplaceClusterNodesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.BatchReplaceClusterNodesInput, ...func(*sagemaker.Options)) (*sagemaker.BatchReplaceClusterNodesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.BatchReplaceClusterNodesInput, ...func(*sagemaker.Options)) *sagemaker.BatchReplaceClusterNodesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.BatchReplaceClusterNodesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.BatchReplaceClusterNodesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAction provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAction(ctx context.Context, params *sagemaker.CreateActionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateActionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4417,6 +4491,43 @@ func (_m *IClient) DeletePipeline(ctx context.Context, params *sagemaker.DeleteP
 	return r0, r1
 }
 
+// DeleteProcessingJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProcessingJob(ctx context.Context, params *sagemaker.DeleteProcessingJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteProcessingJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProcessingJob")
+	}
+
+	var r0 *sagemaker.DeleteProcessingJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteProcessingJobInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteProcessingJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteProcessingJobInput, ...func(*sagemaker.Options)) *sagemaker.DeleteProcessingJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteProcessingJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteProcessingJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteProject provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteProject(ctx context.Context, params *sagemaker.DeleteProjectInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteProjectOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4557,6 +4668,43 @@ func (_m *IClient) DeleteTags(ctx context.Context, params *sagemaker.DeleteTagsI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteTagsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTrainingJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTrainingJob(ctx context.Context, params *sagemaker.DeleteTrainingJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteTrainingJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTrainingJob")
+	}
+
+	var r0 *sagemaker.DeleteTrainingJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteTrainingJobInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteTrainingJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteTrainingJobInput, ...func(*sagemaker.Options)) *sagemaker.DeleteTrainingJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteTrainingJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteTrainingJobInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

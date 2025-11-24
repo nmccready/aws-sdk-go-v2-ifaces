@@ -311,6 +311,154 @@ func (_m *IClient) CreateModel(ctx context.Context, params *apigatewayv2.CreateM
 	return r0, r1
 }
 
+// CreatePortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePortal(ctx context.Context, params *apigatewayv2.CreatePortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreatePortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePortal")
+	}
+
+	var r0 *apigatewayv2.CreatePortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreatePortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.CreatePortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreatePortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.CreatePortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.CreatePortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.CreatePortalInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePortalProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePortalProduct(ctx context.Context, params *apigatewayv2.CreatePortalProductInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreatePortalProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePortalProduct")
+	}
+
+	var r0 *apigatewayv2.CreatePortalProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreatePortalProductInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.CreatePortalProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreatePortalProductInput, ...func(*apigatewayv2.Options)) *apigatewayv2.CreatePortalProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.CreatePortalProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.CreatePortalProductInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateProductPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateProductPage(ctx context.Context, params *apigatewayv2.CreateProductPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateProductPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateProductPage")
+	}
+
+	var r0 *apigatewayv2.CreateProductPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreateProductPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateProductPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreateProductPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.CreateProductPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.CreateProductPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.CreateProductPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateProductRestEndpointPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateProductRestEndpointPage(ctx context.Context, params *apigatewayv2.CreateProductRestEndpointPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateProductRestEndpointPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateProductRestEndpointPage")
+	}
+
+	var r0 *apigatewayv2.CreateProductRestEndpointPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreateProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateProductRestEndpointPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.CreateProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.CreateProductRestEndpointPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.CreateProductRestEndpointPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.CreateProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateRoute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateRoute(ctx context.Context, params *apigatewayv2.CreateRouteInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.CreateRouteOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -866,6 +1014,191 @@ func (_m *IClient) DeleteModel(ctx context.Context, params *apigatewayv2.DeleteM
 	return r0, r1
 }
 
+// DeletePortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePortal(ctx context.Context, params *apigatewayv2.DeletePortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeletePortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePortal")
+	}
+
+	var r0 *apigatewayv2.DeletePortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeletePortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DeletePortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeletePortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DeletePortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DeletePortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeletePortalInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePortalProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePortalProduct(ctx context.Context, params *apigatewayv2.DeletePortalProductInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeletePortalProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePortalProduct")
+	}
+
+	var r0 *apigatewayv2.DeletePortalProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeletePortalProductInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DeletePortalProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeletePortalProductInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DeletePortalProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DeletePortalProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeletePortalProductInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePortalProductSharingPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePortalProductSharingPolicy(ctx context.Context, params *apigatewayv2.DeletePortalProductSharingPolicyInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeletePortalProductSharingPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePortalProductSharingPolicy")
+	}
+
+	var r0 *apigatewayv2.DeletePortalProductSharingPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeletePortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DeletePortalProductSharingPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeletePortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DeletePortalProductSharingPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DeletePortalProductSharingPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeletePortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteProductPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProductPage(ctx context.Context, params *apigatewayv2.DeleteProductPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteProductPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProductPage")
+	}
+
+	var r0 *apigatewayv2.DeleteProductPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeleteProductPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteProductPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeleteProductPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DeleteProductPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DeleteProductPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeleteProductPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteProductRestEndpointPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProductRestEndpointPage(ctx context.Context, params *apigatewayv2.DeleteProductRestEndpointPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteProductRestEndpointPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProductRestEndpointPage")
+	}
+
+	var r0 *apigatewayv2.DeleteProductRestEndpointPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeleteProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteProductRestEndpointPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DeleteProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DeleteProductRestEndpointPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DeleteProductRestEndpointPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeleteProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteRoute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteRoute(ctx context.Context, params *apigatewayv2.DeleteRouteInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DeleteRouteOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1117,6 +1450,43 @@ func (_m *IClient) DeleteVpcLink(ctx context.Context, params *apigatewayv2.Delet
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DeleteVpcLinkInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisablePortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisablePortal(ctx context.Context, params *apigatewayv2.DisablePortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.DisablePortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisablePortal")
+	}
+
+	var r0 *apigatewayv2.DisablePortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DisablePortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.DisablePortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.DisablePortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.DisablePortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.DisablePortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.DisablePortalInput, ...func(*apigatewayv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1791,6 +2161,191 @@ func (_m *IClient) GetModels(ctx context.Context, params *apigatewayv2.GetModels
 	return r0, r1
 }
 
+// GetPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPortal(ctx context.Context, params *apigatewayv2.GetPortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPortal")
+	}
+
+	var r0 *apigatewayv2.GetPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetPortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.GetPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetPortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.GetPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.GetPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.GetPortalInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPortalProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPortalProduct(ctx context.Context, params *apigatewayv2.GetPortalProductInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetPortalProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPortalProduct")
+	}
+
+	var r0 *apigatewayv2.GetPortalProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetPortalProductInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.GetPortalProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetPortalProductInput, ...func(*apigatewayv2.Options)) *apigatewayv2.GetPortalProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.GetPortalProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.GetPortalProductInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPortalProductSharingPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPortalProductSharingPolicy(ctx context.Context, params *apigatewayv2.GetPortalProductSharingPolicyInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetPortalProductSharingPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPortalProductSharingPolicy")
+	}
+
+	var r0 *apigatewayv2.GetPortalProductSharingPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetPortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.GetPortalProductSharingPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetPortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) *apigatewayv2.GetPortalProductSharingPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.GetPortalProductSharingPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.GetPortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProductPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProductPage(ctx context.Context, params *apigatewayv2.GetProductPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetProductPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProductPage")
+	}
+
+	var r0 *apigatewayv2.GetProductPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetProductPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.GetProductPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetProductPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.GetProductPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.GetProductPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.GetProductPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProductRestEndpointPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProductRestEndpointPage(ctx context.Context, params *apigatewayv2.GetProductRestEndpointPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetProductRestEndpointPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProductRestEndpointPage")
+	}
+
+	var r0 *apigatewayv2.GetProductRestEndpointPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.GetProductRestEndpointPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.GetProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.GetProductRestEndpointPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.GetProductRestEndpointPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.GetProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRoute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRoute(ctx context.Context, params *apigatewayv2.GetRouteInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.GetRouteOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2198,6 +2753,154 @@ func (_m *IClient) ImportApi(ctx context.Context, params *apigatewayv2.ImportApi
 	return r0, r1
 }
 
+// ListPortalProducts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPortalProducts(ctx context.Context, params *apigatewayv2.ListPortalProductsInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.ListPortalProductsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPortalProducts")
+	}
+
+	var r0 *apigatewayv2.ListPortalProductsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListPortalProductsInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.ListPortalProductsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListPortalProductsInput, ...func(*apigatewayv2.Options)) *apigatewayv2.ListPortalProductsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.ListPortalProductsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.ListPortalProductsInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPortals provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPortals(ctx context.Context, params *apigatewayv2.ListPortalsInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.ListPortalsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPortals")
+	}
+
+	var r0 *apigatewayv2.ListPortalsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListPortalsInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.ListPortalsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListPortalsInput, ...func(*apigatewayv2.Options)) *apigatewayv2.ListPortalsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.ListPortalsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.ListPortalsInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProductPages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProductPages(ctx context.Context, params *apigatewayv2.ListProductPagesInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.ListProductPagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProductPages")
+	}
+
+	var r0 *apigatewayv2.ListProductPagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListProductPagesInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.ListProductPagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListProductPagesInput, ...func(*apigatewayv2.Options)) *apigatewayv2.ListProductPagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.ListProductPagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.ListProductPagesInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProductRestEndpointPages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProductRestEndpointPages(ctx context.Context, params *apigatewayv2.ListProductRestEndpointPagesInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.ListProductRestEndpointPagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProductRestEndpointPages")
+	}
+
+	var r0 *apigatewayv2.ListProductRestEndpointPagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListProductRestEndpointPagesInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.ListProductRestEndpointPagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.ListProductRestEndpointPagesInput, ...func(*apigatewayv2.Options)) *apigatewayv2.ListProductRestEndpointPagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.ListProductRestEndpointPagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.ListProductRestEndpointPagesInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListRoutingRules provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListRoutingRules(ctx context.Context, params *apigatewayv2.ListRoutingRulesInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.ListRoutingRulesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2251,6 +2954,117 @@ func (_m *IClient) Options() apigatewayv2.Options {
 	}
 
 	return r0
+}
+
+// PreviewPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PreviewPortal(ctx context.Context, params *apigatewayv2.PreviewPortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.PreviewPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PreviewPortal")
+	}
+
+	var r0 *apigatewayv2.PreviewPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PreviewPortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.PreviewPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PreviewPortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.PreviewPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.PreviewPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.PreviewPortalInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PublishPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PublishPortal(ctx context.Context, params *apigatewayv2.PublishPortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.PublishPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PublishPortal")
+	}
+
+	var r0 *apigatewayv2.PublishPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PublishPortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.PublishPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PublishPortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.PublishPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.PublishPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.PublishPortalInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutPortalProductSharingPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutPortalProductSharingPolicy(ctx context.Context, params *apigatewayv2.PutPortalProductSharingPolicyInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.PutPortalProductSharingPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutPortalProductSharingPolicy")
+	}
+
+	var r0 *apigatewayv2.PutPortalProductSharingPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PutPortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.PutPortalProductSharingPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.PutPortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) *apigatewayv2.PutPortalProductSharingPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.PutPortalProductSharingPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.PutPortalProductSharingPolicyInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutRoutingRule provides a mock function with given fields: ctx, params, optFns
@@ -2726,6 +3540,154 @@ func (_m *IClient) UpdateModel(ctx context.Context, params *apigatewayv2.UpdateM
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.UpdateModelInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePortal(ctx context.Context, params *apigatewayv2.UpdatePortalInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdatePortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePortal")
+	}
+
+	var r0 *apigatewayv2.UpdatePortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdatePortalInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdatePortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdatePortalInput, ...func(*apigatewayv2.Options)) *apigatewayv2.UpdatePortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.UpdatePortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.UpdatePortalInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePortalProduct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePortalProduct(ctx context.Context, params *apigatewayv2.UpdatePortalProductInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdatePortalProductOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePortalProduct")
+	}
+
+	var r0 *apigatewayv2.UpdatePortalProductOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdatePortalProductInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdatePortalProductOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdatePortalProductInput, ...func(*apigatewayv2.Options)) *apigatewayv2.UpdatePortalProductOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.UpdatePortalProductOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.UpdatePortalProductInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProductPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProductPage(ctx context.Context, params *apigatewayv2.UpdateProductPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdateProductPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProductPage")
+	}
+
+	var r0 *apigatewayv2.UpdateProductPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdateProductPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdateProductPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdateProductPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.UpdateProductPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.UpdateProductPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.UpdateProductPageInput, ...func(*apigatewayv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProductRestEndpointPage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProductRestEndpointPage(ctx context.Context, params *apigatewayv2.UpdateProductRestEndpointPageInput, optFns ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdateProductRestEndpointPageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProductRestEndpointPage")
+	}
+
+	var r0 *apigatewayv2.UpdateProductRestEndpointPageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdateProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) (*apigatewayv2.UpdateProductRestEndpointPageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *apigatewayv2.UpdateProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) *apigatewayv2.UpdateProductRestEndpointPageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*apigatewayv2.UpdateProductRestEndpointPageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *apigatewayv2.UpdateProductRestEndpointPageInput, ...func(*apigatewayv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

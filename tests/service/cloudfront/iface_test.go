@@ -619,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &cloudfront.DeleteResourcePolicyInput{}
+        output := &cloudfront.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteResponseHeadersPolicy", func(t *testing.T) {
         input := &cloudfront.DeleteResponseHeadersPolicyInput{}
         output := &cloudfront.DeleteResponseHeadersPolicyOutput{}
@@ -1113,6 +1126,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &cloudfront.GetResourcePolicyInput{}
+        output := &cloudfront.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetResponseHeadersPolicy", func(t *testing.T) {
         input := &cloudfront.GetResponseHeadersPolicyInput{}
         output := &cloudfront.GetResponseHeadersPolicyOutput{}
@@ -1256,32 +1282,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDistributionTenants", func(t *testing.T) {
-        input := &cloudfront.ListDistributionTenantsInput{}
-        output := &cloudfront.ListDistributionTenantsOutput{}
-
-        mockClient.On("ListDistributionTenants", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributionTenants(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListDistributionTenantsByCustomization", func(t *testing.T) {
-        input := &cloudfront.ListDistributionTenantsByCustomizationInput{}
-        output := &cloudfront.ListDistributionTenantsByCustomizationOutput{}
-
-        mockClient.On("ListDistributionTenantsByCustomization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributionTenantsByCustomization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDistributions", func(t *testing.T) {
         input := &cloudfront.ListDistributionsInput{}
         output := &cloudfront.ListDistributionsOutput{}
@@ -1360,6 +1360,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDistributionsByOwnedResource", func(t *testing.T) {
+        input := &cloudfront.ListDistributionsByOwnedResourceInput{}
+        output := &cloudfront.ListDistributionsByOwnedResourceOutput{}
+
+        mockClient.On("ListDistributionsByOwnedResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionsByOwnedResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDistributionsByRealtimeLogConfig", func(t *testing.T) {
         input := &cloudfront.ListDistributionsByRealtimeLogConfigInput{}
         output := &cloudfront.ListDistributionsByRealtimeLogConfigOutput{}
@@ -1406,6 +1419,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDistributionsByWebACLId", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDistributionsByWebACLId(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributionTenants", func(t *testing.T) {
+        input := &cloudfront.ListDistributionTenantsInput{}
+        output := &cloudfront.ListDistributionTenantsOutput{}
+
+        mockClient.On("ListDistributionTenants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionTenants(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributionTenantsByCustomization", func(t *testing.T) {
+        input := &cloudfront.ListDistributionTenantsByCustomizationInput{}
+        output := &cloudfront.ListDistributionTenantsByCustomizationOutput{}
+
+        mockClient.On("ListDistributionTenantsByCustomization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionTenantsByCustomization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1633,6 +1672,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &cloudfront.PutResourcePolicyInput{}
+        output := &cloudfront.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &cloudfront.TagResourceInput{}
         output := &cloudfront.TagResourceOutput{}
@@ -1666,6 +1718,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAnycastIpList", func(t *testing.T) {
+        input := &cloudfront.UpdateAnycastIpListInput{}
+        output := &cloudfront.UpdateAnycastIpListOutput{}
+
+        mockClient.On("UpdateAnycastIpList", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAnycastIpList(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

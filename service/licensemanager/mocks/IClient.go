@@ -274,6 +274,80 @@ func (_m *IClient) CreateLicense(ctx context.Context, params *licensemanager.Cre
 	return r0, r1
 }
 
+// CreateLicenseAssetGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateLicenseAssetGroup(ctx context.Context, params *licensemanager.CreateLicenseAssetGroupInput, optFns ...func(*licensemanager.Options)) (*licensemanager.CreateLicenseAssetGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateLicenseAssetGroup")
+	}
+
+	var r0 *licensemanager.CreateLicenseAssetGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.CreateLicenseAssetGroupInput, ...func(*licensemanager.Options)) (*licensemanager.CreateLicenseAssetGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.CreateLicenseAssetGroupInput, ...func(*licensemanager.Options)) *licensemanager.CreateLicenseAssetGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.CreateLicenseAssetGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.CreateLicenseAssetGroupInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateLicenseAssetRuleset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateLicenseAssetRuleset(ctx context.Context, params *licensemanager.CreateLicenseAssetRulesetInput, optFns ...func(*licensemanager.Options)) (*licensemanager.CreateLicenseAssetRulesetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateLicenseAssetRuleset")
+	}
+
+	var r0 *licensemanager.CreateLicenseAssetRulesetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.CreateLicenseAssetRulesetInput, ...func(*licensemanager.Options)) (*licensemanager.CreateLicenseAssetRulesetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.CreateLicenseAssetRulesetInput, ...func(*licensemanager.Options)) *licensemanager.CreateLicenseAssetRulesetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.CreateLicenseAssetRulesetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.CreateLicenseAssetRulesetInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateLicenseConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateLicenseConfiguration(ctx context.Context, params *licensemanager.CreateLicenseConfigurationInput, optFns ...func(*licensemanager.Options)) (*licensemanager.CreateLicenseConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +599,80 @@ func (_m *IClient) DeleteLicense(ctx context.Context, params *licensemanager.Del
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.DeleteLicenseInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteLicenseAssetGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLicenseAssetGroup(ctx context.Context, params *licensemanager.DeleteLicenseAssetGroupInput, optFns ...func(*licensemanager.Options)) (*licensemanager.DeleteLicenseAssetGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLicenseAssetGroup")
+	}
+
+	var r0 *licensemanager.DeleteLicenseAssetGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.DeleteLicenseAssetGroupInput, ...func(*licensemanager.Options)) (*licensemanager.DeleteLicenseAssetGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.DeleteLicenseAssetGroupInput, ...func(*licensemanager.Options)) *licensemanager.DeleteLicenseAssetGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.DeleteLicenseAssetGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.DeleteLicenseAssetGroupInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteLicenseAssetRuleset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLicenseAssetRuleset(ctx context.Context, params *licensemanager.DeleteLicenseAssetRulesetInput, optFns ...func(*licensemanager.Options)) (*licensemanager.DeleteLicenseAssetRulesetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLicenseAssetRuleset")
+	}
+
+	var r0 *licensemanager.DeleteLicenseAssetRulesetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.DeleteLicenseAssetRulesetInput, ...func(*licensemanager.Options)) (*licensemanager.DeleteLicenseAssetRulesetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.DeleteLicenseAssetRulesetInput, ...func(*licensemanager.Options)) *licensemanager.DeleteLicenseAssetRulesetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.DeleteLicenseAssetRulesetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.DeleteLicenseAssetRulesetInput, ...func(*licensemanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +940,80 @@ func (_m *IClient) GetLicense(ctx context.Context, params *licensemanager.GetLic
 	return r0, r1
 }
 
+// GetLicenseAssetGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLicenseAssetGroup(ctx context.Context, params *licensemanager.GetLicenseAssetGroupInput, optFns ...func(*licensemanager.Options)) (*licensemanager.GetLicenseAssetGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLicenseAssetGroup")
+	}
+
+	var r0 *licensemanager.GetLicenseAssetGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.GetLicenseAssetGroupInput, ...func(*licensemanager.Options)) (*licensemanager.GetLicenseAssetGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.GetLicenseAssetGroupInput, ...func(*licensemanager.Options)) *licensemanager.GetLicenseAssetGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.GetLicenseAssetGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.GetLicenseAssetGroupInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetLicenseAssetRuleset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLicenseAssetRuleset(ctx context.Context, params *licensemanager.GetLicenseAssetRulesetInput, optFns ...func(*licensemanager.Options)) (*licensemanager.GetLicenseAssetRulesetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLicenseAssetRuleset")
+	}
+
+	var r0 *licensemanager.GetLicenseAssetRulesetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.GetLicenseAssetRulesetInput, ...func(*licensemanager.Options)) (*licensemanager.GetLicenseAssetRulesetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.GetLicenseAssetRulesetInput, ...func(*licensemanager.Options)) *licensemanager.GetLicenseAssetRulesetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.GetLicenseAssetRulesetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.GetLicenseAssetRulesetInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetLicenseConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetLicenseConfiguration(ctx context.Context, params *licensemanager.GetLicenseConfigurationInput, optFns ...func(*licensemanager.Options)) (*licensemanager.GetLicenseConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -977,6 +1199,43 @@ func (_m *IClient) GetServiceSettings(ctx context.Context, params *licensemanage
 	return r0, r1
 }
 
+// ListAssetsForLicenseAssetGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetsForLicenseAssetGroup(ctx context.Context, params *licensemanager.ListAssetsForLicenseAssetGroupInput, optFns ...func(*licensemanager.Options)) (*licensemanager.ListAssetsForLicenseAssetGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetsForLicenseAssetGroup")
+	}
+
+	var r0 *licensemanager.ListAssetsForLicenseAssetGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListAssetsForLicenseAssetGroupInput, ...func(*licensemanager.Options)) (*licensemanager.ListAssetsForLicenseAssetGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListAssetsForLicenseAssetGroupInput, ...func(*licensemanager.Options)) *licensemanager.ListAssetsForLicenseAssetGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.ListAssetsForLicenseAssetGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.ListAssetsForLicenseAssetGroupInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAssociationsForLicenseConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAssociationsForLicenseConfiguration(ctx context.Context, params *licensemanager.ListAssociationsForLicenseConfigurationInput, optFns ...func(*licensemanager.Options)) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1088,6 +1347,80 @@ func (_m *IClient) ListFailuresForLicenseConfigurationOperations(ctx context.Con
 	return r0, r1
 }
 
+// ListLicenseAssetGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLicenseAssetGroups(ctx context.Context, params *licensemanager.ListLicenseAssetGroupsInput, optFns ...func(*licensemanager.Options)) (*licensemanager.ListLicenseAssetGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLicenseAssetGroups")
+	}
+
+	var r0 *licensemanager.ListLicenseAssetGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListLicenseAssetGroupsInput, ...func(*licensemanager.Options)) (*licensemanager.ListLicenseAssetGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListLicenseAssetGroupsInput, ...func(*licensemanager.Options)) *licensemanager.ListLicenseAssetGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.ListLicenseAssetGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.ListLicenseAssetGroupsInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListLicenseAssetRulesets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLicenseAssetRulesets(ctx context.Context, params *licensemanager.ListLicenseAssetRulesetsInput, optFns ...func(*licensemanager.Options)) (*licensemanager.ListLicenseAssetRulesetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLicenseAssetRulesets")
+	}
+
+	var r0 *licensemanager.ListLicenseAssetRulesetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListLicenseAssetRulesetsInput, ...func(*licensemanager.Options)) (*licensemanager.ListLicenseAssetRulesetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListLicenseAssetRulesetsInput, ...func(*licensemanager.Options)) *licensemanager.ListLicenseAssetRulesetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.ListLicenseAssetRulesetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.ListLicenseAssetRulesetsInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListLicenseConfigurations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListLicenseConfigurations(ctx context.Context, params *licensemanager.ListLicenseConfigurationsInput, optFns ...func(*licensemanager.Options)) (*licensemanager.ListLicenseConfigurationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1117,6 +1450,43 @@ func (_m *IClient) ListLicenseConfigurations(ctx context.Context, params *licens
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.ListLicenseConfigurationsInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListLicenseConfigurationsForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLicenseConfigurationsForOrganization(ctx context.Context, params *licensemanager.ListLicenseConfigurationsForOrganizationInput, optFns ...func(*licensemanager.Options)) (*licensemanager.ListLicenseConfigurationsForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLicenseConfigurationsForOrganization")
+	}
+
+	var r0 *licensemanager.ListLicenseConfigurationsForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListLicenseConfigurationsForOrganizationInput, ...func(*licensemanager.Options)) (*licensemanager.ListLicenseConfigurationsForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.ListLicenseConfigurationsForOrganizationInput, ...func(*licensemanager.Options)) *licensemanager.ListLicenseConfigurationsForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.ListLicenseConfigurationsForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.ListLicenseConfigurationsForOrganizationInput, ...func(*licensemanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1727,6 +2097,80 @@ func (_m *IClient) UntagResource(ctx context.Context, params *licensemanager.Unt
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.UntagResourceInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateLicenseAssetGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLicenseAssetGroup(ctx context.Context, params *licensemanager.UpdateLicenseAssetGroupInput, optFns ...func(*licensemanager.Options)) (*licensemanager.UpdateLicenseAssetGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLicenseAssetGroup")
+	}
+
+	var r0 *licensemanager.UpdateLicenseAssetGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.UpdateLicenseAssetGroupInput, ...func(*licensemanager.Options)) (*licensemanager.UpdateLicenseAssetGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.UpdateLicenseAssetGroupInput, ...func(*licensemanager.Options)) *licensemanager.UpdateLicenseAssetGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.UpdateLicenseAssetGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.UpdateLicenseAssetGroupInput, ...func(*licensemanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateLicenseAssetRuleset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLicenseAssetRuleset(ctx context.Context, params *licensemanager.UpdateLicenseAssetRulesetInput, optFns ...func(*licensemanager.Options)) (*licensemanager.UpdateLicenseAssetRulesetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLicenseAssetRuleset")
+	}
+
+	var r0 *licensemanager.UpdateLicenseAssetRulesetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.UpdateLicenseAssetRulesetInput, ...func(*licensemanager.Options)) (*licensemanager.UpdateLicenseAssetRulesetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *licensemanager.UpdateLicenseAssetRulesetInput, ...func(*licensemanager.Options)) *licensemanager.UpdateLicenseAssetRulesetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*licensemanager.UpdateLicenseAssetRulesetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *licensemanager.UpdateLicenseAssetRulesetInput, ...func(*licensemanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

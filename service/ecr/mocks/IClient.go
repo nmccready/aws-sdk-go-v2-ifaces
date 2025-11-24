@@ -533,6 +533,80 @@ func (_m *IClient) DeleteRepositoryPolicy(ctx context.Context, params *ecr.Delet
 	return r0, r1
 }
 
+// DeleteSigningConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSigningConfiguration(ctx context.Context, params *ecr.DeleteSigningConfigurationInput, optFns ...func(*ecr.Options)) (*ecr.DeleteSigningConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSigningConfiguration")
+	}
+
+	var r0 *ecr.DeleteSigningConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DeleteSigningConfigurationInput, ...func(*ecr.Options)) (*ecr.DeleteSigningConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DeleteSigningConfigurationInput, ...func(*ecr.Options)) *ecr.DeleteSigningConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.DeleteSigningConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DeleteSigningConfigurationInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeregisterPullTimeUpdateExclusion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterPullTimeUpdateExclusion(ctx context.Context, params *ecr.DeregisterPullTimeUpdateExclusionInput, optFns ...func(*ecr.Options)) (*ecr.DeregisterPullTimeUpdateExclusionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterPullTimeUpdateExclusion")
+	}
+
+	var r0 *ecr.DeregisterPullTimeUpdateExclusionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DeregisterPullTimeUpdateExclusionInput, ...func(*ecr.Options)) (*ecr.DeregisterPullTimeUpdateExclusionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DeregisterPullTimeUpdateExclusionInput, ...func(*ecr.Options)) *ecr.DeregisterPullTimeUpdateExclusionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.DeregisterPullTimeUpdateExclusionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DeregisterPullTimeUpdateExclusionInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeImageReplicationStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeImageReplicationStatus(ctx context.Context, params *ecr.DescribeImageReplicationStatusInput, optFns ...func(*ecr.Options)) (*ecr.DescribeImageReplicationStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +673,43 @@ func (_m *IClient) DescribeImageScanFindings(ctx context.Context, params *ecr.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DescribeImageScanFindingsInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeImageSigningStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeImageSigningStatus(ctx context.Context, params *ecr.DescribeImageSigningStatusInput, optFns ...func(*ecr.Options)) (*ecr.DescribeImageSigningStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeImageSigningStatus")
+	}
+
+	var r0 *ecr.DescribeImageSigningStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DescribeImageSigningStatusInput, ...func(*ecr.Options)) (*ecr.DescribeImageSigningStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DescribeImageSigningStatusInput, ...func(*ecr.Options)) *ecr.DescribeImageSigningStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.DescribeImageSigningStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DescribeImageSigningStatusInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1088,6 +1199,43 @@ func (_m *IClient) GetRepositoryPolicy(ctx context.Context, params *ecr.GetRepos
 	return r0, r1
 }
 
+// GetSigningConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSigningConfiguration(ctx context.Context, params *ecr.GetSigningConfigurationInput, optFns ...func(*ecr.Options)) (*ecr.GetSigningConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSigningConfiguration")
+	}
+
+	var r0 *ecr.GetSigningConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.GetSigningConfigurationInput, ...func(*ecr.Options)) (*ecr.GetSigningConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.GetSigningConfigurationInput, ...func(*ecr.Options)) *ecr.GetSigningConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.GetSigningConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.GetSigningConfigurationInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InitiateLayerUpload provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InitiateLayerUpload(ctx context.Context, params *ecr.InitiateLayerUploadInput, optFns ...func(*ecr.Options)) (*ecr.InitiateLayerUploadOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1125,6 +1273,43 @@ func (_m *IClient) InitiateLayerUpload(ctx context.Context, params *ecr.Initiate
 	return r0, r1
 }
 
+// ListImageReferrers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListImageReferrers(ctx context.Context, params *ecr.ListImageReferrersInput, optFns ...func(*ecr.Options)) (*ecr.ListImageReferrersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListImageReferrers")
+	}
+
+	var r0 *ecr.ListImageReferrersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.ListImageReferrersInput, ...func(*ecr.Options)) (*ecr.ListImageReferrersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.ListImageReferrersInput, ...func(*ecr.Options)) *ecr.ListImageReferrersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.ListImageReferrersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.ListImageReferrersInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListImages provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListImages(ctx context.Context, params *ecr.ListImagesInput, optFns ...func(*ecr.Options)) (*ecr.ListImagesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1154,6 +1339,43 @@ func (_m *IClient) ListImages(ctx context.Context, params *ecr.ListImagesInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.ListImagesInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPullTimeUpdateExclusions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPullTimeUpdateExclusions(ctx context.Context, params *ecr.ListPullTimeUpdateExclusionsInput, optFns ...func(*ecr.Options)) (*ecr.ListPullTimeUpdateExclusionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPullTimeUpdateExclusions")
+	}
+
+	var r0 *ecr.ListPullTimeUpdateExclusionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.ListPullTimeUpdateExclusionsInput, ...func(*ecr.Options)) (*ecr.ListPullTimeUpdateExclusionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.ListPullTimeUpdateExclusionsInput, ...func(*ecr.Options)) *ecr.ListPullTimeUpdateExclusionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.ListPullTimeUpdateExclusionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.ListPullTimeUpdateExclusionsInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1513,6 +1735,80 @@ func (_m *IClient) PutReplicationConfiguration(ctx context.Context, params *ecr.
 	return r0, r1
 }
 
+// PutSigningConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutSigningConfiguration(ctx context.Context, params *ecr.PutSigningConfigurationInput, optFns ...func(*ecr.Options)) (*ecr.PutSigningConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutSigningConfiguration")
+	}
+
+	var r0 *ecr.PutSigningConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.PutSigningConfigurationInput, ...func(*ecr.Options)) (*ecr.PutSigningConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.PutSigningConfigurationInput, ...func(*ecr.Options)) *ecr.PutSigningConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.PutSigningConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.PutSigningConfigurationInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterPullTimeUpdateExclusion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterPullTimeUpdateExclusion(ctx context.Context, params *ecr.RegisterPullTimeUpdateExclusionInput, optFns ...func(*ecr.Options)) (*ecr.RegisterPullTimeUpdateExclusionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterPullTimeUpdateExclusion")
+	}
+
+	var r0 *ecr.RegisterPullTimeUpdateExclusionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.RegisterPullTimeUpdateExclusionInput, ...func(*ecr.Options)) (*ecr.RegisterPullTimeUpdateExclusionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.RegisterPullTimeUpdateExclusionInput, ...func(*ecr.Options)) *ecr.RegisterPullTimeUpdateExclusionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.RegisterPullTimeUpdateExclusionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.RegisterPullTimeUpdateExclusionInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetRepositoryPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SetRepositoryPolicy(ctx context.Context, params *ecr.SetRepositoryPolicyInput, optFns ...func(*ecr.Options)) (*ecr.SetRepositoryPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1690,6 +1986,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *ecr.UntagResourceI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.UntagResourceInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateImageStorageClass provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateImageStorageClass(ctx context.Context, params *ecr.UpdateImageStorageClassInput, optFns ...func(*ecr.Options)) (*ecr.UpdateImageStorageClassOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateImageStorageClass")
+	}
+
+	var r0 *ecr.UpdateImageStorageClassOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.UpdateImageStorageClassInput, ...func(*ecr.Options)) (*ecr.UpdateImageStorageClassOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.UpdateImageStorageClassInput, ...func(*ecr.Options)) *ecr.UpdateImageStorageClassOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.UpdateImageStorageClassOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.UpdateImageStorageClassInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

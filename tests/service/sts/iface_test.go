@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDelegatedAccessToken", func(t *testing.T) {
+        input := &sts.GetDelegatedAccessTokenInput{}
+        output := &sts.GetDelegatedAccessTokenOutput{}
+
+        mockClient.On("GetDelegatedAccessToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDelegatedAccessToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFederationToken", func(t *testing.T) {
         input := &sts.GetFederationTokenInput{}
         output := &sts.GetFederationTokenOutput{}
@@ -145,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSessionToken", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSessionToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWebIdentityToken", func(t *testing.T) {
+        input := &sts.GetWebIdentityTokenInput{}
+        output := &sts.GetWebIdentityTokenOutput{}
+
+        mockClient.On("GetWebIdentityToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWebIdentityToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

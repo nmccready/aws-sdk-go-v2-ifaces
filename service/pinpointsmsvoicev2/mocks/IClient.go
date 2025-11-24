@@ -88,6 +88,43 @@ func (_m *IClient) AssociateProtectConfiguration(ctx context.Context, params *pi
 	return r0, r1
 }
 
+// CarrierLookup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CarrierLookup(ctx context.Context, params *pinpointsmsvoicev2.CarrierLookupInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.CarrierLookupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CarrierLookup")
+	}
+
+	var r0 *pinpointsmsvoicev2.CarrierLookupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.CarrierLookupInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.CarrierLookupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.CarrierLookupInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.CarrierLookupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.CarrierLookupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.CarrierLookupInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateConfigurationSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateConfigurationSet(ctx context.Context, params *pinpointsmsvoicev2.CreateConfigurationSetInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.CreateConfigurationSetOutput, error) {
 	_va := make([]interface{}, len(optFns))

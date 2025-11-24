@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateContactWithUser", func(t *testing.T) {
+        input := &connect.AssociateContactWithUserInput{}
+        output := &connect.AssociateContactWithUserOutput{}
+
+        mockClient.On("AssociateContactWithUser", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateContactWithUser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateDefaultVocabulary", func(t *testing.T) {
         input := &connect.AssociateDefaultVocabularyInput{}
         output := &connect.AssociateDefaultVocabularyOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("AssociateDefaultVocabulary", ctx, input).Return(output, nil)
 
         result, err := mockClient.AssociateDefaultVocabulary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAssociateEmailAddressAlias", func(t *testing.T) {
+        input := &connect.AssociateEmailAddressAliasInput{}
+        output := &connect.AssociateEmailAddressAliasOutput{}
+
+        mockClient.On("AssociateEmailAddressAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateEmailAddressAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -366,6 +392,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateContactFlowModule", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateContactFlowModule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateContactFlowModuleAlias", func(t *testing.T) {
+        input := &connect.CreateContactFlowModuleAliasInput{}
+        output := &connect.CreateContactFlowModuleAliasOutput{}
+
+        mockClient.On("CreateContactFlowModuleAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContactFlowModuleAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateContactFlowModuleVersion", func(t *testing.T) {
+        input := &connect.CreateContactFlowModuleVersionInput{}
+        output := &connect.CreateContactFlowModuleVersionOutput{}
+
+        mockClient.On("CreateContactFlowModuleVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContactFlowModuleVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -762,6 +814,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteContactFlowModuleAlias", func(t *testing.T) {
+        input := &connect.DeleteContactFlowModuleAliasInput{}
+        output := &connect.DeleteContactFlowModuleAliasOutput{}
+
+        mockClient.On("DeleteContactFlowModuleAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContactFlowModuleAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteContactFlowModuleVersion", func(t *testing.T) {
+        input := &connect.DeleteContactFlowModuleVersionInput{}
+        output := &connect.DeleteContactFlowModuleVersionOutput{}
+
+        mockClient.On("DeleteContactFlowModuleVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContactFlowModuleVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteContactFlowVersion", func(t *testing.T) {
         input := &connect.DeleteContactFlowVersionInput{}
         output := &connect.DeleteContactFlowVersionOutput{}
@@ -1139,6 +1217,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeContactFlowModuleAlias", func(t *testing.T) {
+        input := &connect.DescribeContactFlowModuleAliasInput{}
+        output := &connect.DescribeContactFlowModuleAliasOutput{}
+
+        mockClient.On("DescribeContactFlowModuleAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeContactFlowModuleAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEmailAddress", func(t *testing.T) {
         input := &connect.DescribeEmailAddressInput{}
         output := &connect.DescribeEmailAddressOutput{}
@@ -1445,6 +1536,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateBot", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateBot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateEmailAddressAlias", func(t *testing.T) {
+        input := &connect.DisassociateEmailAddressAliasInput{}
+        output := &connect.DisassociateEmailAddressAliasOutput{}
+
+        mockClient.On("DisassociateEmailAddressAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateEmailAddressAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1880,6 +1984,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListContactFlowModuleAliases", func(t *testing.T) {
+        input := &connect.ListContactFlowModuleAliasesInput{}
+        output := &connect.ListContactFlowModuleAliasesOutput{}
+
+        mockClient.On("ListContactFlowModuleAliases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContactFlowModuleAliases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListContactFlowModules", func(t *testing.T) {
         input := &connect.ListContactFlowModulesInput{}
         output := &connect.ListContactFlowModulesOutput{}
@@ -1893,13 +2010,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListContactFlowVersions", func(t *testing.T) {
-        input := &connect.ListContactFlowVersionsInput{}
-        output := &connect.ListContactFlowVersionsOutput{}
+    t.Run("TestListContactFlowModuleVersions", func(t *testing.T) {
+        input := &connect.ListContactFlowModuleVersionsInput{}
+        output := &connect.ListContactFlowModuleVersionsOutput{}
 
-        mockClient.On("ListContactFlowVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListContactFlowModuleVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListContactFlowVersions(ctx, input)
+        result, err := mockClient.ListContactFlowModuleVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1913,6 +2030,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContactFlows", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContactFlows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContactFlowVersions", func(t *testing.T) {
+        input := &connect.ListContactFlowVersionsInput{}
+        output := &connect.ListContactFlowVersionsOutput{}
+
+        mockClient.On("ListContactFlowVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContactFlowVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1945,19 +2075,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEvaluationFormVersions", func(t *testing.T) {
-        input := &connect.ListEvaluationFormVersionsInput{}
-        output := &connect.ListEvaluationFormVersionsOutput{}
-
-        mockClient.On("ListEvaluationFormVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListEvaluationFormVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListEvaluationForms", func(t *testing.T) {
         input := &connect.ListEvaluationFormsInput{}
         output := &connect.ListEvaluationFormsOutput{}
@@ -1965,6 +2082,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEvaluationForms", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEvaluationForms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEvaluationFormVersions", func(t *testing.T) {
+        input := &connect.ListEvaluationFormVersionsInput{}
+        output := &connect.ListEvaluationFormVersionsOutput{}
+
+        mockClient.On("ListEvaluationFormVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEvaluationFormVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2023,19 +2153,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInstanceStorageConfigs", func(t *testing.T) {
-        input := &connect.ListInstanceStorageConfigsInput{}
-        output := &connect.ListInstanceStorageConfigsOutput{}
-
-        mockClient.On("ListInstanceStorageConfigs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInstanceStorageConfigs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInstances", func(t *testing.T) {
         input := &connect.ListInstancesInput{}
         output := &connect.ListInstancesOutput{}
@@ -2043,6 +2160,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInstanceStorageConfigs", func(t *testing.T) {
+        input := &connect.ListInstanceStorageConfigsInput{}
+        output := &connect.ListInstanceStorageConfigsOutput{}
+
+        mockClient.On("ListInstanceStorageConfigs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInstanceStorageConfigs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2192,6 +2322,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRoutingProfileManualAssignmentQueues", func(t *testing.T) {
+        input := &connect.ListRoutingProfileManualAssignmentQueuesInput{}
+        output := &connect.ListRoutingProfileManualAssignmentQueuesOutput{}
+
+        mockClient.On("ListRoutingProfileManualAssignmentQueues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRoutingProfileManualAssignmentQueues(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRoutingProfileQueues", func(t *testing.T) {
         input := &connect.ListRoutingProfileQueuesInput{}
         output := &connect.ListRoutingProfileQueuesOutput{}
@@ -2309,19 +2452,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTrafficDistributionGroupUsers", func(t *testing.T) {
-        input := &connect.ListTrafficDistributionGroupUsersInput{}
-        output := &connect.ListTrafficDistributionGroupUsersOutput{}
-
-        mockClient.On("ListTrafficDistributionGroupUsers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTrafficDistributionGroupUsers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTrafficDistributionGroups", func(t *testing.T) {
         input := &connect.ListTrafficDistributionGroupsInput{}
         output := &connect.ListTrafficDistributionGroupsOutput{}
@@ -2329,6 +2459,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTrafficDistributionGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTrafficDistributionGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrafficDistributionGroupUsers", func(t *testing.T) {
+        input := &connect.ListTrafficDistributionGroupUsersInput{}
+        output := &connect.ListTrafficDistributionGroupUsersOutput{}
+
+        mockClient.On("ListTrafficDistributionGroupUsers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrafficDistributionGroupUsers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2387,19 +2530,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListViewVersions", func(t *testing.T) {
-        input := &connect.ListViewVersionsInput{}
-        output := &connect.ListViewVersionsOutput{}
-
-        mockClient.On("ListViewVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListViewVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListViews", func(t *testing.T) {
         input := &connect.ListViewsInput{}
         output := &connect.ListViewsOutput{}
@@ -2407,6 +2537,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListViews", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListViewVersions", func(t *testing.T) {
+        input := &connect.ListViewVersionsInput{}
+        output := &connect.ListViewVersionsOutput{}
+
+        mockClient.On("ListViewVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListViewVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2530,6 +2673,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchContactEvaluations", func(t *testing.T) {
+        input := &connect.SearchContactEvaluationsInput{}
+        output := &connect.SearchContactEvaluationsOutput{}
+
+        mockClient.On("SearchContactEvaluations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchContactEvaluations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchContactFlowModules", func(t *testing.T) {
         input := &connect.SearchContactFlowModulesInput{}
         output := &connect.SearchContactFlowModulesOutput{}
@@ -2576,6 +2732,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchEmailAddresses", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchEmailAddresses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchEvaluationForms", func(t *testing.T) {
+        input := &connect.SearchEvaluationFormsInput{}
+        output := &connect.SearchEvaluationFormsOutput{}
+
+        mockClient.On("SearchEvaluationForms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchEvaluationForms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3135,6 +3304,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateContactFlowMetadata", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateContactFlowMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContactFlowModuleAlias", func(t *testing.T) {
+        input := &connect.UpdateContactFlowModuleAliasInput{}
+        output := &connect.UpdateContactFlowModuleAliasOutput{}
+
+        mockClient.On("UpdateContactFlowModuleAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContactFlowModuleAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -42,6 +42,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListTemplates(ctx context.Context, params *ListTemplatesInput, optFns ...func(*Options)) (*ListTemplatesOutput, error) 
  PutCaseEventConfiguration(ctx context.Context, params *PutCaseEventConfigurationInput, optFns ...func(*Options)) (*PutCaseEventConfigurationOutput, error) 
+ SearchAllRelatedItems(ctx context.Context, params *SearchAllRelatedItemsInput, optFns ...func(*Options)) (*SearchAllRelatedItemsOutput, error) 
  SearchCases(ctx context.Context, params *SearchCasesInput, optFns ...func(*Options)) (*SearchCasesOutput, error) 
  SearchRelatedItems(ctx context.Context, params *SearchRelatedItemsInput, optFns ...func(*Options)) (*SearchRelatedItemsOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 

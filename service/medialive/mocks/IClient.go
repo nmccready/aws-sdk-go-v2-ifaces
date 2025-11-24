@@ -2420,6 +2420,43 @@ func (_m *IClient) GetSignalMap(ctx context.Context, params *medialive.GetSignal
 	return r0, r1
 }
 
+// ListAlerts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAlerts(ctx context.Context, params *medialive.ListAlertsInput, optFns ...func(*medialive.Options)) (*medialive.ListAlertsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAlerts")
+	}
+
+	var r0 *medialive.ListAlertsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListAlertsInput, ...func(*medialive.Options)) (*medialive.ListAlertsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListAlertsInput, ...func(*medialive.Options)) *medialive.ListAlertsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListAlertsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListAlertsInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListChannelPlacementGroups provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListChannelPlacementGroups(ctx context.Context, params *medialive.ListChannelPlacementGroupsInput, optFns ...func(*medialive.Options)) (*medialive.ListChannelPlacementGroupsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2560,6 +2597,43 @@ func (_m *IClient) ListCloudWatchAlarmTemplates(ctx context.Context, params *med
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListCloudWatchAlarmTemplatesInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListClusterAlerts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClusterAlerts(ctx context.Context, params *medialive.ListClusterAlertsInput, optFns ...func(*medialive.Options)) (*medialive.ListClusterAlertsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClusterAlerts")
+	}
+
+	var r0 *medialive.ListClusterAlertsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListClusterAlertsInput, ...func(*medialive.Options)) (*medialive.ListClusterAlertsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListClusterAlertsInput, ...func(*medialive.Options)) *medialive.ListClusterAlertsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListClusterAlertsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListClusterAlertsInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2819,6 +2893,43 @@ func (_m *IClient) ListInputs(ctx context.Context, params *medialive.ListInputsI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListInputsInput, ...func(*medialive.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMultiplexAlerts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMultiplexAlerts(ctx context.Context, params *medialive.ListMultiplexAlertsInput, optFns ...func(*medialive.Options)) (*medialive.ListMultiplexAlertsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMultiplexAlerts")
+	}
+
+	var r0 *medialive.ListMultiplexAlertsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListMultiplexAlertsInput, ...func(*medialive.Options)) (*medialive.ListMultiplexAlertsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *medialive.ListMultiplexAlertsInput, ...func(*medialive.Options)) *medialive.ListMultiplexAlertsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*medialive.ListMultiplexAlertsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *medialive.ListMultiplexAlertsInput, ...func(*medialive.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

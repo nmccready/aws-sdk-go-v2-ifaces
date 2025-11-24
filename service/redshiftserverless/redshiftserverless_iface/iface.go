@@ -67,6 +67,7 @@ type IClient interface {
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateCustomDomainAssociation(ctx context.Context, params *UpdateCustomDomainAssociationInput, optFns ...func(*Options)) (*UpdateCustomDomainAssociationOutput, error) 
  UpdateEndpointAccess(ctx context.Context, params *UpdateEndpointAccessInput, optFns ...func(*Options)) (*UpdateEndpointAccessOutput, error) 
+ UpdateLakehouseConfiguration(ctx context.Context, params *UpdateLakehouseConfigurationInput, optFns ...func(*Options)) (*UpdateLakehouseConfigurationOutput, error) 
  UpdateNamespace(ctx context.Context, params *UpdateNamespaceInput, optFns ...func(*Options)) (*UpdateNamespaceOutput, error) 
  UpdateScheduledAction(ctx context.Context, params *UpdateScheduledActionInput, optFns ...func(*Options)) (*UpdateScheduledActionOutput, error) 
  UpdateSnapshot(ctx context.Context, params *UpdateSnapshotInput, optFns ...func(*Options)) (*UpdateSnapshotOutput, error) 

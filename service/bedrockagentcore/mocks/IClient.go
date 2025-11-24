@@ -15,6 +15,154 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchCreateMemoryRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateMemoryRecords(ctx context.Context, params *bedrockagentcore.BatchCreateMemoryRecordsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.BatchCreateMemoryRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateMemoryRecords")
+	}
+
+	var r0 *bedrockagentcore.BatchCreateMemoryRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.BatchCreateMemoryRecordsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.BatchCreateMemoryRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.BatchCreateMemoryRecordsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.BatchCreateMemoryRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.BatchCreateMemoryRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.BatchCreateMemoryRecordsInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteMemoryRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteMemoryRecords(ctx context.Context, params *bedrockagentcore.BatchDeleteMemoryRecordsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.BatchDeleteMemoryRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteMemoryRecords")
+	}
+
+	var r0 *bedrockagentcore.BatchDeleteMemoryRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.BatchDeleteMemoryRecordsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.BatchDeleteMemoryRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.BatchDeleteMemoryRecordsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.BatchDeleteMemoryRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.BatchDeleteMemoryRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.BatchDeleteMemoryRecordsInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateMemoryRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateMemoryRecords(ctx context.Context, params *bedrockagentcore.BatchUpdateMemoryRecordsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.BatchUpdateMemoryRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateMemoryRecords")
+	}
+
+	var r0 *bedrockagentcore.BatchUpdateMemoryRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.BatchUpdateMemoryRecordsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.BatchUpdateMemoryRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.BatchUpdateMemoryRecordsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.BatchUpdateMemoryRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.BatchUpdateMemoryRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.BatchUpdateMemoryRecordsInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CompleteResourceTokenAuth provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CompleteResourceTokenAuth(ctx context.Context, params *bedrockagentcore.CompleteResourceTokenAuthInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.CompleteResourceTokenAuthOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CompleteResourceTokenAuth")
+	}
+
+	var r0 *bedrockagentcore.CompleteResourceTokenAuthOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.CompleteResourceTokenAuthInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.CompleteResourceTokenAuthOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.CompleteResourceTokenAuthInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.CompleteResourceTokenAuthOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.CompleteResourceTokenAuthOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.CompleteResourceTokenAuthInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEvent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEvent(ctx context.Context, params *bedrockagentcore.CreateEventInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.CreateEventOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +266,43 @@ func (_m *IClient) DeleteMemoryRecord(ctx context.Context, params *bedrockagentc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.DeleteMemoryRecordInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentCard provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentCard(ctx context.Context, params *bedrockagentcore.GetAgentCardInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetAgentCardOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentCard")
+	}
+
+	var r0 *bedrockagentcore.GetAgentCardOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.GetAgentCardInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetAgentCardOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.GetAgentCardInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.GetAgentCardOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.GetAgentCardOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.GetAgentCardInput, ...func(*bedrockagentcore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -681,6 +866,43 @@ func (_m *IClient) ListEvents(ctx context.Context, params *bedrockagentcore.List
 	return r0, r1
 }
 
+// ListMemoryExtractionJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMemoryExtractionJobs(ctx context.Context, params *bedrockagentcore.ListMemoryExtractionJobsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListMemoryExtractionJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMemoryExtractionJobs")
+	}
+
+	var r0 *bedrockagentcore.ListMemoryExtractionJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.ListMemoryExtractionJobsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListMemoryExtractionJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.ListMemoryExtractionJobsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.ListMemoryExtractionJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.ListMemoryExtractionJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.ListMemoryExtractionJobsInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListMemoryRecords provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListMemoryRecords(ctx context.Context, params *bedrockagentcore.ListMemoryRecordsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListMemoryRecordsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -884,6 +1106,43 @@ func (_m *IClient) StartCodeInterpreterSession(ctx context.Context, params *bedr
 	return r0, r1
 }
 
+// StartMemoryExtractionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMemoryExtractionJob(ctx context.Context, params *bedrockagentcore.StartMemoryExtractionJobInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StartMemoryExtractionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMemoryExtractionJob")
+	}
+
+	var r0 *bedrockagentcore.StartMemoryExtractionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.StartMemoryExtractionJobInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StartMemoryExtractionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.StartMemoryExtractionJobInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.StartMemoryExtractionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.StartMemoryExtractionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.StartMemoryExtractionJobInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopBrowserSession provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopBrowserSession(ctx context.Context, params *bedrockagentcore.StopBrowserSessionInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StopBrowserSessionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -950,6 +1209,43 @@ func (_m *IClient) StopCodeInterpreterSession(ctx context.Context, params *bedro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.StopCodeInterpreterSessionInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopRuntimeSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopRuntimeSession(ctx context.Context, params *bedrockagentcore.StopRuntimeSessionInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StopRuntimeSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopRuntimeSession")
+	}
+
+	var r0 *bedrockagentcore.StopRuntimeSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.StopRuntimeSessionInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StopRuntimeSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.StopRuntimeSessionInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.StopRuntimeSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.StopRuntimeSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.StopRuntimeSessionInput, ...func(*bedrockagentcore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

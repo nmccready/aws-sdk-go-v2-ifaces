@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateSoftwareToImageBuilder", func(t *testing.T) {
+        input := &appstream.AssociateSoftwareToImageBuilderInput{}
+        output := &appstream.AssociateSoftwareToImageBuilderOutput{}
+
+        mockClient.On("AssociateSoftwareToImageBuilder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSoftwareToImageBuilder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchAssociateUserStack", func(t *testing.T) {
         input := &appstream.BatchAssociateUserStackInput{}
         output := &appstream.BatchAssociateUserStackOutput{}
@@ -203,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateExportImageTask", func(t *testing.T) {
+        input := &appstream.CreateExportImageTaskInput{}
+        output := &appstream.CreateExportImageTaskOutput{}
+
+        mockClient.On("CreateExportImageTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateExportImageTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFleet", func(t *testing.T) {
         input := &appstream.CreateFleetInput{}
         output := &appstream.CreateFleetOutput{}
@@ -236,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateImageBuilderStreamingURL", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateImageBuilderStreamingURL(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateImportedImage", func(t *testing.T) {
+        input := &appstream.CreateImportedImageInput{}
+        output := &appstream.CreateImportedImageOutput{}
+
+        mockClient.On("CreateImportedImage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateImportedImage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAppLicenseUsage", func(t *testing.T) {
+        input := &appstream.DescribeAppLicenseUsageInput{}
+        output := &appstream.DescribeAppLicenseUsageOutput{}
+
+        mockClient.On("DescribeAppLicenseUsage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAppLicenseUsage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDirectoryConfigs", func(t *testing.T) {
         input := &appstream.DescribeDirectoryConfigsInput{}
         output := &appstream.DescribeDirectoryConfigsOutput{}
@@ -645,6 +697,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeSoftwareAssociations", func(t *testing.T) {
+        input := &appstream.DescribeSoftwareAssociationsInput{}
+        output := &appstream.DescribeSoftwareAssociationsOutput{}
+
+        mockClient.On("DescribeSoftwareAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSoftwareAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeStacks", func(t *testing.T) {
         input := &appstream.DescribeStacksInput{}
         output := &appstream.DescribeStacksOutput{}
@@ -684,19 +749,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeUserStackAssociations", func(t *testing.T) {
-        input := &appstream.DescribeUserStackAssociationsInput{}
-        output := &appstream.DescribeUserStackAssociationsOutput{}
-
-        mockClient.On("DescribeUserStackAssociations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeUserStackAssociations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeUsers", func(t *testing.T) {
         input := &appstream.DescribeUsersInput{}
         output := &appstream.DescribeUsersOutput{}
@@ -704,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeUsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeUsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeUserStackAssociations", func(t *testing.T) {
+        input := &appstream.DescribeUserStackAssociationsInput{}
+        output := &appstream.DescribeUserStackAssociationsOutput{}
+
+        mockClient.On("DescribeUserStackAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeUserStackAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateSoftwareFromImageBuilder", func(t *testing.T) {
+        input := &appstream.DisassociateSoftwareFromImageBuilderInput{}
+        output := &appstream.DisassociateSoftwareFromImageBuilderOutput{}
+
+        mockClient.On("DisassociateSoftwareFromImageBuilder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSoftwareFromImageBuilder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableUser", func(t *testing.T) {
         input := &appstream.EnableUserInput{}
         output := &appstream.EnableUserOutput{}
@@ -795,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ExpireSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.ExpireSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetExportImageTask", func(t *testing.T) {
+        input := &appstream.GetExportImageTaskInput{}
+        output := &appstream.GetExportImageTaskOutput{}
+
+        mockClient.On("GetExportImageTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExportImageTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -834,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEntitledApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEntitledApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExportImageTasks", func(t *testing.T) {
+        input := &appstream.ListExportImageTasksInput{}
+        output := &appstream.ListExportImageTasksOutput{}
+
+        mockClient.On("ListExportImageTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExportImageTasks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -886,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartImageBuilder", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartImageBuilder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartSoftwareDeploymentToImageBuilder", func(t *testing.T) {
+        input := &appstream.StartSoftwareDeploymentToImageBuilderInput{}
+        output := &appstream.StartSoftwareDeploymentToImageBuilderOutput{}
+
+        mockClient.On("StartSoftwareDeploymentToImageBuilder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartSoftwareDeploymentToImageBuilder(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

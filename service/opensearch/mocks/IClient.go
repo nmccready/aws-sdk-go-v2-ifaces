@@ -421,6 +421,43 @@ func (_m *IClient) CreateDomain(ctx context.Context, params *opensearch.CreateDo
 	return r0, r1
 }
 
+// CreateIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIndex(ctx context.Context, params *opensearch.CreateIndexInput, optFns ...func(*opensearch.Options)) (*opensearch.CreateIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIndex")
+	}
+
+	var r0 *opensearch.CreateIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.CreateIndexInput, ...func(*opensearch.Options)) (*opensearch.CreateIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.CreateIndexInput, ...func(*opensearch.Options)) *opensearch.CreateIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.CreateIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.CreateIndexInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateOutboundConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateOutboundConnection(ctx context.Context, params *opensearch.CreateOutboundConnectionInput, optFns ...func(*opensearch.Options)) (*opensearch.CreateOutboundConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -709,6 +746,43 @@ func (_m *IClient) DeleteInboundConnection(ctx context.Context, params *opensear
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DeleteInboundConnectionInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIndex(ctx context.Context, params *opensearch.DeleteIndexInput, optFns ...func(*opensearch.Options)) (*opensearch.DeleteIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIndex")
+	}
+
+	var r0 *opensearch.DeleteIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeleteIndexInput, ...func(*opensearch.Options)) (*opensearch.DeleteIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeleteIndexInput, ...func(*opensearch.Options)) *opensearch.DeleteIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DeleteIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DeleteIndexInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1568,6 +1642,43 @@ func (_m *IClient) GetDataSource(ctx context.Context, params *opensearch.GetData
 	return r0, r1
 }
 
+// GetDefaultApplicationSetting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDefaultApplicationSetting(ctx context.Context, params *opensearch.GetDefaultApplicationSettingInput, optFns ...func(*opensearch.Options)) (*opensearch.GetDefaultApplicationSettingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDefaultApplicationSetting")
+	}
+
+	var r0 *opensearch.GetDefaultApplicationSettingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetDefaultApplicationSettingInput, ...func(*opensearch.Options)) (*opensearch.GetDefaultApplicationSettingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetDefaultApplicationSettingInput, ...func(*opensearch.Options)) *opensearch.GetDefaultApplicationSettingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.GetDefaultApplicationSettingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetDefaultApplicationSettingInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDirectQueryDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDirectQueryDataSource(ctx context.Context, params *opensearch.GetDirectQueryDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.GetDirectQueryDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1634,6 +1745,43 @@ func (_m *IClient) GetDomainMaintenanceStatus(ctx context.Context, params *opens
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetDomainMaintenanceStatusInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIndex(ctx context.Context, params *opensearch.GetIndexInput, optFns ...func(*opensearch.Options)) (*opensearch.GetIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIndex")
+	}
+
+	var r0 *opensearch.GetIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetIndexInput, ...func(*opensearch.Options)) (*opensearch.GetIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetIndexInput, ...func(*opensearch.Options)) *opensearch.GetIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.GetIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetIndexInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2326,6 +2474,43 @@ func (_m *IClient) PurchaseReservedInstanceOffering(ctx context.Context, params 
 	return r0, r1
 }
 
+// PutDefaultApplicationSetting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutDefaultApplicationSetting(ctx context.Context, params *opensearch.PutDefaultApplicationSettingInput, optFns ...func(*opensearch.Options)) (*opensearch.PutDefaultApplicationSettingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutDefaultApplicationSetting")
+	}
+
+	var r0 *opensearch.PutDefaultApplicationSettingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.PutDefaultApplicationSettingInput, ...func(*opensearch.Options)) (*opensearch.PutDefaultApplicationSettingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.PutDefaultApplicationSettingInput, ...func(*opensearch.Options)) *opensearch.PutDefaultApplicationSettingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.PutDefaultApplicationSettingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.PutDefaultApplicationSettingInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RejectInboundConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RejectInboundConnection(ctx context.Context, params *opensearch.RejectInboundConnectionInput, optFns ...func(*opensearch.Options)) (*opensearch.RejectInboundConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2651,6 +2836,43 @@ func (_m *IClient) UpdateDomainConfig(ctx context.Context, params *opensearch.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdateDomainConfigInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIndex(ctx context.Context, params *opensearch.UpdateIndexInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdateIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIndex")
+	}
+
+	var r0 *opensearch.UpdateIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateIndexInput, ...func(*opensearch.Options)) (*opensearch.UpdateIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateIndexInput, ...func(*opensearch.Options)) *opensearch.UpdateIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.UpdateIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdateIndexInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

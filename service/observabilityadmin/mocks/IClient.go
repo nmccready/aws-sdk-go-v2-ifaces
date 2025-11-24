@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateCentralizationRuleForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCentralizationRuleForOrganization(ctx context.Context, params *observabilityadmin.CreateCentralizationRuleForOrganizationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateCentralizationRuleForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCentralizationRuleForOrganization")
+	}
+
+	var r0 *observabilityadmin.CreateCentralizationRuleForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateCentralizationRuleForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.CreateCentralizationRuleForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.CreateCentralizationRuleForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.CreateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTelemetryRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTelemetryRule(ctx context.Context, params *observabilityadmin.CreateTelemetryRuleInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateTelemetryRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -88,6 +125,43 @@ func (_m *IClient) CreateTelemetryRuleForOrganization(ctx context.Context, param
 	return r0, r1
 }
 
+// DeleteCentralizationRuleForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCentralizationRuleForOrganization(ctx context.Context, params *observabilityadmin.DeleteCentralizationRuleForOrganizationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteCentralizationRuleForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCentralizationRuleForOrganization")
+	}
+
+	var r0 *observabilityadmin.DeleteCentralizationRuleForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteCentralizationRuleForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.DeleteCentralizationRuleForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.DeleteCentralizationRuleForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.DeleteCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteTelemetryRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteTelemetryRule(ctx context.Context, params *observabilityadmin.DeleteTelemetryRuleInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteTelemetryRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +228,80 @@ func (_m *IClient) DeleteTelemetryRuleForOrganization(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.DeleteTelemetryRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCentralizationRuleForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCentralizationRuleForOrganization(ctx context.Context, params *observabilityadmin.GetCentralizationRuleForOrganizationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.GetCentralizationRuleForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCentralizationRuleForOrganization")
+	}
+
+	var r0 *observabilityadmin.GetCentralizationRuleForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.GetCentralizationRuleForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.GetCentralizationRuleForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.GetCentralizationRuleForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTelemetryEnrichmentStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTelemetryEnrichmentStatus(ctx context.Context, params *observabilityadmin.GetTelemetryEnrichmentStatusInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.GetTelemetryEnrichmentStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTelemetryEnrichmentStatus")
+	}
+
+	var r0 *observabilityadmin.GetTelemetryEnrichmentStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetTelemetryEnrichmentStatusInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.GetTelemetryEnrichmentStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetTelemetryEnrichmentStatusInput, ...func(*observabilityadmin.Options)) *observabilityadmin.GetTelemetryEnrichmentStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.GetTelemetryEnrichmentStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetTelemetryEnrichmentStatusInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -302,6 +450,43 @@ func (_m *IClient) GetTelemetryRuleForOrganization(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetTelemetryRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCentralizationRulesForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCentralizationRulesForOrganization(ctx context.Context, params *observabilityadmin.ListCentralizationRulesForOrganizationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.ListCentralizationRulesForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCentralizationRulesForOrganization")
+	}
+
+	var r0 *observabilityadmin.ListCentralizationRulesForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListCentralizationRulesForOrganizationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.ListCentralizationRulesForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListCentralizationRulesForOrganizationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.ListCentralizationRulesForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.ListCentralizationRulesForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ListCentralizationRulesForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -513,6 +698,43 @@ func (_m *IClient) Options() observabilityadmin.Options {
 	return r0
 }
 
+// StartTelemetryEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTelemetryEnrichment(ctx context.Context, params *observabilityadmin.StartTelemetryEnrichmentInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.StartTelemetryEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTelemetryEnrichment")
+	}
+
+	var r0 *observabilityadmin.StartTelemetryEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.StartTelemetryEnrichmentInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.StartTelemetryEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.StartTelemetryEnrichmentInput, ...func(*observabilityadmin.Options)) *observabilityadmin.StartTelemetryEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.StartTelemetryEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.StartTelemetryEnrichmentInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartTelemetryEvaluation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartTelemetryEvaluation(ctx context.Context, params *observabilityadmin.StartTelemetryEvaluationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.StartTelemetryEvaluationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -579,6 +801,43 @@ func (_m *IClient) StartTelemetryEvaluationForOrganization(ctx context.Context, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.StartTelemetryEvaluationForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopTelemetryEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopTelemetryEnrichment(ctx context.Context, params *observabilityadmin.StopTelemetryEnrichmentInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.StopTelemetryEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopTelemetryEnrichment")
+	}
+
+	var r0 *observabilityadmin.StopTelemetryEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.StopTelemetryEnrichmentInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.StopTelemetryEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.StopTelemetryEnrichmentInput, ...func(*observabilityadmin.Options)) *observabilityadmin.StopTelemetryEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.StopTelemetryEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.StopTelemetryEnrichmentInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -727,6 +986,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *observabilityadmin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.UntagResourceInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCentralizationRuleForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCentralizationRuleForOrganization(ctx context.Context, params *observabilityadmin.UpdateCentralizationRuleForOrganizationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateCentralizationRuleForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCentralizationRuleForOrganization")
+	}
+
+	var r0 *observabilityadmin.UpdateCentralizationRuleForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.UpdateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateCentralizationRuleForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.UpdateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.UpdateCentralizationRuleForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.UpdateCentralizationRuleForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.UpdateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

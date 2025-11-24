@@ -163,6 +163,43 @@ func (_m *IClient) AssociateFleet(ctx context.Context, params *appstream.Associa
 	return r0, r1
 }
 
+// AssociateSoftwareToImageBuilder provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateSoftwareToImageBuilder(ctx context.Context, params *appstream.AssociateSoftwareToImageBuilderInput, optFns ...func(*appstream.Options)) (*appstream.AssociateSoftwareToImageBuilderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateSoftwareToImageBuilder")
+	}
+
+	var r0 *appstream.AssociateSoftwareToImageBuilderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.AssociateSoftwareToImageBuilderInput, ...func(*appstream.Options)) (*appstream.AssociateSoftwareToImageBuilderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.AssociateSoftwareToImageBuilderInput, ...func(*appstream.Options)) *appstream.AssociateSoftwareToImageBuilderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.AssociateSoftwareToImageBuilderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.AssociateSoftwareToImageBuilderInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchAssociateUserStack provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchAssociateUserStack(ctx context.Context, params *appstream.BatchAssociateUserStackInput, optFns ...func(*appstream.Options)) (*appstream.BatchAssociateUserStackOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -496,6 +533,43 @@ func (_m *IClient) CreateEntitlement(ctx context.Context, params *appstream.Crea
 	return r0, r1
 }
 
+// CreateExportImageTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateExportImageTask(ctx context.Context, params *appstream.CreateExportImageTaskInput, optFns ...func(*appstream.Options)) (*appstream.CreateExportImageTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateExportImageTask")
+	}
+
+	var r0 *appstream.CreateExportImageTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.CreateExportImageTaskInput, ...func(*appstream.Options)) (*appstream.CreateExportImageTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.CreateExportImageTaskInput, ...func(*appstream.Options)) *appstream.CreateExportImageTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.CreateExportImageTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.CreateExportImageTaskInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFleet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFleet(ctx context.Context, params *appstream.CreateFleetInput, optFns ...func(*appstream.Options)) (*appstream.CreateFleetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +673,43 @@ func (_m *IClient) CreateImageBuilderStreamingURL(ctx context.Context, params *a
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appstream.CreateImageBuilderStreamingURLInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateImportedImage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateImportedImage(ctx context.Context, params *appstream.CreateImportedImageInput, optFns ...func(*appstream.Options)) (*appstream.CreateImportedImageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateImportedImage")
+	}
+
+	var r0 *appstream.CreateImportedImageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.CreateImportedImageInput, ...func(*appstream.Options)) (*appstream.CreateImportedImageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.CreateImportedImageInput, ...func(*appstream.Options)) *appstream.CreateImportedImageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.CreateImportedImageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.CreateImportedImageInput, ...func(*appstream.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1421,6 +1532,43 @@ func (_m *IClient) DescribeAppBlocks(ctx context.Context, params *appstream.Desc
 	return r0, r1
 }
 
+// DescribeAppLicenseUsage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAppLicenseUsage(ctx context.Context, params *appstream.DescribeAppLicenseUsageInput, optFns ...func(*appstream.Options)) (*appstream.DescribeAppLicenseUsageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAppLicenseUsage")
+	}
+
+	var r0 *appstream.DescribeAppLicenseUsageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DescribeAppLicenseUsageInput, ...func(*appstream.Options)) (*appstream.DescribeAppLicenseUsageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DescribeAppLicenseUsageInput, ...func(*appstream.Options)) *appstream.DescribeAppLicenseUsageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.DescribeAppLicenseUsageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.DescribeAppLicenseUsageInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeApplicationFleetAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeApplicationFleetAssociations(ctx context.Context, params *appstream.DescribeApplicationFleetAssociationsInput, optFns ...func(*appstream.Options)) (*appstream.DescribeApplicationFleetAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1746,6 +1894,43 @@ func (_m *IClient) DescribeSessions(ctx context.Context, params *appstream.Descr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appstream.DescribeSessionsInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSoftwareAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSoftwareAssociations(ctx context.Context, params *appstream.DescribeSoftwareAssociationsInput, optFns ...func(*appstream.Options)) (*appstream.DescribeSoftwareAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSoftwareAssociations")
+	}
+
+	var r0 *appstream.DescribeSoftwareAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DescribeSoftwareAssociationsInput, ...func(*appstream.Options)) (*appstream.DescribeSoftwareAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DescribeSoftwareAssociationsInput, ...func(*appstream.Options)) *appstream.DescribeSoftwareAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.DescribeSoftwareAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.DescribeSoftwareAssociationsInput, ...func(*appstream.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2124,6 +2309,43 @@ func (_m *IClient) DisassociateFleet(ctx context.Context, params *appstream.Disa
 	return r0, r1
 }
 
+// DisassociateSoftwareFromImageBuilder provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateSoftwareFromImageBuilder(ctx context.Context, params *appstream.DisassociateSoftwareFromImageBuilderInput, optFns ...func(*appstream.Options)) (*appstream.DisassociateSoftwareFromImageBuilderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateSoftwareFromImageBuilder")
+	}
+
+	var r0 *appstream.DisassociateSoftwareFromImageBuilderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DisassociateSoftwareFromImageBuilderInput, ...func(*appstream.Options)) (*appstream.DisassociateSoftwareFromImageBuilderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DisassociateSoftwareFromImageBuilderInput, ...func(*appstream.Options)) *appstream.DisassociateSoftwareFromImageBuilderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.DisassociateSoftwareFromImageBuilderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.DisassociateSoftwareFromImageBuilderInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableUser(ctx context.Context, params *appstream.EnableUserInput, optFns ...func(*appstream.Options)) (*appstream.EnableUserOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2190,6 +2412,43 @@ func (_m *IClient) ExpireSession(ctx context.Context, params *appstream.ExpireSe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appstream.ExpireSessionInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetExportImageTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExportImageTask(ctx context.Context, params *appstream.GetExportImageTaskInput, optFns ...func(*appstream.Options)) (*appstream.GetExportImageTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExportImageTask")
+	}
+
+	var r0 *appstream.GetExportImageTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.GetExportImageTaskInput, ...func(*appstream.Options)) (*appstream.GetExportImageTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.GetExportImageTaskInput, ...func(*appstream.Options)) *appstream.GetExportImageTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.GetExportImageTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.GetExportImageTaskInput, ...func(*appstream.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2301,6 +2560,43 @@ func (_m *IClient) ListEntitledApplications(ctx context.Context, params *appstre
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appstream.ListEntitledApplicationsInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListExportImageTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExportImageTasks(ctx context.Context, params *appstream.ListExportImageTasksInput, optFns ...func(*appstream.Options)) (*appstream.ListExportImageTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExportImageTasks")
+	}
+
+	var r0 *appstream.ListExportImageTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.ListExportImageTasksInput, ...func(*appstream.Options)) (*appstream.ListExportImageTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.ListExportImageTasksInput, ...func(*appstream.Options)) *appstream.ListExportImageTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.ListExportImageTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.ListExportImageTasksInput, ...func(*appstream.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2467,6 +2763,43 @@ func (_m *IClient) StartImageBuilder(ctx context.Context, params *appstream.Star
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appstream.StartImageBuilderInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartSoftwareDeploymentToImageBuilder provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartSoftwareDeploymentToImageBuilder(ctx context.Context, params *appstream.StartSoftwareDeploymentToImageBuilderInput, optFns ...func(*appstream.Options)) (*appstream.StartSoftwareDeploymentToImageBuilderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartSoftwareDeploymentToImageBuilder")
+	}
+
+	var r0 *appstream.StartSoftwareDeploymentToImageBuilderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.StartSoftwareDeploymentToImageBuilderInput, ...func(*appstream.Options)) (*appstream.StartSoftwareDeploymentToImageBuilderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.StartSoftwareDeploymentToImageBuilderInput, ...func(*appstream.Options)) *appstream.StartSoftwareDeploymentToImageBuilderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.StartSoftwareDeploymentToImageBuilderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.StartSoftwareDeploymentToImageBuilderInput, ...func(*appstream.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

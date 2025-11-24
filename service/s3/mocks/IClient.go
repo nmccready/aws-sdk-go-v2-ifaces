@@ -1013,6 +1013,43 @@ func (_m *IClient) DeletePublicAccessBlock(ctx context.Context, params *s3.Delet
 	return r0, r1
 }
 
+// GetBucketAbac provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBucketAbac(ctx context.Context, params *s3.GetBucketAbacInput, optFns ...func(*s3.Options)) (*s3.GetBucketAbacOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBucketAbac")
+	}
+
+	var r0 *s3.GetBucketAbacOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.GetBucketAbacInput, ...func(*s3.Options)) (*s3.GetBucketAbacOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.GetBucketAbacInput, ...func(*s3.Options)) *s3.GetBucketAbacOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.GetBucketAbacOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.GetBucketAbacInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBucketAccelerateConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBucketAccelerateConfiguration(ctx context.Context, params *s3.GetBucketAccelerateConfigurationInput, optFns ...func(*s3.Options)) (*s3.GetBucketAccelerateConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2657,6 +2694,43 @@ func (_m *IClient) Options() s3.Options {
 	}
 
 	return r0
+}
+
+// PutBucketAbac provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutBucketAbac(ctx context.Context, params *s3.PutBucketAbacInput, optFns ...func(*s3.Options)) (*s3.PutBucketAbacOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutBucketAbac")
+	}
+
+	var r0 *s3.PutBucketAbacOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.PutBucketAbacInput, ...func(*s3.Options)) (*s3.PutBucketAbacOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.PutBucketAbacInput, ...func(*s3.Options)) *s3.PutBucketAbacOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.PutBucketAbacOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.PutBucketAbacInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutBucketAccelerateConfiguration provides a mock function with given fields: ctx, params, optFns

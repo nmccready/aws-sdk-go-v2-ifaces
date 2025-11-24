@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataflowEndpointGroupV2", func(t *testing.T) {
+        input := &groundstation.CreateDataflowEndpointGroupV2Input{}
+        output := &groundstation.CreateDataflowEndpointGroupV2Output{}
+
+        mockClient.On("CreateDataflowEndpointGroupV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataflowEndpointGroupV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEphemeris", func(t *testing.T) {
         input := &groundstation.CreateEphemerisInput{}
         output := &groundstation.CreateEphemerisOutput{}
@@ -184,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentTaskResponseUrl", func(t *testing.T) {
+        input := &groundstation.GetAgentTaskResponseUrlInput{}
+        output := &groundstation.GetAgentTaskResponseUrlOutput{}
+
+        mockClient.On("GetAgentTaskResponseUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentTaskResponseUrl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

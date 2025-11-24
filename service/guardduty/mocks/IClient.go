@@ -1532,6 +1532,43 @@ func (_m *IClient) GetMalwareProtectionPlan(ctx context.Context, params *guarddu
 	return r0, r1
 }
 
+// GetMalwareScan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMalwareScan(ctx context.Context, params *guardduty.GetMalwareScanInput, optFns ...func(*guardduty.Options)) (*guardduty.GetMalwareScanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMalwareScan")
+	}
+
+	var r0 *guardduty.GetMalwareScanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetMalwareScanInput, ...func(*guardduty.Options)) (*guardduty.GetMalwareScanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetMalwareScanInput, ...func(*guardduty.Options)) *guardduty.GetMalwareScanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetMalwareScanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetMalwareScanInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetMalwareScanSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetMalwareScanSettings(ctx context.Context, params *guardduty.GetMalwareScanSettingsInput, optFns ...func(*guardduty.Options)) (*guardduty.GetMalwareScanSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2198,6 +2235,43 @@ func (_m *IClient) ListMalwareProtectionPlans(ctx context.Context, params *guard
 	return r0, r1
 }
 
+// ListMalwareScans provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMalwareScans(ctx context.Context, params *guardduty.ListMalwareScansInput, optFns ...func(*guardduty.Options)) (*guardduty.ListMalwareScansOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMalwareScans")
+	}
+
+	var r0 *guardduty.ListMalwareScansOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListMalwareScansInput, ...func(*guardduty.Options)) (*guardduty.ListMalwareScansOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListMalwareScansInput, ...func(*guardduty.Options)) *guardduty.ListMalwareScansOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListMalwareScansOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListMalwareScansInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListMembers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListMembers(ctx context.Context, params *guardduty.ListMembersInput, optFns ...func(*guardduty.Options)) (*guardduty.ListMembersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2473,6 +2547,43 @@ func (_m *IClient) Options() guardduty.Options {
 	}
 
 	return r0
+}
+
+// SendObjectMalwareScan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendObjectMalwareScan(ctx context.Context, params *guardduty.SendObjectMalwareScanInput, optFns ...func(*guardduty.Options)) (*guardduty.SendObjectMalwareScanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendObjectMalwareScan")
+	}
+
+	var r0 *guardduty.SendObjectMalwareScanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.SendObjectMalwareScanInput, ...func(*guardduty.Options)) (*guardduty.SendObjectMalwareScanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.SendObjectMalwareScanInput, ...func(*guardduty.Options)) *guardduty.SendObjectMalwareScanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.SendObjectMalwareScanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.SendObjectMalwareScanInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartMalwareScan provides a mock function with given fields: ctx, params, optFns

@@ -281,6 +281,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTopic", func(t *testing.T) {
+        input := &kafka.DescribeTopicInput{}
+        output := &kafka.DescribeTopicOutput{}
+
+        mockClient.On("DescribeTopic", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTopic(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTopicPartitions", func(t *testing.T) {
+        input := &kafka.DescribeTopicPartitionsInput{}
+        output := &kafka.DescribeTopicPartitionsOutput{}
+
+        mockClient.On("DescribeTopicPartitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTopicPartitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeVpcConnection", func(t *testing.T) {
         input := &kafka.DescribeVpcConnectionInput{}
         output := &kafka.DescribeVpcConnectionOutput{}
@@ -489,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTopics", func(t *testing.T) {
+        input := &kafka.ListTopicsInput{}
+        output := &kafka.ListTopicsOutput{}
+
+        mockClient.On("ListTopics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTopics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListVpcConnections", func(t *testing.T) {
         input := &kafka.ListVpcConnectionsInput{}
         output := &kafka.ListVpcConnectionsOutput{}
@@ -665,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateMonitoring", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateMonitoring(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRebalancing", func(t *testing.T) {
+        input := &kafka.UpdateRebalancingInput{}
+        output := &kafka.UpdateRebalancingOutput{}
+
+        mockClient.On("UpdateRebalancing", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRebalancing(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

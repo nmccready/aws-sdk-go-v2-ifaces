@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  AcceptMarketplaceRegistration(ctx context.Context, params *AcceptMarketplaceRegistrationInput, optFns ...func(*Options)) (*AcceptMarketplaceRegistrationOutput, error) 
+ AssociateIamRoleToResource(ctx context.Context, params *AssociateIamRoleToResourceInput, optFns ...func(*Options)) (*AssociateIamRoleToResourceOutput, error) 
  CreateCloudAutonomousVmCluster(ctx context.Context, params *CreateCloudAutonomousVmClusterInput, optFns ...func(*Options)) (*CreateCloudAutonomousVmClusterOutput, error) 
  CreateCloudExadataInfrastructure(ctx context.Context, params *CreateCloudExadataInfrastructureInput, optFns ...func(*Options)) (*CreateCloudExadataInfrastructureOutput, error) 
  CreateCloudVmCluster(ctx context.Context, params *CreateCloudVmClusterInput, optFns ...func(*Options)) (*CreateCloudVmClusterOutput, error) 
@@ -21,6 +22,7 @@ type IClient interface {
  DeleteCloudVmCluster(ctx context.Context, params *DeleteCloudVmClusterInput, optFns ...func(*Options)) (*DeleteCloudVmClusterOutput, error) 
  DeleteOdbNetwork(ctx context.Context, params *DeleteOdbNetworkInput, optFns ...func(*Options)) (*DeleteOdbNetworkOutput, error) 
  DeleteOdbPeeringConnection(ctx context.Context, params *DeleteOdbPeeringConnectionInput, optFns ...func(*Options)) (*DeleteOdbPeeringConnectionOutput, error) 
+ DisassociateIamRoleFromResource(ctx context.Context, params *DisassociateIamRoleFromResourceInput, optFns ...func(*Options)) (*DisassociateIamRoleFromResourceOutput, error) 
  GetCloudAutonomousVmCluster(ctx context.Context, params *GetCloudAutonomousVmClusterInput, optFns ...func(*Options)) (*GetCloudAutonomousVmClusterOutput, error) 
  GetCloudExadataInfrastructure(ctx context.Context, params *GetCloudExadataInfrastructureInput, optFns ...func(*Options)) (*GetCloudExadataInfrastructureOutput, error) 
  GetCloudExadataInfrastructureUnallocatedResources(ctx context.Context, params *GetCloudExadataInfrastructureUnallocatedResourcesInput, optFns ...func(*Options)) (*GetCloudExadataInfrastructureUnallocatedResourcesOutput, error) 
@@ -50,4 +52,5 @@ type IClient interface {
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateCloudExadataInfrastructure(ctx context.Context, params *UpdateCloudExadataInfrastructureInput, optFns ...func(*Options)) (*UpdateCloudExadataInfrastructureOutput, error) 
  UpdateOdbNetwork(ctx context.Context, params *UpdateOdbNetworkInput, optFns ...func(*Options)) (*UpdateOdbNetworkOutput, error) 
+ UpdateOdbPeeringConnection(ctx context.Context, params *UpdateOdbPeeringConnectionInput, optFns ...func(*Options)) (*UpdateOdbPeeringConnectionOutput, error) 
 }

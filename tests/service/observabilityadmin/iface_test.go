@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCentralizationRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.CreateCentralizationRuleForOrganizationInput{}
+        output := &observabilityadmin.CreateCentralizationRuleForOrganizationOutput{}
+
+        mockClient.On("CreateCentralizationRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCentralizationRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTelemetryRule", func(t *testing.T) {
         input := &observabilityadmin.CreateTelemetryRuleInput{}
         output := &observabilityadmin.CreateTelemetryRuleOutput{}
@@ -60,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCentralizationRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.DeleteCentralizationRuleForOrganizationInput{}
+        output := &observabilityadmin.DeleteCentralizationRuleForOrganizationOutput{}
+
+        mockClient.On("DeleteCentralizationRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCentralizationRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTelemetryRule", func(t *testing.T) {
         input := &observabilityadmin.DeleteTelemetryRuleInput{}
         output := &observabilityadmin.DeleteTelemetryRuleOutput{}
@@ -80,6 +106,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTelemetryRuleForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTelemetryRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCentralizationRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.GetCentralizationRuleForOrganizationInput{}
+        output := &observabilityadmin.GetCentralizationRuleForOrganizationOutput{}
+
+        mockClient.On("GetCentralizationRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCentralizationRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTelemetryEnrichmentStatus", func(t *testing.T) {
+        input := &observabilityadmin.GetTelemetryEnrichmentStatusInput{}
+        output := &observabilityadmin.GetTelemetryEnrichmentStatusOutput{}
+
+        mockClient.On("GetTelemetryEnrichmentStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTelemetryEnrichmentStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTelemetryRuleForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTelemetryRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCentralizationRulesForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.ListCentralizationRulesForOrganizationInput{}
+        output := &observabilityadmin.ListCentralizationRulesForOrganizationOutput{}
+
+        mockClient.On("ListCentralizationRulesForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCentralizationRulesForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartTelemetryEnrichment", func(t *testing.T) {
+        input := &observabilityadmin.StartTelemetryEnrichmentInput{}
+        output := &observabilityadmin.StartTelemetryEnrichmentOutput{}
+
+        mockClient.On("StartTelemetryEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTelemetryEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartTelemetryEvaluation", func(t *testing.T) {
         input := &observabilityadmin.StartTelemetryEvaluationInput{}
         output := &observabilityadmin.StartTelemetryEvaluationOutput{}
@@ -223,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartTelemetryEvaluationForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartTelemetryEvaluationForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopTelemetryEnrichment", func(t *testing.T) {
+        input := &observabilityadmin.StopTelemetryEnrichmentInput{}
+        output := &observabilityadmin.StopTelemetryEnrichmentOutput{}
+
+        mockClient.On("StopTelemetryEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopTelemetryEnrichment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -275,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCentralizationRuleForOrganization", func(t *testing.T) {
+        input := &observabilityadmin.UpdateCentralizationRuleForOrganizationInput{}
+        output := &observabilityadmin.UpdateCentralizationRuleForOrganizationOutput{}
+
+        mockClient.On("UpdateCentralizationRuleForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCentralizationRuleForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -126,6 +126,80 @@ func (_m *IClient) BatchStartRecommendations(ctx context.Context, params *databa
 	return r0, r1
 }
 
+// CancelMetadataModelConversion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelMetadataModelConversion(ctx context.Context, params *databasemigrationservice.CancelMetadataModelConversionInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.CancelMetadataModelConversionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelMetadataModelConversion")
+	}
+
+	var r0 *databasemigrationservice.CancelMetadataModelConversionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.CancelMetadataModelConversionInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.CancelMetadataModelConversionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.CancelMetadataModelConversionInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.CancelMetadataModelConversionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.CancelMetadataModelConversionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.CancelMetadataModelConversionInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CancelMetadataModelCreation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelMetadataModelCreation(ctx context.Context, params *databasemigrationservice.CancelMetadataModelCreationInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.CancelMetadataModelCreationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelMetadataModelCreation")
+	}
+
+	var r0 *databasemigrationservice.CancelMetadataModelCreationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.CancelMetadataModelCreationInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.CancelMetadataModelCreationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.CancelMetadataModelCreationInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.CancelMetadataModelCreationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.CancelMetadataModelCreationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.CancelMetadataModelCreationInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelReplicationTaskAssessmentRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelReplicationTaskAssessmentRun(ctx context.Context, params *databasemigrationservice.CancelReplicationTaskAssessmentRunInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.CancelReplicationTaskAssessmentRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1902,6 +1976,43 @@ func (_m *IClient) DescribeInstanceProfiles(ctx context.Context, params *databas
 	return r0, r1
 }
 
+// DescribeMetadataModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetadataModel(ctx context.Context, params *databasemigrationservice.DescribeMetadataModelInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetadataModel")
+	}
+
+	var r0 *databasemigrationservice.DescribeMetadataModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.DescribeMetadataModelInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.DescribeMetadataModelInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.DescribeMetadataModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.DescribeMetadataModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.DescribeMetadataModelInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeMetadataModelAssessments provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeMetadataModelAssessments(ctx context.Context, params *databasemigrationservice.DescribeMetadataModelAssessmentsInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelAssessmentsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1939,6 +2050,43 @@ func (_m *IClient) DescribeMetadataModelAssessments(ctx context.Context, params 
 	return r0, r1
 }
 
+// DescribeMetadataModelChildren provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetadataModelChildren(ctx context.Context, params *databasemigrationservice.DescribeMetadataModelChildrenInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelChildrenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetadataModelChildren")
+	}
+
+	var r0 *databasemigrationservice.DescribeMetadataModelChildrenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.DescribeMetadataModelChildrenInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelChildrenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.DescribeMetadataModelChildrenInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.DescribeMetadataModelChildrenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.DescribeMetadataModelChildrenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.DescribeMetadataModelChildrenInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeMetadataModelConversions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeMetadataModelConversions(ctx context.Context, params *databasemigrationservice.DescribeMetadataModelConversionsInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelConversionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1968,6 +2116,43 @@ func (_m *IClient) DescribeMetadataModelConversions(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.DescribeMetadataModelConversionsInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeMetadataModelCreations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetadataModelCreations(ctx context.Context, params *databasemigrationservice.DescribeMetadataModelCreationsInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelCreationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetadataModelCreations")
+	}
+
+	var r0 *databasemigrationservice.DescribeMetadataModelCreationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.DescribeMetadataModelCreationsInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.DescribeMetadataModelCreationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.DescribeMetadataModelCreationsInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.DescribeMetadataModelCreationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.DescribeMetadataModelCreationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.DescribeMetadataModelCreationsInput, ...func(*databasemigrationservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2782,6 +2967,43 @@ func (_m *IClient) ExportMetadataModelAssessment(ctx context.Context, params *da
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.ExportMetadataModelAssessmentInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTargetSelectionRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTargetSelectionRules(ctx context.Context, params *databasemigrationservice.GetTargetSelectionRulesInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.GetTargetSelectionRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTargetSelectionRules")
+	}
+
+	var r0 *databasemigrationservice.GetTargetSelectionRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.GetTargetSelectionRulesInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.GetTargetSelectionRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.GetTargetSelectionRulesInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.GetTargetSelectionRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.GetTargetSelectionRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.GetTargetSelectionRulesInput, ...func(*databasemigrationservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3688,6 +3910,43 @@ func (_m *IClient) StartMetadataModelConversion(ctx context.Context, params *dat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.StartMetadataModelConversionInput, ...func(*databasemigrationservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartMetadataModelCreation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMetadataModelCreation(ctx context.Context, params *databasemigrationservice.StartMetadataModelCreationInput, optFns ...func(*databasemigrationservice.Options)) (*databasemigrationservice.StartMetadataModelCreationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMetadataModelCreation")
+	}
+
+	var r0 *databasemigrationservice.StartMetadataModelCreationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.StartMetadataModelCreationInput, ...func(*databasemigrationservice.Options)) (*databasemigrationservice.StartMetadataModelCreationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *databasemigrationservice.StartMetadataModelCreationInput, ...func(*databasemigrationservice.Options)) *databasemigrationservice.StartMetadataModelCreationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*databasemigrationservice.StartMetadataModelCreationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *databasemigrationservice.StartMetadataModelCreationInput, ...func(*databasemigrationservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

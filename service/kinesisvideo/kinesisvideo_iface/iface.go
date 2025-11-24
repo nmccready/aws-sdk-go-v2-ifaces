@@ -22,6 +22,7 @@ type IClient interface {
  DescribeNotificationConfiguration(ctx context.Context, params *DescribeNotificationConfigurationInput, optFns ...func(*Options)) (*DescribeNotificationConfigurationOutput, error) 
  DescribeSignalingChannel(ctx context.Context, params *DescribeSignalingChannelInput, optFns ...func(*Options)) (*DescribeSignalingChannelOutput, error) 
  DescribeStream(ctx context.Context, params *DescribeStreamInput, optFns ...func(*Options)) (*DescribeStreamOutput, error) 
+ DescribeStreamStorageConfiguration(ctx context.Context, params *DescribeStreamStorageConfigurationInput, optFns ...func(*Options)) (*DescribeStreamStorageConfigurationOutput, error) 
  GetDataEndpoint(ctx context.Context, params *GetDataEndpointInput, optFns ...func(*Options)) (*GetDataEndpointOutput, error) 
  GetSignalingChannelEndpoint(ctx context.Context, params *GetSignalingChannelEndpointInput, optFns ...func(*Options)) (*GetSignalingChannelEndpointOutput, error) 
  ListEdgeAgentConfigurations(ctx context.Context, params *ListEdgeAgentConfigurationsInput, optFns ...func(*Options)) (*ListEdgeAgentConfigurationsOutput, error) 
@@ -40,4 +41,5 @@ type IClient interface {
  UpdateNotificationConfiguration(ctx context.Context, params *UpdateNotificationConfigurationInput, optFns ...func(*Options)) (*UpdateNotificationConfigurationOutput, error) 
  UpdateSignalingChannel(ctx context.Context, params *UpdateSignalingChannelInput, optFns ...func(*Options)) (*UpdateSignalingChannelOutput, error) 
  UpdateStream(ctx context.Context, params *UpdateStreamInput, optFns ...func(*Options)) (*UpdateStreamOutput, error) 
+ UpdateStreamStorageConfiguration(ctx context.Context, params *UpdateStreamStorageConfigurationInput, optFns ...func(*Options)) (*UpdateStreamStorageConfigurationOutput, error) 
 }

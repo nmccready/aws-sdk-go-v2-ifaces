@@ -775,6 +775,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateLakehouseConfiguration", func(t *testing.T) {
+        input := &redshiftserverless.UpdateLakehouseConfigurationInput{}
+        output := &redshiftserverless.UpdateLakehouseConfigurationOutput{}
+
+        mockClient.On("UpdateLakehouseConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLakehouseConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateNamespace", func(t *testing.T) {
         input := &redshiftserverless.UpdateNamespaceInput{}
         output := &redshiftserverless.UpdateNamespaceOutput{}

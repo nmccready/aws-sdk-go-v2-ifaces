@@ -52,6 +52,43 @@ func (_m *IClient) GetDataAutomationStatus(ctx context.Context, params *bedrockd
 	return r0, r1
 }
 
+// InvokeDataAutomation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeDataAutomation(ctx context.Context, params *bedrockdataautomationruntime.InvokeDataAutomationInput, optFns ...func(*bedrockdataautomationruntime.Options)) (*bedrockdataautomationruntime.InvokeDataAutomationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeDataAutomation")
+	}
+
+	var r0 *bedrockdataautomationruntime.InvokeDataAutomationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomationruntime.InvokeDataAutomationInput, ...func(*bedrockdataautomationruntime.Options)) (*bedrockdataautomationruntime.InvokeDataAutomationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomationruntime.InvokeDataAutomationInput, ...func(*bedrockdataautomationruntime.Options)) *bedrockdataautomationruntime.InvokeDataAutomationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomationruntime.InvokeDataAutomationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomationruntime.InvokeDataAutomationInput, ...func(*bedrockdataautomationruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InvokeDataAutomationAsync provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InvokeDataAutomationAsync(ctx context.Context, params *bedrockdataautomationruntime.InvokeDataAutomationAsyncInput, optFns ...func(*bedrockdataautomationruntime.Options)) (*bedrockdataautomationruntime.InvokeDataAutomationAsyncOutput, error) {
 	_va := make([]interface{}, len(optFns))

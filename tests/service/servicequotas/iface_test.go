@@ -86,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetAWSDefaultServiceQuota", func(t *testing.T) {
-        input := &servicequotas.GetAWSDefaultServiceQuotaInput{}
-        output := &servicequotas.GetAWSDefaultServiceQuotaOutput{}
-
-        mockClient.On("GetAWSDefaultServiceQuota", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetAWSDefaultServiceQuota(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetAssociationForServiceQuotaTemplate", func(t *testing.T) {
         input := &servicequotas.GetAssociationForServiceQuotaTemplateInput{}
         output := &servicequotas.GetAssociationForServiceQuotaTemplateOutput{}
@@ -106,6 +93,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAssociationForServiceQuotaTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAssociationForServiceQuotaTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutoManagementConfiguration", func(t *testing.T) {
+        input := &servicequotas.GetAutoManagementConfigurationInput{}
+        output := &servicequotas.GetAutoManagementConfigurationOutput{}
+
+        mockClient.On("GetAutoManagementConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutoManagementConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAWSDefaultServiceQuota", func(t *testing.T) {
+        input := &servicequotas.GetAWSDefaultServiceQuotaInput{}
+        output := &servicequotas.GetAWSDefaultServiceQuotaOutput{}
+
+        mockClient.On("GetAWSDefaultServiceQuota", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAWSDefaultServiceQuota(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -268,6 +281,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartAutoManagement", func(t *testing.T) {
+        input := &servicequotas.StartAutoManagementInput{}
+        output := &servicequotas.StartAutoManagementOutput{}
+
+        mockClient.On("StartAutoManagement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAutoManagement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopAutoManagement", func(t *testing.T) {
+        input := &servicequotas.StopAutoManagementInput{}
+        output := &servicequotas.StopAutoManagementOutput{}
+
+        mockClient.On("StopAutoManagement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopAutoManagement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &servicequotas.TagResourceInput{}
         output := &servicequotas.TagResourceOutput{}
@@ -288,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutoManagement", func(t *testing.T) {
+        input := &servicequotas.UpdateAutoManagementInput{}
+        output := &servicequotas.UpdateAutoManagementOutput{}
+
+        mockClient.On("UpdateAutoManagement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutoManagement(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

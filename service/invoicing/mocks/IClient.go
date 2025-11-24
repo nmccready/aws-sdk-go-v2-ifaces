@@ -89,6 +89,43 @@ func (_m *IClient) CreateInvoiceUnit(ctx context.Context, params *invoicing.Crea
 	return r0, r1
 }
 
+// CreateProcurementPortalPreference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateProcurementPortalPreference(ctx context.Context, params *invoicing.CreateProcurementPortalPreferenceInput, optFns ...func(*invoicing.Options)) (*invoicing.CreateProcurementPortalPreferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateProcurementPortalPreference")
+	}
+
+	var r0 *invoicing.CreateProcurementPortalPreferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.CreateProcurementPortalPreferenceInput, ...func(*invoicing.Options)) (*invoicing.CreateProcurementPortalPreferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.CreateProcurementPortalPreferenceInput, ...func(*invoicing.Options)) *invoicing.CreateProcurementPortalPreferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.CreateProcurementPortalPreferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.CreateProcurementPortalPreferenceInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteInvoiceUnit provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteInvoiceUnit(ctx context.Context, params *invoicing.DeleteInvoiceUnitInput, optFns ...func(*invoicing.Options)) (*invoicing.DeleteInvoiceUnitOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -126,6 +163,80 @@ func (_m *IClient) DeleteInvoiceUnit(ctx context.Context, params *invoicing.Dele
 	return r0, r1
 }
 
+// DeleteProcurementPortalPreference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProcurementPortalPreference(ctx context.Context, params *invoicing.DeleteProcurementPortalPreferenceInput, optFns ...func(*invoicing.Options)) (*invoicing.DeleteProcurementPortalPreferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProcurementPortalPreference")
+	}
+
+	var r0 *invoicing.DeleteProcurementPortalPreferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.DeleteProcurementPortalPreferenceInput, ...func(*invoicing.Options)) (*invoicing.DeleteProcurementPortalPreferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.DeleteProcurementPortalPreferenceInput, ...func(*invoicing.Options)) *invoicing.DeleteProcurementPortalPreferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.DeleteProcurementPortalPreferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.DeleteProcurementPortalPreferenceInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetInvoicePDF provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInvoicePDF(ctx context.Context, params *invoicing.GetInvoicePDFInput, optFns ...func(*invoicing.Options)) (*invoicing.GetInvoicePDFOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInvoicePDF")
+	}
+
+	var r0 *invoicing.GetInvoicePDFOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.GetInvoicePDFInput, ...func(*invoicing.Options)) (*invoicing.GetInvoicePDFOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.GetInvoicePDFInput, ...func(*invoicing.Options)) *invoicing.GetInvoicePDFOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.GetInvoicePDFOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.GetInvoicePDFInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetInvoiceUnit provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetInvoiceUnit(ctx context.Context, params *invoicing.GetInvoiceUnitInput, optFns ...func(*invoicing.Options)) (*invoicing.GetInvoiceUnitOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -155,6 +266,43 @@ func (_m *IClient) GetInvoiceUnit(ctx context.Context, params *invoicing.GetInvo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.GetInvoiceUnitInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProcurementPortalPreference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProcurementPortalPreference(ctx context.Context, params *invoicing.GetProcurementPortalPreferenceInput, optFns ...func(*invoicing.Options)) (*invoicing.GetProcurementPortalPreferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProcurementPortalPreference")
+	}
+
+	var r0 *invoicing.GetProcurementPortalPreferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.GetProcurementPortalPreferenceInput, ...func(*invoicing.Options)) (*invoicing.GetProcurementPortalPreferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.GetProcurementPortalPreferenceInput, ...func(*invoicing.Options)) *invoicing.GetProcurementPortalPreferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.GetProcurementPortalPreferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.GetProcurementPortalPreferenceInput, ...func(*invoicing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -237,6 +385,43 @@ func (_m *IClient) ListInvoiceUnits(ctx context.Context, params *invoicing.ListI
 	return r0, r1
 }
 
+// ListProcurementPortalPreferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProcurementPortalPreferences(ctx context.Context, params *invoicing.ListProcurementPortalPreferencesInput, optFns ...func(*invoicing.Options)) (*invoicing.ListProcurementPortalPreferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProcurementPortalPreferences")
+	}
+
+	var r0 *invoicing.ListProcurementPortalPreferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListProcurementPortalPreferencesInput, ...func(*invoicing.Options)) (*invoicing.ListProcurementPortalPreferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListProcurementPortalPreferencesInput, ...func(*invoicing.Options)) *invoicing.ListProcurementPortalPreferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.ListProcurementPortalPreferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.ListProcurementPortalPreferencesInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *invoicing.ListTagsForResourceInput, optFns ...func(*invoicing.Options)) (*invoicing.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -290,6 +475,43 @@ func (_m *IClient) Options() invoicing.Options {
 	}
 
 	return r0
+}
+
+// PutProcurementPortalPreference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutProcurementPortalPreference(ctx context.Context, params *invoicing.PutProcurementPortalPreferenceInput, optFns ...func(*invoicing.Options)) (*invoicing.PutProcurementPortalPreferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutProcurementPortalPreference")
+	}
+
+	var r0 *invoicing.PutProcurementPortalPreferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.PutProcurementPortalPreferenceInput, ...func(*invoicing.Options)) (*invoicing.PutProcurementPortalPreferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.PutProcurementPortalPreferenceInput, ...func(*invoicing.Options)) *invoicing.PutProcurementPortalPreferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.PutProcurementPortalPreferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.PutProcurementPortalPreferenceInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // TagResource provides a mock function with given fields: ctx, params, optFns
@@ -395,6 +617,43 @@ func (_m *IClient) UpdateInvoiceUnit(ctx context.Context, params *invoicing.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.UpdateInvoiceUnitInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProcurementPortalPreferenceStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProcurementPortalPreferenceStatus(ctx context.Context, params *invoicing.UpdateProcurementPortalPreferenceStatusInput, optFns ...func(*invoicing.Options)) (*invoicing.UpdateProcurementPortalPreferenceStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProcurementPortalPreferenceStatus")
+	}
+
+	var r0 *invoicing.UpdateProcurementPortalPreferenceStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.UpdateProcurementPortalPreferenceStatusInput, ...func(*invoicing.Options)) (*invoicing.UpdateProcurementPortalPreferenceStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.UpdateProcurementPortalPreferenceStatusInput, ...func(*invoicing.Options)) *invoicing.UpdateProcurementPortalPreferenceStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.UpdateProcurementPortalPreferenceStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.UpdateProcurementPortalPreferenceStatusInput, ...func(*invoicing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

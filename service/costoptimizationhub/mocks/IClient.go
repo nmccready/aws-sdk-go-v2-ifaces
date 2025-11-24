@@ -89,6 +89,43 @@ func (_m *IClient) GetRecommendation(ctx context.Context, params *costoptimizati
 	return r0, r1
 }
 
+// ListEfficiencyMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEfficiencyMetrics(ctx context.Context, params *costoptimizationhub.ListEfficiencyMetricsInput, optFns ...func(*costoptimizationhub.Options)) (*costoptimizationhub.ListEfficiencyMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEfficiencyMetrics")
+	}
+
+	var r0 *costoptimizationhub.ListEfficiencyMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *costoptimizationhub.ListEfficiencyMetricsInput, ...func(*costoptimizationhub.Options)) (*costoptimizationhub.ListEfficiencyMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *costoptimizationhub.ListEfficiencyMetricsInput, ...func(*costoptimizationhub.Options)) *costoptimizationhub.ListEfficiencyMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*costoptimizationhub.ListEfficiencyMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *costoptimizationhub.ListEfficiencyMetricsInput, ...func(*costoptimizationhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEnrollmentStatuses provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEnrollmentStatuses(ctx context.Context, params *costoptimizationhub.ListEnrollmentStatusesInput, optFns ...func(*costoptimizationhub.Options)) (*costoptimizationhub.ListEnrollmentStatusesOutput, error) {
 	_va := make([]interface{}, len(optFns))

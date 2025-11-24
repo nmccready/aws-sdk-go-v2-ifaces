@@ -1384,6 +1384,43 @@ func (_m *IClient) GetMatches(ctx context.Context, params *customerprofiles.GetM
 	return r0, r1
 }
 
+// GetProfileHistoryRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProfileHistoryRecord(ctx context.Context, params *customerprofiles.GetProfileHistoryRecordInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetProfileHistoryRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProfileHistoryRecord")
+	}
+
+	var r0 *customerprofiles.GetProfileHistoryRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetProfileHistoryRecordInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetProfileHistoryRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetProfileHistoryRecordInput, ...func(*customerprofiles.Options)) *customerprofiles.GetProfileHistoryRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetProfileHistoryRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetProfileHistoryRecordInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetProfileObjectType provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetProfileObjectType(ctx context.Context, params *customerprofiles.GetProfileObjectTypeInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetProfileObjectTypeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2190,6 +2227,43 @@ func (_m *IClient) ListProfileAttributeValues(ctx context.Context, params *custo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListProfileAttributeValuesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProfileHistoryRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProfileHistoryRecords(ctx context.Context, params *customerprofiles.ListProfileHistoryRecordsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListProfileHistoryRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProfileHistoryRecords")
+	}
+
+	var r0 *customerprofiles.ListProfileHistoryRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListProfileHistoryRecordsInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListProfileHistoryRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListProfileHistoryRecordsInput, ...func(*customerprofiles.Options)) *customerprofiles.ListProfileHistoryRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListProfileHistoryRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListProfileHistoryRecordsInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

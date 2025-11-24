@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListComponentTypes", func(t *testing.T) {
-        input := &iottwinmaker.ListComponentTypesInput{}
-        output := &iottwinmaker.ListComponentTypesOutput{}
-
-        mockClient.On("ListComponentTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListComponentTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListComponents", func(t *testing.T) {
         input := &iottwinmaker.ListComponentsInput{}
         output := &iottwinmaker.ListComponentsOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListComponents", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListComponents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListComponentTypes", func(t *testing.T) {
+        input := &iottwinmaker.ListComponentTypesInput{}
+        output := &iottwinmaker.ListComponentTypesOutput{}
+
+        mockClient.On("ListComponentTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListComponentTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

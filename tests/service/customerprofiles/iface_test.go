@@ -515,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetProfileHistoryRecord", func(t *testing.T) {
+        input := &customerprofiles.GetProfileHistoryRecordInput{}
+        output := &customerprofiles.GetProfileHistoryRecordOutput{}
+
+        mockClient.On("GetProfileHistoryRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProfileHistoryRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetProfileObjectType", func(t *testing.T) {
         input := &customerprofiles.GetProfileObjectTypeInput{}
         output := &customerprofiles.GetProfileObjectTypeOutput{}
@@ -801,13 +814,26 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProfileObjectTypeTemplates", func(t *testing.T) {
-        input := &customerprofiles.ListProfileObjectTypeTemplatesInput{}
-        output := &customerprofiles.ListProfileObjectTypeTemplatesOutput{}
+    t.Run("TestListProfileHistoryRecords", func(t *testing.T) {
+        input := &customerprofiles.ListProfileHistoryRecordsInput{}
+        output := &customerprofiles.ListProfileHistoryRecordsOutput{}
 
-        mockClient.On("ListProfileObjectTypeTemplates", ctx, input).Return(output, nil)
+        mockClient.On("ListProfileHistoryRecords", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListProfileObjectTypeTemplates(ctx, input)
+        result, err := mockClient.ListProfileHistoryRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProfileObjects", func(t *testing.T) {
+        input := &customerprofiles.ListProfileObjectsInput{}
+        output := &customerprofiles.ListProfileObjectsOutput{}
+
+        mockClient.On("ListProfileObjects", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProfileObjects(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,13 +853,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListProfileObjects", func(t *testing.T) {
-        input := &customerprofiles.ListProfileObjectsInput{}
-        output := &customerprofiles.ListProfileObjectsOutput{}
+    t.Run("TestListProfileObjectTypeTemplates", func(t *testing.T) {
+        input := &customerprofiles.ListProfileObjectTypeTemplatesInput{}
+        output := &customerprofiles.ListProfileObjectTypeTemplatesOutput{}
 
-        mockClient.On("ListProfileObjects", ctx, input).Return(output, nil)
+        mockClient.On("ListProfileObjectTypeTemplates", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListProfileObjects(ctx, input)
+        result, err := mockClient.ListProfileObjectTypeTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

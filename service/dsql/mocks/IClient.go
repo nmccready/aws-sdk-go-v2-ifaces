@@ -89,6 +89,43 @@ func (_m *IClient) DeleteCluster(ctx context.Context, params *dsql.DeleteCluster
 	return r0, r1
 }
 
+// DeleteClusterPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteClusterPolicy(ctx context.Context, params *dsql.DeleteClusterPolicyInput, optFns ...func(*dsql.Options)) (*dsql.DeleteClusterPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteClusterPolicy")
+	}
+
+	var r0 *dsql.DeleteClusterPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.DeleteClusterPolicyInput, ...func(*dsql.Options)) (*dsql.DeleteClusterPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.DeleteClusterPolicyInput, ...func(*dsql.Options)) *dsql.DeleteClusterPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.DeleteClusterPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.DeleteClusterPolicyInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCluster(ctx context.Context, params *dsql.GetClusterInput, optFns ...func(*dsql.Options)) (*dsql.GetClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) GetCluster(ctx context.Context, params *dsql.GetClusterInput,
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *dsql.GetClusterInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetClusterPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetClusterPolicy(ctx context.Context, params *dsql.GetClusterPolicyInput, optFns ...func(*dsql.Options)) (*dsql.GetClusterPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetClusterPolicy")
+	}
+
+	var r0 *dsql.GetClusterPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.GetClusterPolicyInput, ...func(*dsql.Options)) (*dsql.GetClusterPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.GetClusterPolicyInput, ...func(*dsql.Options)) *dsql.GetClusterPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.GetClusterPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.GetClusterPolicyInput, ...func(*dsql.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -253,6 +327,43 @@ func (_m *IClient) Options() dsql.Options {
 	}
 
 	return r0
+}
+
+// PutClusterPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutClusterPolicy(ctx context.Context, params *dsql.PutClusterPolicyInput, optFns ...func(*dsql.Options)) (*dsql.PutClusterPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutClusterPolicy")
+	}
+
+	var r0 *dsql.PutClusterPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.PutClusterPolicyInput, ...func(*dsql.Options)) (*dsql.PutClusterPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.PutClusterPolicyInput, ...func(*dsql.Options)) *dsql.PutClusterPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.PutClusterPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.PutClusterPolicyInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // TagResource provides a mock function with given fields: ctx, params, optFns

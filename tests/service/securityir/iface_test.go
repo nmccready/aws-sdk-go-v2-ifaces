@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInvestigations", func(t *testing.T) {
+        input := &securityir.ListInvestigationsInput{}
+        output := &securityir.ListInvestigationsOutput{}
+
+        mockClient.On("ListInvestigations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvestigations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMemberships", func(t *testing.T) {
         input := &securityir.ListMembershipsInput{}
         output := &securityir.ListMembershipsOutput{}
@@ -223,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendFeedback", func(t *testing.T) {
+        input := &securityir.SendFeedbackInput{}
+        output := &securityir.SendFeedbackOutput{}
+
+        mockClient.On("SendFeedback", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendFeedback(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

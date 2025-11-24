@@ -1,5 +1,8 @@
 name: Weekly Sync
 
+permissions:
+  contents: write # REQUIRED to push code back to the repository
+
 on:
   schedule:
     - cron: '0 0 * * 0' # Runs every Sunday at 00:00 UTC

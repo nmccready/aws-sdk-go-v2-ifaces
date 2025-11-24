@@ -10,8 +10,10 @@ import (
 // IClient defines the interface for billing
 type IClient interface {
  Options() Options 
+ AssociateSourceViews(ctx context.Context, params *AssociateSourceViewsInput, optFns ...func(*Options)) (*AssociateSourceViewsOutput, error) 
  CreateBillingView(ctx context.Context, params *CreateBillingViewInput, optFns ...func(*Options)) (*CreateBillingViewOutput, error) 
  DeleteBillingView(ctx context.Context, params *DeleteBillingViewInput, optFns ...func(*Options)) (*DeleteBillingViewOutput, error) 
+ DisassociateSourceViews(ctx context.Context, params *DisassociateSourceViewsInput, optFns ...func(*Options)) (*DisassociateSourceViewsOutput, error) 
  GetBillingView(ctx context.Context, params *GetBillingViewInput, optFns ...func(*Options)) (*GetBillingViewOutput, error) 
  GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
  ListBillingViews(ctx context.Context, params *ListBillingViewsInput, optFns ...func(*Options)) (*ListBillingViewsOutput, error) 

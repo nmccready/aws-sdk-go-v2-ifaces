@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListEfficiencyMetrics", func(t *testing.T) {
+        input := &costoptimizationhub.ListEfficiencyMetricsInput{}
+        output := &costoptimizationhub.ListEfficiencyMetricsOutput{}
+
+        mockClient.On("ListEfficiencyMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEfficiencyMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEnrollmentStatuses", func(t *testing.T) {
         input := &costoptimizationhub.ListEnrollmentStatusesInput{}
         output := &costoptimizationhub.ListEnrollmentStatusesOutput{}
@@ -73,19 +86,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRecommendationSummaries", func(t *testing.T) {
-        input := &costoptimizationhub.ListRecommendationSummariesInput{}
-        output := &costoptimizationhub.ListRecommendationSummariesOutput{}
-
-        mockClient.On("ListRecommendationSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRecommendationSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRecommendations", func(t *testing.T) {
         input := &costoptimizationhub.ListRecommendationsInput{}
         output := &costoptimizationhub.ListRecommendationsOutput{}
@@ -93,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRecommendations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecommendationSummaries", func(t *testing.T) {
+        input := &costoptimizationhub.ListRecommendationSummariesInput{}
+        output := &costoptimizationhub.ListRecommendationSummariesOutput{}
+
+        mockClient.On("ListRecommendationSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommendationSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

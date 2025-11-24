@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAccountSettings", func(t *testing.T) {
+        input := &kinesis.DescribeAccountSettingsInput{}
+        output := &kinesis.DescribeAccountSettingsOutput{}
+
+        mockClient.On("DescribeAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeLimits", func(t *testing.T) {
         input := &kinesis.DescribeLimitsInput{}
         output := &kinesis.DescribeLimitsOutput{}
@@ -463,6 +476,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAccountSettings", func(t *testing.T) {
+        input := &kinesis.UpdateAccountSettingsInput{}
+        output := &kinesis.UpdateAccountSettingsOutput{}
+
+        mockClient.On("UpdateAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMaxRecordSize", func(t *testing.T) {
+        input := &kinesis.UpdateMaxRecordSizeInput{}
+        output := &kinesis.UpdateMaxRecordSizeOutput{}
+
+        mockClient.On("UpdateMaxRecordSize", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMaxRecordSize(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateShardCount", func(t *testing.T) {
         input := &kinesis.UpdateShardCountInput{}
         output := &kinesis.UpdateShardCountOutput{}
@@ -483,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateStreamMode", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateStreamMode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateStreamWarmThroughput", func(t *testing.T) {
+        input := &kinesis.UpdateStreamWarmThroughputInput{}
+        output := &kinesis.UpdateStreamWarmThroughputOutput{}
+
+        mockClient.On("UpdateStreamWarmThroughput", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateStreamWarmThroughput(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

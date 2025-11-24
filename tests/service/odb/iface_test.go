@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateIamRoleToResource", func(t *testing.T) {
+        input := &odb.AssociateIamRoleToResourceInput{}
+        output := &odb.AssociateIamRoleToResourceOutput{}
+
+        mockClient.On("AssociateIamRoleToResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateIamRoleToResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCloudAutonomousVmCluster", func(t *testing.T) {
         input := &odb.CreateCloudAutonomousVmClusterInput{}
         output := &odb.CreateCloudAutonomousVmClusterOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOdbPeeringConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOdbPeeringConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateIamRoleFromResource", func(t *testing.T) {
+        input := &odb.DisassociateIamRoleFromResourceInput{}
+        output := &odb.DisassociateIamRoleFromResourceOutput{}
+
+        mockClient.On("DisassociateIamRoleFromResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateIamRoleFromResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -548,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOdbNetwork", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOdbNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOdbPeeringConnection", func(t *testing.T) {
+        input := &odb.UpdateOdbPeeringConnectionInput{}
+        output := &odb.UpdateOdbPeeringConnectionOutput{}
+
+        mockClient.On("UpdateOdbPeeringConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOdbPeeringConnection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -26,6 +26,7 @@ type IClient interface {
  RegisterComputeNodeGroupInstance(ctx context.Context, params *RegisterComputeNodeGroupInstanceInput, optFns ...func(*Options)) (*RegisterComputeNodeGroupInstanceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateCluster(ctx context.Context, params *UpdateClusterInput, optFns ...func(*Options)) (*UpdateClusterOutput, error) 
  UpdateComputeNodeGroup(ctx context.Context, params *UpdateComputeNodeGroupInput, optFns ...func(*Options)) (*UpdateComputeNodeGroupOutput, error) 
  UpdateQueue(ctx context.Context, params *UpdateQueueInput, optFns ...func(*Options)) (*UpdateQueueOutput, error) 
 }

@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTranslateKeyMaterial", func(t *testing.T) {
+        input := &paymentcryptographydata.TranslateKeyMaterialInput{}
+        output := &paymentcryptographydata.TranslateKeyMaterialOutput{}
+
+        mockClient.On("TranslateKeyMaterial", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TranslateKeyMaterial(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTranslatePinData", func(t *testing.T) {
         input := &paymentcryptographydata.TranslatePinDataInput{}
         output := &paymentcryptographydata.TranslatePinDataOutput{}

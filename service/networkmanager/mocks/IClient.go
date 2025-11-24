@@ -347,6 +347,43 @@ func (_m *IClient) CreateCoreNetwork(ctx context.Context, params *networkmanager
 	return r0, r1
 }
 
+// CreateCoreNetworkPrefixListAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCoreNetworkPrefixListAssociation(ctx context.Context, params *networkmanager.CreateCoreNetworkPrefixListAssociationInput, optFns ...func(*networkmanager.Options)) (*networkmanager.CreateCoreNetworkPrefixListAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCoreNetworkPrefixListAssociation")
+	}
+
+	var r0 *networkmanager.CreateCoreNetworkPrefixListAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.CreateCoreNetworkPrefixListAssociationInput, ...func(*networkmanager.Options)) (*networkmanager.CreateCoreNetworkPrefixListAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.CreateCoreNetworkPrefixListAssociationInput, ...func(*networkmanager.Options)) *networkmanager.CreateCoreNetworkPrefixListAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.CreateCoreNetworkPrefixListAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.CreateCoreNetworkPrefixListAssociationInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDevice provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDevice(ctx context.Context, params *networkmanager.CreateDeviceInput, optFns ...func(*networkmanager.Options)) (*networkmanager.CreateDeviceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -857,6 +894,43 @@ func (_m *IClient) DeleteCoreNetworkPolicyVersion(ctx context.Context, params *n
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.DeleteCoreNetworkPolicyVersionInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCoreNetworkPrefixListAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCoreNetworkPrefixListAssociation(ctx context.Context, params *networkmanager.DeleteCoreNetworkPrefixListAssociationInput, optFns ...func(*networkmanager.Options)) (*networkmanager.DeleteCoreNetworkPrefixListAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCoreNetworkPrefixListAssociation")
+	}
+
+	var r0 *networkmanager.DeleteCoreNetworkPrefixListAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.DeleteCoreNetworkPrefixListAssociationInput, ...func(*networkmanager.Options)) (*networkmanager.DeleteCoreNetworkPrefixListAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.DeleteCoreNetworkPrefixListAssociationInput, ...func(*networkmanager.Options)) *networkmanager.DeleteCoreNetworkPrefixListAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.DeleteCoreNetworkPrefixListAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.DeleteCoreNetworkPrefixListAssociationInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2345,6 +2419,43 @@ func (_m *IClient) GetVpcAttachment(ctx context.Context, params *networkmanager.
 	return r0, r1
 }
 
+// ListAttachmentRoutingPolicyAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAttachmentRoutingPolicyAssociations(ctx context.Context, params *networkmanager.ListAttachmentRoutingPolicyAssociationsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListAttachmentRoutingPolicyAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAttachmentRoutingPolicyAssociations")
+	}
+
+	var r0 *networkmanager.ListAttachmentRoutingPolicyAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListAttachmentRoutingPolicyAssociationsInput, ...func(*networkmanager.Options)) (*networkmanager.ListAttachmentRoutingPolicyAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListAttachmentRoutingPolicyAssociationsInput, ...func(*networkmanager.Options)) *networkmanager.ListAttachmentRoutingPolicyAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListAttachmentRoutingPolicyAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListAttachmentRoutingPolicyAssociationsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAttachments provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAttachments(ctx context.Context, params *networkmanager.ListAttachmentsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListAttachmentsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2448,6 +2559,80 @@ func (_m *IClient) ListCoreNetworkPolicyVersions(ctx context.Context, params *ne
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListCoreNetworkPolicyVersionsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCoreNetworkPrefixListAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCoreNetworkPrefixListAssociations(ctx context.Context, params *networkmanager.ListCoreNetworkPrefixListAssociationsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListCoreNetworkPrefixListAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCoreNetworkPrefixListAssociations")
+	}
+
+	var r0 *networkmanager.ListCoreNetworkPrefixListAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListCoreNetworkPrefixListAssociationsInput, ...func(*networkmanager.Options)) (*networkmanager.ListCoreNetworkPrefixListAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListCoreNetworkPrefixListAssociationsInput, ...func(*networkmanager.Options)) *networkmanager.ListCoreNetworkPrefixListAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListCoreNetworkPrefixListAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListCoreNetworkPrefixListAssociationsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCoreNetworkRoutingInformation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCoreNetworkRoutingInformation(ctx context.Context, params *networkmanager.ListCoreNetworkRoutingInformationInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListCoreNetworkRoutingInformationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCoreNetworkRoutingInformation")
+	}
+
+	var r0 *networkmanager.ListCoreNetworkRoutingInformationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListCoreNetworkRoutingInformationInput, ...func(*networkmanager.Options)) (*networkmanager.ListCoreNetworkRoutingInformationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListCoreNetworkRoutingInformationInput, ...func(*networkmanager.Options)) *networkmanager.ListCoreNetworkRoutingInformationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListCoreNetworkRoutingInformationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListCoreNetworkRoutingInformationInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2622,6 +2807,43 @@ func (_m *IClient) Options() networkmanager.Options {
 	return r0
 }
 
+// PutAttachmentRoutingPolicyLabel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAttachmentRoutingPolicyLabel(ctx context.Context, params *networkmanager.PutAttachmentRoutingPolicyLabelInput, optFns ...func(*networkmanager.Options)) (*networkmanager.PutAttachmentRoutingPolicyLabelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAttachmentRoutingPolicyLabel")
+	}
+
+	var r0 *networkmanager.PutAttachmentRoutingPolicyLabelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.PutAttachmentRoutingPolicyLabelInput, ...func(*networkmanager.Options)) (*networkmanager.PutAttachmentRoutingPolicyLabelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.PutAttachmentRoutingPolicyLabelInput, ...func(*networkmanager.Options)) *networkmanager.PutAttachmentRoutingPolicyLabelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.PutAttachmentRoutingPolicyLabelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.PutAttachmentRoutingPolicyLabelInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutCoreNetworkPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutCoreNetworkPolicy(ctx context.Context, params *networkmanager.PutCoreNetworkPolicyInput, optFns ...func(*networkmanager.Options)) (*networkmanager.PutCoreNetworkPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2762,6 +2984,43 @@ func (_m *IClient) RejectAttachment(ctx context.Context, params *networkmanager.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.RejectAttachmentInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RemoveAttachmentRoutingPolicyLabel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveAttachmentRoutingPolicyLabel(ctx context.Context, params *networkmanager.RemoveAttachmentRoutingPolicyLabelInput, optFns ...func(*networkmanager.Options)) (*networkmanager.RemoveAttachmentRoutingPolicyLabelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveAttachmentRoutingPolicyLabel")
+	}
+
+	var r0 *networkmanager.RemoveAttachmentRoutingPolicyLabelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.RemoveAttachmentRoutingPolicyLabelInput, ...func(*networkmanager.Options)) (*networkmanager.RemoveAttachmentRoutingPolicyLabelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.RemoveAttachmentRoutingPolicyLabelInput, ...func(*networkmanager.Options)) *networkmanager.RemoveAttachmentRoutingPolicyLabelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.RemoveAttachmentRoutingPolicyLabelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.RemoveAttachmentRoutingPolicyLabelInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

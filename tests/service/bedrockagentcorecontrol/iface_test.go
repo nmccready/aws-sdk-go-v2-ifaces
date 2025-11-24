@@ -450,19 +450,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAgentRuntimeVersions", func(t *testing.T) {
-        input := &bedrockagentcorecontrol.ListAgentRuntimeVersionsInput{}
-        output := &bedrockagentcorecontrol.ListAgentRuntimeVersionsOutput{}
-
-        mockClient.On("ListAgentRuntimeVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAgentRuntimeVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAgentRuntimes", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListAgentRuntimesInput{}
         output := &bedrockagentcorecontrol.ListAgentRuntimesOutput{}
@@ -470,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAgentRuntimes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAgentRuntimes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentRuntimeVersions", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListAgentRuntimeVersionsInput{}
+        output := &bedrockagentcorecontrol.ListAgentRuntimeVersionsOutput{}
+
+        mockClient.On("ListAgentRuntimeVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentRuntimeVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListGatewayTargets", func(t *testing.T) {
-        input := &bedrockagentcorecontrol.ListGatewayTargetsInput{}
-        output := &bedrockagentcorecontrol.ListGatewayTargetsOutput{}
-
-        mockClient.On("ListGatewayTargets", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListGatewayTargets(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListGateways", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListGatewaysInput{}
         output := &bedrockagentcorecontrol.ListGatewaysOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGatewayTargets", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListGatewayTargetsInput{}
+        output := &bedrockagentcorecontrol.ListGatewayTargetsOutput{}
+
+        mockClient.On("ListGatewayTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGatewayTargets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListTagsForResourceInput{}
+        output := &bedrockagentcorecontrol.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListWorkloadIdentities", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListWorkloadIdentitiesInput{}
         output := &bedrockagentcorecontrol.ListWorkloadIdentitiesOutput{}
@@ -587,6 +600,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("SetTokenVaultCMK", ctx, input).Return(output, nil)
 
         result, err := mockClient.SetTokenVaultCMK(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSynchronizeGatewayTargets", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.SynchronizeGatewayTargetsInput{}
+        output := &bedrockagentcorecontrol.SynchronizeGatewayTargetsOutput{}
+
+        mockClient.On("SynchronizeGatewayTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SynchronizeGatewayTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.TagResourceInput{}
+        output := &bedrockagentcorecontrol.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UntagResourceInput{}
+        output := &bedrockagentcorecontrol.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

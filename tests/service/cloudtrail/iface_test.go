@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInsightsData", func(t *testing.T) {
+        input := &cloudtrail.ListInsightsDataInput{}
+        output := &cloudtrail.ListInsightsDataOutput{}
+
+        mockClient.On("ListInsightsData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInsightsData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListInsightsMetricData", func(t *testing.T) {
         input := &cloudtrail.ListInsightsMetricDataInput{}
         output := &cloudtrail.ListInsightsMetricDataOutput{}

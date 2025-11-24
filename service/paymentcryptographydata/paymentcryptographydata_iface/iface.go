@@ -17,6 +17,7 @@ type IClient interface {
  GenerateMacEmvPinChange(ctx context.Context, params *GenerateMacEmvPinChangeInput, optFns ...func(*Options)) (*GenerateMacEmvPinChangeOutput, error) 
  GeneratePinData(ctx context.Context, params *GeneratePinDataInput, optFns ...func(*Options)) (*GeneratePinDataOutput, error) 
  ReEncryptData(ctx context.Context, params *ReEncryptDataInput, optFns ...func(*Options)) (*ReEncryptDataOutput, error) 
+ TranslateKeyMaterial(ctx context.Context, params *TranslateKeyMaterialInput, optFns ...func(*Options)) (*TranslateKeyMaterialOutput, error) 
  TranslatePinData(ctx context.Context, params *TranslatePinDataInput, optFns ...func(*Options)) (*TranslatePinDataOutput, error) 
  VerifyAuthRequestCryptogram(ctx context.Context, params *VerifyAuthRequestCryptogramInput, optFns ...func(*Options)) (*VerifyAuthRequestCryptogramOutput, error) 
  VerifyCardValidationData(ctx context.Context, params *VerifyCardValidationDataInput, optFns ...func(*Options)) (*VerifyCardValidationDataOutput, error) 

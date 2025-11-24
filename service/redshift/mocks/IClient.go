@@ -3714,6 +3714,43 @@ func (_m *IClient) GetClusterCredentialsWithIAM(ctx context.Context, params *red
 	return r0, r1
 }
 
+// GetIdentityCenterAuthToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIdentityCenterAuthToken(ctx context.Context, params *redshift.GetIdentityCenterAuthTokenInput, optFns ...func(*redshift.Options)) (*redshift.GetIdentityCenterAuthTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIdentityCenterAuthToken")
+	}
+
+	var r0 *redshift.GetIdentityCenterAuthTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.GetIdentityCenterAuthTokenInput, ...func(*redshift.Options)) (*redshift.GetIdentityCenterAuthTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.GetIdentityCenterAuthTokenInput, ...func(*redshift.Options)) *redshift.GetIdentityCenterAuthTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshift.GetIdentityCenterAuthTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshift.GetIdentityCenterAuthTokenInput, ...func(*redshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetReservedNodeExchangeConfigurationOptions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetReservedNodeExchangeConfigurationOptions(ctx context.Context, params *redshift.GetReservedNodeExchangeConfigurationOptionsInput, optFns ...func(*redshift.Options)) (*redshift.GetReservedNodeExchangeConfigurationOptionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4372,6 +4409,43 @@ func (_m *IClient) ModifyIntegration(ctx context.Context, params *redshift.Modif
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *redshift.ModifyIntegrationInput, ...func(*redshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyLakehouseConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyLakehouseConfiguration(ctx context.Context, params *redshift.ModifyLakehouseConfigurationInput, optFns ...func(*redshift.Options)) (*redshift.ModifyLakehouseConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyLakehouseConfiguration")
+	}
+
+	var r0 *redshift.ModifyLakehouseConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.ModifyLakehouseConfigurationInput, ...func(*redshift.Options)) (*redshift.ModifyLakehouseConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.ModifyLakehouseConfigurationInput, ...func(*redshift.Options)) *redshift.ModifyLakehouseConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshift.ModifyLakehouseConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshift.ModifyLakehouseConfigurationInput, ...func(*redshift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

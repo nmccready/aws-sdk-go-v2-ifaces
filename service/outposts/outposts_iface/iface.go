@@ -38,6 +38,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  StartCapacityTask(ctx context.Context, params *StartCapacityTaskInput, optFns ...func(*Options)) (*StartCapacityTaskOutput, error) 
  StartConnection(ctx context.Context, params *StartConnectionInput, optFns ...func(*Options)) (*StartConnectionOutput, error) 
+ StartOutpostDecommission(ctx context.Context, params *StartOutpostDecommissionInput, optFns ...func(*Options)) (*StartOutpostDecommissionOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateOutpost(ctx context.Context, params *UpdateOutpostInput, optFns ...func(*Options)) (*UpdateOutpostOutput, error) 

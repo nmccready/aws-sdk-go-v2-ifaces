@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddKeyReplicationRegions", func(t *testing.T) {
+        input := &paymentcryptography.AddKeyReplicationRegionsInput{}
+        output := &paymentcryptography.AddKeyReplicationRegionsOutput{}
+
+        mockClient.On("AddKeyReplicationRegions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddKeyReplicationRegions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAlias", func(t *testing.T) {
         input := &paymentcryptography.CreateAliasInput{}
         output := &paymentcryptography.CreateAliasOutput{}
@@ -86,6 +99,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableDefaultKeyReplicationRegions", func(t *testing.T) {
+        input := &paymentcryptography.DisableDefaultKeyReplicationRegionsInput{}
+        output := &paymentcryptography.DisableDefaultKeyReplicationRegionsOutput{}
+
+        mockClient.On("DisableDefaultKeyReplicationRegions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableDefaultKeyReplicationRegions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableDefaultKeyReplicationRegions", func(t *testing.T) {
+        input := &paymentcryptography.EnableDefaultKeyReplicationRegionsInput{}
+        output := &paymentcryptography.EnableDefaultKeyReplicationRegionsOutput{}
+
+        mockClient.On("EnableDefaultKeyReplicationRegions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableDefaultKeyReplicationRegions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestExportKey", func(t *testing.T) {
         input := &paymentcryptography.ExportKeyInput{}
         output := &paymentcryptography.ExportKeyOutput{}
@@ -106,6 +145,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCertificateSigningRequest", func(t *testing.T) {
+        input := &paymentcryptography.GetCertificateSigningRequestInput{}
+        output := &paymentcryptography.GetCertificateSigningRequestOutput{}
+
+        mockClient.On("GetCertificateSigningRequest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCertificateSigningRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDefaultKeyReplicationRegions", func(t *testing.T) {
+        input := &paymentcryptography.GetDefaultKeyReplicationRegionsInput{}
+        output := &paymentcryptography.GetDefaultKeyReplicationRegionsOutput{}
+
+        mockClient.On("GetDefaultKeyReplicationRegions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDefaultKeyReplicationRegions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -210,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRemoveKeyReplicationRegions", func(t *testing.T) {
+        input := &paymentcryptography.RemoveKeyReplicationRegionsInput{}
+        output := &paymentcryptography.RemoveKeyReplicationRegionsOutput{}
+
+        mockClient.On("RemoveKeyReplicationRegions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveKeyReplicationRegions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

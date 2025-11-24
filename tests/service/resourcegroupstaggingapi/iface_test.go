@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRequiredTags", func(t *testing.T) {
+        input := &resourcegroupstaggingapi.ListRequiredTagsInput{}
+        output := &resourcegroupstaggingapi.ListRequiredTagsOutput{}
+
+        mockClient.On("ListRequiredTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRequiredTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartReportCreation", func(t *testing.T) {
         input := &resourcegroupstaggingapi.StartReportCreationInput{}
         output := &resourcegroupstaggingapi.StartReportCreationOutput{}

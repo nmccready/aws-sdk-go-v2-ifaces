@@ -814,6 +814,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCopyVolumes", func(t *testing.T) {
+        input := &ec2.CopyVolumesInput{}
+        output := &ec2.CopyVolumesOutput{}
+
+        mockClient.On("CopyVolumes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CopyVolumes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCapacityManagerDataExport", func(t *testing.T) {
+        input := &ec2.CreateCapacityManagerDataExportInput{}
+        output := &ec2.CreateCapacityManagerDataExportOutput{}
+
+        mockClient.On("CreateCapacityManagerDataExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCapacityManagerDataExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCapacityReservation", func(t *testing.T) {
         input := &ec2.CreateCapacityReservationInput{}
         output := &ec2.CreateCapacityReservationOutput{}
@@ -1113,6 +1139,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateInterruptibleCapacityReservationAllocation", func(t *testing.T) {
+        input := &ec2.CreateInterruptibleCapacityReservationAllocationInput{}
+        output := &ec2.CreateInterruptibleCapacityReservationAllocationOutput{}
+
+        mockClient.On("CreateInterruptibleCapacityReservationAllocation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInterruptibleCapacityReservationAllocation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateIpam", func(t *testing.T) {
         input := &ec2.CreateIpamInput{}
         output := &ec2.CreateIpamOutput{}
@@ -1139,6 +1178,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIpamPolicy", func(t *testing.T) {
+        input := &ec2.CreateIpamPolicyInput{}
+        output := &ec2.CreateIpamPolicyOutput{}
+
+        mockClient.On("CreateIpamPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIpamPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateIpamPool", func(t *testing.T) {
         input := &ec2.CreateIpamPoolInput{}
         output := &ec2.CreateIpamPoolOutput{}
@@ -1146,6 +1198,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIpamPool", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIpamPool(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIpamPrefixListResolver", func(t *testing.T) {
+        input := &ec2.CreateIpamPrefixListResolverInput{}
+        output := &ec2.CreateIpamPrefixListResolverOutput{}
+
+        mockClient.On("CreateIpamPrefixListResolver", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIpamPrefixListResolver(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIpamPrefixListResolverTarget", func(t *testing.T) {
+        input := &ec2.CreateIpamPrefixListResolverTargetInput{}
+        output := &ec2.CreateIpamPrefixListResolverTargetOutput{}
+
+        mockClient.On("CreateIpamPrefixListResolverTarget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIpamPrefixListResolverTarget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1737,6 +1815,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTransitGatewayMeteringPolicy", func(t *testing.T) {
+        input := &ec2.CreateTransitGatewayMeteringPolicyInput{}
+        output := &ec2.CreateTransitGatewayMeteringPolicyOutput{}
+
+        mockClient.On("CreateTransitGatewayMeteringPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTransitGatewayMeteringPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateTransitGatewayMeteringPolicyEntry", func(t *testing.T) {
+        input := &ec2.CreateTransitGatewayMeteringPolicyEntryInput{}
+        output := &ec2.CreateTransitGatewayMeteringPolicyEntryOutput{}
+
+        mockClient.On("CreateTransitGatewayMeteringPolicyEntry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTransitGatewayMeteringPolicyEntry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTransitGatewayMulticastDomain", func(t *testing.T) {
         input := &ec2.CreateTransitGatewayMulticastDomainInput{}
         output := &ec2.CreateTransitGatewayMulticastDomainOutput{}
@@ -1932,6 +2036,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVpcEncryptionControl", func(t *testing.T) {
+        input := &ec2.CreateVpcEncryptionControlInput{}
+        output := &ec2.CreateVpcEncryptionControlOutput{}
+
+        mockClient.On("CreateVpcEncryptionControl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVpcEncryptionControl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVpcEndpoint", func(t *testing.T) {
         input := &ec2.CreateVpcEndpointInput{}
         output := &ec2.CreateVpcEndpointOutput{}
@@ -1984,6 +2101,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVpnConcentrator", func(t *testing.T) {
+        input := &ec2.CreateVpnConcentratorInput{}
+        output := &ec2.CreateVpnConcentratorOutput{}
+
+        mockClient.On("CreateVpnConcentrator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVpnConcentrator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVpnConnection", func(t *testing.T) {
         input := &ec2.CreateVpnConnectionInput{}
         output := &ec2.CreateVpnConnectionOutput{}
@@ -2017,6 +2147,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateVpnGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateVpnGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCapacityManagerDataExport", func(t *testing.T) {
+        input := &ec2.DeleteCapacityManagerDataExportInput{}
+        output := &ec2.DeleteCapacityManagerDataExportOutput{}
+
+        mockClient.On("DeleteCapacityManagerDataExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCapacityManagerDataExport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2244,6 +2387,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIpamPolicy", func(t *testing.T) {
+        input := &ec2.DeleteIpamPolicyInput{}
+        output := &ec2.DeleteIpamPolicyOutput{}
+
+        mockClient.On("DeleteIpamPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIpamPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteIpamPool", func(t *testing.T) {
         input := &ec2.DeleteIpamPoolInput{}
         output := &ec2.DeleteIpamPoolOutput{}
@@ -2251,6 +2407,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteIpamPool", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteIpamPool(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIpamPrefixListResolver", func(t *testing.T) {
+        input := &ec2.DeleteIpamPrefixListResolverInput{}
+        output := &ec2.DeleteIpamPrefixListResolverOutput{}
+
+        mockClient.On("DeleteIpamPrefixListResolver", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIpamPrefixListResolver(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIpamPrefixListResolverTarget", func(t *testing.T) {
+        input := &ec2.DeleteIpamPrefixListResolverTargetInput{}
+        output := &ec2.DeleteIpamPrefixListResolverTargetOutput{}
+
+        mockClient.On("DeleteIpamPrefixListResolverTarget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIpamPrefixListResolverTarget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2803,6 +2985,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTransitGatewayMeteringPolicy", func(t *testing.T) {
+        input := &ec2.DeleteTransitGatewayMeteringPolicyInput{}
+        output := &ec2.DeleteTransitGatewayMeteringPolicyOutput{}
+
+        mockClient.On("DeleteTransitGatewayMeteringPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTransitGatewayMeteringPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTransitGatewayMeteringPolicyEntry", func(t *testing.T) {
+        input := &ec2.DeleteTransitGatewayMeteringPolicyEntryInput{}
+        output := &ec2.DeleteTransitGatewayMeteringPolicyEntryOutput{}
+
+        mockClient.On("DeleteTransitGatewayMeteringPolicyEntry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTransitGatewayMeteringPolicyEntry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTransitGatewayMulticastDomain", func(t *testing.T) {
         input := &ec2.DeleteTransitGatewayMulticastDomainInput{}
         output := &ec2.DeleteTransitGatewayMulticastDomainOutput{}
@@ -2998,6 +3206,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVpcEncryptionControl", func(t *testing.T) {
+        input := &ec2.DeleteVpcEncryptionControlInput{}
+        output := &ec2.DeleteVpcEncryptionControlOutput{}
+
+        mockClient.On("DeleteVpcEncryptionControl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpcEncryptionControl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteVpcEndpointConnectionNotifications", func(t *testing.T) {
         input := &ec2.DeleteVpcEndpointConnectionNotificationsInput{}
         output := &ec2.DeleteVpcEndpointConnectionNotificationsOutput{}
@@ -3005,19 +3226,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVpcEndpointConnectionNotifications", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVpcEndpointConnectionNotifications(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDeleteVpcEndpointServiceConfigurations", func(t *testing.T) {
-        input := &ec2.DeleteVpcEndpointServiceConfigurationsInput{}
-        output := &ec2.DeleteVpcEndpointServiceConfigurationsOutput{}
-
-        mockClient.On("DeleteVpcEndpointServiceConfigurations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteVpcEndpointServiceConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3037,6 +3245,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVpcEndpointServiceConfigurations", func(t *testing.T) {
+        input := &ec2.DeleteVpcEndpointServiceConfigurationsInput{}
+        output := &ec2.DeleteVpcEndpointServiceConfigurationsOutput{}
+
+        mockClient.On("DeleteVpcEndpointServiceConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpcEndpointServiceConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteVpcPeeringConnection", func(t *testing.T) {
         input := &ec2.DeleteVpcPeeringConnectionInput{}
         output := &ec2.DeleteVpcPeeringConnectionOutput{}
@@ -3044,6 +3265,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVpcPeeringConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVpcPeeringConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteVpnConcentrator", func(t *testing.T) {
+        input := &ec2.DeleteVpnConcentratorInput{}
+        output := &ec2.DeleteVpnConcentratorOutput{}
+
+        mockClient.On("DeleteVpnConcentrator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpnConcentrator(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3206,19 +3440,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeAddressTransfers", func(t *testing.T) {
-        input := &ec2.DescribeAddressTransfersInput{}
-        output := &ec2.DescribeAddressTransfersOutput{}
-
-        mockClient.On("DescribeAddressTransfers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAddressTransfers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeAddresses", func(t *testing.T) {
         input := &ec2.DescribeAddressesInput{}
         output := &ec2.DescribeAddressesOutput{}
@@ -3239,6 +3460,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAddressesAttribute", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAddressesAttribute(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAddressTransfers", func(t *testing.T) {
+        input := &ec2.DescribeAddressTransfersInput{}
+        output := &ec2.DescribeAddressTransfersOutput{}
+
+        mockClient.On("DescribeAddressTransfers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAddressTransfers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3349,6 +3583,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeCapacityBlocks", func(t *testing.T) {
+        input := &ec2.DescribeCapacityBlocksInput{}
+        output := &ec2.DescribeCapacityBlocksOutput{}
+
+        mockClient.On("DescribeCapacityBlocks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityBlocks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCapacityBlockStatus", func(t *testing.T) {
         input := &ec2.DescribeCapacityBlockStatusInput{}
         output := &ec2.DescribeCapacityBlockStatusOutput{}
@@ -3362,13 +3609,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeCapacityBlocks", func(t *testing.T) {
-        input := &ec2.DescribeCapacityBlocksInput{}
-        output := &ec2.DescribeCapacityBlocksOutput{}
+    t.Run("TestDescribeCapacityManagerDataExports", func(t *testing.T) {
+        input := &ec2.DescribeCapacityManagerDataExportsInput{}
+        output := &ec2.DescribeCapacityManagerDataExportsOutput{}
 
-        mockClient.On("DescribeCapacityBlocks", ctx, input).Return(output, nil)
+        mockClient.On("DescribeCapacityManagerDataExports", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeCapacityBlocks(ctx, input)
+        result, err := mockClient.DescribeCapacityManagerDataExports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3408,6 +3655,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCapacityReservations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCapacityReservations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCapacityReservationTopology", func(t *testing.T) {
+        input := &ec2.DescribeCapacityReservationTopologyInput{}
+        output := &ec2.DescribeCapacityReservationTopologyOutput{}
+
+        mockClient.On("DescribeCapacityReservationTopology", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityReservationTopology(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3778,19 +4038,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeIdFormat", func(t *testing.T) {
-        input := &ec2.DescribeIdFormatInput{}
-        output := &ec2.DescribeIdFormatOutput{}
-
-        mockClient.On("DescribeIdFormat", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeIdFormat(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeIdentityIdFormat", func(t *testing.T) {
         input := &ec2.DescribeIdentityIdFormatInput{}
         output := &ec2.DescribeIdentityIdFormatOutput{}
@@ -3798,6 +4045,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeIdentityIdFormat", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeIdentityIdFormat(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIdFormat", func(t *testing.T) {
+        input := &ec2.DescribeIdFormatInput{}
+        output := &ec2.DescribeIdFormatOutput{}
+
+        mockClient.On("DescribeIdFormat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIdFormat(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3830,6 +4090,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeImages", func(t *testing.T) {
+        input := &ec2.DescribeImagesInput{}
+        output := &ec2.DescribeImagesOutput{}
+
+        mockClient.On("DescribeImages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeImages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeImageUsageReportEntries", func(t *testing.T) {
         input := &ec2.DescribeImageUsageReportEntriesInput{}
         output := &ec2.DescribeImageUsageReportEntriesOutput{}
@@ -3850,19 +4123,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeImageUsageReports", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeImageUsageReports(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeImages", func(t *testing.T) {
-        input := &ec2.DescribeImagesInput{}
-        output := &ec2.DescribeImagesOutput{}
-
-        mockClient.On("DescribeImages", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeImages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3973,6 +4233,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeInstances", func(t *testing.T) {
+        input := &ec2.DescribeInstancesInput{}
+        output := &ec2.DescribeInstancesOutput{}
+
+        mockClient.On("DescribeInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeInstanceSqlHaHistoryStates", func(t *testing.T) {
+        input := &ec2.DescribeInstanceSqlHaHistoryStatesInput{}
+        output := &ec2.DescribeInstanceSqlHaHistoryStatesOutput{}
+
+        mockClient.On("DescribeInstanceSqlHaHistoryStates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInstanceSqlHaHistoryStates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeInstanceSqlHaStates", func(t *testing.T) {
+        input := &ec2.DescribeInstanceSqlHaStatesInput{}
+        output := &ec2.DescribeInstanceSqlHaStatesOutput{}
+
+        mockClient.On("DescribeInstanceSqlHaStates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInstanceSqlHaStates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeInstanceStatus", func(t *testing.T) {
         input := &ec2.DescribeInstanceStatusInput{}
         output := &ec2.DescribeInstanceStatusOutput{}
@@ -4025,19 +4324,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeInstances", func(t *testing.T) {
-        input := &ec2.DescribeInstancesInput{}
-        output := &ec2.DescribeInstancesOutput{}
-
-        mockClient.On("DescribeInstances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeInstances(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeInternetGateways", func(t *testing.T) {
         input := &ec2.DescribeInternetGatewaysInput{}
         output := &ec2.DescribeInternetGatewaysOutput{}
@@ -4077,6 +4363,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeIpamPolicies", func(t *testing.T) {
+        input := &ec2.DescribeIpamPoliciesInput{}
+        output := &ec2.DescribeIpamPoliciesOutput{}
+
+        mockClient.On("DescribeIpamPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIpamPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeIpamPools", func(t *testing.T) {
         input := &ec2.DescribeIpamPoolsInput{}
         output := &ec2.DescribeIpamPoolsOutput{}
@@ -4084,6 +4383,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeIpamPools", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeIpamPools(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIpamPrefixListResolvers", func(t *testing.T) {
+        input := &ec2.DescribeIpamPrefixListResolversInput{}
+        output := &ec2.DescribeIpamPrefixListResolversOutput{}
+
+        mockClient.On("DescribeIpamPrefixListResolvers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIpamPrefixListResolvers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIpamPrefixListResolverTargets", func(t *testing.T) {
+        input := &ec2.DescribeIpamPrefixListResolverTargetsInput{}
+        output := &ec2.DescribeIpamPrefixListResolverTargetsOutput{}
+
+        mockClient.On("DescribeIpamPrefixListResolverTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIpamPrefixListResolverTargets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4116,19 +4441,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeIpamScopes", func(t *testing.T) {
-        input := &ec2.DescribeIpamScopesInput{}
-        output := &ec2.DescribeIpamScopesOutput{}
-
-        mockClient.On("DescribeIpamScopes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeIpamScopes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeIpams", func(t *testing.T) {
         input := &ec2.DescribeIpamsInput{}
         output := &ec2.DescribeIpamsOutput{}
@@ -4136,6 +4448,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeIpams", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeIpams(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIpamScopes", func(t *testing.T) {
+        input := &ec2.DescribeIpamScopesInput{}
+        output := &ec2.DescribeIpamScopesOutput{}
+
+        mockClient.On("DescribeIpamScopes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIpamScopes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4168,6 +4493,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeLaunchTemplates", func(t *testing.T) {
+        input := &ec2.DescribeLaunchTemplatesInput{}
+        output := &ec2.DescribeLaunchTemplatesOutput{}
+
+        mockClient.On("DescribeLaunchTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeLaunchTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeLaunchTemplateVersions", func(t *testing.T) {
         input := &ec2.DescribeLaunchTemplateVersionsInput{}
         output := &ec2.DescribeLaunchTemplateVersionsOutput{}
@@ -4181,13 +4519,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeLaunchTemplates", func(t *testing.T) {
-        input := &ec2.DescribeLaunchTemplatesInput{}
-        output := &ec2.DescribeLaunchTemplatesOutput{}
+    t.Run("TestDescribeLocalGatewayRouteTables", func(t *testing.T) {
+        input := &ec2.DescribeLocalGatewayRouteTablesInput{}
+        output := &ec2.DescribeLocalGatewayRouteTablesOutput{}
 
-        mockClient.On("DescribeLaunchTemplates", ctx, input).Return(output, nil)
+        mockClient.On("DescribeLocalGatewayRouteTables", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeLaunchTemplates(ctx, input)
+        result, err := mockClient.DescribeLocalGatewayRouteTables(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4220,13 +4558,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeLocalGatewayRouteTables", func(t *testing.T) {
-        input := &ec2.DescribeLocalGatewayRouteTablesInput{}
-        output := &ec2.DescribeLocalGatewayRouteTablesOutput{}
+    t.Run("TestDescribeLocalGateways", func(t *testing.T) {
+        input := &ec2.DescribeLocalGatewaysInput{}
+        output := &ec2.DescribeLocalGatewaysOutput{}
 
-        mockClient.On("DescribeLocalGatewayRouteTables", ctx, input).Return(output, nil)
+        mockClient.On("DescribeLocalGateways", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeLocalGatewayRouteTables(ctx, input)
+        result, err := mockClient.DescribeLocalGateways(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4253,19 +4591,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeLocalGatewayVirtualInterfaces", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeLocalGatewayVirtualInterfaces(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeLocalGateways", func(t *testing.T) {
-        input := &ec2.DescribeLocalGatewaysInput{}
-        output := &ec2.DescribeLocalGatewaysOutput{}
-
-        mockClient.On("DescribeLocalGateways", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeLocalGateways(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4701,19 +5026,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeSecurityGroupVpcAssociations", func(t *testing.T) {
-        input := &ec2.DescribeSecurityGroupVpcAssociationsInput{}
-        output := &ec2.DescribeSecurityGroupVpcAssociationsOutput{}
-
-        mockClient.On("DescribeSecurityGroupVpcAssociations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeSecurityGroupVpcAssociations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeSecurityGroups", func(t *testing.T) {
         input := &ec2.DescribeSecurityGroupsInput{}
         output := &ec2.DescribeSecurityGroupsOutput{}
@@ -4721,6 +5033,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeSecurityGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeSecurityGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSecurityGroupVpcAssociations", func(t *testing.T) {
+        input := &ec2.DescribeSecurityGroupVpcAssociationsInput{}
+        output := &ec2.DescribeSecurityGroupVpcAssociationsOutput{}
+
+        mockClient.On("DescribeSecurityGroupVpcAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSecurityGroupVpcAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4753,19 +5078,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeSnapshotTierStatus", func(t *testing.T) {
-        input := &ec2.DescribeSnapshotTierStatusInput{}
-        output := &ec2.DescribeSnapshotTierStatusOutput{}
-
-        mockClient.On("DescribeSnapshotTierStatus", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeSnapshotTierStatus(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeSnapshots", func(t *testing.T) {
         input := &ec2.DescribeSnapshotsInput{}
         output := &ec2.DescribeSnapshotsOutput{}
@@ -4773,6 +5085,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSnapshotTierStatus", func(t *testing.T) {
+        input := &ec2.DescribeSnapshotTierStatusInput{}
+        output := &ec2.DescribeSnapshotTierStatusOutput{}
+
+        mockClient.On("DescribeSnapshotTierStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSnapshotTierStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5000,6 +5325,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTransitGatewayMeteringPolicies", func(t *testing.T) {
+        input := &ec2.DescribeTransitGatewayMeteringPoliciesInput{}
+        output := &ec2.DescribeTransitGatewayMeteringPoliciesOutput{}
+
+        mockClient.On("DescribeTransitGatewayMeteringPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTransitGatewayMeteringPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTransitGatewayMulticastDomains", func(t *testing.T) {
         input := &ec2.DescribeTransitGatewayMulticastDomainsInput{}
         output := &ec2.DescribeTransitGatewayMulticastDomainsOutput{}
@@ -5065,19 +5403,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeTransitGatewayVpcAttachments", func(t *testing.T) {
-        input := &ec2.DescribeTransitGatewayVpcAttachmentsInput{}
-        output := &ec2.DescribeTransitGatewayVpcAttachmentsOutput{}
-
-        mockClient.On("DescribeTransitGatewayVpcAttachments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTransitGatewayVpcAttachments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeTransitGateways", func(t *testing.T) {
         input := &ec2.DescribeTransitGatewaysInput{}
         output := &ec2.DescribeTransitGatewaysOutput{}
@@ -5085,6 +5410,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTransitGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTransitGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTransitGatewayVpcAttachments", func(t *testing.T) {
+        input := &ec2.DescribeTransitGatewayVpcAttachmentsInput{}
+        output := &ec2.DescribeTransitGatewayVpcAttachmentsOutput{}
+
+        mockClient.On("DescribeTransitGatewayVpcAttachments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTransitGatewayVpcAttachments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5182,19 +5520,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeVolumeStatus", func(t *testing.T) {
-        input := &ec2.DescribeVolumeStatusInput{}
-        output := &ec2.DescribeVolumeStatusOutput{}
-
-        mockClient.On("DescribeVolumeStatus", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeVolumeStatus(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeVolumes", func(t *testing.T) {
         input := &ec2.DescribeVolumesInput{}
         output := &ec2.DescribeVolumesOutput{}
@@ -5215,6 +5540,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeVolumesModifications", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeVolumesModifications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeVolumeStatus", func(t *testing.T) {
+        input := &ec2.DescribeVolumeStatusInput{}
+        output := &ec2.DescribeVolumeStatusOutput{}
+
+        mockClient.On("DescribeVolumeStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVolumeStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5286,6 +5624,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeVpcEncryptionControls", func(t *testing.T) {
+        input := &ec2.DescribeVpcEncryptionControlsInput{}
+        output := &ec2.DescribeVpcEncryptionControlsOutput{}
+
+        mockClient.On("DescribeVpcEncryptionControls", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpcEncryptionControls(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeVpcEndpointAssociations", func(t *testing.T) {
         input := &ec2.DescribeVpcEndpointAssociationsInput{}
         output := &ec2.DescribeVpcEndpointAssociationsOutput{}
@@ -5319,6 +5670,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeVpcEndpointConnections", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeVpcEndpointConnections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeVpcEndpoints", func(t *testing.T) {
+        input := &ec2.DescribeVpcEndpointsInput{}
+        output := &ec2.DescribeVpcEndpointsOutput{}
+
+        mockClient.On("DescribeVpcEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpcEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5364,19 +5728,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeVpcEndpoints", func(t *testing.T) {
-        input := &ec2.DescribeVpcEndpointsInput{}
-        output := &ec2.DescribeVpcEndpointsOutput{}
-
-        mockClient.On("DescribeVpcEndpoints", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeVpcEndpoints(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeVpcPeeringConnections", func(t *testing.T) {
         input := &ec2.DescribeVpcPeeringConnectionsInput{}
         output := &ec2.DescribeVpcPeeringConnectionsOutput{}
@@ -5397,6 +5748,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeVpcs", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeVpcs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeVpnConcentrators", func(t *testing.T) {
+        input := &ec2.DescribeVpnConcentratorsInput{}
+        output := &ec2.DescribeVpnConcentratorsOutput{}
+
+        mockClient.On("DescribeVpnConcentrators", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeVpnConcentrators(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5546,6 +5910,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableCapacityManager", func(t *testing.T) {
+        input := &ec2.DisableCapacityManagerInput{}
+        output := &ec2.DisableCapacityManagerOutput{}
+
+        mockClient.On("DisableCapacityManager", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableCapacityManager(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableEbsEncryptionByDefault", func(t *testing.T) {
         input := &ec2.DisableEbsEncryptionByDefaultInput{}
         output := &ec2.DisableEbsEncryptionByDefaultOutput{}
@@ -5637,6 +6014,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableInstanceSqlHaStandbyDetections", func(t *testing.T) {
+        input := &ec2.DisableInstanceSqlHaStandbyDetectionsInput{}
+        output := &ec2.DisableInstanceSqlHaStandbyDetectionsOutput{}
+
+        mockClient.On("DisableInstanceSqlHaStandbyDetections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableInstanceSqlHaStandbyDetections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableIpamOrganizationAdminAccount", func(t *testing.T) {
         input := &ec2.DisableIpamOrganizationAdminAccountInput{}
         output := &ec2.DisableIpamOrganizationAdminAccountOutput{}
@@ -5644,6 +6034,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisableIpamOrganizationAdminAccount", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisableIpamOrganizationAdminAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisableIpamPolicy", func(t *testing.T) {
+        input := &ec2.DisableIpamPolicyInput{}
+        output := &ec2.DisableIpamPolicyOutput{}
+
+        mockClient.On("DisableIpamPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableIpamPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6014,6 +6417,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestEnableCapacityManager", func(t *testing.T) {
+        input := &ec2.EnableCapacityManagerInput{}
+        output := &ec2.EnableCapacityManagerOutput{}
+
+        mockClient.On("EnableCapacityManager", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableCapacityManager(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableEbsEncryptionByDefault", func(t *testing.T) {
         input := &ec2.EnableEbsEncryptionByDefaultInput{}
         output := &ec2.EnableEbsEncryptionByDefaultOutput{}
@@ -6105,6 +6521,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestEnableInstanceSqlHaStandbyDetections", func(t *testing.T) {
+        input := &ec2.EnableInstanceSqlHaStandbyDetectionsInput{}
+        output := &ec2.EnableInstanceSqlHaStandbyDetectionsOutput{}
+
+        mockClient.On("EnableInstanceSqlHaStandbyDetections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableInstanceSqlHaStandbyDetections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableIpamOrganizationAdminAccount", func(t *testing.T) {
         input := &ec2.EnableIpamOrganizationAdminAccountInput{}
         output := &ec2.EnableIpamOrganizationAdminAccountOutput{}
@@ -6112,6 +6541,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableIpamOrganizationAdminAccount", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableIpamOrganizationAdminAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableIpamPolicy", func(t *testing.T) {
+        input := &ec2.EnableIpamPolicyInput{}
+        output := &ec2.EnableIpamPolicyOutput{}
+
+        mockClient.On("EnableIpamPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableIpamPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6365,6 +6807,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCapacityManagerAttributes", func(t *testing.T) {
+        input := &ec2.GetCapacityManagerAttributesInput{}
+        output := &ec2.GetCapacityManagerAttributesOutput{}
+
+        mockClient.On("GetCapacityManagerAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityManagerAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCapacityManagerMetricData", func(t *testing.T) {
+        input := &ec2.GetCapacityManagerMetricDataInput{}
+        output := &ec2.GetCapacityManagerMetricDataOutput{}
+
+        mockClient.On("GetCapacityManagerMetricData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityManagerMetricData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCapacityManagerMetricDimensions", func(t *testing.T) {
+        input := &ec2.GetCapacityManagerMetricDimensionsInput{}
+        output := &ec2.GetCapacityManagerMetricDimensionsOutput{}
+
+        mockClient.On("GetCapacityManagerMetricDimensions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityManagerMetricDimensions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCapacityReservationUsage", func(t *testing.T) {
         input := &ec2.GetCapacityReservationUsageInput{}
         output := &ec2.GetCapacityReservationUsageOutput{}
@@ -6469,6 +6950,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEnabledIpamPolicy", func(t *testing.T) {
+        input := &ec2.GetEnabledIpamPolicyInput{}
+        output := &ec2.GetEnabledIpamPolicyOutput{}
+
+        mockClient.On("GetEnabledIpamPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnabledIpamPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFlowLogsIntegrationTemplate", func(t *testing.T) {
         input := &ec2.GetFlowLogsIntegrationTemplateInput{}
         output := &ec2.GetFlowLogsIntegrationTemplateOutput{}
@@ -6502,6 +6996,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetHostReservationPurchasePreview", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetHostReservationPurchasePreview(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetImageAncestry", func(t *testing.T) {
+        input := &ec2.GetImageAncestryInput{}
+        output := &ec2.GetImageAncestryOutput{}
+
+        mockClient.On("GetImageAncestry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetImageAncestry(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6625,6 +7132,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIpamPolicyAllocationRules", func(t *testing.T) {
+        input := &ec2.GetIpamPolicyAllocationRulesInput{}
+        output := &ec2.GetIpamPolicyAllocationRulesOutput{}
+
+        mockClient.On("GetIpamPolicyAllocationRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamPolicyAllocationRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamPolicyOrganizationTargets", func(t *testing.T) {
+        input := &ec2.GetIpamPolicyOrganizationTargetsInput{}
+        output := &ec2.GetIpamPolicyOrganizationTargetsOutput{}
+
+        mockClient.On("GetIpamPolicyOrganizationTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamPolicyOrganizationTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetIpamPoolAllocations", func(t *testing.T) {
         input := &ec2.GetIpamPoolAllocationsInput{}
         output := &ec2.GetIpamPoolAllocationsOutput{}
@@ -6645,6 +7178,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetIpamPoolCidrs", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetIpamPoolCidrs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamPrefixListResolverRules", func(t *testing.T) {
+        input := &ec2.GetIpamPrefixListResolverRulesInput{}
+        output := &ec2.GetIpamPrefixListResolverRulesOutput{}
+
+        mockClient.On("GetIpamPrefixListResolverRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamPrefixListResolverRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamPrefixListResolverVersionEntries", func(t *testing.T) {
+        input := &ec2.GetIpamPrefixListResolverVersionEntriesInput{}
+        output := &ec2.GetIpamPrefixListResolverVersionEntriesOutput{}
+
+        mockClient.On("GetIpamPrefixListResolverVersionEntries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamPrefixListResolverVersionEntries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamPrefixListResolverVersions", func(t *testing.T) {
+        input := &ec2.GetIpamPrefixListResolverVersionsInput{}
+        output := &ec2.GetIpamPrefixListResolverVersionsOutput{}
+
+        mockClient.On("GetIpamPrefixListResolverVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamPrefixListResolverVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6872,6 +7444,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTransitGatewayMeteringPolicyEntries", func(t *testing.T) {
+        input := &ec2.GetTransitGatewayMeteringPolicyEntriesInput{}
+        output := &ec2.GetTransitGatewayMeteringPolicyEntriesOutput{}
+
+        mockClient.On("GetTransitGatewayMeteringPolicyEntries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTransitGatewayMeteringPolicyEntries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTransitGatewayMulticastDomainAssociations", func(t *testing.T) {
         input := &ec2.GetTransitGatewayMulticastDomainAssociationsInput{}
         output := &ec2.GetTransitGatewayMulticastDomainAssociationsOutput{}
@@ -6983,6 +7568,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetVerifiedAccessGroupPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetVerifiedAccessGroupPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVpcResourcesBlockingEncryptionEnforcement", func(t *testing.T) {
+        input := &ec2.GetVpcResourcesBlockingEncryptionEnforcementInput{}
+        output := &ec2.GetVpcResourcesBlockingEncryptionEnforcementOutput{}
+
+        mockClient.On("GetVpcResourcesBlockingEncryptionEnforcement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVpcResourcesBlockingEncryptionEnforcement(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7132,6 +7730,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListVolumesInRecycleBin", func(t *testing.T) {
+        input := &ec2.ListVolumesInRecycleBinInput{}
+        output := &ec2.ListVolumesInRecycleBinOutput{}
+
+        mockClient.On("ListVolumesInRecycleBin", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVolumesInRecycleBin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestLockSnapshot", func(t *testing.T) {
         input := &ec2.LockSnapshotInput{}
         output := &ec2.LockSnapshotOutput{}
@@ -7275,19 +7886,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestModifyIdFormat", func(t *testing.T) {
-        input := &ec2.ModifyIdFormatInput{}
-        output := &ec2.ModifyIdFormatOutput{}
-
-        mockClient.On("ModifyIdFormat", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ModifyIdFormat(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestModifyIdentityIdFormat", func(t *testing.T) {
         input := &ec2.ModifyIdentityIdFormatInput{}
         output := &ec2.ModifyIdentityIdFormatOutput{}
@@ -7295,6 +7893,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyIdentityIdFormat", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyIdentityIdFormat(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyIdFormat", func(t *testing.T) {
+        input := &ec2.ModifyIdFormatInput{}
+        output := &ec2.ModifyIdFormatOutput{}
+
+        mockClient.On("ModifyIdFormat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIdFormat(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7483,6 +8094,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyIpamPolicyAllocationRules", func(t *testing.T) {
+        input := &ec2.ModifyIpamPolicyAllocationRulesInput{}
+        output := &ec2.ModifyIpamPolicyAllocationRulesOutput{}
+
+        mockClient.On("ModifyIpamPolicyAllocationRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIpamPolicyAllocationRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyIpamPool", func(t *testing.T) {
         input := &ec2.ModifyIpamPoolInput{}
         output := &ec2.ModifyIpamPoolOutput{}
@@ -7490,6 +8114,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyIpamPool", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyIpamPool(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyIpamPrefixListResolver", func(t *testing.T) {
+        input := &ec2.ModifyIpamPrefixListResolverInput{}
+        output := &ec2.ModifyIpamPrefixListResolverOutput{}
+
+        mockClient.On("ModifyIpamPrefixListResolver", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIpamPrefixListResolver(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyIpamPrefixListResolverTarget", func(t *testing.T) {
+        input := &ec2.ModifyIpamPrefixListResolverTargetInput{}
+        output := &ec2.ModifyIpamPrefixListResolverTargetOutput{}
+
+        mockClient.On("ModifyIpamPrefixListResolverTarget", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIpamPrefixListResolverTarget(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7756,6 +8406,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyTransitGatewayMeteringPolicy", func(t *testing.T) {
+        input := &ec2.ModifyTransitGatewayMeteringPolicyInput{}
+        output := &ec2.ModifyTransitGatewayMeteringPolicyOutput{}
+
+        mockClient.On("ModifyTransitGatewayMeteringPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyTransitGatewayMeteringPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyTransitGatewayPrefixListReference", func(t *testing.T) {
         input := &ec2.ModifyTransitGatewayPrefixListReferenceInput{}
         output := &ec2.ModifyTransitGatewayPrefixListReferenceOutput{}
@@ -7932,6 +8595,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyVpcBlockPublicAccessOptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyVpcBlockPublicAccessOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyVpcEncryptionControl", func(t *testing.T) {
+        input := &ec2.ModifyVpcEncryptionControlInput{}
+        output := &ec2.ModifyVpcEncryptionControlOutput{}
+
+        mockClient.On("ModifyVpcEncryptionControl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyVpcEncryptionControl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -8731,6 +9407,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRestoreVolumeFromRecycleBin", func(t *testing.T) {
+        input := &ec2.RestoreVolumeFromRecycleBinInput{}
+        output := &ec2.RestoreVolumeFromRecycleBinOutput{}
+
+        mockClient.On("RestoreVolumeFromRecycleBin", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreVolumeFromRecycleBin(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRevokeClientVpnIngress", func(t *testing.T) {
         input := &ec2.RevokeClientVpnIngressInput{}
         output := &ec2.RevokeClientVpnIngressOutput{}
@@ -9011,6 +9700,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UnmonitorInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.UnmonitorInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCapacityManagerOrganizationsAccess", func(t *testing.T) {
+        input := &ec2.UpdateCapacityManagerOrganizationsAccessInput{}
+        output := &ec2.UpdateCapacityManagerOrganizationsAccessOutput{}
+
+        mockClient.On("UpdateCapacityManagerOrganizationsAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCapacityManagerOrganizationsAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateInterruptibleCapacityReservationAllocation", func(t *testing.T) {
+        input := &ec2.UpdateInterruptibleCapacityReservationAllocationInput{}
+        output := &ec2.UpdateInterruptibleCapacityReservationAllocationOutput{}
+
+        mockClient.On("UpdateInterruptibleCapacityReservationAllocation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateInterruptibleCapacityReservationAllocation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

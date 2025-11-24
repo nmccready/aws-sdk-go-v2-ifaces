@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateScheduledQuery", func(t *testing.T) {
+        input := &cloudwatchlogs.CreateScheduledQueryInput{}
+        output := &cloudwatchlogs.CreateScheduledQueryOutput{}
+
+        mockClient.On("CreateScheduledQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateScheduledQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAccountPolicy", func(t *testing.T) {
         input := &cloudwatchlogs.DeleteAccountPolicyInput{}
         output := &cloudwatchlogs.DeleteAccountPolicyOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRetentionPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRetentionPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteScheduledQuery", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteScheduledQueryInput{}
+        output := &cloudwatchlogs.DeleteScheduledQueryOutput{}
+
+        mockClient.On("DeleteScheduledQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteScheduledQuery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,6 +775,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetScheduledQuery", func(t *testing.T) {
+        input := &cloudwatchlogs.GetScheduledQueryInput{}
+        output := &cloudwatchlogs.GetScheduledQueryOutput{}
+
+        mockClient.On("GetScheduledQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetScheduledQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetScheduledQueryHistory", func(t *testing.T) {
+        input := &cloudwatchlogs.GetScheduledQueryHistoryInput{}
+        output := &cloudwatchlogs.GetScheduledQueryHistoryOutput{}
+
+        mockClient.On("GetScheduledQueryHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetScheduledQueryHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTransformer", func(t *testing.T) {
         input := &cloudwatchlogs.GetTransformerInput{}
         output := &cloudwatchlogs.GetTransformerOutput{}
@@ -821,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLogGroupsForQuery", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLogGroupsForQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListScheduledQueries", func(t *testing.T) {
+        input := &cloudwatchlogs.ListScheduledQueriesInput{}
+        output := &cloudwatchlogs.ListScheduledQueriesOutput{}
+
+        mockClient.On("ListScheduledQueries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListScheduledQueries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1211,6 +1276,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLogAnomalyDetector", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLogAnomalyDetector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateScheduledQuery", func(t *testing.T) {
+        input := &cloudwatchlogs.UpdateScheduledQueryInput{}
+        output := &cloudwatchlogs.UpdateScheduledQueryOutput{}
+
+        mockClient.On("UpdateScheduledQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateScheduledQuery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

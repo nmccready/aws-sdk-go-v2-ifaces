@@ -199,6 +199,43 @@ func (_m *IClient) CreateAccountSubscription(ctx context.Context, params *quicks
 	return r0, r1
 }
 
+// CreateActionConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateActionConnector(ctx context.Context, params *quicksight.CreateActionConnectorInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateActionConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateActionConnector")
+	}
+
+	var r0 *quicksight.CreateActionConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateActionConnectorInput, ...func(*quicksight.Options)) (*quicksight.CreateActionConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateActionConnectorInput, ...func(*quicksight.Options)) *quicksight.CreateActionConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.CreateActionConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.CreateActionConnectorInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAnalysis provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAnalysis(ctx context.Context, params *quicksight.CreateAnalysisInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateAnalysisOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1013,6 +1050,43 @@ func (_m *IClient) CreateVPCConnection(ctx context.Context, params *quicksight.C
 	return r0, r1
 }
 
+// DeleteAccountCustomPermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAccountCustomPermission(ctx context.Context, params *quicksight.DeleteAccountCustomPermissionInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteAccountCustomPermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAccountCustomPermission")
+	}
+
+	var r0 *quicksight.DeleteAccountCustomPermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteAccountCustomPermissionInput, ...func(*quicksight.Options)) (*quicksight.DeleteAccountCustomPermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteAccountCustomPermissionInput, ...func(*quicksight.Options)) *quicksight.DeleteAccountCustomPermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteAccountCustomPermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteAccountCustomPermissionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAccountCustomization provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAccountCustomization(ctx context.Context, params *quicksight.DeleteAccountCustomizationInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteAccountCustomizationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1079,6 +1153,43 @@ func (_m *IClient) DeleteAccountSubscription(ctx context.Context, params *quicks
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteAccountSubscriptionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteActionConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteActionConnector(ctx context.Context, params *quicksight.DeleteActionConnectorInput, optFns ...func(*quicksight.Options)) (*quicksight.DeleteActionConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteActionConnector")
+	}
+
+	var r0 *quicksight.DeleteActionConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteActionConnectorInput, ...func(*quicksight.Options)) (*quicksight.DeleteActionConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteActionConnectorInput, ...func(*quicksight.Options)) *quicksight.DeleteActionConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteActionConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteActionConnectorInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2160,6 +2271,43 @@ func (_m *IClient) DeleteVPCConnection(ctx context.Context, params *quicksight.D
 	return r0, r1
 }
 
+// DescribeAccountCustomPermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAccountCustomPermission(ctx context.Context, params *quicksight.DescribeAccountCustomPermissionInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeAccountCustomPermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAccountCustomPermission")
+	}
+
+	var r0 *quicksight.DescribeAccountCustomPermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeAccountCustomPermissionInput, ...func(*quicksight.Options)) (*quicksight.DescribeAccountCustomPermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeAccountCustomPermissionInput, ...func(*quicksight.Options)) *quicksight.DescribeAccountCustomPermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeAccountCustomPermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeAccountCustomPermissionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAccountCustomization provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAccountCustomization(ctx context.Context, params *quicksight.DescribeAccountCustomizationInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeAccountCustomizationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2263,6 +2411,80 @@ func (_m *IClient) DescribeAccountSubscription(ctx context.Context, params *quic
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeAccountSubscriptionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeActionConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeActionConnector(ctx context.Context, params *quicksight.DescribeActionConnectorInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeActionConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeActionConnector")
+	}
+
+	var r0 *quicksight.DescribeActionConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeActionConnectorInput, ...func(*quicksight.Options)) (*quicksight.DescribeActionConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeActionConnectorInput, ...func(*quicksight.Options)) *quicksight.DescribeActionConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeActionConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeActionConnectorInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeActionConnectorPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeActionConnectorPermissions(ctx context.Context, params *quicksight.DescribeActionConnectorPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeActionConnectorPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeActionConnectorPermissions")
+	}
+
+	var r0 *quicksight.DescribeActionConnectorPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeActionConnectorPermissionsInput, ...func(*quicksight.Options)) (*quicksight.DescribeActionConnectorPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeActionConnectorPermissionsInput, ...func(*quicksight.Options)) *quicksight.DescribeActionConnectorPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeActionConnectorPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeActionConnectorPermissionsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4195,6 +4417,80 @@ func (_m *IClient) GetDashboardEmbedUrl(ctx context.Context, params *quicksight.
 	return r0, r1
 }
 
+// GetFlowMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFlowMetadata(ctx context.Context, params *quicksight.GetFlowMetadataInput, optFns ...func(*quicksight.Options)) (*quicksight.GetFlowMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFlowMetadata")
+	}
+
+	var r0 *quicksight.GetFlowMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GetFlowMetadataInput, ...func(*quicksight.Options)) (*quicksight.GetFlowMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GetFlowMetadataInput, ...func(*quicksight.Options)) *quicksight.GetFlowMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.GetFlowMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.GetFlowMetadataInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFlowPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFlowPermissions(ctx context.Context, params *quicksight.GetFlowPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.GetFlowPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFlowPermissions")
+	}
+
+	var r0 *quicksight.GetFlowPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GetFlowPermissionsInput, ...func(*quicksight.Options)) (*quicksight.GetFlowPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GetFlowPermissionsInput, ...func(*quicksight.Options)) *quicksight.GetFlowPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.GetFlowPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.GetFlowPermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSessionEmbedUrl provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSessionEmbedUrl(ctx context.Context, params *quicksight.GetSessionEmbedUrlInput, optFns ...func(*quicksight.Options)) (*quicksight.GetSessionEmbedUrlOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4224,6 +4520,43 @@ func (_m *IClient) GetSessionEmbedUrl(ctx context.Context, params *quicksight.Ge
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.GetSessionEmbedUrlInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListActionConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListActionConnectors(ctx context.Context, params *quicksight.ListActionConnectorsInput, optFns ...func(*quicksight.Options)) (*quicksight.ListActionConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListActionConnectors")
+	}
+
+	var r0 *quicksight.ListActionConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListActionConnectorsInput, ...func(*quicksight.Options)) (*quicksight.ListActionConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListActionConnectorsInput, ...func(*quicksight.Options)) *quicksight.ListActionConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListActionConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListActionConnectorsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4557,6 +4890,43 @@ func (_m *IClient) ListDataSources(ctx context.Context, params *quicksight.ListD
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListDataSourcesInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFlows provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFlows(ctx context.Context, params *quicksight.ListFlowsInput, optFns ...func(*quicksight.Options)) (*quicksight.ListFlowsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFlows")
+	}
+
+	var r0 *quicksight.ListFlowsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListFlowsInput, ...func(*quicksight.Options)) (*quicksight.ListFlowsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListFlowsInput, ...func(*quicksight.Options)) *quicksight.ListFlowsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListFlowsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListFlowsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5656,6 +6026,43 @@ func (_m *IClient) RestoreAnalysis(ctx context.Context, params *quicksight.Resto
 	return r0, r1
 }
 
+// SearchActionConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchActionConnectors(ctx context.Context, params *quicksight.SearchActionConnectorsInput, optFns ...func(*quicksight.Options)) (*quicksight.SearchActionConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchActionConnectors")
+	}
+
+	var r0 *quicksight.SearchActionConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchActionConnectorsInput, ...func(*quicksight.Options)) (*quicksight.SearchActionConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchActionConnectorsInput, ...func(*quicksight.Options)) *quicksight.SearchActionConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.SearchActionConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.SearchActionConnectorsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchAnalyses provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchAnalyses(ctx context.Context, params *quicksight.SearchAnalysesInput, optFns ...func(*quicksight.Options)) (*quicksight.SearchAnalysesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5796,6 +6203,43 @@ func (_m *IClient) SearchDataSources(ctx context.Context, params *quicksight.Sea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.SearchDataSourcesInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchFlows provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchFlows(ctx context.Context, params *quicksight.SearchFlowsInput, optFns ...func(*quicksight.Options)) (*quicksight.SearchFlowsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchFlows")
+	}
+
+	var r0 *quicksight.SearchFlowsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchFlowsInput, ...func(*quicksight.Options)) (*quicksight.SearchFlowsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchFlowsInput, ...func(*quicksight.Options)) *quicksight.SearchFlowsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.SearchFlowsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.SearchFlowsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6137,6 +6581,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *quicksight.UntagRe
 	return r0, r1
 }
 
+// UpdateAccountCustomPermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAccountCustomPermission(ctx context.Context, params *quicksight.UpdateAccountCustomPermissionInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateAccountCustomPermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAccountCustomPermission")
+	}
+
+	var r0 *quicksight.UpdateAccountCustomPermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateAccountCustomPermissionInput, ...func(*quicksight.Options)) (*quicksight.UpdateAccountCustomPermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateAccountCustomPermissionInput, ...func(*quicksight.Options)) *quicksight.UpdateAccountCustomPermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateAccountCustomPermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateAccountCustomPermissionInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateAccountCustomization provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateAccountCustomization(ctx context.Context, params *quicksight.UpdateAccountCustomizationInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateAccountCustomizationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6203,6 +6684,80 @@ func (_m *IClient) UpdateAccountSettings(ctx context.Context, params *quicksight
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateAccountSettingsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateActionConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateActionConnector(ctx context.Context, params *quicksight.UpdateActionConnectorInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateActionConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateActionConnector")
+	}
+
+	var r0 *quicksight.UpdateActionConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateActionConnectorInput, ...func(*quicksight.Options)) (*quicksight.UpdateActionConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateActionConnectorInput, ...func(*quicksight.Options)) *quicksight.UpdateActionConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateActionConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateActionConnectorInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateActionConnectorPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateActionConnectorPermissions(ctx context.Context, params *quicksight.UpdateActionConnectorPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateActionConnectorPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateActionConnectorPermissions")
+	}
+
+	var r0 *quicksight.UpdateActionConnectorPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateActionConnectorPermissionsInput, ...func(*quicksight.Options)) (*quicksight.UpdateActionConnectorPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateActionConnectorPermissionsInput, ...func(*quicksight.Options)) *quicksight.UpdateActionConnectorPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateActionConnectorPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateActionConnectorPermissionsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6832,6 +7387,43 @@ func (_m *IClient) UpdateDefaultQBusinessApplication(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateDefaultQBusinessApplicationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateFlowPermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateFlowPermissions(ctx context.Context, params *quicksight.UpdateFlowPermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateFlowPermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateFlowPermissions")
+	}
+
+	var r0 *quicksight.UpdateFlowPermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateFlowPermissionsInput, ...func(*quicksight.Options)) (*quicksight.UpdateFlowPermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateFlowPermissionsInput, ...func(*quicksight.Options)) *quicksight.UpdateFlowPermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateFlowPermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateFlowPermissionsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

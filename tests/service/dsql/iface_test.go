@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteClusterPolicy", func(t *testing.T) {
+        input := &dsql.DeleteClusterPolicyInput{}
+        output := &dsql.DeleteClusterPolicyOutput{}
+
+        mockClient.On("DeleteClusterPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteClusterPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCluster", func(t *testing.T) {
         input := &dsql.GetClusterInput{}
         output := &dsql.GetClusterOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetClusterPolicy", func(t *testing.T) {
+        input := &dsql.GetClusterPolicyInput{}
+        output := &dsql.GetClusterPolicyOutput{}
+
+        mockClient.On("GetClusterPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetClusterPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -106,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutClusterPolicy", func(t *testing.T) {
+        input := &dsql.PutClusterPolicyInput{}
+        output := &dsql.PutClusterPolicyOutput{}
+
+        mockClient.On("PutClusterPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutClusterPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

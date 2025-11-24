@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSecretVersionIds", func(t *testing.T) {
-        input := &secretsmanager.ListSecretVersionIdsInput{}
-        output := &secretsmanager.ListSecretVersionIdsOutput{}
-
-        mockClient.On("ListSecretVersionIds", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSecretVersionIds(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSecrets", func(t *testing.T) {
         input := &secretsmanager.ListSecretsInput{}
         output := &secretsmanager.ListSecretsOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSecrets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSecrets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSecretVersionIds", func(t *testing.T) {
+        input := &secretsmanager.ListSecretVersionIdsInput{}
+        output := &secretsmanager.ListSecretVersionIdsOutput{}
+
+        mockClient.On("ListSecretVersionIds", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSecretVersionIds(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -12,10 +12,13 @@ type IClient interface {
  Options() Options 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
  DeleteCluster(ctx context.Context, params *DeleteClusterInput, optFns ...func(*Options)) (*DeleteClusterOutput, error) 
+ DeleteClusterPolicy(ctx context.Context, params *DeleteClusterPolicyInput, optFns ...func(*Options)) (*DeleteClusterPolicyOutput, error) 
  GetCluster(ctx context.Context, params *GetClusterInput, optFns ...func(*Options)) (*GetClusterOutput, error) 
+ GetClusterPolicy(ctx context.Context, params *GetClusterPolicyInput, optFns ...func(*Options)) (*GetClusterPolicyOutput, error) 
  GetVpcEndpointServiceName(ctx context.Context, params *GetVpcEndpointServiceNameInput, optFns ...func(*Options)) (*GetVpcEndpointServiceNameOutput, error) 
  ListClusters(ctx context.Context, params *ListClustersInput, optFns ...func(*Options)) (*ListClustersOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ PutClusterPolicy(ctx context.Context, params *PutClusterPolicyInput, optFns ...func(*Options)) (*PutClusterPolicyOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateCluster(ctx context.Context, params *UpdateClusterInput, optFns ...func(*Options)) (*UpdateClusterOutput, error) 

@@ -718,6 +718,80 @@ func (_m *IClient) DescribeReplicator(ctx context.Context, params *kafka.Describ
 	return r0, r1
 }
 
+// DescribeTopic provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTopic(ctx context.Context, params *kafka.DescribeTopicInput, optFns ...func(*kafka.Options)) (*kafka.DescribeTopicOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTopic")
+	}
+
+	var r0 *kafka.DescribeTopicOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DescribeTopicInput, ...func(*kafka.Options)) (*kafka.DescribeTopicOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DescribeTopicInput, ...func(*kafka.Options)) *kafka.DescribeTopicOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.DescribeTopicOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DescribeTopicInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTopicPartitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTopicPartitions(ctx context.Context, params *kafka.DescribeTopicPartitionsInput, optFns ...func(*kafka.Options)) (*kafka.DescribeTopicPartitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTopicPartitions")
+	}
+
+	var r0 *kafka.DescribeTopicPartitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DescribeTopicPartitionsInput, ...func(*kafka.Options)) (*kafka.DescribeTopicPartitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DescribeTopicPartitionsInput, ...func(*kafka.Options)) *kafka.DescribeTopicPartitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.DescribeTopicPartitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DescribeTopicPartitionsInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeVpcConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeVpcConnection(ctx context.Context, params *kafka.DescribeVpcConnectionInput, optFns ...func(*kafka.Options)) (*kafka.DescribeVpcConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1310,6 +1384,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *kafka.ListTa
 	return r0, r1
 }
 
+// ListTopics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTopics(ctx context.Context, params *kafka.ListTopicsInput, optFns ...func(*kafka.Options)) (*kafka.ListTopicsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTopics")
+	}
+
+	var r0 *kafka.ListTopicsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.ListTopicsInput, ...func(*kafka.Options)) (*kafka.ListTopicsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.ListTopicsInput, ...func(*kafka.Options)) *kafka.ListTopicsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.ListTopicsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.ListTopicsInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListVpcConnections provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListVpcConnections(ctx context.Context, params *kafka.ListVpcConnectionsInput, optFns ...func(*kafka.Options)) (*kafka.ListVpcConnectionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1838,6 +1949,43 @@ func (_m *IClient) UpdateMonitoring(ctx context.Context, params *kafka.UpdateMon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafka.UpdateMonitoringInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRebalancing provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRebalancing(ctx context.Context, params *kafka.UpdateRebalancingInput, optFns ...func(*kafka.Options)) (*kafka.UpdateRebalancingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRebalancing")
+	}
+
+	var r0 *kafka.UpdateRebalancingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.UpdateRebalancingInput, ...func(*kafka.Options)) (*kafka.UpdateRebalancingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.UpdateRebalancingInput, ...func(*kafka.Options)) *kafka.UpdateRebalancingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.UpdateRebalancingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.UpdateRebalancingInput, ...func(*kafka.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -17,6 +17,8 @@ type IClient interface {
  DecodeAuthorizationMessage(ctx context.Context, params *DecodeAuthorizationMessageInput, optFns ...func(*Options)) (*DecodeAuthorizationMessageOutput, error) 
  GetAccessKeyInfo(ctx context.Context, params *GetAccessKeyInfoInput, optFns ...func(*Options)) (*GetAccessKeyInfoOutput, error) 
  GetCallerIdentity(ctx context.Context, params *GetCallerIdentityInput, optFns ...func(*Options)) (*GetCallerIdentityOutput, error) 
+ GetDelegatedAccessToken(ctx context.Context, params *GetDelegatedAccessTokenInput, optFns ...func(*Options)) (*GetDelegatedAccessTokenOutput, error) 
  GetFederationToken(ctx context.Context, params *GetFederationTokenInput, optFns ...func(*Options)) (*GetFederationTokenOutput, error) 
  GetSessionToken(ctx context.Context, params *GetSessionTokenInput, optFns ...func(*Options)) (*GetSessionTokenOutput, error) 
+ GetWebIdentityToken(ctx context.Context, params *GetWebIdentityTokenInput, optFns ...func(*Options)) (*GetWebIdentityTokenOutput, error) 
 }

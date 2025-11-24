@@ -126,6 +126,43 @@ func (_m *IClient) CreateDataflowEndpointGroup(ctx context.Context, params *grou
 	return r0, r1
 }
 
+// CreateDataflowEndpointGroupV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataflowEndpointGroupV2(ctx context.Context, params *groundstation.CreateDataflowEndpointGroupV2Input, optFns ...func(*groundstation.Options)) (*groundstation.CreateDataflowEndpointGroupV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataflowEndpointGroupV2")
+	}
+
+	var r0 *groundstation.CreateDataflowEndpointGroupV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.CreateDataflowEndpointGroupV2Input, ...func(*groundstation.Options)) (*groundstation.CreateDataflowEndpointGroupV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.CreateDataflowEndpointGroupV2Input, ...func(*groundstation.Options)) *groundstation.CreateDataflowEndpointGroupV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.CreateDataflowEndpointGroupV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.CreateDataflowEndpointGroupV2Input, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEphemeris provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEphemeris(ctx context.Context, params *groundstation.CreateEphemerisInput, optFns ...func(*groundstation.Options)) (*groundstation.CreateEphemerisOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -451,6 +488,43 @@ func (_m *IClient) GetAgentConfiguration(ctx context.Context, params *groundstat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.GetAgentConfigurationInput, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentTaskResponseUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentTaskResponseUrl(ctx context.Context, params *groundstation.GetAgentTaskResponseUrlInput, optFns ...func(*groundstation.Options)) (*groundstation.GetAgentTaskResponseUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentTaskResponseUrl")
+	}
+
+	var r0 *groundstation.GetAgentTaskResponseUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.GetAgentTaskResponseUrlInput, ...func(*groundstation.Options)) (*groundstation.GetAgentTaskResponseUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.GetAgentTaskResponseUrlInput, ...func(*groundstation.Options)) *groundstation.GetAgentTaskResponseUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.GetAgentTaskResponseUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.GetAgentTaskResponseUrlInput, ...func(*groundstation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

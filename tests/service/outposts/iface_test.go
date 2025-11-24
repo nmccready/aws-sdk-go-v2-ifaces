@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartOutpostDecommission", func(t *testing.T) {
+        input := &outposts.StartOutpostDecommissionInput{}
+        output := &outposts.StartOutpostDecommissionOutput{}
+
+        mockClient.On("StartOutpostDecommission", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOutpostDecommission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &outposts.TagResourceInput{}
         output := &outposts.TagResourceOutput{}

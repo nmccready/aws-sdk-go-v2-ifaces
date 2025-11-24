@@ -10,14 +10,16 @@ import (
 // IClient defines the interface for evs
 type IClient interface {
  Options() Options 
+ AssociateEipToVlan(ctx context.Context, params *AssociateEipToVlanInput, optFns ...func(*Options)) (*AssociateEipToVlanOutput, error) 
  CreateEnvironment(ctx context.Context, params *CreateEnvironmentInput, optFns ...func(*Options)) (*CreateEnvironmentOutput, error) 
  CreateEnvironmentHost(ctx context.Context, params *CreateEnvironmentHostInput, optFns ...func(*Options)) (*CreateEnvironmentHostOutput, error) 
  DeleteEnvironment(ctx context.Context, params *DeleteEnvironmentInput, optFns ...func(*Options)) (*DeleteEnvironmentOutput, error) 
  DeleteEnvironmentHost(ctx context.Context, params *DeleteEnvironmentHostInput, optFns ...func(*Options)) (*DeleteEnvironmentHostOutput, error) 
+ DisassociateEipFromVlan(ctx context.Context, params *DisassociateEipFromVlanInput, optFns ...func(*Options)) (*DisassociateEipFromVlanOutput, error) 
  GetEnvironment(ctx context.Context, params *GetEnvironmentInput, optFns ...func(*Options)) (*GetEnvironmentOutput, error) 
  ListEnvironmentHosts(ctx context.Context, params *ListEnvironmentHostsInput, optFns ...func(*Options)) (*ListEnvironmentHostsOutput, error) 
- ListEnvironmentVlans(ctx context.Context, params *ListEnvironmentVlansInput, optFns ...func(*Options)) (*ListEnvironmentVlansOutput, error) 
  ListEnvironments(ctx context.Context, params *ListEnvironmentsInput, optFns ...func(*Options)) (*ListEnvironmentsOutput, error) 
+ ListEnvironmentVlans(ctx context.Context, params *ListEnvironmentVlansInput, optFns ...func(*Options)) (*ListEnvironmentVlansOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 

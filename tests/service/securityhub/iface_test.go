@@ -853,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFindings", func(t *testing.T) {
+        input := &securityhub.GetFindingsInput{}
+        output := &securityhub.GetFindingsOutput{}
+
+        mockClient.On("GetFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFindingStatisticsV2", func(t *testing.T) {
         input := &securityhub.GetFindingStatisticsV2Input{}
         output := &securityhub.GetFindingStatisticsV2Output{}
@@ -866,13 +879,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFindings", func(t *testing.T) {
-        input := &securityhub.GetFindingsInput{}
-        output := &securityhub.GetFindingsOutput{}
+    t.Run("TestGetFindingsTrendsV2", func(t *testing.T) {
+        input := &securityhub.GetFindingsTrendsV2Input{}
+        output := &securityhub.GetFindingsTrendsV2Output{}
 
-        mockClient.On("GetFindings", ctx, input).Return(output, nil)
+        mockClient.On("GetFindingsTrendsV2", ctx, input).Return(output, nil)
 
-        result, err := mockClient.GetFindings(ctx, input)
+        result, err := mockClient.GetFindingsTrendsV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -964,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResourcesStatisticsV2", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResourcesStatisticsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcesTrendsV2", func(t *testing.T) {
+        input := &securityhub.GetResourcesTrendsV2Input{}
+        output := &securityhub.GetResourcesTrendsV2Output{}
+
+        mockClient.On("GetResourcesTrendsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcesTrendsV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

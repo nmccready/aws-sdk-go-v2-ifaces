@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDomainVerification", func(t *testing.T) {
+        input := &vpclattice.DeleteDomainVerificationInput{}
+        output := &vpclattice.DeleteDomainVerificationOutput{}
+
+        mockClient.On("DeleteDomainVerification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDomainVerification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteListener", func(t *testing.T) {
         input := &vpclattice.DeleteListenerInput{}
         output := &vpclattice.DeleteListenerOutput{}
@@ -411,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDomainVerification", func(t *testing.T) {
+        input := &vpclattice.GetDomainVerificationInput{}
+        output := &vpclattice.GetDomainVerificationOutput{}
+
+        mockClient.On("GetDomainVerification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDomainVerification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetListener", func(t *testing.T) {
         input := &vpclattice.GetListenerInput{}
         output := &vpclattice.GetListenerOutput{}
@@ -567,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDomainVerifications", func(t *testing.T) {
+        input := &vpclattice.ListDomainVerificationsInput{}
+        output := &vpclattice.ListDomainVerificationsOutput{}
+
+        mockClient.On("ListDomainVerifications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainVerifications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListListeners", func(t *testing.T) {
         input := &vpclattice.ListListenersInput{}
         output := &vpclattice.ListListenersOutput{}
@@ -645,6 +684,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListServiceNetworks", func(t *testing.T) {
+        input := &vpclattice.ListServiceNetworksInput{}
+        output := &vpclattice.ListServiceNetworksOutput{}
+
+        mockClient.On("ListServiceNetworks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceNetworks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListServiceNetworkServiceAssociations", func(t *testing.T) {
         input := &vpclattice.ListServiceNetworkServiceAssociationsInput{}
         output := &vpclattice.ListServiceNetworkServiceAssociationsOutput{}
@@ -678,19 +730,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServiceNetworkVpcEndpointAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServiceNetworkVpcEndpointAssociations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListServiceNetworks", func(t *testing.T) {
-        input := &vpclattice.ListServiceNetworksInput{}
-        output := &vpclattice.ListServiceNetworksOutput{}
-
-        mockClient.On("ListServiceNetworks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServiceNetworks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -782,6 +821,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterTargets", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDomainVerification", func(t *testing.T) {
+        input := &vpclattice.StartDomainVerificationInput{}
+        output := &vpclattice.StartDomainVerificationOutput{}
+
+        mockClient.On("StartDomainVerification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDomainVerification(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

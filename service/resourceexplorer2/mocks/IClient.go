@@ -125,6 +125,43 @@ func (_m *IClient) CreateIndex(ctx context.Context, params *resourceexplorer2.Cr
 	return r0, r1
 }
 
+// CreateResourceExplorerSetup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateResourceExplorerSetup(ctx context.Context, params *resourceexplorer2.CreateResourceExplorerSetupInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.CreateResourceExplorerSetupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateResourceExplorerSetup")
+	}
+
+	var r0 *resourceexplorer2.CreateResourceExplorerSetupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.CreateResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.CreateResourceExplorerSetupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.CreateResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.CreateResourceExplorerSetupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.CreateResourceExplorerSetupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.CreateResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateView(ctx context.Context, params *resourceexplorer2.CreateViewInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.CreateViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -191,6 +228,43 @@ func (_m *IClient) DeleteIndex(ctx context.Context, params *resourceexplorer2.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.DeleteIndexInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourceExplorerSetup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourceExplorerSetup(ctx context.Context, params *resourceexplorer2.DeleteResourceExplorerSetupInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.DeleteResourceExplorerSetupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourceExplorerSetup")
+	}
+
+	var r0 *resourceexplorer2.DeleteResourceExplorerSetupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.DeleteResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.DeleteResourceExplorerSetupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.DeleteResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.DeleteResourceExplorerSetupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.DeleteResourceExplorerSetupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.DeleteResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -421,6 +495,117 @@ func (_m *IClient) GetManagedView(ctx context.Context, params *resourceexplorer2
 	return r0, r1
 }
 
+// GetResourceExplorerSetup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourceExplorerSetup(ctx context.Context, params *resourceexplorer2.GetResourceExplorerSetupInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetResourceExplorerSetupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourceExplorerSetup")
+	}
+
+	var r0 *resourceexplorer2.GetResourceExplorerSetupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.GetResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetResourceExplorerSetupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.GetResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.GetResourceExplorerSetupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.GetResourceExplorerSetupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.GetResourceExplorerSetupInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetServiceIndex provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetServiceIndex(ctx context.Context, params *resourceexplorer2.GetServiceIndexInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetServiceIndexOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetServiceIndex")
+	}
+
+	var r0 *resourceexplorer2.GetServiceIndexOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.GetServiceIndexInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetServiceIndexOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.GetServiceIndexInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.GetServiceIndexOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.GetServiceIndexOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.GetServiceIndexInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetServiceView provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetServiceView(ctx context.Context, params *resourceexplorer2.GetServiceViewInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetServiceViewOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetServiceView")
+	}
+
+	var r0 *resourceexplorer2.GetServiceViewOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.GetServiceViewInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetServiceViewOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.GetServiceViewInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.GetServiceViewOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.GetServiceViewOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.GetServiceViewInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetView(ctx context.Context, params *resourceexplorer2.GetViewInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.GetViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -598,6 +783,117 @@ func (_m *IClient) ListResources(ctx context.Context, params *resourceexplorer2.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.ListResourcesInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListServiceIndexes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListServiceIndexes(ctx context.Context, params *resourceexplorer2.ListServiceIndexesInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.ListServiceIndexesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListServiceIndexes")
+	}
+
+	var r0 *resourceexplorer2.ListServiceIndexesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.ListServiceIndexesInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.ListServiceIndexesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.ListServiceIndexesInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.ListServiceIndexesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.ListServiceIndexesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.ListServiceIndexesInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListServiceViews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListServiceViews(ctx context.Context, params *resourceexplorer2.ListServiceViewsInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.ListServiceViewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListServiceViews")
+	}
+
+	var r0 *resourceexplorer2.ListServiceViewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.ListServiceViewsInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.ListServiceViewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.ListServiceViewsInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.ListServiceViewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.ListServiceViewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.ListServiceViewsInput, ...func(*resourceexplorer2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListStreamingAccessForServices provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListStreamingAccessForServices(ctx context.Context, params *resourceexplorer2.ListStreamingAccessForServicesInput, optFns ...func(*resourceexplorer2.Options)) (*resourceexplorer2.ListStreamingAccessForServicesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListStreamingAccessForServices")
+	}
+
+	var r0 *resourceexplorer2.ListStreamingAccessForServicesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.ListStreamingAccessForServicesInput, ...func(*resourceexplorer2.Options)) (*resourceexplorer2.ListStreamingAccessForServicesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resourceexplorer2.ListStreamingAccessForServicesInput, ...func(*resourceexplorer2.Options)) *resourceexplorer2.ListStreamingAccessForServicesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resourceexplorer2.ListStreamingAccessForServicesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resourceexplorer2.ListStreamingAccessForServicesInput, ...func(*resourceexplorer2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

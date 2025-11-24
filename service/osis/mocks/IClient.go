@@ -51,6 +51,43 @@ func (_m *IClient) CreatePipeline(ctx context.Context, params *osis.CreatePipeli
 	return r0, r1
 }
 
+// CreatePipelineEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePipelineEndpoint(ctx context.Context, params *osis.CreatePipelineEndpointInput, optFns ...func(*osis.Options)) (*osis.CreatePipelineEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePipelineEndpoint")
+	}
+
+	var r0 *osis.CreatePipelineEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.CreatePipelineEndpointInput, ...func(*osis.Options)) (*osis.CreatePipelineEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.CreatePipelineEndpointInput, ...func(*osis.Options)) *osis.CreatePipelineEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.CreatePipelineEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.CreatePipelineEndpointInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePipeline provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePipeline(ctx context.Context, params *osis.DeletePipelineInput, optFns ...func(*osis.Options)) (*osis.DeletePipelineOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -80,6 +117,80 @@ func (_m *IClient) DeletePipeline(ctx context.Context, params *osis.DeletePipeli
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *osis.DeletePipelineInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePipelineEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePipelineEndpoint(ctx context.Context, params *osis.DeletePipelineEndpointInput, optFns ...func(*osis.Options)) (*osis.DeletePipelineEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePipelineEndpoint")
+	}
+
+	var r0 *osis.DeletePipelineEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.DeletePipelineEndpointInput, ...func(*osis.Options)) (*osis.DeletePipelineEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.DeletePipelineEndpointInput, ...func(*osis.Options)) *osis.DeletePipelineEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.DeletePipelineEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.DeletePipelineEndpointInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *osis.DeleteResourcePolicyInput, optFns ...func(*osis.Options)) (*osis.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *osis.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.DeleteResourcePolicyInput, ...func(*osis.Options)) (*osis.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.DeleteResourcePolicyInput, ...func(*osis.Options)) *osis.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.DeleteResourcePolicyInput, ...func(*osis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -199,6 +310,43 @@ func (_m *IClient) GetPipelineChangeProgress(ctx context.Context, params *osis.G
 	return r0, r1
 }
 
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *osis.GetResourcePolicyInput, optFns ...func(*osis.Options)) (*osis.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *osis.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.GetResourcePolicyInput, ...func(*osis.Options)) (*osis.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.GetResourcePolicyInput, ...func(*osis.Options)) *osis.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.GetResourcePolicyInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPipelineBlueprints provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPipelineBlueprints(ctx context.Context, params *osis.ListPipelineBlueprintsInput, optFns ...func(*osis.Options)) (*osis.ListPipelineBlueprintsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +376,80 @@ func (_m *IClient) ListPipelineBlueprints(ctx context.Context, params *osis.List
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *osis.ListPipelineBlueprintsInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPipelineEndpointConnections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPipelineEndpointConnections(ctx context.Context, params *osis.ListPipelineEndpointConnectionsInput, optFns ...func(*osis.Options)) (*osis.ListPipelineEndpointConnectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPipelineEndpointConnections")
+	}
+
+	var r0 *osis.ListPipelineEndpointConnectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.ListPipelineEndpointConnectionsInput, ...func(*osis.Options)) (*osis.ListPipelineEndpointConnectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.ListPipelineEndpointConnectionsInput, ...func(*osis.Options)) *osis.ListPipelineEndpointConnectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.ListPipelineEndpointConnectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.ListPipelineEndpointConnectionsInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPipelineEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPipelineEndpoints(ctx context.Context, params *osis.ListPipelineEndpointsInput, optFns ...func(*osis.Options)) (*osis.ListPipelineEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPipelineEndpoints")
+	}
+
+	var r0 *osis.ListPipelineEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.ListPipelineEndpointsInput, ...func(*osis.Options)) (*osis.ListPipelineEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.ListPipelineEndpointsInput, ...func(*osis.Options)) *osis.ListPipelineEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.ListPipelineEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.ListPipelineEndpointsInput, ...func(*osis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -326,6 +548,80 @@ func (_m *IClient) Options() osis.Options {
 	}
 
 	return r0
+}
+
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *osis.PutResourcePolicyInput, optFns ...func(*osis.Options)) (*osis.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *osis.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.PutResourcePolicyInput, ...func(*osis.Options)) (*osis.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.PutResourcePolicyInput, ...func(*osis.Options)) *osis.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.PutResourcePolicyInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RevokePipelineEndpointConnections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokePipelineEndpointConnections(ctx context.Context, params *osis.RevokePipelineEndpointConnectionsInput, optFns ...func(*osis.Options)) (*osis.RevokePipelineEndpointConnectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokePipelineEndpointConnections")
+	}
+
+	var r0 *osis.RevokePipelineEndpointConnectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.RevokePipelineEndpointConnectionsInput, ...func(*osis.Options)) (*osis.RevokePipelineEndpointConnectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *osis.RevokePipelineEndpointConnectionsInput, ...func(*osis.Options)) *osis.RevokePipelineEndpointConnectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*osis.RevokePipelineEndpointConnectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *osis.RevokePipelineEndpointConnectionsInput, ...func(*osis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartPipeline provides a mock function with given fields: ctx, params, optFns

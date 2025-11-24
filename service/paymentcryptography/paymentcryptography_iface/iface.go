@@ -10,12 +10,17 @@ import (
 // IClient defines the interface for paymentcryptography
 type IClient interface {
  Options() Options 
+ AddKeyReplicationRegions(ctx context.Context, params *AddKeyReplicationRegionsInput, optFns ...func(*Options)) (*AddKeyReplicationRegionsOutput, error) 
  CreateAlias(ctx context.Context, params *CreateAliasInput, optFns ...func(*Options)) (*CreateAliasOutput, error) 
  CreateKey(ctx context.Context, params *CreateKeyInput, optFns ...func(*Options)) (*CreateKeyOutput, error) 
  DeleteAlias(ctx context.Context, params *DeleteAliasInput, optFns ...func(*Options)) (*DeleteAliasOutput, error) 
  DeleteKey(ctx context.Context, params *DeleteKeyInput, optFns ...func(*Options)) (*DeleteKeyOutput, error) 
+ DisableDefaultKeyReplicationRegions(ctx context.Context, params *DisableDefaultKeyReplicationRegionsInput, optFns ...func(*Options)) (*DisableDefaultKeyReplicationRegionsOutput, error) 
+ EnableDefaultKeyReplicationRegions(ctx context.Context, params *EnableDefaultKeyReplicationRegionsInput, optFns ...func(*Options)) (*EnableDefaultKeyReplicationRegionsOutput, error) 
  ExportKey(ctx context.Context, params *ExportKeyInput, optFns ...func(*Options)) (*ExportKeyOutput, error) 
  GetAlias(ctx context.Context, params *GetAliasInput, optFns ...func(*Options)) (*GetAliasOutput, error) 
+ GetCertificateSigningRequest(ctx context.Context, params *GetCertificateSigningRequestInput, optFns ...func(*Options)) (*GetCertificateSigningRequestOutput, error) 
+ GetDefaultKeyReplicationRegions(ctx context.Context, params *GetDefaultKeyReplicationRegionsInput, optFns ...func(*Options)) (*GetDefaultKeyReplicationRegionsOutput, error) 
  GetKey(ctx context.Context, params *GetKeyInput, optFns ...func(*Options)) (*GetKeyOutput, error) 
  GetParametersForExport(ctx context.Context, params *GetParametersForExportInput, optFns ...func(*Options)) (*GetParametersForExportOutput, error) 
  GetParametersForImport(ctx context.Context, params *GetParametersForImportInput, optFns ...func(*Options)) (*GetParametersForImportOutput, error) 
@@ -24,6 +29,7 @@ type IClient interface {
  ListAliases(ctx context.Context, params *ListAliasesInput, optFns ...func(*Options)) (*ListAliasesOutput, error) 
  ListKeys(ctx context.Context, params *ListKeysInput, optFns ...func(*Options)) (*ListKeysOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ RemoveKeyReplicationRegions(ctx context.Context, params *RemoveKeyReplicationRegionsInput, optFns ...func(*Options)) (*RemoveKeyReplicationRegionsOutput, error) 
  RestoreKey(ctx context.Context, params *RestoreKeyInput, optFns ...func(*Options)) (*RestoreKeyOutput, error) 
  StartKeyUsage(ctx context.Context, params *StartKeyUsageInput, optFns ...func(*Options)) (*StartKeyUsageOutput, error) 
  StopKeyUsage(ctx context.Context, params *StopKeyUsageInput, optFns ...func(*Options)) (*StopKeyUsageOutput, error) 

@@ -1162,6 +1162,43 @@ func (_m *IClient) GetQueryRuntimeStatistics(ctx context.Context, params *athena
 	return r0, r1
 }
 
+// GetResourceDashboard provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourceDashboard(ctx context.Context, params *athena.GetResourceDashboardInput, optFns ...func(*athena.Options)) (*athena.GetResourceDashboardOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourceDashboard")
+	}
+
+	var r0 *athena.GetResourceDashboardOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.GetResourceDashboardInput, ...func(*athena.Options)) (*athena.GetResourceDashboardOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.GetResourceDashboardInput, ...func(*athena.Options)) *athena.GetResourceDashboardOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.GetResourceDashboardOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.GetResourceDashboardInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSession provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSession(ctx context.Context, params *athena.GetSessionInput, optFns ...func(*athena.Options)) (*athena.GetSessionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1191,6 +1228,43 @@ func (_m *IClient) GetSession(ctx context.Context, params *athena.GetSessionInpu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *athena.GetSessionInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSessionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSessionEndpoint(ctx context.Context, params *athena.GetSessionEndpointInput, optFns ...func(*athena.Options)) (*athena.GetSessionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSessionEndpoint")
+	}
+
+	var r0 *athena.GetSessionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.GetSessionEndpointInput, ...func(*athena.Options)) (*athena.GetSessionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.GetSessionEndpointInput, ...func(*athena.Options)) *athena.GetSessionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.GetSessionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.GetSessionEndpointInput, ...func(*athena.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

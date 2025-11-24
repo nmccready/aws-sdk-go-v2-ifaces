@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateResourceExplorerSetup", func(t *testing.T) {
+        input := &resourceexplorer2.CreateResourceExplorerSetupInput{}
+        output := &resourceexplorer2.CreateResourceExplorerSetupOutput{}
+
+        mockClient.On("CreateResourceExplorerSetup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateResourceExplorerSetup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateView", func(t *testing.T) {
         input := &resourceexplorer2.CreateViewInput{}
         output := &resourceexplorer2.CreateViewOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteIndex", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteIndex(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourceExplorerSetup", func(t *testing.T) {
+        input := &resourceexplorer2.DeleteResourceExplorerSetupInput{}
+        output := &resourceexplorer2.DeleteResourceExplorerSetupOutput{}
+
+        mockClient.On("DeleteResourceExplorerSetup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourceExplorerSetup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -177,6 +203,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourceExplorerSetup", func(t *testing.T) {
+        input := &resourceexplorer2.GetResourceExplorerSetupInput{}
+        output := &resourceexplorer2.GetResourceExplorerSetupOutput{}
+
+        mockClient.On("GetResourceExplorerSetup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourceExplorerSetup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetServiceIndex", func(t *testing.T) {
+        input := &resourceexplorer2.GetServiceIndexInput{}
+        output := &resourceexplorer2.GetServiceIndexOutput{}
+
+        mockClient.On("GetServiceIndex", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetServiceIndex(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetServiceView", func(t *testing.T) {
+        input := &resourceexplorer2.GetServiceViewInput{}
+        output := &resourceexplorer2.GetServiceViewOutput{}
+
+        mockClient.On("GetServiceView", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetServiceView(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetView", func(t *testing.T) {
         input := &resourceexplorer2.GetViewInput{}
         output := &resourceexplorer2.GetViewOutput{}
@@ -236,6 +301,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceIndexes", func(t *testing.T) {
+        input := &resourceexplorer2.ListServiceIndexesInput{}
+        output := &resourceexplorer2.ListServiceIndexesOutput{}
+
+        mockClient.On("ListServiceIndexes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceIndexes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceViews", func(t *testing.T) {
+        input := &resourceexplorer2.ListServiceViewsInput{}
+        output := &resourceexplorer2.ListServiceViewsOutput{}
+
+        mockClient.On("ListServiceViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStreamingAccessForServices", func(t *testing.T) {
+        input := &resourceexplorer2.ListStreamingAccessForServicesInput{}
+        output := &resourceexplorer2.ListStreamingAccessForServicesOutput{}
+
+        mockClient.On("ListStreamingAccessForServices", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStreamingAccessForServices(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

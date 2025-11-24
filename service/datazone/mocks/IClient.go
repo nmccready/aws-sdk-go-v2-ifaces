@@ -237,6 +237,80 @@ func (_m *IClient) AssociateGovernedTerms(ctx context.Context, params *datazone.
 	return r0, r1
 }
 
+// BatchGetAttributesMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetAttributesMetadata(ctx context.Context, params *datazone.BatchGetAttributesMetadataInput, optFns ...func(*datazone.Options)) (*datazone.BatchGetAttributesMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetAttributesMetadata")
+	}
+
+	var r0 *datazone.BatchGetAttributesMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.BatchGetAttributesMetadataInput, ...func(*datazone.Options)) (*datazone.BatchGetAttributesMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.BatchGetAttributesMetadataInput, ...func(*datazone.Options)) *datazone.BatchGetAttributesMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.BatchGetAttributesMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.BatchGetAttributesMetadataInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchPutAttributesMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchPutAttributesMetadata(ctx context.Context, params *datazone.BatchPutAttributesMetadataInput, optFns ...func(*datazone.Options)) (*datazone.BatchPutAttributesMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchPutAttributesMetadata")
+	}
+
+	var r0 *datazone.BatchPutAttributesMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.BatchPutAttributesMetadataInput, ...func(*datazone.Options)) (*datazone.BatchPutAttributesMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.BatchPutAttributesMetadataInput, ...func(*datazone.Options)) *datazone.BatchPutAttributesMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.BatchPutAttributesMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.BatchPutAttributesMetadataInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelMetadataGenerationRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelMetadataGenerationRun(ctx context.Context, params *datazone.CancelMetadataGenerationRunInput, optFns ...func(*datazone.Options)) (*datazone.CancelMetadataGenerationRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -784,6 +858,43 @@ func (_m *IClient) CreateEnvironmentAction(ctx context.Context, params *datazone
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateEnvironmentActionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateEnvironmentBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEnvironmentBlueprint(ctx context.Context, params *datazone.CreateEnvironmentBlueprintInput, optFns ...func(*datazone.Options)) (*datazone.CreateEnvironmentBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEnvironmentBlueprint")
+	}
+
+	var r0 *datazone.CreateEnvironmentBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateEnvironmentBlueprintInput, ...func(*datazone.Options)) (*datazone.CreateEnvironmentBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateEnvironmentBlueprintInput, ...func(*datazone.Options)) *datazone.CreateEnvironmentBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateEnvironmentBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateEnvironmentBlueprintInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1709,6 +1820,43 @@ func (_m *IClient) DeleteEnvironmentAction(ctx context.Context, params *datazone
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteEnvironmentActionInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteEnvironmentBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEnvironmentBlueprint(ctx context.Context, params *datazone.DeleteEnvironmentBlueprintInput, optFns ...func(*datazone.Options)) (*datazone.DeleteEnvironmentBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEnvironmentBlueprint")
+	}
+
+	var r0 *datazone.DeleteEnvironmentBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteEnvironmentBlueprintInput, ...func(*datazone.Options)) (*datazone.DeleteEnvironmentBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteEnvironmentBlueprintInput, ...func(*datazone.Options)) *datazone.DeleteEnvironmentBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteEnvironmentBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteEnvironmentBlueprintInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5768,6 +5916,43 @@ func (_m *IClient) UpdateEnvironmentAction(ctx context.Context, params *datazone
 	return r0, r1
 }
 
+// UpdateEnvironmentBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEnvironmentBlueprint(ctx context.Context, params *datazone.UpdateEnvironmentBlueprintInput, optFns ...func(*datazone.Options)) (*datazone.UpdateEnvironmentBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEnvironmentBlueprint")
+	}
+
+	var r0 *datazone.UpdateEnvironmentBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateEnvironmentBlueprintInput, ...func(*datazone.Options)) (*datazone.UpdateEnvironmentBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateEnvironmentBlueprintInput, ...func(*datazone.Options)) *datazone.UpdateEnvironmentBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateEnvironmentBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateEnvironmentBlueprintInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateEnvironmentProfile provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateEnvironmentProfile(ctx context.Context, params *datazone.UpdateEnvironmentProfileInput, optFns ...func(*datazone.Options)) (*datazone.UpdateEnvironmentProfileOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5982,6 +6167,43 @@ func (_m *IClient) UpdateProjectProfile(ctx context.Context, params *datazone.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateProjectProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRootDomainUnitOwner provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRootDomainUnitOwner(ctx context.Context, params *datazone.UpdateRootDomainUnitOwnerInput, optFns ...func(*datazone.Options)) (*datazone.UpdateRootDomainUnitOwnerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRootDomainUnitOwner")
+	}
+
+	var r0 *datazone.UpdateRootDomainUnitOwnerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateRootDomainUnitOwnerInput, ...func(*datazone.Options)) (*datazone.UpdateRootDomainUnitOwnerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateRootDomainUnitOwnerInput, ...func(*datazone.Options)) *datazone.UpdateRootDomainUnitOwnerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateRootDomainUnitOwnerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateRootDomainUnitOwnerInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetJobsQueryResults", func(t *testing.T) {
+        input := &mediaconvert.GetJobsQueryResultsInput{}
+        output := &mediaconvert.GetJobsQueryResultsOutput{}
+
+        mockClient.On("GetJobsQueryResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetJobsQueryResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetJobTemplate", func(t *testing.T) {
         input := &mediaconvert.GetJobTemplateInput{}
         output := &mediaconvert.GetJobTemplateOutput{}
@@ -268,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListJobTemplates", func(t *testing.T) {
-        input := &mediaconvert.ListJobTemplatesInput{}
-        output := &mediaconvert.ListJobTemplatesOutput{}
-
-        mockClient.On("ListJobTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListJobTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListJobs", func(t *testing.T) {
         input := &mediaconvert.ListJobsInput{}
         output := &mediaconvert.ListJobsOutput{}
@@ -288,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobTemplates", func(t *testing.T) {
+        input := &mediaconvert.ListJobTemplatesInput{}
+        output := &mediaconvert.ListJobTemplatesOutput{}
+
+        mockClient.On("ListJobTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -379,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartJobsQuery", func(t *testing.T) {
+        input := &mediaconvert.StartJobsQueryInput{}
+        output := &mediaconvert.StartJobsQueryOutput{}
+
+        mockClient.On("StartJobsQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartJobsQuery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

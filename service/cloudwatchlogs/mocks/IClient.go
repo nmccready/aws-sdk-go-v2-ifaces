@@ -274,6 +274,43 @@ func (_m *IClient) CreateLogStream(ctx context.Context, params *cloudwatchlogs.C
 	return r0, r1
 }
 
+// CreateScheduledQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateScheduledQuery(ctx context.Context, params *cloudwatchlogs.CreateScheduledQueryInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.CreateScheduledQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateScheduledQuery")
+	}
+
+	var r0 *cloudwatchlogs.CreateScheduledQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.CreateScheduledQueryInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.CreateScheduledQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.CreateScheduledQueryInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.CreateScheduledQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.CreateScheduledQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.CreateScheduledQueryInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAccountPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAccountPolicy(ctx context.Context, params *cloudwatchlogs.DeleteAccountPolicyInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteAccountPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -858,6 +895,43 @@ func (_m *IClient) DeleteRetentionPolicy(ctx context.Context, params *cloudwatch
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DeleteRetentionPolicyInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteScheduledQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteScheduledQuery(ctx context.Context, params *cloudwatchlogs.DeleteScheduledQueryInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteScheduledQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteScheduledQuery")
+	}
+
+	var r0 *cloudwatchlogs.DeleteScheduledQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DeleteScheduledQueryInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteScheduledQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DeleteScheduledQueryInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.DeleteScheduledQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.DeleteScheduledQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DeleteScheduledQueryInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2050,6 +2124,80 @@ func (_m *IClient) GetQueryResults(ctx context.Context, params *cloudwatchlogs.G
 	return r0, r1
 }
 
+// GetScheduledQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetScheduledQuery(ctx context.Context, params *cloudwatchlogs.GetScheduledQueryInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetScheduledQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetScheduledQuery")
+	}
+
+	var r0 *cloudwatchlogs.GetScheduledQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetScheduledQueryInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetScheduledQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetScheduledQueryInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.GetScheduledQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.GetScheduledQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetScheduledQueryInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetScheduledQueryHistory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetScheduledQueryHistory(ctx context.Context, params *cloudwatchlogs.GetScheduledQueryHistoryInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetScheduledQueryHistoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetScheduledQueryHistory")
+	}
+
+	var r0 *cloudwatchlogs.GetScheduledQueryHistoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetScheduledQueryHistoryInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetScheduledQueryHistoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetScheduledQueryHistoryInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.GetScheduledQueryHistoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.GetScheduledQueryHistoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetScheduledQueryHistoryInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTransformer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTransformer(ctx context.Context, params *cloudwatchlogs.GetTransformerInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetTransformerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2264,6 +2412,43 @@ func (_m *IClient) ListLogGroupsForQuery(ctx context.Context, params *cloudwatch
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.ListLogGroupsForQueryInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListScheduledQueries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListScheduledQueries(ctx context.Context, params *cloudwatchlogs.ListScheduledQueriesInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListScheduledQueriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListScheduledQueries")
+	}
+
+	var r0 *cloudwatchlogs.ListScheduledQueriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListScheduledQueriesInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListScheduledQueriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListScheduledQueriesInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.ListScheduledQueriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.ListScheduledQueriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.ListScheduledQueriesInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3392,6 +3577,43 @@ func (_m *IClient) UpdateLogAnomalyDetector(ctx context.Context, params *cloudwa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.UpdateLogAnomalyDetectorInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateScheduledQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateScheduledQuery(ctx context.Context, params *cloudwatchlogs.UpdateScheduledQueryInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.UpdateScheduledQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateScheduledQuery")
+	}
+
+	var r0 *cloudwatchlogs.UpdateScheduledQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.UpdateScheduledQueryInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.UpdateScheduledQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.UpdateScheduledQueryInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.UpdateScheduledQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.UpdateScheduledQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.UpdateScheduledQueryInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

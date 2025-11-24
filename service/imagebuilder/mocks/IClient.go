@@ -755,6 +755,43 @@ func (_m *IClient) DeleteWorkflow(ctx context.Context, params *imagebuilder.Dele
 	return r0, r1
 }
 
+// DistributeImage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DistributeImage(ctx context.Context, params *imagebuilder.DistributeImageInput, optFns ...func(*imagebuilder.Options)) (*imagebuilder.DistributeImageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DistributeImage")
+	}
+
+	var r0 *imagebuilder.DistributeImageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *imagebuilder.DistributeImageInput, ...func(*imagebuilder.Options)) (*imagebuilder.DistributeImageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *imagebuilder.DistributeImageInput, ...func(*imagebuilder.Options)) *imagebuilder.DistributeImageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*imagebuilder.DistributeImageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *imagebuilder.DistributeImageInput, ...func(*imagebuilder.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetComponent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetComponent(ctx context.Context, params *imagebuilder.GetComponentInput, optFns ...func(*imagebuilder.Options)) (*imagebuilder.GetComponentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2467,6 +2504,43 @@ func (_m *IClient) PutImageRecipePolicy(ctx context.Context, params *imagebuilde
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *imagebuilder.PutImageRecipePolicyInput, ...func(*imagebuilder.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RetryImage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RetryImage(ctx context.Context, params *imagebuilder.RetryImageInput, optFns ...func(*imagebuilder.Options)) (*imagebuilder.RetryImageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RetryImage")
+	}
+
+	var r0 *imagebuilder.RetryImageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *imagebuilder.RetryImageInput, ...func(*imagebuilder.Options)) (*imagebuilder.RetryImageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *imagebuilder.RetryImageInput, ...func(*imagebuilder.Options)) *imagebuilder.RetryImageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*imagebuilder.RetryImageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *imagebuilder.RetryImageInput, ...func(*imagebuilder.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

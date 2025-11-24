@@ -273,6 +273,43 @@ func (_m *IClient) DeleteTableBucketEncryption(ctx context.Context, params *s3ta
 	return r0, r1
 }
 
+// DeleteTableBucketMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTableBucketMetricsConfiguration(ctx context.Context, params *s3tables.DeleteTableBucketMetricsConfigurationInput, optFns ...func(*s3tables.Options)) (*s3tables.DeleteTableBucketMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTableBucketMetricsConfiguration")
+	}
+
+	var r0 *s3tables.DeleteTableBucketMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.DeleteTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) (*s3tables.DeleteTableBucketMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.DeleteTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) *s3tables.DeleteTableBucketMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.DeleteTableBucketMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.DeleteTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteTableBucketPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteTableBucketPolicy(ctx context.Context, params *s3tables.DeleteTableBucketPolicyInput, optFns ...func(*s3tables.Options)) (*s3tables.DeleteTableBucketPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -524,6 +561,43 @@ func (_m *IClient) GetTableBucketMaintenanceConfiguration(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.GetTableBucketMaintenanceConfigurationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTableBucketMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTableBucketMetricsConfiguration(ctx context.Context, params *s3tables.GetTableBucketMetricsConfigurationInput, optFns ...func(*s3tables.Options)) (*s3tables.GetTableBucketMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTableBucketMetricsConfiguration")
+	}
+
+	var r0 *s3tables.GetTableBucketMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.GetTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) (*s3tables.GetTableBucketMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.GetTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) *s3tables.GetTableBucketMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.GetTableBucketMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.GetTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -865,6 +939,43 @@ func (_m *IClient) ListTables(ctx context.Context, params *s3tables.ListTablesIn
 	return r0, r1
 }
 
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *s3tables.ListTagsForResourceInput, optFns ...func(*s3tables.Options)) (*s3tables.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *s3tables.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.ListTagsForResourceInput, ...func(*s3tables.Options)) (*s3tables.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.ListTagsForResourceInput, ...func(*s3tables.Options)) *s3tables.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.ListTagsForResourceInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() s3tables.Options {
 	ret := _m.Called()
@@ -949,6 +1060,43 @@ func (_m *IClient) PutTableBucketMaintenanceConfiguration(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.PutTableBucketMaintenanceConfigurationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutTableBucketMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTableBucketMetricsConfiguration(ctx context.Context, params *s3tables.PutTableBucketMetricsConfigurationInput, optFns ...func(*s3tables.Options)) (*s3tables.PutTableBucketMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTableBucketMetricsConfiguration")
+	}
+
+	var r0 *s3tables.PutTableBucketMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.PutTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) (*s3tables.PutTableBucketMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.PutTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) *s3tables.PutTableBucketMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.PutTableBucketMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.PutTableBucketMetricsConfigurationInput, ...func(*s3tables.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1097,6 +1245,80 @@ func (_m *IClient) RenameTable(ctx context.Context, params *s3tables.RenameTable
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.RenameTableInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *s3tables.TagResourceInput, optFns ...func(*s3tables.Options)) (*s3tables.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *s3tables.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.TagResourceInput, ...func(*s3tables.Options)) (*s3tables.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.TagResourceInput, ...func(*s3tables.Options)) *s3tables.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.TagResourceInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *s3tables.UntagResourceInput, optFns ...func(*s3tables.Options)) (*s3tables.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *s3tables.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.UntagResourceInput, ...func(*s3tables.Options)) (*s3tables.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.UntagResourceInput, ...func(*s3tables.Options)) *s3tables.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.UntagResourceInput, ...func(*s3tables.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
