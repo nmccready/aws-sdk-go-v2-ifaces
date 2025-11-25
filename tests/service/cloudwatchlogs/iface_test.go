@@ -1048,6 +1048,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutLogGroupDeletionProtection", func(t *testing.T) {
+        input := &cloudwatchlogs.PutLogGroupDeletionProtectionInput{}
+        output := &cloudwatchlogs.PutLogGroupDeletionProtectionOutput{}
+
+        mockClient.On("PutLogGroupDeletionProtection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutLogGroupDeletionProtection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutMetricFilter", func(t *testing.T) {
         input := &cloudwatchlogs.PutMetricFilterInput{}
         output := &cloudwatchlogs.PutMetricFilterOutput{}

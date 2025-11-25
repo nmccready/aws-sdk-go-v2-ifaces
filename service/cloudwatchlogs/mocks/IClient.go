@@ -2919,6 +2919,43 @@ func (_m *IClient) PutLogEvents(ctx context.Context, params *cloudwatchlogs.PutL
 	return r0, r1
 }
 
+// PutLogGroupDeletionProtection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutLogGroupDeletionProtection(ctx context.Context, params *cloudwatchlogs.PutLogGroupDeletionProtectionInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutLogGroupDeletionProtectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutLogGroupDeletionProtection")
+	}
+
+	var r0 *cloudwatchlogs.PutLogGroupDeletionProtectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.PutLogGroupDeletionProtectionInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutLogGroupDeletionProtectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.PutLogGroupDeletionProtectionInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.PutLogGroupDeletionProtectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.PutLogGroupDeletionProtectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.PutLogGroupDeletionProtectionInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutMetricFilter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutMetricFilter(ctx context.Context, params *cloudwatchlogs.PutMetricFilterInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutMetricFilterOutput, error) {
 	_va := make([]interface{}, len(optFns))

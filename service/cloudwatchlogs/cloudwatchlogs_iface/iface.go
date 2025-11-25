@@ -88,6 +88,7 @@ type IClient interface {
  PutIndexPolicy(ctx context.Context, params *PutIndexPolicyInput, optFns ...func(*Options)) (*PutIndexPolicyOutput, error) 
  PutIntegration(ctx context.Context, params *PutIntegrationInput, optFns ...func(*Options)) (*PutIntegrationOutput, error) 
  PutLogEvents(ctx context.Context, params *PutLogEventsInput, optFns ...func(*Options)) (*PutLogEventsOutput, error) 
+ PutLogGroupDeletionProtection(ctx context.Context, params *PutLogGroupDeletionProtectionInput, optFns ...func(*Options)) (*PutLogGroupDeletionProtectionOutput, error) 
  PutMetricFilter(ctx context.Context, params *PutMetricFilterInput, optFns ...func(*Options)) (*PutMetricFilterOutput, error) 
  PutQueryDefinition(ctx context.Context, params *PutQueryDefinitionInput, optFns ...func(*Options)) (*PutQueryDefinitionOutput, error) 
  PutResourcePolicy(ctx context.Context, params *PutResourcePolicyInput, optFns ...func(*Options)) (*PutResourcePolicyOutput, error) 

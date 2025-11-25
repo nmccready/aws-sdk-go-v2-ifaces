@@ -110,7 +110,7 @@ for service_dir in ./service/*/*/iface.go; do
         # Generate the interface file
         # echo "$(pwd)/$service_dir"
 
-test_override_path="overrides/service/${service_name}/iface_test.go"
+test_override_path="_overrides/service/${service_name}/iface_test.go"
 if [ -f "$test_override_path" ]; then
     test_file="$(cat "$test_override_path")"
 else 

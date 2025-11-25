@@ -274,6 +274,43 @@ func (_m *IClient) CreateCloudFrontOriginAccessIdentity(ctx context.Context, par
 	return r0, r1
 }
 
+// CreateConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConnectionFunction(ctx context.Context, params *cloudfront.CreateConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.CreateConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConnectionFunction")
+	}
+
+	var r0 *cloudfront.CreateConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.CreateConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.CreateConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.CreateConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.CreateConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.CreateConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.CreateConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateConnectionGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateConnectionGroup(ctx context.Context, params *cloudfront.CreateConnectionGroupInput, optFns ...func(*cloudfront.Options)) (*cloudfront.CreateConnectionGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1014,6 +1051,43 @@ func (_m *IClient) CreateStreamingDistributionWithTags(ctx context.Context, para
 	return r0, r1
 }
 
+// CreateTrustStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTrustStore(ctx context.Context, params *cloudfront.CreateTrustStoreInput, optFns ...func(*cloudfront.Options)) (*cloudfront.CreateTrustStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTrustStore")
+	}
+
+	var r0 *cloudfront.CreateTrustStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.CreateTrustStoreInput, ...func(*cloudfront.Options)) (*cloudfront.CreateTrustStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.CreateTrustStoreInput, ...func(*cloudfront.Options)) *cloudfront.CreateTrustStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.CreateTrustStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.CreateTrustStoreInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateVpcOrigin provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateVpcOrigin(ctx context.Context, params *cloudfront.CreateVpcOriginInput, optFns ...func(*cloudfront.Options)) (*cloudfront.CreateVpcOriginOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1154,6 +1228,43 @@ func (_m *IClient) DeleteCloudFrontOriginAccessIdentity(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.DeleteCloudFrontOriginAccessIdentityInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnectionFunction(ctx context.Context, params *cloudfront.DeleteConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.DeleteConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnectionFunction")
+	}
+
+	var r0 *cloudfront.DeleteConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DeleteConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.DeleteConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DeleteConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.DeleteConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.DeleteConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.DeleteConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1791,6 +1902,43 @@ func (_m *IClient) DeleteStreamingDistribution(ctx context.Context, params *clou
 	return r0, r1
 }
 
+// DeleteTrustStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTrustStore(ctx context.Context, params *cloudfront.DeleteTrustStoreInput, optFns ...func(*cloudfront.Options)) (*cloudfront.DeleteTrustStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTrustStore")
+	}
+
+	var r0 *cloudfront.DeleteTrustStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DeleteTrustStoreInput, ...func(*cloudfront.Options)) (*cloudfront.DeleteTrustStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DeleteTrustStoreInput, ...func(*cloudfront.Options)) *cloudfront.DeleteTrustStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.DeleteTrustStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.DeleteTrustStoreInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteVpcOrigin provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteVpcOrigin(ctx context.Context, params *cloudfront.DeleteVpcOriginInput, optFns ...func(*cloudfront.Options)) (*cloudfront.DeleteVpcOriginOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1820,6 +1968,43 @@ func (_m *IClient) DeleteVpcOrigin(ctx context.Context, params *cloudfront.Delet
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.DeleteVpcOriginInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeConnectionFunction(ctx context.Context, params *cloudfront.DescribeConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.DescribeConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeConnectionFunction")
+	}
+
+	var r0 *cloudfront.DescribeConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DescribeConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.DescribeConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.DescribeConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.DescribeConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.DescribeConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.DescribeConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2153,6 +2338,43 @@ func (_m *IClient) GetCloudFrontOriginAccessIdentityConfig(ctx context.Context, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnectionFunction(ctx context.Context, params *cloudfront.GetConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.GetConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnectionFunction")
+	}
+
+	var r0 *cloudfront.GetConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.GetConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.GetConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.GetConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.GetConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.GetConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.GetConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3308,6 +3530,43 @@ func (_m *IClient) GetStreamingDistributionConfig(ctx context.Context, params *c
 	return r0, r1
 }
 
+// GetTrustStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrustStore(ctx context.Context, params *cloudfront.GetTrustStoreInput, optFns ...func(*cloudfront.Options)) (*cloudfront.GetTrustStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrustStore")
+	}
+
+	var r0 *cloudfront.GetTrustStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.GetTrustStoreInput, ...func(*cloudfront.Options)) (*cloudfront.GetTrustStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.GetTrustStoreInput, ...func(*cloudfront.Options)) *cloudfront.GetTrustStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.GetTrustStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.GetTrustStoreInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetVpcOrigin provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetVpcOrigin(ctx context.Context, params *cloudfront.GetVpcOriginInput, optFns ...func(*cloudfront.Options)) (*cloudfront.GetVpcOriginOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3485,6 +3744,43 @@ func (_m *IClient) ListConflictingAliases(ctx context.Context, params *cloudfron
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListConflictingAliasesInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConnectionFunctions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectionFunctions(ctx context.Context, params *cloudfront.ListConnectionFunctionsInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListConnectionFunctionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectionFunctions")
+	}
+
+	var r0 *cloudfront.ListConnectionFunctionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListConnectionFunctionsInput, ...func(*cloudfront.Options)) (*cloudfront.ListConnectionFunctionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListConnectionFunctionsInput, ...func(*cloudfront.Options)) *cloudfront.ListConnectionFunctionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.ListConnectionFunctionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListConnectionFunctionsInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3752,6 +4048,43 @@ func (_m *IClient) ListDistributionsByCachePolicyId(ctx context.Context, params 
 	return r0, r1
 }
 
+// ListDistributionsByConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDistributionsByConnectionFunction(ctx context.Context, params *cloudfront.ListDistributionsByConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDistributionsByConnectionFunction")
+	}
+
+	var r0 *cloudfront.ListDistributionsByConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListDistributionsByConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListDistributionsByConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.ListDistributionsByConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.ListDistributionsByConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListDistributionsByConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDistributionsByConnectionMode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDistributionsByConnectionMode(ctx context.Context, params *cloudfront.ListDistributionsByConnectionModeInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByConnectionModeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3966,6 +4299,43 @@ func (_m *IClient) ListDistributionsByResponseHeadersPolicyId(ctx context.Contex
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListDistributionsByResponseHeadersPolicyIdInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDistributionsByTrustStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDistributionsByTrustStore(ctx context.Context, params *cloudfront.ListDistributionsByTrustStoreInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByTrustStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDistributionsByTrustStore")
+	}
+
+	var r0 *cloudfront.ListDistributionsByTrustStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListDistributionsByTrustStoreInput, ...func(*cloudfront.Options)) (*cloudfront.ListDistributionsByTrustStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListDistributionsByTrustStoreInput, ...func(*cloudfront.Options)) *cloudfront.ListDistributionsByTrustStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.ListDistributionsByTrustStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListDistributionsByTrustStoreInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4603,6 +4973,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *cloudfront.L
 	return r0, r1
 }
 
+// ListTrustStores provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTrustStores(ctx context.Context, params *cloudfront.ListTrustStoresInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListTrustStoresOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTrustStores")
+	}
+
+	var r0 *cloudfront.ListTrustStoresOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListTrustStoresInput, ...func(*cloudfront.Options)) (*cloudfront.ListTrustStoresOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.ListTrustStoresInput, ...func(*cloudfront.Options)) *cloudfront.ListTrustStoresOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.ListTrustStoresOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.ListTrustStoresInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListVpcOrigins provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListVpcOrigins(ctx context.Context, params *cloudfront.ListVpcOriginsInput, optFns ...func(*cloudfront.Options)) (*cloudfront.ListVpcOriginsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4656,6 +5063,43 @@ func (_m *IClient) Options() cloudfront.Options {
 	}
 
 	return r0
+}
+
+// PublishConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PublishConnectionFunction(ctx context.Context, params *cloudfront.PublishConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.PublishConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PublishConnectionFunction")
+	}
+
+	var r0 *cloudfront.PublishConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.PublishConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.PublishConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.PublishConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.PublishConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.PublishConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.PublishConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PublishFunction provides a mock function with given fields: ctx, params, optFns
@@ -4761,6 +5205,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *cloudfront.TagResour
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.TagResourceInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TestConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TestConnectionFunction(ctx context.Context, params *cloudfront.TestConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.TestConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TestConnectionFunction")
+	}
+
+	var r0 *cloudfront.TestConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.TestConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.TestConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.TestConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.TestConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.TestConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.TestConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4946,6 +5427,43 @@ func (_m *IClient) UpdateCloudFrontOriginAccessIdentity(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.UpdateCloudFrontOriginAccessIdentityInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnectionFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnectionFunction(ctx context.Context, params *cloudfront.UpdateConnectionFunctionInput, optFns ...func(*cloudfront.Options)) (*cloudfront.UpdateConnectionFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnectionFunction")
+	}
+
+	var r0 *cloudfront.UpdateConnectionFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.UpdateConnectionFunctionInput, ...func(*cloudfront.Options)) (*cloudfront.UpdateConnectionFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.UpdateConnectionFunctionInput, ...func(*cloudfront.Options)) *cloudfront.UpdateConnectionFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.UpdateConnectionFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.UpdateConnectionFunctionInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5575,6 +6093,43 @@ func (_m *IClient) UpdateStreamingDistribution(ctx context.Context, params *clou
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.UpdateStreamingDistributionInput, ...func(*cloudfront.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTrustStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTrustStore(ctx context.Context, params *cloudfront.UpdateTrustStoreInput, optFns ...func(*cloudfront.Options)) (*cloudfront.UpdateTrustStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTrustStore")
+	}
+
+	var r0 *cloudfront.UpdateTrustStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.UpdateTrustStoreInput, ...func(*cloudfront.Options)) (*cloudfront.UpdateTrustStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudfront.UpdateTrustStoreInput, ...func(*cloudfront.Options)) *cloudfront.UpdateTrustStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudfront.UpdateTrustStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudfront.UpdateTrustStoreInput, ...func(*cloudfront.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

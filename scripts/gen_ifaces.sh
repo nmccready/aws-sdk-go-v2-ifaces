@@ -60,7 +60,7 @@ for service_dir in "$AWS_SDK_PATH"/*; do
 )"
 
         # Prefer a per-service override header if present
-        header_path="overrides/service/${service_name}/header"
+        header_path="_overrides/service/${service_name}/header"
         if [ -f "$header_path" ]; then
             import_header="$(cat "$header_path")"
         fi
