@@ -983,19 +983,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateOrgEc2DeepInspectionConfiguration", func(t *testing.T) {
-        input := &inspector2.UpdateOrgEc2DeepInspectionConfigurationInput{}
-        output := &inspector2.UpdateOrgEc2DeepInspectionConfigurationOutput{}
-
-        mockClient.On("UpdateOrgEc2DeepInspectionConfiguration", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateOrgEc2DeepInspectionConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateOrganizationConfiguration", func(t *testing.T) {
         input := &inspector2.UpdateOrganizationConfigurationInput{}
         output := &inspector2.UpdateOrganizationConfigurationOutput{}
@@ -1003,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOrganizationConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOrganizationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOrgEc2DeepInspectionConfiguration", func(t *testing.T) {
+        input := &inspector2.UpdateOrgEc2DeepInspectionConfigurationInput{}
+        output := &inspector2.UpdateOrgEc2DeepInspectionConfigurationOutput{}
+
+        mockClient.On("UpdateOrgEc2DeepInspectionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOrgEc2DeepInspectionConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

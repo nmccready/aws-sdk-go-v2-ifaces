@@ -528,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDataSourceSyncJobs", func(t *testing.T) {
-        input := &kendra.ListDataSourceSyncJobsInput{}
-        output := &kendra.ListDataSourceSyncJobsOutput{}
-
-        mockClient.On("ListDataSourceSyncJobs", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDataSourceSyncJobs(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDataSources", func(t *testing.T) {
         input := &kendra.ListDataSourcesInput{}
         output := &kendra.ListDataSourcesOutput{}
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataSourceSyncJobs", func(t *testing.T) {
+        input := &kendra.ListDataSourceSyncJobsInput{}
+        output := &kendra.ListDataSourceSyncJobsOutput{}
+
+        mockClient.On("ListDataSourceSyncJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataSourceSyncJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

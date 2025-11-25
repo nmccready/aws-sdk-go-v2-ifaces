@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRotationShifts", func(t *testing.T) {
-        input := &ssmcontacts.ListRotationShiftsInput{}
-        output := &ssmcontacts.ListRotationShiftsOutput{}
-
-        mockClient.On("ListRotationShifts", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRotationShifts(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRotations", func(t *testing.T) {
         input := &ssmcontacts.ListRotationsInput{}
         output := &ssmcontacts.ListRotationsOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRotations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRotations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRotationShifts", func(t *testing.T) {
+        input := &ssmcontacts.ListRotationShiftsInput{}
+        output := &ssmcontacts.ListRotationShiftsOutput{}
+
+        mockClient.On("ListRotationShifts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRotationShifts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

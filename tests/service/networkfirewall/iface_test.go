@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAttachRuleGroupsToProxyConfiguration", func(t *testing.T) {
+        input := &networkfirewall.AttachRuleGroupsToProxyConfigurationInput{}
+        output := &networkfirewall.AttachRuleGroupsToProxyConfigurationOutput{}
+
+        mockClient.On("AttachRuleGroupsToProxyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AttachRuleGroupsToProxyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFirewall", func(t *testing.T) {
         input := &networkfirewall.CreateFirewallInput{}
         output := &networkfirewall.CreateFirewallOutput{}
@@ -106,6 +119,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateFirewallPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateFirewallPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProxy", func(t *testing.T) {
+        input := &networkfirewall.CreateProxyInput{}
+        output := &networkfirewall.CreateProxyOutput{}
+
+        mockClient.On("CreateProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProxy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProxyConfiguration", func(t *testing.T) {
+        input := &networkfirewall.CreateProxyConfigurationInput{}
+        output := &networkfirewall.CreateProxyConfigurationOutput{}
+
+        mockClient.On("CreateProxyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProxyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProxyRuleGroup", func(t *testing.T) {
+        input := &networkfirewall.CreateProxyRuleGroupInput{}
+        output := &networkfirewall.CreateProxyRuleGroupOutput{}
+
+        mockClient.On("CreateProxyRuleGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProxyRuleGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProxyRules", func(t *testing.T) {
+        input := &networkfirewall.CreateProxyRulesInput{}
+        output := &networkfirewall.CreateProxyRulesOutput{}
+
+        mockClient.On("CreateProxyRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProxyRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +249,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteNetworkFirewallTransitGatewayAttachment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteNetworkFirewallTransitGatewayAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProxy", func(t *testing.T) {
+        input := &networkfirewall.DeleteProxyInput{}
+        output := &networkfirewall.DeleteProxyOutput{}
+
+        mockClient.On("DeleteProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProxy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProxyConfiguration", func(t *testing.T) {
+        input := &networkfirewall.DeleteProxyConfigurationInput{}
+        output := &networkfirewall.DeleteProxyConfigurationOutput{}
+
+        mockClient.On("DeleteProxyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProxyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProxyRuleGroup", func(t *testing.T) {
+        input := &networkfirewall.DeleteProxyRuleGroupInput{}
+        output := &networkfirewall.DeleteProxyRuleGroupOutput{}
+
+        mockClient.On("DeleteProxyRuleGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProxyRuleGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProxyRules", func(t *testing.T) {
+        input := &networkfirewall.DeleteProxyRulesInput{}
+        output := &networkfirewall.DeleteProxyRulesOutput{}
+
+        mockClient.On("DeleteProxyRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProxyRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +424,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeProxy", func(t *testing.T) {
+        input := &networkfirewall.DescribeProxyInput{}
+        output := &networkfirewall.DescribeProxyOutput{}
+
+        mockClient.On("DescribeProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProxy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeProxyConfiguration", func(t *testing.T) {
+        input := &networkfirewall.DescribeProxyConfigurationInput{}
+        output := &networkfirewall.DescribeProxyConfigurationOutput{}
+
+        mockClient.On("DescribeProxyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProxyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeProxyRule", func(t *testing.T) {
+        input := &networkfirewall.DescribeProxyRuleInput{}
+        output := &networkfirewall.DescribeProxyRuleOutput{}
+
+        mockClient.On("DescribeProxyRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProxyRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeProxyRuleGroup", func(t *testing.T) {
+        input := &networkfirewall.DescribeProxyRuleGroupInput{}
+        output := &networkfirewall.DescribeProxyRuleGroupOutput{}
+
+        mockClient.On("DescribeProxyRuleGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProxyRuleGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeResourcePolicy", func(t *testing.T) {
         input := &networkfirewall.DescribeResourcePolicyInput{}
         output := &networkfirewall.DescribeResourcePolicyOutput{}
@@ -379,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeVpcEndpointAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeVpcEndpointAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDetachRuleGroupsFromProxyConfiguration", func(t *testing.T) {
+        input := &networkfirewall.DetachRuleGroupsFromProxyConfigurationInput{}
+        output := &networkfirewall.DetachRuleGroupsFromProxyConfigurationOutput{}
+
+        mockClient.On("DetachRuleGroupsFromProxyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DetachRuleGroupsFromProxyConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,6 +671,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListProxies", func(t *testing.T) {
+        input := &networkfirewall.ListProxiesInput{}
+        output := &networkfirewall.ListProxiesOutput{}
+
+        mockClient.On("ListProxies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProxies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProxyConfigurations", func(t *testing.T) {
+        input := &networkfirewall.ListProxyConfigurationsInput{}
+        output := &networkfirewall.ListProxyConfigurationsOutput{}
+
+        mockClient.On("ListProxyConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProxyConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProxyRuleGroups", func(t *testing.T) {
+        input := &networkfirewall.ListProxyRuleGroupsInput{}
+        output := &networkfirewall.ListProxyRuleGroupsOutput{}
+
+        mockClient.On("ListProxyRuleGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProxyRuleGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRuleGroups", func(t *testing.T) {
         input := &networkfirewall.ListRuleGroupsInput{}
         output := &networkfirewall.ListRuleGroupsOutput{}
@@ -502,19 +723,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTLSInspectionConfigurations", func(t *testing.T) {
-        input := &networkfirewall.ListTLSInspectionConfigurationsInput{}
-        output := &networkfirewall.ListTLSInspectionConfigurationsOutput{}
-
-        mockClient.On("ListTLSInspectionConfigurations", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTLSInspectionConfigurations(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &networkfirewall.ListTagsForResourceInput{}
         output := &networkfirewall.ListTagsForResourceOutput{}
@@ -522,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTLSInspectionConfigurations", func(t *testing.T) {
+        input := &networkfirewall.ListTLSInspectionConfigurationsInput{}
+        output := &networkfirewall.ListTLSInspectionConfigurationsOutput{}
+
+        mockClient.On("ListTLSInspectionConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTLSInspectionConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -730,6 +951,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLoggingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLoggingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProxy", func(t *testing.T) {
+        input := &networkfirewall.UpdateProxyInput{}
+        output := &networkfirewall.UpdateProxyOutput{}
+
+        mockClient.On("UpdateProxy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProxy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProxyConfiguration", func(t *testing.T) {
+        input := &networkfirewall.UpdateProxyConfigurationInput{}
+        output := &networkfirewall.UpdateProxyConfigurationOutput{}
+
+        mockClient.On("UpdateProxyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProxyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProxyRule", func(t *testing.T) {
+        input := &networkfirewall.UpdateProxyRuleInput{}
+        output := &networkfirewall.UpdateProxyRuleOutput{}
+
+        mockClient.On("UpdateProxyRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProxyRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProxyRuleGroupPriorities", func(t *testing.T) {
+        input := &networkfirewall.UpdateProxyRuleGroupPrioritiesInput{}
+        output := &networkfirewall.UpdateProxyRuleGroupPrioritiesOutput{}
+
+        mockClient.On("UpdateProxyRuleGroupPriorities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProxyRuleGroupPriorities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProxyRulePriorities", func(t *testing.T) {
+        input := &networkfirewall.UpdateProxyRulePrioritiesInput{}
+        output := &networkfirewall.UpdateProxyRulePrioritiesOutput{}
+
+        mockClient.On("UpdateProxyRulePriorities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProxyRulePriorities(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

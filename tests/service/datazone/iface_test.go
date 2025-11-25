@@ -1464,19 +1464,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
-        input := &datazone.ListDomainUnitsForParentInput{}
-        output := &datazone.ListDomainUnitsForParentOutput{}
-
-        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDomains", func(t *testing.T) {
         input := &datazone.ListDomainsInput{}
         output := &datazone.ListDomainsOutput{}
@@ -1484,6 +1471,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDomains", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDomainUnitsForParent", func(t *testing.T) {
+        input := &datazone.ListDomainUnitsForParentInput{}
+        output := &datazone.ListDomainUnitsForParentOutput{}
+
+        mockClient.On("ListDomainUnitsForParent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainUnitsForParent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1724,19 +1724,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSubscriptionTargets", func(t *testing.T) {
-        input := &datazone.ListSubscriptionTargetsInput{}
-        output := &datazone.ListSubscriptionTargetsOutput{}
-
-        mockClient.On("ListSubscriptionTargets", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSubscriptionTargets(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSubscriptions", func(t *testing.T) {
         input := &datazone.ListSubscriptionsInput{}
         output := &datazone.ListSubscriptionsOutput{}
@@ -1744,6 +1731,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSubscriptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSubscriptionTargets", func(t *testing.T) {
+        input := &datazone.ListSubscriptionTargetsInput{}
+        output := &datazone.ListSubscriptionTargetsOutput{}
+
+        mockClient.On("ListSubscriptionTargets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptionTargets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

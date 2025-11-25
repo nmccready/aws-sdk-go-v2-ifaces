@@ -78,6 +78,7 @@ type IClient interface {
  TestDNSAnswer(ctx context.Context, params *TestDNSAnswerInput, optFns ...func(*Options)) (*TestDNSAnswerOutput, error) 
  UpdateHealthCheck(ctx context.Context, params *UpdateHealthCheckInput, optFns ...func(*Options)) (*UpdateHealthCheckOutput, error) 
  UpdateHostedZoneComment(ctx context.Context, params *UpdateHostedZoneCommentInput, optFns ...func(*Options)) (*UpdateHostedZoneCommentOutput, error) 
+ UpdateHostedZoneFeatures(ctx context.Context, params *UpdateHostedZoneFeaturesInput, optFns ...func(*Options)) (*UpdateHostedZoneFeaturesOutput, error) 
  UpdateTrafficPolicyComment(ctx context.Context, params *UpdateTrafficPolicyCommentInput, optFns ...func(*Options)) (*UpdateTrafficPolicyCommentOutput, error) 
  UpdateTrafficPolicyInstance(ctx context.Context, params *UpdateTrafficPolicyInstanceInput, optFns ...func(*Options)) (*UpdateTrafficPolicyInstanceOutput, error) 
 }

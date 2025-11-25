@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAvailableManagedRuleGroupVersions", func(t *testing.T) {
-        input := &wafv2.ListAvailableManagedRuleGroupVersionsInput{}
-        output := &wafv2.ListAvailableManagedRuleGroupVersionsOutput{}
-
-        mockClient.On("ListAvailableManagedRuleGroupVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAvailableManagedRuleGroupVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAvailableManagedRuleGroups", func(t *testing.T) {
         input := &wafv2.ListAvailableManagedRuleGroupsInput{}
         output := &wafv2.ListAvailableManagedRuleGroupsOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAvailableManagedRuleGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAvailableManagedRuleGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAvailableManagedRuleGroupVersions", func(t *testing.T) {
+        input := &wafv2.ListAvailableManagedRuleGroupVersionsInput{}
+        output := &wafv2.ListAvailableManagedRuleGroupVersionsOutput{}
+
+        mockClient.On("ListAvailableManagedRuleGroupVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAvailableManagedRuleGroupVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

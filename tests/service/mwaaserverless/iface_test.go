@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkflowVersions", func(t *testing.T) {
-        input := &mwaaserverless.ListWorkflowVersionsInput{}
-        output := &mwaaserverless.ListWorkflowVersionsOutput{}
-
-        mockClient.On("ListWorkflowVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorkflowVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorkflows", func(t *testing.T) {
         input := &mwaaserverless.ListWorkflowsInput{}
         output := &mwaaserverless.ListWorkflowsOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkflows", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkflows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkflowVersions", func(t *testing.T) {
+        input := &mwaaserverless.ListWorkflowVersionsInput{}
+        output := &mwaaserverless.ListWorkflowVersionsOutput{}
+
+        mockClient.On("ListWorkflowVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkflowVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

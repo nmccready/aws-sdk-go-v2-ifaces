@@ -22,8 +22,8 @@ type IClient interface {
  DescribeSupportedLanguages(ctx context.Context, params *DescribeSupportedLanguagesInput, optFns ...func(*Options)) (*DescribeSupportedLanguagesOutput, error) 
  DescribeTrustedAdvisorCheckRefreshStatuses(ctx context.Context, params *DescribeTrustedAdvisorCheckRefreshStatusesInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorCheckRefreshStatusesOutput, error) 
  DescribeTrustedAdvisorCheckResult(ctx context.Context, params *DescribeTrustedAdvisorCheckResultInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorCheckResultOutput, error) 
- DescribeTrustedAdvisorCheckSummaries(ctx context.Context, params *DescribeTrustedAdvisorCheckSummariesInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorCheckSummariesOutput, error) 
  DescribeTrustedAdvisorChecks(ctx context.Context, params *DescribeTrustedAdvisorChecksInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorChecksOutput, error) 
+ DescribeTrustedAdvisorCheckSummaries(ctx context.Context, params *DescribeTrustedAdvisorCheckSummariesInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorCheckSummariesOutput, error) 
  RefreshTrustedAdvisorCheck(ctx context.Context, params *RefreshTrustedAdvisorCheckInput, optFns ...func(*Options)) (*RefreshTrustedAdvisorCheckOutput, error) 
  ResolveCase(ctx context.Context, params *ResolveCaseInput, optFns ...func(*Options)) (*ResolveCaseOutput, error) 
 }

@@ -710,19 +710,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCollaborationPrivacyBudgetTemplates", func(t *testing.T) {
-        input := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesInput{}
-        output := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesOutput{}
-
-        mockClient.On("ListCollaborationPrivacyBudgetTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListCollaborationPrivacyBudgetTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListCollaborationPrivacyBudgets", func(t *testing.T) {
         input := &cleanrooms.ListCollaborationPrivacyBudgetsInput{}
         output := &cleanrooms.ListCollaborationPrivacyBudgetsOutput{}
@@ -730,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCollaborationPrivacyBudgets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCollaborationPrivacyBudgets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCollaborationPrivacyBudgetTemplates", func(t *testing.T) {
+        input := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesInput{}
+        output := &cleanrooms.ListCollaborationPrivacyBudgetTemplatesOutput{}
+
+        mockClient.On("ListCollaborationPrivacyBudgetTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollaborationPrivacyBudgetTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -840,19 +840,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPrivacyBudgetTemplates", func(t *testing.T) {
-        input := &cleanrooms.ListPrivacyBudgetTemplatesInput{}
-        output := &cleanrooms.ListPrivacyBudgetTemplatesOutput{}
-
-        mockClient.On("ListPrivacyBudgetTemplates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPrivacyBudgetTemplates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListPrivacyBudgets", func(t *testing.T) {
         input := &cleanrooms.ListPrivacyBudgetsInput{}
         output := &cleanrooms.ListPrivacyBudgetsOutput{}
@@ -860,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPrivacyBudgets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPrivacyBudgets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPrivacyBudgetTemplates", func(t *testing.T) {
+        input := &cleanrooms.ListPrivacyBudgetTemplatesInput{}
+        output := &cleanrooms.ListPrivacyBudgetTemplatesOutput{}
+
+        mockClient.On("ListPrivacyBudgetTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPrivacyBudgetTemplates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

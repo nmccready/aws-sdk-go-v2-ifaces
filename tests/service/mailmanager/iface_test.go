@@ -528,19 +528,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListArchiveSearches", func(t *testing.T) {
-        input := &mailmanager.ListArchiveSearchesInput{}
-        output := &mailmanager.ListArchiveSearchesOutput{}
-
-        mockClient.On("ListArchiveSearches", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListArchiveSearches(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListArchives", func(t *testing.T) {
         input := &mailmanager.ListArchivesInput{}
         output := &mailmanager.ListArchivesOutput{}
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListArchives", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListArchives(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListArchiveSearches", func(t *testing.T) {
+        input := &mailmanager.ListArchiveSearchesInput{}
+        output := &mailmanager.ListArchiveSearchesOutput{}
+
+        mockClient.On("ListArchiveSearches", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListArchiveSearches(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

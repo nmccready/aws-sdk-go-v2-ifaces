@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteSSHPublicKey", func(t *testing.T) {
-        input := &iam.DeleteSSHPublicKeyInput{}
-        output := &iam.DeleteSSHPublicKeyOutput{}
-
-        mockClient.On("DeleteSSHPublicKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteSSHPublicKey(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteServerCertificate", func(t *testing.T) {
         input := &iam.DeleteServerCertificateInput{}
         output := &iam.DeleteServerCertificateOutput{}
@@ -600,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSigningCertificate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSigningCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSSHPublicKey", func(t *testing.T) {
+        input := &iam.DeleteSSHPublicKeyInput{}
+        output := &iam.DeleteSSHPublicKeyOutput{}
+
+        mockClient.On("DeleteSSHPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSSHPublicKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1113,19 +1113,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSSHPublicKey", func(t *testing.T) {
-        input := &iam.GetSSHPublicKeyInput{}
-        output := &iam.GetSSHPublicKeyOutput{}
-
-        mockClient.On("GetSSHPublicKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSSHPublicKey(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetServerCertificate", func(t *testing.T) {
         input := &iam.GetServerCertificateInput{}
         output := &iam.GetServerCertificateOutput{}
@@ -1172,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetServiceLinkedRoleDeletionStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetServiceLinkedRoleDeletionStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSSHPublicKey", func(t *testing.T) {
+        input := &iam.GetSSHPublicKeyInput{}
+        output := &iam.GetSSHPublicKeyOutput{}
+
+        mockClient.On("GetSSHPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSSHPublicKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1334,19 +1334,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListInstanceProfileTags", func(t *testing.T) {
-        input := &iam.ListInstanceProfileTagsInput{}
-        output := &iam.ListInstanceProfileTagsOutput{}
-
-        mockClient.On("ListInstanceProfileTags", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListInstanceProfileTags(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListInstanceProfiles", func(t *testing.T) {
         input := &iam.ListInstanceProfilesInput{}
         output := &iam.ListInstanceProfilesOutput{}
@@ -1373,13 +1360,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMFADeviceTags", func(t *testing.T) {
-        input := &iam.ListMFADeviceTagsInput{}
-        output := &iam.ListMFADeviceTagsOutput{}
+    t.Run("TestListInstanceProfileTags", func(t *testing.T) {
+        input := &iam.ListInstanceProfileTagsInput{}
+        output := &iam.ListInstanceProfileTagsOutput{}
 
-        mockClient.On("ListMFADeviceTags", ctx, input).Return(output, nil)
+        mockClient.On("ListInstanceProfileTags", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListMFADeviceTags(ctx, input)
+        result, err := mockClient.ListInstanceProfileTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1399,13 +1386,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListOpenIDConnectProviderTags", func(t *testing.T) {
-        input := &iam.ListOpenIDConnectProviderTagsInput{}
-        output := &iam.ListOpenIDConnectProviderTagsOutput{}
+    t.Run("TestListMFADeviceTags", func(t *testing.T) {
+        input := &iam.ListMFADeviceTagsInput{}
+        output := &iam.ListMFADeviceTagsOutput{}
 
-        mockClient.On("ListOpenIDConnectProviderTags", ctx, input).Return(output, nil)
+        mockClient.On("ListMFADeviceTags", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListOpenIDConnectProviderTags(ctx, input)
+        result, err := mockClient.ListMFADeviceTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1419,6 +1406,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOpenIDConnectProviders", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOpenIDConnectProviders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOpenIDConnectProviderTags", func(t *testing.T) {
+        input := &iam.ListOpenIDConnectProviderTagsInput{}
+        output := &iam.ListOpenIDConnectProviderTagsOutput{}
+
+        mockClient.On("ListOpenIDConnectProviderTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOpenIDConnectProviderTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1503,19 +1503,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRoleTags", func(t *testing.T) {
-        input := &iam.ListRoleTagsInput{}
-        output := &iam.ListRoleTagsOutput{}
-
-        mockClient.On("ListRoleTags", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRoleTags(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRoles", func(t *testing.T) {
         input := &iam.ListRolesInput{}
         output := &iam.ListRolesOutput{}
@@ -1529,13 +1516,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSAMLProviderTags", func(t *testing.T) {
-        input := &iam.ListSAMLProviderTagsInput{}
-        output := &iam.ListSAMLProviderTagsOutput{}
+    t.Run("TestListRoleTags", func(t *testing.T) {
+        input := &iam.ListRoleTagsInput{}
+        output := &iam.ListRoleTagsOutput{}
 
-        mockClient.On("ListSAMLProviderTags", ctx, input).Return(output, nil)
+        mockClient.On("ListRoleTags", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListSAMLProviderTags(ctx, input)
+        result, err := mockClient.ListRoleTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1555,26 +1542,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSSHPublicKeys", func(t *testing.T) {
-        input := &iam.ListSSHPublicKeysInput{}
-        output := &iam.ListSSHPublicKeysOutput{}
+    t.Run("TestListSAMLProviderTags", func(t *testing.T) {
+        input := &iam.ListSAMLProviderTagsInput{}
+        output := &iam.ListSAMLProviderTagsOutput{}
 
-        mockClient.On("ListSSHPublicKeys", ctx, input).Return(output, nil)
+        mockClient.On("ListSAMLProviderTags", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListSSHPublicKeys(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListServerCertificateTags", func(t *testing.T) {
-        input := &iam.ListServerCertificateTagsInput{}
-        output := &iam.ListServerCertificateTagsOutput{}
-
-        mockClient.On("ListServerCertificateTags", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServerCertificateTags(ctx, input)
+        result, err := mockClient.ListSAMLProviderTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1588,6 +1562,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServerCertificates", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServerCertificates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServerCertificateTags", func(t *testing.T) {
+        input := &iam.ListServerCertificateTagsInput{}
+        output := &iam.ListServerCertificateTagsOutput{}
+
+        mockClient.On("ListServerCertificateTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServerCertificateTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1620,6 +1607,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSSHPublicKeys", func(t *testing.T) {
+        input := &iam.ListSSHPublicKeysInput{}
+        output := &iam.ListSSHPublicKeysOutput{}
+
+        mockClient.On("ListSSHPublicKeys", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSSHPublicKeys(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListUserPolicies", func(t *testing.T) {
         input := &iam.ListUserPoliciesInput{}
         output := &iam.ListUserPoliciesOutput{}
@@ -1633,19 +1633,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListUserTags", func(t *testing.T) {
-        input := &iam.ListUserTagsInput{}
-        output := &iam.ListUserTagsOutput{}
-
-        mockClient.On("ListUserTags", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListUserTags(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListUsers", func(t *testing.T) {
         input := &iam.ListUsersInput{}
         output := &iam.ListUsersOutput{}
@@ -1653,6 +1640,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListUsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListUsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListUserTags", func(t *testing.T) {
+        input := &iam.ListUserTagsInput{}
+        output := &iam.ListUserTagsOutput{}
+
+        mockClient.On("ListUserTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUserTags(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2218,19 +2218,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestUpdateSSHPublicKey", func(t *testing.T) {
-        input := &iam.UpdateSSHPublicKeyInput{}
-        output := &iam.UpdateSSHPublicKeyOutput{}
-
-        mockClient.On("UpdateSSHPublicKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UpdateSSHPublicKey(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestUpdateServerCertificate", func(t *testing.T) {
         input := &iam.UpdateServerCertificateInput{}
         output := &iam.UpdateServerCertificateOutput{}
@@ -2270,6 +2257,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateSSHPublicKey", func(t *testing.T) {
+        input := &iam.UpdateSSHPublicKeyInput{}
+        output := &iam.UpdateSSHPublicKeyOutput{}
+
+        mockClient.On("UpdateSSHPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSSHPublicKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateUser", func(t *testing.T) {
         input := &iam.UpdateUserInput{}
         output := &iam.UpdateUserOutput{}
@@ -2277,19 +2277,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateUser", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateUser(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestUploadSSHPublicKey", func(t *testing.T) {
-        input := &iam.UploadSSHPublicKeyInput{}
-        output := &iam.UploadSSHPublicKeyOutput{}
-
-        mockClient.On("UploadSSHPublicKey", ctx, input).Return(output, nil)
-
-        result, err := mockClient.UploadSSHPublicKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2316,6 +2303,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UploadSigningCertificate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UploadSigningCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUploadSSHPublicKey", func(t *testing.T) {
+        input := &iam.UploadSSHPublicKeyInput{}
+        output := &iam.UploadSSHPublicKeyOutput{}
+
+        mockClient.On("UploadSSHPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UploadSSHPublicKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
