@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestEnableAWSServiceAccess", func(t *testing.T) {
-        input := &organizations.EnableAWSServiceAccessInput{}
-        output := &organizations.EnableAWSServiceAccessOutput{}
-
-        mockClient.On("EnableAWSServiceAccess", ctx, input).Return(output, nil)
-
-        result, err := mockClient.EnableAWSServiceAccess(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestEnableAllFeatures", func(t *testing.T) {
         input := &organizations.EnableAllFeaturesInput{}
         output := &organizations.EnableAllFeaturesOutput{}
@@ -405,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableAllFeatures", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableAllFeatures(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableAWSServiceAccess", func(t *testing.T) {
+        input := &organizations.EnableAWSServiceAccessInput{}
+        output := &organizations.EnableAWSServiceAccessOutput{}
+
+        mockClient.On("EnableAWSServiceAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableAWSServiceAccess(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAWSServiceAccessForOrganization", func(t *testing.T) {
-        input := &organizations.ListAWSServiceAccessForOrganizationInput{}
-        output := &organizations.ListAWSServiceAccessForOrganizationOutput{}
-
-        mockClient.On("ListAWSServiceAccessForOrganization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAWSServiceAccessForOrganization(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAccounts", func(t *testing.T) {
         input := &organizations.ListAccountsInput{}
         output := &organizations.ListAccountsOutput{}
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAccountsWithInvalidEffectivePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAccountsWithInvalidEffectivePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAWSServiceAccessForOrganization", func(t *testing.T) {
+        input := &organizations.ListAWSServiceAccessForOrganizationInput{}
+        output := &organizations.ListAWSServiceAccessForOrganizationOutput{}
+
+        mockClient.On("ListAWSServiceAccessForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAWSServiceAccessForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

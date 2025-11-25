@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAutomationEvents", func(t *testing.T) {
+        input := &computeoptimizerautomation.ListAutomationEventsInput{}
+        output := &computeoptimizerautomation.ListAutomationEventsOutput{}
+
+        mockClient.On("ListAutomationEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutomationEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAutomationEventSteps", func(t *testing.T) {
         input := &computeoptimizerautomation.ListAutomationEventStepsInput{}
         output := &computeoptimizerautomation.ListAutomationEventStepsOutput{}
@@ -158,19 +171,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAutomationEventSummaries", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAutomationEventSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListAutomationEvents", func(t *testing.T) {
-        input := &computeoptimizerautomation.ListAutomationEventsInput{}
-        output := &computeoptimizerautomation.ListAutomationEventsOutput{}
-
-        mockClient.On("ListAutomationEvents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAutomationEvents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRecommendedActionSummaries", func(t *testing.T) {
-        input := &computeoptimizerautomation.ListRecommendedActionSummariesInput{}
-        output := &computeoptimizerautomation.ListRecommendedActionSummariesOutput{}
-
-        mockClient.On("ListRecommendedActionSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRecommendedActionSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRecommendedActions", func(t *testing.T) {
         input := &computeoptimizerautomation.ListRecommendedActionsInput{}
         output := &computeoptimizerautomation.ListRecommendedActionsOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRecommendedActions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRecommendedActions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecommendedActionSummaries", func(t *testing.T) {
+        input := &computeoptimizerautomation.ListRecommendedActionSummariesInput{}
+        output := &computeoptimizerautomation.ListRecommendedActionSummariesOutput{}
+
+        mockClient.On("ListRecommendedActionSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommendedActionSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

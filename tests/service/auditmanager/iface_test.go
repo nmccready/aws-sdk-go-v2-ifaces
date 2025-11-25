@@ -515,19 +515,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAssessmentFrameworkShareRequests", func(t *testing.T) {
-        input := &auditmanager.ListAssessmentFrameworkShareRequestsInput{}
-        output := &auditmanager.ListAssessmentFrameworkShareRequestsOutput{}
-
-        mockClient.On("ListAssessmentFrameworkShareRequests", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAssessmentFrameworkShareRequests(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAssessmentFrameworks", func(t *testing.T) {
         input := &auditmanager.ListAssessmentFrameworksInput{}
         output := &auditmanager.ListAssessmentFrameworksOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssessmentFrameworks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssessmentFrameworks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssessmentFrameworkShareRequests", func(t *testing.T) {
+        input := &auditmanager.ListAssessmentFrameworkShareRequestsInput{}
+        output := &auditmanager.ListAssessmentFrameworkShareRequestsOutput{}
+
+        mockClient.On("ListAssessmentFrameworkShareRequests", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssessmentFrameworkShareRequests(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

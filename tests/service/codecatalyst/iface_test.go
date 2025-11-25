@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDevEnvironmentSessions", func(t *testing.T) {
-        input := &codecatalyst.ListDevEnvironmentSessionsInput{}
-        output := &codecatalyst.ListDevEnvironmentSessionsOutput{}
-
-        mockClient.On("ListDevEnvironmentSessions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDevEnvironmentSessions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListDevEnvironments", func(t *testing.T) {
         input := &codecatalyst.ListDevEnvironmentsInput{}
         output := &codecatalyst.ListDevEnvironmentsOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDevEnvironments", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDevEnvironments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDevEnvironmentSessions", func(t *testing.T) {
+        input := &codecatalyst.ListDevEnvironmentSessionsInput{}
+        output := &codecatalyst.ListDevEnvironmentSessionsOutput{}
+
+        mockClient.On("ListDevEnvironmentSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDevEnvironmentSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -645,19 +645,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTrainedModelVersions", func(t *testing.T) {
-        input := &cleanroomsml.ListTrainedModelVersionsInput{}
-        output := &cleanroomsml.ListTrainedModelVersionsOutput{}
-
-        mockClient.On("ListTrainedModelVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTrainedModelVersions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTrainedModels", func(t *testing.T) {
         input := &cleanroomsml.ListTrainedModelsInput{}
         output := &cleanroomsml.ListTrainedModelsOutput{}
@@ -665,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTrainedModels", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTrainedModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTrainedModelVersions", func(t *testing.T) {
+        input := &cleanroomsml.ListTrainedModelVersionsInput{}
+        output := &cleanroomsml.ListTrainedModelVersionsOutput{}
+
+        mockClient.On("ListTrainedModelVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrainedModelVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeletePermissionSet", func(t *testing.T) {
-        input := &ssoadmin.DeletePermissionSetInput{}
-        output := &ssoadmin.DeletePermissionSetOutput{}
-
-        mockClient.On("DeletePermissionSet", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeletePermissionSet(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeletePermissionsBoundaryFromPermissionSet", func(t *testing.T) {
         input := &ssoadmin.DeletePermissionsBoundaryFromPermissionSetInput{}
         output := &ssoadmin.DeletePermissionsBoundaryFromPermissionSetOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePermissionsBoundaryFromPermissionSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePermissionsBoundaryFromPermissionSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePermissionSet", func(t *testing.T) {
+        input := &ssoadmin.DeletePermissionSetInput{}
+        output := &ssoadmin.DeletePermissionSetOutput{}
+
+        mockClient.On("DeletePermissionSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePermissionSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

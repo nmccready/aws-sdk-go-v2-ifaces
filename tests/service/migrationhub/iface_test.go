@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMigrationTaskUpdates", func(t *testing.T) {
-        input := &migrationhub.ListMigrationTaskUpdatesInput{}
-        output := &migrationhub.ListMigrationTaskUpdatesOutput{}
-
-        mockClient.On("ListMigrationTaskUpdates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListMigrationTaskUpdates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListMigrationTasks", func(t *testing.T) {
         input := &migrationhub.ListMigrationTasksInput{}
         output := &migrationhub.ListMigrationTasksOutput{}
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListMigrationTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListMigrationTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMigrationTaskUpdates", func(t *testing.T) {
+        input := &migrationhub.ListMigrationTaskUpdatesInput{}
+        output := &migrationhub.ListMigrationTaskUpdatesOutput{}
+
+        mockClient.On("ListMigrationTaskUpdates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMigrationTaskUpdates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -762,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListBackupJobs", func(t *testing.T) {
+        input := &backup.ListBackupJobsInput{}
+        output := &backup.ListBackupJobsOutput{}
+
+        mockClient.On("ListBackupJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBackupJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListBackupJobSummaries", func(t *testing.T) {
         input := &backup.ListBackupJobSummariesInput{}
         output := &backup.ListBackupJobSummariesOutput{}
@@ -775,13 +788,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBackupJobs", func(t *testing.T) {
-        input := &backup.ListBackupJobsInput{}
-        output := &backup.ListBackupJobsOutput{}
+    t.Run("TestListBackupPlans", func(t *testing.T) {
+        input := &backup.ListBackupPlansInput{}
+        output := &backup.ListBackupPlansOutput{}
 
-        mockClient.On("ListBackupJobs", ctx, input).Return(output, nil)
+        mockClient.On("ListBackupPlans", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListBackupJobs(ctx, input)
+        result, err := mockClient.ListBackupPlans(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,19 +827,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBackupPlans", func(t *testing.T) {
-        input := &backup.ListBackupPlansInput{}
-        output := &backup.ListBackupPlansOutput{}
-
-        mockClient.On("ListBackupPlans", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListBackupPlans(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListBackupSelections", func(t *testing.T) {
         input := &backup.ListBackupSelectionsInput{}
         output := &backup.ListBackupSelectionsOutput{}
@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCopyJobSummaries", func(t *testing.T) {
-        input := &backup.ListCopyJobSummariesInput{}
-        output := &backup.ListCopyJobSummariesOutput{}
-
-        mockClient.On("ListCopyJobSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListCopyJobSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListCopyJobs", func(t *testing.T) {
         input := &backup.ListCopyJobsInput{}
         output := &backup.ListCopyJobsOutput{}
@@ -873,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCopyJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCopyJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCopyJobSummaries", func(t *testing.T) {
+        input := &backup.ListCopyJobSummariesInput{}
+        output := &backup.ListCopyJobSummariesOutput{}
+
+        mockClient.On("ListCopyJobSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCopyJobSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,19 +1022,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListRestoreJobSummaries", func(t *testing.T) {
-        input := &backup.ListRestoreJobSummariesInput{}
-        output := &backup.ListRestoreJobSummariesOutput{}
-
-        mockClient.On("ListRestoreJobSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListRestoreJobSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListRestoreJobs", func(t *testing.T) {
         input := &backup.ListRestoreJobsInput{}
         output := &backup.ListRestoreJobsOutput{}
@@ -1055,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRestoreJobsByProtectedResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRestoreJobsByProtectedResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRestoreJobSummaries", func(t *testing.T) {
+        input := &backup.ListRestoreJobSummariesInput{}
+        output := &backup.ListRestoreJobSummariesOutput{}
+
+        mockClient.On("ListRestoreJobSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRestoreJobSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1087,19 +1087,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListScanJobSummaries", func(t *testing.T) {
-        input := &backup.ListScanJobSummariesInput{}
-        output := &backup.ListScanJobSummariesOutput{}
-
-        mockClient.On("ListScanJobSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListScanJobSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListScanJobs", func(t *testing.T) {
         input := &backup.ListScanJobsInput{}
         output := &backup.ListScanJobsOutput{}
@@ -1107,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListScanJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListScanJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListScanJobSummaries", func(t *testing.T) {
+        input := &backup.ListScanJobSummariesInput{}
+        output := &backup.ListScanJobSummariesOutput{}
+
+        mockClient.On("ListScanJobSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListScanJobSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

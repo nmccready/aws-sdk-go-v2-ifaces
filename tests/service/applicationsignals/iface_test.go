@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServiceStates", func(t *testing.T) {
-        input := &applicationsignals.ListServiceStatesInput{}
-        output := &applicationsignals.ListServiceStatesOutput{}
-
-        mockClient.On("ListServiceStates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListServiceStates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListServices", func(t *testing.T) {
         input := &applicationsignals.ListServicesInput{}
         output := &applicationsignals.ListServicesOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListServices", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListServices(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListServiceStates", func(t *testing.T) {
+        input := &applicationsignals.ListServiceStatesInput{}
+        output := &applicationsignals.ListServiceStatesOutput{}
+
+        mockClient.On("ListServiceStates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceStates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

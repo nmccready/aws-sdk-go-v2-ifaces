@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeMountTargetSecurityGroups", func(t *testing.T) {
-        input := &efs.DescribeMountTargetSecurityGroupsInput{}
-        output := &efs.DescribeMountTargetSecurityGroupsOutput{}
-
-        mockClient.On("DescribeMountTargetSecurityGroups", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeMountTargetSecurityGroups(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeMountTargets", func(t *testing.T) {
         input := &efs.DescribeMountTargetsInput{}
         output := &efs.DescribeMountTargetsOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeMountTargets", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeMountTargets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMountTargetSecurityGroups", func(t *testing.T) {
+        input := &efs.DescribeMountTargetSecurityGroupsInput{}
+        output := &efs.DescribeMountTargetSecurityGroupsOutput{}
+
+        mockClient.On("DescribeMountTargetSecurityGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMountTargetSecurityGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

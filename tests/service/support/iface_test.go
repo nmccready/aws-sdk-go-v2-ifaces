@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeTrustedAdvisorCheckSummaries", func(t *testing.T) {
-        input := &support.DescribeTrustedAdvisorCheckSummariesInput{}
-        output := &support.DescribeTrustedAdvisorCheckSummariesOutput{}
-
-        mockClient.On("DescribeTrustedAdvisorCheckSummaries", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTrustedAdvisorCheckSummaries(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeTrustedAdvisorChecks", func(t *testing.T) {
         input := &support.DescribeTrustedAdvisorChecksInput{}
         output := &support.DescribeTrustedAdvisorChecksOutput{}
@@ -210,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTrustedAdvisorChecks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTrustedAdvisorChecks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTrustedAdvisorCheckSummaries", func(t *testing.T) {
+        input := &support.DescribeTrustedAdvisorCheckSummariesInput{}
+        output := &support.DescribeTrustedAdvisorCheckSummariesOutput{}
+
+        mockClient.On("DescribeTrustedAdvisorCheckSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTrustedAdvisorCheckSummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

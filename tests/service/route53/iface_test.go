@@ -918,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateHostedZoneFeatures", func(t *testing.T) {
+        input := &route53.UpdateHostedZoneFeaturesInput{}
+        output := &route53.UpdateHostedZoneFeaturesOutput{}
+
+        mockClient.On("UpdateHostedZoneFeatures", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHostedZoneFeatures(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateTrafficPolicyComment", func(t *testing.T) {
         input := &route53.UpdateTrafficPolicyCommentInput{}
         output := &route53.UpdateTrafficPolicyCommentOutput{}
