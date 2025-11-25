@@ -151,19 +151,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListClusters", func(t *testing.T) {
-        input := &docdbelastic.ListClustersInput{}
-        output := &docdbelastic.ListClustersOutput{}
-
-        mockClient.On("ListClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListClusters(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListClusterSnapshots", func(t *testing.T) {
         input := &docdbelastic.ListClusterSnapshotsInput{}
         output := &docdbelastic.ListClusterSnapshotsOutput{}
@@ -171,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListClusterSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListClusterSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListClusters", func(t *testing.T) {
+        input := &docdbelastic.ListClustersInput{}
+        output := &docdbelastic.ListClustersOutput{}
+
+        mockClient.On("ListClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

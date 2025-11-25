@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStateMachines", func(t *testing.T) {
-        input := &sfn.ListStateMachinesInput{}
-        output := &sfn.ListStateMachinesOutput{}
-
-        mockClient.On("ListStateMachines", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStateMachines(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStateMachineVersions", func(t *testing.T) {
         input := &sfn.ListStateMachineVersionsInput{}
         output := &sfn.ListStateMachineVersionsOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListStateMachineVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListStateMachineVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStateMachines", func(t *testing.T) {
+        input := &sfn.ListStateMachinesInput{}
+        output := &sfn.ListStateMachinesOutput{}
+
+        mockClient.On("ListStateMachines", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStateMachines(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

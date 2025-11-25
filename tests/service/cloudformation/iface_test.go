@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeStacks", func(t *testing.T) {
-        input := &cloudformation.DescribeStacksInput{}
-        output := &cloudformation.DescribeStacksOutput{}
-
-        mockClient.On("DescribeStacks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeStacks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeStackSet", func(t *testing.T) {
         input := &cloudformation.DescribeStackSetInput{}
         output := &cloudformation.DescribeStackSetOutput{}
@@ -509,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeStackSetOperation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeStackSetOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeStacks", func(t *testing.T) {
+        input := &cloudformation.DescribeStacksInput{}
+        output := &cloudformation.DescribeStacksOutput{}
+
+        mockClient.On("DescribeStacks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeStacks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -866,19 +866,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListStacks", func(t *testing.T) {
-        input := &cloudformation.ListStacksInput{}
-        output := &cloudformation.ListStacksOutput{}
-
-        mockClient.On("ListStacks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListStacks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListStackSetAutoDeploymentTargets", func(t *testing.T) {
         input := &cloudformation.ListStackSetAutoDeploymentTargetsInput{}
         output := &cloudformation.ListStackSetAutoDeploymentTargetsOutput{}
@@ -931,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListStacks", func(t *testing.T) {
+        input := &cloudformation.ListStacksInput{}
+        output := &cloudformation.ListStacksOutput{}
+
+        mockClient.On("ListStacks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStacks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTypeRegistrations", func(t *testing.T) {
         input := &cloudformation.ListTypeRegistrationsInput{}
         output := &cloudformation.ListTypeRegistrationsOutput{}
@@ -944,19 +944,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListTypes", func(t *testing.T) {
-        input := &cloudformation.ListTypesInput{}
-        output := &cloudformation.ListTypesOutput{}
-
-        mockClient.On("ListTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListTypeVersions", func(t *testing.T) {
         input := &cloudformation.ListTypeVersionsInput{}
         output := &cloudformation.ListTypeVersionsOutput{}
@@ -964,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTypeVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTypeVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTypes", func(t *testing.T) {
+        input := &cloudformation.ListTypesInput{}
+        output := &cloudformation.ListTypesOutput{}
+
+        mockClient.On("ListTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

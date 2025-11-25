@@ -229,19 +229,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironments", func(t *testing.T) {
-        input := &migrationhubrefactorspaces.ListEnvironmentsInput{}
-        output := &migrationhubrefactorspaces.ListEnvironmentsOutput{}
-
-        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListEnvironments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListEnvironmentVpcs", func(t *testing.T) {
         input := &migrationhubrefactorspaces.ListEnvironmentVpcsInput{}
         output := &migrationhubrefactorspaces.ListEnvironmentVpcsOutput{}
@@ -249,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEnvironmentVpcs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEnvironmentVpcs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEnvironments", func(t *testing.T) {
+        input := &migrationhubrefactorspaces.ListEnvironmentsInput{}
+        output := &migrationhubrefactorspaces.ListEnvironmentsOutput{}
+
+        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnvironments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -99,19 +99,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEnvironments", func(t *testing.T) {
-        input := &cloud9.DescribeEnvironmentsInput{}
-        output := &cloud9.DescribeEnvironmentsOutput{}
-
-        mockClient.On("DescribeEnvironments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEnvironments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEnvironmentStatus", func(t *testing.T) {
         input := &cloud9.DescribeEnvironmentStatusInput{}
         output := &cloud9.DescribeEnvironmentStatusOutput{}
@@ -119,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEnvironmentStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEnvironmentStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEnvironments", func(t *testing.T) {
+        input := &cloud9.DescribeEnvironmentsInput{}
+        output := &cloud9.DescribeEnvironmentsOutput{}
+
+        mockClient.On("DescribeEnvironments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEnvironments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

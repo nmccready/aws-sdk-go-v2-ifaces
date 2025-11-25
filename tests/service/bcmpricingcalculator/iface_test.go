@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListBillScenarios", func(t *testing.T) {
-        input := &bcmpricingcalculator.ListBillScenariosInput{}
-        output := &bcmpricingcalculator.ListBillScenariosOutput{}
-
-        mockClient.On("ListBillScenarios", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListBillScenarios(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListBillScenarioUsageModifications", func(t *testing.T) {
         input := &bcmpricingcalculator.ListBillScenarioUsageModificationsInput{}
         output := &bcmpricingcalculator.ListBillScenarioUsageModificationsOutput{}
@@ -379,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBillScenarioUsageModifications", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBillScenarioUsageModifications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBillScenarios", func(t *testing.T) {
+        input := &bcmpricingcalculator.ListBillScenariosInput{}
+        output := &bcmpricingcalculator.ListBillScenariosOutput{}
+
+        mockClient.On("ListBillScenarios", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBillScenarios(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListWorkloadEstimates", func(t *testing.T) {
-        input := &bcmpricingcalculator.ListWorkloadEstimatesInput{}
-        output := &bcmpricingcalculator.ListWorkloadEstimatesOutput{}
-
-        mockClient.On("ListWorkloadEstimates", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListWorkloadEstimates(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListWorkloadEstimateUsage", func(t *testing.T) {
         input := &bcmpricingcalculator.ListWorkloadEstimateUsageInput{}
         output := &bcmpricingcalculator.ListWorkloadEstimateUsageOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListWorkloadEstimateUsage", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListWorkloadEstimateUsage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkloadEstimates", func(t *testing.T) {
+        input := &bcmpricingcalculator.ListWorkloadEstimatesInput{}
+        output := &bcmpricingcalculator.ListWorkloadEstimatesOutput{}
+
+        mockClient.On("ListWorkloadEstimates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkloadEstimates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -398,19 +398,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribePortfolioShares", func(t *testing.T) {
-        input := &servicecatalog.DescribePortfolioSharesInput{}
-        output := &servicecatalog.DescribePortfolioSharesOutput{}
-
-        mockClient.On("DescribePortfolioShares", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribePortfolioShares(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribePortfolioShareStatus", func(t *testing.T) {
         input := &servicecatalog.DescribePortfolioShareStatusInput{}
         output := &servicecatalog.DescribePortfolioShareStatusOutput{}
@@ -418,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribePortfolioShareStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribePortfolioShareStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribePortfolioShares", func(t *testing.T) {
+        input := &servicecatalog.DescribePortfolioSharesInput{}
+        output := &servicecatalog.DescribePortfolioSharesOutput{}
+
+        mockClient.On("DescribePortfolioShares", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePortfolioShares(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

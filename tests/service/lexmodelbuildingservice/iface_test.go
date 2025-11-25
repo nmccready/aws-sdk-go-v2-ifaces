@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetBots", func(t *testing.T) {
-        input := &lexmodelbuildingservice.GetBotsInput{}
-        output := &lexmodelbuildingservice.GetBotsOutput{}
-
-        mockClient.On("GetBots", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetBots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetBotVersions", func(t *testing.T) {
         input := &lexmodelbuildingservice.GetBotVersionsInput{}
         output := &lexmodelbuildingservice.GetBotVersionsOutput{}
@@ -275,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBotVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBotVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBots", func(t *testing.T) {
+        input := &lexmodelbuildingservice.GetBotsInput{}
+        output := &lexmodelbuildingservice.GetBotsOutput{}
+
+        mockClient.On("GetBots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,19 +359,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetIntents", func(t *testing.T) {
-        input := &lexmodelbuildingservice.GetIntentsInput{}
-        output := &lexmodelbuildingservice.GetIntentsOutput{}
-
-        mockClient.On("GetIntents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetIntents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetIntentVersions", func(t *testing.T) {
         input := &lexmodelbuildingservice.GetIntentVersionsInput{}
         output := &lexmodelbuildingservice.GetIntentVersionsOutput{}
@@ -379,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetIntentVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetIntentVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIntents", func(t *testing.T) {
+        input := &lexmodelbuildingservice.GetIntentsInput{}
+        output := &lexmodelbuildingservice.GetIntentsOutput{}
+
+        mockClient.On("GetIntents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIntents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,19 +424,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSlotTypes", func(t *testing.T) {
-        input := &lexmodelbuildingservice.GetSlotTypesInput{}
-        output := &lexmodelbuildingservice.GetSlotTypesOutput{}
-
-        mockClient.On("GetSlotTypes", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSlotTypes(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSlotTypeVersions", func(t *testing.T) {
         input := &lexmodelbuildingservice.GetSlotTypeVersionsInput{}
         output := &lexmodelbuildingservice.GetSlotTypeVersionsOutput{}
@@ -444,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSlotTypeVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSlotTypeVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSlotTypes", func(t *testing.T) {
+        input := &lexmodelbuildingservice.GetSlotTypesInput{}
+        output := &lexmodelbuildingservice.GetSlotTypesOutput{}
+
+        mockClient.On("GetSlotTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSlotTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

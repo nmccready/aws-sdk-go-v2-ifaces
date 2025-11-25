@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListCustomLineItems", func(t *testing.T) {
-        input := &billingconductor.ListCustomLineItemsInput{}
-        output := &billingconductor.ListCustomLineItemsOutput{}
-
-        mockClient.On("ListCustomLineItems", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListCustomLineItems(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListCustomLineItemVersions", func(t *testing.T) {
         input := &billingconductor.ListCustomLineItemVersionsInput{}
         output := &billingconductor.ListCustomLineItemVersionsOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCustomLineItemVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCustomLineItemVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomLineItems", func(t *testing.T) {
+        input := &billingconductor.ListCustomLineItemsInput{}
+        output := &billingconductor.ListCustomLineItemsOutput{}
+
+        mockClient.On("ListCustomLineItems", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomLineItems(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

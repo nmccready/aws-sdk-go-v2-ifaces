@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListLogPatterns", func(t *testing.T) {
-        input := &applicationinsights.ListLogPatternsInput{}
-        output := &applicationinsights.ListLogPatternsOutput{}
-
-        mockClient.On("ListLogPatterns", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLogPatterns(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListLogPatternSets", func(t *testing.T) {
         input := &applicationinsights.ListLogPatternSetsInput{}
         output := &applicationinsights.ListLogPatternSetsOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLogPatternSets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLogPatternSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLogPatterns", func(t *testing.T) {
+        input := &applicationinsights.ListLogPatternsInput{}
+        output := &applicationinsights.ListLogPatternsOutput{}
+
+        mockClient.On("ListLogPatterns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLogPatterns(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

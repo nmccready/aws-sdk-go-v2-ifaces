@@ -138,19 +138,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironments", func(t *testing.T) {
-        input := &evs.ListEnvironmentsInput{}
-        output := &evs.ListEnvironmentsOutput{}
-
-        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListEnvironments(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListEnvironmentVlans", func(t *testing.T) {
         input := &evs.ListEnvironmentVlansInput{}
         output := &evs.ListEnvironmentVlansOutput{}
@@ -158,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEnvironmentVlans", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEnvironmentVlans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEnvironments", func(t *testing.T) {
+        input := &evs.ListEnvironmentsInput{}
+        output := &evs.ListEnvironmentsOutput{}
+
+        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnvironments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

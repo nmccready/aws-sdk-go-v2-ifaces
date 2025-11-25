@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeProjects", func(t *testing.T) {
-        input := &rekognition.DescribeProjectsInput{}
-        output := &rekognition.DescribeProjectsOutput{}
-
-        mockClient.On("DescribeProjects", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeProjects(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeProjectVersions", func(t *testing.T) {
         input := &rekognition.DescribeProjectVersionsInput{}
         output := &rekognition.DescribeProjectVersionsOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeProjectVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeProjectVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeProjects", func(t *testing.T) {
+        input := &rekognition.DescribeProjectsInput{}
+        output := &rekognition.DescribeProjectsOutput{}
+
+        mockClient.On("DescribeProjects", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeProjects(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
