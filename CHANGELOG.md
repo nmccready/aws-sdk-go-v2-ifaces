@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 0.1.9 (2025-11-25)
+
+
+### Bug Fixes
+
+* overrides directory to  -> _overrides to not attempt to install go dependencies ([c7c81da](https://github.com/nmccready/aws-sdk-go-v2-ifaces/commit/c7c81da8eedeb7dda5b14954b04450d6a8c668eb))
+
 ## 0.1.8 (2025-09-01)
 
 ## 0.1.7 (2025-05-25)
