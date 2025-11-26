@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateInstanceSnapshot", func(t *testing.T) {
+        input := &lightsail.CreateInstanceSnapshotInput{}
+        output := &lightsail.CreateInstanceSnapshotOutput{}
+
+        mockClient.On("CreateInstanceSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInstanceSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateInstances", func(t *testing.T) {
         input := &lightsail.CreateInstancesInput{}
         output := &lightsail.CreateInstancesOutput{}
@@ -353,19 +366,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateInstancesFromSnapshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateInstancesFromSnapshot(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestCreateInstanceSnapshot", func(t *testing.T) {
-        input := &lightsail.CreateInstanceSnapshotInput{}
-        output := &lightsail.CreateInstanceSnapshotOutput{}
-
-        mockClient.On("CreateInstanceSnapshot", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateInstanceSnapshot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1100,19 +1100,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDisks", func(t *testing.T) {
-        input := &lightsail.GetDisksInput{}
-        output := &lightsail.GetDisksOutput{}
-
-        mockClient.On("GetDisks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDisks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDiskSnapshot", func(t *testing.T) {
         input := &lightsail.GetDiskSnapshotInput{}
         output := &lightsail.GetDiskSnapshotOutput{}
@@ -1133,6 +1120,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDiskSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDiskSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDisks", func(t *testing.T) {
+        input := &lightsail.GetDisksInput{}
+        output := &lightsail.GetDisksOutput{}
+
+        mockClient.On("GetDisks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDisks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1282,19 +1282,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetInstances", func(t *testing.T) {
-        input := &lightsail.GetInstancesInput{}
-        output := &lightsail.GetInstancesOutput{}
-
-        mockClient.On("GetInstances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetInstances(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetInstanceSnapshot", func(t *testing.T) {
         input := &lightsail.GetInstanceSnapshotInput{}
         output := &lightsail.GetInstanceSnapshotOutput{}
@@ -1328,6 +1315,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInstanceState", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInstanceState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInstances", func(t *testing.T) {
+        input := &lightsail.GetInstancesInput{}
+        output := &lightsail.GetInstancesOutput{}
+
+        mockClient.On("GetInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInstances(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1386,19 +1386,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetLoadBalancers", func(t *testing.T) {
-        input := &lightsail.GetLoadBalancersInput{}
-        output := &lightsail.GetLoadBalancersOutput{}
-
-        mockClient.On("GetLoadBalancers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetLoadBalancers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetLoadBalancerTlsCertificates", func(t *testing.T) {
         input := &lightsail.GetLoadBalancerTlsCertificatesInput{}
         output := &lightsail.GetLoadBalancerTlsCertificatesOutput{}
@@ -1419,6 +1406,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLoadBalancerTlsPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLoadBalancerTlsPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLoadBalancers", func(t *testing.T) {
+        input := &lightsail.GetLoadBalancersInput{}
+        output := &lightsail.GetLoadBalancersOutput{}
+
+        mockClient.On("GetLoadBalancers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLoadBalancers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1594,19 +1594,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetRelationalDatabases", func(t *testing.T) {
-        input := &lightsail.GetRelationalDatabasesInput{}
-        output := &lightsail.GetRelationalDatabasesOutput{}
-
-        mockClient.On("GetRelationalDatabases", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetRelationalDatabases(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetRelationalDatabaseSnapshot", func(t *testing.T) {
         input := &lightsail.GetRelationalDatabaseSnapshotInput{}
         output := &lightsail.GetRelationalDatabaseSnapshotOutput{}
@@ -1627,6 +1614,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRelationalDatabaseSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRelationalDatabaseSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRelationalDatabases", func(t *testing.T) {
+        input := &lightsail.GetRelationalDatabasesInput{}
+        output := &lightsail.GetRelationalDatabasesOutput{}
+
+        mockClient.On("GetRelationalDatabases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRelationalDatabases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -1386,6 +1386,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDistributionTenants", func(t *testing.T) {
+        input := &cloudfront.ListDistributionTenantsInput{}
+        output := &cloudfront.ListDistributionTenantsOutput{}
+
+        mockClient.On("ListDistributionTenants", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionTenants(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDistributionTenantsByCustomization", func(t *testing.T) {
+        input := &cloudfront.ListDistributionTenantsByCustomizationInput{}
+        output := &cloudfront.ListDistributionTenantsByCustomizationOutput{}
+
+        mockClient.On("ListDistributionTenantsByCustomization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDistributionTenantsByCustomization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDistributions", func(t *testing.T) {
         input := &cloudfront.ListDistributionsInput{}
         output := &cloudfront.ListDistributionsOutput{}
@@ -1549,32 +1575,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDistributionsByWebACLId", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDistributionsByWebACLId(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListDistributionTenants", func(t *testing.T) {
-        input := &cloudfront.ListDistributionTenantsInput{}
-        output := &cloudfront.ListDistributionTenantsOutput{}
-
-        mockClient.On("ListDistributionTenants", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributionTenants(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListDistributionTenantsByCustomization", func(t *testing.T) {
-        input := &cloudfront.ListDistributionTenantsByCustomizationInput{}
-        output := &cloudfront.ListDistributionTenantsByCustomizationOutput{}
-
-        mockClient.On("ListDistributionTenantsByCustomization", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListDistributionTenantsByCustomization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

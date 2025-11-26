@@ -281,19 +281,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListPermissions", func(t *testing.T) {
-        input := &ram.ListPermissionsInput{}
-        output := &ram.ListPermissionsOutput{}
-
-        mockClient.On("ListPermissions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListPermissions(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListPermissionVersions", func(t *testing.T) {
         input := &ram.ListPermissionVersionsInput{}
         output := &ram.ListPermissionVersionsOutput{}
@@ -301,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPermissionVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPermissionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPermissions", func(t *testing.T) {
+        input := &ram.ListPermissionsInput{}
+        output := &ram.ListPermissionsOutput{}
+
+        mockClient.On("ListPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListResources", func(t *testing.T) {
-        input := &ram.ListResourcesInput{}
-        output := &ram.ListResourcesOutput{}
-
-        mockClient.On("ListResources", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListResources(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListResourceSharePermissions", func(t *testing.T) {
         input := &ram.ListResourceSharePermissionsInput{}
         output := &ram.ListResourceSharePermissionsOutput{}
@@ -366,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResourceTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResourceTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResources", func(t *testing.T) {
+        input := &ram.ListResourcesInput{}
+        output := &ram.ListResourcesOutput{}
+
+        mockClient.On("ListResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResources(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

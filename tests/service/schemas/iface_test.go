@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListSchemas", func(t *testing.T) {
-        input := &schemas.ListSchemasInput{}
-        output := &schemas.ListSchemasOutput{}
-
-        mockClient.On("ListSchemas", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListSchemas(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListSchemaVersions", func(t *testing.T) {
         input := &schemas.ListSchemaVersionsInput{}
         output := &schemas.ListSchemaVersionsOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSchemaVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSchemaVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSchemas", func(t *testing.T) {
+        input := &schemas.ListSchemasInput{}
+        output := &schemas.ListSchemasOutput{}
+
+        mockClient.On("ListSchemas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSchemas(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

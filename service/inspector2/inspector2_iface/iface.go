@@ -83,6 +83,6 @@ type IClient interface {
  UpdateEc2DeepInspectionConfiguration(ctx context.Context, params *UpdateEc2DeepInspectionConfigurationInput, optFns ...func(*Options)) (*UpdateEc2DeepInspectionConfigurationOutput, error) 
  UpdateEncryptionKey(ctx context.Context, params *UpdateEncryptionKeyInput, optFns ...func(*Options)) (*UpdateEncryptionKeyOutput, error) 
  UpdateFilter(ctx context.Context, params *UpdateFilterInput, optFns ...func(*Options)) (*UpdateFilterOutput, error) 
- UpdateOrganizationConfiguration(ctx context.Context, params *UpdateOrganizationConfigurationInput, optFns ...func(*Options)) (*UpdateOrganizationConfigurationOutput, error) 
  UpdateOrgEc2DeepInspectionConfiguration(ctx context.Context, params *UpdateOrgEc2DeepInspectionConfigurationInput, optFns ...func(*Options)) (*UpdateOrgEc2DeepInspectionConfigurationOutput, error) 
+ UpdateOrganizationConfiguration(ctx context.Context, params *UpdateOrganizationConfigurationInput, optFns ...func(*Options)) (*UpdateOrganizationConfigurationOutput, error) 
 }

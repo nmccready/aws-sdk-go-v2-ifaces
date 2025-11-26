@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetFindings", func(t *testing.T) {
-        input := &securityhub.GetFindingsInput{}
-        output := &securityhub.GetFindingsOutput{}
-
-        mockClient.On("GetFindings", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFindings(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetFindingStatisticsV2", func(t *testing.T) {
         input := &securityhub.GetFindingStatisticsV2Input{}
         output := &securityhub.GetFindingStatisticsV2Output{}
@@ -873,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFindingStatisticsV2", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFindingStatisticsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFindings", func(t *testing.T) {
+        input := &securityhub.GetFindingsInput{}
+        output := &securityhub.GetFindingsOutput{}
+
+        mockClient.On("GetFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

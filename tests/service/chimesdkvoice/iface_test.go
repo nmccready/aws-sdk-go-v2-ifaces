@@ -840,19 +840,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListVoiceConnectors", func(t *testing.T) {
-        input := &chimesdkvoice.ListVoiceConnectorsInput{}
-        output := &chimesdkvoice.ListVoiceConnectorsOutput{}
-
-        mockClient.On("ListVoiceConnectors", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListVoiceConnectors(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListVoiceConnectorTerminationCredentials", func(t *testing.T) {
         input := &chimesdkvoice.ListVoiceConnectorTerminationCredentialsInput{}
         output := &chimesdkvoice.ListVoiceConnectorTerminationCredentialsOutput{}
@@ -860,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListVoiceConnectorTerminationCredentials", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListVoiceConnectorTerminationCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVoiceConnectors", func(t *testing.T) {
+        input := &chimesdkvoice.ListVoiceConnectorsInput{}
+        output := &chimesdkvoice.ListVoiceConnectorsOutput{}
+
+        mockClient.On("ListVoiceConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVoiceConnectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

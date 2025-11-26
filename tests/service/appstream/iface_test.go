@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAppLicenseUsage", func(t *testing.T) {
+        input := &appstream.DescribeAppLicenseUsageInput{}
+        output := &appstream.DescribeAppLicenseUsageOutput{}
+
+        mockClient.On("DescribeAppLicenseUsage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAppLicenseUsage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeApplicationFleetAssociations", func(t *testing.T) {
         input := &appstream.DescribeApplicationFleetAssociationsInput{}
         output := &appstream.DescribeApplicationFleetAssociationsOutput{}
@@ -587,19 +600,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeApplications(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeAppLicenseUsage", func(t *testing.T) {
-        input := &appstream.DescribeAppLicenseUsageInput{}
-        output := &appstream.DescribeAppLicenseUsageOutput{}
-
-        mockClient.On("DescribeAppLicenseUsage", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeAppLicenseUsage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,19 +749,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeUsers", func(t *testing.T) {
-        input := &appstream.DescribeUsersInput{}
-        output := &appstream.DescribeUsersOutput{}
-
-        mockClient.On("DescribeUsers", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeUsers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeUserStackAssociations", func(t *testing.T) {
         input := &appstream.DescribeUserStackAssociationsInput{}
         output := &appstream.DescribeUserStackAssociationsOutput{}
@@ -769,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeUserStackAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeUserStackAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeUsers", func(t *testing.T) {
+        input := &appstream.DescribeUsersInput{}
+        output := &appstream.DescribeUsersOutput{}
+
+        mockClient.On("DescribeUsers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeUsers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

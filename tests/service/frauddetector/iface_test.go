@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteEventsByEventType", func(t *testing.T) {
-        input := &frauddetector.DeleteEventsByEventTypeInput{}
-        output := &frauddetector.DeleteEventsByEventTypeOutput{}
-
-        mockClient.On("DeleteEventsByEventType", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteEventsByEventType(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteEventType", func(t *testing.T) {
         input := &frauddetector.DeleteEventTypeInput{}
         output := &frauddetector.DeleteEventTypeOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEventType", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEventType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteEventsByEventType", func(t *testing.T) {
+        input := &frauddetector.DeleteEventsByEventTypeInput{}
+        output := &frauddetector.DeleteEventsByEventTypeOutput{}
+
+        mockClient.On("DeleteEventsByEventType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEventsByEventType(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,19 +463,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetDetectors", func(t *testing.T) {
-        input := &frauddetector.GetDetectorsInput{}
-        output := &frauddetector.GetDetectorsOutput{}
-
-        mockClient.On("GetDetectors", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetDetectors(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetDetectorVersion", func(t *testing.T) {
         input := &frauddetector.GetDetectorVersionInput{}
         output := &frauddetector.GetDetectorVersionOutput{}
@@ -483,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDetectorVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDetectorVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDetectors", func(t *testing.T) {
+        input := &frauddetector.GetDetectorsInput{}
+        output := &frauddetector.GetDetectorsOutput{}
+
+        mockClient.On("GetDetectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDetectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,19 +619,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetModels", func(t *testing.T) {
-        input := &frauddetector.GetModelsInput{}
-        output := &frauddetector.GetModelsOutput{}
-
-        mockClient.On("GetModels", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetModels(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetModelVersion", func(t *testing.T) {
         input := &frauddetector.GetModelVersionInput{}
         output := &frauddetector.GetModelVersionOutput{}
@@ -639,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetModelVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetModelVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetModels", func(t *testing.T) {
+        input := &frauddetector.GetModelsInput{}
+        output := &frauddetector.GetModelsOutput{}
+
+        mockClient.On("GetModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

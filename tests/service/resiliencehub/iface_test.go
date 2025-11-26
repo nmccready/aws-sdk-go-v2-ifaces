@@ -476,19 +476,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListApps", func(t *testing.T) {
-        input := &resiliencehub.ListAppsInput{}
-        output := &resiliencehub.ListAppsOutput{}
-
-        mockClient.On("ListApps", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListApps(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAppVersionAppComponents", func(t *testing.T) {
         input := &resiliencehub.ListAppVersionAppComponentsInput{}
         output := &resiliencehub.ListAppVersionAppComponentsOutput{}
@@ -535,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAppVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAppVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApps", func(t *testing.T) {
+        input := &resiliencehub.ListAppsInput{}
+        output := &resiliencehub.ListAppsOutput{}
+
+        mockClient.On("ListApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApps(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

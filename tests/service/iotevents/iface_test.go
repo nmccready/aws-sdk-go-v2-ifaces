@@ -190,19 +190,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAlarmModels", func(t *testing.T) {
-        input := &iotevents.ListAlarmModelsInput{}
-        output := &iotevents.ListAlarmModelsOutput{}
-
-        mockClient.On("ListAlarmModels", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAlarmModels(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAlarmModelVersions", func(t *testing.T) {
         input := &iotevents.ListAlarmModelVersionsInput{}
         output := &iotevents.ListAlarmModelVersionsOutput{}
@@ -216,13 +203,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListDetectorModels", func(t *testing.T) {
-        input := &iotevents.ListDetectorModelsInput{}
-        output := &iotevents.ListDetectorModelsOutput{}
+    t.Run("TestListAlarmModels", func(t *testing.T) {
+        input := &iotevents.ListAlarmModelsInput{}
+        output := &iotevents.ListAlarmModelsOutput{}
 
-        mockClient.On("ListDetectorModels", ctx, input).Return(output, nil)
+        mockClient.On("ListAlarmModels", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListDetectorModels(ctx, input)
+        result, err := mockClient.ListAlarmModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -236,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDetectorModelVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDetectorModelVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDetectorModels", func(t *testing.T) {
+        input := &iotevents.ListDetectorModelsInput{}
+        output := &iotevents.ListDetectorModelsOutput{}
+
+        mockClient.On("ListDetectorModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDetectorModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

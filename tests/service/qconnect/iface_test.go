@@ -658,19 +658,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAIAgents", func(t *testing.T) {
-        input := &qconnect.ListAIAgentsInput{}
-        output := &qconnect.ListAIAgentsOutput{}
-
-        mockClient.On("ListAIAgents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAIAgents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAIAgentVersions", func(t *testing.T) {
         input := &qconnect.ListAIAgentVersionsInput{}
         output := &qconnect.ListAIAgentVersionsOutput{}
@@ -684,13 +671,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAIGuardrails", func(t *testing.T) {
-        input := &qconnect.ListAIGuardrailsInput{}
-        output := &qconnect.ListAIGuardrailsOutput{}
+    t.Run("TestListAIAgents", func(t *testing.T) {
+        input := &qconnect.ListAIAgentsInput{}
+        output := &qconnect.ListAIAgentsOutput{}
 
-        mockClient.On("ListAIGuardrails", ctx, input).Return(output, nil)
+        mockClient.On("ListAIAgents", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListAIGuardrails(ctx, input)
+        result, err := mockClient.ListAIAgents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,13 +697,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAIPrompts", func(t *testing.T) {
-        input := &qconnect.ListAIPromptsInput{}
-        output := &qconnect.ListAIPromptsOutput{}
+    t.Run("TestListAIGuardrails", func(t *testing.T) {
+        input := &qconnect.ListAIGuardrailsInput{}
+        output := &qconnect.ListAIGuardrailsOutput{}
 
-        mockClient.On("ListAIPrompts", ctx, input).Return(output, nil)
+        mockClient.On("ListAIGuardrails", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListAIPrompts(ctx, input)
+        result, err := mockClient.ListAIGuardrails(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -730,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAIPromptVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAIPromptVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIPrompts", func(t *testing.T) {
+        input := &qconnect.ListAIPromptsInput{}
+        output := &qconnect.ListAIPromptsOutput{}
+
+        mockClient.On("ListAIPrompts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIPrompts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,13 +814,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMessages", func(t *testing.T) {
-        input := &qconnect.ListMessagesInput{}
-        output := &qconnect.ListMessagesOutput{}
+    t.Run("TestListMessageTemplateVersions", func(t *testing.T) {
+        input := &qconnect.ListMessageTemplateVersionsInput{}
+        output := &qconnect.ListMessageTemplateVersionsOutput{}
 
-        mockClient.On("ListMessages", ctx, input).Return(output, nil)
+        mockClient.On("ListMessageTemplateVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListMessages(ctx, input)
+        result, err := mockClient.ListMessageTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -840,13 +840,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListMessageTemplateVersions", func(t *testing.T) {
-        input := &qconnect.ListMessageTemplateVersionsInput{}
-        output := &qconnect.ListMessageTemplateVersionsOutput{}
+    t.Run("TestListMessages", func(t *testing.T) {
+        input := &qconnect.ListMessagesInput{}
+        output := &qconnect.ListMessagesOutput{}
 
-        mockClient.On("ListMessageTemplateVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListMessages", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListMessageTemplateVersions(ctx, input)
+        result, err := mockClient.ListMessages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

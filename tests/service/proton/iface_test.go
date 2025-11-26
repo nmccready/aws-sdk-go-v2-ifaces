@@ -749,13 +749,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironments", func(t *testing.T) {
-        input := &proton.ListEnvironmentsInput{}
-        output := &proton.ListEnvironmentsOutput{}
+    t.Run("TestListEnvironmentTemplateVersions", func(t *testing.T) {
+        input := &proton.ListEnvironmentTemplateVersionsInput{}
+        output := &proton.ListEnvironmentTemplateVersionsOutput{}
 
-        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
+        mockClient.On("ListEnvironmentTemplateVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListEnvironments(ctx, input)
+        result, err := mockClient.ListEnvironmentTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,13 +775,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListEnvironmentTemplateVersions", func(t *testing.T) {
-        input := &proton.ListEnvironmentTemplateVersionsInput{}
-        output := &proton.ListEnvironmentTemplateVersionsOutput{}
+    t.Run("TestListEnvironments", func(t *testing.T) {
+        input := &proton.ListEnvironmentsInput{}
+        output := &proton.ListEnvironmentsOutput{}
 
-        mockClient.On("ListEnvironmentTemplateVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListEnvironments", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListEnvironmentTemplateVersions(ctx, input)
+        result, err := mockClient.ListEnvironments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -879,13 +879,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServices", func(t *testing.T) {
-        input := &proton.ListServicesInput{}
-        output := &proton.ListServicesOutput{}
+    t.Run("TestListServiceTemplateVersions", func(t *testing.T) {
+        input := &proton.ListServiceTemplateVersionsInput{}
+        output := &proton.ListServiceTemplateVersionsOutput{}
 
-        mockClient.On("ListServices", ctx, input).Return(output, nil)
+        mockClient.On("ListServiceTemplateVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListServices(ctx, input)
+        result, err := mockClient.ListServiceTemplateVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -905,13 +905,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListServiceTemplateVersions", func(t *testing.T) {
-        input := &proton.ListServiceTemplateVersionsInput{}
-        output := &proton.ListServiceTemplateVersionsOutput{}
+    t.Run("TestListServices", func(t *testing.T) {
+        input := &proton.ListServicesInput{}
+        output := &proton.ListServicesOutput{}
 
-        mockClient.On("ListServiceTemplateVersions", ctx, input).Return(output, nil)
+        mockClient.On("ListServices", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListServiceTemplateVersions(ctx, input)
+        result, err := mockClient.ListServices(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -333,19 +333,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeTasks", func(t *testing.T) {
-        input := &ecs.DescribeTasksInput{}
-        output := &ecs.DescribeTasksOutput{}
-
-        mockClient.On("DescribeTasks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeTasks(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeTaskSets", func(t *testing.T) {
         input := &ecs.DescribeTaskSetsInput{}
         output := &ecs.DescribeTaskSetsOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTaskSets", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTaskSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTasks", func(t *testing.T) {
+        input := &ecs.DescribeTasksInput{}
+        output := &ecs.DescribeTasksOutput{}
+
+        mockClient.On("DescribeTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTasks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

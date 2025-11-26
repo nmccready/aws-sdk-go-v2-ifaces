@@ -255,19 +255,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListAppInstances", func(t *testing.T) {
-        input := &chimesdkidentity.ListAppInstancesInput{}
-        output := &chimesdkidentity.ListAppInstancesOutput{}
-
-        mockClient.On("ListAppInstances", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListAppInstances(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListAppInstanceUserEndpoints", func(t *testing.T) {
         input := &chimesdkidentity.ListAppInstanceUserEndpointsInput{}
         output := &chimesdkidentity.ListAppInstanceUserEndpointsOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAppInstanceUsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAppInstanceUsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAppInstances", func(t *testing.T) {
+        input := &chimesdkidentity.ListAppInstancesInput{}
+        output := &chimesdkidentity.ListAppInstancesOutput{}
+
+        mockClient.On("ListAppInstances", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAppInstances(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

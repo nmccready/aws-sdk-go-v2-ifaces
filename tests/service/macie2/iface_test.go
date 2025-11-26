@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFindingStatistics", func(t *testing.T) {
+        input := &macie2.GetFindingStatisticsInput{}
+        output := &macie2.GetFindingStatisticsOutput{}
+
+        mockClient.On("GetFindingStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindingStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFindings", func(t *testing.T) {
         input := &macie2.GetFindingsInput{}
         output := &macie2.GetFindingsOutput{}
@@ -496,19 +509,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFindingsPublicationConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFindingsPublicationConfiguration(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestGetFindingStatistics", func(t *testing.T) {
-        input := &macie2.GetFindingStatisticsInput{}
-        output := &macie2.GetFindingStatisticsOutput{}
-
-        mockClient.On("GetFindingStatistics", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetFindingStatistics(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

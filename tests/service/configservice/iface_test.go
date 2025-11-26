@@ -385,19 +385,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeConfigurationAggregators", func(t *testing.T) {
-        input := &configservice.DescribeConfigurationAggregatorsInput{}
-        output := &configservice.DescribeConfigurationAggregatorsOutput{}
-
-        mockClient.On("DescribeConfigurationAggregators", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeConfigurationAggregators(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeConfigurationAggregatorSourcesStatus", func(t *testing.T) {
         input := &configservice.DescribeConfigurationAggregatorSourcesStatusInput{}
         output := &configservice.DescribeConfigurationAggregatorSourcesStatusOutput{}
@@ -411,13 +398,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeConfigurationRecorders", func(t *testing.T) {
-        input := &configservice.DescribeConfigurationRecordersInput{}
-        output := &configservice.DescribeConfigurationRecordersOutput{}
+    t.Run("TestDescribeConfigurationAggregators", func(t *testing.T) {
+        input := &configservice.DescribeConfigurationAggregatorsInput{}
+        output := &configservice.DescribeConfigurationAggregatorsOutput{}
 
-        mockClient.On("DescribeConfigurationRecorders", ctx, input).Return(output, nil)
+        mockClient.On("DescribeConfigurationAggregators", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeConfigurationRecorders(ctx, input)
+        result, err := mockClient.DescribeConfigurationAggregators(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -437,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeConfigurationRecorders", func(t *testing.T) {
+        input := &configservice.DescribeConfigurationRecordersInput{}
+        output := &configservice.DescribeConfigurationRecordersOutput{}
+
+        mockClient.On("DescribeConfigurationRecorders", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeConfigurationRecorders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeConformancePackCompliance", func(t *testing.T) {
         input := &configservice.DescribeConformancePackComplianceInput{}
         output := &configservice.DescribeConformancePackComplianceOutput{}
@@ -444,19 +444,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeConformancePackCompliance", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeConformancePackCompliance(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestDescribeConformancePacks", func(t *testing.T) {
-        input := &configservice.DescribeConformancePacksInput{}
-        output := &configservice.DescribeConformancePacksOutput{}
-
-        mockClient.On("DescribeConformancePacks", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeConformancePacks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,13 +463,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDeliveryChannels", func(t *testing.T) {
-        input := &configservice.DescribeDeliveryChannelsInput{}
-        output := &configservice.DescribeDeliveryChannelsOutput{}
+    t.Run("TestDescribeConformancePacks", func(t *testing.T) {
+        input := &configservice.DescribeConformancePacksInput{}
+        output := &configservice.DescribeConformancePacksOutput{}
 
-        mockClient.On("DescribeDeliveryChannels", ctx, input).Return(output, nil)
+        mockClient.On("DescribeConformancePacks", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeDeliveryChannels(ctx, input)
+        result, err := mockClient.DescribeConformancePacks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,13 +489,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeOrganizationConfigRules", func(t *testing.T) {
-        input := &configservice.DescribeOrganizationConfigRulesInput{}
-        output := &configservice.DescribeOrganizationConfigRulesOutput{}
+    t.Run("TestDescribeDeliveryChannels", func(t *testing.T) {
+        input := &configservice.DescribeDeliveryChannelsInput{}
+        output := &configservice.DescribeDeliveryChannelsOutput{}
 
-        mockClient.On("DescribeOrganizationConfigRules", ctx, input).Return(output, nil)
+        mockClient.On("DescribeDeliveryChannels", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeOrganizationConfigRules(ctx, input)
+        result, err := mockClient.DescribeDeliveryChannels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,13 +515,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeOrganizationConformancePacks", func(t *testing.T) {
-        input := &configservice.DescribeOrganizationConformancePacksInput{}
-        output := &configservice.DescribeOrganizationConformancePacksOutput{}
+    t.Run("TestDescribeOrganizationConfigRules", func(t *testing.T) {
+        input := &configservice.DescribeOrganizationConfigRulesInput{}
+        output := &configservice.DescribeOrganizationConfigRulesOutput{}
 
-        mockClient.On("DescribeOrganizationConformancePacks", ctx, input).Return(output, nil)
+        mockClient.On("DescribeOrganizationConfigRules", ctx, input).Return(output, nil)
 
-        result, err := mockClient.DescribeOrganizationConformancePacks(ctx, input)
+        result, err := mockClient.DescribeOrganizationConfigRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -548,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeOrganizationConformancePackStatuses", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeOrganizationConformancePackStatuses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeOrganizationConformancePacks", func(t *testing.T) {
+        input := &configservice.DescribeOrganizationConformancePacksInput{}
+        output := &configservice.DescribeOrganizationConformancePacksOutput{}
+
+        mockClient.On("DescribeOrganizationConformancePacks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeOrganizationConformancePacks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

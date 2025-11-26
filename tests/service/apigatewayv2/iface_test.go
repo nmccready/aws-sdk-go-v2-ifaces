@@ -762,19 +762,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetModels", func(t *testing.T) {
-        input := &apigatewayv2.GetModelsInput{}
-        output := &apigatewayv2.GetModelsOutput{}
-
-        mockClient.On("GetModels", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetModels(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetModelTemplate", func(t *testing.T) {
         input := &apigatewayv2.GetModelTemplateInput{}
         output := &apigatewayv2.GetModelTemplateOutput{}
@@ -782,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetModelTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetModelTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetModels", func(t *testing.T) {
+        input := &apigatewayv2.GetModelsInput{}
+        output := &apigatewayv2.GetModelsOutput{}
+
+        mockClient.On("GetModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

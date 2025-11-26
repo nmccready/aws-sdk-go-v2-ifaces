@@ -52,7 +52,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.50.8
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.12.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomationruntime v1.9.1
-	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.45.1
+	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.46.0
 	github.com/aws/aws-sdk-go-v2/service/billing v1.9.2
 	github.com/aws/aws-sdk-go-v2/service/billingconductor v1.27.2
 	github.com/aws/aws-sdk-go-v2/service/braket v1.39.1
@@ -98,7 +98,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cognitosync v1.29.5
 	github.com/aws/aws-sdk-go-v2/service/comprehend v1.40.14
 	github.com/aws/aws-sdk-go-v2/service/comprehendmedical v1.31.14
-	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.48.5
+	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.49.0
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizerautomation v1.0.1
 	github.com/aws/aws-sdk-go-v2/service/configservice v1.59.6
 	github.com/aws/aws-sdk-go-v2/service/connect v1.148.1
@@ -111,7 +111,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/controltower v1.28.1
 	github.com/aws/aws-sdk-go-v2/service/costandusagereportservice v1.34.6
 	github.com/aws/aws-sdk-go-v2/service/costexplorer v1.60.2
-	github.com/aws/aws-sdk-go-v2/service/costoptimizationhub v1.21.2
+	github.com/aws/aws-sdk-go-v2/service/costoptimizationhub v1.22.0
 	github.com/aws/aws-sdk-go-v2/service/customerprofiles v1.54.7
 	github.com/aws/aws-sdk-go-v2/service/databasemigrationservice v1.61.1
 	github.com/aws/aws-sdk-go-v2/service/databrew v1.39.7
@@ -352,7 +352,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/schemas v1.34.5
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.40.2
 	github.com/aws/aws-sdk-go-v2/service/securityhub v1.66.1
-	github.com/aws/aws-sdk-go-v2/service/securityir v1.10.0
+	github.com/aws/aws-sdk-go-v2/service/securityir v1.10.1
 	github.com/aws/aws-sdk-go-v2/service/securitylake v1.25.6
 	github.com/aws/aws-sdk-go-v2/service/serverlessapplicationrepository v1.30.5
 	github.com/aws/aws-sdk-go-v2/service/servicecatalog v1.39.5

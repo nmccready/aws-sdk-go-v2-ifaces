@@ -307,19 +307,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListQApps", func(t *testing.T) {
-        input := &qapps.ListQAppsInput{}
-        output := &qapps.ListQAppsOutput{}
-
-        mockClient.On("ListQApps", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListQApps(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListQAppSessionData", func(t *testing.T) {
         input := &qapps.ListQAppSessionDataInput{}
         output := &qapps.ListQAppSessionDataOutput{}
@@ -327,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListQAppSessionData", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListQAppSessionData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQApps", func(t *testing.T) {
+        input := &qapps.ListQAppsInput{}
+        output := &qapps.ListQAppsOutput{}
+
+        mockClient.On("ListQApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQApps(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -112,19 +112,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestCreateConnection", func(t *testing.T) {
-        input := &networkmanager.CreateConnectionInput{}
-        output := &networkmanager.CreateConnectionOutput{}
-
-        mockClient.On("CreateConnection", ctx, input).Return(output, nil)
-
-        result, err := mockClient.CreateConnection(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateConnectPeer", func(t *testing.T) {
         input := &networkmanager.CreateConnectPeerInput{}
         output := &networkmanager.CreateConnectPeerOutput{}
@@ -132,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateConnectPeer", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateConnectPeer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConnection", func(t *testing.T) {
+        input := &networkmanager.CreateConnectionInput{}
+        output := &networkmanager.CreateConnectionOutput{}
+
+        mockClient.On("CreateConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,19 +294,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteConnection", func(t *testing.T) {
-        input := &networkmanager.DeleteConnectionInput{}
-        output := &networkmanager.DeleteConnectionOutput{}
-
-        mockClient.On("DeleteConnection", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteConnection(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteConnectPeer", func(t *testing.T) {
         input := &networkmanager.DeleteConnectPeerInput{}
         output := &networkmanager.DeleteConnectPeerOutput{}
@@ -314,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConnectPeer", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConnectPeer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConnection", func(t *testing.T) {
+        input := &networkmanager.DeleteConnectionInput{}
+        output := &networkmanager.DeleteConnectionOutput{}
+
+        mockClient.On("DeleteConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -541,19 +541,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetConnections", func(t *testing.T) {
-        input := &networkmanager.GetConnectionsInput{}
-        output := &networkmanager.GetConnectionsOutput{}
-
-        mockClient.On("GetConnections", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetConnections(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetConnectPeer", func(t *testing.T) {
         input := &networkmanager.GetConnectPeerInput{}
         output := &networkmanager.GetConnectPeerOutput{}
@@ -574,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConnectPeerAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConnectPeerAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnections", func(t *testing.T) {
+        input := &networkmanager.GetConnectionsInput{}
+        output := &networkmanager.GetConnectionsOutput{}
+
+        mockClient.On("GetConnections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnections(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,19 +788,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestGetSites", func(t *testing.T) {
-        input := &networkmanager.GetSitesInput{}
-        output := &networkmanager.GetSitesOutput{}
-
-        mockClient.On("GetSites", ctx, input).Return(output, nil)
-
-        result, err := mockClient.GetSites(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestGetSiteToSiteVpnAttachment", func(t *testing.T) {
         input := &networkmanager.GetSiteToSiteVpnAttachmentInput{}
         output := &networkmanager.GetSiteToSiteVpnAttachmentOutput{}
@@ -808,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSiteToSiteVpnAttachment", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSiteToSiteVpnAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSites", func(t *testing.T) {
+        input := &networkmanager.GetSitesInput{}
+        output := &networkmanager.GetSitesOutput{}
+
+        mockClient.On("GetSites", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSites(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

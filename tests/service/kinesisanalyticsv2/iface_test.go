@@ -320,19 +320,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListApplications", func(t *testing.T) {
-        input := &kinesisanalyticsv2.ListApplicationsInput{}
-        output := &kinesisanalyticsv2.ListApplicationsOutput{}
-
-        mockClient.On("ListApplications", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListApplications(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListApplicationSnapshots", func(t *testing.T) {
         input := &kinesisanalyticsv2.ListApplicationSnapshotsInput{}
         output := &kinesisanalyticsv2.ListApplicationSnapshotsOutput{}
@@ -353,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApplicationVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApplicationVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApplications", func(t *testing.T) {
+        input := &kinesisanalyticsv2.ListApplicationsInput{}
+        output := &kinesisanalyticsv2.ListApplicationsOutput{}
+
+        mockClient.On("ListApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

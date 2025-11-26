@@ -853,19 +853,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDBClusters", func(t *testing.T) {
-        input := &rds.DescribeDBClustersInput{}
-        output := &rds.DescribeDBClustersOutput{}
-
-        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDBClusters(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeDBClusterSnapshotAttributes", func(t *testing.T) {
         input := &rds.DescribeDBClusterSnapshotAttributesInput{}
         output := &rds.DescribeDBClusterSnapshotAttributesOutput{}
@@ -886,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDBClusterSnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDBClusterSnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDBClusters", func(t *testing.T) {
+        input := &rds.DescribeDBClustersInput{}
+        output := &rds.DescribeDBClustersOutput{}
+
+        mockClient.On("DescribeDBClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBClusters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1087,19 +1087,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeDBSnapshots", func(t *testing.T) {
-        input := &rds.DescribeDBSnapshotsInput{}
-        output := &rds.DescribeDBSnapshotsOutput{}
-
-        mockClient.On("DescribeDBSnapshots", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeDBSnapshots(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeDBSnapshotTenantDatabases", func(t *testing.T) {
         input := &rds.DescribeDBSnapshotTenantDatabasesInput{}
         output := &rds.DescribeDBSnapshotTenantDatabasesOutput{}
@@ -1107,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDBSnapshotTenantDatabases", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDBSnapshotTenantDatabases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDBSnapshots", func(t *testing.T) {
+        input := &rds.DescribeDBSnapshotsInput{}
+        output := &rds.DescribeDBSnapshotsOutput{}
+
+        mockClient.On("DescribeDBSnapshots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBSnapshots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1165,19 +1165,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDescribeEvents", func(t *testing.T) {
-        input := &rds.DescribeEventsInput{}
-        output := &rds.DescribeEventsOutput{}
-
-        mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DescribeEvents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDescribeEventSubscriptions", func(t *testing.T) {
         input := &rds.DescribeEventSubscriptionsInput{}
         output := &rds.DescribeEventSubscriptionsOutput{}
@@ -1185,6 +1172,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeEventSubscriptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeEventSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEvents", func(t *testing.T) {
+        input := &rds.DescribeEventsInput{}
+        output := &rds.DescribeEventsOutput{}
+
+        mockClient.On("DescribeEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEvents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -268,19 +268,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListComponents", func(t *testing.T) {
-        input := &greengrassv2.ListComponentsInput{}
-        output := &greengrassv2.ListComponentsOutput{}
-
-        mockClient.On("ListComponents", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListComponents(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestListComponentVersions", func(t *testing.T) {
         input := &greengrassv2.ListComponentVersionsInput{}
         output := &greengrassv2.ListComponentVersionsOutput{}
@@ -288,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListComponentVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListComponentVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListComponents", func(t *testing.T) {
+        input := &greengrassv2.ListComponentsInput{}
+        output := &greengrassv2.ListComponentsOutput{}
+
+        mockClient.On("ListComponents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListComponents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

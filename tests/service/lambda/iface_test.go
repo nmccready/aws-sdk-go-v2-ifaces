@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFunctionUrlConfigs", func(t *testing.T) {
+        input := &lambda.ListFunctionUrlConfigsInput{}
+        output := &lambda.ListFunctionUrlConfigsOutput{}
+
+        mockClient.On("ListFunctionUrlConfigs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFunctionUrlConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListFunctions", func(t *testing.T) {
         input := &lambda.ListFunctionsInput{}
         output := &lambda.ListFunctionsOutput{}
@@ -593,13 +606,13 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestListFunctionUrlConfigs", func(t *testing.T) {
-        input := &lambda.ListFunctionUrlConfigsInput{}
-        output := &lambda.ListFunctionUrlConfigsOutput{}
+    t.Run("TestListLayerVersions", func(t *testing.T) {
+        input := &lambda.ListLayerVersionsInput{}
+        output := &lambda.ListLayerVersionsOutput{}
 
-        mockClient.On("ListFunctionUrlConfigs", ctx, input).Return(output, nil)
+        mockClient.On("ListLayerVersions", ctx, input).Return(output, nil)
 
-        result, err := mockClient.ListFunctionUrlConfigs(ctx, input)
+        result, err := mockClient.ListLayerVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -613,19 +626,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLayers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLayers(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestListLayerVersions", func(t *testing.T) {
-        input := &lambda.ListLayerVersionsInput{}
-        output := &lambda.ListLayerVersionsOutput{}
-
-        mockClient.On("ListLayerVersions", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ListLayerVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
