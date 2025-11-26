@@ -17,7 +17,7 @@
     "test:go:tests": "go test ./tests/..."
   },
   "devDependencies": {
-    "@commitlint/cli": "20.0.0",
+    "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@stdlib/string-pascalcase-cli": "0.2.2",
     "commit-and-tag-version": "12",
