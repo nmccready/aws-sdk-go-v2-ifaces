@@ -53,5 +53,5 @@ jobs:
             git commit -am "chore(release): sync aws-sdk-go-v2"
           fi
           npx commit-and-tag-version
-          git push
+          git push -f
           git push --tags
