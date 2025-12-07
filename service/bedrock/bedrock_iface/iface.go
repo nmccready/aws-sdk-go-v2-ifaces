@@ -104,6 +104,7 @@ type IClient interface {
  UpdateAutomatedReasoningPolicy(ctx context.Context, params *UpdateAutomatedReasoningPolicyInput, optFns ...func(*Options)) (*UpdateAutomatedReasoningPolicyOutput, error) 
  UpdateAutomatedReasoningPolicyAnnotations(ctx context.Context, params *UpdateAutomatedReasoningPolicyAnnotationsInput, optFns ...func(*Options)) (*UpdateAutomatedReasoningPolicyAnnotationsOutput, error) 
  UpdateAutomatedReasoningPolicyTestCase(ctx context.Context, params *UpdateAutomatedReasoningPolicyTestCaseInput, optFns ...func(*Options)) (*UpdateAutomatedReasoningPolicyTestCaseOutput, error) 
+ UpdateCustomModelDeployment(ctx context.Context, params *UpdateCustomModelDeploymentInput, optFns ...func(*Options)) (*UpdateCustomModelDeploymentOutput, error) 
  UpdateGuardrail(ctx context.Context, params *UpdateGuardrailInput, optFns ...func(*Options)) (*UpdateGuardrailOutput, error) 
  UpdateMarketplaceModelEndpoint(ctx context.Context, params *UpdateMarketplaceModelEndpointInput, optFns ...func(*Options)) (*UpdateMarketplaceModelEndpointOutput, error) 
  UpdateProvisionedModelThroughput(ctx context.Context, params *UpdateProvisionedModelThroughputInput, optFns ...func(*Options)) (*UpdateProvisionedModelThroughputOutput, error) 

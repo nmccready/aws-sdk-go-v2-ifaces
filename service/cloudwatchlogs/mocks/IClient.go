@@ -52,6 +52,43 @@ func (_m *IClient) AssociateKmsKey(ctx context.Context, params *cloudwatchlogs.A
 	return r0, r1
 }
 
+// AssociateSourceToS3TableIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateSourceToS3TableIntegration(ctx context.Context, params *cloudwatchlogs.AssociateSourceToS3TableIntegrationInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.AssociateSourceToS3TableIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateSourceToS3TableIntegration")
+	}
+
+	var r0 *cloudwatchlogs.AssociateSourceToS3TableIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.AssociateSourceToS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.AssociateSourceToS3TableIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.AssociateSourceToS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.AssociateSourceToS3TableIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.AssociateSourceToS3TableIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.AssociateSourceToS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelExportTask provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelExportTask(ctx context.Context, params *cloudwatchlogs.CancelExportTaskInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.CancelExportTaskOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1643,6 +1680,43 @@ func (_m *IClient) DisassociateKmsKey(ctx context.Context, params *cloudwatchlog
 	return r0, r1
 }
 
+// DisassociateSourceFromS3TableIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateSourceFromS3TableIntegration(ctx context.Context, params *cloudwatchlogs.DisassociateSourceFromS3TableIntegrationInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DisassociateSourceFromS3TableIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateSourceFromS3TableIntegration")
+	}
+
+	var r0 *cloudwatchlogs.DisassociateSourceFromS3TableIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DisassociateSourceFromS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DisassociateSourceFromS3TableIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DisassociateSourceFromS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.DisassociateSourceFromS3TableIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.DisassociateSourceFromS3TableIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DisassociateSourceFromS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // FilterLogEvents provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) FilterLogEvents(ctx context.Context, params *cloudwatchlogs.FilterLogEventsInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.FilterLogEventsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1976,6 +2050,43 @@ func (_m *IClient) GetLogEvents(ctx context.Context, params *cloudwatchlogs.GetL
 	return r0, r1
 }
 
+// GetLogFields provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLogFields(ctx context.Context, params *cloudwatchlogs.GetLogFieldsInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLogFieldsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLogFields")
+	}
+
+	var r0 *cloudwatchlogs.GetLogFieldsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetLogFieldsInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLogFieldsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetLogFieldsInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.GetLogFieldsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.GetLogFieldsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetLogFieldsInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetLogGroupFields provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetLogGroupFields(ctx context.Context, params *cloudwatchlogs.GetLogGroupFieldsInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLogGroupFieldsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2235,6 +2346,43 @@ func (_m *IClient) GetTransformer(ctx context.Context, params *cloudwatchlogs.Ge
 	return r0, r1
 }
 
+// ListAggregateLogGroupSummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAggregateLogGroupSummaries(ctx context.Context, params *cloudwatchlogs.ListAggregateLogGroupSummariesInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListAggregateLogGroupSummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAggregateLogGroupSummaries")
+	}
+
+	var r0 *cloudwatchlogs.ListAggregateLogGroupSummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListAggregateLogGroupSummariesInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListAggregateLogGroupSummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListAggregateLogGroupSummariesInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.ListAggregateLogGroupSummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.ListAggregateLogGroupSummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.ListAggregateLogGroupSummariesInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAnomalies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAnomalies(ctx context.Context, params *cloudwatchlogs.ListAnomaliesInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListAnomaliesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2449,6 +2597,43 @@ func (_m *IClient) ListScheduledQueries(ctx context.Context, params *cloudwatchl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.ListScheduledQueriesInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSourcesForS3TableIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSourcesForS3TableIntegration(ctx context.Context, params *cloudwatchlogs.ListSourcesForS3TableIntegrationInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListSourcesForS3TableIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSourcesForS3TableIntegration")
+	}
+
+	var r0 *cloudwatchlogs.ListSourcesForS3TableIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListSourcesForS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListSourcesForS3TableIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListSourcesForS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.ListSourcesForS3TableIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.ListSourcesForS3TableIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.ListSourcesForS3TableIntegrationInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateMlflowApp", func(t *testing.T) {
+        input := &sagemaker.CreateMlflowAppInput{}
+        output := &sagemaker.CreateMlflowAppOutput{}
+
+        mockClient.On("CreateMlflowApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMlflowApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMlflowTrackingServer", func(t *testing.T) {
         input := &sagemaker.CreateMlflowTrackingServerInput{}
         output := &sagemaker.CreateMlflowTrackingServerOutput{}
@@ -821,6 +834,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreatePresignedDomainUrl", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreatePresignedDomainUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePresignedMlflowAppUrl", func(t *testing.T) {
+        input := &sagemaker.CreatePresignedMlflowAppUrlInput{}
+        output := &sagemaker.CreatePresignedMlflowAppUrlOutput{}
+
+        mockClient.On("CreatePresignedMlflowAppUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePresignedMlflowAppUrl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1406,6 +1432,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteInferenceExperiment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteInferenceExperiment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMlflowApp", func(t *testing.T) {
+        input := &sagemaker.DeleteMlflowAppInput{}
+        output := &sagemaker.DeleteMlflowAppOutput{}
+
+        mockClient.On("DeleteMlflowApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMlflowApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2251,6 +2290,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeLineageGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeLineageGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMlflowApp", func(t *testing.T) {
+        input := &sagemaker.DescribeMlflowAppInput{}
+        output := &sagemaker.DescribeMlflowAppOutput{}
+
+        mockClient.On("DescribeMlflowApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMlflowApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3343,6 +3395,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLineageGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLineageGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMlflowApps", func(t *testing.T) {
+        input := &sagemaker.ListMlflowAppsInput{}
+        output := &sagemaker.ListMlflowAppsOutput{}
+
+        mockClient.On("ListMlflowApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMlflowApps(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4630,6 +4695,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInferenceExperiment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInferenceExperiment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMlflowApp", func(t *testing.T) {
+        input := &sagemaker.UpdateMlflowAppInput{}
+        output := &sagemaker.UpdateMlflowAppOutput{}
+
+        mockClient.On("UpdateMlflowApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMlflowApp(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

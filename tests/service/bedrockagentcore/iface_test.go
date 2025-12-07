@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestEvaluate", func(t *testing.T) {
+        input := &bedrockagentcore.EvaluateInput{}
+        output := &bedrockagentcore.EvaluateOutput{}
+
+        mockClient.On("Evaluate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.Evaluate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAgentCard", func(t *testing.T) {
         input := &bedrockagentcore.GetAgentCardInput{}
         output := &bedrockagentcore.GetAgentCardOutput{}

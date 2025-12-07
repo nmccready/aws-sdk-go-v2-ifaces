@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateSourceToS3TableIntegration", func(t *testing.T) {
+        input := &cloudwatchlogs.AssociateSourceToS3TableIntegrationInput{}
+        output := &cloudwatchlogs.AssociateSourceToS3TableIntegrationOutput{}
+
+        mockClient.On("AssociateSourceToS3TableIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSourceToS3TableIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelExportTask", func(t *testing.T) {
         input := &cloudwatchlogs.CancelExportTaskInput{}
         output := &cloudwatchlogs.CancelExportTaskOutput{}
@@ -606,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateSourceFromS3TableIntegration", func(t *testing.T) {
+        input := &cloudwatchlogs.DisassociateSourceFromS3TableIntegrationInput{}
+        output := &cloudwatchlogs.DisassociateSourceFromS3TableIntegrationOutput{}
+
+        mockClient.On("DisassociateSourceFromS3TableIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSourceFromS3TableIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestFilterLogEvents", func(t *testing.T) {
         input := &cloudwatchlogs.FilterLogEventsInput{}
         output := &cloudwatchlogs.FilterLogEventsOutput{}
@@ -723,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetLogFields", func(t *testing.T) {
+        input := &cloudwatchlogs.GetLogFieldsInput{}
+        output := &cloudwatchlogs.GetLogFieldsOutput{}
+
+        mockClient.On("GetLogFields", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLogFields(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLogGroupFields", func(t *testing.T) {
         input := &cloudwatchlogs.GetLogGroupFieldsInput{}
         output := &cloudwatchlogs.GetLogGroupFieldsOutput{}
@@ -814,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAggregateLogGroupSummaries", func(t *testing.T) {
+        input := &cloudwatchlogs.ListAggregateLogGroupSummariesInput{}
+        output := &cloudwatchlogs.ListAggregateLogGroupSummariesOutput{}
+
+        mockClient.On("ListAggregateLogGroupSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAggregateLogGroupSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAnomalies", func(t *testing.T) {
         input := &cloudwatchlogs.ListAnomaliesInput{}
         output := &cloudwatchlogs.ListAnomaliesOutput{}
@@ -886,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListScheduledQueries", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListScheduledQueries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSourcesForS3TableIntegration", func(t *testing.T) {
+        input := &cloudwatchlogs.ListSourcesForS3TableIntegrationInput{}
+        output := &cloudwatchlogs.ListSourcesForS3TableIntegrationOutput{}
+
+        mockClient.On("ListSourcesForS3TableIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSourcesForS3TableIntegration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

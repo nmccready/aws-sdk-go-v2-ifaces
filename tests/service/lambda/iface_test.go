@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCheckpointDurableExecution", func(t *testing.T) {
+        input := &lambda.CheckpointDurableExecutionInput{}
+        output := &lambda.CheckpointDurableExecutionOutput{}
+
+        mockClient.On("CheckpointDurableExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CheckpointDurableExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAlias", func(t *testing.T) {
         input := &lambda.CreateAliasInput{}
         output := &lambda.CreateAliasOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCapacityProvider", func(t *testing.T) {
+        input := &lambda.CreateCapacityProviderInput{}
+        output := &lambda.CreateCapacityProviderOutput{}
+
+        mockClient.On("CreateCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCapacityProvider(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCapacityProvider", func(t *testing.T) {
+        input := &lambda.DeleteCapacityProviderInput{}
+        output := &lambda.DeleteCapacityProviderOutput{}
+
+        mockClient.On("DeleteCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCapacityProvider(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCapacityProvider", func(t *testing.T) {
+        input := &lambda.GetCapacityProviderInput{}
+        output := &lambda.GetCapacityProviderOutput{}
+
+        mockClient.On("GetCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCodeSigningConfig", func(t *testing.T) {
         input := &lambda.GetCodeSigningConfigInput{}
         output := &lambda.GetCodeSigningConfigOutput{}
@@ -288,6 +340,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCodeSigningConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCodeSigningConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDurableExecution", func(t *testing.T) {
+        input := &lambda.GetDurableExecutionInput{}
+        output := &lambda.GetDurableExecutionOutput{}
+
+        mockClient.On("GetDurableExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDurableExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDurableExecutionHistory", func(t *testing.T) {
+        input := &lambda.GetDurableExecutionHistoryInput{}
+        output := &lambda.GetDurableExecutionHistoryOutput{}
+
+        mockClient.On("GetDurableExecutionHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDurableExecutionHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDurableExecutionState", func(t *testing.T) {
+        input := &lambda.GetDurableExecutionStateInput{}
+        output := &lambda.GetDurableExecutionStateOutput{}
+
+        mockClient.On("GetDurableExecutionState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDurableExecutionState(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -379,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFunctionRecursionConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFunctionRecursionConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFunctionScalingConfig", func(t *testing.T) {
+        input := &lambda.GetFunctionScalingConfigInput{}
+        output := &lambda.GetFunctionScalingConfigOutput{}
+
+        mockClient.On("GetFunctionScalingConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFunctionScalingConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCapacityProviders", func(t *testing.T) {
+        input := &lambda.ListCapacityProvidersInput{}
+        output := &lambda.ListCapacityProvidersOutput{}
+
+        mockClient.On("ListCapacityProviders", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCapacityProviders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCodeSigningConfigs", func(t *testing.T) {
         input := &lambda.ListCodeSigningConfigsInput{}
         output := &lambda.ListCodeSigningConfigsOutput{}
@@ -535,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCodeSigningConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCodeSigningConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDurableExecutionsByFunction", func(t *testing.T) {
+        input := &lambda.ListDurableExecutionsByFunctionInput{}
+        output := &lambda.ListDurableExecutionsByFunctionOutput{}
+
+        mockClient.On("ListDurableExecutionsByFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDurableExecutionsByFunction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -574,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFunctionUrlConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFunctionUrlConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFunctionVersionsByCapacityProvider", func(t *testing.T) {
+        input := &lambda.ListFunctionVersionsByCapacityProviderInput{}
+        output := &lambda.ListFunctionVersionsByCapacityProviderOutput{}
+
+        mockClient.On("ListFunctionVersionsByCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFunctionVersionsByCapacityProvider(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,6 +892,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutFunctionScalingConfig", func(t *testing.T) {
+        input := &lambda.PutFunctionScalingConfigInput{}
+        output := &lambda.PutFunctionScalingConfigOutput{}
+
+        mockClient.On("PutFunctionScalingConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutFunctionScalingConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutProvisionedConcurrencyConfig", func(t *testing.T) {
         input := &lambda.PutProvisionedConcurrencyConfigInput{}
         output := &lambda.PutProvisionedConcurrencyConfigOutput{}
@@ -801,6 +957,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendDurableExecutionCallbackFailure", func(t *testing.T) {
+        input := &lambda.SendDurableExecutionCallbackFailureInput{}
+        output := &lambda.SendDurableExecutionCallbackFailureOutput{}
+
+        mockClient.On("SendDurableExecutionCallbackFailure", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendDurableExecutionCallbackFailure(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendDurableExecutionCallbackHeartbeat", func(t *testing.T) {
+        input := &lambda.SendDurableExecutionCallbackHeartbeatInput{}
+        output := &lambda.SendDurableExecutionCallbackHeartbeatOutput{}
+
+        mockClient.On("SendDurableExecutionCallbackHeartbeat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendDurableExecutionCallbackHeartbeat(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendDurableExecutionCallbackSuccess", func(t *testing.T) {
+        input := &lambda.SendDurableExecutionCallbackSuccessInput{}
+        output := &lambda.SendDurableExecutionCallbackSuccessOutput{}
+
+        mockClient.On("SendDurableExecutionCallbackSuccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendDurableExecutionCallbackSuccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopDurableExecution", func(t *testing.T) {
+        input := &lambda.StopDurableExecutionInput{}
+        output := &lambda.StopDurableExecutionOutput{}
+
+        mockClient.On("StopDurableExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopDurableExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &lambda.TagResourceInput{}
         output := &lambda.TagResourceOutput{}
@@ -834,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCapacityProvider", func(t *testing.T) {
+        input := &lambda.UpdateCapacityProviderInput{}
+        output := &lambda.UpdateCapacityProviderOutput{}
+
+        mockClient.On("UpdateCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCapacityProvider(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -385,6 +385,43 @@ func (_m *IClient) CreateProfile(ctx context.Context, params *customerprofiles.C
 	return r0, r1
 }
 
+// CreateRecommender provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRecommender(ctx context.Context, params *customerprofiles.CreateRecommenderInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateRecommenderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRecommender")
+	}
+
+	var r0 *customerprofiles.CreateRecommenderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateRecommenderInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateRecommenderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateRecommenderInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateRecommenderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateRecommenderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateRecommenderInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateSegmentDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateSegmentDefinition(ctx context.Context, params *customerprofiles.CreateSegmentDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -644,6 +681,43 @@ func (_m *IClient) DeleteDomainLayout(ctx context.Context, params *customerprofi
 	return r0, r1
 }
 
+// DeleteDomainObjectType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDomainObjectType(ctx context.Context, params *customerprofiles.DeleteDomainObjectTypeInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteDomainObjectTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDomainObjectType")
+	}
+
+	var r0 *customerprofiles.DeleteDomainObjectTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteDomainObjectTypeInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteDomainObjectTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteDomainObjectTypeInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteDomainObjectTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteDomainObjectTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteDomainObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEventStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEventStream(ctx context.Context, params *customerprofiles.DeleteEventStreamInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteEventStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -895,6 +969,43 @@ func (_m *IClient) DeleteProfileObjectType(ctx context.Context, params *customer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteProfileObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRecommender provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRecommender(ctx context.Context, params *customerprofiles.DeleteRecommenderInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteRecommenderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRecommender")
+	}
+
+	var r0 *customerprofiles.DeleteRecommenderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteRecommenderInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteRecommenderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteRecommenderInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteRecommenderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteRecommenderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteRecommenderInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1199,6 +1310,43 @@ func (_m *IClient) GetDomainLayout(ctx context.Context, params *customerprofiles
 	return r0, r1
 }
 
+// GetDomainObjectType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDomainObjectType(ctx context.Context, params *customerprofiles.GetDomainObjectTypeInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetDomainObjectTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDomainObjectType")
+	}
+
+	var r0 *customerprofiles.GetDomainObjectTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetDomainObjectTypeInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetDomainObjectTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetDomainObjectTypeInput, ...func(*customerprofiles.Options)) *customerprofiles.GetDomainObjectTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetDomainObjectTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetDomainObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEventStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEventStream(ctx context.Context, params *customerprofiles.GetEventStreamInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetEventStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1384,6 +1532,43 @@ func (_m *IClient) GetMatches(ctx context.Context, params *customerprofiles.GetM
 	return r0, r1
 }
 
+// GetObjectTypeAttributeStatistics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetObjectTypeAttributeStatistics(ctx context.Context, params *customerprofiles.GetObjectTypeAttributeStatisticsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetObjectTypeAttributeStatisticsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetObjectTypeAttributeStatistics")
+	}
+
+	var r0 *customerprofiles.GetObjectTypeAttributeStatisticsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetObjectTypeAttributeStatisticsInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetObjectTypeAttributeStatisticsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetObjectTypeAttributeStatisticsInput, ...func(*customerprofiles.Options)) *customerprofiles.GetObjectTypeAttributeStatisticsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetObjectTypeAttributeStatisticsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetObjectTypeAttributeStatisticsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetProfileHistoryRecord provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetProfileHistoryRecord(ctx context.Context, params *customerprofiles.GetProfileHistoryRecordInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetProfileHistoryRecordOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1487,6 +1672,80 @@ func (_m *IClient) GetProfileObjectTypeTemplate(ctx context.Context, params *cus
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetProfileObjectTypeTemplateInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProfileRecommendations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProfileRecommendations(ctx context.Context, params *customerprofiles.GetProfileRecommendationsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetProfileRecommendationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProfileRecommendations")
+	}
+
+	var r0 *customerprofiles.GetProfileRecommendationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetProfileRecommendationsInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetProfileRecommendationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetProfileRecommendationsInput, ...func(*customerprofiles.Options)) *customerprofiles.GetProfileRecommendationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetProfileRecommendationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetProfileRecommendationsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRecommender provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecommender(ctx context.Context, params *customerprofiles.GetRecommenderInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetRecommenderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecommender")
+	}
+
+	var r0 *customerprofiles.GetRecommenderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetRecommenderInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetRecommenderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetRecommenderInput, ...func(*customerprofiles.Options)) *customerprofiles.GetRecommenderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetRecommenderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetRecommenderInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1976,6 +2235,43 @@ func (_m *IClient) ListDomainLayouts(ctx context.Context, params *customerprofil
 	return r0, r1
 }
 
+// ListDomainObjectTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDomainObjectTypes(ctx context.Context, params *customerprofiles.ListDomainObjectTypesInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListDomainObjectTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDomainObjectTypes")
+	}
+
+	var r0 *customerprofiles.ListDomainObjectTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListDomainObjectTypesInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListDomainObjectTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListDomainObjectTypesInput, ...func(*customerprofiles.Options)) *customerprofiles.ListDomainObjectTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListDomainObjectTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListDomainObjectTypesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDomains provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDomains(ctx context.Context, params *customerprofiles.ListDomainsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListDomainsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2153,6 +2449,43 @@ func (_m *IClient) ListIntegrations(ctx context.Context, params *customerprofile
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListIntegrationsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListObjectTypeAttributeValues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListObjectTypeAttributeValues(ctx context.Context, params *customerprofiles.ListObjectTypeAttributeValuesInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListObjectTypeAttributeValuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListObjectTypeAttributeValues")
+	}
+
+	var r0 *customerprofiles.ListObjectTypeAttributeValuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListObjectTypeAttributeValuesInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListObjectTypeAttributeValuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListObjectTypeAttributeValuesInput, ...func(*customerprofiles.Options)) *customerprofiles.ListObjectTypeAttributeValuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListObjectTypeAttributeValuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListObjectTypeAttributeValuesInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2375,6 +2708,80 @@ func (_m *IClient) ListProfileObjects(ctx context.Context, params *customerprofi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListProfileObjectsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecommenderRecipes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecommenderRecipes(ctx context.Context, params *customerprofiles.ListRecommenderRecipesInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListRecommenderRecipesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecommenderRecipes")
+	}
+
+	var r0 *customerprofiles.ListRecommenderRecipesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListRecommenderRecipesInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListRecommenderRecipesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListRecommenderRecipesInput, ...func(*customerprofiles.Options)) *customerprofiles.ListRecommenderRecipesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListRecommenderRecipesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListRecommenderRecipesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecommenders provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecommenders(ctx context.Context, params *customerprofiles.ListRecommendersInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListRecommendersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecommenders")
+	}
+
+	var r0 *customerprofiles.ListRecommendersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListRecommendersInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListRecommendersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListRecommendersInput, ...func(*customerprofiles.Options)) *customerprofiles.ListRecommendersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListRecommendersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListRecommendersInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2623,6 +3030,43 @@ func (_m *IClient) Options() customerprofiles.Options {
 	return r0
 }
 
+// PutDomainObjectType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutDomainObjectType(ctx context.Context, params *customerprofiles.PutDomainObjectTypeInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.PutDomainObjectTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutDomainObjectType")
+	}
+
+	var r0 *customerprofiles.PutDomainObjectTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.PutDomainObjectTypeInput, ...func(*customerprofiles.Options)) (*customerprofiles.PutDomainObjectTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.PutDomainObjectTypeInput, ...func(*customerprofiles.Options)) *customerprofiles.PutDomainObjectTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.PutDomainObjectTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.PutDomainObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutIntegration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutIntegration(ctx context.Context, params *customerprofiles.PutIntegrationInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.PutIntegrationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2771,6 +3215,43 @@ func (_m *IClient) SearchProfiles(ctx context.Context, params *customerprofiles.
 	return r0, r1
 }
 
+// StartRecommender provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartRecommender(ctx context.Context, params *customerprofiles.StartRecommenderInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.StartRecommenderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartRecommender")
+	}
+
+	var r0 *customerprofiles.StartRecommenderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StartRecommenderInput, ...func(*customerprofiles.Options)) (*customerprofiles.StartRecommenderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StartRecommenderInput, ...func(*customerprofiles.Options)) *customerprofiles.StartRecommenderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.StartRecommenderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.StartRecommenderInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartUploadJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartUploadJob(ctx context.Context, params *customerprofiles.StartUploadJobInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.StartUploadJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2800,6 +3281,43 @@ func (_m *IClient) StartUploadJob(ctx context.Context, params *customerprofiles.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.StartUploadJobInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopRecommender provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopRecommender(ctx context.Context, params *customerprofiles.StopRecommenderInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.StopRecommenderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopRecommender")
+	}
+
+	var r0 *customerprofiles.StopRecommenderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StopRecommenderInput, ...func(*customerprofiles.Options)) (*customerprofiles.StopRecommenderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.StopRecommenderInput, ...func(*customerprofiles.Options)) *customerprofiles.StopRecommenderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.StopRecommenderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.StopRecommenderInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3096,6 +3614,43 @@ func (_m *IClient) UpdateProfile(ctx context.Context, params *customerprofiles.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.UpdateProfileInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRecommender provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRecommender(ctx context.Context, params *customerprofiles.UpdateRecommenderInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.UpdateRecommenderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRecommender")
+	}
+
+	var r0 *customerprofiles.UpdateRecommenderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.UpdateRecommenderInput, ...func(*customerprofiles.Options)) (*customerprofiles.UpdateRecommenderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.UpdateRecommenderInput, ...func(*customerprofiles.Options)) *customerprofiles.UpdateRecommenderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.UpdateRecommenderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.UpdateRecommenderInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

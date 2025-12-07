@@ -866,6 +866,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSpans", func(t *testing.T) {
+        input := &qconnect.ListSpansInput{}
+        output := &qconnect.ListSpansOutput{}
+
+        mockClient.On("ListSpans", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSpans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &qconnect.ListTagsForResourceInput{}
         output := &qconnect.ListTagsForResourceOutput{}
@@ -951,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RenderMessageTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.RenderMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRetrieve", func(t *testing.T) {
+        input := &qconnect.RetrieveInput{}
+        output := &qconnect.RetrieveOutput{}
+
+        mockClient.On("Retrieve", ctx, input).Return(output, nil)
+
+        result, err := mockClient.Retrieve(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

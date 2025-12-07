@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &s3vectors.ListTagsForResourceInput{}
+        output := &s3vectors.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListVectorBuckets", func(t *testing.T) {
         input := &s3vectors.ListVectorBucketsInput{}
         output := &s3vectors.ListVectorBucketsOutput{}
@@ -236,6 +249,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("QueryVectors", ctx, input).Return(output, nil)
 
         result, err := mockClient.QueryVectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &s3vectors.TagResourceInput{}
+        output := &s3vectors.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &s3vectors.UntagResourceInput{}
+        output := &s3vectors.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

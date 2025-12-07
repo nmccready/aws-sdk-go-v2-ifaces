@@ -957,6 +957,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataExportConfiguration", func(t *testing.T) {
+        input := &datazone.GetDataExportConfigurationInput{}
+        output := &datazone.GetDataExportConfigurationOutput{}
+
+        mockClient.On("GetDataExportConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataExportConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataProduct", func(t *testing.T) {
         input := &datazone.GetDataProductInput{}
         output := &datazone.GetDataProductOutput{}
@@ -1796,6 +1809,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PostTimeSeriesDataPoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.PostTimeSeriesDataPoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutDataExportConfiguration", func(t *testing.T) {
+        input := &datazone.PutDataExportConfigurationInput{}
+        output := &datazone.PutDataExportConfigurationOutput{}
+
+        mockClient.On("PutDataExportConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutDataExportConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
