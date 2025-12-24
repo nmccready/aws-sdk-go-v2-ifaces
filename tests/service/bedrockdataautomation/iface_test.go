@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCopyBlueprintStage", func(t *testing.T) {
+        input := &bedrockdataautomation.CopyBlueprintStageInput{}
+        output := &bedrockdataautomation.CopyBlueprintStageOutput{}
+
+        mockClient.On("CopyBlueprintStage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CopyBlueprintStage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBlueprint", func(t *testing.T) {
         input := &bedrockdataautomation.CreateBlueprintInput{}
         output := &bedrockdataautomation.CreateBlueprintOutput{}
@@ -112,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetBlueprintOptimizationStatus", func(t *testing.T) {
+        input := &bedrockdataautomation.GetBlueprintOptimizationStatusInput{}
+        output := &bedrockdataautomation.GetBlueprintOptimizationStatusOutput{}
+
+        mockClient.On("GetBlueprintOptimizationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBlueprintOptimizationStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataAutomationProject", func(t *testing.T) {
         input := &bedrockdataautomation.GetDataAutomationProjectInput{}
         output := &bedrockdataautomation.GetDataAutomationProjectOutput{}
@@ -119,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataAutomationProject", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataAutomationProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestInvokeBlueprintOptimizationAsync", func(t *testing.T) {
+        input := &bedrockdataautomation.InvokeBlueprintOptimizationAsyncInput{}
+        output := &bedrockdataautomation.InvokeBlueprintOptimizationAsyncOutput{}
+
+        mockClient.On("InvokeBlueprintOptimizationAsync", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeBlueprintOptimizationAsync(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

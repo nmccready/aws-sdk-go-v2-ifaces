@@ -2382,6 +2382,43 @@ func (_m *IClient) ListQuickResponses(ctx context.Context, params *qconnect.List
 	return r0, r1
 }
 
+// ListSpans provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSpans(ctx context.Context, params *qconnect.ListSpansInput, optFns ...func(*qconnect.Options)) (*qconnect.ListSpansOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSpans")
+	}
+
+	var r0 *qconnect.ListSpansOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.ListSpansInput, ...func(*qconnect.Options)) (*qconnect.ListSpansOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.ListSpansInput, ...func(*qconnect.Options)) *qconnect.ListSpansOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qconnect.ListSpansOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qconnect.ListSpansInput, ...func(*qconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *qconnect.ListTagsForResourceInput, optFns ...func(*qconnect.Options)) (*qconnect.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2651,6 +2688,43 @@ func (_m *IClient) RenderMessageTemplate(ctx context.Context, params *qconnect.R
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *qconnect.RenderMessageTemplateInput, ...func(*qconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// Retrieve provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) Retrieve(ctx context.Context, params *qconnect.RetrieveInput, optFns ...func(*qconnect.Options)) (*qconnect.RetrieveOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for Retrieve")
+	}
+
+	var r0 *qconnect.RetrieveOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.RetrieveInput, ...func(*qconnect.Options)) (*qconnect.RetrieveOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.RetrieveInput, ...func(*qconnect.Options)) *qconnect.RetrieveOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qconnect.RetrieveOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qconnect.RetrieveInput, ...func(*qconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

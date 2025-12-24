@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateEvaluator", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateEvaluatorInput{}
+        output := &bedrockagentcorecontrol.CreateEvaluatorOutput{}
+
+        mockClient.On("CreateEvaluator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEvaluator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGateway", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateGatewayInput{}
         output := &bedrockagentcorecontrol.CreateGatewayOutput{}
@@ -145,6 +158,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateOauth2CredentialProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateOauth2CredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateOnlineEvaluationConfig", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateOnlineEvaluationConfigInput{}
+        output := &bedrockagentcorecontrol.CreateOnlineEvaluationConfigOutput{}
+
+        mockClient.On("CreateOnlineEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreatePolicyInput{}
+        output := &bedrockagentcorecontrol.CreatePolicyOutput{}
+
+        mockClient.On("CreatePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePolicyEngine", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreatePolicyEngineInput{}
+        output := &bedrockagentcorecontrol.CreatePolicyEngineOutput{}
+
+        mockClient.On("CreatePolicyEngine", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePolicyEngine(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteEvaluator", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteEvaluatorInput{}
+        output := &bedrockagentcorecontrol.DeleteEvaluatorOutput{}
+
+        mockClient.On("DeleteEvaluator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEvaluator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteGateway", func(t *testing.T) {
         input := &bedrockagentcorecontrol.DeleteGatewayInput{}
         output := &bedrockagentcorecontrol.DeleteGatewayOutput{}
@@ -275,6 +340,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOauth2CredentialProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOauth2CredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteOnlineEvaluationConfig", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteOnlineEvaluationConfigInput{}
+        output := &bedrockagentcorecontrol.DeleteOnlineEvaluationConfigOutput{}
+
+        mockClient.On("DeleteOnlineEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeletePolicyInput{}
+        output := &bedrockagentcorecontrol.DeletePolicyOutput{}
+
+        mockClient.On("DeletePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePolicyEngine", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeletePolicyEngineInput{}
+        output := &bedrockagentcorecontrol.DeletePolicyEngineOutput{}
+
+        mockClient.On("DeletePolicyEngine", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePolicyEngine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteResourcePolicyInput{}
+        output := &bedrockagentcorecontrol.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEvaluator", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetEvaluatorInput{}
+        output := &bedrockagentcorecontrol.GetEvaluatorOutput{}
+
+        mockClient.On("GetEvaluator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEvaluator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetGateway", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetGatewayInput{}
         output := &bedrockagentcorecontrol.GetGatewayOutput{}
@@ -405,6 +535,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOauth2CredentialProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOauth2CredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetOnlineEvaluationConfig", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetOnlineEvaluationConfigInput{}
+        output := &bedrockagentcorecontrol.GetOnlineEvaluationConfigOutput{}
+
+        mockClient.On("GetOnlineEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPolicyInput{}
+        output := &bedrockagentcorecontrol.GetPolicyOutput{}
+
+        mockClient.On("GetPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPolicyEngine", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPolicyEngineInput{}
+        output := &bedrockagentcorecontrol.GetPolicyEngineOutput{}
+
+        mockClient.On("GetPolicyEngine", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicyEngine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPolicyGeneration", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPolicyGenerationInput{}
+        output := &bedrockagentcorecontrol.GetPolicyGenerationOutput{}
+
+        mockClient.On("GetPolicyGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicyGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetResourcePolicyInput{}
+        output := &bedrockagentcorecontrol.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +710,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListEvaluators", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListEvaluatorsInput{}
+        output := &bedrockagentcorecontrol.ListEvaluatorsOutput{}
+
+        mockClient.On("ListEvaluators", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEvaluators(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListGatewayTargets", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListGatewayTargetsInput{}
         output := &bedrockagentcorecontrol.ListGatewayTargetsOutput{}
@@ -567,6 +775,71 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListOnlineEvaluationConfigs", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListOnlineEvaluationConfigsInput{}
+        output := &bedrockagentcorecontrol.ListOnlineEvaluationConfigsOutput{}
+
+        mockClient.On("ListOnlineEvaluationConfigs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOnlineEvaluationConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicies", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPoliciesInput{}
+        output := &bedrockagentcorecontrol.ListPoliciesOutput{}
+
+        mockClient.On("ListPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicyEngines", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPolicyEnginesInput{}
+        output := &bedrockagentcorecontrol.ListPolicyEnginesOutput{}
+
+        mockClient.On("ListPolicyEngines", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyEngines(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicyGenerationAssets", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPolicyGenerationAssetsInput{}
+        output := &bedrockagentcorecontrol.ListPolicyGenerationAssetsOutput{}
+
+        mockClient.On("ListPolicyGenerationAssets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyGenerationAssets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicyGenerations", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPolicyGenerationsInput{}
+        output := &bedrockagentcorecontrol.ListPolicyGenerationsOutput{}
+
+        mockClient.On("ListPolicyGenerations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyGenerations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListTagsForResourceInput{}
         output := &bedrockagentcorecontrol.ListTagsForResourceOutput{}
@@ -593,6 +866,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.PutResourcePolicyInput{}
+        output := &bedrockagentcorecontrol.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSetTokenVaultCMK", func(t *testing.T) {
         input := &bedrockagentcorecontrol.SetTokenVaultCMKInput{}
         output := &bedrockagentcorecontrol.SetTokenVaultCMKOutput{}
@@ -600,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SetTokenVaultCMK", ctx, input).Return(output, nil)
 
         result, err := mockClient.SetTokenVaultCMK(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartPolicyGeneration", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.StartPolicyGenerationInput{}
+        output := &bedrockagentcorecontrol.StartPolicyGenerationOutput{}
+
+        mockClient.On("StartPolicyGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartPolicyGeneration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -684,6 +983,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateEvaluator", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateEvaluatorInput{}
+        output := &bedrockagentcorecontrol.UpdateEvaluatorOutput{}
+
+        mockClient.On("UpdateEvaluator", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEvaluator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateGateway", func(t *testing.T) {
         input := &bedrockagentcorecontrol.UpdateGatewayInput{}
         output := &bedrockagentcorecontrol.UpdateGatewayOutput{}
@@ -730,6 +1042,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOauth2CredentialProvider", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOauth2CredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOnlineEvaluationConfig", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateOnlineEvaluationConfigInput{}
+        output := &bedrockagentcorecontrol.UpdateOnlineEvaluationConfigOutput{}
+
+        mockClient.On("UpdateOnlineEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePolicy", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdatePolicyInput{}
+        output := &bedrockagentcorecontrol.UpdatePolicyOutput{}
+
+        mockClient.On("UpdatePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePolicyEngine", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdatePolicyEngineInput{}
+        output := &bedrockagentcorecontrol.UpdatePolicyEngineOutput{}
+
+        mockClient.On("UpdatePolicyEngine", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePolicyEngine(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -476,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCostCategoryResourceAssociations", func(t *testing.T) {
+        input := &costexplorer.ListCostCategoryResourceAssociationsInput{}
+        output := &costexplorer.ListCostCategoryResourceAssociationsOutput{}
+
+        mockClient.On("ListCostCategoryResourceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCostCategoryResourceAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListSavingsPlansPurchaseRecommendationGeneration", func(t *testing.T) {
         input := &costexplorer.ListSavingsPlansPurchaseRecommendationGenerationInput{}
         output := &costexplorer.ListSavingsPlansPurchaseRecommendationGenerationOutput{}

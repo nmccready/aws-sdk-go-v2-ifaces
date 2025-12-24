@@ -86,6 +86,7 @@ type IClient interface {
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateAnalysisTemplate(ctx context.Context, params *UpdateAnalysisTemplateInput, optFns ...func(*Options)) (*UpdateAnalysisTemplateOutput, error) 
  UpdateCollaboration(ctx context.Context, params *UpdateCollaborationInput, optFns ...func(*Options)) (*UpdateCollaborationOutput, error) 
+ UpdateCollaborationChangeRequest(ctx context.Context, params *UpdateCollaborationChangeRequestInput, optFns ...func(*Options)) (*UpdateCollaborationChangeRequestOutput, error) 
  UpdateConfiguredAudienceModelAssociation(ctx context.Context, params *UpdateConfiguredAudienceModelAssociationInput, optFns ...func(*Options)) (*UpdateConfiguredAudienceModelAssociationOutput, error) 
  UpdateConfiguredTable(ctx context.Context, params *UpdateConfiguredTableInput, optFns ...func(*Options)) (*UpdateConfiguredTableOutput, error) 
  UpdateConfiguredTableAnalysisRule(ctx context.Context, params *UpdateConfiguredTableAnalysisRuleInput, optFns ...func(*Options)) (*UpdateConfiguredTableAnalysisRuleOutput, error) 

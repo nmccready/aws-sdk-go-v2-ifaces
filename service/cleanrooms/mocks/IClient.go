@@ -2845,6 +2845,43 @@ func (_m *IClient) UpdateCollaboration(ctx context.Context, params *cleanrooms.U
 	return r0, r1
 }
 
+// UpdateCollaborationChangeRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCollaborationChangeRequest(ctx context.Context, params *cleanrooms.UpdateCollaborationChangeRequestInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateCollaborationChangeRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCollaborationChangeRequest")
+	}
+
+	var r0 *cleanrooms.UpdateCollaborationChangeRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) (*cleanrooms.UpdateCollaborationChangeRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) *cleanrooms.UpdateCollaborationChangeRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.UpdateCollaborationChangeRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateCollaborationChangeRequestInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateConfiguredAudienceModelAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateConfiguredAudienceModelAssociation(ctx context.Context, params *cleanrooms.UpdateConfiguredAudienceModelAssociationInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateConfiguredAudienceModelAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))

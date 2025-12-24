@@ -4491,6 +4491,43 @@ func (_m *IClient) GetFlowPermissions(ctx context.Context, params *quicksight.Ge
 	return r0, r1
 }
 
+// GetIdentityContext provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIdentityContext(ctx context.Context, params *quicksight.GetIdentityContextInput, optFns ...func(*quicksight.Options)) (*quicksight.GetIdentityContextOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIdentityContext")
+	}
+
+	var r0 *quicksight.GetIdentityContextOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GetIdentityContextInput, ...func(*quicksight.Options)) (*quicksight.GetIdentityContextOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.GetIdentityContextInput, ...func(*quicksight.Options)) *quicksight.GetIdentityContextOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.GetIdentityContextOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.GetIdentityContextInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSessionEmbedUrl provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSessionEmbedUrl(ctx context.Context, params *quicksight.GetSessionEmbedUrlInput, optFns ...func(*quicksight.Options)) (*quicksight.GetSessionEmbedUrlOutput, error) {
 	_va := make([]interface{}, len(optFns))

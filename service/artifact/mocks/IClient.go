@@ -200,6 +200,43 @@ func (_m *IClient) ListCustomerAgreements(ctx context.Context, params *artifact.
 	return r0, r1
 }
 
+// ListReportVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListReportVersions(ctx context.Context, params *artifact.ListReportVersionsInput, optFns ...func(*artifact.Options)) (*artifact.ListReportVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListReportVersions")
+	}
+
+	var r0 *artifact.ListReportVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListReportVersionsInput, ...func(*artifact.Options)) (*artifact.ListReportVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListReportVersionsInput, ...func(*artifact.Options)) *artifact.ListReportVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.ListReportVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.ListReportVersionsInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListReports provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListReports(ctx context.Context, params *artifact.ListReportsInput, optFns ...func(*artifact.Options)) (*artifact.ListReportsOutput, error) {
 	_va := make([]interface{}, len(optFns))

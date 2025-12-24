@@ -1256,6 +1256,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCustomModelDeployment", func(t *testing.T) {
+        input := &bedrock.UpdateCustomModelDeploymentInput{}
+        output := &bedrock.UpdateCustomModelDeploymentOutput{}
+
+        mockClient.On("UpdateCustomModelDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCustomModelDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateGuardrail", func(t *testing.T) {
         input := &bedrock.UpdateGuardrailInput{}
         output := &bedrock.UpdateGuardrailOutput{}

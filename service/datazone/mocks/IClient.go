@@ -2642,6 +2642,43 @@ func (_m *IClient) GetConnection(ctx context.Context, params *datazone.GetConnec
 	return r0, r1
 }
 
+// GetDataExportConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataExportConfiguration(ctx context.Context, params *datazone.GetDataExportConfigurationInput, optFns ...func(*datazone.Options)) (*datazone.GetDataExportConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataExportConfiguration")
+	}
+
+	var r0 *datazone.GetDataExportConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDataExportConfigurationInput, ...func(*datazone.Options)) (*datazone.GetDataExportConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDataExportConfigurationInput, ...func(*datazone.Options)) *datazone.GetDataExportConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetDataExportConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetDataExportConfigurationInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataProduct provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataProduct(ctx context.Context, params *datazone.GetDataProductInput, optFns ...func(*datazone.Options)) (*datazone.GetDataProductOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5057,6 +5094,43 @@ func (_m *IClient) PostTimeSeriesDataPoints(ctx context.Context, params *datazon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.PostTimeSeriesDataPointsInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutDataExportConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutDataExportConfiguration(ctx context.Context, params *datazone.PutDataExportConfigurationInput, optFns ...func(*datazone.Options)) (*datazone.PutDataExportConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutDataExportConfiguration")
+	}
+
+	var r0 *datazone.PutDataExportConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.PutDataExportConfigurationInput, ...func(*datazone.Options)) (*datazone.PutDataExportConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.PutDataExportConfigurationInput, ...func(*datazone.Options)) *datazone.PutDataExportConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.PutDataExportConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.PutDataExportConfigurationInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

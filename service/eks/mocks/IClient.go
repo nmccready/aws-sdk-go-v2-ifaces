@@ -200,6 +200,43 @@ func (_m *IClient) CreateAddon(ctx context.Context, params *eks.CreateAddonInput
 	return r0, r1
 }
 
+// CreateCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCapability(ctx context.Context, params *eks.CreateCapabilityInput, optFns ...func(*eks.Options)) (*eks.CreateCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCapability")
+	}
+
+	var r0 *eks.CreateCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.CreateCapabilityInput, ...func(*eks.Options)) (*eks.CreateCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.CreateCapabilityInput, ...func(*eks.Options)) *eks.CreateCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.CreateCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.CreateCapabilityInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCluster(ctx context.Context, params *eks.CreateClusterInput, optFns ...func(*eks.Options)) (*eks.CreateClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -451,6 +488,43 @@ func (_m *IClient) DeleteAddon(ctx context.Context, params *eks.DeleteAddonInput
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.DeleteAddonInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCapability(ctx context.Context, params *eks.DeleteCapabilityInput, optFns ...func(*eks.Options)) (*eks.DeleteCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCapability")
+	}
+
+	var r0 *eks.DeleteCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DeleteCapabilityInput, ...func(*eks.Options)) (*eks.DeleteCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DeleteCapabilityInput, ...func(*eks.Options)) *eks.DeleteCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.DeleteCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.DeleteCapabilityInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -821,6 +895,43 @@ func (_m *IClient) DescribeAddonVersions(ctx context.Context, params *eks.Descri
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.DescribeAddonVersionsInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCapability(ctx context.Context, params *eks.DescribeCapabilityInput, optFns ...func(*eks.Options)) (*eks.DescribeCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCapability")
+	}
+
+	var r0 *eks.DescribeCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DescribeCapabilityInput, ...func(*eks.Options)) (*eks.DescribeCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DescribeCapabilityInput, ...func(*eks.Options)) *eks.DescribeCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.DescribeCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.DescribeCapabilityInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1421,6 +1532,43 @@ func (_m *IClient) ListAssociatedAccessPolicies(ctx context.Context, params *eks
 	return r0, r1
 }
 
+// ListCapabilities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCapabilities(ctx context.Context, params *eks.ListCapabilitiesInput, optFns ...func(*eks.Options)) (*eks.ListCapabilitiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCapabilities")
+	}
+
+	var r0 *eks.ListCapabilitiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.ListCapabilitiesInput, ...func(*eks.Options)) (*eks.ListCapabilitiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.ListCapabilitiesInput, ...func(*eks.Options)) *eks.ListCapabilitiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.ListCapabilitiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.ListCapabilitiesInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListClusters provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListClusters(ctx context.Context, params *eks.ListClustersInput, optFns ...func(*eks.Options)) (*eks.ListClustersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1986,6 +2134,43 @@ func (_m *IClient) UpdateAddon(ctx context.Context, params *eks.UpdateAddonInput
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.UpdateAddonInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCapability(ctx context.Context, params *eks.UpdateCapabilityInput, optFns ...func(*eks.Options)) (*eks.UpdateCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCapability")
+	}
+
+	var r0 *eks.UpdateCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.UpdateCapabilityInput, ...func(*eks.Options)) (*eks.UpdateCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.UpdateCapabilityInput, ...func(*eks.Options)) *eks.UpdateCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.UpdateCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.UpdateCapabilityInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

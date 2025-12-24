@@ -23,6 +23,8 @@ type IClient interface {
  ListDbInstancesForCluster(ctx context.Context, params *ListDbInstancesForClusterInput, optFns ...func(*Options)) (*ListDbInstancesForClusterOutput, error) 
  ListDbParameterGroups(ctx context.Context, params *ListDbParameterGroupsInput, optFns ...func(*Options)) (*ListDbParameterGroupsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ RebootDbCluster(ctx context.Context, params *RebootDbClusterInput, optFns ...func(*Options)) (*RebootDbClusterOutput, error) 
+ RebootDbInstance(ctx context.Context, params *RebootDbInstanceInput, optFns ...func(*Options)) (*RebootDbInstanceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateDbCluster(ctx context.Context, params *UpdateDbClusterInput, optFns ...func(*Options)) (*UpdateDbClusterOutput, error) 

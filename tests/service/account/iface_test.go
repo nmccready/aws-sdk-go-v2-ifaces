@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetGovCloudAccountInformation", func(t *testing.T) {
+        input := &account.GetGovCloudAccountInformationInput{}
+        output := &account.GetGovCloudAccountInformationOutput{}
+
+        mockClient.On("GetGovCloudAccountInformation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGovCloudAccountInformation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPrimaryEmail", func(t *testing.T) {
         input := &account.GetPrimaryEmailInput{}
         output := &account.GetPrimaryEmailOutput{}

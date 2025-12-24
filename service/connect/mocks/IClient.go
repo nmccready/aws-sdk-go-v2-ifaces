@@ -570,6 +570,43 @@ func (_m *IClient) AssociateSecurityKey(ctx context.Context, params *connect.Ass
 	return r0, r1
 }
 
+// AssociateSecurityProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateSecurityProfiles(ctx context.Context, params *connect.AssociateSecurityProfilesInput, optFns ...func(*connect.Options)) (*connect.AssociateSecurityProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateSecurityProfiles")
+	}
+
+	var r0 *connect.AssociateSecurityProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateSecurityProfilesInput, ...func(*connect.Options)) (*connect.AssociateSecurityProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateSecurityProfilesInput, ...func(*connect.Options)) *connect.AssociateSecurityProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.AssociateSecurityProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.AssociateSecurityProfilesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateTrafficDistributionGroupUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateTrafficDistributionGroupUser(ctx context.Context, params *connect.AssociateTrafficDistributionGroupUserInput, optFns ...func(*connect.Options)) (*connect.AssociateTrafficDistributionGroupUserOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -644,6 +681,43 @@ func (_m *IClient) AssociateUserProficiencies(ctx context.Context, params *conne
 	return r0, r1
 }
 
+// AssociateWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateWorkspace(ctx context.Context, params *connect.AssociateWorkspaceInput, optFns ...func(*connect.Options)) (*connect.AssociateWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateWorkspace")
+	}
+
+	var r0 *connect.AssociateWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateWorkspaceInput, ...func(*connect.Options)) (*connect.AssociateWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateWorkspaceInput, ...func(*connect.Options)) *connect.AssociateWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.AssociateWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.AssociateWorkspaceInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchAssociateAnalyticsDataSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchAssociateAnalyticsDataSet(ctx context.Context, params *connect.BatchAssociateAnalyticsDataSetInput, optFns ...func(*connect.Options)) (*connect.BatchAssociateAnalyticsDataSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -673,6 +747,117 @@ func (_m *IClient) BatchAssociateAnalyticsDataSet(ctx context.Context, params *c
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.BatchAssociateAnalyticsDataSetInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchCreateDataTableValue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateDataTableValue(ctx context.Context, params *connect.BatchCreateDataTableValueInput, optFns ...func(*connect.Options)) (*connect.BatchCreateDataTableValueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateDataTableValue")
+	}
+
+	var r0 *connect.BatchCreateDataTableValueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchCreateDataTableValueInput, ...func(*connect.Options)) (*connect.BatchCreateDataTableValueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchCreateDataTableValueInput, ...func(*connect.Options)) *connect.BatchCreateDataTableValueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.BatchCreateDataTableValueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.BatchCreateDataTableValueInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteDataTableValue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteDataTableValue(ctx context.Context, params *connect.BatchDeleteDataTableValueInput, optFns ...func(*connect.Options)) (*connect.BatchDeleteDataTableValueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteDataTableValue")
+	}
+
+	var r0 *connect.BatchDeleteDataTableValueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchDeleteDataTableValueInput, ...func(*connect.Options)) (*connect.BatchDeleteDataTableValueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchDeleteDataTableValueInput, ...func(*connect.Options)) *connect.BatchDeleteDataTableValueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.BatchDeleteDataTableValueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.BatchDeleteDataTableValueInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDescribeDataTableValue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDescribeDataTableValue(ctx context.Context, params *connect.BatchDescribeDataTableValueInput, optFns ...func(*connect.Options)) (*connect.BatchDescribeDataTableValueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDescribeDataTableValue")
+	}
+
+	var r0 *connect.BatchDescribeDataTableValueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchDescribeDataTableValueInput, ...func(*connect.Options)) (*connect.BatchDescribeDataTableValueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchDescribeDataTableValueInput, ...func(*connect.Options)) *connect.BatchDescribeDataTableValueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.BatchDescribeDataTableValueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.BatchDescribeDataTableValueInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -821,6 +1006,43 @@ func (_m *IClient) BatchPutContact(ctx context.Context, params *connect.BatchPut
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.BatchPutContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateDataTableValue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateDataTableValue(ctx context.Context, params *connect.BatchUpdateDataTableValueInput, optFns ...func(*connect.Options)) (*connect.BatchUpdateDataTableValueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateDataTableValue")
+	}
+
+	var r0 *connect.BatchUpdateDataTableValueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchUpdateDataTableValueInput, ...func(*connect.Options)) (*connect.BatchUpdateDataTableValueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.BatchUpdateDataTableValueInput, ...func(*connect.Options)) *connect.BatchUpdateDataTableValueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.BatchUpdateDataTableValueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.BatchUpdateDataTableValueInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1154,6 +1376,80 @@ func (_m *IClient) CreateContactFlowVersion(ctx context.Context, params *connect
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateContactFlowVersionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataTable(ctx context.Context, params *connect.CreateDataTableInput, optFns ...func(*connect.Options)) (*connect.CreateDataTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataTable")
+	}
+
+	var r0 *connect.CreateDataTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateDataTableInput, ...func(*connect.Options)) (*connect.CreateDataTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateDataTableInput, ...func(*connect.Options)) *connect.CreateDataTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateDataTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateDataTableInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDataTableAttribute provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataTableAttribute(ctx context.Context, params *connect.CreateDataTableAttributeInput, optFns ...func(*connect.Options)) (*connect.CreateDataTableAttributeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataTableAttribute")
+	}
+
+	var r0 *connect.CreateDataTableAttributeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateDataTableAttributeInput, ...func(*connect.Options)) (*connect.CreateDataTableAttributeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateDataTableAttributeInput, ...func(*connect.Options)) *connect.CreateDataTableAttributeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateDataTableAttributeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateDataTableAttributeInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2050,6 +2346,80 @@ func (_m *IClient) CreateVocabulary(ctx context.Context, params *connect.CreateV
 	return r0, r1
 }
 
+// CreateWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWorkspace(ctx context.Context, params *connect.CreateWorkspaceInput, optFns ...func(*connect.Options)) (*connect.CreateWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWorkspace")
+	}
+
+	var r0 *connect.CreateWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateWorkspaceInput, ...func(*connect.Options)) (*connect.CreateWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateWorkspaceInput, ...func(*connect.Options)) *connect.CreateWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateWorkspaceInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateWorkspacePage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWorkspacePage(ctx context.Context, params *connect.CreateWorkspacePageInput, optFns ...func(*connect.Options)) (*connect.CreateWorkspacePageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWorkspacePage")
+	}
+
+	var r0 *connect.CreateWorkspacePageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateWorkspacePageInput, ...func(*connect.Options)) (*connect.CreateWorkspacePageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateWorkspacePageInput, ...func(*connect.Options)) *connect.CreateWorkspacePageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateWorkspacePageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateWorkspacePageInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeactivateEvaluationForm provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeactivateEvaluationForm(ctx context.Context, params *connect.DeactivateEvaluationFormInput, optFns ...func(*connect.Options)) (*connect.DeactivateEvaluationFormOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2338,6 +2708,80 @@ func (_m *IClient) DeleteContactFlowVersion(ctx context.Context, params *connect
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteContactFlowVersionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataTable(ctx context.Context, params *connect.DeleteDataTableInput, optFns ...func(*connect.Options)) (*connect.DeleteDataTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataTable")
+	}
+
+	var r0 *connect.DeleteDataTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteDataTableInput, ...func(*connect.Options)) (*connect.DeleteDataTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteDataTableInput, ...func(*connect.Options)) *connect.DeleteDataTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteDataTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteDataTableInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataTableAttribute provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataTableAttribute(ctx context.Context, params *connect.DeleteDataTableAttributeInput, optFns ...func(*connect.Options)) (*connect.DeleteDataTableAttributeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataTableAttribute")
+	}
+
+	var r0 *connect.DeleteDataTableAttributeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteDataTableAttributeInput, ...func(*connect.Options)) (*connect.DeleteDataTableAttributeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteDataTableAttributeInput, ...func(*connect.Options)) *connect.DeleteDataTableAttributeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteDataTableAttributeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteDataTableAttributeInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3160,6 +3604,117 @@ func (_m *IClient) DeleteVocabulary(ctx context.Context, params *connect.DeleteV
 	return r0, r1
 }
 
+// DeleteWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWorkspace(ctx context.Context, params *connect.DeleteWorkspaceInput, optFns ...func(*connect.Options)) (*connect.DeleteWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWorkspace")
+	}
+
+	var r0 *connect.DeleteWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteWorkspaceInput, ...func(*connect.Options)) (*connect.DeleteWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteWorkspaceInput, ...func(*connect.Options)) *connect.DeleteWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteWorkspaceInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWorkspaceMedia provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWorkspaceMedia(ctx context.Context, params *connect.DeleteWorkspaceMediaInput, optFns ...func(*connect.Options)) (*connect.DeleteWorkspaceMediaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWorkspaceMedia")
+	}
+
+	var r0 *connect.DeleteWorkspaceMediaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteWorkspaceMediaInput, ...func(*connect.Options)) (*connect.DeleteWorkspaceMediaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteWorkspaceMediaInput, ...func(*connect.Options)) *connect.DeleteWorkspaceMediaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteWorkspaceMediaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteWorkspaceMediaInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWorkspacePage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWorkspacePage(ctx context.Context, params *connect.DeleteWorkspacePageInput, optFns ...func(*connect.Options)) (*connect.DeleteWorkspacePageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWorkspacePage")
+	}
+
+	var r0 *connect.DeleteWorkspacePageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteWorkspacePageInput, ...func(*connect.Options)) (*connect.DeleteWorkspacePageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteWorkspacePageInput, ...func(*connect.Options)) *connect.DeleteWorkspacePageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteWorkspacePageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteWorkspacePageInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAgentStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAgentStatus(ctx context.Context, params *connect.DescribeAgentStatusInput, optFns ...func(*connect.Options)) (*connect.DescribeAgentStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3411,6 +3966,80 @@ func (_m *IClient) DescribeContactFlowModuleAlias(ctx context.Context, params *c
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeContactFlowModuleAliasInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDataTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDataTable(ctx context.Context, params *connect.DescribeDataTableInput, optFns ...func(*connect.Options)) (*connect.DescribeDataTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDataTable")
+	}
+
+	var r0 *connect.DescribeDataTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeDataTableInput, ...func(*connect.Options)) (*connect.DescribeDataTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeDataTableInput, ...func(*connect.Options)) *connect.DescribeDataTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeDataTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeDataTableInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDataTableAttribute provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDataTableAttribute(ctx context.Context, params *connect.DescribeDataTableAttributeInput, optFns ...func(*connect.Options)) (*connect.DescribeDataTableAttributeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDataTableAttribute")
+	}
+
+	var r0 *connect.DescribeDataTableAttributeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeDataTableAttributeInput, ...func(*connect.Options)) (*connect.DescribeDataTableAttributeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeDataTableAttributeInput, ...func(*connect.Options)) *connect.DescribeDataTableAttributeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeDataTableAttributeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeDataTableAttributeInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4196,6 +4825,43 @@ func (_m *IClient) DescribeVocabulary(ctx context.Context, params *connect.Descr
 	return r0, r1
 }
 
+// DescribeWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeWorkspace(ctx context.Context, params *connect.DescribeWorkspaceInput, optFns ...func(*connect.Options)) (*connect.DescribeWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeWorkspace")
+	}
+
+	var r0 *connect.DescribeWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeWorkspaceInput, ...func(*connect.Options)) (*connect.DescribeWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeWorkspaceInput, ...func(*connect.Options)) *connect.DescribeWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeWorkspaceInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateAnalyticsDataSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateAnalyticsDataSet(ctx context.Context, params *connect.DisassociateAnalyticsDataSetInput, optFns ...func(*connect.Options)) (*connect.DisassociateAnalyticsDataSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4640,6 +5306,43 @@ func (_m *IClient) DisassociateSecurityKey(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// DisassociateSecurityProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateSecurityProfiles(ctx context.Context, params *connect.DisassociateSecurityProfilesInput, optFns ...func(*connect.Options)) (*connect.DisassociateSecurityProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateSecurityProfiles")
+	}
+
+	var r0 *connect.DisassociateSecurityProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateSecurityProfilesInput, ...func(*connect.Options)) (*connect.DisassociateSecurityProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateSecurityProfilesInput, ...func(*connect.Options)) *connect.DisassociateSecurityProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DisassociateSecurityProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DisassociateSecurityProfilesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateTrafficDistributionGroupUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateTrafficDistributionGroupUser(ctx context.Context, params *connect.DisassociateTrafficDistributionGroupUserInput, optFns ...func(*connect.Options)) (*connect.DisassociateTrafficDistributionGroupUserOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4714,6 +5417,43 @@ func (_m *IClient) DisassociateUserProficiencies(ctx context.Context, params *co
 	return r0, r1
 }
 
+// DisassociateWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateWorkspace(ctx context.Context, params *connect.DisassociateWorkspaceInput, optFns ...func(*connect.Options)) (*connect.DisassociateWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateWorkspace")
+	}
+
+	var r0 *connect.DisassociateWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateWorkspaceInput, ...func(*connect.Options)) (*connect.DisassociateWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateWorkspaceInput, ...func(*connect.Options)) *connect.DisassociateWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DisassociateWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DisassociateWorkspaceInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DismissUserContact provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DismissUserContact(ctx context.Context, params *connect.DismissUserContactInput, optFns ...func(*connect.Options)) (*connect.DismissUserContactOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4743,6 +5483,43 @@ func (_m *IClient) DismissUserContact(ctx context.Context, params *connect.Dismi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DismissUserContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EvaluateDataTableValues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EvaluateDataTableValues(ctx context.Context, params *connect.EvaluateDataTableValuesInput, optFns ...func(*connect.Options)) (*connect.EvaluateDataTableValuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EvaluateDataTableValues")
+	}
+
+	var r0 *connect.EvaluateDataTableValuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.EvaluateDataTableValuesInput, ...func(*connect.Options)) (*connect.EvaluateDataTableValuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.EvaluateDataTableValuesInput, ...func(*connect.Options)) *connect.EvaluateDataTableValuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.EvaluateDataTableValuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.EvaluateDataTableValuesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5269,6 +6046,43 @@ func (_m *IClient) ImportPhoneNumber(ctx context.Context, params *connect.Import
 	return r0, r1
 }
 
+// ImportWorkspaceMedia provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ImportWorkspaceMedia(ctx context.Context, params *connect.ImportWorkspaceMediaInput, optFns ...func(*connect.Options)) (*connect.ImportWorkspaceMediaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ImportWorkspaceMedia")
+	}
+
+	var r0 *connect.ImportWorkspaceMediaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ImportWorkspaceMediaInput, ...func(*connect.Options)) (*connect.ImportWorkspaceMediaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ImportWorkspaceMediaInput, ...func(*connect.Options)) *connect.ImportWorkspaceMediaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ImportWorkspaceMediaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ImportWorkspaceMediaInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAgentStatuses provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAgentStatuses(ctx context.Context, params *connect.ListAgentStatusesInput, optFns ...func(*connect.Options)) (*connect.ListAgentStatusesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5787,6 +6601,154 @@ func (_m *IClient) ListContactReferences(ctx context.Context, params *connect.Li
 	return r0, r1
 }
 
+// ListDataTableAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTableAttributes(ctx context.Context, params *connect.ListDataTableAttributesInput, optFns ...func(*connect.Options)) (*connect.ListDataTableAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTableAttributes")
+	}
+
+	var r0 *connect.ListDataTableAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTableAttributesInput, ...func(*connect.Options)) (*connect.ListDataTableAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTableAttributesInput, ...func(*connect.Options)) *connect.ListDataTableAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListDataTableAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListDataTableAttributesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataTablePrimaryValues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTablePrimaryValues(ctx context.Context, params *connect.ListDataTablePrimaryValuesInput, optFns ...func(*connect.Options)) (*connect.ListDataTablePrimaryValuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTablePrimaryValues")
+	}
+
+	var r0 *connect.ListDataTablePrimaryValuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTablePrimaryValuesInput, ...func(*connect.Options)) (*connect.ListDataTablePrimaryValuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTablePrimaryValuesInput, ...func(*connect.Options)) *connect.ListDataTablePrimaryValuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListDataTablePrimaryValuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListDataTablePrimaryValuesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataTableValues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTableValues(ctx context.Context, params *connect.ListDataTableValuesInput, optFns ...func(*connect.Options)) (*connect.ListDataTableValuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTableValues")
+	}
+
+	var r0 *connect.ListDataTableValuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTableValuesInput, ...func(*connect.Options)) (*connect.ListDataTableValuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTableValuesInput, ...func(*connect.Options)) *connect.ListDataTableValuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListDataTableValuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListDataTableValuesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataTables provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTables(ctx context.Context, params *connect.ListDataTablesInput, optFns ...func(*connect.Options)) (*connect.ListDataTablesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTables")
+	}
+
+	var r0 *connect.ListDataTablesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTablesInput, ...func(*connect.Options)) (*connect.ListDataTablesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListDataTablesInput, ...func(*connect.Options)) *connect.ListDataTablesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListDataTablesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListDataTablesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDefaultVocabularies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDefaultVocabularies(ctx context.Context, params *connect.ListDefaultVocabulariesInput, optFns ...func(*connect.Options)) (*connect.ListDefaultVocabulariesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5816,6 +6778,43 @@ func (_m *IClient) ListDefaultVocabularies(ctx context.Context, params *connect.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListDefaultVocabulariesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEntitySecurityProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEntitySecurityProfiles(ctx context.Context, params *connect.ListEntitySecurityProfilesInput, optFns ...func(*connect.Options)) (*connect.ListEntitySecurityProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEntitySecurityProfiles")
+	}
+
+	var r0 *connect.ListEntitySecurityProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListEntitySecurityProfilesInput, ...func(*connect.Options)) (*connect.ListEntitySecurityProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListEntitySecurityProfilesInput, ...func(*connect.Options)) *connect.ListEntitySecurityProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListEntitySecurityProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListEntitySecurityProfilesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6749,6 +7748,43 @@ func (_m *IClient) ListSecurityProfileApplications(ctx context.Context, params *
 	return r0, r1
 }
 
+// ListSecurityProfileFlowModules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSecurityProfileFlowModules(ctx context.Context, params *connect.ListSecurityProfileFlowModulesInput, optFns ...func(*connect.Options)) (*connect.ListSecurityProfileFlowModulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSecurityProfileFlowModules")
+	}
+
+	var r0 *connect.ListSecurityProfileFlowModulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListSecurityProfileFlowModulesInput, ...func(*connect.Options)) (*connect.ListSecurityProfileFlowModulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListSecurityProfileFlowModulesInput, ...func(*connect.Options)) *connect.ListSecurityProfileFlowModulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListSecurityProfileFlowModulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListSecurityProfileFlowModulesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListSecurityProfilePermissions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListSecurityProfilePermissions(ctx context.Context, params *connect.ListSecurityProfilePermissionsInput, optFns ...func(*connect.Options)) (*connect.ListSecurityProfilePermissionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7185,6 +8221,117 @@ func (_m *IClient) ListViews(ctx context.Context, params *connect.ListViewsInput
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListViewsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWorkspaceMedia provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWorkspaceMedia(ctx context.Context, params *connect.ListWorkspaceMediaInput, optFns ...func(*connect.Options)) (*connect.ListWorkspaceMediaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWorkspaceMedia")
+	}
+
+	var r0 *connect.ListWorkspaceMediaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListWorkspaceMediaInput, ...func(*connect.Options)) (*connect.ListWorkspaceMediaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListWorkspaceMediaInput, ...func(*connect.Options)) *connect.ListWorkspaceMediaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListWorkspaceMediaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListWorkspaceMediaInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWorkspacePages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWorkspacePages(ctx context.Context, params *connect.ListWorkspacePagesInput, optFns ...func(*connect.Options)) (*connect.ListWorkspacePagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWorkspacePages")
+	}
+
+	var r0 *connect.ListWorkspacePagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListWorkspacePagesInput, ...func(*connect.Options)) (*connect.ListWorkspacePagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListWorkspacePagesInput, ...func(*connect.Options)) *connect.ListWorkspacePagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListWorkspacePagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListWorkspacePagesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWorkspaces provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWorkspaces(ctx context.Context, params *connect.ListWorkspacesInput, optFns ...func(*connect.Options)) (*connect.ListWorkspacesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWorkspaces")
+	}
+
+	var r0 *connect.ListWorkspacesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListWorkspacesInput, ...func(*connect.Options)) (*connect.ListWorkspacesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListWorkspacesInput, ...func(*connect.Options)) *connect.ListWorkspacesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListWorkspacesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListWorkspacesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7692,6 +8839,43 @@ func (_m *IClient) SearchContacts(ctx context.Context, params *connect.SearchCon
 	return r0, r1
 }
 
+// SearchDataTables provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchDataTables(ctx context.Context, params *connect.SearchDataTablesInput, optFns ...func(*connect.Options)) (*connect.SearchDataTablesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchDataTables")
+	}
+
+	var r0 *connect.SearchDataTablesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchDataTablesInput, ...func(*connect.Options)) (*connect.SearchDataTablesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchDataTablesInput, ...func(*connect.Options)) *connect.SearchDataTablesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchDataTablesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchDataTablesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchEmailAddresses provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchEmailAddresses(ctx context.Context, params *connect.SearchEmailAddressesInput, optFns ...func(*connect.Options)) (*connect.SearchEmailAddressesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8173,6 +9357,43 @@ func (_m *IClient) SearchUsers(ctx context.Context, params *connect.SearchUsersI
 	return r0, r1
 }
 
+// SearchViews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchViews(ctx context.Context, params *connect.SearchViewsInput, optFns ...func(*connect.Options)) (*connect.SearchViewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchViews")
+	}
+
+	var r0 *connect.SearchViewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchViewsInput, ...func(*connect.Options)) (*connect.SearchViewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchViewsInput, ...func(*connect.Options)) *connect.SearchViewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchViewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchViewsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchVocabularies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchVocabularies(ctx context.Context, params *connect.SearchVocabulariesInput, optFns ...func(*connect.Options)) (*connect.SearchVocabulariesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8202,6 +9423,80 @@ func (_m *IClient) SearchVocabularies(ctx context.Context, params *connect.Searc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchVocabulariesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchWorkspaceAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchWorkspaceAssociations(ctx context.Context, params *connect.SearchWorkspaceAssociationsInput, optFns ...func(*connect.Options)) (*connect.SearchWorkspaceAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchWorkspaceAssociations")
+	}
+
+	var r0 *connect.SearchWorkspaceAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchWorkspaceAssociationsInput, ...func(*connect.Options)) (*connect.SearchWorkspaceAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchWorkspaceAssociationsInput, ...func(*connect.Options)) *connect.SearchWorkspaceAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchWorkspaceAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchWorkspaceAssociationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchWorkspaces provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchWorkspaces(ctx context.Context, params *connect.SearchWorkspacesInput, optFns ...func(*connect.Options)) (*connect.SearchWorkspacesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchWorkspaces")
+	}
+
+	var r0 *connect.SearchWorkspacesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchWorkspacesInput, ...func(*connect.Options)) (*connect.SearchWorkspacesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchWorkspacesInput, ...func(*connect.Options)) *connect.SearchWorkspacesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchWorkspacesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchWorkspacesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8387,6 +9682,43 @@ func (_m *IClient) StartContactEvaluation(ctx context.Context, params *connect.S
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartContactEvaluationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartContactMediaProcessing provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartContactMediaProcessing(ctx context.Context, params *connect.StartContactMediaProcessingInput, optFns ...func(*connect.Options)) (*connect.StartContactMediaProcessingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartContactMediaProcessing")
+	}
+
+	var r0 *connect.StartContactMediaProcessingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartContactMediaProcessingInput, ...func(*connect.Options)) (*connect.StartContactMediaProcessingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartContactMediaProcessingInput, ...func(*connect.Options)) *connect.StartContactMediaProcessingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartContactMediaProcessingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartContactMediaProcessingInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8757,6 +10089,43 @@ func (_m *IClient) StopContact(ctx context.Context, params *connect.StopContactI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.StopContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopContactMediaProcessing provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopContactMediaProcessing(ctx context.Context, params *connect.StopContactMediaProcessingInput, optFns ...func(*connect.Options)) (*connect.StopContactMediaProcessingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopContactMediaProcessing")
+	}
+
+	var r0 *connect.StopContactMediaProcessingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StopContactMediaProcessingInput, ...func(*connect.Options)) (*connect.StopContactMediaProcessingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StopContactMediaProcessingInput, ...func(*connect.Options)) *connect.StopContactMediaProcessingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StopContactMediaProcessingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StopContactMediaProcessingInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9571,6 +10940,117 @@ func (_m *IClient) UpdateContactSchedule(ctx context.Context, params *connect.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateContactScheduleInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataTableAttribute provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataTableAttribute(ctx context.Context, params *connect.UpdateDataTableAttributeInput, optFns ...func(*connect.Options)) (*connect.UpdateDataTableAttributeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataTableAttribute")
+	}
+
+	var r0 *connect.UpdateDataTableAttributeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateDataTableAttributeInput, ...func(*connect.Options)) (*connect.UpdateDataTableAttributeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateDataTableAttributeInput, ...func(*connect.Options)) *connect.UpdateDataTableAttributeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateDataTableAttributeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateDataTableAttributeInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataTableMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataTableMetadata(ctx context.Context, params *connect.UpdateDataTableMetadataInput, optFns ...func(*connect.Options)) (*connect.UpdateDataTableMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataTableMetadata")
+	}
+
+	var r0 *connect.UpdateDataTableMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateDataTableMetadataInput, ...func(*connect.Options)) (*connect.UpdateDataTableMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateDataTableMetadataInput, ...func(*connect.Options)) *connect.UpdateDataTableMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateDataTableMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateDataTableMetadataInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataTablePrimaryValues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataTablePrimaryValues(ctx context.Context, params *connect.UpdateDataTablePrimaryValuesInput, optFns ...func(*connect.Options)) (*connect.UpdateDataTablePrimaryValuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataTablePrimaryValues")
+	}
+
+	var r0 *connect.UpdateDataTablePrimaryValuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateDataTablePrimaryValuesInput, ...func(*connect.Options)) (*connect.UpdateDataTablePrimaryValuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateDataTablePrimaryValuesInput, ...func(*connect.Options)) *connect.UpdateDataTablePrimaryValuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateDataTablePrimaryValuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateDataTablePrimaryValuesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -11014,6 +12494,154 @@ func (_m *IClient) UpdateViewMetadata(ctx context.Context, params *connect.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateViewMetadataInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWorkspaceMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWorkspaceMetadata(ctx context.Context, params *connect.UpdateWorkspaceMetadataInput, optFns ...func(*connect.Options)) (*connect.UpdateWorkspaceMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWorkspaceMetadata")
+	}
+
+	var r0 *connect.UpdateWorkspaceMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspaceMetadataInput, ...func(*connect.Options)) (*connect.UpdateWorkspaceMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspaceMetadataInput, ...func(*connect.Options)) *connect.UpdateWorkspaceMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateWorkspaceMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateWorkspaceMetadataInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWorkspacePage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWorkspacePage(ctx context.Context, params *connect.UpdateWorkspacePageInput, optFns ...func(*connect.Options)) (*connect.UpdateWorkspacePageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWorkspacePage")
+	}
+
+	var r0 *connect.UpdateWorkspacePageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspacePageInput, ...func(*connect.Options)) (*connect.UpdateWorkspacePageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspacePageInput, ...func(*connect.Options)) *connect.UpdateWorkspacePageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateWorkspacePageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateWorkspacePageInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWorkspaceTheme provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWorkspaceTheme(ctx context.Context, params *connect.UpdateWorkspaceThemeInput, optFns ...func(*connect.Options)) (*connect.UpdateWorkspaceThemeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWorkspaceTheme")
+	}
+
+	var r0 *connect.UpdateWorkspaceThemeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspaceThemeInput, ...func(*connect.Options)) (*connect.UpdateWorkspaceThemeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspaceThemeInput, ...func(*connect.Options)) *connect.UpdateWorkspaceThemeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateWorkspaceThemeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateWorkspaceThemeInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWorkspaceVisibility provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWorkspaceVisibility(ctx context.Context, params *connect.UpdateWorkspaceVisibilityInput, optFns ...func(*connect.Options)) (*connect.UpdateWorkspaceVisibilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWorkspaceVisibility")
+	}
+
+	var r0 *connect.UpdateWorkspaceVisibilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspaceVisibilityInput, ...func(*connect.Options)) (*connect.UpdateWorkspaceVisibilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateWorkspaceVisibilityInput, ...func(*connect.Options)) *connect.UpdateWorkspaceVisibilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateWorkspaceVisibilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateWorkspaceVisibilityInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

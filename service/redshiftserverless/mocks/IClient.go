@@ -828,6 +828,43 @@ func (_m *IClient) GetEndpointAccess(ctx context.Context, params *redshiftserver
 	return r0, r1
 }
 
+// GetIdentityCenterAuthToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIdentityCenterAuthToken(ctx context.Context, params *redshiftserverless.GetIdentityCenterAuthTokenInput, optFns ...func(*redshiftserverless.Options)) (*redshiftserverless.GetIdentityCenterAuthTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIdentityCenterAuthToken")
+	}
+
+	var r0 *redshiftserverless.GetIdentityCenterAuthTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftserverless.GetIdentityCenterAuthTokenInput, ...func(*redshiftserverless.Options)) (*redshiftserverless.GetIdentityCenterAuthTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshiftserverless.GetIdentityCenterAuthTokenInput, ...func(*redshiftserverless.Options)) *redshiftserverless.GetIdentityCenterAuthTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshiftserverless.GetIdentityCenterAuthTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshiftserverless.GetIdentityCenterAuthTokenInput, ...func(*redshiftserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetNamespace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetNamespace(ctx context.Context, params *redshiftserverless.GetNamespaceInput, optFns ...func(*redshiftserverless.Options)) (*redshiftserverless.GetNamespaceOutput, error) {
 	_va := make([]interface{}, len(optFns))

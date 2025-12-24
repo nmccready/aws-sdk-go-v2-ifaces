@@ -51,6 +51,80 @@ func (_m *IClient) CreateCentralizationRuleForOrganization(ctx context.Context, 
 	return r0, r1
 }
 
+// CreateS3TableIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateS3TableIntegration(ctx context.Context, params *observabilityadmin.CreateS3TableIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateS3TableIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateS3TableIntegration")
+	}
+
+	var r0 *observabilityadmin.CreateS3TableIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateS3TableIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateS3TableIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateS3TableIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.CreateS3TableIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.CreateS3TableIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.CreateS3TableIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateTelemetryPipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTelemetryPipeline(ctx context.Context, params *observabilityadmin.CreateTelemetryPipelineInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateTelemetryPipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTelemetryPipeline")
+	}
+
+	var r0 *observabilityadmin.CreateTelemetryPipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateTelemetryPipelineInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateTelemetryPipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateTelemetryPipelineInput, ...func(*observabilityadmin.Options)) *observabilityadmin.CreateTelemetryPipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.CreateTelemetryPipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.CreateTelemetryPipelineInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTelemetryRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTelemetryRule(ctx context.Context, params *observabilityadmin.CreateTelemetryRuleInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateTelemetryRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +228,80 @@ func (_m *IClient) DeleteCentralizationRuleForOrganization(ctx context.Context, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.DeleteCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteS3TableIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteS3TableIntegration(ctx context.Context, params *observabilityadmin.DeleteS3TableIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteS3TableIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteS3TableIntegration")
+	}
+
+	var r0 *observabilityadmin.DeleteS3TableIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteS3TableIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteS3TableIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteS3TableIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.DeleteS3TableIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.DeleteS3TableIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.DeleteS3TableIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTelemetryPipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTelemetryPipeline(ctx context.Context, params *observabilityadmin.DeleteTelemetryPipelineInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteTelemetryPipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTelemetryPipeline")
+	}
+
+	var r0 *observabilityadmin.DeleteTelemetryPipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteTelemetryPipelineInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteTelemetryPipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteTelemetryPipelineInput, ...func(*observabilityadmin.Options)) *observabilityadmin.DeleteTelemetryPipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.DeleteTelemetryPipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.DeleteTelemetryPipelineInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -273,6 +421,43 @@ func (_m *IClient) GetCentralizationRuleForOrganization(ctx context.Context, par
 	return r0, r1
 }
 
+// GetS3TableIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetS3TableIntegration(ctx context.Context, params *observabilityadmin.GetS3TableIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.GetS3TableIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetS3TableIntegration")
+	}
+
+	var r0 *observabilityadmin.GetS3TableIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetS3TableIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.GetS3TableIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetS3TableIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.GetS3TableIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.GetS3TableIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetS3TableIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTelemetryEnrichmentStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTelemetryEnrichmentStatus(ctx context.Context, params *observabilityadmin.GetTelemetryEnrichmentStatusInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.GetTelemetryEnrichmentStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -376,6 +561,43 @@ func (_m *IClient) GetTelemetryEvaluationStatusForOrganization(ctx context.Conte
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetTelemetryEvaluationStatusForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTelemetryPipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTelemetryPipeline(ctx context.Context, params *observabilityadmin.GetTelemetryPipelineInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.GetTelemetryPipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTelemetryPipeline")
+	}
+
+	var r0 *observabilityadmin.GetTelemetryPipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetTelemetryPipelineInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.GetTelemetryPipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetTelemetryPipelineInput, ...func(*observabilityadmin.Options)) *observabilityadmin.GetTelemetryPipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.GetTelemetryPipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetTelemetryPipelineInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -569,6 +791,43 @@ func (_m *IClient) ListResourceTelemetryForOrganization(ctx context.Context, par
 	return r0, r1
 }
 
+// ListS3TableIntegrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListS3TableIntegrations(ctx context.Context, params *observabilityadmin.ListS3TableIntegrationsInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.ListS3TableIntegrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListS3TableIntegrations")
+	}
+
+	var r0 *observabilityadmin.ListS3TableIntegrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListS3TableIntegrationsInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.ListS3TableIntegrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListS3TableIntegrationsInput, ...func(*observabilityadmin.Options)) *observabilityadmin.ListS3TableIntegrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.ListS3TableIntegrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ListS3TableIntegrationsInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *observabilityadmin.ListTagsForResourceInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -598,6 +857,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *observabilit
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ListTagsForResourceInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTelemetryPipelines provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTelemetryPipelines(ctx context.Context, params *observabilityadmin.ListTelemetryPipelinesInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.ListTelemetryPipelinesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTelemetryPipelines")
+	}
+
+	var r0 *observabilityadmin.ListTelemetryPipelinesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListTelemetryPipelinesInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.ListTelemetryPipelinesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListTelemetryPipelinesInput, ...func(*observabilityadmin.Options)) *observabilityadmin.ListTelemetryPipelinesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.ListTelemetryPipelinesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ListTelemetryPipelinesInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -957,6 +1253,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *observabilityadmin.T
 	return r0, r1
 }
 
+// TestTelemetryPipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TestTelemetryPipeline(ctx context.Context, params *observabilityadmin.TestTelemetryPipelineInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.TestTelemetryPipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TestTelemetryPipeline")
+	}
+
+	var r0 *observabilityadmin.TestTelemetryPipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.TestTelemetryPipelineInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.TestTelemetryPipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.TestTelemetryPipelineInput, ...func(*observabilityadmin.Options)) *observabilityadmin.TestTelemetryPipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.TestTelemetryPipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.TestTelemetryPipelineInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UntagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UntagResource(ctx context.Context, params *observabilityadmin.UntagResourceInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.UntagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1031,6 +1364,43 @@ func (_m *IClient) UpdateCentralizationRuleForOrganization(ctx context.Context, 
 	return r0, r1
 }
 
+// UpdateTelemetryPipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTelemetryPipeline(ctx context.Context, params *observabilityadmin.UpdateTelemetryPipelineInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateTelemetryPipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTelemetryPipeline")
+	}
+
+	var r0 *observabilityadmin.UpdateTelemetryPipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.UpdateTelemetryPipelineInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateTelemetryPipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.UpdateTelemetryPipelineInput, ...func(*observabilityadmin.Options)) *observabilityadmin.UpdateTelemetryPipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.UpdateTelemetryPipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.UpdateTelemetryPipelineInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateTelemetryRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateTelemetryRule(ctx context.Context, params *observabilityadmin.UpdateTelemetryRuleInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateTelemetryRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1097,6 +1467,43 @@ func (_m *IClient) UpdateTelemetryRuleForOrganization(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.UpdateTelemetryRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ValidateTelemetryPipelineConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ValidateTelemetryPipelineConfiguration(ctx context.Context, params *observabilityadmin.ValidateTelemetryPipelineConfigurationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.ValidateTelemetryPipelineConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ValidateTelemetryPipelineConfiguration")
+	}
+
+	var r0 *observabilityadmin.ValidateTelemetryPipelineConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ValidateTelemetryPipelineConfigurationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.ValidateTelemetryPipelineConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ValidateTelemetryPipelineConfigurationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.ValidateTelemetryPipelineConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.ValidateTelemetryPipelineConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ValidateTelemetryPipelineConfigurationInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

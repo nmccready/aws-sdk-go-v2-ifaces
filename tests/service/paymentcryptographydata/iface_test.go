@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGenerateAs2805KekValidation", func(t *testing.T) {
+        input := &paymentcryptographydata.GenerateAs2805KekValidationInput{}
+        output := &paymentcryptographydata.GenerateAs2805KekValidationOutput{}
+
+        mockClient.On("GenerateAs2805KekValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateAs2805KekValidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGenerateCardValidationData", func(t *testing.T) {
         input := &paymentcryptographydata.GenerateCardValidationDataInput{}
         output := &paymentcryptographydata.GenerateCardValidationDataOutput{}

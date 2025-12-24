@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCapability", func(t *testing.T) {
+        input := &eks.CreateCapabilityInput{}
+        output := &eks.CreateCapabilityOutput{}
+
+        mockClient.On("CreateCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCapability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCluster", func(t *testing.T) {
         input := &eks.CreateClusterInput{}
         output := &eks.CreateClusterOutput{}
@@ -184,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAddon", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAddon(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCapability", func(t *testing.T) {
+        input := &eks.DeleteCapabilityInput{}
+        output := &eks.DeleteCapabilityOutput{}
+
+        mockClient.On("DeleteCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCapability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -314,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAddonVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAddonVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCapability", func(t *testing.T) {
+        input := &eks.DescribeCapabilityInput{}
+        output := &eks.DescribeCapabilityOutput{}
+
+        mockClient.On("DescribeCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCapabilities", func(t *testing.T) {
+        input := &eks.ListCapabilitiesInput{}
+        output := &eks.ListCapabilitiesOutput{}
+
+        mockClient.On("ListCapabilities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCapabilities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListClusters", func(t *testing.T) {
         input := &eks.ListClustersInput{}
         output := &eks.ListClustersOutput{}
@@ -717,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAddon", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAddon(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCapability", func(t *testing.T) {
+        input := &eks.UpdateCapabilityInput{}
+        output := &eks.UpdateCapabilityOutput{}
+
+        mockClient.On("UpdateCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCapability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

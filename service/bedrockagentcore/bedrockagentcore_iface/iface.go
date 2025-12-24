@@ -17,6 +17,7 @@ type IClient interface {
  CreateEvent(ctx context.Context, params *CreateEventInput, optFns ...func(*Options)) (*CreateEventOutput, error) 
  DeleteEvent(ctx context.Context, params *DeleteEventInput, optFns ...func(*Options)) (*DeleteEventOutput, error) 
  DeleteMemoryRecord(ctx context.Context, params *DeleteMemoryRecordInput, optFns ...func(*Options)) (*DeleteMemoryRecordOutput, error) 
+ Evaluate(ctx context.Context, params *EvaluateInput, optFns ...func(*Options)) (*EvaluateOutput, error) 
  GetAgentCard(ctx context.Context, params *GetAgentCardInput, optFns ...func(*Options)) (*GetAgentCardOutput, error) 
  GetBrowserSession(ctx context.Context, params *GetBrowserSessionInput, optFns ...func(*Options)) (*GetBrowserSessionOutput, error) 
  GetCodeInterpreterSession(ctx context.Context, params *GetCodeInterpreterSessionInput, optFns ...func(*Options)) (*GetCodeInterpreterSessionOutput, error) 

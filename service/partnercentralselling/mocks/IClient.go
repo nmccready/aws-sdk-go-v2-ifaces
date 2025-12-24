@@ -162,6 +162,43 @@ func (_m *IClient) CreateEngagement(ctx context.Context, params *partnercentrals
 	return r0, r1
 }
 
+// CreateEngagementContext provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEngagementContext(ctx context.Context, params *partnercentralselling.CreateEngagementContextInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.CreateEngagementContextOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEngagementContext")
+	}
+
+	var r0 *partnercentralselling.CreateEngagementContextOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.CreateEngagementContextInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.CreateEngagementContextOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.CreateEngagementContextInput, ...func(*partnercentralselling.Options)) *partnercentralselling.CreateEngagementContextOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.CreateEngagementContextOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.CreateEngagementContextInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEngagementInvitation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEngagementInvitation(ctx context.Context, params *partnercentralselling.CreateEngagementInvitationInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.CreateEngagementInvitationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -902,6 +939,43 @@ func (_m *IClient) ListOpportunities(ctx context.Context, params *partnercentral
 	return r0, r1
 }
 
+// ListOpportunityFromEngagementTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOpportunityFromEngagementTasks(ctx context.Context, params *partnercentralselling.ListOpportunityFromEngagementTasksInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListOpportunityFromEngagementTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOpportunityFromEngagementTasks")
+	}
+
+	var r0 *partnercentralselling.ListOpportunityFromEngagementTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListOpportunityFromEngagementTasksInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListOpportunityFromEngagementTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListOpportunityFromEngagementTasksInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListOpportunityFromEngagementTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListOpportunityFromEngagementTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListOpportunityFromEngagementTasksInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListResourceSnapshotJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListResourceSnapshotJobs(ctx context.Context, params *partnercentralselling.ListResourceSnapshotJobsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListResourceSnapshotJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1216,6 +1290,43 @@ func (_m *IClient) StartEngagementFromOpportunityTask(ctx context.Context, param
 	return r0, r1
 }
 
+// StartOpportunityFromEngagementTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartOpportunityFromEngagementTask(ctx context.Context, params *partnercentralselling.StartOpportunityFromEngagementTaskInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.StartOpportunityFromEngagementTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartOpportunityFromEngagementTask")
+	}
+
+	var r0 *partnercentralselling.StartOpportunityFromEngagementTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartOpportunityFromEngagementTaskInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.StartOpportunityFromEngagementTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartOpportunityFromEngagementTaskInput, ...func(*partnercentralselling.Options)) *partnercentralselling.StartOpportunityFromEngagementTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.StartOpportunityFromEngagementTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.StartOpportunityFromEngagementTaskInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartResourceSnapshotJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartResourceSnapshotJob(ctx context.Context, params *partnercentralselling.StartResourceSnapshotJobInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.StartResourceSnapshotJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1393,6 +1504,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *partnercentralsell
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.UntagResourceInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateEngagementContext provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEngagementContext(ctx context.Context, params *partnercentralselling.UpdateEngagementContextInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.UpdateEngagementContextOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEngagementContext")
+	}
+
+	var r0 *partnercentralselling.UpdateEngagementContextOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.UpdateEngagementContextInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.UpdateEngagementContextOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.UpdateEngagementContextInput, ...func(*partnercentralselling.Options)) *partnercentralselling.UpdateEngagementContextOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.UpdateEngagementContextOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.UpdateEngagementContextInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

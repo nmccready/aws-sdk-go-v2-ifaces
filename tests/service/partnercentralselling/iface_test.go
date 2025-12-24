@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateEngagementContext", func(t *testing.T) {
+        input := &partnercentralselling.CreateEngagementContextInput{}
+        output := &partnercentralselling.CreateEngagementContextOutput{}
+
+        mockClient.On("CreateEngagementContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEngagementContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEngagementInvitation", func(t *testing.T) {
         input := &partnercentralselling.CreateEngagementInvitationInput{}
         output := &partnercentralselling.CreateEngagementInvitationOutput{}
@@ -346,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListOpportunityFromEngagementTasks", func(t *testing.T) {
+        input := &partnercentralselling.ListOpportunityFromEngagementTasksInput{}
+        output := &partnercentralselling.ListOpportunityFromEngagementTasksOutput{}
+
+        mockClient.On("ListOpportunityFromEngagementTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOpportunityFromEngagementTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListResourceSnapshotJobs", func(t *testing.T) {
         input := &partnercentralselling.ListResourceSnapshotJobsInput{}
         output := &partnercentralselling.ListResourceSnapshotJobsOutput{}
@@ -450,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartOpportunityFromEngagementTask", func(t *testing.T) {
+        input := &partnercentralselling.StartOpportunityFromEngagementTaskInput{}
+        output := &partnercentralselling.StartOpportunityFromEngagementTaskOutput{}
+
+        mockClient.On("StartOpportunityFromEngagementTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOpportunityFromEngagementTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartResourceSnapshotJob", func(t *testing.T) {
         input := &partnercentralselling.StartResourceSnapshotJobInput{}
         output := &partnercentralselling.StartResourceSnapshotJobOutput{}
@@ -509,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateEngagementContext", func(t *testing.T) {
+        input := &partnercentralselling.UpdateEngagementContextInput{}
+        output := &partnercentralselling.UpdateEngagementContextOutput{}
+
+        mockClient.On("UpdateEngagementContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEngagementContext(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

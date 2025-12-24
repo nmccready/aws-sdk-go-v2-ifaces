@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIdentityCenterAuthToken", func(t *testing.T) {
+        input := &redshiftserverless.GetIdentityCenterAuthTokenInput{}
+        output := &redshiftserverless.GetIdentityCenterAuthTokenOutput{}
+
+        mockClient.On("GetIdentityCenterAuthToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIdentityCenterAuthToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetNamespace", func(t *testing.T) {
         input := &redshiftserverless.GetNamespaceInput{}
         output := &redshiftserverless.GetNamespaceOutput{}

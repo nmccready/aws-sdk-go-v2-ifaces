@@ -44,6 +44,7 @@ type IClient interface {
  ListCostAllocationTagBackfillHistory(ctx context.Context, params *ListCostAllocationTagBackfillHistoryInput, optFns ...func(*Options)) (*ListCostAllocationTagBackfillHistoryOutput, error) 
  ListCostAllocationTags(ctx context.Context, params *ListCostAllocationTagsInput, optFns ...func(*Options)) (*ListCostAllocationTagsOutput, error) 
  ListCostCategoryDefinitions(ctx context.Context, params *ListCostCategoryDefinitionsInput, optFns ...func(*Options)) (*ListCostCategoryDefinitionsOutput, error) 
+ ListCostCategoryResourceAssociations(ctx context.Context, params *ListCostCategoryResourceAssociationsInput, optFns ...func(*Options)) (*ListCostCategoryResourceAssociationsOutput, error) 
  ListSavingsPlansPurchaseRecommendationGeneration(ctx context.Context, params *ListSavingsPlansPurchaseRecommendationGenerationInput, optFns ...func(*Options)) (*ListSavingsPlansPurchaseRecommendationGenerationOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ProvideAnomalyFeedback(ctx context.Context, params *ProvideAnomalyFeedbackInput, optFns ...func(*Options)) (*ProvideAnomalyFeedbackOutput, error) 

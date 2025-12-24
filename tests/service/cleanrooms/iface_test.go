@@ -1022,6 +1022,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCollaborationChangeRequest", func(t *testing.T) {
+        input := &cleanrooms.UpdateCollaborationChangeRequestInput{}
+        output := &cleanrooms.UpdateCollaborationChangeRequestOutput{}
+
+        mockClient.On("UpdateCollaborationChangeRequest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCollaborationChangeRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateConfiguredAudienceModelAssociation", func(t *testing.T) {
         input := &cleanrooms.UpdateConfiguredAudienceModelAssociationInput{}
         output := &cleanrooms.UpdateConfiguredAudienceModelAssociationOutput{}

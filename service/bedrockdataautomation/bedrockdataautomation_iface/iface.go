@@ -10,13 +10,16 @@ import (
 // IClient defines the interface for bedrockdataautomation
 type IClient interface {
  Options() Options 
+ CopyBlueprintStage(ctx context.Context, params *CopyBlueprintStageInput, optFns ...func(*Options)) (*CopyBlueprintStageOutput, error) 
  CreateBlueprint(ctx context.Context, params *CreateBlueprintInput, optFns ...func(*Options)) (*CreateBlueprintOutput, error) 
  CreateBlueprintVersion(ctx context.Context, params *CreateBlueprintVersionInput, optFns ...func(*Options)) (*CreateBlueprintVersionOutput, error) 
  CreateDataAutomationProject(ctx context.Context, params *CreateDataAutomationProjectInput, optFns ...func(*Options)) (*CreateDataAutomationProjectOutput, error) 
  DeleteBlueprint(ctx context.Context, params *DeleteBlueprintInput, optFns ...func(*Options)) (*DeleteBlueprintOutput, error) 
  DeleteDataAutomationProject(ctx context.Context, params *DeleteDataAutomationProjectInput, optFns ...func(*Options)) (*DeleteDataAutomationProjectOutput, error) 
  GetBlueprint(ctx context.Context, params *GetBlueprintInput, optFns ...func(*Options)) (*GetBlueprintOutput, error) 
+ GetBlueprintOptimizationStatus(ctx context.Context, params *GetBlueprintOptimizationStatusInput, optFns ...func(*Options)) (*GetBlueprintOptimizationStatusOutput, error) 
  GetDataAutomationProject(ctx context.Context, params *GetDataAutomationProjectInput, optFns ...func(*Options)) (*GetDataAutomationProjectOutput, error) 
+ InvokeBlueprintOptimizationAsync(ctx context.Context, params *InvokeBlueprintOptimizationAsyncInput, optFns ...func(*Options)) (*InvokeBlueprintOptimizationAsyncOutput, error) 
  ListBlueprints(ctx context.Context, params *ListBlueprintsInput, optFns ...func(*Options)) (*ListBlueprintsOutput, error) 
  ListDataAutomationProjects(ctx context.Context, params *ListDataAutomationProjectsInput, optFns ...func(*Options)) (*ListDataAutomationProjectsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 

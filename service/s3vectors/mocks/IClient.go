@@ -421,6 +421,43 @@ func (_m *IClient) ListIndexes(ctx context.Context, params *s3vectors.ListIndexe
 	return r0, r1
 }
 
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *s3vectors.ListTagsForResourceInput, optFns ...func(*s3vectors.Options)) (*s3vectors.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *s3vectors.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.ListTagsForResourceInput, ...func(*s3vectors.Options)) (*s3vectors.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.ListTagsForResourceInput, ...func(*s3vectors.Options)) *s3vectors.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3vectors.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.ListTagsForResourceInput, ...func(*s3vectors.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListVectorBuckets provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListVectorBuckets(ctx context.Context, params *s3vectors.ListVectorBucketsInput, optFns ...func(*s3vectors.Options)) (*s3vectors.ListVectorBucketsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -616,6 +653,80 @@ func (_m *IClient) QueryVectors(ctx context.Context, params *s3vectors.QueryVect
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.QueryVectorsInput, ...func(*s3vectors.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *s3vectors.TagResourceInput, optFns ...func(*s3vectors.Options)) (*s3vectors.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *s3vectors.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.TagResourceInput, ...func(*s3vectors.Options)) (*s3vectors.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.TagResourceInput, ...func(*s3vectors.Options)) *s3vectors.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3vectors.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.TagResourceInput, ...func(*s3vectors.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *s3vectors.UntagResourceInput, optFns ...func(*s3vectors.Options)) (*s3vectors.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *s3vectors.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.UntagResourceInput, ...func(*s3vectors.Options)) (*s3vectors.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.UntagResourceInput, ...func(*s3vectors.Options)) *s3vectors.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3vectors.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.UntagResourceInput, ...func(*s3vectors.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

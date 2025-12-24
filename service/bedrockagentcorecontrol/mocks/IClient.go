@@ -200,6 +200,43 @@ func (_m *IClient) CreateCodeInterpreter(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// CreateEvaluator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEvaluator(ctx context.Context, params *bedrockagentcorecontrol.CreateEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateEvaluatorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEvaluator")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateEvaluatorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateEvaluatorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateEvaluatorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateEvaluatorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGateway(ctx context.Context, params *bedrockagentcorecontrol.CreateGatewayInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +377,117 @@ func (_m *IClient) CreateOauth2CredentialProvider(ctx context.Context, params *b
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateOauth2CredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateOnlineEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateOnlineEvaluationConfig(ctx context.Context, params *bedrockagentcorecontrol.CreateOnlineEvaluationConfigInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateOnlineEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateOnlineEvaluationConfig")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateOnlineEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateOnlineEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateOnlineEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateOnlineEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePolicy(ctx context.Context, params *bedrockagentcorecontrol.CreatePolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreatePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreatePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreatePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreatePolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePolicyEngine provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePolicyEngine(ctx context.Context, params *bedrockagentcorecontrol.CreatePolicyEngineInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePolicyEngineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePolicyEngine")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreatePolicyEngineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePolicyEngineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreatePolicyEngineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreatePolicyEngineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -570,6 +718,43 @@ func (_m *IClient) DeleteCodeInterpreter(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// DeleteEvaluator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEvaluator(ctx context.Context, params *bedrockagentcorecontrol.DeleteEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteEvaluatorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEvaluator")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteEvaluatorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteEvaluatorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteEvaluatorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteEvaluatorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteGateway(ctx context.Context, params *bedrockagentcorecontrol.DeleteGatewayInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -710,6 +895,154 @@ func (_m *IClient) DeleteOauth2CredentialProvider(ctx context.Context, params *b
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteOauth2CredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteOnlineEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteOnlineEvaluationConfig(ctx context.Context, params *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteOnlineEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteOnlineEvaluationConfig")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteOnlineEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteOnlineEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePolicy(ctx context.Context, params *bedrockagentcorecontrol.DeletePolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeletePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeletePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeletePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePolicyEngine provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePolicyEngine(ctx context.Context, params *bedrockagentcorecontrol.DeletePolicyEngineInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePolicyEngineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePolicyEngine")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeletePolicyEngineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePolicyEngineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeletePolicyEngineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeletePolicyEngineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *bedrockagentcorecontrol.DeleteResourcePolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -940,6 +1273,43 @@ func (_m *IClient) GetCodeInterpreter(ctx context.Context, params *bedrockagentc
 	return r0, r1
 }
 
+// GetEvaluator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEvaluator(ctx context.Context, params *bedrockagentcorecontrol.GetEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetEvaluatorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEvaluator")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetEvaluatorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetEvaluatorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetEvaluatorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetEvaluatorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetGateway(ctx context.Context, params *bedrockagentcorecontrol.GetGatewayInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1080,6 +1450,191 @@ func (_m *IClient) GetOauth2CredentialProvider(ctx context.Context, params *bedr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetOauth2CredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetOnlineEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOnlineEvaluationConfig(ctx context.Context, params *bedrockagentcorecontrol.GetOnlineEvaluationConfigInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetOnlineEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOnlineEvaluationConfig")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetOnlineEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetOnlineEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetOnlineEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetOnlineEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicy(ctx context.Context, params *bedrockagentcorecontrol.GetPolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicyEngine provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicyEngine(ctx context.Context, params *bedrockagentcorecontrol.GetPolicyEngineInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyEngineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicyEngine")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPolicyEngineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyEngineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPolicyEngineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPolicyEngineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicyGeneration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicyGeneration(ctx context.Context, params *bedrockagentcorecontrol.GetPolicyGenerationInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyGenerationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicyGeneration")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPolicyGenerationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyGenerationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPolicyGenerationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPolicyGenerationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *bedrockagentcorecontrol.GetResourcePolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1384,6 +1939,43 @@ func (_m *IClient) ListCodeInterpreters(ctx context.Context, params *bedrockagen
 	return r0, r1
 }
 
+// ListEvaluators provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEvaluators(ctx context.Context, params *bedrockagentcorecontrol.ListEvaluatorsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListEvaluatorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEvaluators")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListEvaluatorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListEvaluatorsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListEvaluatorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListEvaluatorsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListEvaluatorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListEvaluatorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListEvaluatorsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListGatewayTargets provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListGatewayTargets(ctx context.Context, params *bedrockagentcorecontrol.ListGatewayTargetsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListGatewayTargetsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1532,6 +2124,191 @@ func (_m *IClient) ListOauth2CredentialProviders(ctx context.Context, params *be
 	return r0, r1
 }
 
+// ListOnlineEvaluationConfigs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOnlineEvaluationConfigs(ctx context.Context, params *bedrockagentcorecontrol.ListOnlineEvaluationConfigsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListOnlineEvaluationConfigsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOnlineEvaluationConfigs")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListOnlineEvaluationConfigsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListOnlineEvaluationConfigsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListOnlineEvaluationConfigsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListOnlineEvaluationConfigsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListOnlineEvaluationConfigsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListOnlineEvaluationConfigsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListOnlineEvaluationConfigsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicies(ctx context.Context, params *bedrockagentcorecontrol.ListPoliciesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicies")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPoliciesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPoliciesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPoliciesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicyEngines provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyEngines(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyEnginesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyEnginesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyEngines")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPolicyEnginesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyEnginesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyEnginesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyEnginesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPolicyEnginesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPolicyEnginesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicyEnginesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicyGenerationAssets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyGenerationAssets(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyGenerationAssetsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationAssetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyGenerationAssets")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPolicyGenerationAssetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationAssetsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationAssetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationAssetsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPolicyGenerationAssetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPolicyGenerationAssetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationAssetsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicyGenerations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyGenerations(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyGenerationsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyGenerations")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPolicyGenerationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPolicyGenerationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPolicyGenerationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *bedrockagentcorecontrol.ListTagsForResourceInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1624,6 +2401,43 @@ func (_m *IClient) Options() bedrockagentcorecontrol.Options {
 	return r0
 }
 
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *bedrockagentcorecontrol.PutResourcePolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.PutResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.PutResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.PutResourcePolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetTokenVaultCMK provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SetTokenVaultCMK(ctx context.Context, params *bedrockagentcorecontrol.SetTokenVaultCMKInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.SetTokenVaultCMKOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1653,6 +2467,43 @@ func (_m *IClient) SetTokenVaultCMK(ctx context.Context, params *bedrockagentcor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.SetTokenVaultCMKInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartPolicyGeneration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartPolicyGeneration(ctx context.Context, params *bedrockagentcorecontrol.StartPolicyGenerationInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.StartPolicyGenerationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartPolicyGeneration")
+	}
+
+	var r0 *bedrockagentcorecontrol.StartPolicyGenerationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.StartPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.StartPolicyGenerationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.StartPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.StartPolicyGenerationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.StartPolicyGenerationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.StartPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1883,6 +2734,43 @@ func (_m *IClient) UpdateApiKeyCredentialProvider(ctx context.Context, params *b
 	return r0, r1
 }
 
+// UpdateEvaluator provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEvaluator(ctx context.Context, params *bedrockagentcorecontrol.UpdateEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateEvaluatorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEvaluator")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateEvaluatorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateEvaluatorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateEvaluatorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateEvaluatorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateEvaluatorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateGateway(ctx context.Context, params *bedrockagentcorecontrol.UpdateGatewayInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2023,6 +2911,117 @@ func (_m *IClient) UpdateOauth2CredentialProvider(ctx context.Context, params *b
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateOauth2CredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateOnlineEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateOnlineEvaluationConfig(ctx context.Context, params *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateOnlineEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateOnlineEvaluationConfig")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateOnlineEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateOnlineEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePolicy(ctx context.Context, params *bedrockagentcorecontrol.UpdatePolicyInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePolicy")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdatePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdatePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdatePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePolicyEngine provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePolicyEngine(ctx context.Context, params *bedrockagentcorecontrol.UpdatePolicyEngineInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePolicyEngineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePolicyEngine")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdatePolicyEngineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePolicyEngineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdatePolicyEngineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdatePolicyEngineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetQuotaUtilizationReport", func(t *testing.T) {
+        input := &servicequotas.GetQuotaUtilizationReportInput{}
+        output := &servicequotas.GetQuotaUtilizationReportOutput{}
+
+        mockClient.On("GetQuotaUtilizationReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQuotaUtilizationReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRequestedServiceQuotaChange", func(t *testing.T) {
         input := &servicequotas.GetRequestedServiceQuotaChangeInput{}
         output := &servicequotas.GetRequestedServiceQuotaChangeOutput{}
@@ -288,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAutoManagement", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAutoManagement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartQuotaUtilizationReport", func(t *testing.T) {
+        input := &servicequotas.StartQuotaUtilizationReportInput{}
+        output := &servicequotas.StartQuotaUtilizationReportOutput{}
+
+        mockClient.On("StartQuotaUtilizationReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartQuotaUtilizationReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

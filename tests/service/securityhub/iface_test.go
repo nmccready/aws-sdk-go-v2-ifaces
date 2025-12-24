@@ -216,19 +216,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestConnectorRegistrationsV2", func(t *testing.T) {
-        input := &securityhub.ConnectorRegistrationsV2Input{}
-        output := &securityhub.ConnectorRegistrationsV2Output{}
-
-        mockClient.On("ConnectorRegistrationsV2", ctx, input).Return(output, nil)
-
-        result, err := mockClient.ConnectorRegistrationsV2(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestCreateActionTarget", func(t *testing.T) {
         input := &securityhub.CreateActionTargetInput{}
         output := &securityhub.CreateActionTargetOutput{}
@@ -1211,6 +1198,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterConnectorV2", func(t *testing.T) {
+        input := &securityhub.RegisterConnectorV2Input{}
+        output := &securityhub.RegisterConnectorV2Output{}
+
+        mockClient.On("RegisterConnectorV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterConnectorV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

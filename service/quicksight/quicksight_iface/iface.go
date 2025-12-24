@@ -131,6 +131,7 @@ type IClient interface {
  GetDashboardEmbedUrl(ctx context.Context, params *GetDashboardEmbedUrlInput, optFns ...func(*Options)) (*GetDashboardEmbedUrlOutput, error) 
  GetFlowMetadata(ctx context.Context, params *GetFlowMetadataInput, optFns ...func(*Options)) (*GetFlowMetadataOutput, error) 
  GetFlowPermissions(ctx context.Context, params *GetFlowPermissionsInput, optFns ...func(*Options)) (*GetFlowPermissionsOutput, error) 
+ GetIdentityContext(ctx context.Context, params *GetIdentityContextInput, optFns ...func(*Options)) (*GetIdentityContextOutput, error) 
  GetSessionEmbedUrl(ctx context.Context, params *GetSessionEmbedUrlInput, optFns ...func(*Options)) (*GetSessionEmbedUrlOutput, error) 
  ListActionConnectors(ctx context.Context, params *ListActionConnectorsInput, optFns ...func(*Options)) (*ListActionConnectorsOutput, error) 
  ListAnalyses(ctx context.Context, params *ListAnalysesInput, optFns ...func(*Options)) (*ListAnalysesOutput, error) 
