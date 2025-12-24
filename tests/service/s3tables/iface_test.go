@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTableBucketReplication", func(t *testing.T) {
+        input := &s3tables.DeleteTableBucketReplicationInput{}
+        output := &s3tables.DeleteTableBucketReplicationOutput{}
+
+        mockClient.On("DeleteTableBucketReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTableBucketReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTablePolicy", func(t *testing.T) {
         input := &s3tables.DeleteTablePolicyInput{}
         output := &s3tables.DeleteTablePolicyOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTablePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTablePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTableReplication", func(t *testing.T) {
+        input := &s3tables.DeleteTableReplicationInput{}
+        output := &s3tables.DeleteTableReplicationOutput{}
+
+        mockClient.On("DeleteTableReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTableReplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,6 +281,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTableBucketReplication", func(t *testing.T) {
+        input := &s3tables.GetTableBucketReplicationInput{}
+        output := &s3tables.GetTableBucketReplicationOutput{}
+
+        mockClient.On("GetTableBucketReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableBucketReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableBucketStorageClass", func(t *testing.T) {
+        input := &s3tables.GetTableBucketStorageClassInput{}
+        output := &s3tables.GetTableBucketStorageClassOutput{}
+
+        mockClient.On("GetTableBucketStorageClass", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableBucketStorageClass(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTableEncryption", func(t *testing.T) {
         input := &s3tables.GetTableEncryptionInput{}
         output := &s3tables.GetTableEncryptionOutput{}
@@ -314,6 +366,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTablePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTablePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableRecordExpirationConfiguration", func(t *testing.T) {
+        input := &s3tables.GetTableRecordExpirationConfigurationInput{}
+        output := &s3tables.GetTableRecordExpirationConfigurationOutput{}
+
+        mockClient.On("GetTableRecordExpirationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableRecordExpirationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableRecordExpirationJobStatus", func(t *testing.T) {
+        input := &s3tables.GetTableRecordExpirationJobStatusInput{}
+        output := &s3tables.GetTableRecordExpirationJobStatusOutput{}
+
+        mockClient.On("GetTableRecordExpirationJobStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableRecordExpirationJobStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableReplication", func(t *testing.T) {
+        input := &s3tables.GetTableReplicationInput{}
+        output := &s3tables.GetTableReplicationOutput{}
+
+        mockClient.On("GetTableReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableReplicationStatus", func(t *testing.T) {
+        input := &s3tables.GetTableReplicationStatusInput{}
+        output := &s3tables.GetTableReplicationStatusOutput{}
+
+        mockClient.On("GetTableReplicationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableReplicationStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTableStorageClass", func(t *testing.T) {
+        input := &s3tables.GetTableStorageClassInput{}
+        output := &s3tables.GetTableStorageClassOutput{}
+
+        mockClient.On("GetTableStorageClass", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableStorageClass(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +541,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutTableBucketReplication", func(t *testing.T) {
+        input := &s3tables.PutTableBucketReplicationInput{}
+        output := &s3tables.PutTableBucketReplicationOutput{}
+
+        mockClient.On("PutTableBucketReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTableBucketReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTableBucketStorageClass", func(t *testing.T) {
+        input := &s3tables.PutTableBucketStorageClassInput{}
+        output := &s3tables.PutTableBucketStorageClassOutput{}
+
+        mockClient.On("PutTableBucketStorageClass", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTableBucketStorageClass(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutTableMaintenanceConfiguration", func(t *testing.T) {
         input := &s3tables.PutTableMaintenanceConfigurationInput{}
         output := &s3tables.PutTableMaintenanceConfigurationOutput{}
@@ -444,6 +587,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutTablePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutTablePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTableRecordExpirationConfiguration", func(t *testing.T) {
+        input := &s3tables.PutTableRecordExpirationConfigurationInput{}
+        output := &s3tables.PutTableRecordExpirationConfigurationOutput{}
+
+        mockClient.On("PutTableRecordExpirationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTableRecordExpirationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTableReplication", func(t *testing.T) {
+        input := &s3tables.PutTableReplicationInput{}
+        output := &s3tables.PutTableReplicationOutput{}
+
+        mockClient.On("PutTableReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTableReplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

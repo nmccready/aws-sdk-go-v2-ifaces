@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRoute53HealthChecksInRegion", func(t *testing.T) {
+        input := &arcregionswitch.ListRoute53HealthChecksInRegionInput{}
+        output := &arcregionswitch.ListRoute53HealthChecksInRegionOutput{}
+
+        mockClient.On("ListRoute53HealthChecksInRegion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRoute53HealthChecksInRegion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &arcregionswitch.ListTagsForResourceInput{}
         output := &arcregionswitch.ListTagsForResourceOutput{}

@@ -15,6 +15,7 @@ type IClient interface {
  GetReportMetadata(ctx context.Context, params *GetReportMetadataInput, optFns ...func(*Options)) (*GetReportMetadataOutput, error) 
  GetTermForReport(ctx context.Context, params *GetTermForReportInput, optFns ...func(*Options)) (*GetTermForReportOutput, error) 
  ListCustomerAgreements(ctx context.Context, params *ListCustomerAgreementsInput, optFns ...func(*Options)) (*ListCustomerAgreementsOutput, error) 
+ ListReportVersions(ctx context.Context, params *ListReportVersionsInput, optFns ...func(*Options)) (*ListReportVersionsOutput, error) 
  ListReports(ctx context.Context, params *ListReportsInput, optFns ...func(*Options)) (*ListReportsOutput, error) 
  PutAccountSettings(ctx context.Context, params *PutAccountSettingsInput, optFns ...func(*Options)) (*PutAccountSettingsOutput, error) 
 }

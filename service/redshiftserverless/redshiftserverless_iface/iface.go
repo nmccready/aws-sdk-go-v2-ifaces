@@ -32,6 +32,7 @@ type IClient interface {
  GetCredentials(ctx context.Context, params *GetCredentialsInput, optFns ...func(*Options)) (*GetCredentialsOutput, error) 
  GetCustomDomainAssociation(ctx context.Context, params *GetCustomDomainAssociationInput, optFns ...func(*Options)) (*GetCustomDomainAssociationOutput, error) 
  GetEndpointAccess(ctx context.Context, params *GetEndpointAccessInput, optFns ...func(*Options)) (*GetEndpointAccessOutput, error) 
+ GetIdentityCenterAuthToken(ctx context.Context, params *GetIdentityCenterAuthTokenInput, optFns ...func(*Options)) (*GetIdentityCenterAuthTokenOutput, error) 
  GetNamespace(ctx context.Context, params *GetNamespaceInput, optFns ...func(*Options)) (*GetNamespaceOutput, error) 
  GetRecoveryPoint(ctx context.Context, params *GetRecoveryPointInput, optFns ...func(*Options)) (*GetRecoveryPointOutput, error) 
  GetReservation(ctx context.Context, params *GetReservationInput, optFns ...func(*Options)) (*GetReservationOutput, error) 

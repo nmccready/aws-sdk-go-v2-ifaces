@@ -23,6 +23,7 @@ type IClient interface {
  ListPlans(ctx context.Context, params *ListPlansInput, optFns ...func(*Options)) (*ListPlansOutput, error) 
  ListPlansInRegion(ctx context.Context, params *ListPlansInRegionInput, optFns ...func(*Options)) (*ListPlansInRegionOutput, error) 
  ListRoute53HealthChecks(ctx context.Context, params *ListRoute53HealthChecksInput, optFns ...func(*Options)) (*ListRoute53HealthChecksOutput, error) 
+ ListRoute53HealthChecksInRegion(ctx context.Context, params *ListRoute53HealthChecksInRegionInput, optFns ...func(*Options)) (*ListRoute53HealthChecksInRegionOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  StartPlanExecution(ctx context.Context, params *StartPlanExecutionInput, optFns ...func(*Options)) (*StartPlanExecutionOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 

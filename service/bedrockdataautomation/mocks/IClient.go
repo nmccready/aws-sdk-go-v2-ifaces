@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CopyBlueprintStage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CopyBlueprintStage(ctx context.Context, params *bedrockdataautomation.CopyBlueprintStageInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.CopyBlueprintStageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CopyBlueprintStage")
+	}
+
+	var r0 *bedrockdataautomation.CopyBlueprintStageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.CopyBlueprintStageInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.CopyBlueprintStageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.CopyBlueprintStageInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.CopyBlueprintStageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.CopyBlueprintStageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.CopyBlueprintStageInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBlueprint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBlueprint(ctx context.Context, params *bedrockdataautomation.CreateBlueprintInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.CreateBlueprintOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -237,6 +274,43 @@ func (_m *IClient) GetBlueprint(ctx context.Context, params *bedrockdataautomati
 	return r0, r1
 }
 
+// GetBlueprintOptimizationStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBlueprintOptimizationStatus(ctx context.Context, params *bedrockdataautomation.GetBlueprintOptimizationStatusInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetBlueprintOptimizationStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBlueprintOptimizationStatus")
+	}
+
+	var r0 *bedrockdataautomation.GetBlueprintOptimizationStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetBlueprintOptimizationStatusInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetBlueprintOptimizationStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetBlueprintOptimizationStatusInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.GetBlueprintOptimizationStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.GetBlueprintOptimizationStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.GetBlueprintOptimizationStatusInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataAutomationProject provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataAutomationProject(ctx context.Context, params *bedrockdataautomation.GetDataAutomationProjectInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationProjectOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +340,43 @@ func (_m *IClient) GetDataAutomationProject(ctx context.Context, params *bedrock
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.GetDataAutomationProjectInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// InvokeBlueprintOptimizationAsync provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeBlueprintOptimizationAsync(ctx context.Context, params *bedrockdataautomation.InvokeBlueprintOptimizationAsyncInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.InvokeBlueprintOptimizationAsyncOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeBlueprintOptimizationAsync")
+	}
+
+	var r0 *bedrockdataautomation.InvokeBlueprintOptimizationAsyncOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.InvokeBlueprintOptimizationAsyncInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.InvokeBlueprintOptimizationAsyncOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.InvokeBlueprintOptimizationAsyncInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.InvokeBlueprintOptimizationAsyncOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.InvokeBlueprintOptimizationAsyncOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.InvokeBlueprintOptimizationAsyncInput, ...func(*bedrockdataautomation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -203,6 +203,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRebootDbCluster", func(t *testing.T) {
+        input := &timestreaminfluxdb.RebootDbClusterInput{}
+        output := &timestreaminfluxdb.RebootDbClusterOutput{}
+
+        mockClient.On("RebootDbCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RebootDbCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRebootDbInstance", func(t *testing.T) {
+        input := &timestreaminfluxdb.RebootDbInstanceInput{}
+        output := &timestreaminfluxdb.RebootDbInstanceOutput{}
+
+        mockClient.On("RebootDbInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RebootDbInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &timestreaminfluxdb.TagResourceInput{}
         output := &timestreaminfluxdb.TagResourceOutput{}

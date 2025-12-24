@@ -273,6 +273,43 @@ func (_m *IClient) GetAutoManagementConfiguration(ctx context.Context, params *s
 	return r0, r1
 }
 
+// GetQuotaUtilizationReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQuotaUtilizationReport(ctx context.Context, params *servicequotas.GetQuotaUtilizationReportInput, optFns ...func(*servicequotas.Options)) (*servicequotas.GetQuotaUtilizationReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQuotaUtilizationReport")
+	}
+
+	var r0 *servicequotas.GetQuotaUtilizationReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *servicequotas.GetQuotaUtilizationReportInput, ...func(*servicequotas.Options)) (*servicequotas.GetQuotaUtilizationReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *servicequotas.GetQuotaUtilizationReportInput, ...func(*servicequotas.Options)) *servicequotas.GetQuotaUtilizationReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*servicequotas.GetQuotaUtilizationReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *servicequotas.GetQuotaUtilizationReportInput, ...func(*servicequotas.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRequestedServiceQuotaChange provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRequestedServiceQuotaChange(ctx context.Context, params *servicequotas.GetRequestedServiceQuotaChangeInput, optFns ...func(*servicequotas.Options)) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -764,6 +801,43 @@ func (_m *IClient) StartAutoManagement(ctx context.Context, params *servicequota
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *servicequotas.StartAutoManagementInput, ...func(*servicequotas.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartQuotaUtilizationReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartQuotaUtilizationReport(ctx context.Context, params *servicequotas.StartQuotaUtilizationReportInput, optFns ...func(*servicequotas.Options)) (*servicequotas.StartQuotaUtilizationReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartQuotaUtilizationReport")
+	}
+
+	var r0 *servicequotas.StartQuotaUtilizationReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *servicequotas.StartQuotaUtilizationReportInput, ...func(*servicequotas.Options)) (*servicequotas.StartQuotaUtilizationReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *servicequotas.StartQuotaUtilizationReportInput, ...func(*servicequotas.Options)) *servicequotas.StartQuotaUtilizationReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*servicequotas.StartQuotaUtilizationReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *servicequotas.StartQuotaUtilizationReportInput, ...func(*servicequotas.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -12,6 +12,7 @@ type IClient interface {
  Options() Options 
  DecryptData(ctx context.Context, params *DecryptDataInput, optFns ...func(*Options)) (*DecryptDataOutput, error) 
  EncryptData(ctx context.Context, params *EncryptDataInput, optFns ...func(*Options)) (*EncryptDataOutput, error) 
+ GenerateAs2805KekValidation(ctx context.Context, params *GenerateAs2805KekValidationInput, optFns ...func(*Options)) (*GenerateAs2805KekValidationOutput, error) 
  GenerateCardValidationData(ctx context.Context, params *GenerateCardValidationDataInput, optFns ...func(*Options)) (*GenerateCardValidationDataOutput, error) 
  GenerateMac(ctx context.Context, params *GenerateMacInput, optFns ...func(*Options)) (*GenerateMacOutput, error) 
  GenerateMacEmvPinChange(ctx context.Context, params *GenerateMacEmvPinChangeInput, optFns ...func(*Options)) (*GenerateMacEmvPinChangeOutput, error) 

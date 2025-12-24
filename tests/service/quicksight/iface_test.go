@@ -1607,6 +1607,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIdentityContext", func(t *testing.T) {
+        input := &quicksight.GetIdentityContextInput{}
+        output := &quicksight.GetIdentityContextOutput{}
+
+        mockClient.On("GetIdentityContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIdentityContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSessionEmbedUrl", func(t *testing.T) {
         input := &quicksight.GetSessionEmbedUrlInput{}
         output := &quicksight.GetSessionEmbedUrlOutput{}

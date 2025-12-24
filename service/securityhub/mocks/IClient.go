@@ -532,43 +532,6 @@ func (_m *IClient) BatchUpdateStandardsControlAssociations(ctx context.Context, 
 	return r0, r1
 }
 
-// ConnectorRegistrationsV2 provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) ConnectorRegistrationsV2(ctx context.Context, params *securityhub.ConnectorRegistrationsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ConnectorRegistrationsV2Output, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for ConnectorRegistrationsV2")
-	}
-
-	var r0 *securityhub.ConnectorRegistrationsV2Output
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ConnectorRegistrationsV2Input, ...func(*securityhub.Options)) (*securityhub.ConnectorRegistrationsV2Output, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ConnectorRegistrationsV2Input, ...func(*securityhub.Options)) *securityhub.ConnectorRegistrationsV2Output); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*securityhub.ConnectorRegistrationsV2Output)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ConnectorRegistrationsV2Input, ...func(*securityhub.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
 // CreateActionTarget provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateActionTarget(ctx context.Context, params *securityhub.CreateActionTargetInput, optFns ...func(*securityhub.Options)) (*securityhub.CreateActionTargetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3397,6 +3360,43 @@ func (_m *IClient) Options() securityhub.Options {
 	}
 
 	return r0
+}
+
+// RegisterConnectorV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterConnectorV2(ctx context.Context, params *securityhub.RegisterConnectorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.RegisterConnectorV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterConnectorV2")
+	}
+
+	var r0 *securityhub.RegisterConnectorV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.RegisterConnectorV2Input, ...func(*securityhub.Options)) (*securityhub.RegisterConnectorV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.RegisterConnectorV2Input, ...func(*securityhub.Options)) *securityhub.RegisterConnectorV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.RegisterConnectorV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.RegisterConnectorV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartConfigurationPolicyAssociation provides a mock function with given fields: ctx, params, optFns

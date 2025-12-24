@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateSecurityProfiles", func(t *testing.T) {
+        input := &connect.AssociateSecurityProfilesInput{}
+        output := &connect.AssociateSecurityProfilesOutput{}
+
+        mockClient.On("AssociateSecurityProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateSecurityProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateTrafficDistributionGroupUser", func(t *testing.T) {
         input := &connect.AssociateTrafficDistributionGroupUserInput{}
         output := &connect.AssociateTrafficDistributionGroupUserOutput{}
@@ -255,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateWorkspace", func(t *testing.T) {
+        input := &connect.AssociateWorkspaceInput{}
+        output := &connect.AssociateWorkspaceOutput{}
+
+        mockClient.On("AssociateWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchAssociateAnalyticsDataSet", func(t *testing.T) {
         input := &connect.BatchAssociateAnalyticsDataSetInput{}
         output := &connect.BatchAssociateAnalyticsDataSetOutput{}
@@ -262,6 +288,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchAssociateAnalyticsDataSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchAssociateAnalyticsDataSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchCreateDataTableValue", func(t *testing.T) {
+        input := &connect.BatchCreateDataTableValueInput{}
+        output := &connect.BatchCreateDataTableValueOutput{}
+
+        mockClient.On("BatchCreateDataTableValue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchCreateDataTableValue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteDataTableValue", func(t *testing.T) {
+        input := &connect.BatchDeleteDataTableValueInput{}
+        output := &connect.BatchDeleteDataTableValueOutput{}
+
+        mockClient.On("BatchDeleteDataTableValue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteDataTableValue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDescribeDataTableValue", func(t *testing.T) {
+        input := &connect.BatchDescribeDataTableValueInput{}
+        output := &connect.BatchDescribeDataTableValueOutput{}
+
+        mockClient.On("BatchDescribeDataTableValue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDescribeDataTableValue(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -314,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchPutContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchPutContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateDataTableValue", func(t *testing.T) {
+        input := &connect.BatchUpdateDataTableValueInput{}
+        output := &connect.BatchUpdateDataTableValueOutput{}
+
+        mockClient.On("BatchUpdateDataTableValue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateDataTableValue(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -431,6 +509,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateContactFlowVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateContactFlowVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataTable", func(t *testing.T) {
+        input := &connect.CreateDataTableInput{}
+        output := &connect.CreateDataTableOutput{}
+
+        mockClient.On("CreateDataTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDataTableAttribute", func(t *testing.T) {
+        input := &connect.CreateDataTableAttributeInput{}
+        output := &connect.CreateDataTableAttributeOutput{}
+
+        mockClient.On("CreateDataTableAttribute", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataTableAttribute(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,6 +853,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWorkspace", func(t *testing.T) {
+        input := &connect.CreateWorkspaceInput{}
+        output := &connect.CreateWorkspaceOutput{}
+
+        mockClient.On("CreateWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWorkspacePage", func(t *testing.T) {
+        input := &connect.CreateWorkspacePageInput{}
+        output := &connect.CreateWorkspacePageOutput{}
+
+        mockClient.On("CreateWorkspacePage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWorkspacePage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeactivateEvaluationForm", func(t *testing.T) {
         input := &connect.DeactivateEvaluationFormInput{}
         output := &connect.DeactivateEvaluationFormOutput{}
@@ -847,6 +977,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteContactFlowVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteContactFlowVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataTable", func(t *testing.T) {
+        input := &connect.DeleteDataTableInput{}
+        output := &connect.DeleteDataTableOutput{}
+
+        mockClient.On("DeleteDataTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataTableAttribute", func(t *testing.T) {
+        input := &connect.DeleteDataTableAttributeInput{}
+        output := &connect.DeleteDataTableAttributeOutput{}
+
+        mockClient.On("DeleteDataTableAttribute", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataTableAttribute(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1139,6 +1295,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteWorkspace", func(t *testing.T) {
+        input := &connect.DeleteWorkspaceInput{}
+        output := &connect.DeleteWorkspaceOutput{}
+
+        mockClient.On("DeleteWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWorkspaceMedia", func(t *testing.T) {
+        input := &connect.DeleteWorkspaceMediaInput{}
+        output := &connect.DeleteWorkspaceMediaOutput{}
+
+        mockClient.On("DeleteWorkspaceMedia", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWorkspaceMedia(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWorkspacePage", func(t *testing.T) {
+        input := &connect.DeleteWorkspacePageInput{}
+        output := &connect.DeleteWorkspacePageOutput{}
+
+        mockClient.On("DeleteWorkspacePage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWorkspacePage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAgentStatus", func(t *testing.T) {
         input := &connect.DescribeAgentStatusInput{}
         output := &connect.DescribeAgentStatusOutput{}
@@ -1224,6 +1419,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeContactFlowModuleAlias", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeContactFlowModuleAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataTable", func(t *testing.T) {
+        input := &connect.DescribeDataTableInput{}
+        output := &connect.DescribeDataTableOutput{}
+
+        mockClient.On("DescribeDataTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataTableAttribute", func(t *testing.T) {
+        input := &connect.DescribeDataTableAttributeInput{}
+        output := &connect.DescribeDataTableAttributeOutput{}
+
+        mockClient.On("DescribeDataTableAttribute", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataTableAttribute(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1503,6 +1724,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeWorkspace", func(t *testing.T) {
+        input := &connect.DescribeWorkspaceInput{}
+        output := &connect.DescribeWorkspaceOutput{}
+
+        mockClient.On("DescribeWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateAnalyticsDataSet", func(t *testing.T) {
         input := &connect.DisassociateAnalyticsDataSetInput{}
         output := &connect.DisassociateAnalyticsDataSetOutput{}
@@ -1659,6 +1893,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateSecurityProfiles", func(t *testing.T) {
+        input := &connect.DisassociateSecurityProfilesInput{}
+        output := &connect.DisassociateSecurityProfilesOutput{}
+
+        mockClient.On("DisassociateSecurityProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateSecurityProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateTrafficDistributionGroupUser", func(t *testing.T) {
         input := &connect.DisassociateTrafficDistributionGroupUserInput{}
         output := &connect.DisassociateTrafficDistributionGroupUserOutput{}
@@ -1685,6 +1932,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateWorkspace", func(t *testing.T) {
+        input := &connect.DisassociateWorkspaceInput{}
+        output := &connect.DisassociateWorkspaceOutput{}
+
+        mockClient.On("DisassociateWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDismissUserContact", func(t *testing.T) {
         input := &connect.DismissUserContactInput{}
         output := &connect.DismissUserContactOutput{}
@@ -1692,6 +1952,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DismissUserContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.DismissUserContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEvaluateDataTableValues", func(t *testing.T) {
+        input := &connect.EvaluateDataTableValuesInput{}
+        output := &connect.EvaluateDataTableValuesOutput{}
+
+        mockClient.On("EvaluateDataTableValues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EvaluateDataTableValues(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1880,6 +2153,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestImportWorkspaceMedia", func(t *testing.T) {
+        input := &connect.ImportWorkspaceMediaInput{}
+        output := &connect.ImportWorkspaceMediaOutput{}
+
+        mockClient.On("ImportWorkspaceMedia", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ImportWorkspaceMedia(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAgentStatuses", func(t *testing.T) {
         input := &connect.ListAgentStatusesInput{}
         output := &connect.ListAgentStatusesOutput{}
@@ -2062,6 +2348,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDataTableAttributes", func(t *testing.T) {
+        input := &connect.ListDataTableAttributesInput{}
+        output := &connect.ListDataTableAttributesOutput{}
+
+        mockClient.On("ListDataTableAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTableAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataTablePrimaryValues", func(t *testing.T) {
+        input := &connect.ListDataTablePrimaryValuesInput{}
+        output := &connect.ListDataTablePrimaryValuesOutput{}
+
+        mockClient.On("ListDataTablePrimaryValues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTablePrimaryValues(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataTableValues", func(t *testing.T) {
+        input := &connect.ListDataTableValuesInput{}
+        output := &connect.ListDataTableValuesOutput{}
+
+        mockClient.On("ListDataTableValues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTableValues(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataTables", func(t *testing.T) {
+        input := &connect.ListDataTablesInput{}
+        output := &connect.ListDataTablesOutput{}
+
+        mockClient.On("ListDataTables", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDefaultVocabularies", func(t *testing.T) {
         input := &connect.ListDefaultVocabulariesInput{}
         output := &connect.ListDefaultVocabulariesOutput{}
@@ -2069,6 +2407,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDefaultVocabularies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDefaultVocabularies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEntitySecurityProfiles", func(t *testing.T) {
+        input := &connect.ListEntitySecurityProfilesInput{}
+        output := &connect.ListEntitySecurityProfilesOutput{}
+
+        mockClient.On("ListEntitySecurityProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEntitySecurityProfiles(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2400,6 +2751,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSecurityProfileFlowModules", func(t *testing.T) {
+        input := &connect.ListSecurityProfileFlowModulesInput{}
+        output := &connect.ListSecurityProfileFlowModulesOutput{}
+
+        mockClient.On("ListSecurityProfileFlowModules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSecurityProfileFlowModules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListSecurityProfilePermissions", func(t *testing.T) {
         input := &connect.ListSecurityProfilePermissionsInput{}
         output := &connect.ListSecurityProfilePermissionsOutput{}
@@ -2550,6 +2914,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListViews", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkspaceMedia", func(t *testing.T) {
+        input := &connect.ListWorkspaceMediaInput{}
+        output := &connect.ListWorkspaceMediaOutput{}
+
+        mockClient.On("ListWorkspaceMedia", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkspaceMedia(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkspacePages", func(t *testing.T) {
+        input := &connect.ListWorkspacePagesInput{}
+        output := &connect.ListWorkspacePagesOutput{}
+
+        mockClient.On("ListWorkspacePages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkspacePages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkspaces", func(t *testing.T) {
+        input := &connect.ListWorkspacesInput{}
+        output := &connect.ListWorkspacesOutput{}
+
+        mockClient.On("ListWorkspaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkspaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2725,6 +3128,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchDataTables", func(t *testing.T) {
+        input := &connect.SearchDataTablesInput{}
+        output := &connect.SearchDataTablesOutput{}
+
+        mockClient.On("SearchDataTables", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchDataTables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchEmailAddresses", func(t *testing.T) {
         input := &connect.SearchEmailAddressesInput{}
         output := &connect.SearchEmailAddressesOutput{}
@@ -2894,6 +3310,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchViews", func(t *testing.T) {
+        input := &connect.SearchViewsInput{}
+        output := &connect.SearchViewsOutput{}
+
+        mockClient.On("SearchViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchVocabularies", func(t *testing.T) {
         input := &connect.SearchVocabulariesInput{}
         output := &connect.SearchVocabulariesOutput{}
@@ -2901,6 +3330,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchVocabularies", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchVocabularies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchWorkspaceAssociations", func(t *testing.T) {
+        input := &connect.SearchWorkspaceAssociationsInput{}
+        output := &connect.SearchWorkspaceAssociationsOutput{}
+
+        mockClient.On("SearchWorkspaceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchWorkspaceAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchWorkspaces", func(t *testing.T) {
+        input := &connect.SearchWorkspacesInput{}
+        output := &connect.SearchWorkspacesOutput{}
+
+        mockClient.On("SearchWorkspaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchWorkspaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2966,6 +3421,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartContactEvaluation", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartContactEvaluation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartContactMediaProcessing", func(t *testing.T) {
+        input := &connect.StartContactMediaProcessingInput{}
+        output := &connect.StartContactMediaProcessingOutput{}
+
+        mockClient.On("StartContactMediaProcessing", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartContactMediaProcessing(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3096,6 +3564,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopContactMediaProcessing", func(t *testing.T) {
+        input := &connect.StopContactMediaProcessingInput{}
+        output := &connect.StopContactMediaProcessingOutput{}
+
+        mockClient.On("StopContactMediaProcessing", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopContactMediaProcessing(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3382,6 +3863,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateContactSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateContactSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataTableAttribute", func(t *testing.T) {
+        input := &connect.UpdateDataTableAttributeInput{}
+        output := &connect.UpdateDataTableAttributeOutput{}
+
+        mockClient.On("UpdateDataTableAttribute", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataTableAttribute(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataTableMetadata", func(t *testing.T) {
+        input := &connect.UpdateDataTableMetadataInput{}
+        output := &connect.UpdateDataTableMetadataOutput{}
+
+        mockClient.On("UpdateDataTableMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataTableMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataTablePrimaryValues", func(t *testing.T) {
+        input := &connect.UpdateDataTablePrimaryValuesInput{}
+        output := &connect.UpdateDataTablePrimaryValuesOutput{}
+
+        mockClient.On("UpdateDataTablePrimaryValues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataTablePrimaryValues(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3889,6 +4409,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateViewMetadata", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateViewMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkspaceMetadata", func(t *testing.T) {
+        input := &connect.UpdateWorkspaceMetadataInput{}
+        output := &connect.UpdateWorkspaceMetadataOutput{}
+
+        mockClient.On("UpdateWorkspaceMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspaceMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkspacePage", func(t *testing.T) {
+        input := &connect.UpdateWorkspacePageInput{}
+        output := &connect.UpdateWorkspacePageOutput{}
+
+        mockClient.On("UpdateWorkspacePage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspacePage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkspaceTheme", func(t *testing.T) {
+        input := &connect.UpdateWorkspaceThemeInput{}
+        output := &connect.UpdateWorkspaceThemeOutput{}
+
+        mockClient.On("UpdateWorkspaceTheme", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspaceTheme(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkspaceVisibility", func(t *testing.T) {
+        input := &connect.UpdateWorkspaceVisibilityInput{}
+        output := &connect.UpdateWorkspaceVisibilityOutput{}
+
+        mockClient.On("UpdateWorkspaceVisibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspaceVisibility(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

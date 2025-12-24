@@ -1642,6 +1642,43 @@ func (_m *IClient) CreateLabelingJob(ctx context.Context, params *sagemaker.Crea
 	return r0, r1
 }
 
+// CreateMlflowApp provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateMlflowApp(ctx context.Context, params *sagemaker.CreateMlflowAppInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateMlflowAppOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateMlflowApp")
+	}
+
+	var r0 *sagemaker.CreateMlflowAppOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateMlflowAppInput, ...func(*sagemaker.Options)) (*sagemaker.CreateMlflowAppOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateMlflowAppInput, ...func(*sagemaker.Options)) *sagemaker.CreateMlflowAppOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateMlflowAppOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateMlflowAppInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateMlflowTrackingServer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateMlflowTrackingServer(ctx context.Context, params *sagemaker.CreateMlflowTrackingServerInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateMlflowTrackingServerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2263,6 +2300,43 @@ func (_m *IClient) CreatePresignedDomainUrl(ctx context.Context, params *sagemak
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreatePresignedDomainUrlInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePresignedMlflowAppUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePresignedMlflowAppUrl(ctx context.Context, params *sagemaker.CreatePresignedMlflowAppUrlInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreatePresignedMlflowAppUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePresignedMlflowAppUrl")
+	}
+
+	var r0 *sagemaker.CreatePresignedMlflowAppUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreatePresignedMlflowAppUrlInput, ...func(*sagemaker.Options)) (*sagemaker.CreatePresignedMlflowAppUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreatePresignedMlflowAppUrlInput, ...func(*sagemaker.Options)) *sagemaker.CreatePresignedMlflowAppUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreatePresignedMlflowAppUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreatePresignedMlflowAppUrlInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3928,6 +4002,43 @@ func (_m *IClient) DeleteInferenceExperiment(ctx context.Context, params *sagema
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteInferenceExperimentInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteMlflowApp provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteMlflowApp(ctx context.Context, params *sagemaker.DeleteMlflowAppInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteMlflowAppOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteMlflowApp")
+	}
+
+	var r0 *sagemaker.DeleteMlflowAppOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteMlflowAppInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteMlflowAppOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteMlflowAppInput, ...func(*sagemaker.Options)) *sagemaker.DeleteMlflowAppOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteMlflowAppOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteMlflowAppInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6333,6 +6444,43 @@ func (_m *IClient) DescribeLineageGroup(ctx context.Context, params *sagemaker.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeLineageGroupInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeMlflowApp provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMlflowApp(ctx context.Context, params *sagemaker.DescribeMlflowAppInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeMlflowAppOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMlflowApp")
+	}
+
+	var r0 *sagemaker.DescribeMlflowAppOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeMlflowAppInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeMlflowAppOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeMlflowAppInput, ...func(*sagemaker.Options)) *sagemaker.DescribeMlflowAppOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeMlflowAppOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeMlflowAppInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9441,6 +9589,43 @@ func (_m *IClient) ListLineageGroups(ctx context.Context, params *sagemaker.List
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListLineageGroupsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMlflowApps provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMlflowApps(ctx context.Context, params *sagemaker.ListMlflowAppsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListMlflowAppsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMlflowApps")
+	}
+
+	var r0 *sagemaker.ListMlflowAppsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListMlflowAppsInput, ...func(*sagemaker.Options)) (*sagemaker.ListMlflowAppsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListMlflowAppsInput, ...func(*sagemaker.Options)) *sagemaker.ListMlflowAppsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListMlflowAppsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListMlflowAppsInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -13122,6 +13307,43 @@ func (_m *IClient) UpdateInferenceExperiment(ctx context.Context, params *sagema
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateInferenceExperimentInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMlflowApp provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMlflowApp(ctx context.Context, params *sagemaker.UpdateMlflowAppInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateMlflowAppOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMlflowApp")
+	}
+
+	var r0 *sagemaker.UpdateMlflowAppOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateMlflowAppInput, ...func(*sagemaker.Options)) (*sagemaker.UpdateMlflowAppOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateMlflowAppInput, ...func(*sagemaker.Options)) *sagemaker.UpdateMlflowAppOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdateMlflowAppOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateMlflowAppInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

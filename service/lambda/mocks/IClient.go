@@ -89,6 +89,43 @@ func (_m *IClient) AddPermission(ctx context.Context, params *lambda.AddPermissi
 	return r0, r1
 }
 
+// CheckpointDurableExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CheckpointDurableExecution(ctx context.Context, params *lambda.CheckpointDurableExecutionInput, optFns ...func(*lambda.Options)) (*lambda.CheckpointDurableExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CheckpointDurableExecution")
+	}
+
+	var r0 *lambda.CheckpointDurableExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.CheckpointDurableExecutionInput, ...func(*lambda.Options)) (*lambda.CheckpointDurableExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.CheckpointDurableExecutionInput, ...func(*lambda.Options)) *lambda.CheckpointDurableExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.CheckpointDurableExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.CheckpointDurableExecutionInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAlias provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAlias(ctx context.Context, params *lambda.CreateAliasInput, optFns ...func(*lambda.Options)) (*lambda.CreateAliasOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) CreateAlias(ctx context.Context, params *lambda.CreateAliasIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.CreateAliasInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCapacityProvider(ctx context.Context, params *lambda.CreateCapacityProviderInput, optFns ...func(*lambda.Options)) (*lambda.CreateCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCapacityProvider")
+	}
+
+	var r0 *lambda.CreateCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.CreateCapacityProviderInput, ...func(*lambda.Options)) (*lambda.CreateCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.CreateCapacityProviderInput, ...func(*lambda.Options)) *lambda.CreateCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.CreateCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.CreateCapacityProviderInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -303,6 +377,43 @@ func (_m *IClient) DeleteAlias(ctx context.Context, params *lambda.DeleteAliasIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.DeleteAliasInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCapacityProvider(ctx context.Context, params *lambda.DeleteCapacityProviderInput, optFns ...func(*lambda.Options)) (*lambda.DeleteCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCapacityProvider")
+	}
+
+	var r0 *lambda.DeleteCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.DeleteCapacityProviderInput, ...func(*lambda.Options)) (*lambda.DeleteCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.DeleteCapacityProviderInput, ...func(*lambda.Options)) *lambda.DeleteCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.DeleteCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.DeleteCapacityProviderInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -718,6 +829,43 @@ func (_m *IClient) GetAlias(ctx context.Context, params *lambda.GetAliasInput, o
 	return r0, r1
 }
 
+// GetCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCapacityProvider(ctx context.Context, params *lambda.GetCapacityProviderInput, optFns ...func(*lambda.Options)) (*lambda.GetCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCapacityProvider")
+	}
+
+	var r0 *lambda.GetCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetCapacityProviderInput, ...func(*lambda.Options)) (*lambda.GetCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetCapacityProviderInput, ...func(*lambda.Options)) *lambda.GetCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.GetCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetCapacityProviderInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCodeSigningConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCodeSigningConfig(ctx context.Context, params *lambda.GetCodeSigningConfigInput, optFns ...func(*lambda.Options)) (*lambda.GetCodeSigningConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +895,117 @@ func (_m *IClient) GetCodeSigningConfig(ctx context.Context, params *lambda.GetC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetCodeSigningConfigInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDurableExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDurableExecution(ctx context.Context, params *lambda.GetDurableExecutionInput, optFns ...func(*lambda.Options)) (*lambda.GetDurableExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDurableExecution")
+	}
+
+	var r0 *lambda.GetDurableExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetDurableExecutionInput, ...func(*lambda.Options)) (*lambda.GetDurableExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetDurableExecutionInput, ...func(*lambda.Options)) *lambda.GetDurableExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.GetDurableExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetDurableExecutionInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDurableExecutionHistory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDurableExecutionHistory(ctx context.Context, params *lambda.GetDurableExecutionHistoryInput, optFns ...func(*lambda.Options)) (*lambda.GetDurableExecutionHistoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDurableExecutionHistory")
+	}
+
+	var r0 *lambda.GetDurableExecutionHistoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetDurableExecutionHistoryInput, ...func(*lambda.Options)) (*lambda.GetDurableExecutionHistoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetDurableExecutionHistoryInput, ...func(*lambda.Options)) *lambda.GetDurableExecutionHistoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.GetDurableExecutionHistoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetDurableExecutionHistoryInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDurableExecutionState provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDurableExecutionState(ctx context.Context, params *lambda.GetDurableExecutionStateInput, optFns ...func(*lambda.Options)) (*lambda.GetDurableExecutionStateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDurableExecutionState")
+	}
+
+	var r0 *lambda.GetDurableExecutionStateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetDurableExecutionStateInput, ...func(*lambda.Options)) (*lambda.GetDurableExecutionStateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetDurableExecutionStateInput, ...func(*lambda.Options)) *lambda.GetDurableExecutionStateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.GetDurableExecutionStateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetDurableExecutionStateInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1006,6 +1265,43 @@ func (_m *IClient) GetFunctionRecursionConfig(ctx context.Context, params *lambd
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetFunctionRecursionConfigInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFunctionScalingConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFunctionScalingConfig(ctx context.Context, params *lambda.GetFunctionScalingConfigInput, optFns ...func(*lambda.Options)) (*lambda.GetFunctionScalingConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFunctionScalingConfig")
+	}
+
+	var r0 *lambda.GetFunctionScalingConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetFunctionScalingConfigInput, ...func(*lambda.Options)) (*lambda.GetFunctionScalingConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.GetFunctionScalingConfigInput, ...func(*lambda.Options)) *lambda.GetFunctionScalingConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.GetFunctionScalingConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.GetFunctionScalingConfigInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1421,6 +1717,43 @@ func (_m *IClient) ListAliases(ctx context.Context, params *lambda.ListAliasesIn
 	return r0, r1
 }
 
+// ListCapacityProviders provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCapacityProviders(ctx context.Context, params *lambda.ListCapacityProvidersInput, optFns ...func(*lambda.Options)) (*lambda.ListCapacityProvidersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCapacityProviders")
+	}
+
+	var r0 *lambda.ListCapacityProvidersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ListCapacityProvidersInput, ...func(*lambda.Options)) (*lambda.ListCapacityProvidersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ListCapacityProvidersInput, ...func(*lambda.Options)) *lambda.ListCapacityProvidersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.ListCapacityProvidersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.ListCapacityProvidersInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCodeSigningConfigs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCodeSigningConfigs(ctx context.Context, params *lambda.ListCodeSigningConfigsInput, optFns ...func(*lambda.Options)) (*lambda.ListCodeSigningConfigsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1450,6 +1783,43 @@ func (_m *IClient) ListCodeSigningConfigs(ctx context.Context, params *lambda.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.ListCodeSigningConfigsInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDurableExecutionsByFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDurableExecutionsByFunction(ctx context.Context, params *lambda.ListDurableExecutionsByFunctionInput, optFns ...func(*lambda.Options)) (*lambda.ListDurableExecutionsByFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDurableExecutionsByFunction")
+	}
+
+	var r0 *lambda.ListDurableExecutionsByFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ListDurableExecutionsByFunctionInput, ...func(*lambda.Options)) (*lambda.ListDurableExecutionsByFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ListDurableExecutionsByFunctionInput, ...func(*lambda.Options)) *lambda.ListDurableExecutionsByFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.ListDurableExecutionsByFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.ListDurableExecutionsByFunctionInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1561,6 +1931,43 @@ func (_m *IClient) ListFunctionUrlConfigs(ctx context.Context, params *lambda.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.ListFunctionUrlConfigsInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFunctionVersionsByCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFunctionVersionsByCapacityProvider(ctx context.Context, params *lambda.ListFunctionVersionsByCapacityProviderInput, optFns ...func(*lambda.Options)) (*lambda.ListFunctionVersionsByCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFunctionVersionsByCapacityProvider")
+	}
+
+	var r0 *lambda.ListFunctionVersionsByCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ListFunctionVersionsByCapacityProviderInput, ...func(*lambda.Options)) (*lambda.ListFunctionVersionsByCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ListFunctionVersionsByCapacityProviderInput, ...func(*lambda.Options)) *lambda.ListFunctionVersionsByCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.ListFunctionVersionsByCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.ListFunctionVersionsByCapacityProviderInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2068,6 +2475,43 @@ func (_m *IClient) PutFunctionRecursionConfig(ctx context.Context, params *lambd
 	return r0, r1
 }
 
+// PutFunctionScalingConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutFunctionScalingConfig(ctx context.Context, params *lambda.PutFunctionScalingConfigInput, optFns ...func(*lambda.Options)) (*lambda.PutFunctionScalingConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutFunctionScalingConfig")
+	}
+
+	var r0 *lambda.PutFunctionScalingConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.PutFunctionScalingConfigInput, ...func(*lambda.Options)) (*lambda.PutFunctionScalingConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.PutFunctionScalingConfigInput, ...func(*lambda.Options)) *lambda.PutFunctionScalingConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.PutFunctionScalingConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.PutFunctionScalingConfigInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutProvisionedConcurrencyConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutProvisionedConcurrencyConfig(ctx context.Context, params *lambda.PutProvisionedConcurrencyConfigInput, optFns ...func(*lambda.Options)) (*lambda.PutProvisionedConcurrencyConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2216,6 +2660,154 @@ func (_m *IClient) RemovePermission(ctx context.Context, params *lambda.RemovePe
 	return r0, r1
 }
 
+// SendDurableExecutionCallbackFailure provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendDurableExecutionCallbackFailure(ctx context.Context, params *lambda.SendDurableExecutionCallbackFailureInput, optFns ...func(*lambda.Options)) (*lambda.SendDurableExecutionCallbackFailureOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendDurableExecutionCallbackFailure")
+	}
+
+	var r0 *lambda.SendDurableExecutionCallbackFailureOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.SendDurableExecutionCallbackFailureInput, ...func(*lambda.Options)) (*lambda.SendDurableExecutionCallbackFailureOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.SendDurableExecutionCallbackFailureInput, ...func(*lambda.Options)) *lambda.SendDurableExecutionCallbackFailureOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.SendDurableExecutionCallbackFailureOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.SendDurableExecutionCallbackFailureInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendDurableExecutionCallbackHeartbeat provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendDurableExecutionCallbackHeartbeat(ctx context.Context, params *lambda.SendDurableExecutionCallbackHeartbeatInput, optFns ...func(*lambda.Options)) (*lambda.SendDurableExecutionCallbackHeartbeatOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendDurableExecutionCallbackHeartbeat")
+	}
+
+	var r0 *lambda.SendDurableExecutionCallbackHeartbeatOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.SendDurableExecutionCallbackHeartbeatInput, ...func(*lambda.Options)) (*lambda.SendDurableExecutionCallbackHeartbeatOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.SendDurableExecutionCallbackHeartbeatInput, ...func(*lambda.Options)) *lambda.SendDurableExecutionCallbackHeartbeatOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.SendDurableExecutionCallbackHeartbeatOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.SendDurableExecutionCallbackHeartbeatInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendDurableExecutionCallbackSuccess provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendDurableExecutionCallbackSuccess(ctx context.Context, params *lambda.SendDurableExecutionCallbackSuccessInput, optFns ...func(*lambda.Options)) (*lambda.SendDurableExecutionCallbackSuccessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendDurableExecutionCallbackSuccess")
+	}
+
+	var r0 *lambda.SendDurableExecutionCallbackSuccessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.SendDurableExecutionCallbackSuccessInput, ...func(*lambda.Options)) (*lambda.SendDurableExecutionCallbackSuccessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.SendDurableExecutionCallbackSuccessInput, ...func(*lambda.Options)) *lambda.SendDurableExecutionCallbackSuccessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.SendDurableExecutionCallbackSuccessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.SendDurableExecutionCallbackSuccessInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopDurableExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopDurableExecution(ctx context.Context, params *lambda.StopDurableExecutionInput, optFns ...func(*lambda.Options)) (*lambda.StopDurableExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopDurableExecution")
+	}
+
+	var r0 *lambda.StopDurableExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.StopDurableExecutionInput, ...func(*lambda.Options)) (*lambda.StopDurableExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.StopDurableExecutionInput, ...func(*lambda.Options)) *lambda.StopDurableExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.StopDurableExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.StopDurableExecutionInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *lambda.TagResourceInput, optFns ...func(*lambda.Options)) (*lambda.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2319,6 +2911,43 @@ func (_m *IClient) UpdateAlias(ctx context.Context, params *lambda.UpdateAliasIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.UpdateAliasInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCapacityProvider(ctx context.Context, params *lambda.UpdateCapacityProviderInput, optFns ...func(*lambda.Options)) (*lambda.UpdateCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCapacityProvider")
+	}
+
+	var r0 *lambda.UpdateCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.UpdateCapacityProviderInput, ...func(*lambda.Options)) (*lambda.UpdateCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.UpdateCapacityProviderInput, ...func(*lambda.Options)) *lambda.UpdateCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.UpdateCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.UpdateCapacityProviderInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

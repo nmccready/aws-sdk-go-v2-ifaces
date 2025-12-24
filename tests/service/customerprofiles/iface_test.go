@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRecommender", func(t *testing.T) {
+        input := &customerprofiles.CreateRecommenderInput{}
+        output := &customerprofiles.CreateRecommenderOutput{}
+
+        mockClient.On("CreateRecommender", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRecommender(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSegmentDefinition", func(t *testing.T) {
         input := &customerprofiles.CreateSegmentDefinitionInput{}
         output := &customerprofiles.CreateSegmentDefinitionOutput{}
@@ -255,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDomainObjectType", func(t *testing.T) {
+        input := &customerprofiles.DeleteDomainObjectTypeInput{}
+        output := &customerprofiles.DeleteDomainObjectTypeOutput{}
+
+        mockClient.On("DeleteDomainObjectType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDomainObjectType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEventStream", func(t *testing.T) {
         input := &customerprofiles.DeleteEventStreamInput{}
         output := &customerprofiles.DeleteEventStreamOutput{}
@@ -340,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteProfileObjectType", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteProfileObjectType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRecommender", func(t *testing.T) {
+        input := &customerprofiles.DeleteRecommenderInput{}
+        output := &customerprofiles.DeleteRecommenderOutput{}
+
+        mockClient.On("DeleteRecommender", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRecommender(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDomainObjectType", func(t *testing.T) {
+        input := &customerprofiles.GetDomainObjectTypeInput{}
+        output := &customerprofiles.GetDomainObjectTypeOutput{}
+
+        mockClient.On("GetDomainObjectType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDomainObjectType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEventStream", func(t *testing.T) {
         input := &customerprofiles.GetEventStreamInput{}
         output := &customerprofiles.GetEventStreamOutput{}
@@ -515,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetObjectTypeAttributeStatistics", func(t *testing.T) {
+        input := &customerprofiles.GetObjectTypeAttributeStatisticsInput{}
+        output := &customerprofiles.GetObjectTypeAttributeStatisticsOutput{}
+
+        mockClient.On("GetObjectTypeAttributeStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetObjectTypeAttributeStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetProfileHistoryRecord", func(t *testing.T) {
         input := &customerprofiles.GetProfileHistoryRecordInput{}
         output := &customerprofiles.GetProfileHistoryRecordOutput{}
@@ -548,6 +613,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetProfileObjectTypeTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetProfileObjectTypeTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProfileRecommendations", func(t *testing.T) {
+        input := &customerprofiles.GetProfileRecommendationsInput{}
+        output := &customerprofiles.GetProfileRecommendationsOutput{}
+
+        mockClient.On("GetProfileRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProfileRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecommender", func(t *testing.T) {
+        input := &customerprofiles.GetRecommenderInput{}
+        output := &customerprofiles.GetRecommenderOutput{}
+
+        mockClient.On("GetRecommender", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecommender(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDomainObjectTypes", func(t *testing.T) {
+        input := &customerprofiles.ListDomainObjectTypesInput{}
+        output := &customerprofiles.ListDomainObjectTypesOutput{}
+
+        mockClient.On("ListDomainObjectTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDomainObjectTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDomains", func(t *testing.T) {
         input := &customerprofiles.ListDomainsInput{}
         output := &customerprofiles.ListDomainsOutput{}
@@ -782,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIntegrations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIntegrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListObjectTypeAttributeValues", func(t *testing.T) {
+        input := &customerprofiles.ListObjectTypeAttributeValuesInput{}
+        output := &customerprofiles.ListObjectTypeAttributeValuesOutput{}
+
+        mockClient.On("ListObjectTypeAttributeValues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListObjectTypeAttributeValues(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -866,6 +983,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRecommenderRecipes", func(t *testing.T) {
+        input := &customerprofiles.ListRecommenderRecipesInput{}
+        output := &customerprofiles.ListRecommenderRecipesOutput{}
+
+        mockClient.On("ListRecommenderRecipes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommenderRecipes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecommenders", func(t *testing.T) {
+        input := &customerprofiles.ListRecommendersInput{}
+        output := &customerprofiles.ListRecommendersOutput{}
+
+        mockClient.On("ListRecommenders", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommenders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRuleBasedMatches", func(t *testing.T) {
         input := &customerprofiles.ListRuleBasedMatchesInput{}
         output := &customerprofiles.ListRuleBasedMatchesOutput{}
@@ -944,6 +1087,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutDomainObjectType", func(t *testing.T) {
+        input := &customerprofiles.PutDomainObjectTypeInput{}
+        output := &customerprofiles.PutDomainObjectTypeOutput{}
+
+        mockClient.On("PutDomainObjectType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutDomainObjectType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutIntegration", func(t *testing.T) {
         input := &customerprofiles.PutIntegrationInput{}
         output := &customerprofiles.PutIntegrationOutput{}
@@ -996,6 +1152,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartRecommender", func(t *testing.T) {
+        input := &customerprofiles.StartRecommenderInput{}
+        output := &customerprofiles.StartRecommenderOutput{}
+
+        mockClient.On("StartRecommender", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRecommender(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartUploadJob", func(t *testing.T) {
         input := &customerprofiles.StartUploadJobInput{}
         output := &customerprofiles.StartUploadJobOutput{}
@@ -1003,6 +1172,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartUploadJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartUploadJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopRecommender", func(t *testing.T) {
+        input := &customerprofiles.StopRecommenderInput{}
+        output := &customerprofiles.StopRecommenderOutput{}
+
+        mockClient.On("StopRecommender", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopRecommender(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1107,6 +1289,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRecommender", func(t *testing.T) {
+        input := &customerprofiles.UpdateRecommenderInput{}
+        output := &customerprofiles.UpdateRecommenderOutput{}
+
+        mockClient.On("UpdateRecommender", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRecommender(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

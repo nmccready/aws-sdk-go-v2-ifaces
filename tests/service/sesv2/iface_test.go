@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEmailAddressInsights", func(t *testing.T) {
+        input := &sesv2.GetEmailAddressInsightsInput{}
+        output := &sesv2.GetEmailAddressInsightsOutput{}
+
+        mockClient.On("GetEmailAddressInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEmailAddressInsights(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEmailIdentity", func(t *testing.T) {
         input := &sesv2.GetEmailIdentityInput{}
         output := &sesv2.GetEmailIdentityOutput{}

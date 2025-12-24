@@ -513,6 +513,80 @@ func (_m *IClient) Options() timestreaminfluxdb.Options {
 	return r0
 }
 
+// RebootDbCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RebootDbCluster(ctx context.Context, params *timestreaminfluxdb.RebootDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.RebootDbClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RebootDbCluster")
+	}
+
+	var r0 *timestreaminfluxdb.RebootDbClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.RebootDbClusterInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.RebootDbClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.RebootDbClusterInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.RebootDbClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.RebootDbClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.RebootDbClusterInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RebootDbInstance provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RebootDbInstance(ctx context.Context, params *timestreaminfluxdb.RebootDbInstanceInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.RebootDbInstanceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RebootDbInstance")
+	}
+
+	var r0 *timestreaminfluxdb.RebootDbInstanceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.RebootDbInstanceInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.RebootDbInstanceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.RebootDbInstanceInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.RebootDbInstanceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.RebootDbInstanceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.RebootDbInstanceInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *timestreaminfluxdb.TagResourceInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))

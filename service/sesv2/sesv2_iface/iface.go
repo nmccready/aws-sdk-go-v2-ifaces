@@ -54,6 +54,7 @@ type IClient interface {
  GetDeliverabilityTestReport(ctx context.Context, params *GetDeliverabilityTestReportInput, optFns ...func(*Options)) (*GetDeliverabilityTestReportOutput, error) 
  GetDomainDeliverabilityCampaign(ctx context.Context, params *GetDomainDeliverabilityCampaignInput, optFns ...func(*Options)) (*GetDomainDeliverabilityCampaignOutput, error) 
  GetDomainStatisticsReport(ctx context.Context, params *GetDomainStatisticsReportInput, optFns ...func(*Options)) (*GetDomainStatisticsReportOutput, error) 
+ GetEmailAddressInsights(ctx context.Context, params *GetEmailAddressInsightsInput, optFns ...func(*Options)) (*GetEmailAddressInsightsOutput, error) 
  GetEmailIdentity(ctx context.Context, params *GetEmailIdentityInput, optFns ...func(*Options)) (*GetEmailIdentityOutput, error) 
  GetEmailIdentityPolicies(ctx context.Context, params *GetEmailIdentityPoliciesInput, optFns ...func(*Options)) (*GetEmailIdentityPoliciesOutput, error) 
  GetEmailTemplate(ctx context.Context, params *GetEmailTemplateInput, optFns ...func(*Options)) (*GetEmailTemplateOutput, error) 
