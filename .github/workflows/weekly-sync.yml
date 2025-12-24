@@ -2,20 +2,25 @@ name: Weekly Sync
 
 permissions:
   contents: write # REQUIRED to push code back to the repository
+  pull-requests: write # REQUIRED to create pull requests
 
 on:
   schedule:
     - cron: '0 0 * * 0' # Runs every Sunday at 00:00 UTC
+  # pull_request: # temporary for PR testing / fixing
+  #   branches: ["main"]    
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with: # important, must be defined on checkout to kick publish (defining in setup/node doesn't work)
           token: ${{ secrets.GH_TOKEN || github.token }}
-      
+          fetch-depth: 0 # Fetch all history to ensure branches are available
+          ref: main # Ensure the workflow checks out the default branch
+
       - name: load runtime versions
         id: load-versions
         run: |
@@ -25,8 +30,14 @@ jobs:
           echo "GO_VERSION=$GO_VERSION" >> $GITHUB_ENV
           echo "NODE_VERSION=$NODE_VERSION" >> $GITHUB_ENV    
 
+      # - name: Debug environment variables
+      #   run: |
+      #     echo "GO_VERSION=${{ env.GO_VERSION }}"
+      #     echo "NODE_VERSION=${{ env.NODE_VERSION }}"
+      #     echo "AWS_SDK_VERSION=${{ env.AWS_SDK_VERSION }}"
+
       - name: node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
           # cache: "npm" # needs lockfile if enabled
@@ -48,14 +59,22 @@ jobs:
 
       - name: Fetch AWS SDK version
         run: |
-          cd ./tmp/aws-sdk-go-v2
+          cd ./tmp/aws-sdk-go-v2 || exit 1
           AWS_SDK_VERSION=$(git tag | grep -E "^v[0-9]+\.[0-9]+\.[0-9]+$" | sort -V | tail -n 1)
+          if [ -z "$AWS_SDK_VERSION" ]; then
+            echo "Error: AWS_SDK_VERSION could not be determined."
+            exit 1
+          fi
           echo "AWS_SDK_VERSION=$AWS_SDK_VERSION" >> $GITHUB_ENV
 
+      - name: Debug AWS SDK version
+        run: echo "AWS_SDK_VERSION=${{ env.AWS_SDK_VERSION }}"
+
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v8
         with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Ensure the correct token is used
           commit-message: 'Automated sync'
           branch: 'automated-sync-aws-sdk-go-v2-${{ env.AWS_SDK_VERSION }}'
-          title: 'Automated sync'
+          title: 'Automated sync aws-sdk-go-v2-${{ env.AWS_SDK_VERSION }}'
           body: 'fix: this PR was created automatically to sync with aws-sdk-go-v2 ${{ env.AWS_SDK_VERSION }}'
