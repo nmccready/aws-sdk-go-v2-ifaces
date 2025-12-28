@@ -249,7 +249,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplacereporting v1.7.7
 	github.com/aws/aws-sdk-go-v2/service/mediaconnect v1.46.4
 	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.86.0
-	github.com/aws/aws-sdk-go-v2/service/medialive v1.87.4
+	github.com/aws/aws-sdk-go-v2/service/medialive v1.88.0
 	github.com/aws/aws-sdk-go-v2/service/mediapackage v1.39.16
 	github.com/aws/aws-sdk-go-v2/service/mediapackagev2 v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/mediapackagevod v1.39.16
@@ -399,7 +399,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/tnb v1.18.16
 	github.com/aws/aws-sdk-go-v2/service/transcribe v1.53.10
 	github.com/aws/aws-sdk-go-v2/service/transcribestreaming v1.33.4
-	github.com/aws/aws-sdk-go-v2/service/transfer v1.68.4
+	github.com/aws/aws-sdk-go-v2/service/transfer v1.68.5
 	github.com/aws/aws-sdk-go-v2/service/translate v1.33.16
 	github.com/aws/aws-sdk-go-v2/service/trustedadvisor v1.13.17
 	github.com/aws/aws-sdk-go-v2/service/verifiedpermissions v1.30.6
