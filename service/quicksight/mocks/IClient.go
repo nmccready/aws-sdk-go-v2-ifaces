@@ -3788,6 +3788,43 @@ func (_m *IClient) DescribeRoleCustomPermission(ctx context.Context, params *qui
 	return r0, r1
 }
 
+// DescribeSelfUpgradeConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSelfUpgradeConfiguration(ctx context.Context, params *quicksight.DescribeSelfUpgradeConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeSelfUpgradeConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSelfUpgradeConfiguration")
+	}
+
+	var r0 *quicksight.DescribeSelfUpgradeConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeSelfUpgradeConfigurationInput, ...func(*quicksight.Options)) (*quicksight.DescribeSelfUpgradeConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeSelfUpgradeConfigurationInput, ...func(*quicksight.Options)) *quicksight.DescribeSelfUpgradeConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeSelfUpgradeConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeSelfUpgradeConfigurationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTemplate(ctx context.Context, params *quicksight.DescribeTemplateInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5408,6 +5445,43 @@ func (_m *IClient) ListRoleMemberships(ctx context.Context, params *quicksight.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListRoleMembershipsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSelfUpgrades provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSelfUpgrades(ctx context.Context, params *quicksight.ListSelfUpgradesInput, optFns ...func(*quicksight.Options)) (*quicksight.ListSelfUpgradesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSelfUpgrades")
+	}
+
+	var r0 *quicksight.ListSelfUpgradesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListSelfUpgradesInput, ...func(*quicksight.Options)) (*quicksight.ListSelfUpgradesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListSelfUpgradesInput, ...func(*quicksight.Options)) *quicksight.ListSelfUpgradesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListSelfUpgradesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListSelfUpgradesInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7942,6 +8016,80 @@ func (_m *IClient) UpdateSPICECapacityConfiguration(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateSPICECapacityConfigurationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSelfUpgrade provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSelfUpgrade(ctx context.Context, params *quicksight.UpdateSelfUpgradeInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateSelfUpgradeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSelfUpgrade")
+	}
+
+	var r0 *quicksight.UpdateSelfUpgradeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateSelfUpgradeInput, ...func(*quicksight.Options)) (*quicksight.UpdateSelfUpgradeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateSelfUpgradeInput, ...func(*quicksight.Options)) *quicksight.UpdateSelfUpgradeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateSelfUpgradeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateSelfUpgradeInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSelfUpgradeConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSelfUpgradeConfiguration(ctx context.Context, params *quicksight.UpdateSelfUpgradeConfigurationInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateSelfUpgradeConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSelfUpgradeConfiguration")
+	}
+
+	var r0 *quicksight.UpdateSelfUpgradeConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateSelfUpgradeConfigurationInput, ...func(*quicksight.Options)) (*quicksight.UpdateSelfUpgradeConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateSelfUpgradeConfigurationInput, ...func(*quicksight.Options)) *quicksight.UpdateSelfUpgradeConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateSelfUpgradeConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateSelfUpgradeConfigurationInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
