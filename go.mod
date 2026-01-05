@@ -64,8 +64,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/chimesdkmeetings v1.33.10
 	github.com/aws/aws-sdk-go-v2/service/chimesdkmessaging v1.32.12
 	github.com/aws/aws-sdk-go-v2/service/chimesdkvoice v1.28.8
-	github.com/aws/aws-sdk-go-v2/service/cleanrooms v1.39.0
-	github.com/aws/aws-sdk-go-v2/service/cleanroomsml v1.21.2
+	github.com/aws/aws-sdk-go-v2/service/cleanrooms v1.40.0
+	github.com/aws/aws-sdk-go-v2/service/cleanroomsml v1.22.0
 	github.com/aws/aws-sdk-go-v2/service/cloud9 v1.33.15
 	github.com/aws/aws-sdk-go-v2/service/cloudcontrol v1.29.8
 	github.com/aws/aws-sdk-go-v2/service/clouddirectory v1.30.7
@@ -101,7 +101,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.49.3
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizerautomation v1.0.3
 	github.com/aws/aws-sdk-go-v2/service/configservice v1.60.0
-	github.com/aws/aws-sdk-go-v2/service/connect v1.152.0
+	github.com/aws/aws-sdk-go-v2/service/connect v1.154.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.15
 	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.10.2
 	github.com/aws/aws-sdk-go-v2/service/connectcases v1.34.8
@@ -182,7 +182,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/health v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/healthlake v1.36.8
 	github.com/aws/aws-sdk-go-v2/service/iam v1.53.1
-	github.com/aws/aws-sdk-go-v2/service/identitystore v1.35.2
+	github.com/aws/aws-sdk-go-v2/service/identitystore v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.50.3
 	github.com/aws/aws-sdk-go-v2/service/inspector v1.30.15
 	github.com/aws/aws-sdk-go-v2/service/inspector2 v1.46.1
@@ -207,7 +207,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ivschat v1.21.15
 	github.com/aws/aws-sdk-go-v2/service/ivsrealtime v1.32.0
 	github.com/aws/aws-sdk-go-v2/service/kafka v1.46.6
-	github.com/aws/aws-sdk-go-v2/service/kafkaconnect v1.28.0
+	github.com/aws/aws-sdk-go-v2/service/kafkaconnect v1.29.0
 	github.com/aws/aws-sdk-go-v2/service/kendra v1.60.16
 	github.com/aws/aws-sdk-go-v2/service/kendraranking v1.15.20
 	github.com/aws/aws-sdk-go-v2/service/keyspaces v1.24.9
@@ -249,7 +249,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplacereporting v1.7.7
 	github.com/aws/aws-sdk-go-v2/service/mediaconnect v1.46.4
 	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.86.0
-	github.com/aws/aws-sdk-go-v2/service/medialive v1.87.4
+	github.com/aws/aws-sdk-go-v2/service/medialive v1.88.0
 	github.com/aws/aws-sdk-go-v2/service/mediapackage v1.39.16
 	github.com/aws/aws-sdk-go-v2/service/mediapackagev2 v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/mediapackagevod v1.39.16
@@ -313,7 +313,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/qapps v1.11.15
 	github.com/aws/aws-sdk-go-v2/service/qbusiness v1.34.0
 	github.com/aws/aws-sdk-go-v2/service/qconnect v1.25.2
-	github.com/aws/aws-sdk-go-v2/service/quicksight v1.99.0
+	github.com/aws/aws-sdk-go-v2/service/quicksight v1.100.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.34.18
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.27.4
 	github.com/aws/aws-sdk-go-v2/service/rds v1.113.1
@@ -399,7 +399,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/tnb v1.18.16
 	github.com/aws/aws-sdk-go-v2/service/transcribe v1.53.10
 	github.com/aws/aws-sdk-go-v2/service/transcribestreaming v1.33.4
-	github.com/aws/aws-sdk-go-v2/service/transfer v1.68.4
+	github.com/aws/aws-sdk-go-v2/service/transfer v1.68.5
 	github.com/aws/aws-sdk-go-v2/service/translate v1.33.16
 	github.com/aws/aws-sdk-go-v2/service/trustedadvisor v1.13.17
 	github.com/aws/aws-sdk-go-v2/service/verifiedpermissions v1.30.6
@@ -407,7 +407,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/vpclattice v1.20.6
 	github.com/aws/aws-sdk-go-v2/service/waf v1.30.15
 	github.com/aws/aws-sdk-go-v2/service/wafregional v1.30.16
-	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.70.5
+	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.70.6
 	github.com/aws/aws-sdk-go-v2/service/wellarchitected v1.39.16
 	github.com/aws/aws-sdk-go-v2/service/wickr v1.0.0
 	github.com/aws/aws-sdk-go-v2/service/wisdom v1.32.16
@@ -420,7 +420,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.16
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -435,14 +435,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.16 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.16 // indirect
 	github.com/aws/smithy-go v1.24.0 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
