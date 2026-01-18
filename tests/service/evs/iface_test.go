@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetVersions", func(t *testing.T) {
+        input := &evs.GetVersionsInput{}
+        output := &evs.GetVersionsOutput{}
+
+        mockClient.On("GetVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEnvironmentHosts", func(t *testing.T) {
         input := &evs.ListEnvironmentHostsInput{}
         output := &evs.ListEnvironmentHostsOutput{}

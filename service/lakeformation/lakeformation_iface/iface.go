@@ -42,6 +42,7 @@ type IClient interface {
  GetQueryStatistics(ctx context.Context, params *GetQueryStatisticsInput, optFns ...func(*Options)) (*GetQueryStatisticsOutput, error) 
  GetResourceLFTags(ctx context.Context, params *GetResourceLFTagsInput, optFns ...func(*Options)) (*GetResourceLFTagsOutput, error) 
  GetTableObjects(ctx context.Context, params *GetTableObjectsInput, optFns ...func(*Options)) (*GetTableObjectsOutput, error) 
+ GetTemporaryDataLocationCredentials(ctx context.Context, params *GetTemporaryDataLocationCredentialsInput, optFns ...func(*Options)) (*GetTemporaryDataLocationCredentialsOutput, error) 
  GetTemporaryGluePartitionCredentials(ctx context.Context, params *GetTemporaryGluePartitionCredentialsInput, optFns ...func(*Options)) (*GetTemporaryGluePartitionCredentialsOutput, error) 
  GetTemporaryGlueTableCredentials(ctx context.Context, params *GetTemporaryGlueTableCredentialsInput, optFns ...func(*Options)) (*GetTemporaryGlueTableCredentialsOutput, error) 
  GetWorkUnitResults(ctx context.Context, params *GetWorkUnitResultsInput, optFns ...func(*Options)) (*GetWorkUnitResultsOutput, error) 

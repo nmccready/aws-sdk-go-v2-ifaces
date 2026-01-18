@@ -311,6 +311,43 @@ func (_m *IClient) AssociateFlow(ctx context.Context, params *connect.AssociateF
 	return r0, r1
 }
 
+// AssociateHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateHoursOfOperations(ctx context.Context, params *connect.AssociateHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.AssociateHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateHoursOfOperations")
+	}
+
+	var r0 *connect.AssociateHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateHoursOfOperationsInput, ...func(*connect.Options)) (*connect.AssociateHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateHoursOfOperationsInput, ...func(*connect.Options)) *connect.AssociateHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.AssociateHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.AssociateHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateInstanceStorageConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateInstanceStorageConfig(ctx context.Context, params *connect.AssociateInstanceStorageConfigInput, optFns ...func(*connect.Options)) (*connect.AssociateInstanceStorageConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5047,6 +5084,43 @@ func (_m *IClient) DisassociateFlow(ctx context.Context, params *connect.Disasso
 	return r0, r1
 }
 
+// DisassociateHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateHoursOfOperations(ctx context.Context, params *connect.DisassociateHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.DisassociateHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateHoursOfOperations")
+	}
+
+	var r0 *connect.DisassociateHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateHoursOfOperationsInput, ...func(*connect.Options)) (*connect.DisassociateHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateHoursOfOperationsInput, ...func(*connect.Options)) *connect.DisassociateHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DisassociateHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DisassociateHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateInstanceStorageConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateInstanceStorageConfig(ctx context.Context, params *connect.DisassociateInstanceStorageConfigInput, optFns ...func(*connect.Options)) (*connect.DisassociateInstanceStorageConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6334,6 +6408,43 @@ func (_m *IClient) ListBots(ctx context.Context, params *connect.ListBotsInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListBotsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChildHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChildHoursOfOperations(ctx context.Context, params *connect.ListChildHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.ListChildHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChildHoursOfOperations")
+	}
+
+	var r0 *connect.ListChildHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListChildHoursOfOperationsInput, ...func(*connect.Options)) (*connect.ListChildHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListChildHoursOfOperationsInput, ...func(*connect.Options)) *connect.ListChildHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListChildHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListChildHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

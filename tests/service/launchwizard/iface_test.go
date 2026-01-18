@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDeploymentPatternVersion", func(t *testing.T) {
+        input := &launchwizard.GetDeploymentPatternVersionInput{}
+        output := &launchwizard.GetDeploymentPatternVersionOutput{}
+
+        mockClient.On("GetDeploymentPatternVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDeploymentPatternVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWorkload", func(t *testing.T) {
         input := &launchwizard.GetWorkloadInput{}
         output := &launchwizard.GetWorkloadOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDeploymentEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDeploymentEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDeploymentPatternVersions", func(t *testing.T) {
+        input := &launchwizard.ListDeploymentPatternVersionsInput{}
+        output := &launchwizard.ListDeploymentPatternVersionsOutput{}
+
+        mockClient.On("ListDeploymentPatternVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeploymentPatternVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDeployment", func(t *testing.T) {
+        input := &launchwizard.UpdateDeploymentInput{}
+        output := &launchwizard.UpdateDeploymentOutput{}
+
+        mockClient.On("UpdateDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDeployment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

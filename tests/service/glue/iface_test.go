@@ -1776,6 +1776,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMaterializedViewRefreshTaskRun", func(t *testing.T) {
+        input := &glue.GetMaterializedViewRefreshTaskRunInput{}
+        output := &glue.GetMaterializedViewRefreshTaskRunOutput{}
+
+        mockClient.On("GetMaterializedViewRefreshTaskRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMaterializedViewRefreshTaskRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPartition", func(t *testing.T) {
         input := &glue.GetPartitionInput{}
         output := &glue.GetPartitionOutput{}
@@ -2439,6 +2452,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMaterializedViewRefreshTaskRuns", func(t *testing.T) {
+        input := &glue.ListMaterializedViewRefreshTaskRunsInput{}
+        output := &glue.ListMaterializedViewRefreshTaskRunsOutput{}
+
+        mockClient.On("ListMaterializedViewRefreshTaskRuns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMaterializedViewRefreshTaskRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRegistries", func(t *testing.T) {
         input := &glue.ListRegistriesInput{}
         output := &glue.ListRegistriesOutput{}
@@ -2881,6 +2907,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartMaterializedViewRefreshTaskRun", func(t *testing.T) {
+        input := &glue.StartMaterializedViewRefreshTaskRunInput{}
+        output := &glue.StartMaterializedViewRefreshTaskRunOutput{}
+
+        mockClient.On("StartMaterializedViewRefreshTaskRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMaterializedViewRefreshTaskRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartTrigger", func(t *testing.T) {
         input := &glue.StartTriggerInput{}
         output := &glue.StartTriggerOutput{}
@@ -2953,6 +2992,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopCrawlerSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopCrawlerSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopMaterializedViewRefreshTaskRun", func(t *testing.T) {
+        input := &glue.StopMaterializedViewRefreshTaskRunInput{}
+        output := &glue.StopMaterializedViewRefreshTaskRunOutput{}
+
+        mockClient.On("StopMaterializedViewRefreshTaskRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopMaterializedViewRefreshTaskRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

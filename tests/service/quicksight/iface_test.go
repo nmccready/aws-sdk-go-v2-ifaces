@@ -1360,6 +1360,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeSelfUpgradeConfiguration", func(t *testing.T) {
+        input := &quicksight.DescribeSelfUpgradeConfigurationInput{}
+        output := &quicksight.DescribeSelfUpgradeConfigurationOutput{}
+
+        mockClient.On("DescribeSelfUpgradeConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSelfUpgradeConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTemplate", func(t *testing.T) {
         input := &quicksight.DescribeTemplateInput{}
         output := &quicksight.DescribeTemplateOutput{}
@@ -1926,6 +1939,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRoleMemberships", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRoleMemberships(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSelfUpgrades", func(t *testing.T) {
+        input := &quicksight.ListSelfUpgradesInput{}
+        output := &quicksight.ListSelfUpgradesOutput{}
+
+        mockClient.On("ListSelfUpgrades", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSelfUpgrades(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2810,6 +2836,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSPICECapacityConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSPICECapacityConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSelfUpgrade", func(t *testing.T) {
+        input := &quicksight.UpdateSelfUpgradeInput{}
+        output := &quicksight.UpdateSelfUpgradeOutput{}
+
+        mockClient.On("UpdateSelfUpgrade", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSelfUpgrade(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSelfUpgradeConfiguration", func(t *testing.T) {
+        input := &quicksight.UpdateSelfUpgradeConfigurationInput{}
+        output := &quicksight.UpdateSelfUpgradeConfigurationOutput{}
+
+        mockClient.On("UpdateSelfUpgradeConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSelfUpgradeConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
