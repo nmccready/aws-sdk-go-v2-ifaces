@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetCollectionGroup", func(t *testing.T) {
+        input := &opensearchserverless.BatchGetCollectionGroupInput{}
+        output := &opensearchserverless.BatchGetCollectionGroupOutput{}
+
+        mockClient.On("BatchGetCollectionGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetCollectionGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetEffectiveLifecyclePolicy", func(t *testing.T) {
         input := &opensearchserverless.BatchGetEffectiveLifecyclePolicyInput{}
         output := &opensearchserverless.BatchGetEffectiveLifecyclePolicyOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCollection", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCollection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCollectionGroup", func(t *testing.T) {
+        input := &opensearchserverless.CreateCollectionGroupInput{}
+        output := &opensearchserverless.CreateCollectionGroupOutput{}
+
+        mockClient.On("CreateCollectionGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCollectionGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -197,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCollection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCollection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCollectionGroup", func(t *testing.T) {
+        input := &opensearchserverless.DeleteCollectionGroupInput{}
+        output := &opensearchserverless.DeleteCollectionGroupOutput{}
+
+        mockClient.On("DeleteCollectionGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCollectionGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCollectionGroups", func(t *testing.T) {
+        input := &opensearchserverless.ListCollectionGroupsInput{}
+        output := &opensearchserverless.ListCollectionGroupsOutput{}
+
+        mockClient.On("ListCollectionGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCollectionGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCollections", func(t *testing.T) {
         input := &opensearchserverless.ListCollectionsInput{}
         output := &opensearchserverless.ListCollectionsOutput{}
@@ -496,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCollection", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCollection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCollectionGroup", func(t *testing.T) {
+        input := &opensearchserverless.UpdateCollectionGroupInput{}
+        output := &opensearchserverless.UpdateCollectionGroupOutput{}
+
+        mockClient.On("UpdateCollectionGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCollectionGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

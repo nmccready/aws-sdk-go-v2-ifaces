@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateHoursOfOperations", func(t *testing.T) {
+        input := &connect.AssociateHoursOfOperationsInput{}
+        output := &connect.AssociateHoursOfOperationsOutput{}
+
+        mockClient.On("AssociateHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateHoursOfOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateInstanceStorageConfig", func(t *testing.T) {
         input := &connect.AssociateInstanceStorageConfigInput{}
         output := &connect.AssociateInstanceStorageConfigOutput{}
@@ -1802,6 +1815,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateHoursOfOperations", func(t *testing.T) {
+        input := &connect.DisassociateHoursOfOperationsInput{}
+        output := &connect.DisassociateHoursOfOperationsOutput{}
+
+        mockClient.On("DisassociateHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateHoursOfOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateInstanceStorageConfig", func(t *testing.T) {
         input := &connect.DisassociateInstanceStorageConfigInput{}
         output := &connect.DisassociateInstanceStorageConfigOutput{}
@@ -2251,6 +2277,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBots", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChildHoursOfOperations", func(t *testing.T) {
+        input := &connect.ListChildHoursOfOperationsInput{}
+        output := &connect.ListChildHoursOfOperationsOutput{}
+
+        mockClient.On("ListChildHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChildHoursOfOperations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

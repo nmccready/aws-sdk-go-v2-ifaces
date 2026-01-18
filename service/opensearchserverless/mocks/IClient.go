@@ -51,6 +51,43 @@ func (_m *IClient) BatchGetCollection(ctx context.Context, params *opensearchser
 	return r0, r1
 }
 
+// BatchGetCollectionGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetCollectionGroup(ctx context.Context, params *opensearchserverless.BatchGetCollectionGroupInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.BatchGetCollectionGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetCollectionGroup")
+	}
+
+	var r0 *opensearchserverless.BatchGetCollectionGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.BatchGetCollectionGroupInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.BatchGetCollectionGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.BatchGetCollectionGroupInput, ...func(*opensearchserverless.Options)) *opensearchserverless.BatchGetCollectionGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.BatchGetCollectionGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.BatchGetCollectionGroupInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetEffectiveLifecyclePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetEffectiveLifecyclePolicy(ctx context.Context, params *opensearchserverless.BatchGetEffectiveLifecyclePolicyInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.BatchGetEffectiveLifecyclePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +265,43 @@ func (_m *IClient) CreateCollection(ctx context.Context, params *opensearchserve
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CreateCollectionInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCollectionGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCollectionGroup(ctx context.Context, params *opensearchserverless.CreateCollectionGroupInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateCollectionGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCollectionGroup")
+	}
+
+	var r0 *opensearchserverless.CreateCollectionGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateCollectionGroupInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateCollectionGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateCollectionGroupInput, ...func(*opensearchserverless.Options)) *opensearchserverless.CreateCollectionGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.CreateCollectionGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CreateCollectionGroupInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -487,6 +561,43 @@ func (_m *IClient) DeleteCollection(ctx context.Context, params *opensearchserve
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.DeleteCollectionInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCollectionGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCollectionGroup(ctx context.Context, params *opensearchserverless.DeleteCollectionGroupInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteCollectionGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCollectionGroup")
+	}
+
+	var r0 *opensearchserverless.DeleteCollectionGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.DeleteCollectionGroupInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteCollectionGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.DeleteCollectionGroupInput, ...func(*opensearchserverless.Options)) *opensearchserverless.DeleteCollectionGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.DeleteCollectionGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.DeleteCollectionGroupInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -939,6 +1050,43 @@ func (_m *IClient) ListAccessPolicies(ctx context.Context, params *opensearchser
 	return r0, r1
 }
 
+// ListCollectionGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCollectionGroups(ctx context.Context, params *opensearchserverless.ListCollectionGroupsInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.ListCollectionGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCollectionGroups")
+	}
+
+	var r0 *opensearchserverless.ListCollectionGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.ListCollectionGroupsInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.ListCollectionGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.ListCollectionGroupsInput, ...func(*opensearchserverless.Options)) *opensearchserverless.ListCollectionGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.ListCollectionGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.ListCollectionGroupsInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCollections provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCollections(ctx context.Context, params *opensearchserverless.ListCollectionsInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.ListCollectionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1356,6 +1504,43 @@ func (_m *IClient) UpdateCollection(ctx context.Context, params *opensearchserve
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.UpdateCollectionInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCollectionGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCollectionGroup(ctx context.Context, params *opensearchserverless.UpdateCollectionGroupInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.UpdateCollectionGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCollectionGroup")
+	}
+
+	var r0 *opensearchserverless.UpdateCollectionGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.UpdateCollectionGroupInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.UpdateCollectionGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.UpdateCollectionGroupInput, ...func(*opensearchserverless.Options)) *opensearchserverless.UpdateCollectionGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.UpdateCollectionGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.UpdateCollectionGroupInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -450,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTemporaryDataLocationCredentials", func(t *testing.T) {
+        input := &lakeformation.GetTemporaryDataLocationCredentialsInput{}
+        output := &lakeformation.GetTemporaryDataLocationCredentialsOutput{}
+
+        mockClient.On("GetTemporaryDataLocationCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTemporaryDataLocationCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTemporaryGluePartitionCredentials", func(t *testing.T) {
         input := &lakeformation.GetTemporaryGluePartitionCredentialsInput{}
         output := &lakeformation.GetTemporaryGluePartitionCredentialsOutput{}
