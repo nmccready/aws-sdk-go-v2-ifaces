@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateHoursOfOperations", func(t *testing.T) {
+        input := &connect.AssociateHoursOfOperationsInput{}
+        output := &connect.AssociateHoursOfOperationsOutput{}
+
+        mockClient.On("AssociateHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateHoursOfOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateInstanceStorageConfig", func(t *testing.T) {
         input := &connect.AssociateInstanceStorageConfigInput{}
         output := &connect.AssociateInstanceStorageConfigOutput{}
@@ -762,6 +775,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTestCase", func(t *testing.T) {
+        input := &connect.CreateTestCaseInput{}
+        output := &connect.CreateTestCaseOutput{}
+
+        mockClient.On("CreateTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTestCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTrafficDistributionGroup", func(t *testing.T) {
         input := &connect.CreateTrafficDistributionGroupInput{}
         output := &connect.CreateTrafficDistributionGroupOutput{}
@@ -1198,6 +1224,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTaskTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTaskTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTestCase", func(t *testing.T) {
+        input := &connect.DeleteTestCaseInput{}
+        output := &connect.DeleteTestCaseOutput{}
+
+        mockClient.On("DeleteTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTestCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1646,6 +1685,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTestCase", func(t *testing.T) {
+        input := &connect.DescribeTestCaseInput{}
+        output := &connect.DescribeTestCaseOutput{}
+
+        mockClient.On("DescribeTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTestCase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTrafficDistributionGroup", func(t *testing.T) {
         input := &connect.DescribeTrafficDistributionGroupInput{}
         output := &connect.DescribeTrafficDistributionGroupOutput{}
@@ -1796,6 +1848,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateHoursOfOperations", func(t *testing.T) {
+        input := &connect.DisassociateHoursOfOperationsInput{}
+        output := &connect.DisassociateHoursOfOperationsOutput{}
+
+        mockClient.On("DisassociateHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateHoursOfOperations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2127,6 +2192,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTestCaseExecutionSummary", func(t *testing.T) {
+        input := &connect.GetTestCaseExecutionSummaryInput{}
+        output := &connect.GetTestCaseExecutionSummaryOutput{}
+
+        mockClient.On("GetTestCaseExecutionSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTestCaseExecutionSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTrafficDistribution", func(t *testing.T) {
         input := &connect.GetTrafficDistributionInput{}
         output := &connect.GetTrafficDistributionOutput{}
@@ -2251,6 +2329,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBots", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChildHoursOfOperations", func(t *testing.T) {
+        input := &connect.ListChildHoursOfOperationsInput{}
+        output := &connect.ListChildHoursOfOperationsOutput{}
+
+        mockClient.On("ListChildHoursOfOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChildHoursOfOperations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2816,6 +2907,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTestCaseExecutionRecords", func(t *testing.T) {
+        input := &connect.ListTestCaseExecutionRecordsInput{}
+        output := &connect.ListTestCaseExecutionRecordsOutput{}
+
+        mockClient.On("ListTestCaseExecutionRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTestCaseExecutionRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTestCaseExecutions", func(t *testing.T) {
+        input := &connect.ListTestCaseExecutionsInput{}
+        output := &connect.ListTestCaseExecutionsOutput{}
+
+        mockClient.On("ListTestCaseExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTestCaseExecutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTestCases", func(t *testing.T) {
+        input := &connect.ListTestCasesInput{}
+        output := &connect.ListTestCasesOutput{}
+
+        mockClient.On("ListTestCases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTestCases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTrafficDistributionGroupUsers", func(t *testing.T) {
         input := &connect.ListTrafficDistributionGroupUsersInput{}
         output := &connect.ListTrafficDistributionGroupUsersOutput{}
@@ -3284,6 +3414,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchTestCases", func(t *testing.T) {
+        input := &connect.SearchTestCasesInput{}
+        output := &connect.SearchTestCasesOutput{}
+
+        mockClient.On("SearchTestCases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchTestCases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchUserHierarchyGroups", func(t *testing.T) {
         input := &connect.SearchUserHierarchyGroupsInput{}
         output := &connect.SearchUserHierarchyGroupsOutput{}
@@ -3544,6 +3687,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartTestCaseExecution", func(t *testing.T) {
+        input := &connect.StartTestCaseExecutionInput{}
+        output := &connect.StartTestCaseExecutionOutput{}
+
+        mockClient.On("StartTestCaseExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTestCaseExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartWebRTCContact", func(t *testing.T) {
         input := &connect.StartWebRTCContactInput{}
         output := &connect.StartWebRTCContactOutput{}
@@ -3603,6 +3759,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopContactStreaming", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopContactStreaming(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopTestCaseExecution", func(t *testing.T) {
+        input := &connect.StopTestCaseExecutionInput{}
+        output := &connect.StopTestCaseExecutionOutput{}
+
+        mockClient.On("StopTestCaseExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopTestCaseExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4266,6 +4435,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTaskTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTaskTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTestCase", func(t *testing.T) {
+        input := &connect.UpdateTestCaseInput{}
+        output := &connect.UpdateTestCaseOutput{}
+
+        mockClient.On("UpdateTestCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTestCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

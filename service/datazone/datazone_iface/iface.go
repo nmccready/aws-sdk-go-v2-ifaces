@@ -53,6 +53,7 @@ type IClient interface {
  DeleteAssetFilter(ctx context.Context, params *DeleteAssetFilterInput, optFns ...func(*Options)) (*DeleteAssetFilterOutput, error) 
  DeleteAssetType(ctx context.Context, params *DeleteAssetTypeInput, optFns ...func(*Options)) (*DeleteAssetTypeOutput, error) 
  DeleteConnection(ctx context.Context, params *DeleteConnectionInput, optFns ...func(*Options)) (*DeleteConnectionOutput, error) 
+ DeleteDataExportConfiguration(ctx context.Context, params *DeleteDataExportConfigurationInput, optFns ...func(*Options)) (*DeleteDataExportConfigurationOutput, error) 
  DeleteDataProduct(ctx context.Context, params *DeleteDataProductInput, optFns ...func(*Options)) (*DeleteDataProductOutput, error) 
  DeleteDataSource(ctx context.Context, params *DeleteDataSourceInput, optFns ...func(*Options)) (*DeleteDataSourceOutput, error) 
  DeleteDomain(ctx context.Context, params *DeleteDomainInput, optFns ...func(*Options)) (*DeleteDomainOutput, error) 

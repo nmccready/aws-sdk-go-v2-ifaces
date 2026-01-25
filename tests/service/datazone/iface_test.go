@@ -593,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataExportConfiguration", func(t *testing.T) {
+        input := &datazone.DeleteDataExportConfigurationInput{}
+        output := &datazone.DeleteDataExportConfigurationOutput{}
+
+        mockClient.On("DeleteDataExportConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataExportConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDataProduct", func(t *testing.T) {
         input := &datazone.DeleteDataProductInput{}
         output := &datazone.DeleteDataProductOutput{}
