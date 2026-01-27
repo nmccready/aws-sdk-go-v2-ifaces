@@ -104,7 +104,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/connect v1.157.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.16
 	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.10.3
-	github.com/aws/aws-sdk-go-v2/service/connectcases v1.34.9
+	github.com/aws/aws-sdk-go-v2/service/connectcases v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/connectcontactlens v1.33.9
 	github.com/aws/aws-sdk-go-v2/service/connectparticipant v1.36.3
 	github.com/aws/aws-sdk-go-v2/service/controlcatalog v1.14.5
@@ -135,7 +135,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.54.0
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.32.10
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.33.10
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.281.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.282.0
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.32.16
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.55.1
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.9
@@ -154,7 +154,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/emrserverless v1.39.1
 	github.com/aws/aws-sdk-go-v2/service/entityresolution v1.26.1
 	github.com/aws/aws-sdk-go-v2/service/eventbridge v1.45.18
-	github.com/aws/aws-sdk-go-v2/service/evidently v1.28.16
+	github.com/aws/aws-sdk-go-v2/service/evidently v1.29.0
 	github.com/aws/aws-sdk-go-v2/service/evs v1.6.0
 	github.com/aws/aws-sdk-go-v2/service/finspace v1.33.17
 	github.com/aws/aws-sdk-go-v2/service/finspacedata v1.33.17
@@ -177,7 +177,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/grafana v1.32.10
 	github.com/aws/aws-sdk-go-v2/service/greengrass v1.32.17
 	github.com/aws/aws-sdk-go-v2/service/greengrassv2 v1.42.8
-	github.com/aws/aws-sdk-go-v2/service/groundstation v1.39.7
+	github.com/aws/aws-sdk-go-v2/service/groundstation v1.40.0
 	github.com/aws/aws-sdk-go-v2/service/guardduty v1.73.0
 	github.com/aws/aws-sdk-go-v2/service/health v1.37.0
 	github.com/aws/aws-sdk-go-v2/service/healthlake v1.36.9
