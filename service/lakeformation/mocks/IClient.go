@@ -1199,6 +1199,43 @@ func (_m *IClient) GetTableObjects(ctx context.Context, params *lakeformation.Ge
 	return r0, r1
 }
 
+// GetTemporaryDataLocationCredentials provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTemporaryDataLocationCredentials(ctx context.Context, params *lakeformation.GetTemporaryDataLocationCredentialsInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetTemporaryDataLocationCredentialsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTemporaryDataLocationCredentials")
+	}
+
+	var r0 *lakeformation.GetTemporaryDataLocationCredentialsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetTemporaryDataLocationCredentialsInput, ...func(*lakeformation.Options)) (*lakeformation.GetTemporaryDataLocationCredentialsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetTemporaryDataLocationCredentialsInput, ...func(*lakeformation.Options)) *lakeformation.GetTemporaryDataLocationCredentialsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.GetTemporaryDataLocationCredentialsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetTemporaryDataLocationCredentialsInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTemporaryGluePartitionCredentials provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTemporaryGluePartitionCredentials(ctx context.Context, params *lakeformation.GetTemporaryGluePartitionCredentialsInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetTemporaryGluePartitionCredentialsOutput, error) {
 	_va := make([]interface{}, len(optFns))

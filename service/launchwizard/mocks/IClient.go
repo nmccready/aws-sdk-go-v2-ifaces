@@ -126,6 +126,43 @@ func (_m *IClient) GetDeployment(ctx context.Context, params *launchwizard.GetDe
 	return r0, r1
 }
 
+// GetDeploymentPatternVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDeploymentPatternVersion(ctx context.Context, params *launchwizard.GetDeploymentPatternVersionInput, optFns ...func(*launchwizard.Options)) (*launchwizard.GetDeploymentPatternVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDeploymentPatternVersion")
+	}
+
+	var r0 *launchwizard.GetDeploymentPatternVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *launchwizard.GetDeploymentPatternVersionInput, ...func(*launchwizard.Options)) (*launchwizard.GetDeploymentPatternVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *launchwizard.GetDeploymentPatternVersionInput, ...func(*launchwizard.Options)) *launchwizard.GetDeploymentPatternVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*launchwizard.GetDeploymentPatternVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *launchwizard.GetDeploymentPatternVersionInput, ...func(*launchwizard.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetWorkload provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetWorkload(ctx context.Context, params *launchwizard.GetWorkloadInput, optFns ...func(*launchwizard.Options)) (*launchwizard.GetWorkloadOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +266,43 @@ func (_m *IClient) ListDeploymentEvents(ctx context.Context, params *launchwizar
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *launchwizard.ListDeploymentEventsInput, ...func(*launchwizard.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDeploymentPatternVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDeploymentPatternVersions(ctx context.Context, params *launchwizard.ListDeploymentPatternVersionsInput, optFns ...func(*launchwizard.Options)) (*launchwizard.ListDeploymentPatternVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDeploymentPatternVersions")
+	}
+
+	var r0 *launchwizard.ListDeploymentPatternVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *launchwizard.ListDeploymentPatternVersionsInput, ...func(*launchwizard.Options)) (*launchwizard.ListDeploymentPatternVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *launchwizard.ListDeploymentPatternVersionsInput, ...func(*launchwizard.Options)) *launchwizard.ListDeploymentPatternVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*launchwizard.ListDeploymentPatternVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *launchwizard.ListDeploymentPatternVersionsInput, ...func(*launchwizard.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -469,6 +543,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *launchwizard.Untag
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *launchwizard.UntagResourceInput, ...func(*launchwizard.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDeployment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDeployment(ctx context.Context, params *launchwizard.UpdateDeploymentInput, optFns ...func(*launchwizard.Options)) (*launchwizard.UpdateDeploymentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDeployment")
+	}
+
+	var r0 *launchwizard.UpdateDeploymentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *launchwizard.UpdateDeploymentInput, ...func(*launchwizard.Options)) (*launchwizard.UpdateDeploymentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *launchwizard.UpdateDeploymentInput, ...func(*launchwizard.Options)) *launchwizard.UpdateDeploymentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*launchwizard.UpdateDeploymentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *launchwizard.UpdateDeploymentInput, ...func(*launchwizard.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

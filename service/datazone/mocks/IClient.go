@@ -1606,6 +1606,43 @@ func (_m *IClient) DeleteConnection(ctx context.Context, params *datazone.Delete
 	return r0, r1
 }
 
+// DeleteDataExportConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataExportConfiguration(ctx context.Context, params *datazone.DeleteDataExportConfigurationInput, optFns ...func(*datazone.Options)) (*datazone.DeleteDataExportConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataExportConfiguration")
+	}
+
+	var r0 *datazone.DeleteDataExportConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDataExportConfigurationInput, ...func(*datazone.Options)) (*datazone.DeleteDataExportConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDataExportConfigurationInput, ...func(*datazone.Options)) *datazone.DeleteDataExportConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteDataExportConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteDataExportConfigurationInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDataProduct provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDataProduct(ctx context.Context, params *datazone.DeleteDataProductInput, optFns ...func(*datazone.Options)) (*datazone.DeleteDataProductOutput, error) {
 	_va := make([]interface{}, len(optFns))

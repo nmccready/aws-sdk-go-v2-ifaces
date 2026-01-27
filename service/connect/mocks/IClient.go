@@ -311,6 +311,43 @@ func (_m *IClient) AssociateFlow(ctx context.Context, params *connect.AssociateF
 	return r0, r1
 }
 
+// AssociateHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateHoursOfOperations(ctx context.Context, params *connect.AssociateHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.AssociateHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateHoursOfOperations")
+	}
+
+	var r0 *connect.AssociateHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateHoursOfOperationsInput, ...func(*connect.Options)) (*connect.AssociateHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateHoursOfOperationsInput, ...func(*connect.Options)) *connect.AssociateHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.AssociateHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.AssociateHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateInstanceStorageConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateInstanceStorageConfig(ctx context.Context, params *connect.AssociateInstanceStorageConfigInput, optFns ...func(*connect.Options)) (*connect.AssociateInstanceStorageConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2087,6 +2124,43 @@ func (_m *IClient) CreateTaskTemplate(ctx context.Context, params *connect.Creat
 	return r0, r1
 }
 
+// CreateTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTestCase(ctx context.Context, params *connect.CreateTestCaseInput, optFns ...func(*connect.Options)) (*connect.CreateTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTestCase")
+	}
+
+	var r0 *connect.CreateTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateTestCaseInput, ...func(*connect.Options)) (*connect.CreateTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateTestCaseInput, ...func(*connect.Options)) *connect.CreateTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateTestCaseInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTrafficDistributionGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTrafficDistributionGroup(ctx context.Context, params *connect.CreateTrafficDistributionGroupInput, optFns ...func(*connect.Options)) (*connect.CreateTrafficDistributionGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3337,6 +3411,43 @@ func (_m *IClient) DeleteTaskTemplate(ctx context.Context, params *connect.Delet
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteTaskTemplateInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTestCase(ctx context.Context, params *connect.DeleteTestCaseInput, optFns ...func(*connect.Options)) (*connect.DeleteTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTestCase")
+	}
+
+	var r0 *connect.DeleteTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteTestCaseInput, ...func(*connect.Options)) (*connect.DeleteTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteTestCaseInput, ...func(*connect.Options)) *connect.DeleteTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteTestCaseInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4603,6 +4714,43 @@ func (_m *IClient) DescribeSecurityProfile(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// DescribeTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTestCase(ctx context.Context, params *connect.DescribeTestCaseInput, optFns ...func(*connect.Options)) (*connect.DescribeTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTestCase")
+	}
+
+	var r0 *connect.DescribeTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeTestCaseInput, ...func(*connect.Options)) (*connect.DescribeTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeTestCaseInput, ...func(*connect.Options)) *connect.DescribeTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeTestCaseInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTrafficDistributionGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTrafficDistributionGroup(ctx context.Context, params *connect.DescribeTrafficDistributionGroupInput, optFns ...func(*connect.Options)) (*connect.DescribeTrafficDistributionGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5039,6 +5187,43 @@ func (_m *IClient) DisassociateFlow(ctx context.Context, params *connect.Disasso
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DisassociateFlowInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateHoursOfOperations(ctx context.Context, params *connect.DisassociateHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.DisassociateHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateHoursOfOperations")
+	}
+
+	var r0 *connect.DisassociateHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateHoursOfOperationsInput, ...func(*connect.Options)) (*connect.DisassociateHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateHoursOfOperationsInput, ...func(*connect.Options)) *connect.DisassociateHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DisassociateHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DisassociateHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5972,6 +6157,43 @@ func (_m *IClient) GetTaskTemplate(ctx context.Context, params *connect.GetTaskT
 	return r0, r1
 }
 
+// GetTestCaseExecutionSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTestCaseExecutionSummary(ctx context.Context, params *connect.GetTestCaseExecutionSummaryInput, optFns ...func(*connect.Options)) (*connect.GetTestCaseExecutionSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTestCaseExecutionSummary")
+	}
+
+	var r0 *connect.GetTestCaseExecutionSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetTestCaseExecutionSummaryInput, ...func(*connect.Options)) (*connect.GetTestCaseExecutionSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetTestCaseExecutionSummaryInput, ...func(*connect.Options)) *connect.GetTestCaseExecutionSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.GetTestCaseExecutionSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.GetTestCaseExecutionSummaryInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTrafficDistribution provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTrafficDistribution(ctx context.Context, params *connect.GetTrafficDistributionInput, optFns ...func(*connect.Options)) (*connect.GetTrafficDistributionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6334,6 +6556,43 @@ func (_m *IClient) ListBots(ctx context.Context, params *connect.ListBotsInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListBotsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChildHoursOfOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChildHoursOfOperations(ctx context.Context, params *connect.ListChildHoursOfOperationsInput, optFns ...func(*connect.Options)) (*connect.ListChildHoursOfOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChildHoursOfOperations")
+	}
+
+	var r0 *connect.ListChildHoursOfOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListChildHoursOfOperationsInput, ...func(*connect.Options)) (*connect.ListChildHoursOfOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListChildHoursOfOperationsInput, ...func(*connect.Options)) *connect.ListChildHoursOfOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListChildHoursOfOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListChildHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7933,6 +8192,117 @@ func (_m *IClient) ListTaskTemplates(ctx context.Context, params *connect.ListTa
 	return r0, r1
 }
 
+// ListTestCaseExecutionRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestCaseExecutionRecords(ctx context.Context, params *connect.ListTestCaseExecutionRecordsInput, optFns ...func(*connect.Options)) (*connect.ListTestCaseExecutionRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestCaseExecutionRecords")
+	}
+
+	var r0 *connect.ListTestCaseExecutionRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListTestCaseExecutionRecordsInput, ...func(*connect.Options)) (*connect.ListTestCaseExecutionRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListTestCaseExecutionRecordsInput, ...func(*connect.Options)) *connect.ListTestCaseExecutionRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListTestCaseExecutionRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListTestCaseExecutionRecordsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestCaseExecutions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestCaseExecutions(ctx context.Context, params *connect.ListTestCaseExecutionsInput, optFns ...func(*connect.Options)) (*connect.ListTestCaseExecutionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestCaseExecutions")
+	}
+
+	var r0 *connect.ListTestCaseExecutionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListTestCaseExecutionsInput, ...func(*connect.Options)) (*connect.ListTestCaseExecutionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListTestCaseExecutionsInput, ...func(*connect.Options)) *connect.ListTestCaseExecutionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListTestCaseExecutionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListTestCaseExecutionsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestCases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestCases(ctx context.Context, params *connect.ListTestCasesInput, optFns ...func(*connect.Options)) (*connect.ListTestCasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestCases")
+	}
+
+	var r0 *connect.ListTestCasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListTestCasesInput, ...func(*connect.Options)) (*connect.ListTestCasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListTestCasesInput, ...func(*connect.Options)) *connect.ListTestCasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListTestCasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListTestCasesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTrafficDistributionGroupUsers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTrafficDistributionGroupUsers(ctx context.Context, params *connect.ListTrafficDistributionGroupUsersInput, optFns ...func(*connect.Options)) (*connect.ListTrafficDistributionGroupUsersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9283,6 +9653,43 @@ func (_m *IClient) SearchSecurityProfiles(ctx context.Context, params *connect.S
 	return r0, r1
 }
 
+// SearchTestCases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchTestCases(ctx context.Context, params *connect.SearchTestCasesInput, optFns ...func(*connect.Options)) (*connect.SearchTestCasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchTestCases")
+	}
+
+	var r0 *connect.SearchTestCasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchTestCasesInput, ...func(*connect.Options)) (*connect.SearchTestCasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchTestCasesInput, ...func(*connect.Options)) *connect.SearchTestCasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchTestCasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchTestCasesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchUserHierarchyGroups provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchUserHierarchyGroups(ctx context.Context, params *connect.SearchUserHierarchyGroupsInput, optFns ...func(*connect.Options)) (*connect.SearchUserHierarchyGroupsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10023,6 +10430,43 @@ func (_m *IClient) StartTaskContact(ctx context.Context, params *connect.StartTa
 	return r0, r1
 }
 
+// StartTestCaseExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTestCaseExecution(ctx context.Context, params *connect.StartTestCaseExecutionInput, optFns ...func(*connect.Options)) (*connect.StartTestCaseExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTestCaseExecution")
+	}
+
+	var r0 *connect.StartTestCaseExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartTestCaseExecutionInput, ...func(*connect.Options)) (*connect.StartTestCaseExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartTestCaseExecutionInput, ...func(*connect.Options)) *connect.StartTestCaseExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartTestCaseExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartTestCaseExecutionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartWebRTCContact provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartWebRTCContact(ctx context.Context, params *connect.StartWebRTCContactInput, optFns ...func(*connect.Options)) (*connect.StartWebRTCContactOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10200,6 +10644,43 @@ func (_m *IClient) StopContactStreaming(ctx context.Context, params *connect.Sto
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.StopContactStreamingInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopTestCaseExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopTestCaseExecution(ctx context.Context, params *connect.StopTestCaseExecutionInput, optFns ...func(*connect.Options)) (*connect.StopTestCaseExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopTestCaseExecution")
+	}
+
+	var r0 *connect.StopTestCaseExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StopTestCaseExecutionInput, ...func(*connect.Options)) (*connect.StopTestCaseExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StopTestCaseExecutionInput, ...func(*connect.Options)) *connect.StopTestCaseExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StopTestCaseExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StopTestCaseExecutionInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12087,6 +12568,43 @@ func (_m *IClient) UpdateTaskTemplate(ctx context.Context, params *connect.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateTaskTemplateInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTestCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTestCase(ctx context.Context, params *connect.UpdateTestCaseInput, optFns ...func(*connect.Options)) (*connect.UpdateTestCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTestCase")
+	}
+
+	var r0 *connect.UpdateTestCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateTestCaseInput, ...func(*connect.Options)) (*connect.UpdateTestCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateTestCaseInput, ...func(*connect.Options)) *connect.UpdateTestCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateTestCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateTestCaseInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

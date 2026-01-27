@@ -4973,6 +4973,43 @@ func (_m *IClient) GetMapping(ctx context.Context, params *glue.GetMappingInput,
 	return r0, r1
 }
 
+// GetMaterializedViewRefreshTaskRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMaterializedViewRefreshTaskRun(ctx context.Context, params *glue.GetMaterializedViewRefreshTaskRunInput, optFns ...func(*glue.Options)) (*glue.GetMaterializedViewRefreshTaskRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMaterializedViewRefreshTaskRun")
+	}
+
+	var r0 *glue.GetMaterializedViewRefreshTaskRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) (*glue.GetMaterializedViewRefreshTaskRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) *glue.GetMaterializedViewRefreshTaskRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetMaterializedViewRefreshTaskRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPartition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPartition(ctx context.Context, params *glue.GetPartitionInput, optFns ...func(*glue.Options)) (*glue.GetPartitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6860,6 +6897,43 @@ func (_m *IClient) ListMLTransforms(ctx context.Context, params *glue.ListMLTran
 	return r0, r1
 }
 
+// ListMaterializedViewRefreshTaskRuns provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMaterializedViewRefreshTaskRuns(ctx context.Context, params *glue.ListMaterializedViewRefreshTaskRunsInput, optFns ...func(*glue.Options)) (*glue.ListMaterializedViewRefreshTaskRunsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMaterializedViewRefreshTaskRuns")
+	}
+
+	var r0 *glue.ListMaterializedViewRefreshTaskRunsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListMaterializedViewRefreshTaskRunsInput, ...func(*glue.Options)) (*glue.ListMaterializedViewRefreshTaskRunsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListMaterializedViewRefreshTaskRunsInput, ...func(*glue.Options)) *glue.ListMaterializedViewRefreshTaskRunsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListMaterializedViewRefreshTaskRunsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListMaterializedViewRefreshTaskRunsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListRegistries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListRegistries(ctx context.Context, params *glue.ListRegistriesInput, optFns ...func(*glue.Options)) (*glue.ListRegistriesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8136,6 +8210,43 @@ func (_m *IClient) StartMLLabelingSetGenerationTaskRun(ctx context.Context, para
 	return r0, r1
 }
 
+// StartMaterializedViewRefreshTaskRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMaterializedViewRefreshTaskRun(ctx context.Context, params *glue.StartMaterializedViewRefreshTaskRunInput, optFns ...func(*glue.Options)) (*glue.StartMaterializedViewRefreshTaskRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMaterializedViewRefreshTaskRun")
+	}
+
+	var r0 *glue.StartMaterializedViewRefreshTaskRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StartMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) (*glue.StartMaterializedViewRefreshTaskRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StartMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) *glue.StartMaterializedViewRefreshTaskRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.StartMaterializedViewRefreshTaskRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.StartMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartTrigger provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartTrigger(ctx context.Context, params *glue.StartTriggerInput, optFns ...func(*glue.Options)) (*glue.StartTriggerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8350,6 +8461,43 @@ func (_m *IClient) StopCrawlerSchedule(ctx context.Context, params *glue.StopCra
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.StopCrawlerScheduleInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopMaterializedViewRefreshTaskRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopMaterializedViewRefreshTaskRun(ctx context.Context, params *glue.StopMaterializedViewRefreshTaskRunInput, optFns ...func(*glue.Options)) (*glue.StopMaterializedViewRefreshTaskRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopMaterializedViewRefreshTaskRun")
+	}
+
+	var r0 *glue.StopMaterializedViewRefreshTaskRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StopMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) (*glue.StopMaterializedViewRefreshTaskRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StopMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) *glue.StopMaterializedViewRefreshTaskRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.StopMaterializedViewRefreshTaskRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.StopMaterializedViewRefreshTaskRunInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
