@@ -3843,6 +3843,43 @@ func (_m *IClient) UpdateBucketMetadataJournalTableConfiguration(ctx context.Con
 	return r0, r1
 }
 
+// UpdateObjectEncryption provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateObjectEncryption(ctx context.Context, params *s3.UpdateObjectEncryptionInput, optFns ...func(*s3.Options)) (*s3.UpdateObjectEncryptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateObjectEncryption")
+	}
+
+	var r0 *s3.UpdateObjectEncryptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.UpdateObjectEncryptionInput, ...func(*s3.Options)) (*s3.UpdateObjectEncryptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.UpdateObjectEncryptionInput, ...func(*s3.Options)) *s3.UpdateObjectEncryptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.UpdateObjectEncryptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.UpdateObjectEncryptionInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UploadPart provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UploadPart(ctx context.Context, params *s3.UploadPartInput, optFns ...func(*s3.Options)) (*s3.UploadPartOutput, error) {
 	_va := make([]interface{}, len(optFns))

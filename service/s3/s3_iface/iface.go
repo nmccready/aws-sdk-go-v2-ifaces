@@ -113,6 +113,7 @@ type IClient interface {
  SelectObjectContent(ctx context.Context, params *SelectObjectContentInput, optFns ...func(*Options)) (*SelectObjectContentOutput, error) 
  UpdateBucketMetadataInventoryTableConfiguration(ctx context.Context, params *UpdateBucketMetadataInventoryTableConfigurationInput, optFns ...func(*Options)) (*UpdateBucketMetadataInventoryTableConfigurationOutput, error) 
  UpdateBucketMetadataJournalTableConfiguration(ctx context.Context, params *UpdateBucketMetadataJournalTableConfigurationInput, optFns ...func(*Options)) (*UpdateBucketMetadataJournalTableConfigurationOutput, error) 
+ UpdateObjectEncryption(ctx context.Context, params *UpdateObjectEncryptionInput, optFns ...func(*Options)) (*UpdateObjectEncryptionOutput, error) 
  UploadPart(ctx context.Context, params *UploadPartInput, optFns ...func(*Options)) (*UploadPartOutput, error) 
  UploadPartCopy(ctx context.Context, params *UploadPartCopyInput, optFns ...func(*Options)) (*UploadPartCopyOutput, error) 
  WriteGetObjectResponse(ctx context.Context, params *WriteGetObjectResponseInput, optFns ...func(*Options)) (*WriteGetObjectResponseOutput, error) 

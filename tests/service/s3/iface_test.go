@@ -1373,6 +1373,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateObjectEncryption", func(t *testing.T) {
+        input := &s3.UpdateObjectEncryptionInput{}
+        output := &s3.UpdateObjectEncryptionOutput{}
+
+        mockClient.On("UpdateObjectEncryption", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateObjectEncryption(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUploadPart", func(t *testing.T) {
         input := &s3.UploadPartInput{}
         output := &s3.UploadPartOutput{}
