@@ -27,7 +27,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/applicationsignals v1.18.4
 	github.com/aws/aws-sdk-go-v2/service/appmesh v1.35.8
 	github.com/aws/aws-sdk-go-v2/service/apprunner v1.39.10
-	github.com/aws/aws-sdk-go-v2/service/appstream v1.53.1
+	github.com/aws/aws-sdk-go-v2/service/appstream v1.53.2
 	github.com/aws/aws-sdk-go-v2/service/appsync v1.53.1
 	github.com/aws/aws-sdk-go-v2/service/arcregionswitch v1.4.1
 	github.com/aws/aws-sdk-go-v2/service/arczonalshift v1.22.19
@@ -48,7 +48,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/bedrock v1.53.2
 	github.com/aws/aws-sdk-go-v2/service/bedrockagent v1.52.3
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.11.0
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.17.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.18.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.3
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.13.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomationruntime v1.9.4
@@ -70,7 +70,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudcontrol v1.29.9
 	github.com/aws/aws-sdk-go-v2/service/clouddirectory v1.30.8
 	github.com/aws/aws-sdk-go-v2/service/cloudformation v1.71.5
-	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.59.0
+	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.60.0
 	github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore v1.12.19
 	github.com/aws/aws-sdk-go-v2/service/cloudhsm v1.29.17
 	github.com/aws/aws-sdk-go-v2/service/cloudhsmv2 v1.34.17
@@ -148,10 +148,10 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing v1.33.19
 	github.com/aws/aws-sdk-go-v2/service/elasticloadbalancingv2 v1.54.6
 	github.com/aws/aws-sdk-go-v2/service/elasticsearchservice v1.37.19
-	github.com/aws/aws-sdk-go-v2/service/elastictranscoder v1.32.18
+	github.com/aws/aws-sdk-go-v2/service/elastictranscoder v1.33.0
 	github.com/aws/aws-sdk-go-v2/service/emr v1.57.5
 	github.com/aws/aws-sdk-go-v2/service/emrcontainers v1.40.13
-	github.com/aws/aws-sdk-go-v2/service/emrserverless v1.39.1
+	github.com/aws/aws-sdk-go-v2/service/emrserverless v1.39.2
 	github.com/aws/aws-sdk-go-v2/service/entityresolution v1.26.1
 	github.com/aws/aws-sdk-go-v2/service/eventbridge v1.45.18
 	github.com/aws/aws-sdk-go-v2/service/evidently v1.29.0
@@ -264,7 +264,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/migrationhuborchestrator v1.18.17
 	github.com/aws/aws-sdk-go-v2/service/migrationhubrefactorspaces v1.25.17
 	github.com/aws/aws-sdk-go-v2/service/migrationhubstrategy v1.26.17
-	github.com/aws/aws-sdk-go-v2/service/mpa v1.5.9
+	github.com/aws/aws-sdk-go-v2/service/mpa v1.6.0
 	github.com/aws/aws-sdk-go-v2/service/mq v1.34.15
 	github.com/aws/aws-sdk-go-v2/service/mturk v1.30.16
 	github.com/aws/aws-sdk-go-v2/service/mwaa v1.39.18
@@ -420,7 +420,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.36.1
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.17
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -435,14 +435,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.17 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.17 // indirect
 	github.com/aws/smithy-go v1.24.0 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
