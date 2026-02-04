@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for ssoadmin
 type IClient interface {
  Options() Options 
+ AddRegion(ctx context.Context, params *AddRegionInput, optFns ...func(*Options)) (*AddRegionOutput, error) 
  AttachCustomerManagedPolicyReferenceToPermissionSet(ctx context.Context, params *AttachCustomerManagedPolicyReferenceToPermissionSetInput, optFns ...func(*Options)) (*AttachCustomerManagedPolicyReferenceToPermissionSetOutput, error) 
  AttachManagedPolicyToPermissionSet(ctx context.Context, params *AttachManagedPolicyToPermissionSetInput, optFns ...func(*Options)) (*AttachManagedPolicyToPermissionSetOutput, error) 
  CreateAccountAssignment(ctx context.Context, params *CreateAccountAssignmentInput, optFns ...func(*Options)) (*CreateAccountAssignmentOutput, error) 
@@ -40,6 +41,7 @@ type IClient interface {
  DescribeInstanceAccessControlAttributeConfiguration(ctx context.Context, params *DescribeInstanceAccessControlAttributeConfigurationInput, optFns ...func(*Options)) (*DescribeInstanceAccessControlAttributeConfigurationOutput, error) 
  DescribePermissionSet(ctx context.Context, params *DescribePermissionSetInput, optFns ...func(*Options)) (*DescribePermissionSetOutput, error) 
  DescribePermissionSetProvisioningStatus(ctx context.Context, params *DescribePermissionSetProvisioningStatusInput, optFns ...func(*Options)) (*DescribePermissionSetProvisioningStatusOutput, error) 
+ DescribeRegion(ctx context.Context, params *DescribeRegionInput, optFns ...func(*Options)) (*DescribeRegionOutput, error) 
  DescribeTrustedTokenIssuer(ctx context.Context, params *DescribeTrustedTokenIssuerInput, optFns ...func(*Options)) (*DescribeTrustedTokenIssuerOutput, error) 
  DetachCustomerManagedPolicyReferenceFromPermissionSet(ctx context.Context, params *DetachCustomerManagedPolicyReferenceFromPermissionSetInput, optFns ...func(*Options)) (*DetachCustomerManagedPolicyReferenceFromPermissionSetOutput, error) 
  DetachManagedPolicyFromPermissionSet(ctx context.Context, params *DetachManagedPolicyFromPermissionSetInput, optFns ...func(*Options)) (*DetachManagedPolicyFromPermissionSetOutput, error) 
@@ -68,6 +70,7 @@ type IClient interface {
  ListPermissionSetProvisioningStatus(ctx context.Context, params *ListPermissionSetProvisioningStatusInput, optFns ...func(*Options)) (*ListPermissionSetProvisioningStatusOutput, error) 
  ListPermissionSets(ctx context.Context, params *ListPermissionSetsInput, optFns ...func(*Options)) (*ListPermissionSetsOutput, error) 
  ListPermissionSetsProvisionedToAccount(ctx context.Context, params *ListPermissionSetsProvisionedToAccountInput, optFns ...func(*Options)) (*ListPermissionSetsProvisionedToAccountOutput, error) 
+ ListRegions(ctx context.Context, params *ListRegionsInput, optFns ...func(*Options)) (*ListRegionsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListTrustedTokenIssuers(ctx context.Context, params *ListTrustedTokenIssuersInput, optFns ...func(*Options)) (*ListTrustedTokenIssuersOutput, error) 
  ProvisionPermissionSet(ctx context.Context, params *ProvisionPermissionSetInput, optFns ...func(*Options)) (*ProvisionPermissionSetOutput, error) 
@@ -78,6 +81,7 @@ type IClient interface {
  PutApplicationSessionConfiguration(ctx context.Context, params *PutApplicationSessionConfigurationInput, optFns ...func(*Options)) (*PutApplicationSessionConfigurationOutput, error) 
  PutInlinePolicyToPermissionSet(ctx context.Context, params *PutInlinePolicyToPermissionSetInput, optFns ...func(*Options)) (*PutInlinePolicyToPermissionSetOutput, error) 
  PutPermissionsBoundaryToPermissionSet(ctx context.Context, params *PutPermissionsBoundaryToPermissionSetInput, optFns ...func(*Options)) (*PutPermissionsBoundaryToPermissionSetOutput, error) 
+ RemoveRegion(ctx context.Context, params *RemoveRegionInput, optFns ...func(*Options)) (*RemoveRegionOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateApplication(ctx context.Context, params *UpdateApplicationInput, optFns ...func(*Options)) (*UpdateApplicationOutput, error) 

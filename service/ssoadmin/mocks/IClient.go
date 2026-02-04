@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AddRegion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddRegion(ctx context.Context, params *ssoadmin.AddRegionInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.AddRegionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddRegion")
+	}
+
+	var r0 *ssoadmin.AddRegionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.AddRegionInput, ...func(*ssoadmin.Options)) (*ssoadmin.AddRegionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.AddRegionInput, ...func(*ssoadmin.Options)) *ssoadmin.AddRegionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssoadmin.AddRegionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssoadmin.AddRegionInput, ...func(*ssoadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AttachCustomerManagedPolicyReferenceToPermissionSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AttachCustomerManagedPolicyReferenceToPermissionSet(ctx context.Context, params *ssoadmin.AttachCustomerManagedPolicyReferenceToPermissionSetInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.AttachCustomerManagedPolicyReferenceToPermissionSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1124,6 +1161,43 @@ func (_m *IClient) DescribePermissionSetProvisioningStatus(ctx context.Context, 
 	return r0, r1
 }
 
+// DescribeRegion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeRegion(ctx context.Context, params *ssoadmin.DescribeRegionInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.DescribeRegionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeRegion")
+	}
+
+	var r0 *ssoadmin.DescribeRegionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.DescribeRegionInput, ...func(*ssoadmin.Options)) (*ssoadmin.DescribeRegionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.DescribeRegionInput, ...func(*ssoadmin.Options)) *ssoadmin.DescribeRegionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssoadmin.DescribeRegionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssoadmin.DescribeRegionInput, ...func(*ssoadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTrustedTokenIssuer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTrustedTokenIssuer(ctx context.Context, params *ssoadmin.DescribeTrustedTokenIssuerInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.DescribeTrustedTokenIssuerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2160,6 +2234,43 @@ func (_m *IClient) ListPermissionSetsProvisionedToAccount(ctx context.Context, p
 	return r0, r1
 }
 
+// ListRegions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRegions(ctx context.Context, params *ssoadmin.ListRegionsInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.ListRegionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRegions")
+	}
+
+	var r0 *ssoadmin.ListRegionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.ListRegionsInput, ...func(*ssoadmin.Options)) (*ssoadmin.ListRegionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.ListRegionsInput, ...func(*ssoadmin.Options)) *ssoadmin.ListRegionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssoadmin.ListRegionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssoadmin.ListRegionsInput, ...func(*ssoadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *ssoadmin.ListTagsForResourceInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2540,6 +2651,43 @@ func (_m *IClient) PutPermissionsBoundaryToPermissionSet(ctx context.Context, pa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssoadmin.PutPermissionsBoundaryToPermissionSetInput, ...func(*ssoadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RemoveRegion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveRegion(ctx context.Context, params *ssoadmin.RemoveRegionInput, optFns ...func(*ssoadmin.Options)) (*ssoadmin.RemoveRegionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveRegion")
+	}
+
+	var r0 *ssoadmin.RemoveRegionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.RemoveRegionInput, ...func(*ssoadmin.Options)) (*ssoadmin.RemoveRegionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssoadmin.RemoveRegionInput, ...func(*ssoadmin.Options)) *ssoadmin.RemoveRegionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssoadmin.RemoveRegionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssoadmin.RemoveRegionInput, ...func(*ssoadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

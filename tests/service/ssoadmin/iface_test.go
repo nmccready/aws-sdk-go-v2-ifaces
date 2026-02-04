@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddRegion", func(t *testing.T) {
+        input := &ssoadmin.AddRegionInput{}
+        output := &ssoadmin.AddRegionOutput{}
+
+        mockClient.On("AddRegion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddRegion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAttachCustomerManagedPolicyReferenceToPermissionSet", func(t *testing.T) {
         input := &ssoadmin.AttachCustomerManagedPolicyReferenceToPermissionSetInput{}
         output := &ssoadmin.AttachCustomerManagedPolicyReferenceToPermissionSetOutput{}
@@ -424,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeRegion", func(t *testing.T) {
+        input := &ssoadmin.DescribeRegionInput{}
+        output := &ssoadmin.DescribeRegionOutput{}
+
+        mockClient.On("DescribeRegion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRegion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTrustedTokenIssuer", func(t *testing.T) {
         input := &ssoadmin.DescribeTrustedTokenIssuerInput{}
         output := &ssoadmin.DescribeTrustedTokenIssuerOutput{}
@@ -788,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRegions", func(t *testing.T) {
+        input := &ssoadmin.ListRegionsInput{}
+        output := &ssoadmin.ListRegionsOutput{}
+
+        mockClient.On("ListRegions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRegions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &ssoadmin.ListTagsForResourceInput{}
         output := &ssoadmin.ListTagsForResourceOutput{}
@@ -912,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutPermissionsBoundaryToPermissionSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutPermissionsBoundaryToPermissionSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRemoveRegion", func(t *testing.T) {
+        input := &ssoadmin.RemoveRegionInput{}
+        output := &ssoadmin.RemoveRegionOutput{}
+
+        mockClient.On("RemoveRegion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveRegion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
