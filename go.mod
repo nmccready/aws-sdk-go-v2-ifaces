@@ -52,7 +52,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.3
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.13.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomationruntime v1.9.4
-	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.48.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.49.0
 	github.com/aws/aws-sdk-go-v2/service/billing v1.10.0
 	github.com/aws/aws-sdk-go-v2/service/billingconductor v1.28.1
 	github.com/aws/aws-sdk-go-v2/service/braket v1.39.4
@@ -104,7 +104,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/connect v1.160.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.16
 	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.10.3
-	github.com/aws/aws-sdk-go-v2/service/connectcases v1.35.0
+	github.com/aws/aws-sdk-go-v2/service/connectcases v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/connectcontactlens v1.33.9
 	github.com/aws/aws-sdk-go-v2/service/connectparticipant v1.36.3
 	github.com/aws/aws-sdk-go-v2/service/controlcatalog v1.14.5
@@ -141,7 +141,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.9
 	github.com/aws/aws-sdk-go-v2/service/ecs v1.71.0
 	github.com/aws/aws-sdk-go-v2/service/efs v1.41.10
-	github.com/aws/aws-sdk-go-v2/service/eks v1.77.0
+	github.com/aws/aws-sdk-go-v2/service/eks v1.77.1
 	github.com/aws/aws-sdk-go-v2/service/eksauth v1.12.9
 	github.com/aws/aws-sdk-go-v2/service/elasticache v1.51.9
 	github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk v1.33.19
@@ -248,7 +248,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplacereporting v1.7.8
 	github.com/aws/aws-sdk-go-v2/service/mediaconnect v1.47.0
 	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.87.0
-	github.com/aws/aws-sdk-go-v2/service/medialive v1.90.0
+	github.com/aws/aws-sdk-go-v2/service/medialive v1.91.0
 	github.com/aws/aws-sdk-go-v2/service/mediapackage v1.39.17
 	github.com/aws/aws-sdk-go-v2/service/mediapackagev2 v1.35.2
 	github.com/aws/aws-sdk-go-v2/service/mediapackagevod v1.39.17
@@ -317,7 +317,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.27.5
 	github.com/aws/aws-sdk-go-v2/service/rds v1.114.0
 	github.com/aws/aws-sdk-go-v2/service/rdsdata v1.32.17
-	github.com/aws/aws-sdk-go-v2/service/redshift v1.62.0
+	github.com/aws/aws-sdk-go-v2/service/redshift v1.62.1
 	github.com/aws/aws-sdk-go-v2/service/redshiftdata v1.38.4
 	github.com/aws/aws-sdk-go-v2/service/redshiftserverless v1.34.0
 	github.com/aws/aws-sdk-go-v2/service/rekognition v1.51.16
@@ -416,7 +416,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspaces v1.65.1
 	github.com/aws/aws-sdk-go-v2/service/workspacesinstances v1.5.0
 	github.com/aws/aws-sdk-go-v2/service/workspacesthinclient v1.20.17
-	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.36.1
+	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.37.0
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.17
 	github.com/nmccready/go-debug v0.5.0
 	github.com/stretchr/testify v1.6.1
