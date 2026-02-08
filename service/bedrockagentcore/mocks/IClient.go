@@ -1069,6 +1069,43 @@ func (_m *IClient) RetrieveMemoryRecords(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// SaveBrowserSessionProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SaveBrowserSessionProfile(ctx context.Context, params *bedrockagentcore.SaveBrowserSessionProfileInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.SaveBrowserSessionProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SaveBrowserSessionProfile")
+	}
+
+	var r0 *bedrockagentcore.SaveBrowserSessionProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.SaveBrowserSessionProfileInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.SaveBrowserSessionProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.SaveBrowserSessionProfileInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.SaveBrowserSessionProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.SaveBrowserSessionProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.SaveBrowserSessionProfileInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartBrowserSession provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartBrowserSession(ctx context.Context, params *bedrockagentcore.StartBrowserSessionInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StartBrowserSessionOutput, error) {
 	_va := make([]interface{}, len(optFns))

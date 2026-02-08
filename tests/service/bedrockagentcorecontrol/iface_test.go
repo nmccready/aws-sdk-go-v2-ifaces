@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBrowserProfile", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateBrowserProfileInput{}
+        output := &bedrockagentcorecontrol.CreateBrowserProfileOutput{}
+
+        mockClient.On("CreateBrowserProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBrowserProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCodeInterpreter", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateCodeInterpreterInput{}
         output := &bedrockagentcorecontrol.CreateCodeInterpreterOutput{}
@@ -262,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBrowser", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBrowser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBrowserProfile", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteBrowserProfileInput{}
+        output := &bedrockagentcorecontrol.DeleteBrowserProfileOutput{}
+
+        mockClient.On("DeleteBrowserProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBrowserProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBrowser", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBrowser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBrowserProfile", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetBrowserProfileInput{}
+        output := &bedrockagentcorecontrol.GetBrowserProfileOutput{}
+
+        mockClient.On("GetBrowserProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBrowserProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -678,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApiKeyCredentialProviders", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApiKeyCredentialProviders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBrowserProfiles", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListBrowserProfilesInput{}
+        output := &bedrockagentcorecontrol.ListBrowserProfilesOutput{}
+
+        mockClient.On("ListBrowserProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBrowserProfiles(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

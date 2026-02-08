@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSaveBrowserSessionProfile", func(t *testing.T) {
+        input := &bedrockagentcore.SaveBrowserSessionProfileInput{}
+        output := &bedrockagentcore.SaveBrowserSessionProfileOutput{}
+
+        mockClient.On("SaveBrowserSessionProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SaveBrowserSessionProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartBrowserSession", func(t *testing.T) {
         input := &bedrockagentcore.StartBrowserSessionInput{}
         output := &bedrockagentcore.StartBrowserSessionOutput{}

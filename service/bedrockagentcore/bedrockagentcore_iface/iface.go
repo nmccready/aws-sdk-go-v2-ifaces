@@ -38,6 +38,7 @@ type IClient interface {
  ListMemoryRecords(ctx context.Context, params *ListMemoryRecordsInput, optFns ...func(*Options)) (*ListMemoryRecordsOutput, error) 
  ListSessions(ctx context.Context, params *ListSessionsInput, optFns ...func(*Options)) (*ListSessionsOutput, error) 
  RetrieveMemoryRecords(ctx context.Context, params *RetrieveMemoryRecordsInput, optFns ...func(*Options)) (*RetrieveMemoryRecordsOutput, error) 
+ SaveBrowserSessionProfile(ctx context.Context, params *SaveBrowserSessionProfileInput, optFns ...func(*Options)) (*SaveBrowserSessionProfileOutput, error) 
  StartBrowserSession(ctx context.Context, params *StartBrowserSessionInput, optFns ...func(*Options)) (*StartBrowserSessionOutput, error) 
  StartCodeInterpreterSession(ctx context.Context, params *StartCodeInterpreterSessionInput, optFns ...func(*Options)) (*StartCodeInterpreterSessionOutput, error) 
  StartMemoryExtractionJob(ctx context.Context, params *StartMemoryExtractionJobInput, optFns ...func(*Options)) (*StartMemoryExtractionJobOutput, error) 

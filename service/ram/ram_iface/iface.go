@@ -36,6 +36,7 @@ type IClient interface {
  ListResourceSharePermissions(ctx context.Context, params *ListResourceSharePermissionsInput, optFns ...func(*Options)) (*ListResourceSharePermissionsOutput, error) 
  ListResourceTypes(ctx context.Context, params *ListResourceTypesInput, optFns ...func(*Options)) (*ListResourceTypesOutput, error) 
  ListResources(ctx context.Context, params *ListResourcesInput, optFns ...func(*Options)) (*ListResourcesOutput, error) 
+ ListSourceAssociations(ctx context.Context, params *ListSourceAssociationsInput, optFns ...func(*Options)) (*ListSourceAssociationsOutput, error) 
  PromotePermissionCreatedFromPolicy(ctx context.Context, params *PromotePermissionCreatedFromPolicyInput, optFns ...func(*Options)) (*PromotePermissionCreatedFromPolicyOutput, error) 
  PromoteResourceShareCreatedFromPolicy(ctx context.Context, params *PromoteResourceShareCreatedFromPolicyInput, optFns ...func(*Options)) (*PromoteResourceShareCreatedFromPolicyOutput, error) 
  RejectResourceShareInvitation(ctx context.Context, params *RejectResourceShareInvitationInput, optFns ...func(*Options)) (*RejectResourceShareInvitationOutput, error) 
