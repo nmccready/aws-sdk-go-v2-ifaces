@@ -372,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSourceAssociations", func(t *testing.T) {
+        input := &ram.ListSourceAssociationsInput{}
+        output := &ram.ListSourceAssociationsOutput{}
+
+        mockClient.On("ListSourceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSourceAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPromotePermissionCreatedFromPolicy", func(t *testing.T) {
         input := &ram.PromotePermissionCreatedFromPolicyInput{}
         output := &ram.PromotePermissionCreatedFromPolicyOutput{}

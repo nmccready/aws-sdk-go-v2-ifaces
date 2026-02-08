@@ -2198,6 +2198,43 @@ func (_m *IClient) DeleteConnection(ctx context.Context, params *glue.DeleteConn
 	return r0, r1
 }
 
+// DeleteConnectionType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnectionType(ctx context.Context, params *glue.DeleteConnectionTypeInput, optFns ...func(*glue.Options)) (*glue.DeleteConnectionTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnectionType")
+	}
+
+	var r0 *glue.DeleteConnectionTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteConnectionTypeInput, ...func(*glue.Options)) (*glue.DeleteConnectionTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteConnectionTypeInput, ...func(*glue.Options)) *glue.DeleteConnectionTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteConnectionTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteConnectionTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCrawler provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCrawler(ctx context.Context, params *glue.DeleteCrawlerInput, optFns ...func(*glue.Options)) (*glue.DeleteCrawlerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7536,6 +7573,43 @@ func (_m *IClient) QuerySchemaVersionMetadata(ctx context.Context, params *glue.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.QuerySchemaVersionMetadataInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterConnectionType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterConnectionType(ctx context.Context, params *glue.RegisterConnectionTypeInput, optFns ...func(*glue.Options)) (*glue.RegisterConnectionTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterConnectionType")
+	}
+
+	var r0 *glue.RegisterConnectionTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.RegisterConnectionTypeInput, ...func(*glue.Options)) (*glue.RegisterConnectionTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.RegisterConnectionTypeInput, ...func(*glue.Options)) *glue.RegisterConnectionTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.RegisterConnectionTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.RegisterConnectionTypeInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
