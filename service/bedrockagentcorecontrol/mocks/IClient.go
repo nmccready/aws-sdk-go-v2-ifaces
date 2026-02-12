@@ -163,6 +163,43 @@ func (_m *IClient) CreateBrowser(ctx context.Context, params *bedrockagentcoreco
 	return r0, r1
 }
 
+// CreateBrowserProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateBrowserProfile(ctx context.Context, params *bedrockagentcorecontrol.CreateBrowserProfileInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateBrowserProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateBrowserProfile")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateBrowserProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateBrowserProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateBrowserProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateBrowserProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCodeInterpreter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCodeInterpreter(ctx context.Context, params *bedrockagentcorecontrol.CreateCodeInterpreterInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateCodeInterpreterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -673,6 +710,43 @@ func (_m *IClient) DeleteBrowser(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteBrowserInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteBrowserProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBrowserProfile(ctx context.Context, params *bedrockagentcorecontrol.DeleteBrowserProfileInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteBrowserProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBrowserProfile")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteBrowserProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteBrowserProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteBrowserProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteBrowserProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1228,6 +1302,43 @@ func (_m *IClient) GetBrowser(ctx context.Context, params *bedrockagentcorecontr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetBrowserInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetBrowserProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBrowserProfile(ctx context.Context, params *bedrockagentcorecontrol.GetBrowserProfileInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetBrowserProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBrowserProfile")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetBrowserProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetBrowserProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetBrowserProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetBrowserProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1857,6 +1968,43 @@ func (_m *IClient) ListApiKeyCredentialProviders(ctx context.Context, params *be
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListApiKeyCredentialProvidersInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBrowserProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBrowserProfiles(ctx context.Context, params *bedrockagentcorecontrol.ListBrowserProfilesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListBrowserProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBrowserProfiles")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListBrowserProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListBrowserProfilesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListBrowserProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListBrowserProfilesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListBrowserProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListBrowserProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListBrowserProfilesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

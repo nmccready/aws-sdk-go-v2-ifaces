@@ -801,6 +801,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConnectionType", func(t *testing.T) {
+        input := &glue.DeleteConnectionTypeInput{}
+        output := &glue.DeleteConnectionTypeOutput{}
+
+        mockClient.On("DeleteConnectionType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnectionType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCrawler", func(t *testing.T) {
         input := &glue.DeleteCrawlerInput{}
         output := &glue.DeleteCrawlerOutput{}
@@ -2667,6 +2680,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("QuerySchemaVersionMetadata", ctx, input).Return(output, nil)
 
         result, err := mockClient.QuerySchemaVersionMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterConnectionType", func(t *testing.T) {
+        input := &glue.RegisterConnectionTypeInput{}
+        output := &glue.RegisterConnectionTypeOutput{}
+
+        mockClient.On("RegisterConnectionType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterConnectionType(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
