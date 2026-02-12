@@ -4467,6 +4467,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateUserConfig", func(t *testing.T) {
+        input := &connect.UpdateUserConfigInput{}
+        output := &connect.UpdateUserConfigOutput{}
+
+        mockClient.On("UpdateUserConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateUserConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateUserHierarchy", func(t *testing.T) {
         input := &connect.UpdateUserHierarchyInput{}
         output := &connect.UpdateUserHierarchyOutput{}

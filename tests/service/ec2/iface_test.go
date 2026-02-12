@@ -1620,6 +1620,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSecondaryNetwork", func(t *testing.T) {
+        input := &ec2.CreateSecondaryNetworkInput{}
+        output := &ec2.CreateSecondaryNetworkOutput{}
+
+        mockClient.On("CreateSecondaryNetwork", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSecondaryNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSecondarySubnet", func(t *testing.T) {
+        input := &ec2.CreateSecondarySubnetInput{}
+        output := &ec2.CreateSecondarySubnetOutput{}
+
+        mockClient.On("CreateSecondarySubnet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSecondarySubnet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSecurityGroup", func(t *testing.T) {
         input := &ec2.CreateSecurityGroupInput{}
         output := &ec2.CreateSecurityGroupOutput{}
@@ -2810,6 +2836,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRouteTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRouteTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSecondaryNetwork", func(t *testing.T) {
+        input := &ec2.DeleteSecondaryNetworkInput{}
+        output := &ec2.DeleteSecondaryNetworkOutput{}
+
+        mockClient.On("DeleteSecondaryNetwork", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSecondaryNetwork(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSecondarySubnet", func(t *testing.T) {
+        input := &ec2.DeleteSecondarySubnetInput{}
+        output := &ec2.DeleteSecondarySubnetOutput{}
+
+        mockClient.On("DeleteSecondarySubnet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSecondarySubnet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4994,6 +5046,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeScheduledInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeScheduledInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSecondaryInterfaces", func(t *testing.T) {
+        input := &ec2.DescribeSecondaryInterfacesInput{}
+        output := &ec2.DescribeSecondaryInterfacesOutput{}
+
+        mockClient.On("DescribeSecondaryInterfaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSecondaryInterfaces(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSecondaryNetworks", func(t *testing.T) {
+        input := &ec2.DescribeSecondaryNetworksInput{}
+        output := &ec2.DescribeSecondaryNetworksOutput{}
+
+        mockClient.On("DescribeSecondaryNetworks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSecondaryNetworks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSecondarySubnets", func(t *testing.T) {
+        input := &ec2.DescribeSecondarySubnetsInput{}
+        output := &ec2.DescribeSecondarySubnetsOutput{}
+
+        mockClient.On("DescribeSecondarySubnets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSecondarySubnets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -40,14 +40,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/backup v1.54.6
 	github.com/aws/aws-sdk-go-v2/service/backupgateway v1.25.17
 	github.com/aws/aws-sdk-go-v2/service/backupsearch v1.6.19
-	github.com/aws/aws-sdk-go-v2/service/batch v1.59.0
+	github.com/aws/aws-sdk-go-v2/service/batch v1.60.0
 	github.com/aws/aws-sdk-go-v2/service/bcmdashboards v1.0.19
 	github.com/aws/aws-sdk-go-v2/service/bcmdataexports v1.12.10
 	github.com/aws/aws-sdk-go-v2/service/bcmpricingcalculator v1.10.5
 	github.com/aws/aws-sdk-go-v2/service/bcmrecommendedactions v1.1.1
 	github.com/aws/aws-sdk-go-v2/service/bedrock v1.53.2
 	github.com/aws/aws-sdk-go-v2/service/bedrockagent v1.52.3
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.12.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.13.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.19.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.3
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.13.1
@@ -101,9 +101,9 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.49.4
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizerautomation v1.0.4
 	github.com/aws/aws-sdk-go-v2/service/configservice v1.61.0
-	github.com/aws/aws-sdk-go-v2/service/connect v1.160.0
+	github.com/aws/aws-sdk-go-v2/service/connect v1.161.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.16
-	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.10.3
+	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.11.0
 	github.com/aws/aws-sdk-go-v2/service/connectcases v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/connectcontactlens v1.33.9
 	github.com/aws/aws-sdk-go-v2/service/connectparticipant v1.36.3
@@ -118,7 +118,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dataexchange v1.40.10
 	github.com/aws/aws-sdk-go-v2/service/datapipeline v1.30.16
 	github.com/aws/aws-sdk-go-v2/service/datasync v1.57.1
-	github.com/aws/aws-sdk-go-v2/service/datazone v1.52.0
+	github.com/aws/aws-sdk-go-v2/service/datazone v1.52.1
 	github.com/aws/aws-sdk-go-v2/service/dax v1.29.12
 	github.com/aws/aws-sdk-go-v2/service/deadline v1.25.0
 	github.com/aws/aws-sdk-go-v2/service/detective v1.38.9
@@ -135,13 +135,13 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.55.0
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.32.10
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.33.10
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.285.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.287.0
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.32.16
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.55.1
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.9
 	github.com/aws/aws-sdk-go-v2/service/ecs v1.71.0
 	github.com/aws/aws-sdk-go-v2/service/efs v1.41.10
-	github.com/aws/aws-sdk-go-v2/service/eks v1.77.1
+	github.com/aws/aws-sdk-go-v2/service/eks v1.80.0
 	github.com/aws/aws-sdk-go-v2/service/eksauth v1.12.9
 	github.com/aws/aws-sdk-go-v2/service/elasticache v1.51.9
 	github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk v1.33.19
@@ -153,7 +153,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/emrserverless v1.39.2
 	github.com/aws/aws-sdk-go-v2/service/entityresolution v1.26.1
 	github.com/aws/aws-sdk-go-v2/service/eventbridge v1.45.18
-	github.com/aws/aws-sdk-go-v2/service/evidently v1.29.0
+	github.com/aws/aws-sdk-go-v2/service/evidently v1.30.0
 	github.com/aws/aws-sdk-go-v2/service/evs v1.6.0
 	github.com/aws/aws-sdk-go-v2/service/finspace v1.33.17
 	github.com/aws/aws-sdk-go-v2/service/finspacedata v1.33.17
@@ -182,14 +182,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/healthlake v1.36.9
 	github.com/aws/aws-sdk-go-v2/service/iam v1.53.2
 	github.com/aws/aws-sdk-go-v2/service/identitystore v1.36.1
-	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.50.4
+	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.51.0
 	github.com/aws/aws-sdk-go-v2/service/inspector v1.30.16
 	github.com/aws/aws-sdk-go-v2/service/inspector2 v1.46.2
 	github.com/aws/aws-sdk-go-v2/service/inspectorscan v1.13.1
 	github.com/aws/aws-sdk-go-v2/service/internetmonitor v1.26.10
 	github.com/aws/aws-sdk-go-v2/service/invoicing v1.9.4
 	github.com/aws/aws-sdk-go-v2/service/iot v1.72.1
-	github.com/aws/aws-sdk-go-v2/service/iotanalytics v1.31.17
+	github.com/aws/aws-sdk-go-v2/service/iotanalytics v1.32.0
 	github.com/aws/aws-sdk-go-v2/service/iotdataplane v1.32.17
 	github.com/aws/aws-sdk-go-v2/service/iotdeviceadvisor v1.36.17
 	github.com/aws/aws-sdk-go-v2/service/iotevents v1.33.9
@@ -205,8 +205,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ivs v1.48.10
 	github.com/aws/aws-sdk-go-v2/service/ivschat v1.21.16
 	github.com/aws/aws-sdk-go-v2/service/ivsrealtime v1.32.1
-	github.com/aws/aws-sdk-go-v2/service/kafka v1.46.7
-	github.com/aws/aws-sdk-go-v2/service/kafkaconnect v1.29.2
+	github.com/aws/aws-sdk-go-v2/service/kafka v1.47.0
+	github.com/aws/aws-sdk-go-v2/service/kafkaconnect v1.30.0
 	github.com/aws/aws-sdk-go-v2/service/kendra v1.60.17
 	github.com/aws/aws-sdk-go-v2/service/kendraranking v1.15.21
 	github.com/aws/aws-sdk-go-v2/service/keyspaces v1.25.0
@@ -220,7 +220,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideosignaling v1.28.17
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideowebrtcstorage v1.20.9
 	github.com/aws/aws-sdk-go-v2/service/kms v1.49.5
-	github.com/aws/aws-sdk-go-v2/service/lakeformation v1.47.0
+	github.com/aws/aws-sdk-go-v2/service/lakeformation v1.47.1
 	github.com/aws/aws-sdk-go-v2/service/lambda v1.88.0
 	github.com/aws/aws-sdk-go-v2/service/launchwizard v1.14.0
 	github.com/aws/aws-sdk-go-v2/service/lexmodelbuildingservice v1.34.10
@@ -269,7 +269,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/mwaa v1.39.18
 	github.com/aws/aws-sdk-go-v2/service/mwaaserverless v1.0.5
 	github.com/aws/aws-sdk-go-v2/service/neptune v1.43.9
-	github.com/aws/aws-sdk-go-v2/service/neptunedata v1.16.9
+	github.com/aws/aws-sdk-go-v2/service/neptunedata v1.17.0
 	github.com/aws/aws-sdk-go-v2/service/neptunegraph v1.21.17
 	github.com/aws/aws-sdk-go-v2/service/networkfirewall v1.59.3
 	github.com/aws/aws-sdk-go-v2/service/networkflowmonitor v1.11.5
@@ -296,7 +296,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/paymentcryptographydata v1.25.1
 	github.com/aws/aws-sdk-go-v2/service/pcaconnectorad v1.15.17
 	github.com/aws/aws-sdk-go-v2/service/pcaconnectorscep v1.10.9
-	github.com/aws/aws-sdk-go-v2/service/pcs v1.15.6
+	github.com/aws/aws-sdk-go-v2/service/pcs v1.16.0
 	github.com/aws/aws-sdk-go-v2/service/personalize v1.47.3
 	github.com/aws/aws-sdk-go-v2/service/personalizeevents v1.31.9
 	github.com/aws/aws-sdk-go-v2/service/personalizeruntime v1.33.10
@@ -315,7 +315,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/quicksight v1.102.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.27.5
-	github.com/aws/aws-sdk-go-v2/service/rds v1.114.0
+	github.com/aws/aws-sdk-go-v2/service/rds v1.115.0
 	github.com/aws/aws-sdk-go-v2/service/rdsdata v1.32.17
 	github.com/aws/aws-sdk-go-v2/service/redshift v1.62.1
 	github.com/aws/aws-sdk-go-v2/service/redshiftdata v1.38.4
@@ -340,7 +340,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.96.0
 	github.com/aws/aws-sdk-go-v2/service/s3control v1.68.0
 	github.com/aws/aws-sdk-go-v2/service/s3outposts v1.34.8
-	github.com/aws/aws-sdk-go-v2/service/s3tables v1.13.2
+	github.com/aws/aws-sdk-go-v2/service/s3tables v1.14.0
 	github.com/aws/aws-sdk-go-v2/service/s3vectors v1.6.2
 	github.com/aws/aws-sdk-go-v2/service/sagemaker v1.232.0
 	github.com/aws/aws-sdk-go-v2/service/sagemakera2iruntime v1.32.17
@@ -398,7 +398,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/tnb v1.18.17
 	github.com/aws/aws-sdk-go-v2/service/transcribe v1.54.0
 	github.com/aws/aws-sdk-go-v2/service/transcribestreaming v1.33.6
-	github.com/aws/aws-sdk-go-v2/service/transfer v1.69.0
+	github.com/aws/aws-sdk-go-v2/service/transfer v1.69.1
 	github.com/aws/aws-sdk-go-v2/service/translate v1.33.17
 	github.com/aws/aws-sdk-go-v2/service/trustedadvisor v1.13.18
 	github.com/aws/aws-sdk-go-v2/service/verifiedpermissions v1.31.1

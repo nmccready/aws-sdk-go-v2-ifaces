@@ -12650,6 +12650,43 @@ func (_m *IClient) UpdateTrafficDistribution(ctx context.Context, params *connec
 	return r0, r1
 }
 
+// UpdateUserConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateUserConfig(ctx context.Context, params *connect.UpdateUserConfigInput, optFns ...func(*connect.Options)) (*connect.UpdateUserConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateUserConfig")
+	}
+
+	var r0 *connect.UpdateUserConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateUserConfigInput, ...func(*connect.Options)) (*connect.UpdateUserConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateUserConfigInput, ...func(*connect.Options)) *connect.UpdateUserConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateUserConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateUserConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateUserHierarchy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateUserHierarchy(ctx context.Context, params *connect.UpdateUserHierarchyInput, optFns ...func(*connect.Options)) (*connect.UpdateUserHierarchyOutput, error) {
 	_va := make([]interface{}, len(optFns))

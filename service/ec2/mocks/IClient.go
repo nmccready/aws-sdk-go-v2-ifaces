@@ -4529,6 +4529,80 @@ func (_m *IClient) CreateRouteTable(ctx context.Context, params *ec2.CreateRoute
 	return r0, r1
 }
 
+// CreateSecondaryNetwork provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSecondaryNetwork(ctx context.Context, params *ec2.CreateSecondaryNetworkInput, optFns ...func(*ec2.Options)) (*ec2.CreateSecondaryNetworkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSecondaryNetwork")
+	}
+
+	var r0 *ec2.CreateSecondaryNetworkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateSecondaryNetworkInput, ...func(*ec2.Options)) (*ec2.CreateSecondaryNetworkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateSecondaryNetworkInput, ...func(*ec2.Options)) *ec2.CreateSecondaryNetworkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateSecondaryNetworkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateSecondaryNetworkInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSecondarySubnet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSecondarySubnet(ctx context.Context, params *ec2.CreateSecondarySubnetInput, optFns ...func(*ec2.Options)) (*ec2.CreateSecondarySubnetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSecondarySubnet")
+	}
+
+	var r0 *ec2.CreateSecondarySubnetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateSecondarySubnetInput, ...func(*ec2.Options)) (*ec2.CreateSecondarySubnetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateSecondarySubnetInput, ...func(*ec2.Options)) *ec2.CreateSecondarySubnetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateSecondarySubnetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateSecondarySubnetInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateSecurityGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateSecurityGroup(ctx context.Context, params *ec2.CreateSecurityGroupInput, optFns ...func(*ec2.Options)) (*ec2.CreateSecurityGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7925,6 +7999,80 @@ func (_m *IClient) DeleteRouteTable(ctx context.Context, params *ec2.DeleteRoute
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteRouteTableInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSecondaryNetwork provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSecondaryNetwork(ctx context.Context, params *ec2.DeleteSecondaryNetworkInput, optFns ...func(*ec2.Options)) (*ec2.DeleteSecondaryNetworkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSecondaryNetwork")
+	}
+
+	var r0 *ec2.DeleteSecondaryNetworkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteSecondaryNetworkInput, ...func(*ec2.Options)) (*ec2.DeleteSecondaryNetworkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteSecondaryNetworkInput, ...func(*ec2.Options)) *ec2.DeleteSecondaryNetworkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteSecondaryNetworkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteSecondaryNetworkInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSecondarySubnet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSecondarySubnet(ctx context.Context, params *ec2.DeleteSecondarySubnetInput, optFns ...func(*ec2.Options)) (*ec2.DeleteSecondarySubnetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSecondarySubnet")
+	}
+
+	var r0 *ec2.DeleteSecondarySubnetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteSecondarySubnetInput, ...func(*ec2.Options)) (*ec2.DeleteSecondarySubnetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteSecondarySubnetInput, ...func(*ec2.Options)) *ec2.DeleteSecondarySubnetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteSecondarySubnetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteSecondarySubnetInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -14141,6 +14289,117 @@ func (_m *IClient) DescribeScheduledInstances(ctx context.Context, params *ec2.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeScheduledInstancesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSecondaryInterfaces provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSecondaryInterfaces(ctx context.Context, params *ec2.DescribeSecondaryInterfacesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeSecondaryInterfacesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSecondaryInterfaces")
+	}
+
+	var r0 *ec2.DescribeSecondaryInterfacesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeSecondaryInterfacesInput, ...func(*ec2.Options)) (*ec2.DescribeSecondaryInterfacesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeSecondaryInterfacesInput, ...func(*ec2.Options)) *ec2.DescribeSecondaryInterfacesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeSecondaryInterfacesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeSecondaryInterfacesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSecondaryNetworks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSecondaryNetworks(ctx context.Context, params *ec2.DescribeSecondaryNetworksInput, optFns ...func(*ec2.Options)) (*ec2.DescribeSecondaryNetworksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSecondaryNetworks")
+	}
+
+	var r0 *ec2.DescribeSecondaryNetworksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeSecondaryNetworksInput, ...func(*ec2.Options)) (*ec2.DescribeSecondaryNetworksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeSecondaryNetworksInput, ...func(*ec2.Options)) *ec2.DescribeSecondaryNetworksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeSecondaryNetworksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeSecondaryNetworksInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSecondarySubnets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSecondarySubnets(ctx context.Context, params *ec2.DescribeSecondarySubnetsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeSecondarySubnetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSecondarySubnets")
+	}
+
+	var r0 *ec2.DescribeSecondarySubnetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeSecondarySubnetsInput, ...func(*ec2.Options)) (*ec2.DescribeSecondarySubnetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeSecondarySubnetsInput, ...func(*ec2.Options)) *ec2.DescribeSecondarySubnetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeSecondarySubnetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeSecondarySubnetsInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

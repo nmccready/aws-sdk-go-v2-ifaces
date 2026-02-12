@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTopic", func(t *testing.T) {
+        input := &kafka.CreateTopicInput{}
+        output := &kafka.CreateTopicOutput{}
+
+        mockClient.On("CreateTopic", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTopic(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVpcConnection", func(t *testing.T) {
         input := &kafka.CreateVpcConnectionInput{}
         output := &kafka.CreateVpcConnectionOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteReplicator", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteReplicator(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTopic", func(t *testing.T) {
+        input := &kafka.DeleteTopicInput{}
+        output := &kafka.DeleteTopicOutput{}
+
+        mockClient.On("DeleteTopic", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTopic(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateStorage", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTopic", func(t *testing.T) {
+        input := &kafka.UpdateTopicInput{}
+        output := &kafka.UpdateTopicOutput{}
+
+        mockClient.On("UpdateTopic", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTopic(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

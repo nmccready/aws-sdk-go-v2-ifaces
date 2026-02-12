@@ -237,6 +237,43 @@ func (_m *IClient) CreateReplicator(ctx context.Context, params *kafka.CreateRep
 	return r0, r1
 }
 
+// CreateTopic provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTopic(ctx context.Context, params *kafka.CreateTopicInput, optFns ...func(*kafka.Options)) (*kafka.CreateTopicOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTopic")
+	}
+
+	var r0 *kafka.CreateTopicOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.CreateTopicInput, ...func(*kafka.Options)) (*kafka.CreateTopicOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.CreateTopicInput, ...func(*kafka.Options)) *kafka.CreateTopicOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.CreateTopicOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.CreateTopicInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateVpcConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateVpcConnection(ctx context.Context, params *kafka.CreateVpcConnectionInput, optFns ...func(*kafka.Options)) (*kafka.CreateVpcConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +451,43 @@ func (_m *IClient) DeleteReplicator(ctx context.Context, params *kafka.DeleteRep
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DeleteReplicatorInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTopic provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTopic(ctx context.Context, params *kafka.DeleteTopicInput, optFns ...func(*kafka.Options)) (*kafka.DeleteTopicOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTopic")
+	}
+
+	var r0 *kafka.DeleteTopicOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DeleteTopicInput, ...func(*kafka.Options)) (*kafka.DeleteTopicOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DeleteTopicInput, ...func(*kafka.Options)) *kafka.DeleteTopicOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.DeleteTopicOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DeleteTopicInput, ...func(*kafka.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2097,6 +2171,43 @@ func (_m *IClient) UpdateStorage(ctx context.Context, params *kafka.UpdateStorag
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafka.UpdateStorageInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTopic provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTopic(ctx context.Context, params *kafka.UpdateTopicInput, optFns ...func(*kafka.Options)) (*kafka.UpdateTopicOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTopic")
+	}
+
+	var r0 *kafka.UpdateTopicOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.UpdateTopicInput, ...func(*kafka.Options)) (*kafka.UpdateTopicOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.UpdateTopicInput, ...func(*kafka.Options)) *kafka.UpdateTopicOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.UpdateTopicOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.UpdateTopicInput, ...func(*kafka.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

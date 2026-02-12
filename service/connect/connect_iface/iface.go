@@ -351,6 +351,7 @@ type IClient interface {
  UpdateTaskTemplate(ctx context.Context, params *UpdateTaskTemplateInput, optFns ...func(*Options)) (*UpdateTaskTemplateOutput, error) 
  UpdateTestCase(ctx context.Context, params *UpdateTestCaseInput, optFns ...func(*Options)) (*UpdateTestCaseOutput, error) 
  UpdateTrafficDistribution(ctx context.Context, params *UpdateTrafficDistributionInput, optFns ...func(*Options)) (*UpdateTrafficDistributionOutput, error) 
+ UpdateUserConfig(ctx context.Context, params *UpdateUserConfigInput, optFns ...func(*Options)) (*UpdateUserConfigOutput, error) 
  UpdateUserHierarchy(ctx context.Context, params *UpdateUserHierarchyInput, optFns ...func(*Options)) (*UpdateUserHierarchyOutput, error) 
  UpdateUserHierarchyGroupName(ctx context.Context, params *UpdateUserHierarchyGroupNameInput, optFns ...func(*Options)) (*UpdateUserHierarchyGroupNameOutput, error) 
  UpdateUserHierarchyStructure(ctx context.Context, params *UpdateUserHierarchyStructureInput, optFns ...func(*Options)) (*UpdateUserHierarchyStructureOutput, error) 
