@@ -78,7 +78,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudsearchdomain v1.28.16
 	github.com/aws/aws-sdk-go-v2/service/cloudtrail v1.55.5
 	github.com/aws/aws-sdk-go-v2/service/cloudtraildata v1.17.9
-	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.53.1
+	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.54.0
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchevents v1.32.19
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.63.1
 	github.com/aws/aws-sdk-go-v2/service/codeartifact v1.38.17
@@ -101,7 +101,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.49.4
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizerautomation v1.0.4
 	github.com/aws/aws-sdk-go-v2/service/configservice v1.61.0
-	github.com/aws/aws-sdk-go-v2/service/connect v1.161.0
+	github.com/aws/aws-sdk-go-v2/service/connect v1.162.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.16
 	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.11.0
 	github.com/aws/aws-sdk-go-v2/service/connectcases v1.36.0
@@ -135,7 +135,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.55.0
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.32.10
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.33.10
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.288.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.289.0
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.32.16
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.55.1
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.9
@@ -183,7 +183,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/identitystore v1.36.1
 	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.51.0
 	github.com/aws/aws-sdk-go-v2/service/inspector v1.30.16
-	github.com/aws/aws-sdk-go-v2/service/inspector2 v1.46.2
+	github.com/aws/aws-sdk-go-v2/service/inspector2 v1.47.0
 	github.com/aws/aws-sdk-go-v2/service/inspectorscan v1.13.1
 	github.com/aws/aws-sdk-go-v2/service/internetmonitor v1.26.10
 	github.com/aws/aws-sdk-go-v2/service/invoicing v1.9.4
@@ -340,7 +340,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3outposts v1.34.8
 	github.com/aws/aws-sdk-go-v2/service/s3tables v1.14.0
 	github.com/aws/aws-sdk-go-v2/service/s3vectors v1.6.2
-	github.com/aws/aws-sdk-go-v2/service/sagemaker v1.232.0
+	github.com/aws/aws-sdk-go-v2/service/sagemaker v1.233.0
 	github.com/aws/aws-sdk-go-v2/service/sagemakera2iruntime v1.32.17
 	github.com/aws/aws-sdk-go-v2/service/sagemakeredge v1.31.9
 	github.com/aws/aws-sdk-go-v2/service/sagemakerfeaturestoreruntime v1.34.17

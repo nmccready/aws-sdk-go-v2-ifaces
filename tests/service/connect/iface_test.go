@@ -632,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateNotification", func(t *testing.T) {
+        input := &connect.CreateNotificationInput{}
+        output := &connect.CreateNotificationOutput{}
+
+        mockClient.On("CreateNotification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNotification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateParticipant", func(t *testing.T) {
         input := &connect.CreateParticipantInput{}
         output := &connect.CreateParticipantOutput{}
@@ -1113,6 +1126,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteNotification", func(t *testing.T) {
+        input := &connect.DeleteNotificationInput{}
+        output := &connect.DeleteNotificationOutput{}
+
+        mockClient.On("DeleteNotification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNotification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePredefinedAttribute", func(t *testing.T) {
         input := &connect.DeletePredefinedAttributeInput{}
         output := &connect.DeletePredefinedAttributeOutput{}
@@ -1575,6 +1601,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInstanceStorageConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInstanceStorageConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNotification", func(t *testing.T) {
+        input := &connect.DescribeNotificationInput{}
+        output := &connect.DescribeNotificationOutput{}
+
+        mockClient.On("DescribeNotification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNotification(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2660,6 +2699,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListNotifications", func(t *testing.T) {
+        input := &connect.ListNotificationsInput{}
+        output := &connect.ListNotificationsOutput{}
+
+        mockClient.On("ListNotifications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNotifications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPhoneNumbers", func(t *testing.T) {
         input := &connect.ListPhoneNumbersInput{}
         output := &connect.ListPhoneNumbersOutput{}
@@ -2998,6 +3050,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListUserNotifications", func(t *testing.T) {
+        input := &connect.ListUserNotificationsInput{}
+        output := &connect.ListUserNotificationsOutput{}
+
+        mockClient.On("ListUserNotifications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUserNotifications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListUserProficiencies", func(t *testing.T) {
         input := &connect.ListUserProficienciesInput{}
         output := &connect.ListUserProficienciesOutput{}
@@ -3317,6 +3382,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchHoursOfOperations", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchHoursOfOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchNotifications", func(t *testing.T) {
+        input := &connect.SearchNotificationsInput{}
+        output := &connect.SearchNotificationsOutput{}
+
+        mockClient.On("SearchNotifications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchNotifications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4155,6 +4233,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateNotificationContent", func(t *testing.T) {
+        input := &connect.UpdateNotificationContentInput{}
+        output := &connect.UpdateNotificationContentOutput{}
+
+        mockClient.On("UpdateNotificationContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNotificationContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateParticipantAuthentication", func(t *testing.T) {
         input := &connect.UpdateParticipantAuthenticationInput{}
         output := &connect.UpdateParticipantAuthenticationOutput{}
@@ -4526,6 +4617,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateUserIdentityInfo", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateUserIdentityInfo(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateUserNotificationStatus", func(t *testing.T) {
+        input := &connect.UpdateUserNotificationStatusInput{}
+        output := &connect.UpdateUserNotificationStatusOutput{}
+
+        mockClient.On("UpdateUserNotificationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateUserNotificationStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

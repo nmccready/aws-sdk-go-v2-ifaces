@@ -1717,6 +1717,43 @@ func (_m *IClient) CreateIntegrationAssociation(ctx context.Context, params *con
 	return r0, r1
 }
 
+// CreateNotification provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNotification(ctx context.Context, params *connect.CreateNotificationInput, optFns ...func(*connect.Options)) (*connect.CreateNotificationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNotification")
+	}
+
+	var r0 *connect.CreateNotificationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateNotificationInput, ...func(*connect.Options)) (*connect.CreateNotificationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateNotificationInput, ...func(*connect.Options)) *connect.CreateNotificationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateNotificationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateNotificationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateParticipant provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateParticipant(ctx context.Context, params *connect.CreateParticipantInput, optFns ...func(*connect.Options)) (*connect.CreateParticipantOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3086,6 +3123,43 @@ func (_m *IClient) DeleteIntegrationAssociation(ctx context.Context, params *con
 	return r0, r1
 }
 
+// DeleteNotification provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNotification(ctx context.Context, params *connect.DeleteNotificationInput, optFns ...func(*connect.Options)) (*connect.DeleteNotificationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNotification")
+	}
+
+	var r0 *connect.DeleteNotificationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteNotificationInput, ...func(*connect.Options)) (*connect.DeleteNotificationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteNotificationInput, ...func(*connect.Options)) *connect.DeleteNotificationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteNotificationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteNotificationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePredefinedAttribute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePredefinedAttribute(ctx context.Context, params *connect.DeletePredefinedAttributeInput, optFns ...func(*connect.Options)) (*connect.DeletePredefinedAttributeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4410,6 +4484,43 @@ func (_m *IClient) DescribeInstanceStorageConfig(ctx context.Context, params *co
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeInstanceStorageConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeNotification provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeNotification(ctx context.Context, params *connect.DescribeNotificationInput, optFns ...func(*connect.Options)) (*connect.DescribeNotificationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeNotification")
+	}
+
+	var r0 *connect.DescribeNotificationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeNotificationInput, ...func(*connect.Options)) (*connect.DescribeNotificationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeNotificationInput, ...func(*connect.Options)) *connect.DescribeNotificationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeNotificationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeNotificationInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7489,6 +7600,43 @@ func (_m *IClient) ListLexBots(ctx context.Context, params *connect.ListLexBotsI
 	return r0, r1
 }
 
+// ListNotifications provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNotifications(ctx context.Context, params *connect.ListNotificationsInput, optFns ...func(*connect.Options)) (*connect.ListNotificationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNotifications")
+	}
+
+	var r0 *connect.ListNotificationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListNotificationsInput, ...func(*connect.Options)) (*connect.ListNotificationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListNotificationsInput, ...func(*connect.Options)) *connect.ListNotificationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListNotificationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListNotificationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPhoneNumbers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPhoneNumbers(ctx context.Context, params *connect.ListPhoneNumbersInput, optFns ...func(*connect.Options)) (*connect.ListPhoneNumbersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8451,6 +8599,43 @@ func (_m *IClient) ListUserHierarchyGroups(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// ListUserNotifications provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUserNotifications(ctx context.Context, params *connect.ListUserNotificationsInput, optFns ...func(*connect.Options)) (*connect.ListUserNotificationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUserNotifications")
+	}
+
+	var r0 *connect.ListUserNotificationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListUserNotificationsInput, ...func(*connect.Options)) (*connect.ListUserNotificationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListUserNotificationsInput, ...func(*connect.Options)) *connect.ListUserNotificationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListUserNotificationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListUserNotificationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListUserProficiencies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListUserProficiencies(ctx context.Context, params *connect.ListUserProficienciesInput, optFns ...func(*connect.Options)) (*connect.ListUserProficienciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9386,6 +9571,43 @@ func (_m *IClient) SearchHoursOfOperations(ctx context.Context, params *connect.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchHoursOfOperationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchNotifications provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchNotifications(ctx context.Context, params *connect.SearchNotificationsInput, optFns ...func(*connect.Options)) (*connect.SearchNotificationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchNotifications")
+	}
+
+	var r0 *connect.SearchNotificationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchNotificationsInput, ...func(*connect.Options)) (*connect.SearchNotificationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchNotificationsInput, ...func(*connect.Options)) *connect.SearchNotificationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchNotificationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchNotificationsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -11762,6 +11984,43 @@ func (_m *IClient) UpdateInstanceStorageConfig(ctx context.Context, params *conn
 	return r0, r1
 }
 
+// UpdateNotificationContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNotificationContent(ctx context.Context, params *connect.UpdateNotificationContentInput, optFns ...func(*connect.Options)) (*connect.UpdateNotificationContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNotificationContent")
+	}
+
+	var r0 *connect.UpdateNotificationContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateNotificationContentInput, ...func(*connect.Options)) (*connect.UpdateNotificationContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateNotificationContentInput, ...func(*connect.Options)) *connect.UpdateNotificationContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateNotificationContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateNotificationContentInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateParticipantAuthentication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateParticipantAuthentication(ctx context.Context, params *connect.UpdateParticipantAuthenticationInput, optFns ...func(*connect.Options)) (*connect.UpdateParticipantAuthenticationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -12827,6 +13086,43 @@ func (_m *IClient) UpdateUserIdentityInfo(ctx context.Context, params *connect.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateUserIdentityInfoInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateUserNotificationStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateUserNotificationStatus(ctx context.Context, params *connect.UpdateUserNotificationStatusInput, optFns ...func(*connect.Options)) (*connect.UpdateUserNotificationStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateUserNotificationStatus")
+	}
+
+	var r0 *connect.UpdateUserNotificationStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateUserNotificationStatusInput, ...func(*connect.Options)) (*connect.UpdateUserNotificationStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateUserNotificationStatusInput, ...func(*connect.Options)) *connect.UpdateUserNotificationStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateUserNotificationStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateUserNotificationStatusInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
