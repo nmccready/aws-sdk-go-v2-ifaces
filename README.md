@@ -161,6 +161,10 @@ The generation pipeline:
 3. Interfaces are written to `service/<svc>/<svc>_iface/iface.go`
 4. Mockery generates mocks to `service/<svc>/mocks/IClient.go`
 
+## Sponsor
+
+If you find this project useful, consider [sponsoring @nmccready](https://github.com/sponsors/nmccready) to support ongoing maintenance and development. ❤️
+
 ## License
 
 See [LICENSE](LICENSE) for details.
