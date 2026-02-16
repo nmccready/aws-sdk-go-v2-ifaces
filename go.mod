@@ -29,7 +29,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/apprunner v1.39.10
 	github.com/aws/aws-sdk-go-v2/service/appstream v1.53.2
 	github.com/aws/aws-sdk-go-v2/service/appsync v1.53.1
-	github.com/aws/aws-sdk-go-v2/service/arcregionswitch v1.5.0
+	github.com/aws/aws-sdk-go-v2/service/arcregionswitch v1.5.1
 	github.com/aws/aws-sdk-go-v2/service/arczonalshift v1.22.19
 	github.com/aws/aws-sdk-go-v2/service/artifact v1.15.1
 	github.com/aws/aws-sdk-go-v2/service/athena v1.57.0
@@ -135,9 +135,9 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.55.0
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.32.10
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.33.10
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.289.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.289.1
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.32.16
-	github.com/aws/aws-sdk-go-v2/service/ecr v1.55.1
+	github.com/aws/aws-sdk-go-v2/service/ecr v1.55.2
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.9
 	github.com/aws/aws-sdk-go-v2/service/ecs v1.71.0
 	github.com/aws/aws-sdk-go-v2/service/efs v1.41.10
@@ -203,7 +203,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ivs v1.48.10
 	github.com/aws/aws-sdk-go-v2/service/ivschat v1.21.16
 	github.com/aws/aws-sdk-go-v2/service/ivsrealtime v1.32.1
-	github.com/aws/aws-sdk-go-v2/service/kafka v1.47.0
+	github.com/aws/aws-sdk-go-v2/service/kafka v1.48.0
 	github.com/aws/aws-sdk-go-v2/service/kafkaconnect v1.30.0
 	github.com/aws/aws-sdk-go-v2/service/kendra v1.60.17
 	github.com/aws/aws-sdk-go-v2/service/kendraranking v1.15.21
@@ -217,7 +217,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideomedia v1.27.16
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideosignaling v1.28.17
 	github.com/aws/aws-sdk-go-v2/service/kinesisvideowebrtcstorage v1.20.9
-	github.com/aws/aws-sdk-go-v2/service/kms v1.49.5
+	github.com/aws/aws-sdk-go-v2/service/kms v1.50.0
 	github.com/aws/aws-sdk-go-v2/service/lakeformation v1.47.1
 	github.com/aws/aws-sdk-go-v2/service/lambda v1.88.0
 	github.com/aws/aws-sdk-go-v2/service/launchwizard v1.14.0
@@ -309,7 +309,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/proton v1.39.11
 	github.com/aws/aws-sdk-go-v2/service/qapps v1.11.16
 	github.com/aws/aws-sdk-go-v2/service/qbusiness v1.34.1
-	github.com/aws/aws-sdk-go-v2/service/qconnect v1.27.0
+	github.com/aws/aws-sdk-go-v2/service/qconnect v1.28.0
 	github.com/aws/aws-sdk-go-v2/service/quicksight v1.102.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.27.5
@@ -352,7 +352,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/scheduler v1.17.18
 	github.com/aws/aws-sdk-go-v2/service/schemas v1.34.8
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.41.1
-	github.com/aws/aws-sdk-go-v2/service/securityhub v1.67.3
+	github.com/aws/aws-sdk-go-v2/service/securityhub v1.67.4
 	github.com/aws/aws-sdk-go-v2/service/securityir v1.10.4
 	github.com/aws/aws-sdk-go-v2/service/securitylake v1.25.9
 	github.com/aws/aws-sdk-go-v2/service/serverlessapplicationrepository v1.30.8
@@ -417,7 +417,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.37.0
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.17
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -432,14 +432,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.17 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.17 // indirect
 	github.com/aws/smithy-go v1.24.0 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
