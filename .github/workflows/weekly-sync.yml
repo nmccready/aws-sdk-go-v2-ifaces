@@ -73,7 +73,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Ensure the correct token is used
+          token: ${{ secrets.GH_TOKEN }} # Use PAT so PR triggers workflows
           commit-message: 'Automated sync'
           branch: 'automated-sync-aws-sdk-go-v2-${{ env.AWS_SDK_VERSION }}'
           title: 'Automated sync aws-sdk-go-v2-${{ env.AWS_SDK_VERSION }}'
