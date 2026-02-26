@@ -1124,6 +1124,43 @@ func (_m *IClient) GetSampledRequests(ctx context.Context, params *wafv2.GetSamp
 	return r0, r1
 }
 
+// GetTopPathStatisticsByTraffic provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTopPathStatisticsByTraffic(ctx context.Context, params *wafv2.GetTopPathStatisticsByTrafficInput, optFns ...func(*wafv2.Options)) (*wafv2.GetTopPathStatisticsByTrafficOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTopPathStatisticsByTraffic")
+	}
+
+	var r0 *wafv2.GetTopPathStatisticsByTrafficOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetTopPathStatisticsByTrafficInput, ...func(*wafv2.Options)) (*wafv2.GetTopPathStatisticsByTrafficOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetTopPathStatisticsByTrafficInput, ...func(*wafv2.Options)) *wafv2.GetTopPathStatisticsByTrafficOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.GetTopPathStatisticsByTrafficOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.GetTopPathStatisticsByTrafficInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetWebACL provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetWebACL(ctx context.Context, params *wafv2.GetWebACLInput, optFns ...func(*wafv2.Options)) (*wafv2.GetWebACLOutput, error) {
 	_va := make([]interface{}, len(optFns))

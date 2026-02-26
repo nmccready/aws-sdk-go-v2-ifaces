@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAlarmMuteRule", func(t *testing.T) {
+        input := &cloudwatch.DeleteAlarmMuteRuleInput{}
+        output := &cloudwatch.DeleteAlarmMuteRuleOutput{}
+
+        mockClient.On("DeleteAlarmMuteRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAlarmMuteRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAlarms", func(t *testing.T) {
         input := &cloudwatch.DeleteAlarmsInput{}
         output := &cloudwatch.DeleteAlarmsOutput{}
@@ -229,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAlarmMuteRule", func(t *testing.T) {
+        input := &cloudwatch.GetAlarmMuteRuleInput{}
+        output := &cloudwatch.GetAlarmMuteRuleOutput{}
+
+        mockClient.On("GetAlarmMuteRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAlarmMuteRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDashboard", func(t *testing.T) {
         input := &cloudwatch.GetDashboardInput{}
         output := &cloudwatch.GetDashboardOutput{}
@@ -307,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAlarmMuteRules", func(t *testing.T) {
+        input := &cloudwatch.ListAlarmMuteRulesInput{}
+        output := &cloudwatch.ListAlarmMuteRulesOutput{}
+
+        mockClient.On("ListAlarmMuteRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAlarmMuteRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDashboards", func(t *testing.T) {
         input := &cloudwatch.ListDashboardsInput{}
         output := &cloudwatch.ListDashboardsOutput{}
@@ -366,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAlarmMuteRule", func(t *testing.T) {
+        input := &cloudwatch.PutAlarmMuteRuleInput{}
+        output := &cloudwatch.PutAlarmMuteRuleOutput{}
+
+        mockClient.On("PutAlarmMuteRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAlarmMuteRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -237,6 +237,43 @@ func (_m *IClient) InvokeModel(ctx context.Context, params *bedrockruntime.Invok
 	return r0, r1
 }
 
+// InvokeModelWithBidirectionalStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeModelWithBidirectionalStream(ctx context.Context, params *bedrockruntime.InvokeModelWithBidirectionalStreamInput, optFns ...func(*bedrockruntime.Options)) (*bedrockruntime.InvokeModelWithBidirectionalStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeModelWithBidirectionalStream")
+	}
+
+	var r0 *bedrockruntime.InvokeModelWithBidirectionalStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.InvokeModelWithBidirectionalStreamInput, ...func(*bedrockruntime.Options)) (*bedrockruntime.InvokeModelWithBidirectionalStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockruntime.InvokeModelWithBidirectionalStreamInput, ...func(*bedrockruntime.Options)) *bedrockruntime.InvokeModelWithBidirectionalStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockruntime.InvokeModelWithBidirectionalStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockruntime.InvokeModelWithBidirectionalStreamInput, ...func(*bedrockruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InvokeModelWithResponseStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InvokeModelWithResponseStream(ctx context.Context, params *bedrockruntime.InvokeModelWithResponseStreamInput, optFns ...func(*bedrockruntime.Options)) (*bedrockruntime.InvokeModelWithResponseStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))

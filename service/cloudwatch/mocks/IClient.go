@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// DeleteAlarmMuteRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAlarmMuteRule(ctx context.Context, params *cloudwatch.DeleteAlarmMuteRuleInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteAlarmMuteRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAlarmMuteRule")
+	}
+
+	var r0 *cloudwatch.DeleteAlarmMuteRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DeleteAlarmMuteRuleInput, ...func(*cloudwatch.Options)) (*cloudwatch.DeleteAlarmMuteRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DeleteAlarmMuteRuleInput, ...func(*cloudwatch.Options)) *cloudwatch.DeleteAlarmMuteRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.DeleteAlarmMuteRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.DeleteAlarmMuteRuleInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAlarms provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAlarms(ctx context.Context, params *cloudwatch.DeleteAlarmsInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteAlarmsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -570,6 +607,43 @@ func (_m *IClient) EnableInsightRules(ctx context.Context, params *cloudwatch.En
 	return r0, r1
 }
 
+// GetAlarmMuteRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAlarmMuteRule(ctx context.Context, params *cloudwatch.GetAlarmMuteRuleInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetAlarmMuteRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAlarmMuteRule")
+	}
+
+	var r0 *cloudwatch.GetAlarmMuteRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetAlarmMuteRuleInput, ...func(*cloudwatch.Options)) (*cloudwatch.GetAlarmMuteRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetAlarmMuteRuleInput, ...func(*cloudwatch.Options)) *cloudwatch.GetAlarmMuteRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.GetAlarmMuteRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetAlarmMuteRuleInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDashboard provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDashboard(ctx context.Context, params *cloudwatch.GetDashboardInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetDashboardOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -792,6 +866,43 @@ func (_m *IClient) GetMetricWidgetImage(ctx context.Context, params *cloudwatch.
 	return r0, r1
 }
 
+// ListAlarmMuteRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAlarmMuteRules(ctx context.Context, params *cloudwatch.ListAlarmMuteRulesInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.ListAlarmMuteRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAlarmMuteRules")
+	}
+
+	var r0 *cloudwatch.ListAlarmMuteRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.ListAlarmMuteRulesInput, ...func(*cloudwatch.Options)) (*cloudwatch.ListAlarmMuteRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.ListAlarmMuteRulesInput, ...func(*cloudwatch.Options)) *cloudwatch.ListAlarmMuteRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.ListAlarmMuteRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.ListAlarmMuteRulesInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDashboards provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDashboards(ctx context.Context, params *cloudwatch.ListDashboardsInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.ListDashboardsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -993,6 +1104,43 @@ func (_m *IClient) Options() cloudwatch.Options {
 	}
 
 	return r0
+}
+
+// PutAlarmMuteRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAlarmMuteRule(ctx context.Context, params *cloudwatch.PutAlarmMuteRuleInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.PutAlarmMuteRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAlarmMuteRule")
+	}
+
+	var r0 *cloudwatch.PutAlarmMuteRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.PutAlarmMuteRuleInput, ...func(*cloudwatch.Options)) (*cloudwatch.PutAlarmMuteRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.PutAlarmMuteRuleInput, ...func(*cloudwatch.Options)) *cloudwatch.PutAlarmMuteRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.PutAlarmMuteRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.PutAlarmMuteRuleInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutAnomalyDetector provides a mock function with given fields: ctx, params, optFns

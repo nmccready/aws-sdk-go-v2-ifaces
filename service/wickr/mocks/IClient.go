@@ -828,6 +828,43 @@ func (_m *IClient) GetOidcInfo(ctx context.Context, params *wickr.GetOidcInfoInp
 	return r0, r1
 }
 
+// GetOpentdfConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOpentdfConfig(ctx context.Context, params *wickr.GetOpentdfConfigInput, optFns ...func(*wickr.Options)) (*wickr.GetOpentdfConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOpentdfConfig")
+	}
+
+	var r0 *wickr.GetOpentdfConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wickr.GetOpentdfConfigInput, ...func(*wickr.Options)) (*wickr.GetOpentdfConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wickr.GetOpentdfConfigInput, ...func(*wickr.Options)) *wickr.GetOpentdfConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wickr.GetOpentdfConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wickr.GetOpentdfConfigInput, ...func(*wickr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSecurityGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSecurityGroup(ctx context.Context, params *wickr.GetSecurityGroupInput, optFns ...func(*wickr.Options)) (*wickr.GetSecurityGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1319,6 +1356,43 @@ func (_m *IClient) RegisterOidcConfigTest(ctx context.Context, params *wickr.Reg
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wickr.RegisterOidcConfigTestInput, ...func(*wickr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterOpentdfConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterOpentdfConfig(ctx context.Context, params *wickr.RegisterOpentdfConfigInput, optFns ...func(*wickr.Options)) (*wickr.RegisterOpentdfConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterOpentdfConfig")
+	}
+
+	var r0 *wickr.RegisterOpentdfConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wickr.RegisterOpentdfConfigInput, ...func(*wickr.Options)) (*wickr.RegisterOpentdfConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wickr.RegisterOpentdfConfigInput, ...func(*wickr.Options)) *wickr.RegisterOpentdfConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wickr.RegisterOpentdfConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wickr.RegisterOpentdfConfigInput, ...func(*wickr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

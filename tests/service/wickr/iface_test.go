@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetOpentdfConfig", func(t *testing.T) {
+        input := &wickr.GetOpentdfConfigInput{}
+        output := &wickr.GetOpentdfConfigOutput{}
+
+        mockClient.On("GetOpentdfConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOpentdfConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSecurityGroup", func(t *testing.T) {
         input := &wickr.GetSecurityGroupInput{}
         output := &wickr.GetSecurityGroupOutput{}
@@ -483,6 +496,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterOidcConfigTest", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterOidcConfigTest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterOpentdfConfig", func(t *testing.T) {
+        input := &wickr.RegisterOpentdfConfigInput{}
+        output := &wickr.RegisterOpentdfConfigOutput{}
+
+        mockClient.On("RegisterOpentdfConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterOpentdfConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

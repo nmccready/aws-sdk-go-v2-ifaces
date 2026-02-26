@@ -424,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTopPathStatisticsByTraffic", func(t *testing.T) {
+        input := &wafv2.GetTopPathStatisticsByTrafficInput{}
+        output := &wafv2.GetTopPathStatisticsByTrafficOutput{}
+
+        mockClient.On("GetTopPathStatisticsByTraffic", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTopPathStatisticsByTraffic(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWebACL", func(t *testing.T) {
         input := &wafv2.GetWebACLInput{}
         output := &wafv2.GetWebACLOutput{}

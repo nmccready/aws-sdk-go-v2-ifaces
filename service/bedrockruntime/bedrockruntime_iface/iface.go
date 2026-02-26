@@ -16,6 +16,7 @@ type IClient interface {
  CountTokens(ctx context.Context, params *CountTokensInput, optFns ...func(*Options)) (*CountTokensOutput, error) 
  GetAsyncInvoke(ctx context.Context, params *GetAsyncInvokeInput, optFns ...func(*Options)) (*GetAsyncInvokeOutput, error) 
  InvokeModel(ctx context.Context, params *InvokeModelInput, optFns ...func(*Options)) (*InvokeModelOutput, error) 
+ InvokeModelWithBidirectionalStream(ctx context.Context, params *InvokeModelWithBidirectionalStreamInput, optFns ...func(*Options)) (*InvokeModelWithBidirectionalStreamOutput, error) 
  InvokeModelWithResponseStream(ctx context.Context, params *InvokeModelWithResponseStreamInput, optFns ...func(*Options)) (*InvokeModelWithResponseStreamOutput, error) 
  ListAsyncInvokes(ctx context.Context, params *ListAsyncInvokesInput, optFns ...func(*Options)) (*ListAsyncInvokesOutput, error) 
  StartAsyncInvoke(ctx context.Context, params *StartAsyncInvokeInput, optFns ...func(*Options)) (*StartAsyncInvokeOutput, error) 

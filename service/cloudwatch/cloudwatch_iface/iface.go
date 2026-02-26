@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for cloudwatch
 type IClient interface {
  Options() Options 
+ DeleteAlarmMuteRule(ctx context.Context, params *DeleteAlarmMuteRuleInput, optFns ...func(*Options)) (*DeleteAlarmMuteRuleOutput, error) 
  DeleteAlarms(ctx context.Context, params *DeleteAlarmsInput, optFns ...func(*Options)) (*DeleteAlarmsOutput, error) 
  DeleteAnomalyDetector(ctx context.Context, params *DeleteAnomalyDetectorInput, optFns ...func(*Options)) (*DeleteAnomalyDetectorOutput, error) 
  DeleteDashboards(ctx context.Context, params *DeleteDashboardsInput, optFns ...func(*Options)) (*DeleteDashboardsOutput, error) 
@@ -25,17 +26,20 @@ type IClient interface {
  DisableInsightRules(ctx context.Context, params *DisableInsightRulesInput, optFns ...func(*Options)) (*DisableInsightRulesOutput, error) 
  EnableAlarmActions(ctx context.Context, params *EnableAlarmActionsInput, optFns ...func(*Options)) (*EnableAlarmActionsOutput, error) 
  EnableInsightRules(ctx context.Context, params *EnableInsightRulesInput, optFns ...func(*Options)) (*EnableInsightRulesOutput, error) 
+ GetAlarmMuteRule(ctx context.Context, params *GetAlarmMuteRuleInput, optFns ...func(*Options)) (*GetAlarmMuteRuleOutput, error) 
  GetDashboard(ctx context.Context, params *GetDashboardInput, optFns ...func(*Options)) (*GetDashboardOutput, error) 
  GetInsightRuleReport(ctx context.Context, params *GetInsightRuleReportInput, optFns ...func(*Options)) (*GetInsightRuleReportOutput, error) 
  GetMetricData(ctx context.Context, params *GetMetricDataInput, optFns ...func(*Options)) (*GetMetricDataOutput, error) 
  GetMetricStatistics(ctx context.Context, params *GetMetricStatisticsInput, optFns ...func(*Options)) (*GetMetricStatisticsOutput, error) 
  GetMetricStream(ctx context.Context, params *GetMetricStreamInput, optFns ...func(*Options)) (*GetMetricStreamOutput, error) 
  GetMetricWidgetImage(ctx context.Context, params *GetMetricWidgetImageInput, optFns ...func(*Options)) (*GetMetricWidgetImageOutput, error) 
+ ListAlarmMuteRules(ctx context.Context, params *ListAlarmMuteRulesInput, optFns ...func(*Options)) (*ListAlarmMuteRulesOutput, error) 
  ListDashboards(ctx context.Context, params *ListDashboardsInput, optFns ...func(*Options)) (*ListDashboardsOutput, error) 
  ListManagedInsightRules(ctx context.Context, params *ListManagedInsightRulesInput, optFns ...func(*Options)) (*ListManagedInsightRulesOutput, error) 
  ListMetricStreams(ctx context.Context, params *ListMetricStreamsInput, optFns ...func(*Options)) (*ListMetricStreamsOutput, error) 
  ListMetrics(ctx context.Context, params *ListMetricsInput, optFns ...func(*Options)) (*ListMetricsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ PutAlarmMuteRule(ctx context.Context, params *PutAlarmMuteRuleInput, optFns ...func(*Options)) (*PutAlarmMuteRuleOutput, error) 
  PutAnomalyDetector(ctx context.Context, params *PutAnomalyDetectorInput, optFns ...func(*Options)) (*PutAnomalyDetectorOutput, error) 
  PutCompositeAlarm(ctx context.Context, params *PutCompositeAlarmInput, optFns ...func(*Options)) (*PutCompositeAlarmOutput, error) 
  PutDashboard(ctx context.Context, params *PutDashboardInput, optFns ...func(*Options)) (*PutDashboardOutput, error) 

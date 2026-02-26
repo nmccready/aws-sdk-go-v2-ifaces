@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeModelWithBidirectionalStream", func(t *testing.T) {
+        input := &bedrockruntime.InvokeModelWithBidirectionalStreamInput{}
+        output := &bedrockruntime.InvokeModelWithBidirectionalStreamOutput{}
+
+        mockClient.On("InvokeModelWithBidirectionalStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeModelWithBidirectionalStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeModelWithResponseStream", func(t *testing.T) {
         input := &bedrockruntime.InvokeModelWithResponseStreamInput{}
         output := &bedrockruntime.InvokeModelWithResponseStreamOutput{}

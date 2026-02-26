@@ -40,6 +40,7 @@ type IClient interface {
  GetRegexPatternSet(ctx context.Context, params *GetRegexPatternSetInput, optFns ...func(*Options)) (*GetRegexPatternSetOutput, error) 
  GetRuleGroup(ctx context.Context, params *GetRuleGroupInput, optFns ...func(*Options)) (*GetRuleGroupOutput, error) 
  GetSampledRequests(ctx context.Context, params *GetSampledRequestsInput, optFns ...func(*Options)) (*GetSampledRequestsOutput, error) 
+ GetTopPathStatisticsByTraffic(ctx context.Context, params *GetTopPathStatisticsByTrafficInput, optFns ...func(*Options)) (*GetTopPathStatisticsByTrafficOutput, error) 
  GetWebACL(ctx context.Context, params *GetWebACLInput, optFns ...func(*Options)) (*GetWebACLOutput, error) 
  GetWebACLForResource(ctx context.Context, params *GetWebACLForResourceInput, optFns ...func(*Options)) (*GetWebACLForResourceOutput, error) 
  ListAPIKeys(ctx context.Context, params *ListAPIKeysInput, optFns ...func(*Options)) (*ListAPIKeysOutput, error) 
