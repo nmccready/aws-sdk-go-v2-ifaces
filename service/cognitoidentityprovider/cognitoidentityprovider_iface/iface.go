@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  AddCustomAttributes(ctx context.Context, params *AddCustomAttributesInput, optFns ...func(*Options)) (*AddCustomAttributesOutput, error) 
+ AddUserPoolClientSecret(ctx context.Context, params *AddUserPoolClientSecretInput, optFns ...func(*Options)) (*AddUserPoolClientSecretOutput, error) 
  AdminAddUserToGroup(ctx context.Context, params *AdminAddUserToGroupInput, optFns ...func(*Options)) (*AdminAddUserToGroupOutput, error) 
  AdminConfirmSignUp(ctx context.Context, params *AdminConfirmSignUpInput, optFns ...func(*Options)) (*AdminConfirmSignUpOutput, error) 
  AdminCreateUser(ctx context.Context, params *AdminCreateUserInput, optFns ...func(*Options)) (*AdminCreateUserOutput, error) 
@@ -61,6 +62,7 @@ type IClient interface {
  DeleteUserAttributes(ctx context.Context, params *DeleteUserAttributesInput, optFns ...func(*Options)) (*DeleteUserAttributesOutput, error) 
  DeleteUserPool(ctx context.Context, params *DeleteUserPoolInput, optFns ...func(*Options)) (*DeleteUserPoolOutput, error) 
  DeleteUserPoolClient(ctx context.Context, params *DeleteUserPoolClientInput, optFns ...func(*Options)) (*DeleteUserPoolClientOutput, error) 
+ DeleteUserPoolClientSecret(ctx context.Context, params *DeleteUserPoolClientSecretInput, optFns ...func(*Options)) (*DeleteUserPoolClientSecretOutput, error) 
  DeleteUserPoolDomain(ctx context.Context, params *DeleteUserPoolDomainInput, optFns ...func(*Options)) (*DeleteUserPoolDomainOutput, error) 
  DeleteWebAuthnCredential(ctx context.Context, params *DeleteWebAuthnCredentialInput, optFns ...func(*Options)) (*DeleteWebAuthnCredentialOutput, error) 
  DescribeIdentityProvider(ctx context.Context, params *DescribeIdentityProviderInput, optFns ...func(*Options)) (*DescribeIdentityProviderOutput, error) 
@@ -96,6 +98,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListTerms(ctx context.Context, params *ListTermsInput, optFns ...func(*Options)) (*ListTermsOutput, error) 
  ListUserImportJobs(ctx context.Context, params *ListUserImportJobsInput, optFns ...func(*Options)) (*ListUserImportJobsOutput, error) 
+ ListUserPoolClientSecrets(ctx context.Context, params *ListUserPoolClientSecretsInput, optFns ...func(*Options)) (*ListUserPoolClientSecretsOutput, error) 
  ListUserPoolClients(ctx context.Context, params *ListUserPoolClientsInput, optFns ...func(*Options)) (*ListUserPoolClientsOutput, error) 
  ListUserPools(ctx context.Context, params *ListUserPoolsInput, optFns ...func(*Options)) (*ListUserPoolsOutput, error) 
  ListUsers(ctx context.Context, params *ListUsersInput, optFns ...func(*Options)) (*ListUsersOutput, error) 

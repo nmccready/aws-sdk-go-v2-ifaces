@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddUserPoolClientSecret", func(t *testing.T) {
+        input := &cognitoidentityprovider.AddUserPoolClientSecretInput{}
+        output := &cognitoidentityprovider.AddUserPoolClientSecretOutput{}
+
+        mockClient.On("AddUserPoolClientSecret", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddUserPoolClientSecret(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAdminAddUserToGroup", func(t *testing.T) {
         input := &cognitoidentityprovider.AdminAddUserToGroupInput{}
         output := &cognitoidentityprovider.AdminAddUserToGroupOutput{}
@@ -697,6 +710,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteUserPoolClientSecret", func(t *testing.T) {
+        input := &cognitoidentityprovider.DeleteUserPoolClientSecretInput{}
+        output := &cognitoidentityprovider.DeleteUserPoolClientSecretOutput{}
+
+        mockClient.On("DeleteUserPoolClientSecret", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteUserPoolClientSecret(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteUserPoolDomain", func(t *testing.T) {
         input := &cognitoidentityprovider.DeleteUserPoolDomainInput{}
         output := &cognitoidentityprovider.DeleteUserPoolDomainOutput{}
@@ -1146,6 +1172,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListUserImportJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListUserImportJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListUserPoolClientSecrets", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListUserPoolClientSecretsInput{}
+        output := &cognitoidentityprovider.ListUserPoolClientSecretsOutput{}
+
+        mockClient.On("ListUserPoolClientSecrets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUserPoolClientSecrets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

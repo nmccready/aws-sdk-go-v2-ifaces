@@ -52,6 +52,43 @@ func (_m *IClient) AddCustomAttributes(ctx context.Context, params *cognitoident
 	return r0, r1
 }
 
+// AddUserPoolClientSecret provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddUserPoolClientSecret(ctx context.Context, params *cognitoidentityprovider.AddUserPoolClientSecretInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AddUserPoolClientSecretOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddUserPoolClientSecret")
+	}
+
+	var r0 *cognitoidentityprovider.AddUserPoolClientSecretOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AddUserPoolClientSecretInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AddUserPoolClientSecretOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AddUserPoolClientSecretInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.AddUserPoolClientSecretOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.AddUserPoolClientSecretOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.AddUserPoolClientSecretInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AdminAddUserToGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AdminAddUserToGroup(ctx context.Context, params *cognitoidentityprovider.AdminAddUserToGroupInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminAddUserToGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1902,6 +1939,43 @@ func (_m *IClient) DeleteUserPoolClient(ctx context.Context, params *cognitoiden
 	return r0, r1
 }
 
+// DeleteUserPoolClientSecret provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteUserPoolClientSecret(ctx context.Context, params *cognitoidentityprovider.DeleteUserPoolClientSecretInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteUserPoolClientSecretOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteUserPoolClientSecret")
+	}
+
+	var r0 *cognitoidentityprovider.DeleteUserPoolClientSecretOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolClientSecretInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteUserPoolClientSecretOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolClientSecretInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DeleteUserPoolClientSecretOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DeleteUserPoolClientSecretOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolClientSecretInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteUserPoolDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteUserPoolDomain(ctx context.Context, params *cognitoidentityprovider.DeleteUserPoolDomainInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteUserPoolDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3189,6 +3263,43 @@ func (_m *IClient) ListUserImportJobs(ctx context.Context, params *cognitoidenti
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListUserImportJobsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListUserPoolClientSecrets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUserPoolClientSecrets(ctx context.Context, params *cognitoidentityprovider.ListUserPoolClientSecretsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUserPoolClientSecretsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUserPoolClientSecrets")
+	}
+
+	var r0 *cognitoidentityprovider.ListUserPoolClientSecretsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListUserPoolClientSecretsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUserPoolClientSecretsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListUserPoolClientSecretsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListUserPoolClientSecretsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListUserPoolClientSecretsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListUserPoolClientSecretsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
