@@ -5213,6 +5213,43 @@ func (_m *IClient) PutEnvironmentBlueprintConfiguration(ctx context.Context, par
 	return r0, r1
 }
 
+// QueryGraph provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) QueryGraph(ctx context.Context, params *datazone.QueryGraphInput, optFns ...func(*datazone.Options)) (*datazone.QueryGraphOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for QueryGraph")
+	}
+
+	var r0 *datazone.QueryGraphOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.QueryGraphInput, ...func(*datazone.Options)) (*datazone.QueryGraphOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.QueryGraphInput, ...func(*datazone.Options)) *datazone.QueryGraphOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.QueryGraphOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.QueryGraphInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RejectPredictions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RejectPredictions(ctx context.Context, params *datazone.RejectPredictionsInput, optFns ...func(*datazone.Options)) (*datazone.RejectPredictionsOutput, error) {
 	_va := make([]interface{}, len(optFns))

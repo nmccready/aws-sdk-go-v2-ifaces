@@ -88,6 +88,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListTagsLogGroup(ctx context.Context, params *ListTagsLogGroupInput, optFns ...func(*Options)) (*ListTagsLogGroupOutput, error) 
  PutAccountPolicy(ctx context.Context, params *PutAccountPolicyInput, optFns ...func(*Options)) (*PutAccountPolicyOutput, error) 
+ PutBearerTokenAuthentication(ctx context.Context, params *PutBearerTokenAuthenticationInput, optFns ...func(*Options)) (*PutBearerTokenAuthenticationOutput, error) 
  PutDataProtectionPolicy(ctx context.Context, params *PutDataProtectionPolicyInput, optFns ...func(*Options)) (*PutDataProtectionPolicyOutput, error) 
  PutDeliveryDestination(ctx context.Context, params *PutDeliveryDestinationInput, optFns ...func(*Options)) (*PutDeliveryDestinationOutput, error) 
  PutDeliveryDestinationPolicy(ctx context.Context, params *PutDeliveryDestinationPolicyInput, optFns ...func(*Options)) (*PutDeliveryDestinationPolicyOutput, error) 

@@ -150,6 +150,7 @@ type IClient interface {
  PostTimeSeriesDataPoints(ctx context.Context, params *PostTimeSeriesDataPointsInput, optFns ...func(*Options)) (*PostTimeSeriesDataPointsOutput, error) 
  PutDataExportConfiguration(ctx context.Context, params *PutDataExportConfigurationInput, optFns ...func(*Options)) (*PutDataExportConfigurationOutput, error) 
  PutEnvironmentBlueprintConfiguration(ctx context.Context, params *PutEnvironmentBlueprintConfigurationInput, optFns ...func(*Options)) (*PutEnvironmentBlueprintConfigurationOutput, error) 
+ QueryGraph(ctx context.Context, params *QueryGraphInput, optFns ...func(*Options)) (*QueryGraphOutput, error) 
  RejectPredictions(ctx context.Context, params *RejectPredictionsInput, optFns ...func(*Options)) (*RejectPredictionsOutput, error) 
  RejectSubscriptionRequest(ctx context.Context, params *RejectSubscriptionRequestInput, optFns ...func(*Options)) (*RejectSubscriptionRequestOutput, error) 
  RemoveEntityOwner(ctx context.Context, params *RemoveEntityOwnerInput, optFns ...func(*Options)) (*RemoveEntityOwnerOutput, error) 

@@ -1854,6 +1854,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestQueryGraph", func(t *testing.T) {
+        input := &datazone.QueryGraphInput{}
+        output := &datazone.QueryGraphOutput{}
+
+        mockClient.On("QueryGraph", ctx, input).Return(output, nil)
+
+        result, err := mockClient.QueryGraph(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRejectPredictions", func(t *testing.T) {
         input := &datazone.RejectPredictionsInput{}
         output := &datazone.RejectPredictionsOutput{}

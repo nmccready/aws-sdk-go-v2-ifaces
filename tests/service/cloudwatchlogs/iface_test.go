@@ -1048,6 +1048,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutBearerTokenAuthentication", func(t *testing.T) {
+        input := &cloudwatchlogs.PutBearerTokenAuthenticationInput{}
+        output := &cloudwatchlogs.PutBearerTokenAuthenticationOutput{}
+
+        mockClient.On("PutBearerTokenAuthentication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutBearerTokenAuthentication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutDataProtectionPolicy", func(t *testing.T) {
         input := &cloudwatchlogs.PutDataProtectionPolicyInput{}
         output := &cloudwatchlogs.PutDataProtectionPolicyOutput{}
