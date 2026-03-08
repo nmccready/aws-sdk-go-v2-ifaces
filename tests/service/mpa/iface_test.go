@@ -268,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartApprovalTeamBaseline", func(t *testing.T) {
+        input := &mpa.StartApprovalTeamBaselineInput{}
+        output := &mpa.StartApprovalTeamBaselineOutput{}
+
+        mockClient.On("StartApprovalTeamBaseline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartApprovalTeamBaseline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &mpa.TagResourceInput{}
         output := &mpa.TagResourceOutput{}

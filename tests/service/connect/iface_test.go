@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateQueueEmailAddresses", func(t *testing.T) {
+        input := &connect.AssociateQueueEmailAddressesInput{}
+        output := &connect.AssociateQueueEmailAddressesOutput{}
+
+        mockClient.On("AssociateQueueEmailAddresses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateQueueEmailAddresses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateQueueQuickConnects", func(t *testing.T) {
         input := &connect.AssociateQueueQuickConnectsInput{}
         output := &connect.AssociateQueueQuickConnectsOutput{}
@@ -1958,6 +1971,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateQueueEmailAddresses", func(t *testing.T) {
+        input := &connect.DisassociateQueueEmailAddressesInput{}
+        output := &connect.DisassociateQueueEmailAddressesOutput{}
+
+        mockClient.On("DisassociateQueueEmailAddresses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateQueueEmailAddresses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateQueueQuickConnects", func(t *testing.T) {
         input := &connect.DisassociateQueueQuickConnectsInput{}
         output := &connect.DisassociateQueueQuickConnectsOutput{}
@@ -2758,6 +2784,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPrompts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPrompts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQueueEmailAddresses", func(t *testing.T) {
+        input := &connect.ListQueueEmailAddressesInput{}
+        output := &connect.ListQueueEmailAddressesOutput{}
+
+        mockClient.On("ListQueueEmailAddresses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQueueEmailAddresses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

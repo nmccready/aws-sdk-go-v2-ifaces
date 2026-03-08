@@ -82,6 +82,7 @@ type IClient interface {
  GetComputeAuthToken(ctx context.Context, params *GetComputeAuthTokenInput, optFns ...func(*Options)) (*GetComputeAuthTokenOutput, error) 
  GetGameSessionLogUrl(ctx context.Context, params *GetGameSessionLogUrlInput, optFns ...func(*Options)) (*GetGameSessionLogUrlOutput, error) 
  GetInstanceAccess(ctx context.Context, params *GetInstanceAccessInput, optFns ...func(*Options)) (*GetInstanceAccessOutput, error) 
+ GetPlayerConnectionDetails(ctx context.Context, params *GetPlayerConnectionDetailsInput, optFns ...func(*Options)) (*GetPlayerConnectionDetailsOutput, error) 
  ListAliases(ctx context.Context, params *ListAliasesInput, optFns ...func(*Options)) (*ListAliasesOutput, error) 
  ListBuilds(ctx context.Context, params *ListBuildsInput, optFns ...func(*Options)) (*ListBuildsOutput, error) 
  ListCompute(ctx context.Context, params *ListComputeInput, optFns ...func(*Options)) (*ListComputeOutput, error) 

@@ -970,6 +970,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPlayerConnectionDetails", func(t *testing.T) {
+        input := &gamelift.GetPlayerConnectionDetailsInput{}
+        output := &gamelift.GetPlayerConnectionDetailsOutput{}
+
+        mockClient.On("GetPlayerConnectionDetails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPlayerConnectionDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAliases", func(t *testing.T) {
         input := &gamelift.ListAliasesInput{}
         output := &gamelift.ListAliasesOutput{}

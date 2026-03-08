@@ -28,6 +28,7 @@ type IClient interface {
  ListSessions(ctx context.Context, params *ListSessionsInput, optFns ...func(*Options)) (*ListSessionsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  StartActiveApprovalTeamDeletion(ctx context.Context, params *StartActiveApprovalTeamDeletionInput, optFns ...func(*Options)) (*StartActiveApprovalTeamDeletionOutput, error) 
+ StartApprovalTeamBaseline(ctx context.Context, params *StartApprovalTeamBaselineInput, optFns ...func(*Options)) (*StartApprovalTeamBaselineOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateApprovalTeam(ctx context.Context, params *UpdateApprovalTeamInput, optFns ...func(*Options)) (*UpdateApprovalTeamOutput, error) 

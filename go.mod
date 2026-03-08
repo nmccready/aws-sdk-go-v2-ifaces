@@ -42,13 +42,13 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/backupsearch v1.6.21
 	github.com/aws/aws-sdk-go-v2/service/batch v1.61.1
 	github.com/aws/aws-sdk-go-v2/service/bcmdashboards v1.1.2
-	github.com/aws/aws-sdk-go-v2/service/bcmdataexports v1.12.12
+	github.com/aws/aws-sdk-go-v2/service/bcmdataexports v1.13.0
 	github.com/aws/aws-sdk-go-v2/service/bcmpricingcalculator v1.10.7
 	github.com/aws/aws-sdk-go-v2/service/bcmrecommendedactions v1.1.3
-	github.com/aws/aws-sdk-go-v2/service/bedrock v1.55.1
+	github.com/aws/aws-sdk-go-v2/service/bedrock v1.56.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagent v1.52.5
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.13.2
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.20.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.21.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.5
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.13.3
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomationruntime v1.10.2
@@ -71,7 +71,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/clouddirectory v1.30.10
 	github.com/aws/aws-sdk-go-v2/service/cloudformation v1.71.7
 	github.com/aws/aws-sdk-go-v2/service/cloudfront v1.60.2
-	github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore v1.12.21
+	github.com/aws/aws-sdk-go-v2/service/cloudfrontkeyvaluestore v1.12.22
 	github.com/aws/aws-sdk-go-v2/service/cloudhsm v1.29.19
 	github.com/aws/aws-sdk-go-v2/service/cloudhsmv2 v1.34.19
 	github.com/aws/aws-sdk-go-v2/service/cloudsearch v1.32.10
@@ -101,11 +101,12 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.49.6
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizerautomation v1.0.6
 	github.com/aws/aws-sdk-go-v2/service/configservice v1.61.2
-	github.com/aws/aws-sdk-go-v2/service/connect v1.163.1
+	github.com/aws/aws-sdk-go-v2/service/connect v1.165.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.18
 	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.11.2
 	github.com/aws/aws-sdk-go-v2/service/connectcases v1.37.1
 	github.com/aws/aws-sdk-go-v2/service/connectcontactlens v1.33.11
+	github.com/aws/aws-sdk-go-v2/service/connecthealth v1.0.0
 	github.com/aws/aws-sdk-go-v2/service/connectparticipant v1.36.5
 	github.com/aws/aws-sdk-go-v2/service/controlcatalog v1.14.7
 	github.com/aws/aws-sdk-go-v2/service/controltower v1.28.7
@@ -120,7 +121,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/datasync v1.57.3
 	github.com/aws/aws-sdk-go-v2/service/datazone v1.54.0
 	github.com/aws/aws-sdk-go-v2/service/dax v1.29.14
-	github.com/aws/aws-sdk-go-v2/service/deadline v1.25.2
+	github.com/aws/aws-sdk-go-v2/service/deadline v1.26.0
 	github.com/aws/aws-sdk-go-v2/service/detective v1.38.11
 	github.com/aws/aws-sdk-go-v2/service/devicefarm v1.38.6
 	github.com/aws/aws-sdk-go-v2/service/devopsguru v1.40.10
@@ -135,7 +136,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.56.1
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.32.12
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.33.12
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.293.1
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.294.0
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.32.18
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.55.4
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.11
@@ -144,29 +145,29 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/eks v1.80.2
 	github.com/aws/aws-sdk-go-v2/service/eksauth v1.12.11
 	github.com/aws/aws-sdk-go-v2/service/elasticache v1.51.11
-	github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk v1.33.21
+	github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk v1.34.0
 	github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing v1.33.21
 	github.com/aws/aws-sdk-go-v2/service/elasticloadbalancingv2 v1.54.8
-	github.com/aws/aws-sdk-go-v2/service/elasticsearchservice v1.38.1
+	github.com/aws/aws-sdk-go-v2/service/elasticsearchservice v1.39.0
 	github.com/aws/aws-sdk-go-v2/service/elementalinference v1.0.1
 	github.com/aws/aws-sdk-go-v2/service/emr v1.57.7
 	github.com/aws/aws-sdk-go-v2/service/emrcontainers v1.40.15
 	github.com/aws/aws-sdk-go-v2/service/emrserverless v1.39.4
 	github.com/aws/aws-sdk-go-v2/service/entityresolution v1.26.3
-	github.com/aws/aws-sdk-go-v2/service/eventbridge v1.45.20
+	github.com/aws/aws-sdk-go-v2/service/eventbridge v1.45.21
 	github.com/aws/aws-sdk-go-v2/service/evs v1.6.2
 	github.com/aws/aws-sdk-go-v2/service/finspace v1.33.19
 	github.com/aws/aws-sdk-go-v2/service/finspacedata v1.33.19
 	github.com/aws/aws-sdk-go-v2/service/firehose v1.42.11
 	github.com/aws/aws-sdk-go-v2/service/fis v1.37.18
-	github.com/aws/aws-sdk-go-v2/service/fms v1.44.19
+	github.com/aws/aws-sdk-go-v2/service/fms v1.44.20
 	github.com/aws/aws-sdk-go-v2/service/forecast v1.41.19
 	github.com/aws/aws-sdk-go-v2/service/forecastquery v1.29.19
 	github.com/aws/aws-sdk-go-v2/service/frauddetector v1.41.10
 	github.com/aws/aws-sdk-go-v2/service/freetier v1.13.12
 	github.com/aws/aws-sdk-go-v2/service/fsx v1.65.5
-	github.com/aws/aws-sdk-go-v2/service/gamelift v1.50.2
-	github.com/aws/aws-sdk-go-v2/service/gameliftstreams v1.9.3
+	github.com/aws/aws-sdk-go-v2/service/gamelift v1.51.0
+	github.com/aws/aws-sdk-go-v2/service/gameliftstreams v1.10.0
 	github.com/aws/aws-sdk-go-v2/service/geomaps v1.9.2
 	github.com/aws/aws-sdk-go-v2/service/geoplaces v1.8.3
 	github.com/aws/aws-sdk-go-v2/service/georoutes v1.7.12
@@ -177,7 +178,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/greengrass v1.32.19
 	github.com/aws/aws-sdk-go-v2/service/greengrassv2 v1.42.10
 	github.com/aws/aws-sdk-go-v2/service/groundstation v1.40.2
-	github.com/aws/aws-sdk-go-v2/service/guardduty v1.73.2
+	github.com/aws/aws-sdk-go-v2/service/guardduty v1.74.0
 	github.com/aws/aws-sdk-go-v2/service/health v1.37.2
 	github.com/aws/aws-sdk-go-v2/service/healthlake v1.36.11
 	github.com/aws/aws-sdk-go-v2/service/iam v1.53.4
@@ -262,7 +263,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/migrationhuborchestrator v1.18.19
 	github.com/aws/aws-sdk-go-v2/service/migrationhubrefactorspaces v1.25.19
 	github.com/aws/aws-sdk-go-v2/service/migrationhubstrategy v1.26.19
-	github.com/aws/aws-sdk-go-v2/service/mpa v1.6.2
+	github.com/aws/aws-sdk-go-v2/service/mpa v1.7.0
 	github.com/aws/aws-sdk-go-v2/service/mq v1.34.17
 	github.com/aws/aws-sdk-go-v2/service/mturk v1.30.18
 	github.com/aws/aws-sdk-go-v2/service/mwaa v1.39.20
@@ -281,7 +282,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/observabilityadmin v1.10.1
 	github.com/aws/aws-sdk-go-v2/service/odb v1.9.1
 	github.com/aws/aws-sdk-go-v2/service/omics v1.38.10
-	github.com/aws/aws-sdk-go-v2/service/opensearch v1.58.1
+	github.com/aws/aws-sdk-go-v2/service/opensearch v1.59.0
 	github.com/aws/aws-sdk-go-v2/service/opensearchserverless v1.29.2
 	github.com/aws/aws-sdk-go-v2/service/organizations v1.50.4
 	github.com/aws/aws-sdk-go-v2/service/osis v1.21.12
@@ -289,7 +290,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/panorama v1.27.19
 	github.com/aws/aws-sdk-go-v2/service/partnercentralaccount v1.1.4
 	github.com/aws/aws-sdk-go-v2/service/partnercentralbenefits v1.0.5
-	github.com/aws/aws-sdk-go-v2/service/partnercentralchannel v1.1.0
+	github.com/aws/aws-sdk-go-v2/service/partnercentralchannel v1.1.1
 	github.com/aws/aws-sdk-go-v2/service/partnercentralselling v1.15.1
 	github.com/aws/aws-sdk-go-v2/service/paymentcryptography v1.27.3
 	github.com/aws/aws-sdk-go-v2/service/paymentcryptographydata v1.25.3
@@ -311,7 +312,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/qapps v1.11.18
 	github.com/aws/aws-sdk-go-v2/service/qbusiness v1.34.3
 	github.com/aws/aws-sdk-go-v2/service/qconnect v1.28.2
-	github.com/aws/aws-sdk-go-v2/service/quicksight v1.103.1
+	github.com/aws/aws-sdk-go-v2/service/quicksight v1.104.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.36.1
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.27.7
 	github.com/aws/aws-sdk-go-v2/service/rds v1.116.2
@@ -336,12 +337,12 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/route53resolver v1.42.3
 	github.com/aws/aws-sdk-go-v2/service/rtbfabric v1.2.8
 	github.com/aws/aws-sdk-go-v2/service/rum v1.30.7
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.96.3
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.96.4
 	github.com/aws/aws-sdk-go-v2/service/s3control v1.68.2
 	github.com/aws/aws-sdk-go-v2/service/s3outposts v1.34.10
 	github.com/aws/aws-sdk-go-v2/service/s3tables v1.14.2
 	github.com/aws/aws-sdk-go-v2/service/s3vectors v1.6.4
-	github.com/aws/aws-sdk-go-v2/service/sagemaker v1.234.0
+	github.com/aws/aws-sdk-go-v2/service/sagemaker v1.235.0
 	github.com/aws/aws-sdk-go-v2/service/sagemakera2iruntime v1.32.19
 	github.com/aws/aws-sdk-go-v2/service/sagemakeredge v1.31.11
 	github.com/aws/aws-sdk-go-v2/service/sagemakerfeaturestoreruntime v1.34.19
@@ -349,7 +350,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sagemakermetrics v1.18.21
 	github.com/aws/aws-sdk-go-v2/service/sagemakerruntime v1.39.3
 	github.com/aws/aws-sdk-go-v2/service/sagemakerruntimehttp2 v1.0.7
-	github.com/aws/aws-sdk-go-v2/service/savingsplans v1.31.4
+	github.com/aws/aws-sdk-go-v2/service/savingsplans v1.32.0
 	github.com/aws/aws-sdk-go-v2/service/scheduler v1.17.20
 	github.com/aws/aws-sdk-go-v2/service/schemas v1.34.10
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.41.3
@@ -362,7 +363,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/servicediscovery v1.39.24
 	github.com/aws/aws-sdk-go-v2/service/servicequotas v1.34.3
 	github.com/aws/aws-sdk-go-v2/service/ses v1.34.20
-	github.com/aws/aws-sdk-go-v2/service/sesv2 v1.59.3
+	github.com/aws/aws-sdk-go-v2/service/sesv2 v1.60.0
 	github.com/aws/aws-sdk-go-v2/service/sfn v1.40.8
 	github.com/aws/aws-sdk-go-v2/service/shield v1.34.19
 	github.com/aws/aws-sdk-go-v2/service/signer v1.32.3
@@ -397,7 +398,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/timestreamwrite v1.35.18
 	github.com/aws/aws-sdk-go-v2/service/tnb v1.18.19
 	github.com/aws/aws-sdk-go-v2/service/transcribe v1.54.2
-	github.com/aws/aws-sdk-go-v2/service/transcribestreaming v1.34.1
+	github.com/aws/aws-sdk-go-v2/service/transcribestreaming v1.34.2
 	github.com/aws/aws-sdk-go-v2/service/transfer v1.69.3
 	github.com/aws/aws-sdk-go-v2/service/translate v1.33.19
 	github.com/aws/aws-sdk-go-v2/service/trustedadvisor v1.14.2
@@ -427,7 +428,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.7.6 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.19 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.19 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.19 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.20 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.6 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.9.11 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.11.19 // indirect
