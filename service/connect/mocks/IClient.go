@@ -496,6 +496,43 @@ func (_m *IClient) AssociatePhoneNumberContactFlow(ctx context.Context, params *
 	return r0, r1
 }
 
+// AssociateQueueEmailAddresses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateQueueEmailAddresses(ctx context.Context, params *connect.AssociateQueueEmailAddressesInput, optFns ...func(*connect.Options)) (*connect.AssociateQueueEmailAddressesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateQueueEmailAddresses")
+	}
+
+	var r0 *connect.AssociateQueueEmailAddressesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateQueueEmailAddressesInput, ...func(*connect.Options)) (*connect.AssociateQueueEmailAddressesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.AssociateQueueEmailAddressesInput, ...func(*connect.Options)) *connect.AssociateQueueEmailAddressesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.AssociateQueueEmailAddressesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.AssociateQueueEmailAddressesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateQueueQuickConnects provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateQueueQuickConnects(ctx context.Context, params *connect.AssociateQueueQuickConnectsInput, optFns ...func(*connect.Options)) (*connect.AssociateQueueQuickConnectsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5491,6 +5528,43 @@ func (_m *IClient) DisassociatePhoneNumberContactFlow(ctx context.Context, param
 	return r0, r1
 }
 
+// DisassociateQueueEmailAddresses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateQueueEmailAddresses(ctx context.Context, params *connect.DisassociateQueueEmailAddressesInput, optFns ...func(*connect.Options)) (*connect.DisassociateQueueEmailAddressesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateQueueEmailAddresses")
+	}
+
+	var r0 *connect.DisassociateQueueEmailAddressesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateQueueEmailAddressesInput, ...func(*connect.Options)) (*connect.DisassociateQueueEmailAddressesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DisassociateQueueEmailAddressesInput, ...func(*connect.Options)) *connect.DisassociateQueueEmailAddressesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DisassociateQueueEmailAddressesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DisassociateQueueEmailAddressesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateQueueQuickConnects provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateQueueQuickConnects(ctx context.Context, params *connect.DisassociateQueueQuickConnectsInput, optFns ...func(*connect.Options)) (*connect.DisassociateQueueQuickConnectsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7777,6 +7851,43 @@ func (_m *IClient) ListPrompts(ctx context.Context, params *connect.ListPromptsI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListPromptsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListQueueEmailAddresses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQueueEmailAddresses(ctx context.Context, params *connect.ListQueueEmailAddressesInput, optFns ...func(*connect.Options)) (*connect.ListQueueEmailAddressesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQueueEmailAddresses")
+	}
+
+	var r0 *connect.ListQueueEmailAddressesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListQueueEmailAddressesInput, ...func(*connect.Options)) (*connect.ListQueueEmailAddressesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListQueueEmailAddressesInput, ...func(*connect.Options)) *connect.ListQueueEmailAddressesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListQueueEmailAddressesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListQueueEmailAddressesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
