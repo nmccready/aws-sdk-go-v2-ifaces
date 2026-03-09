@@ -181,7 +181,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/guardduty v1.74.0
 	github.com/aws/aws-sdk-go-v2/service/health v1.37.2
 	github.com/aws/aws-sdk-go-v2/service/healthlake v1.36.11
-	github.com/aws/aws-sdk-go-v2/service/iam v1.53.4
+	github.com/aws/aws-sdk-go-v2/service/iam v1.53.5
 	github.com/aws/aws-sdk-go-v2/service/identitystore v1.36.3
 	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.51.2
 	github.com/aws/aws-sdk-go-v2/service/inspector v1.30.18
@@ -257,7 +257,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/mediatailor v1.56.1
 	github.com/aws/aws-sdk-go-v2/service/medicalimaging v1.23.8
 	github.com/aws/aws-sdk-go-v2/service/memorydb v1.33.12
-	github.com/aws/aws-sdk-go-v2/service/mgn v1.39.3
+	github.com/aws/aws-sdk-go-v2/service/mgn v1.40.0
 	github.com/aws/aws-sdk-go-v2/service/migrationhub v1.31.11
 	github.com/aws/aws-sdk-go-v2/service/migrationhubconfig v1.31.12
 	github.com/aws/aws-sdk-go-v2/service/migrationhuborchestrator v1.18.19
@@ -282,7 +282,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/observabilityadmin v1.10.1
 	github.com/aws/aws-sdk-go-v2/service/odb v1.9.1
 	github.com/aws/aws-sdk-go-v2/service/omics v1.38.10
-	github.com/aws/aws-sdk-go-v2/service/opensearch v1.59.0
+	github.com/aws/aws-sdk-go-v2/service/opensearch v1.60.0
 	github.com/aws/aws-sdk-go-v2/service/opensearchserverless v1.29.2
 	github.com/aws/aws-sdk-go-v2/service/organizations v1.50.4
 	github.com/aws/aws-sdk-go-v2/service/osis v1.21.12
@@ -329,7 +329,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/rolesanywhere v1.22.5
 	github.com/aws/aws-sdk-go-v2/service/route53 v1.62.3
 	github.com/aws/aws-sdk-go-v2/service/route53domains v1.34.17
-	github.com/aws/aws-sdk-go-v2/service/route53globalresolver v1.0.5
+	github.com/aws/aws-sdk-go-v2/service/route53globalresolver v1.1.0
 	github.com/aws/aws-sdk-go-v2/service/route53profiles v1.9.21
 	github.com/aws/aws-sdk-go-v2/service/route53recoverycluster v1.28.19
 	github.com/aws/aws-sdk-go-v2/service/route53recoverycontrolconfig v1.32.12
@@ -420,7 +420,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.38.2
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.19
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -435,14 +435,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.19 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.19 // indirect
 	github.com/aws/smithy-go v1.24.2 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
