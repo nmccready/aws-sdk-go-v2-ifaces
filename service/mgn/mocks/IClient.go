@@ -311,6 +311,43 @@ func (_m *IClient) CreateLaunchConfigurationTemplate(ctx context.Context, params
 	return r0, r1
 }
 
+// CreateNetworkMigrationDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNetworkMigrationDefinition(ctx context.Context, params *mgn.CreateNetworkMigrationDefinitionInput, optFns ...func(*mgn.Options)) (*mgn.CreateNetworkMigrationDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNetworkMigrationDefinition")
+	}
+
+	var r0 *mgn.CreateNetworkMigrationDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.CreateNetworkMigrationDefinitionInput, ...func(*mgn.Options)) (*mgn.CreateNetworkMigrationDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.CreateNetworkMigrationDefinitionInput, ...func(*mgn.Options)) *mgn.CreateNetworkMigrationDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.CreateNetworkMigrationDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.CreateNetworkMigrationDefinitionInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateReplicationConfigurationTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateReplicationConfigurationTemplate(ctx context.Context, params *mgn.CreateReplicationConfigurationTemplateInput, optFns ...func(*mgn.Options)) (*mgn.CreateReplicationConfigurationTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +562,43 @@ func (_m *IClient) DeleteLaunchConfigurationTemplate(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.DeleteLaunchConfigurationTemplateInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteNetworkMigrationDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNetworkMigrationDefinition(ctx context.Context, params *mgn.DeleteNetworkMigrationDefinitionInput, optFns ...func(*mgn.Options)) (*mgn.DeleteNetworkMigrationDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNetworkMigrationDefinition")
+	}
+
+	var r0 *mgn.DeleteNetworkMigrationDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.DeleteNetworkMigrationDefinitionInput, ...func(*mgn.Options)) (*mgn.DeleteNetworkMigrationDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.DeleteNetworkMigrationDefinitionInput, ...func(*mgn.Options)) *mgn.DeleteNetworkMigrationDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.DeleteNetworkMigrationDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.DeleteNetworkMigrationDefinitionInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1088,6 +1162,80 @@ func (_m *IClient) GetLaunchConfiguration(ctx context.Context, params *mgn.GetLa
 	return r0, r1
 }
 
+// GetNetworkMigrationDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetNetworkMigrationDefinition(ctx context.Context, params *mgn.GetNetworkMigrationDefinitionInput, optFns ...func(*mgn.Options)) (*mgn.GetNetworkMigrationDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetNetworkMigrationDefinition")
+	}
+
+	var r0 *mgn.GetNetworkMigrationDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.GetNetworkMigrationDefinitionInput, ...func(*mgn.Options)) (*mgn.GetNetworkMigrationDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.GetNetworkMigrationDefinitionInput, ...func(*mgn.Options)) *mgn.GetNetworkMigrationDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.GetNetworkMigrationDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.GetNetworkMigrationDefinitionInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetNetworkMigrationMapperSegmentConstruct provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetNetworkMigrationMapperSegmentConstruct(ctx context.Context, params *mgn.GetNetworkMigrationMapperSegmentConstructInput, optFns ...func(*mgn.Options)) (*mgn.GetNetworkMigrationMapperSegmentConstructOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetNetworkMigrationMapperSegmentConstruct")
+	}
+
+	var r0 *mgn.GetNetworkMigrationMapperSegmentConstructOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.GetNetworkMigrationMapperSegmentConstructInput, ...func(*mgn.Options)) (*mgn.GetNetworkMigrationMapperSegmentConstructOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.GetNetworkMigrationMapperSegmentConstructInput, ...func(*mgn.Options)) *mgn.GetNetworkMigrationMapperSegmentConstructOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.GetNetworkMigrationMapperSegmentConstructOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.GetNetworkMigrationMapperSegmentConstructInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetReplicationConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetReplicationConfiguration(ctx context.Context, params *mgn.GetReplicationConfigurationInput, optFns ...func(*mgn.Options)) (*mgn.GetReplicationConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1347,6 +1495,43 @@ func (_m *IClient) ListImportErrors(ctx context.Context, params *mgn.ListImportE
 	return r0, r1
 }
 
+// ListImportFileEnrichments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListImportFileEnrichments(ctx context.Context, params *mgn.ListImportFileEnrichmentsInput, optFns ...func(*mgn.Options)) (*mgn.ListImportFileEnrichmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListImportFileEnrichments")
+	}
+
+	var r0 *mgn.ListImportFileEnrichmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListImportFileEnrichmentsInput, ...func(*mgn.Options)) (*mgn.ListImportFileEnrichmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListImportFileEnrichmentsInput, ...func(*mgn.Options)) *mgn.ListImportFileEnrichmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListImportFileEnrichmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListImportFileEnrichmentsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListImports provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListImports(ctx context.Context, params *mgn.ListImportsInput, optFns ...func(*mgn.Options)) (*mgn.ListImportsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1413,6 +1598,450 @@ func (_m *IClient) ListManagedAccounts(ctx context.Context, params *mgn.ListMana
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListManagedAccountsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationAnalyses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationAnalyses(ctx context.Context, params *mgn.ListNetworkMigrationAnalysesInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationAnalysesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationAnalyses")
+	}
+
+	var r0 *mgn.ListNetworkMigrationAnalysesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationAnalysesInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationAnalysesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationAnalysesInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationAnalysesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationAnalysesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationAnalysesInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationAnalysisResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationAnalysisResults(ctx context.Context, params *mgn.ListNetworkMigrationAnalysisResultsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationAnalysisResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationAnalysisResults")
+	}
+
+	var r0 *mgn.ListNetworkMigrationAnalysisResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationAnalysisResultsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationAnalysisResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationAnalysisResultsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationAnalysisResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationAnalysisResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationAnalysisResultsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationCodeGenerationSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationCodeGenerationSegments(ctx context.Context, params *mgn.ListNetworkMigrationCodeGenerationSegmentsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationCodeGenerationSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationCodeGenerationSegments")
+	}
+
+	var r0 *mgn.ListNetworkMigrationCodeGenerationSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationCodeGenerationSegmentsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationCodeGenerationSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationCodeGenerationSegmentsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationCodeGenerationSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationCodeGenerationSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationCodeGenerationSegmentsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationCodeGenerations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationCodeGenerations(ctx context.Context, params *mgn.ListNetworkMigrationCodeGenerationsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationCodeGenerationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationCodeGenerations")
+	}
+
+	var r0 *mgn.ListNetworkMigrationCodeGenerationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationCodeGenerationsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationCodeGenerationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationCodeGenerationsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationCodeGenerationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationCodeGenerationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationCodeGenerationsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationDefinitions(ctx context.Context, params *mgn.ListNetworkMigrationDefinitionsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationDefinitions")
+	}
+
+	var r0 *mgn.ListNetworkMigrationDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationDefinitionsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationDefinitionsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationDefinitionsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationDeployedStacks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationDeployedStacks(ctx context.Context, params *mgn.ListNetworkMigrationDeployedStacksInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationDeployedStacksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationDeployedStacks")
+	}
+
+	var r0 *mgn.ListNetworkMigrationDeployedStacksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationDeployedStacksInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationDeployedStacksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationDeployedStacksInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationDeployedStacksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationDeployedStacksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationDeployedStacksInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationDeployments(ctx context.Context, params *mgn.ListNetworkMigrationDeploymentsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationDeployments")
+	}
+
+	var r0 *mgn.ListNetworkMigrationDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationDeploymentsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationDeploymentsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationDeploymentsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationExecutions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationExecutions(ctx context.Context, params *mgn.ListNetworkMigrationExecutionsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationExecutionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationExecutions")
+	}
+
+	var r0 *mgn.ListNetworkMigrationExecutionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationExecutionsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationExecutionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationExecutionsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationExecutionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationExecutionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationExecutionsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationMapperSegmentConstructs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationMapperSegmentConstructs(ctx context.Context, params *mgn.ListNetworkMigrationMapperSegmentConstructsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMapperSegmentConstructsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationMapperSegmentConstructs")
+	}
+
+	var r0 *mgn.ListNetworkMigrationMapperSegmentConstructsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMapperSegmentConstructsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMapperSegmentConstructsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMapperSegmentConstructsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationMapperSegmentConstructsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationMapperSegmentConstructsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationMapperSegmentConstructsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationMapperSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationMapperSegments(ctx context.Context, params *mgn.ListNetworkMigrationMapperSegmentsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMapperSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationMapperSegments")
+	}
+
+	var r0 *mgn.ListNetworkMigrationMapperSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMapperSegmentsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMapperSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMapperSegmentsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationMapperSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationMapperSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationMapperSegmentsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationMappingUpdates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationMappingUpdates(ctx context.Context, params *mgn.ListNetworkMigrationMappingUpdatesInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMappingUpdatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationMappingUpdates")
+	}
+
+	var r0 *mgn.ListNetworkMigrationMappingUpdatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMappingUpdatesInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMappingUpdatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMappingUpdatesInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationMappingUpdatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationMappingUpdatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationMappingUpdatesInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListNetworkMigrationMappings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationMappings(ctx context.Context, params *mgn.ListNetworkMigrationMappingsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMappingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationMappings")
+	}
+
+	var r0 *mgn.ListNetworkMigrationMappingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMappingsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMappingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationMappingsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationMappingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationMappingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationMappingsInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1994,6 +2623,228 @@ func (_m *IClient) StartImport(ctx context.Context, params *mgn.StartImportInput
 	return r0, r1
 }
 
+// StartImportFileEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartImportFileEnrichment(ctx context.Context, params *mgn.StartImportFileEnrichmentInput, optFns ...func(*mgn.Options)) (*mgn.StartImportFileEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartImportFileEnrichment")
+	}
+
+	var r0 *mgn.StartImportFileEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartImportFileEnrichmentInput, ...func(*mgn.Options)) (*mgn.StartImportFileEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartImportFileEnrichmentInput, ...func(*mgn.Options)) *mgn.StartImportFileEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartImportFileEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartImportFileEnrichmentInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartNetworkMigrationAnalysis provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNetworkMigrationAnalysis(ctx context.Context, params *mgn.StartNetworkMigrationAnalysisInput, optFns ...func(*mgn.Options)) (*mgn.StartNetworkMigrationAnalysisOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNetworkMigrationAnalysis")
+	}
+
+	var r0 *mgn.StartNetworkMigrationAnalysisOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationAnalysisInput, ...func(*mgn.Options)) (*mgn.StartNetworkMigrationAnalysisOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationAnalysisInput, ...func(*mgn.Options)) *mgn.StartNetworkMigrationAnalysisOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartNetworkMigrationAnalysisOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartNetworkMigrationAnalysisInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartNetworkMigrationCodeGeneration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNetworkMigrationCodeGeneration(ctx context.Context, params *mgn.StartNetworkMigrationCodeGenerationInput, optFns ...func(*mgn.Options)) (*mgn.StartNetworkMigrationCodeGenerationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNetworkMigrationCodeGeneration")
+	}
+
+	var r0 *mgn.StartNetworkMigrationCodeGenerationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationCodeGenerationInput, ...func(*mgn.Options)) (*mgn.StartNetworkMigrationCodeGenerationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationCodeGenerationInput, ...func(*mgn.Options)) *mgn.StartNetworkMigrationCodeGenerationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartNetworkMigrationCodeGenerationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartNetworkMigrationCodeGenerationInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartNetworkMigrationDeployment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNetworkMigrationDeployment(ctx context.Context, params *mgn.StartNetworkMigrationDeploymentInput, optFns ...func(*mgn.Options)) (*mgn.StartNetworkMigrationDeploymentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNetworkMigrationDeployment")
+	}
+
+	var r0 *mgn.StartNetworkMigrationDeploymentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationDeploymentInput, ...func(*mgn.Options)) (*mgn.StartNetworkMigrationDeploymentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationDeploymentInput, ...func(*mgn.Options)) *mgn.StartNetworkMigrationDeploymentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartNetworkMigrationDeploymentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartNetworkMigrationDeploymentInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartNetworkMigrationMapping provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNetworkMigrationMapping(ctx context.Context, params *mgn.StartNetworkMigrationMappingInput, optFns ...func(*mgn.Options)) (*mgn.StartNetworkMigrationMappingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNetworkMigrationMapping")
+	}
+
+	var r0 *mgn.StartNetworkMigrationMappingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationMappingInput, ...func(*mgn.Options)) (*mgn.StartNetworkMigrationMappingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationMappingInput, ...func(*mgn.Options)) *mgn.StartNetworkMigrationMappingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartNetworkMigrationMappingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartNetworkMigrationMappingInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartNetworkMigrationMappingUpdate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNetworkMigrationMappingUpdate(ctx context.Context, params *mgn.StartNetworkMigrationMappingUpdateInput, optFns ...func(*mgn.Options)) (*mgn.StartNetworkMigrationMappingUpdateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNetworkMigrationMappingUpdate")
+	}
+
+	var r0 *mgn.StartNetworkMigrationMappingUpdateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationMappingUpdateInput, ...func(*mgn.Options)) (*mgn.StartNetworkMigrationMappingUpdateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartNetworkMigrationMappingUpdateInput, ...func(*mgn.Options)) *mgn.StartNetworkMigrationMappingUpdateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartNetworkMigrationMappingUpdateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartNetworkMigrationMappingUpdateInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartReplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartReplication(ctx context.Context, params *mgn.StartReplicationInput, optFns ...func(*mgn.Options)) (*mgn.StartReplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2430,6 +3281,80 @@ func (_m *IClient) UpdateLaunchConfigurationTemplate(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.UpdateLaunchConfigurationTemplateInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateNetworkMigrationDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNetworkMigrationDefinition(ctx context.Context, params *mgn.UpdateNetworkMigrationDefinitionInput, optFns ...func(*mgn.Options)) (*mgn.UpdateNetworkMigrationDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNetworkMigrationDefinition")
+	}
+
+	var r0 *mgn.UpdateNetworkMigrationDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateNetworkMigrationDefinitionInput, ...func(*mgn.Options)) (*mgn.UpdateNetworkMigrationDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateNetworkMigrationDefinitionInput, ...func(*mgn.Options)) *mgn.UpdateNetworkMigrationDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.UpdateNetworkMigrationDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.UpdateNetworkMigrationDefinitionInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateNetworkMigrationMapperSegment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNetworkMigrationMapperSegment(ctx context.Context, params *mgn.UpdateNetworkMigrationMapperSegmentInput, optFns ...func(*mgn.Options)) (*mgn.UpdateNetworkMigrationMapperSegmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNetworkMigrationMapperSegment")
+	}
+
+	var r0 *mgn.UpdateNetworkMigrationMapperSegmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateNetworkMigrationMapperSegmentInput, ...func(*mgn.Options)) (*mgn.UpdateNetworkMigrationMapperSegmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateNetworkMigrationMapperSegmentInput, ...func(*mgn.Options)) *mgn.UpdateNetworkMigrationMapperSegmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.UpdateNetworkMigrationMapperSegmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.UpdateNetworkMigrationMapperSegmentInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateNetworkMigrationDefinition", func(t *testing.T) {
+        input := &mgn.CreateNetworkMigrationDefinitionInput{}
+        output := &mgn.CreateNetworkMigrationDefinitionOutput{}
+
+        mockClient.On("CreateNetworkMigrationDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNetworkMigrationDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateReplicationConfigurationTemplate", func(t *testing.T) {
         input := &mgn.CreateReplicationConfigurationTemplateInput{}
         output := &mgn.CreateReplicationConfigurationTemplateOutput{}
@@ -210,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLaunchConfigurationTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLaunchConfigurationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteNetworkMigrationDefinition", func(t *testing.T) {
+        input := &mgn.DeleteNetworkMigrationDefinitionInput{}
+        output := &mgn.DeleteNetworkMigrationDefinitionOutput{}
+
+        mockClient.On("DeleteNetworkMigrationDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNetworkMigrationDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -411,6 +437,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetNetworkMigrationDefinition", func(t *testing.T) {
+        input := &mgn.GetNetworkMigrationDefinitionInput{}
+        output := &mgn.GetNetworkMigrationDefinitionOutput{}
+
+        mockClient.On("GetNetworkMigrationDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNetworkMigrationDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetNetworkMigrationMapperSegmentConstruct", func(t *testing.T) {
+        input := &mgn.GetNetworkMigrationMapperSegmentConstructInput{}
+        output := &mgn.GetNetworkMigrationMapperSegmentConstructOutput{}
+
+        mockClient.On("GetNetworkMigrationMapperSegmentConstruct", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNetworkMigrationMapperSegmentConstruct(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetReplicationConfiguration", func(t *testing.T) {
         input := &mgn.GetReplicationConfigurationInput{}
         output := &mgn.GetReplicationConfigurationOutput{}
@@ -502,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListImportFileEnrichments", func(t *testing.T) {
+        input := &mgn.ListImportFileEnrichmentsInput{}
+        output := &mgn.ListImportFileEnrichmentsOutput{}
+
+        mockClient.On("ListImportFileEnrichments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListImportFileEnrichments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListImports", func(t *testing.T) {
         input := &mgn.ListImportsInput{}
         output := &mgn.ListImportsOutput{}
@@ -522,6 +587,162 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListManagedAccounts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListManagedAccounts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationAnalyses", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationAnalysesInput{}
+        output := &mgn.ListNetworkMigrationAnalysesOutput{}
+
+        mockClient.On("ListNetworkMigrationAnalyses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationAnalyses(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationAnalysisResults", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationAnalysisResultsInput{}
+        output := &mgn.ListNetworkMigrationAnalysisResultsOutput{}
+
+        mockClient.On("ListNetworkMigrationAnalysisResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationAnalysisResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationCodeGenerationSegments", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationCodeGenerationSegmentsInput{}
+        output := &mgn.ListNetworkMigrationCodeGenerationSegmentsOutput{}
+
+        mockClient.On("ListNetworkMigrationCodeGenerationSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationCodeGenerationSegments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationCodeGenerations", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationCodeGenerationsInput{}
+        output := &mgn.ListNetworkMigrationCodeGenerationsOutput{}
+
+        mockClient.On("ListNetworkMigrationCodeGenerations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationCodeGenerations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationDefinitions", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationDefinitionsInput{}
+        output := &mgn.ListNetworkMigrationDefinitionsOutput{}
+
+        mockClient.On("ListNetworkMigrationDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationDeployedStacks", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationDeployedStacksInput{}
+        output := &mgn.ListNetworkMigrationDeployedStacksOutput{}
+
+        mockClient.On("ListNetworkMigrationDeployedStacks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationDeployedStacks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationDeployments", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationDeploymentsInput{}
+        output := &mgn.ListNetworkMigrationDeploymentsOutput{}
+
+        mockClient.On("ListNetworkMigrationDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationDeployments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationExecutions", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationExecutionsInput{}
+        output := &mgn.ListNetworkMigrationExecutionsOutput{}
+
+        mockClient.On("ListNetworkMigrationExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationExecutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationMapperSegmentConstructs", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationMapperSegmentConstructsInput{}
+        output := &mgn.ListNetworkMigrationMapperSegmentConstructsOutput{}
+
+        mockClient.On("ListNetworkMigrationMapperSegmentConstructs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationMapperSegmentConstructs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationMapperSegments", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationMapperSegmentsInput{}
+        output := &mgn.ListNetworkMigrationMapperSegmentsOutput{}
+
+        mockClient.On("ListNetworkMigrationMapperSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationMapperSegments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationMappingUpdates", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationMappingUpdatesInput{}
+        output := &mgn.ListNetworkMigrationMappingUpdatesOutput{}
+
+        mockClient.On("ListNetworkMigrationMappingUpdates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationMappingUpdates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNetworkMigrationMappings", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationMappingsInput{}
+        output := &mgn.ListNetworkMigrationMappingsOutput{}
+
+        mockClient.On("ListNetworkMigrationMappings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationMappings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -723,6 +944,84 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartImportFileEnrichment", func(t *testing.T) {
+        input := &mgn.StartImportFileEnrichmentInput{}
+        output := &mgn.StartImportFileEnrichmentOutput{}
+
+        mockClient.On("StartImportFileEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartImportFileEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartNetworkMigrationAnalysis", func(t *testing.T) {
+        input := &mgn.StartNetworkMigrationAnalysisInput{}
+        output := &mgn.StartNetworkMigrationAnalysisOutput{}
+
+        mockClient.On("StartNetworkMigrationAnalysis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNetworkMigrationAnalysis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartNetworkMigrationCodeGeneration", func(t *testing.T) {
+        input := &mgn.StartNetworkMigrationCodeGenerationInput{}
+        output := &mgn.StartNetworkMigrationCodeGenerationOutput{}
+
+        mockClient.On("StartNetworkMigrationCodeGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNetworkMigrationCodeGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartNetworkMigrationDeployment", func(t *testing.T) {
+        input := &mgn.StartNetworkMigrationDeploymentInput{}
+        output := &mgn.StartNetworkMigrationDeploymentOutput{}
+
+        mockClient.On("StartNetworkMigrationDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNetworkMigrationDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartNetworkMigrationMapping", func(t *testing.T) {
+        input := &mgn.StartNetworkMigrationMappingInput{}
+        output := &mgn.StartNetworkMigrationMappingOutput{}
+
+        mockClient.On("StartNetworkMigrationMapping", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNetworkMigrationMapping(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartNetworkMigrationMappingUpdate", func(t *testing.T) {
+        input := &mgn.StartNetworkMigrationMappingUpdateInput{}
+        output := &mgn.StartNetworkMigrationMappingUpdateOutput{}
+
+        mockClient.On("StartNetworkMigrationMappingUpdate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNetworkMigrationMappingUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartReplication", func(t *testing.T) {
         input := &mgn.StartReplicationInput{}
         output := &mgn.StartReplicationOutput{}
@@ -873,6 +1172,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLaunchConfigurationTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLaunchConfigurationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateNetworkMigrationDefinition", func(t *testing.T) {
+        input := &mgn.UpdateNetworkMigrationDefinitionInput{}
+        output := &mgn.UpdateNetworkMigrationDefinitionOutput{}
+
+        mockClient.On("UpdateNetworkMigrationDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNetworkMigrationDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateNetworkMigrationMapperSegment", func(t *testing.T) {
+        input := &mgn.UpdateNetworkMigrationMapperSegmentInput{}
+        output := &mgn.UpdateNetworkMigrationMapperSegmentOutput{}
+
+        mockClient.On("UpdateNetworkMigrationMapperSegment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNetworkMigrationMapperSegment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

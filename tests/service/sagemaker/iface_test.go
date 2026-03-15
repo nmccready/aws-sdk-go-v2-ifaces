@@ -2634,6 +2634,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTrainingPlanExtensionHistory", func(t *testing.T) {
+        input := &sagemaker.DescribeTrainingPlanExtensionHistoryInput{}
+        output := &sagemaker.DescribeTrainingPlanExtensionHistoryOutput{}
+
+        mockClient.On("DescribeTrainingPlanExtensionHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTrainingPlanExtensionHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTransformJob", func(t *testing.T) {
         input := &sagemaker.DescribeTransformJobInput{}
         output := &sagemaker.DescribeTransformJobOutput{}
@@ -2758,6 +2771,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableSagemakerServicecatalogPortfolio", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableSagemakerServicecatalogPortfolio(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestExtendTrainingPlan", func(t *testing.T) {
+        input := &sagemaker.ExtendTrainingPlanInput{}
+        output := &sagemaker.ExtendTrainingPlanOutput{}
+
+        mockClient.On("ExtendTrainingPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExtendTrainingPlan(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
