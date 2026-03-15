@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRecommenderFilter", func(t *testing.T) {
+        input := &customerprofiles.CreateRecommenderFilterInput{}
+        output := &customerprofiles.CreateRecommenderFilterOutput{}
+
+        mockClient.On("CreateRecommenderFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRecommenderFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSegmentDefinition", func(t *testing.T) {
         input := &customerprofiles.CreateSegmentDefinitionInput{}
         output := &customerprofiles.CreateSegmentDefinitionOutput{}
@@ -379,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRecommender", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRecommender(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRecommenderFilter", func(t *testing.T) {
+        input := &customerprofiles.DeleteRecommenderFilterInput{}
+        output := &customerprofiles.DeleteRecommenderFilterOutput{}
+
+        mockClient.On("DeleteRecommenderFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRecommenderFilter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -639,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRecommender", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRecommender(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecommenderFilter", func(t *testing.T) {
+        input := &customerprofiles.GetRecommenderFilterInput{}
+        output := &customerprofiles.GetRecommenderFilterOutput{}
+
+        mockClient.On("GetRecommenderFilter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecommenderFilter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -977,6 +1016,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListProfileObjects", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListProfileObjects(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecommenderFilters", func(t *testing.T) {
+        input := &customerprofiles.ListRecommenderFiltersInput{}
+        output := &customerprofiles.ListRecommenderFiltersOutput{}
+
+        mockClient.On("ListRecommenderFilters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommenderFilters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

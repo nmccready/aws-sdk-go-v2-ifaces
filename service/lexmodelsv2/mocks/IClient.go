@@ -718,6 +718,43 @@ func (_m *IClient) DeleteBotAlias(ctx context.Context, params *lexmodelsv2.Delet
 	return r0, r1
 }
 
+// DeleteBotAnalyzerRecommendation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBotAnalyzerRecommendation(ctx context.Context, params *lexmodelsv2.DeleteBotAnalyzerRecommendationInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.DeleteBotAnalyzerRecommendationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBotAnalyzerRecommendation")
+	}
+
+	var r0 *lexmodelsv2.DeleteBotAnalyzerRecommendationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.DeleteBotAnalyzerRecommendationInput, ...func(*lexmodelsv2.Options)) (*lexmodelsv2.DeleteBotAnalyzerRecommendationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.DeleteBotAnalyzerRecommendationInput, ...func(*lexmodelsv2.Options)) *lexmodelsv2.DeleteBotAnalyzerRecommendationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lexmodelsv2.DeleteBotAnalyzerRecommendationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.DeleteBotAnalyzerRecommendationInput, ...func(*lexmodelsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteBotLocale provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteBotLocale(ctx context.Context, params *lexmodelsv2.DeleteBotLocaleInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.DeleteBotLocaleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1265,6 +1302,43 @@ func (_m *IClient) DescribeBotAlias(ctx context.Context, params *lexmodelsv2.Des
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.DescribeBotAliasInput, ...func(*lexmodelsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeBotAnalyzerRecommendation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeBotAnalyzerRecommendation(ctx context.Context, params *lexmodelsv2.DescribeBotAnalyzerRecommendationInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.DescribeBotAnalyzerRecommendationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeBotAnalyzerRecommendation")
+	}
+
+	var r0 *lexmodelsv2.DescribeBotAnalyzerRecommendationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.DescribeBotAnalyzerRecommendationInput, ...func(*lexmodelsv2.Options)) (*lexmodelsv2.DescribeBotAnalyzerRecommendationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.DescribeBotAnalyzerRecommendationInput, ...func(*lexmodelsv2.Options)) *lexmodelsv2.DescribeBotAnalyzerRecommendationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lexmodelsv2.DescribeBotAnalyzerRecommendationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.DescribeBotAnalyzerRecommendationInput, ...func(*lexmodelsv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2042,6 +2116,43 @@ func (_m *IClient) ListBotAliases(ctx context.Context, params *lexmodelsv2.ListB
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.ListBotAliasesInput, ...func(*lexmodelsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBotAnalyzerHistory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBotAnalyzerHistory(ctx context.Context, params *lexmodelsv2.ListBotAnalyzerHistoryInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.ListBotAnalyzerHistoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBotAnalyzerHistory")
+	}
+
+	var r0 *lexmodelsv2.ListBotAnalyzerHistoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.ListBotAnalyzerHistoryInput, ...func(*lexmodelsv2.Options)) (*lexmodelsv2.ListBotAnalyzerHistoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.ListBotAnalyzerHistoryInput, ...func(*lexmodelsv2.Options)) *lexmodelsv2.ListBotAnalyzerHistoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lexmodelsv2.ListBotAnalyzerHistoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.ListBotAnalyzerHistoryInput, ...func(*lexmodelsv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3141,6 +3252,43 @@ func (_m *IClient) SearchAssociatedTranscripts(ctx context.Context, params *lexm
 	return r0, r1
 }
 
+// StartBotAnalyzer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartBotAnalyzer(ctx context.Context, params *lexmodelsv2.StartBotAnalyzerInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.StartBotAnalyzerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartBotAnalyzer")
+	}
+
+	var r0 *lexmodelsv2.StartBotAnalyzerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.StartBotAnalyzerInput, ...func(*lexmodelsv2.Options)) (*lexmodelsv2.StartBotAnalyzerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.StartBotAnalyzerInput, ...func(*lexmodelsv2.Options)) *lexmodelsv2.StartBotAnalyzerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lexmodelsv2.StartBotAnalyzerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.StartBotAnalyzerInput, ...func(*lexmodelsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartBotRecommendation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartBotRecommendation(ctx context.Context, params *lexmodelsv2.StartBotRecommendationInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.StartBotRecommendationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3318,6 +3466,43 @@ func (_m *IClient) StartTestSetGeneration(ctx context.Context, params *lexmodels
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.StartTestSetGenerationInput, ...func(*lexmodelsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopBotAnalyzer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopBotAnalyzer(ctx context.Context, params *lexmodelsv2.StopBotAnalyzerInput, optFns ...func(*lexmodelsv2.Options)) (*lexmodelsv2.StopBotAnalyzerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopBotAnalyzer")
+	}
+
+	var r0 *lexmodelsv2.StopBotAnalyzerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.StopBotAnalyzerInput, ...func(*lexmodelsv2.Options)) (*lexmodelsv2.StopBotAnalyzerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lexmodelsv2.StopBotAnalyzerInput, ...func(*lexmodelsv2.Options)) *lexmodelsv2.StopBotAnalyzerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lexmodelsv2.StopBotAnalyzerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lexmodelsv2.StopBotAnalyzerInput, ...func(*lexmodelsv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
