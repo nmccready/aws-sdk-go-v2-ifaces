@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePolicyStoreAlias", func(t *testing.T) {
+        input := &verifiedpermissions.CreatePolicyStoreAliasInput{}
+        output := &verifiedpermissions.CreatePolicyStoreAliasOutput{}
+
+        mockClient.On("CreatePolicyStoreAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePolicyStoreAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreatePolicyTemplate", func(t *testing.T) {
         input := &verifiedpermissions.CreatePolicyTemplateInput{}
         output := &verifiedpermissions.CreatePolicyTemplateOutput{}
@@ -164,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeletePolicyStoreAlias", func(t *testing.T) {
+        input := &verifiedpermissions.DeletePolicyStoreAliasInput{}
+        output := &verifiedpermissions.DeletePolicyStoreAliasOutput{}
+
+        mockClient.On("DeletePolicyStoreAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePolicyStoreAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePolicyTemplate", func(t *testing.T) {
         input := &verifiedpermissions.DeletePolicyTemplateInput{}
         output := &verifiedpermissions.DeletePolicyTemplateOutput{}
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPolicyStore", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPolicyStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPolicyStoreAlias", func(t *testing.T) {
+        input := &verifiedpermissions.GetPolicyStoreAliasInput{}
+        output := &verifiedpermissions.GetPolicyStoreAliasOutput{}
+
+        mockClient.On("GetPolicyStoreAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicyStoreAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicyStoreAliases", func(t *testing.T) {
+        input := &verifiedpermissions.ListPolicyStoreAliasesInput{}
+        output := &verifiedpermissions.ListPolicyStoreAliasesOutput{}
+
+        mockClient.On("ListPolicyStoreAliases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyStoreAliases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -163,6 +163,43 @@ func (_m *IClient) CreateJobQueue(ctx context.Context, params *batch.CreateJobQu
 	return r0, r1
 }
 
+// CreateQuotaShare provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQuotaShare(ctx context.Context, params *batch.CreateQuotaShareInput, optFns ...func(*batch.Options)) (*batch.CreateQuotaShareOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQuotaShare")
+	}
+
+	var r0 *batch.CreateQuotaShareOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.CreateQuotaShareInput, ...func(*batch.Options)) (*batch.CreateQuotaShareOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.CreateQuotaShareInput, ...func(*batch.Options)) *batch.CreateQuotaShareOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.CreateQuotaShareOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.CreateQuotaShareInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateSchedulingPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateSchedulingPolicy(ctx context.Context, params *batch.CreateSchedulingPolicyInput, optFns ...func(*batch.Options)) (*batch.CreateSchedulingPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +377,43 @@ func (_m *IClient) DeleteJobQueue(ctx context.Context, params *batch.DeleteJobQu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.DeleteJobQueueInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQuotaShare provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQuotaShare(ctx context.Context, params *batch.DeleteQuotaShareInput, optFns ...func(*batch.Options)) (*batch.DeleteQuotaShareOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQuotaShare")
+	}
+
+	var r0 *batch.DeleteQuotaShareOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DeleteQuotaShareInput, ...func(*batch.Options)) (*batch.DeleteQuotaShareOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DeleteQuotaShareInput, ...func(*batch.Options)) *batch.DeleteQuotaShareOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.DeleteQuotaShareOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.DeleteQuotaShareInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -644,6 +718,43 @@ func (_m *IClient) DescribeJobs(ctx context.Context, params *batch.DescribeJobsI
 	return r0, r1
 }
 
+// DescribeQuotaShare provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeQuotaShare(ctx context.Context, params *batch.DescribeQuotaShareInput, optFns ...func(*batch.Options)) (*batch.DescribeQuotaShareOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeQuotaShare")
+	}
+
+	var r0 *batch.DescribeQuotaShareOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DescribeQuotaShareInput, ...func(*batch.Options)) (*batch.DescribeQuotaShareOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.DescribeQuotaShareInput, ...func(*batch.Options)) *batch.DescribeQuotaShareOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.DescribeQuotaShareOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.DescribeQuotaShareInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeSchedulingPolicies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeSchedulingPolicies(ctx context.Context, params *batch.DescribeSchedulingPoliciesInput, optFns ...func(*batch.Options)) (*batch.DescribeSchedulingPoliciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -895,6 +1006,43 @@ func (_m *IClient) ListJobsByConsumableResource(ctx context.Context, params *bat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.ListJobsByConsumableResourceInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListQuotaShares provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQuotaShares(ctx context.Context, params *batch.ListQuotaSharesInput, optFns ...func(*batch.Options)) (*batch.ListQuotaSharesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQuotaShares")
+	}
+
+	var r0 *batch.ListQuotaSharesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.ListQuotaSharesInput, ...func(*batch.Options)) (*batch.ListQuotaSharesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.ListQuotaSharesInput, ...func(*batch.Options)) *batch.ListQuotaSharesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.ListQuotaSharesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.ListQuotaSharesInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1402,6 +1550,43 @@ func (_m *IClient) UpdateJobQueue(ctx context.Context, params *batch.UpdateJobQu
 	return r0, r1
 }
 
+// UpdateQuotaShare provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQuotaShare(ctx context.Context, params *batch.UpdateQuotaShareInput, optFns ...func(*batch.Options)) (*batch.UpdateQuotaShareOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQuotaShare")
+	}
+
+	var r0 *batch.UpdateQuotaShareOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.UpdateQuotaShareInput, ...func(*batch.Options)) (*batch.UpdateQuotaShareOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.UpdateQuotaShareInput, ...func(*batch.Options)) *batch.UpdateQuotaShareOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.UpdateQuotaShareOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.UpdateQuotaShareInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateSchedulingPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateSchedulingPolicy(ctx context.Context, params *batch.UpdateSchedulingPolicyInput, optFns ...func(*batch.Options)) (*batch.UpdateSchedulingPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1468,6 +1653,43 @@ func (_m *IClient) UpdateServiceEnvironment(ctx context.Context, params *batch.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.UpdateServiceEnvironmentInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateServiceJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateServiceJob(ctx context.Context, params *batch.UpdateServiceJobInput, optFns ...func(*batch.Options)) (*batch.UpdateServiceJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateServiceJob")
+	}
+
+	var r0 *batch.UpdateServiceJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.UpdateServiceJobInput, ...func(*batch.Options)) (*batch.UpdateServiceJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.UpdateServiceJobInput, ...func(*batch.Options)) *batch.UpdateServiceJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.UpdateServiceJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.UpdateServiceJobInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

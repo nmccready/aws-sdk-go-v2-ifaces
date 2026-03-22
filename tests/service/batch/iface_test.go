@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateQuotaShare", func(t *testing.T) {
+        input := &batch.CreateQuotaShareInput{}
+        output := &batch.CreateQuotaShareOutput{}
+
+        mockClient.On("CreateQuotaShare", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQuotaShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSchedulingPolicy", func(t *testing.T) {
         input := &batch.CreateSchedulingPolicyInput{}
         output := &batch.CreateSchedulingPolicyOutput{}
@@ -145,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteJobQueue", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteJobQueue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQuotaShare", func(t *testing.T) {
+        input := &batch.DeleteQuotaShareInput{}
+        output := &batch.DeleteQuotaShareOutput{}
+
+        mockClient.On("DeleteQuotaShare", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQuotaShare(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeQuotaShare", func(t *testing.T) {
+        input := &batch.DescribeQuotaShareInput{}
+        output := &batch.DescribeQuotaShareOutput{}
+
+        mockClient.On("DescribeQuotaShare", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeQuotaShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeSchedulingPolicies", func(t *testing.T) {
         input := &batch.DescribeSchedulingPoliciesInput{}
         output := &batch.DescribeSchedulingPoliciesOutput{}
@@ -340,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobsByConsumableResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobsByConsumableResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQuotaShares", func(t *testing.T) {
+        input := &batch.ListQuotaSharesInput{}
+        output := &batch.ListQuotaSharesOutput{}
+
+        mockClient.On("ListQuotaShares", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQuotaShares(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateQuotaShare", func(t *testing.T) {
+        input := &batch.UpdateQuotaShareInput{}
+        output := &batch.UpdateQuotaShareOutput{}
+
+        mockClient.On("UpdateQuotaShare", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQuotaShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateSchedulingPolicy", func(t *testing.T) {
         input := &batch.UpdateSchedulingPolicyInput{}
         output := &batch.UpdateSchedulingPolicyOutput{}
@@ -535,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateServiceEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateServiceEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateServiceJob", func(t *testing.T) {
+        input := &batch.UpdateServiceJobInput{}
+        output := &batch.UpdateServiceJobOutput{}
+
+        mockClient.On("UpdateServiceJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateServiceJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
