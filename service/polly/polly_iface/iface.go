@@ -17,6 +17,7 @@ type IClient interface {
  ListLexicons(ctx context.Context, params *ListLexiconsInput, optFns ...func(*Options)) (*ListLexiconsOutput, error) 
  ListSpeechSynthesisTasks(ctx context.Context, params *ListSpeechSynthesisTasksInput, optFns ...func(*Options)) (*ListSpeechSynthesisTasksOutput, error) 
  PutLexicon(ctx context.Context, params *PutLexiconInput, optFns ...func(*Options)) (*PutLexiconOutput, error) 
+ StartSpeechSynthesisStream(ctx context.Context, params *StartSpeechSynthesisStreamInput, optFns ...func(*Options)) (*StartSpeechSynthesisStreamOutput, error) 
  StartSpeechSynthesisTask(ctx context.Context, params *StartSpeechSynthesisTaskInput, optFns ...func(*Options)) (*StartSpeechSynthesisTaskOutput, error) 
  SynthesizeSpeech(ctx context.Context, params *SynthesizeSpeechInput, optFns ...func(*Options)) (*SynthesizeSpeechOutput, error) 
 }

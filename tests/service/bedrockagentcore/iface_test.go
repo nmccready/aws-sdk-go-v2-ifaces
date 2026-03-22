@@ -281,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeAgentRuntimeCommand", func(t *testing.T) {
+        input := &bedrockagentcore.InvokeAgentRuntimeCommandInput{}
+        output := &bedrockagentcore.InvokeAgentRuntimeCommandOutput{}
+
+        mockClient.On("InvokeAgentRuntimeCommand", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeAgentRuntimeCommand(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeCodeInterpreter", func(t *testing.T) {
         input := &bedrockagentcore.InvokeCodeInterpreterInput{}
         output := &bedrockagentcore.InvokeCodeInterpreterOutput{}

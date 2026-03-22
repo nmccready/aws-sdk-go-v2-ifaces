@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartSpeechSynthesisStream", func(t *testing.T) {
+        input := &polly.StartSpeechSynthesisStreamInput{}
+        output := &polly.StartSpeechSynthesisStreamOutput{}
+
+        mockClient.On("StartSpeechSynthesisStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartSpeechSynthesisStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartSpeechSynthesisTask", func(t *testing.T) {
         input := &polly.StartSpeechSynthesisTaskInput{}
         output := &polly.StartSpeechSynthesisTaskOutput{}

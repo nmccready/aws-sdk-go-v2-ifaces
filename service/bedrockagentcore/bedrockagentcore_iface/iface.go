@@ -29,6 +29,7 @@ type IClient interface {
  GetWorkloadAccessTokenForJWT(ctx context.Context, params *GetWorkloadAccessTokenForJWTInput, optFns ...func(*Options)) (*GetWorkloadAccessTokenForJWTOutput, error) 
  GetWorkloadAccessTokenForUserId(ctx context.Context, params *GetWorkloadAccessTokenForUserIdInput, optFns ...func(*Options)) (*GetWorkloadAccessTokenForUserIdOutput, error) 
  InvokeAgentRuntime(ctx context.Context, params *InvokeAgentRuntimeInput, optFns ...func(*Options)) (*InvokeAgentRuntimeOutput, error) 
+ InvokeAgentRuntimeCommand(ctx context.Context, params *InvokeAgentRuntimeCommandInput, optFns ...func(*Options)) (*InvokeAgentRuntimeCommandOutput, error) 
  InvokeCodeInterpreter(ctx context.Context, params *InvokeCodeInterpreterInput, optFns ...func(*Options)) (*InvokeCodeInterpreterOutput, error) 
  ListActors(ctx context.Context, params *ListActorsInput, optFns ...func(*Options)) (*ListActorsOutput, error) 
  ListBrowserSessions(ctx context.Context, params *ListBrowserSessionsInput, optFns ...func(*Options)) (*ListBrowserSessionsOutput, error) 

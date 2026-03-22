@@ -236,6 +236,43 @@ func (_m *IClient) CreatePolicyStore(ctx context.Context, params *verifiedpermis
 	return r0, r1
 }
 
+// CreatePolicyStoreAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePolicyStoreAlias(ctx context.Context, params *verifiedpermissions.CreatePolicyStoreAliasInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.CreatePolicyStoreAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePolicyStoreAlias")
+	}
+
+	var r0 *verifiedpermissions.CreatePolicyStoreAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.CreatePolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) (*verifiedpermissions.CreatePolicyStoreAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.CreatePolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) *verifiedpermissions.CreatePolicyStoreAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*verifiedpermissions.CreatePolicyStoreAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.CreatePolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreatePolicyTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreatePolicyTemplate(ctx context.Context, params *verifiedpermissions.CreatePolicyTemplateInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.CreatePolicyTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -384,6 +421,43 @@ func (_m *IClient) DeletePolicyStore(ctx context.Context, params *verifiedpermis
 	return r0, r1
 }
 
+// DeletePolicyStoreAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePolicyStoreAlias(ctx context.Context, params *verifiedpermissions.DeletePolicyStoreAliasInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.DeletePolicyStoreAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePolicyStoreAlias")
+	}
+
+	var r0 *verifiedpermissions.DeletePolicyStoreAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.DeletePolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) (*verifiedpermissions.DeletePolicyStoreAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.DeletePolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) *verifiedpermissions.DeletePolicyStoreAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*verifiedpermissions.DeletePolicyStoreAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.DeletePolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePolicyTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePolicyTemplate(ctx context.Context, params *verifiedpermissions.DeletePolicyTemplateInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.DeletePolicyTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -524,6 +598,43 @@ func (_m *IClient) GetPolicyStore(ctx context.Context, params *verifiedpermissio
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.GetPolicyStoreInput, ...func(*verifiedpermissions.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicyStoreAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicyStoreAlias(ctx context.Context, params *verifiedpermissions.GetPolicyStoreAliasInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.GetPolicyStoreAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicyStoreAlias")
+	}
+
+	var r0 *verifiedpermissions.GetPolicyStoreAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.GetPolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) (*verifiedpermissions.GetPolicyStoreAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.GetPolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) *verifiedpermissions.GetPolicyStoreAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*verifiedpermissions.GetPolicyStoreAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.GetPolicyStoreAliasInput, ...func(*verifiedpermissions.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -746,6 +857,43 @@ func (_m *IClient) ListPolicies(ctx context.Context, params *verifiedpermissions
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.ListPoliciesInput, ...func(*verifiedpermissions.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicyStoreAliases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyStoreAliases(ctx context.Context, params *verifiedpermissions.ListPolicyStoreAliasesInput, optFns ...func(*verifiedpermissions.Options)) (*verifiedpermissions.ListPolicyStoreAliasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyStoreAliases")
+	}
+
+	var r0 *verifiedpermissions.ListPolicyStoreAliasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.ListPolicyStoreAliasesInput, ...func(*verifiedpermissions.Options)) (*verifiedpermissions.ListPolicyStoreAliasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *verifiedpermissions.ListPolicyStoreAliasesInput, ...func(*verifiedpermissions.Options)) *verifiedpermissions.ListPolicyStoreAliasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*verifiedpermissions.ListPolicyStoreAliasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *verifiedpermissions.ListPolicyStoreAliasesInput, ...func(*verifiedpermissions.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
