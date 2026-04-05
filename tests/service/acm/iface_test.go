@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchCertificates", func(t *testing.T) {
+        input := &acm.SearchCertificatesInput{}
+        output := &acm.SearchCertificatesOutput{}
+
+        mockClient.On("SearchCertificates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchCertificates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateCertificateOptions", func(t *testing.T) {
         input := &acm.UpdateCertificateOptionsInput{}
         output := &acm.UpdateCertificateOptionsOutput{}

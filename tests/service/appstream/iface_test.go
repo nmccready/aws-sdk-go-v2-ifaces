@@ -853,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDrainSessionInstance", func(t *testing.T) {
+        input := &appstream.DrainSessionInstanceInput{}
+        output := &appstream.DrainSessionInstanceOutput{}
+
+        mockClient.On("DrainSessionInstance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DrainSessionInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableUser", func(t *testing.T) {
         input := &appstream.EnableUserInput{}
         output := &appstream.EnableUserOutput{}

@@ -10,7 +10,19 @@ import (
 // IClient defines the interface for marketplaceagreement
 type IClient interface {
  Options() Options 
+ BatchCreateBillingAdjustmentRequest(ctx context.Context, params *BatchCreateBillingAdjustmentRequestInput, optFns ...func(*Options)) (*BatchCreateBillingAdjustmentRequestOutput, error) 
+ CancelAgreementCancellationRequest(ctx context.Context, params *CancelAgreementCancellationRequestInput, optFns ...func(*Options)) (*CancelAgreementCancellationRequestOutput, error) 
+ CancelAgreementPaymentRequest(ctx context.Context, params *CancelAgreementPaymentRequestInput, optFns ...func(*Options)) (*CancelAgreementPaymentRequestOutput, error) 
  DescribeAgreement(ctx context.Context, params *DescribeAgreementInput, optFns ...func(*Options)) (*DescribeAgreementOutput, error) 
+ GetAgreementCancellationRequest(ctx context.Context, params *GetAgreementCancellationRequestInput, optFns ...func(*Options)) (*GetAgreementCancellationRequestOutput, error) 
+ GetAgreementPaymentRequest(ctx context.Context, params *GetAgreementPaymentRequestInput, optFns ...func(*Options)) (*GetAgreementPaymentRequestOutput, error) 
  GetAgreementTerms(ctx context.Context, params *GetAgreementTermsInput, optFns ...func(*Options)) (*GetAgreementTermsOutput, error) 
+ GetBillingAdjustmentRequest(ctx context.Context, params *GetBillingAdjustmentRequestInput, optFns ...func(*Options)) (*GetBillingAdjustmentRequestOutput, error) 
+ ListAgreementCancellationRequests(ctx context.Context, params *ListAgreementCancellationRequestsInput, optFns ...func(*Options)) (*ListAgreementCancellationRequestsOutput, error) 
+ ListAgreementInvoiceLineItems(ctx context.Context, params *ListAgreementInvoiceLineItemsInput, optFns ...func(*Options)) (*ListAgreementInvoiceLineItemsOutput, error) 
+ ListAgreementPaymentRequests(ctx context.Context, params *ListAgreementPaymentRequestsInput, optFns ...func(*Options)) (*ListAgreementPaymentRequestsOutput, error) 
+ ListBillingAdjustmentRequests(ctx context.Context, params *ListBillingAdjustmentRequestsInput, optFns ...func(*Options)) (*ListBillingAdjustmentRequestsOutput, error) 
  SearchAgreements(ctx context.Context, params *SearchAgreementsInput, optFns ...func(*Options)) (*SearchAgreementsOutput, error) 
+ SendAgreementCancellationRequest(ctx context.Context, params *SendAgreementCancellationRequestInput, optFns ...func(*Options)) (*SendAgreementCancellationRequestOutput, error) 
+ SendAgreementPaymentRequest(ctx context.Context, params *SendAgreementPaymentRequestInput, optFns ...func(*Options)) (*SendAgreementPaymentRequestOutput, error) 
 }

@@ -970,6 +970,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAutomationJob", func(t *testing.T) {
+        input := &quicksight.DescribeAutomationJobInput{}
+        output := &quicksight.DescribeAutomationJobOutput{}
+
+        mockClient.On("DescribeAutomationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAutomationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeBrand", func(t *testing.T) {
         input := &quicksight.DescribeBrandInput{}
         output := &quicksight.DescribeBrandOutput{}
@@ -2316,6 +2329,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAssetBundleImportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAssetBundleImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAutomationJob", func(t *testing.T) {
+        input := &quicksight.StartAutomationJobInput{}
+        output := &quicksight.StartAutomationJobOutput{}
+
+        mockClient.On("StartAutomationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAutomationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

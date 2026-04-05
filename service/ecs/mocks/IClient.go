@@ -89,6 +89,43 @@ func (_m *IClient) CreateCluster(ctx context.Context, params *ecs.CreateClusterI
 	return r0, r1
 }
 
+// CreateDaemon provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDaemon(ctx context.Context, params *ecs.CreateDaemonInput, optFns ...func(*ecs.Options)) (*ecs.CreateDaemonOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDaemon")
+	}
+
+	var r0 *ecs.CreateDaemonOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.CreateDaemonInput, ...func(*ecs.Options)) (*ecs.CreateDaemonOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.CreateDaemonInput, ...func(*ecs.Options)) *ecs.CreateDaemonOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.CreateDaemonOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.CreateDaemonInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateExpressGatewayService provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateExpressGatewayService(ctx context.Context, params *ecs.CreateExpressGatewayServiceInput, optFns ...func(*ecs.Options)) (*ecs.CreateExpressGatewayServiceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +377,80 @@ func (_m *IClient) DeleteCluster(ctx context.Context, params *ecs.DeleteClusterI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DeleteClusterInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDaemon provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDaemon(ctx context.Context, params *ecs.DeleteDaemonInput, optFns ...func(*ecs.Options)) (*ecs.DeleteDaemonOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDaemon")
+	}
+
+	var r0 *ecs.DeleteDaemonOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DeleteDaemonInput, ...func(*ecs.Options)) (*ecs.DeleteDaemonOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DeleteDaemonInput, ...func(*ecs.Options)) *ecs.DeleteDaemonOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DeleteDaemonOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DeleteDaemonInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDaemonTaskDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDaemonTaskDefinition(ctx context.Context, params *ecs.DeleteDaemonTaskDefinitionInput, optFns ...func(*ecs.Options)) (*ecs.DeleteDaemonTaskDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDaemonTaskDefinition")
+	}
+
+	var r0 *ecs.DeleteDaemonTaskDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DeleteDaemonTaskDefinitionInput, ...func(*ecs.Options)) (*ecs.DeleteDaemonTaskDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DeleteDaemonTaskDefinitionInput, ...func(*ecs.Options)) *ecs.DeleteDaemonTaskDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DeleteDaemonTaskDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DeleteDaemonTaskDefinitionInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -673,6 +784,154 @@ func (_m *IClient) DescribeContainerInstances(ctx context.Context, params *ecs.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeContainerInstancesInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDaemon provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDaemon(ctx context.Context, params *ecs.DescribeDaemonInput, optFns ...func(*ecs.Options)) (*ecs.DescribeDaemonOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDaemon")
+	}
+
+	var r0 *ecs.DescribeDaemonOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonInput, ...func(*ecs.Options)) (*ecs.DescribeDaemonOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonInput, ...func(*ecs.Options)) *ecs.DescribeDaemonOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeDaemonOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeDaemonInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDaemonDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDaemonDeployments(ctx context.Context, params *ecs.DescribeDaemonDeploymentsInput, optFns ...func(*ecs.Options)) (*ecs.DescribeDaemonDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDaemonDeployments")
+	}
+
+	var r0 *ecs.DescribeDaemonDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonDeploymentsInput, ...func(*ecs.Options)) (*ecs.DescribeDaemonDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonDeploymentsInput, ...func(*ecs.Options)) *ecs.DescribeDaemonDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeDaemonDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeDaemonDeploymentsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDaemonRevisions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDaemonRevisions(ctx context.Context, params *ecs.DescribeDaemonRevisionsInput, optFns ...func(*ecs.Options)) (*ecs.DescribeDaemonRevisionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDaemonRevisions")
+	}
+
+	var r0 *ecs.DescribeDaemonRevisionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonRevisionsInput, ...func(*ecs.Options)) (*ecs.DescribeDaemonRevisionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonRevisionsInput, ...func(*ecs.Options)) *ecs.DescribeDaemonRevisionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeDaemonRevisionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeDaemonRevisionsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDaemonTaskDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDaemonTaskDefinition(ctx context.Context, params *ecs.DescribeDaemonTaskDefinitionInput, optFns ...func(*ecs.Options)) (*ecs.DescribeDaemonTaskDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDaemonTaskDefinition")
+	}
+
+	var r0 *ecs.DescribeDaemonTaskDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonTaskDefinitionInput, ...func(*ecs.Options)) (*ecs.DescribeDaemonTaskDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.DescribeDaemonTaskDefinitionInput, ...func(*ecs.Options)) *ecs.DescribeDaemonTaskDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.DescribeDaemonTaskDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.DescribeDaemonTaskDefinitionInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1199,6 +1458,117 @@ func (_m *IClient) ListContainerInstances(ctx context.Context, params *ecs.ListC
 	return r0, r1
 }
 
+// ListDaemonDeployments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDaemonDeployments(ctx context.Context, params *ecs.ListDaemonDeploymentsInput, optFns ...func(*ecs.Options)) (*ecs.ListDaemonDeploymentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDaemonDeployments")
+	}
+
+	var r0 *ecs.ListDaemonDeploymentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListDaemonDeploymentsInput, ...func(*ecs.Options)) (*ecs.ListDaemonDeploymentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListDaemonDeploymentsInput, ...func(*ecs.Options)) *ecs.ListDaemonDeploymentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.ListDaemonDeploymentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.ListDaemonDeploymentsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDaemonTaskDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDaemonTaskDefinitions(ctx context.Context, params *ecs.ListDaemonTaskDefinitionsInput, optFns ...func(*ecs.Options)) (*ecs.ListDaemonTaskDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDaemonTaskDefinitions")
+	}
+
+	var r0 *ecs.ListDaemonTaskDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListDaemonTaskDefinitionsInput, ...func(*ecs.Options)) (*ecs.ListDaemonTaskDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListDaemonTaskDefinitionsInput, ...func(*ecs.Options)) *ecs.ListDaemonTaskDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.ListDaemonTaskDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.ListDaemonTaskDefinitionsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDaemons provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDaemons(ctx context.Context, params *ecs.ListDaemonsInput, optFns ...func(*ecs.Options)) (*ecs.ListDaemonsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDaemons")
+	}
+
+	var r0 *ecs.ListDaemonsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListDaemonsInput, ...func(*ecs.Options)) (*ecs.ListDaemonsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.ListDaemonsInput, ...func(*ecs.Options)) *ecs.ListDaemonsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.ListDaemonsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.ListDaemonsInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListServiceDeployments provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListServiceDeployments(ctx context.Context, params *ecs.ListServiceDeploymentsInput, optFns ...func(*ecs.Options)) (*ecs.ListServiceDeploymentsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1653,6 +2023,43 @@ func (_m *IClient) RegisterContainerInstance(ctx context.Context, params *ecs.Re
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.RegisterContainerInstanceInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterDaemonTaskDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterDaemonTaskDefinition(ctx context.Context, params *ecs.RegisterDaemonTaskDefinitionInput, optFns ...func(*ecs.Options)) (*ecs.RegisterDaemonTaskDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterDaemonTaskDefinition")
+	}
+
+	var r0 *ecs.RegisterDaemonTaskDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.RegisterDaemonTaskDefinitionInput, ...func(*ecs.Options)) (*ecs.RegisterDaemonTaskDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.RegisterDaemonTaskDefinitionInput, ...func(*ecs.Options)) *ecs.RegisterDaemonTaskDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.RegisterDaemonTaskDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.RegisterDaemonTaskDefinitionInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2208,6 +2615,43 @@ func (_m *IClient) UpdateContainerInstancesState(ctx context.Context, params *ec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecs.UpdateContainerInstancesStateInput, ...func(*ecs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDaemon provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDaemon(ctx context.Context, params *ecs.UpdateDaemonInput, optFns ...func(*ecs.Options)) (*ecs.UpdateDaemonOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDaemon")
+	}
+
+	var r0 *ecs.UpdateDaemonOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.UpdateDaemonInput, ...func(*ecs.Options)) (*ecs.UpdateDaemonOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecs.UpdateDaemonInput, ...func(*ecs.Options)) *ecs.UpdateDaemonOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecs.UpdateDaemonOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecs.UpdateDaemonInput, ...func(*ecs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -866,6 +866,43 @@ func (_m *IClient) GetMetricWidgetImage(ctx context.Context, params *cloudwatch.
 	return r0, r1
 }
 
+// GetOTelEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOTelEnrichment(ctx context.Context, params *cloudwatch.GetOTelEnrichmentInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetOTelEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOTelEnrichment")
+	}
+
+	var r0 *cloudwatch.GetOTelEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetOTelEnrichmentInput, ...func(*cloudwatch.Options)) (*cloudwatch.GetOTelEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetOTelEnrichmentInput, ...func(*cloudwatch.Options)) *cloudwatch.GetOTelEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.GetOTelEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetOTelEnrichmentInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAlarmMuteRules provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAlarmMuteRules(ctx context.Context, params *cloudwatch.ListAlarmMuteRulesInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.ListAlarmMuteRulesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1513,6 +1550,43 @@ func (_m *IClient) StartMetricStreams(ctx context.Context, params *cloudwatch.St
 	return r0, r1
 }
 
+// StartOTelEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartOTelEnrichment(ctx context.Context, params *cloudwatch.StartOTelEnrichmentInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.StartOTelEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartOTelEnrichment")
+	}
+
+	var r0 *cloudwatch.StartOTelEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.StartOTelEnrichmentInput, ...func(*cloudwatch.Options)) (*cloudwatch.StartOTelEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.StartOTelEnrichmentInput, ...func(*cloudwatch.Options)) *cloudwatch.StartOTelEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.StartOTelEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.StartOTelEnrichmentInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopMetricStreams provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopMetricStreams(ctx context.Context, params *cloudwatch.StopMetricStreamsInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.StopMetricStreamsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1542,6 +1616,43 @@ func (_m *IClient) StopMetricStreams(ctx context.Context, params *cloudwatch.Sto
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.StopMetricStreamsInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopOTelEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopOTelEnrichment(ctx context.Context, params *cloudwatch.StopOTelEnrichmentInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.StopOTelEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopOTelEnrichment")
+	}
+
+	var r0 *cloudwatch.StopOTelEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.StopOTelEnrichmentInput, ...func(*cloudwatch.Options)) (*cloudwatch.StopOTelEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.StopOTelEnrichmentInput, ...func(*cloudwatch.Options)) *cloudwatch.StopOTelEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.StopOTelEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.StopOTelEnrichmentInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -199,6 +199,43 @@ func (_m *IClient) CancelRun(ctx context.Context, params *omics.CancelRunInput, 
 	return r0, r1
 }
 
+// CancelRunBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelRunBatch(ctx context.Context, params *omics.CancelRunBatchInput, optFns ...func(*omics.Options)) (*omics.CancelRunBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelRunBatch")
+	}
+
+	var r0 *omics.CancelRunBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.CancelRunBatchInput, ...func(*omics.Options)) (*omics.CancelRunBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.CancelRunBatchInput, ...func(*omics.Options)) *omics.CancelRunBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.CancelRunBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.CancelRunBatchInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelVariantImportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelVariantImportJob(ctx context.Context, params *omics.CancelVariantImportJobInput, optFns ...func(*omics.Options)) (*omics.CancelVariantImportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -339,6 +376,43 @@ func (_m *IClient) CreateAnnotationStoreVersion(ctx context.Context, params *omi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.CreateAnnotationStoreVersionInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConfiguration(ctx context.Context, params *omics.CreateConfigurationInput, optFns ...func(*omics.Options)) (*omics.CreateConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConfiguration")
+	}
+
+	var r0 *omics.CreateConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.CreateConfigurationInput, ...func(*omics.Options)) (*omics.CreateConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.CreateConfigurationInput, ...func(*omics.Options)) *omics.CreateConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.CreateConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.CreateConfigurationInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -754,6 +828,80 @@ func (_m *IClient) DeleteAnnotationStoreVersions(ctx context.Context, params *om
 	return r0, r1
 }
 
+// DeleteBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBatch(ctx context.Context, params *omics.DeleteBatchInput, optFns ...func(*omics.Options)) (*omics.DeleteBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBatch")
+	}
+
+	var r0 *omics.DeleteBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteBatchInput, ...func(*omics.Options)) (*omics.DeleteBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteBatchInput, ...func(*omics.Options)) *omics.DeleteBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.DeleteBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteBatchInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConfiguration(ctx context.Context, params *omics.DeleteConfigurationInput, optFns ...func(*omics.Options)) (*omics.DeleteConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConfiguration")
+	}
+
+	var r0 *omics.DeleteConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteConfigurationInput, ...func(*omics.Options)) (*omics.DeleteConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteConfigurationInput, ...func(*omics.Options)) *omics.DeleteConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.DeleteConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteConfigurationInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteReference provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteReference(ctx context.Context, params *omics.DeleteReferenceInput, optFns ...func(*omics.Options)) (*omics.DeleteReferenceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -857,6 +1005,43 @@ func (_m *IClient) DeleteRun(ctx context.Context, params *omics.DeleteRunInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteRunInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRunBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRunBatch(ctx context.Context, params *omics.DeleteRunBatchInput, optFns ...func(*omics.Options)) (*omics.DeleteRunBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRunBatch")
+	}
+
+	var r0 *omics.DeleteRunBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteRunBatchInput, ...func(*omics.Options)) (*omics.DeleteRunBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.DeleteRunBatchInput, ...func(*omics.Options)) *omics.DeleteRunBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.DeleteRunBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.DeleteRunBatchInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1264,6 +1449,80 @@ func (_m *IClient) GetAnnotationStoreVersion(ctx context.Context, params *omics.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.GetAnnotationStoreVersionInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBatch(ctx context.Context, params *omics.GetBatchInput, optFns ...func(*omics.Options)) (*omics.GetBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBatch")
+	}
+
+	var r0 *omics.GetBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetBatchInput, ...func(*omics.Options)) (*omics.GetBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetBatchInput, ...func(*omics.Options)) *omics.GetBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.GetBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.GetBatchInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConfiguration(ctx context.Context, params *omics.GetConfigurationInput, optFns ...func(*omics.Options)) (*omics.GetConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConfiguration")
+	}
+
+	var r0 *omics.GetConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetConfigurationInput, ...func(*omics.Options)) (*omics.GetConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.GetConfigurationInput, ...func(*omics.Options)) *omics.GetConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.GetConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.GetConfigurationInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2123,6 +2382,80 @@ func (_m *IClient) ListAnnotationStores(ctx context.Context, params *omics.ListA
 	return r0, r1
 }
 
+// ListBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBatch(ctx context.Context, params *omics.ListBatchInput, optFns ...func(*omics.Options)) (*omics.ListBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBatch")
+	}
+
+	var r0 *omics.ListBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListBatchInput, ...func(*omics.Options)) (*omics.ListBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListBatchInput, ...func(*omics.Options)) *omics.ListBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.ListBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.ListBatchInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConfigurations(ctx context.Context, params *omics.ListConfigurationsInput, optFns ...func(*omics.Options)) (*omics.ListConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConfigurations")
+	}
+
+	var r0 *omics.ListConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListConfigurationsInput, ...func(*omics.Options)) (*omics.ListConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListConfigurationsInput, ...func(*omics.Options)) *omics.ListConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.ListConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.ListConfigurationsInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListMultipartReadSetUploads provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListMultipartReadSetUploads(ctx context.Context, params *omics.ListMultipartReadSetUploadsInput, optFns ...func(*omics.Options)) (*omics.ListMultipartReadSetUploadsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2596,6 +2929,43 @@ func (_m *IClient) ListRuns(ctx context.Context, params *omics.ListRunsInput, op
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.ListRunsInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRunsInBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRunsInBatch(ctx context.Context, params *omics.ListRunsInBatchInput, optFns ...func(*omics.Options)) (*omics.ListRunsInBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRunsInBatch")
+	}
+
+	var r0 *omics.ListRunsInBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListRunsInBatchInput, ...func(*omics.Options)) (*omics.ListRunsInBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.ListRunsInBatchInput, ...func(*omics.Options)) *omics.ListRunsInBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.ListRunsInBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.ListRunsInBatchInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3132,6 +3502,43 @@ func (_m *IClient) StartRun(ctx context.Context, params *omics.StartRunInput, op
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *omics.StartRunInput, ...func(*omics.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartRunBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartRunBatch(ctx context.Context, params *omics.StartRunBatchInput, optFns ...func(*omics.Options)) (*omics.StartRunBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartRunBatch")
+	}
+
+	var r0 *omics.StartRunBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.StartRunBatchInput, ...func(*omics.Options)) (*omics.StartRunBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *omics.StartRunBatchInput, ...func(*omics.Options)) *omics.StartRunBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*omics.StartRunBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *omics.StartRunBatchInput, ...func(*omics.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

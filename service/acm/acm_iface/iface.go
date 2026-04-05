@@ -25,5 +25,6 @@ type IClient interface {
  RequestCertificate(ctx context.Context, params *RequestCertificateInput, optFns ...func(*Options)) (*RequestCertificateOutput, error) 
  ResendValidationEmail(ctx context.Context, params *ResendValidationEmailInput, optFns ...func(*Options)) (*ResendValidationEmailOutput, error) 
  RevokeCertificate(ctx context.Context, params *RevokeCertificateInput, optFns ...func(*Options)) (*RevokeCertificateOutput, error) 
+ SearchCertificates(ctx context.Context, params *SearchCertificatesInput, optFns ...func(*Options)) (*SearchCertificatesOutput, error) 
  UpdateCertificateOptions(ctx context.Context, params *UpdateCertificateOptionsInput, optFns ...func(*Options)) (*UpdateCertificateOptionsOutput, error) 
 }

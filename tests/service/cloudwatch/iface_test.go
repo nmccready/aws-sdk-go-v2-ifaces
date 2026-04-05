@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetOTelEnrichment", func(t *testing.T) {
+        input := &cloudwatch.GetOTelEnrichmentInput{}
+        output := &cloudwatch.GetOTelEnrichmentOutput{}
+
+        mockClient.On("GetOTelEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOTelEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAlarmMuteRules", func(t *testing.T) {
         input := &cloudwatch.ListAlarmMuteRulesInput{}
         output := &cloudwatch.ListAlarmMuteRulesOutput{}
@@ -554,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartOTelEnrichment", func(t *testing.T) {
+        input := &cloudwatch.StartOTelEnrichmentInput{}
+        output := &cloudwatch.StartOTelEnrichmentOutput{}
+
+        mockClient.On("StartOTelEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOTelEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopMetricStreams", func(t *testing.T) {
         input := &cloudwatch.StopMetricStreamsInput{}
         output := &cloudwatch.StopMetricStreamsOutput{}
@@ -561,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopMetricStreams", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopMetricStreams(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopOTelEnrichment", func(t *testing.T) {
+        input := &cloudwatch.StopOTelEnrichmentInput{}
+        output := &cloudwatch.StopOTelEnrichmentOutput{}
+
+        mockClient.On("StopOTelEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopOTelEnrichment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

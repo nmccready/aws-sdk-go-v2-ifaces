@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateRelatedItem", func(t *testing.T) {
+        input := &connectcases.UpdateRelatedItemInput{}
+        output := &connectcases.UpdateRelatedItemOutput{}
+
+        mockClient.On("UpdateRelatedItem", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRelatedItem(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateTemplate", func(t *testing.T) {
         input := &connectcases.UpdateTemplateInput{}
         output := &connectcases.UpdateTemplateOutput{}

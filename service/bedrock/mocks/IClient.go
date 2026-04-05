@@ -1236,6 +1236,43 @@ func (_m *IClient) DeleteProvisionedModelThroughput(ctx context.Context, params 
 	return r0, r1
 }
 
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *bedrock.DeleteResourcePolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *bedrock.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteResourcePolicyInput, ...func(*bedrock.Options)) (*bedrock.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteResourcePolicyInput, ...func(*bedrock.Options)) *bedrock.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteResourcePolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeregisterMarketplaceModelEndpoint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeregisterMarketplaceModelEndpoint(ctx context.Context, params *bedrock.DeregisterMarketplaceModelEndpointInput, optFns ...func(*bedrock.Options)) (*bedrock.DeregisterMarketplaceModelEndpointOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2161,6 +2198,43 @@ func (_m *IClient) GetProvisionedModelThroughput(ctx context.Context, params *be
 	return r0, r1
 }
 
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *bedrock.GetResourcePolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *bedrock.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetResourcePolicyInput, ...func(*bedrock.Options)) (*bedrock.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetResourcePolicyInput, ...func(*bedrock.Options)) *bedrock.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetResourcePolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetUseCaseForModelAccess provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetUseCaseForModelAccess(ctx context.Context, params *bedrock.GetUseCaseForModelAccessInput, optFns ...func(*bedrock.Options)) (*bedrock.GetUseCaseForModelAccessOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3059,6 +3133,43 @@ func (_m *IClient) PutModelInvocationLoggingConfiguration(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutModelInvocationLoggingConfigurationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *bedrock.PutResourcePolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *bedrock.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutResourcePolicyInput, ...func(*bedrock.Options)) (*bedrock.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutResourcePolicyInput, ...func(*bedrock.Options)) *bedrock.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutResourcePolicyInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -1550,6 +1550,43 @@ func (_m *IClient) UpdateLayout(ctx context.Context, params *connectcases.Update
 	return r0, r1
 }
 
+// UpdateRelatedItem provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRelatedItem(ctx context.Context, params *connectcases.UpdateRelatedItemInput, optFns ...func(*connectcases.Options)) (*connectcases.UpdateRelatedItemOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRelatedItem")
+	}
+
+	var r0 *connectcases.UpdateRelatedItemOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.UpdateRelatedItemInput, ...func(*connectcases.Options)) (*connectcases.UpdateRelatedItemOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.UpdateRelatedItemInput, ...func(*connectcases.Options)) *connectcases.UpdateRelatedItemOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.UpdateRelatedItemOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.UpdateRelatedItemInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateTemplate(ctx context.Context, params *connectcases.UpdateTemplateInput, optFns ...func(*connectcases.Options)) (*connectcases.UpdateTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))

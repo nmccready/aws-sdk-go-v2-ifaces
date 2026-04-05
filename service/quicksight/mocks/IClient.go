@@ -2678,6 +2678,43 @@ func (_m *IClient) DescribeAssetBundleImportJob(ctx context.Context, params *qui
 	return r0, r1
 }
 
+// DescribeAutomationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAutomationJob(ctx context.Context, params *quicksight.DescribeAutomationJobInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeAutomationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAutomationJob")
+	}
+
+	var r0 *quicksight.DescribeAutomationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeAutomationJobInput, ...func(*quicksight.Options)) (*quicksight.DescribeAutomationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeAutomationJobInput, ...func(*quicksight.Options)) *quicksight.DescribeAutomationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeAutomationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeAutomationJobInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeBrand provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeBrand(ctx context.Context, params *quicksight.DescribeBrandInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeBrandOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6536,6 +6573,43 @@ func (_m *IClient) StartAssetBundleImportJob(ctx context.Context, params *quicks
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.StartAssetBundleImportJobInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAutomationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAutomationJob(ctx context.Context, params *quicksight.StartAutomationJobInput, optFns ...func(*quicksight.Options)) (*quicksight.StartAutomationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAutomationJob")
+	}
+
+	var r0 *quicksight.StartAutomationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.StartAutomationJobInput, ...func(*quicksight.Options)) (*quicksight.StartAutomationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.StartAutomationJobInput, ...func(*quicksight.Options)) *quicksight.StartAutomationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.StartAutomationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.StartAutomationJobInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

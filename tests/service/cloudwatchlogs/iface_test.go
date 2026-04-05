@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateLookupTable", func(t *testing.T) {
+        input := &cloudwatchlogs.CreateLookupTableInput{}
+        output := &cloudwatchlogs.CreateLookupTableOutput{}
+
+        mockClient.On("CreateLookupTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLookupTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateScheduledQuery", func(t *testing.T) {
         input := &cloudwatchlogs.CreateScheduledQueryInput{}
         output := &cloudwatchlogs.CreateScheduledQueryOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLogStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLogStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteLookupTable", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteLookupTableInput{}
+        output := &cloudwatchlogs.DeleteLookupTableOutput{}
+
+        mockClient.On("DeleteLookupTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLookupTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeLookupTables", func(t *testing.T) {
+        input := &cloudwatchlogs.DescribeLookupTablesInput{}
+        output := &cloudwatchlogs.DescribeLookupTablesOutput{}
+
+        mockClient.On("DescribeLookupTables", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeLookupTables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeMetricFilters", func(t *testing.T) {
         input := &cloudwatchlogs.DescribeMetricFiltersInput{}
         output := &cloudwatchlogs.DescribeMetricFiltersOutput{}
@@ -847,6 +886,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLogRecord", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLogRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLookupTable", func(t *testing.T) {
+        input := &cloudwatchlogs.GetLookupTableInput{}
+        output := &cloudwatchlogs.GetLookupTableOutput{}
+
+        mockClient.On("GetLookupTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLookupTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1419,6 +1471,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLogAnomalyDetector", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLogAnomalyDetector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLookupTable", func(t *testing.T) {
+        input := &cloudwatchlogs.UpdateLookupTableInput{}
+        output := &cloudwatchlogs.UpdateLookupTableOutput{}
+
+        mockClient.On("UpdateLookupTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLookupTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataAutomationLibrary", func(t *testing.T) {
+        input := &bedrockdataautomation.CreateDataAutomationLibraryInput{}
+        output := &bedrockdataautomation.CreateDataAutomationLibraryOutput{}
+
+        mockClient.On("CreateDataAutomationLibrary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataAutomationLibrary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataAutomationProject", func(t *testing.T) {
         input := &bedrockdataautomation.CreateDataAutomationProjectInput{}
         output := &bedrockdataautomation.CreateDataAutomationProjectOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBlueprint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataAutomationLibrary", func(t *testing.T) {
+        input := &bedrockdataautomation.DeleteDataAutomationLibraryInput{}
+        output := &bedrockdataautomation.DeleteDataAutomationLibraryOutput{}
+
+        mockClient.On("DeleteDataAutomationLibrary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataAutomationLibrary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,6 +164,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataAutomationLibrary", func(t *testing.T) {
+        input := &bedrockdataautomation.GetDataAutomationLibraryInput{}
+        output := &bedrockdataautomation.GetDataAutomationLibraryOutput{}
+
+        mockClient.On("GetDataAutomationLibrary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataAutomationLibrary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataAutomationLibraryEntity", func(t *testing.T) {
+        input := &bedrockdataautomation.GetDataAutomationLibraryEntityInput{}
+        output := &bedrockdataautomation.GetDataAutomationLibraryEntityOutput{}
+
+        mockClient.On("GetDataAutomationLibraryEntity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataAutomationLibraryEntity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataAutomationLibraryIngestionJob", func(t *testing.T) {
+        input := &bedrockdataautomation.GetDataAutomationLibraryIngestionJobInput{}
+        output := &bedrockdataautomation.GetDataAutomationLibraryIngestionJobOutput{}
+
+        mockClient.On("GetDataAutomationLibraryIngestionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataAutomationLibraryIngestionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataAutomationProject", func(t *testing.T) {
         input := &bedrockdataautomation.GetDataAutomationProjectInput{}
         output := &bedrockdataautomation.GetDataAutomationProjectOutput{}
@@ -164,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeDataAutomationLibraryIngestionJob", func(t *testing.T) {
+        input := &bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobInput{}
+        output := &bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobOutput{}
+
+        mockClient.On("InvokeDataAutomationLibraryIngestionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeDataAutomationLibraryIngestionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListBlueprints", func(t *testing.T) {
         input := &bedrockdataautomation.ListBlueprintsInput{}
         output := &bedrockdataautomation.ListBlueprintsOutput{}
@@ -171,6 +249,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBlueprints", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBlueprints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataAutomationLibraries", func(t *testing.T) {
+        input := &bedrockdataautomation.ListDataAutomationLibrariesInput{}
+        output := &bedrockdataautomation.ListDataAutomationLibrariesOutput{}
+
+        mockClient.On("ListDataAutomationLibraries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataAutomationLibraries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataAutomationLibraryEntities", func(t *testing.T) {
+        input := &bedrockdataautomation.ListDataAutomationLibraryEntitiesInput{}
+        output := &bedrockdataautomation.ListDataAutomationLibraryEntitiesOutput{}
+
+        mockClient.On("ListDataAutomationLibraryEntities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataAutomationLibraryEntities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataAutomationLibraryIngestionJobs", func(t *testing.T) {
+        input := &bedrockdataautomation.ListDataAutomationLibraryIngestionJobsInput{}
+        output := &bedrockdataautomation.ListDataAutomationLibraryIngestionJobsOutput{}
+
+        mockClient.On("ListDataAutomationLibraryIngestionJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataAutomationLibraryIngestionJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -236,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBlueprint", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataAutomationLibrary", func(t *testing.T) {
+        input := &bedrockdataautomation.UpdateDataAutomationLibraryInput{}
+        output := &bedrockdataautomation.UpdateDataAutomationLibraryOutput{}
+
+        mockClient.On("UpdateDataAutomationLibrary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataAutomationLibrary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

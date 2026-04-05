@@ -51,5 +51,6 @@ type IClient interface {
  UpdateCaseRule(ctx context.Context, params *UpdateCaseRuleInput, optFns ...func(*Options)) (*UpdateCaseRuleOutput, error) 
  UpdateField(ctx context.Context, params *UpdateFieldInput, optFns ...func(*Options)) (*UpdateFieldOutput, error) 
  UpdateLayout(ctx context.Context, params *UpdateLayoutInput, optFns ...func(*Options)) (*UpdateLayoutOutput, error) 
+ UpdateRelatedItem(ctx context.Context, params *UpdateRelatedItemInput, optFns ...func(*Options)) (*UpdateRelatedItemOutput, error) 
  UpdateTemplate(ctx context.Context, params *UpdateTemplateInput, optFns ...func(*Options)) (*UpdateTemplateOutput, error) 
 }
