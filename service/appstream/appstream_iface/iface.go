@@ -73,6 +73,7 @@ type IClient interface {
  DisassociateApplicationFromEntitlement(ctx context.Context, params *DisassociateApplicationFromEntitlementInput, optFns ...func(*Options)) (*DisassociateApplicationFromEntitlementOutput, error) 
  DisassociateFleet(ctx context.Context, params *DisassociateFleetInput, optFns ...func(*Options)) (*DisassociateFleetOutput, error) 
  DisassociateSoftwareFromImageBuilder(ctx context.Context, params *DisassociateSoftwareFromImageBuilderInput, optFns ...func(*Options)) (*DisassociateSoftwareFromImageBuilderOutput, error) 
+ DrainSessionInstance(ctx context.Context, params *DrainSessionInstanceInput, optFns ...func(*Options)) (*DrainSessionInstanceOutput, error) 
  EnableUser(ctx context.Context, params *EnableUserInput, optFns ...func(*Options)) (*EnableUserOutput, error) 
  ExpireSession(ctx context.Context, params *ExpireSessionInput, optFns ...func(*Options)) (*ExpireSessionOutput, error) 
  GetExportImageTask(ctx context.Context, params *GetExportImageTaskInput, optFns ...func(*Options)) (*GetExportImageTaskOutput, error) 

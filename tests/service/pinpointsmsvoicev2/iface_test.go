@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateNotifyConfiguration", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.CreateNotifyConfigurationInput{}
+        output := &pinpointsmsvoicev2.CreateNotifyConfigurationOutput{}
+
+        mockClient.On("CreateNotifyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNotifyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateOptOutList", func(t *testing.T) {
         input := &pinpointsmsvoicev2.CreateOptOutListInput{}
         output := &pinpointsmsvoicev2.CreateOptOutListOutput{}
@@ -132,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateProtectConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateProtectConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRcsAgent", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.CreateRcsAgentInput{}
+        output := &pinpointsmsvoicev2.CreateRcsAgentOutput{}
+
+        mockClient.On("CreateRcsAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRcsAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,6 +320,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteNotifyConfiguration", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteNotifyConfigurationInput{}
+        output := &pinpointsmsvoicev2.DeleteNotifyConfigurationOutput{}
+
+        mockClient.On("DeleteNotifyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNotifyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteNotifyMessageSpendLimitOverride", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteNotifyMessageSpendLimitOverrideInput{}
+        output := &pinpointsmsvoicev2.DeleteNotifyMessageSpendLimitOverrideOutput{}
+
+        mockClient.On("DeleteNotifyMessageSpendLimitOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNotifyMessageSpendLimitOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteOptOutList", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DeleteOptOutListInput{}
         output := &pinpointsmsvoicev2.DeleteOptOutListOutput{}
@@ -353,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteProtectConfigurationRuleSetNumberOverride", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteProtectConfigurationRuleSetNumberOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRcsAgent", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteRcsAgentInput{}
+        output := &pinpointsmsvoicev2.DeleteRcsAgentOutput{}
+
+        mockClient.On("DeleteRcsAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRcsAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,6 +567,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeNotifyConfigurations", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DescribeNotifyConfigurationsInput{}
+        output := &pinpointsmsvoicev2.DescribeNotifyConfigurationsOutput{}
+
+        mockClient.On("DescribeNotifyConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNotifyConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNotifyTemplates", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DescribeNotifyTemplatesInput{}
+        output := &pinpointsmsvoicev2.DescribeNotifyTemplatesOutput{}
+
+        mockClient.On("DescribeNotifyTemplates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNotifyTemplates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeOptOutLists", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DescribeOptOutListsInput{}
         output := &pinpointsmsvoicev2.DescribeOptOutListsOutput{}
@@ -561,6 +652,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeProtectConfigurations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeProtectConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeRcsAgentCountryLaunchStatus", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DescribeRcsAgentCountryLaunchStatusInput{}
+        output := &pinpointsmsvoicev2.DescribeRcsAgentCountryLaunchStatusOutput{}
+
+        mockClient.On("DescribeRcsAgentCountryLaunchStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRcsAgentCountryLaunchStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeRcsAgents", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DescribeRcsAgentsInput{}
+        output := &pinpointsmsvoicev2.DescribeRcsAgentsOutput{}
+
+        mockClient.On("DescribeRcsAgents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeRcsAgents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListNotifyCountries", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.ListNotifyCountriesInput{}
+        output := &pinpointsmsvoicev2.ListNotifyCountriesOutput{}
+
+        mockClient.On("ListNotifyCountries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNotifyCountries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -970,6 +1100,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendNotifyTextMessage", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.SendNotifyTextMessageInput{}
+        output := &pinpointsmsvoicev2.SendNotifyTextMessageOutput{}
+
+        mockClient.On("SendNotifyTextMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendNotifyTextMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendNotifyVoiceMessage", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.SendNotifyVoiceMessageInput{}
+        output := &pinpointsmsvoicev2.SendNotifyVoiceMessageOutput{}
+
+        mockClient.On("SendNotifyVoiceMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendNotifyVoiceMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSendTextMessage", func(t *testing.T) {
         input := &pinpointsmsvoicev2.SendTextMessageInput{}
         output := &pinpointsmsvoicev2.SendTextMessageOutput{}
@@ -1061,6 +1217,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSetNotifyMessageSpendLimitOverride", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.SetNotifyMessageSpendLimitOverrideInput{}
+        output := &pinpointsmsvoicev2.SetNotifyMessageSpendLimitOverrideOutput{}
+
+        mockClient.On("SetNotifyMessageSpendLimitOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SetNotifyMessageSpendLimitOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSetTextMessageSpendLimitOverride", func(t *testing.T) {
         input := &pinpointsmsvoicev2.SetTextMessageSpendLimitOverrideInput{}
         output := &pinpointsmsvoicev2.SetTextMessageSpendLimitOverrideOutput{}
@@ -1139,6 +1308,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateNotifyConfiguration", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.UpdateNotifyConfigurationInput{}
+        output := &pinpointsmsvoicev2.UpdateNotifyConfigurationOutput{}
+
+        mockClient.On("UpdateNotifyConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNotifyConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdatePhoneNumber", func(t *testing.T) {
         input := &pinpointsmsvoicev2.UpdatePhoneNumberInput{}
         output := &pinpointsmsvoicev2.UpdatePhoneNumberOutput{}
@@ -1185,6 +1367,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateProtectConfigurationCountryRuleSet", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateProtectConfigurationCountryRuleSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRcsAgent", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.UpdateRcsAgentInput{}
+        output := &pinpointsmsvoicev2.UpdateRcsAgentOutput{}
+
+        mockClient.On("UpdateRcsAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRcsAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

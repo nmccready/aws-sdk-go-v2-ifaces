@@ -346,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeregisterCapability", func(t *testing.T) {
+        input := &opensearch.DeregisterCapabilityInput{}
+        output := &opensearch.DeregisterCapabilityOutput{}
+
+        mockClient.On("DeregisterCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterCapability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDomain", func(t *testing.T) {
         input := &opensearch.DescribeDomainInput{}
         output := &opensearch.DescribeDomainOutput{}
@@ -463,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeInsightDetails", func(t *testing.T) {
+        input := &opensearch.DescribeInsightDetailsInput{}
+        output := &opensearch.DescribeInsightDetailsOutput{}
+
+        mockClient.On("DescribeInsightDetails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInsightDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeInstanceTypeLimits", func(t *testing.T) {
         input := &opensearch.DescribeInstanceTypeLimitsInput{}
         output := &opensearch.DescribeInstanceTypeLimitsOutput{}
@@ -574,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCapability", func(t *testing.T) {
+        input := &opensearch.GetCapabilityInput{}
+        output := &opensearch.GetCapabilityOutput{}
+
+        mockClient.On("GetCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInsights", func(t *testing.T) {
+        input := &opensearch.ListInsightsInput{}
+        output := &opensearch.ListInsightsOutput{}
+
+        mockClient.On("ListInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInsights(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListInstanceTypeDetails", func(t *testing.T) {
         input := &opensearch.ListInstanceTypeDetailsInput{}
         output := &opensearch.ListInstanceTypeDetailsOutput{}
@@ -899,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutDefaultApplicationSetting", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutDefaultApplicationSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterCapability", func(t *testing.T) {
+        input := &opensearch.RegisterCapabilityInput{}
+        output := &opensearch.RegisterCapabilityOutput{}
+
+        mockClient.On("RegisterCapability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterCapability(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

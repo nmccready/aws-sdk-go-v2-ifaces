@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDaemon", func(t *testing.T) {
+        input := &ecs.CreateDaemonInput{}
+        output := &ecs.CreateDaemonOutput{}
+
+        mockClient.On("CreateDaemon", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDaemon(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateExpressGatewayService", func(t *testing.T) {
         input := &ecs.CreateExpressGatewayServiceInput{}
         output := &ecs.CreateExpressGatewayServiceOutput{}
@@ -145,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDaemon", func(t *testing.T) {
+        input := &ecs.DeleteDaemonInput{}
+        output := &ecs.DeleteDaemonOutput{}
+
+        mockClient.On("DeleteDaemon", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDaemon(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDaemonTaskDefinition", func(t *testing.T) {
+        input := &ecs.DeleteDaemonTaskDefinitionInput{}
+        output := &ecs.DeleteDaemonTaskDefinitionOutput{}
+
+        mockClient.On("DeleteDaemonTaskDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDaemonTaskDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -262,6 +301,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeContainerInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeContainerInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDaemon", func(t *testing.T) {
+        input := &ecs.DescribeDaemonInput{}
+        output := &ecs.DescribeDaemonOutput{}
+
+        mockClient.On("DescribeDaemon", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDaemon(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDaemonDeployments", func(t *testing.T) {
+        input := &ecs.DescribeDaemonDeploymentsInput{}
+        output := &ecs.DescribeDaemonDeploymentsOutput{}
+
+        mockClient.On("DescribeDaemonDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDaemonDeployments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDaemonRevisions", func(t *testing.T) {
+        input := &ecs.DescribeDaemonRevisionsInput{}
+        output := &ecs.DescribeDaemonRevisionsOutput{}
+
+        mockClient.On("DescribeDaemonRevisions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDaemonRevisions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDaemonTaskDefinition", func(t *testing.T) {
+        input := &ecs.DescribeDaemonTaskDefinitionInput{}
+        output := &ecs.DescribeDaemonTaskDefinitionOutput{}
+
+        mockClient.On("DescribeDaemonTaskDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDaemonTaskDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +541,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDaemonDeployments", func(t *testing.T) {
+        input := &ecs.ListDaemonDeploymentsInput{}
+        output := &ecs.ListDaemonDeploymentsOutput{}
+
+        mockClient.On("ListDaemonDeployments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDaemonDeployments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDaemonTaskDefinitions", func(t *testing.T) {
+        input := &ecs.ListDaemonTaskDefinitionsInput{}
+        output := &ecs.ListDaemonTaskDefinitionsOutput{}
+
+        mockClient.On("ListDaemonTaskDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDaemonTaskDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDaemons", func(t *testing.T) {
+        input := &ecs.ListDaemonsInput{}
+        output := &ecs.ListDaemonsOutput{}
+
+        mockClient.On("ListDaemons", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDaemons(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListServiceDeployments", func(t *testing.T) {
         input := &ecs.ListServiceDeploymentsInput{}
         output := &ecs.ListServiceDeploymentsOutput{}
@@ -600,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterContainerInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterContainerInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterDaemonTaskDefinition", func(t *testing.T) {
+        input := &ecs.RegisterDaemonTaskDefinitionInput{}
+        output := &ecs.RegisterDaemonTaskDefinitionOutput{}
+
+        mockClient.On("RegisterDaemonTaskDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterDaemonTaskDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -795,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateContainerInstancesState", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateContainerInstancesState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDaemon", func(t *testing.T) {
+        input := &ecs.UpdateDaemonInput{}
+        output := &ecs.UpdateDaemonOutput{}
+
+        mockClient.On("UpdateDaemon", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDaemon(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

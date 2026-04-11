@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelRunBatch", func(t *testing.T) {
+        input := &omics.CancelRunBatchInput{}
+        output := &omics.CancelRunBatchOutput{}
+
+        mockClient.On("CancelRunBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelRunBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelVariantImportJob", func(t *testing.T) {
         input := &omics.CancelVariantImportJobInput{}
         output := &omics.CancelVariantImportJobOutput{}
@@ -145,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAnnotationStoreVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAnnotationStoreVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateConfiguration", func(t *testing.T) {
+        input := &omics.CreateConfigurationInput{}
+        output := &omics.CreateConfigurationOutput{}
+
+        mockClient.On("CreateConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -294,6 +320,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteBatch", func(t *testing.T) {
+        input := &omics.DeleteBatchInput{}
+        output := &omics.DeleteBatchOutput{}
+
+        mockClient.On("DeleteBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConfiguration", func(t *testing.T) {
+        input := &omics.DeleteConfigurationInput{}
+        output := &omics.DeleteConfigurationOutput{}
+
+        mockClient.On("DeleteConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteReference", func(t *testing.T) {
         input := &omics.DeleteReferenceInput{}
         output := &omics.DeleteReferenceOutput{}
@@ -327,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRun", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRunBatch", func(t *testing.T) {
+        input := &omics.DeleteRunBatchInput{}
+        output := &omics.DeleteRunBatchOutput{}
+
+        mockClient.On("DeleteRunBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRunBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -470,6 +535,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAnnotationStoreVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAnnotationStoreVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBatch", func(t *testing.T) {
+        input := &omics.GetBatchInput{}
+        output := &omics.GetBatchOutput{}
+
+        mockClient.On("GetBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfiguration", func(t *testing.T) {
+        input := &omics.GetConfigurationInput{}
+        output := &omics.GetConfigurationOutput{}
+
+        mockClient.On("GetConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -775,6 +866,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListBatch", func(t *testing.T) {
+        input := &omics.ListBatchInput{}
+        output := &omics.ListBatchOutput{}
+
+        mockClient.On("ListBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBatch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConfigurations", func(t *testing.T) {
+        input := &omics.ListConfigurationsInput{}
+        output := &omics.ListConfigurationsOutput{}
+
+        mockClient.On("ListConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMultipartReadSetUploads", func(t *testing.T) {
         input := &omics.ListMultipartReadSetUploadsInput{}
         output := &omics.ListMultipartReadSetUploadsOutput{}
@@ -938,6 +1055,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRuns", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRunsInBatch", func(t *testing.T) {
+        input := &omics.ListRunsInBatchInput{}
+        output := &omics.ListRunsInBatchOutput{}
+
+        mockClient.On("ListRunsInBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRunsInBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1120,6 +1250,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartRun", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartRunBatch", func(t *testing.T) {
+        input := &omics.StartRunBatchInput{}
+        output := &omics.StartRunBatchOutput{}
+
+        mockClient.On("StartRunBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRunBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

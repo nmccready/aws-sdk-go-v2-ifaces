@@ -2346,6 +2346,43 @@ func (_m *IClient) DisassociateSoftwareFromImageBuilder(ctx context.Context, par
 	return r0, r1
 }
 
+// DrainSessionInstance provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DrainSessionInstance(ctx context.Context, params *appstream.DrainSessionInstanceInput, optFns ...func(*appstream.Options)) (*appstream.DrainSessionInstanceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DrainSessionInstance")
+	}
+
+	var r0 *appstream.DrainSessionInstanceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DrainSessionInstanceInput, ...func(*appstream.Options)) (*appstream.DrainSessionInstanceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.DrainSessionInstanceInput, ...func(*appstream.Options)) *appstream.DrainSessionInstanceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.DrainSessionInstanceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.DrainSessionInstanceInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableUser(ctx context.Context, params *appstream.EnableUserInput, optFns ...func(*appstream.Options)) (*appstream.EnableUserOutput, error) {
 	_va := make([]interface{}, len(optFns))

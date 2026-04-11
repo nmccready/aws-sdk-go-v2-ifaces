@@ -385,6 +385,43 @@ func (_m *IClient) CreateLogStream(ctx context.Context, params *cloudwatchlogs.C
 	return r0, r1
 }
 
+// CreateLookupTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateLookupTable(ctx context.Context, params *cloudwatchlogs.CreateLookupTableInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.CreateLookupTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateLookupTable")
+	}
+
+	var r0 *cloudwatchlogs.CreateLookupTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.CreateLookupTableInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.CreateLookupTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.CreateLookupTableInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.CreateLookupTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.CreateLookupTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.CreateLookupTableInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateScheduledQuery provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateScheduledQuery(ctx context.Context, params *cloudwatchlogs.CreateScheduledQueryInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.CreateScheduledQueryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -858,6 +895,43 @@ func (_m *IClient) DeleteLogStream(ctx context.Context, params *cloudwatchlogs.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DeleteLogStreamInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteLookupTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLookupTable(ctx context.Context, params *cloudwatchlogs.DeleteLookupTableInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteLookupTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLookupTable")
+	}
+
+	var r0 *cloudwatchlogs.DeleteLookupTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DeleteLookupTableInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteLookupTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DeleteLookupTableInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.DeleteLookupTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.DeleteLookupTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DeleteLookupTableInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1606,6 +1680,43 @@ func (_m *IClient) DescribeLogStreams(ctx context.Context, params *cloudwatchlog
 	return r0, r1
 }
 
+// DescribeLookupTables provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeLookupTables(ctx context.Context, params *cloudwatchlogs.DescribeLookupTablesInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DescribeLookupTablesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeLookupTables")
+	}
+
+	var r0 *cloudwatchlogs.DescribeLookupTablesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DescribeLookupTablesInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DescribeLookupTablesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DescribeLookupTablesInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.DescribeLookupTablesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.DescribeLookupTablesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DescribeLookupTablesInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeMetricFilters provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeMetricFilters(ctx context.Context, params *cloudwatchlogs.DescribeMetricFiltersInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DescribeMetricFiltersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2338,6 +2449,43 @@ func (_m *IClient) GetLogRecord(ctx context.Context, params *cloudwatchlogs.GetL
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetLogRecordInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetLookupTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLookupTable(ctx context.Context, params *cloudwatchlogs.GetLookupTableInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLookupTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLookupTable")
+	}
+
+	var r0 *cloudwatchlogs.GetLookupTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetLookupTableInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetLookupTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetLookupTableInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.GetLookupTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.GetLookupTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetLookupTableInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3984,6 +4132,43 @@ func (_m *IClient) UpdateLogAnomalyDetector(ctx context.Context, params *cloudwa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.UpdateLogAnomalyDetectorInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateLookupTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLookupTable(ctx context.Context, params *cloudwatchlogs.UpdateLookupTableInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.UpdateLookupTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLookupTable")
+	}
+
+	var r0 *cloudwatchlogs.UpdateLookupTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.UpdateLookupTableInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.UpdateLookupTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.UpdateLookupTableInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.UpdateLookupTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.UpdateLookupTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.UpdateLookupTableInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

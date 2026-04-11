@@ -33,6 +33,7 @@ type IClient interface {
  GetMetricStatistics(ctx context.Context, params *GetMetricStatisticsInput, optFns ...func(*Options)) (*GetMetricStatisticsOutput, error) 
  GetMetricStream(ctx context.Context, params *GetMetricStreamInput, optFns ...func(*Options)) (*GetMetricStreamOutput, error) 
  GetMetricWidgetImage(ctx context.Context, params *GetMetricWidgetImageInput, optFns ...func(*Options)) (*GetMetricWidgetImageOutput, error) 
+ GetOTelEnrichment(ctx context.Context, params *GetOTelEnrichmentInput, optFns ...func(*Options)) (*GetOTelEnrichmentOutput, error) 
  ListAlarmMuteRules(ctx context.Context, params *ListAlarmMuteRulesInput, optFns ...func(*Options)) (*ListAlarmMuteRulesOutput, error) 
  ListDashboards(ctx context.Context, params *ListDashboardsInput, optFns ...func(*Options)) (*ListDashboardsOutput, error) 
  ListManagedInsightRules(ctx context.Context, params *ListManagedInsightRulesInput, optFns ...func(*Options)) (*ListManagedInsightRulesOutput, error) 
@@ -50,7 +51,9 @@ type IClient interface {
  PutMetricStream(ctx context.Context, params *PutMetricStreamInput, optFns ...func(*Options)) (*PutMetricStreamOutput, error) 
  SetAlarmState(ctx context.Context, params *SetAlarmStateInput, optFns ...func(*Options)) (*SetAlarmStateOutput, error) 
  StartMetricStreams(ctx context.Context, params *StartMetricStreamsInput, optFns ...func(*Options)) (*StartMetricStreamsOutput, error) 
+ StartOTelEnrichment(ctx context.Context, params *StartOTelEnrichmentInput, optFns ...func(*Options)) (*StartOTelEnrichmentOutput, error) 
  StopMetricStreams(ctx context.Context, params *StopMetricStreamsInput, optFns ...func(*Options)) (*StopMetricStreamsOutput, error) 
+ StopOTelEnrichment(ctx context.Context, params *StopOTelEnrichmentInput, optFns ...func(*Options)) (*StopOTelEnrichmentOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

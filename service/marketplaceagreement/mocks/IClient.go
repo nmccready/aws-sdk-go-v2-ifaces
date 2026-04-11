@@ -15,6 +15,117 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchCreateBillingAdjustmentRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateBillingAdjustmentRequest(ctx context.Context, params *marketplaceagreement.BatchCreateBillingAdjustmentRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.BatchCreateBillingAdjustmentRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateBillingAdjustmentRequest")
+	}
+
+	var r0 *marketplaceagreement.BatchCreateBillingAdjustmentRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.BatchCreateBillingAdjustmentRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.BatchCreateBillingAdjustmentRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.BatchCreateBillingAdjustmentRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.BatchCreateBillingAdjustmentRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.BatchCreateBillingAdjustmentRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.BatchCreateBillingAdjustmentRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CancelAgreementCancellationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelAgreementCancellationRequest(ctx context.Context, params *marketplaceagreement.CancelAgreementCancellationRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.CancelAgreementCancellationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelAgreementCancellationRequest")
+	}
+
+	var r0 *marketplaceagreement.CancelAgreementCancellationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.CancelAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.CancelAgreementCancellationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.CancelAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.CancelAgreementCancellationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.CancelAgreementCancellationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.CancelAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CancelAgreementPaymentRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelAgreementPaymentRequest(ctx context.Context, params *marketplaceagreement.CancelAgreementPaymentRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.CancelAgreementPaymentRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelAgreementPaymentRequest")
+	}
+
+	var r0 *marketplaceagreement.CancelAgreementPaymentRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.CancelAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.CancelAgreementPaymentRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.CancelAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.CancelAgreementPaymentRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.CancelAgreementPaymentRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.CancelAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAgreement provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAgreement(ctx context.Context, params *marketplaceagreement.DescribeAgreementInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.DescribeAgreementOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -52,6 +163,80 @@ func (_m *IClient) DescribeAgreement(ctx context.Context, params *marketplaceagr
 	return r0, r1
 }
 
+// GetAgreementCancellationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgreementCancellationRequest(ctx context.Context, params *marketplaceagreement.GetAgreementCancellationRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetAgreementCancellationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgreementCancellationRequest")
+	}
+
+	var r0 *marketplaceagreement.GetAgreementCancellationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.GetAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetAgreementCancellationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.GetAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.GetAgreementCancellationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.GetAgreementCancellationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.GetAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgreementPaymentRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgreementPaymentRequest(ctx context.Context, params *marketplaceagreement.GetAgreementPaymentRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetAgreementPaymentRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgreementPaymentRequest")
+	}
+
+	var r0 *marketplaceagreement.GetAgreementPaymentRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.GetAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetAgreementPaymentRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.GetAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.GetAgreementPaymentRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.GetAgreementPaymentRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.GetAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAgreementTerms provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAgreementTerms(ctx context.Context, params *marketplaceagreement.GetAgreementTermsInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetAgreementTermsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +266,191 @@ func (_m *IClient) GetAgreementTerms(ctx context.Context, params *marketplaceagr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.GetAgreementTermsInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetBillingAdjustmentRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBillingAdjustmentRequest(ctx context.Context, params *marketplaceagreement.GetBillingAdjustmentRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetBillingAdjustmentRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBillingAdjustmentRequest")
+	}
+
+	var r0 *marketplaceagreement.GetBillingAdjustmentRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.GetBillingAdjustmentRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.GetBillingAdjustmentRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.GetBillingAdjustmentRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.GetBillingAdjustmentRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.GetBillingAdjustmentRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.GetBillingAdjustmentRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAgreementCancellationRequests provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgreementCancellationRequests(ctx context.Context, params *marketplaceagreement.ListAgreementCancellationRequestsInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListAgreementCancellationRequestsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgreementCancellationRequests")
+	}
+
+	var r0 *marketplaceagreement.ListAgreementCancellationRequestsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListAgreementCancellationRequestsInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListAgreementCancellationRequestsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListAgreementCancellationRequestsInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.ListAgreementCancellationRequestsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.ListAgreementCancellationRequestsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.ListAgreementCancellationRequestsInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAgreementInvoiceLineItems provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgreementInvoiceLineItems(ctx context.Context, params *marketplaceagreement.ListAgreementInvoiceLineItemsInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListAgreementInvoiceLineItemsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgreementInvoiceLineItems")
+	}
+
+	var r0 *marketplaceagreement.ListAgreementInvoiceLineItemsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListAgreementInvoiceLineItemsInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListAgreementInvoiceLineItemsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListAgreementInvoiceLineItemsInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.ListAgreementInvoiceLineItemsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.ListAgreementInvoiceLineItemsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.ListAgreementInvoiceLineItemsInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAgreementPaymentRequests provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgreementPaymentRequests(ctx context.Context, params *marketplaceagreement.ListAgreementPaymentRequestsInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListAgreementPaymentRequestsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgreementPaymentRequests")
+	}
+
+	var r0 *marketplaceagreement.ListAgreementPaymentRequestsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListAgreementPaymentRequestsInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListAgreementPaymentRequestsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListAgreementPaymentRequestsInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.ListAgreementPaymentRequestsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.ListAgreementPaymentRequestsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.ListAgreementPaymentRequestsInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBillingAdjustmentRequests provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBillingAdjustmentRequests(ctx context.Context, params *marketplaceagreement.ListBillingAdjustmentRequestsInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListBillingAdjustmentRequestsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBillingAdjustmentRequests")
+	}
+
+	var r0 *marketplaceagreement.ListBillingAdjustmentRequestsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListBillingAdjustmentRequestsInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.ListBillingAdjustmentRequestsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.ListBillingAdjustmentRequestsInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.ListBillingAdjustmentRequestsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.ListBillingAdjustmentRequestsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.ListBillingAdjustmentRequestsInput, ...func(*marketplaceagreement.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -136,6 +506,80 @@ func (_m *IClient) SearchAgreements(ctx context.Context, params *marketplaceagre
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.SearchAgreementsInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendAgreementCancellationRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendAgreementCancellationRequest(ctx context.Context, params *marketplaceagreement.SendAgreementCancellationRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.SendAgreementCancellationRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendAgreementCancellationRequest")
+	}
+
+	var r0 *marketplaceagreement.SendAgreementCancellationRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.SendAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.SendAgreementCancellationRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.SendAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.SendAgreementCancellationRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.SendAgreementCancellationRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.SendAgreementCancellationRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendAgreementPaymentRequest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendAgreementPaymentRequest(ctx context.Context, params *marketplaceagreement.SendAgreementPaymentRequestInput, optFns ...func(*marketplaceagreement.Options)) (*marketplaceagreement.SendAgreementPaymentRequestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendAgreementPaymentRequest")
+	}
+
+	var r0 *marketplaceagreement.SendAgreementPaymentRequestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.SendAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) (*marketplaceagreement.SendAgreementPaymentRequestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplaceagreement.SendAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) *marketplaceagreement.SendAgreementPaymentRequestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplaceagreement.SendAgreementPaymentRequestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplaceagreement.SendAgreementPaymentRequestInput, ...func(*marketplaceagreement.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

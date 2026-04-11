@@ -902,6 +902,43 @@ func (_m *IClient) DeleteVpcEndpoint(ctx context.Context, params *opensearch.Del
 	return r0, r1
 }
 
+// DeregisterCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterCapability(ctx context.Context, params *opensearch.DeregisterCapabilityInput, optFns ...func(*opensearch.Options)) (*opensearch.DeregisterCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterCapability")
+	}
+
+	var r0 *opensearch.DeregisterCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeregisterCapabilityInput, ...func(*opensearch.Options)) (*opensearch.DeregisterCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DeregisterCapabilityInput, ...func(*opensearch.Options)) *opensearch.DeregisterCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DeregisterCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DeregisterCapabilityInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeDomain(ctx context.Context, params *opensearch.DescribeDomainInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1235,6 +1272,43 @@ func (_m *IClient) DescribeInboundConnections(ctx context.Context, params *opens
 	return r0, r1
 }
 
+// DescribeInsightDetails provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeInsightDetails(ctx context.Context, params *opensearch.DescribeInsightDetailsInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeInsightDetailsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeInsightDetails")
+	}
+
+	var r0 *opensearch.DescribeInsightDetailsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DescribeInsightDetailsInput, ...func(*opensearch.Options)) (*opensearch.DescribeInsightDetailsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DescribeInsightDetailsInput, ...func(*opensearch.Options)) *opensearch.DescribeInsightDetailsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DescribeInsightDetailsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DescribeInsightDetailsInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeInstanceTypeLimits provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeInstanceTypeLimits(ctx context.Context, params *opensearch.DescribeInstanceTypeLimitsInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeInstanceTypeLimitsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1560,6 +1634,43 @@ func (_m *IClient) GetApplication(ctx context.Context, params *opensearch.GetApp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetApplicationInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCapability(ctx context.Context, params *opensearch.GetCapabilityInput, optFns ...func(*opensearch.Options)) (*opensearch.GetCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCapability")
+	}
+
+	var r0 *opensearch.GetCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetCapabilityInput, ...func(*opensearch.Options)) (*opensearch.GetCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetCapabilityInput, ...func(*opensearch.Options)) *opensearch.GetCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.GetCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetCapabilityInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2123,6 +2234,43 @@ func (_m *IClient) ListDomainsForPackage(ctx context.Context, params *opensearch
 	return r0, r1
 }
 
+// ListInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInsights(ctx context.Context, params *opensearch.ListInsightsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInsights")
+	}
+
+	var r0 *opensearch.ListInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListInsightsInput, ...func(*opensearch.Options)) (*opensearch.ListInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListInsightsInput, ...func(*opensearch.Options)) *opensearch.ListInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.ListInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListInsightsInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListInstanceTypeDetails provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListInstanceTypeDetails(ctx context.Context, params *opensearch.ListInstanceTypeDetailsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListInstanceTypeDetailsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2503,6 +2651,43 @@ func (_m *IClient) PutDefaultApplicationSetting(ctx context.Context, params *ope
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.PutDefaultApplicationSettingInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterCapability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterCapability(ctx context.Context, params *opensearch.RegisterCapabilityInput, optFns ...func(*opensearch.Options)) (*opensearch.RegisterCapabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterCapability")
+	}
+
+	var r0 *opensearch.RegisterCapabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.RegisterCapabilityInput, ...func(*opensearch.Options)) (*opensearch.RegisterCapabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.RegisterCapabilityInput, ...func(*opensearch.Options)) *opensearch.RegisterCapabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.RegisterCapabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.RegisterCapabilityInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

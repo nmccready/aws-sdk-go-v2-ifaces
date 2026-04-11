@@ -126,6 +126,43 @@ func (_m *IClient) CreateBlueprintVersion(ctx context.Context, params *bedrockda
 	return r0, r1
 }
 
+// CreateDataAutomationLibrary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataAutomationLibrary(ctx context.Context, params *bedrockdataautomation.CreateDataAutomationLibraryInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.CreateDataAutomationLibraryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataAutomationLibrary")
+	}
+
+	var r0 *bedrockdataautomation.CreateDataAutomationLibraryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.CreateDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.CreateDataAutomationLibraryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.CreateDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.CreateDataAutomationLibraryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.CreateDataAutomationLibraryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.CreateDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDataAutomationProject provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDataAutomationProject(ctx context.Context, params *bedrockdataautomation.CreateDataAutomationProjectInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.CreateDataAutomationProjectOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +229,43 @@ func (_m *IClient) DeleteBlueprint(ctx context.Context, params *bedrockdataautom
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.DeleteBlueprintInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataAutomationLibrary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataAutomationLibrary(ctx context.Context, params *bedrockdataautomation.DeleteDataAutomationLibraryInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.DeleteDataAutomationLibraryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataAutomationLibrary")
+	}
+
+	var r0 *bedrockdataautomation.DeleteDataAutomationLibraryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.DeleteDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.DeleteDataAutomationLibraryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.DeleteDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.DeleteDataAutomationLibraryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.DeleteDataAutomationLibraryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.DeleteDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -311,6 +385,117 @@ func (_m *IClient) GetBlueprintOptimizationStatus(ctx context.Context, params *b
 	return r0, r1
 }
 
+// GetDataAutomationLibrary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataAutomationLibrary(ctx context.Context, params *bedrockdataautomation.GetDataAutomationLibraryInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationLibraryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataAutomationLibrary")
+	}
+
+	var r0 *bedrockdataautomation.GetDataAutomationLibraryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationLibraryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.GetDataAutomationLibraryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.GetDataAutomationLibraryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataAutomationLibraryEntity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataAutomationLibraryEntity(ctx context.Context, params *bedrockdataautomation.GetDataAutomationLibraryEntityInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationLibraryEntityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataAutomationLibraryEntity")
+	}
+
+	var r0 *bedrockdataautomation.GetDataAutomationLibraryEntityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryEntityInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationLibraryEntityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryEntityInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.GetDataAutomationLibraryEntityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.GetDataAutomationLibraryEntityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryEntityInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataAutomationLibraryIngestionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataAutomationLibraryIngestionJob(ctx context.Context, params *bedrockdataautomation.GetDataAutomationLibraryIngestionJobInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationLibraryIngestionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataAutomationLibraryIngestionJob")
+	}
+
+	var r0 *bedrockdataautomation.GetDataAutomationLibraryIngestionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryIngestionJobInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationLibraryIngestionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryIngestionJobInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.GetDataAutomationLibraryIngestionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.GetDataAutomationLibraryIngestionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.GetDataAutomationLibraryIngestionJobInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataAutomationProject provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataAutomationProject(ctx context.Context, params *bedrockdataautomation.GetDataAutomationProjectInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.GetDataAutomationProjectOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -385,6 +570,43 @@ func (_m *IClient) InvokeBlueprintOptimizationAsync(ctx context.Context, params 
 	return r0, r1
 }
 
+// InvokeDataAutomationLibraryIngestionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeDataAutomationLibraryIngestionJob(ctx context.Context, params *bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeDataAutomationLibraryIngestionJob")
+	}
+
+	var r0 *bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.InvokeDataAutomationLibraryIngestionJobInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListBlueprints provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListBlueprints(ctx context.Context, params *bedrockdataautomation.ListBlueprintsInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListBlueprintsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +636,117 @@ func (_m *IClient) ListBlueprints(ctx context.Context, params *bedrockdataautoma
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.ListBlueprintsInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataAutomationLibraries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataAutomationLibraries(ctx context.Context, params *bedrockdataautomation.ListDataAutomationLibrariesInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListDataAutomationLibrariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataAutomationLibraries")
+	}
+
+	var r0 *bedrockdataautomation.ListDataAutomationLibrariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibrariesInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListDataAutomationLibrariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibrariesInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.ListDataAutomationLibrariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.ListDataAutomationLibrariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibrariesInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataAutomationLibraryEntities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataAutomationLibraryEntities(ctx context.Context, params *bedrockdataautomation.ListDataAutomationLibraryEntitiesInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListDataAutomationLibraryEntitiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataAutomationLibraryEntities")
+	}
+
+	var r0 *bedrockdataautomation.ListDataAutomationLibraryEntitiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibraryEntitiesInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListDataAutomationLibraryEntitiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibraryEntitiesInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.ListDataAutomationLibraryEntitiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.ListDataAutomationLibraryEntitiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibraryEntitiesInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataAutomationLibraryIngestionJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataAutomationLibraryIngestionJobs(ctx context.Context, params *bedrockdataautomation.ListDataAutomationLibraryIngestionJobsInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListDataAutomationLibraryIngestionJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataAutomationLibraryIngestionJobs")
+	}
+
+	var r0 *bedrockdataautomation.ListDataAutomationLibraryIngestionJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibraryIngestionJobsInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.ListDataAutomationLibraryIngestionJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibraryIngestionJobsInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.ListDataAutomationLibraryIngestionJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.ListDataAutomationLibraryIngestionJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.ListDataAutomationLibraryIngestionJobsInput, ...func(*bedrockdataautomation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -617,6 +950,43 @@ func (_m *IClient) UpdateBlueprint(ctx context.Context, params *bedrockdataautom
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.UpdateBlueprintInput, ...func(*bedrockdataautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataAutomationLibrary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataAutomationLibrary(ctx context.Context, params *bedrockdataautomation.UpdateDataAutomationLibraryInput, optFns ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.UpdateDataAutomationLibraryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataAutomationLibrary")
+	}
+
+	var r0 *bedrockdataautomation.UpdateDataAutomationLibraryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.UpdateDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) (*bedrockdataautomation.UpdateDataAutomationLibraryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockdataautomation.UpdateDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) *bedrockdataautomation.UpdateDataAutomationLibraryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockdataautomation.UpdateDataAutomationLibraryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockdataautomation.UpdateDataAutomationLibraryInput, ...func(*bedrockdataautomation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
