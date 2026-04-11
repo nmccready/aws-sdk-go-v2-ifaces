@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateScheduledReport", func(t *testing.T) {
+        input := &bcmdashboards.CreateScheduledReportInput{}
+        output := &bcmdashboards.CreateScheduledReportOutput{}
+
+        mockClient.On("CreateScheduledReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateScheduledReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDashboard", func(t *testing.T) {
         input := &bcmdashboards.DeleteDashboardInput{}
         output := &bcmdashboards.DeleteDashboardOutput{}
@@ -54,6 +67,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDashboard", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteScheduledReport", func(t *testing.T) {
+        input := &bcmdashboards.DeleteScheduledReportInput{}
+        output := &bcmdashboards.DeleteScheduledReportOutput{}
+
+        mockClient.On("DeleteScheduledReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteScheduledReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestExecuteScheduledReport", func(t *testing.T) {
+        input := &bcmdashboards.ExecuteScheduledReportInput{}
+        output := &bcmdashboards.ExecuteScheduledReportOutput{}
+
+        mockClient.On("ExecuteScheduledReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExecuteScheduledReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetScheduledReport", func(t *testing.T) {
+        input := &bcmdashboards.GetScheduledReportInput{}
+        output := &bcmdashboards.GetScheduledReportOutput{}
+
+        mockClient.On("GetScheduledReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetScheduledReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDashboards", func(t *testing.T) {
         input := &bcmdashboards.ListDashboardsInput{}
         output := &bcmdashboards.ListDashboardsOutput{}
@@ -93,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDashboards", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDashboards(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListScheduledReports", func(t *testing.T) {
+        input := &bcmdashboards.ListScheduledReportsInput{}
+        output := &bcmdashboards.ListScheduledReportsOutput{}
+
+        mockClient.On("ListScheduledReports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListScheduledReports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDashboard", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateScheduledReport", func(t *testing.T) {
+        input := &bcmdashboards.UpdateScheduledReportInput{}
+        output := &bcmdashboards.UpdateScheduledReportOutput{}
+
+        mockClient.On("UpdateScheduledReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateScheduledReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

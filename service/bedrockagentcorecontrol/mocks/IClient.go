@@ -533,6 +533,80 @@ func (_m *IClient) CreatePolicyEngine(ctx context.Context, params *bedrockagentc
 	return r0, r1
 }
 
+// CreateRegistry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRegistry(ctx context.Context, params *bedrockagentcorecontrol.CreateRegistryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateRegistryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRegistry")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateRegistryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateRegistryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateRegistryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateRegistryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateRegistryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateRegistryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateRegistryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRegistryRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRegistryRecord(ctx context.Context, params *bedrockagentcorecontrol.CreateRegistryRecordInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateRegistryRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRegistryRecord")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateRegistryRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateRegistryRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateRegistryRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateRegistryRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateWorkloadIdentity provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateWorkloadIdentity(ctx context.Context, params *bedrockagentcorecontrol.CreateWorkloadIdentityInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateWorkloadIdentityOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1080,6 +1154,80 @@ func (_m *IClient) DeletePolicyEngine(ctx context.Context, params *bedrockagentc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeletePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRegistry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRegistry(ctx context.Context, params *bedrockagentcorecontrol.DeleteRegistryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteRegistryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRegistry")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteRegistryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteRegistryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteRegistryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteRegistryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteRegistryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteRegistryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteRegistryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRegistryRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRegistryRecord(ctx context.Context, params *bedrockagentcorecontrol.DeleteRegistryRecordInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteRegistryRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRegistryRecord")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteRegistryRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteRegistryRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteRegistryRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteRegistryRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1709,6 +1857,80 @@ func (_m *IClient) GetPolicyGeneration(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRegistry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRegistry(ctx context.Context, params *bedrockagentcorecontrol.GetRegistryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetRegistryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRegistry")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetRegistryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetRegistryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetRegistryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetRegistryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetRegistryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetRegistryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetRegistryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRegistryRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRegistryRecord(ctx context.Context, params *bedrockagentcorecontrol.GetRegistryRecordInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetRegistryRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRegistryRecord")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetRegistryRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetRegistryRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetRegistryRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetRegistryRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2457,6 +2679,80 @@ func (_m *IClient) ListPolicyGenerations(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// ListRegistries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRegistries(ctx context.Context, params *bedrockagentcorecontrol.ListRegistriesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListRegistriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRegistries")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListRegistriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListRegistriesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListRegistriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListRegistriesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListRegistriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListRegistriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListRegistriesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRegistryRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRegistryRecords(ctx context.Context, params *bedrockagentcorecontrol.ListRegistryRecordsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListRegistryRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRegistryRecords")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListRegistryRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListRegistryRecordsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListRegistryRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListRegistryRecordsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListRegistryRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListRegistryRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListRegistryRecordsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *bedrockagentcorecontrol.ListTagsForResourceInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2652,6 +2948,43 @@ func (_m *IClient) StartPolicyGeneration(ctx context.Context, params *bedrockage
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.StartPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SubmitRegistryRecordForApproval provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SubmitRegistryRecordForApproval(ctx context.Context, params *bedrockagentcorecontrol.SubmitRegistryRecordForApprovalInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.SubmitRegistryRecordForApprovalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SubmitRegistryRecordForApproval")
+	}
+
+	var r0 *bedrockagentcorecontrol.SubmitRegistryRecordForApprovalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.SubmitRegistryRecordForApprovalInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.SubmitRegistryRecordForApprovalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.SubmitRegistryRecordForApprovalInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.SubmitRegistryRecordForApprovalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.SubmitRegistryRecordForApprovalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.SubmitRegistryRecordForApprovalInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3170,6 +3503,117 @@ func (_m *IClient) UpdatePolicyEngine(ctx context.Context, params *bedrockagentc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdatePolicyEngineInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRegistry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRegistry(ctx context.Context, params *bedrockagentcorecontrol.UpdateRegistryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateRegistryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRegistry")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateRegistryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateRegistryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateRegistryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateRegistryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRegistryRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRegistryRecord(ctx context.Context, params *bedrockagentcorecontrol.UpdateRegistryRecordInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateRegistryRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRegistryRecord")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateRegistryRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateRegistryRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateRegistryRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateRegistryRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryRecordInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRegistryRecordStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRegistryRecordStatus(ctx context.Context, params *bedrockagentcorecontrol.UpdateRegistryRecordStatusInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateRegistryRecordStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRegistryRecordStatus")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateRegistryRecordStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryRecordStatusInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateRegistryRecordStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryRecordStatusInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateRegistryRecordStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateRegistryRecordStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateRegistryRecordStatusInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

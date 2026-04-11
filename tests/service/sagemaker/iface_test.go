@@ -4103,6 +4103,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartClusterHealthCheck", func(t *testing.T) {
+        input := &sagemaker.StartClusterHealthCheckInput{}
+        output := &sagemaker.StartClusterHealthCheckOutput{}
+
+        mockClient.On("StartClusterHealthCheck", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartClusterHealthCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartEdgeDeploymentStage", func(t *testing.T) {
         input := &sagemaker.StartEdgeDeploymentStageInput{}
         output := &sagemaker.StartEdgeDeploymentStageOutput{}

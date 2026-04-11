@@ -323,6 +323,7 @@ type IClient interface {
  SearchTrainingPlanOfferings(ctx context.Context, params *SearchTrainingPlanOfferingsInput, optFns ...func(*Options)) (*SearchTrainingPlanOfferingsOutput, error) 
  SendPipelineExecutionStepFailure(ctx context.Context, params *SendPipelineExecutionStepFailureInput, optFns ...func(*Options)) (*SendPipelineExecutionStepFailureOutput, error) 
  SendPipelineExecutionStepSuccess(ctx context.Context, params *SendPipelineExecutionStepSuccessInput, optFns ...func(*Options)) (*SendPipelineExecutionStepSuccessOutput, error) 
+ StartClusterHealthCheck(ctx context.Context, params *StartClusterHealthCheckInput, optFns ...func(*Options)) (*StartClusterHealthCheckOutput, error) 
  StartEdgeDeploymentStage(ctx context.Context, params *StartEdgeDeploymentStageInput, optFns ...func(*Options)) (*StartEdgeDeploymentStageOutput, error) 
  StartInferenceExperiment(ctx context.Context, params *StartInferenceExperimentInput, optFns ...func(*Options)) (*StartInferenceExperimentOutput, error) 
  StartMlflowTrackingServer(ctx context.Context, params *StartMlflowTrackingServerInput, optFns ...func(*Options)) (*StartMlflowTrackingServerOutput, error) 

@@ -348,6 +348,43 @@ func (_m *IClient) AssumeQueueRoleForWorker(ctx context.Context, params *deadlin
 	return r0, r1
 }
 
+// BatchGetJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetJob(ctx context.Context, params *deadline.BatchGetJobInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetJob")
+	}
+
+	var r0 *deadline.BatchGetJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetJobInput, ...func(*deadline.Options)) (*deadline.BatchGetJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetJobInput, ...func(*deadline.Options)) *deadline.BatchGetJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchGetJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetJobInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetJobEntity provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetJobEntity(ctx context.Context, params *deadline.BatchGetJobEntityInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetJobEntityOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +414,265 @@ func (_m *IClient) BatchGetJobEntity(ctx context.Context, params *deadline.Batch
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetJobEntityInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetSession(ctx context.Context, params *deadline.BatchGetSessionInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetSession")
+	}
+
+	var r0 *deadline.BatchGetSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetSessionInput, ...func(*deadline.Options)) (*deadline.BatchGetSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetSessionInput, ...func(*deadline.Options)) *deadline.BatchGetSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchGetSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetSessionInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetSessionAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetSessionAction(ctx context.Context, params *deadline.BatchGetSessionActionInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetSessionActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetSessionAction")
+	}
+
+	var r0 *deadline.BatchGetSessionActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetSessionActionInput, ...func(*deadline.Options)) (*deadline.BatchGetSessionActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetSessionActionInput, ...func(*deadline.Options)) *deadline.BatchGetSessionActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchGetSessionActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetSessionActionInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetStep(ctx context.Context, params *deadline.BatchGetStepInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetStep")
+	}
+
+	var r0 *deadline.BatchGetStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetStepInput, ...func(*deadline.Options)) (*deadline.BatchGetStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetStepInput, ...func(*deadline.Options)) *deadline.BatchGetStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchGetStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetStepInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetTask(ctx context.Context, params *deadline.BatchGetTaskInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetTask")
+	}
+
+	var r0 *deadline.BatchGetTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetTaskInput, ...func(*deadline.Options)) (*deadline.BatchGetTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetTaskInput, ...func(*deadline.Options)) *deadline.BatchGetTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchGetTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetTaskInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetWorker provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetWorker(ctx context.Context, params *deadline.BatchGetWorkerInput, optFns ...func(*deadline.Options)) (*deadline.BatchGetWorkerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetWorker")
+	}
+
+	var r0 *deadline.BatchGetWorkerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetWorkerInput, ...func(*deadline.Options)) (*deadline.BatchGetWorkerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchGetWorkerInput, ...func(*deadline.Options)) *deadline.BatchGetWorkerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchGetWorkerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchGetWorkerInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateJob(ctx context.Context, params *deadline.BatchUpdateJobInput, optFns ...func(*deadline.Options)) (*deadline.BatchUpdateJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateJob")
+	}
+
+	var r0 *deadline.BatchUpdateJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchUpdateJobInput, ...func(*deadline.Options)) (*deadline.BatchUpdateJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchUpdateJobInput, ...func(*deadline.Options)) *deadline.BatchUpdateJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchUpdateJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchUpdateJobInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateTask(ctx context.Context, params *deadline.BatchUpdateTaskInput, optFns ...func(*deadline.Options)) (*deadline.BatchUpdateTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateTask")
+	}
+
+	var r0 *deadline.BatchUpdateTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchUpdateTaskInput, ...func(*deadline.Options)) (*deadline.BatchUpdateTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.BatchUpdateTaskInput, ...func(*deadline.Options)) *deadline.BatchUpdateTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.BatchUpdateTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.BatchUpdateTaskInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

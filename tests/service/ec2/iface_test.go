@@ -6937,6 +6937,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCapacityManagerMonitoredTagKeys", func(t *testing.T) {
+        input := &ec2.GetCapacityManagerMonitoredTagKeysInput{}
+        output := &ec2.GetCapacityManagerMonitoredTagKeysOutput{}
+
+        mockClient.On("GetCapacityManagerMonitoredTagKeys", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityManagerMonitoredTagKeys(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCapacityReservationUsage", func(t *testing.T) {
         input := &ec2.GetCapacityReservationUsageInput{}
         output := &ec2.GetCapacityReservationUsageOutput{}
@@ -9791,6 +9804,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UnmonitorInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.UnmonitorInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCapacityManagerMonitoredTagKeys", func(t *testing.T) {
+        input := &ec2.UpdateCapacityManagerMonitoredTagKeysInput{}
+        output := &ec2.UpdateCapacityManagerMonitoredTagKeysOutput{}
+
+        mockClient.On("UpdateCapacityManagerMonitoredTagKeys", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCapacityManagerMonitoredTagKeys(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

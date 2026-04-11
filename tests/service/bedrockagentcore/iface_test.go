@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeBrowser", func(t *testing.T) {
+        input := &bedrockagentcore.InvokeBrowserInput{}
+        output := &bedrockagentcore.InvokeBrowserOutput{}
+
+        mockClient.On("InvokeBrowser", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeBrowser(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeCodeInterpreter", func(t *testing.T) {
         input := &bedrockagentcore.InvokeCodeInterpreterInput{}
         output := &bedrockagentcore.InvokeCodeInterpreterOutput{}
@@ -418,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SaveBrowserSessionProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.SaveBrowserSessionProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchRegistryRecords", func(t *testing.T) {
+        input := &bedrockagentcore.SearchRegistryRecordsInput{}
+        output := &bedrockagentcore.SearchRegistryRecordsOutput{}
+
+        mockClient.On("SearchRegistryRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchRegistryRecords(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

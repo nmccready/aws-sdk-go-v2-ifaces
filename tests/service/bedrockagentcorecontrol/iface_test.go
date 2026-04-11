@@ -216,6 +216,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRegistry", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateRegistryInput{}
+        output := &bedrockagentcorecontrol.CreateRegistryOutput{}
+
+        mockClient.On("CreateRegistry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRegistry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRegistryRecord", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateRegistryRecordInput{}
+        output := &bedrockagentcorecontrol.CreateRegistryRecordOutput{}
+
+        mockClient.On("CreateRegistryRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRegistryRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWorkloadIdentity", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateWorkloadIdentityInput{}
         output := &bedrockagentcorecontrol.CreateWorkloadIdentityOutput{}
@@ -405,6 +431,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePolicyEngine", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePolicyEngine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRegistry", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteRegistryInput{}
+        output := &bedrockagentcorecontrol.DeleteRegistryOutput{}
+
+        mockClient.On("DeleteRegistry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRegistry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRegistryRecord", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteRegistryRecordInput{}
+        output := &bedrockagentcorecontrol.DeleteRegistryRecordOutput{}
+
+        mockClient.On("DeleteRegistryRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRegistryRecord(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -626,6 +678,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPolicyGeneration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPolicyGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRegistry", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetRegistryInput{}
+        output := &bedrockagentcorecontrol.GetRegistryOutput{}
+
+        mockClient.On("GetRegistry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRegistry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRegistryRecord", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetRegistryRecordInput{}
+        output := &bedrockagentcorecontrol.GetRegistryRecordOutput{}
+
+        mockClient.On("GetRegistryRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRegistryRecord(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -892,6 +970,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRegistries", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListRegistriesInput{}
+        output := &bedrockagentcorecontrol.ListRegistriesOutput{}
+
+        mockClient.On("ListRegistries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRegistries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRegistryRecords", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListRegistryRecordsInput{}
+        output := &bedrockagentcorecontrol.ListRegistryRecordsOutput{}
+
+        mockClient.On("ListRegistryRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRegistryRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListTagsForResourceInput{}
         output := &bedrockagentcorecontrol.ListTagsForResourceOutput{}
@@ -951,6 +1055,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartPolicyGeneration", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartPolicyGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSubmitRegistryRecordForApproval", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.SubmitRegistryRecordForApprovalInput{}
+        output := &bedrockagentcorecontrol.SubmitRegistryRecordForApprovalOutput{}
+
+        mockClient.On("SubmitRegistryRecordForApproval", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SubmitRegistryRecordForApproval(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1133,6 +1250,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePolicyEngine", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePolicyEngine(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRegistry", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateRegistryInput{}
+        output := &bedrockagentcorecontrol.UpdateRegistryOutput{}
+
+        mockClient.On("UpdateRegistry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRegistry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRegistryRecord", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateRegistryRecordInput{}
+        output := &bedrockagentcorecontrol.UpdateRegistryRecordOutput{}
+
+        mockClient.On("UpdateRegistryRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRegistryRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRegistryRecordStatus", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateRegistryRecordStatusInput{}
+        output := &bedrockagentcorecontrol.UpdateRegistryRecordStatusOutput{}
+
+        mockClient.On("UpdateRegistryRecordStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRegistryRecordStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

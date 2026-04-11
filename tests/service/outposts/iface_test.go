@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRenewal", func(t *testing.T) {
+        input := &outposts.CreateRenewalInput{}
+        output := &outposts.CreateRenewalOutput{}
+
+        mockClient.On("CreateRenewal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRenewal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateSite", func(t *testing.T) {
         input := &outposts.CreateSiteInput{}
         output := &outposts.CreateSiteOutput{}
@@ -223,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOutpostSupportedInstanceTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOutpostSupportedInstanceTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRenewalPricing", func(t *testing.T) {
+        input := &outposts.GetRenewalPricingInput{}
+        output := &outposts.GetRenewalPricingOutput{}
+
+        mockClient.On("GetRenewalPricing", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRenewalPricing(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

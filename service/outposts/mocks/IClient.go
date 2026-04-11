@@ -162,6 +162,43 @@ func (_m *IClient) CreateOutpost(ctx context.Context, params *outposts.CreateOut
 	return r0, r1
 }
 
+// CreateRenewal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRenewal(ctx context.Context, params *outposts.CreateRenewalInput, optFns ...func(*outposts.Options)) (*outposts.CreateRenewalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRenewal")
+	}
+
+	var r0 *outposts.CreateRenewalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.CreateRenewalInput, ...func(*outposts.Options)) (*outposts.CreateRenewalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.CreateRenewalInput, ...func(*outposts.Options)) *outposts.CreateRenewalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.CreateRenewalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.CreateRenewalInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateSite provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateSite(ctx context.Context, params *outposts.CreateSiteInput, optFns ...func(*outposts.Options)) (*outposts.CreateSiteOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -561,6 +598,43 @@ func (_m *IClient) GetOutpostSupportedInstanceTypes(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *outposts.GetOutpostSupportedInstanceTypesInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRenewalPricing provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRenewalPricing(ctx context.Context, params *outposts.GetRenewalPricingInput, optFns ...func(*outposts.Options)) (*outposts.GetRenewalPricingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRenewalPricing")
+	}
+
+	var r0 *outposts.GetRenewalPricingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.GetRenewalPricingInput, ...func(*outposts.Options)) (*outposts.GetRenewalPricingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.GetRenewalPricingInput, ...func(*outposts.Options)) *outposts.GetRenewalPricingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.GetRenewalPricingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.GetRenewalPricingInput, ...func(*outposts.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

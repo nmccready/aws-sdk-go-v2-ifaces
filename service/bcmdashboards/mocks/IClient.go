@@ -52,6 +52,43 @@ func (_m *IClient) CreateDashboard(ctx context.Context, params *bcmdashboards.Cr
 	return r0, r1
 }
 
+// CreateScheduledReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateScheduledReport(ctx context.Context, params *bcmdashboards.CreateScheduledReportInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.CreateScheduledReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateScheduledReport")
+	}
+
+	var r0 *bcmdashboards.CreateScheduledReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.CreateScheduledReportInput, ...func(*bcmdashboards.Options)) (*bcmdashboards.CreateScheduledReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.CreateScheduledReportInput, ...func(*bcmdashboards.Options)) *bcmdashboards.CreateScheduledReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bcmdashboards.CreateScheduledReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.CreateScheduledReportInput, ...func(*bcmdashboards.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDashboard provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDashboard(ctx context.Context, params *bcmdashboards.DeleteDashboardInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.DeleteDashboardOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +118,80 @@ func (_m *IClient) DeleteDashboard(ctx context.Context, params *bcmdashboards.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.DeleteDashboardInput, ...func(*bcmdashboards.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteScheduledReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteScheduledReport(ctx context.Context, params *bcmdashboards.DeleteScheduledReportInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.DeleteScheduledReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteScheduledReport")
+	}
+
+	var r0 *bcmdashboards.DeleteScheduledReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.DeleteScheduledReportInput, ...func(*bcmdashboards.Options)) (*bcmdashboards.DeleteScheduledReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.DeleteScheduledReportInput, ...func(*bcmdashboards.Options)) *bcmdashboards.DeleteScheduledReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bcmdashboards.DeleteScheduledReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.DeleteScheduledReportInput, ...func(*bcmdashboards.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ExecuteScheduledReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExecuteScheduledReport(ctx context.Context, params *bcmdashboards.ExecuteScheduledReportInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.ExecuteScheduledReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExecuteScheduledReport")
+	}
+
+	var r0 *bcmdashboards.ExecuteScheduledReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.ExecuteScheduledReportInput, ...func(*bcmdashboards.Options)) (*bcmdashboards.ExecuteScheduledReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.ExecuteScheduledReportInput, ...func(*bcmdashboards.Options)) *bcmdashboards.ExecuteScheduledReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bcmdashboards.ExecuteScheduledReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.ExecuteScheduledReportInput, ...func(*bcmdashboards.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -163,6 +274,43 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *bcmdashboards.
 	return r0, r1
 }
 
+// GetScheduledReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetScheduledReport(ctx context.Context, params *bcmdashboards.GetScheduledReportInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.GetScheduledReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetScheduledReport")
+	}
+
+	var r0 *bcmdashboards.GetScheduledReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.GetScheduledReportInput, ...func(*bcmdashboards.Options)) (*bcmdashboards.GetScheduledReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.GetScheduledReportInput, ...func(*bcmdashboards.Options)) *bcmdashboards.GetScheduledReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bcmdashboards.GetScheduledReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.GetScheduledReportInput, ...func(*bcmdashboards.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDashboards provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDashboards(ctx context.Context, params *bcmdashboards.ListDashboardsInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.ListDashboardsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +340,43 @@ func (_m *IClient) ListDashboards(ctx context.Context, params *bcmdashboards.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.ListDashboardsInput, ...func(*bcmdashboards.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListScheduledReports provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListScheduledReports(ctx context.Context, params *bcmdashboards.ListScheduledReportsInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.ListScheduledReportsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListScheduledReports")
+	}
+
+	var r0 *bcmdashboards.ListScheduledReportsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.ListScheduledReportsInput, ...func(*bcmdashboards.Options)) (*bcmdashboards.ListScheduledReportsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.ListScheduledReportsInput, ...func(*bcmdashboards.Options)) *bcmdashboards.ListScheduledReportsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bcmdashboards.ListScheduledReportsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.ListScheduledReportsInput, ...func(*bcmdashboards.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -358,6 +543,43 @@ func (_m *IClient) UpdateDashboard(ctx context.Context, params *bcmdashboards.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.UpdateDashboardInput, ...func(*bcmdashboards.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateScheduledReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateScheduledReport(ctx context.Context, params *bcmdashboards.UpdateScheduledReportInput, optFns ...func(*bcmdashboards.Options)) (*bcmdashboards.UpdateScheduledReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateScheduledReport")
+	}
+
+	var r0 *bcmdashboards.UpdateScheduledReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.UpdateScheduledReportInput, ...func(*bcmdashboards.Options)) (*bcmdashboards.UpdateScheduledReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bcmdashboards.UpdateScheduledReportInput, ...func(*bcmdashboards.Options)) *bcmdashboards.UpdateScheduledReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bcmdashboards.UpdateScheduledReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bcmdashboards.UpdateScheduledReportInput, ...func(*bcmdashboards.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

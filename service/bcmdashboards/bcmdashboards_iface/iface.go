@@ -11,12 +11,18 @@ import (
 type IClient interface {
  Options() Options 
  CreateDashboard(ctx context.Context, params *CreateDashboardInput, optFns ...func(*Options)) (*CreateDashboardOutput, error) 
+ CreateScheduledReport(ctx context.Context, params *CreateScheduledReportInput, optFns ...func(*Options)) (*CreateScheduledReportOutput, error) 
  DeleteDashboard(ctx context.Context, params *DeleteDashboardInput, optFns ...func(*Options)) (*DeleteDashboardOutput, error) 
+ DeleteScheduledReport(ctx context.Context, params *DeleteScheduledReportInput, optFns ...func(*Options)) (*DeleteScheduledReportOutput, error) 
+ ExecuteScheduledReport(ctx context.Context, params *ExecuteScheduledReportInput, optFns ...func(*Options)) (*ExecuteScheduledReportOutput, error) 
  GetDashboard(ctx context.Context, params *GetDashboardInput, optFns ...func(*Options)) (*GetDashboardOutput, error) 
  GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
+ GetScheduledReport(ctx context.Context, params *GetScheduledReportInput, optFns ...func(*Options)) (*GetScheduledReportOutput, error) 
  ListDashboards(ctx context.Context, params *ListDashboardsInput, optFns ...func(*Options)) (*ListDashboardsOutput, error) 
+ ListScheduledReports(ctx context.Context, params *ListScheduledReportsInput, optFns ...func(*Options)) (*ListScheduledReportsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateDashboard(ctx context.Context, params *UpdateDashboardInput, optFns ...func(*Options)) (*UpdateDashboardOutput, error) 
+ UpdateScheduledReport(ctx context.Context, params *UpdateScheduledReportInput, optFns ...func(*Options)) (*UpdateScheduledReportOutput, error) 
 }

@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetJob", func(t *testing.T) {
+        input := &deadline.BatchGetJobInput{}
+        output := &deadline.BatchGetJobOutput{}
+
+        mockClient.On("BatchGetJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetJobEntity", func(t *testing.T) {
         input := &deadline.BatchGetJobEntityInput{}
         output := &deadline.BatchGetJobEntityOutput{}
@@ -158,6 +171,97 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetJobEntity", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetJobEntity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetSession", func(t *testing.T) {
+        input := &deadline.BatchGetSessionInput{}
+        output := &deadline.BatchGetSessionOutput{}
+
+        mockClient.On("BatchGetSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetSessionAction", func(t *testing.T) {
+        input := &deadline.BatchGetSessionActionInput{}
+        output := &deadline.BatchGetSessionActionOutput{}
+
+        mockClient.On("BatchGetSessionAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetSessionAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetStep", func(t *testing.T) {
+        input := &deadline.BatchGetStepInput{}
+        output := &deadline.BatchGetStepOutput{}
+
+        mockClient.On("BatchGetStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetStep(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetTask", func(t *testing.T) {
+        input := &deadline.BatchGetTaskInput{}
+        output := &deadline.BatchGetTaskOutput{}
+
+        mockClient.On("BatchGetTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetWorker", func(t *testing.T) {
+        input := &deadline.BatchGetWorkerInput{}
+        output := &deadline.BatchGetWorkerOutput{}
+
+        mockClient.On("BatchGetWorker", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetWorker(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateJob", func(t *testing.T) {
+        input := &deadline.BatchUpdateJobInput{}
+        output := &deadline.BatchUpdateJobOutput{}
+
+        mockClient.On("BatchUpdateJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateTask", func(t *testing.T) {
+        input := &deadline.BatchUpdateTaskInput{}
+        output := &deadline.BatchUpdateTaskOutput{}
+
+        mockClient.On("BatchUpdateTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

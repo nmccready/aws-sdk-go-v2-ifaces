@@ -755,6 +755,43 @@ func (_m *IClient) InvokeAgentRuntimeCommand(ctx context.Context, params *bedroc
 	return r0, r1
 }
 
+// InvokeBrowser provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeBrowser(ctx context.Context, params *bedrockagentcore.InvokeBrowserInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.InvokeBrowserOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeBrowser")
+	}
+
+	var r0 *bedrockagentcore.InvokeBrowserOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.InvokeBrowserInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.InvokeBrowserOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.InvokeBrowserInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.InvokeBrowserOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.InvokeBrowserOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.InvokeBrowserInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InvokeCodeInterpreter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InvokeCodeInterpreter(ctx context.Context, params *bedrockagentcore.InvokeCodeInterpreterInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.InvokeCodeInterpreterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1135,6 +1172,43 @@ func (_m *IClient) SaveBrowserSessionProfile(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.SaveBrowserSessionProfileInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchRegistryRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchRegistryRecords(ctx context.Context, params *bedrockagentcore.SearchRegistryRecordsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.SearchRegistryRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchRegistryRecords")
+	}
+
+	var r0 *bedrockagentcore.SearchRegistryRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.SearchRegistryRecordsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.SearchRegistryRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.SearchRegistryRecordsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.SearchRegistryRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.SearchRegistryRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.SearchRegistryRecordsInput, ...func(*bedrockagentcore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
