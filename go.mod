@@ -113,7 +113,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/costandusagereportservice v1.34.13
 	github.com/aws/aws-sdk-go-v2/service/costexplorer v1.63.6
 	github.com/aws/aws-sdk-go-v2/service/costoptimizationhub v1.22.8
-	github.com/aws/aws-sdk-go-v2/service/customerprofiles v1.57.2
+	github.com/aws/aws-sdk-go-v2/service/customerprofiles v1.58.0
 	github.com/aws/aws-sdk-go-v2/service/databasemigrationservice v1.62.0
 	github.com/aws/aws-sdk-go-v2/service/databrew v1.39.14
 	github.com/aws/aws-sdk-go-v2/service/dataexchange v1.41.0
@@ -121,7 +121,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/datasync v1.58.2
 	github.com/aws/aws-sdk-go-v2/service/datazone v1.56.0
 	github.com/aws/aws-sdk-go-v2/service/dax v1.29.16
-	github.com/aws/aws-sdk-go-v2/service/deadline v1.29.0
+	github.com/aws/aws-sdk-go-v2/service/deadline v1.30.0
 	github.com/aws/aws-sdk-go-v2/service/detective v1.38.13
 	github.com/aws/aws-sdk-go-v2/service/devicefarm v1.38.8
 	github.com/aws/aws-sdk-go-v2/service/devopsagent v1.2.0
@@ -174,7 +174,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/georoutes v1.8.0
 	github.com/aws/aws-sdk-go-v2/service/glacier v1.32.6
 	github.com/aws/aws-sdk-go-v2/service/globalaccelerator v1.35.16
-	github.com/aws/aws-sdk-go-v2/service/glue v1.139.1
+	github.com/aws/aws-sdk-go-v2/service/glue v1.139.2
 	github.com/aws/aws-sdk-go-v2/service/grafana v1.33.4
 	github.com/aws/aws-sdk-go-v2/service/greengrass v1.32.21
 	github.com/aws/aws-sdk-go-v2/service/greengrassv2 v1.42.12
@@ -190,15 +190,15 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/inspectorscan v1.13.5
 	github.com/aws/aws-sdk-go-v2/service/internetmonitor v1.26.14
 	github.com/aws/aws-sdk-go-v2/service/invoicing v1.9.8
-	github.com/aws/aws-sdk-go-v2/service/iot v1.72.5
-	github.com/aws/aws-sdk-go-v2/service/iotdataplane v1.32.21
+	github.com/aws/aws-sdk-go-v2/service/iot v1.72.6
+	github.com/aws/aws-sdk-go-v2/service/iotdataplane v1.32.22
 	github.com/aws/aws-sdk-go-v2/service/iotdeviceadvisor v1.36.21
 	github.com/aws/aws-sdk-go-v2/service/iotevents v1.33.13
 	github.com/aws/aws-sdk-go-v2/service/ioteventsdata v1.30.12
 	github.com/aws/aws-sdk-go-v2/service/iotfleetwise v1.31.20
 	github.com/aws/aws-sdk-go-v2/service/iotjobsdataplane v1.30.13
 	github.com/aws/aws-sdk-go-v2/service/iotmanagedintegrations v1.8.4
-	github.com/aws/aws-sdk-go-v2/service/iotsecuretunneling v1.33.21
+	github.com/aws/aws-sdk-go-v2/service/iotsecuretunneling v1.33.22
 	github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.52.19
 	github.com/aws/aws-sdk-go-v2/service/iotthingsgraph v1.30.21
 	github.com/aws/aws-sdk-go-v2/service/iottwinmaker v1.29.21
@@ -236,7 +236,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/lookoutequipment v1.36.14
 	github.com/aws/aws-sdk-go-v2/service/m2 v1.26.14
 	github.com/aws/aws-sdk-go-v2/service/machinelearning v1.34.14
-	github.com/aws/aws-sdk-go-v2/service/macie2 v1.50.13
+	github.com/aws/aws-sdk-go-v2/service/macie2 v1.51.0
 	github.com/aws/aws-sdk-go-v2/service/mailmanager v1.18.0
 	github.com/aws/aws-sdk-go-v2/service/managedblockchain v1.31.21
 	github.com/aws/aws-sdk-go-v2/service/managedblockchainquery v1.22.13
@@ -358,7 +358,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/schemas v1.34.12
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.41.5
 	github.com/aws/aws-sdk-go-v2/service/securityagent v1.0.0
-	github.com/aws/aws-sdk-go-v2/service/securityhub v1.68.3
+	github.com/aws/aws-sdk-go-v2/service/securityhub v1.69.0
 	github.com/aws/aws-sdk-go-v2/service/securityir v1.10.8
 	github.com/aws/aws-sdk-go-v2/service/securitylake v1.25.13
 	github.com/aws/aws-sdk-go-v2/service/serverlessapplicationrepository v1.30.12
@@ -427,7 +427,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.38.4
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.21
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -442,14 +442,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.21 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.21 // indirect
 	github.com/aws/smithy-go v1.24.2 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
