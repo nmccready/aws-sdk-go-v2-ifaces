@@ -1308,6 +1308,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeServerlessV2PlatformVersions", func(t *testing.T) {
+        input := &rds.DescribeServerlessV2PlatformVersionsInput{}
+        output := &rds.DescribeServerlessV2PlatformVersionsOutput{}
+
+        mockClient.On("DescribeServerlessV2PlatformVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServerlessV2PlatformVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeSourceRegions", func(t *testing.T) {
         input := &rds.DescribeSourceRegionsInput{}
         output := &rds.DescribeSourceRegionsOutput{}

@@ -347,6 +347,117 @@ func (_m *IClient) BatchReplaceClusterNodes(ctx context.Context, params *sagemak
 	return r0, r1
 }
 
+// CreateAIBenchmarkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAIBenchmarkJob(ctx context.Context, params *sagemaker.CreateAIBenchmarkJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateAIBenchmarkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAIBenchmarkJob")
+	}
+
+	var r0 *sagemaker.CreateAIBenchmarkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateAIBenchmarkJobInput, ...func(*sagemaker.Options)) (*sagemaker.CreateAIBenchmarkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateAIBenchmarkJobInput, ...func(*sagemaker.Options)) *sagemaker.CreateAIBenchmarkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateAIBenchmarkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateAIBenchmarkJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAIRecommendationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAIRecommendationJob(ctx context.Context, params *sagemaker.CreateAIRecommendationJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateAIRecommendationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAIRecommendationJob")
+	}
+
+	var r0 *sagemaker.CreateAIRecommendationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateAIRecommendationJobInput, ...func(*sagemaker.Options)) (*sagemaker.CreateAIRecommendationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateAIRecommendationJobInput, ...func(*sagemaker.Options)) *sagemaker.CreateAIRecommendationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateAIRecommendationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateAIRecommendationJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAIWorkloadConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAIWorkloadConfig(ctx context.Context, params *sagemaker.CreateAIWorkloadConfigInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateAIWorkloadConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAIWorkloadConfig")
+	}
+
+	var r0 *sagemaker.CreateAIWorkloadConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateAIWorkloadConfigInput, ...func(*sagemaker.Options)) (*sagemaker.CreateAIWorkloadConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateAIWorkloadConfigInput, ...func(*sagemaker.Options)) *sagemaker.CreateAIWorkloadConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateAIWorkloadConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateAIWorkloadConfigInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAction provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAction(ctx context.Context, params *sagemaker.CreateActionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateActionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2863,6 +2974,117 @@ func (_m *IClient) CreateWorkteam(ctx context.Context, params *sagemaker.CreateW
 	return r0, r1
 }
 
+// DeleteAIBenchmarkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAIBenchmarkJob(ctx context.Context, params *sagemaker.DeleteAIBenchmarkJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteAIBenchmarkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAIBenchmarkJob")
+	}
+
+	var r0 *sagemaker.DeleteAIBenchmarkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteAIBenchmarkJobInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteAIBenchmarkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteAIBenchmarkJobInput, ...func(*sagemaker.Options)) *sagemaker.DeleteAIBenchmarkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteAIBenchmarkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteAIBenchmarkJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAIRecommendationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAIRecommendationJob(ctx context.Context, params *sagemaker.DeleteAIRecommendationJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteAIRecommendationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAIRecommendationJob")
+	}
+
+	var r0 *sagemaker.DeleteAIRecommendationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteAIRecommendationJobInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteAIRecommendationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteAIRecommendationJobInput, ...func(*sagemaker.Options)) *sagemaker.DeleteAIRecommendationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteAIRecommendationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteAIRecommendationJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAIWorkloadConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAIWorkloadConfig(ctx context.Context, params *sagemaker.DeleteAIWorkloadConfigInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteAIWorkloadConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAIWorkloadConfig")
+	}
+
+	var r0 *sagemaker.DeleteAIWorkloadConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteAIWorkloadConfigInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteAIWorkloadConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteAIWorkloadConfigInput, ...func(*sagemaker.Options)) *sagemaker.DeleteAIWorkloadConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteAIWorkloadConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteAIWorkloadConfigInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAction provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAction(ctx context.Context, params *sagemaker.DeleteActionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteActionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5038,6 +5260,117 @@ func (_m *IClient) DeregisterDevices(ctx context.Context, params *sagemaker.Dere
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeregisterDevicesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAIBenchmarkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAIBenchmarkJob(ctx context.Context, params *sagemaker.DescribeAIBenchmarkJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeAIBenchmarkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAIBenchmarkJob")
+	}
+
+	var r0 *sagemaker.DescribeAIBenchmarkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeAIBenchmarkJobInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeAIBenchmarkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeAIBenchmarkJobInput, ...func(*sagemaker.Options)) *sagemaker.DescribeAIBenchmarkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeAIBenchmarkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeAIBenchmarkJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAIRecommendationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAIRecommendationJob(ctx context.Context, params *sagemaker.DescribeAIRecommendationJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeAIRecommendationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAIRecommendationJob")
+	}
+
+	var r0 *sagemaker.DescribeAIRecommendationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeAIRecommendationJobInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeAIRecommendationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeAIRecommendationJobInput, ...func(*sagemaker.Options)) *sagemaker.DescribeAIRecommendationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeAIRecommendationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeAIRecommendationJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAIWorkloadConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAIWorkloadConfig(ctx context.Context, params *sagemaker.DescribeAIWorkloadConfigInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeAIWorkloadConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAIWorkloadConfig")
+	}
+
+	var r0 *sagemaker.DescribeAIWorkloadConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeAIWorkloadConfigInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeAIWorkloadConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeAIWorkloadConfigInput, ...func(*sagemaker.Options)) *sagemaker.DescribeAIWorkloadConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeAIWorkloadConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeAIWorkloadConfigInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8109,6 +8442,117 @@ func (_m *IClient) ImportHubContent(ctx context.Context, params *sagemaker.Impor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ImportHubContentInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAIBenchmarkJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAIBenchmarkJobs(ctx context.Context, params *sagemaker.ListAIBenchmarkJobsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListAIBenchmarkJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAIBenchmarkJobs")
+	}
+
+	var r0 *sagemaker.ListAIBenchmarkJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListAIBenchmarkJobsInput, ...func(*sagemaker.Options)) (*sagemaker.ListAIBenchmarkJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListAIBenchmarkJobsInput, ...func(*sagemaker.Options)) *sagemaker.ListAIBenchmarkJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListAIBenchmarkJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListAIBenchmarkJobsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAIRecommendationJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAIRecommendationJobs(ctx context.Context, params *sagemaker.ListAIRecommendationJobsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListAIRecommendationJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAIRecommendationJobs")
+	}
+
+	var r0 *sagemaker.ListAIRecommendationJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListAIRecommendationJobsInput, ...func(*sagemaker.Options)) (*sagemaker.ListAIRecommendationJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListAIRecommendationJobsInput, ...func(*sagemaker.Options)) *sagemaker.ListAIRecommendationJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListAIRecommendationJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListAIRecommendationJobsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAIWorkloadConfigs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAIWorkloadConfigs(ctx context.Context, params *sagemaker.ListAIWorkloadConfigsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListAIWorkloadConfigsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAIWorkloadConfigs")
+	}
+
+	var r0 *sagemaker.ListAIWorkloadConfigsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListAIWorkloadConfigsInput, ...func(*sagemaker.Options)) (*sagemaker.ListAIWorkloadConfigsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListAIWorkloadConfigsInput, ...func(*sagemaker.Options)) *sagemaker.ListAIWorkloadConfigsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListAIWorkloadConfigsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListAIWorkloadConfigsInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -11901,6 +12345,80 @@ func (_m *IClient) StartSession(ctx context.Context, params *sagemaker.StartSess
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StartSessionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopAIBenchmarkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopAIBenchmarkJob(ctx context.Context, params *sagemaker.StopAIBenchmarkJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.StopAIBenchmarkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopAIBenchmarkJob")
+	}
+
+	var r0 *sagemaker.StopAIBenchmarkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopAIBenchmarkJobInput, ...func(*sagemaker.Options)) (*sagemaker.StopAIBenchmarkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopAIBenchmarkJobInput, ...func(*sagemaker.Options)) *sagemaker.StopAIBenchmarkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.StopAIBenchmarkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StopAIBenchmarkJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopAIRecommendationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopAIRecommendationJob(ctx context.Context, params *sagemaker.StopAIRecommendationJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.StopAIRecommendationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopAIRecommendationJob")
+	}
+
+	var r0 *sagemaker.StopAIRecommendationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopAIRecommendationJobInput, ...func(*sagemaker.Options)) (*sagemaker.StopAIRecommendationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopAIRecommendationJobInput, ...func(*sagemaker.Options)) *sagemaker.StopAIRecommendationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.StopAIRecommendationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StopAIRecommendationJobInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

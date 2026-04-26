@@ -422,6 +422,43 @@ func (_m *IClient) DescribeContact(ctx context.Context, params *groundstation.De
 	return r0, r1
 }
 
+// DescribeContactVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeContactVersion(ctx context.Context, params *groundstation.DescribeContactVersionInput, optFns ...func(*groundstation.Options)) (*groundstation.DescribeContactVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeContactVersion")
+	}
+
+	var r0 *groundstation.DescribeContactVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.DescribeContactVersionInput, ...func(*groundstation.Options)) (*groundstation.DescribeContactVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.DescribeContactVersionInput, ...func(*groundstation.Options)) *groundstation.DescribeContactVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.DescribeContactVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.DescribeContactVersionInput, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeEphemeris provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeEphemeris(ctx context.Context, params *groundstation.DescribeEphemerisInput, optFns ...func(*groundstation.Options)) (*groundstation.DescribeEphemerisOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -718,6 +755,43 @@ func (_m *IClient) GetSatellite(ctx context.Context, params *groundstation.GetSa
 	return r0, r1
 }
 
+// ListAntennas provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAntennas(ctx context.Context, params *groundstation.ListAntennasInput, optFns ...func(*groundstation.Options)) (*groundstation.ListAntennasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAntennas")
+	}
+
+	var r0 *groundstation.ListAntennasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.ListAntennasInput, ...func(*groundstation.Options)) (*groundstation.ListAntennasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.ListAntennasInput, ...func(*groundstation.Options)) *groundstation.ListAntennasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.ListAntennasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.ListAntennasInput, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListConfigs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListConfigs(ctx context.Context, params *groundstation.ListConfigsInput, optFns ...func(*groundstation.Options)) (*groundstation.ListConfigsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +821,43 @@ func (_m *IClient) ListConfigs(ctx context.Context, params *groundstation.ListCo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.ListConfigsInput, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContactVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContactVersions(ctx context.Context, params *groundstation.ListContactVersionsInput, optFns ...func(*groundstation.Options)) (*groundstation.ListContactVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContactVersions")
+	}
+
+	var r0 *groundstation.ListContactVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.ListContactVersionsInput, ...func(*groundstation.Options)) (*groundstation.ListContactVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.ListContactVersionsInput, ...func(*groundstation.Options)) *groundstation.ListContactVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.ListContactVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.ListContactVersionsInput, ...func(*groundstation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -858,6 +969,43 @@ func (_m *IClient) ListEphemerides(ctx context.Context, params *groundstation.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.ListEphemeridesInput, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGroundStationReservations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGroundStationReservations(ctx context.Context, params *groundstation.ListGroundStationReservationsInput, optFns ...func(*groundstation.Options)) (*groundstation.ListGroundStationReservationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGroundStationReservations")
+	}
+
+	var r0 *groundstation.ListGroundStationReservationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.ListGroundStationReservationsInput, ...func(*groundstation.Options)) (*groundstation.ListGroundStationReservationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.ListGroundStationReservationsInput, ...func(*groundstation.Options)) *groundstation.ListGroundStationReservationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.ListGroundStationReservationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.ListGroundStationReservationsInput, ...func(*groundstation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1246,6 +1394,43 @@ func (_m *IClient) UpdateConfig(ctx context.Context, params *groundstation.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.UpdateConfigInput, ...func(*groundstation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContact(ctx context.Context, params *groundstation.UpdateContactInput, optFns ...func(*groundstation.Options)) (*groundstation.UpdateContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContact")
+	}
+
+	var r0 *groundstation.UpdateContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.UpdateContactInput, ...func(*groundstation.Options)) (*groundstation.UpdateContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *groundstation.UpdateContactInput, ...func(*groundstation.Options)) *groundstation.UpdateContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*groundstation.UpdateContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *groundstation.UpdateContactInput, ...func(*groundstation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

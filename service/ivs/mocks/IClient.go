@@ -126,6 +126,43 @@ func (_m *IClient) BatchStartViewerSessionRevocation(ctx context.Context, params
 	return r0, r1
 }
 
+// CreateAdConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAdConfiguration(ctx context.Context, params *ivs.CreateAdConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.CreateAdConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAdConfiguration")
+	}
+
+	var r0 *ivs.CreateAdConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.CreateAdConfigurationInput, ...func(*ivs.Options)) (*ivs.CreateAdConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.CreateAdConfigurationInput, ...func(*ivs.Options)) *ivs.CreateAdConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.CreateAdConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.CreateAdConfigurationInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateChannel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateChannel(ctx context.Context, params *ivs.CreateChannelInput, optFns ...func(*ivs.Options)) (*ivs.CreateChannelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +303,43 @@ func (_m *IClient) CreateStreamKey(ctx context.Context, params *ivs.CreateStream
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.CreateStreamKeyInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAdConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAdConfiguration(ctx context.Context, params *ivs.DeleteAdConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.DeleteAdConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAdConfiguration")
+	}
+
+	var r0 *ivs.DeleteAdConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.DeleteAdConfigurationInput, ...func(*ivs.Options)) (*ivs.DeleteAdConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.DeleteAdConfigurationInput, ...func(*ivs.Options)) *ivs.DeleteAdConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.DeleteAdConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.DeleteAdConfigurationInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -451,6 +525,43 @@ func (_m *IClient) DeleteStreamKey(ctx context.Context, params *ivs.DeleteStream
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.DeleteStreamKeyInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAdConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAdConfiguration(ctx context.Context, params *ivs.GetAdConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.GetAdConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAdConfiguration")
+	}
+
+	var r0 *ivs.GetAdConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.GetAdConfigurationInput, ...func(*ivs.Options)) (*ivs.GetAdConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.GetAdConfigurationInput, ...func(*ivs.Options)) *ivs.GetAdConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.GetAdConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.GetAdConfigurationInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -747,6 +858,80 @@ func (_m *IClient) ImportPlaybackKeyPair(ctx context.Context, params *ivs.Import
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.ImportPlaybackKeyPairInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// InsertAdBreak provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InsertAdBreak(ctx context.Context, params *ivs.InsertAdBreakInput, optFns ...func(*ivs.Options)) (*ivs.InsertAdBreakOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InsertAdBreak")
+	}
+
+	var r0 *ivs.InsertAdBreakOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.InsertAdBreakInput, ...func(*ivs.Options)) (*ivs.InsertAdBreakOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.InsertAdBreakInput, ...func(*ivs.Options)) *ivs.InsertAdBreakOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.InsertAdBreakOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.InsertAdBreakInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAdConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAdConfigurations(ctx context.Context, params *ivs.ListAdConfigurationsInput, optFns ...func(*ivs.Options)) (*ivs.ListAdConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAdConfigurations")
+	}
+
+	var r0 *ivs.ListAdConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.ListAdConfigurationsInput, ...func(*ivs.Options)) (*ivs.ListAdConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.ListAdConfigurationsInput, ...func(*ivs.Options)) *ivs.ListAdConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.ListAdConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.ListAdConfigurationsInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

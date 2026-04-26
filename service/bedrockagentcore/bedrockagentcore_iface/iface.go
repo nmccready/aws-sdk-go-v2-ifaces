@@ -32,6 +32,7 @@ type IClient interface {
  InvokeAgentRuntimeCommand(ctx context.Context, params *InvokeAgentRuntimeCommandInput, optFns ...func(*Options)) (*InvokeAgentRuntimeCommandOutput, error) 
  InvokeBrowser(ctx context.Context, params *InvokeBrowserInput, optFns ...func(*Options)) (*InvokeBrowserOutput, error) 
  InvokeCodeInterpreter(ctx context.Context, params *InvokeCodeInterpreterInput, optFns ...func(*Options)) (*InvokeCodeInterpreterOutput, error) 
+ InvokeHarness(ctx context.Context, params *InvokeHarnessInput, optFns ...func(*Options)) (*InvokeHarnessOutput, error) 
  ListActors(ctx context.Context, params *ListActorsInput, optFns ...func(*Options)) (*ListActorsOutput, error) 
  ListBrowserSessions(ctx context.Context, params *ListBrowserSessionsInput, optFns ...func(*Options)) (*ListBrowserSessionsOutput, error) 
  ListCodeInterpreterSessions(ctx context.Context, params *ListCodeInterpreterSessionsInput, optFns ...func(*Options)) (*ListCodeInterpreterSessionsOutput, error) 

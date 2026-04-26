@@ -151,6 +151,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAIBenchmarkJob", func(t *testing.T) {
+        input := &sagemaker.CreateAIBenchmarkJobInput{}
+        output := &sagemaker.CreateAIBenchmarkJobOutput{}
+
+        mockClient.On("CreateAIBenchmarkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIBenchmarkJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIRecommendationJob", func(t *testing.T) {
+        input := &sagemaker.CreateAIRecommendationJobInput{}
+        output := &sagemaker.CreateAIRecommendationJobOutput{}
+
+        mockClient.On("CreateAIRecommendationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIRecommendationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAIWorkloadConfig", func(t *testing.T) {
+        input := &sagemaker.CreateAIWorkloadConfigInput{}
+        output := &sagemaker.CreateAIWorkloadConfigOutput{}
+
+        mockClient.On("CreateAIWorkloadConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAIWorkloadConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAction", func(t *testing.T) {
         input := &sagemaker.CreateActionInput{}
         output := &sagemaker.CreateActionOutput{}
@@ -1035,6 +1074,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAIBenchmarkJob", func(t *testing.T) {
+        input := &sagemaker.DeleteAIBenchmarkJobInput{}
+        output := &sagemaker.DeleteAIBenchmarkJobOutput{}
+
+        mockClient.On("DeleteAIBenchmarkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIBenchmarkJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIRecommendationJob", func(t *testing.T) {
+        input := &sagemaker.DeleteAIRecommendationJobInput{}
+        output := &sagemaker.DeleteAIRecommendationJobOutput{}
+
+        mockClient.On("DeleteAIRecommendationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIRecommendationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAIWorkloadConfig", func(t *testing.T) {
+        input := &sagemaker.DeleteAIWorkloadConfigInput{}
+        output := &sagemaker.DeleteAIWorkloadConfigOutput{}
+
+        mockClient.On("DeleteAIWorkloadConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAIWorkloadConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAction", func(t *testing.T) {
         input := &sagemaker.DeleteActionInput{}
         output := &sagemaker.DeleteActionOutput{}
@@ -1796,6 +1874,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeregisterDevices", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeregisterDevices(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAIBenchmarkJob", func(t *testing.T) {
+        input := &sagemaker.DescribeAIBenchmarkJobInput{}
+        output := &sagemaker.DescribeAIBenchmarkJobOutput{}
+
+        mockClient.On("DescribeAIBenchmarkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAIBenchmarkJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAIRecommendationJob", func(t *testing.T) {
+        input := &sagemaker.DescribeAIRecommendationJobInput{}
+        output := &sagemaker.DescribeAIRecommendationJobOutput{}
+
+        mockClient.On("DescribeAIRecommendationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAIRecommendationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAIWorkloadConfig", func(t *testing.T) {
+        input := &sagemaker.DescribeAIWorkloadConfigInput{}
+        output := &sagemaker.DescribeAIWorkloadConfigOutput{}
+
+        mockClient.On("DescribeAIWorkloadConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAIWorkloadConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2875,6 +2992,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ImportHubContent", ctx, input).Return(output, nil)
 
         result, err := mockClient.ImportHubContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIBenchmarkJobs", func(t *testing.T) {
+        input := &sagemaker.ListAIBenchmarkJobsInput{}
+        output := &sagemaker.ListAIBenchmarkJobsOutput{}
+
+        mockClient.On("ListAIBenchmarkJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIBenchmarkJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIRecommendationJobs", func(t *testing.T) {
+        input := &sagemaker.ListAIRecommendationJobsInput{}
+        output := &sagemaker.ListAIRecommendationJobsOutput{}
+
+        mockClient.On("ListAIRecommendationJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIRecommendationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAIWorkloadConfigs", func(t *testing.T) {
+        input := &sagemaker.ListAIWorkloadConfigsInput{}
+        output := &sagemaker.ListAIWorkloadConfigsOutput{}
+
+        mockClient.On("ListAIWorkloadConfigs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAIWorkloadConfigs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4201,6 +4357,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopAIBenchmarkJob", func(t *testing.T) {
+        input := &sagemaker.StopAIBenchmarkJobInput{}
+        output := &sagemaker.StopAIBenchmarkJobOutput{}
+
+        mockClient.On("StopAIBenchmarkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopAIBenchmarkJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopAIRecommendationJob", func(t *testing.T) {
+        input := &sagemaker.StopAIRecommendationJobInput{}
+        output := &sagemaker.StopAIRecommendationJobOutput{}
+
+        mockClient.On("StopAIRecommendationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopAIRecommendationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

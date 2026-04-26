@@ -1425,6 +1425,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAttachedFilesConfiguration", func(t *testing.T) {
+        input := &connect.DescribeAttachedFilesConfigurationInput{}
+        output := &connect.DescribeAttachedFilesConfigurationOutput{}
+
+        mockClient.On("DescribeAttachedFilesConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAttachedFilesConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAuthenticationProfile", func(t *testing.T) {
         input := &connect.DescribeAuthenticationProfileInput{}
         output := &connect.DescribeAuthenticationProfileOutput{}
@@ -2368,6 +2381,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssociatedContacts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssociatedContacts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAttachedFilesConfigurations", func(t *testing.T) {
+        input := &connect.ListAttachedFilesConfigurationsInput{}
+        output := &connect.ListAttachedFilesConfigurationsOutput{}
+
+        mockClient.On("ListAttachedFilesConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAttachedFilesConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3993,6 +4019,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAgentStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAgentStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAttachedFilesConfiguration", func(t *testing.T) {
+        input := &connect.UpdateAttachedFilesConfigurationInput{}
+        output := &connect.UpdateAttachedFilesConfigurationOutput{}
+
+        mockClient.On("UpdateAttachedFilesConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAttachedFilesConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

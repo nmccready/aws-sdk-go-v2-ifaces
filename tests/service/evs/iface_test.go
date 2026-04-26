@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateEntitlement", func(t *testing.T) {
+        input := &evs.CreateEntitlementInput{}
+        output := &evs.CreateEntitlementOutput{}
+
+        mockClient.On("CreateEntitlement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEntitlement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEnvironment", func(t *testing.T) {
         input := &evs.CreateEnvironmentInput{}
         output := &evs.CreateEnvironmentOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateEnvironmentConnector", func(t *testing.T) {
+        input := &evs.CreateEnvironmentConnectorInput{}
+        output := &evs.CreateEnvironmentConnectorOutput{}
+
+        mockClient.On("CreateEnvironmentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEnvironmentConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -73,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteEntitlement", func(t *testing.T) {
+        input := &evs.DeleteEntitlementInput{}
+        output := &evs.DeleteEntitlementOutput{}
+
+        mockClient.On("DeleteEntitlement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEntitlement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEnvironment", func(t *testing.T) {
         input := &evs.DeleteEnvironmentInput{}
         output := &evs.DeleteEnvironmentOutput{}
@@ -80,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteEnvironmentConnector", func(t *testing.T) {
+        input := &evs.DeleteEnvironmentConnectorInput{}
+        output := &evs.DeleteEnvironmentConnectorOutput{}
+
+        mockClient.On("DeleteEnvironmentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEnvironmentConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListEnvironmentConnectors", func(t *testing.T) {
+        input := &evs.ListEnvironmentConnectorsInput{}
+        output := &evs.ListEnvironmentConnectorsOutput{}
+
+        mockClient.On("ListEnvironmentConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnvironmentConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEnvironmentHosts", func(t *testing.T) {
         input := &evs.ListEnvironmentHostsInput{}
         output := &evs.ListEnvironmentHostsOutput{}
@@ -190,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListVmEntitlements", func(t *testing.T) {
+        input := &evs.ListVmEntitlementsInput{}
+        output := &evs.ListVmEntitlementsOutput{}
+
+        mockClient.On("ListVmEntitlements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVmEntitlements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &evs.TagResourceInput{}
         output := &evs.TagResourceOutput{}
@@ -210,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateEnvironmentConnector", func(t *testing.T) {
+        input := &evs.UpdateEnvironmentConnectorInput{}
+        output := &evs.UpdateEnvironmentConnectorOutput{}
+
+        mockClient.On("UpdateEnvironmentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateEnvironmentConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateHarnessInput{}
+        output := &bedrockagentcorecontrol.CreateHarnessOutput{}
+
+        mockClient.On("CreateHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMemory", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateMemoryInput{}
         output := &bedrockagentcorecontrol.CreateMemoryOutput{}
@@ -366,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteHarnessInput{}
+        output := &bedrockagentcorecontrol.DeleteHarnessOutput{}
+
+        mockClient.On("DeleteHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -600,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetHarnessInput{}
+        output := &bedrockagentcorecontrol.GetHarnessOutput{}
+
+        mockClient.On("GetHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -873,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHarnesses", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListHarnessesInput{}
+        output := &bedrockagentcorecontrol.ListHarnessesOutput{}
+
+        mockClient.On("ListHarnesses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHarnesses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1185,6 +1237,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateHarnessInput{}
+        output := &bedrockagentcorecontrol.UpdateHarnessOutput{}
+
+        mockClient.On("UpdateHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

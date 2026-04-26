@@ -2087,6 +2087,43 @@ func (_m *IClient) GetMonitor(ctx context.Context, params *deadline.GetMonitorIn
 	return r0, r1
 }
 
+// GetMonitorSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMonitorSettings(ctx context.Context, params *deadline.GetMonitorSettingsInput, optFns ...func(*deadline.Options)) (*deadline.GetMonitorSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMonitorSettings")
+	}
+
+	var r0 *deadline.GetMonitorSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetMonitorSettingsInput, ...func(*deadline.Options)) (*deadline.GetMonitorSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetMonitorSettingsInput, ...func(*deadline.Options)) *deadline.GetMonitorSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.GetMonitorSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.GetMonitorSettingsInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetQueue provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetQueue(ctx context.Context, params *deadline.GetQueueInput, optFns ...func(*deadline.Options)) (*deadline.GetQueueOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4132,6 +4169,43 @@ func (_m *IClient) UpdateMonitor(ctx context.Context, params *deadline.UpdateMon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.UpdateMonitorInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMonitorSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMonitorSettings(ctx context.Context, params *deadline.UpdateMonitorSettingsInput, optFns ...func(*deadline.Options)) (*deadline.UpdateMonitorSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMonitorSettings")
+	}
+
+	var r0 *deadline.UpdateMonitorSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.UpdateMonitorSettingsInput, ...func(*deadline.Options)) (*deadline.UpdateMonitorSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.UpdateMonitorSettingsInput, ...func(*deadline.Options)) *deadline.UpdateMonitorSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.UpdateMonitorSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.UpdateMonitorSettingsInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

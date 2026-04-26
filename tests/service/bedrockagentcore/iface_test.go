@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeHarness", func(t *testing.T) {
+        input := &bedrockagentcore.InvokeHarnessInput{}
+        output := &bedrockagentcore.InvokeHarnessOutput{}
+
+        mockClient.On("InvokeHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListActors", func(t *testing.T) {
         input := &bedrockagentcore.ListActorsInput{}
         output := &bedrockagentcore.ListActorsOutput{}
