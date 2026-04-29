@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCampaignEntryLimits", func(t *testing.T) {
+        input := &connectcampaignsv2.DeleteCampaignEntryLimitsInput{}
+        output := &connectcampaignsv2.DeleteCampaignEntryLimitsOutput{}
+
+        mockClient.On("DeleteCampaignEntryLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCampaignEntryLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteConnectInstanceConfig", func(t *testing.T) {
         input := &connectcampaignsv2.DeleteConnectInstanceConfigInput{}
         output := &connectcampaignsv2.DeleteConnectInstanceConfigOutput{}
@@ -431,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCampaignCommunicationTime", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCampaignCommunicationTime(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCampaignEntryLimits", func(t *testing.T) {
+        input := &connectcampaignsv2.UpdateCampaignEntryLimitsInput{}
+        output := &connectcampaignsv2.UpdateCampaignEntryLimitsOutput{}
+
+        mockClient.On("UpdateCampaignEntryLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCampaignEntryLimits(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

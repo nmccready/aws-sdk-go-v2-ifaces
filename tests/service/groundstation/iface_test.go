@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeContactVersion", func(t *testing.T) {
+        input := &groundstation.DescribeContactVersionInput{}
+        output := &groundstation.DescribeContactVersionOutput{}
+
+        mockClient.On("DescribeContactVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeContactVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEphemeris", func(t *testing.T) {
         input := &groundstation.DescribeEphemerisInput{}
         output := &groundstation.DescribeEphemerisOutput{}
@@ -281,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAntennas", func(t *testing.T) {
+        input := &groundstation.ListAntennasInput{}
+        output := &groundstation.ListAntennasOutput{}
+
+        mockClient.On("ListAntennas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAntennas(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListConfigs", func(t *testing.T) {
         input := &groundstation.ListConfigsInput{}
         output := &groundstation.ListConfigsOutput{}
@@ -288,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContactVersions", func(t *testing.T) {
+        input := &groundstation.ListContactVersionsInput{}
+        output := &groundstation.ListContactVersionsOutput{}
+
+        mockClient.On("ListContactVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContactVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -327,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEphemerides", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEphemerides(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGroundStationReservations", func(t *testing.T) {
+        input := &groundstation.ListGroundStationReservationsInput{}
+        output := &groundstation.ListGroundStationReservationsOutput{}
+
+        mockClient.On("ListGroundStationReservations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGroundStationReservations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContact", func(t *testing.T) {
+        input := &groundstation.UpdateContactInput{}
+        output := &groundstation.UpdateContactOutput{}
+
+        mockClient.On("UpdateContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContact(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

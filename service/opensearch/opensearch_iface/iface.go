@@ -85,6 +85,7 @@ type IClient interface {
  RejectInboundConnection(ctx context.Context, params *RejectInboundConnectionInput, optFns ...func(*Options)) (*RejectInboundConnectionOutput, error) 
  RemoveTags(ctx context.Context, params *RemoveTagsInput, optFns ...func(*Options)) (*RemoveTagsOutput, error) 
  RevokeVpcEndpointAccess(ctx context.Context, params *RevokeVpcEndpointAccessInput, optFns ...func(*Options)) (*RevokeVpcEndpointAccessOutput, error) 
+ RollbackServiceSoftwareUpdate(ctx context.Context, params *RollbackServiceSoftwareUpdateInput, optFns ...func(*Options)) (*RollbackServiceSoftwareUpdateOutput, error) 
  StartDomainMaintenance(ctx context.Context, params *StartDomainMaintenanceInput, optFns ...func(*Options)) (*StartDomainMaintenanceOutput, error) 
  StartServiceSoftwareUpdate(ctx context.Context, params *StartServiceSoftwareUpdateInput, optFns ...func(*Options)) (*StartServiceSoftwareUpdateOutput, error) 
  UpdateApplication(ctx context.Context, params *UpdateApplicationInput, optFns ...func(*Options)) (*UpdateApplicationOutput, error) 

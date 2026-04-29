@@ -126,6 +126,43 @@ func (_m *IClient) AcceptReservedInstancesExchangeQuote(ctx context.Context, par
 	return r0, r1
 }
 
+// AcceptTransitGatewayClientVpnAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcceptTransitGatewayClientVpnAttachment(ctx context.Context, params *ec2.AcceptTransitGatewayClientVpnAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.AcceptTransitGatewayClientVpnAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcceptTransitGatewayClientVpnAttachment")
+	}
+
+	var r0 *ec2.AcceptTransitGatewayClientVpnAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AcceptTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) (*ec2.AcceptTransitGatewayClientVpnAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AcceptTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) *ec2.AcceptTransitGatewayClientVpnAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.AcceptTransitGatewayClientVpnAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.AcceptTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AcceptTransitGatewayMulticastDomainAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AcceptTransitGatewayMulticastDomainAssociations(ctx context.Context, params *ec2.AcceptTransitGatewayMulticastDomainAssociationsInput, optFns ...func(*ec2.Options)) (*ec2.AcceptTransitGatewayMulticastDomainAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8480,6 +8517,43 @@ func (_m *IClient) DeleteTransitGateway(ctx context.Context, params *ec2.DeleteT
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteTransitGatewayInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTransitGatewayClientVpnAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTransitGatewayClientVpnAttachment(ctx context.Context, params *ec2.DeleteTransitGatewayClientVpnAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.DeleteTransitGatewayClientVpnAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTransitGatewayClientVpnAttachment")
+	}
+
+	var r0 *ec2.DeleteTransitGatewayClientVpnAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) (*ec2.DeleteTransitGatewayClientVpnAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) *ec2.DeleteTransitGatewayClientVpnAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteTransitGatewayClientVpnAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -20920,6 +20994,43 @@ func (_m *IClient) GetManagedPrefixListEntries(ctx context.Context, params *ec2.
 	return r0, r1
 }
 
+// GetManagedResourceVisibility provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetManagedResourceVisibility(ctx context.Context, params *ec2.GetManagedResourceVisibilityInput, optFns ...func(*ec2.Options)) (*ec2.GetManagedResourceVisibilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetManagedResourceVisibility")
+	}
+
+	var r0 *ec2.GetManagedResourceVisibilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetManagedResourceVisibilityInput, ...func(*ec2.Options)) (*ec2.GetManagedResourceVisibilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetManagedResourceVisibilityInput, ...func(*ec2.Options)) *ec2.GetManagedResourceVisibilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetManagedResourceVisibilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetManagedResourceVisibilityInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetNetworkInsightsAccessScopeAnalysisFindings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetNetworkInsightsAccessScopeAnalysisFindings(ctx context.Context, params *ec2.GetNetworkInsightsAccessScopeAnalysisFindingsInput, optFns ...func(*ec2.Options)) (*ec2.GetNetworkInsightsAccessScopeAnalysisFindingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -23621,6 +23732,43 @@ func (_m *IClient) ModifyManagedPrefixList(ctx context.Context, params *ec2.Modi
 	return r0, r1
 }
 
+// ModifyManagedResourceVisibility provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyManagedResourceVisibility(ctx context.Context, params *ec2.ModifyManagedResourceVisibilityInput, optFns ...func(*ec2.Options)) (*ec2.ModifyManagedResourceVisibilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyManagedResourceVisibility")
+	}
+
+	var r0 *ec2.ModifyManagedResourceVisibilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyManagedResourceVisibilityInput, ...func(*ec2.Options)) (*ec2.ModifyManagedResourceVisibilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyManagedResourceVisibilityInput, ...func(*ec2.Options)) *ec2.ModifyManagedResourceVisibilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyManagedResourceVisibilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyManagedResourceVisibilityInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ModifyNetworkInterfaceAttribute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ModifyNetworkInterfaceAttribute(ctx context.Context, params *ec2.ModifyNetworkInterfaceAttributeInput, optFns ...func(*ec2.Options)) (*ec2.ModifyNetworkInterfaceAttributeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -25851,6 +25999,43 @@ func (_m *IClient) RejectCapacityReservationBillingOwnership(ctx context.Context
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.RejectCapacityReservationBillingOwnershipInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RejectTransitGatewayClientVpnAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RejectTransitGatewayClientVpnAttachment(ctx context.Context, params *ec2.RejectTransitGatewayClientVpnAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.RejectTransitGatewayClientVpnAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RejectTransitGatewayClientVpnAttachment")
+	}
+
+	var r0 *ec2.RejectTransitGatewayClientVpnAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.RejectTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) (*ec2.RejectTransitGatewayClientVpnAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.RejectTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) *ec2.RejectTransitGatewayClientVpnAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.RejectTransitGatewayClientVpnAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.RejectTransitGatewayClientVpnAttachmentInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

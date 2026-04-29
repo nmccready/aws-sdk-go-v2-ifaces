@@ -459,6 +459,43 @@ func (_m *IClient) CreateRecommenderFilter(ctx context.Context, params *customer
 	return r0, r1
 }
 
+// CreateRecommenderSchema provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRecommenderSchema(ctx context.Context, params *customerprofiles.CreateRecommenderSchemaInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateRecommenderSchemaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRecommenderSchema")
+	}
+
+	var r0 *customerprofiles.CreateRecommenderSchemaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateRecommenderSchemaInput, ...func(*customerprofiles.Options)) (*customerprofiles.CreateRecommenderSchemaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.CreateRecommenderSchemaInput, ...func(*customerprofiles.Options)) *customerprofiles.CreateRecommenderSchemaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.CreateRecommenderSchemaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.CreateRecommenderSchemaInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateSegmentDefinition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateSegmentDefinition(ctx context.Context, params *customerprofiles.CreateSegmentDefinitionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.CreateSegmentDefinitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1080,6 +1117,43 @@ func (_m *IClient) DeleteRecommenderFilter(ctx context.Context, params *customer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteRecommenderFilterInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRecommenderSchema provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRecommenderSchema(ctx context.Context, params *customerprofiles.DeleteRecommenderSchemaInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteRecommenderSchemaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRecommenderSchema")
+	}
+
+	var r0 *customerprofiles.DeleteRecommenderSchemaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteRecommenderSchemaInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteRecommenderSchemaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteRecommenderSchemaInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteRecommenderSchemaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteRecommenderSchemaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteRecommenderSchemaInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1857,6 +1931,43 @@ func (_m *IClient) GetRecommenderFilter(ctx context.Context, params *customerpro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetRecommenderFilterInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRecommenderSchema provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecommenderSchema(ctx context.Context, params *customerprofiles.GetRecommenderSchemaInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetRecommenderSchemaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecommenderSchema")
+	}
+
+	var r0 *customerprofiles.GetRecommenderSchemaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetRecommenderSchemaInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetRecommenderSchemaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetRecommenderSchemaInput, ...func(*customerprofiles.Options)) *customerprofiles.GetRecommenderSchemaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetRecommenderSchemaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetRecommenderSchemaInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2893,6 +3004,43 @@ func (_m *IClient) ListRecommenderRecipes(ctx context.Context, params *customerp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListRecommenderRecipesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecommenderSchemas provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecommenderSchemas(ctx context.Context, params *customerprofiles.ListRecommenderSchemasInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListRecommenderSchemasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecommenderSchemas")
+	}
+
+	var r0 *customerprofiles.ListRecommenderSchemasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListRecommenderSchemasInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListRecommenderSchemasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListRecommenderSchemasInput, ...func(*customerprofiles.Options)) *customerprofiles.ListRecommenderSchemasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListRecommenderSchemasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListRecommenderSchemasInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
