@@ -1975,6 +1975,43 @@ func (_m *IClient) EnableSecurityHubV2(ctx context.Context, params *securityhub.
 	return r0, r1
 }
 
+// GenerateRecommendedPolicyV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GenerateRecommendedPolicyV2(ctx context.Context, params *securityhub.GenerateRecommendedPolicyV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GenerateRecommendedPolicyV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GenerateRecommendedPolicyV2")
+	}
+
+	var r0 *securityhub.GenerateRecommendedPolicyV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GenerateRecommendedPolicyV2Input, ...func(*securityhub.Options)) (*securityhub.GenerateRecommendedPolicyV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GenerateRecommendedPolicyV2Input, ...func(*securityhub.Options)) *securityhub.GenerateRecommendedPolicyV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GenerateRecommendedPolicyV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GenerateRecommendedPolicyV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAdministratorAccount provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAdministratorAccount(ctx context.Context, params *securityhub.GetAdministratorAccountInput, optFns ...func(*securityhub.Options)) (*securityhub.GetAdministratorAccountOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2633,6 +2670,43 @@ func (_m *IClient) GetMembers(ctx context.Context, params *securityhub.GetMember
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetMembersInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRecommendedPolicyV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecommendedPolicyV2(ctx context.Context, params *securityhub.GetRecommendedPolicyV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetRecommendedPolicyV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecommendedPolicyV2")
+	}
+
+	var r0 *securityhub.GetRecommendedPolicyV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetRecommendedPolicyV2Input, ...func(*securityhub.Options)) (*securityhub.GetRecommendedPolicyV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetRecommendedPolicyV2Input, ...func(*securityhub.Options)) *securityhub.GetRecommendedPolicyV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetRecommendedPolicyV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetRecommendedPolicyV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

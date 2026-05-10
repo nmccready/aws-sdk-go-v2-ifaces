@@ -34,19 +34,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestAllowVendedLogDeliveryForResource", func(t *testing.T) {
-        input := &devopsagent.AllowVendedLogDeliveryForResourceInput{}
-        output := &devopsagent.AllowVendedLogDeliveryForResourceOutput{}
-
-        mockClient.On("AllowVendedLogDeliveryForResource", ctx, input).Return(output, nil)
-
-        result, err := mockClient.AllowVendedLogDeliveryForResource(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestAssociateService", func(t *testing.T) {
         input := &devopsagent.AssociateServiceInput{}
         output := &devopsagent.AssociateServiceOutput{}

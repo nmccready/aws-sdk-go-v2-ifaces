@@ -385,6 +385,43 @@ func (_m *IClient) DeleteChannelPolicy(ctx context.Context, params *mediatailor.
 	return r0, r1
 }
 
+// DeleteFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFunction(ctx context.Context, params *mediatailor.DeleteFunctionInput, optFns ...func(*mediatailor.Options)) (*mediatailor.DeleteFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFunction")
+	}
+
+	var r0 *mediatailor.DeleteFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.DeleteFunctionInput, ...func(*mediatailor.Options)) (*mediatailor.DeleteFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.DeleteFunctionInput, ...func(*mediatailor.Options)) *mediatailor.DeleteFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediatailor.DeleteFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediatailor.DeleteFunctionInput, ...func(*mediatailor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteLiveSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteLiveSource(ctx context.Context, params *mediatailor.DeleteLiveSourceInput, optFns ...func(*mediatailor.Options)) (*mediatailor.DeleteLiveSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -866,6 +903,43 @@ func (_m *IClient) GetChannelSchedule(ctx context.Context, params *mediatailor.G
 	return r0, r1
 }
 
+// GetFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFunction(ctx context.Context, params *mediatailor.GetFunctionInput, optFns ...func(*mediatailor.Options)) (*mediatailor.GetFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFunction")
+	}
+
+	var r0 *mediatailor.GetFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.GetFunctionInput, ...func(*mediatailor.Options)) (*mediatailor.GetFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.GetFunctionInput, ...func(*mediatailor.Options)) *mediatailor.GetFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediatailor.GetFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediatailor.GetFunctionInput, ...func(*mediatailor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPlaybackConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPlaybackConfiguration(ctx context.Context, params *mediatailor.GetPlaybackConfigurationInput, optFns ...func(*mediatailor.Options)) (*mediatailor.GetPlaybackConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1006,6 +1080,43 @@ func (_m *IClient) ListChannels(ctx context.Context, params *mediatailor.ListCha
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediatailor.ListChannelsInput, ...func(*mediatailor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFunctions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFunctions(ctx context.Context, params *mediatailor.ListFunctionsInput, optFns ...func(*mediatailor.Options)) (*mediatailor.ListFunctionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFunctions")
+	}
+
+	var r0 *mediatailor.ListFunctionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.ListFunctionsInput, ...func(*mediatailor.Options)) (*mediatailor.ListFunctionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.ListFunctionsInput, ...func(*mediatailor.Options)) *mediatailor.ListFunctionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediatailor.ListFunctionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediatailor.ListFunctionsInput, ...func(*mediatailor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1283,6 +1394,43 @@ func (_m *IClient) PutChannelPolicy(ctx context.Context, params *mediatailor.Put
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediatailor.PutChannelPolicyInput, ...func(*mediatailor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutFunction(ctx context.Context, params *mediatailor.PutFunctionInput, optFns ...func(*mediatailor.Options)) (*mediatailor.PutFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutFunction")
+	}
+
+	var r0 *mediatailor.PutFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.PutFunctionInput, ...func(*mediatailor.Options)) (*mediatailor.PutFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediatailor.PutFunctionInput, ...func(*mediatailor.Options)) *mediatailor.PutFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediatailor.PutFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediatailor.PutFunctionInput, ...func(*mediatailor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

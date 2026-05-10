@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateABTest", func(t *testing.T) {
+        input := &bedrockagentcore.CreateABTestInput{}
+        output := &bedrockagentcore.CreateABTestOutput{}
+
+        mockClient.On("CreateABTest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateABTest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvent", func(t *testing.T) {
         input := &bedrockagentcore.CreateEventInput{}
         output := &bedrockagentcore.CreateEventOutput{}
@@ -93,6 +106,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateEvent", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePaymentInstrument", func(t *testing.T) {
+        input := &bedrockagentcore.CreatePaymentInstrumentInput{}
+        output := &bedrockagentcore.CreatePaymentInstrumentOutput{}
+
+        mockClient.On("CreatePaymentInstrument", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePaymentInstrument(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePaymentSession", func(t *testing.T) {
+        input := &bedrockagentcore.CreatePaymentSessionInput{}
+        output := &bedrockagentcore.CreatePaymentSessionOutput{}
+
+        mockClient.On("CreatePaymentSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePaymentSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteABTest", func(t *testing.T) {
+        input := &bedrockagentcore.DeleteABTestInput{}
+        output := &bedrockagentcore.DeleteABTestOutput{}
+
+        mockClient.On("DeleteABTest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteABTest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBatchEvaluation", func(t *testing.T) {
+        input := &bedrockagentcore.DeleteBatchEvaluationInput{}
+        output := &bedrockagentcore.DeleteBatchEvaluationOutput{}
+
+        mockClient.On("DeleteBatchEvaluation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBatchEvaluation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,6 +190,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeletePaymentInstrument", func(t *testing.T) {
+        input := &bedrockagentcore.DeletePaymentInstrumentInput{}
+        output := &bedrockagentcore.DeletePaymentInstrumentOutput{}
+
+        mockClient.On("DeletePaymentInstrument", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePaymentInstrument(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePaymentSession", func(t *testing.T) {
+        input := &bedrockagentcore.DeletePaymentSessionInput{}
+        output := &bedrockagentcore.DeletePaymentSessionOutput{}
+
+        mockClient.On("DeletePaymentSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePaymentSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRecommendation", func(t *testing.T) {
+        input := &bedrockagentcore.DeleteRecommendationInput{}
+        output := &bedrockagentcore.DeleteRecommendationOutput{}
+
+        mockClient.On("DeleteRecommendation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRecommendation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEvaluate", func(t *testing.T) {
         input := &bedrockagentcore.EvaluateInput{}
         output := &bedrockagentcore.EvaluateOutput{}
@@ -138,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetABTest", func(t *testing.T) {
+        input := &bedrockagentcore.GetABTestInput{}
+        output := &bedrockagentcore.GetABTestOutput{}
+
+        mockClient.On("GetABTest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetABTest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAgentCard", func(t *testing.T) {
         input := &bedrockagentcore.GetAgentCardInput{}
         output := &bedrockagentcore.GetAgentCardOutput{}
@@ -145,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentCard", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentCard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetBatchEvaluation", func(t *testing.T) {
+        input := &bedrockagentcore.GetBatchEvaluationInput{}
+        output := &bedrockagentcore.GetBatchEvaluationOutput{}
+
+        mockClient.On("GetBatchEvaluation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBatchEvaluation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +333,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPaymentInstrument", func(t *testing.T) {
+        input := &bedrockagentcore.GetPaymentInstrumentInput{}
+        output := &bedrockagentcore.GetPaymentInstrumentOutput{}
+
+        mockClient.On("GetPaymentInstrument", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPaymentInstrument(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPaymentInstrumentBalance", func(t *testing.T) {
+        input := &bedrockagentcore.GetPaymentInstrumentBalanceInput{}
+        output := &bedrockagentcore.GetPaymentInstrumentBalanceOutput{}
+
+        mockClient.On("GetPaymentInstrumentBalance", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPaymentInstrumentBalance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPaymentSession", func(t *testing.T) {
+        input := &bedrockagentcore.GetPaymentSessionInput{}
+        output := &bedrockagentcore.GetPaymentSessionOutput{}
+
+        mockClient.On("GetPaymentSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPaymentSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecommendation", func(t *testing.T) {
+        input := &bedrockagentcore.GetRecommendationInput{}
+        output := &bedrockagentcore.GetRecommendationOutput{}
+
+        mockClient.On("GetRecommendation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecommendation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetResourceApiKey", func(t *testing.T) {
         input := &bedrockagentcore.GetResourceApiKeyInput{}
         output := &bedrockagentcore.GetResourceApiKeyOutput{}
@@ -223,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResourceOauth2Token", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResourceOauth2Token(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcePaymentToken", func(t *testing.T) {
+        input := &bedrockagentcore.GetResourcePaymentTokenInput{}
+        output := &bedrockagentcore.GetResourcePaymentTokenOutput{}
+
+        mockClient.On("GetResourcePaymentToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePaymentToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,6 +515,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeHarness", func(t *testing.T) {
+        input := &bedrockagentcore.InvokeHarnessInput{}
+        output := &bedrockagentcore.InvokeHarnessOutput{}
+
+        mockClient.On("InvokeHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListABTests", func(t *testing.T) {
+        input := &bedrockagentcore.ListABTestsInput{}
+        output := &bedrockagentcore.ListABTestsOutput{}
+
+        mockClient.On("ListABTests", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListABTests(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListActors", func(t *testing.T) {
         input := &bedrockagentcore.ListActorsInput{}
         output := &bedrockagentcore.ListActorsOutput{}
@@ -327,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListActors", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListActors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBatchEvaluations", func(t *testing.T) {
+        input := &bedrockagentcore.ListBatchEvaluationsInput{}
+        output := &bedrockagentcore.ListBatchEvaluationsOutput{}
+
+        mockClient.On("ListBatchEvaluations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBatchEvaluations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +632,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPaymentInstruments", func(t *testing.T) {
+        input := &bedrockagentcore.ListPaymentInstrumentsInput{}
+        output := &bedrockagentcore.ListPaymentInstrumentsOutput{}
+
+        mockClient.On("ListPaymentInstruments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPaymentInstruments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPaymentSessions", func(t *testing.T) {
+        input := &bedrockagentcore.ListPaymentSessionsInput{}
+        output := &bedrockagentcore.ListPaymentSessionsOutput{}
+
+        mockClient.On("ListPaymentSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPaymentSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecommendations", func(t *testing.T) {
+        input := &bedrockagentcore.ListRecommendationsInput{}
+        output := &bedrockagentcore.ListRecommendationsOutput{}
+
+        mockClient.On("ListRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListSessions", func(t *testing.T) {
         input := &bedrockagentcore.ListSessionsInput{}
         output := &bedrockagentcore.ListSessionsOutput{}
@@ -405,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestProcessPayment", func(t *testing.T) {
+        input := &bedrockagentcore.ProcessPaymentInput{}
+        output := &bedrockagentcore.ProcessPaymentOutput{}
+
+        mockClient.On("ProcessPayment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ProcessPayment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartBatchEvaluation", func(t *testing.T) {
+        input := &bedrockagentcore.StartBatchEvaluationInput{}
+        output := &bedrockagentcore.StartBatchEvaluationOutput{}
+
+        mockClient.On("StartBatchEvaluation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartBatchEvaluation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartBrowserSession", func(t *testing.T) {
         input := &bedrockagentcore.StartBrowserSessionInput{}
         output := &bedrockagentcore.StartBrowserSessionOutput{}
@@ -489,6 +788,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartRecommendation", func(t *testing.T) {
+        input := &bedrockagentcore.StartRecommendationInput{}
+        output := &bedrockagentcore.StartRecommendationOutput{}
+
+        mockClient.On("StartRecommendation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRecommendation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopBatchEvaluation", func(t *testing.T) {
+        input := &bedrockagentcore.StopBatchEvaluationInput{}
+        output := &bedrockagentcore.StopBatchEvaluationOutput{}
+
+        mockClient.On("StopBatchEvaluation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopBatchEvaluation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopBrowserSession", func(t *testing.T) {
         input := &bedrockagentcore.StopBrowserSessionInput{}
         output := &bedrockagentcore.StopBrowserSessionOutput{}
@@ -522,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopRuntimeSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopRuntimeSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateABTest", func(t *testing.T) {
+        input := &bedrockagentcore.UpdateABTestInput{}
+        output := &bedrockagentcore.UpdateABTestOutput{}
+
+        mockClient.On("UpdateABTest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateABTest(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -762,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMonitorSettings", func(t *testing.T) {
+        input := &deadline.GetMonitorSettingsInput{}
+        output := &deadline.GetMonitorSettingsOutput{}
+
+        mockClient.On("GetMonitorSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMonitorSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetQueue", func(t *testing.T) {
         input := &deadline.GetQueueInput{}
         output := &deadline.GetQueueOutput{}
@@ -1471,6 +1484,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateMonitor", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMonitorSettings", func(t *testing.T) {
+        input := &deadline.UpdateMonitorSettingsInput{}
+        output := &deadline.UpdateMonitorSettingsOutput{}
+
+        mockClient.On("UpdateMonitorSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMonitorSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

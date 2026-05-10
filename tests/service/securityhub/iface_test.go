@@ -723,6 +723,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGenerateRecommendedPolicyV2", func(t *testing.T) {
+        input := &securityhub.GenerateRecommendedPolicyV2Input{}
+        output := &securityhub.GenerateRecommendedPolicyV2Output{}
+
+        mockClient.On("GenerateRecommendedPolicyV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateRecommendedPolicyV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAdministratorAccount", func(t *testing.T) {
         input := &securityhub.GetAdministratorAccountInput{}
         output := &securityhub.GetAdministratorAccountOutput{}
@@ -951,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetMembers", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetMembers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecommendedPolicyV2", func(t *testing.T) {
+        input := &securityhub.GetRecommendedPolicyV2Input{}
+        output := &securityhub.GetRecommendedPolicyV2Output{}
+
+        mockClient.On("GetRecommendedPolicyV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecommendedPolicyV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteFunction", func(t *testing.T) {
+        input := &mediatailor.DeleteFunctionInput{}
+        output := &mediatailor.DeleteFunctionOutput{}
+
+        mockClient.On("DeleteFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLiveSource", func(t *testing.T) {
         input := &mediatailor.DeleteLiveSourceInput{}
         output := &mediatailor.DeleteLiveSourceOutput{}
@@ -333,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFunction", func(t *testing.T) {
+        input := &mediatailor.GetFunctionInput{}
+        output := &mediatailor.GetFunctionOutput{}
+
+        mockClient.On("GetFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPlaybackConfiguration", func(t *testing.T) {
         input := &mediatailor.GetPlaybackConfigurationInput{}
         output := &mediatailor.GetPlaybackConfigurationOutput{}
@@ -379,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListChannels", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListChannels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFunctions", func(t *testing.T) {
+        input := &mediatailor.ListFunctionsInput{}
+        output := &mediatailor.ListFunctionsOutput{}
+
+        mockClient.On("ListFunctions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFunctions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -470,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutChannelPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutChannelPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutFunction", func(t *testing.T) {
+        input := &mediatailor.PutFunctionInput{}
+        output := &mediatailor.PutFunctionOutput{}
+
+        mockClient.On("PutFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutFunction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

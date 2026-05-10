@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeContainerGroupPortMappings", func(t *testing.T) {
+        input := &gamelift.DescribeContainerGroupPortMappingsInput{}
+        output := &gamelift.DescribeContainerGroupPortMappingsOutput{}
+
+        mockClient.On("DescribeContainerGroupPortMappings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeContainerGroupPortMappings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeEC2InstanceLimits", func(t *testing.T) {
         input := &gamelift.DescribeEC2InstanceLimitsInput{}
         output := &gamelift.DescribeEC2InstanceLimitsOutput{}

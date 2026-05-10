@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAdConfiguration", func(t *testing.T) {
+        input := &ivs.CreateAdConfigurationInput{}
+        output := &ivs.CreateAdConfigurationOutput{}
+
+        mockClient.On("CreateAdConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAdConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateChannel", func(t *testing.T) {
         input := &ivs.CreateChannelInput{}
         output := &ivs.CreateChannelOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateStreamKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateStreamKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAdConfiguration", func(t *testing.T) {
+        input := &ivs.DeleteAdConfigurationInput{}
+        output := &ivs.DeleteAdConfigurationOutput{}
+
+        mockClient.On("DeleteAdConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAdConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteStreamKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteStreamKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAdConfiguration", func(t *testing.T) {
+        input := &ivs.GetAdConfigurationInput{}
+        output := &ivs.GetAdConfigurationOutput{}
+
+        mockClient.On("GetAdConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAdConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +327,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ImportPlaybackKeyPair", ctx, input).Return(output, nil)
 
         result, err := mockClient.ImportPlaybackKeyPair(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestInsertAdBreak", func(t *testing.T) {
+        input := &ivs.InsertAdBreakInput{}
+        output := &ivs.InsertAdBreakOutput{}
+
+        mockClient.On("InsertAdBreak", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InsertAdBreak(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAdConfigurations", func(t *testing.T) {
+        input := &ivs.ListAdConfigurationsInput{}
+        output := &ivs.ListAdConfigurationsOutput{}
+
+        mockClient.On("ListAdConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAdConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

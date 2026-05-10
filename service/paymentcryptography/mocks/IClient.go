@@ -51,6 +51,43 @@ func (_m *IClient) AddKeyReplicationRegions(ctx context.Context, params *payment
 	return r0, r1
 }
 
+// AssociateMpaTeam provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateMpaTeam(ctx context.Context, params *paymentcryptography.AssociateMpaTeamInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.AssociateMpaTeamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateMpaTeam")
+	}
+
+	var r0 *paymentcryptography.AssociateMpaTeamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.AssociateMpaTeamInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.AssociateMpaTeamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.AssociateMpaTeamInput, ...func(*paymentcryptography.Options)) *paymentcryptography.AssociateMpaTeamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.AssociateMpaTeamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.AssociateMpaTeamInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAlias provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAlias(ctx context.Context, params *paymentcryptography.CreateAliasInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.CreateAliasOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -199,6 +236,43 @@ func (_m *IClient) DeleteKey(ctx context.Context, params *paymentcryptography.De
 	return r0, r1
 }
 
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *paymentcryptography.DeleteResourcePolicyInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *paymentcryptography.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.DeleteResourcePolicyInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.DeleteResourcePolicyInput, ...func(*paymentcryptography.Options)) *paymentcryptography.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.DeleteResourcePolicyInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisableDefaultKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisableDefaultKeyReplicationRegions(ctx context.Context, params *paymentcryptography.DisableDefaultKeyReplicationRegionsInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.DisableDefaultKeyReplicationRegionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +302,43 @@ func (_m *IClient) DisableDefaultKeyReplicationRegions(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.DisableDefaultKeyReplicationRegionsInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateMpaTeam provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateMpaTeam(ctx context.Context, params *paymentcryptography.DisassociateMpaTeamInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.DisassociateMpaTeamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateMpaTeam")
+	}
+
+	var r0 *paymentcryptography.DisassociateMpaTeamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.DisassociateMpaTeamInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.DisassociateMpaTeamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.DisassociateMpaTeamInput, ...func(*paymentcryptography.Options)) *paymentcryptography.DisassociateMpaTeamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.DisassociateMpaTeamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.DisassociateMpaTeamInput, ...func(*paymentcryptography.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -458,6 +569,43 @@ func (_m *IClient) GetKey(ctx context.Context, params *paymentcryptography.GetKe
 	return r0, r1
 }
 
+// GetMpaTeamAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMpaTeamAssociation(ctx context.Context, params *paymentcryptography.GetMpaTeamAssociationInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.GetMpaTeamAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMpaTeamAssociation")
+	}
+
+	var r0 *paymentcryptography.GetMpaTeamAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetMpaTeamAssociationInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.GetMpaTeamAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetMpaTeamAssociationInput, ...func(*paymentcryptography.Options)) *paymentcryptography.GetMpaTeamAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.GetMpaTeamAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.GetMpaTeamAssociationInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetParametersForExport provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetParametersForExport(ctx context.Context, params *paymentcryptography.GetParametersForExportInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.GetParametersForExportOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -561,6 +709,43 @@ func (_m *IClient) GetPublicKeyCertificate(ctx context.Context, params *paymentc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.GetPublicKeyCertificateInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *paymentcryptography.GetResourcePolicyInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *paymentcryptography.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetResourcePolicyInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.GetResourcePolicyInput, ...func(*paymentcryptography.Options)) *paymentcryptography.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.GetResourcePolicyInput, ...func(*paymentcryptography.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -733,6 +918,43 @@ func (_m *IClient) Options() paymentcryptography.Options {
 	}
 
 	return r0
+}
+
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *paymentcryptography.PutResourcePolicyInput, optFns ...func(*paymentcryptography.Options)) (*paymentcryptography.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *paymentcryptography.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.PutResourcePolicyInput, ...func(*paymentcryptography.Options)) (*paymentcryptography.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *paymentcryptography.PutResourcePolicyInput, ...func(*paymentcryptography.Options)) *paymentcryptography.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*paymentcryptography.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *paymentcryptography.PutResourcePolicyInput, ...func(*paymentcryptography.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // RemoveKeyReplicationRegions provides a mock function with given fields: ctx, params, optFns

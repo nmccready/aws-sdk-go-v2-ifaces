@@ -35,6 +35,7 @@ type IClient interface {
  GenerateDataKeyWithoutPlaintext(ctx context.Context, params *GenerateDataKeyWithoutPlaintextInput, optFns ...func(*Options)) (*GenerateDataKeyWithoutPlaintextOutput, error) 
  GenerateMac(ctx context.Context, params *GenerateMacInput, optFns ...func(*Options)) (*GenerateMacOutput, error) 
  GenerateRandom(ctx context.Context, params *GenerateRandomInput, optFns ...func(*Options)) (*GenerateRandomOutput, error) 
+ GetKeyLastUsage(ctx context.Context, params *GetKeyLastUsageInput, optFns ...func(*Options)) (*GetKeyLastUsageOutput, error) 
  GetKeyPolicy(ctx context.Context, params *GetKeyPolicyInput, optFns ...func(*Options)) (*GetKeyPolicyOutput, error) 
  GetKeyRotationStatus(ctx context.Context, params *GetKeyRotationStatusInput, optFns ...func(*Options)) (*GetKeyRotationStatusOutput, error) 
  GetParametersForImport(ctx context.Context, params *GetParametersForImportInput, optFns ...func(*Options)) (*GetParametersForImportOutput, error) 

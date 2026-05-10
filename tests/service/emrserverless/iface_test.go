@@ -112,6 +112,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetResourceDashboard", func(t *testing.T) {
+        input := &emrserverless.GetResourceDashboardInput{}
+        output := &emrserverless.GetResourceDashboardOutput{}
+
+        mockClient.On("GetResourceDashboard", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourceDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSession", func(t *testing.T) {
+        input := &emrserverless.GetSessionInput{}
+        output := &emrserverless.GetSessionOutput{}
+
+        mockClient.On("GetSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSessionEndpoint", func(t *testing.T) {
+        input := &emrserverless.GetSessionEndpointInput{}
+        output := &emrserverless.GetSessionEndpointOutput{}
+
+        mockClient.On("GetSessionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSessionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListApplications", func(t *testing.T) {
         input := &emrserverless.ListApplicationsInput{}
         output := &emrserverless.ListApplicationsOutput{}
@@ -145,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListJobRuns", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListJobRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSessions", func(t *testing.T) {
+        input := &emrserverless.ListSessionsInput{}
+        output := &emrserverless.ListSessionsOutput{}
+
+        mockClient.On("ListSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartSession", func(t *testing.T) {
+        input := &emrserverless.StartSessionInput{}
+        output := &emrserverless.StartSessionOutput{}
+
+        mockClient.On("StartSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopApplication", func(t *testing.T) {
         input := &emrserverless.StopApplicationInput{}
         output := &emrserverless.StopApplicationOutput{}
@@ -210,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("TagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTerminateSession", func(t *testing.T) {
+        input := &emrserverless.TerminateSessionInput{}
+        output := &emrserverless.TerminateSessionOutput{}
+
+        mockClient.On("TerminateSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

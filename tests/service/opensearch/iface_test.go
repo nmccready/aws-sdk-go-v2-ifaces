@@ -1009,6 +1009,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRollbackServiceSoftwareUpdate", func(t *testing.T) {
+        input := &opensearch.RollbackServiceSoftwareUpdateInput{}
+        output := &opensearch.RollbackServiceSoftwareUpdateOutput{}
+
+        mockClient.On("RollbackServiceSoftwareUpdate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RollbackServiceSoftwareUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartDomainMaintenance", func(t *testing.T) {
         input := &opensearch.StartDomainMaintenanceInput{}
         output := &opensearch.StartDomainMaintenanceOutput{}

@@ -108,6 +108,7 @@ type IClient interface {
  DescribePendingMaintenanceActions(ctx context.Context, params *DescribePendingMaintenanceActionsInput, optFns ...func(*Options)) (*DescribePendingMaintenanceActionsOutput, error) 
  DescribeReservedDBInstances(ctx context.Context, params *DescribeReservedDBInstancesInput, optFns ...func(*Options)) (*DescribeReservedDBInstancesOutput, error) 
  DescribeReservedDBInstancesOfferings(ctx context.Context, params *DescribeReservedDBInstancesOfferingsInput, optFns ...func(*Options)) (*DescribeReservedDBInstancesOfferingsOutput, error) 
+ DescribeServerlessV2PlatformVersions(ctx context.Context, params *DescribeServerlessV2PlatformVersionsInput, optFns ...func(*Options)) (*DescribeServerlessV2PlatformVersionsOutput, error) 
  DescribeSourceRegions(ctx context.Context, params *DescribeSourceRegionsInput, optFns ...func(*Options)) (*DescribeSourceRegionsOutput, error) 
  DescribeTenantDatabases(ctx context.Context, params *DescribeTenantDatabasesInput, optFns ...func(*Options)) (*DescribeTenantDatabasesOutput, error) 
  DescribeValidDBInstanceModifications(ctx context.Context, params *DescribeValidDBInstanceModificationsInput, optFns ...func(*Options)) (*DescribeValidDBInstanceModificationsOutput, error) 
