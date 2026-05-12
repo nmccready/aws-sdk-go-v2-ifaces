@@ -51,6 +51,7 @@ type IClient interface {
  DescribeCompute(ctx context.Context, params *DescribeComputeInput, optFns ...func(*Options)) (*DescribeComputeOutput, error) 
  DescribeContainerFleet(ctx context.Context, params *DescribeContainerFleetInput, optFns ...func(*Options)) (*DescribeContainerFleetOutput, error) 
  DescribeContainerGroupDefinition(ctx context.Context, params *DescribeContainerGroupDefinitionInput, optFns ...func(*Options)) (*DescribeContainerGroupDefinitionOutput, error) 
+ DescribeContainerGroupPortMappings(ctx context.Context, params *DescribeContainerGroupPortMappingsInput, optFns ...func(*Options)) (*DescribeContainerGroupPortMappingsOutput, error) 
  DescribeEC2InstanceLimits(ctx context.Context, params *DescribeEC2InstanceLimitsInput, optFns ...func(*Options)) (*DescribeEC2InstanceLimitsOutput, error) 
  DescribeFleetAttributes(ctx context.Context, params *DescribeFleetAttributesInput, optFns ...func(*Options)) (*DescribeFleetAttributesOutput, error) 
  DescribeFleetCapacity(ctx context.Context, params *DescribeFleetCapacityInput, optFns ...func(*Options)) (*DescribeFleetCapacityOutput, error) 

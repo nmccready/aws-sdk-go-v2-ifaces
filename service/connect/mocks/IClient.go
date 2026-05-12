@@ -3974,6 +3974,43 @@ func (_m *IClient) DescribeAgentStatus(ctx context.Context, params *connect.Desc
 	return r0, r1
 }
 
+// DescribeAttachedFilesConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAttachedFilesConfiguration(ctx context.Context, params *connect.DescribeAttachedFilesConfigurationInput, optFns ...func(*connect.Options)) (*connect.DescribeAttachedFilesConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAttachedFilesConfiguration")
+	}
+
+	var r0 *connect.DescribeAttachedFilesConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeAttachedFilesConfigurationInput, ...func(*connect.Options)) (*connect.DescribeAttachedFilesConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeAttachedFilesConfigurationInput, ...func(*connect.Options)) *connect.DescribeAttachedFilesConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeAttachedFilesConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeAttachedFilesConfigurationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAuthenticationProfile provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAuthenticationProfile(ctx context.Context, params *connect.DescribeAuthenticationProfileInput, optFns ...func(*connect.Options)) (*connect.DescribeAuthenticationProfileOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6667,6 +6704,43 @@ func (_m *IClient) ListAssociatedContacts(ctx context.Context, params *connect.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListAssociatedContactsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAttachedFilesConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAttachedFilesConfigurations(ctx context.Context, params *connect.ListAttachedFilesConfigurationsInput, optFns ...func(*connect.Options)) (*connect.ListAttachedFilesConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAttachedFilesConfigurations")
+	}
+
+	var r0 *connect.ListAttachedFilesConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListAttachedFilesConfigurationsInput, ...func(*connect.Options)) (*connect.ListAttachedFilesConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListAttachedFilesConfigurationsInput, ...func(*connect.Options)) *connect.ListAttachedFilesConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListAttachedFilesConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListAttachedFilesConfigurationsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -11310,6 +11384,43 @@ func (_m *IClient) UpdateAgentStatus(ctx context.Context, params *connect.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateAgentStatusInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAttachedFilesConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAttachedFilesConfiguration(ctx context.Context, params *connect.UpdateAttachedFilesConfigurationInput, optFns ...func(*connect.Options)) (*connect.UpdateAttachedFilesConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAttachedFilesConfiguration")
+	}
+
+	var r0 *connect.UpdateAttachedFilesConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateAttachedFilesConfigurationInput, ...func(*connect.Options)) (*connect.UpdateAttachedFilesConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateAttachedFilesConfigurationInput, ...func(*connect.Options)) *connect.UpdateAttachedFilesConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateAttachedFilesConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateAttachedFilesConfigurationInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

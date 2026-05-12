@@ -10,7 +10,6 @@ import (
 // IClient defines the interface for devopsagent
 type IClient interface {
  Options() Options 
- AllowVendedLogDeliveryForResource(ctx context.Context, params *AllowVendedLogDeliveryForResourceInput, optFns ...func(*Options)) (*AllowVendedLogDeliveryForResourceOutput, error) 
  AssociateService(ctx context.Context, params *AssociateServiceInput, optFns ...func(*Options)) (*AssociateServiceOutput, error) 
  CreateAgentSpace(ctx context.Context, params *CreateAgentSpaceInput, optFns ...func(*Options)) (*CreateAgentSpaceOutput, error) 
  CreateBacklogTask(ctx context.Context, params *CreateBacklogTaskInput, optFns ...func(*Options)) (*CreateBacklogTaskOutput, error) 

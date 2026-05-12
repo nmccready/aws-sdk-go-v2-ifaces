@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcceptTransitGatewayClientVpnAttachment", func(t *testing.T) {
+        input := &ec2.AcceptTransitGatewayClientVpnAttachmentInput{}
+        output := &ec2.AcceptTransitGatewayClientVpnAttachmentOutput{}
+
+        mockClient.On("AcceptTransitGatewayClientVpnAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcceptTransitGatewayClientVpnAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAcceptTransitGatewayMulticastDomainAssociations", func(t *testing.T) {
         input := &ec2.AcceptTransitGatewayMulticastDomainAssociationsInput{}
         output := &ec2.AcceptTransitGatewayMulticastDomainAssociationsOutput{}
@@ -3005,6 +3018,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTransitGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTransitGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTransitGatewayClientVpnAttachment", func(t *testing.T) {
+        input := &ec2.DeleteTransitGatewayClientVpnAttachmentInput{}
+        output := &ec2.DeleteTransitGatewayClientVpnAttachmentOutput{}
+
+        mockClient.On("DeleteTransitGatewayClientVpnAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTransitGatewayClientVpnAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7379,6 +7405,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetManagedResourceVisibility", func(t *testing.T) {
+        input := &ec2.GetManagedResourceVisibilityInput{}
+        output := &ec2.GetManagedResourceVisibilityOutput{}
+
+        mockClient.On("GetManagedResourceVisibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetManagedResourceVisibility(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetNetworkInsightsAccessScopeAnalysisFindings", func(t *testing.T) {
         input := &ec2.GetNetworkInsightsAccessScopeAnalysisFindingsInput{}
         output := &ec2.GetNetworkInsightsAccessScopeAnalysisFindingsOutput{}
@@ -8328,6 +8367,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyManagedResourceVisibility", func(t *testing.T) {
+        input := &ec2.ModifyManagedResourceVisibilityInput{}
+        output := &ec2.ModifyManagedResourceVisibilityOutput{}
+
+        mockClient.On("ModifyManagedResourceVisibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyManagedResourceVisibility(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyNetworkInterfaceAttribute", func(t *testing.T) {
         input := &ec2.ModifyNetworkInterfaceAttributeInput{}
         output := &ec2.ModifyNetworkInterfaceAttributeOutput{}
@@ -9102,6 +9154,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RejectCapacityReservationBillingOwnership", ctx, input).Return(output, nil)
 
         result, err := mockClient.RejectCapacityReservationBillingOwnership(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRejectTransitGatewayClientVpnAttachment", func(t *testing.T) {
+        input := &ec2.RejectTransitGatewayClientVpnAttachmentInput{}
+        output := &ec2.RejectTransitGatewayClientVpnAttachmentOutput{}
+
+        mockClient.On("RejectTransitGatewayClientVpnAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RejectTransitGatewayClientVpnAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelJob", func(t *testing.T) {
+        input := &location.CancelJobInput{}
+        output := &location.CancelJobOutput{}
+
+        mockClient.On("CancelJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGeofenceCollection", func(t *testing.T) {
         input := &location.CreateGeofenceCollectionInput{}
         output := &location.CreateGeofenceCollectionOutput{}
@@ -450,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetJob", func(t *testing.T) {
+        input := &location.GetJobInput{}
+        output := &location.GetJobOutput{}
+
+        mockClient.On("GetJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetMapGlyphs", func(t *testing.T) {
         input := &location.GetMapGlyphsInput{}
         output := &location.GetMapGlyphsOutput{}
@@ -548,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGeofences", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGeofences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobs", func(t *testing.T) {
+        input := &location.ListJobsInput{}
+        output := &location.ListJobsOutput{}
+
+        mockClient.On("ListJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -691,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchPlaceIndexForText", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchPlaceIndexForText(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartJob", func(t *testing.T) {
+        input := &location.StartJobInput{}
+        output := &location.StartJobOutput{}
+
+        mockClient.On("StartJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

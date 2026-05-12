@@ -940,6 +940,43 @@ func (_m *IClient) GenerateRandom(ctx context.Context, params *kms.GenerateRando
 	return r0, r1
 }
 
+// GetKeyLastUsage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetKeyLastUsage(ctx context.Context, params *kms.GetKeyLastUsageInput, optFns ...func(*kms.Options)) (*kms.GetKeyLastUsageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetKeyLastUsage")
+	}
+
+	var r0 *kms.GetKeyLastUsageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kms.GetKeyLastUsageInput, ...func(*kms.Options)) (*kms.GetKeyLastUsageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kms.GetKeyLastUsageInput, ...func(*kms.Options)) *kms.GetKeyLastUsageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kms.GetKeyLastUsageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kms.GetKeyLastUsageInput, ...func(*kms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetKeyPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetKeyPolicy(ctx context.Context, params *kms.GetKeyPolicyInput, optFns ...func(*kms.Options)) (*kms.GetKeyPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))

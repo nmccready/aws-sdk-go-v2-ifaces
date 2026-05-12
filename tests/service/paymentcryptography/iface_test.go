@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateMpaTeam", func(t *testing.T) {
+        input := &paymentcryptography.AssociateMpaTeamInput{}
+        output := &paymentcryptography.AssociateMpaTeamOutput{}
+
+        mockClient.On("AssociateMpaTeam", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateMpaTeam(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAlias", func(t *testing.T) {
         input := &paymentcryptography.CreateAliasInput{}
         output := &paymentcryptography.CreateAliasOutput{}
@@ -99,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &paymentcryptography.DeleteResourcePolicyInput{}
+        output := &paymentcryptography.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableDefaultKeyReplicationRegions", func(t *testing.T) {
         input := &paymentcryptography.DisableDefaultKeyReplicationRegionsInput{}
         output := &paymentcryptography.DisableDefaultKeyReplicationRegionsOutput{}
@@ -106,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisableDefaultKeyReplicationRegions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisableDefaultKeyReplicationRegions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateMpaTeam", func(t *testing.T) {
+        input := &paymentcryptography.DisassociateMpaTeamInput{}
+        output := &paymentcryptography.DisassociateMpaTeamOutput{}
+
+        mockClient.On("DisassociateMpaTeam", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateMpaTeam(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMpaTeamAssociation", func(t *testing.T) {
+        input := &paymentcryptography.GetMpaTeamAssociationInput{}
+        output := &paymentcryptography.GetMpaTeamAssociationOutput{}
+
+        mockClient.On("GetMpaTeamAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMpaTeamAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetParametersForExport", func(t *testing.T) {
         input := &paymentcryptography.GetParametersForExportInput{}
         output := &paymentcryptography.GetParametersForExportOutput{}
@@ -223,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPublicKeyCertificate", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPublicKeyCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &paymentcryptography.GetResourcePolicyInput{}
+        output := &paymentcryptography.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -275,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &paymentcryptography.PutResourcePolicyInput{}
+        output := &paymentcryptography.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

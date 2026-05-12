@@ -52,6 +52,43 @@ func (_m *IClient) AssociateEipToVlan(ctx context.Context, params *evs.Associate
 	return r0, r1
 }
 
+// CreateEntitlement provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEntitlement(ctx context.Context, params *evs.CreateEntitlementInput, optFns ...func(*evs.Options)) (*evs.CreateEntitlementOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEntitlement")
+	}
+
+	var r0 *evs.CreateEntitlementOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.CreateEntitlementInput, ...func(*evs.Options)) (*evs.CreateEntitlementOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.CreateEntitlementInput, ...func(*evs.Options)) *evs.CreateEntitlementOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.CreateEntitlementOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.CreateEntitlementInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEnvironment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEnvironment(ctx context.Context, params *evs.CreateEnvironmentInput, optFns ...func(*evs.Options)) (*evs.CreateEnvironmentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +118,43 @@ func (_m *IClient) CreateEnvironment(ctx context.Context, params *evs.CreateEnvi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *evs.CreateEnvironmentInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateEnvironmentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEnvironmentConnector(ctx context.Context, params *evs.CreateEnvironmentConnectorInput, optFns ...func(*evs.Options)) (*evs.CreateEnvironmentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEnvironmentConnector")
+	}
+
+	var r0 *evs.CreateEnvironmentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.CreateEnvironmentConnectorInput, ...func(*evs.Options)) (*evs.CreateEnvironmentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.CreateEnvironmentConnectorInput, ...func(*evs.Options)) *evs.CreateEnvironmentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.CreateEnvironmentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.CreateEnvironmentConnectorInput, ...func(*evs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -126,6 +200,43 @@ func (_m *IClient) CreateEnvironmentHost(ctx context.Context, params *evs.Create
 	return r0, r1
 }
 
+// DeleteEntitlement provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEntitlement(ctx context.Context, params *evs.DeleteEntitlementInput, optFns ...func(*evs.Options)) (*evs.DeleteEntitlementOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEntitlement")
+	}
+
+	var r0 *evs.DeleteEntitlementOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.DeleteEntitlementInput, ...func(*evs.Options)) (*evs.DeleteEntitlementOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.DeleteEntitlementInput, ...func(*evs.Options)) *evs.DeleteEntitlementOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.DeleteEntitlementOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.DeleteEntitlementInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEnvironment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEnvironment(ctx context.Context, params *evs.DeleteEnvironmentInput, optFns ...func(*evs.Options)) (*evs.DeleteEnvironmentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -155,6 +266,43 @@ func (_m *IClient) DeleteEnvironment(ctx context.Context, params *evs.DeleteEnvi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *evs.DeleteEnvironmentInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteEnvironmentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEnvironmentConnector(ctx context.Context, params *evs.DeleteEnvironmentConnectorInput, optFns ...func(*evs.Options)) (*evs.DeleteEnvironmentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEnvironmentConnector")
+	}
+
+	var r0 *evs.DeleteEnvironmentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.DeleteEnvironmentConnectorInput, ...func(*evs.Options)) (*evs.DeleteEnvironmentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.DeleteEnvironmentConnectorInput, ...func(*evs.Options)) *evs.DeleteEnvironmentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.DeleteEnvironmentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.DeleteEnvironmentConnectorInput, ...func(*evs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -311,6 +459,43 @@ func (_m *IClient) GetVersions(ctx context.Context, params *evs.GetVersionsInput
 	return r0, r1
 }
 
+// ListEnvironmentConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEnvironmentConnectors(ctx context.Context, params *evs.ListEnvironmentConnectorsInput, optFns ...func(*evs.Options)) (*evs.ListEnvironmentConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEnvironmentConnectors")
+	}
+
+	var r0 *evs.ListEnvironmentConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.ListEnvironmentConnectorsInput, ...func(*evs.Options)) (*evs.ListEnvironmentConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.ListEnvironmentConnectorsInput, ...func(*evs.Options)) *evs.ListEnvironmentConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.ListEnvironmentConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.ListEnvironmentConnectorsInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEnvironmentHosts provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEnvironmentHosts(ctx context.Context, params *evs.ListEnvironmentHostsInput, optFns ...func(*evs.Options)) (*evs.ListEnvironmentHostsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -459,6 +644,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *evs.ListTags
 	return r0, r1
 }
 
+// ListVmEntitlements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListVmEntitlements(ctx context.Context, params *evs.ListVmEntitlementsInput, optFns ...func(*evs.Options)) (*evs.ListVmEntitlementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListVmEntitlements")
+	}
+
+	var r0 *evs.ListVmEntitlementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.ListVmEntitlementsInput, ...func(*evs.Options)) (*evs.ListVmEntitlementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.ListVmEntitlementsInput, ...func(*evs.Options)) *evs.ListVmEntitlementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.ListVmEntitlementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.ListVmEntitlementsInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() evs.Options {
 	ret := _m.Called()
@@ -543,6 +765,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *evs.UntagResourceI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *evs.UntagResourceInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateEnvironmentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateEnvironmentConnector(ctx context.Context, params *evs.UpdateEnvironmentConnectorInput, optFns ...func(*evs.Options)) (*evs.UpdateEnvironmentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateEnvironmentConnector")
+	}
+
+	var r0 *evs.UpdateEnvironmentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.UpdateEnvironmentConnectorInput, ...func(*evs.Options)) (*evs.UpdateEnvironmentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.UpdateEnvironmentConnectorInput, ...func(*evs.Options)) *evs.UpdateEnvironmentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.UpdateEnvironmentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.UpdateEnvironmentConnectorInput, ...func(*evs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

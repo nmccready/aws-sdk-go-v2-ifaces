@@ -359,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetKeyLastUsage", func(t *testing.T) {
+        input := &kms.GetKeyLastUsageInput{}
+        output := &kms.GetKeyLastUsageOutput{}
+
+        mockClient.On("GetKeyLastUsage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetKeyLastUsage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetKeyPolicy", func(t *testing.T) {
         input := &kms.GetKeyPolicyInput{}
         output := &kms.GetKeyPolicyOutput{}

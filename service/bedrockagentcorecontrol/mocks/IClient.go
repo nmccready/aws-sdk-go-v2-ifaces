@@ -237,6 +237,43 @@ func (_m *IClient) CreateCodeInterpreter(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// CreateConfigurationBundle provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConfigurationBundle(ctx context.Context, params *bedrockagentcorecontrol.CreateConfigurationBundleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateConfigurationBundleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConfigurationBundle")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateConfigurationBundleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateConfigurationBundleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateConfigurationBundleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateConfigurationBundleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEvaluator(ctx context.Context, params *bedrockagentcorecontrol.CreateEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -311,6 +348,43 @@ func (_m *IClient) CreateGateway(ctx context.Context, params *bedrockagentcoreco
 	return r0, r1
 }
 
+// CreateGatewayRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateGatewayRule(ctx context.Context, params *bedrockagentcorecontrol.CreateGatewayRuleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateGatewayRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateGatewayRule")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateGatewayRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateGatewayRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateGatewayRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateGatewayRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGatewayTarget provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGatewayTarget(ctx context.Context, params *bedrockagentcorecontrol.CreateGatewayTargetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateGatewayTargetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +414,43 @@ func (_m *IClient) CreateGatewayTarget(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayTargetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateHarness provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateHarness(ctx context.Context, params *bedrockagentcorecontrol.CreateHarnessInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateHarnessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateHarness")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateHarnessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateHarnessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateHarnessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateHarnessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -451,6 +562,117 @@ func (_m *IClient) CreateOnlineEvaluationConfig(ctx context.Context, params *bed
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePaymentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePaymentConnector(ctx context.Context, params *bedrockagentcorecontrol.CreatePaymentConnectorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePaymentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePaymentConnector")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreatePaymentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePaymentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreatePaymentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreatePaymentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePaymentCredentialProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePaymentCredentialProvider(ctx context.Context, params *bedrockagentcorecontrol.CreatePaymentCredentialProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePaymentCredentialProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePaymentCredentialProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreatePaymentCredentialProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePaymentCredentialProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreatePaymentCredentialProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreatePaymentCredentialProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePaymentManager provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePaymentManager(ctx context.Context, params *bedrockagentcorecontrol.CreatePaymentManagerInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePaymentManagerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePaymentManager")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreatePaymentManagerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreatePaymentManagerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreatePaymentManagerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreatePaymentManagerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreatePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -866,6 +1088,43 @@ func (_m *IClient) DeleteCodeInterpreter(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// DeleteConfigurationBundle provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConfigurationBundle(ctx context.Context, params *bedrockagentcorecontrol.DeleteConfigurationBundleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteConfigurationBundleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConfigurationBundle")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteConfigurationBundleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteConfigurationBundleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteConfigurationBundleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteConfigurationBundleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEvaluator(ctx context.Context, params *bedrockagentcorecontrol.DeleteEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -940,6 +1199,43 @@ func (_m *IClient) DeleteGateway(ctx context.Context, params *bedrockagentcoreco
 	return r0, r1
 }
 
+// DeleteGatewayRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGatewayRule(ctx context.Context, params *bedrockagentcorecontrol.DeleteGatewayRuleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteGatewayRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGatewayRule")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteGatewayRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteGatewayRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteGatewayRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteGatewayRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteGatewayTarget provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteGatewayTarget(ctx context.Context, params *bedrockagentcorecontrol.DeleteGatewayTargetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteGatewayTargetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -969,6 +1265,43 @@ func (_m *IClient) DeleteGatewayTarget(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayTargetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteHarness provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteHarness(ctx context.Context, params *bedrockagentcorecontrol.DeleteHarnessInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteHarnessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteHarness")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteHarnessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteHarnessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteHarnessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteHarnessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1080,6 +1413,117 @@ func (_m *IClient) DeleteOnlineEvaluationConfig(ctx context.Context, params *bed
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePaymentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePaymentConnector(ctx context.Context, params *bedrockagentcorecontrol.DeletePaymentConnectorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePaymentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePaymentConnector")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeletePaymentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePaymentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeletePaymentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeletePaymentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePaymentCredentialProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePaymentCredentialProvider(ctx context.Context, params *bedrockagentcorecontrol.DeletePaymentCredentialProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePaymentCredentialProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePaymentCredentialProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeletePaymentCredentialProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePaymentCredentialProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeletePaymentCredentialProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeletePaymentCredentialProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePaymentManager provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePaymentManager(ctx context.Context, params *bedrockagentcorecontrol.DeletePaymentManagerInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePaymentManagerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePaymentManager")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeletePaymentManagerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeletePaymentManagerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeletePaymentManagerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeletePaymentManagerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeletePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1532,6 +1976,80 @@ func (_m *IClient) GetCodeInterpreter(ctx context.Context, params *bedrockagentc
 	return r0, r1
 }
 
+// GetConfigurationBundle provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConfigurationBundle(ctx context.Context, params *bedrockagentcorecontrol.GetConfigurationBundleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetConfigurationBundleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConfigurationBundle")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetConfigurationBundleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetConfigurationBundleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetConfigurationBundleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetConfigurationBundleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConfigurationBundleVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConfigurationBundleVersion(ctx context.Context, params *bedrockagentcorecontrol.GetConfigurationBundleVersionInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetConfigurationBundleVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConfigurationBundleVersion")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetConfigurationBundleVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleVersionInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetConfigurationBundleVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleVersionInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetConfigurationBundleVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetConfigurationBundleVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleVersionInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEvaluator(ctx context.Context, params *bedrockagentcorecontrol.GetEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1606,6 +2124,43 @@ func (_m *IClient) GetGateway(ctx context.Context, params *bedrockagentcorecontr
 	return r0, r1
 }
 
+// GetGatewayRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetGatewayRule(ctx context.Context, params *bedrockagentcorecontrol.GetGatewayRuleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetGatewayRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetGatewayRule")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetGatewayRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetGatewayRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetGatewayRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetGatewayRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetGatewayTarget provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetGatewayTarget(ctx context.Context, params *bedrockagentcorecontrol.GetGatewayTargetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetGatewayTargetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1635,6 +2190,43 @@ func (_m *IClient) GetGatewayTarget(ctx context.Context, params *bedrockagentcor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetGatewayTargetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetHarness provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetHarness(ctx context.Context, params *bedrockagentcorecontrol.GetHarnessInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetHarnessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetHarness")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetHarnessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetHarnessInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetHarnessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetHarnessInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetHarnessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetHarnessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1746,6 +2338,117 @@ func (_m *IClient) GetOnlineEvaluationConfig(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPaymentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPaymentConnector(ctx context.Context, params *bedrockagentcorecontrol.GetPaymentConnectorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPaymentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPaymentConnector")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPaymentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPaymentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPaymentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPaymentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPaymentCredentialProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPaymentCredentialProvider(ctx context.Context, params *bedrockagentcorecontrol.GetPaymentCredentialProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPaymentCredentialProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPaymentCredentialProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPaymentCredentialProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPaymentCredentialProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPaymentCredentialProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPaymentCredentialProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPaymentManager provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPaymentManager(ctx context.Context, params *bedrockagentcorecontrol.GetPaymentManagerInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPaymentManagerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPaymentManager")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPaymentManagerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPaymentManagerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPaymentManagerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPaymentManagerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2309,6 +3012,80 @@ func (_m *IClient) ListCodeInterpreters(ctx context.Context, params *bedrockagen
 	return r0, r1
 }
 
+// ListConfigurationBundleVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConfigurationBundleVersions(ctx context.Context, params *bedrockagentcorecontrol.ListConfigurationBundleVersionsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListConfigurationBundleVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConfigurationBundleVersions")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListConfigurationBundleVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundleVersionsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListConfigurationBundleVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundleVersionsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListConfigurationBundleVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListConfigurationBundleVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundleVersionsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConfigurationBundles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConfigurationBundles(ctx context.Context, params *bedrockagentcorecontrol.ListConfigurationBundlesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListConfigurationBundlesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConfigurationBundles")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListConfigurationBundlesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundlesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListConfigurationBundlesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundlesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListConfigurationBundlesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListConfigurationBundlesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundlesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEvaluators provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEvaluators(ctx context.Context, params *bedrockagentcorecontrol.ListEvaluatorsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListEvaluatorsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2338,6 +3115,43 @@ func (_m *IClient) ListEvaluators(ctx context.Context, params *bedrockagentcorec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListEvaluatorsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGatewayRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGatewayRules(ctx context.Context, params *bedrockagentcorecontrol.ListGatewayRulesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListGatewayRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGatewayRules")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListGatewayRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListGatewayRulesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListGatewayRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListGatewayRulesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListGatewayRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListGatewayRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListGatewayRulesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2412,6 +3226,43 @@ func (_m *IClient) ListGateways(ctx context.Context, params *bedrockagentcorecon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListGatewaysInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListHarnesses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHarnesses(ctx context.Context, params *bedrockagentcorecontrol.ListHarnessesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListHarnessesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHarnesses")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListHarnessesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListHarnessesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListHarnessesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListHarnessesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListHarnessesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListHarnessesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListHarnessesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2523,6 +3374,117 @@ func (_m *IClient) ListOnlineEvaluationConfigs(ctx context.Context, params *bedr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListOnlineEvaluationConfigsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPaymentConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPaymentConnectors(ctx context.Context, params *bedrockagentcorecontrol.ListPaymentConnectorsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPaymentConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPaymentConnectors")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPaymentConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPaymentConnectorsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPaymentConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPaymentConnectorsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPaymentConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPaymentConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPaymentConnectorsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPaymentCredentialProviders provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPaymentCredentialProviders(ctx context.Context, params *bedrockagentcorecontrol.ListPaymentCredentialProvidersInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPaymentCredentialProvidersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPaymentCredentialProviders")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPaymentCredentialProvidersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPaymentCredentialProvidersInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPaymentCredentialProvidersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPaymentCredentialProvidersInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPaymentCredentialProvidersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPaymentCredentialProvidersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPaymentCredentialProvidersInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPaymentManagers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPaymentManagers(ctx context.Context, params *bedrockagentcorecontrol.ListPaymentManagersInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPaymentManagersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPaymentManagers")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPaymentManagersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPaymentManagersInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPaymentManagersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPaymentManagersInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPaymentManagersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPaymentManagersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPaymentManagersInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3215,6 +4177,43 @@ func (_m *IClient) UpdateApiKeyCredentialProvider(ctx context.Context, params *b
 	return r0, r1
 }
 
+// UpdateConfigurationBundle provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConfigurationBundle(ctx context.Context, params *bedrockagentcorecontrol.UpdateConfigurationBundleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateConfigurationBundleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConfigurationBundle")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateConfigurationBundleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateConfigurationBundleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateConfigurationBundleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateConfigurationBundleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateEvaluator(ctx context.Context, params *bedrockagentcorecontrol.UpdateEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3289,6 +4288,43 @@ func (_m *IClient) UpdateGateway(ctx context.Context, params *bedrockagentcoreco
 	return r0, r1
 }
 
+// UpdateGatewayRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateGatewayRule(ctx context.Context, params *bedrockagentcorecontrol.UpdateGatewayRuleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateGatewayRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateGatewayRule")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateGatewayRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateGatewayRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateGatewayRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateGatewayRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayRuleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateGatewayTarget provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateGatewayTarget(ctx context.Context, params *bedrockagentcorecontrol.UpdateGatewayTargetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateGatewayTargetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3318,6 +4354,43 @@ func (_m *IClient) UpdateGatewayTarget(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayTargetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateHarness provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHarness(ctx context.Context, params *bedrockagentcorecontrol.UpdateHarnessInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateHarnessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHarness")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateHarnessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateHarnessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateHarnessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateHarnessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3429,6 +4502,117 @@ func (_m *IClient) UpdateOnlineEvaluationConfig(ctx context.Context, params *bed
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateOnlineEvaluationConfigInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePaymentConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePaymentConnector(ctx context.Context, params *bedrockagentcorecontrol.UpdatePaymentConnectorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePaymentConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePaymentConnector")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdatePaymentConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePaymentConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdatePaymentConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdatePaymentConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentConnectorInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePaymentCredentialProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePaymentCredentialProvider(ctx context.Context, params *bedrockagentcorecontrol.UpdatePaymentCredentialProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePaymentCredentialProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePaymentCredentialProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdatePaymentCredentialProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePaymentCredentialProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdatePaymentCredentialProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdatePaymentCredentialProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentCredentialProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePaymentManager provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePaymentManager(ctx context.Context, params *bedrockagentcorecontrol.UpdatePaymentManagerInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePaymentManagerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePaymentManager")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdatePaymentManagerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdatePaymentManagerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdatePaymentManagerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdatePaymentManagerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdatePaymentManagerInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

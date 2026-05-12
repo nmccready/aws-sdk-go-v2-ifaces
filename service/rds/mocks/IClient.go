@@ -3640,6 +3640,43 @@ func (_m *IClient) DescribeReservedDBInstancesOfferings(ctx context.Context, par
 	return r0, r1
 }
 
+// DescribeServerlessV2PlatformVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeServerlessV2PlatformVersions(ctx context.Context, params *rds.DescribeServerlessV2PlatformVersionsInput, optFns ...func(*rds.Options)) (*rds.DescribeServerlessV2PlatformVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeServerlessV2PlatformVersions")
+	}
+
+	var r0 *rds.DescribeServerlessV2PlatformVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.DescribeServerlessV2PlatformVersionsInput, ...func(*rds.Options)) (*rds.DescribeServerlessV2PlatformVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.DescribeServerlessV2PlatformVersionsInput, ...func(*rds.Options)) *rds.DescribeServerlessV2PlatformVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rds.DescribeServerlessV2PlatformVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rds.DescribeServerlessV2PlatformVersionsInput, ...func(*rds.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeSourceRegions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeSourceRegions(ctx context.Context, params *rds.DescribeSourceRegionsInput, optFns ...func(*rds.Options)) (*rds.DescribeSourceRegionsOutput, error) {
 	_va := make([]interface{}, len(optFns))

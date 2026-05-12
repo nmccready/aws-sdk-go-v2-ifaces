@@ -348,6 +348,43 @@ func (_m *IClient) CalculateRouteMatrix(ctx context.Context, params *location.Ca
 	return r0, r1
 }
 
+// CancelJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelJob(ctx context.Context, params *location.CancelJobInput, optFns ...func(*location.Options)) (*location.CancelJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelJob")
+	}
+
+	var r0 *location.CancelJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *location.CancelJobInput, ...func(*location.Options)) (*location.CancelJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *location.CancelJobInput, ...func(*location.Options)) *location.CancelJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*location.CancelJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *location.CancelJobInput, ...func(*location.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGeofenceCollection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGeofenceCollection(ctx context.Context, params *location.CreateGeofenceCollectionInput, optFns ...func(*location.Options)) (*location.CreateGeofenceCollectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1199,6 +1236,43 @@ func (_m *IClient) GetGeofence(ctx context.Context, params *location.GetGeofence
 	return r0, r1
 }
 
+// GetJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetJob(ctx context.Context, params *location.GetJobInput, optFns ...func(*location.Options)) (*location.GetJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetJob")
+	}
+
+	var r0 *location.GetJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *location.GetJobInput, ...func(*location.Options)) (*location.GetJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *location.GetJobInput, ...func(*location.Options)) *location.GetJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*location.GetJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *location.GetJobInput, ...func(*location.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetMapGlyphs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetMapGlyphs(ctx context.Context, params *location.GetMapGlyphsInput, optFns ...func(*location.Options)) (*location.GetMapGlyphsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1487,6 +1561,43 @@ func (_m *IClient) ListGeofences(ctx context.Context, params *location.ListGeofe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *location.ListGeofencesInput, ...func(*location.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListJobs(ctx context.Context, params *location.ListJobsInput, optFns ...func(*location.Options)) (*location.ListJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListJobs")
+	}
+
+	var r0 *location.ListJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *location.ListJobsInput, ...func(*location.Options)) (*location.ListJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *location.ListJobsInput, ...func(*location.Options)) *location.ListJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*location.ListJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *location.ListJobsInput, ...func(*location.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1912,6 +2023,43 @@ func (_m *IClient) SearchPlaceIndexForText(ctx context.Context, params *location
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *location.SearchPlaceIndexForTextInput, ...func(*location.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartJob(ctx context.Context, params *location.StartJobInput, optFns ...func(*location.Options)) (*location.StartJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartJob")
+	}
+
+	var r0 *location.StartJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *location.StartJobInput, ...func(*location.Options)) (*location.StartJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *location.StartJobInput, ...func(*location.Options)) *location.StartJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*location.StartJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *location.StartJobInput, ...func(*location.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

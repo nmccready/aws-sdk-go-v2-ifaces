@@ -1532,6 +1532,43 @@ func (_m *IClient) DescribeContainerGroupDefinition(ctx context.Context, params 
 	return r0, r1
 }
 
+// DescribeContainerGroupPortMappings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeContainerGroupPortMappings(ctx context.Context, params *gamelift.DescribeContainerGroupPortMappingsInput, optFns ...func(*gamelift.Options)) (*gamelift.DescribeContainerGroupPortMappingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeContainerGroupPortMappings")
+	}
+
+	var r0 *gamelift.DescribeContainerGroupPortMappingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DescribeContainerGroupPortMappingsInput, ...func(*gamelift.Options)) (*gamelift.DescribeContainerGroupPortMappingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gamelift.DescribeContainerGroupPortMappingsInput, ...func(*gamelift.Options)) *gamelift.DescribeContainerGroupPortMappingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gamelift.DescribeContainerGroupPortMappingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gamelift.DescribeContainerGroupPortMappingsInput, ...func(*gamelift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeEC2InstanceLimits provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeEC2InstanceLimits(ctx context.Context, params *gamelift.DescribeEC2InstanceLimitsInput, optFns ...func(*gamelift.Options)) (*gamelift.DescribeEC2InstanceLimitsOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConfigurationBundle", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateConfigurationBundleInput{}
+        output := &bedrockagentcorecontrol.CreateConfigurationBundleOutput{}
+
+        mockClient.On("CreateConfigurationBundle", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConfigurationBundle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateEvaluatorInput{}
         output := &bedrockagentcorecontrol.CreateEvaluatorOutput{}
@@ -138,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateGatewayRule", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateGatewayRuleInput{}
+        output := &bedrockagentcorecontrol.CreateGatewayRuleOutput{}
+
+        mockClient.On("CreateGatewayRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGatewayRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGatewayTarget", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateGatewayTargetInput{}
         output := &bedrockagentcorecontrol.CreateGatewayTargetOutput{}
@@ -145,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateHarnessInput{}
+        output := &bedrockagentcorecontrol.CreateHarnessOutput{}
+
+        mockClient.On("CreateHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +223,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateOnlineEvaluationConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePaymentConnector", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreatePaymentConnectorInput{}
+        output := &bedrockagentcorecontrol.CreatePaymentConnectorOutput{}
+
+        mockClient.On("CreatePaymentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePaymentConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePaymentCredentialProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreatePaymentCredentialProviderInput{}
+        output := &bedrockagentcorecontrol.CreatePaymentCredentialProviderOutput{}
+
+        mockClient.On("CreatePaymentCredentialProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePaymentCredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePaymentManager", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreatePaymentManagerInput{}
+        output := &bedrockagentcorecontrol.CreatePaymentManagerOutput{}
+
+        mockClient.On("CreatePaymentManager", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePaymentManager(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConfigurationBundle", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteConfigurationBundleInput{}
+        output := &bedrockagentcorecontrol.DeleteConfigurationBundleOutput{}
+
+        mockClient.On("DeleteConfigurationBundle", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConfigurationBundle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.DeleteEvaluatorInput{}
         output := &bedrockagentcorecontrol.DeleteEvaluatorOutput{}
@@ -359,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteGatewayRule", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteGatewayRuleInput{}
+        output := &bedrockagentcorecontrol.DeleteGatewayRuleOutput{}
+
+        mockClient.On("DeleteGatewayRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGatewayRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteGatewayTarget", func(t *testing.T) {
         input := &bedrockagentcorecontrol.DeleteGatewayTargetInput{}
         output := &bedrockagentcorecontrol.DeleteGatewayTargetOutput{}
@@ -366,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteHarnessInput{}
+        output := &bedrockagentcorecontrol.DeleteHarnessOutput{}
+
+        mockClient.On("DeleteHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -405,6 +522,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOnlineEvaluationConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePaymentConnector", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeletePaymentConnectorInput{}
+        output := &bedrockagentcorecontrol.DeletePaymentConnectorOutput{}
+
+        mockClient.On("DeletePaymentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePaymentConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePaymentCredentialProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeletePaymentCredentialProviderInput{}
+        output := &bedrockagentcorecontrol.DeletePaymentCredentialProviderOutput{}
+
+        mockClient.On("DeletePaymentCredentialProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePaymentCredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePaymentManager", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeletePaymentManagerInput{}
+        output := &bedrockagentcorecontrol.DeletePaymentManagerOutput{}
+
+        mockClient.On("DeletePaymentManager", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePaymentManager(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +723,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetConfigurationBundle", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetConfigurationBundleInput{}
+        output := &bedrockagentcorecontrol.GetConfigurationBundleOutput{}
+
+        mockClient.On("GetConfigurationBundle", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfigurationBundle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConfigurationBundleVersion", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetConfigurationBundleVersionInput{}
+        output := &bedrockagentcorecontrol.GetConfigurationBundleVersionOutput{}
+
+        mockClient.On("GetConfigurationBundleVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConfigurationBundleVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetEvaluatorInput{}
         output := &bedrockagentcorecontrol.GetEvaluatorOutput{}
@@ -593,6 +775,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetGatewayRule", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetGatewayRuleInput{}
+        output := &bedrockagentcorecontrol.GetGatewayRuleOutput{}
+
+        mockClient.On("GetGatewayRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGatewayRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetGatewayTarget", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetGatewayTargetInput{}
         output := &bedrockagentcorecontrol.GetGatewayTargetOutput{}
@@ -600,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetHarnessInput{}
+        output := &bedrockagentcorecontrol.GetHarnessOutput{}
+
+        mockClient.On("GetHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -639,6 +847,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOnlineEvaluationConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPaymentConnector", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPaymentConnectorInput{}
+        output := &bedrockagentcorecontrol.GetPaymentConnectorOutput{}
+
+        mockClient.On("GetPaymentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPaymentConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPaymentCredentialProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPaymentCredentialProviderInput{}
+        output := &bedrockagentcorecontrol.GetPaymentCredentialProviderOutput{}
+
+        mockClient.On("GetPaymentCredentialProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPaymentCredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPaymentManager", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPaymentManagerInput{}
+        output := &bedrockagentcorecontrol.GetPaymentManagerOutput{}
+
+        mockClient.On("GetPaymentManager", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPaymentManager(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -840,6 +1087,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConfigurationBundleVersions", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListConfigurationBundleVersionsInput{}
+        output := &bedrockagentcorecontrol.ListConfigurationBundleVersionsOutput{}
+
+        mockClient.On("ListConfigurationBundleVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfigurationBundleVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConfigurationBundles", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListConfigurationBundlesInput{}
+        output := &bedrockagentcorecontrol.ListConfigurationBundlesOutput{}
+
+        mockClient.On("ListConfigurationBundles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConfigurationBundles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEvaluators", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListEvaluatorsInput{}
         output := &bedrockagentcorecontrol.ListEvaluatorsOutput{}
@@ -847,6 +1120,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEvaluators", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEvaluators(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGatewayRules", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListGatewayRulesInput{}
+        output := &bedrockagentcorecontrol.ListGatewayRulesOutput{}
+
+        mockClient.On("ListGatewayRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGatewayRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -873,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHarnesses", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListHarnessesInput{}
+        output := &bedrockagentcorecontrol.ListHarnessesOutput{}
+
+        mockClient.On("ListHarnesses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHarnesses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -912,6 +1211,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOnlineEvaluationConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOnlineEvaluationConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPaymentConnectors", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPaymentConnectorsInput{}
+        output := &bedrockagentcorecontrol.ListPaymentConnectorsOutput{}
+
+        mockClient.On("ListPaymentConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPaymentConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPaymentCredentialProviders", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPaymentCredentialProvidersInput{}
+        output := &bedrockagentcorecontrol.ListPaymentCredentialProvidersOutput{}
+
+        mockClient.On("ListPaymentCredentialProviders", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPaymentCredentialProviders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPaymentManagers", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPaymentManagersInput{}
+        output := &bedrockagentcorecontrol.ListPaymentManagersOutput{}
+
+        mockClient.On("ListPaymentManagers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPaymentManagers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,6 +1490,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateConfigurationBundle", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateConfigurationBundleInput{}
+        output := &bedrockagentcorecontrol.UpdateConfigurationBundleOutput{}
+
+        mockClient.On("UpdateConfigurationBundle", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConfigurationBundle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.UpdateEvaluatorInput{}
         output := &bedrockagentcorecontrol.UpdateEvaluatorOutput{}
@@ -1178,6 +1529,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateGatewayRule", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateGatewayRuleInput{}
+        output := &bedrockagentcorecontrol.UpdateGatewayRuleOutput{}
+
+        mockClient.On("UpdateGatewayRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGatewayRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateGatewayTarget", func(t *testing.T) {
         input := &bedrockagentcorecontrol.UpdateGatewayTargetInput{}
         output := &bedrockagentcorecontrol.UpdateGatewayTargetOutput{}
@@ -1185,6 +1549,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGatewayTarget", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGatewayTarget(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateHarness", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateHarnessInput{}
+        output := &bedrockagentcorecontrol.UpdateHarnessOutput{}
+
+        mockClient.On("UpdateHarness", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHarness(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1224,6 +1601,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOnlineEvaluationConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOnlineEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePaymentConnector", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdatePaymentConnectorInput{}
+        output := &bedrockagentcorecontrol.UpdatePaymentConnectorOutput{}
+
+        mockClient.On("UpdatePaymentConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePaymentConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePaymentCredentialProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdatePaymentCredentialProviderInput{}
+        output := &bedrockagentcorecontrol.UpdatePaymentCredentialProviderOutput{}
+
+        mockClient.On("UpdatePaymentCredentialProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePaymentCredentialProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePaymentManager", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdatePaymentManagerInput{}
+        output := &bedrockagentcorecontrol.UpdatePaymentManagerOutput{}
+
+        mockClient.On("UpdatePaymentManager", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePaymentManager(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
