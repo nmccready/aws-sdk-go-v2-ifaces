@@ -918,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPolicyEngineSummary", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPolicyEngineSummaryInput{}
+        output := &bedrockagentcorecontrol.GetPolicyEngineSummaryOutput{}
+
+        mockClient.On("GetPolicyEngineSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicyEngineSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPolicyGeneration", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetPolicyGenerationInput{}
         output := &bedrockagentcorecontrol.GetPolicyGenerationOutput{}
@@ -925,6 +938,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetPolicyGeneration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetPolicyGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPolicyGenerationSummary", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPolicyGenerationSummaryInput{}
+        output := &bedrockagentcorecontrol.GetPolicyGenerationSummaryOutput{}
+
+        mockClient.On("GetPolicyGenerationSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicyGenerationSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPolicySummary", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetPolicySummaryInput{}
+        output := &bedrockagentcorecontrol.GetPolicySummaryOutput{}
+
+        mockClient.On("GetPolicySummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicySummary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1269,6 +1308,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPolicyEngineSummaries", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPolicyEngineSummariesInput{}
+        output := &bedrockagentcorecontrol.ListPolicyEngineSummariesOutput{}
+
+        mockClient.On("ListPolicyEngineSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyEngineSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPolicyEngines", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListPolicyEnginesInput{}
         output := &bedrockagentcorecontrol.ListPolicyEnginesOutput{}
@@ -1295,6 +1347,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPolicyGenerationSummaries", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPolicyGenerationSummariesInput{}
+        output := &bedrockagentcorecontrol.ListPolicyGenerationSummariesOutput{}
+
+        mockClient.On("ListPolicyGenerationSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyGenerationSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPolicyGenerations", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListPolicyGenerationsInput{}
         output := &bedrockagentcorecontrol.ListPolicyGenerationsOutput{}
@@ -1302,6 +1367,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPolicyGenerations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPolicyGenerations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicySummaries", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListPolicySummariesInput{}
+        output := &bedrockagentcorecontrol.ListPolicySummariesOutput{}
+
+        mockClient.On("ListPolicySummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicySummaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

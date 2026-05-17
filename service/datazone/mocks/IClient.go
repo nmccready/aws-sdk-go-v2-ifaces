@@ -1125,6 +1125,43 @@ func (_m *IClient) CreateListingChangeSet(ctx context.Context, params *datazone.
 	return r0, r1
 }
 
+// CreateNotebook provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNotebook(ctx context.Context, params *datazone.CreateNotebookInput, optFns ...func(*datazone.Options)) (*datazone.CreateNotebookOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNotebook")
+	}
+
+	var r0 *datazone.CreateNotebookOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateNotebookInput, ...func(*datazone.Options)) (*datazone.CreateNotebookOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateNotebookInput, ...func(*datazone.Options)) *datazone.CreateNotebookOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateNotebookOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateNotebookInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateProject provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateProject(ctx context.Context, params *datazone.CreateProjectInput, optFns ...func(*datazone.Options)) (*datazone.CreateProjectOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2116,6 +2153,43 @@ func (_m *IClient) DeleteListing(ctx context.Context, params *datazone.DeleteLis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteListingInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteNotebook provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNotebook(ctx context.Context, params *datazone.DeleteNotebookInput, optFns ...func(*datazone.Options)) (*datazone.DeleteNotebookOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNotebook")
+	}
+
+	var r0 *datazone.DeleteNotebookOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteNotebookInput, ...func(*datazone.Options)) (*datazone.DeleteNotebookOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteNotebookInput, ...func(*datazone.Options)) *datazone.DeleteNotebookOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteNotebookOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteNotebookInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3493,6 +3567,80 @@ func (_m *IClient) GetMetadataGenerationRun(ctx context.Context, params *datazon
 	return r0, r1
 }
 
+// GetNotebook provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetNotebook(ctx context.Context, params *datazone.GetNotebookInput, optFns ...func(*datazone.Options)) (*datazone.GetNotebookOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetNotebook")
+	}
+
+	var r0 *datazone.GetNotebookOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetNotebookInput, ...func(*datazone.Options)) (*datazone.GetNotebookOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetNotebookInput, ...func(*datazone.Options)) *datazone.GetNotebookOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetNotebookOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetNotebookInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetNotebookExport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetNotebookExport(ctx context.Context, params *datazone.GetNotebookExportInput, optFns ...func(*datazone.Options)) (*datazone.GetNotebookExportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetNotebookExport")
+	}
+
+	var r0 *datazone.GetNotebookExportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetNotebookExportInput, ...func(*datazone.Options)) (*datazone.GetNotebookExportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetNotebookExportInput, ...func(*datazone.Options)) *datazone.GetNotebookExportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetNotebookExportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetNotebookExportInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetNotebookRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetNotebookRun(ctx context.Context, params *datazone.GetNotebookRunInput, optFns ...func(*datazone.Options)) (*datazone.GetNotebookRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4677,6 +4825,43 @@ func (_m *IClient) ListNotebookRuns(ctx context.Context, params *datazone.ListNo
 	return r0, r1
 }
 
+// ListNotebooks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNotebooks(ctx context.Context, params *datazone.ListNotebooksInput, optFns ...func(*datazone.Options)) (*datazone.ListNotebooksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNotebooks")
+	}
+
+	var r0 *datazone.ListNotebooksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListNotebooksInput, ...func(*datazone.Options)) (*datazone.ListNotebooksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListNotebooksInput, ...func(*datazone.Options)) *datazone.ListNotebooksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListNotebooksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListNotebooksInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListNotifications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListNotifications(ctx context.Context, params *datazone.ListNotificationsInput, optFns ...func(*datazone.Options)) (*datazone.ListNotificationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5768,6 +5953,80 @@ func (_m *IClient) StartMetadataGenerationRun(ctx context.Context, params *dataz
 	return r0, r1
 }
 
+// StartNotebookExport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNotebookExport(ctx context.Context, params *datazone.StartNotebookExportInput, optFns ...func(*datazone.Options)) (*datazone.StartNotebookExportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNotebookExport")
+	}
+
+	var r0 *datazone.StartNotebookExportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.StartNotebookExportInput, ...func(*datazone.Options)) (*datazone.StartNotebookExportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.StartNotebookExportInput, ...func(*datazone.Options)) *datazone.StartNotebookExportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.StartNotebookExportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.StartNotebookExportInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartNotebookImport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNotebookImport(ctx context.Context, params *datazone.StartNotebookImportInput, optFns ...func(*datazone.Options)) (*datazone.StartNotebookImportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNotebookImport")
+	}
+
+	var r0 *datazone.StartNotebookImportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.StartNotebookImportInput, ...func(*datazone.Options)) (*datazone.StartNotebookImportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.StartNotebookImportInput, ...func(*datazone.Options)) *datazone.StartNotebookImportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.StartNotebookImportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.StartNotebookImportInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartNotebookRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartNotebookRun(ctx context.Context, params *datazone.StartNotebookRunInput, optFns ...func(*datazone.Options)) (*datazone.StartNotebookRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6389,6 +6648,43 @@ func (_m *IClient) UpdateGroupProfile(ctx context.Context, params *datazone.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateGroupProfileInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateNotebook provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateNotebook(ctx context.Context, params *datazone.UpdateNotebookInput, optFns ...func(*datazone.Options)) (*datazone.UpdateNotebookOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateNotebook")
+	}
+
+	var r0 *datazone.UpdateNotebookOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateNotebookInput, ...func(*datazone.Options)) (*datazone.UpdateNotebookOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateNotebookInput, ...func(*datazone.Options)) *datazone.UpdateNotebookOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateNotebookOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateNotebookInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

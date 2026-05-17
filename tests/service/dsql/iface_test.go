@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateStream", func(t *testing.T) {
+        input := &dsql.CreateStreamInput{}
+        output := &dsql.CreateStreamOutput{}
+
+        mockClient.On("CreateStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCluster", func(t *testing.T) {
         input := &dsql.DeleteClusterInput{}
         output := &dsql.DeleteClusterOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteClusterPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteClusterPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteStream", func(t *testing.T) {
+        input := &dsql.DeleteStreamInput{}
+        output := &dsql.DeleteStreamOutput{}
+
+        mockClient.On("DeleteStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteStream(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetStream", func(t *testing.T) {
+        input := &dsql.GetStreamInput{}
+        output := &dsql.GetStreamOutput{}
+
+        mockClient.On("GetStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetVpcEndpointServiceName", func(t *testing.T) {
         input := &dsql.GetVpcEndpointServiceNameInput{}
         output := &dsql.GetVpcEndpointServiceNameOutput{}
@@ -119,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListClusters", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListStreams", func(t *testing.T) {
+        input := &dsql.ListStreamsInput{}
+        output := &dsql.ListStreamsOutput{}
+
+        mockClient.On("ListStreams", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStreams(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -51,6 +51,43 @@ func (_m *IClient) AcceptLink(ctx context.Context, params *rtbfabric.AcceptLinkI
 	return r0, r1
 }
 
+// AssociateCertificate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateCertificate(ctx context.Context, params *rtbfabric.AssociateCertificateInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.AssociateCertificateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateCertificate")
+	}
+
+	var r0 *rtbfabric.AssociateCertificateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.AssociateCertificateInput, ...func(*rtbfabric.Options)) (*rtbfabric.AssociateCertificateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.AssociateCertificateInput, ...func(*rtbfabric.Options)) *rtbfabric.AssociateCertificateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.AssociateCertificateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.AssociateCertificateInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateInboundExternalLink provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateInboundExternalLink(ctx context.Context, params *rtbfabric.CreateInboundExternalLinkInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.CreateInboundExternalLinkOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -117,6 +154,43 @@ func (_m *IClient) CreateLink(ctx context.Context, params *rtbfabric.CreateLinkI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.CreateLinkInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateLinkRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateLinkRoutingRule(ctx context.Context, params *rtbfabric.CreateLinkRoutingRuleInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.CreateLinkRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateLinkRoutingRule")
+	}
+
+	var r0 *rtbfabric.CreateLinkRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.CreateLinkRoutingRuleInput, ...func(*rtbfabric.Options)) (*rtbfabric.CreateLinkRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.CreateLinkRoutingRuleInput, ...func(*rtbfabric.Options)) *rtbfabric.CreateLinkRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.CreateLinkRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.CreateLinkRoutingRuleInput, ...func(*rtbfabric.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -310,6 +384,43 @@ func (_m *IClient) DeleteLink(ctx context.Context, params *rtbfabric.DeleteLinkI
 	return r0, r1
 }
 
+// DeleteLinkRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLinkRoutingRule(ctx context.Context, params *rtbfabric.DeleteLinkRoutingRuleInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.DeleteLinkRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLinkRoutingRule")
+	}
+
+	var r0 *rtbfabric.DeleteLinkRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.DeleteLinkRoutingRuleInput, ...func(*rtbfabric.Options)) (*rtbfabric.DeleteLinkRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.DeleteLinkRoutingRuleInput, ...func(*rtbfabric.Options)) *rtbfabric.DeleteLinkRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.DeleteLinkRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.DeleteLinkRoutingRuleInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteOutboundExternalLink provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteOutboundExternalLink(ctx context.Context, params *rtbfabric.DeleteOutboundExternalLinkInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.DeleteOutboundExternalLinkOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -421,6 +532,80 @@ func (_m *IClient) DeleteResponderGateway(ctx context.Context, params *rtbfabric
 	return r0, r1
 }
 
+// DisassociateCertificate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateCertificate(ctx context.Context, params *rtbfabric.DisassociateCertificateInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.DisassociateCertificateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateCertificate")
+	}
+
+	var r0 *rtbfabric.DisassociateCertificateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.DisassociateCertificateInput, ...func(*rtbfabric.Options)) (*rtbfabric.DisassociateCertificateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.DisassociateCertificateInput, ...func(*rtbfabric.Options)) *rtbfabric.DisassociateCertificateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.DisassociateCertificateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.DisassociateCertificateInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCertificateAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCertificateAssociation(ctx context.Context, params *rtbfabric.GetCertificateAssociationInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetCertificateAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCertificateAssociation")
+	}
+
+	var r0 *rtbfabric.GetCertificateAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetCertificateAssociationInput, ...func(*rtbfabric.Options)) (*rtbfabric.GetCertificateAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetCertificateAssociationInput, ...func(*rtbfabric.Options)) *rtbfabric.GetCertificateAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.GetCertificateAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetCertificateAssociationInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetInboundExternalLink provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetInboundExternalLink(ctx context.Context, params *rtbfabric.GetInboundExternalLinkInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetInboundExternalLinkOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -487,6 +672,43 @@ func (_m *IClient) GetLink(ctx context.Context, params *rtbfabric.GetLinkInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetLinkInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetLinkRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLinkRoutingRule(ctx context.Context, params *rtbfabric.GetLinkRoutingRuleInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetLinkRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLinkRoutingRule")
+	}
+
+	var r0 *rtbfabric.GetLinkRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetLinkRoutingRuleInput, ...func(*rtbfabric.Options)) (*rtbfabric.GetLinkRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetLinkRoutingRuleInput, ...func(*rtbfabric.Options)) *rtbfabric.GetLinkRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.GetLinkRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetLinkRoutingRuleInput, ...func(*rtbfabric.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -598,6 +820,80 @@ func (_m *IClient) GetResponderGateway(ctx context.Context, params *rtbfabric.Ge
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetResponderGatewayInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCertificateAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCertificateAssociations(ctx context.Context, params *rtbfabric.ListCertificateAssociationsInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.ListCertificateAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCertificateAssociations")
+	}
+
+	var r0 *rtbfabric.ListCertificateAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListCertificateAssociationsInput, ...func(*rtbfabric.Options)) (*rtbfabric.ListCertificateAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListCertificateAssociationsInput, ...func(*rtbfabric.Options)) *rtbfabric.ListCertificateAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.ListCertificateAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.ListCertificateAssociationsInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListLinkRoutingRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListLinkRoutingRules(ctx context.Context, params *rtbfabric.ListLinkRoutingRulesInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.ListLinkRoutingRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListLinkRoutingRules")
+	}
+
+	var r0 *rtbfabric.ListLinkRoutingRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListLinkRoutingRulesInput, ...func(*rtbfabric.Options)) (*rtbfabric.ListLinkRoutingRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListLinkRoutingRulesInput, ...func(*rtbfabric.Options)) *rtbfabric.ListLinkRoutingRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.ListLinkRoutingRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.ListLinkRoutingRulesInput, ...func(*rtbfabric.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -949,6 +1245,43 @@ func (_m *IClient) UpdateLinkModuleFlow(ctx context.Context, params *rtbfabric.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.UpdateLinkModuleFlowInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateLinkRoutingRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLinkRoutingRule(ctx context.Context, params *rtbfabric.UpdateLinkRoutingRuleInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.UpdateLinkRoutingRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLinkRoutingRule")
+	}
+
+	var r0 *rtbfabric.UpdateLinkRoutingRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.UpdateLinkRoutingRuleInput, ...func(*rtbfabric.Options)) (*rtbfabric.UpdateLinkRoutingRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.UpdateLinkRoutingRuleInput, ...func(*rtbfabric.Options)) *rtbfabric.UpdateLinkRoutingRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.UpdateLinkRoutingRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.UpdateLinkRoutingRuleInput, ...func(*rtbfabric.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

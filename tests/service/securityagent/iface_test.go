@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeleteCodeReviews", func(t *testing.T) {
+        input := &securityagent.BatchDeleteCodeReviewsInput{}
+        output := &securityagent.BatchDeleteCodeReviewsOutput{}
+
+        mockClient.On("BatchDeleteCodeReviews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteCodeReviews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDeletePentests", func(t *testing.T) {
         input := &securityagent.BatchDeletePentestsInput{}
         output := &securityagent.BatchDeletePentestsOutput{}
@@ -80,6 +93,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetArtifactMetadata", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetArtifactMetadata(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetCodeReviewJobTasks", func(t *testing.T) {
+        input := &securityagent.BatchGetCodeReviewJobTasksInput{}
+        output := &securityagent.BatchGetCodeReviewJobTasksOutput{}
+
+        mockClient.On("BatchGetCodeReviewJobTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetCodeReviewJobTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetCodeReviewJobs", func(t *testing.T) {
+        input := &securityagent.BatchGetCodeReviewJobsInput{}
+        output := &securityagent.BatchGetCodeReviewJobsOutput{}
+
+        mockClient.On("BatchGetCodeReviewJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetCodeReviewJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetCodeReviews", func(t *testing.T) {
+        input := &securityagent.BatchGetCodeReviewsInput{}
+        output := &securityagent.BatchGetCodeReviewsOutput{}
+
+        mockClient.On("BatchGetCodeReviews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetCodeReviews(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -171,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCodeReview", func(t *testing.T) {
+        input := &securityagent.CreateCodeReviewInput{}
+        output := &securityagent.CreateCodeReviewOutput{}
+
+        mockClient.On("CreateCodeReview", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCodeReview(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +463,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCodeReviewJobTasks", func(t *testing.T) {
+        input := &securityagent.ListCodeReviewJobTasksInput{}
+        output := &securityagent.ListCodeReviewJobTasksOutput{}
+
+        mockClient.On("ListCodeReviewJobTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCodeReviewJobTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCodeReviewJobsForCodeReview", func(t *testing.T) {
+        input := &securityagent.ListCodeReviewJobsForCodeReviewInput{}
+        output := &securityagent.ListCodeReviewJobsForCodeReviewOutput{}
+
+        mockClient.On("ListCodeReviewJobsForCodeReview", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCodeReviewJobsForCodeReview(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCodeReviews", func(t *testing.T) {
+        input := &securityagent.ListCodeReviewsInput{}
+        output := &securityagent.ListCodeReviewsOutput{}
+
+        mockClient.On("ListCodeReviews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCodeReviews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDiscoveredEndpoints", func(t *testing.T) {
         input := &securityagent.ListDiscoveredEndpointsInput{}
         output := &securityagent.ListDiscoveredEndpointsOutput{}
@@ -541,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartCodeReviewJob", func(t *testing.T) {
+        input := &securityagent.StartCodeReviewJobInput{}
+        output := &securityagent.StartCodeReviewJobOutput{}
+
+        mockClient.On("StartCodeReviewJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCodeReviewJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartPentestJob", func(t *testing.T) {
         input := &securityagent.StartPentestJobInput{}
         output := &securityagent.StartPentestJobOutput{}
@@ -548,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartPentestJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartPentestJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopCodeReviewJob", func(t *testing.T) {
+        input := &securityagent.StopCodeReviewJobInput{}
+        output := &securityagent.StopCodeReviewJobOutput{}
+
+        mockClient.On("StopCodeReviewJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopCodeReviewJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -613,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCodeReview", func(t *testing.T) {
+        input := &securityagent.UpdateCodeReviewInput{}
+        output := &securityagent.UpdateCodeReviewOutput{}
+
+        mockClient.On("UpdateCodeReview", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCodeReview(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

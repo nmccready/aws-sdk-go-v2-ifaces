@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchDeleteAdvancedPromptOptimizationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteAdvancedPromptOptimizationJob(ctx context.Context, params *bedrock.BatchDeleteAdvancedPromptOptimizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteAdvancedPromptOptimizationJob")
+	}
+
+	var r0 *bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.BatchDeleteAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) (*bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.BatchDeleteAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) *bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.BatchDeleteAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchDeleteEvaluationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchDeleteEvaluationJob(ctx context.Context, params *bedrock.BatchDeleteEvaluationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.BatchDeleteEvaluationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +118,43 @@ func (_m *IClient) CancelAutomatedReasoningPolicyBuildWorkflow(ctx context.Conte
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CancelAutomatedReasoningPolicyBuildWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAdvancedPromptOptimizationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAdvancedPromptOptimizationJob(ctx context.Context, params *bedrock.CreateAdvancedPromptOptimizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateAdvancedPromptOptimizationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAdvancedPromptOptimizationJob")
+	}
+
+	var r0 *bedrock.CreateAdvancedPromptOptimizationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) (*bedrock.CreateAdvancedPromptOptimizationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) *bedrock.CreateAdvancedPromptOptimizationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateAdvancedPromptOptimizationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1347,6 +1421,43 @@ func (_m *IClient) ExportAutomatedReasoningPolicyVersion(ctx context.Context, pa
 	return r0, r1
 }
 
+// GetAdvancedPromptOptimizationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAdvancedPromptOptimizationJob(ctx context.Context, params *bedrock.GetAdvancedPromptOptimizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAdvancedPromptOptimizationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAdvancedPromptOptimizationJob")
+	}
+
+	var r0 *bedrock.GetAdvancedPromptOptimizationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) (*bedrock.GetAdvancedPromptOptimizationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) *bedrock.GetAdvancedPromptOptimizationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAdvancedPromptOptimizationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAutomatedReasoningPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAutomatedReasoningPolicy(ctx context.Context, params *bedrock.GetAutomatedReasoningPolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAutomatedReasoningPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2264,6 +2375,43 @@ func (_m *IClient) GetUseCaseForModelAccess(ctx context.Context, params *bedrock
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetUseCaseForModelAccessInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAdvancedPromptOptimizationJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAdvancedPromptOptimizationJobs(ctx context.Context, params *bedrock.ListAdvancedPromptOptimizationJobsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListAdvancedPromptOptimizationJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAdvancedPromptOptimizationJobs")
+	}
+
+	var r0 *bedrock.ListAdvancedPromptOptimizationJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAdvancedPromptOptimizationJobsInput, ...func(*bedrock.Options)) (*bedrock.ListAdvancedPromptOptimizationJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListAdvancedPromptOptimizationJobsInput, ...func(*bedrock.Options)) *bedrock.ListAdvancedPromptOptimizationJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListAdvancedPromptOptimizationJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListAdvancedPromptOptimizationJobsInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3318,6 +3466,43 @@ func (_m *IClient) StartAutomatedReasoningPolicyTestWorkflow(ctx context.Context
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyTestWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopAdvancedPromptOptimizationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopAdvancedPromptOptimizationJob(ctx context.Context, params *bedrock.StopAdvancedPromptOptimizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.StopAdvancedPromptOptimizationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopAdvancedPromptOptimizationJob")
+	}
+
+	var r0 *bedrock.StopAdvancedPromptOptimizationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StopAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) (*bedrock.StopAdvancedPromptOptimizationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StopAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) *bedrock.StopAdvancedPromptOptimizationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StopAdvancedPromptOptimizationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StopAdvancedPromptOptimizationJobInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

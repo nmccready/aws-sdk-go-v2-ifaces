@@ -52,6 +52,43 @@ func (_m *IClient) CreateCluster(ctx context.Context, params *dsql.CreateCluster
 	return r0, r1
 }
 
+// CreateStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateStream(ctx context.Context, params *dsql.CreateStreamInput, optFns ...func(*dsql.Options)) (*dsql.CreateStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateStream")
+	}
+
+	var r0 *dsql.CreateStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.CreateStreamInput, ...func(*dsql.Options)) (*dsql.CreateStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.CreateStreamInput, ...func(*dsql.Options)) *dsql.CreateStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.CreateStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.CreateStreamInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCluster(ctx context.Context, params *dsql.DeleteClusterInput, optFns ...func(*dsql.Options)) (*dsql.DeleteClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) DeleteClusterPolicy(ctx context.Context, params *dsql.DeleteC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *dsql.DeleteClusterPolicyInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteStream(ctx context.Context, params *dsql.DeleteStreamInput, optFns ...func(*dsql.Options)) (*dsql.DeleteStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteStream")
+	}
+
+	var r0 *dsql.DeleteStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.DeleteStreamInput, ...func(*dsql.Options)) (*dsql.DeleteStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.DeleteStreamInput, ...func(*dsql.Options)) *dsql.DeleteStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.DeleteStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.DeleteStreamInput, ...func(*dsql.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -200,6 +274,43 @@ func (_m *IClient) GetClusterPolicy(ctx context.Context, params *dsql.GetCluster
 	return r0, r1
 }
 
+// GetStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetStream(ctx context.Context, params *dsql.GetStreamInput, optFns ...func(*dsql.Options)) (*dsql.GetStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetStream")
+	}
+
+	var r0 *dsql.GetStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.GetStreamInput, ...func(*dsql.Options)) (*dsql.GetStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.GetStreamInput, ...func(*dsql.Options)) *dsql.GetStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.GetStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.GetStreamInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetVpcEndpointServiceName provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetVpcEndpointServiceName(ctx context.Context, params *dsql.GetVpcEndpointServiceNameInput, optFns ...func(*dsql.Options)) (*dsql.GetVpcEndpointServiceNameOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +377,43 @@ func (_m *IClient) ListClusters(ctx context.Context, params *dsql.ListClustersIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *dsql.ListClustersInput, ...func(*dsql.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListStreams provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListStreams(ctx context.Context, params *dsql.ListStreamsInput, optFns ...func(*dsql.Options)) (*dsql.ListStreamsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListStreams")
+	}
+
+	var r0 *dsql.ListStreamsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.ListStreamsInput, ...func(*dsql.Options)) (*dsql.ListStreamsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dsql.ListStreamsInput, ...func(*dsql.Options)) *dsql.ListStreamsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dsql.ListStreamsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dsql.ListStreamsInput, ...func(*dsql.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

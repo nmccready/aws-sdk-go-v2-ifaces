@@ -73,6 +73,7 @@ type IClient interface {
  ListMessageTemplateVersions(ctx context.Context, params *ListMessageTemplateVersionsInput, optFns ...func(*Options)) (*ListMessageTemplateVersionsOutput, error) 
  ListMessageTemplates(ctx context.Context, params *ListMessageTemplatesInput, optFns ...func(*Options)) (*ListMessageTemplatesOutput, error) 
  ListMessages(ctx context.Context, params *ListMessagesInput, optFns ...func(*Options)) (*ListMessagesOutput, error) 
+ ListModels(ctx context.Context, params *ListModelsInput, optFns ...func(*Options)) (*ListModelsOutput, error) 
  ListQuickResponses(ctx context.Context, params *ListQuickResponsesInput, optFns ...func(*Options)) (*ListQuickResponsesOutput, error) 
  ListSpans(ctx context.Context, params *ListSpansInput, optFns ...func(*Options)) (*ListSpansOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 

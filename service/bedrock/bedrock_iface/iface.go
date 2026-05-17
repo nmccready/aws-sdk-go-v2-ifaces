@@ -10,8 +10,10 @@ import (
 // IClient defines the interface for bedrock
 type IClient interface {
  Options() Options 
+ BatchDeleteAdvancedPromptOptimizationJob(ctx context.Context, params *BatchDeleteAdvancedPromptOptimizationJobInput, optFns ...func(*Options)) (*BatchDeleteAdvancedPromptOptimizationJobOutput, error) 
  BatchDeleteEvaluationJob(ctx context.Context, params *BatchDeleteEvaluationJobInput, optFns ...func(*Options)) (*BatchDeleteEvaluationJobOutput, error) 
  CancelAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *CancelAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*Options)) (*CancelAutomatedReasoningPolicyBuildWorkflowOutput, error) 
+ CreateAdvancedPromptOptimizationJob(ctx context.Context, params *CreateAdvancedPromptOptimizationJobInput, optFns ...func(*Options)) (*CreateAdvancedPromptOptimizationJobOutput, error) 
  CreateAutomatedReasoningPolicy(ctx context.Context, params *CreateAutomatedReasoningPolicyInput, optFns ...func(*Options)) (*CreateAutomatedReasoningPolicyOutput, error) 
  CreateAutomatedReasoningPolicyTestCase(ctx context.Context, params *CreateAutomatedReasoningPolicyTestCaseInput, optFns ...func(*Options)) (*CreateAutomatedReasoningPolicyTestCaseOutput, error) 
  CreateAutomatedReasoningPolicyVersion(ctx context.Context, params *CreateAutomatedReasoningPolicyVersionInput, optFns ...func(*Options)) (*CreateAutomatedReasoningPolicyVersionOutput, error) 
@@ -46,6 +48,7 @@ type IClient interface {
  DeleteResourcePolicy(ctx context.Context, params *DeleteResourcePolicyInput, optFns ...func(*Options)) (*DeleteResourcePolicyOutput, error) 
  DeregisterMarketplaceModelEndpoint(ctx context.Context, params *DeregisterMarketplaceModelEndpointInput, optFns ...func(*Options)) (*DeregisterMarketplaceModelEndpointOutput, error) 
  ExportAutomatedReasoningPolicyVersion(ctx context.Context, params *ExportAutomatedReasoningPolicyVersionInput, optFns ...func(*Options)) (*ExportAutomatedReasoningPolicyVersionOutput, error) 
+ GetAdvancedPromptOptimizationJob(ctx context.Context, params *GetAdvancedPromptOptimizationJobInput, optFns ...func(*Options)) (*GetAdvancedPromptOptimizationJobOutput, error) 
  GetAutomatedReasoningPolicy(ctx context.Context, params *GetAutomatedReasoningPolicyInput, optFns ...func(*Options)) (*GetAutomatedReasoningPolicyOutput, error) 
  GetAutomatedReasoningPolicyAnnotations(ctx context.Context, params *GetAutomatedReasoningPolicyAnnotationsInput, optFns ...func(*Options)) (*GetAutomatedReasoningPolicyAnnotationsOutput, error) 
  GetAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *GetAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*Options)) (*GetAutomatedReasoningPolicyBuildWorkflowOutput, error) 
@@ -71,6 +74,7 @@ type IClient interface {
  GetProvisionedModelThroughput(ctx context.Context, params *GetProvisionedModelThroughputInput, optFns ...func(*Options)) (*GetProvisionedModelThroughputOutput, error) 
  GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
  GetUseCaseForModelAccess(ctx context.Context, params *GetUseCaseForModelAccessInput, optFns ...func(*Options)) (*GetUseCaseForModelAccessOutput, error) 
+ ListAdvancedPromptOptimizationJobs(ctx context.Context, params *ListAdvancedPromptOptimizationJobsInput, optFns ...func(*Options)) (*ListAdvancedPromptOptimizationJobsOutput, error) 
  ListAutomatedReasoningPolicies(ctx context.Context, params *ListAutomatedReasoningPoliciesInput, optFns ...func(*Options)) (*ListAutomatedReasoningPoliciesOutput, error) 
  ListAutomatedReasoningPolicyBuildWorkflows(ctx context.Context, params *ListAutomatedReasoningPolicyBuildWorkflowsInput, optFns ...func(*Options)) (*ListAutomatedReasoningPolicyBuildWorkflowsOutput, error) 
  ListAutomatedReasoningPolicyTestCases(ctx context.Context, params *ListAutomatedReasoningPolicyTestCasesInput, optFns ...func(*Options)) (*ListAutomatedReasoningPolicyTestCasesOutput, error) 
@@ -99,6 +103,7 @@ type IClient interface {
  RegisterMarketplaceModelEndpoint(ctx context.Context, params *RegisterMarketplaceModelEndpointInput, optFns ...func(*Options)) (*RegisterMarketplaceModelEndpointOutput, error) 
  StartAutomatedReasoningPolicyBuildWorkflow(ctx context.Context, params *StartAutomatedReasoningPolicyBuildWorkflowInput, optFns ...func(*Options)) (*StartAutomatedReasoningPolicyBuildWorkflowOutput, error) 
  StartAutomatedReasoningPolicyTestWorkflow(ctx context.Context, params *StartAutomatedReasoningPolicyTestWorkflowInput, optFns ...func(*Options)) (*StartAutomatedReasoningPolicyTestWorkflowOutput, error) 
+ StopAdvancedPromptOptimizationJob(ctx context.Context, params *StopAdvancedPromptOptimizationJobInput, optFns ...func(*Options)) (*StopAdvancedPromptOptimizationJobOutput, error) 
  StopEvaluationJob(ctx context.Context, params *StopEvaluationJobInput, optFns ...func(*Options)) (*StopEvaluationJobOutput, error) 
  StopModelCustomizationJob(ctx context.Context, params *StopModelCustomizationJobInput, optFns ...func(*Options)) (*StopModelCustomizationJobOutput, error) 
  StopModelInvocationJob(ctx context.Context, params *StopModelInvocationJobInput, optFns ...func(*Options)) (*StopModelInvocationJobOutput, error) 

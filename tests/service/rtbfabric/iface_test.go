@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateCertificate", func(t *testing.T) {
+        input := &rtbfabric.AssociateCertificateInput{}
+        output := &rtbfabric.AssociateCertificateOutput{}
+
+        mockClient.On("AssociateCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateInboundExternalLink", func(t *testing.T) {
         input := &rtbfabric.CreateInboundExternalLinkInput{}
         output := &rtbfabric.CreateInboundExternalLinkOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateLink", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateLink(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateLinkRoutingRule", func(t *testing.T) {
+        input := &rtbfabric.CreateLinkRoutingRuleInput{}
+        output := &rtbfabric.CreateLinkRoutingRuleOutput{}
+
+        mockClient.On("CreateLinkRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLinkRoutingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteLinkRoutingRule", func(t *testing.T) {
+        input := &rtbfabric.DeleteLinkRoutingRuleInput{}
+        output := &rtbfabric.DeleteLinkRoutingRuleOutput{}
+
+        mockClient.On("DeleteLinkRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLinkRoutingRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteOutboundExternalLink", func(t *testing.T) {
         input := &rtbfabric.DeleteOutboundExternalLinkInput{}
         output := &rtbfabric.DeleteOutboundExternalLinkOutput{}
@@ -177,6 +216,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateCertificate", func(t *testing.T) {
+        input := &rtbfabric.DisassociateCertificateInput{}
+        output := &rtbfabric.DisassociateCertificateOutput{}
+
+        mockClient.On("DisassociateCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCertificateAssociation", func(t *testing.T) {
+        input := &rtbfabric.GetCertificateAssociationInput{}
+        output := &rtbfabric.GetCertificateAssociationOutput{}
+
+        mockClient.On("GetCertificateAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCertificateAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInboundExternalLink", func(t *testing.T) {
         input := &rtbfabric.GetInboundExternalLinkInput{}
         output := &rtbfabric.GetInboundExternalLinkOutput{}
@@ -197,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLink", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLink(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLinkRoutingRule", func(t *testing.T) {
+        input := &rtbfabric.GetLinkRoutingRuleInput{}
+        output := &rtbfabric.GetLinkRoutingRuleOutput{}
+
+        mockClient.On("GetLinkRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLinkRoutingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -236,6 +314,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResponderGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResponderGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCertificateAssociations", func(t *testing.T) {
+        input := &rtbfabric.ListCertificateAssociationsInput{}
+        output := &rtbfabric.ListCertificateAssociationsOutput{}
+
+        mockClient.On("ListCertificateAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCertificateAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLinkRoutingRules", func(t *testing.T) {
+        input := &rtbfabric.ListLinkRoutingRulesInput{}
+        output := &rtbfabric.ListLinkRoutingRulesOutput{}
+
+        mockClient.On("ListLinkRoutingRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLinkRoutingRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -353,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLinkModuleFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLinkModuleFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLinkRoutingRule", func(t *testing.T) {
+        input := &rtbfabric.UpdateLinkRoutingRuleInput{}
+        output := &rtbfabric.UpdateLinkRoutingRuleOutput{}
+
+        mockClient.On("UpdateLinkRoutingRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLinkRoutingRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

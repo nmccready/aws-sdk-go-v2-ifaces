@@ -11,12 +11,16 @@ import (
 type IClient interface {
  Options() Options 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
+ CreateStream(ctx context.Context, params *CreateStreamInput, optFns ...func(*Options)) (*CreateStreamOutput, error) 
  DeleteCluster(ctx context.Context, params *DeleteClusterInput, optFns ...func(*Options)) (*DeleteClusterOutput, error) 
  DeleteClusterPolicy(ctx context.Context, params *DeleteClusterPolicyInput, optFns ...func(*Options)) (*DeleteClusterPolicyOutput, error) 
+ DeleteStream(ctx context.Context, params *DeleteStreamInput, optFns ...func(*Options)) (*DeleteStreamOutput, error) 
  GetCluster(ctx context.Context, params *GetClusterInput, optFns ...func(*Options)) (*GetClusterOutput, error) 
  GetClusterPolicy(ctx context.Context, params *GetClusterPolicyInput, optFns ...func(*Options)) (*GetClusterPolicyOutput, error) 
+ GetStream(ctx context.Context, params *GetStreamInput, optFns ...func(*Options)) (*GetStreamOutput, error) 
  GetVpcEndpointServiceName(ctx context.Context, params *GetVpcEndpointServiceNameInput, optFns ...func(*Options)) (*GetVpcEndpointServiceNameOutput, error) 
  ListClusters(ctx context.Context, params *ListClustersInput, optFns ...func(*Options)) (*ListClustersOutput, error) 
+ ListStreams(ctx context.Context, params *ListStreamsInput, optFns ...func(*Options)) (*ListStreamsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutClusterPolicy(ctx context.Context, params *PutClusterPolicyInput, optFns ...func(*Options)) (*PutClusterPolicyOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
