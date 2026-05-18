@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeleteAdvancedPromptOptimizationJob", func(t *testing.T) {
+        input := &bedrock.BatchDeleteAdvancedPromptOptimizationJobInput{}
+        output := &bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput{}
+
+        mockClient.On("BatchDeleteAdvancedPromptOptimizationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteAdvancedPromptOptimizationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDeleteEvaluationJob", func(t *testing.T) {
         input := &bedrock.BatchDeleteEvaluationJobInput{}
         output := &bedrock.BatchDeleteEvaluationJobOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelAutomatedReasoningPolicyBuildWorkflow", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelAutomatedReasoningPolicyBuildWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAdvancedPromptOptimizationJob", func(t *testing.T) {
+        input := &bedrock.CreateAdvancedPromptOptimizationJobInput{}
+        output := &bedrock.CreateAdvancedPromptOptimizationJobOutput{}
+
+        mockClient.On("CreateAdvancedPromptOptimizationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAdvancedPromptOptimizationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -502,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAdvancedPromptOptimizationJob", func(t *testing.T) {
+        input := &bedrock.GetAdvancedPromptOptimizationJobInput{}
+        output := &bedrock.GetAdvancedPromptOptimizationJobOutput{}
+
+        mockClient.On("GetAdvancedPromptOptimizationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAdvancedPromptOptimizationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAutomatedReasoningPolicy", func(t *testing.T) {
         input := &bedrock.GetAutomatedReasoningPolicyInput{}
         output := &bedrock.GetAutomatedReasoningPolicyOutput{}
@@ -821,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetUseCaseForModelAccess", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetUseCaseForModelAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAdvancedPromptOptimizationJobs", func(t *testing.T) {
+        input := &bedrock.ListAdvancedPromptOptimizationJobsInput{}
+        output := &bedrock.ListAdvancedPromptOptimizationJobsOutput{}
+
+        mockClient.On("ListAdvancedPromptOptimizationJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAdvancedPromptOptimizationJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1185,6 +1237,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAutomatedReasoningPolicyTestWorkflow", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAutomatedReasoningPolicyTestWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopAdvancedPromptOptimizationJob", func(t *testing.T) {
+        input := &bedrock.StopAdvancedPromptOptimizationJobInput{}
+        output := &bedrock.StopAdvancedPromptOptimizationJobOutput{}
+
+        mockClient.On("StopAdvancedPromptOptimizationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopAdvancedPromptOptimizationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

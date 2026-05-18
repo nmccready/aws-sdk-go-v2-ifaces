@@ -853,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListModels", func(t *testing.T) {
+        input := &qconnect.ListModelsInput{}
+        output := &qconnect.ListModelsOutput{}
+
+        mockClient.On("ListModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListQuickResponses", func(t *testing.T) {
         input := &qconnect.ListQuickResponsesInput{}
         output := &qconnect.ListQuickResponsesOutput{}

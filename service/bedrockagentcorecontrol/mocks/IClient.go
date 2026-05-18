@@ -2531,6 +2531,43 @@ func (_m *IClient) GetPolicyEngine(ctx context.Context, params *bedrockagentcore
 	return r0, r1
 }
 
+// GetPolicyEngineSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicyEngineSummary(ctx context.Context, params *bedrockagentcorecontrol.GetPolicyEngineSummaryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyEngineSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicyEngineSummary")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPolicyEngineSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyEngineSummaryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyEngineSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyEngineSummaryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPolicyEngineSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPolicyEngineSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyEngineSummaryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPolicyGeneration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPolicyGeneration(ctx context.Context, params *bedrockagentcorecontrol.GetPolicyGenerationInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyGenerationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2560,6 +2597,80 @@ func (_m *IClient) GetPolicyGeneration(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicyGenerationSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicyGenerationSummary(ctx context.Context, params *bedrockagentcorecontrol.GetPolicyGenerationSummaryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyGenerationSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicyGenerationSummary")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPolicyGenerationSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationSummaryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicyGenerationSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationSummaryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPolicyGenerationSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPolicyGenerationSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicyGenerationSummaryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPolicySummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPolicySummary(ctx context.Context, params *bedrockagentcorecontrol.GetPolicySummaryInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicySummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPolicySummary")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetPolicySummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicySummaryInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetPolicySummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetPolicySummaryInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetPolicySummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetPolicySummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetPolicySummaryInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3530,6 +3641,43 @@ func (_m *IClient) ListPolicies(ctx context.Context, params *bedrockagentcorecon
 	return r0, r1
 }
 
+// ListPolicyEngineSummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyEngineSummaries(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyEngineSummariesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyEngineSummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyEngineSummaries")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPolicyEngineSummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyEngineSummariesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyEngineSummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyEngineSummariesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPolicyEngineSummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPolicyEngineSummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicyEngineSummariesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPolicyEngines provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPolicyEngines(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyEnginesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyEnginesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3604,6 +3752,43 @@ func (_m *IClient) ListPolicyGenerationAssets(ctx context.Context, params *bedro
 	return r0, r1
 }
 
+// ListPolicyGenerationSummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyGenerationSummaries(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyGenerationSummariesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationSummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyGenerationSummaries")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPolicyGenerationSummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationSummariesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationSummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationSummariesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPolicyGenerationSummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPolicyGenerationSummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationSummariesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPolicyGenerations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPolicyGenerations(ctx context.Context, params *bedrockagentcorecontrol.ListPolicyGenerationsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicyGenerationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3633,6 +3818,43 @@ func (_m *IClient) ListPolicyGenerations(ctx context.Context, params *bedrockage
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicyGenerationsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicySummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicySummaries(ctx context.Context, params *bedrockagentcorecontrol.ListPolicySummariesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicySummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicySummaries")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListPolicySummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicySummariesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListPolicySummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListPolicySummariesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListPolicySummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListPolicySummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListPolicySummariesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

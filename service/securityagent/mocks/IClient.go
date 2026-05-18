@@ -51,6 +51,43 @@ func (_m *IClient) AddArtifact(ctx context.Context, params *securityagent.AddArt
 	return r0, r1
 }
 
+// BatchDeleteCodeReviews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteCodeReviews(ctx context.Context, params *securityagent.BatchDeleteCodeReviewsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchDeleteCodeReviewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteCodeReviews")
+	}
+
+	var r0 *securityagent.BatchDeleteCodeReviewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDeleteCodeReviewsInput, ...func(*securityagent.Options)) (*securityagent.BatchDeleteCodeReviewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDeleteCodeReviewsInput, ...func(*securityagent.Options)) *securityagent.BatchDeleteCodeReviewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchDeleteCodeReviewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchDeleteCodeReviewsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchDeletePentests provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchDeletePentests(ctx context.Context, params *securityagent.BatchDeletePentestsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchDeletePentestsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +191,117 @@ func (_m *IClient) BatchGetArtifactMetadata(ctx context.Context, params *securit
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetArtifactMetadataInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetCodeReviewJobTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetCodeReviewJobTasks(ctx context.Context, params *securityagent.BatchGetCodeReviewJobTasksInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetCodeReviewJobTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetCodeReviewJobTasks")
+	}
+
+	var r0 *securityagent.BatchGetCodeReviewJobTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetCodeReviewJobTasksInput, ...func(*securityagent.Options)) (*securityagent.BatchGetCodeReviewJobTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetCodeReviewJobTasksInput, ...func(*securityagent.Options)) *securityagent.BatchGetCodeReviewJobTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetCodeReviewJobTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetCodeReviewJobTasksInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetCodeReviewJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetCodeReviewJobs(ctx context.Context, params *securityagent.BatchGetCodeReviewJobsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetCodeReviewJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetCodeReviewJobs")
+	}
+
+	var r0 *securityagent.BatchGetCodeReviewJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetCodeReviewJobsInput, ...func(*securityagent.Options)) (*securityagent.BatchGetCodeReviewJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetCodeReviewJobsInput, ...func(*securityagent.Options)) *securityagent.BatchGetCodeReviewJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetCodeReviewJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetCodeReviewJobsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetCodeReviews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetCodeReviews(ctx context.Context, params *securityagent.BatchGetCodeReviewsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetCodeReviewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetCodeReviews")
+	}
+
+	var r0 *securityagent.BatchGetCodeReviewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetCodeReviewsInput, ...func(*securityagent.Options)) (*securityagent.BatchGetCodeReviewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetCodeReviewsInput, ...func(*securityagent.Options)) *securityagent.BatchGetCodeReviewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetCodeReviewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetCodeReviewsInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -413,6 +561,43 @@ func (_m *IClient) CreateApplication(ctx context.Context, params *securityagent.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreateApplicationInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCodeReview provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCodeReview(ctx context.Context, params *securityagent.CreateCodeReviewInput, optFns ...func(*securityagent.Options)) (*securityagent.CreateCodeReviewOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCodeReview")
+	}
+
+	var r0 *securityagent.CreateCodeReviewOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateCodeReviewInput, ...func(*securityagent.Options)) (*securityagent.CreateCodeReviewOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateCodeReviewInput, ...func(*securityagent.Options)) *securityagent.CreateCodeReviewOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.CreateCodeReviewOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreateCodeReviewInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1050,6 +1235,117 @@ func (_m *IClient) ListArtifacts(ctx context.Context, params *securityagent.List
 	return r0, r1
 }
 
+// ListCodeReviewJobTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCodeReviewJobTasks(ctx context.Context, params *securityagent.ListCodeReviewJobTasksInput, optFns ...func(*securityagent.Options)) (*securityagent.ListCodeReviewJobTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCodeReviewJobTasks")
+	}
+
+	var r0 *securityagent.ListCodeReviewJobTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListCodeReviewJobTasksInput, ...func(*securityagent.Options)) (*securityagent.ListCodeReviewJobTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListCodeReviewJobTasksInput, ...func(*securityagent.Options)) *securityagent.ListCodeReviewJobTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListCodeReviewJobTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListCodeReviewJobTasksInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCodeReviewJobsForCodeReview provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCodeReviewJobsForCodeReview(ctx context.Context, params *securityagent.ListCodeReviewJobsForCodeReviewInput, optFns ...func(*securityagent.Options)) (*securityagent.ListCodeReviewJobsForCodeReviewOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCodeReviewJobsForCodeReview")
+	}
+
+	var r0 *securityagent.ListCodeReviewJobsForCodeReviewOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListCodeReviewJobsForCodeReviewInput, ...func(*securityagent.Options)) (*securityagent.ListCodeReviewJobsForCodeReviewOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListCodeReviewJobsForCodeReviewInput, ...func(*securityagent.Options)) *securityagent.ListCodeReviewJobsForCodeReviewOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListCodeReviewJobsForCodeReviewOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListCodeReviewJobsForCodeReviewInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCodeReviews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCodeReviews(ctx context.Context, params *securityagent.ListCodeReviewsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListCodeReviewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCodeReviews")
+	}
+
+	var r0 *securityagent.ListCodeReviewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListCodeReviewsInput, ...func(*securityagent.Options)) (*securityagent.ListCodeReviewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListCodeReviewsInput, ...func(*securityagent.Options)) *securityagent.ListCodeReviewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListCodeReviewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListCodeReviewsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDiscoveredEndpoints provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDiscoveredEndpoints(ctx context.Context, params *securityagent.ListDiscoveredEndpointsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListDiscoveredEndpointsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1475,6 +1771,43 @@ func (_m *IClient) StartCodeRemediation(ctx context.Context, params *securityage
 	return r0, r1
 }
 
+// StartCodeReviewJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartCodeReviewJob(ctx context.Context, params *securityagent.StartCodeReviewJobInput, optFns ...func(*securityagent.Options)) (*securityagent.StartCodeReviewJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartCodeReviewJob")
+	}
+
+	var r0 *securityagent.StartCodeReviewJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StartCodeReviewJobInput, ...func(*securityagent.Options)) (*securityagent.StartCodeReviewJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StartCodeReviewJobInput, ...func(*securityagent.Options)) *securityagent.StartCodeReviewJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.StartCodeReviewJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.StartCodeReviewJobInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartPentestJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartPentestJob(ctx context.Context, params *securityagent.StartPentestJobInput, optFns ...func(*securityagent.Options)) (*securityagent.StartPentestJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1504,6 +1837,43 @@ func (_m *IClient) StartPentestJob(ctx context.Context, params *securityagent.St
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.StartPentestJobInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopCodeReviewJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopCodeReviewJob(ctx context.Context, params *securityagent.StopCodeReviewJobInput, optFns ...func(*securityagent.Options)) (*securityagent.StopCodeReviewJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopCodeReviewJob")
+	}
+
+	var r0 *securityagent.StopCodeReviewJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StopCodeReviewJobInput, ...func(*securityagent.Options)) (*securityagent.StopCodeReviewJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StopCodeReviewJobInput, ...func(*securityagent.Options)) *securityagent.StopCodeReviewJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.StopCodeReviewJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.StopCodeReviewJobInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1689,6 +2059,43 @@ func (_m *IClient) UpdateApplication(ctx context.Context, params *securityagent.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdateApplicationInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCodeReview provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCodeReview(ctx context.Context, params *securityagent.UpdateCodeReviewInput, optFns ...func(*securityagent.Options)) (*securityagent.UpdateCodeReviewOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCodeReview")
+	}
+
+	var r0 *securityagent.UpdateCodeReviewOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateCodeReviewInput, ...func(*securityagent.Options)) (*securityagent.UpdateCodeReviewOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateCodeReviewInput, ...func(*securityagent.Options)) *securityagent.UpdateCodeReviewOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.UpdateCodeReviewOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdateCodeReviewInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -424,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateNotebook", func(t *testing.T) {
+        input := &datazone.CreateNotebookInput{}
+        output := &datazone.CreateNotebookOutput{}
+
+        mockClient.On("CreateNotebook", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNotebook(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateProject", func(t *testing.T) {
         input := &datazone.CreateProjectInput{}
         output := &datazone.CreateProjectOutput{}
@@ -769,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteListing", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteListing(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteNotebook", func(t *testing.T) {
+        input := &datazone.DeleteNotebookInput{}
+        output := &datazone.DeleteNotebookOutput{}
+
+        mockClient.On("DeleteNotebook", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNotebook(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1256,6 +1282,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetNotebook", func(t *testing.T) {
+        input := &datazone.GetNotebookInput{}
+        output := &datazone.GetNotebookOutput{}
+
+        mockClient.On("GetNotebook", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNotebook(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetNotebookExport", func(t *testing.T) {
+        input := &datazone.GetNotebookExportInput{}
+        output := &datazone.GetNotebookExportOutput{}
+
+        mockClient.On("GetNotebookExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNotebookExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetNotebookRun", func(t *testing.T) {
         input := &datazone.GetNotebookRunInput{}
         output := &datazone.GetNotebookRunOutput{}
@@ -1672,6 +1724,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListNotebooks", func(t *testing.T) {
+        input := &datazone.ListNotebooksInput{}
+        output := &datazone.ListNotebooksOutput{}
+
+        mockClient.On("ListNotebooks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNotebooks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNotifications", func(t *testing.T) {
         input := &datazone.ListNotificationsInput{}
         output := &datazone.ListNotificationsOutput{}
@@ -2049,6 +2114,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartNotebookExport", func(t *testing.T) {
+        input := &datazone.StartNotebookExportInput{}
+        output := &datazone.StartNotebookExportOutput{}
+
+        mockClient.On("StartNotebookExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNotebookExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartNotebookImport", func(t *testing.T) {
+        input := &datazone.StartNotebookImportInput{}
+        output := &datazone.StartNotebookImportOutput{}
+
+        mockClient.On("StartNotebookImport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNotebookImport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartNotebookRun", func(t *testing.T) {
         input := &datazone.StartNotebookRunInput{}
         output := &datazone.StartNotebookRunOutput{}
@@ -2264,6 +2355,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGroupProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGroupProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateNotebook", func(t *testing.T) {
+        input := &datazone.UpdateNotebookInput{}
+        output := &datazone.UpdateNotebookOutput{}
+
+        mockClient.On("UpdateNotebook", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateNotebook(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
