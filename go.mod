@@ -3,10 +3,10 @@ module github.com/nmccready/aws-sdk-go-v2-ifaces
 go 1.24
 
 require (
-	github.com/aws/aws-sdk-go-v2/service/accessanalyzer v1.47.2
+	github.com/aws/aws-sdk-go-v2/service/accessanalyzer v1.48.0
 	github.com/aws/aws-sdk-go-v2/service/account v1.31.0
 	github.com/aws/aws-sdk-go-v2/service/acm v1.38.3
-	github.com/aws/aws-sdk-go-v2/service/acmpca v1.46.14
+	github.com/aws/aws-sdk-go-v2/service/acmpca v1.46.15
 	github.com/aws/aws-sdk-go-v2/service/aiops v1.6.23
 	github.com/aws/aws-sdk-go-v2/service/amp v1.42.11
 	github.com/aws/aws-sdk-go-v2/service/amplify v1.38.16
@@ -101,7 +101,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizer v1.50.1
 	github.com/aws/aws-sdk-go-v2/service/computeoptimizerautomation v1.1.1
 	github.com/aws/aws-sdk-go-v2/service/configservice v1.62.3
-	github.com/aws/aws-sdk-go-v2/service/connect v1.173.0
+	github.com/aws/aws-sdk-go-v2/service/connect v1.174.0
 	github.com/aws/aws-sdk-go-v2/service/connectcampaigns v1.20.22
 	github.com/aws/aws-sdk-go-v2/service/connectcampaignsv2 v1.13.0
 	github.com/aws/aws-sdk-go-v2/service/connectcases v1.41.0
@@ -137,11 +137,11 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.57.3
 	github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.32.16
 	github.com/aws/aws-sdk-go-v2/service/ebs v1.33.16
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.302.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.303.0
 	github.com/aws/aws-sdk-go-v2/service/ec2instanceconnect v1.32.22
 	github.com/aws/aws-sdk-go-v2/service/ecr v1.57.2
 	github.com/aws/aws-sdk-go-v2/service/ecrpublic v1.38.15
-	github.com/aws/aws-sdk-go-v2/service/ecs v1.79.1
+	github.com/aws/aws-sdk-go-v2/service/ecs v1.80.0
 	github.com/aws/aws-sdk-go-v2/service/efs v1.41.16
 	github.com/aws/aws-sdk-go-v2/service/eks v1.83.0
 	github.com/aws/aws-sdk-go-v2/service/eksauth v1.12.15
@@ -156,7 +156,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/emrserverless v1.40.2
 	github.com/aws/aws-sdk-go-v2/service/entityresolution v1.27.0
 	github.com/aws/aws-sdk-go-v2/service/eventbridge v1.45.25
-	github.com/aws/aws-sdk-go-v2/service/evs v1.8.1
+	github.com/aws/aws-sdk-go-v2/service/evs v1.8.2
 	github.com/aws/aws-sdk-go-v2/service/finspace v1.33.23
 	github.com/aws/aws-sdk-go-v2/service/finspacedata v1.33.23
 	github.com/aws/aws-sdk-go-v2/service/firehose v1.42.16
@@ -315,7 +315,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/qapps v1.11.22
 	github.com/aws/aws-sdk-go-v2/service/qbusiness v1.34.8
 	github.com/aws/aws-sdk-go-v2/service/qconnect v1.31.0
-	github.com/aws/aws-sdk-go-v2/service/quicksight v1.109.0
+	github.com/aws/aws-sdk-go-v2/service/quicksight v1.110.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.36.5
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.27.11
 	github.com/aws/aws-sdk-go-v2/service/rds v1.118.2
@@ -428,7 +428,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.39.0
 	github.com/aws/aws-sdk-go-v2/service/xray v1.36.23
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -443,14 +443,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.23 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.23 // indirect
 	github.com/aws/smithy-go v1.25.1 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
