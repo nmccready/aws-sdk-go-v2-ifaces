@@ -1606,6 +1606,43 @@ func (_m *IClient) CreateUserPoolDomain(ctx context.Context, params *cognitoiden
 	return r0, r1
 }
 
+// CreateUserPoolReplica provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateUserPoolReplica(ctx context.Context, params *cognitoidentityprovider.CreateUserPoolReplicaInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateUserPoolReplicaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateUserPoolReplica")
+	}
+
+	var r0 *cognitoidentityprovider.CreateUserPoolReplicaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateUserPoolReplicaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.CreateUserPoolReplicaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.CreateUserPoolReplicaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CreateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteGroup(ctx context.Context, params *cognitoidentityprovider.DeleteGroupInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2005,6 +2042,43 @@ func (_m *IClient) DeleteUserPoolDomain(ctx context.Context, params *cognitoiden
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolDomainInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteUserPoolReplica provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteUserPoolReplica(ctx context.Context, params *cognitoidentityprovider.DeleteUserPoolReplicaInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteUserPoolReplicaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteUserPoolReplica")
+	}
+
+	var r0 *cognitoidentityprovider.DeleteUserPoolReplicaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteUserPoolReplicaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DeleteUserPoolReplicaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DeleteUserPoolReplicaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2679,6 +2753,43 @@ func (_m *IClient) GetLogDeliveryConfiguration(ctx context.Context, params *cogn
 	return r0, r1
 }
 
+// GetProvisionedLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProvisionedLimit(ctx context.Context, params *cognitoidentityprovider.GetProvisionedLimitInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetProvisionedLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProvisionedLimit")
+	}
+
+	var r0 *cognitoidentityprovider.GetProvisionedLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetProvisionedLimitInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetProvisionedLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetProvisionedLimitInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.GetProvisionedLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.GetProvisionedLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetProvisionedLimitInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSigningCertificate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSigningCertificate(ctx context.Context, params *cognitoidentityprovider.GetSigningCertificateInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetSigningCertificateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3337,6 +3448,43 @@ func (_m *IClient) ListUserPoolClients(ctx context.Context, params *cognitoident
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListUserPoolClientsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListUserPoolReplicas provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUserPoolReplicas(ctx context.Context, params *cognitoidentityprovider.ListUserPoolReplicasInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUserPoolReplicasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUserPoolReplicas")
+	}
+
+	var r0 *cognitoidentityprovider.ListUserPoolReplicasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListUserPoolReplicasInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUserPoolReplicasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListUserPoolReplicasInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListUserPoolReplicasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListUserPoolReplicasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListUserPoolReplicasInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4251,6 +4399,43 @@ func (_m *IClient) UpdateManagedLoginBranding(ctx context.Context, params *cogni
 	return r0, r1
 }
 
+// UpdateProvisionedLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProvisionedLimit(ctx context.Context, params *cognitoidentityprovider.UpdateProvisionedLimitInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateProvisionedLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProvisionedLimit")
+	}
+
+	var r0 *cognitoidentityprovider.UpdateProvisionedLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateProvisionedLimitInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateProvisionedLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateProvisionedLimitInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.UpdateProvisionedLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.UpdateProvisionedLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateProvisionedLimitInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateResourceServer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateResourceServer(ctx context.Context, params *cognitoidentityprovider.UpdateResourceServerInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateResourceServerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4465,6 +4650,43 @@ func (_m *IClient) UpdateUserPoolDomain(ctx context.Context, params *cognitoiden
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateUserPoolDomainInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateUserPoolReplica provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateUserPoolReplica(ctx context.Context, params *cognitoidentityprovider.UpdateUserPoolReplicaInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateUserPoolReplicaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateUserPoolReplica")
+	}
+
+	var r0 *cognitoidentityprovider.UpdateUserPoolReplicaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateUserPoolReplicaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.UpdateUserPoolReplicaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.UpdateUserPoolReplicaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

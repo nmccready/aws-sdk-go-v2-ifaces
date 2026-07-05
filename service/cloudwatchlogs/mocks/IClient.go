@@ -1162,6 +1162,43 @@ func (_m *IClient) DeleteSubscriptionFilter(ctx context.Context, params *cloudwa
 	return r0, r1
 }
 
+// DeleteSyslogConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSyslogConfiguration(ctx context.Context, params *cloudwatchlogs.DeleteSyslogConfigurationInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteSyslogConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSyslogConfiguration")
+	}
+
+	var r0 *cloudwatchlogs.DeleteSyslogConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DeleteSyslogConfigurationInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteSyslogConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.DeleteSyslogConfigurationInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.DeleteSyslogConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.DeleteSyslogConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.DeleteSyslogConfigurationInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteTransformer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteTransformer(ctx context.Context, params *cloudwatchlogs.DeleteTransformerInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.DeleteTransformerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2938,6 +2975,43 @@ func (_m *IClient) ListSourcesForS3TableIntegration(ctx context.Context, params 
 	return r0, r1
 }
 
+// ListSyslogConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSyslogConfigurations(ctx context.Context, params *cloudwatchlogs.ListSyslogConfigurationsInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListSyslogConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSyslogConfigurations")
+	}
+
+	var r0 *cloudwatchlogs.ListSyslogConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListSyslogConfigurationsInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListSyslogConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.ListSyslogConfigurationsInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.ListSyslogConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.ListSyslogConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.ListSyslogConfigurationsInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *cloudwatchlogs.ListTagsForResourceInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3651,6 +3725,43 @@ func (_m *IClient) PutSubscriptionFilter(ctx context.Context, params *cloudwatch
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.PutSubscriptionFilterInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutSyslogConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutSyslogConfiguration(ctx context.Context, params *cloudwatchlogs.PutSyslogConfigurationInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutSyslogConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutSyslogConfiguration")
+	}
+
+	var r0 *cloudwatchlogs.PutSyslogConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.PutSyslogConfigurationInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutSyslogConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.PutSyslogConfigurationInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.PutSyslogConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.PutSyslogConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.PutSyslogConfigurationInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

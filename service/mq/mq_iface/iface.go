@@ -23,6 +23,7 @@ type IClient interface {
  DescribeBrokerInstanceOptions(ctx context.Context, params *DescribeBrokerInstanceOptionsInput, optFns ...func(*Options)) (*DescribeBrokerInstanceOptionsOutput, error) 
  DescribeConfiguration(ctx context.Context, params *DescribeConfigurationInput, optFns ...func(*Options)) (*DescribeConfigurationOutput, error) 
  DescribeConfigurationRevision(ctx context.Context, params *DescribeConfigurationRevisionInput, optFns ...func(*Options)) (*DescribeConfigurationRevisionOutput, error) 
+ DescribeSharedResources(ctx context.Context, params *DescribeSharedResourcesInput, optFns ...func(*Options)) (*DescribeSharedResourcesOutput, error) 
  DescribeUser(ctx context.Context, params *DescribeUserInput, optFns ...func(*Options)) (*DescribeUserOutput, error) 
  ListBrokers(ctx context.Context, params *ListBrokersInput, optFns ...func(*Options)) (*ListBrokersOutput, error) 
  ListConfigurationRevisions(ctx context.Context, params *ListConfigurationRevisionsInput, optFns ...func(*Options)) (*ListConfigurationRevisionsOutput, error) 

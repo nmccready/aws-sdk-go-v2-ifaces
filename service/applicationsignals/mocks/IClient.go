@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchDeleteInstrumentationConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteInstrumentationConfigurations(ctx context.Context, params *applicationsignals.BatchDeleteInstrumentationConfigurationsInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.BatchDeleteInstrumentationConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteInstrumentationConfigurations")
+	}
+
+	var r0 *applicationsignals.BatchDeleteInstrumentationConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.BatchDeleteInstrumentationConfigurationsInput, ...func(*applicationsignals.Options)) (*applicationsignals.BatchDeleteInstrumentationConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.BatchDeleteInstrumentationConfigurationsInput, ...func(*applicationsignals.Options)) *applicationsignals.BatchDeleteInstrumentationConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.BatchDeleteInstrumentationConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.BatchDeleteInstrumentationConfigurationsInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetServiceLevelObjectiveBudgetReport provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetServiceLevelObjectiveBudgetReport(ctx context.Context, params *applicationsignals.BatchGetServiceLevelObjectiveBudgetReportInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.BatchGetServiceLevelObjectiveBudgetReportOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +118,43 @@ func (_m *IClient) BatchUpdateExclusionWindows(ctx context.Context, params *appl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.BatchUpdateExclusionWindowsInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateInstrumentationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateInstrumentationConfiguration(ctx context.Context, params *applicationsignals.CreateInstrumentationConfigurationInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.CreateInstrumentationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateInstrumentationConfiguration")
+	}
+
+	var r0 *applicationsignals.CreateInstrumentationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.CreateInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) (*applicationsignals.CreateInstrumentationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.CreateInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) *applicationsignals.CreateInstrumentationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.CreateInstrumentationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.CreateInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -163,6 +237,43 @@ func (_m *IClient) DeleteGroupingConfiguration(ctx context.Context, params *appl
 	return r0, r1
 }
 
+// DeleteInstrumentationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteInstrumentationConfiguration(ctx context.Context, params *applicationsignals.DeleteInstrumentationConfigurationInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.DeleteInstrumentationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteInstrumentationConfiguration")
+	}
+
+	var r0 *applicationsignals.DeleteInstrumentationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.DeleteInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) (*applicationsignals.DeleteInstrumentationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.DeleteInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) *applicationsignals.DeleteInstrumentationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.DeleteInstrumentationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.DeleteInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteServiceLevelObjective provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteServiceLevelObjective(ctx context.Context, params *applicationsignals.DeleteServiceLevelObjectiveInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.DeleteServiceLevelObjectiveOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +303,80 @@ func (_m *IClient) DeleteServiceLevelObjective(ctx context.Context, params *appl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.DeleteServiceLevelObjectiveInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetInstrumentationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInstrumentationConfiguration(ctx context.Context, params *applicationsignals.GetInstrumentationConfigurationInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.GetInstrumentationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInstrumentationConfiguration")
+	}
+
+	var r0 *applicationsignals.GetInstrumentationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.GetInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) (*applicationsignals.GetInstrumentationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.GetInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) *applicationsignals.GetInstrumentationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.GetInstrumentationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.GetInstrumentationConfigurationInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetInstrumentationConfigurationStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInstrumentationConfigurationStatus(ctx context.Context, params *applicationsignals.GetInstrumentationConfigurationStatusInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.GetInstrumentationConfigurationStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInstrumentationConfigurationStatus")
+	}
+
+	var r0 *applicationsignals.GetInstrumentationConfigurationStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.GetInstrumentationConfigurationStatusInput, ...func(*applicationsignals.Options)) (*applicationsignals.GetInstrumentationConfigurationStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.GetInstrumentationConfigurationStatusInput, ...func(*applicationsignals.Options)) *applicationsignals.GetInstrumentationConfigurationStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.GetInstrumentationConfigurationStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.GetInstrumentationConfigurationStatusInput, ...func(*applicationsignals.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -377,6 +562,43 @@ func (_m *IClient) ListGroupingAttributeDefinitions(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ListGroupingAttributeDefinitionsInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInstrumentationConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInstrumentationConfigurations(ctx context.Context, params *applicationsignals.ListInstrumentationConfigurationsInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ListInstrumentationConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInstrumentationConfigurations")
+	}
+
+	var r0 *applicationsignals.ListInstrumentationConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListInstrumentationConfigurationsInput, ...func(*applicationsignals.Options)) (*applicationsignals.ListInstrumentationConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ListInstrumentationConfigurationsInput, ...func(*applicationsignals.Options)) *applicationsignals.ListInstrumentationConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.ListInstrumentationConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ListInstrumentationConfigurationsInput, ...func(*applicationsignals.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -728,6 +950,43 @@ func (_m *IClient) PutGroupingConfiguration(ctx context.Context, params *applica
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.PutGroupingConfigurationInput, ...func(*applicationsignals.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ReportInstrumentationConfigurationStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ReportInstrumentationConfigurationStatus(ctx context.Context, params *applicationsignals.ReportInstrumentationConfigurationStatusInput, optFns ...func(*applicationsignals.Options)) (*applicationsignals.ReportInstrumentationConfigurationStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ReportInstrumentationConfigurationStatus")
+	}
+
+	var r0 *applicationsignals.ReportInstrumentationConfigurationStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ReportInstrumentationConfigurationStatusInput, ...func(*applicationsignals.Options)) (*applicationsignals.ReportInstrumentationConfigurationStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *applicationsignals.ReportInstrumentationConfigurationStatusInput, ...func(*applicationsignals.Options)) *applicationsignals.ReportInstrumentationConfigurationStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*applicationsignals.ReportInstrumentationConfigurationStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *applicationsignals.ReportInstrumentationConfigurationStatusInput, ...func(*applicationsignals.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

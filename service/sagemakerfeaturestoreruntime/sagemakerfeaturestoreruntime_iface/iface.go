@@ -11,7 +11,9 @@ import (
 type IClient interface {
  Options() Options 
  BatchGetRecord(ctx context.Context, params *BatchGetRecordInput, optFns ...func(*Options)) (*BatchGetRecordOutput, error) 
+ BatchWriteRecord(ctx context.Context, params *BatchWriteRecordInput, optFns ...func(*Options)) (*BatchWriteRecordOutput, error) 
  DeleteRecord(ctx context.Context, params *DeleteRecordInput, optFns ...func(*Options)) (*DeleteRecordOutput, error) 
  GetRecord(ctx context.Context, params *GetRecordInput, optFns ...func(*Options)) (*GetRecordOutput, error) 
+ ListRecords(ctx context.Context, params *ListRecordsInput, optFns ...func(*Options)) (*ListRecordsOutput, error) 
  PutRecord(ctx context.Context, params *PutRecordInput, optFns ...func(*Options)) (*PutRecordOutput, error) 
 }

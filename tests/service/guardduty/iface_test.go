@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateInvestigation", func(t *testing.T) {
+        input := &guardduty.CreateInvestigationInput{}
+        output := &guardduty.CreateInvestigationOutput{}
+
+        mockClient.On("CreateInvestigation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInvestigation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMalwareProtectionPlan", func(t *testing.T) {
         input := &guardduty.CreateMalwareProtectionPlanInput{}
         output := &guardduty.CreateMalwareProtectionPlanOutput{}
@@ -541,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetInvestigation", func(t *testing.T) {
+        input := &guardduty.GetInvestigationInput{}
+        output := &guardduty.GetInvestigationOutput{}
+
+        mockClient.On("GetInvestigation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInvestigation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInvitationsCount", func(t *testing.T) {
         input := &guardduty.GetInvitationsCountInput{}
         output := &guardduty.GetInvitationsCountOutput{}
@@ -782,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIPSets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIPSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInvestigations", func(t *testing.T) {
+        input := &guardduty.ListInvestigationsInput{}
+        output := &guardduty.ListInvestigationsOutput{}
+
+        mockClient.On("ListInvestigations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvestigations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

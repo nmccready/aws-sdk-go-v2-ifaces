@@ -372,6 +372,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSession", func(t *testing.T) {
+        input := &emr.GetSessionInput{}
+        output := &emr.GetSessionOutput{}
+
+        mockClient.On("GetSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSessionEndpoint", func(t *testing.T) {
+        input := &emr.GetSessionEndpointInput{}
+        output := &emr.GetSessionEndpointOutput{}
+
+        mockClient.On("GetSessionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSessionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetStudioSessionMapping", func(t *testing.T) {
         input := &emr.GetStudioSessionMappingInput{}
         output := &emr.GetStudioSessionMappingOutput{}
@@ -483,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSecurityConfigurations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSecurityConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSessions", func(t *testing.T) {
+        input := &emr.ListSessionsInput{}
+        output := &emr.ListSessionsOutput{}
+
+        mockClient.On("ListSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -762,6 +801,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartSession", func(t *testing.T) {
+        input := &emr.StartSessionInput{}
+        output := &emr.StartSessionOutput{}
+
+        mockClient.On("StartSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopNotebookExecution", func(t *testing.T) {
         input := &emr.StopNotebookExecutionInput{}
         output := &emr.StopNotebookExecutionOutput{}
@@ -782,6 +834,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("TerminateJobFlows", ctx, input).Return(output, nil)
 
         result, err := mockClient.TerminateJobFlows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTerminateSession", func(t *testing.T) {
+        input := &emr.TerminateSessionInput{}
+        output := &emr.TerminateSessionOutput{}
+
+        mockClient.On("TerminateSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

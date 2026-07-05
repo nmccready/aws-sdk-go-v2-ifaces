@@ -52,6 +52,228 @@ func (_m *IClient) AddTagsToCertificate(ctx context.Context, params *acm.AddTags
 	return r0, r1
 }
 
+// CreateAcmeDomainValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAcmeDomainValidation(ctx context.Context, params *acm.CreateAcmeDomainValidationInput, optFns ...func(*acm.Options)) (*acm.CreateAcmeDomainValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAcmeDomainValidation")
+	}
+
+	var r0 *acm.CreateAcmeDomainValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.CreateAcmeDomainValidationInput, ...func(*acm.Options)) (*acm.CreateAcmeDomainValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.CreateAcmeDomainValidationInput, ...func(*acm.Options)) *acm.CreateAcmeDomainValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.CreateAcmeDomainValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.CreateAcmeDomainValidationInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAcmeEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAcmeEndpoint(ctx context.Context, params *acm.CreateAcmeEndpointInput, optFns ...func(*acm.Options)) (*acm.CreateAcmeEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAcmeEndpoint")
+	}
+
+	var r0 *acm.CreateAcmeEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.CreateAcmeEndpointInput, ...func(*acm.Options)) (*acm.CreateAcmeEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.CreateAcmeEndpointInput, ...func(*acm.Options)) *acm.CreateAcmeEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.CreateAcmeEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.CreateAcmeEndpointInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAcmeExternalAccountBinding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAcmeExternalAccountBinding(ctx context.Context, params *acm.CreateAcmeExternalAccountBindingInput, optFns ...func(*acm.Options)) (*acm.CreateAcmeExternalAccountBindingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAcmeExternalAccountBinding")
+	}
+
+	var r0 *acm.CreateAcmeExternalAccountBindingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.CreateAcmeExternalAccountBindingInput, ...func(*acm.Options)) (*acm.CreateAcmeExternalAccountBindingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.CreateAcmeExternalAccountBindingInput, ...func(*acm.Options)) *acm.CreateAcmeExternalAccountBindingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.CreateAcmeExternalAccountBindingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.CreateAcmeExternalAccountBindingInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAcmeDomainValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAcmeDomainValidation(ctx context.Context, params *acm.DeleteAcmeDomainValidationInput, optFns ...func(*acm.Options)) (*acm.DeleteAcmeDomainValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAcmeDomainValidation")
+	}
+
+	var r0 *acm.DeleteAcmeDomainValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DeleteAcmeDomainValidationInput, ...func(*acm.Options)) (*acm.DeleteAcmeDomainValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DeleteAcmeDomainValidationInput, ...func(*acm.Options)) *acm.DeleteAcmeDomainValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DeleteAcmeDomainValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DeleteAcmeDomainValidationInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAcmeEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAcmeEndpoint(ctx context.Context, params *acm.DeleteAcmeEndpointInput, optFns ...func(*acm.Options)) (*acm.DeleteAcmeEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAcmeEndpoint")
+	}
+
+	var r0 *acm.DeleteAcmeEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DeleteAcmeEndpointInput, ...func(*acm.Options)) (*acm.DeleteAcmeEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DeleteAcmeEndpointInput, ...func(*acm.Options)) *acm.DeleteAcmeEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DeleteAcmeEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DeleteAcmeEndpointInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAcmeExternalAccountBinding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAcmeExternalAccountBinding(ctx context.Context, params *acm.DeleteAcmeExternalAccountBindingInput, optFns ...func(*acm.Options)) (*acm.DeleteAcmeExternalAccountBindingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAcmeExternalAccountBinding")
+	}
+
+	var r0 *acm.DeleteAcmeExternalAccountBindingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DeleteAcmeExternalAccountBindingInput, ...func(*acm.Options)) (*acm.DeleteAcmeExternalAccountBindingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DeleteAcmeExternalAccountBindingInput, ...func(*acm.Options)) *acm.DeleteAcmeExternalAccountBindingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DeleteAcmeExternalAccountBindingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DeleteAcmeExternalAccountBindingInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCertificate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCertificate(ctx context.Context, params *acm.DeleteCertificateInput, optFns ...func(*acm.Options)) (*acm.DeleteCertificateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +303,154 @@ func (_m *IClient) DeleteCertificate(ctx context.Context, params *acm.DeleteCert
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *acm.DeleteCertificateInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAcmeAccount provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAcmeAccount(ctx context.Context, params *acm.DescribeAcmeAccountInput, optFns ...func(*acm.Options)) (*acm.DescribeAcmeAccountOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAcmeAccount")
+	}
+
+	var r0 *acm.DescribeAcmeAccountOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeAccountInput, ...func(*acm.Options)) (*acm.DescribeAcmeAccountOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeAccountInput, ...func(*acm.Options)) *acm.DescribeAcmeAccountOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DescribeAcmeAccountOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DescribeAcmeAccountInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAcmeDomainValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAcmeDomainValidation(ctx context.Context, params *acm.DescribeAcmeDomainValidationInput, optFns ...func(*acm.Options)) (*acm.DescribeAcmeDomainValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAcmeDomainValidation")
+	}
+
+	var r0 *acm.DescribeAcmeDomainValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeDomainValidationInput, ...func(*acm.Options)) (*acm.DescribeAcmeDomainValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeDomainValidationInput, ...func(*acm.Options)) *acm.DescribeAcmeDomainValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DescribeAcmeDomainValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DescribeAcmeDomainValidationInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAcmeEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAcmeEndpoint(ctx context.Context, params *acm.DescribeAcmeEndpointInput, optFns ...func(*acm.Options)) (*acm.DescribeAcmeEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAcmeEndpoint")
+	}
+
+	var r0 *acm.DescribeAcmeEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeEndpointInput, ...func(*acm.Options)) (*acm.DescribeAcmeEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeEndpointInput, ...func(*acm.Options)) *acm.DescribeAcmeEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DescribeAcmeEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DescribeAcmeEndpointInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAcmeExternalAccountBinding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAcmeExternalAccountBinding(ctx context.Context, params *acm.DescribeAcmeExternalAccountBindingInput, optFns ...func(*acm.Options)) (*acm.DescribeAcmeExternalAccountBindingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAcmeExternalAccountBinding")
+	}
+
+	var r0 *acm.DescribeAcmeExternalAccountBindingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeExternalAccountBindingInput, ...func(*acm.Options)) (*acm.DescribeAcmeExternalAccountBindingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.DescribeAcmeExternalAccountBindingInput, ...func(*acm.Options)) *acm.DescribeAcmeExternalAccountBindingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.DescribeAcmeExternalAccountBindingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.DescribeAcmeExternalAccountBindingInput, ...func(*acm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -200,6 +570,43 @@ func (_m *IClient) GetAccountConfiguration(ctx context.Context, params *acm.GetA
 	return r0, r1
 }
 
+// GetAcmeExternalAccountBindingCredentials provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAcmeExternalAccountBindingCredentials(ctx context.Context, params *acm.GetAcmeExternalAccountBindingCredentialsInput, optFns ...func(*acm.Options)) (*acm.GetAcmeExternalAccountBindingCredentialsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAcmeExternalAccountBindingCredentials")
+	}
+
+	var r0 *acm.GetAcmeExternalAccountBindingCredentialsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.GetAcmeExternalAccountBindingCredentialsInput, ...func(*acm.Options)) (*acm.GetAcmeExternalAccountBindingCredentialsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.GetAcmeExternalAccountBindingCredentialsInput, ...func(*acm.Options)) *acm.GetAcmeExternalAccountBindingCredentialsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.GetAcmeExternalAccountBindingCredentialsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.GetAcmeExternalAccountBindingCredentialsInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCertificate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCertificate(ctx context.Context, params *acm.GetCertificateInput, optFns ...func(*acm.Options)) (*acm.GetCertificateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -274,6 +681,154 @@ func (_m *IClient) ImportCertificate(ctx context.Context, params *acm.ImportCert
 	return r0, r1
 }
 
+// ListAcmeAccounts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAcmeAccounts(ctx context.Context, params *acm.ListAcmeAccountsInput, optFns ...func(*acm.Options)) (*acm.ListAcmeAccountsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAcmeAccounts")
+	}
+
+	var r0 *acm.ListAcmeAccountsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeAccountsInput, ...func(*acm.Options)) (*acm.ListAcmeAccountsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeAccountsInput, ...func(*acm.Options)) *acm.ListAcmeAccountsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.ListAcmeAccountsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListAcmeAccountsInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAcmeDomainValidations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAcmeDomainValidations(ctx context.Context, params *acm.ListAcmeDomainValidationsInput, optFns ...func(*acm.Options)) (*acm.ListAcmeDomainValidationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAcmeDomainValidations")
+	}
+
+	var r0 *acm.ListAcmeDomainValidationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeDomainValidationsInput, ...func(*acm.Options)) (*acm.ListAcmeDomainValidationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeDomainValidationsInput, ...func(*acm.Options)) *acm.ListAcmeDomainValidationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.ListAcmeDomainValidationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListAcmeDomainValidationsInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAcmeEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAcmeEndpoints(ctx context.Context, params *acm.ListAcmeEndpointsInput, optFns ...func(*acm.Options)) (*acm.ListAcmeEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAcmeEndpoints")
+	}
+
+	var r0 *acm.ListAcmeEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeEndpointsInput, ...func(*acm.Options)) (*acm.ListAcmeEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeEndpointsInput, ...func(*acm.Options)) *acm.ListAcmeEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.ListAcmeEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListAcmeEndpointsInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAcmeExternalAccountBindings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAcmeExternalAccountBindings(ctx context.Context, params *acm.ListAcmeExternalAccountBindingsInput, optFns ...func(*acm.Options)) (*acm.ListAcmeExternalAccountBindingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAcmeExternalAccountBindings")
+	}
+
+	var r0 *acm.ListAcmeExternalAccountBindingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeExternalAccountBindingsInput, ...func(*acm.Options)) (*acm.ListAcmeExternalAccountBindingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListAcmeExternalAccountBindingsInput, ...func(*acm.Options)) *acm.ListAcmeExternalAccountBindingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.ListAcmeExternalAccountBindingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListAcmeExternalAccountBindingsInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCertificates provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCertificates(ctx context.Context, params *acm.ListCertificatesInput, optFns ...func(*acm.Options)) (*acm.ListCertificatesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +895,43 @@ func (_m *IClient) ListTagsForCertificate(ctx context.Context, params *acm.ListT
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListTagsForCertificateInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *acm.ListTagsForResourceInput, optFns ...func(*acm.Options)) (*acm.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *acm.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListTagsForResourceInput, ...func(*acm.Options)) (*acm.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListTagsForResourceInput, ...func(*acm.Options)) *acm.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListTagsForResourceInput, ...func(*acm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -551,6 +1143,80 @@ func (_m *IClient) ResendValidationEmail(ctx context.Context, params *acm.Resend
 	return r0, r1
 }
 
+// RevokeAcmeAccount provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeAcmeAccount(ctx context.Context, params *acm.RevokeAcmeAccountInput, optFns ...func(*acm.Options)) (*acm.RevokeAcmeAccountOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeAcmeAccount")
+	}
+
+	var r0 *acm.RevokeAcmeAccountOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.RevokeAcmeAccountInput, ...func(*acm.Options)) (*acm.RevokeAcmeAccountOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.RevokeAcmeAccountInput, ...func(*acm.Options)) *acm.RevokeAcmeAccountOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.RevokeAcmeAccountOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.RevokeAcmeAccountInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RevokeAcmeExternalAccountBinding provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeAcmeExternalAccountBinding(ctx context.Context, params *acm.RevokeAcmeExternalAccountBindingInput, optFns ...func(*acm.Options)) (*acm.RevokeAcmeExternalAccountBindingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeAcmeExternalAccountBinding")
+	}
+
+	var r0 *acm.RevokeAcmeExternalAccountBindingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.RevokeAcmeExternalAccountBindingInput, ...func(*acm.Options)) (*acm.RevokeAcmeExternalAccountBindingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.RevokeAcmeExternalAccountBindingInput, ...func(*acm.Options)) *acm.RevokeAcmeExternalAccountBindingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.RevokeAcmeExternalAccountBindingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.RevokeAcmeExternalAccountBindingInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RevokeCertificate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RevokeCertificate(ctx context.Context, params *acm.RevokeCertificateInput, optFns ...func(*acm.Options)) (*acm.RevokeCertificateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -617,6 +1283,154 @@ func (_m *IClient) SearchCertificates(ctx context.Context, params *acm.SearchCer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *acm.SearchCertificatesInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *acm.TagResourceInput, optFns ...func(*acm.Options)) (*acm.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *acm.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.TagResourceInput, ...func(*acm.Options)) (*acm.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.TagResourceInput, ...func(*acm.Options)) *acm.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.TagResourceInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *acm.UntagResourceInput, optFns ...func(*acm.Options)) (*acm.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *acm.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.UntagResourceInput, ...func(*acm.Options)) (*acm.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.UntagResourceInput, ...func(*acm.Options)) *acm.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.UntagResourceInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAcmeDomainValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAcmeDomainValidation(ctx context.Context, params *acm.UpdateAcmeDomainValidationInput, optFns ...func(*acm.Options)) (*acm.UpdateAcmeDomainValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAcmeDomainValidation")
+	}
+
+	var r0 *acm.UpdateAcmeDomainValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.UpdateAcmeDomainValidationInput, ...func(*acm.Options)) (*acm.UpdateAcmeDomainValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.UpdateAcmeDomainValidationInput, ...func(*acm.Options)) *acm.UpdateAcmeDomainValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.UpdateAcmeDomainValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.UpdateAcmeDomainValidationInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAcmeEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAcmeEndpoint(ctx context.Context, params *acm.UpdateAcmeEndpointInput, optFns ...func(*acm.Options)) (*acm.UpdateAcmeEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAcmeEndpoint")
+	}
+
+	var r0 *acm.UpdateAcmeEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.UpdateAcmeEndpointInput, ...func(*acm.Options)) (*acm.UpdateAcmeEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.UpdateAcmeEndpointInput, ...func(*acm.Options)) *acm.UpdateAcmeEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.UpdateAcmeEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.UpdateAcmeEndpointInput, ...func(*acm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

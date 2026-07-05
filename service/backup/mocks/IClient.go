@@ -1791,6 +1791,43 @@ func (_m *IClient) GetLegalHold(ctx context.Context, params *backup.GetLegalHold
 	return r0, r1
 }
 
+// GetPITRMalwareScanResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPITRMalwareScanResults(ctx context.Context, params *backup.GetPITRMalwareScanResultsInput, optFns ...func(*backup.Options)) (*backup.GetPITRMalwareScanResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPITRMalwareScanResults")
+	}
+
+	var r0 *backup.GetPITRMalwareScanResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.GetPITRMalwareScanResultsInput, ...func(*backup.Options)) (*backup.GetPITRMalwareScanResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.GetPITRMalwareScanResultsInput, ...func(*backup.Options)) *backup.GetPITRMalwareScanResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.GetPITRMalwareScanResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.GetPITRMalwareScanResultsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRecoveryPointIndexDetails provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRecoveryPointIndexDetails(ctx context.Context, params *backup.GetRecoveryPointIndexDetailsInput, optFns ...func(*backup.Options)) (*backup.GetRecoveryPointIndexDetailsOutput, error) {
 	_va := make([]interface{}, len(optFns))

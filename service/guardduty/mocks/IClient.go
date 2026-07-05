@@ -237,6 +237,43 @@ func (_m *IClient) CreateIPSet(ctx context.Context, params *guardduty.CreateIPSe
 	return r0, r1
 }
 
+// CreateInvestigation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateInvestigation(ctx context.Context, params *guardduty.CreateInvestigationInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateInvestigationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateInvestigation")
+	}
+
+	var r0 *guardduty.CreateInvestigationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateInvestigationInput, ...func(*guardduty.Options)) (*guardduty.CreateInvestigationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateInvestigationInput, ...func(*guardduty.Options)) *guardduty.CreateInvestigationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.CreateInvestigationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.CreateInvestigationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateMalwareProtectionPlan provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateMalwareProtectionPlan(ctx context.Context, params *guardduty.CreateMalwareProtectionPlanInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateMalwareProtectionPlanOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1458,6 +1495,43 @@ func (_m *IClient) GetIPSet(ctx context.Context, params *guardduty.GetIPSetInput
 	return r0, r1
 }
 
+// GetInvestigation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetInvestigation(ctx context.Context, params *guardduty.GetInvestigationInput, optFns ...func(*guardduty.Options)) (*guardduty.GetInvestigationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetInvestigation")
+	}
+
+	var r0 *guardduty.GetInvestigationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetInvestigationInput, ...func(*guardduty.Options)) (*guardduty.GetInvestigationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetInvestigationInput, ...func(*guardduty.Options)) *guardduty.GetInvestigationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetInvestigationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetInvestigationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetInvitationsCount provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetInvitationsCount(ctx context.Context, params *guardduty.GetInvitationsCountInput, optFns ...func(*guardduty.Options)) (*guardduty.GetInvitationsCountOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2153,6 +2227,43 @@ func (_m *IClient) ListIPSets(ctx context.Context, params *guardduty.ListIPSetsI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListIPSetsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInvestigations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInvestigations(ctx context.Context, params *guardduty.ListInvestigationsInput, optFns ...func(*guardduty.Options)) (*guardduty.ListInvestigationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInvestigations")
+	}
+
+	var r0 *guardduty.ListInvestigationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListInvestigationsInput, ...func(*guardduty.Options)) (*guardduty.ListInvestigationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListInvestigationsInput, ...func(*guardduty.Options)) *guardduty.ListInvestigationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListInvestigationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListInvestigationsInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

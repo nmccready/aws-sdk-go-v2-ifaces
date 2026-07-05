@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAttachDataSource", func(t *testing.T) {
+        input := &opensearch.AttachDataSourceInput{}
+        output := &opensearch.AttachDataSourceOutput{}
+
+        mockClient.On("AttachDataSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AttachDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAuthorizeVpcEndpointAccess", func(t *testing.T) {
         input := &opensearch.AuthorizeVpcEndpointAccessInput{}
         output := &opensearch.AuthorizeVpcEndpointAccessOutput{}
@@ -359,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDataSourceAttachment", func(t *testing.T) {
+        input := &opensearch.DescribeDataSourceAttachmentInput{}
+        output := &opensearch.DescribeDataSourceAttachmentOutput{}
+
+        mockClient.On("DescribeDataSourceAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataSourceAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDomain", func(t *testing.T) {
         input := &opensearch.DescribeDomainInput{}
         output := &opensearch.DescribeDomainOutput{}
@@ -567,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDetachDataSource", func(t *testing.T) {
+        input := &opensearch.DetachDataSourceInput{}
+        output := &opensearch.DetachDataSourceOutput{}
+
+        mockClient.On("DetachDataSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DetachDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDissociatePackage", func(t *testing.T) {
         input := &opensearch.DissociatePackageInput{}
         output := &opensearch.DissociatePackageOutput{}
@@ -736,6 +775,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInsightFeedback", func(t *testing.T) {
+        input := &opensearch.InsightFeedbackInput{}
+        output := &opensearch.InsightFeedbackOutput{}
+
+        mockClient.On("InsightFeedback", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InsightFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListApplications", func(t *testing.T) {
         input := &opensearch.ListApplicationsInput{}
         output := &opensearch.ListApplicationsOutput{}
@@ -743,6 +795,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataSourceAttachments", func(t *testing.T) {
+        input := &opensearch.ListDataSourceAttachmentsInput{}
+        output := &opensearch.ListDataSourceAttachmentsOutput{}
+
+        mockClient.On("ListDataSourceAttachments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataSourceAttachments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

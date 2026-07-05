@@ -19,6 +19,7 @@ type IClient interface {
  GetResourceMetrics(ctx context.Context, params *GetResourceMetricsInput, optFns ...func(*Options)) (*GetResourceMetricsOutput, error) 
  ListAvailableResourceDimensions(ctx context.Context, params *ListAvailableResourceDimensionsInput, optFns ...func(*Options)) (*ListAvailableResourceDimensionsOutput, error) 
  ListAvailableResourceMetrics(ctx context.Context, params *ListAvailableResourceMetricsInput, optFns ...func(*Options)) (*ListAvailableResourceMetricsOutput, error) 
+ ListPerformanceAnalysisReportRecommendations(ctx context.Context, params *ListPerformanceAnalysisReportRecommendationsInput, optFns ...func(*Options)) (*ListPerformanceAnalysisReportRecommendationsOutput, error) 
  ListPerformanceAnalysisReports(ctx context.Context, params *ListPerformanceAnalysisReportsInput, optFns ...func(*Options)) (*ListPerformanceAnalysisReportsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 

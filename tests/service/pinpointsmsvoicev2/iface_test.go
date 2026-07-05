@@ -424,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteRcsMessageSpendLimitOverride", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideInput{}
+        output := &pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideOutput{}
+
+        mockClient.On("DeleteRcsMessageSpendLimitOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRcsMessageSpendLimitOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRegistration", func(t *testing.T) {
         input := &pinpointsmsvoicev2.DeleteRegistrationInput{}
         output := &pinpointsmsvoicev2.DeleteRegistrationOutput{}
@@ -1126,6 +1139,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendRcsMessage", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.SendRcsMessageInput{}
+        output := &pinpointsmsvoicev2.SendRcsMessageOutput{}
+
+        mockClient.On("SendRcsMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendRcsMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSendTextMessage", func(t *testing.T) {
         input := &pinpointsmsvoicev2.SendTextMessageInput{}
         output := &pinpointsmsvoicev2.SendTextMessageOutput{}
@@ -1224,6 +1250,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SetNotifyMessageSpendLimitOverride", ctx, input).Return(output, nil)
 
         result, err := mockClient.SetNotifyMessageSpendLimitOverride(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSetRcsMessageSpendLimitOverride", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideInput{}
+        output := &pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideOutput{}
+
+        mockClient.On("SetRcsMessageSpendLimitOverride", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SetRcsMessageSpendLimitOverride(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

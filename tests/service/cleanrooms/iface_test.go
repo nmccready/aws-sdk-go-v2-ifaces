@@ -203,6 +203,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIntermediateTable", func(t *testing.T) {
+        input := &cleanrooms.CreateIntermediateTableInput{}
+        output := &cleanrooms.CreateIntermediateTableOutput{}
+
+        mockClient.On("CreateIntermediateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIntermediateTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIntermediateTableAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.CreateIntermediateTableAnalysisRuleInput{}
+        output := &cleanrooms.CreateIntermediateTableAnalysisRuleOutput{}
+
+        mockClient.On("CreateIntermediateTableAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIntermediateTableAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateMembership", func(t *testing.T) {
         input := &cleanrooms.CreateMembershipInput{}
         output := &cleanrooms.CreateMembershipOutput{}
@@ -346,6 +372,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIntermediateTable", func(t *testing.T) {
+        input := &cleanrooms.DeleteIntermediateTableInput{}
+        output := &cleanrooms.DeleteIntermediateTableOutput{}
+
+        mockClient.On("DeleteIntermediateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIntermediateTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIntermediateTableAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.DeleteIntermediateTableAnalysisRuleInput{}
+        output := &cleanrooms.DeleteIntermediateTableAnalysisRuleOutput{}
+
+        mockClient.On("DeleteIntermediateTableAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIntermediateTableAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteMember", func(t *testing.T) {
         input := &cleanrooms.DeleteMemberInput{}
         output := &cleanrooms.DeleteMemberOutput{}
@@ -379,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePrivacyBudgetTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePrivacyBudgetTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisallowIntermediateTable", func(t *testing.T) {
+        input := &cleanrooms.DisallowIntermediateTableInput{}
+        output := &cleanrooms.DisallowIntermediateTableOutput{}
+
+        mockClient.On("DisallowIntermediateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisallowIntermediateTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -561,6 +626,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetIdNamespaceAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetIdNamespaceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIntermediateTable", func(t *testing.T) {
+        input := &cleanrooms.GetIntermediateTableInput{}
+        output := &cleanrooms.GetIntermediateTableOutput{}
+
+        mockClient.On("GetIntermediateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIntermediateTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIntermediateTableAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.GetIntermediateTableAnalysisRuleInput{}
+        output := &cleanrooms.GetIntermediateTableAnalysisRuleOutput{}
+
+        mockClient.On("GetIntermediateTableAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIntermediateTableAnalysisRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,6 +905,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListIntermediateTableVersions", func(t *testing.T) {
+        input := &cleanrooms.ListIntermediateTableVersionsInput{}
+        output := &cleanrooms.ListIntermediateTableVersionsOutput{}
+
+        mockClient.On("ListIntermediateTableVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIntermediateTableVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIntermediateTables", func(t *testing.T) {
+        input := &cleanrooms.ListIntermediateTablesInput{}
+        output := &cleanrooms.ListIntermediateTablesOutput{}
+
+        mockClient.On("ListIntermediateTables", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIntermediateTables(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMembers", func(t *testing.T) {
         input := &cleanrooms.ListMembersInput{}
         output := &cleanrooms.ListMembersOutput{}
@@ -925,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PopulateIdMappingTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.PopulateIdMappingTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPopulateIntermediateTable", func(t *testing.T) {
+        input := &cleanrooms.PopulateIntermediateTableInput{}
+        output := &cleanrooms.PopulateIntermediateTableOutput{}
+
+        mockClient.On("PopulateIntermediateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PopulateIntermediateTable(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1120,6 +1250,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateIdNamespaceAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateIdNamespaceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIntermediateTable", func(t *testing.T) {
+        input := &cleanrooms.UpdateIntermediateTableInput{}
+        output := &cleanrooms.UpdateIntermediateTableOutput{}
+
+        mockClient.On("UpdateIntermediateTable", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIntermediateTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIntermediateTableAnalysisRule", func(t *testing.T) {
+        input := &cleanrooms.UpdateIntermediateTableAnalysisRuleInput{}
+        output := &cleanrooms.UpdateIntermediateTableAnalysisRuleOutput{}
+
+        mockClient.On("UpdateIntermediateTableAnalysisRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIntermediateTableAnalysisRule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

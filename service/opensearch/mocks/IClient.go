@@ -236,6 +236,43 @@ func (_m *IClient) AssociatePackages(ctx context.Context, params *opensearch.Ass
 	return r0, r1
 }
 
+// AttachDataSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AttachDataSource(ctx context.Context, params *opensearch.AttachDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.AttachDataSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AttachDataSource")
+	}
+
+	var r0 *opensearch.AttachDataSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AttachDataSourceInput, ...func(*opensearch.Options)) (*opensearch.AttachDataSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AttachDataSourceInput, ...func(*opensearch.Options)) *opensearch.AttachDataSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.AttachDataSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.AttachDataSourceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AuthorizeVpcEndpointAccess provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AuthorizeVpcEndpointAccess(ctx context.Context, params *opensearch.AuthorizeVpcEndpointAccessInput, optFns ...func(*opensearch.Options)) (*opensearch.AuthorizeVpcEndpointAccessOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -939,6 +976,43 @@ func (_m *IClient) DeregisterCapability(ctx context.Context, params *opensearch.
 	return r0, r1
 }
 
+// DescribeDataSourceAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDataSourceAttachment(ctx context.Context, params *opensearch.DescribeDataSourceAttachmentInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeDataSourceAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDataSourceAttachment")
+	}
+
+	var r0 *opensearch.DescribeDataSourceAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DescribeDataSourceAttachmentInput, ...func(*opensearch.Options)) (*opensearch.DescribeDataSourceAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DescribeDataSourceAttachmentInput, ...func(*opensearch.Options)) *opensearch.DescribeDataSourceAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DescribeDataSourceAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DescribeDataSourceAttachmentInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeDomain(ctx context.Context, params *opensearch.DescribeDomainInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1531,6 +1605,43 @@ func (_m *IClient) DescribeVpcEndpoints(ctx context.Context, params *opensearch.
 	return r0, r1
 }
 
+// DetachDataSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DetachDataSource(ctx context.Context, params *opensearch.DetachDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.DetachDataSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DetachDataSource")
+	}
+
+	var r0 *opensearch.DetachDataSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DetachDataSourceInput, ...func(*opensearch.Options)) (*opensearch.DetachDataSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DetachDataSourceInput, ...func(*opensearch.Options)) *opensearch.DetachDataSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DetachDataSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DetachDataSourceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DissociatePackage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DissociatePackage(ctx context.Context, params *opensearch.DissociatePackageInput, optFns ...func(*opensearch.Options)) (*opensearch.DissociatePackageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2012,6 +2123,43 @@ func (_m *IClient) GetUpgradeStatus(ctx context.Context, params *opensearch.GetU
 	return r0, r1
 }
 
+// InsightFeedback provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InsightFeedback(ctx context.Context, params *opensearch.InsightFeedbackInput, optFns ...func(*opensearch.Options)) (*opensearch.InsightFeedbackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InsightFeedback")
+	}
+
+	var r0 *opensearch.InsightFeedbackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.InsightFeedbackInput, ...func(*opensearch.Options)) (*opensearch.InsightFeedbackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.InsightFeedbackInput, ...func(*opensearch.Options)) *opensearch.InsightFeedbackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.InsightFeedbackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.InsightFeedbackInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListApplications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListApplications(ctx context.Context, params *opensearch.ListApplicationsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListApplicationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2041,6 +2189,43 @@ func (_m *IClient) ListApplications(ctx context.Context, params *opensearch.List
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListApplicationsInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataSourceAttachments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataSourceAttachments(ctx context.Context, params *opensearch.ListDataSourceAttachmentsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListDataSourceAttachmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataSourceAttachments")
+	}
+
+	var r0 *opensearch.ListDataSourceAttachmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListDataSourceAttachmentsInput, ...func(*opensearch.Options)) (*opensearch.ListDataSourceAttachmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListDataSourceAttachmentsInput, ...func(*opensearch.Options)) *opensearch.ListDataSourceAttachmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.ListDataSourceAttachmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListDataSourceAttachmentsInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -60,6 +60,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAsset", func(t *testing.T) {
+        input := &devopsagent.CreateAssetInput{}
+        output := &devopsagent.CreateAssetOutput{}
+
+        mockClient.On("CreateAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAssetFile", func(t *testing.T) {
+        input := &devopsagent.CreateAssetFileInput{}
+        output := &devopsagent.CreateAssetFileOutput{}
+
+        mockClient.On("CreateAssetFile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssetFile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBacklogTask", func(t *testing.T) {
         input := &devopsagent.CreateBacklogTaskInput{}
         output := &devopsagent.CreateBacklogTaskOutput{}
@@ -99,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTrigger", func(t *testing.T) {
+        input := &devopsagent.CreateTriggerInput{}
+        output := &devopsagent.CreateTriggerOutput{}
+
+        mockClient.On("CreateTrigger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTrigger(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAgentSpace", func(t *testing.T) {
         input := &devopsagent.DeleteAgentSpaceInput{}
         output := &devopsagent.DeleteAgentSpaceOutput{}
@@ -112,6 +151,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAsset", func(t *testing.T) {
+        input := &devopsagent.DeleteAssetInput{}
+        output := &devopsagent.DeleteAssetOutput{}
+
+        mockClient.On("DeleteAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAssetFile", func(t *testing.T) {
+        input := &devopsagent.DeleteAssetFileInput{}
+        output := &devopsagent.DeleteAssetFileOutput{}
+
+        mockClient.On("DeleteAssetFile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssetFile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePrivateConnection", func(t *testing.T) {
         input := &devopsagent.DeletePrivateConnectionInput{}
         output := &devopsagent.DeletePrivateConnectionOutput{}
@@ -119,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePrivateConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePrivateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTrigger", func(t *testing.T) {
+        input := &devopsagent.DeleteTriggerInput{}
+        output := &devopsagent.DeleteTriggerOutput{}
+
+        mockClient.On("DeleteTrigger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTrigger(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,6 +294,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAsset", func(t *testing.T) {
+        input := &devopsagent.GetAssetInput{}
+        output := &devopsagent.GetAssetOutput{}
+
+        mockClient.On("GetAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAssetContent", func(t *testing.T) {
+        input := &devopsagent.GetAssetContentInput{}
+        output := &devopsagent.GetAssetContentOutput{}
+
+        mockClient.On("GetAssetContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAssetContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAssetFile", func(t *testing.T) {
+        input := &devopsagent.GetAssetFileInput{}
+        output := &devopsagent.GetAssetFileOutput{}
+
+        mockClient.On("GetAssetFile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAssetFile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAssociation", func(t *testing.T) {
         input := &devopsagent.GetAssociationInput{}
         output := &devopsagent.GetAssociationOutput{}
@@ -281,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTrigger", func(t *testing.T) {
+        input := &devopsagent.GetTriggerInput{}
+        output := &devopsagent.GetTriggerOutput{}
+
+        mockClient.On("GetTrigger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrigger(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAgentSpaces", func(t *testing.T) {
         input := &devopsagent.ListAgentSpacesInput{}
         output := &devopsagent.ListAgentSpacesOutput{}
@@ -288,6 +418,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAgentSpaces", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAgentSpaces(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssetFiles", func(t *testing.T) {
+        input := &devopsagent.ListAssetFilesInput{}
+        output := &devopsagent.ListAssetFilesOutput{}
+
+        mockClient.On("ListAssetFiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssetFiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssetTypes", func(t *testing.T) {
+        input := &devopsagent.ListAssetTypesInput{}
+        output := &devopsagent.ListAssetTypesOutput{}
+
+        mockClient.On("ListAssetTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssetTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssetVersions", func(t *testing.T) {
+        input := &devopsagent.ListAssetVersionsInput{}
+        output := &devopsagent.ListAssetVersionsOutput{}
+
+        mockClient.On("ListAssetVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssetVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssets", func(t *testing.T) {
+        input := &devopsagent.ListAssetsInput{}
+        output := &devopsagent.ListAssetsOutput{}
+
+        mockClient.On("ListAssets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -437,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTriggers", func(t *testing.T) {
+        input := &devopsagent.ListTriggersInput{}
+        output := &devopsagent.ListTriggersOutput{}
+
+        mockClient.On("ListTriggers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTriggers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListWebhooks", func(t *testing.T) {
         input := &devopsagent.ListWebhooksInput{}
         output := &devopsagent.ListWebhooksOutput{}
@@ -515,6 +710,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAsset", func(t *testing.T) {
+        input := &devopsagent.UpdateAssetInput{}
+        output := &devopsagent.UpdateAssetOutput{}
+
+        mockClient.On("UpdateAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAssetFile", func(t *testing.T) {
+        input := &devopsagent.UpdateAssetFileInput{}
+        output := &devopsagent.UpdateAssetFileOutput{}
+
+        mockClient.On("UpdateAssetFile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAssetFile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateAssociation", func(t *testing.T) {
         input := &devopsagent.UpdateAssociationInput{}
         output := &devopsagent.UpdateAssociationOutput{}
@@ -587,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRecommendation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRecommendation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTrigger", func(t *testing.T) {
+        input := &devopsagent.UpdateTriggerInput{}
+        output := &devopsagent.UpdateTriggerOutput{}
+
+        mockClient.On("UpdateTrigger", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTrigger(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -51,6 +51,43 @@ func (_m *IClient) AddArtifact(ctx context.Context, params *securityagent.AddArt
 	return r0, r1
 }
 
+// BatchCreateSecurityRequirements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateSecurityRequirements(ctx context.Context, params *securityagent.BatchCreateSecurityRequirementsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchCreateSecurityRequirementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateSecurityRequirements")
+	}
+
+	var r0 *securityagent.BatchCreateSecurityRequirementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchCreateSecurityRequirementsInput, ...func(*securityagent.Options)) (*securityagent.BatchCreateSecurityRequirementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchCreateSecurityRequirementsInput, ...func(*securityagent.Options)) *securityagent.BatchCreateSecurityRequirementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchCreateSecurityRequirementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchCreateSecurityRequirementsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchDeleteCodeReviews provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchDeleteCodeReviews(ctx context.Context, params *securityagent.BatchDeleteCodeReviewsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchDeleteCodeReviewsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -117,6 +154,80 @@ func (_m *IClient) BatchDeletePentests(ctx context.Context, params *securityagen
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchDeletePentestsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteSecurityRequirements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteSecurityRequirements(ctx context.Context, params *securityagent.BatchDeleteSecurityRequirementsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchDeleteSecurityRequirementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteSecurityRequirements")
+	}
+
+	var r0 *securityagent.BatchDeleteSecurityRequirementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDeleteSecurityRequirementsInput, ...func(*securityagent.Options)) (*securityagent.BatchDeleteSecurityRequirementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDeleteSecurityRequirementsInput, ...func(*securityagent.Options)) *securityagent.BatchDeleteSecurityRequirementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchDeleteSecurityRequirementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchDeleteSecurityRequirementsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteThreatModels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteThreatModels(ctx context.Context, params *securityagent.BatchDeleteThreatModelsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchDeleteThreatModelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteThreatModels")
+	}
+
+	var r0 *securityagent.BatchDeleteThreatModelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDeleteThreatModelsInput, ...func(*securityagent.Options)) (*securityagent.BatchDeleteThreatModelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDeleteThreatModelsInput, ...func(*securityagent.Options)) *securityagent.BatchDeleteThreatModelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchDeleteThreatModelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchDeleteThreatModelsInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -458,6 +569,43 @@ func (_m *IClient) BatchGetPentests(ctx context.Context, params *securityagent.B
 	return r0, r1
 }
 
+// BatchGetSecurityRequirements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetSecurityRequirements(ctx context.Context, params *securityagent.BatchGetSecurityRequirementsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetSecurityRequirementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetSecurityRequirements")
+	}
+
+	var r0 *securityagent.BatchGetSecurityRequirementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetSecurityRequirementsInput, ...func(*securityagent.Options)) (*securityagent.BatchGetSecurityRequirementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetSecurityRequirementsInput, ...func(*securityagent.Options)) *securityagent.BatchGetSecurityRequirementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetSecurityRequirementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetSecurityRequirementsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetTargetDomains provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetTargetDomains(ctx context.Context, params *securityagent.BatchGetTargetDomainsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetTargetDomainsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -487,6 +635,191 @@ func (_m *IClient) BatchGetTargetDomains(ctx context.Context, params *securityag
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetTargetDomainsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetThreatModelJobTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetThreatModelJobTasks(ctx context.Context, params *securityagent.BatchGetThreatModelJobTasksInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetThreatModelJobTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetThreatModelJobTasks")
+	}
+
+	var r0 *securityagent.BatchGetThreatModelJobTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatModelJobTasksInput, ...func(*securityagent.Options)) (*securityagent.BatchGetThreatModelJobTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatModelJobTasksInput, ...func(*securityagent.Options)) *securityagent.BatchGetThreatModelJobTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetThreatModelJobTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetThreatModelJobTasksInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetThreatModelJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetThreatModelJobs(ctx context.Context, params *securityagent.BatchGetThreatModelJobsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetThreatModelJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetThreatModelJobs")
+	}
+
+	var r0 *securityagent.BatchGetThreatModelJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatModelJobsInput, ...func(*securityagent.Options)) (*securityagent.BatchGetThreatModelJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatModelJobsInput, ...func(*securityagent.Options)) *securityagent.BatchGetThreatModelJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetThreatModelJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetThreatModelJobsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetThreatModels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetThreatModels(ctx context.Context, params *securityagent.BatchGetThreatModelsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetThreatModelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetThreatModels")
+	}
+
+	var r0 *securityagent.BatchGetThreatModelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatModelsInput, ...func(*securityagent.Options)) (*securityagent.BatchGetThreatModelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatModelsInput, ...func(*securityagent.Options)) *securityagent.BatchGetThreatModelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetThreatModelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetThreatModelsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetThreats provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetThreats(ctx context.Context, params *securityagent.BatchGetThreatsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetThreatsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetThreats")
+	}
+
+	var r0 *securityagent.BatchGetThreatsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatsInput, ...func(*securityagent.Options)) (*securityagent.BatchGetThreatsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchGetThreatsInput, ...func(*securityagent.Options)) *securityagent.BatchGetThreatsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchGetThreatsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchGetThreatsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateSecurityRequirements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateSecurityRequirements(ctx context.Context, params *securityagent.BatchUpdateSecurityRequirementsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchUpdateSecurityRequirementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateSecurityRequirements")
+	}
+
+	var r0 *securityagent.BatchUpdateSecurityRequirementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchUpdateSecurityRequirementsInput, ...func(*securityagent.Options)) (*securityagent.BatchUpdateSecurityRequirementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchUpdateSecurityRequirementsInput, ...func(*securityagent.Options)) *securityagent.BatchUpdateSecurityRequirementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchUpdateSecurityRequirementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchUpdateSecurityRequirementsInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -717,6 +1050,80 @@ func (_m *IClient) CreatePentest(ctx context.Context, params *securityagent.Crea
 	return r0, r1
 }
 
+// CreatePrivateConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePrivateConnection(ctx context.Context, params *securityagent.CreatePrivateConnectionInput, optFns ...func(*securityagent.Options)) (*securityagent.CreatePrivateConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePrivateConnection")
+	}
+
+	var r0 *securityagent.CreatePrivateConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreatePrivateConnectionInput, ...func(*securityagent.Options)) (*securityagent.CreatePrivateConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreatePrivateConnectionInput, ...func(*securityagent.Options)) *securityagent.CreatePrivateConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.CreatePrivateConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreatePrivateConnectionInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateSecurityRequirementPack provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSecurityRequirementPack(ctx context.Context, params *securityagent.CreateSecurityRequirementPackInput, optFns ...func(*securityagent.Options)) (*securityagent.CreateSecurityRequirementPackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSecurityRequirementPack")
+	}
+
+	var r0 *securityagent.CreateSecurityRequirementPackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateSecurityRequirementPackInput, ...func(*securityagent.Options)) (*securityagent.CreateSecurityRequirementPackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateSecurityRequirementPackInput, ...func(*securityagent.Options)) *securityagent.CreateSecurityRequirementPackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.CreateSecurityRequirementPackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreateSecurityRequirementPackInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTargetDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTargetDomain(ctx context.Context, params *securityagent.CreateTargetDomainInput, optFns ...func(*securityagent.Options)) (*securityagent.CreateTargetDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -746,6 +1153,80 @@ func (_m *IClient) CreateTargetDomain(ctx context.Context, params *securityagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreateTargetDomainInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateThreat provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateThreat(ctx context.Context, params *securityagent.CreateThreatInput, optFns ...func(*securityagent.Options)) (*securityagent.CreateThreatOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateThreat")
+	}
+
+	var r0 *securityagent.CreateThreatOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateThreatInput, ...func(*securityagent.Options)) (*securityagent.CreateThreatOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateThreatInput, ...func(*securityagent.Options)) *securityagent.CreateThreatOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.CreateThreatOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreateThreatInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateThreatModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateThreatModel(ctx context.Context, params *securityagent.CreateThreatModelInput, optFns ...func(*securityagent.Options)) (*securityagent.CreateThreatModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateThreatModel")
+	}
+
+	var r0 *securityagent.CreateThreatModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateThreatModelInput, ...func(*securityagent.Options)) (*securityagent.CreateThreatModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.CreateThreatModelInput, ...func(*securityagent.Options)) *securityagent.CreateThreatModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.CreateThreatModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.CreateThreatModelInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -939,6 +1420,80 @@ func (_m *IClient) DeleteMembership(ctx context.Context, params *securityagent.D
 	return r0, r1
 }
 
+// DeletePrivateConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePrivateConnection(ctx context.Context, params *securityagent.DeletePrivateConnectionInput, optFns ...func(*securityagent.Options)) (*securityagent.DeletePrivateConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePrivateConnection")
+	}
+
+	var r0 *securityagent.DeletePrivateConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.DeletePrivateConnectionInput, ...func(*securityagent.Options)) (*securityagent.DeletePrivateConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.DeletePrivateConnectionInput, ...func(*securityagent.Options)) *securityagent.DeletePrivateConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.DeletePrivateConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.DeletePrivateConnectionInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSecurityRequirementPack provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSecurityRequirementPack(ctx context.Context, params *securityagent.DeleteSecurityRequirementPackInput, optFns ...func(*securityagent.Options)) (*securityagent.DeleteSecurityRequirementPackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSecurityRequirementPack")
+	}
+
+	var r0 *securityagent.DeleteSecurityRequirementPackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.DeleteSecurityRequirementPackInput, ...func(*securityagent.Options)) (*securityagent.DeleteSecurityRequirementPackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.DeleteSecurityRequirementPackInput, ...func(*securityagent.Options)) *securityagent.DeleteSecurityRequirementPackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.DeleteSecurityRequirementPackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.DeleteSecurityRequirementPackInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteTargetDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteTargetDomain(ctx context.Context, params *securityagent.DeleteTargetDomainInput, optFns ...func(*securityagent.Options)) (*securityagent.DeleteTargetDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -968,6 +1523,43 @@ func (_m *IClient) DeleteTargetDomain(ctx context.Context, params *securityagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.DeleteTargetDomainInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribePrivateConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribePrivateConnection(ctx context.Context, params *securityagent.DescribePrivateConnectionInput, optFns ...func(*securityagent.Options)) (*securityagent.DescribePrivateConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribePrivateConnection")
+	}
+
+	var r0 *securityagent.DescribePrivateConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.DescribePrivateConnectionInput, ...func(*securityagent.Options)) (*securityagent.DescribePrivateConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.DescribePrivateConnectionInput, ...func(*securityagent.Options)) *securityagent.DescribePrivateConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.DescribePrivateConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.DescribePrivateConnectionInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1079,6 +1671,80 @@ func (_m *IClient) GetIntegration(ctx context.Context, params *securityagent.Get
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.GetIntegrationInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSecurityRequirementPack provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSecurityRequirementPack(ctx context.Context, params *securityagent.GetSecurityRequirementPackInput, optFns ...func(*securityagent.Options)) (*securityagent.GetSecurityRequirementPackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSecurityRequirementPack")
+	}
+
+	var r0 *securityagent.GetSecurityRequirementPackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.GetSecurityRequirementPackInput, ...func(*securityagent.Options)) (*securityagent.GetSecurityRequirementPackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.GetSecurityRequirementPackInput, ...func(*securityagent.Options)) *securityagent.GetSecurityRequirementPackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.GetSecurityRequirementPackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.GetSecurityRequirementPackInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ImportSecurityRequirements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ImportSecurityRequirements(ctx context.Context, params *securityagent.ImportSecurityRequirementsInput, optFns ...func(*securityagent.Options)) (*securityagent.ImportSecurityRequirementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ImportSecurityRequirements")
+	}
+
+	var r0 *securityagent.ImportSecurityRequirementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ImportSecurityRequirementsInput, ...func(*securityagent.Options)) (*securityagent.ImportSecurityRequirementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ImportSecurityRequirementsInput, ...func(*securityagent.Options)) *securityagent.ImportSecurityRequirementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ImportSecurityRequirementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ImportSecurityRequirementsInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1642,6 +2308,117 @@ func (_m *IClient) ListPentests(ctx context.Context, params *securityagent.ListP
 	return r0, r1
 }
 
+// ListPrivateConnections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPrivateConnections(ctx context.Context, params *securityagent.ListPrivateConnectionsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListPrivateConnectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPrivateConnections")
+	}
+
+	var r0 *securityagent.ListPrivateConnectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListPrivateConnectionsInput, ...func(*securityagent.Options)) (*securityagent.ListPrivateConnectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListPrivateConnectionsInput, ...func(*securityagent.Options)) *securityagent.ListPrivateConnectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListPrivateConnectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListPrivateConnectionsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSecurityRequirementPacks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSecurityRequirementPacks(ctx context.Context, params *securityagent.ListSecurityRequirementPacksInput, optFns ...func(*securityagent.Options)) (*securityagent.ListSecurityRequirementPacksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSecurityRequirementPacks")
+	}
+
+	var r0 *securityagent.ListSecurityRequirementPacksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListSecurityRequirementPacksInput, ...func(*securityagent.Options)) (*securityagent.ListSecurityRequirementPacksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListSecurityRequirementPacksInput, ...func(*securityagent.Options)) *securityagent.ListSecurityRequirementPacksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListSecurityRequirementPacksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListSecurityRequirementPacksInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSecurityRequirements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSecurityRequirements(ctx context.Context, params *securityagent.ListSecurityRequirementsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListSecurityRequirementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSecurityRequirements")
+	}
+
+	var r0 *securityagent.ListSecurityRequirementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListSecurityRequirementsInput, ...func(*securityagent.Options)) (*securityagent.ListSecurityRequirementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListSecurityRequirementsInput, ...func(*securityagent.Options)) *securityagent.ListSecurityRequirementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListSecurityRequirementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListSecurityRequirementsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *securityagent.ListTagsForResourceInput, optFns ...func(*securityagent.Options)) (*securityagent.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1708,6 +2485,154 @@ func (_m *IClient) ListTargetDomains(ctx context.Context, params *securityagent.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListTargetDomainsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListThreatModelJobTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListThreatModelJobTasks(ctx context.Context, params *securityagent.ListThreatModelJobTasksInput, optFns ...func(*securityagent.Options)) (*securityagent.ListThreatModelJobTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListThreatModelJobTasks")
+	}
+
+	var r0 *securityagent.ListThreatModelJobTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatModelJobTasksInput, ...func(*securityagent.Options)) (*securityagent.ListThreatModelJobTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatModelJobTasksInput, ...func(*securityagent.Options)) *securityagent.ListThreatModelJobTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListThreatModelJobTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListThreatModelJobTasksInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListThreatModelJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListThreatModelJobs(ctx context.Context, params *securityagent.ListThreatModelJobsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListThreatModelJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListThreatModelJobs")
+	}
+
+	var r0 *securityagent.ListThreatModelJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatModelJobsInput, ...func(*securityagent.Options)) (*securityagent.ListThreatModelJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatModelJobsInput, ...func(*securityagent.Options)) *securityagent.ListThreatModelJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListThreatModelJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListThreatModelJobsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListThreatModels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListThreatModels(ctx context.Context, params *securityagent.ListThreatModelsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListThreatModelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListThreatModels")
+	}
+
+	var r0 *securityagent.ListThreatModelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatModelsInput, ...func(*securityagent.Options)) (*securityagent.ListThreatModelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatModelsInput, ...func(*securityagent.Options)) *securityagent.ListThreatModelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListThreatModelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListThreatModelsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListThreats provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListThreats(ctx context.Context, params *securityagent.ListThreatsInput, optFns ...func(*securityagent.Options)) (*securityagent.ListThreatsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListThreats")
+	}
+
+	var r0 *securityagent.ListThreatsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatsInput, ...func(*securityagent.Options)) (*securityagent.ListThreatsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListThreatsInput, ...func(*securityagent.Options)) *securityagent.ListThreatsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListThreatsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListThreatsInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1845,6 +2770,43 @@ func (_m *IClient) StartPentestJob(ctx context.Context, params *securityagent.St
 	return r0, r1
 }
 
+// StartThreatModelJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartThreatModelJob(ctx context.Context, params *securityagent.StartThreatModelJobInput, optFns ...func(*securityagent.Options)) (*securityagent.StartThreatModelJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartThreatModelJob")
+	}
+
+	var r0 *securityagent.StartThreatModelJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StartThreatModelJobInput, ...func(*securityagent.Options)) (*securityagent.StartThreatModelJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StartThreatModelJobInput, ...func(*securityagent.Options)) *securityagent.StartThreatModelJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.StartThreatModelJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.StartThreatModelJobInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopCodeReviewJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopCodeReviewJob(ctx context.Context, params *securityagent.StopCodeReviewJobInput, optFns ...func(*securityagent.Options)) (*securityagent.StopCodeReviewJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1911,6 +2873,43 @@ func (_m *IClient) StopPentestJob(ctx context.Context, params *securityagent.Sto
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.StopPentestJobInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopThreatModelJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopThreatModelJob(ctx context.Context, params *securityagent.StopThreatModelJobInput, optFns ...func(*securityagent.Options)) (*securityagent.StopThreatModelJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopThreatModelJob")
+	}
+
+	var r0 *securityagent.StopThreatModelJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StopThreatModelJobInput, ...func(*securityagent.Options)) (*securityagent.StopThreatModelJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.StopThreatModelJobInput, ...func(*securityagent.Options)) *securityagent.StopThreatModelJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.StopThreatModelJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.StopThreatModelJobInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2215,6 +3214,80 @@ func (_m *IClient) UpdatePentest(ctx context.Context, params *securityagent.Upda
 	return r0, r1
 }
 
+// UpdatePrivateConnectionCertificate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePrivateConnectionCertificate(ctx context.Context, params *securityagent.UpdatePrivateConnectionCertificateInput, optFns ...func(*securityagent.Options)) (*securityagent.UpdatePrivateConnectionCertificateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePrivateConnectionCertificate")
+	}
+
+	var r0 *securityagent.UpdatePrivateConnectionCertificateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdatePrivateConnectionCertificateInput, ...func(*securityagent.Options)) (*securityagent.UpdatePrivateConnectionCertificateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdatePrivateConnectionCertificateInput, ...func(*securityagent.Options)) *securityagent.UpdatePrivateConnectionCertificateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.UpdatePrivateConnectionCertificateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdatePrivateConnectionCertificateInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSecurityRequirementPack provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSecurityRequirementPack(ctx context.Context, params *securityagent.UpdateSecurityRequirementPackInput, optFns ...func(*securityagent.Options)) (*securityagent.UpdateSecurityRequirementPackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSecurityRequirementPack")
+	}
+
+	var r0 *securityagent.UpdateSecurityRequirementPackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateSecurityRequirementPackInput, ...func(*securityagent.Options)) (*securityagent.UpdateSecurityRequirementPackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateSecurityRequirementPackInput, ...func(*securityagent.Options)) *securityagent.UpdateSecurityRequirementPackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.UpdateSecurityRequirementPackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdateSecurityRequirementPackInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateTargetDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateTargetDomain(ctx context.Context, params *securityagent.UpdateTargetDomainInput, optFns ...func(*securityagent.Options)) (*securityagent.UpdateTargetDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2244,6 +3317,80 @@ func (_m *IClient) UpdateTargetDomain(ctx context.Context, params *securityagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdateTargetDomainInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateThreat provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateThreat(ctx context.Context, params *securityagent.UpdateThreatInput, optFns ...func(*securityagent.Options)) (*securityagent.UpdateThreatOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateThreat")
+	}
+
+	var r0 *securityagent.UpdateThreatOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateThreatInput, ...func(*securityagent.Options)) (*securityagent.UpdateThreatOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateThreatInput, ...func(*securityagent.Options)) *securityagent.UpdateThreatOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.UpdateThreatOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdateThreatInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateThreatModel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateThreatModel(ctx context.Context, params *securityagent.UpdateThreatModelInput, optFns ...func(*securityagent.Options)) (*securityagent.UpdateThreatModelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateThreatModel")
+	}
+
+	var r0 *securityagent.UpdateThreatModelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateThreatModelInput, ...func(*securityagent.Options)) (*securityagent.UpdateThreatModelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.UpdateThreatModelInput, ...func(*securityagent.Options)) *securityagent.UpdateThreatModelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.UpdateThreatModelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.UpdateThreatModelInput, ...func(*securityagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

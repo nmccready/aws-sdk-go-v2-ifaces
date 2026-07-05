@@ -60,6 +60,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAutonomousDatabase", func(t *testing.T) {
+        input := &odb.CreateAutonomousDatabaseInput{}
+        output := &odb.CreateAutonomousDatabaseOutput{}
+
+        mockClient.On("CreateAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAutonomousDatabaseBackup", func(t *testing.T) {
+        input := &odb.CreateAutonomousDatabaseBackupInput{}
+        output := &odb.CreateAutonomousDatabaseBackupOutput{}
+
+        mockClient.On("CreateAutonomousDatabaseBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAutonomousDatabaseBackup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAutonomousDatabaseWallet", func(t *testing.T) {
+        input := &odb.CreateAutonomousDatabaseWalletInput{}
+        output := &odb.CreateAutonomousDatabaseWalletOutput{}
+
+        mockClient.On("CreateAutonomousDatabaseWallet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAutonomousDatabaseWallet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCloudAutonomousVmCluster", func(t *testing.T) {
         input := &odb.CreateCloudAutonomousVmClusterInput{}
         output := &odb.CreateCloudAutonomousVmClusterOutput{}
@@ -119,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateOdbPeeringConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateOdbPeeringConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAutonomousDatabase", func(t *testing.T) {
+        input := &odb.DeleteAutonomousDatabaseInput{}
+        output := &odb.DeleteAutonomousDatabaseOutput{}
+
+        mockClient.On("DeleteAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAutonomousDatabaseBackup", func(t *testing.T) {
+        input := &odb.DeleteAutonomousDatabaseBackupInput{}
+        output := &odb.DeleteAutonomousDatabaseBackupOutput{}
+
+        mockClient.On("DeleteAutonomousDatabaseBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAutonomousDatabaseBackup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -197,6 +262,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateIamRoleFromResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateIamRoleFromResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestFailoverAutonomousDatabase", func(t *testing.T) {
+        input := &odb.FailoverAutonomousDatabaseInput{}
+        output := &odb.FailoverAutonomousDatabaseOutput{}
+
+        mockClient.On("FailoverAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.FailoverAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutonomousDatabase", func(t *testing.T) {
+        input := &odb.GetAutonomousDatabaseInput{}
+        output := &odb.GetAutonomousDatabaseOutput{}
+
+        mockClient.On("GetAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutonomousDatabaseBackup", func(t *testing.T) {
+        input := &odb.GetAutonomousDatabaseBackupInput{}
+        output := &odb.GetAutonomousDatabaseBackupOutput{}
+
+        mockClient.On("GetAutonomousDatabaseBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutonomousDatabaseBackup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAutonomousDatabaseWalletDetails", func(t *testing.T) {
+        input := &odb.GetAutonomousDatabaseWalletDetailsInput{}
+        output := &odb.GetAutonomousDatabaseWalletDetailsOutput{}
+
+        mockClient.On("GetAutonomousDatabaseWalletDetails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAutonomousDatabaseWalletDetails(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -327,6 +444,84 @@ func TestIClient(t *testing.T) {
         mockClient.On("InitializeService", ctx, input).Return(output, nil)
 
         result, err := mockClient.InitializeService(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutonomousDatabaseBackups", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabaseBackupsInput{}
+        output := &odb.ListAutonomousDatabaseBackupsOutput{}
+
+        mockClient.On("ListAutonomousDatabaseBackups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabaseBackups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutonomousDatabaseCharacterSets", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabaseCharacterSetsInput{}
+        output := &odb.ListAutonomousDatabaseCharacterSetsOutput{}
+
+        mockClient.On("ListAutonomousDatabaseCharacterSets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabaseCharacterSets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutonomousDatabaseClones", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabaseClonesInput{}
+        output := &odb.ListAutonomousDatabaseClonesOutput{}
+
+        mockClient.On("ListAutonomousDatabaseClones", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabaseClones(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutonomousDatabasePeers", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabasePeersInput{}
+        output := &odb.ListAutonomousDatabasePeersOutput{}
+
+        mockClient.On("ListAutonomousDatabasePeers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabasePeers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutonomousDatabaseVersions", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabaseVersionsInput{}
+        output := &odb.ListAutonomousDatabaseVersionsOutput{}
+
+        mockClient.On("ListAutonomousDatabaseVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabaseVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAutonomousDatabases", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabasesInput{}
+        output := &odb.ListAutonomousDatabasesOutput{}
+
+        mockClient.On("ListAutonomousDatabases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,6 +684,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRebootAutonomousDatabase", func(t *testing.T) {
+        input := &odb.RebootAutonomousDatabaseInput{}
+        output := &odb.RebootAutonomousDatabaseOutput{}
+
+        mockClient.On("RebootAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RebootAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRebootDbNode", func(t *testing.T) {
         input := &odb.RebootDbNodeInput{}
         output := &odb.RebootDbNodeOutput{}
@@ -496,6 +704,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("RebootDbNode", ctx, input).Return(output, nil)
 
         result, err := mockClient.RebootDbNode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRestoreAutonomousDatabase", func(t *testing.T) {
+        input := &odb.RestoreAutonomousDatabaseInput{}
+        output := &odb.RestoreAutonomousDatabaseOutput{}
+
+        mockClient.On("RestoreAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestShrinkAutonomousDatabase", func(t *testing.T) {
+        input := &odb.ShrinkAutonomousDatabaseInput{}
+        output := &odb.ShrinkAutonomousDatabaseOutput{}
+
+        mockClient.On("ShrinkAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ShrinkAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAutonomousDatabase", func(t *testing.T) {
+        input := &odb.StartAutonomousDatabaseInput{}
+        output := &odb.StartAutonomousDatabaseOutput{}
+
+        mockClient.On("StartAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAutonomousDatabase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -515,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStopAutonomousDatabase", func(t *testing.T) {
+        input := &odb.StopAutonomousDatabaseInput{}
+        output := &odb.StopAutonomousDatabaseOutput{}
+
+        mockClient.On("StopAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopDbNode", func(t *testing.T) {
         input := &odb.StopDbNodeInput{}
         output := &odb.StopDbNodeOutput{}
@@ -522,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopDbNode", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopDbNode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSwitchoverAutonomousDatabase", func(t *testing.T) {
+        input := &odb.SwitchoverAutonomousDatabaseInput{}
+        output := &odb.SwitchoverAutonomousDatabaseOutput{}
+
+        mockClient.On("SwitchoverAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SwitchoverAutonomousDatabase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -548,6 +821,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutonomousDatabase", func(t *testing.T) {
+        input := &odb.UpdateAutonomousDatabaseInput{}
+        output := &odb.UpdateAutonomousDatabaseOutput{}
+
+        mockClient.On("UpdateAutonomousDatabase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAutonomousDatabaseBackup", func(t *testing.T) {
+        input := &odb.UpdateAutonomousDatabaseBackupInput{}
+        output := &odb.UpdateAutonomousDatabaseBackupOutput{}
+
+        mockClient.On("UpdateAutonomousDatabaseBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAutonomousDatabaseBackup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

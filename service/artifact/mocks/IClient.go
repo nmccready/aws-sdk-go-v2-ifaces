@@ -15,6 +15,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateComplianceInquiry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateComplianceInquiry(ctx context.Context, params *artifact.CreateComplianceInquiryInput, optFns ...func(*artifact.Options)) (*artifact.CreateComplianceInquiryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateComplianceInquiry")
+	}
+
+	var r0 *artifact.CreateComplianceInquiryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.CreateComplianceInquiryInput, ...func(*artifact.Options)) (*artifact.CreateComplianceInquiryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.CreateComplianceInquiryInput, ...func(*artifact.Options)) *artifact.CreateComplianceInquiryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.CreateComplianceInquiryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.CreateComplianceInquiryInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ExportComplianceInquiry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExportComplianceInquiry(ctx context.Context, params *artifact.ExportComplianceInquiryInput, optFns ...func(*artifact.Options)) (*artifact.ExportComplianceInquiryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExportComplianceInquiry")
+	}
+
+	var r0 *artifact.ExportComplianceInquiryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ExportComplianceInquiryInput, ...func(*artifact.Options)) (*artifact.ExportComplianceInquiryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ExportComplianceInquiryInput, ...func(*artifact.Options)) *artifact.ExportComplianceInquiryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.ExportComplianceInquiryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.ExportComplianceInquiryInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAccountSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAccountSettings(ctx context.Context, params *artifact.GetAccountSettingsInput, optFns ...func(*artifact.Options)) (*artifact.GetAccountSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -44,6 +118,43 @@ func (_m *IClient) GetAccountSettings(ctx context.Context, params *artifact.GetA
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *artifact.GetAccountSettingsInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetComplianceInquiryMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetComplianceInquiryMetadata(ctx context.Context, params *artifact.GetComplianceInquiryMetadataInput, optFns ...func(*artifact.Options)) (*artifact.GetComplianceInquiryMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetComplianceInquiryMetadata")
+	}
+
+	var r0 *artifact.GetComplianceInquiryMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.GetComplianceInquiryMetadataInput, ...func(*artifact.Options)) (*artifact.GetComplianceInquiryMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.GetComplianceInquiryMetadataInput, ...func(*artifact.Options)) *artifact.GetComplianceInquiryMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.GetComplianceInquiryMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.GetComplianceInquiryMetadataInput, ...func(*artifact.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -163,6 +274,80 @@ func (_m *IClient) GetTermForReport(ctx context.Context, params *artifact.GetTer
 	return r0, r1
 }
 
+// ListComplianceInquiries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListComplianceInquiries(ctx context.Context, params *artifact.ListComplianceInquiriesInput, optFns ...func(*artifact.Options)) (*artifact.ListComplianceInquiriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListComplianceInquiries")
+	}
+
+	var r0 *artifact.ListComplianceInquiriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListComplianceInquiriesInput, ...func(*artifact.Options)) (*artifact.ListComplianceInquiriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListComplianceInquiriesInput, ...func(*artifact.Options)) *artifact.ListComplianceInquiriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.ListComplianceInquiriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.ListComplianceInquiriesInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListComplianceInquiryQueries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListComplianceInquiryQueries(ctx context.Context, params *artifact.ListComplianceInquiryQueriesInput, optFns ...func(*artifact.Options)) (*artifact.ListComplianceInquiryQueriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListComplianceInquiryQueries")
+	}
+
+	var r0 *artifact.ListComplianceInquiryQueriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListComplianceInquiryQueriesInput, ...func(*artifact.Options)) (*artifact.ListComplianceInquiryQueriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListComplianceInquiryQueriesInput, ...func(*artifact.Options)) *artifact.ListComplianceInquiryQueriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.ListComplianceInquiryQueriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.ListComplianceInquiryQueriesInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCustomerAgreements provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCustomerAgreements(ctx context.Context, params *artifact.ListCustomerAgreementsInput, optFns ...func(*artifact.Options)) (*artifact.ListCustomerAgreementsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -274,6 +459,43 @@ func (_m *IClient) ListReports(ctx context.Context, params *artifact.ListReports
 	return r0, r1
 }
 
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *artifact.ListTagsForResourceInput, optFns ...func(*artifact.Options)) (*artifact.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *artifact.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListTagsForResourceInput, ...func(*artifact.Options)) (*artifact.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.ListTagsForResourceInput, ...func(*artifact.Options)) *artifact.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.ListTagsForResourceInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() artifact.Options {
 	ret := _m.Called()
@@ -321,6 +543,80 @@ func (_m *IClient) PutAccountSettings(ctx context.Context, params *artifact.PutA
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *artifact.PutAccountSettingsInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *artifact.TagResourceInput, optFns ...func(*artifact.Options)) (*artifact.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *artifact.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.TagResourceInput, ...func(*artifact.Options)) (*artifact.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.TagResourceInput, ...func(*artifact.Options)) *artifact.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.TagResourceInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *artifact.UntagResourceInput, optFns ...func(*artifact.Options)) (*artifact.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *artifact.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.UntagResourceInput, ...func(*artifact.Options)) (*artifact.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.UntagResourceInput, ...func(*artifact.Options)) *artifact.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.UntagResourceInput, ...func(*artifact.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

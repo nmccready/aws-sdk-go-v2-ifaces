@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchWriteRecord", func(t *testing.T) {
+        input := &sagemakerfeaturestoreruntime.BatchWriteRecordInput{}
+        output := &sagemakerfeaturestoreruntime.BatchWriteRecordOutput{}
+
+        mockClient.On("BatchWriteRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchWriteRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteRecord", func(t *testing.T) {
         input := &sagemakerfeaturestoreruntime.DeleteRecordInput{}
         output := &sagemakerfeaturestoreruntime.DeleteRecordOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRecord", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecords", func(t *testing.T) {
+        input := &sagemakerfeaturestoreruntime.ListRecordsInput{}
+        output := &sagemakerfeaturestoreruntime.ListRecordsOutput{}
+
+        mockClient.On("ListRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecords(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -2124,6 +2124,43 @@ func (_m *IClient) DeleteGlossaryTerm(ctx context.Context, params *datazone.Dele
 	return r0, r1
 }
 
+// DeleteLineageEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteLineageEvent(ctx context.Context, params *datazone.DeleteLineageEventInput, optFns ...func(*datazone.Options)) (*datazone.DeleteLineageEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteLineageEvent")
+	}
+
+	var r0 *datazone.DeleteLineageEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteLineageEventInput, ...func(*datazone.Options)) (*datazone.DeleteLineageEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteLineageEventInput, ...func(*datazone.Options)) *datazone.DeleteLineageEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteLineageEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteLineageEventInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteListing provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteListing(ctx context.Context, params *datazone.DeleteListingInput, optFns ...func(*datazone.Options)) (*datazone.DeleteListingOutput, error) {
 	_va := make([]interface{}, len(optFns))

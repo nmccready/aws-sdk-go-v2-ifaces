@@ -514,6 +514,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *healthlake.UntagRe
 	return r0, r1
 }
 
+// UpdateFHIRDatastore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateFHIRDatastore(ctx context.Context, params *healthlake.UpdateFHIRDatastoreInput, optFns ...func(*healthlake.Options)) (*healthlake.UpdateFHIRDatastoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateFHIRDatastore")
+	}
+
+	var r0 *healthlake.UpdateFHIRDatastoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.UpdateFHIRDatastoreInput, ...func(*healthlake.Options)) (*healthlake.UpdateFHIRDatastoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.UpdateFHIRDatastoreInput, ...func(*healthlake.Options)) *healthlake.UpdateFHIRDatastoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.UpdateFHIRDatastoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.UpdateFHIRDatastoreInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
 // The first argument is typically a *testing.T value.
 func NewIClient(t interface {

@@ -162,6 +162,43 @@ func (_m *IClient) CreateOutpost(ctx context.Context, params *outposts.CreateOut
 	return r0, r1
 }
 
+// CreateQuote provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQuote(ctx context.Context, params *outposts.CreateQuoteInput, optFns ...func(*outposts.Options)) (*outposts.CreateQuoteOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQuote")
+	}
+
+	var r0 *outposts.CreateQuoteOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.CreateQuoteInput, ...func(*outposts.Options)) (*outposts.CreateQuoteOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.CreateQuoteInput, ...func(*outposts.Options)) *outposts.CreateQuoteOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.CreateQuoteOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.CreateQuoteInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateRenewal provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateRenewal(ctx context.Context, params *outposts.CreateRenewalInput, optFns ...func(*outposts.Options)) (*outposts.CreateRenewalOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -265,6 +302,43 @@ func (_m *IClient) DeleteOutpost(ctx context.Context, params *outposts.DeleteOut
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *outposts.DeleteOutpostInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQuote provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQuote(ctx context.Context, params *outposts.DeleteQuoteInput, optFns ...func(*outposts.Options)) (*outposts.DeleteQuoteOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQuote")
+	}
+
+	var r0 *outposts.DeleteQuoteOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.DeleteQuoteInput, ...func(*outposts.Options)) (*outposts.DeleteQuoteOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.DeleteQuoteInput, ...func(*outposts.Options)) *outposts.DeleteQuoteOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.DeleteQuoteOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.DeleteQuoteInput, ...func(*outposts.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -606,6 +680,43 @@ func (_m *IClient) GetOutpostSupportedInstanceTypes(ctx context.Context, params 
 	return r0, r1
 }
 
+// GetQuote provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQuote(ctx context.Context, params *outposts.GetQuoteInput, optFns ...func(*outposts.Options)) (*outposts.GetQuoteOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQuote")
+	}
+
+	var r0 *outposts.GetQuoteOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.GetQuoteInput, ...func(*outposts.Options)) (*outposts.GetQuoteOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.GetQuoteInput, ...func(*outposts.Options)) *outposts.GetQuoteOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.GetQuoteOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.GetQuoteInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRenewalPricing provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRenewalPricing(ctx context.Context, params *outposts.GetRenewalPricingInput, optFns ...func(*outposts.Options)) (*outposts.GetRenewalPricingOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -902,6 +1013,43 @@ func (_m *IClient) ListCatalogItems(ctx context.Context, params *outposts.ListCa
 	return r0, r1
 }
 
+// ListOrderableInstanceTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOrderableInstanceTypes(ctx context.Context, params *outposts.ListOrderableInstanceTypesInput, optFns ...func(*outposts.Options)) (*outposts.ListOrderableInstanceTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOrderableInstanceTypes")
+	}
+
+	var r0 *outposts.ListOrderableInstanceTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListOrderableInstanceTypesInput, ...func(*outposts.Options)) (*outposts.ListOrderableInstanceTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListOrderableInstanceTypesInput, ...func(*outposts.Options)) *outposts.ListOrderableInstanceTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.ListOrderableInstanceTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.ListOrderableInstanceTypesInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListOrders provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListOrders(ctx context.Context, params *outposts.ListOrdersInput, optFns ...func(*outposts.Options)) (*outposts.ListOrdersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -968,6 +1116,43 @@ func (_m *IClient) ListOutposts(ctx context.Context, params *outposts.ListOutpos
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *outposts.ListOutpostsInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListQuotes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQuotes(ctx context.Context, params *outposts.ListQuotesInput, optFns ...func(*outposts.Options)) (*outposts.ListQuotesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQuotes")
+	}
+
+	var r0 *outposts.ListQuotesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListQuotesInput, ...func(*outposts.Options)) (*outposts.ListQuotesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.ListQuotesInput, ...func(*outposts.Options)) *outposts.ListQuotesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.ListQuotesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.ListQuotesInput, ...func(*outposts.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1282,6 +1467,43 @@ func (_m *IClient) UpdateOutpost(ctx context.Context, params *outposts.UpdateOut
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *outposts.UpdateOutpostInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQuote provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQuote(ctx context.Context, params *outposts.UpdateQuoteInput, optFns ...func(*outposts.Options)) (*outposts.UpdateQuoteOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQuote")
+	}
+
+	var r0 *outposts.UpdateQuoteOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.UpdateQuoteInput, ...func(*outposts.Options)) (*outposts.UpdateQuoteOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.UpdateQuoteInput, ...func(*outposts.Options)) *outposts.UpdateQuoteOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.UpdateQuoteOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.UpdateQuoteInput, ...func(*outposts.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

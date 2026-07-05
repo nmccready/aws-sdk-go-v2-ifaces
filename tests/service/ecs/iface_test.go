@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestContinueServiceDeployment", func(t *testing.T) {
+        input := &ecs.ContinueServiceDeploymentInput{}
+        output := &ecs.ContinueServiceDeploymentOutput{}
+
+        mockClient.On("ContinueServiceDeployment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ContinueServiceDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCapacityProvider", func(t *testing.T) {
         input := &ecs.CreateCapacityProviderInput{}
         output := &ecs.CreateCapacityProviderOutput{}

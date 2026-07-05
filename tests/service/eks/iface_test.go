@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelUpdate", func(t *testing.T) {
+        input := &eks.CancelUpdateInput{}
+        output := &eks.CancelUpdateOutput{}
+
+        mockClient.On("CancelUpdate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAccessEntry", func(t *testing.T) {
         input := &eks.CreateAccessEntryInput{}
         output := &eks.CreateAccessEntryOutput{}

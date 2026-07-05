@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateExperimentDefinition", func(t *testing.T) {
+        input := &appconfig.CreateExperimentDefinitionInput{}
+        output := &appconfig.CreateExperimentDefinitionOutput{}
+
+        mockClient.On("CreateExperimentDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateExperimentDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateExtension", func(t *testing.T) {
         input := &appconfig.CreateExtensionInput{}
         output := &appconfig.CreateExtensionOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteExperimentDefinition", func(t *testing.T) {
+        input := &appconfig.DeleteExperimentDefinitionInput{}
+        output := &appconfig.DeleteExperimentDefinitionOutput{}
+
+        mockClient.On("DeleteExperimentDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteExperimentDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +333,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetExperimentDefinition", func(t *testing.T) {
+        input := &appconfig.GetExperimentDefinitionInput{}
+        output := &appconfig.GetExperimentDefinitionOutput{}
+
+        mockClient.On("GetExperimentDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExperimentDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetExperimentRun", func(t *testing.T) {
+        input := &appconfig.GetExperimentRunInput{}
+        output := &appconfig.GetExperimentRunOutput{}
+
+        mockClient.On("GetExperimentRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExperimentRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetExtension", func(t *testing.T) {
         input := &appconfig.GetExtensionInput{}
         output := &appconfig.GetExtensionOutput{}
@@ -411,6 +463,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListExperimentDefinitions", func(t *testing.T) {
+        input := &appconfig.ListExperimentDefinitionsInput{}
+        output := &appconfig.ListExperimentDefinitionsOutput{}
+
+        mockClient.On("ListExperimentDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExperimentDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExperimentRunEvents", func(t *testing.T) {
+        input := &appconfig.ListExperimentRunEventsInput{}
+        output := &appconfig.ListExperimentRunEventsOutput{}
+
+        mockClient.On("ListExperimentRunEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExperimentRunEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExperimentRuns", func(t *testing.T) {
+        input := &appconfig.ListExperimentRunsInput{}
+        output := &appconfig.ListExperimentRunsOutput{}
+
+        mockClient.On("ListExperimentRuns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExperimentRuns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListExtensionAssociations", func(t *testing.T) {
         input := &appconfig.ListExtensionAssociationsInput{}
         output := &appconfig.ListExtensionAssociationsOutput{}
@@ -476,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartExperimentRun", func(t *testing.T) {
+        input := &appconfig.StartExperimentRunInput{}
+        output := &appconfig.StartExperimentRunOutput{}
+
+        mockClient.On("StartExperimentRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartExperimentRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopDeployment", func(t *testing.T) {
         input := &appconfig.StopDeploymentInput{}
         output := &appconfig.StopDeploymentOutput{}
@@ -483,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopDeployment", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopDeployment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopExperimentRun", func(t *testing.T) {
+        input := &appconfig.StopExperimentRunInput{}
+        output := &appconfig.StopExperimentRunOutput{}
+
+        mockClient.On("StopExperimentRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopExperimentRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -574,6 +691,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateEnvironment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateEnvironment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateExperimentDefinition", func(t *testing.T) {
+        input := &appconfig.UpdateExperimentDefinitionInput{}
+        output := &appconfig.UpdateExperimentDefinitionOutput{}
+
+        mockClient.On("UpdateExperimentDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExperimentDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateExperimentRun", func(t *testing.T) {
+        input := &appconfig.UpdateExperimentRunInput{}
+        output := &appconfig.UpdateExperimentRunOutput{}
+
+        mockClient.On("UpdateExperimentRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExperimentRun(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAttachedFile", func(t *testing.T) {
+        input := &connect.CreateAttachedFileInput{}
+        output := &connect.CreateAttachedFileOutput{}
+
+        mockClient.On("CreateAttachedFile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAttachedFile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateContact", func(t *testing.T) {
         input := &connect.CreateContactInput{}
         output := &connect.CreateContactOutput{}
@@ -2192,6 +2205,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEvaluationFormValidation", func(t *testing.T) {
+        input := &connect.GetEvaluationFormValidationInput{}
+        output := &connect.GetEvaluationFormValidationOutput{}
+
+        mockClient.On("GetEvaluationFormValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEvaluationFormValidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFederationToken", func(t *testing.T) {
         input := &connect.GetFederationTokenInput{}
         output := &connect.GetFederationTokenOutput{}
@@ -3674,6 +3700,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendOutboundWebNotification", func(t *testing.T) {
+        input := &connect.SendOutboundWebNotificationInput{}
+        output := &connect.SendOutboundWebNotificationOutput{}
+
+        mockClient.On("SendOutboundWebNotification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendOutboundWebNotification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartAttachedFileUpload", func(t *testing.T) {
         input := &connect.StartAttachedFileUploadInput{}
         output := &connect.StartAttachedFileUploadOutput{}
@@ -3694,6 +3733,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartChatContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartChatContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartContactConversationalAnalyticsJob", func(t *testing.T) {
+        input := &connect.StartContactConversationalAnalyticsJobInput{}
+        output := &connect.StartContactConversationalAnalyticsJobOutput{}
+
+        mockClient.On("StartContactConversationalAnalyticsJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartContactConversationalAnalyticsJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3759,6 +3811,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartEmailContact", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartEmailContact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartEvaluationFormValidation", func(t *testing.T) {
+        input := &connect.StartEvaluationFormValidationInput{}
+        output := &connect.StartEvaluationFormValidationOutput{}
+
+        mockClient.On("StartEvaluationFormValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartEvaluationFormValidation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

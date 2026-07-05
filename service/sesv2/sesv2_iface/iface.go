@@ -106,6 +106,7 @@ type IClient interface {
  PutEmailIdentityFeedbackAttributes(ctx context.Context, params *PutEmailIdentityFeedbackAttributesInput, optFns ...func(*Options)) (*PutEmailIdentityFeedbackAttributesOutput, error) 
  PutEmailIdentityMailFromAttributes(ctx context.Context, params *PutEmailIdentityMailFromAttributesInput, optFns ...func(*Options)) (*PutEmailIdentityMailFromAttributesOutput, error) 
  PutSuppressedDestination(ctx context.Context, params *PutSuppressedDestinationInput, optFns ...func(*Options)) (*PutSuppressedDestinationOutput, error) 
+ PutTenantSuppressionAttributes(ctx context.Context, params *PutTenantSuppressionAttributesInput, optFns ...func(*Options)) (*PutTenantSuppressionAttributesOutput, error) 
  SendBulkEmail(ctx context.Context, params *SendBulkEmailInput, optFns ...func(*Options)) (*SendBulkEmailOutput, error) 
  SendCustomVerificationEmail(ctx context.Context, params *SendCustomVerificationEmailInput, optFns ...func(*Options)) (*SendCustomVerificationEmailOutput, error) 
  SendEmail(ctx context.Context, params *SendEmailInput, optFns ...func(*Options)) (*SendEmailOutput, error) 

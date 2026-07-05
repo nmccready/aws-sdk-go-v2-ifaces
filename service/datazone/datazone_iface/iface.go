@@ -67,6 +67,7 @@ type IClient interface {
  DeleteFormType(ctx context.Context, params *DeleteFormTypeInput, optFns ...func(*Options)) (*DeleteFormTypeOutput, error) 
  DeleteGlossary(ctx context.Context, params *DeleteGlossaryInput, optFns ...func(*Options)) (*DeleteGlossaryOutput, error) 
  DeleteGlossaryTerm(ctx context.Context, params *DeleteGlossaryTermInput, optFns ...func(*Options)) (*DeleteGlossaryTermOutput, error) 
+ DeleteLineageEvent(ctx context.Context, params *DeleteLineageEventInput, optFns ...func(*Options)) (*DeleteLineageEventOutput, error) 
  DeleteListing(ctx context.Context, params *DeleteListingInput, optFns ...func(*Options)) (*DeleteListingOutput, error) 
  DeleteNotebook(ctx context.Context, params *DeleteNotebookInput, optFns ...func(*Options)) (*DeleteNotebookOutput, error) 
  DeleteProject(ctx context.Context, params *DeleteProjectInput, optFns ...func(*Options)) (*DeleteProjectOutput, error) 

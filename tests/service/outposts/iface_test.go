@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateQuote", func(t *testing.T) {
+        input := &outposts.CreateQuoteInput{}
+        output := &outposts.CreateQuoteOutput{}
+
+        mockClient.On("CreateQuote", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQuote(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRenewal", func(t *testing.T) {
         input := &outposts.CreateRenewalInput{}
         output := &outposts.CreateRenewalOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOutpost", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOutpost(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQuote", func(t *testing.T) {
+        input := &outposts.DeleteQuoteInput{}
+        output := &outposts.DeleteQuoteOutput{}
+
+        mockClient.On("DeleteQuote", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQuote(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetQuote", func(t *testing.T) {
+        input := &outposts.GetQuoteInput{}
+        output := &outposts.GetQuoteOutput{}
+
+        mockClient.On("GetQuote", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQuote(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRenewalPricing", func(t *testing.T) {
         input := &outposts.GetRenewalPricingInput{}
         output := &outposts.GetRenewalPricingOutput{}
@@ -346,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListOrderableInstanceTypes", func(t *testing.T) {
+        input := &outposts.ListOrderableInstanceTypesInput{}
+        output := &outposts.ListOrderableInstanceTypesOutput{}
+
+        mockClient.On("ListOrderableInstanceTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOrderableInstanceTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListOrders", func(t *testing.T) {
         input := &outposts.ListOrdersInput{}
         output := &outposts.ListOrdersOutput{}
@@ -366,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOutposts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOutposts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQuotes", func(t *testing.T) {
+        input := &outposts.ListQuotesInput{}
+        output := &outposts.ListQuotesOutput{}
+
+        mockClient.On("ListQuotes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQuotes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -470,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateOutpost", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateOutpost(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQuote", func(t *testing.T) {
+        input := &outposts.UpdateQuoteInput{}
+        output := &outposts.UpdateQuoteOutput{}
+
+        mockClient.On("UpdateQuote", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQuote(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

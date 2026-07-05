@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateGlossaryTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateGlossaryTerms(ctx context.Context, params *glue.AssociateGlossaryTermsInput, optFns ...func(*glue.Options)) (*glue.AssociateGlossaryTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateGlossaryTerms")
+	}
+
+	var r0 *glue.AssociateGlossaryTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.AssociateGlossaryTermsInput, ...func(*glue.Options)) (*glue.AssociateGlossaryTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.AssociateGlossaryTermsInput, ...func(*glue.Options)) *glue.AssociateGlossaryTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.AssociateGlossaryTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.AssociateGlossaryTermsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchCreatePartition provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchCreatePartition(ctx context.Context, params *glue.BatchCreatePartitionInput, optFns ...func(*glue.Options)) (*glue.BatchCreatePartitionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +414,43 @@ func (_m *IClient) BatchGetDevEndpoints(ctx context.Context, params *glue.BatchG
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.BatchGetDevEndpointsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetIterableForms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetIterableForms(ctx context.Context, params *glue.BatchGetIterableFormsInput, optFns ...func(*glue.Options)) (*glue.BatchGetIterableFormsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetIterableForms")
+	}
+
+	var r0 *glue.BatchGetIterableFormsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.BatchGetIterableFormsInput, ...func(*glue.Options)) (*glue.BatchGetIterableFormsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.BatchGetIterableFormsInput, ...func(*glue.Options)) *glue.BatchGetIterableFormsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.BatchGetIterableFormsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.BatchGetIterableFormsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1236,6 +1310,80 @@ func (_m *IClient) CreateDevEndpoint(ctx context.Context, params *glue.CreateDev
 	return r0, r1
 }
 
+// CreateGlossary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateGlossary(ctx context.Context, params *glue.CreateGlossaryInput, optFns ...func(*glue.Options)) (*glue.CreateGlossaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateGlossary")
+	}
+
+	var r0 *glue.CreateGlossaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateGlossaryInput, ...func(*glue.Options)) (*glue.CreateGlossaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateGlossaryInput, ...func(*glue.Options)) *glue.CreateGlossaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateGlossaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateGlossaryInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateGlossaryTerm provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateGlossaryTerm(ctx context.Context, params *glue.CreateGlossaryTermInput, optFns ...func(*glue.Options)) (*glue.CreateGlossaryTermOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateGlossaryTerm")
+	}
+
+	var r0 *glue.CreateGlossaryTermOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateGlossaryTermInput, ...func(*glue.Options)) (*glue.CreateGlossaryTermOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateGlossaryTermInput, ...func(*glue.Options)) *glue.CreateGlossaryTermOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateGlossaryTermOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateGlossaryTermInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGlueIdentityCenterConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGlueIdentityCenterConfiguration(ctx context.Context, params *glue.CreateGlueIdentityCenterConfigurationInput, optFns ...func(*glue.Options)) (*glue.CreateGlueIdentityCenterConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1939,6 +2087,117 @@ func (_m *IClient) CreateWorkflow(ctx context.Context, params *glue.CreateWorkfl
 	return r0, r1
 }
 
+// DeleteAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAsset(ctx context.Context, params *glue.DeleteAssetInput, optFns ...func(*glue.Options)) (*glue.DeleteAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAsset")
+	}
+
+	var r0 *glue.DeleteAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteAssetInput, ...func(*glue.Options)) (*glue.DeleteAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteAssetInput, ...func(*glue.Options)) *glue.DeleteAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteAssetInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAssetType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAssetType(ctx context.Context, params *glue.DeleteAssetTypeInput, optFns ...func(*glue.Options)) (*glue.DeleteAssetTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAssetType")
+	}
+
+	var r0 *glue.DeleteAssetTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteAssetTypeInput, ...func(*glue.Options)) (*glue.DeleteAssetTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteAssetTypeInput, ...func(*glue.Options)) *glue.DeleteAssetTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteAssetTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteAssetTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAttachment(ctx context.Context, params *glue.DeleteAttachmentInput, optFns ...func(*glue.Options)) (*glue.DeleteAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAttachment")
+	}
+
+	var r0 *glue.DeleteAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteAttachmentInput, ...func(*glue.Options)) (*glue.DeleteAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteAttachmentInput, ...func(*glue.Options)) *glue.DeleteAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteAttachmentInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteBlueprint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteBlueprint(ctx context.Context, params *glue.DeleteBlueprintInput, optFns ...func(*glue.Options)) (*glue.DeleteBlueprintOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2412,6 +2671,117 @@ func (_m *IClient) DeleteDevEndpoint(ctx context.Context, params *glue.DeleteDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteFormType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFormType(ctx context.Context, params *glue.DeleteFormTypeInput, optFns ...func(*glue.Options)) (*glue.DeleteFormTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFormType")
+	}
+
+	var r0 *glue.DeleteFormTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteFormTypeInput, ...func(*glue.Options)) (*glue.DeleteFormTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteFormTypeInput, ...func(*glue.Options)) *glue.DeleteFormTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteFormTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteFormTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteGlossary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGlossary(ctx context.Context, params *glue.DeleteGlossaryInput, optFns ...func(*glue.Options)) (*glue.DeleteGlossaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGlossary")
+	}
+
+	var r0 *glue.DeleteGlossaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteGlossaryInput, ...func(*glue.Options)) (*glue.DeleteGlossaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteGlossaryInput, ...func(*glue.Options)) *glue.DeleteGlossaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteGlossaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteGlossaryInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteGlossaryTerm provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGlossaryTerm(ctx context.Context, params *glue.DeleteGlossaryTermInput, optFns ...func(*glue.Options)) (*glue.DeleteGlossaryTermOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGlossaryTerm")
+	}
+
+	var r0 *glue.DeleteGlossaryTermOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteGlossaryTermInput, ...func(*glue.Options)) (*glue.DeleteGlossaryTermOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteGlossaryTermInput, ...func(*glue.Options)) *glue.DeleteGlossaryTermOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteGlossaryTermOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteGlossaryTermInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3345,6 +3715,117 @@ func (_m *IClient) DescribeIntegrations(ctx context.Context, params *glue.Descri
 	return r0, r1
 }
 
+// DisassociateGlossaryTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateGlossaryTerms(ctx context.Context, params *glue.DisassociateGlossaryTermsInput, optFns ...func(*glue.Options)) (*glue.DisassociateGlossaryTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateGlossaryTerms")
+	}
+
+	var r0 *glue.DisassociateGlossaryTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DisassociateGlossaryTermsInput, ...func(*glue.Options)) (*glue.DisassociateGlossaryTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DisassociateGlossaryTermsInput, ...func(*glue.Options)) *glue.DisassociateGlossaryTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DisassociateGlossaryTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DisassociateGlossaryTermsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAsset(ctx context.Context, params *glue.GetAssetInput, optFns ...func(*glue.Options)) (*glue.GetAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAsset")
+	}
+
+	var r0 *glue.GetAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetAssetInput, ...func(*glue.Options)) (*glue.GetAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetAssetInput, ...func(*glue.Options)) *glue.GetAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetAssetInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAssetType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAssetType(ctx context.Context, params *glue.GetAssetTypeInput, optFns ...func(*glue.Options)) (*glue.GetAssetTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAssetType")
+	}
+
+	var r0 *glue.GetAssetTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetAssetTypeInput, ...func(*glue.Options)) (*glue.GetAssetTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetAssetTypeInput, ...func(*glue.Options)) *glue.GetAssetTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetAssetTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetAssetTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBlueprint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBlueprint(ctx context.Context, params *glue.GetBlueprintInput, optFns ...func(*glue.Options)) (*glue.GetBlueprintOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4048,6 +4529,43 @@ func (_m *IClient) GetCustomEntityType(ctx context.Context, params *glue.GetCust
 	return r0, r1
 }
 
+// GetDashboardUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDashboardUrl(ctx context.Context, params *glue.GetDashboardUrlInput, optFns ...func(*glue.Options)) (*glue.GetDashboardUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDashboardUrl")
+	}
+
+	var r0 *glue.GetDashboardUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDashboardUrlInput, ...func(*glue.Options)) (*glue.GetDashboardUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDashboardUrlInput, ...func(*glue.Options)) *glue.GetDashboardUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetDashboardUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDashboardUrlInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataCatalogEncryptionSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataCatalogEncryptionSettings(ctx context.Context, params *glue.GetDataCatalogEncryptionSettingsInput, optFns ...func(*glue.Options)) (*glue.GetDataCatalogEncryptionSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4521,6 +5039,117 @@ func (_m *IClient) GetEntityRecords(ctx context.Context, params *glue.GetEntityR
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetEntityRecordsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFormType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFormType(ctx context.Context, params *glue.GetFormTypeInput, optFns ...func(*glue.Options)) (*glue.GetFormTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFormType")
+	}
+
+	var r0 *glue.GetFormTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetFormTypeInput, ...func(*glue.Options)) (*glue.GetFormTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetFormTypeInput, ...func(*glue.Options)) *glue.GetFormTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetFormTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetFormTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetGlossary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetGlossary(ctx context.Context, params *glue.GetGlossaryInput, optFns ...func(*glue.Options)) (*glue.GetGlossaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetGlossary")
+	}
+
+	var r0 *glue.GetGlossaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetGlossaryInput, ...func(*glue.Options)) (*glue.GetGlossaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetGlossaryInput, ...func(*glue.Options)) *glue.GetGlossaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetGlossaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetGlossaryInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetGlossaryTerm provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetGlossaryTerm(ctx context.Context, params *glue.GetGlossaryTermInput, optFns ...func(*glue.Options)) (*glue.GetGlossaryTermOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetGlossaryTerm")
+	}
+
+	var r0 *glue.GetGlossaryTermOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetGlossaryTermInput, ...func(*glue.Options)) (*glue.GetGlossaryTermOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetGlossaryTermInput, ...func(*glue.Options)) *glue.GetGlossaryTermOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetGlossaryTermOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetGlossaryTermInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5565,6 +6194,43 @@ func (_m *IClient) GetSession(ctx context.Context, params *glue.GetSessionInput,
 	return r0, r1
 }
 
+// GetSessionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSessionEndpoint(ctx context.Context, params *glue.GetSessionEndpointInput, optFns ...func(*glue.Options)) (*glue.GetSessionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSessionEndpoint")
+	}
+
+	var r0 *glue.GetSessionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetSessionEndpointInput, ...func(*glue.Options)) (*glue.GetSessionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetSessionEndpointInput, ...func(*glue.Options)) *glue.GetSessionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetSessionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetSessionEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetStatement provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetStatement(ctx context.Context, params *glue.GetStatementInput, optFns ...func(*glue.Options)) (*glue.GetStatementOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6305,6 +6971,43 @@ func (_m *IClient) ImportCatalogToGlue(ctx context.Context, params *glue.ImportC
 	return r0, r1
 }
 
+// ListAssetTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetTypes(ctx context.Context, params *glue.ListAssetTypesInput, optFns ...func(*glue.Options)) (*glue.ListAssetTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetTypes")
+	}
+
+	var r0 *glue.ListAssetTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListAssetTypesInput, ...func(*glue.Options)) (*glue.ListAssetTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListAssetTypesInput, ...func(*glue.Options)) *glue.ListAssetTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListAssetTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListAssetTypesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListBlueprints provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListBlueprints(ctx context.Context, params *glue.ListBlueprintsInput, optFns ...func(*glue.Options)) (*glue.ListBlueprintsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6823,6 +7526,117 @@ func (_m *IClient) ListEntities(ctx context.Context, params *glue.ListEntitiesIn
 	return r0, r1
 }
 
+// ListFormTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFormTypes(ctx context.Context, params *glue.ListFormTypesInput, optFns ...func(*glue.Options)) (*glue.ListFormTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFormTypes")
+	}
+
+	var r0 *glue.ListFormTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListFormTypesInput, ...func(*glue.Options)) (*glue.ListFormTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListFormTypesInput, ...func(*glue.Options)) *glue.ListFormTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListFormTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListFormTypesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGlossaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGlossaries(ctx context.Context, params *glue.ListGlossariesInput, optFns ...func(*glue.Options)) (*glue.ListGlossariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGlossaries")
+	}
+
+	var r0 *glue.ListGlossariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListGlossariesInput, ...func(*glue.Options)) (*glue.ListGlossariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListGlossariesInput, ...func(*glue.Options)) *glue.ListGlossariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListGlossariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListGlossariesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGlossaryTerms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGlossaryTerms(ctx context.Context, params *glue.ListGlossaryTermsInput, optFns ...func(*glue.Options)) (*glue.ListGlossaryTermsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGlossaryTerms")
+	}
+
+	var r0 *glue.ListGlossaryTermsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListGlossaryTermsInput, ...func(*glue.Options)) (*glue.ListGlossaryTermsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListGlossaryTermsInput, ...func(*glue.Options)) *glue.ListGlossaryTermsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListGlossaryTermsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListGlossaryTermsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListIntegrationResourceProperties provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListIntegrationResourceProperties(ctx context.Context, params *glue.ListIntegrationResourcePropertiesInput, optFns ...func(*glue.Options)) (*glue.ListIntegrationResourcePropertiesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6852,6 +7666,43 @@ func (_m *IClient) ListIntegrationResourceProperties(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListIntegrationResourcePropertiesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIterableForms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIterableForms(ctx context.Context, params *glue.ListIterableFormsInput, optFns ...func(*glue.Options)) (*glue.ListIterableFormsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIterableForms")
+	}
+
+	var r0 *glue.ListIterableFormsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListIterableFormsInput, ...func(*glue.Options)) (*glue.ListIterableFormsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListIterableFormsInput, ...func(*glue.Options)) *glue.ListIterableFormsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListIterableFormsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListIterableFormsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7359,6 +8210,117 @@ func (_m *IClient) Options() glue.Options {
 	return r0
 }
 
+// PutAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAsset(ctx context.Context, params *glue.PutAssetInput, optFns ...func(*glue.Options)) (*glue.PutAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAsset")
+	}
+
+	var r0 *glue.PutAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutAssetInput, ...func(*glue.Options)) (*glue.PutAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutAssetInput, ...func(*glue.Options)) *glue.PutAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PutAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutAssetInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutAssetType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAssetType(ctx context.Context, params *glue.PutAssetTypeInput, optFns ...func(*glue.Options)) (*glue.PutAssetTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAssetType")
+	}
+
+	var r0 *glue.PutAssetTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutAssetTypeInput, ...func(*glue.Options)) (*glue.PutAssetTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutAssetTypeInput, ...func(*glue.Options)) *glue.PutAssetTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PutAssetTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutAssetTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAttachment(ctx context.Context, params *glue.PutAttachmentInput, optFns ...func(*glue.Options)) (*glue.PutAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAttachment")
+	}
+
+	var r0 *glue.PutAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutAttachmentInput, ...func(*glue.Options)) (*glue.PutAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutAttachmentInput, ...func(*glue.Options)) *glue.PutAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PutAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutAttachmentInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutDataCatalogEncryptionSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutDataCatalogEncryptionSettings(ctx context.Context, params *glue.PutDataCatalogEncryptionSettingsInput, optFns ...func(*glue.Options)) (*glue.PutDataCatalogEncryptionSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7425,6 +8387,43 @@ func (_m *IClient) PutDataQualityProfileAnnotation(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutDataQualityProfileAnnotationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutFormType provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutFormType(ctx context.Context, params *glue.PutFormTypeInput, optFns ...func(*glue.Options)) (*glue.PutFormTypeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutFormType")
+	}
+
+	var r0 *glue.PutFormTypeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutFormTypeInput, ...func(*glue.Options)) (*glue.PutFormTypeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutFormTypeInput, ...func(*glue.Options)) *glue.PutFormTypeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PutFormTypeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutFormTypeInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7795,6 +8794,43 @@ func (_m *IClient) RunStatement(ctx context.Context, params *glue.RunStatementIn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.RunStatementInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchAssets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchAssets(ctx context.Context, params *glue.SearchAssetsInput, optFns ...func(*glue.Options)) (*glue.SearchAssetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchAssets")
+	}
+
+	var r0 *glue.SearchAssetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.SearchAssetsInput, ...func(*glue.Options)) (*glue.SearchAssetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.SearchAssetsInput, ...func(*glue.Options)) *glue.SearchAssetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.SearchAssetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.SearchAssetsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -8802,6 +9838,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *glue.UntagResource
 	return r0, r1
 }
 
+// UpdateAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAsset(ctx context.Context, params *glue.UpdateAssetInput, optFns ...func(*glue.Options)) (*glue.UpdateAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAsset")
+	}
+
+	var r0 *glue.UpdateAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateAssetInput, ...func(*glue.Options)) (*glue.UpdateAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateAssetInput, ...func(*glue.Options)) *glue.UpdateAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateAssetInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateBlueprint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateBlueprint(ctx context.Context, params *glue.UpdateBlueprintInput, optFns ...func(*glue.Options)) (*glue.UpdateBlueprintOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9238,6 +10311,80 @@ func (_m *IClient) UpdateDevEndpoint(ctx context.Context, params *glue.UpdateDev
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateDevEndpointInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateGlossary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateGlossary(ctx context.Context, params *glue.UpdateGlossaryInput, optFns ...func(*glue.Options)) (*glue.UpdateGlossaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateGlossary")
+	}
+
+	var r0 *glue.UpdateGlossaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateGlossaryInput, ...func(*glue.Options)) (*glue.UpdateGlossaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateGlossaryInput, ...func(*glue.Options)) *glue.UpdateGlossaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateGlossaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateGlossaryInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateGlossaryTerm provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateGlossaryTerm(ctx context.Context, params *glue.UpdateGlossaryTermInput, optFns ...func(*glue.Options)) (*glue.UpdateGlossaryTermOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateGlossaryTerm")
+	}
+
+	var r0 *glue.UpdateGlossaryTermOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateGlossaryTermInput, ...func(*glue.Options)) (*glue.UpdateGlossaryTermOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateGlossaryTermInput, ...func(*glue.Options)) *glue.UpdateGlossaryTermOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateGlossaryTermOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateGlossaryTermInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

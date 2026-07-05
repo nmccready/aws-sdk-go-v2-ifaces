@@ -496,6 +496,80 @@ func (_m *IClient) CreateIdNamespaceAssociation(ctx context.Context, params *cle
 	return r0, r1
 }
 
+// CreateIntermediateTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIntermediateTable(ctx context.Context, params *cleanrooms.CreateIntermediateTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateIntermediateTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIntermediateTable")
+	}
+
+	var r0 *cleanrooms.CreateIntermediateTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIntermediateTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.CreateIntermediateTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIntermediateTableInput, ...func(*cleanrooms.Options)) *cleanrooms.CreateIntermediateTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.CreateIntermediateTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.CreateIntermediateTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIntermediateTableAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIntermediateTableAnalysisRule(ctx context.Context, params *cleanrooms.CreateIntermediateTableAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateIntermediateTableAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIntermediateTableAnalysisRule")
+	}
+
+	var r0 *cleanrooms.CreateIntermediateTableAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.CreateIntermediateTableAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.CreateIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.CreateIntermediateTableAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.CreateIntermediateTableAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.CreateIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateMembership provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateMembership(ctx context.Context, params *cleanrooms.CreateMembershipInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.CreateMembershipOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -903,6 +977,80 @@ func (_m *IClient) DeleteIdNamespaceAssociation(ctx context.Context, params *cle
 	return r0, r1
 }
 
+// DeleteIntermediateTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIntermediateTable(ctx context.Context, params *cleanrooms.DeleteIntermediateTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIntermediateTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIntermediateTable")
+	}
+
+	var r0 *cleanrooms.DeleteIntermediateTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIntermediateTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIntermediateTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIntermediateTableInput, ...func(*cleanrooms.Options)) *cleanrooms.DeleteIntermediateTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.DeleteIntermediateTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DeleteIntermediateTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIntermediateTableAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIntermediateTableAnalysisRule(ctx context.Context, params *cleanrooms.DeleteIntermediateTableAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIntermediateTableAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIntermediateTableAnalysisRule")
+	}
+
+	var r0 *cleanrooms.DeleteIntermediateTableAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.DeleteIntermediateTableAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DeleteIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.DeleteIntermediateTableAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.DeleteIntermediateTableAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DeleteIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteMember provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteMember(ctx context.Context, params *cleanrooms.DeleteMemberInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DeleteMemberOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1006,6 +1154,43 @@ func (_m *IClient) DeletePrivacyBudgetTemplate(ctx context.Context, params *clea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DeletePrivacyBudgetTemplateInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisallowIntermediateTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisallowIntermediateTable(ctx context.Context, params *cleanrooms.DisallowIntermediateTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.DisallowIntermediateTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisallowIntermediateTable")
+	}
+
+	var r0 *cleanrooms.DisallowIntermediateTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DisallowIntermediateTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.DisallowIntermediateTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.DisallowIntermediateTableInput, ...func(*cleanrooms.Options)) *cleanrooms.DisallowIntermediateTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.DisallowIntermediateTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.DisallowIntermediateTableInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1524,6 +1709,80 @@ func (_m *IClient) GetIdNamespaceAssociation(ctx context.Context, params *cleanr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIntermediateTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIntermediateTable(ctx context.Context, params *cleanrooms.GetIntermediateTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetIntermediateTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIntermediateTable")
+	}
+
+	var r0 *cleanrooms.GetIntermediateTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIntermediateTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetIntermediateTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIntermediateTableInput, ...func(*cleanrooms.Options)) *cleanrooms.GetIntermediateTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetIntermediateTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetIntermediateTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIntermediateTableAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIntermediateTableAnalysisRule(ctx context.Context, params *cleanrooms.GetIntermediateTableAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetIntermediateTableAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIntermediateTableAnalysisRule")
+	}
+
+	var r0 *cleanrooms.GetIntermediateTableAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetIntermediateTableAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.GetIntermediateTableAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetIntermediateTableAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2235,6 +2494,80 @@ func (_m *IClient) ListIdNamespaceAssociations(ctx context.Context, params *clea
 	return r0, r1
 }
 
+// ListIntermediateTableVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIntermediateTableVersions(ctx context.Context, params *cleanrooms.ListIntermediateTableVersionsInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListIntermediateTableVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIntermediateTableVersions")
+	}
+
+	var r0 *cleanrooms.ListIntermediateTableVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIntermediateTableVersionsInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListIntermediateTableVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIntermediateTableVersionsInput, ...func(*cleanrooms.Options)) *cleanrooms.ListIntermediateTableVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListIntermediateTableVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListIntermediateTableVersionsInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIntermediateTables provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIntermediateTables(ctx context.Context, params *cleanrooms.ListIntermediateTablesInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListIntermediateTablesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIntermediateTables")
+	}
+
+	var r0 *cleanrooms.ListIntermediateTablesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIntermediateTablesInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListIntermediateTablesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListIntermediateTablesInput, ...func(*cleanrooms.Options)) *cleanrooms.ListIntermediateTablesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListIntermediateTablesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListIntermediateTablesInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListMembers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListMembers(ctx context.Context, params *cleanrooms.ListMembersInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListMembersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2578,6 +2911,43 @@ func (_m *IClient) PopulateIdMappingTable(ctx context.Context, params *cleanroom
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.PopulateIdMappingTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PopulateIntermediateTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PopulateIntermediateTable(ctx context.Context, params *cleanrooms.PopulateIntermediateTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.PopulateIntermediateTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PopulateIntermediateTable")
+	}
+
+	var r0 *cleanrooms.PopulateIntermediateTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.PopulateIntermediateTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.PopulateIntermediateTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.PopulateIntermediateTableInput, ...func(*cleanrooms.Options)) *cleanrooms.PopulateIntermediateTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.PopulateIntermediateTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.PopulateIntermediateTableInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3133,6 +3503,80 @@ func (_m *IClient) UpdateIdNamespaceAssociation(ctx context.Context, params *cle
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateIdNamespaceAssociationInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIntermediateTable provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIntermediateTable(ctx context.Context, params *cleanrooms.UpdateIntermediateTableInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIntermediateTableOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIntermediateTable")
+	}
+
+	var r0 *cleanrooms.UpdateIntermediateTableOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIntermediateTableInput, ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIntermediateTableOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIntermediateTableInput, ...func(*cleanrooms.Options)) *cleanrooms.UpdateIntermediateTableOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.UpdateIntermediateTableOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateIntermediateTableInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIntermediateTableAnalysisRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIntermediateTableAnalysisRule(ctx context.Context, params *cleanrooms.UpdateIntermediateTableAnalysisRuleInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIntermediateTableAnalysisRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIntermediateTableAnalysisRule")
+	}
+
+	var r0 *cleanrooms.UpdateIntermediateTableAnalysisRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) (*cleanrooms.UpdateIntermediateTableAnalysisRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.UpdateIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) *cleanrooms.UpdateIntermediateTableAnalysisRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.UpdateIntermediateTableAnalysisRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.UpdateIntermediateTableAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

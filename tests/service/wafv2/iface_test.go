@@ -398,6 +398,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetRevenueStatistics", func(t *testing.T) {
+        input := &wafv2.GetRevenueStatisticsInput{}
+        output := &wafv2.GetRevenueStatisticsOutput{}
+
+        mockClient.On("GetRevenueStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRevenueStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRevenueStatisticsSummary", func(t *testing.T) {
+        input := &wafv2.GetRevenueStatisticsSummaryInput{}
+        output := &wafv2.GetRevenueStatisticsSummaryOutput{}
+
+        mockClient.On("GetRevenueStatisticsSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRevenueStatisticsSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRevenueStatisticsTimeSeries", func(t *testing.T) {
+        input := &wafv2.GetRevenueStatisticsTimeSeriesInput{}
+        output := &wafv2.GetRevenueStatisticsTimeSeriesOutput{}
+
+        mockClient.On("GetRevenueStatisticsTimeSeries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRevenueStatisticsTimeSeries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRuleGroup", func(t *testing.T) {
         input := &wafv2.GetRuleGroupInput{}
         output := &wafv2.GetRuleGroupOutput{}
@@ -587,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListRuleGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListRuleGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSettlementRecords", func(t *testing.T) {
+        input := &wafv2.ListSettlementRecordsInput{}
+        output := &wafv2.ListSettlementRecordsOutput{}
+
+        mockClient.On("ListSettlementRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSettlementRecords(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

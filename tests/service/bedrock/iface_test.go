@@ -528,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccountDataRetention", func(t *testing.T) {
+        input := &bedrock.GetAccountDataRetentionInput{}
+        output := &bedrock.GetAccountDataRetentionOutput{}
+
+        mockClient.On("GetAccountDataRetention", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountDataRetention(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAdvancedPromptOptimizationJob", func(t *testing.T) {
         input := &bedrock.GetAdvancedPromptOptimizationJobInput{}
         output := &bedrock.GetAdvancedPromptOptimizationJobOutput{}
@@ -1146,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountDataRetention", func(t *testing.T) {
+        input := &bedrock.PutAccountDataRetentionInput{}
+        output := &bedrock.PutAccountDataRetentionOutput{}
+
+        mockClient.On("PutAccountDataRetention", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountDataRetention(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -15,6 +15,7 @@ type IClient interface {
  ConverseStream(ctx context.Context, params *ConverseStreamInput, optFns ...func(*Options)) (*ConverseStreamOutput, error) 
  CountTokens(ctx context.Context, params *CountTokensInput, optFns ...func(*Options)) (*CountTokensOutput, error) 
  GetAsyncInvoke(ctx context.Context, params *GetAsyncInvokeInput, optFns ...func(*Options)) (*GetAsyncInvokeOutput, error) 
+ InvokeGuardrailChecks(ctx context.Context, params *InvokeGuardrailChecksInput, optFns ...func(*Options)) (*InvokeGuardrailChecksOutput, error) 
  InvokeModel(ctx context.Context, params *InvokeModelInput, optFns ...func(*Options)) (*InvokeModelOutput, error) 
  InvokeModelWithBidirectionalStream(ctx context.Context, params *InvokeModelWithBidirectionalStreamInput, optFns ...func(*Options)) (*InvokeModelWithBidirectionalStreamOutput, error) 
  InvokeModelWithResponseStream(ctx context.Context, params *InvokeModelWithResponseStreamInput, optFns ...func(*Options)) (*InvokeModelWithResponseStreamOutput, error) 

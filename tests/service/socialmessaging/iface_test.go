@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWhatsAppFlow", func(t *testing.T) {
+        input := &socialmessaging.CreateWhatsAppFlowInput{}
+        output := &socialmessaging.CreateWhatsAppFlowOutput{}
+
+        mockClient.On("CreateWhatsAppFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWhatsAppFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWhatsAppMessageTemplate", func(t *testing.T) {
         input := &socialmessaging.CreateWhatsAppMessageTemplateInput{}
         output := &socialmessaging.CreateWhatsAppMessageTemplateOutput{}
@@ -86,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteWhatsAppFlow", func(t *testing.T) {
+        input := &socialmessaging.DeleteWhatsAppFlowInput{}
+        output := &socialmessaging.DeleteWhatsAppFlowOutput{}
+
+        mockClient.On("DeleteWhatsAppFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWhatsAppFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteWhatsAppMessageMedia", func(t *testing.T) {
         input := &socialmessaging.DeleteWhatsAppMessageMediaInput{}
         output := &socialmessaging.DeleteWhatsAppMessageMediaOutput{}
@@ -106,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteWhatsAppMessageTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteWhatsAppMessageTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeprecateWhatsAppFlow", func(t *testing.T) {
+        input := &socialmessaging.DeprecateWhatsAppFlowInput{}
+        output := &socialmessaging.DeprecateWhatsAppFlowOutput{}
+
+        mockClient.On("DeprecateWhatsAppFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeprecateWhatsAppFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +184,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLinkedWhatsAppBusinessAccountPhoneNumber", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLinkedWhatsAppBusinessAccountPhoneNumber(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWhatsAppFlow", func(t *testing.T) {
+        input := &socialmessaging.GetWhatsAppFlowInput{}
+        output := &socialmessaging.GetWhatsAppFlowOutput{}
+
+        mockClient.On("GetWhatsAppFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWhatsAppFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWhatsAppFlowPreview", func(t *testing.T) {
+        input := &socialmessaging.GetWhatsAppFlowPreviewInput{}
+        output := &socialmessaging.GetWhatsAppFlowPreviewOutput{}
+
+        mockClient.On("GetWhatsAppFlowPreview", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWhatsAppFlowPreview(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +268,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListWhatsAppFlowAssets", func(t *testing.T) {
+        input := &socialmessaging.ListWhatsAppFlowAssetsInput{}
+        output := &socialmessaging.ListWhatsAppFlowAssetsOutput{}
+
+        mockClient.On("ListWhatsAppFlowAssets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWhatsAppFlowAssets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWhatsAppFlows", func(t *testing.T) {
+        input := &socialmessaging.ListWhatsAppFlowsInput{}
+        output := &socialmessaging.ListWhatsAppFlowsOutput{}
+
+        mockClient.On("ListWhatsAppFlows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWhatsAppFlows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListWhatsAppMessageTemplates", func(t *testing.T) {
         input := &socialmessaging.ListWhatsAppMessageTemplatesInput{}
         output := &socialmessaging.ListWhatsAppMessageTemplatesOutput{}
@@ -236,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PostWhatsAppMessageMedia", ctx, input).Return(output, nil)
 
         result, err := mockClient.PostWhatsAppMessageMedia(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPublishWhatsAppFlow", func(t *testing.T) {
+        input := &socialmessaging.PublishWhatsAppFlowInput{}
+        output := &socialmessaging.PublishWhatsAppFlowOutput{}
+
+        mockClient.On("PublishWhatsAppFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PublishWhatsAppFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -288,6 +392,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWhatsAppFlow", func(t *testing.T) {
+        input := &socialmessaging.UpdateWhatsAppFlowInput{}
+        output := &socialmessaging.UpdateWhatsAppFlowOutput{}
+
+        mockClient.On("UpdateWhatsAppFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWhatsAppFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWhatsAppFlowAssets", func(t *testing.T) {
+        input := &socialmessaging.UpdateWhatsAppFlowAssetsInput{}
+        output := &socialmessaging.UpdateWhatsAppFlowAssetsOutput{}
+
+        mockClient.On("UpdateWhatsAppFlowAssets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWhatsAppFlowAssets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

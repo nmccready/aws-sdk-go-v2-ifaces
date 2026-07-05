@@ -1236,6 +1236,43 @@ func (_m *IClient) CreateAgentStatus(ctx context.Context, params *connect.Create
 	return r0, r1
 }
 
+// CreateAttachedFile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAttachedFile(ctx context.Context, params *connect.CreateAttachedFileInput, optFns ...func(*connect.Options)) (*connect.CreateAttachedFileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAttachedFile")
+	}
+
+	var r0 *connect.CreateAttachedFileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateAttachedFileInput, ...func(*connect.Options)) (*connect.CreateAttachedFileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateAttachedFileInput, ...func(*connect.Options)) *connect.CreateAttachedFileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateAttachedFileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateAttachedFileInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateContact provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateContact(ctx context.Context, params *connect.CreateContactInput, optFns ...func(*connect.Options)) (*connect.CreateContactOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6157,6 +6194,43 @@ func (_m *IClient) GetEffectiveHoursOfOperations(ctx context.Context, params *co
 	return r0, r1
 }
 
+// GetEvaluationFormValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEvaluationFormValidation(ctx context.Context, params *connect.GetEvaluationFormValidationInput, optFns ...func(*connect.Options)) (*connect.GetEvaluationFormValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEvaluationFormValidation")
+	}
+
+	var r0 *connect.GetEvaluationFormValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetEvaluationFormValidationInput, ...func(*connect.Options)) (*connect.GetEvaluationFormValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetEvaluationFormValidationInput, ...func(*connect.Options)) *connect.GetEvaluationFormValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.GetEvaluationFormValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.GetEvaluationFormValidationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFederationToken provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFederationToken(ctx context.Context, params *connect.GetFederationTokenInput, optFns ...func(*connect.Options)) (*connect.GetFederationTokenOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10393,6 +10467,43 @@ func (_m *IClient) SendOutboundEmail(ctx context.Context, params *connect.SendOu
 	return r0, r1
 }
 
+// SendOutboundWebNotification provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendOutboundWebNotification(ctx context.Context, params *connect.SendOutboundWebNotificationInput, optFns ...func(*connect.Options)) (*connect.SendOutboundWebNotificationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendOutboundWebNotification")
+	}
+
+	var r0 *connect.SendOutboundWebNotificationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SendOutboundWebNotificationInput, ...func(*connect.Options)) (*connect.SendOutboundWebNotificationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SendOutboundWebNotificationInput, ...func(*connect.Options)) *connect.SendOutboundWebNotificationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SendOutboundWebNotificationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SendOutboundWebNotificationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartAttachedFileUpload provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartAttachedFileUpload(ctx context.Context, params *connect.StartAttachedFileUploadInput, optFns ...func(*connect.Options)) (*connect.StartAttachedFileUploadOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10459,6 +10570,43 @@ func (_m *IClient) StartChatContact(ctx context.Context, params *connect.StartCh
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartChatContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartContactConversationalAnalyticsJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartContactConversationalAnalyticsJob(ctx context.Context, params *connect.StartContactConversationalAnalyticsJobInput, optFns ...func(*connect.Options)) (*connect.StartContactConversationalAnalyticsJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartContactConversationalAnalyticsJob")
+	}
+
+	var r0 *connect.StartContactConversationalAnalyticsJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartContactConversationalAnalyticsJobInput, ...func(*connect.Options)) (*connect.StartContactConversationalAnalyticsJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartContactConversationalAnalyticsJobInput, ...func(*connect.Options)) *connect.StartContactConversationalAnalyticsJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartContactConversationalAnalyticsJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartContactConversationalAnalyticsJobInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -10644,6 +10792,43 @@ func (_m *IClient) StartEmailContact(ctx context.Context, params *connect.StartE
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartEmailContactInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartEvaluationFormValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartEvaluationFormValidation(ctx context.Context, params *connect.StartEvaluationFormValidationInput, optFns ...func(*connect.Options)) (*connect.StartEvaluationFormValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartEvaluationFormValidation")
+	}
+
+	var r0 *connect.StartEvaluationFormValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartEvaluationFormValidationInput, ...func(*connect.Options)) (*connect.StartEvaluationFormValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartEvaluationFormValidationInput, ...func(*connect.Options)) *connect.StartEvaluationFormValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartEvaluationFormValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartEvaluationFormValidationInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

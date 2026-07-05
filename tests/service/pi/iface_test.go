@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPerformanceAnalysisReportRecommendations", func(t *testing.T) {
+        input := &pi.ListPerformanceAnalysisReportRecommendationsInput{}
+        output := &pi.ListPerformanceAnalysisReportRecommendationsOutput{}
+
+        mockClient.On("ListPerformanceAnalysisReportRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPerformanceAnalysisReportRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPerformanceAnalysisReports", func(t *testing.T) {
         input := &pi.ListPerformanceAnalysisReportsInput{}
         output := &pi.ListPerformanceAnalysisReportsOutput{}

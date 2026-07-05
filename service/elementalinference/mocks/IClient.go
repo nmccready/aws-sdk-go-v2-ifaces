@@ -52,6 +52,43 @@ func (_m *IClient) AssociateFeed(ctx context.Context, params *elementalinference
 	return r0, r1
 }
 
+// CreateDictionary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDictionary(ctx context.Context, params *elementalinference.CreateDictionaryInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateDictionaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDictionary")
+	}
+
+	var r0 *elementalinference.CreateDictionaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateDictionaryInput, ...func(*elementalinference.Options)) (*elementalinference.CreateDictionaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateDictionaryInput, ...func(*elementalinference.Options)) *elementalinference.CreateDictionaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.CreateDictionaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.CreateDictionaryInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFeed provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFeed(ctx context.Context, params *elementalinference.CreateFeedInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateFeedOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +118,43 @@ func (_m *IClient) CreateFeed(ctx context.Context, params *elementalinference.Cr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.CreateFeedInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDictionary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDictionary(ctx context.Context, params *elementalinference.DeleteDictionaryInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteDictionaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDictionary")
+	}
+
+	var r0 *elementalinference.DeleteDictionaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteDictionaryInput, ...func(*elementalinference.Options)) (*elementalinference.DeleteDictionaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteDictionaryInput, ...func(*elementalinference.Options)) *elementalinference.DeleteDictionaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.DeleteDictionaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteDictionaryInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -163,6 +237,80 @@ func (_m *IClient) DisassociateFeed(ctx context.Context, params *elementalinfere
 	return r0, r1
 }
 
+// ExportDictionaryEntries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExportDictionaryEntries(ctx context.Context, params *elementalinference.ExportDictionaryEntriesInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ExportDictionaryEntriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExportDictionaryEntries")
+	}
+
+	var r0 *elementalinference.ExportDictionaryEntriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ExportDictionaryEntriesInput, ...func(*elementalinference.Options)) (*elementalinference.ExportDictionaryEntriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ExportDictionaryEntriesInput, ...func(*elementalinference.Options)) *elementalinference.ExportDictionaryEntriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.ExportDictionaryEntriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ExportDictionaryEntriesInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDictionary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDictionary(ctx context.Context, params *elementalinference.GetDictionaryInput, optFns ...func(*elementalinference.Options)) (*elementalinference.GetDictionaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDictionary")
+	}
+
+	var r0 *elementalinference.GetDictionaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetDictionaryInput, ...func(*elementalinference.Options)) (*elementalinference.GetDictionaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetDictionaryInput, ...func(*elementalinference.Options)) *elementalinference.GetDictionaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.GetDictionaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetDictionaryInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFeed provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFeed(ctx context.Context, params *elementalinference.GetFeedInput, optFns ...func(*elementalinference.Options)) (*elementalinference.GetFeedOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +340,43 @@ func (_m *IClient) GetFeed(ctx context.Context, params *elementalinference.GetFe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetFeedInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDictionaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDictionaries(ctx context.Context, params *elementalinference.ListDictionariesInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListDictionariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDictionaries")
+	}
+
+	var r0 *elementalinference.ListDictionariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListDictionariesInput, ...func(*elementalinference.Options)) (*elementalinference.ListDictionariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListDictionariesInput, ...func(*elementalinference.Options)) *elementalinference.ListDictionariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.ListDictionariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListDictionariesInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -358,6 +543,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *elementalinference
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.UntagResourceInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDictionary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDictionary(ctx context.Context, params *elementalinference.UpdateDictionaryInput, optFns ...func(*elementalinference.Options)) (*elementalinference.UpdateDictionaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDictionary")
+	}
+
+	var r0 *elementalinference.UpdateDictionaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.UpdateDictionaryInput, ...func(*elementalinference.Options)) (*elementalinference.UpdateDictionaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.UpdateDictionaryInput, ...func(*elementalinference.Options)) *elementalinference.UpdateDictionaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.UpdateDictionaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.UpdateDictionaryInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

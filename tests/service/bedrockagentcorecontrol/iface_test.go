@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddDatasetExamples", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.AddDatasetExamplesInput{}
+        output := &bedrockagentcorecontrol.AddDatasetExamplesOutput{}
+
+        mockClient.On("AddDatasetExamples", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddDatasetExamples(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAgentRuntime", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateAgentRuntimeInput{}
         output := &bedrockagentcorecontrol.CreateAgentRuntimeOutput{}
@@ -125,6 +138,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataset", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateDatasetInput{}
+        output := &bedrockagentcorecontrol.CreateDatasetOutput{}
+
+        mockClient.On("CreateDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDatasetVersion", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateDatasetVersionInput{}
+        output := &bedrockagentcorecontrol.CreateDatasetVersionOutput{}
+
+        mockClient.On("CreateDatasetVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDatasetVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateEvaluatorInput{}
         output := &bedrockagentcorecontrol.CreateEvaluatorOutput{}
@@ -184,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateHarness", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateHarnessEndpoint", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateHarnessEndpointInput{}
+        output := &bedrockagentcorecontrol.CreateHarnessEndpointOutput{}
+
+        mockClient.On("CreateHarnessEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHarnessEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +476,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataset", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteDatasetInput{}
+        output := &bedrockagentcorecontrol.DeleteDatasetOutput{}
+
+        mockClient.On("DeleteDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDatasetExamples", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteDatasetExamplesInput{}
+        output := &bedrockagentcorecontrol.DeleteDatasetExamplesOutput{}
+
+        mockClient.On("DeleteDatasetExamples", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDatasetExamples(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.DeleteEvaluatorInput{}
         output := &bedrockagentcorecontrol.DeleteEvaluatorOutput{}
@@ -483,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteHarness", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteHarnessEndpoint", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteHarnessEndpointInput{}
+        output := &bedrockagentcorecontrol.DeleteHarnessEndpointOutput{}
+
+        mockClient.On("DeleteHarnessEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteHarnessEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -749,6 +840,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataset", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetDatasetInput{}
+        output := &bedrockagentcorecontrol.GetDatasetOutput{}
+
+        mockClient.On("GetDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetEvaluatorInput{}
         output := &bedrockagentcorecontrol.GetEvaluatorOutput{}
@@ -808,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetHarness", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetHarnessEndpoint", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetHarnessEndpointInput{}
+        output := &bedrockagentcorecontrol.GetHarnessEndpointOutput{}
+
+        mockClient.On("GetHarnessEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHarnessEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,6 +1269,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDatasetExamples", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListDatasetExamplesInput{}
+        output := &bedrockagentcorecontrol.ListDatasetExamplesOutput{}
+
+        mockClient.On("ListDatasetExamples", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetExamples(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasetVersions", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListDatasetVersionsInput{}
+        output := &bedrockagentcorecontrol.ListDatasetVersionsOutput{}
+
+        mockClient.On("ListDatasetVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasets", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListDatasetsInput{}
+        output := &bedrockagentcorecontrol.ListDatasetsOutput{}
+
+        mockClient.On("ListDatasets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEvaluators", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListEvaluatorsInput{}
         output := &bedrockagentcorecontrol.ListEvaluatorsOutput{}
@@ -1198,6 +1354,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGateways", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHarnessEndpoints", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListHarnessEndpointsInput{}
+        output := &bedrockagentcorecontrol.ListHarnessEndpointsOutput{}
+
+        mockClient.On("ListHarnessEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHarnessEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHarnessVersions", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListHarnessVersionsInput{}
+        output := &bedrockagentcorecontrol.ListHarnessVersionsOutput{}
+
+        mockClient.On("ListHarnessVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHarnessVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1581,6 +1763,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateDataset", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateDatasetInput{}
+        output := &bedrockagentcorecontrol.UpdateDatasetOutput{}
+
+        mockClient.On("UpdateDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDatasetExamples", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateDatasetExamplesInput{}
+        output := &bedrockagentcorecontrol.UpdateDatasetExamplesOutput{}
+
+        mockClient.On("UpdateDatasetExamples", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDatasetExamples(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateEvaluator", func(t *testing.T) {
         input := &bedrockagentcorecontrol.UpdateEvaluatorInput{}
         output := &bedrockagentcorecontrol.UpdateEvaluatorOutput{}
@@ -1640,6 +1848,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateHarness", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateHarness(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateHarnessEndpoint", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateHarnessEndpointInput{}
+        output := &bedrockagentcorecontrol.UpdateHarnessEndpointOutput{}
+
+        mockClient.On("UpdateHarnessEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHarnessEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

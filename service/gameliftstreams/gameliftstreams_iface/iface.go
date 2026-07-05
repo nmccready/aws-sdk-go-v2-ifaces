@@ -14,6 +14,7 @@ type IClient interface {
  AssociateApplications(ctx context.Context, params *AssociateApplicationsInput, optFns ...func(*Options)) (*AssociateApplicationsOutput, error) 
  CreateApplication(ctx context.Context, params *CreateApplicationInput, optFns ...func(*Options)) (*CreateApplicationOutput, error) 
  CreateStreamGroup(ctx context.Context, params *CreateStreamGroupInput, optFns ...func(*Options)) (*CreateStreamGroupOutput, error) 
+ CreateStreamSessionAdminShell(ctx context.Context, params *CreateStreamSessionAdminShellInput, optFns ...func(*Options)) (*CreateStreamSessionAdminShellOutput, error) 
  CreateStreamSessionConnection(ctx context.Context, params *CreateStreamSessionConnectionInput, optFns ...func(*Options)) (*CreateStreamSessionConnectionOutput, error) 
  DeleteApplication(ctx context.Context, params *DeleteApplicationInput, optFns ...func(*Options)) (*DeleteApplicationOutput, error) 
  DeleteStreamGroup(ctx context.Context, params *DeleteStreamGroupInput, optFns ...func(*Options)) (*DeleteStreamGroupOutput, error) 

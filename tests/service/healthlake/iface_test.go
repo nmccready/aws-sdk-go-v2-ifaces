@@ -202,4 +202,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestUpdateFHIRDatastore", func(t *testing.T) {
+        input := &healthlake.UpdateFHIRDatastoreInput{}
+        output := &healthlake.UpdateFHIRDatastoreOutput{}
+
+        mockClient.On("UpdateFHIRDatastore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFHIRDatastore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

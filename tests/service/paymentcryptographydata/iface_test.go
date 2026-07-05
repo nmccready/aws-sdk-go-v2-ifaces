@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGenerateAuthRequestCryptogram", func(t *testing.T) {
+        input := &paymentcryptographydata.GenerateAuthRequestCryptogramInput{}
+        output := &paymentcryptographydata.GenerateAuthRequestCryptogramOutput{}
+
+        mockClient.On("GenerateAuthRequestCryptogram", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GenerateAuthRequestCryptogram(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGenerateCardValidationData", func(t *testing.T) {
         input := &paymentcryptographydata.GenerateCardValidationDataInput{}
         output := &paymentcryptographydata.GenerateCardValidationDataOutput{}

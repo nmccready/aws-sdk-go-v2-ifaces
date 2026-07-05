@@ -51,6 +51,43 @@ func (_m *IClient) BatchGetRecord(ctx context.Context, params *sagemakerfeatures
 	return r0, r1
 }
 
+// BatchWriteRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchWriteRecord(ctx context.Context, params *sagemakerfeaturestoreruntime.BatchWriteRecordInput, optFns ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.BatchWriteRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchWriteRecord")
+	}
+
+	var r0 *sagemakerfeaturestoreruntime.BatchWriteRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemakerfeaturestoreruntime.BatchWriteRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.BatchWriteRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemakerfeaturestoreruntime.BatchWriteRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) *sagemakerfeaturestoreruntime.BatchWriteRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemakerfeaturestoreruntime.BatchWriteRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemakerfeaturestoreruntime.BatchWriteRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteRecord provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteRecord(ctx context.Context, params *sagemakerfeaturestoreruntime.DeleteRecordInput, optFns ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.DeleteRecordOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -117,6 +154,43 @@ func (_m *IClient) GetRecord(ctx context.Context, params *sagemakerfeaturestorer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemakerfeaturestoreruntime.GetRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecords(ctx context.Context, params *sagemakerfeaturestoreruntime.ListRecordsInput, optFns ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.ListRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecords")
+	}
+
+	var r0 *sagemakerfeaturestoreruntime.ListRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemakerfeaturestoreruntime.ListRecordsInput, ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.ListRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemakerfeaturestoreruntime.ListRecordsInput, ...func(*sagemakerfeaturestoreruntime.Options)) *sagemakerfeaturestoreruntime.ListRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemakerfeaturestoreruntime.ListRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemakerfeaturestoreruntime.ListRecordsInput, ...func(*sagemakerfeaturestoreruntime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

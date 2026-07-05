@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AgenticRetrieveStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AgenticRetrieveStream(ctx context.Context, params *bedrockagentruntime.AgenticRetrieveStreamInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.AgenticRetrieveStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AgenticRetrieveStream")
+	}
+
+	var r0 *bedrockagentruntime.AgenticRetrieveStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.AgenticRetrieveStreamInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.AgenticRetrieveStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.AgenticRetrieveStreamInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.AgenticRetrieveStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.AgenticRetrieveStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.AgenticRetrieveStreamInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateInvocation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateInvocation(ctx context.Context, params *bedrockagentruntime.CreateInvocationInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CreateInvocationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +303,43 @@ func (_m *IClient) GetAgentMemory(ctx context.Context, params *bedrockagentrunti
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetAgentMemoryInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDocumentContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDocumentContent(ctx context.Context, params *bedrockagentruntime.GetDocumentContentInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetDocumentContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDocumentContent")
+	}
+
+	var r0 *bedrockagentruntime.GetDocumentContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetDocumentContentInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetDocumentContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetDocumentContentInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.GetDocumentContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.GetDocumentContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetDocumentContentInput, ...func(*bedrockagentruntime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

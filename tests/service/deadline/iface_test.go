@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteVolume", func(t *testing.T) {
+        input := &deadline.DeleteVolumeInput{}
+        output := &deadline.DeleteVolumeOutput{}
+
+        mockClient.On("DeleteVolume", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVolume(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteWorker", func(t *testing.T) {
         input := &deadline.DeleteWorkerInput{}
         output := &deadline.DeleteWorkerOutput{}
@@ -912,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVolume", func(t *testing.T) {
+        input := &deadline.GetVolumeInput{}
+        output := &deadline.GetVolumeOutput{}
+
+        mockClient.On("GetVolume", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVolume(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1289,6 +1315,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVolumes", func(t *testing.T) {
+        input := &deadline.ListVolumesInput{}
+        output := &deadline.ListVolumesOutput{}
+
+        mockClient.On("ListVolumes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVolumes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

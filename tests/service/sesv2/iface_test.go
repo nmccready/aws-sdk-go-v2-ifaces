@@ -1282,6 +1282,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutTenantSuppressionAttributes", func(t *testing.T) {
+        input := &sesv2.PutTenantSuppressionAttributesInput{}
+        output := &sesv2.PutTenantSuppressionAttributesOutput{}
+
+        mockClient.On("PutTenantSuppressionAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTenantSuppressionAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSendBulkEmail", func(t *testing.T) {
         input := &sesv2.SendBulkEmailInput{}
         output := &sesv2.SendBulkEmailOutput{}

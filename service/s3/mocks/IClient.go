@@ -902,6 +902,43 @@ func (_m *IClient) DeleteObject(ctx context.Context, params *s3.DeleteObjectInpu
 	return r0, r1
 }
 
+// DeleteObjectAnnotation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteObjectAnnotation(ctx context.Context, params *s3.DeleteObjectAnnotationInput, optFns ...func(*s3.Options)) (*s3.DeleteObjectAnnotationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteObjectAnnotation")
+	}
+
+	var r0 *s3.DeleteObjectAnnotationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.DeleteObjectAnnotationInput, ...func(*s3.Options)) (*s3.DeleteObjectAnnotationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.DeleteObjectAnnotationInput, ...func(*s3.Options)) *s3.DeleteObjectAnnotationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.DeleteObjectAnnotationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.DeleteObjectAnnotationInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteObjectTagging provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteObjectTagging(ctx context.Context, params *s3.DeleteObjectTaggingInput, optFns ...func(*s3.Options)) (*s3.DeleteObjectTaggingOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1938,6 +1975,43 @@ func (_m *IClient) GetObjectAcl(ctx context.Context, params *s3.GetObjectAclInpu
 	return r0, r1
 }
 
+// GetObjectAnnotation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetObjectAnnotation(ctx context.Context, params *s3.GetObjectAnnotationInput, optFns ...func(*s3.Options)) (*s3.GetObjectAnnotationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetObjectAnnotation")
+	}
+
+	var r0 *s3.GetObjectAnnotationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.GetObjectAnnotationInput, ...func(*s3.Options)) (*s3.GetObjectAnnotationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.GetObjectAnnotationInput, ...func(*s3.Options)) *s3.GetObjectAnnotationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.GetObjectAnnotationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.GetObjectAnnotationInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetObjectAttributes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetObjectAttributes(ctx context.Context, params *s3.GetObjectAttributesInput, optFns ...func(*s3.Options)) (*s3.GetObjectAttributesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2522,6 +2596,43 @@ func (_m *IClient) ListMultipartUploads(ctx context.Context, params *s3.ListMult
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3.ListMultipartUploadsInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListObjectAnnotations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListObjectAnnotations(ctx context.Context, params *s3.ListObjectAnnotationsInput, optFns ...func(*s3.Options)) (*s3.ListObjectAnnotationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListObjectAnnotations")
+	}
+
+	var r0 *s3.ListObjectAnnotationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.ListObjectAnnotationsInput, ...func(*s3.Options)) (*s3.ListObjectAnnotationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.ListObjectAnnotationsInput, ...func(*s3.Options)) *s3.ListObjectAnnotationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.ListObjectAnnotationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.ListObjectAnnotationsInput, ...func(*s3.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3473,6 +3584,43 @@ func (_m *IClient) PutObjectAcl(ctx context.Context, params *s3.PutObjectAclInpu
 	return r0, r1
 }
 
+// PutObjectAnnotation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutObjectAnnotation(ctx context.Context, params *s3.PutObjectAnnotationInput, optFns ...func(*s3.Options)) (*s3.PutObjectAnnotationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutObjectAnnotation")
+	}
+
+	var r0 *s3.PutObjectAnnotationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.PutObjectAnnotationInput, ...func(*s3.Options)) (*s3.PutObjectAnnotationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.PutObjectAnnotationInput, ...func(*s3.Options)) *s3.PutObjectAnnotationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.PutObjectAnnotationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.PutObjectAnnotationInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutObjectLegalHold provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutObjectLegalHold(ctx context.Context, params *s3.PutObjectLegalHoldInput, optFns ...func(*s3.Options)) (*s3.PutObjectLegalHoldOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3761,6 +3909,43 @@ func (_m *IClient) SelectObjectContent(ctx context.Context, params *s3.SelectObj
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3.SelectObjectContentInput, ...func(*s3.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBucketMetadataAnnotationTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBucketMetadataAnnotationTableConfiguration(ctx context.Context, params *s3.UpdateBucketMetadataAnnotationTableConfigurationInput, optFns ...func(*s3.Options)) (*s3.UpdateBucketMetadataAnnotationTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBucketMetadataAnnotationTableConfiguration")
+	}
+
+	var r0 *s3.UpdateBucketMetadataAnnotationTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.UpdateBucketMetadataAnnotationTableConfigurationInput, ...func(*s3.Options)) (*s3.UpdateBucketMetadataAnnotationTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3.UpdateBucketMetadataAnnotationTableConfigurationInput, ...func(*s3.Options)) *s3.UpdateBucketMetadataAnnotationTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3.UpdateBucketMetadataAnnotationTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3.UpdateBucketMetadataAnnotationTableConfigurationInput, ...func(*s3.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

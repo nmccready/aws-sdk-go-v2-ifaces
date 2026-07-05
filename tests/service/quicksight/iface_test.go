@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeleteKnowledgeBase", func(t *testing.T) {
+        input := &quicksight.BatchDeleteKnowledgeBaseInput{}
+        output := &quicksight.BatchDeleteKnowledgeBaseOutput{}
+
+        mockClient.On("BatchDeleteKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDeleteTopicReviewedAnswer", func(t *testing.T) {
         input := &quicksight.BatchDeleteTopicReviewedAnswerInput{}
         output := &quicksight.BatchDeleteTopicReviewedAnswerOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateActionConnector", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateActionConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAgent", func(t *testing.T) {
+        input := &quicksight.CreateAgentInput{}
+        output := &quicksight.CreateAgentOutput{}
+
+        mockClient.On("CreateAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateFlow", func(t *testing.T) {
+        input := &quicksight.CreateFlowInput{}
+        output := &quicksight.CreateFlowOutput{}
+
+        mockClient.On("CreateFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateFlow(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateOAuthClientApplication", func(t *testing.T) {
+        input := &quicksight.CreateOAuthClientApplicationInput{}
+        output := &quicksight.CreateOAuthClientApplicationOutput{}
+
+        mockClient.On("CreateOAuthClientApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateOAuthClientApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRefreshSchedule", func(t *testing.T) {
         input := &quicksight.CreateRefreshScheduleInput{}
         output := &quicksight.CreateRefreshScheduleOutput{}
@@ -301,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateRoleMembership", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateRoleMembership(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSpace", func(t *testing.T) {
+        input := &quicksight.CreateSpaceInput{}
+        output := &quicksight.CreateSpaceOutput{}
+
+        mockClient.On("CreateSpace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSpace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAgent", func(t *testing.T) {
+        input := &quicksight.DeleteAgentInput{}
+        output := &quicksight.DeleteAgentOutput{}
+
+        mockClient.On("DeleteAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAnalysis", func(t *testing.T) {
         input := &quicksight.DeleteAnalysisInput{}
         output := &quicksight.DeleteAnalysisOutput{}
@@ -567,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteFlow", func(t *testing.T) {
+        input := &quicksight.DeleteFlowInput{}
+        output := &quicksight.DeleteFlowOutput{}
+
+        mockClient.On("DeleteFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteFolder", func(t *testing.T) {
         input := &quicksight.DeleteFolderInput{}
         output := &quicksight.DeleteFolderOutput{}
@@ -645,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteKnowledgeBase", func(t *testing.T) {
+        input := &quicksight.DeleteKnowledgeBaseInput{}
+        output := &quicksight.DeleteKnowledgeBaseOutput{}
+
+        mockClient.On("DeleteKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteNamespace", func(t *testing.T) {
         input := &quicksight.DeleteNamespaceInput{}
         output := &quicksight.DeleteNamespaceOutput{}
@@ -652,6 +756,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteNamespace", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteNamespace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteOAuthClientApplication", func(t *testing.T) {
+        input := &quicksight.DeleteOAuthClientApplicationInput{}
+        output := &quicksight.DeleteOAuthClientApplicationOutput{}
+
+        mockClient.On("DeleteOAuthClientApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteOAuthClientApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -691,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRoleMembership", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRoleMembership(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSpace", func(t *testing.T) {
+        input := &quicksight.DeleteSpaceInput{}
+        output := &quicksight.DeleteSpaceOutput{}
+
+        mockClient.On("DeleteSpace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSpace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -899,6 +1029,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeActionConnectorPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeActionConnectorPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAgent", func(t *testing.T) {
+        input := &quicksight.DescribeAgentInput{}
+        output := &quicksight.DescribeAgentOutput{}
+
+        mockClient.On("DescribeAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAgentPermissions", func(t *testing.T) {
+        input := &quicksight.DescribeAgentPermissionsInput{}
+        output := &quicksight.DescribeAgentPermissionsOutput{}
+
+        mockClient.On("DescribeAgentPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAgentPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1191,6 +1347,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeFlow", func(t *testing.T) {
+        input := &quicksight.DescribeFlowInput{}
+        output := &quicksight.DescribeFlowOutput{}
+
+        mockClient.On("DescribeFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeFolder", func(t *testing.T) {
         input := &quicksight.DescribeFolderInput{}
         output := &quicksight.DescribeFolderOutput{}
@@ -1308,6 +1477,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeKnowledgeBase", func(t *testing.T) {
+        input := &quicksight.DescribeKnowledgeBaseInput{}
+        output := &quicksight.DescribeKnowledgeBaseOutput{}
+
+        mockClient.On("DescribeKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeKnowledgeBasePermissions", func(t *testing.T) {
+        input := &quicksight.DescribeKnowledgeBasePermissionsInput{}
+        output := &quicksight.DescribeKnowledgeBasePermissionsOutput{}
+
+        mockClient.On("DescribeKnowledgeBasePermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeKnowledgeBasePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeNamespace", func(t *testing.T) {
         input := &quicksight.DescribeNamespaceInput{}
         output := &quicksight.DescribeNamespaceOutput{}
@@ -1315,6 +1510,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeNamespace", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeNamespace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeOAuthClientApplication", func(t *testing.T) {
+        input := &quicksight.DescribeOAuthClientApplicationInput{}
+        output := &quicksight.DescribeOAuthClientApplicationOutput{}
+
+        mockClient.On("DescribeOAuthClientApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeOAuthClientApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1380,6 +1588,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeSelfUpgradeConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeSelfUpgradeConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSpace", func(t *testing.T) {
+        input := &quicksight.DescribeSpaceInput{}
+        output := &quicksight.DescribeSpaceOutput{}
+
+        mockClient.On("DescribeSpace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSpace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSpacePermissions", func(t *testing.T) {
+        input := &quicksight.DescribeSpacePermissionsInput{}
+        output := &quicksight.DescribeSpacePermissionsOutput{}
+
+        mockClient.On("DescribeSpacePermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSpacePermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1672,6 +1906,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAgents", func(t *testing.T) {
+        input := &quicksight.ListAgentsInput{}
+        output := &quicksight.ListAgentsOutput{}
+
+        mockClient.On("ListAgents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAnalyses", func(t *testing.T) {
         input := &quicksight.ListAnalysesInput{}
         output := &quicksight.ListAnalysesOutput{}
@@ -1919,6 +2166,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListKnowledgeBases", func(t *testing.T) {
+        input := &quicksight.ListKnowledgeBasesInput{}
+        output := &quicksight.ListKnowledgeBasesOutput{}
+
+        mockClient.On("ListKnowledgeBases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListKnowledgeBases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNamespaces", func(t *testing.T) {
         input := &quicksight.ListNamespacesInput{}
         output := &quicksight.ListNamespacesOutput{}
@@ -1926,6 +2186,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListNamespaces", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListNamespaces(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOAuthClientApplications", func(t *testing.T) {
+        input := &quicksight.ListOAuthClientApplicationsInput{}
+        output := &quicksight.ListOAuthClientApplicationsOutput{}
+
+        mockClient.On("ListOAuthClientApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOAuthClientApplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1965,6 +2238,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSelfUpgrades", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSelfUpgrades(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSpaceResources", func(t *testing.T) {
+        input := &quicksight.ListSpaceResourcesInput{}
+        output := &quicksight.ListSpaceResourcesOutput{}
+
+        mockClient.On("ListSpaceResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSpaceResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSpaces", func(t *testing.T) {
+        input := &quicksight.ListSpacesInput{}
+        output := &quicksight.ListSpacesOutput{}
+
+        mockClient.On("ListSpaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSpaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2127,6 +2426,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListUsersIndexCapacity", func(t *testing.T) {
+        input := &quicksight.ListUsersIndexCapacityInput{}
+        output := &quicksight.ListUsersIndexCapacityOutput{}
+
+        mockClient.On("ListUsersIndexCapacity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUsersIndexCapacity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListVPCConnections", func(t *testing.T) {
         input := &quicksight.ListVPCConnectionsInput{}
         output := &quicksight.ListVPCConnectionsOutput{}
@@ -2199,6 +2511,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchActionConnectors", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchActionConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchAgents", func(t *testing.T) {
+        input := &quicksight.SearchAgentsInput{}
+        output := &quicksight.SearchAgentsOutput{}
+
+        mockClient.On("SearchAgents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchAgents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2290,6 +2615,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchKnowledgeBases", func(t *testing.T) {
+        input := &quicksight.SearchKnowledgeBasesInput{}
+        output := &quicksight.SearchKnowledgeBasesOutput{}
+
+        mockClient.On("SearchKnowledgeBases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchKnowledgeBases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchSpaces", func(t *testing.T) {
+        input := &quicksight.SearchSpacesInput{}
+        output := &quicksight.SearchSpacesOutput{}
+
+        mockClient.On("SearchSpaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchSpaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2459,6 +2810,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateActionConnectorPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateActionConnectorPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgent", func(t *testing.T) {
+        input := &quicksight.UpdateAgentInput{}
+        output := &quicksight.UpdateAgentOutput{}
+
+        mockClient.On("UpdateAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentPermissions", func(t *testing.T) {
+        input := &quicksight.UpdateAgentPermissionsInput{}
+        output := &quicksight.UpdateAgentPermissionsOutput{}
+
+        mockClient.On("UpdateAgentPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2686,6 +3063,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateFlow", func(t *testing.T) {
+        input := &quicksight.UpdateFlowInput{}
+        output := &quicksight.UpdateFlowOutput{}
+
+        mockClient.On("UpdateFlow", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateFlowPermissions", func(t *testing.T) {
         input := &quicksight.UpdateFlowPermissionsInput{}
         output := &quicksight.UpdateFlowPermissionsOutput{}
@@ -2790,6 +3180,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateKnowledgeBasePermissions", func(t *testing.T) {
+        input := &quicksight.UpdateKnowledgeBasePermissionsInput{}
+        output := &quicksight.UpdateKnowledgeBasePermissionsOutput{}
+
+        mockClient.On("UpdateKnowledgeBasePermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateKnowledgeBasePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOAuthClientApplication", func(t *testing.T) {
+        input := &quicksight.UpdateOAuthClientApplicationInput{}
+        output := &quicksight.UpdateOAuthClientApplicationOutput{}
+
+        mockClient.On("UpdateOAuthClientApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOAuthClientApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdatePublicSharingSettings", func(t *testing.T) {
         input := &quicksight.UpdatePublicSharingSettingsInput{}
         output := &quicksight.UpdatePublicSharingSettingsOutput{}
@@ -2888,6 +3304,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateSelfUpgradeConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateSelfUpgradeConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSpace", func(t *testing.T) {
+        input := &quicksight.UpdateSpaceInput{}
+        output := &quicksight.UpdateSpaceOutput{}
+
+        mockClient.On("UpdateSpace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSpace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSpacePermissions", func(t *testing.T) {
+        input := &quicksight.UpdateSpacePermissionsInput{}
+        output := &quicksight.UpdateSpacePermissionsOutput{}
+
+        mockClient.On("UpdateSpacePermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSpacePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSpaceResources", func(t *testing.T) {
+        input := &quicksight.UpdateSpaceResourcesInput{}
+        output := &quicksight.UpdateSpaceResourcesOutput{}
+
+        mockClient.On("UpdateSpaceResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSpaceResources(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

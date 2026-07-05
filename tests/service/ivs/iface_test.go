@@ -528,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAdConfiguration", func(t *testing.T) {
+        input := &ivs.UpdateAdConfigurationInput{}
+        output := &ivs.UpdateAdConfigurationOutput{}
+
+        mockClient.On("UpdateAdConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAdConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateChannel", func(t *testing.T) {
         input := &ivs.UpdateChannelInput{}
         output := &ivs.UpdateChannelOutput{}

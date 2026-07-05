@@ -569,6 +569,43 @@ func (_m *IClient) GetOpportunity(ctx context.Context, params *partnercentralsel
 	return r0, r1
 }
 
+// GetProspectingFromEngagementTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProspectingFromEngagementTask(ctx context.Context, params *partnercentralselling.GetProspectingFromEngagementTaskInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetProspectingFromEngagementTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProspectingFromEngagementTask")
+	}
+
+	var r0 *partnercentralselling.GetProspectingFromEngagementTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetProspectingFromEngagementTaskInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.GetProspectingFromEngagementTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetProspectingFromEngagementTaskInput, ...func(*partnercentralselling.Options)) *partnercentralselling.GetProspectingFromEngagementTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.GetProspectingFromEngagementTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetProspectingFromEngagementTaskInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetResourceSnapshot provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetResourceSnapshot(ctx context.Context, params *partnercentralselling.GetResourceSnapshotInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetResourceSnapshotOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -976,6 +1013,43 @@ func (_m *IClient) ListOpportunityFromEngagementTasks(ctx context.Context, param
 	return r0, r1
 }
 
+// ListProspectingFromEngagementTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProspectingFromEngagementTasks(ctx context.Context, params *partnercentralselling.ListProspectingFromEngagementTasksInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListProspectingFromEngagementTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProspectingFromEngagementTasks")
+	}
+
+	var r0 *partnercentralselling.ListProspectingFromEngagementTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListProspectingFromEngagementTasksInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListProspectingFromEngagementTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListProspectingFromEngagementTasksInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListProspectingFromEngagementTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListProspectingFromEngagementTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListProspectingFromEngagementTasksInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListResourceSnapshotJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListResourceSnapshotJobs(ctx context.Context, params *partnercentralselling.ListResourceSnapshotJobsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListResourceSnapshotJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1319,6 +1393,43 @@ func (_m *IClient) StartOpportunityFromEngagementTask(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.StartOpportunityFromEngagementTaskInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartProspectingFromEngagementTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartProspectingFromEngagementTask(ctx context.Context, params *partnercentralselling.StartProspectingFromEngagementTaskInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.StartProspectingFromEngagementTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartProspectingFromEngagementTask")
+	}
+
+	var r0 *partnercentralselling.StartProspectingFromEngagementTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartProspectingFromEngagementTaskInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.StartProspectingFromEngagementTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartProspectingFromEngagementTaskInput, ...func(*partnercentralselling.Options)) *partnercentralselling.StartProspectingFromEngagementTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.StartProspectingFromEngagementTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.StartProspectingFromEngagementTaskInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

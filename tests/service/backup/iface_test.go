@@ -658,6 +658,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPITRMalwareScanResults", func(t *testing.T) {
+        input := &backup.GetPITRMalwareScanResultsInput{}
+        output := &backup.GetPITRMalwareScanResultsOutput{}
+
+        mockClient.On("GetPITRMalwareScanResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPITRMalwareScanResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRecoveryPointIndexDetails", func(t *testing.T) {
         input := &backup.GetRecoveryPointIndexDetailsInput{}
         output := &backup.GetRecoveryPointIndexDetailsOutput{}

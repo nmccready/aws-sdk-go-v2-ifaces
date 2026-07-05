@@ -46,4 +46,95 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestDeleteConsoleAuthorizationConfiguration", func(t *testing.T) {
+        input := &signin.DeleteConsoleAuthorizationConfigurationInput{}
+        output := &signin.DeleteConsoleAuthorizationConfigurationOutput{}
+
+        mockClient.On("DeleteConsoleAuthorizationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConsoleAuthorizationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourcePermissionStatement", func(t *testing.T) {
+        input := &signin.DeleteResourcePermissionStatementInput{}
+        output := &signin.DeleteResourcePermissionStatementOutput{}
+
+        mockClient.On("DeleteResourcePermissionStatement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePermissionStatement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConsoleAuthorizationConfiguration", func(t *testing.T) {
+        input := &signin.GetConsoleAuthorizationConfigurationInput{}
+        output := &signin.GetConsoleAuthorizationConfigurationOutput{}
+
+        mockClient.On("GetConsoleAuthorizationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConsoleAuthorizationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &signin.GetResourcePolicyInput{}
+        output := &signin.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourcePermissionStatements", func(t *testing.T) {
+        input := &signin.ListResourcePermissionStatementsInput{}
+        output := &signin.ListResourcePermissionStatementsOutput{}
+
+        mockClient.On("ListResourcePermissionStatements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourcePermissionStatements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutConsoleAuthorizationConfiguration", func(t *testing.T) {
+        input := &signin.PutConsoleAuthorizationConfigurationInput{}
+        output := &signin.PutConsoleAuthorizationConfigurationOutput{}
+
+        mockClient.On("PutConsoleAuthorizationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutConsoleAuthorizationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePermissionStatement", func(t *testing.T) {
+        input := &signin.PutResourcePermissionStatementInput{}
+        output := &signin.PutResourcePermissionStatementOutput{}
+
+        mockClient.On("PutResourcePermissionStatement", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePermissionStatement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

@@ -199,6 +199,43 @@ func (_m *IClient) AttachRuleGroupsToProxyConfiguration(ctx context.Context, par
 	return r0, r1
 }
 
+// CreateContainerAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContainerAssociation(ctx context.Context, params *networkfirewall.CreateContainerAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateContainerAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContainerAssociation")
+	}
+
+	var r0 *networkfirewall.CreateContainerAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateContainerAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.CreateContainerAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateContainerAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.CreateContainerAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.CreateContainerAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateContainerAssociationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFirewall provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFirewall(ctx context.Context, params *networkfirewall.CreateFirewallInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateFirewallOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -524,6 +561,43 @@ func (_m *IClient) CreateVpcEndpointAssociation(ctx context.Context, params *net
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteContainerAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteContainerAssociation(ctx context.Context, params *networkfirewall.DeleteContainerAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteContainerAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteContainerAssociation")
+	}
+
+	var r0 *networkfirewall.DeleteContainerAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteContainerAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteContainerAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteContainerAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.DeleteContainerAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DeleteContainerAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteContainerAssociationInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -931,6 +1005,43 @@ func (_m *IClient) DeleteVpcEndpointAssociation(ctx context.Context, params *net
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteVpcEndpointAssociationInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeContainerAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeContainerAssociation(ctx context.Context, params *networkfirewall.DescribeContainerAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeContainerAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeContainerAssociation")
+	}
+
+	var r0 *networkfirewall.DescribeContainerAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeContainerAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeContainerAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeContainerAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeContainerAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DescribeContainerAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeContainerAssociationInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1679,6 +1790,43 @@ func (_m *IClient) ListAnalysisReports(ctx context.Context, params *networkfirew
 	return r0, r1
 }
 
+// ListContainerAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContainerAssociations(ctx context.Context, params *networkfirewall.ListContainerAssociationsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListContainerAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContainerAssociations")
+	}
+
+	var r0 *networkfirewall.ListContainerAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListContainerAssociationsInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListContainerAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListContainerAssociationsInput, ...func(*networkfirewall.Options)) *networkfirewall.ListContainerAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.ListContainerAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListContainerAssociationsInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFirewallPolicies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFirewallPolicies(ctx context.Context, params *networkfirewall.ListFirewallPoliciesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallPoliciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2392,6 +2540,43 @@ func (_m *IClient) UpdateAvailabilityZoneChangeProtection(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateAvailabilityZoneChangeProtectionInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateContainerAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContainerAssociation(ctx context.Context, params *networkfirewall.UpdateContainerAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateContainerAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContainerAssociation")
+	}
+
+	var r0 *networkfirewall.UpdateContainerAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateContainerAssociationInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateContainerAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateContainerAssociationInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateContainerAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.UpdateContainerAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateContainerAssociationInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

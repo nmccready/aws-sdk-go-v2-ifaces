@@ -12,10 +12,13 @@ type IClient interface {
  Options() Options 
  DeleteConnection(ctx context.Context, params *DeleteConnectionInput, optFns ...func(*Options)) (*DeleteConnectionOutput, error) 
  DeleteThingShadow(ctx context.Context, params *DeleteThingShadowInput, optFns ...func(*Options)) (*DeleteThingShadowOutput, error) 
+ GetConnection(ctx context.Context, params *GetConnectionInput, optFns ...func(*Options)) (*GetConnectionOutput, error) 
  GetRetainedMessage(ctx context.Context, params *GetRetainedMessageInput, optFns ...func(*Options)) (*GetRetainedMessageOutput, error) 
  GetThingShadow(ctx context.Context, params *GetThingShadowInput, optFns ...func(*Options)) (*GetThingShadowOutput, error) 
  ListNamedShadowsForThing(ctx context.Context, params *ListNamedShadowsForThingInput, optFns ...func(*Options)) (*ListNamedShadowsForThingOutput, error) 
  ListRetainedMessages(ctx context.Context, params *ListRetainedMessagesInput, optFns ...func(*Options)) (*ListRetainedMessagesOutput, error) 
+ ListSubscriptions(ctx context.Context, params *ListSubscriptionsInput, optFns ...func(*Options)) (*ListSubscriptionsOutput, error) 
  Publish(ctx context.Context, params *PublishInput, optFns ...func(*Options)) (*PublishOutput, error) 
+ SendDirectMessage(ctx context.Context, params *SendDirectMessageInput, optFns ...func(*Options)) (*SendDirectMessageOutput, error) 
  UpdateThingShadow(ctx context.Context, params *UpdateThingShadowInput, optFns ...func(*Options)) (*UpdateThingShadowOutput, error) 
 }

@@ -58,6 +58,7 @@ type IClient interface {
  GetBackupVaultAccessPolicy(ctx context.Context, params *GetBackupVaultAccessPolicyInput, optFns ...func(*Options)) (*GetBackupVaultAccessPolicyOutput, error) 
  GetBackupVaultNotifications(ctx context.Context, params *GetBackupVaultNotificationsInput, optFns ...func(*Options)) (*GetBackupVaultNotificationsOutput, error) 
  GetLegalHold(ctx context.Context, params *GetLegalHoldInput, optFns ...func(*Options)) (*GetLegalHoldOutput, error) 
+ GetPITRMalwareScanResults(ctx context.Context, params *GetPITRMalwareScanResultsInput, optFns ...func(*Options)) (*GetPITRMalwareScanResultsOutput, error) 
  GetRecoveryPointIndexDetails(ctx context.Context, params *GetRecoveryPointIndexDetailsInput, optFns ...func(*Options)) (*GetRecoveryPointIndexDetailsOutput, error) 
  GetRecoveryPointRestoreMetadata(ctx context.Context, params *GetRecoveryPointRestoreMetadataInput, optFns ...func(*Options)) (*GetRecoveryPointRestoreMetadataOutput, error) 
  GetRestoreJobMetadata(ctx context.Context, params *GetRestoreJobMetadataInput, optFns ...func(*Options)) (*GetRestoreJobMetadataOutput, error) 

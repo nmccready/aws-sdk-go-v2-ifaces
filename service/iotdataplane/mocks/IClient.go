@@ -89,6 +89,43 @@ func (_m *IClient) DeleteThingShadow(ctx context.Context, params *iotdataplane.D
 	return r0, r1
 }
 
+// GetConnection provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnection(ctx context.Context, params *iotdataplane.GetConnectionInput, optFns ...func(*iotdataplane.Options)) (*iotdataplane.GetConnectionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnection")
+	}
+
+	var r0 *iotdataplane.GetConnectionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.GetConnectionInput, ...func(*iotdataplane.Options)) (*iotdataplane.GetConnectionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.GetConnectionInput, ...func(*iotdataplane.Options)) *iotdataplane.GetConnectionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotdataplane.GetConnectionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotdataplane.GetConnectionInput, ...func(*iotdataplane.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRetainedMessage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRetainedMessage(ctx context.Context, params *iotdataplane.GetRetainedMessageInput, optFns ...func(*iotdataplane.Options)) (*iotdataplane.GetRetainedMessageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -237,6 +274,43 @@ func (_m *IClient) ListRetainedMessages(ctx context.Context, params *iotdataplan
 	return r0, r1
 }
 
+// ListSubscriptions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSubscriptions(ctx context.Context, params *iotdataplane.ListSubscriptionsInput, optFns ...func(*iotdataplane.Options)) (*iotdataplane.ListSubscriptionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSubscriptions")
+	}
+
+	var r0 *iotdataplane.ListSubscriptionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.ListSubscriptionsInput, ...func(*iotdataplane.Options)) (*iotdataplane.ListSubscriptionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.ListSubscriptionsInput, ...func(*iotdataplane.Options)) *iotdataplane.ListSubscriptionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotdataplane.ListSubscriptionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotdataplane.ListSubscriptionsInput, ...func(*iotdataplane.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() iotdataplane.Options {
 	ret := _m.Called()
@@ -284,6 +358,43 @@ func (_m *IClient) Publish(ctx context.Context, params *iotdataplane.PublishInpu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotdataplane.PublishInput, ...func(*iotdataplane.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendDirectMessage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendDirectMessage(ctx context.Context, params *iotdataplane.SendDirectMessageInput, optFns ...func(*iotdataplane.Options)) (*iotdataplane.SendDirectMessageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendDirectMessage")
+	}
+
+	var r0 *iotdataplane.SendDirectMessageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.SendDirectMessageInput, ...func(*iotdataplane.Options)) (*iotdataplane.SendDirectMessageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotdataplane.SendDirectMessageInput, ...func(*iotdataplane.Options)) *iotdataplane.SendDirectMessageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotdataplane.SendDirectMessageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotdataplane.SendDirectMessageInput, ...func(*iotdataplane.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

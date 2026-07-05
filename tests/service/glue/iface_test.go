@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateGlossaryTerms", func(t *testing.T) {
+        input := &glue.AssociateGlossaryTermsInput{}
+        output := &glue.AssociateGlossaryTermsOutput{}
+
+        mockClient.On("AssociateGlossaryTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateGlossaryTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchCreatePartition", func(t *testing.T) {
         input := &glue.BatchCreatePartitionInput{}
         output := &glue.BatchCreatePartitionOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetDevEndpoints", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetDevEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetIterableForms", func(t *testing.T) {
+        input := &glue.BatchGetIterableFormsInput{}
+        output := &glue.BatchGetIterableFormsOutput{}
+
+        mockClient.On("BatchGetIterableForms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetIterableForms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,6 +489,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateGlossary", func(t *testing.T) {
+        input := &glue.CreateGlossaryInput{}
+        output := &glue.CreateGlossaryOutput{}
+
+        mockClient.On("CreateGlossary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGlossary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateGlossaryTerm", func(t *testing.T) {
+        input := &glue.CreateGlossaryTermInput{}
+        output := &glue.CreateGlossaryTermOutput{}
+
+        mockClient.On("CreateGlossaryTerm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGlossaryTerm(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGlueIdentityCenterConfiguration", func(t *testing.T) {
         input := &glue.CreateGlueIdentityCenterConfigurationInput{}
         output := &glue.CreateGlueIdentityCenterConfigurationOutput{}
@@ -710,6 +762,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAsset", func(t *testing.T) {
+        input := &glue.DeleteAssetInput{}
+        output := &glue.DeleteAssetOutput{}
+
+        mockClient.On("DeleteAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAssetType", func(t *testing.T) {
+        input := &glue.DeleteAssetTypeInput{}
+        output := &glue.DeleteAssetTypeOutput{}
+
+        mockClient.On("DeleteAssetType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssetType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAttachment", func(t *testing.T) {
+        input := &glue.DeleteAttachmentInput{}
+        output := &glue.DeleteAttachmentOutput{}
+
+        mockClient.On("DeleteAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteBlueprint", func(t *testing.T) {
         input := &glue.DeleteBlueprintInput{}
         output := &glue.DeleteBlueprintOutput{}
@@ -873,6 +964,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDevEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDevEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteFormType", func(t *testing.T) {
+        input := &glue.DeleteFormTypeInput{}
+        output := &glue.DeleteFormTypeOutput{}
+
+        mockClient.On("DeleteFormType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFormType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteGlossary", func(t *testing.T) {
+        input := &glue.DeleteGlossaryInput{}
+        output := &glue.DeleteGlossaryOutput{}
+
+        mockClient.On("DeleteGlossary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGlossary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteGlossaryTerm", func(t *testing.T) {
+        input := &glue.DeleteGlossaryTermInput{}
+        output := &glue.DeleteGlossaryTermOutput{}
+
+        mockClient.On("DeleteGlossaryTerm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGlossaryTerm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1204,6 +1334,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateGlossaryTerms", func(t *testing.T) {
+        input := &glue.DisassociateGlossaryTermsInput{}
+        output := &glue.DisassociateGlossaryTermsOutput{}
+
+        mockClient.On("DisassociateGlossaryTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateGlossaryTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAsset", func(t *testing.T) {
+        input := &glue.GetAssetInput{}
+        output := &glue.GetAssetOutput{}
+
+        mockClient.On("GetAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAssetType", func(t *testing.T) {
+        input := &glue.GetAssetTypeInput{}
+        output := &glue.GetAssetTypeOutput{}
+
+        mockClient.On("GetAssetType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAssetType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBlueprint", func(t *testing.T) {
         input := &glue.GetBlueprintInput{}
         output := &glue.GetBlueprintOutput{}
@@ -1451,6 +1620,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDashboardUrl", func(t *testing.T) {
+        input := &glue.GetDashboardUrlInput{}
+        output := &glue.GetDashboardUrlOutput{}
+
+        mockClient.On("GetDashboardUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDashboardUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataCatalogEncryptionSettings", func(t *testing.T) {
         input := &glue.GetDataCatalogEncryptionSettingsInput{}
         output := &glue.GetDataCatalogEncryptionSettingsOutput{}
@@ -1614,6 +1796,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetEntityRecords", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetEntityRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFormType", func(t *testing.T) {
+        input := &glue.GetFormTypeInput{}
+        output := &glue.GetFormTypeOutput{}
+
+        mockClient.On("GetFormType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFormType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetGlossary", func(t *testing.T) {
+        input := &glue.GetGlossaryInput{}
+        output := &glue.GetGlossaryOutput{}
+
+        mockClient.On("GetGlossary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGlossary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetGlossaryTerm", func(t *testing.T) {
+        input := &glue.GetGlossaryTermInput{}
+        output := &glue.GetGlossaryTermOutput{}
+
+        mockClient.On("GetGlossaryTerm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGlossaryTerm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1984,6 +2205,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSessionEndpoint", func(t *testing.T) {
+        input := &glue.GetSessionEndpointInput{}
+        output := &glue.GetSessionEndpointOutput{}
+
+        mockClient.On("GetSessionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSessionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetStatement", func(t *testing.T) {
         input := &glue.GetStatementInput{}
         output := &glue.GetStatementOutput{}
@@ -2244,6 +2478,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAssetTypes", func(t *testing.T) {
+        input := &glue.ListAssetTypesInput{}
+        output := &glue.ListAssetTypesOutput{}
+
+        mockClient.On("ListAssetTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssetTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListBlueprints", func(t *testing.T) {
         input := &glue.ListBlueprintsInput{}
         output := &glue.ListBlueprintsOutput{}
@@ -2426,6 +2673,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFormTypes", func(t *testing.T) {
+        input := &glue.ListFormTypesInput{}
+        output := &glue.ListFormTypesOutput{}
+
+        mockClient.On("ListFormTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFormTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGlossaries", func(t *testing.T) {
+        input := &glue.ListGlossariesInput{}
+        output := &glue.ListGlossariesOutput{}
+
+        mockClient.On("ListGlossaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGlossaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGlossaryTerms", func(t *testing.T) {
+        input := &glue.ListGlossaryTermsInput{}
+        output := &glue.ListGlossaryTermsOutput{}
+
+        mockClient.On("ListGlossaryTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGlossaryTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListIntegrationResourceProperties", func(t *testing.T) {
         input := &glue.ListIntegrationResourcePropertiesInput{}
         output := &glue.ListIntegrationResourcePropertiesOutput{}
@@ -2433,6 +2719,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIntegrationResourceProperties", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIntegrationResourceProperties(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIterableForms", func(t *testing.T) {
+        input := &glue.ListIterableFormsInput{}
+        output := &glue.ListIterableFormsOutput{}
+
+        mockClient.On("ListIterableForms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIterableForms(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2608,6 +2907,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutAsset", func(t *testing.T) {
+        input := &glue.PutAssetInput{}
+        output := &glue.PutAssetOutput{}
+
+        mockClient.On("PutAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAssetType", func(t *testing.T) {
+        input := &glue.PutAssetTypeInput{}
+        output := &glue.PutAssetTypeOutput{}
+
+        mockClient.On("PutAssetType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAssetType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAttachment", func(t *testing.T) {
+        input := &glue.PutAttachmentInput{}
+        output := &glue.PutAttachmentOutput{}
+
+        mockClient.On("PutAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutDataCatalogEncryptionSettings", func(t *testing.T) {
         input := &glue.PutDataCatalogEncryptionSettingsInput{}
         output := &glue.PutDataCatalogEncryptionSettingsOutput{}
@@ -2628,6 +2966,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutDataQualityProfileAnnotation", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutDataQualityProfileAnnotation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutFormType", func(t *testing.T) {
+        input := &glue.PutFormTypeInput{}
+        output := &glue.PutFormTypeOutput{}
+
+        mockClient.On("PutFormType", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutFormType(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2758,6 +3109,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RunStatement", ctx, input).Return(output, nil)
 
         result, err := mockClient.RunStatement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchAssets", func(t *testing.T) {
+        input := &glue.SearchAssetsInput{}
+        output := &glue.SearchAssetsOutput{}
+
+        mockClient.On("SearchAssets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchAssets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3115,6 +3479,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAsset", func(t *testing.T) {
+        input := &glue.UpdateAssetInput{}
+        output := &glue.UpdateAssetOutput{}
+
+        mockClient.On("UpdateAsset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAsset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateBlueprint", func(t *testing.T) {
         input := &glue.UpdateBlueprintInput{}
         output := &glue.UpdateBlueprintOutput{}
@@ -3265,6 +3642,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDevEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDevEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateGlossary", func(t *testing.T) {
+        input := &glue.UpdateGlossaryInput{}
+        output := &glue.UpdateGlossaryOutput{}
+
+        mockClient.On("UpdateGlossary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGlossary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateGlossaryTerm", func(t *testing.T) {
+        input := &glue.UpdateGlossaryTermInput{}
+        output := &glue.UpdateGlossaryTermOutput{}
+
+        mockClient.On("UpdateGlossaryTerm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGlossaryTerm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

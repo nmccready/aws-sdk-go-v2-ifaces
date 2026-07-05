@@ -5,6 +5,7 @@ package sagemakerruntimehttp2_test
 // this ../../../service/sagemakerruntimehttp2/iface.go
 
 import (
+	"context"
 	"testing"
 
 	"github.com/aws/aws-sdk-go-v2/service/sagemakerruntimehttp2"
@@ -21,12 +22,26 @@ func TestSagemakerruntimehttp2ServiceCanBeMocked(t *testing.T) {
 
 func TestIClient(t *testing.T) {
     mockClient := &mocks.IClient{}
+    ctx := context.TODO()
 
     t.Run("TestOptions", func(t *testing.T) {
         output := sagemakerruntimehttp2.Options{}
         mockClient.On("Options").Return(output)
 
         result := mockClient.Options()
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestInvokeEndpointWithBidirectionalStream", func(t *testing.T) {
+        input := &sagemakerruntimehttp2.InvokeEndpointWithBidirectionalStreamInput{}
+        output := &sagemakerruntimehttp2.InvokeEndpointWithBidirectionalStreamOutput{}
+
+        mockClient.On("InvokeEndpointWithBidirectionalStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeEndpointWithBidirectionalStream(ctx, input)
+        assert.NoError(t, err)
         assert.Equal(t, output, result)
 
         mockClient.AssertExpectations(t)

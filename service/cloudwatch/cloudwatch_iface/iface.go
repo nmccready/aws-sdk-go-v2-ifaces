@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for cloudwatch
 type IClient interface {
  Options() Options 
+ AssociateDatasetKmsKey(ctx context.Context, params *AssociateDatasetKmsKeyInput, optFns ...func(*Options)) (*AssociateDatasetKmsKeyOutput, error) 
  DeleteAlarmMuteRule(ctx context.Context, params *DeleteAlarmMuteRuleInput, optFns ...func(*Options)) (*DeleteAlarmMuteRuleOutput, error) 
  DeleteAlarms(ctx context.Context, params *DeleteAlarmsInput, optFns ...func(*Options)) (*DeleteAlarmsOutput, error) 
  DeleteAnomalyDetector(ctx context.Context, params *DeleteAnomalyDetectorInput, optFns ...func(*Options)) (*DeleteAnomalyDetectorOutput, error) 
@@ -24,10 +25,12 @@ type IClient interface {
  DescribeInsightRules(ctx context.Context, params *DescribeInsightRulesInput, optFns ...func(*Options)) (*DescribeInsightRulesOutput, error) 
  DisableAlarmActions(ctx context.Context, params *DisableAlarmActionsInput, optFns ...func(*Options)) (*DisableAlarmActionsOutput, error) 
  DisableInsightRules(ctx context.Context, params *DisableInsightRulesInput, optFns ...func(*Options)) (*DisableInsightRulesOutput, error) 
+ DisassociateDatasetKmsKey(ctx context.Context, params *DisassociateDatasetKmsKeyInput, optFns ...func(*Options)) (*DisassociateDatasetKmsKeyOutput, error) 
  EnableAlarmActions(ctx context.Context, params *EnableAlarmActionsInput, optFns ...func(*Options)) (*EnableAlarmActionsOutput, error) 
  EnableInsightRules(ctx context.Context, params *EnableInsightRulesInput, optFns ...func(*Options)) (*EnableInsightRulesOutput, error) 
  GetAlarmMuteRule(ctx context.Context, params *GetAlarmMuteRuleInput, optFns ...func(*Options)) (*GetAlarmMuteRuleOutput, error) 
  GetDashboard(ctx context.Context, params *GetDashboardInput, optFns ...func(*Options)) (*GetDashboardOutput, error) 
+ GetDataset(ctx context.Context, params *GetDatasetInput, optFns ...func(*Options)) (*GetDatasetOutput, error) 
  GetInsightRuleReport(ctx context.Context, params *GetInsightRuleReportInput, optFns ...func(*Options)) (*GetInsightRuleReportOutput, error) 
  GetMetricData(ctx context.Context, params *GetMetricDataInput, optFns ...func(*Options)) (*GetMetricDataOutput, error) 
  GetMetricStatistics(ctx context.Context, params *GetMetricStatisticsInput, optFns ...func(*Options)) (*GetMetricStatisticsOutput, error) 
@@ -45,6 +48,7 @@ type IClient interface {
  PutCompositeAlarm(ctx context.Context, params *PutCompositeAlarmInput, optFns ...func(*Options)) (*PutCompositeAlarmOutput, error) 
  PutDashboard(ctx context.Context, params *PutDashboardInput, optFns ...func(*Options)) (*PutDashboardOutput, error) 
  PutInsightRule(ctx context.Context, params *PutInsightRuleInput, optFns ...func(*Options)) (*PutInsightRuleOutput, error) 
+ PutLogAlarm(ctx context.Context, params *PutLogAlarmInput, optFns ...func(*Options)) (*PutLogAlarmOutput, error) 
  PutManagedInsightRules(ctx context.Context, params *PutManagedInsightRulesInput, optFns ...func(*Options)) (*PutManagedInsightRulesOutput, error) 
  PutMetricAlarm(ctx context.Context, params *PutMetricAlarmInput, optFns ...func(*Options)) (*PutMetricAlarmOutput, error) 
  PutMetricData(ctx context.Context, params *PutMetricDataInput, optFns ...func(*Options)) (*PutMetricDataOutput, error) 

@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AddDatasetExamples provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddDatasetExamples(ctx context.Context, params *bedrockagentcorecontrol.AddDatasetExamplesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.AddDatasetExamplesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddDatasetExamples")
+	}
+
+	var r0 *bedrockagentcorecontrol.AddDatasetExamplesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.AddDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.AddDatasetExamplesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.AddDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.AddDatasetExamplesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.AddDatasetExamplesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.AddDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAgentRuntime provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAgentRuntime(ctx context.Context, params *bedrockagentcorecontrol.CreateAgentRuntimeInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateAgentRuntimeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -274,6 +311,80 @@ func (_m *IClient) CreateConfigurationBundle(ctx context.Context, params *bedroc
 	return r0, r1
 }
 
+// CreateDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataset(ctx context.Context, params *bedrockagentcorecontrol.CreateDatasetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataset")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateDatasetInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateDatasetInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateDatasetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDatasetVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDatasetVersion(ctx context.Context, params *bedrockagentcorecontrol.CreateDatasetVersionInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateDatasetVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDatasetVersion")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateDatasetVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateDatasetVersionInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateDatasetVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateDatasetVersionInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateDatasetVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateDatasetVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateDatasetVersionInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEvaluator(ctx context.Context, params *bedrockagentcorecontrol.CreateEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -451,6 +562,43 @@ func (_m *IClient) CreateHarness(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateHarnessEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateHarnessEndpoint(ctx context.Context, params *bedrockagentcorecontrol.CreateHarnessEndpointInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateHarnessEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateHarnessEndpoint")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateHarnessEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateHarnessEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateHarnessEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateHarnessEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1125,6 +1273,80 @@ func (_m *IClient) DeleteConfigurationBundle(ctx context.Context, params *bedroc
 	return r0, r1
 }
 
+// DeleteDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataset(ctx context.Context, params *bedrockagentcorecontrol.DeleteDatasetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataset")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteDatasetInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteDatasetInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteDatasetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDatasetExamples provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDatasetExamples(ctx context.Context, params *bedrockagentcorecontrol.DeleteDatasetExamplesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteDatasetExamplesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDatasetExamples")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteDatasetExamplesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteDatasetExamplesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteDatasetExamplesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteDatasetExamplesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEvaluator(ctx context.Context, params *bedrockagentcorecontrol.DeleteEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1302,6 +1524,43 @@ func (_m *IClient) DeleteHarness(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteHarnessEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteHarnessEndpoint(ctx context.Context, params *bedrockagentcorecontrol.DeleteHarnessEndpointInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteHarnessEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteHarnessEndpoint")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteHarnessEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteHarnessEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteHarnessEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteHarnessEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2050,6 +2309,43 @@ func (_m *IClient) GetConfigurationBundleVersion(ctx context.Context, params *be
 	return r0, r1
 }
 
+// GetDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataset(ctx context.Context, params *bedrockagentcorecontrol.GetDatasetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataset")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetDatasetInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetDatasetInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetDatasetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEvaluator(ctx context.Context, params *bedrockagentcorecontrol.GetEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2227,6 +2523,43 @@ func (_m *IClient) GetHarness(ctx context.Context, params *bedrockagentcorecontr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetHarnessEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetHarnessEndpoint(ctx context.Context, params *bedrockagentcorecontrol.GetHarnessEndpointInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetHarnessEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetHarnessEndpoint")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetHarnessEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetHarnessEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetHarnessEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetHarnessEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3197,6 +3530,117 @@ func (_m *IClient) ListConfigurationBundles(ctx context.Context, params *bedrock
 	return r0, r1
 }
 
+// ListDatasetExamples provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetExamples(ctx context.Context, params *bedrockagentcorecontrol.ListDatasetExamplesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListDatasetExamplesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetExamples")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListDatasetExamplesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListDatasetExamplesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListDatasetExamplesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListDatasetExamplesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasetVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetVersions(ctx context.Context, params *bedrockagentcorecontrol.ListDatasetVersionsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListDatasetVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetVersions")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListDatasetVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListDatasetVersionsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListDatasetVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListDatasetVersionsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListDatasetVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListDatasetVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListDatasetVersionsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasets(ctx context.Context, params *bedrockagentcorecontrol.ListDatasetsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListDatasetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasets")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListDatasetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListDatasetsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListDatasetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListDatasetsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListDatasetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListDatasetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListDatasetsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEvaluators provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEvaluators(ctx context.Context, params *bedrockagentcorecontrol.ListEvaluatorsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListEvaluatorsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3337,6 +3781,80 @@ func (_m *IClient) ListGateways(ctx context.Context, params *bedrockagentcorecon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListGatewaysInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListHarnessEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHarnessEndpoints(ctx context.Context, params *bedrockagentcorecontrol.ListHarnessEndpointsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListHarnessEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHarnessEndpoints")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListHarnessEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListHarnessEndpointsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListHarnessEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListHarnessEndpointsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListHarnessEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListHarnessEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListHarnessEndpointsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListHarnessVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHarnessVersions(ctx context.Context, params *bedrockagentcorecontrol.ListHarnessVersionsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListHarnessVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHarnessVersions")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListHarnessVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListHarnessVersionsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListHarnessVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListHarnessVersionsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListHarnessVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListHarnessVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListHarnessVersionsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4436,6 +4954,80 @@ func (_m *IClient) UpdateConfigurationBundle(ctx context.Context, params *bedroc
 	return r0, r1
 }
 
+// UpdateDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataset(ctx context.Context, params *bedrockagentcorecontrol.UpdateDatasetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataset")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateDatasetInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateDatasetInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateDatasetInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDatasetExamples provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDatasetExamples(ctx context.Context, params *bedrockagentcorecontrol.UpdateDatasetExamplesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateDatasetExamplesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDatasetExamples")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateDatasetExamplesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateDatasetExamplesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateDatasetExamplesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateDatasetExamplesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateDatasetExamplesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateEvaluator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateEvaluator(ctx context.Context, params *bedrockagentcorecontrol.UpdateEvaluatorInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateEvaluatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4613,6 +5205,43 @@ func (_m *IClient) UpdateHarness(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateHarnessEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHarnessEndpoint(ctx context.Context, params *bedrockagentcorecontrol.UpdateHarnessEndpointInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateHarnessEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHarnessEndpoint")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateHarnessEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateHarnessEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateHarnessEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateHarnessEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateHarnessEndpointInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

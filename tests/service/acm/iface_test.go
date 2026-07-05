@@ -47,6 +47,84 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAcmeDomainValidation", func(t *testing.T) {
+        input := &acm.CreateAcmeDomainValidationInput{}
+        output := &acm.CreateAcmeDomainValidationOutput{}
+
+        mockClient.On("CreateAcmeDomainValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAcmeDomainValidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAcmeEndpoint", func(t *testing.T) {
+        input := &acm.CreateAcmeEndpointInput{}
+        output := &acm.CreateAcmeEndpointOutput{}
+
+        mockClient.On("CreateAcmeEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAcmeEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAcmeExternalAccountBinding", func(t *testing.T) {
+        input := &acm.CreateAcmeExternalAccountBindingInput{}
+        output := &acm.CreateAcmeExternalAccountBindingOutput{}
+
+        mockClient.On("CreateAcmeExternalAccountBinding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAcmeExternalAccountBinding(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAcmeDomainValidation", func(t *testing.T) {
+        input := &acm.DeleteAcmeDomainValidationInput{}
+        output := &acm.DeleteAcmeDomainValidationOutput{}
+
+        mockClient.On("DeleteAcmeDomainValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAcmeDomainValidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAcmeEndpoint", func(t *testing.T) {
+        input := &acm.DeleteAcmeEndpointInput{}
+        output := &acm.DeleteAcmeEndpointOutput{}
+
+        mockClient.On("DeleteAcmeEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAcmeEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAcmeExternalAccountBinding", func(t *testing.T) {
+        input := &acm.DeleteAcmeExternalAccountBindingInput{}
+        output := &acm.DeleteAcmeExternalAccountBindingOutput{}
+
+        mockClient.On("DeleteAcmeExternalAccountBinding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAcmeExternalAccountBinding(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCertificate", func(t *testing.T) {
         input := &acm.DeleteCertificateInput{}
         output := &acm.DeleteCertificateOutput{}
@@ -54,6 +132,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCertificate", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAcmeAccount", func(t *testing.T) {
+        input := &acm.DescribeAcmeAccountInput{}
+        output := &acm.DescribeAcmeAccountOutput{}
+
+        mockClient.On("DescribeAcmeAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAcmeAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAcmeDomainValidation", func(t *testing.T) {
+        input := &acm.DescribeAcmeDomainValidationInput{}
+        output := &acm.DescribeAcmeDomainValidationOutput{}
+
+        mockClient.On("DescribeAcmeDomainValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAcmeDomainValidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAcmeEndpoint", func(t *testing.T) {
+        input := &acm.DescribeAcmeEndpointInput{}
+        output := &acm.DescribeAcmeEndpointOutput{}
+
+        mockClient.On("DescribeAcmeEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAcmeEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAcmeExternalAccountBinding", func(t *testing.T) {
+        input := &acm.DescribeAcmeExternalAccountBindingInput{}
+        output := &acm.DescribeAcmeExternalAccountBindingOutput{}
+
+        mockClient.On("DescribeAcmeExternalAccountBinding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAcmeExternalAccountBinding(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAcmeExternalAccountBindingCredentials", func(t *testing.T) {
+        input := &acm.GetAcmeExternalAccountBindingCredentialsInput{}
+        output := &acm.GetAcmeExternalAccountBindingCredentialsOutput{}
+
+        mockClient.On("GetAcmeExternalAccountBindingCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAcmeExternalAccountBindingCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCertificate", func(t *testing.T) {
         input := &acm.GetCertificateInput{}
         output := &acm.GetCertificateOutput{}
@@ -125,6 +268,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAcmeAccounts", func(t *testing.T) {
+        input := &acm.ListAcmeAccountsInput{}
+        output := &acm.ListAcmeAccountsOutput{}
+
+        mockClient.On("ListAcmeAccounts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAcmeAccounts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAcmeDomainValidations", func(t *testing.T) {
+        input := &acm.ListAcmeDomainValidationsInput{}
+        output := &acm.ListAcmeDomainValidationsOutput{}
+
+        mockClient.On("ListAcmeDomainValidations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAcmeDomainValidations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAcmeEndpoints", func(t *testing.T) {
+        input := &acm.ListAcmeEndpointsInput{}
+        output := &acm.ListAcmeEndpointsOutput{}
+
+        mockClient.On("ListAcmeEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAcmeEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAcmeExternalAccountBindings", func(t *testing.T) {
+        input := &acm.ListAcmeExternalAccountBindingsInput{}
+        output := &acm.ListAcmeExternalAccountBindingsOutput{}
+
+        mockClient.On("ListAcmeExternalAccountBindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAcmeExternalAccountBindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCertificates", func(t *testing.T) {
         input := &acm.ListCertificatesInput{}
         output := &acm.ListCertificatesOutput{}
@@ -145,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForCertificate", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &acm.ListTagsForResourceInput{}
+        output := &acm.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,6 +424,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRevokeAcmeAccount", func(t *testing.T) {
+        input := &acm.RevokeAcmeAccountInput{}
+        output := &acm.RevokeAcmeAccountOutput{}
+
+        mockClient.On("RevokeAcmeAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokeAcmeAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRevokeAcmeExternalAccountBinding", func(t *testing.T) {
+        input := &acm.RevokeAcmeExternalAccountBindingInput{}
+        output := &acm.RevokeAcmeExternalAccountBindingOutput{}
+
+        mockClient.On("RevokeAcmeExternalAccountBinding", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokeAcmeExternalAccountBinding(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRevokeCertificate", func(t *testing.T) {
         input := &acm.RevokeCertificateInput{}
         output := &acm.RevokeCertificateOutput{}
@@ -236,6 +470,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchCertificates", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchCertificates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &acm.TagResourceInput{}
+        output := &acm.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &acm.UntagResourceInput{}
+        output := &acm.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAcmeDomainValidation", func(t *testing.T) {
+        input := &acm.UpdateAcmeDomainValidationInput{}
+        output := &acm.UpdateAcmeDomainValidationOutput{}
+
+        mockClient.On("UpdateAcmeDomainValidation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAcmeDomainValidation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAcmeEndpoint", func(t *testing.T) {
+        input := &acm.UpdateAcmeEndpointInput{}
+        output := &acm.UpdateAcmeEndpointOutput{}
+
+        mockClient.On("UpdateAcmeEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAcmeEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

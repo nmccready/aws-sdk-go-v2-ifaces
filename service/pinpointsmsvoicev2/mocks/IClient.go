@@ -1124,6 +1124,43 @@ func (_m *IClient) DeleteRcsAgent(ctx context.Context, params *pinpointsmsvoicev
 	return r0, r1
 }
 
+// DeleteRcsMessageSpendLimitOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRcsMessageSpendLimitOverride(ctx context.Context, params *pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRcsMessageSpendLimitOverride")
+	}
+
+	var r0 *pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.DeleteRcsMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteRegistration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteRegistration(ctx context.Context, params *pinpointsmsvoicev2.DeleteRegistrationInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.DeleteRegistrationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3140,6 +3177,43 @@ func (_m *IClient) SendNotifyVoiceMessage(ctx context.Context, params *pinpoints
 	return r0, r1
 }
 
+// SendRcsMessage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendRcsMessage(ctx context.Context, params *pinpointsmsvoicev2.SendRcsMessageInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SendRcsMessageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendRcsMessage")
+	}
+
+	var r0 *pinpointsmsvoicev2.SendRcsMessageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.SendRcsMessageInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SendRcsMessageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.SendRcsMessageInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.SendRcsMessageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.SendRcsMessageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.SendRcsMessageInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SendTextMessage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SendTextMessage(ctx context.Context, params *pinpointsmsvoicev2.SendTextMessageInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SendTextMessageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3428,6 +3502,43 @@ func (_m *IClient) SetNotifyMessageSpendLimitOverride(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.SetNotifyMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SetRcsMessageSpendLimitOverride provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SetRcsMessageSpendLimitOverride(ctx context.Context, params *pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideInput, optFns ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SetRcsMessageSpendLimitOverride")
+	}
+
+	var r0 *pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) (*pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) *pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *pinpointsmsvoicev2.SetRcsMessageSpendLimitOverrideInput, ...func(*pinpointsmsvoicev2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

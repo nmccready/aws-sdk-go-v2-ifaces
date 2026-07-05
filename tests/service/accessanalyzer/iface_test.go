@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateServiceLinkedAnalyzer", func(t *testing.T) {
+        input := &accessanalyzer.CreateServiceLinkedAnalyzerInput{}
+        output := &accessanalyzer.CreateServiceLinkedAnalyzerOutput{}
+
+        mockClient.On("CreateServiceLinkedAnalyzer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateServiceLinkedAnalyzer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAnalyzer", func(t *testing.T) {
         input := &accessanalyzer.DeleteAnalyzerInput{}
         output := &accessanalyzer.DeleteAnalyzerOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteArchiveRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteArchiveRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteServiceLinkedAnalyzer", func(t *testing.T) {
+        input := &accessanalyzer.DeleteServiceLinkedAnalyzerInput{}
+        output := &accessanalyzer.DeleteServiceLinkedAnalyzerOutput{}
+
+        mockClient.On("DeleteServiceLinkedAnalyzer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteServiceLinkedAnalyzer(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -1716,6 +1716,43 @@ func (_m *IClient) CreateInferenceRecommendationsJob(ctx context.Context, params
 	return r0, r1
 }
 
+// CreateJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateJob(ctx context.Context, params *sagemaker.CreateJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateJob")
+	}
+
+	var r0 *sagemaker.CreateJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateJobInput, ...func(*sagemaker.Options)) (*sagemaker.CreateJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateJobInput, ...func(*sagemaker.Options)) *sagemaker.CreateJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateLabelingJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateLabelingJob(ctx context.Context, params *sagemaker.CreateLabelingJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateLabelingJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4232,6 +4269,43 @@ func (_m *IClient) DeleteInferenceExperiment(ctx context.Context, params *sagema
 	return r0, r1
 }
 
+// DeleteJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteJob(ctx context.Context, params *sagemaker.DeleteJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteJob")
+	}
+
+	var r0 *sagemaker.DeleteJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteJobInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteJobInput, ...func(*sagemaker.Options)) *sagemaker.DeleteJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteMlflowApp provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteMlflowApp(ctx context.Context, params *sagemaker.DeleteMlflowAppInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteMlflowAppOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6703,6 +6777,80 @@ func (_m *IClient) DescribeInferenceRecommendationsJob(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeInferenceRecommendationsJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeJob(ctx context.Context, params *sagemaker.DescribeJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeJob")
+	}
+
+	var r0 *sagemaker.DescribeJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeJobInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeJobInput, ...func(*sagemaker.Options)) *sagemaker.DescribeJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeJobSchemaVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeJobSchemaVersion(ctx context.Context, params *sagemaker.DescribeJobSchemaVersionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeJobSchemaVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeJobSchemaVersion")
+	}
+
+	var r0 *sagemaker.DescribeJobSchemaVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeJobSchemaVersionInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeJobSchemaVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeJobSchemaVersionInput, ...func(*sagemaker.Options)) *sagemaker.DescribeJobSchemaVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeJobSchemaVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeJobSchemaVersionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -10004,6 +10152,80 @@ func (_m *IClient) ListInferenceRecommendationsJobs(ctx context.Context, params 
 	return r0, r1
 }
 
+// ListJobSchemaVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListJobSchemaVersions(ctx context.Context, params *sagemaker.ListJobSchemaVersionsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListJobSchemaVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListJobSchemaVersions")
+	}
+
+	var r0 *sagemaker.ListJobSchemaVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListJobSchemaVersionsInput, ...func(*sagemaker.Options)) (*sagemaker.ListJobSchemaVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListJobSchemaVersionsInput, ...func(*sagemaker.Options)) *sagemaker.ListJobSchemaVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListJobSchemaVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListJobSchemaVersionsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListJobs(ctx context.Context, params *sagemaker.ListJobsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListJobs")
+	}
+
+	var r0 *sagemaker.ListJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListJobsInput, ...func(*sagemaker.Options)) (*sagemaker.ListJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListJobsInput, ...func(*sagemaker.Options)) *sagemaker.ListJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListJobsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListLabelingJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListLabelingJobs(ctx context.Context, params *sagemaker.ListLabelingJobsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListLabelingJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -12678,6 +12900,43 @@ func (_m *IClient) StopInferenceRecommendationsJob(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StopInferenceRecommendationsJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopJob(ctx context.Context, params *sagemaker.StopJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.StopJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopJob")
+	}
+
+	var r0 *sagemaker.StopJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopJobInput, ...func(*sagemaker.Options)) (*sagemaker.StopJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopJobInput, ...func(*sagemaker.Options)) *sagemaker.StopJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.StopJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StopJobInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

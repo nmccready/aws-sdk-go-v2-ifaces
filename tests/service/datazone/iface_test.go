@@ -775,6 +775,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteLineageEvent", func(t *testing.T) {
+        input := &datazone.DeleteLineageEventInput{}
+        output := &datazone.DeleteLineageEventOutput{}
+
+        mockClient.On("DeleteLineageEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLineageEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteListing", func(t *testing.T) {
         input := &datazone.DeleteListingInput{}
         output := &datazone.DeleteListingOutput{}

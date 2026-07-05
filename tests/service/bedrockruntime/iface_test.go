@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeGuardrailChecks", func(t *testing.T) {
+        input := &bedrockruntime.InvokeGuardrailChecksInput{}
+        output := &bedrockruntime.InvokeGuardrailChecksOutput{}
+
+        mockClient.On("InvokeGuardrailChecks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeGuardrailChecks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeModel", func(t *testing.T) {
         input := &bedrockruntime.InvokeModelInput{}
         output := &bedrockruntime.InvokeModelOutput{}

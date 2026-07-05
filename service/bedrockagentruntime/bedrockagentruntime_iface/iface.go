@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for bedrockagentruntime
 type IClient interface {
  Options() Options 
+ AgenticRetrieveStream(ctx context.Context, params *AgenticRetrieveStreamInput, optFns ...func(*Options)) (*AgenticRetrieveStreamOutput, error) 
  CreateInvocation(ctx context.Context, params *CreateInvocationInput, optFns ...func(*Options)) (*CreateInvocationOutput, error) 
  CreateSession(ctx context.Context, params *CreateSessionInput, optFns ...func(*Options)) (*CreateSessionOutput, error) 
  DeleteAgentMemory(ctx context.Context, params *DeleteAgentMemoryInput, optFns ...func(*Options)) (*DeleteAgentMemoryOutput, error) 
@@ -17,6 +18,7 @@ type IClient interface {
  EndSession(ctx context.Context, params *EndSessionInput, optFns ...func(*Options)) (*EndSessionOutput, error) 
  GenerateQuery(ctx context.Context, params *GenerateQueryInput, optFns ...func(*Options)) (*GenerateQueryOutput, error) 
  GetAgentMemory(ctx context.Context, params *GetAgentMemoryInput, optFns ...func(*Options)) (*GetAgentMemoryOutput, error) 
+ GetDocumentContent(ctx context.Context, params *GetDocumentContentInput, optFns ...func(*Options)) (*GetDocumentContentOutput, error) 
  GetExecutionFlowSnapshot(ctx context.Context, params *GetExecutionFlowSnapshotInput, optFns ...func(*Options)) (*GetExecutionFlowSnapshotOutput, error) 
  GetFlowExecution(ctx context.Context, params *GetFlowExecutionInput, optFns ...func(*Options)) (*GetFlowExecutionOutput, error) 
  GetInvocationStep(ctx context.Context, params *GetInvocationStepInput, optFns ...func(*Options)) (*GetInvocationStepOutput, error) 

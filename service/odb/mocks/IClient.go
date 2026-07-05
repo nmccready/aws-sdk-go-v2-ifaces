@@ -88,6 +88,117 @@ func (_m *IClient) AssociateIamRoleToResource(ctx context.Context, params *odb.A
 	return r0, r1
 }
 
+// CreateAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutonomousDatabase(ctx context.Context, params *odb.CreateAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutonomousDatabase")
+	}
+
+	var r0 *odb.CreateAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateAutonomousDatabaseInput, ...func(*odb.Options)) *odb.CreateAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.CreateAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAutonomousDatabaseBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutonomousDatabaseBackup(ctx context.Context, params *odb.CreateAutonomousDatabaseBackupInput, optFns ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutonomousDatabaseBackup")
+	}
+
+	var r0 *odb.CreateAutonomousDatabaseBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateAutonomousDatabaseBackupInput, ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateAutonomousDatabaseBackupInput, ...func(*odb.Options)) *odb.CreateAutonomousDatabaseBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.CreateAutonomousDatabaseBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateAutonomousDatabaseBackupInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAutonomousDatabaseWallet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAutonomousDatabaseWallet(ctx context.Context, params *odb.CreateAutonomousDatabaseWalletInput, optFns ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseWalletOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAutonomousDatabaseWallet")
+	}
+
+	var r0 *odb.CreateAutonomousDatabaseWalletOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateAutonomousDatabaseWalletInput, ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseWalletOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateAutonomousDatabaseWalletInput, ...func(*odb.Options)) *odb.CreateAutonomousDatabaseWalletOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.CreateAutonomousDatabaseWalletOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateAutonomousDatabaseWalletInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCloudAutonomousVmCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCloudAutonomousVmCluster(ctx context.Context, params *odb.CreateCloudAutonomousVmClusterInput, optFns ...func(*odb.Options)) (*odb.CreateCloudAutonomousVmClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -265,6 +376,80 @@ func (_m *IClient) CreateOdbPeeringConnection(ctx context.Context, params *odb.C
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateOdbPeeringConnectionInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAutonomousDatabase(ctx context.Context, params *odb.DeleteAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.DeleteAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAutonomousDatabase")
+	}
+
+	var r0 *odb.DeleteAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.DeleteAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteAutonomousDatabaseInput, ...func(*odb.Options)) *odb.DeleteAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DeleteAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DeleteAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAutonomousDatabaseBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAutonomousDatabaseBackup(ctx context.Context, params *odb.DeleteAutonomousDatabaseBackupInput, optFns ...func(*odb.Options)) (*odb.DeleteAutonomousDatabaseBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAutonomousDatabaseBackup")
+	}
+
+	var r0 *odb.DeleteAutonomousDatabaseBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteAutonomousDatabaseBackupInput, ...func(*odb.Options)) (*odb.DeleteAutonomousDatabaseBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteAutonomousDatabaseBackupInput, ...func(*odb.Options)) *odb.DeleteAutonomousDatabaseBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DeleteAutonomousDatabaseBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DeleteAutonomousDatabaseBackupInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -487,6 +672,154 @@ func (_m *IClient) DisassociateIamRoleFromResource(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.DisassociateIamRoleFromResourceInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// FailoverAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) FailoverAutonomousDatabase(ctx context.Context, params *odb.FailoverAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.FailoverAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for FailoverAutonomousDatabase")
+	}
+
+	var r0 *odb.FailoverAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.FailoverAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.FailoverAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.FailoverAutonomousDatabaseInput, ...func(*odb.Options)) *odb.FailoverAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.FailoverAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.FailoverAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutonomousDatabase(ctx context.Context, params *odb.GetAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.GetAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutonomousDatabase")
+	}
+
+	var r0 *odb.GetAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.GetAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetAutonomousDatabaseInput, ...func(*odb.Options)) *odb.GetAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.GetAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.GetAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutonomousDatabaseBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutonomousDatabaseBackup(ctx context.Context, params *odb.GetAutonomousDatabaseBackupInput, optFns ...func(*odb.Options)) (*odb.GetAutonomousDatabaseBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutonomousDatabaseBackup")
+	}
+
+	var r0 *odb.GetAutonomousDatabaseBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetAutonomousDatabaseBackupInput, ...func(*odb.Options)) (*odb.GetAutonomousDatabaseBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetAutonomousDatabaseBackupInput, ...func(*odb.Options)) *odb.GetAutonomousDatabaseBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.GetAutonomousDatabaseBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.GetAutonomousDatabaseBackupInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAutonomousDatabaseWalletDetails provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAutonomousDatabaseWalletDetails(ctx context.Context, params *odb.GetAutonomousDatabaseWalletDetailsInput, optFns ...func(*odb.Options)) (*odb.GetAutonomousDatabaseWalletDetailsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAutonomousDatabaseWalletDetails")
+	}
+
+	var r0 *odb.GetAutonomousDatabaseWalletDetailsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetAutonomousDatabaseWalletDetailsInput, ...func(*odb.Options)) (*odb.GetAutonomousDatabaseWalletDetailsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetAutonomousDatabaseWalletDetailsInput, ...func(*odb.Options)) *odb.GetAutonomousDatabaseWalletDetailsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.GetAutonomousDatabaseWalletDetailsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.GetAutonomousDatabaseWalletDetailsInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -857,6 +1190,228 @@ func (_m *IClient) InitializeService(ctx context.Context, params *odb.Initialize
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.InitializeServiceInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutonomousDatabaseBackups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabaseBackups(ctx context.Context, params *odb.ListAutonomousDatabaseBackupsInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabaseBackupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabaseBackups")
+	}
+
+	var r0 *odb.ListAutonomousDatabaseBackupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseBackupsInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabaseBackupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseBackupsInput, ...func(*odb.Options)) *odb.ListAutonomousDatabaseBackupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabaseBackupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabaseBackupsInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutonomousDatabaseCharacterSets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabaseCharacterSets(ctx context.Context, params *odb.ListAutonomousDatabaseCharacterSetsInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabaseCharacterSetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabaseCharacterSets")
+	}
+
+	var r0 *odb.ListAutonomousDatabaseCharacterSetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseCharacterSetsInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabaseCharacterSetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseCharacterSetsInput, ...func(*odb.Options)) *odb.ListAutonomousDatabaseCharacterSetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabaseCharacterSetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabaseCharacterSetsInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutonomousDatabaseClones provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabaseClones(ctx context.Context, params *odb.ListAutonomousDatabaseClonesInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabaseClonesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabaseClones")
+	}
+
+	var r0 *odb.ListAutonomousDatabaseClonesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseClonesInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabaseClonesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseClonesInput, ...func(*odb.Options)) *odb.ListAutonomousDatabaseClonesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabaseClonesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabaseClonesInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutonomousDatabasePeers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabasePeers(ctx context.Context, params *odb.ListAutonomousDatabasePeersInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabasePeersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabasePeers")
+	}
+
+	var r0 *odb.ListAutonomousDatabasePeersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabasePeersInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabasePeersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabasePeersInput, ...func(*odb.Options)) *odb.ListAutonomousDatabasePeersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabasePeersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabasePeersInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutonomousDatabaseVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabaseVersions(ctx context.Context, params *odb.ListAutonomousDatabaseVersionsInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabaseVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabaseVersions")
+	}
+
+	var r0 *odb.ListAutonomousDatabaseVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseVersionsInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabaseVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseVersionsInput, ...func(*odb.Options)) *odb.ListAutonomousDatabaseVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabaseVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabaseVersionsInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAutonomousDatabases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabases(ctx context.Context, params *odb.ListAutonomousDatabasesInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabases")
+	}
+
+	var r0 *odb.ListAutonomousDatabasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabasesInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabasesInput, ...func(*odb.Options)) *odb.ListAutonomousDatabasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabasesInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1327,6 +1882,43 @@ func (_m *IClient) Options() odb.Options {
 	return r0
 }
 
+// RebootAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RebootAutonomousDatabase(ctx context.Context, params *odb.RebootAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.RebootAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RebootAutonomousDatabase")
+	}
+
+	var r0 *odb.RebootAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.RebootAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.RebootAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.RebootAutonomousDatabaseInput, ...func(*odb.Options)) *odb.RebootAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.RebootAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.RebootAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RebootDbNode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RebootDbNode(ctx context.Context, params *odb.RebootDbNodeInput, optFns ...func(*odb.Options)) (*odb.RebootDbNodeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1356,6 +1948,117 @@ func (_m *IClient) RebootDbNode(ctx context.Context, params *odb.RebootDbNodeInp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.RebootDbNodeInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RestoreAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RestoreAutonomousDatabase(ctx context.Context, params *odb.RestoreAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.RestoreAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RestoreAutonomousDatabase")
+	}
+
+	var r0 *odb.RestoreAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.RestoreAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.RestoreAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.RestoreAutonomousDatabaseInput, ...func(*odb.Options)) *odb.RestoreAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.RestoreAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.RestoreAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ShrinkAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ShrinkAutonomousDatabase(ctx context.Context, params *odb.ShrinkAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.ShrinkAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ShrinkAutonomousDatabase")
+	}
+
+	var r0 *odb.ShrinkAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ShrinkAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.ShrinkAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ShrinkAutonomousDatabaseInput, ...func(*odb.Options)) *odb.ShrinkAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ShrinkAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ShrinkAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAutonomousDatabase(ctx context.Context, params *odb.StartAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.StartAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAutonomousDatabase")
+	}
+
+	var r0 *odb.StartAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.StartAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.StartAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.StartAutonomousDatabaseInput, ...func(*odb.Options)) *odb.StartAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.StartAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.StartAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1401,6 +2104,43 @@ func (_m *IClient) StartDbNode(ctx context.Context, params *odb.StartDbNodeInput
 	return r0, r1
 }
 
+// StopAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopAutonomousDatabase(ctx context.Context, params *odb.StopAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.StopAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopAutonomousDatabase")
+	}
+
+	var r0 *odb.StopAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.StopAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.StopAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.StopAutonomousDatabaseInput, ...func(*odb.Options)) *odb.StopAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.StopAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.StopAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopDbNode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopDbNode(ctx context.Context, params *odb.StopDbNodeInput, optFns ...func(*odb.Options)) (*odb.StopDbNodeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1430,6 +2170,43 @@ func (_m *IClient) StopDbNode(ctx context.Context, params *odb.StopDbNodeInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.StopDbNodeInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SwitchoverAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SwitchoverAutonomousDatabase(ctx context.Context, params *odb.SwitchoverAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.SwitchoverAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SwitchoverAutonomousDatabase")
+	}
+
+	var r0 *odb.SwitchoverAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.SwitchoverAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.SwitchoverAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.SwitchoverAutonomousDatabaseInput, ...func(*odb.Options)) *odb.SwitchoverAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.SwitchoverAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.SwitchoverAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1504,6 +2281,80 @@ func (_m *IClient) UntagResource(ctx context.Context, params *odb.UntagResourceI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.UntagResourceInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAutonomousDatabase(ctx context.Context, params *odb.UpdateAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.UpdateAutonomousDatabaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAutonomousDatabase")
+	}
+
+	var r0 *odb.UpdateAutonomousDatabaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateAutonomousDatabaseInput, ...func(*odb.Options)) (*odb.UpdateAutonomousDatabaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateAutonomousDatabaseInput, ...func(*odb.Options)) *odb.UpdateAutonomousDatabaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateAutonomousDatabaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAutonomousDatabaseBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAutonomousDatabaseBackup(ctx context.Context, params *odb.UpdateAutonomousDatabaseBackupInput, optFns ...func(*odb.Options)) (*odb.UpdateAutonomousDatabaseBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAutonomousDatabaseBackup")
+	}
+
+	var r0 *odb.UpdateAutonomousDatabaseBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateAutonomousDatabaseBackupInput, ...func(*odb.Options)) (*odb.UpdateAutonomousDatabaseBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateAutonomousDatabaseBackupInput, ...func(*odb.Options)) *odb.UpdateAutonomousDatabaseBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateAutonomousDatabaseBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateAutonomousDatabaseBackupInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

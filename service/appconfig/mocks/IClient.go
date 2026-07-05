@@ -163,6 +163,43 @@ func (_m *IClient) CreateEnvironment(ctx context.Context, params *appconfig.Crea
 	return r0, r1
 }
 
+// CreateExperimentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateExperimentDefinition(ctx context.Context, params *appconfig.CreateExperimentDefinitionInput, optFns ...func(*appconfig.Options)) (*appconfig.CreateExperimentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateExperimentDefinition")
+	}
+
+	var r0 *appconfig.CreateExperimentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.CreateExperimentDefinitionInput, ...func(*appconfig.Options)) (*appconfig.CreateExperimentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.CreateExperimentDefinitionInput, ...func(*appconfig.Options)) *appconfig.CreateExperimentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.CreateExperimentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.CreateExperimentDefinitionInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateExtension provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateExtension(ctx context.Context, params *appconfig.CreateExtensionInput, optFns ...func(*appconfig.Options)) (*appconfig.CreateExtensionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +451,43 @@ func (_m *IClient) DeleteEnvironment(ctx context.Context, params *appconfig.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.DeleteEnvironmentInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteExperimentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteExperimentDefinition(ctx context.Context, params *appconfig.DeleteExperimentDefinitionInput, optFns ...func(*appconfig.Options)) (*appconfig.DeleteExperimentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteExperimentDefinition")
+	}
+
+	var r0 *appconfig.DeleteExperimentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.DeleteExperimentDefinitionInput, ...func(*appconfig.Options)) (*appconfig.DeleteExperimentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.DeleteExperimentDefinitionInput, ...func(*appconfig.Options)) *appconfig.DeleteExperimentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.DeleteExperimentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.DeleteExperimentDefinitionInput, ...func(*appconfig.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +866,80 @@ func (_m *IClient) GetEnvironment(ctx context.Context, params *appconfig.GetEnvi
 	return r0, r1
 }
 
+// GetExperimentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExperimentDefinition(ctx context.Context, params *appconfig.GetExperimentDefinitionInput, optFns ...func(*appconfig.Options)) (*appconfig.GetExperimentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExperimentDefinition")
+	}
+
+	var r0 *appconfig.GetExperimentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.GetExperimentDefinitionInput, ...func(*appconfig.Options)) (*appconfig.GetExperimentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.GetExperimentDefinitionInput, ...func(*appconfig.Options)) *appconfig.GetExperimentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.GetExperimentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.GetExperimentDefinitionInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetExperimentRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExperimentRun(ctx context.Context, params *appconfig.GetExperimentRunInput, optFns ...func(*appconfig.Options)) (*appconfig.GetExperimentRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExperimentRun")
+	}
+
+	var r0 *appconfig.GetExperimentRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.GetExperimentRunInput, ...func(*appconfig.Options)) (*appconfig.GetExperimentRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.GetExperimentRunInput, ...func(*appconfig.Options)) *appconfig.GetExperimentRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.GetExperimentRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.GetExperimentRunInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetExtension provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetExtension(ctx context.Context, params *appconfig.GetExtensionInput, optFns ...func(*appconfig.Options)) (*appconfig.GetExtensionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1088,6 +1236,117 @@ func (_m *IClient) ListEnvironments(ctx context.Context, params *appconfig.ListE
 	return r0, r1
 }
 
+// ListExperimentDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExperimentDefinitions(ctx context.Context, params *appconfig.ListExperimentDefinitionsInput, optFns ...func(*appconfig.Options)) (*appconfig.ListExperimentDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExperimentDefinitions")
+	}
+
+	var r0 *appconfig.ListExperimentDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.ListExperimentDefinitionsInput, ...func(*appconfig.Options)) (*appconfig.ListExperimentDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.ListExperimentDefinitionsInput, ...func(*appconfig.Options)) *appconfig.ListExperimentDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.ListExperimentDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.ListExperimentDefinitionsInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListExperimentRunEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExperimentRunEvents(ctx context.Context, params *appconfig.ListExperimentRunEventsInput, optFns ...func(*appconfig.Options)) (*appconfig.ListExperimentRunEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExperimentRunEvents")
+	}
+
+	var r0 *appconfig.ListExperimentRunEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.ListExperimentRunEventsInput, ...func(*appconfig.Options)) (*appconfig.ListExperimentRunEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.ListExperimentRunEventsInput, ...func(*appconfig.Options)) *appconfig.ListExperimentRunEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.ListExperimentRunEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.ListExperimentRunEventsInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListExperimentRuns provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExperimentRuns(ctx context.Context, params *appconfig.ListExperimentRunsInput, optFns ...func(*appconfig.Options)) (*appconfig.ListExperimentRunsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExperimentRuns")
+	}
+
+	var r0 *appconfig.ListExperimentRunsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.ListExperimentRunsInput, ...func(*appconfig.Options)) (*appconfig.ListExperimentRunsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.ListExperimentRunsInput, ...func(*appconfig.Options)) *appconfig.ListExperimentRunsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.ListExperimentRunsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.ListExperimentRunsInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListExtensionAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListExtensionAssociations(ctx context.Context, params *appconfig.ListExtensionAssociationsInput, optFns ...func(*appconfig.Options)) (*appconfig.ListExtensionAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1291,6 +1550,43 @@ func (_m *IClient) StartDeployment(ctx context.Context, params *appconfig.StartD
 	return r0, r1
 }
 
+// StartExperimentRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartExperimentRun(ctx context.Context, params *appconfig.StartExperimentRunInput, optFns ...func(*appconfig.Options)) (*appconfig.StartExperimentRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartExperimentRun")
+	}
+
+	var r0 *appconfig.StartExperimentRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.StartExperimentRunInput, ...func(*appconfig.Options)) (*appconfig.StartExperimentRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.StartExperimentRunInput, ...func(*appconfig.Options)) *appconfig.StartExperimentRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.StartExperimentRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.StartExperimentRunInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopDeployment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopDeployment(ctx context.Context, params *appconfig.StopDeploymentInput, optFns ...func(*appconfig.Options)) (*appconfig.StopDeploymentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1320,6 +1616,43 @@ func (_m *IClient) StopDeployment(ctx context.Context, params *appconfig.StopDep
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.StopDeploymentInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopExperimentRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopExperimentRun(ctx context.Context, params *appconfig.StopExperimentRunInput, optFns ...func(*appconfig.Options)) (*appconfig.StopExperimentRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopExperimentRun")
+	}
+
+	var r0 *appconfig.StopExperimentRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.StopExperimentRunInput, ...func(*appconfig.Options)) (*appconfig.StopExperimentRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.StopExperimentRunInput, ...func(*appconfig.Options)) *appconfig.StopExperimentRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.StopExperimentRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.StopExperimentRunInput, ...func(*appconfig.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1579,6 +1912,80 @@ func (_m *IClient) UpdateEnvironment(ctx context.Context, params *appconfig.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.UpdateEnvironmentInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateExperimentDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExperimentDefinition(ctx context.Context, params *appconfig.UpdateExperimentDefinitionInput, optFns ...func(*appconfig.Options)) (*appconfig.UpdateExperimentDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExperimentDefinition")
+	}
+
+	var r0 *appconfig.UpdateExperimentDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.UpdateExperimentDefinitionInput, ...func(*appconfig.Options)) (*appconfig.UpdateExperimentDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.UpdateExperimentDefinitionInput, ...func(*appconfig.Options)) *appconfig.UpdateExperimentDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.UpdateExperimentDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.UpdateExperimentDefinitionInput, ...func(*appconfig.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateExperimentRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExperimentRun(ctx context.Context, params *appconfig.UpdateExperimentRunInput, optFns ...func(*appconfig.Options)) (*appconfig.UpdateExperimentRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExperimentRun")
+	}
+
+	var r0 *appconfig.UpdateExperimentRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.UpdateExperimentRunInput, ...func(*appconfig.Options)) (*appconfig.UpdateExperimentRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appconfig.UpdateExperimentRunInput, ...func(*appconfig.Options)) *appconfig.UpdateExperimentRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appconfig.UpdateExperimentRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appconfig.UpdateExperimentRunInput, ...func(*appconfig.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDictionary", func(t *testing.T) {
+        input := &elementalinference.CreateDictionaryInput{}
+        output := &elementalinference.CreateDictionaryOutput{}
+
+        mockClient.On("CreateDictionary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDictionary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFeed", func(t *testing.T) {
         input := &elementalinference.CreateFeedInput{}
         output := &elementalinference.CreateFeedOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateFeed", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateFeed(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDictionary", func(t *testing.T) {
+        input := &elementalinference.DeleteDictionaryInput{}
+        output := &elementalinference.DeleteDictionaryOutput{}
+
+        mockClient.On("DeleteDictionary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDictionary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,6 +112,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestExportDictionaryEntries", func(t *testing.T) {
+        input := &elementalinference.ExportDictionaryEntriesInput{}
+        output := &elementalinference.ExportDictionaryEntriesOutput{}
+
+        mockClient.On("ExportDictionaryEntries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportDictionaryEntries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDictionary", func(t *testing.T) {
+        input := &elementalinference.GetDictionaryInput{}
+        output := &elementalinference.GetDictionaryOutput{}
+
+        mockClient.On("GetDictionary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDictionary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFeed", func(t *testing.T) {
         input := &elementalinference.GetFeedInput{}
         output := &elementalinference.GetFeedOutput{}
@@ -93,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFeed", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFeed(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDictionaries", func(t *testing.T) {
+        input := &elementalinference.ListDictionariesInput{}
+        output := &elementalinference.ListDictionariesOutput{}
+
+        mockClient.On("ListDictionaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDictionaries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDictionary", func(t *testing.T) {
+        input := &elementalinference.UpdateDictionaryInput{}
+        output := &elementalinference.UpdateDictionaryOutput{}
+
+        mockClient.On("UpdateDictionary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDictionary(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

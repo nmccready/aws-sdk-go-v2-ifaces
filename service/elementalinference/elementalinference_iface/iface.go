@@ -11,13 +11,19 @@ import (
 type IClient interface {
  Options() Options 
  AssociateFeed(ctx context.Context, params *AssociateFeedInput, optFns ...func(*Options)) (*AssociateFeedOutput, error) 
+ CreateDictionary(ctx context.Context, params *CreateDictionaryInput, optFns ...func(*Options)) (*CreateDictionaryOutput, error) 
  CreateFeed(ctx context.Context, params *CreateFeedInput, optFns ...func(*Options)) (*CreateFeedOutput, error) 
+ DeleteDictionary(ctx context.Context, params *DeleteDictionaryInput, optFns ...func(*Options)) (*DeleteDictionaryOutput, error) 
  DeleteFeed(ctx context.Context, params *DeleteFeedInput, optFns ...func(*Options)) (*DeleteFeedOutput, error) 
  DisassociateFeed(ctx context.Context, params *DisassociateFeedInput, optFns ...func(*Options)) (*DisassociateFeedOutput, error) 
+ ExportDictionaryEntries(ctx context.Context, params *ExportDictionaryEntriesInput, optFns ...func(*Options)) (*ExportDictionaryEntriesOutput, error) 
+ GetDictionary(ctx context.Context, params *GetDictionaryInput, optFns ...func(*Options)) (*GetDictionaryOutput, error) 
  GetFeed(ctx context.Context, params *GetFeedInput, optFns ...func(*Options)) (*GetFeedOutput, error) 
+ ListDictionaries(ctx context.Context, params *ListDictionariesInput, optFns ...func(*Options)) (*ListDictionariesOutput, error) 
  ListFeeds(ctx context.Context, params *ListFeedsInput, optFns ...func(*Options)) (*ListFeedsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateDictionary(ctx context.Context, params *UpdateDictionaryInput, optFns ...func(*Options)) (*UpdateDictionaryOutput, error) 
  UpdateFeed(ctx context.Context, params *UpdateFeedInput, optFns ...func(*Options)) (*UpdateFeedOutput, error) 
 }

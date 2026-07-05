@@ -437,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSyslogConfiguration", func(t *testing.T) {
+        input := &cloudwatchlogs.DeleteSyslogConfigurationInput{}
+        output := &cloudwatchlogs.DeleteSyslogConfigurationOutput{}
+
+        mockClient.On("DeleteSyslogConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSyslogConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTransformer", func(t *testing.T) {
         input := &cloudwatchlogs.DeleteTransformerInput{}
         output := &cloudwatchlogs.DeleteTransformerOutput{}
@@ -1061,6 +1074,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSyslogConfigurations", func(t *testing.T) {
+        input := &cloudwatchlogs.ListSyslogConfigurationsInput{}
+        output := &cloudwatchlogs.ListSyslogConfigurationsOutput{}
+
+        mockClient.On("ListSyslogConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSyslogConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &cloudwatchlogs.ListTagsForResourceInput{}
         output := &cloudwatchlogs.ListTagsForResourceOutput{}
@@ -1302,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutSubscriptionFilter", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutSubscriptionFilter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutSyslogConfiguration", func(t *testing.T) {
+        input := &cloudwatchlogs.PutSyslogConfigurationInput{}
+        output := &cloudwatchlogs.PutSyslogConfigurationOutput{}
+
+        mockClient.On("PutSyslogConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutSyslogConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

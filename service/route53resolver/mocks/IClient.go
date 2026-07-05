@@ -162,6 +162,117 @@ func (_m *IClient) AssociateResolverRule(ctx context.Context, params *route53res
 	return r0, r1
 }
 
+// BatchCreateFirewallRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateFirewallRule(ctx context.Context, params *route53resolver.BatchCreateFirewallRuleInput, optFns ...func(*route53resolver.Options)) (*route53resolver.BatchCreateFirewallRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateFirewallRule")
+	}
+
+	var r0 *route53resolver.BatchCreateFirewallRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.BatchCreateFirewallRuleInput, ...func(*route53resolver.Options)) (*route53resolver.BatchCreateFirewallRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.BatchCreateFirewallRuleInput, ...func(*route53resolver.Options)) *route53resolver.BatchCreateFirewallRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53resolver.BatchCreateFirewallRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53resolver.BatchCreateFirewallRuleInput, ...func(*route53resolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteFirewallRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteFirewallRule(ctx context.Context, params *route53resolver.BatchDeleteFirewallRuleInput, optFns ...func(*route53resolver.Options)) (*route53resolver.BatchDeleteFirewallRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteFirewallRule")
+	}
+
+	var r0 *route53resolver.BatchDeleteFirewallRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.BatchDeleteFirewallRuleInput, ...func(*route53resolver.Options)) (*route53resolver.BatchDeleteFirewallRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.BatchDeleteFirewallRuleInput, ...func(*route53resolver.Options)) *route53resolver.BatchDeleteFirewallRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53resolver.BatchDeleteFirewallRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53resolver.BatchDeleteFirewallRuleInput, ...func(*route53resolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateFirewallRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateFirewallRule(ctx context.Context, params *route53resolver.BatchUpdateFirewallRuleInput, optFns ...func(*route53resolver.Options)) (*route53resolver.BatchUpdateFirewallRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateFirewallRule")
+	}
+
+	var r0 *route53resolver.BatchUpdateFirewallRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.BatchUpdateFirewallRuleInput, ...func(*route53resolver.Options)) (*route53resolver.BatchUpdateFirewallRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.BatchUpdateFirewallRuleInput, ...func(*route53resolver.Options)) *route53resolver.BatchUpdateFirewallRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53resolver.BatchUpdateFirewallRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53resolver.BatchUpdateFirewallRuleInput, ...func(*route53resolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFirewallDomainList provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFirewallDomainList(ctx context.Context, params *route53resolver.CreateFirewallDomainListInput, optFns ...func(*route53resolver.Options)) (*route53resolver.CreateFirewallDomainListOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1597,6 +1708,43 @@ func (_m *IClient) ListFirewallRuleGroups(ctx context.Context, params *route53re
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53resolver.ListFirewallRuleGroupsInput, ...func(*route53resolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFirewallRuleTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFirewallRuleTypes(ctx context.Context, params *route53resolver.ListFirewallRuleTypesInput, optFns ...func(*route53resolver.Options)) (*route53resolver.ListFirewallRuleTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFirewallRuleTypes")
+	}
+
+	var r0 *route53resolver.ListFirewallRuleTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.ListFirewallRuleTypesInput, ...func(*route53resolver.Options)) (*route53resolver.ListFirewallRuleTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.ListFirewallRuleTypesInput, ...func(*route53resolver.Options)) *route53resolver.ListFirewallRuleTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53resolver.ListFirewallRuleTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53resolver.ListFirewallRuleTypesInput, ...func(*route53resolver.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -1421,6 +1421,43 @@ func (_m *IClient) ExportAutomatedReasoningPolicyVersion(ctx context.Context, pa
 	return r0, r1
 }
 
+// GetAccountDataRetention provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountDataRetention(ctx context.Context, params *bedrock.GetAccountDataRetentionInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAccountDataRetentionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountDataRetention")
+	}
+
+	var r0 *bedrock.GetAccountDataRetentionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAccountDataRetentionInput, ...func(*bedrock.Options)) (*bedrock.GetAccountDataRetentionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAccountDataRetentionInput, ...func(*bedrock.Options)) *bedrock.GetAccountDataRetentionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAccountDataRetentionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAccountDataRetentionInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAdvancedPromptOptimizationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAdvancedPromptOptimizationJob(ctx context.Context, params *bedrock.GetAdvancedPromptOptimizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAdvancedPromptOptimizationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3213,6 +3250,43 @@ func (_m *IClient) Options() bedrock.Options {
 	}
 
 	return r0
+}
+
+// PutAccountDataRetention provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountDataRetention(ctx context.Context, params *bedrock.PutAccountDataRetentionInput, optFns ...func(*bedrock.Options)) (*bedrock.PutAccountDataRetentionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountDataRetention")
+	}
+
+	var r0 *bedrock.PutAccountDataRetentionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutAccountDataRetentionInput, ...func(*bedrock.Options)) (*bedrock.PutAccountDataRetentionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutAccountDataRetentionInput, ...func(*bedrock.Options)) *bedrock.PutAccountDataRetentionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutAccountDataRetentionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutAccountDataRetentionInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutEnforcedGuardrailConfiguration provides a mock function with given fields: ctx, params, optFns

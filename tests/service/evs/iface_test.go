@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDepotUrl", func(t *testing.T) {
+        input := &evs.GetDepotUrlInput{}
+        output := &evs.GetDepotUrlOutput{}
+
+        mockClient.On("GetDepotUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDepotUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEnvironment", func(t *testing.T) {
         input := &evs.GetEnvironmentInput{}
         output := &evs.GetEnvironmentOutput{}

@@ -632,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateJob", func(t *testing.T) {
+        input := &sagemaker.CreateJobInput{}
+        output := &sagemaker.CreateJobOutput{}
+
+        mockClient.On("CreateJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLabelingJob", func(t *testing.T) {
         input := &sagemaker.CreateLabelingJobInput{}
         output := &sagemaker.CreateLabelingJobOutput{}
@@ -1516,6 +1529,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteJob", func(t *testing.T) {
+        input := &sagemaker.DeleteJobInput{}
+        output := &sagemaker.DeleteJobOutput{}
+
+        mockClient.On("DeleteJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteMlflowApp", func(t *testing.T) {
         input := &sagemaker.DeleteMlflowAppInput{}
         output := &sagemaker.DeleteMlflowAppOutput{}
@@ -2381,6 +2407,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInferenceRecommendationsJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInferenceRecommendationsJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeJob", func(t *testing.T) {
+        input := &sagemaker.DescribeJobInput{}
+        output := &sagemaker.DescribeJobOutput{}
+
+        mockClient.On("DescribeJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeJobSchemaVersion", func(t *testing.T) {
+        input := &sagemaker.DescribeJobSchemaVersionInput{}
+        output := &sagemaker.DescribeJobSchemaVersionOutput{}
+
+        mockClient.On("DescribeJobSchemaVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeJobSchemaVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3544,6 +3596,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListJobSchemaVersions", func(t *testing.T) {
+        input := &sagemaker.ListJobSchemaVersionsInput{}
+        output := &sagemaker.ListJobSchemaVersionsOutput{}
+
+        mockClient.On("ListJobSchemaVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobSchemaVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListJobs", func(t *testing.T) {
+        input := &sagemaker.ListJobsInput{}
+        output := &sagemaker.ListJobsOutput{}
+
+        mockClient.On("ListJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListLabelingJobs", func(t *testing.T) {
         input := &sagemaker.ListLabelingJobsInput{}
         output := &sagemaker.ListLabelingJobsOutput{}
@@ -4474,6 +4552,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopInferenceRecommendationsJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopInferenceRecommendationsJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopJob", func(t *testing.T) {
+        input := &sagemaker.StopJobInput{}
+        output := &sagemaker.StopJobOutput{}
+
+        mockClient.On("StopJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

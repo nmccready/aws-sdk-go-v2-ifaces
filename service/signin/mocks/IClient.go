@@ -51,6 +51,191 @@ func (_m *IClient) CreateOAuth2Token(ctx context.Context, params *signin.CreateO
 	return r0, r1
 }
 
+// DeleteConsoleAuthorizationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConsoleAuthorizationConfiguration(ctx context.Context, params *signin.DeleteConsoleAuthorizationConfigurationInput, optFns ...func(*signin.Options)) (*signin.DeleteConsoleAuthorizationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConsoleAuthorizationConfiguration")
+	}
+
+	var r0 *signin.DeleteConsoleAuthorizationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.DeleteConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) (*signin.DeleteConsoleAuthorizationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.DeleteConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) *signin.DeleteConsoleAuthorizationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.DeleteConsoleAuthorizationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.DeleteConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourcePermissionStatement provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePermissionStatement(ctx context.Context, params *signin.DeleteResourcePermissionStatementInput, optFns ...func(*signin.Options)) (*signin.DeleteResourcePermissionStatementOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePermissionStatement")
+	}
+
+	var r0 *signin.DeleteResourcePermissionStatementOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.DeleteResourcePermissionStatementInput, ...func(*signin.Options)) (*signin.DeleteResourcePermissionStatementOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.DeleteResourcePermissionStatementInput, ...func(*signin.Options)) *signin.DeleteResourcePermissionStatementOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.DeleteResourcePermissionStatementOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.DeleteResourcePermissionStatementInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConsoleAuthorizationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConsoleAuthorizationConfiguration(ctx context.Context, params *signin.GetConsoleAuthorizationConfigurationInput, optFns ...func(*signin.Options)) (*signin.GetConsoleAuthorizationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConsoleAuthorizationConfiguration")
+	}
+
+	var r0 *signin.GetConsoleAuthorizationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.GetConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) (*signin.GetConsoleAuthorizationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.GetConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) *signin.GetConsoleAuthorizationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.GetConsoleAuthorizationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.GetConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *signin.GetResourcePolicyInput, optFns ...func(*signin.Options)) (*signin.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *signin.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.GetResourcePolicyInput, ...func(*signin.Options)) (*signin.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.GetResourcePolicyInput, ...func(*signin.Options)) *signin.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.GetResourcePolicyInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourcePermissionStatements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourcePermissionStatements(ctx context.Context, params *signin.ListResourcePermissionStatementsInput, optFns ...func(*signin.Options)) (*signin.ListResourcePermissionStatementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourcePermissionStatements")
+	}
+
+	var r0 *signin.ListResourcePermissionStatementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.ListResourcePermissionStatementsInput, ...func(*signin.Options)) (*signin.ListResourcePermissionStatementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.ListResourcePermissionStatementsInput, ...func(*signin.Options)) *signin.ListResourcePermissionStatementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.ListResourcePermissionStatementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.ListResourcePermissionStatementsInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() signin.Options {
 	ret := _m.Called()
@@ -67,6 +252,80 @@ func (_m *IClient) Options() signin.Options {
 	}
 
 	return r0
+}
+
+// PutConsoleAuthorizationConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutConsoleAuthorizationConfiguration(ctx context.Context, params *signin.PutConsoleAuthorizationConfigurationInput, optFns ...func(*signin.Options)) (*signin.PutConsoleAuthorizationConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutConsoleAuthorizationConfiguration")
+	}
+
+	var r0 *signin.PutConsoleAuthorizationConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.PutConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) (*signin.PutConsoleAuthorizationConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.PutConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) *signin.PutConsoleAuthorizationConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.PutConsoleAuthorizationConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.PutConsoleAuthorizationConfigurationInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutResourcePermissionStatement provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePermissionStatement(ctx context.Context, params *signin.PutResourcePermissionStatementInput, optFns ...func(*signin.Options)) (*signin.PutResourcePermissionStatementOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePermissionStatement")
+	}
+
+	var r0 *signin.PutResourcePermissionStatementOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.PutResourcePermissionStatementInput, ...func(*signin.Options)) (*signin.PutResourcePermissionStatementOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.PutResourcePermissionStatementInput, ...func(*signin.Options)) *signin.PutResourcePermissionStatementOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.PutResourcePermissionStatementOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.PutResourcePermissionStatementInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

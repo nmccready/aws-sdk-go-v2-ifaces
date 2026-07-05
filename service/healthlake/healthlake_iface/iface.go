@@ -23,4 +23,5 @@ type IClient interface {
  StartFHIRImportJob(ctx context.Context, params *StartFHIRImportJobInput, optFns ...func(*Options)) (*StartFHIRImportJobOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateFHIRDatastore(ctx context.Context, params *UpdateFHIRDatastoreInput, optFns ...func(*Options)) (*UpdateFHIRDatastoreOutput, error) 
 }

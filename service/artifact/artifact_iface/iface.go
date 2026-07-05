@@ -10,12 +10,20 @@ import (
 // IClient defines the interface for artifact
 type IClient interface {
  Options() Options 
+ CreateComplianceInquiry(ctx context.Context, params *CreateComplianceInquiryInput, optFns ...func(*Options)) (*CreateComplianceInquiryOutput, error) 
+ ExportComplianceInquiry(ctx context.Context, params *ExportComplianceInquiryInput, optFns ...func(*Options)) (*ExportComplianceInquiryOutput, error) 
  GetAccountSettings(ctx context.Context, params *GetAccountSettingsInput, optFns ...func(*Options)) (*GetAccountSettingsOutput, error) 
+ GetComplianceInquiryMetadata(ctx context.Context, params *GetComplianceInquiryMetadataInput, optFns ...func(*Options)) (*GetComplianceInquiryMetadataOutput, error) 
  GetReport(ctx context.Context, params *GetReportInput, optFns ...func(*Options)) (*GetReportOutput, error) 
  GetReportMetadata(ctx context.Context, params *GetReportMetadataInput, optFns ...func(*Options)) (*GetReportMetadataOutput, error) 
  GetTermForReport(ctx context.Context, params *GetTermForReportInput, optFns ...func(*Options)) (*GetTermForReportOutput, error) 
+ ListComplianceInquiries(ctx context.Context, params *ListComplianceInquiriesInput, optFns ...func(*Options)) (*ListComplianceInquiriesOutput, error) 
+ ListComplianceInquiryQueries(ctx context.Context, params *ListComplianceInquiryQueriesInput, optFns ...func(*Options)) (*ListComplianceInquiryQueriesOutput, error) 
  ListCustomerAgreements(ctx context.Context, params *ListCustomerAgreementsInput, optFns ...func(*Options)) (*ListCustomerAgreementsOutput, error) 
  ListReportVersions(ctx context.Context, params *ListReportVersionsInput, optFns ...func(*Options)) (*ListReportVersionsOutput, error) 
  ListReports(ctx context.Context, params *ListReportsInput, optFns ...func(*Options)) (*ListReportsOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutAccountSettings(ctx context.Context, params *PutAccountSettingsInput, optFns ...func(*Options)) (*PutAccountSettingsOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

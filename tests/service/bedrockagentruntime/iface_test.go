@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAgenticRetrieveStream", func(t *testing.T) {
+        input := &bedrockagentruntime.AgenticRetrieveStreamInput{}
+        output := &bedrockagentruntime.AgenticRetrieveStreamOutput{}
+
+        mockClient.On("AgenticRetrieveStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AgenticRetrieveStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateInvocation", func(t *testing.T) {
         input := &bedrockagentruntime.CreateInvocationInput{}
         output := &bedrockagentruntime.CreateInvocationOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentMemory", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentMemory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDocumentContent", func(t *testing.T) {
+        input := &bedrockagentruntime.GetDocumentContentInput{}
+        output := &bedrockagentruntime.GetDocumentContentOutput{}
+
+        mockClient.On("GetDocumentContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDocumentContent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

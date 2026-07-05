@@ -977,6 +977,80 @@ func (_m *IClient) GetPersistentAppUIPresignedURL(ctx context.Context, params *e
 	return r0, r1
 }
 
+// GetSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSession(ctx context.Context, params *emr.GetSessionInput, optFns ...func(*emr.Options)) (*emr.GetSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSession")
+	}
+
+	var r0 *emr.GetSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.GetSessionInput, ...func(*emr.Options)) (*emr.GetSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.GetSessionInput, ...func(*emr.Options)) *emr.GetSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emr.GetSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emr.GetSessionInput, ...func(*emr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSessionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSessionEndpoint(ctx context.Context, params *emr.GetSessionEndpointInput, optFns ...func(*emr.Options)) (*emr.GetSessionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSessionEndpoint")
+	}
+
+	var r0 *emr.GetSessionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.GetSessionEndpointInput, ...func(*emr.Options)) (*emr.GetSessionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.GetSessionEndpointInput, ...func(*emr.Options)) *emr.GetSessionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emr.GetSessionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emr.GetSessionEndpointInput, ...func(*emr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetStudioSessionMapping provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetStudioSessionMapping(ctx context.Context, params *emr.GetStudioSessionMappingInput, optFns ...func(*emr.Options)) (*emr.GetStudioSessionMappingOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1302,6 +1376,43 @@ func (_m *IClient) ListSecurityConfigurations(ctx context.Context, params *emr.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *emr.ListSecurityConfigurationsInput, ...func(*emr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSessions(ctx context.Context, params *emr.ListSessionsInput, optFns ...func(*emr.Options)) (*emr.ListSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSessions")
+	}
+
+	var r0 *emr.ListSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.ListSessionsInput, ...func(*emr.Options)) (*emr.ListSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.ListSessionsInput, ...func(*emr.Options)) *emr.ListSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emr.ListSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emr.ListSessionsInput, ...func(*emr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2105,6 +2216,43 @@ func (_m *IClient) StartNotebookExecution(ctx context.Context, params *emr.Start
 	return r0, r1
 }
 
+// StartSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartSession(ctx context.Context, params *emr.StartSessionInput, optFns ...func(*emr.Options)) (*emr.StartSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartSession")
+	}
+
+	var r0 *emr.StartSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.StartSessionInput, ...func(*emr.Options)) (*emr.StartSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.StartSessionInput, ...func(*emr.Options)) *emr.StartSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emr.StartSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emr.StartSessionInput, ...func(*emr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopNotebookExecution provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopNotebookExecution(ctx context.Context, params *emr.StopNotebookExecutionInput, optFns ...func(*emr.Options)) (*emr.StopNotebookExecutionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2171,6 +2319,43 @@ func (_m *IClient) TerminateJobFlows(ctx context.Context, params *emr.TerminateJ
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *emr.TerminateJobFlowsInput, ...func(*emr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TerminateSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TerminateSession(ctx context.Context, params *emr.TerminateSessionInput, optFns ...func(*emr.Options)) (*emr.TerminateSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TerminateSession")
+	}
+
+	var r0 *emr.TerminateSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.TerminateSessionInput, ...func(*emr.Options)) (*emr.TerminateSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emr.TerminateSessionInput, ...func(*emr.Options)) *emr.TerminateSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emr.TerminateSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emr.TerminateSessionInput, ...func(*emr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

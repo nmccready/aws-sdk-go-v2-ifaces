@@ -13,6 +13,7 @@ type IClient interface {
  AddProfileKey(ctx context.Context, params *AddProfileKeyInput, optFns ...func(*Options)) (*AddProfileKeyOutput, error) 
  BatchGetCalculatedAttributeForProfile(ctx context.Context, params *BatchGetCalculatedAttributeForProfileInput, optFns ...func(*Options)) (*BatchGetCalculatedAttributeForProfileOutput, error) 
  BatchGetProfile(ctx context.Context, params *BatchGetProfileInput, optFns ...func(*Options)) (*BatchGetProfileOutput, error) 
+ BatchPutProfileObject(ctx context.Context, params *BatchPutProfileObjectInput, optFns ...func(*Options)) (*BatchPutProfileObjectOutput, error) 
  CreateCalculatedAttributeDefinition(ctx context.Context, params *CreateCalculatedAttributeDefinitionInput, optFns ...func(*Options)) (*CreateCalculatedAttributeDefinitionOutput, error) 
  CreateDomain(ctx context.Context, params *CreateDomainInput, optFns ...func(*Options)) (*CreateDomainOutput, error) 
  CreateDomainLayout(ctx context.Context, params *CreateDomainLayoutInput, optFns ...func(*Options)) (*CreateDomainLayoutOutput, error) 

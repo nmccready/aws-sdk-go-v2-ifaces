@@ -48,6 +48,7 @@ type IClient interface {
  StopStream(ctx context.Context, params *StopStreamInput, optFns ...func(*Options)) (*StopStreamOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateAdConfiguration(ctx context.Context, params *UpdateAdConfigurationInput, optFns ...func(*Options)) (*UpdateAdConfigurationOutput, error) 
  UpdateChannel(ctx context.Context, params *UpdateChannelInput, optFns ...func(*Options)) (*UpdateChannelOutput, error) 
  UpdatePlaybackRestrictionPolicy(ctx context.Context, params *UpdatePlaybackRestrictionPolicyInput, optFns ...func(*Options)) (*UpdatePlaybackRestrictionPolicyOutput, error) 
 }

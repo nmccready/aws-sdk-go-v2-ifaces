@@ -385,6 +385,43 @@ func (_m *IClient) DisassociateEipFromVlan(ctx context.Context, params *evs.Disa
 	return r0, r1
 }
 
+// GetDepotUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDepotUrl(ctx context.Context, params *evs.GetDepotUrlInput, optFns ...func(*evs.Options)) (*evs.GetDepotUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDepotUrl")
+	}
+
+	var r0 *evs.GetDepotUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.GetDepotUrlInput, ...func(*evs.Options)) (*evs.GetDepotUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.GetDepotUrlInput, ...func(*evs.Options)) *evs.GetDepotUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.GetDepotUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.GetDepotUrlInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEnvironment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEnvironment(ctx context.Context, params *evs.GetEnvironmentInput, optFns ...func(*evs.Options)) (*evs.GetEnvironmentOutput, error) {
 	_va := make([]interface{}, len(optFns))

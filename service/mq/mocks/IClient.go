@@ -495,6 +495,43 @@ func (_m *IClient) DescribeConfigurationRevision(ctx context.Context, params *mq
 	return r0, r1
 }
 
+// DescribeSharedResources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSharedResources(ctx context.Context, params *mq.DescribeSharedResourcesInput, optFns ...func(*mq.Options)) (*mq.DescribeSharedResourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSharedResources")
+	}
+
+	var r0 *mq.DescribeSharedResourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mq.DescribeSharedResourcesInput, ...func(*mq.Options)) (*mq.DescribeSharedResourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mq.DescribeSharedResourcesInput, ...func(*mq.Options)) *mq.DescribeSharedResourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mq.DescribeSharedResourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mq.DescribeSharedResourcesInput, ...func(*mq.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeUser(ctx context.Context, params *mq.DescribeUserInput, optFns ...func(*mq.Options)) (*mq.DescribeUserOutput, error) {
 	_va := make([]interface{}, len(optFns))

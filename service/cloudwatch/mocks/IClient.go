@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateDatasetKmsKey provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateDatasetKmsKey(ctx context.Context, params *cloudwatch.AssociateDatasetKmsKeyInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.AssociateDatasetKmsKeyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateDatasetKmsKey")
+	}
+
+	var r0 *cloudwatch.AssociateDatasetKmsKeyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.AssociateDatasetKmsKeyInput, ...func(*cloudwatch.Options)) (*cloudwatch.AssociateDatasetKmsKeyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.AssociateDatasetKmsKeyInput, ...func(*cloudwatch.Options)) *cloudwatch.AssociateDatasetKmsKeyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.AssociateDatasetKmsKeyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.AssociateDatasetKmsKeyInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAlarmMuteRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAlarmMuteRule(ctx context.Context, params *cloudwatch.DeleteAlarmMuteRuleInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteAlarmMuteRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -533,6 +570,43 @@ func (_m *IClient) DisableInsightRules(ctx context.Context, params *cloudwatch.D
 	return r0, r1
 }
 
+// DisassociateDatasetKmsKey provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateDatasetKmsKey(ctx context.Context, params *cloudwatch.DisassociateDatasetKmsKeyInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DisassociateDatasetKmsKeyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateDatasetKmsKey")
+	}
+
+	var r0 *cloudwatch.DisassociateDatasetKmsKeyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DisassociateDatasetKmsKeyInput, ...func(*cloudwatch.Options)) (*cloudwatch.DisassociateDatasetKmsKeyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DisassociateDatasetKmsKeyInput, ...func(*cloudwatch.Options)) *cloudwatch.DisassociateDatasetKmsKeyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.DisassociateDatasetKmsKeyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.DisassociateDatasetKmsKeyInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableAlarmActions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableAlarmActions(ctx context.Context, params *cloudwatch.EnableAlarmActionsInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.EnableAlarmActionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -673,6 +747,43 @@ func (_m *IClient) GetDashboard(ctx context.Context, params *cloudwatch.GetDashb
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetDashboardInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataset(ctx context.Context, params *cloudwatch.GetDatasetInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataset")
+	}
+
+	var r0 *cloudwatch.GetDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetDatasetInput, ...func(*cloudwatch.Options)) (*cloudwatch.GetDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetDatasetInput, ...func(*cloudwatch.Options)) *cloudwatch.GetDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.GetDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetDatasetInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1320,6 +1431,43 @@ func (_m *IClient) PutInsightRule(ctx context.Context, params *cloudwatch.PutIns
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.PutInsightRuleInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutLogAlarm provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutLogAlarm(ctx context.Context, params *cloudwatch.PutLogAlarmInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.PutLogAlarmOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutLogAlarm")
+	}
+
+	var r0 *cloudwatch.PutLogAlarmOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.PutLogAlarmInput, ...func(*cloudwatch.Options)) (*cloudwatch.PutLogAlarmOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.PutLogAlarmInput, ...func(*cloudwatch.Options)) *cloudwatch.PutLogAlarmOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.PutLogAlarmOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.PutLogAlarmInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

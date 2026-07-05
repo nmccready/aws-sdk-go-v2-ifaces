@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetProspectingFromEngagementTask", func(t *testing.T) {
+        input := &partnercentralselling.GetProspectingFromEngagementTaskInput{}
+        output := &partnercentralselling.GetProspectingFromEngagementTaskOutput{}
+
+        mockClient.On("GetProspectingFromEngagementTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProspectingFromEngagementTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetResourceSnapshot", func(t *testing.T) {
         input := &partnercentralselling.GetResourceSnapshotInput{}
         output := &partnercentralselling.GetResourceSnapshotOutput{}
@@ -372,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListProspectingFromEngagementTasks", func(t *testing.T) {
+        input := &partnercentralselling.ListProspectingFromEngagementTasksInput{}
+        output := &partnercentralselling.ListProspectingFromEngagementTasksOutput{}
+
+        mockClient.On("ListProspectingFromEngagementTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProspectingFromEngagementTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListResourceSnapshotJobs", func(t *testing.T) {
         input := &partnercentralselling.ListResourceSnapshotJobsInput{}
         output := &partnercentralselling.ListResourceSnapshotJobsOutput{}
@@ -483,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartOpportunityFromEngagementTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartOpportunityFromEngagementTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartProspectingFromEngagementTask", func(t *testing.T) {
+        input := &partnercentralselling.StartProspectingFromEngagementTaskInput{}
+        output := &partnercentralselling.StartProspectingFromEngagementTaskOutput{}
+
+        mockClient.On("StartProspectingFromEngagementTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartProspectingFromEngagementTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

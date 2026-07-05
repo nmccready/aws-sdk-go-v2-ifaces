@@ -311,6 +311,43 @@ func (_m *IClient) CreateArchiveRule(ctx context.Context, params *accessanalyzer
 	return r0, r1
 }
 
+// CreateServiceLinkedAnalyzer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateServiceLinkedAnalyzer(ctx context.Context, params *accessanalyzer.CreateServiceLinkedAnalyzerInput, optFns ...func(*accessanalyzer.Options)) (*accessanalyzer.CreateServiceLinkedAnalyzerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateServiceLinkedAnalyzer")
+	}
+
+	var r0 *accessanalyzer.CreateServiceLinkedAnalyzerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *accessanalyzer.CreateServiceLinkedAnalyzerInput, ...func(*accessanalyzer.Options)) (*accessanalyzer.CreateServiceLinkedAnalyzerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *accessanalyzer.CreateServiceLinkedAnalyzerInput, ...func(*accessanalyzer.Options)) *accessanalyzer.CreateServiceLinkedAnalyzerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*accessanalyzer.CreateServiceLinkedAnalyzerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *accessanalyzer.CreateServiceLinkedAnalyzerInput, ...func(*accessanalyzer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAnalyzer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAnalyzer(ctx context.Context, params *accessanalyzer.DeleteAnalyzerInput, optFns ...func(*accessanalyzer.Options)) (*accessanalyzer.DeleteAnalyzerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +414,43 @@ func (_m *IClient) DeleteArchiveRule(ctx context.Context, params *accessanalyzer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *accessanalyzer.DeleteArchiveRuleInput, ...func(*accessanalyzer.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteServiceLinkedAnalyzer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteServiceLinkedAnalyzer(ctx context.Context, params *accessanalyzer.DeleteServiceLinkedAnalyzerInput, optFns ...func(*accessanalyzer.Options)) (*accessanalyzer.DeleteServiceLinkedAnalyzerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteServiceLinkedAnalyzer")
+	}
+
+	var r0 *accessanalyzer.DeleteServiceLinkedAnalyzerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *accessanalyzer.DeleteServiceLinkedAnalyzerInput, ...func(*accessanalyzer.Options)) (*accessanalyzer.DeleteServiceLinkedAnalyzerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *accessanalyzer.DeleteServiceLinkedAnalyzerInput, ...func(*accessanalyzer.Options)) *accessanalyzer.DeleteServiceLinkedAnalyzerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*accessanalyzer.DeleteServiceLinkedAnalyzerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *accessanalyzer.DeleteServiceLinkedAnalyzerInput, ...func(*accessanalyzer.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

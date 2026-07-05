@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeSharedResources", func(t *testing.T) {
+        input := &mq.DescribeSharedResourcesInput{}
+        output := &mq.DescribeSharedResourcesOutput{}
+
+        mockClient.On("DescribeSharedResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSharedResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeUser", func(t *testing.T) {
         input := &mq.DescribeUserInput{}
         output := &mq.DescribeUserOutput{}

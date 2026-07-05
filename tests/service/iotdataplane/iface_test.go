@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetConnection", func(t *testing.T) {
+        input := &iotdataplane.GetConnectionInput{}
+        output := &iotdataplane.GetConnectionOutput{}
+
+        mockClient.On("GetConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRetainedMessage", func(t *testing.T) {
         input := &iotdataplane.GetRetainedMessageInput{}
         output := &iotdataplane.GetRetainedMessageOutput{}
@@ -112,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSubscriptions", func(t *testing.T) {
+        input := &iotdataplane.ListSubscriptionsInput{}
+        output := &iotdataplane.ListSubscriptionsOutput{}
+
+        mockClient.On("ListSubscriptions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSubscriptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPublish", func(t *testing.T) {
         input := &iotdataplane.PublishInput{}
         output := &iotdataplane.PublishOutput{}
@@ -119,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("Publish", ctx, input).Return(output, nil)
 
         result, err := mockClient.Publish(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendDirectMessage", func(t *testing.T) {
+        input := &iotdataplane.SendDirectMessageInput{}
+        output := &iotdataplane.SendDirectMessageOutput{}
+
+        mockClient.On("SendDirectMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendDirectMessage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -163,6 +163,43 @@ func (_m *IClient) CreateStreamGroup(ctx context.Context, params *gameliftstream
 	return r0, r1
 }
 
+// CreateStreamSessionAdminShell provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateStreamSessionAdminShell(ctx context.Context, params *gameliftstreams.CreateStreamSessionAdminShellInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.CreateStreamSessionAdminShellOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateStreamSessionAdminShell")
+	}
+
+	var r0 *gameliftstreams.CreateStreamSessionAdminShellOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.CreateStreamSessionAdminShellInput, ...func(*gameliftstreams.Options)) (*gameliftstreams.CreateStreamSessionAdminShellOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.CreateStreamSessionAdminShellInput, ...func(*gameliftstreams.Options)) *gameliftstreams.CreateStreamSessionAdminShellOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gameliftstreams.CreateStreamSessionAdminShellOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.CreateStreamSessionAdminShellInput, ...func(*gameliftstreams.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateStreamSessionConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateStreamSessionConnection(ctx context.Context, params *gameliftstreams.CreateStreamSessionConnectionInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.CreateStreamSessionConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))

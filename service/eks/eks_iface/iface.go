@@ -13,6 +13,7 @@ type IClient interface {
  AssociateAccessPolicy(ctx context.Context, params *AssociateAccessPolicyInput, optFns ...func(*Options)) (*AssociateAccessPolicyOutput, error) 
  AssociateEncryptionConfig(ctx context.Context, params *AssociateEncryptionConfigInput, optFns ...func(*Options)) (*AssociateEncryptionConfigOutput, error) 
  AssociateIdentityProviderConfig(ctx context.Context, params *AssociateIdentityProviderConfigInput, optFns ...func(*Options)) (*AssociateIdentityProviderConfigOutput, error) 
+ CancelUpdate(ctx context.Context, params *CancelUpdateInput, optFns ...func(*Options)) (*CancelUpdateOutput, error) 
  CreateAccessEntry(ctx context.Context, params *CreateAccessEntryInput, optFns ...func(*Options)) (*CreateAccessEntryOutput, error) 
  CreateAddon(ctx context.Context, params *CreateAddonInput, optFns ...func(*Options)) (*CreateAddonOutput, error) 
  CreateCapability(ctx context.Context, params *CreateCapabilityInput, optFns ...func(*Options)) (*CreateCapabilityOutput, error) 

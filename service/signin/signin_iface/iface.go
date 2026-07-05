@@ -11,4 +11,11 @@ import (
 type IClient interface {
  Options() Options 
  CreateOAuth2Token(ctx context.Context, params *CreateOAuth2TokenInput, optFns ...func(*Options)) (*CreateOAuth2TokenOutput, error) 
+ DeleteConsoleAuthorizationConfiguration(ctx context.Context, params *DeleteConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*DeleteConsoleAuthorizationConfigurationOutput, error) 
+ DeleteResourcePermissionStatement(ctx context.Context, params *DeleteResourcePermissionStatementInput, optFns ...func(*Options)) (*DeleteResourcePermissionStatementOutput, error) 
+ GetConsoleAuthorizationConfiguration(ctx context.Context, params *GetConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*GetConsoleAuthorizationConfigurationOutput, error) 
+ GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
+ ListResourcePermissionStatements(ctx context.Context, params *ListResourcePermissionStatementsInput, optFns ...func(*Options)) (*ListResourcePermissionStatementsOutput, error) 
+ PutConsoleAuthorizationConfiguration(ctx context.Context, params *PutConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*PutConsoleAuthorizationConfigurationOutput, error) 
+ PutResourcePermissionStatement(ctx context.Context, params *PutResourcePermissionStatementInput, optFns ...func(*Options)) (*PutResourcePermissionStatementOutput, error) 
 }

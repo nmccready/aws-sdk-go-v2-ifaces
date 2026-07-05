@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateStreamSessionAdminShell", func(t *testing.T) {
+        input := &gameliftstreams.CreateStreamSessionAdminShellInput{}
+        output := &gameliftstreams.CreateStreamSessionAdminShellOutput{}
+
+        mockClient.On("CreateStreamSessionAdminShell", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStreamSessionAdminShell(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateStreamSessionConnection", func(t *testing.T) {
         input := &gameliftstreams.CreateStreamSessionConnectionInput{}
         output := &gameliftstreams.CreateStreamSessionConnectionOutput{}

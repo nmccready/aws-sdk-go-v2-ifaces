@@ -86,6 +86,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchCreateFirewallRule", func(t *testing.T) {
+        input := &route53resolver.BatchCreateFirewallRuleInput{}
+        output := &route53resolver.BatchCreateFirewallRuleOutput{}
+
+        mockClient.On("BatchCreateFirewallRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchCreateFirewallRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteFirewallRule", func(t *testing.T) {
+        input := &route53resolver.BatchDeleteFirewallRuleInput{}
+        output := &route53resolver.BatchDeleteFirewallRuleOutput{}
+
+        mockClient.On("BatchDeleteFirewallRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteFirewallRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateFirewallRule", func(t *testing.T) {
+        input := &route53resolver.BatchUpdateFirewallRuleInput{}
+        output := &route53resolver.BatchUpdateFirewallRuleOutput{}
+
+        mockClient.On("BatchUpdateFirewallRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateFirewallRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFirewallDomainList", func(t *testing.T) {
         input := &route53resolver.CreateFirewallDomainListInput{}
         output := &route53resolver.CreateFirewallDomainListOutput{}
@@ -587,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFirewallRuleGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFirewallRuleGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFirewallRuleTypes", func(t *testing.T) {
+        input := &route53resolver.ListFirewallRuleTypesInput{}
+        output := &route53resolver.ListFirewallRuleTypesOutput{}
+
+        mockClient.On("ListFirewallRuleTypes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFirewallRuleTypes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

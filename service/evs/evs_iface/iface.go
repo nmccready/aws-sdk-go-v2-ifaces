@@ -20,6 +20,7 @@ type IClient interface {
  DeleteEnvironmentConnector(ctx context.Context, params *DeleteEnvironmentConnectorInput, optFns ...func(*Options)) (*DeleteEnvironmentConnectorOutput, error) 
  DeleteEnvironmentHost(ctx context.Context, params *DeleteEnvironmentHostInput, optFns ...func(*Options)) (*DeleteEnvironmentHostOutput, error) 
  DisassociateEipFromVlan(ctx context.Context, params *DisassociateEipFromVlanInput, optFns ...func(*Options)) (*DisassociateEipFromVlanOutput, error) 
+ GetDepotUrl(ctx context.Context, params *GetDepotUrlInput, optFns ...func(*Options)) (*GetDepotUrlOutput, error) 
  GetEnvironment(ctx context.Context, params *GetEnvironmentInput, optFns ...func(*Options)) (*GetEnvironmentOutput, error) 
  GetVersions(ctx context.Context, params *GetVersionsInput, optFns ...func(*Options)) (*GetVersionsOutput, error) 
  ListEnvironmentConnectors(ctx context.Context, params *ListEnvironmentConnectorsInput, optFns ...func(*Options)) (*ListEnvironmentConnectorsOutput, error) 

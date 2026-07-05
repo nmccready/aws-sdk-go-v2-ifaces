@@ -3584,6 +3584,43 @@ func (_m *IClient) PutSuppressedDestination(ctx context.Context, params *sesv2.P
 	return r0, r1
 }
 
+// PutTenantSuppressionAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTenantSuppressionAttributes(ctx context.Context, params *sesv2.PutTenantSuppressionAttributesInput, optFns ...func(*sesv2.Options)) (*sesv2.PutTenantSuppressionAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTenantSuppressionAttributes")
+	}
+
+	var r0 *sesv2.PutTenantSuppressionAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.PutTenantSuppressionAttributesInput, ...func(*sesv2.Options)) (*sesv2.PutTenantSuppressionAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.PutTenantSuppressionAttributesInput, ...func(*sesv2.Options)) *sesv2.PutTenantSuppressionAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.PutTenantSuppressionAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.PutTenantSuppressionAttributesInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SendBulkEmail provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SendBulkEmail(ctx context.Context, params *sesv2.SendBulkEmailInput, optFns ...func(*sesv2.Options)) (*sesv2.SendBulkEmailOutput, error) {
 	_va := make([]interface{}, len(optFns))

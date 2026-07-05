@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateDatasetKmsKey", func(t *testing.T) {
+        input := &cloudwatch.AssociateDatasetKmsKeyInput{}
+        output := &cloudwatch.AssociateDatasetKmsKeyOutput{}
+
+        mockClient.On("AssociateDatasetKmsKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateDatasetKmsKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAlarmMuteRule", func(t *testing.T) {
         input := &cloudwatch.DeleteAlarmMuteRuleInput{}
         output := &cloudwatch.DeleteAlarmMuteRuleOutput{}
@@ -216,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateDatasetKmsKey", func(t *testing.T) {
+        input := &cloudwatch.DisassociateDatasetKmsKeyInput{}
+        output := &cloudwatch.DisassociateDatasetKmsKeyOutput{}
+
+        mockClient.On("DisassociateDatasetKmsKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateDatasetKmsKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableAlarmActions", func(t *testing.T) {
         input := &cloudwatch.EnableAlarmActionsInput{}
         output := &cloudwatch.EnableAlarmActionsOutput{}
@@ -262,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDashboard", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDashboard(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataset", func(t *testing.T) {
+        input := &cloudwatch.GetDatasetInput{}
+        output := &cloudwatch.GetDatasetOutput{}
+
+        mockClient.On("GetDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutInsightRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutInsightRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutLogAlarm", func(t *testing.T) {
+        input := &cloudwatch.PutLogAlarmInput{}
+        output := &cloudwatch.PutLogAlarmOutput{}
+
+        mockClient.On("PutLogAlarm", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutLogAlarm(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -89,6 +89,80 @@ func (_m *IClient) CreateAgentSpace(ctx context.Context, params *devopsagent.Cre
 	return r0, r1
 }
 
+// CreateAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAsset(ctx context.Context, params *devopsagent.CreateAssetInput, optFns ...func(*devopsagent.Options)) (*devopsagent.CreateAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAsset")
+	}
+
+	var r0 *devopsagent.CreateAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.CreateAssetInput, ...func(*devopsagent.Options)) (*devopsagent.CreateAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.CreateAssetInput, ...func(*devopsagent.Options)) *devopsagent.CreateAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.CreateAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.CreateAssetInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAssetFile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAssetFile(ctx context.Context, params *devopsagent.CreateAssetFileInput, optFns ...func(*devopsagent.Options)) (*devopsagent.CreateAssetFileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAssetFile")
+	}
+
+	var r0 *devopsagent.CreateAssetFileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.CreateAssetFileInput, ...func(*devopsagent.Options)) (*devopsagent.CreateAssetFileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.CreateAssetFileInput, ...func(*devopsagent.Options)) *devopsagent.CreateAssetFileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.CreateAssetFileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.CreateAssetFileInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBacklogTask provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBacklogTask(ctx context.Context, params *devopsagent.CreateBacklogTaskInput, optFns ...func(*devopsagent.Options)) (*devopsagent.CreateBacklogTaskOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -200,6 +274,43 @@ func (_m *IClient) CreatePrivateConnection(ctx context.Context, params *devopsag
 	return r0, r1
 }
 
+// CreateTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTrigger(ctx context.Context, params *devopsagent.CreateTriggerInput, optFns ...func(*devopsagent.Options)) (*devopsagent.CreateTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTrigger")
+	}
+
+	var r0 *devopsagent.CreateTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.CreateTriggerInput, ...func(*devopsagent.Options)) (*devopsagent.CreateTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.CreateTriggerInput, ...func(*devopsagent.Options)) *devopsagent.CreateTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.CreateTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.CreateTriggerInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAgentSpace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAgentSpace(ctx context.Context, params *devopsagent.DeleteAgentSpaceInput, optFns ...func(*devopsagent.Options)) (*devopsagent.DeleteAgentSpaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -237,6 +348,80 @@ func (_m *IClient) DeleteAgentSpace(ctx context.Context, params *devopsagent.Del
 	return r0, r1
 }
 
+// DeleteAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAsset(ctx context.Context, params *devopsagent.DeleteAssetInput, optFns ...func(*devopsagent.Options)) (*devopsagent.DeleteAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAsset")
+	}
+
+	var r0 *devopsagent.DeleteAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.DeleteAssetInput, ...func(*devopsagent.Options)) (*devopsagent.DeleteAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.DeleteAssetInput, ...func(*devopsagent.Options)) *devopsagent.DeleteAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.DeleteAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.DeleteAssetInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAssetFile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAssetFile(ctx context.Context, params *devopsagent.DeleteAssetFileInput, optFns ...func(*devopsagent.Options)) (*devopsagent.DeleteAssetFileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAssetFile")
+	}
+
+	var r0 *devopsagent.DeleteAssetFileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.DeleteAssetFileInput, ...func(*devopsagent.Options)) (*devopsagent.DeleteAssetFileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.DeleteAssetFileInput, ...func(*devopsagent.Options)) *devopsagent.DeleteAssetFileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.DeleteAssetFileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.DeleteAssetFileInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePrivateConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePrivateConnection(ctx context.Context, params *devopsagent.DeletePrivateConnectionInput, optFns ...func(*devopsagent.Options)) (*devopsagent.DeletePrivateConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +451,43 @@ func (_m *IClient) DeletePrivateConnection(ctx context.Context, params *devopsag
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.DeletePrivateConnectionInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTrigger(ctx context.Context, params *devopsagent.DeleteTriggerInput, optFns ...func(*devopsagent.Options)) (*devopsagent.DeleteTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTrigger")
+	}
+
+	var r0 *devopsagent.DeleteTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.DeleteTriggerInput, ...func(*devopsagent.Options)) (*devopsagent.DeleteTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.DeleteTriggerInput, ...func(*devopsagent.Options)) *devopsagent.DeleteTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.DeleteTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.DeleteTriggerInput, ...func(*devopsagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -533,6 +755,117 @@ func (_m *IClient) GetAgentSpace(ctx context.Context, params *devopsagent.GetAge
 	return r0, r1
 }
 
+// GetAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAsset(ctx context.Context, params *devopsagent.GetAssetInput, optFns ...func(*devopsagent.Options)) (*devopsagent.GetAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAsset")
+	}
+
+	var r0 *devopsagent.GetAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetAssetInput, ...func(*devopsagent.Options)) (*devopsagent.GetAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetAssetInput, ...func(*devopsagent.Options)) *devopsagent.GetAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.GetAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.GetAssetInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAssetContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAssetContent(ctx context.Context, params *devopsagent.GetAssetContentInput, optFns ...func(*devopsagent.Options)) (*devopsagent.GetAssetContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAssetContent")
+	}
+
+	var r0 *devopsagent.GetAssetContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetAssetContentInput, ...func(*devopsagent.Options)) (*devopsagent.GetAssetContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetAssetContentInput, ...func(*devopsagent.Options)) *devopsagent.GetAssetContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.GetAssetContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.GetAssetContentInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAssetFile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAssetFile(ctx context.Context, params *devopsagent.GetAssetFileInput, optFns ...func(*devopsagent.Options)) (*devopsagent.GetAssetFileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAssetFile")
+	}
+
+	var r0 *devopsagent.GetAssetFileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetAssetFileInput, ...func(*devopsagent.Options)) (*devopsagent.GetAssetFileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetAssetFileInput, ...func(*devopsagent.Options)) *devopsagent.GetAssetFileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.GetAssetFileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.GetAssetFileInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAssociation(ctx context.Context, params *devopsagent.GetAssociationInput, optFns ...func(*devopsagent.Options)) (*devopsagent.GetAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -718,6 +1051,43 @@ func (_m *IClient) GetService(ctx context.Context, params *devopsagent.GetServic
 	return r0, r1
 }
 
+// GetTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrigger(ctx context.Context, params *devopsagent.GetTriggerInput, optFns ...func(*devopsagent.Options)) (*devopsagent.GetTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrigger")
+	}
+
+	var r0 *devopsagent.GetTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetTriggerInput, ...func(*devopsagent.Options)) (*devopsagent.GetTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.GetTriggerInput, ...func(*devopsagent.Options)) *devopsagent.GetTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.GetTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.GetTriggerInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAgentSpaces provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAgentSpaces(ctx context.Context, params *devopsagent.ListAgentSpacesInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListAgentSpacesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +1117,154 @@ func (_m *IClient) ListAgentSpaces(ctx context.Context, params *devopsagent.List
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.ListAgentSpacesInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAssetFiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetFiles(ctx context.Context, params *devopsagent.ListAssetFilesInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListAssetFilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetFiles")
+	}
+
+	var r0 *devopsagent.ListAssetFilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetFilesInput, ...func(*devopsagent.Options)) (*devopsagent.ListAssetFilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetFilesInput, ...func(*devopsagent.Options)) *devopsagent.ListAssetFilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.ListAssetFilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.ListAssetFilesInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAssetTypes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetTypes(ctx context.Context, params *devopsagent.ListAssetTypesInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListAssetTypesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetTypes")
+	}
+
+	var r0 *devopsagent.ListAssetTypesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetTypesInput, ...func(*devopsagent.Options)) (*devopsagent.ListAssetTypesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetTypesInput, ...func(*devopsagent.Options)) *devopsagent.ListAssetTypesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.ListAssetTypesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.ListAssetTypesInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAssetVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssetVersions(ctx context.Context, params *devopsagent.ListAssetVersionsInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListAssetVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssetVersions")
+	}
+
+	var r0 *devopsagent.ListAssetVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetVersionsInput, ...func(*devopsagent.Options)) (*devopsagent.ListAssetVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetVersionsInput, ...func(*devopsagent.Options)) *devopsagent.ListAssetVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.ListAssetVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.ListAssetVersionsInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAssets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAssets(ctx context.Context, params *devopsagent.ListAssetsInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListAssetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAssets")
+	}
+
+	var r0 *devopsagent.ListAssetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetsInput, ...func(*devopsagent.Options)) (*devopsagent.ListAssetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListAssetsInput, ...func(*devopsagent.Options)) *devopsagent.ListAssetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.ListAssetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.ListAssetsInput, ...func(*devopsagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1162,6 +1680,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *devopsagent.
 	return r0, r1
 }
 
+// ListTriggers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTriggers(ctx context.Context, params *devopsagent.ListTriggersInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListTriggersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTriggers")
+	}
+
+	var r0 *devopsagent.ListTriggersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListTriggersInput, ...func(*devopsagent.Options)) (*devopsagent.ListTriggersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.ListTriggersInput, ...func(*devopsagent.Options)) *devopsagent.ListTriggersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.ListTriggersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.ListTriggersInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListWebhooks provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListWebhooks(ctx context.Context, params *devopsagent.ListWebhooksInput, optFns ...func(*devopsagent.Options)) (*devopsagent.ListWebhooksOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1402,6 +1957,80 @@ func (_m *IClient) UpdateAgentSpace(ctx context.Context, params *devopsagent.Upd
 	return r0, r1
 }
 
+// UpdateAsset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAsset(ctx context.Context, params *devopsagent.UpdateAssetInput, optFns ...func(*devopsagent.Options)) (*devopsagent.UpdateAssetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAsset")
+	}
+
+	var r0 *devopsagent.UpdateAssetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateAssetInput, ...func(*devopsagent.Options)) (*devopsagent.UpdateAssetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateAssetInput, ...func(*devopsagent.Options)) *devopsagent.UpdateAssetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.UpdateAssetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.UpdateAssetInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAssetFile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAssetFile(ctx context.Context, params *devopsagent.UpdateAssetFileInput, optFns ...func(*devopsagent.Options)) (*devopsagent.UpdateAssetFileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAssetFile")
+	}
+
+	var r0 *devopsagent.UpdateAssetFileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateAssetFileInput, ...func(*devopsagent.Options)) (*devopsagent.UpdateAssetFileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateAssetFileInput, ...func(*devopsagent.Options)) *devopsagent.UpdateAssetFileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.UpdateAssetFileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.UpdateAssetFileInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateAssociation(ctx context.Context, params *devopsagent.UpdateAssociationInput, optFns ...func(*devopsagent.Options)) (*devopsagent.UpdateAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1616,6 +2245,43 @@ func (_m *IClient) UpdateRecommendation(ctx context.Context, params *devopsagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.UpdateRecommendationInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTrigger provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTrigger(ctx context.Context, params *devopsagent.UpdateTriggerInput, optFns ...func(*devopsagent.Options)) (*devopsagent.UpdateTriggerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTrigger")
+	}
+
+	var r0 *devopsagent.UpdateTriggerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateTriggerInput, ...func(*devopsagent.Options)) (*devopsagent.UpdateTriggerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateTriggerInput, ...func(*devopsagent.Options)) *devopsagent.UpdateTriggerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.UpdateTriggerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.UpdateTriggerInput, ...func(*devopsagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

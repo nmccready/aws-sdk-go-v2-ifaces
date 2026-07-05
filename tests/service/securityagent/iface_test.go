@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchCreateSecurityRequirements", func(t *testing.T) {
+        input := &securityagent.BatchCreateSecurityRequirementsInput{}
+        output := &securityagent.BatchCreateSecurityRequirementsOutput{}
+
+        mockClient.On("BatchCreateSecurityRequirements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchCreateSecurityRequirements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDeleteCodeReviews", func(t *testing.T) {
         input := &securityagent.BatchDeleteCodeReviewsInput{}
         output := &securityagent.BatchDeleteCodeReviewsOutput{}
@@ -67,6 +80,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchDeletePentests", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchDeletePentests(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteSecurityRequirements", func(t *testing.T) {
+        input := &securityagent.BatchDeleteSecurityRequirementsInput{}
+        output := &securityagent.BatchDeleteSecurityRequirementsOutput{}
+
+        mockClient.On("BatchDeleteSecurityRequirements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteSecurityRequirements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteThreatModels", func(t *testing.T) {
+        input := &securityagent.BatchDeleteThreatModelsInput{}
+        output := &securityagent.BatchDeleteThreatModelsOutput{}
+
+        mockClient.On("BatchDeleteThreatModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteThreatModels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetSecurityRequirements", func(t *testing.T) {
+        input := &securityagent.BatchGetSecurityRequirementsInput{}
+        output := &securityagent.BatchGetSecurityRequirementsOutput{}
+
+        mockClient.On("BatchGetSecurityRequirements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetSecurityRequirements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetTargetDomains", func(t *testing.T) {
         input := &securityagent.BatchGetTargetDomainsInput{}
         output := &securityagent.BatchGetTargetDomainsOutput{}
@@ -197,6 +249,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetTargetDomains", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetTargetDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetThreatModelJobTasks", func(t *testing.T) {
+        input := &securityagent.BatchGetThreatModelJobTasksInput{}
+        output := &securityagent.BatchGetThreatModelJobTasksOutput{}
+
+        mockClient.On("BatchGetThreatModelJobTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetThreatModelJobTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetThreatModelJobs", func(t *testing.T) {
+        input := &securityagent.BatchGetThreatModelJobsInput{}
+        output := &securityagent.BatchGetThreatModelJobsOutput{}
+
+        mockClient.On("BatchGetThreatModelJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetThreatModelJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetThreatModels", func(t *testing.T) {
+        input := &securityagent.BatchGetThreatModelsInput{}
+        output := &securityagent.BatchGetThreatModelsOutput{}
+
+        mockClient.On("BatchGetThreatModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetThreatModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetThreats", func(t *testing.T) {
+        input := &securityagent.BatchGetThreatsInput{}
+        output := &securityagent.BatchGetThreatsOutput{}
+
+        mockClient.On("BatchGetThreats", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetThreats(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateSecurityRequirements", func(t *testing.T) {
+        input := &securityagent.BatchUpdateSecurityRequirementsInput{}
+        output := &securityagent.BatchUpdateSecurityRequirementsOutput{}
+
+        mockClient.On("BatchUpdateSecurityRequirements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateSecurityRequirements(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +398,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePrivateConnection", func(t *testing.T) {
+        input := &securityagent.CreatePrivateConnectionInput{}
+        output := &securityagent.CreatePrivateConnectionOutput{}
+
+        mockClient.On("CreatePrivateConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePrivateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateSecurityRequirementPack", func(t *testing.T) {
+        input := &securityagent.CreateSecurityRequirementPackInput{}
+        output := &securityagent.CreateSecurityRequirementPackOutput{}
+
+        mockClient.On("CreateSecurityRequirementPack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSecurityRequirementPack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTargetDomain", func(t *testing.T) {
         input := &securityagent.CreateTargetDomainInput{}
         output := &securityagent.CreateTargetDomainOutput{}
@@ -288,6 +431,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTargetDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTargetDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateThreat", func(t *testing.T) {
+        input := &securityagent.CreateThreatInput{}
+        output := &securityagent.CreateThreatOutput{}
+
+        mockClient.On("CreateThreat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateThreat(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateThreatModel", func(t *testing.T) {
+        input := &securityagent.CreateThreatModelInput{}
+        output := &securityagent.CreateThreatModelOutput{}
+
+        mockClient.On("CreateThreatModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateThreatModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,6 +528,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeletePrivateConnection", func(t *testing.T) {
+        input := &securityagent.DeletePrivateConnectionInput{}
+        output := &securityagent.DeletePrivateConnectionOutput{}
+
+        mockClient.On("DeletePrivateConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePrivateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSecurityRequirementPack", func(t *testing.T) {
+        input := &securityagent.DeleteSecurityRequirementPackInput{}
+        output := &securityagent.DeleteSecurityRequirementPackOutput{}
+
+        mockClient.On("DeleteSecurityRequirementPack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSecurityRequirementPack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTargetDomain", func(t *testing.T) {
         input := &securityagent.DeleteTargetDomainInput{}
         output := &securityagent.DeleteTargetDomainOutput{}
@@ -366,6 +561,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTargetDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTargetDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribePrivateConnection", func(t *testing.T) {
+        input := &securityagent.DescribePrivateConnectionInput{}
+        output := &securityagent.DescribePrivateConnectionOutput{}
+
+        mockClient.On("DescribePrivateConnection", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePrivateConnection(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -405,6 +613,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetIntegration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSecurityRequirementPack", func(t *testing.T) {
+        input := &securityagent.GetSecurityRequirementPackInput{}
+        output := &securityagent.GetSecurityRequirementPackOutput{}
+
+        mockClient.On("GetSecurityRequirementPack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSecurityRequirementPack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestImportSecurityRequirements", func(t *testing.T) {
+        input := &securityagent.ImportSecurityRequirementsInput{}
+        output := &securityagent.ImportSecurityRequirementsOutput{}
+
+        mockClient.On("ImportSecurityRequirements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ImportSecurityRequirements(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,6 +840,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPrivateConnections", func(t *testing.T) {
+        input := &securityagent.ListPrivateConnectionsInput{}
+        output := &securityagent.ListPrivateConnectionsOutput{}
+
+        mockClient.On("ListPrivateConnections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPrivateConnections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSecurityRequirementPacks", func(t *testing.T) {
+        input := &securityagent.ListSecurityRequirementPacksInput{}
+        output := &securityagent.ListSecurityRequirementPacksOutput{}
+
+        mockClient.On("ListSecurityRequirementPacks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSecurityRequirementPacks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSecurityRequirements", func(t *testing.T) {
+        input := &securityagent.ListSecurityRequirementsInput{}
+        output := &securityagent.ListSecurityRequirementsOutput{}
+
+        mockClient.On("ListSecurityRequirements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSecurityRequirements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &securityagent.ListTagsForResourceInput{}
         output := &securityagent.ListTagsForResourceOutput{}
@@ -626,6 +899,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTargetDomains", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTargetDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThreatModelJobTasks", func(t *testing.T) {
+        input := &securityagent.ListThreatModelJobTasksInput{}
+        output := &securityagent.ListThreatModelJobTasksOutput{}
+
+        mockClient.On("ListThreatModelJobTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThreatModelJobTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThreatModelJobs", func(t *testing.T) {
+        input := &securityagent.ListThreatModelJobsInput{}
+        output := &securityagent.ListThreatModelJobsOutput{}
+
+        mockClient.On("ListThreatModelJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThreatModelJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThreatModels", func(t *testing.T) {
+        input := &securityagent.ListThreatModelsInput{}
+        output := &securityagent.ListThreatModelsOutput{}
+
+        mockClient.On("ListThreatModels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThreatModels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListThreats", func(t *testing.T) {
+        input := &securityagent.ListThreatsInput{}
+        output := &securityagent.ListThreatsOutput{}
+
+        mockClient.On("ListThreats", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThreats(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -671,6 +996,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartThreatModelJob", func(t *testing.T) {
+        input := &securityagent.StartThreatModelJobInput{}
+        output := &securityagent.StartThreatModelJobOutput{}
+
+        mockClient.On("StartThreatModelJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartThreatModelJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopCodeReviewJob", func(t *testing.T) {
         input := &securityagent.StopCodeReviewJobInput{}
         output := &securityagent.StopCodeReviewJobOutput{}
@@ -691,6 +1029,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopPentestJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopPentestJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopThreatModelJob", func(t *testing.T) {
+        input := &securityagent.StopThreatModelJobInput{}
+        output := &securityagent.StopThreatModelJobOutput{}
+
+        mockClient.On("StopThreatModelJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopThreatModelJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,6 +1152,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdatePrivateConnectionCertificate", func(t *testing.T) {
+        input := &securityagent.UpdatePrivateConnectionCertificateInput{}
+        output := &securityagent.UpdatePrivateConnectionCertificateOutput{}
+
+        mockClient.On("UpdatePrivateConnectionCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePrivateConnectionCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSecurityRequirementPack", func(t *testing.T) {
+        input := &securityagent.UpdateSecurityRequirementPackInput{}
+        output := &securityagent.UpdateSecurityRequirementPackOutput{}
+
+        mockClient.On("UpdateSecurityRequirementPack", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSecurityRequirementPack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateTargetDomain", func(t *testing.T) {
         input := &securityagent.UpdateTargetDomainInput{}
         output := &securityagent.UpdateTargetDomainOutput{}
@@ -808,6 +1185,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTargetDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTargetDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateThreat", func(t *testing.T) {
+        input := &securityagent.UpdateThreatInput{}
+        output := &securityagent.UpdateThreatOutput{}
+
+        mockClient.On("UpdateThreat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateThreat(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateThreatModel", func(t *testing.T) {
+        input := &securityagent.UpdateThreatModelInput{}
+        output := &securityagent.UpdateThreatModelOutput{}
+
+        mockClient.On("UpdateThreatModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateThreatModel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

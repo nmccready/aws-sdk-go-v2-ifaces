@@ -1643,6 +1643,43 @@ func (_m *IClient) DeleteStorageProfile(ctx context.Context, params *deadline.De
 	return r0, r1
 }
 
+// DeleteVolume provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteVolume(ctx context.Context, params *deadline.DeleteVolumeInput, optFns ...func(*deadline.Options)) (*deadline.DeleteVolumeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteVolume")
+	}
+
+	var r0 *deadline.DeleteVolumeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.DeleteVolumeInput, ...func(*deadline.Options)) (*deadline.DeleteVolumeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.DeleteVolumeInput, ...func(*deadline.Options)) *deadline.DeleteVolumeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.DeleteVolumeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.DeleteVolumeInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteWorker provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteWorker(ctx context.Context, params *deadline.DeleteWorkerInput, optFns ...func(*deadline.Options)) (*deadline.DeleteWorkerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2523,6 +2560,43 @@ func (_m *IClient) GetTask(ctx context.Context, params *deadline.GetTaskInput, o
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.GetTaskInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetVolume provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetVolume(ctx context.Context, params *deadline.GetVolumeInput, optFns ...func(*deadline.Options)) (*deadline.GetVolumeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetVolume")
+	}
+
+	var r0 *deadline.GetVolumeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetVolumeInput, ...func(*deadline.Options)) (*deadline.GetVolumeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.GetVolumeInput, ...func(*deadline.Options)) *deadline.GetVolumeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.GetVolumeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.GetVolumeInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3596,6 +3670,43 @@ func (_m *IClient) ListTasks(ctx context.Context, params *deadline.ListTasksInpu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *deadline.ListTasksInput, ...func(*deadline.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListVolumes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListVolumes(ctx context.Context, params *deadline.ListVolumesInput, optFns ...func(*deadline.Options)) (*deadline.ListVolumesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListVolumes")
+	}
+
+	var r0 *deadline.ListVolumesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.ListVolumesInput, ...func(*deadline.Options)) (*deadline.ListVolumesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *deadline.ListVolumesInput, ...func(*deadline.Options)) *deadline.ListVolumesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*deadline.ListVolumesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *deadline.ListVolumesInput, ...func(*deadline.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

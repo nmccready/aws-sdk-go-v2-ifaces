@@ -1050,6 +1050,117 @@ func (_m *IClient) GetRegexPatternSet(ctx context.Context, params *wafv2.GetRege
 	return r0, r1
 }
 
+// GetRevenueStatistics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRevenueStatistics(ctx context.Context, params *wafv2.GetRevenueStatisticsInput, optFns ...func(*wafv2.Options)) (*wafv2.GetRevenueStatisticsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRevenueStatistics")
+	}
+
+	var r0 *wafv2.GetRevenueStatisticsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetRevenueStatisticsInput, ...func(*wafv2.Options)) (*wafv2.GetRevenueStatisticsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetRevenueStatisticsInput, ...func(*wafv2.Options)) *wafv2.GetRevenueStatisticsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.GetRevenueStatisticsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.GetRevenueStatisticsInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRevenueStatisticsSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRevenueStatisticsSummary(ctx context.Context, params *wafv2.GetRevenueStatisticsSummaryInput, optFns ...func(*wafv2.Options)) (*wafv2.GetRevenueStatisticsSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRevenueStatisticsSummary")
+	}
+
+	var r0 *wafv2.GetRevenueStatisticsSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetRevenueStatisticsSummaryInput, ...func(*wafv2.Options)) (*wafv2.GetRevenueStatisticsSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetRevenueStatisticsSummaryInput, ...func(*wafv2.Options)) *wafv2.GetRevenueStatisticsSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.GetRevenueStatisticsSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.GetRevenueStatisticsSummaryInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRevenueStatisticsTimeSeries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRevenueStatisticsTimeSeries(ctx context.Context, params *wafv2.GetRevenueStatisticsTimeSeriesInput, optFns ...func(*wafv2.Options)) (*wafv2.GetRevenueStatisticsTimeSeriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRevenueStatisticsTimeSeries")
+	}
+
+	var r0 *wafv2.GetRevenueStatisticsTimeSeriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetRevenueStatisticsTimeSeriesInput, ...func(*wafv2.Options)) (*wafv2.GetRevenueStatisticsTimeSeriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetRevenueStatisticsTimeSeriesInput, ...func(*wafv2.Options)) *wafv2.GetRevenueStatisticsTimeSeriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.GetRevenueStatisticsTimeSeriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.GetRevenueStatisticsTimeSeriesInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRuleGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRuleGroup(ctx context.Context, params *wafv2.GetRuleGroupInput, optFns ...func(*wafv2.Options)) (*wafv2.GetRuleGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1597,6 +1708,43 @@ func (_m *IClient) ListRuleGroups(ctx context.Context, params *wafv2.ListRuleGro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.ListRuleGroupsInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSettlementRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSettlementRecords(ctx context.Context, params *wafv2.ListSettlementRecordsInput, optFns ...func(*wafv2.Options)) (*wafv2.ListSettlementRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSettlementRecords")
+	}
+
+	var r0 *wafv2.ListSettlementRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListSettlementRecordsInput, ...func(*wafv2.Options)) (*wafv2.ListSettlementRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListSettlementRecordsInput, ...func(*wafv2.Options)) *wafv2.ListSettlementRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.ListSettlementRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.ListSettlementRecordsInput, ...func(*wafv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateComplianceInquiry", func(t *testing.T) {
+        input := &artifact.CreateComplianceInquiryInput{}
+        output := &artifact.CreateComplianceInquiryOutput{}
+
+        mockClient.On("CreateComplianceInquiry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateComplianceInquiry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestExportComplianceInquiry", func(t *testing.T) {
+        input := &artifact.ExportComplianceInquiryInput{}
+        output := &artifact.ExportComplianceInquiryOutput{}
+
+        mockClient.On("ExportComplianceInquiry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportComplianceInquiry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAccountSettings", func(t *testing.T) {
         input := &artifact.GetAccountSettingsInput{}
         output := &artifact.GetAccountSettingsOutput{}
@@ -41,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetComplianceInquiryMetadata", func(t *testing.T) {
+        input := &artifact.GetComplianceInquiryMetadataInput{}
+        output := &artifact.GetComplianceInquiryMetadataOutput{}
+
+        mockClient.On("GetComplianceInquiryMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetComplianceInquiryMetadata(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,6 +125,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListComplianceInquiries", func(t *testing.T) {
+        input := &artifact.ListComplianceInquiriesInput{}
+        output := &artifact.ListComplianceInquiriesOutput{}
+
+        mockClient.On("ListComplianceInquiries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListComplianceInquiries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListComplianceInquiryQueries", func(t *testing.T) {
+        input := &artifact.ListComplianceInquiryQueriesInput{}
+        output := &artifact.ListComplianceInquiryQueriesOutput{}
+
+        mockClient.On("ListComplianceInquiryQueries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListComplianceInquiryQueries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCustomerAgreements", func(t *testing.T) {
         input := &artifact.ListCustomerAgreementsInput{}
         output := &artifact.ListCustomerAgreementsOutput{}
@@ -125,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &artifact.ListTagsForResourceInput{}
+        output := &artifact.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutAccountSettings", func(t *testing.T) {
         input := &artifact.PutAccountSettingsInput{}
         output := &artifact.PutAccountSettingsOutput{}
@@ -132,6 +210,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &artifact.TagResourceInput{}
+        output := &artifact.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &artifact.UntagResourceInput{}
+        output := &artifact.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

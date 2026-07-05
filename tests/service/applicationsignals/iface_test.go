@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeleteInstrumentationConfigurations", func(t *testing.T) {
+        input := &applicationsignals.BatchDeleteInstrumentationConfigurationsInput{}
+        output := &applicationsignals.BatchDeleteInstrumentationConfigurationsOutput{}
+
+        mockClient.On("BatchDeleteInstrumentationConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteInstrumentationConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetServiceLevelObjectiveBudgetReport", func(t *testing.T) {
         input := &applicationsignals.BatchGetServiceLevelObjectiveBudgetReportInput{}
         output := &applicationsignals.BatchGetServiceLevelObjectiveBudgetReportOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchUpdateExclusionWindows", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchUpdateExclusionWindows(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateInstrumentationConfiguration", func(t *testing.T) {
+        input := &applicationsignals.CreateInstrumentationConfigurationInput{}
+        output := &applicationsignals.CreateInstrumentationConfigurationOutput{}
+
+        mockClient.On("CreateInstrumentationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInstrumentationConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteInstrumentationConfiguration", func(t *testing.T) {
+        input := &applicationsignals.DeleteInstrumentationConfigurationInput{}
+        output := &applicationsignals.DeleteInstrumentationConfigurationOutput{}
+
+        mockClient.On("DeleteInstrumentationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteInstrumentationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteServiceLevelObjective", func(t *testing.T) {
         input := &applicationsignals.DeleteServiceLevelObjectiveInput{}
         output := &applicationsignals.DeleteServiceLevelObjectiveOutput{}
@@ -93,6 +132,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteServiceLevelObjective", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteServiceLevelObjective(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInstrumentationConfiguration", func(t *testing.T) {
+        input := &applicationsignals.GetInstrumentationConfigurationInput{}
+        output := &applicationsignals.GetInstrumentationConfigurationOutput{}
+
+        mockClient.On("GetInstrumentationConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInstrumentationConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetInstrumentationConfigurationStatus", func(t *testing.T) {
+        input := &applicationsignals.GetInstrumentationConfigurationStatusInput{}
+        output := &applicationsignals.GetInstrumentationConfigurationStatusOutput{}
+
+        mockClient.On("GetInstrumentationConfigurationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetInstrumentationConfigurationStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -158,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGroupingAttributeDefinitions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGroupingAttributeDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInstrumentationConfigurations", func(t *testing.T) {
+        input := &applicationsignals.ListInstrumentationConfigurationsInput{}
+        output := &applicationsignals.ListInstrumentationConfigurationsOutput{}
+
+        mockClient.On("ListInstrumentationConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInstrumentationConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -275,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutGroupingConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutGroupingConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestReportInstrumentationConfigurationStatus", func(t *testing.T) {
+        input := &applicationsignals.ReportInstrumentationConfigurationStatusInput{}
+        output := &applicationsignals.ReportInstrumentationConfigurationStatusOutput{}
+
+        mockClient.On("ReportInstrumentationConfigurationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ReportInstrumentationConfigurationStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

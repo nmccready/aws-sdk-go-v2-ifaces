@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchPutProfileObject", func(t *testing.T) {
+        input := &customerprofiles.BatchPutProfileObjectInput{}
+        output := &customerprofiles.BatchPutProfileObjectOutput{}
+
+        mockClient.On("BatchPutProfileObject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchPutProfileObject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCalculatedAttributeDefinition", func(t *testing.T) {
         input := &customerprofiles.CreateCalculatedAttributeDefinitionInput{}
         output := &customerprofiles.CreateCalculatedAttributeDefinitionOutput{}

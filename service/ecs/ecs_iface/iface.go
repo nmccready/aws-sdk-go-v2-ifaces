@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for ecs
 type IClient interface {
  Options() Options 
+ ContinueServiceDeployment(ctx context.Context, params *ContinueServiceDeploymentInput, optFns ...func(*Options)) (*ContinueServiceDeploymentOutput, error) 
  CreateCapacityProvider(ctx context.Context, params *CreateCapacityProviderInput, optFns ...func(*Options)) (*CreateCapacityProviderOutput, error) 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
  CreateDaemon(ctx context.Context, params *CreateDaemonInput, optFns ...func(*Options)) (*CreateDaemonOutput, error) 
