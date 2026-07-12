@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateOAuth2TokenWithIAM", func(t *testing.T) {
+        input := &signin.CreateOAuth2TokenWithIAMInput{}
+        output := &signin.CreateOAuth2TokenWithIAMOutput{}
+
+        mockClient.On("CreateOAuth2TokenWithIAM", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateOAuth2TokenWithIAM(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteConsoleAuthorizationConfiguration", func(t *testing.T) {
         input := &signin.DeleteConsoleAuthorizationConfigurationInput{}
         output := &signin.DeleteConsoleAuthorizationConfigurationOutput{}
@@ -99,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestIntrospectOAuth2TokenWithIAM", func(t *testing.T) {
+        input := &signin.IntrospectOAuth2TokenWithIAMInput{}
+        output := &signin.IntrospectOAuth2TokenWithIAMOutput{}
+
+        mockClient.On("IntrospectOAuth2TokenWithIAM", ctx, input).Return(output, nil)
+
+        result, err := mockClient.IntrospectOAuth2TokenWithIAM(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListResourcePermissionStatements", func(t *testing.T) {
         input := &signin.ListResourcePermissionStatementsInput{}
         output := &signin.ListResourcePermissionStatementsOutput{}
@@ -132,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutResourcePermissionStatement", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutResourcePermissionStatement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRevokeOAuth2TokenWithIAM", func(t *testing.T) {
+        input := &signin.RevokeOAuth2TokenWithIAMInput{}
+        output := &signin.RevokeOAuth2TokenWithIAMOutput{}
+
+        mockClient.On("RevokeOAuth2TokenWithIAM", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokeOAuth2TokenWithIAM(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -311,6 +311,43 @@ func (_m *IClient) DeleteConformancePack(ctx context.Context, params *configserv
 	return r0, r1
 }
 
+// DeleteConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnector(ctx context.Context, params *configservice.DeleteConnectorInput, optFns ...func(*configservice.Options)) (*configservice.DeleteConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnector")
+	}
+
+	var r0 *configservice.DeleteConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.DeleteConnectorInput, ...func(*configservice.Options)) (*configservice.DeleteConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.DeleteConnectorInput, ...func(*configservice.Options)) *configservice.DeleteConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*configservice.DeleteConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *configservice.DeleteConnectorInput, ...func(*configservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDeliveryChannel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDeliveryChannel(ctx context.Context, params *configservice.DeleteDeliveryChannelInput, optFns ...func(*configservice.Options)) (*configservice.DeleteDeliveryChannelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2124,6 +2161,43 @@ func (_m *IClient) GetConformancePackComplianceSummary(ctx context.Context, para
 	return r0, r1
 }
 
+// GetConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnector(ctx context.Context, params *configservice.GetConnectorInput, optFns ...func(*configservice.Options)) (*configservice.GetConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnector")
+	}
+
+	var r0 *configservice.GetConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.GetConnectorInput, ...func(*configservice.Options)) (*configservice.GetConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.GetConnectorInput, ...func(*configservice.Options)) *configservice.GetConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*configservice.GetConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *configservice.GetConnectorInput, ...func(*configservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCustomRulePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCustomRulePolicy(ctx context.Context, params *configservice.GetCustomRulePolicyInput, optFns ...func(*configservice.Options)) (*configservice.GetCustomRulePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2531,6 +2605,43 @@ func (_m *IClient) ListConformancePackComplianceScores(ctx context.Context, para
 	return r0, r1
 }
 
+// ListConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectors(ctx context.Context, params *configservice.ListConnectorsInput, optFns ...func(*configservice.Options)) (*configservice.ListConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectors")
+	}
+
+	var r0 *configservice.ListConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.ListConnectorsInput, ...func(*configservice.Options)) (*configservice.ListConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.ListConnectorsInput, ...func(*configservice.Options)) *configservice.ListConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*configservice.ListConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *configservice.ListConnectorsInput, ...func(*configservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDiscoveredResources provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDiscoveredResources(ctx context.Context, params *configservice.ListDiscoveredResourcesInput, optFns ...func(*configservice.Options)) (*configservice.ListDiscoveredResourcesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2874,6 +2985,43 @@ func (_m *IClient) PutConformancePack(ctx context.Context, params *configservice
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *configservice.PutConformancePackInput, ...func(*configservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutConnector(ctx context.Context, params *configservice.PutConnectorInput, optFns ...func(*configservice.Options)) (*configservice.PutConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutConnector")
+	}
+
+	var r0 *configservice.PutConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.PutConnectorInput, ...func(*configservice.Options)) (*configservice.PutConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.PutConnectorInput, ...func(*configservice.Options)) *configservice.PutConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*configservice.PutConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *configservice.PutConnectorInput, ...func(*configservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3281,6 +3429,43 @@ func (_m *IClient) PutStoredQuery(ctx context.Context, params *configservice.Put
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *configservice.PutStoredQueryInput, ...func(*configservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutThirdPartyServiceLinkedConfigurationRecorder provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutThirdPartyServiceLinkedConfigurationRecorder(ctx context.Context, params *configservice.PutThirdPartyServiceLinkedConfigurationRecorderInput, optFns ...func(*configservice.Options)) (*configservice.PutThirdPartyServiceLinkedConfigurationRecorderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutThirdPartyServiceLinkedConfigurationRecorder")
+	}
+
+	var r0 *configservice.PutThirdPartyServiceLinkedConfigurationRecorderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.PutThirdPartyServiceLinkedConfigurationRecorderInput, ...func(*configservice.Options)) (*configservice.PutThirdPartyServiceLinkedConfigurationRecorderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *configservice.PutThirdPartyServiceLinkedConfigurationRecorderInput, ...func(*configservice.Options)) *configservice.PutThirdPartyServiceLinkedConfigurationRecorderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*configservice.PutThirdPartyServiceLinkedConfigurationRecorderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *configservice.PutThirdPartyServiceLinkedConfigurationRecorderInput, ...func(*configservice.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

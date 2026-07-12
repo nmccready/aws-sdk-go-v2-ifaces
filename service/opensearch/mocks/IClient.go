@@ -2012,6 +2012,43 @@ func (_m *IClient) GetIndex(ctx context.Context, params *opensearch.GetIndexInpu
 	return r0, r1
 }
 
+// GetMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMigration(ctx context.Context, params *opensearch.GetMigrationInput, optFns ...func(*opensearch.Options)) (*opensearch.GetMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMigration")
+	}
+
+	var r0 *opensearch.GetMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetMigrationInput, ...func(*opensearch.Options)) (*opensearch.GetMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.GetMigrationInput, ...func(*opensearch.Options)) *opensearch.GetMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.GetMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.GetMigrationInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPackageVersionHistory provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPackageVersionHistory(ctx context.Context, params *opensearch.GetPackageVersionHistoryInput, optFns ...func(*opensearch.Options)) (*opensearch.GetPackageVersionHistoryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2485,6 +2522,43 @@ func (_m *IClient) ListInstanceTypeDetails(ctx context.Context, params *opensear
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListInstanceTypeDetailsInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMigrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMigrations(ctx context.Context, params *opensearch.ListMigrationsInput, optFns ...func(*opensearch.Options)) (*opensearch.ListMigrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMigrations")
+	}
+
+	var r0 *opensearch.ListMigrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListMigrationsInput, ...func(*opensearch.Options)) (*opensearch.ListMigrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.ListMigrationsInput, ...func(*opensearch.Options)) *opensearch.ListMigrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.ListMigrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.ListMigrationsInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3058,6 +3132,43 @@ func (_m *IClient) StartDomainMaintenance(ctx context.Context, params *opensearc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.StartDomainMaintenanceInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMigration(ctx context.Context, params *opensearch.StartMigrationInput, optFns ...func(*opensearch.Options)) (*opensearch.StartMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMigration")
+	}
+
+	var r0 *opensearch.StartMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.StartMigrationInput, ...func(*opensearch.Options)) (*opensearch.StartMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.StartMigrationInput, ...func(*opensearch.Options)) *opensearch.StartMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.StartMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.StartMigrationInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

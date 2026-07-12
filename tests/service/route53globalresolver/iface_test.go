@@ -515,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSharedDNSViews", func(t *testing.T) {
+        input := &route53globalresolver.ListSharedDNSViewsInput{}
+        output := &route53globalresolver.ListSharedDNSViewsOutput{}
+
+        mockClient.On("ListSharedDNSViews", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSharedDNSViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &route53globalresolver.ListTagsForResourceInput{}
         output := &route53globalresolver.ListTagsForResourceOutput{}

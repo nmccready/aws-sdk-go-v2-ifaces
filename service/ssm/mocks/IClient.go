@@ -273,6 +273,43 @@ func (_m *IClient) CreateAssociationBatch(ctx context.Context, params *ssm.Creat
 	return r0, r1
 }
 
+// CreateCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCloudConnector(ctx context.Context, params *ssm.CreateCloudConnectorInput, optFns ...func(*ssm.Options)) (*ssm.CreateCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCloudConnector")
+	}
+
+	var r0 *ssm.CreateCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.CreateCloudConnectorInput, ...func(*ssm.Options)) (*ssm.CreateCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.CreateCloudConnectorInput, ...func(*ssm.Options)) *ssm.CreateCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.CreateCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.CreateCloudConnectorInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDocument provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDocument(ctx context.Context, params *ssm.CreateDocumentInput, optFns ...func(*ssm.Options)) (*ssm.CreateDocumentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -561,6 +598,43 @@ func (_m *IClient) DeleteAssociation(ctx context.Context, params *ssm.DeleteAsso
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssm.DeleteAssociationInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCloudConnector(ctx context.Context, params *ssm.DeleteCloudConnectorInput, optFns ...func(*ssm.Options)) (*ssm.DeleteCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCloudConnector")
+	}
+
+	var r0 *ssm.DeleteCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.DeleteCloudConnectorInput, ...func(*ssm.Options)) (*ssm.DeleteCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.DeleteCloudConnectorInput, ...func(*ssm.Options)) *ssm.DeleteCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.DeleteCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.DeleteCloudConnectorInput, ...func(*ssm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2456,6 +2530,43 @@ func (_m *IClient) GetCalendarState(ctx context.Context, params *ssm.GetCalendar
 	return r0, r1
 }
 
+// GetCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCloudConnector(ctx context.Context, params *ssm.GetCloudConnectorInput, optFns ...func(*ssm.Options)) (*ssm.GetCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCloudConnector")
+	}
+
+	var r0 *ssm.GetCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.GetCloudConnectorInput, ...func(*ssm.Options)) (*ssm.GetCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.GetCloudConnectorInput, ...func(*ssm.Options)) *ssm.GetCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.GetCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.GetCloudConnectorInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCommandInvocation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCommandInvocation(ctx context.Context, params *ssm.GetCommandInvocationInput, optFns ...func(*ssm.Options)) (*ssm.GetCommandInvocationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3447,6 +3558,43 @@ func (_m *IClient) ListAssociations(ctx context.Context, params *ssm.ListAssocia
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssm.ListAssociationsInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCloudConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCloudConnectors(ctx context.Context, params *ssm.ListCloudConnectorsInput, optFns ...func(*ssm.Options)) (*ssm.ListCloudConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCloudConnectors")
+	}
+
+	var r0 *ssm.ListCloudConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ListCloudConnectorsInput, ...func(*ssm.Options)) (*ssm.ListCloudConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ListCloudConnectorsInput, ...func(*ssm.Options)) *ssm.ListCloudConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.ListCloudConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.ListCloudConnectorsInput, ...func(*ssm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4990,6 +5138,43 @@ func (_m *IClient) UpdateAssociationStatus(ctx context.Context, params *ssm.Upda
 	return r0, r1
 }
 
+// UpdateCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCloudConnector(ctx context.Context, params *ssm.UpdateCloudConnectorInput, optFns ...func(*ssm.Options)) (*ssm.UpdateCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCloudConnector")
+	}
+
+	var r0 *ssm.UpdateCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.UpdateCloudConnectorInput, ...func(*ssm.Options)) (*ssm.UpdateCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.UpdateCloudConnectorInput, ...func(*ssm.Options)) *ssm.UpdateCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.UpdateCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.UpdateCloudConnectorInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDocument provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDocument(ctx context.Context, params *ssm.UpdateDocumentInput, optFns ...func(*ssm.Options)) (*ssm.UpdateDocumentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5426,6 +5611,43 @@ func (_m *IClient) UpdateServiceSetting(ctx context.Context, params *ssm.UpdateS
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssm.UpdateServiceSettingInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ValidateCloudConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ValidateCloudConnector(ctx context.Context, params *ssm.ValidateCloudConnectorInput, optFns ...func(*ssm.Options)) (*ssm.ValidateCloudConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ValidateCloudConnector")
+	}
+
+	var r0 *ssm.ValidateCloudConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ValidateCloudConnectorInput, ...func(*ssm.Options)) (*ssm.ValidateCloudConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.ValidateCloudConnectorInput, ...func(*ssm.Options)) *ssm.ValidateCloudConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.ValidateCloudConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.ValidateCloudConnectorInput, ...func(*ssm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

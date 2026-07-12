@@ -1273,6 +1273,43 @@ func (_m *IClient) CreateAttachedFile(ctx context.Context, params *connect.Creat
 	return r0, r1
 }
 
+// CreateAuthCode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAuthCode(ctx context.Context, params *connect.CreateAuthCodeInput, optFns ...func(*connect.Options)) (*connect.CreateAuthCodeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAuthCode")
+	}
+
+	var r0 *connect.CreateAuthCodeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateAuthCodeInput, ...func(*connect.Options)) (*connect.CreateAuthCodeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateAuthCodeInput, ...func(*connect.Options)) *connect.CreateAuthCodeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateAuthCodeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateAuthCodeInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateContact provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateContact(ctx context.Context, params *connect.CreateContactInput, optFns ...func(*connect.Options)) (*connect.CreateContactOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2679,6 +2716,43 @@ func (_m *IClient) DeleteAttachedFile(ctx context.Context, params *connect.Delet
 	return r0, r1
 }
 
+// DeleteContactData provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteContactData(ctx context.Context, params *connect.DeleteContactDataInput, optFns ...func(*connect.Options)) (*connect.DeleteContactDataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteContactData")
+	}
+
+	var r0 *connect.DeleteContactDataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteContactDataInput, ...func(*connect.Options)) (*connect.DeleteContactDataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteContactDataInput, ...func(*connect.Options)) *connect.DeleteContactDataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteContactDataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteContactDataInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteContactEvaluation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteContactEvaluation(ctx context.Context, params *connect.DeleteContactEvaluationInput, optFns ...func(*connect.Options)) (*connect.DeleteContactEvaluationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3522,6 +3596,43 @@ func (_m *IClient) DeleteSecurityProfile(ctx context.Context, params *connect.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteSecurityProfileInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSession(ctx context.Context, params *connect.DeleteSessionInput, optFns ...func(*connect.Options)) (*connect.DeleteSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSession")
+	}
+
+	var r0 *connect.DeleteSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteSessionInput, ...func(*connect.Options)) (*connect.DeleteSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteSessionInput, ...func(*connect.Options)) *connect.DeleteSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteSessionInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

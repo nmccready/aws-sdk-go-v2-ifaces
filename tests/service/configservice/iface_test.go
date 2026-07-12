@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConnector", func(t *testing.T) {
+        input := &configservice.DeleteConnectorInput{}
+        output := &configservice.DeleteConnectorOutput{}
+
+        mockClient.On("DeleteConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDeliveryChannel", func(t *testing.T) {
         input := &configservice.DeleteDeliveryChannelInput{}
         output := &configservice.DeleteDeliveryChannelOutput{}
@@ -775,6 +788,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetConnector", func(t *testing.T) {
+        input := &configservice.GetConnectorInput{}
+        output := &configservice.GetConnectorOutput{}
+
+        mockClient.On("GetConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCustomRulePolicy", func(t *testing.T) {
         input := &configservice.GetCustomRulePolicyInput{}
         output := &configservice.GetCustomRulePolicyOutput{}
@@ -918,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConnectors", func(t *testing.T) {
+        input := &configservice.ListConnectorsInput{}
+        output := &configservice.ListConnectorsOutput{}
+
+        mockClient.On("ListConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDiscoveredResources", func(t *testing.T) {
         input := &configservice.ListDiscoveredResourcesInput{}
         output := &configservice.ListDiscoveredResourcesOutput{}
@@ -1029,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutConformancePack", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutConformancePack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutConnector", func(t *testing.T) {
+        input := &configservice.PutConnectorInput{}
+        output := &configservice.PutConnectorOutput{}
+
+        mockClient.On("PutConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1172,6 +1224,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutStoredQuery", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutStoredQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutThirdPartyServiceLinkedConfigurationRecorder", func(t *testing.T) {
+        input := &configservice.PutThirdPartyServiceLinkedConfigurationRecorderInput{}
+        output := &configservice.PutThirdPartyServiceLinkedConfigurationRecorderOutput{}
+
+        mockClient.On("PutThirdPartyServiceLinkedConfigurationRecorder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutThirdPartyServiceLinkedConfigurationRecorder(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

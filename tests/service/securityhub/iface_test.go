@@ -281,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConnector", func(t *testing.T) {
+        input := &securityhub.CreateConnectorInput{}
+        output := &securityhub.CreateConnectorOutput{}
+
+        mockClient.On("CreateConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateConnectorV2", func(t *testing.T) {
         input := &securityhub.CreateConnectorV2Input{}
         output := &securityhub.CreateConnectorV2Output{}
@@ -405,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConfigurationPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConfigurationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConnector", func(t *testing.T) {
+        input := &securityhub.DeleteConnectorInput{}
+        output := &securityhub.DeleteConnectorOutput{}
+
+        mockClient.On("DeleteConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -619,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableSecurityHubFeatureV2", func(t *testing.T) {
+        input := &securityhub.DisableSecurityHubFeatureV2Input{}
+        output := &securityhub.DisableSecurityHubFeatureV2Output{}
+
+        mockClient.On("DisableSecurityHubFeatureV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableSecurityHubFeatureV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableSecurityHubV2", func(t *testing.T) {
         input := &securityhub.DisableSecurityHubV2Input{}
         output := &securityhub.DisableSecurityHubV2Output{}
@@ -710,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestEnableSecurityHubFeatureV2", func(t *testing.T) {
+        input := &securityhub.EnableSecurityHubFeatureV2Input{}
+        output := &securityhub.EnableSecurityHubFeatureV2Output{}
+
+        mockClient.On("EnableSecurityHubFeatureV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableSecurityHubFeatureV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableSecurityHubV2", func(t *testing.T) {
         input := &securityhub.EnableSecurityHubV2Input{}
         output := &securityhub.EnableSecurityHubV2Output{}
@@ -795,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfigurationPolicyAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfigurationPolicyAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnector", func(t *testing.T) {
+        input := &securityhub.GetConnectorInput{}
+        output := &securityhub.GetConnectorOutput{}
+
+        mockClient.On("GetConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1113,6 +1178,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConnectors", func(t *testing.T) {
+        input := &securityhub.ListConnectorsInput{}
+        output := &securityhub.ListConnectorsOutput{}
+
+        mockClient.On("ListConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListConnectorsV2", func(t *testing.T) {
         input := &securityhub.ListConnectorsV2Input{}
         output := &securityhub.ListConnectorsV2Output{}
@@ -1341,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConfigurationPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConfigurationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConnector", func(t *testing.T) {
+        input := &securityhub.UpdateConnectorInput{}
+        output := &securityhub.UpdateConnectorOutput{}
+
+        mockClient.On("UpdateConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

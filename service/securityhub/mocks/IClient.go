@@ -717,6 +717,43 @@ func (_m *IClient) CreateConfigurationPolicy(ctx context.Context, params *securi
 	return r0, r1
 }
 
+// CreateConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConnector(ctx context.Context, params *securityhub.CreateConnectorInput, optFns ...func(*securityhub.Options)) (*securityhub.CreateConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConnector")
+	}
+
+	var r0 *securityhub.CreateConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateConnectorInput, ...func(*securityhub.Options)) (*securityhub.CreateConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CreateConnectorInput, ...func(*securityhub.Options)) *securityhub.CreateConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.CreateConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CreateConnectorInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateConnectorV2 provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateConnectorV2(ctx context.Context, params *securityhub.CreateConnectorV2Input, optFns ...func(*securityhub.Options)) (*securityhub.CreateConnectorV2Output, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1079,6 +1116,43 @@ func (_m *IClient) DeleteConfigurationPolicy(ctx context.Context, params *securi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DeleteConfigurationPolicyInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnector(ctx context.Context, params *securityhub.DeleteConnectorInput, optFns ...func(*securityhub.Options)) (*securityhub.DeleteConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnector")
+	}
+
+	var r0 *securityhub.DeleteConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteConnectorInput, ...func(*securityhub.Options)) (*securityhub.DeleteConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DeleteConnectorInput, ...func(*securityhub.Options)) *securityhub.DeleteConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DeleteConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DeleteConnectorInput, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1679,6 +1753,43 @@ func (_m *IClient) DisableSecurityHub(ctx context.Context, params *securityhub.D
 	return r0, r1
 }
 
+// DisableSecurityHubFeatureV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableSecurityHubFeatureV2(ctx context.Context, params *securityhub.DisableSecurityHubFeatureV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DisableSecurityHubFeatureV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableSecurityHubFeatureV2")
+	}
+
+	var r0 *securityhub.DisableSecurityHubFeatureV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DisableSecurityHubFeatureV2Input, ...func(*securityhub.Options)) (*securityhub.DisableSecurityHubFeatureV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.DisableSecurityHubFeatureV2Input, ...func(*securityhub.Options)) *securityhub.DisableSecurityHubFeatureV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.DisableSecurityHubFeatureV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.DisableSecurityHubFeatureV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisableSecurityHubV2 provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisableSecurityHubV2(ctx context.Context, params *securityhub.DisableSecurityHubV2Input, optFns ...func(*securityhub.Options)) (*securityhub.DisableSecurityHubV2Output, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1938,6 +2049,43 @@ func (_m *IClient) EnableSecurityHub(ctx context.Context, params *securityhub.En
 	return r0, r1
 }
 
+// EnableSecurityHubFeatureV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableSecurityHubFeatureV2(ctx context.Context, params *securityhub.EnableSecurityHubFeatureV2Input, optFns ...func(*securityhub.Options)) (*securityhub.EnableSecurityHubFeatureV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableSecurityHubFeatureV2")
+	}
+
+	var r0 *securityhub.EnableSecurityHubFeatureV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.EnableSecurityHubFeatureV2Input, ...func(*securityhub.Options)) (*securityhub.EnableSecurityHubFeatureV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.EnableSecurityHubFeatureV2Input, ...func(*securityhub.Options)) *securityhub.EnableSecurityHubFeatureV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.EnableSecurityHubFeatureV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.EnableSecurityHubFeatureV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableSecurityHubV2 provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableSecurityHubV2(ctx context.Context, params *securityhub.EnableSecurityHubV2Input, optFns ...func(*securityhub.Options)) (*securityhub.EnableSecurityHubV2Output, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2189,6 +2337,43 @@ func (_m *IClient) GetConfigurationPolicyAssociation(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetConfigurationPolicyAssociationInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConnector(ctx context.Context, params *securityhub.GetConnectorInput, optFns ...func(*securityhub.Options)) (*securityhub.GetConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConnector")
+	}
+
+	var r0 *securityhub.GetConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetConnectorInput, ...func(*securityhub.Options)) (*securityhub.GetConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetConnectorInput, ...func(*securityhub.Options)) *securityhub.GetConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetConnectorInput, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3085,6 +3270,43 @@ func (_m *IClient) ListConfigurationPolicyAssociations(ctx context.Context, para
 	return r0, r1
 }
 
+// ListConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectors(ctx context.Context, params *securityhub.ListConnectorsInput, optFns ...func(*securityhub.Options)) (*securityhub.ListConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectors")
+	}
+
+	var r0 *securityhub.ListConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListConnectorsInput, ...func(*securityhub.Options)) (*securityhub.ListConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListConnectorsInput, ...func(*securityhub.Options)) *securityhub.ListConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListConnectorsInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListConnectorsV2 provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListConnectorsV2(ctx context.Context, params *securityhub.ListConnectorsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListConnectorsV2Output, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3761,6 +3983,43 @@ func (_m *IClient) UpdateConfigurationPolicy(ctx context.Context, params *securi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.UpdateConfigurationPolicyInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnector(ctx context.Context, params *securityhub.UpdateConnectorInput, optFns ...func(*securityhub.Options)) (*securityhub.UpdateConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnector")
+	}
+
+	var r0 *securityhub.UpdateConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateConnectorInput, ...func(*securityhub.Options)) (*securityhub.UpdateConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.UpdateConnectorInput, ...func(*securityhub.Options)) *securityhub.UpdateConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.UpdateConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.UpdateConnectorInput, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

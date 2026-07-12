@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetBillingPreferences", func(t *testing.T) {
+        input := &billing.GetBillingPreferencesInput{}
+        output := &billing.GetBillingPreferencesOutput{}
+
+        mockClient.On("GetBillingPreferences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBillingPreferences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBillingView", func(t *testing.T) {
         input := &billing.GetBillingViewInput{}
         output := &billing.GetBillingViewOutput{}
@@ -93,6 +106,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBillingView", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBillingView(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCreditAllocationHistory", func(t *testing.T) {
+        input := &billing.GetCreditAllocationHistoryInput{}
+        output := &billing.GetCreditAllocationHistoryOutput{}
+
+        mockClient.On("GetCreditAllocationHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCreditAllocationHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCredits", func(t *testing.T) {
+        input := &billing.GetCreditsInput{}
+        output := &billing.GetCreditsOutput{}
+
+        mockClient.On("GetCredits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCredits(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRedeemCredits", func(t *testing.T) {
+        input := &billing.RedeemCreditsInput{}
+        output := &billing.RedeemCreditsOutput{}
+
+        mockClient.On("RedeemCredits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RedeemCredits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &billing.TagResourceInput{}
         output := &billing.TagResourceOutput{}
@@ -171,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBillingPreferences", func(t *testing.T) {
+        input := &billing.UpdateBillingPreferencesInput{}
+        output := &billing.UpdateBillingPreferencesOutput{}
+
+        mockClient.On("UpdateBillingPreferences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBillingPreferences(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

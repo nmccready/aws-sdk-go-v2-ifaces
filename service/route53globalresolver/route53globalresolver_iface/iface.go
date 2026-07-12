@@ -47,6 +47,7 @@ type IClient interface {
  ListGlobalResolvers(ctx context.Context, params *ListGlobalResolversInput, optFns ...func(*Options)) (*ListGlobalResolversOutput, error) 
  ListHostedZoneAssociations(ctx context.Context, params *ListHostedZoneAssociationsInput, optFns ...func(*Options)) (*ListHostedZoneAssociationsOutput, error) 
  ListManagedFirewallDomainLists(ctx context.Context, params *ListManagedFirewallDomainListsInput, optFns ...func(*Options)) (*ListManagedFirewallDomainListsOutput, error) 
+ ListSharedDNSViews(ctx context.Context, params *ListSharedDNSViewsInput, optFns ...func(*Options)) (*ListSharedDNSViewsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 

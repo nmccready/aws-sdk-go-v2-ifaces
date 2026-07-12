@@ -736,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMigration", func(t *testing.T) {
+        input := &opensearch.GetMigrationInput{}
+        output := &opensearch.GetMigrationOutput{}
+
+        mockClient.On("GetMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPackageVersionHistory", func(t *testing.T) {
         input := &opensearch.GetPackageVersionHistoryInput{}
         output := &opensearch.GetPackageVersionHistoryOutput{}
@@ -899,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInstanceTypeDetails", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInstanceTypeDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMigrations", func(t *testing.T) {
+        input := &opensearch.ListMigrationsInput{}
+        output := &opensearch.ListMigrationsOutput{}
+
+        mockClient.On("ListMigrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMigrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1094,6 +1120,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartDomainMaintenance", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartDomainMaintenance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartMigration", func(t *testing.T) {
+        input := &opensearch.StartMigrationInput{}
+        output := &opensearch.StartMigrationOutput{}
+
+        mockClient.On("StartMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMigration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
