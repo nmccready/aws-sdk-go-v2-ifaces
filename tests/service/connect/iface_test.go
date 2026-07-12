@@ -476,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAuthCode", func(t *testing.T) {
+        input := &connect.CreateAuthCodeInput{}
+        output := &connect.CreateAuthCodeOutput{}
+
+        mockClient.On("CreateAuthCode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAuthCode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateContact", func(t *testing.T) {
         input := &connect.CreateContactInput{}
         output := &connect.CreateContactOutput{}
@@ -970,6 +983,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteContactData", func(t *testing.T) {
+        input := &connect.DeleteContactDataInput{}
+        output := &connect.DeleteContactDataOutput{}
+
+        mockClient.On("DeleteContactData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContactData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteContactEvaluation", func(t *testing.T) {
         input := &connect.DeleteContactEvaluationInput{}
         output := &connect.DeleteContactEvaluationOutput{}
@@ -1263,6 +1289,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteSecurityProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteSecurityProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSession", func(t *testing.T) {
+        input := &connect.DeleteSessionInput{}
+        output := &connect.DeleteSessionOutput{}
+
+        mockClient.On("DeleteSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

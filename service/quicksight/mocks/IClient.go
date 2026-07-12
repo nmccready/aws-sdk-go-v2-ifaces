@@ -791,6 +791,43 @@ func (_m *IClient) CreateIngestion(ctx context.Context, params *quicksight.Creat
 	return r0, r1
 }
 
+// CreateKnowledgeBase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateKnowledgeBase(ctx context.Context, params *quicksight.CreateKnowledgeBaseInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateKnowledgeBaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateKnowledgeBase")
+	}
+
+	var r0 *quicksight.CreateKnowledgeBaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateKnowledgeBaseInput, ...func(*quicksight.Options)) (*quicksight.CreateKnowledgeBaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateKnowledgeBaseInput, ...func(*quicksight.Options)) *quicksight.CreateKnowledgeBaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.CreateKnowledgeBaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.CreateKnowledgeBaseInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateNamespace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateNamespace(ctx context.Context, params *quicksight.CreateNamespaceInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateNamespaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8978,6 +9015,43 @@ func (_m *IClient) UpdateKeyRegistration(ctx context.Context, params *quicksight
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateKeyRegistrationInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateKnowledgeBase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateKnowledgeBase(ctx context.Context, params *quicksight.UpdateKnowledgeBaseInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateKnowledgeBaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateKnowledgeBase")
+	}
+
+	var r0 *quicksight.UpdateKnowledgeBaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateKnowledgeBaseInput, ...func(*quicksight.Options)) (*quicksight.UpdateKnowledgeBaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateKnowledgeBaseInput, ...func(*quicksight.Options)) *quicksight.UpdateKnowledgeBaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateKnowledgeBaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateKnowledgeBaseInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

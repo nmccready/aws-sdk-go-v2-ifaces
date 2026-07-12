@@ -163,6 +163,43 @@ func (_m *IClient) DisassociateSourceViews(ctx context.Context, params *billing.
 	return r0, r1
 }
 
+// GetBillingPreferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBillingPreferences(ctx context.Context, params *billing.GetBillingPreferencesInput, optFns ...func(*billing.Options)) (*billing.GetBillingPreferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBillingPreferences")
+	}
+
+	var r0 *billing.GetBillingPreferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetBillingPreferencesInput, ...func(*billing.Options)) (*billing.GetBillingPreferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetBillingPreferencesInput, ...func(*billing.Options)) *billing.GetBillingPreferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.GetBillingPreferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetBillingPreferencesInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBillingView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBillingView(ctx context.Context, params *billing.GetBillingViewInput, optFns ...func(*billing.Options)) (*billing.GetBillingViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -192,6 +229,80 @@ func (_m *IClient) GetBillingView(ctx context.Context, params *billing.GetBillin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetBillingViewInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCreditAllocationHistory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCreditAllocationHistory(ctx context.Context, params *billing.GetCreditAllocationHistoryInput, optFns ...func(*billing.Options)) (*billing.GetCreditAllocationHistoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCreditAllocationHistory")
+	}
+
+	var r0 *billing.GetCreditAllocationHistoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetCreditAllocationHistoryInput, ...func(*billing.Options)) (*billing.GetCreditAllocationHistoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetCreditAllocationHistoryInput, ...func(*billing.Options)) *billing.GetCreditAllocationHistoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.GetCreditAllocationHistoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetCreditAllocationHistoryInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCredits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCredits(ctx context.Context, params *billing.GetCreditsInput, optFns ...func(*billing.Options)) (*billing.GetCreditsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCredits")
+	}
+
+	var r0 *billing.GetCreditsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetCreditsInput, ...func(*billing.Options)) (*billing.GetCreditsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetCreditsInput, ...func(*billing.Options)) *billing.GetCreditsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.GetCreditsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetCreditsInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -366,6 +477,43 @@ func (_m *IClient) Options() billing.Options {
 	return r0
 }
 
+// RedeemCredits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RedeemCredits(ctx context.Context, params *billing.RedeemCreditsInput, optFns ...func(*billing.Options)) (*billing.RedeemCreditsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RedeemCredits")
+	}
+
+	var r0 *billing.RedeemCreditsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.RedeemCreditsInput, ...func(*billing.Options)) (*billing.RedeemCreditsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.RedeemCreditsInput, ...func(*billing.Options)) *billing.RedeemCreditsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.RedeemCreditsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.RedeemCreditsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *billing.TagResourceInput, optFns ...func(*billing.Options)) (*billing.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -432,6 +580,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *billing.UntagResou
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.UntagResourceInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBillingPreferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBillingPreferences(ctx context.Context, params *billing.UpdateBillingPreferencesInput, optFns ...func(*billing.Options)) (*billing.UpdateBillingPreferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBillingPreferences")
+	}
+
+	var r0 *billing.UpdateBillingPreferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.UpdateBillingPreferencesInput, ...func(*billing.Options)) (*billing.UpdateBillingPreferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.UpdateBillingPreferencesInput, ...func(*billing.Options)) *billing.UpdateBillingPreferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.UpdateBillingPreferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.UpdateBillingPreferencesInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

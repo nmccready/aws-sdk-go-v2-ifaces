@@ -957,6 +957,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetStorageTierPolicy", func(t *testing.T) {
+        input := &cloudwatchlogs.GetStorageTierPolicyInput{}
+        output := &cloudwatchlogs.GetStorageTierPolicyOutput{}
+
+        mockClient.On("GetStorageTierPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStorageTierPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTransformer", func(t *testing.T) {
         input := &cloudwatchlogs.GetTransformerInput{}
         output := &cloudwatchlogs.GetTransformerOutput{}
@@ -1315,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutRetentionPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutRetentionPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutStorageTierPolicy", func(t *testing.T) {
+        input := &cloudwatchlogs.PutStorageTierPolicyInput{}
+        output := &cloudwatchlogs.PutStorageTierPolicyOutput{}
+
+        mockClient.On("PutStorageTierPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutStorageTierPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

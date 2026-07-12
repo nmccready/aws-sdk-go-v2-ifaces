@@ -533,6 +533,43 @@ func (_m *IClient) CreateCodeSecurityScanConfiguration(ctx context.Context, para
 	return r0, r1
 }
 
+// CreateConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConnector(ctx context.Context, params *inspector2.CreateConnectorInput, optFns ...func(*inspector2.Options)) (*inspector2.CreateConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConnector")
+	}
+
+	var r0 *inspector2.CreateConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.CreateConnectorInput, ...func(*inspector2.Options)) (*inspector2.CreateConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.CreateConnectorInput, ...func(*inspector2.Options)) *inspector2.CreateConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.CreateConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.CreateConnectorInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFilter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFilter(ctx context.Context, params *inspector2.CreateFilterInput, optFns ...func(*inspector2.Options)) (*inspector2.CreateFilterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +784,43 @@ func (_m *IClient) DeleteCodeSecurityScanConfiguration(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.DeleteCodeSecurityScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConnector(ctx context.Context, params *inspector2.DeleteConnectorInput, optFns ...func(*inspector2.Options)) (*inspector2.DeleteConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConnector")
+	}
+
+	var r0 *inspector2.DeleteConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.DeleteConnectorInput, ...func(*inspector2.Options)) (*inspector2.DeleteConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.DeleteConnectorInput, ...func(*inspector2.Options)) *inspector2.DeleteConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.DeleteConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.DeleteConnectorInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1791,6 +1865,80 @@ func (_m *IClient) ListCodeSecurityScanConfigurations(ctx context.Context, param
 	return r0, r1
 }
 
+// ListConnectorScanConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectorScanConfigurations(ctx context.Context, params *inspector2.ListConnectorScanConfigurationsInput, optFns ...func(*inspector2.Options)) (*inspector2.ListConnectorScanConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectorScanConfigurations")
+	}
+
+	var r0 *inspector2.ListConnectorScanConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListConnectorScanConfigurationsInput, ...func(*inspector2.Options)) (*inspector2.ListConnectorScanConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListConnectorScanConfigurationsInput, ...func(*inspector2.Options)) *inspector2.ListConnectorScanConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.ListConnectorScanConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListConnectorScanConfigurationsInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConnectors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConnectors(ctx context.Context, params *inspector2.ListConnectorsInput, optFns ...func(*inspector2.Options)) (*inspector2.ListConnectorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConnectors")
+	}
+
+	var r0 *inspector2.ListConnectorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListConnectorsInput, ...func(*inspector2.Options)) (*inspector2.ListConnectorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListConnectorsInput, ...func(*inspector2.Options)) *inspector2.ListConnectorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.ListConnectorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListConnectorsInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCoverage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCoverage(ctx context.Context, params *inspector2.ListCoverageInput, optFns ...func(*inspector2.Options)) (*inspector2.ListCoverageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2615,6 +2763,80 @@ func (_m *IClient) UpdateConfiguration(ctx context.Context, params *inspector2.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.UpdateConfigurationInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnector(ctx context.Context, params *inspector2.UpdateConnectorInput, optFns ...func(*inspector2.Options)) (*inspector2.UpdateConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnector")
+	}
+
+	var r0 *inspector2.UpdateConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateConnectorInput, ...func(*inspector2.Options)) (*inspector2.UpdateConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateConnectorInput, ...func(*inspector2.Options)) *inspector2.UpdateConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.UpdateConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.UpdateConnectorInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConnectorScanConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnectorScanConfiguration(ctx context.Context, params *inspector2.UpdateConnectorScanConfigurationInput, optFns ...func(*inspector2.Options)) (*inspector2.UpdateConnectorScanConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnectorScanConfiguration")
+	}
+
+	var r0 *inspector2.UpdateConnectorScanConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateConnectorScanConfigurationInput, ...func(*inspector2.Options)) (*inspector2.UpdateConnectorScanConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.UpdateConnectorScanConfigurationInput, ...func(*inspector2.Options)) *inspector2.UpdateConnectorScanConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.UpdateConnectorScanConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.UpdateConnectorScanConfigurationInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConnector", func(t *testing.T) {
+        input := &inspector2.CreateConnectorInput{}
+        output := &inspector2.CreateConnectorOutput{}
+
+        mockClient.On("CreateConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFilter", func(t *testing.T) {
         input := &inspector2.CreateFilterInput{}
         output := &inspector2.CreateFilterOutput{}
@@ -288,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCodeSecurityScanConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCodeSecurityScanConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConnector", func(t *testing.T) {
+        input := &inspector2.DeleteConnectorInput{}
+        output := &inspector2.DeleteConnectorOutput{}
+
+        mockClient.On("DeleteConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -658,6 +684,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListConnectorScanConfigurations", func(t *testing.T) {
+        input := &inspector2.ListConnectorScanConfigurationsInput{}
+        output := &inspector2.ListConnectorScanConfigurationsOutput{}
+
+        mockClient.On("ListConnectorScanConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectorScanConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConnectors", func(t *testing.T) {
+        input := &inspector2.ListConnectorsInput{}
+        output := &inspector2.ListConnectorsOutput{}
+
+        mockClient.On("ListConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCoverage", func(t *testing.T) {
         input := &inspector2.ListCoverageInput{}
         output := &inspector2.ListCoverageOutput{}
@@ -938,6 +990,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConnector", func(t *testing.T) {
+        input := &inspector2.UpdateConnectorInput{}
+        output := &inspector2.UpdateConnectorOutput{}
+
+        mockClient.On("UpdateConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConnectorScanConfiguration", func(t *testing.T) {
+        input := &inspector2.UpdateConnectorScanConfigurationInput{}
+        output := &inspector2.UpdateConnectorScanConfigurationOutput{}
+
+        mockClient.On("UpdateConnectorScanConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConnectorScanConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -2642,6 +2642,43 @@ func (_m *IClient) GetScheduledQueryHistory(ctx context.Context, params *cloudwa
 	return r0, r1
 }
 
+// GetStorageTierPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetStorageTierPolicy(ctx context.Context, params *cloudwatchlogs.GetStorageTierPolicyInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetStorageTierPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetStorageTierPolicy")
+	}
+
+	var r0 *cloudwatchlogs.GetStorageTierPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetStorageTierPolicyInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetStorageTierPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.GetStorageTierPolicyInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.GetStorageTierPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.GetStorageTierPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.GetStorageTierPolicyInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTransformer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTransformer(ctx context.Context, params *cloudwatchlogs.GetTransformerInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.GetTransformerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3688,6 +3725,43 @@ func (_m *IClient) PutRetentionPolicy(ctx context.Context, params *cloudwatchlog
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.PutRetentionPolicyInput, ...func(*cloudwatchlogs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutStorageTierPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutStorageTierPolicy(ctx context.Context, params *cloudwatchlogs.PutStorageTierPolicyInput, optFns ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutStorageTierPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutStorageTierPolicy")
+	}
+
+	var r0 *cloudwatchlogs.PutStorageTierPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.PutStorageTierPolicyInput, ...func(*cloudwatchlogs.Options)) (*cloudwatchlogs.PutStorageTierPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchlogs.PutStorageTierPolicyInput, ...func(*cloudwatchlogs.Options)) *cloudwatchlogs.PutStorageTierPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchlogs.PutStorageTierPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchlogs.PutStorageTierPolicyInput, ...func(*cloudwatchlogs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

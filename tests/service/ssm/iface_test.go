@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCloudConnector", func(t *testing.T) {
+        input := &ssm.CreateCloudConnectorInput{}
+        output := &ssm.CreateCloudConnectorOutput{}
+
+        mockClient.On("CreateCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDocument", func(t *testing.T) {
         input := &ssm.CreateDocumentInput{}
         output := &ssm.CreateDocumentOutput{}
@@ -223,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCloudConnector", func(t *testing.T) {
+        input := &ssm.DeleteCloudConnectorInput{}
+        output := &ssm.DeleteCloudConnectorOutput{}
+
+        mockClient.On("DeleteCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCloudConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -892,6 +918,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCloudConnector", func(t *testing.T) {
+        input := &ssm.GetCloudConnectorInput{}
+        output := &ssm.GetCloudConnectorOutput{}
+
+        mockClient.On("GetCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCommandInvocation", func(t *testing.T) {
         input := &ssm.GetCommandInvocationInput{}
         output := &ssm.GetCommandInvocationOutput{}
@@ -1237,6 +1276,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAssociations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCloudConnectors", func(t *testing.T) {
+        input := &ssm.ListCloudConnectorsInput{}
+        output := &ssm.ListCloudConnectorsOutput{}
+
+        mockClient.On("ListCloudConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCloudConnectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1776,6 +1828,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCloudConnector", func(t *testing.T) {
+        input := &ssm.UpdateCloudConnectorInput{}
+        output := &ssm.UpdateCloudConnectorOutput{}
+
+        mockClient.On("UpdateCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCloudConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateDocument", func(t *testing.T) {
         input := &ssm.UpdateDocumentInput{}
         output := &ssm.UpdateDocumentOutput{}
@@ -1926,6 +1991,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateServiceSetting", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateServiceSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestValidateCloudConnector", func(t *testing.T) {
+        input := &ssm.ValidateCloudConnectorInput{}
+        output := &ssm.ValidateCloudConnectorOutput{}
+
+        mockClient.On("ValidateCloudConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ValidateCloudConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

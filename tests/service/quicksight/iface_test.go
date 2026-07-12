@@ -307,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateKnowledgeBase", func(t *testing.T) {
+        input := &quicksight.CreateKnowledgeBaseInput{}
+        output := &quicksight.CreateKnowledgeBaseOutput{}
+
+        mockClient.On("CreateKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateNamespace", func(t *testing.T) {
         input := &quicksight.CreateNamespaceInput{}
         output := &quicksight.CreateNamespaceOutput{}
@@ -3174,6 +3187,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateKeyRegistration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateKeyRegistration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateKnowledgeBase", func(t *testing.T) {
+        input := &quicksight.UpdateKnowledgeBaseInput{}
+        output := &quicksight.UpdateKnowledgeBaseOutput{}
+
+        mockClient.On("UpdateKnowledgeBase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateKnowledgeBase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

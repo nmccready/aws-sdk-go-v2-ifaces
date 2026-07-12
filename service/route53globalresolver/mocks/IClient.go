@@ -1383,6 +1383,43 @@ func (_m *IClient) ListManagedFirewallDomainLists(ctx context.Context, params *r
 	return r0, r1
 }
 
+// ListSharedDNSViews provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSharedDNSViews(ctx context.Context, params *route53globalresolver.ListSharedDNSViewsInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.ListSharedDNSViewsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSharedDNSViews")
+	}
+
+	var r0 *route53globalresolver.ListSharedDNSViewsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.ListSharedDNSViewsInput, ...func(*route53globalresolver.Options)) (*route53globalresolver.ListSharedDNSViewsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.ListSharedDNSViewsInput, ...func(*route53globalresolver.Options)) *route53globalresolver.ListSharedDNSViewsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53globalresolver.ListSharedDNSViewsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.ListSharedDNSViewsInput, ...func(*route53globalresolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *route53globalresolver.ListTagsForResourceInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))

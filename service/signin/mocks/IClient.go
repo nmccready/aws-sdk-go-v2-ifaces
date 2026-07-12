@@ -51,6 +51,43 @@ func (_m *IClient) CreateOAuth2Token(ctx context.Context, params *signin.CreateO
 	return r0, r1
 }
 
+// CreateOAuth2TokenWithIAM provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateOAuth2TokenWithIAM(ctx context.Context, params *signin.CreateOAuth2TokenWithIAMInput, optFns ...func(*signin.Options)) (*signin.CreateOAuth2TokenWithIAMOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateOAuth2TokenWithIAM")
+	}
+
+	var r0 *signin.CreateOAuth2TokenWithIAMOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.CreateOAuth2TokenWithIAMInput, ...func(*signin.Options)) (*signin.CreateOAuth2TokenWithIAMOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.CreateOAuth2TokenWithIAMInput, ...func(*signin.Options)) *signin.CreateOAuth2TokenWithIAMOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.CreateOAuth2TokenWithIAMOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.CreateOAuth2TokenWithIAMInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteConsoleAuthorizationConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteConsoleAuthorizationConfiguration(ctx context.Context, params *signin.DeleteConsoleAuthorizationConfigurationInput, optFns ...func(*signin.Options)) (*signin.DeleteConsoleAuthorizationConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -199,6 +236,43 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *signin.GetReso
 	return r0, r1
 }
 
+// IntrospectOAuth2TokenWithIAM provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) IntrospectOAuth2TokenWithIAM(ctx context.Context, params *signin.IntrospectOAuth2TokenWithIAMInput, optFns ...func(*signin.Options)) (*signin.IntrospectOAuth2TokenWithIAMOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for IntrospectOAuth2TokenWithIAM")
+	}
+
+	var r0 *signin.IntrospectOAuth2TokenWithIAMOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.IntrospectOAuth2TokenWithIAMInput, ...func(*signin.Options)) (*signin.IntrospectOAuth2TokenWithIAMOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.IntrospectOAuth2TokenWithIAMInput, ...func(*signin.Options)) *signin.IntrospectOAuth2TokenWithIAMOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.IntrospectOAuth2TokenWithIAMOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.IntrospectOAuth2TokenWithIAMInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListResourcePermissionStatements provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListResourcePermissionStatements(ctx context.Context, params *signin.ListResourcePermissionStatementsInput, optFns ...func(*signin.Options)) (*signin.ListResourcePermissionStatementsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -320,6 +394,43 @@ func (_m *IClient) PutResourcePermissionStatement(ctx context.Context, params *s
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *signin.PutResourcePermissionStatementInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RevokeOAuth2TokenWithIAM provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeOAuth2TokenWithIAM(ctx context.Context, params *signin.RevokeOAuth2TokenWithIAMInput, optFns ...func(*signin.Options)) (*signin.RevokeOAuth2TokenWithIAMOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeOAuth2TokenWithIAM")
+	}
+
+	var r0 *signin.RevokeOAuth2TokenWithIAMOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.RevokeOAuth2TokenWithIAMInput, ...func(*signin.Options)) (*signin.RevokeOAuth2TokenWithIAMOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.RevokeOAuth2TokenWithIAMInput, ...func(*signin.Options)) *signin.RevokeOAuth2TokenWithIAMOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.RevokeOAuth2TokenWithIAMOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.RevokeOAuth2TokenWithIAMInput, ...func(*signin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
