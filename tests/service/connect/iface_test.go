@@ -3609,6 +3609,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchRules", func(t *testing.T) {
+        input := &connect.SearchRulesInput{}
+        output := &connect.SearchRulesOutput{}
+
+        mockClient.On("SearchRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchSecurityProfiles", func(t *testing.T) {
         input := &connect.SearchSecurityProfilesInput{}
         output := &connect.SearchSecurityProfilesOutput{}

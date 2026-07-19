@@ -59,4 +59,30 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestGetEstimatedWaterAllocation", func(t *testing.T) {
+        input := &sustainability.GetEstimatedWaterAllocationInput{}
+        output := &sustainability.GetEstimatedWaterAllocationOutput{}
+
+        mockClient.On("GetEstimatedWaterAllocation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEstimatedWaterAllocation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEstimatedWaterAllocationDimensionValues", func(t *testing.T) {
+        input := &sustainability.GetEstimatedWaterAllocationDimensionValuesInput{}
+        output := &sustainability.GetEstimatedWaterAllocationDimensionValuesOutput{}
+
+        mockClient.On("GetEstimatedWaterAllocationDimensionValues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEstimatedWaterAllocationDimensionValues(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }
