@@ -285,6 +285,7 @@ type IClient interface {
  SearchQuickConnects(ctx context.Context, params *SearchQuickConnectsInput, optFns ...func(*Options)) (*SearchQuickConnectsOutput, error) 
  SearchResourceTags(ctx context.Context, params *SearchResourceTagsInput, optFns ...func(*Options)) (*SearchResourceTagsOutput, error) 
  SearchRoutingProfiles(ctx context.Context, params *SearchRoutingProfilesInput, optFns ...func(*Options)) (*SearchRoutingProfilesOutput, error) 
+ SearchRules(ctx context.Context, params *SearchRulesInput, optFns ...func(*Options)) (*SearchRulesOutput, error) 
  SearchSecurityProfiles(ctx context.Context, params *SearchSecurityProfilesInput, optFns ...func(*Options)) (*SearchSecurityProfilesOutput, error) 
  SearchTestCases(ctx context.Context, params *SearchTestCasesInput, optFns ...func(*Options)) (*SearchTestCasesOutput, error) 
  SearchUserHierarchyGroups(ctx context.Context, params *SearchUserHierarchyGroupsInput, optFns ...func(*Options)) (*SearchUserHierarchyGroupsOutput, error) 

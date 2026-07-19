@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateDataTransformationProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataTransformationProfile(ctx context.Context, params *healthlake.CreateDataTransformationProfileInput, optFns ...func(*healthlake.Options)) (*healthlake.CreateDataTransformationProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataTransformationProfile")
+	}
+
+	var r0 *healthlake.CreateDataTransformationProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.CreateDataTransformationProfileInput, ...func(*healthlake.Options)) (*healthlake.CreateDataTransformationProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.CreateDataTransformationProfileInput, ...func(*healthlake.Options)) *healthlake.CreateDataTransformationProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.CreateDataTransformationProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.CreateDataTransformationProfileInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateFHIRDatastore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateFHIRDatastore(ctx context.Context, params *healthlake.CreateFHIRDatastoreInput, optFns ...func(*healthlake.Options)) (*healthlake.CreateFHIRDatastoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -52,6 +89,43 @@ func (_m *IClient) CreateFHIRDatastore(ctx context.Context, params *healthlake.C
 	return r0, r1
 }
 
+// DeleteDataTransformationProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataTransformationProfile(ctx context.Context, params *healthlake.DeleteDataTransformationProfileInput, optFns ...func(*healthlake.Options)) (*healthlake.DeleteDataTransformationProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataTransformationProfile")
+	}
+
+	var r0 *healthlake.DeleteDataTransformationProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.DeleteDataTransformationProfileInput, ...func(*healthlake.Options)) (*healthlake.DeleteDataTransformationProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.DeleteDataTransformationProfileInput, ...func(*healthlake.Options)) *healthlake.DeleteDataTransformationProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.DeleteDataTransformationProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.DeleteDataTransformationProfileInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteFHIRDatastore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteFHIRDatastore(ctx context.Context, params *healthlake.DeleteFHIRDatastoreInput, optFns ...func(*healthlake.Options)) (*healthlake.DeleteFHIRDatastoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +155,43 @@ func (_m *IClient) DeleteFHIRDatastore(ctx context.Context, params *healthlake.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.DeleteFHIRDatastoreInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDataTransformationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDataTransformationJob(ctx context.Context, params *healthlake.DescribeDataTransformationJobInput, optFns ...func(*healthlake.Options)) (*healthlake.DescribeDataTransformationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDataTransformationJob")
+	}
+
+	var r0 *healthlake.DescribeDataTransformationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.DescribeDataTransformationJobInput, ...func(*healthlake.Options)) (*healthlake.DescribeDataTransformationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.DescribeDataTransformationJobInput, ...func(*healthlake.Options)) *healthlake.DescribeDataTransformationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.DescribeDataTransformationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.DescribeDataTransformationJobInput, ...func(*healthlake.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -192,6 +303,154 @@ func (_m *IClient) DescribeFHIRImportJob(ctx context.Context, params *healthlake
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.DescribeFHIRImportJobInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataTransformationProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataTransformationProfile(ctx context.Context, params *healthlake.GetDataTransformationProfileInput, optFns ...func(*healthlake.Options)) (*healthlake.GetDataTransformationProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataTransformationProfile")
+	}
+
+	var r0 *healthlake.GetDataTransformationProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.GetDataTransformationProfileInput, ...func(*healthlake.Options)) (*healthlake.GetDataTransformationProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.GetDataTransformationProfileInput, ...func(*healthlake.Options)) *healthlake.GetDataTransformationProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.GetDataTransformationProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.GetDataTransformationProfileInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataTransformationJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTransformationJobs(ctx context.Context, params *healthlake.ListDataTransformationJobsInput, optFns ...func(*healthlake.Options)) (*healthlake.ListDataTransformationJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTransformationJobs")
+	}
+
+	var r0 *healthlake.ListDataTransformationJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.ListDataTransformationJobsInput, ...func(*healthlake.Options)) (*healthlake.ListDataTransformationJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.ListDataTransformationJobsInput, ...func(*healthlake.Options)) *healthlake.ListDataTransformationJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.ListDataTransformationJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.ListDataTransformationJobsInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataTransformationProfileVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTransformationProfileVersions(ctx context.Context, params *healthlake.ListDataTransformationProfileVersionsInput, optFns ...func(*healthlake.Options)) (*healthlake.ListDataTransformationProfileVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTransformationProfileVersions")
+	}
+
+	var r0 *healthlake.ListDataTransformationProfileVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.ListDataTransformationProfileVersionsInput, ...func(*healthlake.Options)) (*healthlake.ListDataTransformationProfileVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.ListDataTransformationProfileVersionsInput, ...func(*healthlake.Options)) *healthlake.ListDataTransformationProfileVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.ListDataTransformationProfileVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.ListDataTransformationProfileVersionsInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataTransformationProfiles provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataTransformationProfiles(ctx context.Context, params *healthlake.ListDataTransformationProfilesInput, optFns ...func(*healthlake.Options)) (*healthlake.ListDataTransformationProfilesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataTransformationProfiles")
+	}
+
+	var r0 *healthlake.ListDataTransformationProfilesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.ListDataTransformationProfilesInput, ...func(*healthlake.Options)) (*healthlake.ListDataTransformationProfilesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.ListDataTransformationProfilesInput, ...func(*healthlake.Options)) *healthlake.ListDataTransformationProfilesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.ListDataTransformationProfilesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.ListDataTransformationProfilesInput, ...func(*healthlake.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -366,6 +625,80 @@ func (_m *IClient) Options() healthlake.Options {
 	return r0
 }
 
+// PublishDataTransformationProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PublishDataTransformationProfile(ctx context.Context, params *healthlake.PublishDataTransformationProfileInput, optFns ...func(*healthlake.Options)) (*healthlake.PublishDataTransformationProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PublishDataTransformationProfile")
+	}
+
+	var r0 *healthlake.PublishDataTransformationProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.PublishDataTransformationProfileInput, ...func(*healthlake.Options)) (*healthlake.PublishDataTransformationProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.PublishDataTransformationProfileInput, ...func(*healthlake.Options)) *healthlake.PublishDataTransformationProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.PublishDataTransformationProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.PublishDataTransformationProfileInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartDataTransformationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDataTransformationJob(ctx context.Context, params *healthlake.StartDataTransformationJobInput, optFns ...func(*healthlake.Options)) (*healthlake.StartDataTransformationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDataTransformationJob")
+	}
+
+	var r0 *healthlake.StartDataTransformationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.StartDataTransformationJobInput, ...func(*healthlake.Options)) (*healthlake.StartDataTransformationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.StartDataTransformationJobInput, ...func(*healthlake.Options)) *healthlake.StartDataTransformationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.StartDataTransformationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.StartDataTransformationJobInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartFHIRExportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartFHIRExportJob(ctx context.Context, params *healthlake.StartFHIRExportJobInput, optFns ...func(*healthlake.Options)) (*healthlake.StartFHIRExportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -514,6 +847,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *healthlake.UntagRe
 	return r0, r1
 }
 
+// UpdateDataTransformationProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataTransformationProfile(ctx context.Context, params *healthlake.UpdateDataTransformationProfileInput, optFns ...func(*healthlake.Options)) (*healthlake.UpdateDataTransformationProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataTransformationProfile")
+	}
+
+	var r0 *healthlake.UpdateDataTransformationProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.UpdateDataTransformationProfileInput, ...func(*healthlake.Options)) (*healthlake.UpdateDataTransformationProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.UpdateDataTransformationProfileInput, ...func(*healthlake.Options)) *healthlake.UpdateDataTransformationProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.UpdateDataTransformationProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.UpdateDataTransformationProfileInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateFHIRDatastore provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateFHIRDatastore(ctx context.Context, params *healthlake.UpdateFHIRDatastoreInput, optFns ...func(*healthlake.Options)) (*healthlake.UpdateFHIRDatastoreOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -543,6 +913,43 @@ func (_m *IClient) UpdateFHIRDatastore(ctx context.Context, params *healthlake.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.UpdateFHIRDatastoreInput, ...func(*healthlake.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProfileWithAgent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProfileWithAgent(ctx context.Context, params *healthlake.UpdateProfileWithAgentInput, optFns ...func(*healthlake.Options)) (*healthlake.UpdateProfileWithAgentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProfileWithAgent")
+	}
+
+	var r0 *healthlake.UpdateProfileWithAgentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.UpdateProfileWithAgentInput, ...func(*healthlake.Options)) (*healthlake.UpdateProfileWithAgentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *healthlake.UpdateProfileWithAgentInput, ...func(*healthlake.Options)) *healthlake.UpdateProfileWithAgentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*healthlake.UpdateProfileWithAgentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *healthlake.UpdateProfileWithAgentInput, ...func(*healthlake.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
