@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataTransformationProfile", func(t *testing.T) {
+        input := &healthlake.CreateDataTransformationProfileInput{}
+        output := &healthlake.CreateDataTransformationProfileOutput{}
+
+        mockClient.On("CreateDataTransformationProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataTransformationProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateFHIRDatastore", func(t *testing.T) {
         input := &healthlake.CreateFHIRDatastoreInput{}
         output := &healthlake.CreateFHIRDatastoreOutput{}
@@ -47,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataTransformationProfile", func(t *testing.T) {
+        input := &healthlake.DeleteDataTransformationProfileInput{}
+        output := &healthlake.DeleteDataTransformationProfileOutput{}
+
+        mockClient.On("DeleteDataTransformationProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataTransformationProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteFHIRDatastore", func(t *testing.T) {
         input := &healthlake.DeleteFHIRDatastoreInput{}
         output := &healthlake.DeleteFHIRDatastoreOutput{}
@@ -54,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFHIRDatastore", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFHIRDatastore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDataTransformationJob", func(t *testing.T) {
+        input := &healthlake.DescribeDataTransformationJobInput{}
+        output := &healthlake.DescribeDataTransformationJobOutput{}
+
+        mockClient.On("DescribeDataTransformationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDataTransformationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -93,6 +132,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeFHIRImportJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeFHIRImportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataTransformationProfile", func(t *testing.T) {
+        input := &healthlake.GetDataTransformationProfileInput{}
+        output := &healthlake.GetDataTransformationProfileOutput{}
+
+        mockClient.On("GetDataTransformationProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataTransformationProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataTransformationJobs", func(t *testing.T) {
+        input := &healthlake.ListDataTransformationJobsInput{}
+        output := &healthlake.ListDataTransformationJobsOutput{}
+
+        mockClient.On("ListDataTransformationJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTransformationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataTransformationProfileVersions", func(t *testing.T) {
+        input := &healthlake.ListDataTransformationProfileVersionsInput{}
+        output := &healthlake.ListDataTransformationProfileVersionsOutput{}
+
+        mockClient.On("ListDataTransformationProfileVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTransformationProfileVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataTransformationProfiles", func(t *testing.T) {
+        input := &healthlake.ListDataTransformationProfilesInput{}
+        output := &healthlake.ListDataTransformationProfilesOutput{}
+
+        mockClient.On("ListDataTransformationProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataTransformationProfiles(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,6 +242,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPublishDataTransformationProfile", func(t *testing.T) {
+        input := &healthlake.PublishDataTransformationProfileInput{}
+        output := &healthlake.PublishDataTransformationProfileOutput{}
+
+        mockClient.On("PublishDataTransformationProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PublishDataTransformationProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDataTransformationJob", func(t *testing.T) {
+        input := &healthlake.StartDataTransformationJobInput{}
+        output := &healthlake.StartDataTransformationJobOutput{}
+
+        mockClient.On("StartDataTransformationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDataTransformationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartFHIRExportJob", func(t *testing.T) {
         input := &healthlake.StartFHIRExportJobInput{}
         output := &healthlake.StartFHIRExportJobOutput{}
@@ -203,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateDataTransformationProfile", func(t *testing.T) {
+        input := &healthlake.UpdateDataTransformationProfileInput{}
+        output := &healthlake.UpdateDataTransformationProfileOutput{}
+
+        mockClient.On("UpdateDataTransformationProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataTransformationProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateFHIRDatastore", func(t *testing.T) {
         input := &healthlake.UpdateFHIRDatastoreInput{}
         output := &healthlake.UpdateFHIRDatastoreOutput{}
@@ -210,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateFHIRDatastore", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateFHIRDatastore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProfileWithAgent", func(t *testing.T) {
+        input := &healthlake.UpdateProfileWithAgentInput{}
+        output := &healthlake.UpdateProfileWithAgentOutput{}
+
+        mockClient.On("UpdateProfileWithAgent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProfileWithAgent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

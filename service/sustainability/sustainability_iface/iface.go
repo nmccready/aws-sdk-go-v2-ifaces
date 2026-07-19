@@ -12,4 +12,6 @@ type IClient interface {
  Options() Options 
  GetEstimatedCarbonEmissions(ctx context.Context, params *GetEstimatedCarbonEmissionsInput, optFns ...func(*Options)) (*GetEstimatedCarbonEmissionsOutput, error) 
  GetEstimatedCarbonEmissionsDimensionValues(ctx context.Context, params *GetEstimatedCarbonEmissionsDimensionValuesInput, optFns ...func(*Options)) (*GetEstimatedCarbonEmissionsDimensionValuesOutput, error) 
+ GetEstimatedWaterAllocation(ctx context.Context, params *GetEstimatedWaterAllocationInput, optFns ...func(*Options)) (*GetEstimatedWaterAllocationOutput, error) 
+ GetEstimatedWaterAllocationDimensionValues(ctx context.Context, params *GetEstimatedWaterAllocationDimensionValuesInput, optFns ...func(*Options)) (*GetEstimatedWaterAllocationDimensionValuesOutput, error) 
 }
