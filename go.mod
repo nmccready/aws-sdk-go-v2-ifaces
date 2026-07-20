@@ -47,8 +47,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/bcmrecommendedactions v1.3.1
 	github.com/aws/aws-sdk-go-v2/service/bedrock v1.65.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockagent v1.57.1
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.33.1
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.48.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.34.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.49.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.54.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.17.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomationruntime v1.12.1
@@ -247,7 +247,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplacedeployment v1.13.1
 	github.com/aws/aws-sdk-go-v2/service/marketplacediscovery v1.2.1
 	github.com/aws/aws-sdk-go-v2/service/marketplaceentitlementservice v1.40.0
-	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.38.2
+	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.38.3
 	github.com/aws/aws-sdk-go-v2/service/marketplacereporting v1.9.1
 	github.com/aws/aws-sdk-go-v2/service/mediaconnect v1.52.1
 	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.95.1
@@ -257,7 +257,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/mediapackagevod v1.41.1
 	github.com/aws/aws-sdk-go-v2/service/mediastore v1.31.1
 	github.com/aws/aws-sdk-go-v2/service/mediastoredata v1.31.1
-	github.com/aws/aws-sdk-go-v2/service/mediatailor v1.61.1
+	github.com/aws/aws-sdk-go-v2/service/mediatailor v1.62.0
 	github.com/aws/aws-sdk-go-v2/service/medicalimaging v1.27.1
 	github.com/aws/aws-sdk-go-v2/service/memorydb v1.35.1
 	github.com/aws/aws-sdk-go-v2/service/mgn v1.47.1
@@ -287,7 +287,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/omics v1.48.0
 	github.com/aws/aws-sdk-go-v2/service/opensearch v1.74.1
 	github.com/aws/aws-sdk-go-v2/service/opensearchserverless v1.33.1
-	github.com/aws/aws-sdk-go-v2/service/organizations v1.52.1
+	github.com/aws/aws-sdk-go-v2/service/organizations v1.52.2
 	github.com/aws/aws-sdk-go-v2/service/osis v1.23.1
 	github.com/aws/aws-sdk-go-v2/service/outposts v1.64.1
 	github.com/aws/aws-sdk-go-v2/service/partnercentralaccount v1.5.1
@@ -315,7 +315,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/qapps v1.13.1
 	github.com/aws/aws-sdk-go-v2/service/qbusiness v1.36.1
 	github.com/aws/aws-sdk-go-v2/service/qconnect v1.33.1
-	github.com/aws/aws-sdk-go-v2/service/quicksight v1.118.1
+	github.com/aws/aws-sdk-go-v2/service/quicksight v1.119.0
 	github.com/aws/aws-sdk-go-v2/service/ram v1.38.1
 	github.com/aws/aws-sdk-go-v2/service/rbin v1.29.1
 	github.com/aws/aws-sdk-go-v2/service/rds v1.122.0
@@ -370,7 +370,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/servicediscovery v1.42.0
 	github.com/aws/aws-sdk-go-v2/service/servicequotas v1.36.1
 	github.com/aws/aws-sdk-go-v2/service/ses v1.36.1
-	github.com/aws/aws-sdk-go-v2/service/sesv2 v1.63.1
+	github.com/aws/aws-sdk-go-v2/service/sesv2 v1.64.0
 	github.com/aws/aws-sdk-go-v2/service/sfn v1.44.1
 	github.com/aws/aws-sdk-go-v2/service/shield v1.36.1
 	github.com/aws/aws-sdk-go-v2/service/signer v1.34.1
@@ -430,7 +430,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.41.1
 	github.com/aws/aws-sdk-go-v2/service/xray v1.38.1
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
@@ -445,14 +445,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.30 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.31 // indirect
 	github.com/aws/smithy-go v1.27.3 // indirect
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.1.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
