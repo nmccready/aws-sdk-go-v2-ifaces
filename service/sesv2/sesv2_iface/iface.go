@@ -86,6 +86,7 @@ type IClient interface {
  ListTenants(ctx context.Context, params *ListTenantsInput, optFns ...func(*Options)) (*ListTenantsOutput, error) 
  PutAccountDedicatedIpWarmupAttributes(ctx context.Context, params *PutAccountDedicatedIpWarmupAttributesInput, optFns ...func(*Options)) (*PutAccountDedicatedIpWarmupAttributesOutput, error) 
  PutAccountDetails(ctx context.Context, params *PutAccountDetailsInput, optFns ...func(*Options)) (*PutAccountDetailsOutput, error) 
+ PutAccountPricingAttributes(ctx context.Context, params *PutAccountPricingAttributesInput, optFns ...func(*Options)) (*PutAccountPricingAttributesOutput, error) 
  PutAccountSendingAttributes(ctx context.Context, params *PutAccountSendingAttributesInput, optFns ...func(*Options)) (*PutAccountSendingAttributesOutput, error) 
  PutAccountSuppressionAttributes(ctx context.Context, params *PutAccountSuppressionAttributesInput, optFns ...func(*Options)) (*PutAccountSuppressionAttributesOutput, error) 
  PutAccountVdmAttributes(ctx context.Context, params *PutAccountVdmAttributesInput, optFns ...func(*Options)) (*PutAccountVdmAttributesOutput, error) 

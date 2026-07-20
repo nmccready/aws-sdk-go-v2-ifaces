@@ -2844,6 +2844,43 @@ func (_m *IClient) PutAccountDetails(ctx context.Context, params *sesv2.PutAccou
 	return r0, r1
 }
 
+// PutAccountPricingAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountPricingAttributes(ctx context.Context, params *sesv2.PutAccountPricingAttributesInput, optFns ...func(*sesv2.Options)) (*sesv2.PutAccountPricingAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountPricingAttributes")
+	}
+
+	var r0 *sesv2.PutAccountPricingAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.PutAccountPricingAttributesInput, ...func(*sesv2.Options)) (*sesv2.PutAccountPricingAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.PutAccountPricingAttributesInput, ...func(*sesv2.Options)) *sesv2.PutAccountPricingAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.PutAccountPricingAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.PutAccountPricingAttributesInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutAccountSendingAttributes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutAccountSendingAttributes(ctx context.Context, params *sesv2.PutAccountSendingAttributesInput, optFns ...func(*sesv2.Options)) (*sesv2.PutAccountSendingAttributesOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -1022,6 +1022,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutAccountPricingAttributes", func(t *testing.T) {
+        input := &sesv2.PutAccountPricingAttributesInput{}
+        output := &sesv2.PutAccountPricingAttributesOutput{}
+
+        mockClient.On("PutAccountPricingAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountPricingAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutAccountSendingAttributes", func(t *testing.T) {
         input := &sesv2.PutAccountSendingAttributesInput{}
         output := &sesv2.PutAccountSendingAttributesOutput{}
