@@ -333,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateQev2IdcApplication", func(t *testing.T) {
+        input := &redshift.CreateQev2IdcApplicationInput{}
+        output := &redshift.CreateQev2IdcApplicationOutput{}
+
+        mockClient.On("CreateQev2IdcApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQev2IdcApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRedshiftIdcApplication", func(t *testing.T) {
         input := &redshift.CreateRedshiftIdcApplicationInput{}
         output := &redshift.CreateRedshiftIdcApplicationOutput{}
@@ -587,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePartner", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePartner(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQev2IdcApplication", func(t *testing.T) {
+        input := &redshift.DeleteQev2IdcApplicationInput{}
+        output := &redshift.DeleteQev2IdcApplicationOutput{}
+
+        mockClient.On("DeleteQev2IdcApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQev2IdcApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1068,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribePartners", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribePartners(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeQev2IdcApplications", func(t *testing.T) {
+        input := &redshift.DescribeQev2IdcApplicationsInput{}
+        output := &redshift.DescribeQev2IdcApplicationsOutput{}
+
+        mockClient.On("DescribeQev2IdcApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeQev2IdcApplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1588,6 +1627,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyLakehouseConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyLakehouseConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyQev2IdcApplication", func(t *testing.T) {
+        input := &redshift.ModifyQev2IdcApplicationInput{}
+        output := &redshift.ModifyQev2IdcApplicationOutput{}
+
+        mockClient.On("ModifyQev2IdcApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyQev2IdcApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -17,6 +17,7 @@ type IClient interface {
  CreateVirtualCluster(ctx context.Context, params *CreateVirtualClusterInput, optFns ...func(*Options)) (*CreateVirtualClusterOutput, error) 
  DeleteJobTemplate(ctx context.Context, params *DeleteJobTemplateInput, optFns ...func(*Options)) (*DeleteJobTemplateOutput, error) 
  DeleteManagedEndpoint(ctx context.Context, params *DeleteManagedEndpointInput, optFns ...func(*Options)) (*DeleteManagedEndpointOutput, error) 
+ DeleteSecurityConfiguration(ctx context.Context, params *DeleteSecurityConfigurationInput, optFns ...func(*Options)) (*DeleteSecurityConfigurationOutput, error) 
  DeleteVirtualCluster(ctx context.Context, params *DeleteVirtualClusterInput, optFns ...func(*Options)) (*DeleteVirtualClusterOutput, error) 
  DescribeJobRun(ctx context.Context, params *DescribeJobRunInput, optFns ...func(*Options)) (*DescribeJobRunOutput, error) 
  DescribeJobTemplate(ctx context.Context, params *DescribeJobTemplateInput, optFns ...func(*Options)) (*DescribeJobTemplateOutput, error) 

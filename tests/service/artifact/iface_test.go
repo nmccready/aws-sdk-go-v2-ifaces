@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutComplianceInquiryFeedback", func(t *testing.T) {
+        input := &artifact.PutComplianceInquiryFeedbackInput{}
+        output := &artifact.PutComplianceInquiryFeedbackOutput{}
+
+        mockClient.On("PutComplianceInquiryFeedback", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutComplianceInquiryFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &artifact.TagResourceInput{}
         output := &artifact.TagResourceOutput{}

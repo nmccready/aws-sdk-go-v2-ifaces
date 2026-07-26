@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSecurityConfiguration", func(t *testing.T) {
+        input := &emrcontainers.DeleteSecurityConfigurationInput{}
+        output := &emrcontainers.DeleteSecurityConfigurationOutput{}
+
+        mockClient.On("DeleteSecurityConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSecurityConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteVirtualCluster", func(t *testing.T) {
         input := &emrcontainers.DeleteVirtualClusterInput{}
         output := &emrcontainers.DeleteVirtualClusterOutput{}

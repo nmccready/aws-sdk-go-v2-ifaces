@@ -229,6 +229,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetQualificationsAssociationDetails", func(t *testing.T) {
+        input := &partnercentralaccount.GetQualificationsAssociationDetailsInput{}
+        output := &partnercentralaccount.GetQualificationsAssociationDetailsOutput{}
+
+        mockClient.On("GetQualificationsAssociationDetails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQualificationsAssociationDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQualificationsAssociationTask", func(t *testing.T) {
+        input := &partnercentralaccount.GetQualificationsAssociationTaskInput{}
+        output := &partnercentralaccount.GetQualificationsAssociationTaskOutput{}
+
+        mockClient.On("GetQualificationsAssociationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQualificationsAssociationTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQualificationsDisassociationTask", func(t *testing.T) {
+        input := &partnercentralaccount.GetQualificationsDisassociationTaskInput{}
+        output := &partnercentralaccount.GetQualificationsDisassociationTaskOutput{}
+
+        mockClient.On("GetQualificationsDisassociationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQualificationsDisassociationTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetVerification", func(t *testing.T) {
         input := &partnercentralaccount.GetVerificationInput{}
         output := &partnercentralaccount.GetVerificationOutput{}
@@ -353,6 +392,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartProfileUpdateTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartProfileUpdateTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartQualificationsAssociationTask", func(t *testing.T) {
+        input := &partnercentralaccount.StartQualificationsAssociationTaskInput{}
+        output := &partnercentralaccount.StartQualificationsAssociationTaskOutput{}
+
+        mockClient.On("StartQualificationsAssociationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartQualificationsAssociationTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartQualificationsDisassociationTask", func(t *testing.T) {
+        input := &partnercentralaccount.StartQualificationsDisassociationTaskInput{}
+        output := &partnercentralaccount.StartQualificationsDisassociationTaskOutput{}
+
+        mockClient.On("StartQualificationsDisassociationTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartQualificationsDisassociationTask(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
