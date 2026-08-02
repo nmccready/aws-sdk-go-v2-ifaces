@@ -274,6 +274,43 @@ func (_m *IClient) DeleteManagedEndpoint(ctx context.Context, params *emrcontain
 	return r0, r1
 }
 
+// DeleteSecurityConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSecurityConfiguration(ctx context.Context, params *emrcontainers.DeleteSecurityConfigurationInput, optFns ...func(*emrcontainers.Options)) (*emrcontainers.DeleteSecurityConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSecurityConfiguration")
+	}
+
+	var r0 *emrcontainers.DeleteSecurityConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emrcontainers.DeleteSecurityConfigurationInput, ...func(*emrcontainers.Options)) (*emrcontainers.DeleteSecurityConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emrcontainers.DeleteSecurityConfigurationInput, ...func(*emrcontainers.Options)) *emrcontainers.DeleteSecurityConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emrcontainers.DeleteSecurityConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emrcontainers.DeleteSecurityConfigurationInput, ...func(*emrcontainers.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteVirtualCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteVirtualCluster(ctx context.Context, params *emrcontainers.DeleteVirtualClusterInput, optFns ...func(*emrcontainers.Options)) (*emrcontainers.DeleteVirtualClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -876,6 +913,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *emrcontainers.Unta
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *emrcontainers.UntagResourceInput, ...func(*emrcontainers.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateVirtualCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateVirtualCluster(ctx context.Context, params *emrcontainers.UpdateVirtualClusterInput, optFns ...func(*emrcontainers.Options)) (*emrcontainers.UpdateVirtualClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateVirtualCluster")
+	}
+
+	var r0 *emrcontainers.UpdateVirtualClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *emrcontainers.UpdateVirtualClusterInput, ...func(*emrcontainers.Options)) (*emrcontainers.UpdateVirtualClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *emrcontainers.UpdateVirtualClusterInput, ...func(*emrcontainers.Options)) *emrcontainers.UpdateVirtualClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*emrcontainers.UpdateVirtualClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *emrcontainers.UpdateVirtualClusterInput, ...func(*emrcontainers.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

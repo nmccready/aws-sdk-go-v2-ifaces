@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTopicV2", func(t *testing.T) {
+        input := &quicksight.CreateTopicV2Input{}
+        output := &quicksight.CreateTopicV2Output{}
+
+        mockClient.On("CreateTopicV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTopicV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVPCConnection", func(t *testing.T) {
         input := &quicksight.CreateVPCConnectionInput{}
         output := &quicksight.CreateVPCConnectionOutput{}
@@ -912,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTopicRefreshSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTopicRefreshSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTopicV2", func(t *testing.T) {
+        input := &quicksight.DeleteTopicV2Input{}
+        output := &quicksight.DeleteTopicV2Output{}
+
+        mockClient.On("DeleteTopicV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTopicV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1750,6 +1776,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTopicPermissionsV2", func(t *testing.T) {
+        input := &quicksight.DescribeTopicPermissionsV2Input{}
+        output := &quicksight.DescribeTopicPermissionsV2Output{}
+
+        mockClient.On("DescribeTopicPermissionsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTopicPermissionsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTopicRefresh", func(t *testing.T) {
         input := &quicksight.DescribeTopicRefreshInput{}
         output := &quicksight.DescribeTopicRefreshOutput{}
@@ -1770,6 +1809,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTopicRefreshSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTopicRefreshSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTopicV2", func(t *testing.T) {
+        input := &quicksight.DescribeTopicV2Input{}
+        output := &quicksight.DescribeTopicV2Output{}
+
+        mockClient.On("DescribeTopicV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTopicV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2413,6 +2465,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTopicsV2", func(t *testing.T) {
+        input := &quicksight.ListTopicsV2Input{}
+        output := &quicksight.ListTopicsV2Output{}
+
+        mockClient.On("ListTopicsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTopicsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListUserGroups", func(t *testing.T) {
         input := &quicksight.ListUserGroupsInput{}
         output := &quicksight.ListUserGroupsOutput{}
@@ -2667,6 +2732,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchTopics", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchTopics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchTopicsV2", func(t *testing.T) {
+        input := &quicksight.SearchTopicsV2Input{}
+        output := &quicksight.SearchTopicsV2Output{}
+
+        mockClient.On("SearchTopicsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchTopicsV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3479,6 +3557,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateTopicPermissionsV2", func(t *testing.T) {
+        input := &quicksight.UpdateTopicPermissionsV2Input{}
+        output := &quicksight.UpdateTopicPermissionsV2Output{}
+
+        mockClient.On("UpdateTopicPermissionsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTopicPermissionsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateTopicRefreshSchedule", func(t *testing.T) {
         input := &quicksight.UpdateTopicRefreshScheduleInput{}
         output := &quicksight.UpdateTopicRefreshScheduleOutput{}
@@ -3486,6 +3577,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTopicRefreshSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTopicRefreshSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTopicV2", func(t *testing.T) {
+        input := &quicksight.UpdateTopicV2Input{}
+        output := &quicksight.UpdateTopicV2Output{}
+
+        mockClient.On("UpdateTopicV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTopicV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

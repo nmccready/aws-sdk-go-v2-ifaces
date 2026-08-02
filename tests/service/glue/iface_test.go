@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetDataQualityRulesetEvaluationRun", func(t *testing.T) {
+        input := &glue.BatchGetDataQualityRulesetEvaluationRunInput{}
+        output := &glue.BatchGetDataQualityRulesetEvaluationRunOutput{}
+
+        mockClient.On("BatchGetDataQualityRulesetEvaluationRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetDataQualityRulesetEvaluationRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetDevEndpoints", func(t *testing.T) {
         input := &glue.BatchGetDevEndpointsInput{}
         output := &glue.BatchGetDevEndpointsOutput{}

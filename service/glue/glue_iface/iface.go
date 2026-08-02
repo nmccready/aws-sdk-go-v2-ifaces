@@ -20,6 +20,7 @@ type IClient interface {
  BatchGetCrawlers(ctx context.Context, params *BatchGetCrawlersInput, optFns ...func(*Options)) (*BatchGetCrawlersOutput, error) 
  BatchGetCustomEntityTypes(ctx context.Context, params *BatchGetCustomEntityTypesInput, optFns ...func(*Options)) (*BatchGetCustomEntityTypesOutput, error) 
  BatchGetDataQualityResult(ctx context.Context, params *BatchGetDataQualityResultInput, optFns ...func(*Options)) (*BatchGetDataQualityResultOutput, error) 
+ BatchGetDataQualityRulesetEvaluationRun(ctx context.Context, params *BatchGetDataQualityRulesetEvaluationRunInput, optFns ...func(*Options)) (*BatchGetDataQualityRulesetEvaluationRunOutput, error) 
  BatchGetDevEndpoints(ctx context.Context, params *BatchGetDevEndpointsInput, optFns ...func(*Options)) (*BatchGetDevEndpointsOutput, error) 
  BatchGetIterableForms(ctx context.Context, params *BatchGetIterableFormsInput, optFns ...func(*Options)) (*BatchGetIterableFormsOutput, error) 
  BatchGetJobs(ctx context.Context, params *BatchGetJobsInput, optFns ...func(*Options)) (*BatchGetJobsOutput, error) 

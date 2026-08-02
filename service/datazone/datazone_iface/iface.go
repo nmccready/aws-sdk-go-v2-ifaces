@@ -174,6 +174,7 @@ type IClient interface {
  StartNotebookExport(ctx context.Context, params *StartNotebookExportInput, optFns ...func(*Options)) (*StartNotebookExportOutput, error) 
  StartNotebookImport(ctx context.Context, params *StartNotebookImportInput, optFns ...func(*Options)) (*StartNotebookImportOutput, error) 
  StartNotebookRun(ctx context.Context, params *StartNotebookRunInput, optFns ...func(*Options)) (*StartNotebookRunOutput, error) 
+ StartNotebookSync(ctx context.Context, params *StartNotebookSyncInput, optFns ...func(*Options)) (*StartNotebookSyncOutput, error) 
  StopNotebookRun(ctx context.Context, params *StopNotebookRunInput, optFns ...func(*Options)) (*StopNotebookRunOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 

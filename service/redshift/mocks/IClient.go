@@ -865,6 +865,43 @@ func (_m *IClient) CreateIntegration(ctx context.Context, params *redshift.Creat
 	return r0, r1
 }
 
+// CreateQev2IdcApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQev2IdcApplication(ctx context.Context, params *redshift.CreateQev2IdcApplicationInput, optFns ...func(*redshift.Options)) (*redshift.CreateQev2IdcApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQev2IdcApplication")
+	}
+
+	var r0 *redshift.CreateQev2IdcApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.CreateQev2IdcApplicationInput, ...func(*redshift.Options)) (*redshift.CreateQev2IdcApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.CreateQev2IdcApplicationInput, ...func(*redshift.Options)) *redshift.CreateQev2IdcApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshift.CreateQev2IdcApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshift.CreateQev2IdcApplicationInput, ...func(*redshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateRedshiftIdcApplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateRedshiftIdcApplication(ctx context.Context, params *redshift.CreateRedshiftIdcApplicationInput, optFns ...func(*redshift.Options)) (*redshift.CreateRedshiftIdcApplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1597,6 +1634,43 @@ func (_m *IClient) DeletePartner(ctx context.Context, params *redshift.DeletePar
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *redshift.DeletePartnerInput, ...func(*redshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQev2IdcApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQev2IdcApplication(ctx context.Context, params *redshift.DeleteQev2IdcApplicationInput, optFns ...func(*redshift.Options)) (*redshift.DeleteQev2IdcApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQev2IdcApplication")
+	}
+
+	var r0 *redshift.DeleteQev2IdcApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.DeleteQev2IdcApplicationInput, ...func(*redshift.Options)) (*redshift.DeleteQev2IdcApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.DeleteQev2IdcApplicationInput, ...func(*redshift.Options)) *redshift.DeleteQev2IdcApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshift.DeleteQev2IdcApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshift.DeleteQev2IdcApplicationInput, ...func(*redshift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2966,6 +3040,43 @@ func (_m *IClient) DescribePartners(ctx context.Context, params *redshift.Descri
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *redshift.DescribePartnersInput, ...func(*redshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeQev2IdcApplications provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeQev2IdcApplications(ctx context.Context, params *redshift.DescribeQev2IdcApplicationsInput, optFns ...func(*redshift.Options)) (*redshift.DescribeQev2IdcApplicationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeQev2IdcApplications")
+	}
+
+	var r0 *redshift.DescribeQev2IdcApplicationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.DescribeQev2IdcApplicationsInput, ...func(*redshift.Options)) (*redshift.DescribeQev2IdcApplicationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.DescribeQev2IdcApplicationsInput, ...func(*redshift.Options)) *redshift.DescribeQev2IdcApplicationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshift.DescribeQev2IdcApplicationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshift.DescribeQev2IdcApplicationsInput, ...func(*redshift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4446,6 +4557,43 @@ func (_m *IClient) ModifyLakehouseConfiguration(ctx context.Context, params *red
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *redshift.ModifyLakehouseConfigurationInput, ...func(*redshift.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyQev2IdcApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyQev2IdcApplication(ctx context.Context, params *redshift.ModifyQev2IdcApplicationInput, optFns ...func(*redshift.Options)) (*redshift.ModifyQev2IdcApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyQev2IdcApplication")
+	}
+
+	var r0 *redshift.ModifyQev2IdcApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.ModifyQev2IdcApplicationInput, ...func(*redshift.Options)) (*redshift.ModifyQev2IdcApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *redshift.ModifyQev2IdcApplicationInput, ...func(*redshift.Options)) *redshift.ModifyQev2IdcApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*redshift.ModifyQev2IdcApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *redshift.ModifyQev2IdcApplicationInput, ...func(*redshift.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

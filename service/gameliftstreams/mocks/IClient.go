@@ -237,6 +237,43 @@ func (_m *IClient) CreateStreamSessionConnection(ctx context.Context, params *ga
 	return r0, r1
 }
 
+// CreateStreamUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateStreamUrl(ctx context.Context, params *gameliftstreams.CreateStreamUrlInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.CreateStreamUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateStreamUrl")
+	}
+
+	var r0 *gameliftstreams.CreateStreamUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.CreateStreamUrlInput, ...func(*gameliftstreams.Options)) (*gameliftstreams.CreateStreamUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.CreateStreamUrlInput, ...func(*gameliftstreams.Options)) *gameliftstreams.CreateStreamUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gameliftstreams.CreateStreamUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.CreateStreamUrlInput, ...func(*gameliftstreams.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteApplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteApplication(ctx context.Context, params *gameliftstreams.DeleteApplicationInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.DeleteApplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -496,6 +533,80 @@ func (_m *IClient) GetStreamSession(ctx context.Context, params *gameliftstreams
 	return r0, r1
 }
 
+// GetStreamUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetStreamUrl(ctx context.Context, params *gameliftstreams.GetStreamUrlInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.GetStreamUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetStreamUrl")
+	}
+
+	var r0 *gameliftstreams.GetStreamUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.GetStreamUrlInput, ...func(*gameliftstreams.Options)) (*gameliftstreams.GetStreamUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.GetStreamUrlInput, ...func(*gameliftstreams.Options)) *gameliftstreams.GetStreamUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gameliftstreams.GetStreamUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.GetStreamUrlInput, ...func(*gameliftstreams.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListApplicationShaderCaches provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListApplicationShaderCaches(ctx context.Context, params *gameliftstreams.ListApplicationShaderCachesInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.ListApplicationShaderCachesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListApplicationShaderCaches")
+	}
+
+	var r0 *gameliftstreams.ListApplicationShaderCachesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.ListApplicationShaderCachesInput, ...func(*gameliftstreams.Options)) (*gameliftstreams.ListApplicationShaderCachesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.ListApplicationShaderCachesInput, ...func(*gameliftstreams.Options)) *gameliftstreams.ListApplicationShaderCachesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gameliftstreams.ListApplicationShaderCachesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.ListApplicationShaderCachesInput, ...func(*gameliftstreams.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListApplications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListApplications(ctx context.Context, params *gameliftstreams.ListApplicationsInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.ListApplicationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -644,6 +755,43 @@ func (_m *IClient) ListStreamSessionsByAccount(ctx context.Context, params *game
 	return r0, r1
 }
 
+// ListStreamUrls provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListStreamUrls(ctx context.Context, params *gameliftstreams.ListStreamUrlsInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.ListStreamUrlsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListStreamUrls")
+	}
+
+	var r0 *gameliftstreams.ListStreamUrlsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.ListStreamUrlsInput, ...func(*gameliftstreams.Options)) (*gameliftstreams.ListStreamUrlsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.ListStreamUrlsInput, ...func(*gameliftstreams.Options)) *gameliftstreams.ListStreamUrlsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gameliftstreams.ListStreamUrlsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.ListStreamUrlsInput, ...func(*gameliftstreams.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *gameliftstreams.ListTagsForResourceInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -728,6 +876,43 @@ func (_m *IClient) RemoveStreamGroupLocations(ctx context.Context, params *gamel
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.RemoveStreamGroupLocationsInput, ...func(*gameliftstreams.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RevokeStreamUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeStreamUrl(ctx context.Context, params *gameliftstreams.RevokeStreamUrlInput, optFns ...func(*gameliftstreams.Options)) (*gameliftstreams.RevokeStreamUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeStreamUrl")
+	}
+
+	var r0 *gameliftstreams.RevokeStreamUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.RevokeStreamUrlInput, ...func(*gameliftstreams.Options)) (*gameliftstreams.RevokeStreamUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *gameliftstreams.RevokeStreamUrlInput, ...func(*gameliftstreams.Options)) *gameliftstreams.RevokeStreamUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*gameliftstreams.RevokeStreamUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *gameliftstreams.RevokeStreamUrlInput, ...func(*gameliftstreams.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

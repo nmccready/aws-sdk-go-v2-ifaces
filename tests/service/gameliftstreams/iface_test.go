@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateStreamUrl", func(t *testing.T) {
+        input := &gameliftstreams.CreateStreamUrlInput{}
+        output := &gameliftstreams.CreateStreamUrlOutput{}
+
+        mockClient.On("CreateStreamUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateStreamUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteApplication", func(t *testing.T) {
         input := &gameliftstreams.DeleteApplicationInput{}
         output := &gameliftstreams.DeleteApplicationOutput{}
@@ -203,6 +216,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetStreamUrl", func(t *testing.T) {
+        input := &gameliftstreams.GetStreamUrlInput{}
+        output := &gameliftstreams.GetStreamUrlOutput{}
+
+        mockClient.On("GetStreamUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStreamUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApplicationShaderCaches", func(t *testing.T) {
+        input := &gameliftstreams.ListApplicationShaderCachesInput{}
+        output := &gameliftstreams.ListApplicationShaderCachesOutput{}
+
+        mockClient.On("ListApplicationShaderCaches", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplicationShaderCaches(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListApplications", func(t *testing.T) {
         input := &gameliftstreams.ListApplicationsInput{}
         output := &gameliftstreams.ListApplicationsOutput{}
@@ -255,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListStreamUrls", func(t *testing.T) {
+        input := &gameliftstreams.ListStreamUrlsInput{}
+        output := &gameliftstreams.ListStreamUrlsOutput{}
+
+        mockClient.On("ListStreamUrls", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListStreamUrls(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &gameliftstreams.ListTagsForResourceInput{}
         output := &gameliftstreams.ListTagsForResourceOutput{}
@@ -275,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RemoveStreamGroupLocations", ctx, input).Return(output, nil)
 
         result, err := mockClient.RemoveStreamGroupLocations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRevokeStreamUrl", func(t *testing.T) {
+        input := &gameliftstreams.RevokeStreamUrlInput{}
+        output := &gameliftstreams.RevokeStreamUrlOutput{}
+
+        mockClient.On("RevokeStreamUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokeStreamUrl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

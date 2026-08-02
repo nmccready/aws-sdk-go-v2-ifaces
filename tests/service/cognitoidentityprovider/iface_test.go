@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAdminGetUserAuthFactors", func(t *testing.T) {
+        input := &cognitoidentityprovider.AdminGetUserAuthFactorsInput{}
+        output := &cognitoidentityprovider.AdminGetUserAuthFactorsOutput{}
+
+        mockClient.On("AdminGetUserAuthFactors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AdminGetUserAuthFactors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAdminInitiateAuth", func(t *testing.T) {
         input := &cognitoidentityprovider.AdminInitiateAuthInput{}
         output := &cognitoidentityprovider.AdminInitiateAuthOutput{}

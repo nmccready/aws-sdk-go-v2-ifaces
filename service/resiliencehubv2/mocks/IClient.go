@@ -310,6 +310,43 @@ func (_m *IClient) CreateSystem(ctx context.Context, params *resiliencehubv2.Cre
 	return r0, r1
 }
 
+// CreateTest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTest(ctx context.Context, params *resiliencehubv2.CreateTestInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.CreateTestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTest")
+	}
+
+	var r0 *resiliencehubv2.CreateTestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.CreateTestInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.CreateTestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.CreateTestInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.CreateTestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.CreateTestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.CreateTestInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateUserJourney provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateUserJourney(ctx context.Context, params *resiliencehubv2.CreateUserJourneyInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.CreateUserJourneyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -606,6 +643,80 @@ func (_m *IClient) DeleteSystem(ctx context.Context, params *resiliencehubv2.Del
 	return r0, r1
 }
 
+// DeleteTest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTest(ctx context.Context, params *resiliencehubv2.DeleteTestInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.DeleteTestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTest")
+	}
+
+	var r0 *resiliencehubv2.DeleteTestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.DeleteTestInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.DeleteTestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.DeleteTestInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.DeleteTestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.DeleteTestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.DeleteTestInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTestSources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTestSources(ctx context.Context, params *resiliencehubv2.DeleteTestSourcesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.DeleteTestSourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTestSources")
+	}
+
+	var r0 *resiliencehubv2.DeleteTestSourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.DeleteTestSourcesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.DeleteTestSourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.DeleteTestSourcesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.DeleteTestSourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.DeleteTestSourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.DeleteTestSourcesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteUserJourney provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteUserJourney(ctx context.Context, params *resiliencehubv2.DeleteUserJourneyInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.DeleteUserJourneyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -783,6 +894,117 @@ func (_m *IClient) GetSystem(ctx context.Context, params *resiliencehubv2.GetSys
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.GetSystemInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTest(ctx context.Context, params *resiliencehubv2.GetTestInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetTestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTest")
+	}
+
+	var r0 *resiliencehubv2.GetTestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetTestInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetTestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetTestInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.GetTestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.GetTestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.GetTestInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTestRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTestRun(ctx context.Context, params *resiliencehubv2.GetTestRunInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetTestRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTestRun")
+	}
+
+	var r0 *resiliencehubv2.GetTestRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetTestRunInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetTestRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetTestRunInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.GetTestRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.GetTestRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.GetTestRunInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTestTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTestTemplate(ctx context.Context, params *resiliencehubv2.GetTestTemplateInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetTestTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTestTemplate")
+	}
+
+	var r0 *resiliencehubv2.GetTestTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetTestTemplateInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetTestTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetTestTemplateInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.GetTestTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.GetTestTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.GetTestTemplateInput, ...func(*resiliencehubv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1161,6 +1383,43 @@ func (_m *IClient) ListReports(ctx context.Context, params *resiliencehubv2.List
 	return r0, r1
 }
 
+// ListResolvedTestRunTargetResources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResolvedTestRunTargetResources(ctx context.Context, params *resiliencehubv2.ListResolvedTestRunTargetResourcesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListResolvedTestRunTargetResourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResolvedTestRunTargetResources")
+	}
+
+	var r0 *resiliencehubv2.ListResolvedTestRunTargetResourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListResolvedTestRunTargetResourcesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListResolvedTestRunTargetResourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListResolvedTestRunTargetResourcesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListResolvedTestRunTargetResourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListResolvedTestRunTargetResourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListResolvedTestRunTargetResourcesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListResources provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListResources(ctx context.Context, params *resiliencehubv2.ListResourcesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListResourcesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1457,6 +1716,228 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *resiliencehu
 	return r0, r1
 }
 
+// ListTestRunEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestRunEvents(ctx context.Context, params *resiliencehubv2.ListTestRunEventsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestRunEvents")
+	}
+
+	var r0 *resiliencehubv2.ListTestRunEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunEventsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunEventsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestRunEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestRunEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestRunEventsInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestRunSources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestRunSources(ctx context.Context, params *resiliencehubv2.ListTestRunSourcesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunSourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestRunSources")
+	}
+
+	var r0 *resiliencehubv2.ListTestRunSourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunSourcesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunSourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunSourcesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestRunSourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestRunSourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestRunSourcesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestRuns provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestRuns(ctx context.Context, params *resiliencehubv2.ListTestRunsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestRuns")
+	}
+
+	var r0 *resiliencehubv2.ListTestRunsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestRunsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestRunsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestRunsInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestSources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestSources(ctx context.Context, params *resiliencehubv2.ListTestSourcesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestSourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestSources")
+	}
+
+	var r0 *resiliencehubv2.ListTestSourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestSourcesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestSourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestSourcesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestSourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestSourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestSourcesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestTemplates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestTemplates(ctx context.Context, params *resiliencehubv2.ListTestTemplatesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestTemplatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestTemplates")
+	}
+
+	var r0 *resiliencehubv2.ListTestTemplatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestTemplatesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestTemplatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestTemplatesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestTemplatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestTemplatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestTemplatesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTests provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTests(ctx context.Context, params *resiliencehubv2.ListTestsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTests")
+	}
+
+	var r0 *resiliencehubv2.ListTestsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestsInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListUserJourneys provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListUserJourneys(ctx context.Context, params *resiliencehubv2.ListUserJourneysInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListUserJourneysOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1512,6 +1993,43 @@ func (_m *IClient) Options() resiliencehubv2.Options {
 	return r0
 }
 
+// PutTestSources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTestSources(ctx context.Context, params *resiliencehubv2.PutTestSourcesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.PutTestSourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTestSources")
+	}
+
+	var r0 *resiliencehubv2.PutTestSourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.PutTestSourcesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.PutTestSourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.PutTestSourcesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.PutTestSourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.PutTestSourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.PutTestSourcesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartFailureModeAssessment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartFailureModeAssessment(ctx context.Context, params *resiliencehubv2.StartFailureModeAssessmentInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StartFailureModeAssessmentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1541,6 +2059,80 @@ func (_m *IClient) StartFailureModeAssessment(ctx context.Context, params *resil
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.StartFailureModeAssessmentInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartTestRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTestRun(ctx context.Context, params *resiliencehubv2.StartTestRunInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StartTestRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTestRun")
+	}
+
+	var r0 *resiliencehubv2.StartTestRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.StartTestRunInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StartTestRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.StartTestRunInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.StartTestRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.StartTestRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.StartTestRunInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopTestRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopTestRun(ctx context.Context, params *resiliencehubv2.StopTestRunInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StopTestRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopTestRun")
+	}
+
+	var r0 *resiliencehubv2.StopTestRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.StopTestRunInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StopTestRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.StopTestRunInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.StopTestRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.StopTestRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.StopTestRunInput, ...func(*resiliencehubv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1874,6 +2466,43 @@ func (_m *IClient) UpdateSystem(ctx context.Context, params *resiliencehubv2.Upd
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.UpdateSystemInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTest provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTest(ctx context.Context, params *resiliencehubv2.UpdateTestInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.UpdateTestOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTest")
+	}
+
+	var r0 *resiliencehubv2.UpdateTestOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.UpdateTestInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.UpdateTestOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.UpdateTestInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.UpdateTestOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.UpdateTestOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.UpdateTestInput, ...func(*resiliencehubv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

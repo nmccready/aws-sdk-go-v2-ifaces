@@ -6101,6 +6101,43 @@ func (_m *IClient) StartNotebookRun(ctx context.Context, params *datazone.StartN
 	return r0, r1
 }
 
+// StartNotebookSync provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartNotebookSync(ctx context.Context, params *datazone.StartNotebookSyncInput, optFns ...func(*datazone.Options)) (*datazone.StartNotebookSyncOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartNotebookSync")
+	}
+
+	var r0 *datazone.StartNotebookSyncOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.StartNotebookSyncInput, ...func(*datazone.Options)) (*datazone.StartNotebookSyncOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.StartNotebookSyncInput, ...func(*datazone.Options)) *datazone.StartNotebookSyncOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.StartNotebookSyncOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.StartNotebookSyncInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StopNotebookRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StopNotebookRun(ctx context.Context, params *datazone.StopNotebookRunInput, optFns ...func(*datazone.Options)) (*datazone.StopNotebookRunOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateChannel", func(t *testing.T) {
+        input := &kafka.CreateChannelInput{}
+        output := &kafka.CreateChannelOutput{}
+
+        mockClient.On("CreateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCluster", func(t *testing.T) {
         input := &kafka.CreateClusterInput{}
         output := &kafka.CreateClusterOutput{}
@@ -138,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteChannel", func(t *testing.T) {
+        input := &kafka.DeleteChannelInput{}
+        output := &kafka.DeleteChannelOutput{}
+
+        mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCluster", func(t *testing.T) {
         input := &kafka.DeleteClusterInput{}
         output := &kafka.DeleteClusterOutput{}
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVpcConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVpcConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeChannel", func(t *testing.T) {
+        input := &kafka.DescribeChannelInput{}
+        output := &kafka.DescribeChannelOutput{}
+
+        mockClient.On("DescribeChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -379,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCompatibleKafkaVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCompatibleKafkaVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannels", func(t *testing.T) {
+        input := &kafka.ListChannelsInput{}
+        output := &kafka.ListChannelsOutput{}
+
+        mockClient.On("ListChannels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -665,6 +717,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBrokerType", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBrokerType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChannel", func(t *testing.T) {
+        input := &kafka.UpdateChannelInput{}
+        output := &kafka.UpdateChannelOutput{}
+
+        mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

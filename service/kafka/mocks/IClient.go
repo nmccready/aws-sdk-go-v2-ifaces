@@ -89,6 +89,43 @@ func (_m *IClient) BatchDisassociateScramSecret(ctx context.Context, params *kaf
 	return r0, r1
 }
 
+// CreateChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateChannel(ctx context.Context, params *kafka.CreateChannelInput, optFns ...func(*kafka.Options)) (*kafka.CreateChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateChannel")
+	}
+
+	var r0 *kafka.CreateChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.CreateChannelInput, ...func(*kafka.Options)) (*kafka.CreateChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.CreateChannelInput, ...func(*kafka.Options)) *kafka.CreateChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.CreateChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.CreateChannelInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCluster(ctx context.Context, params *kafka.CreateClusterInput, optFns ...func(*kafka.Options)) (*kafka.CreateClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -311,6 +348,43 @@ func (_m *IClient) CreateVpcConnection(ctx context.Context, params *kafka.Create
 	return r0, r1
 }
 
+// DeleteChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteChannel(ctx context.Context, params *kafka.DeleteChannelInput, optFns ...func(*kafka.Options)) (*kafka.DeleteChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteChannel")
+	}
+
+	var r0 *kafka.DeleteChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DeleteChannelInput, ...func(*kafka.Options)) (*kafka.DeleteChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DeleteChannelInput, ...func(*kafka.Options)) *kafka.DeleteChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.DeleteChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DeleteChannelInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCluster(ctx context.Context, params *kafka.DeleteClusterInput, optFns ...func(*kafka.Options)) (*kafka.DeleteClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -525,6 +599,43 @@ func (_m *IClient) DeleteVpcConnection(ctx context.Context, params *kafka.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DeleteVpcConnectionInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeChannel(ctx context.Context, params *kafka.DescribeChannelInput, optFns ...func(*kafka.Options)) (*kafka.DescribeChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeChannel")
+	}
+
+	var r0 *kafka.DescribeChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DescribeChannelInput, ...func(*kafka.Options)) (*kafka.DescribeChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.DescribeChannelInput, ...func(*kafka.Options)) *kafka.DescribeChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.DescribeChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.DescribeChannelInput, ...func(*kafka.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1006,6 +1117,43 @@ func (_m *IClient) GetCompatibleKafkaVersions(ctx context.Context, params *kafka
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafka.GetCompatibleKafkaVersionsInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChannels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChannels(ctx context.Context, params *kafka.ListChannelsInput, optFns ...func(*kafka.Options)) (*kafka.ListChannelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChannels")
+	}
+
+	var r0 *kafka.ListChannelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.ListChannelsInput, ...func(*kafka.Options)) (*kafka.ListChannelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.ListChannelsInput, ...func(*kafka.Options)) *kafka.ListChannelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.ListChannelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.ListChannelsInput, ...func(*kafka.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1838,6 +1986,43 @@ func (_m *IClient) UpdateBrokerType(ctx context.Context, params *kafka.UpdateBro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kafka.UpdateBrokerTypeInput, ...func(*kafka.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateChannel(ctx context.Context, params *kafka.UpdateChannelInput, optFns ...func(*kafka.Options)) (*kafka.UpdateChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateChannel")
+	}
+
+	var r0 *kafka.UpdateChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.UpdateChannelInput, ...func(*kafka.Options)) (*kafka.UpdateChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafka.UpdateChannelInput, ...func(*kafka.Options)) *kafka.UpdateChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafka.UpdateChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafka.UpdateChannelInput, ...func(*kafka.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRecommendationsForResource", func(t *testing.T) {
+        input := &trustedadvisor.ListRecommendationsForResourceInput{}
+        output := &trustedadvisor.ListRecommendationsForResourceOutput{}
+
+        mockClient.On("ListRecommendationsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecommendationsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateOrganizationRecommendationLifecycle", func(t *testing.T) {
         input := &trustedadvisor.UpdateOrganizationRecommendationLifecycleInput{}
         output := &trustedadvisor.UpdateOrganizationRecommendationLifecycleOutput{}

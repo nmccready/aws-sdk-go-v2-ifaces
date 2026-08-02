@@ -5454,6 +5454,43 @@ func (_m *IClient) CreateTransitGatewayPolicyTable(ctx context.Context, params *
 	return r0, r1
 }
 
+// CreateTransitGatewayPolicyTableEntry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTransitGatewayPolicyTableEntry(ctx context.Context, params *ec2.CreateTransitGatewayPolicyTableEntryInput, optFns ...func(*ec2.Options)) (*ec2.CreateTransitGatewayPolicyTableEntryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTransitGatewayPolicyTableEntry")
+	}
+
+	var r0 *ec2.CreateTransitGatewayPolicyTableEntryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) (*ec2.CreateTransitGatewayPolicyTableEntryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) *ec2.CreateTransitGatewayPolicyTableEntryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateTransitGatewayPolicyTableEntryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTransitGatewayPrefixListReference provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTransitGatewayPrefixListReference(ctx context.Context, params *ec2.CreateTransitGatewayPrefixListReferenceInput, optFns ...func(*ec2.Options)) (*ec2.CreateTransitGatewayPrefixListReferenceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8887,6 +8924,43 @@ func (_m *IClient) DeleteTransitGatewayPolicyTable(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteTransitGatewayPolicyTableInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTransitGatewayPolicyTableEntry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTransitGatewayPolicyTableEntry(ctx context.Context, params *ec2.DeleteTransitGatewayPolicyTableEntryInput, optFns ...func(*ec2.Options)) (*ec2.DeleteTransitGatewayPolicyTableEntryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTransitGatewayPolicyTableEntry")
+	}
+
+	var r0 *ec2.DeleteTransitGatewayPolicyTableEntryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) (*ec2.DeleteTransitGatewayPolicyTableEntryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) *ec2.DeleteTransitGatewayPolicyTableEntryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteTransitGatewayPolicyTableEntryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -24612,6 +24686,43 @@ func (_m *IClient) ModifyTransitGatewayMeteringPolicy(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayMeteringPolicyInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyTransitGatewayPolicyTableEntry provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyTransitGatewayPolicyTableEntry(ctx context.Context, params *ec2.ModifyTransitGatewayPolicyTableEntryInput, optFns ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayPolicyTableEntryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyTransitGatewayPolicyTableEntry")
+	}
+
+	var r0 *ec2.ModifyTransitGatewayPolicyTableEntryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayPolicyTableEntryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) *ec2.ModifyTransitGatewayPolicyTableEntryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyTransitGatewayPolicyTableEntryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayPolicyTableEntryInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

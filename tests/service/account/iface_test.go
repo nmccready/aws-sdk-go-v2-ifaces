@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPrimaryEmailUpdateStatus", func(t *testing.T) {
+        input := &account.GetPrimaryEmailUpdateStatusInput{}
+        output := &account.GetPrimaryEmailUpdateStatusOutput{}
+
+        mockClient.On("GetPrimaryEmailUpdateStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPrimaryEmailUpdateStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRegionOptStatus", func(t *testing.T) {
         input := &account.GetRegionOptStatusInput{}
         output := &account.GetRegionOptStatusOutput{}

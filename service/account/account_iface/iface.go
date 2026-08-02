@@ -19,6 +19,7 @@ type IClient interface {
  GetContactInformation(ctx context.Context, params *GetContactInformationInput, optFns ...func(*Options)) (*GetContactInformationOutput, error) 
  GetGovCloudAccountInformation(ctx context.Context, params *GetGovCloudAccountInformationInput, optFns ...func(*Options)) (*GetGovCloudAccountInformationOutput, error) 
  GetPrimaryEmail(ctx context.Context, params *GetPrimaryEmailInput, optFns ...func(*Options)) (*GetPrimaryEmailOutput, error) 
+ GetPrimaryEmailUpdateStatus(ctx context.Context, params *GetPrimaryEmailUpdateStatusInput, optFns ...func(*Options)) (*GetPrimaryEmailUpdateStatusOutput, error) 
  GetRegionOptStatus(ctx context.Context, params *GetRegionOptStatusInput, optFns ...func(*Options)) (*GetRegionOptStatusOutput, error) 
  ListRegions(ctx context.Context, params *ListRegionsInput, optFns ...func(*Options)) (*ListRegionsOutput, error) 
  PutAccountName(ctx context.Context, params *PutAccountNameInput, optFns ...func(*Options)) (*PutAccountNameOutput, error) 

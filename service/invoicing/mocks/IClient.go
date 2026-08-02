@@ -514,6 +514,43 @@ func (_m *IClient) PutProcurementPortalPreference(ctx context.Context, params *i
 	return r0, r1
 }
 
+// SendProcurementPortalValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendProcurementPortalValidation(ctx context.Context, params *invoicing.SendProcurementPortalValidationInput, optFns ...func(*invoicing.Options)) (*invoicing.SendProcurementPortalValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendProcurementPortalValidation")
+	}
+
+	var r0 *invoicing.SendProcurementPortalValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.SendProcurementPortalValidationInput, ...func(*invoicing.Options)) (*invoicing.SendProcurementPortalValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.SendProcurementPortalValidationInput, ...func(*invoicing.Options)) *invoicing.SendProcurementPortalValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.SendProcurementPortalValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.SendProcurementPortalValidationInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *invoicing.TagResourceInput, optFns ...func(*invoicing.Options)) (*invoicing.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -654,6 +691,43 @@ func (_m *IClient) UpdateProcurementPortalPreferenceStatus(ctx context.Context, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.UpdateProcurementPortalPreferenceStatusInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// VerifyProcurementPortalValidation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) VerifyProcurementPortalValidation(ctx context.Context, params *invoicing.VerifyProcurementPortalValidationInput, optFns ...func(*invoicing.Options)) (*invoicing.VerifyProcurementPortalValidationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for VerifyProcurementPortalValidation")
+	}
+
+	var r0 *invoicing.VerifyProcurementPortalValidationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.VerifyProcurementPortalValidationInput, ...func(*invoicing.Options)) (*invoicing.VerifyProcurementPortalValidationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.VerifyProcurementPortalValidationInput, ...func(*invoicing.Options)) *invoicing.VerifyProcurementPortalValidationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.VerifyProcurementPortalValidationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.VerifyProcurementPortalValidationInput, ...func(*invoicing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

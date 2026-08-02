@@ -311,6 +311,80 @@ func (_m *IClient) GetCredits(ctx context.Context, params *billing.GetCreditsInp
 	return r0, r1
 }
 
+// GetEnterpriseSupportChargeSummary provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEnterpriseSupportChargeSummary(ctx context.Context, params *billing.GetEnterpriseSupportChargeSummaryInput, optFns ...func(*billing.Options)) (*billing.GetEnterpriseSupportChargeSummaryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEnterpriseSupportChargeSummary")
+	}
+
+	var r0 *billing.GetEnterpriseSupportChargeSummaryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetEnterpriseSupportChargeSummaryInput, ...func(*billing.Options)) (*billing.GetEnterpriseSupportChargeSummaryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetEnterpriseSupportChargeSummaryInput, ...func(*billing.Options)) *billing.GetEnterpriseSupportChargeSummaryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.GetEnterpriseSupportChargeSummaryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetEnterpriseSupportChargeSummaryInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetEnterpriseSupportContractDetails provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEnterpriseSupportContractDetails(ctx context.Context, params *billing.GetEnterpriseSupportContractDetailsInput, optFns ...func(*billing.Options)) (*billing.GetEnterpriseSupportContractDetailsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEnterpriseSupportContractDetails")
+	}
+
+	var r0 *billing.GetEnterpriseSupportContractDetailsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetEnterpriseSupportContractDetailsInput, ...func(*billing.Options)) (*billing.GetEnterpriseSupportContractDetailsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetEnterpriseSupportContractDetailsInput, ...func(*billing.Options)) *billing.GetEnterpriseSupportContractDetailsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.GetEnterpriseSupportContractDetailsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetEnterpriseSupportContractDetailsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetResourcePolicy(ctx context.Context, params *billing.GetResourcePolicyInput, optFns ...func(*billing.Options)) (*billing.GetResourcePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +451,43 @@ func (_m *IClient) ListBillingViews(ctx context.Context, params *billing.ListBil
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListBillingViewsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEnterpriseSupportLinkedAccountCharges provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEnterpriseSupportLinkedAccountCharges(ctx context.Context, params *billing.ListEnterpriseSupportLinkedAccountChargesInput, optFns ...func(*billing.Options)) (*billing.ListEnterpriseSupportLinkedAccountChargesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEnterpriseSupportLinkedAccountCharges")
+	}
+
+	var r0 *billing.ListEnterpriseSupportLinkedAccountChargesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListEnterpriseSupportLinkedAccountChargesInput, ...func(*billing.Options)) (*billing.ListEnterpriseSupportLinkedAccountChargesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListEnterpriseSupportLinkedAccountChargesInput, ...func(*billing.Options)) *billing.ListEnterpriseSupportLinkedAccountChargesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListEnterpriseSupportLinkedAccountChargesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListEnterpriseSupportLinkedAccountChargesInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
