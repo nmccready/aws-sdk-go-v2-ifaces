@@ -1945,6 +1945,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTransitGatewayPolicyTableEntry", func(t *testing.T) {
+        input := &ec2.CreateTransitGatewayPolicyTableEntryInput{}
+        output := &ec2.CreateTransitGatewayPolicyTableEntryOutput{}
+
+        mockClient.On("CreateTransitGatewayPolicyTableEntry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTransitGatewayPolicyTableEntry(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTransitGatewayPrefixListReference", func(t *testing.T) {
         input := &ec2.CreateTransitGatewayPrefixListReferenceInput{}
         output := &ec2.CreateTransitGatewayPrefixListReferenceOutput{}
@@ -3148,6 +3161,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTransitGatewayPolicyTable", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTransitGatewayPolicyTable(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTransitGatewayPolicyTableEntry", func(t *testing.T) {
+        input := &ec2.DeleteTransitGatewayPolicyTableEntryInput{}
+        output := &ec2.DeleteTransitGatewayPolicyTableEntryOutput{}
+
+        mockClient.On("DeleteTransitGatewayPolicyTableEntry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTransitGatewayPolicyTableEntry(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -8673,6 +8699,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyTransitGatewayMeteringPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyTransitGatewayMeteringPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyTransitGatewayPolicyTableEntry", func(t *testing.T) {
+        input := &ec2.ModifyTransitGatewayPolicyTableEntryInput{}
+        output := &ec2.ModifyTransitGatewayPolicyTableEntryOutput{}
+
+        mockClient.On("ModifyTransitGatewayPolicyTableEntry", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyTransitGatewayPolicyTableEntry(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

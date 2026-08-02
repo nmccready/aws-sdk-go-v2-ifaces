@@ -138,6 +138,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEnterpriseSupportChargeSummary", func(t *testing.T) {
+        input := &billing.GetEnterpriseSupportChargeSummaryInput{}
+        output := &billing.GetEnterpriseSupportChargeSummaryOutput{}
+
+        mockClient.On("GetEnterpriseSupportChargeSummary", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnterpriseSupportChargeSummary(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEnterpriseSupportContractDetails", func(t *testing.T) {
+        input := &billing.GetEnterpriseSupportContractDetailsInput{}
+        output := &billing.GetEnterpriseSupportContractDetailsOutput{}
+
+        mockClient.On("GetEnterpriseSupportContractDetails", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEnterpriseSupportContractDetails(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetResourcePolicy", func(t *testing.T) {
         input := &billing.GetResourcePolicyInput{}
         output := &billing.GetResourcePolicyOutput{}
@@ -158,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBillingViews", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBillingViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEnterpriseSupportLinkedAccountCharges", func(t *testing.T) {
+        input := &billing.ListEnterpriseSupportLinkedAccountChargesInput{}
+        output := &billing.ListEnterpriseSupportLinkedAccountChargesOutput{}
+
+        mockClient.On("ListEnterpriseSupportLinkedAccountCharges", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnterpriseSupportLinkedAccountCharges(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

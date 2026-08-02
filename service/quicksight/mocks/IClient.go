@@ -1235,6 +1235,43 @@ func (_m *IClient) CreateTopicRefreshSchedule(ctx context.Context, params *quick
 	return r0, r1
 }
 
+// CreateTopicV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTopicV2(ctx context.Context, params *quicksight.CreateTopicV2Input, optFns ...func(*quicksight.Options)) (*quicksight.CreateTopicV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTopicV2")
+	}
+
+	var r0 *quicksight.CreateTopicV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateTopicV2Input, ...func(*quicksight.Options)) (*quicksight.CreateTopicV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.CreateTopicV2Input, ...func(*quicksight.Options)) *quicksight.CreateTopicV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.CreateTopicV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.CreateTopicV2Input, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateVPCConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateVPCConnection(ctx context.Context, params *quicksight.CreateVPCConnectionInput, optFns ...func(*quicksight.Options)) (*quicksight.CreateVPCConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2522,6 +2559,43 @@ func (_m *IClient) DeleteTopicRefreshSchedule(ctx context.Context, params *quick
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteTopicRefreshScheduleInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTopicV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTopicV2(ctx context.Context, params *quicksight.DeleteTopicV2Input, optFns ...func(*quicksight.Options)) (*quicksight.DeleteTopicV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTopicV2")
+	}
+
+	var r0 *quicksight.DeleteTopicV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteTopicV2Input, ...func(*quicksight.Options)) (*quicksight.DeleteTopicV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DeleteTopicV2Input, ...func(*quicksight.Options)) *quicksight.DeleteTopicV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DeleteTopicV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DeleteTopicV2Input, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4898,6 +4972,43 @@ func (_m *IClient) DescribeTopicPermissions(ctx context.Context, params *quicksi
 	return r0, r1
 }
 
+// DescribeTopicPermissionsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTopicPermissionsV2(ctx context.Context, params *quicksight.DescribeTopicPermissionsV2Input, optFns ...func(*quicksight.Options)) (*quicksight.DescribeTopicPermissionsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTopicPermissionsV2")
+	}
+
+	var r0 *quicksight.DescribeTopicPermissionsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeTopicPermissionsV2Input, ...func(*quicksight.Options)) (*quicksight.DescribeTopicPermissionsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeTopicPermissionsV2Input, ...func(*quicksight.Options)) *quicksight.DescribeTopicPermissionsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeTopicPermissionsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeTopicPermissionsV2Input, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTopicRefresh provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTopicRefresh(ctx context.Context, params *quicksight.DescribeTopicRefreshInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeTopicRefreshOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4964,6 +5075,43 @@ func (_m *IClient) DescribeTopicRefreshSchedule(ctx context.Context, params *qui
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeTopicRefreshScheduleInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTopicV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTopicV2(ctx context.Context, params *quicksight.DescribeTopicV2Input, optFns ...func(*quicksight.Options)) (*quicksight.DescribeTopicV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTopicV2")
+	}
+
+	var r0 *quicksight.DescribeTopicV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeTopicV2Input, ...func(*quicksight.Options)) (*quicksight.DescribeTopicV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeTopicV2Input, ...func(*quicksight.Options)) *quicksight.DescribeTopicV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeTopicV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeTopicV2Input, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6785,6 +6933,43 @@ func (_m *IClient) ListTopics(ctx context.Context, params *quicksight.ListTopics
 	return r0, r1
 }
 
+// ListTopicsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTopicsV2(ctx context.Context, params *quicksight.ListTopicsV2Input, optFns ...func(*quicksight.Options)) (*quicksight.ListTopicsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTopicsV2")
+	}
+
+	var r0 *quicksight.ListTopicsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListTopicsV2Input, ...func(*quicksight.Options)) (*quicksight.ListTopicsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.ListTopicsV2Input, ...func(*quicksight.Options)) *quicksight.ListTopicsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.ListTopicsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.ListTopicsV2Input, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListUserGroups provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListUserGroups(ctx context.Context, params *quicksight.ListUserGroupsInput, optFns ...func(*quicksight.Options)) (*quicksight.ListUserGroupsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7535,6 +7720,43 @@ func (_m *IClient) SearchTopics(ctx context.Context, params *quicksight.SearchTo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.SearchTopicsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchTopicsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchTopicsV2(ctx context.Context, params *quicksight.SearchTopicsV2Input, optFns ...func(*quicksight.Options)) (*quicksight.SearchTopicsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchTopicsV2")
+	}
+
+	var r0 *quicksight.SearchTopicsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchTopicsV2Input, ...func(*quicksight.Options)) (*quicksight.SearchTopicsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.SearchTopicsV2Input, ...func(*quicksight.Options)) *quicksight.SearchTopicsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.SearchTopicsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.SearchTopicsV2Input, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9837,6 +10059,43 @@ func (_m *IClient) UpdateTopicPermissions(ctx context.Context, params *quicksigh
 	return r0, r1
 }
 
+// UpdateTopicPermissionsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTopicPermissionsV2(ctx context.Context, params *quicksight.UpdateTopicPermissionsV2Input, optFns ...func(*quicksight.Options)) (*quicksight.UpdateTopicPermissionsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTopicPermissionsV2")
+	}
+
+	var r0 *quicksight.UpdateTopicPermissionsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateTopicPermissionsV2Input, ...func(*quicksight.Options)) (*quicksight.UpdateTopicPermissionsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateTopicPermissionsV2Input, ...func(*quicksight.Options)) *quicksight.UpdateTopicPermissionsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateTopicPermissionsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateTopicPermissionsV2Input, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateTopicRefreshSchedule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateTopicRefreshSchedule(ctx context.Context, params *quicksight.UpdateTopicRefreshScheduleInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateTopicRefreshScheduleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9866,6 +10125,43 @@ func (_m *IClient) UpdateTopicRefreshSchedule(ctx context.Context, params *quick
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateTopicRefreshScheduleInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTopicV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTopicV2(ctx context.Context, params *quicksight.UpdateTopicV2Input, optFns ...func(*quicksight.Options)) (*quicksight.UpdateTopicV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTopicV2")
+	}
+
+	var r0 *quicksight.UpdateTopicV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateTopicV2Input, ...func(*quicksight.Options)) (*quicksight.UpdateTopicV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateTopicV2Input, ...func(*quicksight.Options)) *quicksight.UpdateTopicV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateTopicV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateTopicV2Input, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

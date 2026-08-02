@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSessions", func(t *testing.T) {
+        input := &redshiftdata.ListSessionsInput{}
+        output := &redshiftdata.ListSessionsOutput{}
+
+        mockClient.On("ListSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListStatements", func(t *testing.T) {
         input := &redshiftdata.ListStatementsInput{}
         output := &redshiftdata.ListStatementsOutput{}

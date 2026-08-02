@@ -19,6 +19,7 @@ type IClient interface {
  ListOrganizationRecommendations(ctx context.Context, params *ListOrganizationRecommendationsInput, optFns ...func(*Options)) (*ListOrganizationRecommendationsOutput, error) 
  ListRecommendationResources(ctx context.Context, params *ListRecommendationResourcesInput, optFns ...func(*Options)) (*ListRecommendationResourcesOutput, error) 
  ListRecommendations(ctx context.Context, params *ListRecommendationsInput, optFns ...func(*Options)) (*ListRecommendationsOutput, error) 
+ ListRecommendationsForResource(ctx context.Context, params *ListRecommendationsForResourceInput, optFns ...func(*Options)) (*ListRecommendationsForResourceOutput, error) 
  UpdateOrganizationRecommendationLifecycle(ctx context.Context, params *UpdateOrganizationRecommendationLifecycleInput, optFns ...func(*Options)) (*UpdateOrganizationRecommendationLifecycleOutput, error) 
  UpdateRecommendationLifecycle(ctx context.Context, params *UpdateRecommendationLifecycleInput, optFns ...func(*Options)) (*UpdateRecommendationLifecycleOutput, error) 
 }

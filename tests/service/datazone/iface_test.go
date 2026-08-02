@@ -2166,6 +2166,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartNotebookSync", func(t *testing.T) {
+        input := &datazone.StartNotebookSyncInput{}
+        output := &datazone.StartNotebookSyncOutput{}
+
+        mockClient.On("StartNotebookSync", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartNotebookSync(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopNotebookRun", func(t *testing.T) {
         input := &datazone.StopNotebookRunInput{}
         output := &datazone.StopNotebookRunOutput{}

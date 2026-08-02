@@ -23,8 +23,10 @@ type IClient interface {
  ListProcurementPortalPreferences(ctx context.Context, params *ListProcurementPortalPreferencesInput, optFns ...func(*Options)) (*ListProcurementPortalPreferencesOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutProcurementPortalPreference(ctx context.Context, params *PutProcurementPortalPreferenceInput, optFns ...func(*Options)) (*PutProcurementPortalPreferenceOutput, error) 
+ SendProcurementPortalValidation(ctx context.Context, params *SendProcurementPortalValidationInput, optFns ...func(*Options)) (*SendProcurementPortalValidationOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateInvoiceUnit(ctx context.Context, params *UpdateInvoiceUnitInput, optFns ...func(*Options)) (*UpdateInvoiceUnitOutput, error) 
  UpdateProcurementPortalPreferenceStatus(ctx context.Context, params *UpdateProcurementPortalPreferenceStatusInput, optFns ...func(*Options)) (*UpdateProcurementPortalPreferenceStatusOutput, error) 
+ VerifyProcurementPortalValidation(ctx context.Context, params *VerifyProcurementPortalValidationInput, optFns ...func(*Options)) (*VerifyProcurementPortalValidationOutput, error) 
 }

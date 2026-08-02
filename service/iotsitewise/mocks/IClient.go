@@ -89,6 +89,43 @@ func (_m *IClient) AssociateTimeSeriesToAssetProperty(ctx context.Context, param
 	return r0, r1
 }
 
+// BatchAssociateDataSegmentsToDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchAssociateDataSegmentsToDataset(ctx context.Context, params *iotsitewise.BatchAssociateDataSegmentsToDatasetInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.BatchAssociateDataSegmentsToDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchAssociateDataSegmentsToDataset")
+	}
+
+	var r0 *iotsitewise.BatchAssociateDataSegmentsToDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.BatchAssociateDataSegmentsToDatasetInput, ...func(*iotsitewise.Options)) (*iotsitewise.BatchAssociateDataSegmentsToDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.BatchAssociateDataSegmentsToDatasetInput, ...func(*iotsitewise.Options)) *iotsitewise.BatchAssociateDataSegmentsToDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.BatchAssociateDataSegmentsToDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.BatchAssociateDataSegmentsToDatasetInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchAssociateProjectAssets provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchAssociateProjectAssets(ctx context.Context, params *iotsitewise.BatchAssociateProjectAssetsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.BatchAssociateProjectAssetsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,80 @@ func (_m *IClient) BatchAssociateProjectAssets(ctx context.Context, params *iots
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.BatchAssociateProjectAssetsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDeleteDatasetDataSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDeleteDatasetDataSegments(ctx context.Context, params *iotsitewise.BatchDeleteDatasetDataSegmentsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.BatchDeleteDatasetDataSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDeleteDatasetDataSegments")
+	}
+
+	var r0 *iotsitewise.BatchDeleteDatasetDataSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.BatchDeleteDatasetDataSegmentsInput, ...func(*iotsitewise.Options)) (*iotsitewise.BatchDeleteDatasetDataSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.BatchDeleteDatasetDataSegmentsInput, ...func(*iotsitewise.Options)) *iotsitewise.BatchDeleteDatasetDataSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.BatchDeleteDatasetDataSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.BatchDeleteDatasetDataSegmentsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchDisassociateDataSegmentsFromDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDisassociateDataSegmentsFromDataset(ctx context.Context, params *iotsitewise.BatchDisassociateDataSegmentsFromDatasetInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.BatchDisassociateDataSegmentsFromDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDisassociateDataSegmentsFromDataset")
+	}
+
+	var r0 *iotsitewise.BatchDisassociateDataSegmentsFromDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.BatchDisassociateDataSegmentsFromDatasetInput, ...func(*iotsitewise.Options)) (*iotsitewise.BatchDisassociateDataSegmentsFromDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.BatchDisassociateDataSegmentsFromDatasetInput, ...func(*iotsitewise.Options)) *iotsitewise.BatchDisassociateDataSegmentsFromDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.BatchDisassociateDataSegmentsFromDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.BatchDisassociateDataSegmentsFromDatasetInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -311,6 +422,117 @@ func (_m *IClient) BatchPutAssetPropertyValue(ctx context.Context, params *iotsi
 	return r0, r1
 }
 
+// CancelEnrichmentJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelEnrichmentJob(ctx context.Context, params *iotsitewise.CancelEnrichmentJobInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CancelEnrichmentJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelEnrichmentJob")
+	}
+
+	var r0 *iotsitewise.CancelEnrichmentJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CancelEnrichmentJobInput, ...func(*iotsitewise.Options)) (*iotsitewise.CancelEnrichmentJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CancelEnrichmentJobInput, ...func(*iotsitewise.Options)) *iotsitewise.CancelEnrichmentJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CancelEnrichmentJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CancelEnrichmentJobInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CancelPipelineExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelPipelineExecution(ctx context.Context, params *iotsitewise.CancelPipelineExecutionInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CancelPipelineExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelPipelineExecution")
+	}
+
+	var r0 *iotsitewise.CancelPipelineExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CancelPipelineExecutionInput, ...func(*iotsitewise.Options)) (*iotsitewise.CancelPipelineExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CancelPipelineExecutionInput, ...func(*iotsitewise.Options)) *iotsitewise.CancelPipelineExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CancelPipelineExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CancelPipelineExecutionInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CancelQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelQuery(ctx context.Context, params *iotsitewise.CancelQueryInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CancelQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelQuery")
+	}
+
+	var r0 *iotsitewise.CancelQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CancelQueryInput, ...func(*iotsitewise.Options)) (*iotsitewise.CancelQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CancelQueryInput, ...func(*iotsitewise.Options)) *iotsitewise.CancelQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CancelQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CancelQueryInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAccessPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAccessPolicy(ctx context.Context, params *iotsitewise.CreateAccessPolicyInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateAccessPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +562,43 @@ func (_m *IClient) CreateAccessPolicy(ctx context.Context, params *iotsitewise.C
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateAccessPolicyInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateApplication(ctx context.Context, params *iotsitewise.CreateApplicationInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateApplication")
+	}
+
+	var r0 *iotsitewise.CreateApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateApplicationInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateApplicationInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateApplicationInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -607,6 +866,80 @@ func (_m *IClient) CreateDataset(ctx context.Context, params *iotsitewise.Create
 	return r0, r1
 }
 
+// CreateDatasetExportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDatasetExportJob(ctx context.Context, params *iotsitewise.CreateDatasetExportJobInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateDatasetExportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDatasetExportJob")
+	}
+
+	var r0 *iotsitewise.CreateDatasetExportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateDatasetExportJobInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateDatasetExportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateDatasetExportJobInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateDatasetExportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateDatasetExportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateDatasetExportJobInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateEnrichmentJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateEnrichmentJob(ctx context.Context, params *iotsitewise.CreateEnrichmentJobInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateEnrichmentJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateEnrichmentJob")
+	}
+
+	var r0 *iotsitewise.CreateEnrichmentJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateEnrichmentJobInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateEnrichmentJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateEnrichmentJobInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateEnrichmentJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateEnrichmentJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateEnrichmentJobInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateGateway(ctx context.Context, params *iotsitewise.CreateGatewayInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -636,6 +969,43 @@ func (_m *IClient) CreateGateway(ctx context.Context, params *iotsitewise.Create
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateGatewayInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePipeline(ctx context.Context, params *iotsitewise.CreatePipelineInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreatePipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePipeline")
+	}
+
+	var r0 *iotsitewise.CreatePipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreatePipelineInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreatePipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreatePipelineInput, ...func(*iotsitewise.Options)) *iotsitewise.CreatePipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreatePipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreatePipelineInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -718,6 +1088,80 @@ func (_m *IClient) CreateProject(ctx context.Context, params *iotsitewise.Create
 	return r0, r1
 }
 
+// CreateTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTask(ctx context.Context, params *iotsitewise.CreateTaskInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTask")
+	}
+
+	var r0 *iotsitewise.CreateTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateTaskInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateTaskInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateTaskInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWorkspace(ctx context.Context, params *iotsitewise.CreateWorkspaceInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.CreateWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWorkspace")
+	}
+
+	var r0 *iotsitewise.CreateWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateWorkspaceInput, ...func(*iotsitewise.Options)) (*iotsitewise.CreateWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.CreateWorkspaceInput, ...func(*iotsitewise.Options)) *iotsitewise.CreateWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.CreateWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.CreateWorkspaceInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAccessPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAccessPolicy(ctx context.Context, params *iotsitewise.DeleteAccessPolicyInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteAccessPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -747,6 +1191,43 @@ func (_m *IClient) DeleteAccessPolicy(ctx context.Context, params *iotsitewise.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteAccessPolicyInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteApplication(ctx context.Context, params *iotsitewise.DeleteApplicationInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteApplication")
+	}
+
+	var r0 *iotsitewise.DeleteApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteApplicationInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeleteApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteApplicationInput, ...func(*iotsitewise.Options)) *iotsitewise.DeleteApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeleteApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteApplicationInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1051,6 +1532,43 @@ func (_m *IClient) DeleteGateway(ctx context.Context, params *iotsitewise.Delete
 	return r0, r1
 }
 
+// DeletePipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePipeline(ctx context.Context, params *iotsitewise.DeletePipelineInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeletePipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePipeline")
+	}
+
+	var r0 *iotsitewise.DeletePipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeletePipelineInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeletePipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeletePipelineInput, ...func(*iotsitewise.Options)) *iotsitewise.DeletePipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeletePipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeletePipelineInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePortal provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePortal(ctx context.Context, params *iotsitewise.DeletePortalInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeletePortalOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1125,6 +1643,43 @@ func (_m *IClient) DeleteProject(ctx context.Context, params *iotsitewise.Delete
 	return r0, r1
 }
 
+// DeleteTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTask(ctx context.Context, params *iotsitewise.DeleteTaskInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTask")
+	}
+
+	var r0 *iotsitewise.DeleteTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteTaskInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeleteTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteTaskInput, ...func(*iotsitewise.Options)) *iotsitewise.DeleteTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeleteTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteTaskInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteTimeSeries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteTimeSeries(ctx context.Context, params *iotsitewise.DeleteTimeSeriesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteTimeSeriesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1154,6 +1709,43 @@ func (_m *IClient) DeleteTimeSeries(ctx context.Context, params *iotsitewise.Del
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteTimeSeriesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWorkspace(ctx context.Context, params *iotsitewise.DeleteWorkspaceInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DeleteWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWorkspace")
+	}
+
+	var r0 *iotsitewise.DeleteWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteWorkspaceInput, ...func(*iotsitewise.Options)) (*iotsitewise.DeleteWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DeleteWorkspaceInput, ...func(*iotsitewise.Options)) *iotsitewise.DeleteWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DeleteWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DeleteWorkspaceInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1228,6 +1820,43 @@ func (_m *IClient) DescribeAction(ctx context.Context, params *iotsitewise.Descr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeActionInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeApplication(ctx context.Context, params *iotsitewise.DescribeApplicationInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeApplication")
+	}
+
+	var r0 *iotsitewise.DescribeApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeApplicationInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeApplicationInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeApplicationInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1643,6 +2272,43 @@ func (_m *IClient) DescribeDataset(ctx context.Context, params *iotsitewise.Desc
 	return r0, r1
 }
 
+// DescribeDatasetExportJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDatasetExportJob(ctx context.Context, params *iotsitewise.DescribeDatasetExportJobInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeDatasetExportJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDatasetExportJob")
+	}
+
+	var r0 *iotsitewise.DescribeDatasetExportJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeDatasetExportJobInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeDatasetExportJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeDatasetExportJobInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeDatasetExportJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeDatasetExportJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeDatasetExportJobInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeDefaultEncryptionConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeDefaultEncryptionConfiguration(ctx context.Context, params *iotsitewise.DescribeDefaultEncryptionConfigurationInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeDefaultEncryptionConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1672,6 +2338,43 @@ func (_m *IClient) DescribeDefaultEncryptionConfiguration(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeDefaultEncryptionConfigurationInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeEnrichmentJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeEnrichmentJob(ctx context.Context, params *iotsitewise.DescribeEnrichmentJobInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeEnrichmentJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeEnrichmentJob")
+	}
+
+	var r0 *iotsitewise.DescribeEnrichmentJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeEnrichmentJobInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeEnrichmentJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeEnrichmentJobInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeEnrichmentJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeEnrichmentJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeEnrichmentJobInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1828,6 +2531,80 @@ func (_m *IClient) DescribeLoggingOptions(ctx context.Context, params *iotsitewi
 	return r0, r1
 }
 
+// DescribePipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribePipeline(ctx context.Context, params *iotsitewise.DescribePipelineInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribePipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribePipeline")
+	}
+
+	var r0 *iotsitewise.DescribePipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribePipelineInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribePipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribePipelineInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribePipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribePipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribePipelineInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribePipelineExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribePipelineExecution(ctx context.Context, params *iotsitewise.DescribePipelineExecutionInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribePipelineExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribePipelineExecution")
+	}
+
+	var r0 *iotsitewise.DescribePipelineExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribePipelineExecutionInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribePipelineExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribePipelineExecutionInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribePipelineExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribePipelineExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribePipelineExecutionInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribePortal provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribePortal(ctx context.Context, params *iotsitewise.DescribePortalInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribePortalOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1902,6 +2679,80 @@ func (_m *IClient) DescribeProject(ctx context.Context, params *iotsitewise.Desc
 	return r0, r1
 }
 
+// DescribeQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeQuery(ctx context.Context, params *iotsitewise.DescribeQueryInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeQuery")
+	}
+
+	var r0 *iotsitewise.DescribeQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeQueryInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeQueryInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeQueryInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSearch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSearch(ctx context.Context, params *iotsitewise.DescribeSearchInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeSearchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSearch")
+	}
+
+	var r0 *iotsitewise.DescribeSearchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeSearchInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeSearchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeSearchInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeSearchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeSearchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeSearchInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeStorageConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeStorageConfiguration(ctx context.Context, params *iotsitewise.DescribeStorageConfigurationInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeStorageConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1939,6 +2790,43 @@ func (_m *IClient) DescribeStorageConfiguration(ctx context.Context, params *iot
 	return r0, r1
 }
 
+// DescribeTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTask(ctx context.Context, params *iotsitewise.DescribeTaskInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTask")
+	}
+
+	var r0 *iotsitewise.DescribeTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeTaskInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeTaskInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeTaskInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTimeSeries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTimeSeries(ctx context.Context, params *iotsitewise.DescribeTimeSeriesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeTimeSeriesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1968,6 +2856,43 @@ func (_m *IClient) DescribeTimeSeries(ctx context.Context, params *iotsitewise.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeTimeSeriesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeWorkspace(ctx context.Context, params *iotsitewise.DescribeWorkspaceInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.DescribeWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeWorkspace")
+	}
+
+	var r0 *iotsitewise.DescribeWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeWorkspaceInput, ...func(*iotsitewise.Options)) (*iotsitewise.DescribeWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.DescribeWorkspaceInput, ...func(*iotsitewise.Options)) *iotsitewise.DescribeWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.DescribeWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.DescribeWorkspaceInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2235,6 +3160,43 @@ func (_m *IClient) GetAssetPropertyValueHistory(ctx context.Context, params *iot
 	return r0, r1
 }
 
+// GetCaptureData provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCaptureData(ctx context.Context, params *iotsitewise.GetCaptureDataInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.GetCaptureDataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCaptureData")
+	}
+
+	var r0 *iotsitewise.GetCaptureDataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.GetCaptureDataInput, ...func(*iotsitewise.Options)) (*iotsitewise.GetCaptureDataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.GetCaptureDataInput, ...func(*iotsitewise.Options)) *iotsitewise.GetCaptureDataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.GetCaptureDataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.GetCaptureDataInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetInterpolatedAssetPropertyValues provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetInterpolatedAssetPropertyValues(ctx context.Context, params *iotsitewise.GetInterpolatedAssetPropertyValuesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.GetInterpolatedAssetPropertyValuesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2264,6 +3226,80 @@ func (_m *IClient) GetInterpolatedAssetPropertyValues(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.GetInterpolatedAssetPropertyValuesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQueryResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQueryResults(ctx context.Context, params *iotsitewise.GetQueryResultsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.GetQueryResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQueryResults")
+	}
+
+	var r0 *iotsitewise.GetQueryResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.GetQueryResultsInput, ...func(*iotsitewise.Options)) (*iotsitewise.GetQueryResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.GetQueryResultsInput, ...func(*iotsitewise.Options)) *iotsitewise.GetQueryResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.GetQueryResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.GetQueryResultsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSearchResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSearchResults(ctx context.Context, params *iotsitewise.GetSearchResultsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.GetSearchResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSearchResults")
+	}
+
+	var r0 *iotsitewise.GetSearchResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.GetSearchResultsInput, ...func(*iotsitewise.Options)) (*iotsitewise.GetSearchResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.GetSearchResultsInput, ...func(*iotsitewise.Options)) *iotsitewise.GetSearchResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.GetSearchResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.GetSearchResultsInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2375,6 +3411,43 @@ func (_m *IClient) ListActions(ctx context.Context, params *iotsitewise.ListActi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListActionsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListApplications provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListApplications(ctx context.Context, params *iotsitewise.ListApplicationsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListApplicationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListApplications")
+	}
+
+	var r0 *iotsitewise.ListApplicationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListApplicationsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListApplicationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListApplicationsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListApplicationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListApplicationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListApplicationsInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2864,6 +3937,117 @@ func (_m *IClient) ListDashboards(ctx context.Context, params *iotsitewise.ListD
 	return r0, r1
 }
 
+// ListDatasetDataSegmentRelationships provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetDataSegmentRelationships(ctx context.Context, params *iotsitewise.ListDatasetDataSegmentRelationshipsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetDataSegmentRelationshipsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetDataSegmentRelationships")
+	}
+
+	var r0 *iotsitewise.ListDatasetDataSegmentRelationshipsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetDataSegmentRelationshipsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetDataSegmentRelationshipsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetDataSegmentRelationshipsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListDatasetDataSegmentRelationshipsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListDatasetDataSegmentRelationshipsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListDatasetDataSegmentRelationshipsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasetDataSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetDataSegments(ctx context.Context, params *iotsitewise.ListDatasetDataSegmentsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetDataSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetDataSegments")
+	}
+
+	var r0 *iotsitewise.ListDatasetDataSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetDataSegmentsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetDataSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetDataSegmentsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListDatasetDataSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListDatasetDataSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListDatasetDataSegmentsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasetExportJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetExportJobs(ctx context.Context, params *iotsitewise.ListDatasetExportJobsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetExportJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetExportJobs")
+	}
+
+	var r0 *iotsitewise.ListDatasetExportJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetExportJobsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetExportJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListDatasetExportJobsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListDatasetExportJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListDatasetExportJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListDatasetExportJobsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDatasets provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDatasets(ctx context.Context, params *iotsitewise.ListDatasetsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListDatasetsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2893,6 +4077,43 @@ func (_m *IClient) ListDatasets(ctx context.Context, params *iotsitewise.ListDat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListDatasetsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEnrichmentJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEnrichmentJobs(ctx context.Context, params *iotsitewise.ListEnrichmentJobsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListEnrichmentJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEnrichmentJobs")
+	}
+
+	var r0 *iotsitewise.ListEnrichmentJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListEnrichmentJobsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListEnrichmentJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListEnrichmentJobsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListEnrichmentJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListEnrichmentJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListEnrichmentJobsInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3012,6 +4233,80 @@ func (_m *IClient) ListInterfaceRelationships(ctx context.Context, params *iotsi
 	return r0, r1
 }
 
+// ListPipelineExecutions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPipelineExecutions(ctx context.Context, params *iotsitewise.ListPipelineExecutionsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListPipelineExecutionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPipelineExecutions")
+	}
+
+	var r0 *iotsitewise.ListPipelineExecutionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListPipelineExecutionsInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListPipelineExecutionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListPipelineExecutionsInput, ...func(*iotsitewise.Options)) *iotsitewise.ListPipelineExecutionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListPipelineExecutionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListPipelineExecutionsInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPipelines provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPipelines(ctx context.Context, params *iotsitewise.ListPipelinesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListPipelinesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPipelines")
+	}
+
+	var r0 *iotsitewise.ListPipelinesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListPipelinesInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListPipelinesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListPipelinesInput, ...func(*iotsitewise.Options)) *iotsitewise.ListPipelinesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListPipelinesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListPipelinesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPortals provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPortals(ctx context.Context, params *iotsitewise.ListPortalsInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListPortalsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3123,6 +4418,80 @@ func (_m *IClient) ListProjects(ctx context.Context, params *iotsitewise.ListPro
 	return r0, r1
 }
 
+// ListQueries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQueries(ctx context.Context, params *iotsitewise.ListQueriesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListQueriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQueries")
+	}
+
+	var r0 *iotsitewise.ListQueriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListQueriesInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListQueriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListQueriesInput, ...func(*iotsitewise.Options)) *iotsitewise.ListQueriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListQueriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListQueriesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSearches provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSearches(ctx context.Context, params *iotsitewise.ListSearchesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListSearchesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSearches")
+	}
+
+	var r0 *iotsitewise.ListSearchesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListSearchesInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListSearchesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListSearchesInput, ...func(*iotsitewise.Options)) *iotsitewise.ListSearchesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListSearchesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListSearchesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *iotsitewise.ListTagsForResourceInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3160,6 +4529,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *iotsitewise.
 	return r0, r1
 }
 
+// ListTasks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTasks(ctx context.Context, params *iotsitewise.ListTasksInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListTasksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTasks")
+	}
+
+	var r0 *iotsitewise.ListTasksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListTasksInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListTasksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListTasksInput, ...func(*iotsitewise.Options)) *iotsitewise.ListTasksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListTasksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListTasksInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTimeSeries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTimeSeries(ctx context.Context, params *iotsitewise.ListTimeSeriesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListTimeSeriesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3189,6 +4595,43 @@ func (_m *IClient) ListTimeSeries(ctx context.Context, params *iotsitewise.ListT
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListTimeSeriesInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWorkspaces provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWorkspaces(ctx context.Context, params *iotsitewise.ListWorkspacesInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.ListWorkspacesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWorkspaces")
+	}
+
+	var r0 *iotsitewise.ListWorkspacesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListWorkspacesInput, ...func(*iotsitewise.Options)) (*iotsitewise.ListWorkspacesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.ListWorkspacesInput, ...func(*iotsitewise.Options)) *iotsitewise.ListWorkspacesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.ListWorkspacesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.ListWorkspacesInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3355,6 +4798,117 @@ func (_m *IClient) PutStorageConfiguration(ctx context.Context, params *iotsitew
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.PutStorageConfigurationInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartPipelineExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartPipelineExecution(ctx context.Context, params *iotsitewise.StartPipelineExecutionInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.StartPipelineExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartPipelineExecution")
+	}
+
+	var r0 *iotsitewise.StartPipelineExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.StartPipelineExecutionInput, ...func(*iotsitewise.Options)) (*iotsitewise.StartPipelineExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.StartPipelineExecutionInput, ...func(*iotsitewise.Options)) *iotsitewise.StartPipelineExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.StartPipelineExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.StartPipelineExecutionInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartQuery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartQuery(ctx context.Context, params *iotsitewise.StartQueryInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.StartQueryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartQuery")
+	}
+
+	var r0 *iotsitewise.StartQueryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.StartQueryInput, ...func(*iotsitewise.Options)) (*iotsitewise.StartQueryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.StartQueryInput, ...func(*iotsitewise.Options)) *iotsitewise.StartQueryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.StartQueryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.StartQueryInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartSearch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartSearch(ctx context.Context, params *iotsitewise.StartSearchInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.StartSearchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartSearch")
+	}
+
+	var r0 *iotsitewise.StartSearchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.StartSearchInput, ...func(*iotsitewise.Options)) (*iotsitewise.StartSearchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.StartSearchInput, ...func(*iotsitewise.Options)) *iotsitewise.StartSearchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.StartSearchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.StartSearchInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3807,6 +5361,43 @@ func (_m *IClient) UpdateGatewayCapabilityConfiguration(ctx context.Context, par
 	return r0, r1
 }
 
+// UpdatePipeline provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePipeline(ctx context.Context, params *iotsitewise.UpdatePipelineInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.UpdatePipelineOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePipeline")
+	}
+
+	var r0 *iotsitewise.UpdatePipelineOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdatePipelineInput, ...func(*iotsitewise.Options)) (*iotsitewise.UpdatePipelineOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdatePipelineInput, ...func(*iotsitewise.Options)) *iotsitewise.UpdatePipelineOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.UpdatePipelineOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdatePipelineInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdatePortal provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdatePortal(ctx context.Context, params *iotsitewise.UpdatePortalInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.UpdatePortalOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3873,6 +5464,80 @@ func (_m *IClient) UpdateProject(ctx context.Context, params *iotsitewise.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateProjectInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTask(ctx context.Context, params *iotsitewise.UpdateTaskInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.UpdateTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTask")
+	}
+
+	var r0 *iotsitewise.UpdateTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateTaskInput, ...func(*iotsitewise.Options)) (*iotsitewise.UpdateTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateTaskInput, ...func(*iotsitewise.Options)) *iotsitewise.UpdateTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.UpdateTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateTaskInput, ...func(*iotsitewise.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWorkspace provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWorkspace(ctx context.Context, params *iotsitewise.UpdateWorkspaceInput, optFns ...func(*iotsitewise.Options)) (*iotsitewise.UpdateWorkspaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWorkspace")
+	}
+
+	var r0 *iotsitewise.UpdateWorkspaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateWorkspaceInput, ...func(*iotsitewise.Options)) (*iotsitewise.UpdateWorkspaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iotsitewise.UpdateWorkspaceInput, ...func(*iotsitewise.Options)) *iotsitewise.UpdateWorkspaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iotsitewise.UpdateWorkspaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iotsitewise.UpdateWorkspaceInput, ...func(*iotsitewise.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

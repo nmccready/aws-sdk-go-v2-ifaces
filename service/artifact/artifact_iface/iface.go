@@ -24,6 +24,7 @@ type IClient interface {
  ListReports(ctx context.Context, params *ListReportsInput, optFns ...func(*Options)) (*ListReportsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutAccountSettings(ctx context.Context, params *PutAccountSettingsInput, optFns ...func(*Options)) (*PutAccountSettingsOutput, error) 
+ PutComplianceInquiryFeedback(ctx context.Context, params *PutComplianceInquiryFeedbackInput, optFns ...func(*Options)) (*PutComplianceInquiryFeedbackOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

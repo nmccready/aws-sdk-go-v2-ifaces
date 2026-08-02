@@ -569,6 +569,117 @@ func (_m *IClient) GetProfileVisibility(ctx context.Context, params *partnercent
 	return r0, r1
 }
 
+// GetQualificationsAssociationDetails provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQualificationsAssociationDetails(ctx context.Context, params *partnercentralaccount.GetQualificationsAssociationDetailsInput, optFns ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetQualificationsAssociationDetailsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQualificationsAssociationDetails")
+	}
+
+	var r0 *partnercentralaccount.GetQualificationsAssociationDetailsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.GetQualificationsAssociationDetailsInput, ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetQualificationsAssociationDetailsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.GetQualificationsAssociationDetailsInput, ...func(*partnercentralaccount.Options)) *partnercentralaccount.GetQualificationsAssociationDetailsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralaccount.GetQualificationsAssociationDetailsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralaccount.GetQualificationsAssociationDetailsInput, ...func(*partnercentralaccount.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQualificationsAssociationTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQualificationsAssociationTask(ctx context.Context, params *partnercentralaccount.GetQualificationsAssociationTaskInput, optFns ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetQualificationsAssociationTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQualificationsAssociationTask")
+	}
+
+	var r0 *partnercentralaccount.GetQualificationsAssociationTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.GetQualificationsAssociationTaskInput, ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetQualificationsAssociationTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.GetQualificationsAssociationTaskInput, ...func(*partnercentralaccount.Options)) *partnercentralaccount.GetQualificationsAssociationTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralaccount.GetQualificationsAssociationTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralaccount.GetQualificationsAssociationTaskInput, ...func(*partnercentralaccount.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQualificationsDisassociationTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQualificationsDisassociationTask(ctx context.Context, params *partnercentralaccount.GetQualificationsDisassociationTaskInput, optFns ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetQualificationsDisassociationTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQualificationsDisassociationTask")
+	}
+
+	var r0 *partnercentralaccount.GetQualificationsDisassociationTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.GetQualificationsDisassociationTaskInput, ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetQualificationsDisassociationTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.GetQualificationsDisassociationTaskInput, ...func(*partnercentralaccount.Options)) *partnercentralaccount.GetQualificationsDisassociationTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralaccount.GetQualificationsDisassociationTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralaccount.GetQualificationsDisassociationTaskInput, ...func(*partnercentralaccount.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetVerification provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetVerification(ctx context.Context, params *partnercentralaccount.GetVerificationInput, optFns ...func(*partnercentralaccount.Options)) (*partnercentralaccount.GetVerificationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -949,6 +1060,80 @@ func (_m *IClient) StartProfileUpdateTask(ctx context.Context, params *partnerce
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralaccount.StartProfileUpdateTaskInput, ...func(*partnercentralaccount.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartQualificationsAssociationTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartQualificationsAssociationTask(ctx context.Context, params *partnercentralaccount.StartQualificationsAssociationTaskInput, optFns ...func(*partnercentralaccount.Options)) (*partnercentralaccount.StartQualificationsAssociationTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartQualificationsAssociationTask")
+	}
+
+	var r0 *partnercentralaccount.StartQualificationsAssociationTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.StartQualificationsAssociationTaskInput, ...func(*partnercentralaccount.Options)) (*partnercentralaccount.StartQualificationsAssociationTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.StartQualificationsAssociationTaskInput, ...func(*partnercentralaccount.Options)) *partnercentralaccount.StartQualificationsAssociationTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralaccount.StartQualificationsAssociationTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralaccount.StartQualificationsAssociationTaskInput, ...func(*partnercentralaccount.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartQualificationsDisassociationTask provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartQualificationsDisassociationTask(ctx context.Context, params *partnercentralaccount.StartQualificationsDisassociationTaskInput, optFns ...func(*partnercentralaccount.Options)) (*partnercentralaccount.StartQualificationsDisassociationTaskOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartQualificationsDisassociationTask")
+	}
+
+	var r0 *partnercentralaccount.StartQualificationsDisassociationTaskOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.StartQualificationsDisassociationTaskInput, ...func(*partnercentralaccount.Options)) (*partnercentralaccount.StartQualificationsDisassociationTaskOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralaccount.StartQualificationsDisassociationTaskInput, ...func(*partnercentralaccount.Options)) *partnercentralaccount.StartQualificationsDisassociationTaskOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralaccount.StartQualificationsDisassociationTaskOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralaccount.StartQualificationsDisassociationTaskInput, ...func(*partnercentralaccount.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

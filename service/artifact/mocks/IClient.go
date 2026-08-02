@@ -551,6 +551,43 @@ func (_m *IClient) PutAccountSettings(ctx context.Context, params *artifact.PutA
 	return r0, r1
 }
 
+// PutComplianceInquiryFeedback provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutComplianceInquiryFeedback(ctx context.Context, params *artifact.PutComplianceInquiryFeedbackInput, optFns ...func(*artifact.Options)) (*artifact.PutComplianceInquiryFeedbackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutComplianceInquiryFeedback")
+	}
+
+	var r0 *artifact.PutComplianceInquiryFeedbackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.PutComplianceInquiryFeedbackInput, ...func(*artifact.Options)) (*artifact.PutComplianceInquiryFeedbackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *artifact.PutComplianceInquiryFeedbackInput, ...func(*artifact.Options)) *artifact.PutComplianceInquiryFeedbackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*artifact.PutComplianceInquiryFeedbackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *artifact.PutComplianceInquiryFeedbackInput, ...func(*artifact.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *artifact.TagResourceInput, optFns ...func(*artifact.Options)) (*artifact.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))

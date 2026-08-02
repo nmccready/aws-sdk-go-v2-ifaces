@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchAssociateDataSegmentsToDataset", func(t *testing.T) {
+        input := &iotsitewise.BatchAssociateDataSegmentsToDatasetInput{}
+        output := &iotsitewise.BatchAssociateDataSegmentsToDatasetOutput{}
+
+        mockClient.On("BatchAssociateDataSegmentsToDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchAssociateDataSegmentsToDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchAssociateProjectAssets", func(t *testing.T) {
         input := &iotsitewise.BatchAssociateProjectAssetsInput{}
         output := &iotsitewise.BatchAssociateProjectAssetsOutput{}
@@ -67,6 +80,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchAssociateProjectAssets", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchAssociateProjectAssets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDeleteDatasetDataSegments", func(t *testing.T) {
+        input := &iotsitewise.BatchDeleteDatasetDataSegmentsInput{}
+        output := &iotsitewise.BatchDeleteDatasetDataSegmentsOutput{}
+
+        mockClient.On("BatchDeleteDatasetDataSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeleteDatasetDataSegments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchDisassociateDataSegmentsFromDataset", func(t *testing.T) {
+        input := &iotsitewise.BatchDisassociateDataSegmentsFromDatasetInput{}
+        output := &iotsitewise.BatchDisassociateDataSegmentsFromDatasetOutput{}
+
+        mockClient.On("BatchDisassociateDataSegmentsFromDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDisassociateDataSegmentsFromDataset(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -138,6 +177,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelEnrichmentJob", func(t *testing.T) {
+        input := &iotsitewise.CancelEnrichmentJobInput{}
+        output := &iotsitewise.CancelEnrichmentJobOutput{}
+
+        mockClient.On("CancelEnrichmentJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelEnrichmentJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCancelPipelineExecution", func(t *testing.T) {
+        input := &iotsitewise.CancelPipelineExecutionInput{}
+        output := &iotsitewise.CancelPipelineExecutionOutput{}
+
+        mockClient.On("CancelPipelineExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelPipelineExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCancelQuery", func(t *testing.T) {
+        input := &iotsitewise.CancelQueryInput{}
+        output := &iotsitewise.CancelQueryOutput{}
+
+        mockClient.On("CancelQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAccessPolicy", func(t *testing.T) {
         input := &iotsitewise.CreateAccessPolicyInput{}
         output := &iotsitewise.CreateAccessPolicyOutput{}
@@ -145,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAccessPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAccessPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateApplication", func(t *testing.T) {
+        input := &iotsitewise.CreateApplicationInput{}
+        output := &iotsitewise.CreateApplicationOutput{}
+
+        mockClient.On("CreateApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,6 +333,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDatasetExportJob", func(t *testing.T) {
+        input := &iotsitewise.CreateDatasetExportJobInput{}
+        output := &iotsitewise.CreateDatasetExportJobOutput{}
+
+        mockClient.On("CreateDatasetExportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDatasetExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateEnrichmentJob", func(t *testing.T) {
+        input := &iotsitewise.CreateEnrichmentJobInput{}
+        output := &iotsitewise.CreateEnrichmentJobOutput{}
+
+        mockClient.On("CreateEnrichmentJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateEnrichmentJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateGateway", func(t *testing.T) {
         input := &iotsitewise.CreateGatewayInput{}
         output := &iotsitewise.CreateGatewayOutput{}
@@ -249,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePipeline", func(t *testing.T) {
+        input := &iotsitewise.CreatePipelineInput{}
+        output := &iotsitewise.CreatePipelineOutput{}
+
+        mockClient.On("CreatePipeline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePipeline(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +411,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTask", func(t *testing.T) {
+        input := &iotsitewise.CreateTaskInput{}
+        output := &iotsitewise.CreateTaskOutput{}
+
+        mockClient.On("CreateTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWorkspace", func(t *testing.T) {
+        input := &iotsitewise.CreateWorkspaceInput{}
+        output := &iotsitewise.CreateWorkspaceOutput{}
+
+        mockClient.On("CreateWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWorkspace(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAccessPolicy", func(t *testing.T) {
         input := &iotsitewise.DeleteAccessPolicyInput{}
         output := &iotsitewise.DeleteAccessPolicyOutput{}
@@ -288,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAccessPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAccessPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteApplication", func(t *testing.T) {
+        input := &iotsitewise.DeleteApplicationInput{}
+        output := &iotsitewise.DeleteApplicationOutput{}
+
+        mockClient.On("DeleteApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -398,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeletePipeline", func(t *testing.T) {
+        input := &iotsitewise.DeletePipelineInput{}
+        output := &iotsitewise.DeletePipelineOutput{}
+
+        mockClient.On("DeletePipeline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePortal", func(t *testing.T) {
         input := &iotsitewise.DeletePortalInput{}
         output := &iotsitewise.DeletePortalOutput{}
@@ -424,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteTask", func(t *testing.T) {
+        input := &iotsitewise.DeleteTaskInput{}
+        output := &iotsitewise.DeleteTaskOutput{}
+
+        mockClient.On("DeleteTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteTimeSeries", func(t *testing.T) {
         input := &iotsitewise.DeleteTimeSeriesInput{}
         output := &iotsitewise.DeleteTimeSeriesOutput{}
@@ -431,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTimeSeries", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTimeSeries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWorkspace", func(t *testing.T) {
+        input := &iotsitewise.DeleteWorkspaceInput{}
+        output := &iotsitewise.DeleteWorkspaceOutput{}
+
+        mockClient.On("DeleteWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWorkspace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAction", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApplication", func(t *testing.T) {
+        input := &iotsitewise.DescribeApplicationInput{}
+        output := &iotsitewise.DescribeApplicationOutput{}
+
+        mockClient.On("DescribeApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -606,6 +827,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDatasetExportJob", func(t *testing.T) {
+        input := &iotsitewise.DescribeDatasetExportJobInput{}
+        output := &iotsitewise.DescribeDatasetExportJobOutput{}
+
+        mockClient.On("DescribeDatasetExportJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDatasetExportJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDefaultEncryptionConfiguration", func(t *testing.T) {
         input := &iotsitewise.DescribeDefaultEncryptionConfigurationInput{}
         output := &iotsitewise.DescribeDefaultEncryptionConfigurationOutput{}
@@ -613,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeDefaultEncryptionConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeDefaultEncryptionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeEnrichmentJob", func(t *testing.T) {
+        input := &iotsitewise.DescribeEnrichmentJobInput{}
+        output := &iotsitewise.DescribeEnrichmentJobOutput{}
+
+        mockClient.On("DescribeEnrichmentJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeEnrichmentJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -671,6 +918,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribePipeline", func(t *testing.T) {
+        input := &iotsitewise.DescribePipelineInput{}
+        output := &iotsitewise.DescribePipelineOutput{}
+
+        mockClient.On("DescribePipeline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribePipelineExecution", func(t *testing.T) {
+        input := &iotsitewise.DescribePipelineExecutionInput{}
+        output := &iotsitewise.DescribePipelineExecutionOutput{}
+
+        mockClient.On("DescribePipelineExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePipelineExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribePortal", func(t *testing.T) {
         input := &iotsitewise.DescribePortalInput{}
         output := &iotsitewise.DescribePortalOutput{}
@@ -697,6 +970,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeQuery", func(t *testing.T) {
+        input := &iotsitewise.DescribeQueryInput{}
+        output := &iotsitewise.DescribeQueryOutput{}
+
+        mockClient.On("DescribeQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSearch", func(t *testing.T) {
+        input := &iotsitewise.DescribeSearchInput{}
+        output := &iotsitewise.DescribeSearchOutput{}
+
+        mockClient.On("DescribeSearch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSearch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeStorageConfiguration", func(t *testing.T) {
         input := &iotsitewise.DescribeStorageConfigurationInput{}
         output := &iotsitewise.DescribeStorageConfigurationOutput{}
@@ -710,6 +1009,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTask", func(t *testing.T) {
+        input := &iotsitewise.DescribeTaskInput{}
+        output := &iotsitewise.DescribeTaskOutput{}
+
+        mockClient.On("DescribeTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTimeSeries", func(t *testing.T) {
         input := &iotsitewise.DescribeTimeSeriesInput{}
         output := &iotsitewise.DescribeTimeSeriesOutput{}
@@ -717,6 +1029,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTimeSeries", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTimeSeries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeWorkspace", func(t *testing.T) {
+        input := &iotsitewise.DescribeWorkspaceInput{}
+        output := &iotsitewise.DescribeWorkspaceOutput{}
+
+        mockClient.On("DescribeWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeWorkspace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,6 +1139,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCaptureData", func(t *testing.T) {
+        input := &iotsitewise.GetCaptureDataInput{}
+        output := &iotsitewise.GetCaptureDataOutput{}
+
+        mockClient.On("GetCaptureData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCaptureData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetInterpolatedAssetPropertyValues", func(t *testing.T) {
         input := &iotsitewise.GetInterpolatedAssetPropertyValuesInput{}
         output := &iotsitewise.GetInterpolatedAssetPropertyValuesOutput{}
@@ -821,6 +1159,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetInterpolatedAssetPropertyValues", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetInterpolatedAssetPropertyValues(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQueryResults", func(t *testing.T) {
+        input := &iotsitewise.GetQueryResultsInput{}
+        output := &iotsitewise.GetQueryResultsOutput{}
+
+        mockClient.On("GetQueryResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQueryResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSearchResults", func(t *testing.T) {
+        input := &iotsitewise.GetSearchResultsInput{}
+        output := &iotsitewise.GetSearchResultsOutput{}
+
+        mockClient.On("GetSearchResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSearchResults(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -860,6 +1224,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListActions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListActions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListApplications", func(t *testing.T) {
+        input := &iotsitewise.ListApplicationsInput{}
+        output := &iotsitewise.ListApplicationsOutput{}
+
+        mockClient.On("ListApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1035,6 +1412,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDatasetDataSegmentRelationships", func(t *testing.T) {
+        input := &iotsitewise.ListDatasetDataSegmentRelationshipsInput{}
+        output := &iotsitewise.ListDatasetDataSegmentRelationshipsOutput{}
+
+        mockClient.On("ListDatasetDataSegmentRelationships", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetDataSegmentRelationships(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasetDataSegments", func(t *testing.T) {
+        input := &iotsitewise.ListDatasetDataSegmentsInput{}
+        output := &iotsitewise.ListDatasetDataSegmentsOutput{}
+
+        mockClient.On("ListDatasetDataSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetDataSegments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasetExportJobs", func(t *testing.T) {
+        input := &iotsitewise.ListDatasetExportJobsInput{}
+        output := &iotsitewise.ListDatasetExportJobsOutput{}
+
+        mockClient.On("ListDatasetExportJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetExportJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDatasets", func(t *testing.T) {
         input := &iotsitewise.ListDatasetsInput{}
         output := &iotsitewise.ListDatasetsOutput{}
@@ -1042,6 +1458,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDatasets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDatasets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEnrichmentJobs", func(t *testing.T) {
+        input := &iotsitewise.ListEnrichmentJobsInput{}
+        output := &iotsitewise.ListEnrichmentJobsOutput{}
+
+        mockClient.On("ListEnrichmentJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEnrichmentJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1087,6 +1516,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPipelineExecutions", func(t *testing.T) {
+        input := &iotsitewise.ListPipelineExecutionsInput{}
+        output := &iotsitewise.ListPipelineExecutionsOutput{}
+
+        mockClient.On("ListPipelineExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPipelineExecutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPipelines", func(t *testing.T) {
+        input := &iotsitewise.ListPipelinesInput{}
+        output := &iotsitewise.ListPipelinesOutput{}
+
+        mockClient.On("ListPipelines", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPipelines(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPortals", func(t *testing.T) {
         input := &iotsitewise.ListPortalsInput{}
         output := &iotsitewise.ListPortalsOutput{}
@@ -1126,6 +1581,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListQueries", func(t *testing.T) {
+        input := &iotsitewise.ListQueriesInput{}
+        output := &iotsitewise.ListQueriesOutput{}
+
+        mockClient.On("ListQueries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQueries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSearches", func(t *testing.T) {
+        input := &iotsitewise.ListSearchesInput{}
+        output := &iotsitewise.ListSearchesOutput{}
+
+        mockClient.On("ListSearches", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSearches(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &iotsitewise.ListTagsForResourceInput{}
         output := &iotsitewise.ListTagsForResourceOutput{}
@@ -1139,6 +1620,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTasks", func(t *testing.T) {
+        input := &iotsitewise.ListTasksInput{}
+        output := &iotsitewise.ListTasksOutput{}
+
+        mockClient.On("ListTasks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTimeSeries", func(t *testing.T) {
         input := &iotsitewise.ListTimeSeriesInput{}
         output := &iotsitewise.ListTimeSeriesOutput{}
@@ -1146,6 +1640,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTimeSeries", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTimeSeries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWorkspaces", func(t *testing.T) {
+        input := &iotsitewise.ListWorkspacesInput{}
+        output := &iotsitewise.ListWorkspacesOutput{}
+
+        mockClient.On("ListWorkspaces", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWorkspaces(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1198,6 +1705,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutStorageConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutStorageConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartPipelineExecution", func(t *testing.T) {
+        input := &iotsitewise.StartPipelineExecutionInput{}
+        output := &iotsitewise.StartPipelineExecutionOutput{}
+
+        mockClient.On("StartPipelineExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartPipelineExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartQuery", func(t *testing.T) {
+        input := &iotsitewise.StartQueryInput{}
+        output := &iotsitewise.StartQueryOutput{}
+
+        mockClient.On("StartQuery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartQuery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartSearch", func(t *testing.T) {
+        input := &iotsitewise.StartSearchInput{}
+        output := &iotsitewise.StartSearchOutput{}
+
+        mockClient.On("StartSearch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartSearch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1360,6 +1906,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdatePipeline", func(t *testing.T) {
+        input := &iotsitewise.UpdatePipelineInput{}
+        output := &iotsitewise.UpdatePipelineOutput{}
+
+        mockClient.On("UpdatePipeline", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePipeline(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdatePortal", func(t *testing.T) {
         input := &iotsitewise.UpdatePortalInput{}
         output := &iotsitewise.UpdatePortalOutput{}
@@ -1380,6 +1939,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateProject", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTask", func(t *testing.T) {
+        input := &iotsitewise.UpdateTaskInput{}
+        output := &iotsitewise.UpdateTaskOutput{}
+
+        mockClient.On("UpdateTask", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWorkspace", func(t *testing.T) {
+        input := &iotsitewise.UpdateWorkspaceInput{}
+        output := &iotsitewise.UpdateWorkspaceOutput{}
+
+        mockClient.On("UpdateWorkspace", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWorkspace(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
