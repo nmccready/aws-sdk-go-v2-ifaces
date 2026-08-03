@@ -63,6 +63,7 @@ type IClient interface {
  DescribeVirtualInterfaces(ctx context.Context, params *DescribeVirtualInterfacesInput, optFns ...func(*Options)) (*DescribeVirtualInterfacesOutput, error) 
  DisassociateConnectionFromLag(ctx context.Context, params *DisassociateConnectionFromLagInput, optFns ...func(*Options)) (*DisassociateConnectionFromLagOutput, error) 
  DisassociateMacSecKey(ctx context.Context, params *DisassociateMacSecKeyInput, optFns ...func(*Options)) (*DisassociateMacSecKeyOutput, error) 
+ ListVirtualInterfaceRoutes(ctx context.Context, params *ListVirtualInterfaceRoutesInput, optFns ...func(*Options)) (*ListVirtualInterfaceRoutesOutput, error) 
  ListVirtualInterfaceTestHistory(ctx context.Context, params *ListVirtualInterfaceTestHistoryInput, optFns ...func(*Options)) (*ListVirtualInterfaceTestHistoryOutput, error) 
  StartBgpFailoverTest(ctx context.Context, params *StartBgpFailoverTestInput, optFns ...func(*Options)) (*StartBgpFailoverTestOutput, error) 
  StopBgpFailoverTest(ctx context.Context, params *StopBgpFailoverTestInput, optFns ...func(*Options)) (*StopBgpFailoverTestOutput, error) 

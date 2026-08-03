@@ -91,6 +91,7 @@ type IClient interface {
  UpdateProxyRule(ctx context.Context, params *UpdateProxyRuleInput, optFns ...func(*Options)) (*UpdateProxyRuleOutput, error) 
  UpdateProxyRuleGroupPriorities(ctx context.Context, params *UpdateProxyRuleGroupPrioritiesInput, optFns ...func(*Options)) (*UpdateProxyRuleGroupPrioritiesOutput, error) 
  UpdateProxyRulePriorities(ctx context.Context, params *UpdateProxyRulePrioritiesInput, optFns ...func(*Options)) (*UpdateProxyRulePrioritiesOutput, error) 
+ UpdateProxySettings(ctx context.Context, params *UpdateProxySettingsInput, optFns ...func(*Options)) (*UpdateProxySettingsOutput, error) 
  UpdateRuleGroup(ctx context.Context, params *UpdateRuleGroupInput, optFns ...func(*Options)) (*UpdateRuleGroupOutput, error) 
  UpdateSubnetChangeProtection(ctx context.Context, params *UpdateSubnetChangeProtectionInput, optFns ...func(*Options)) (*UpdateSubnetChangeProtectionOutput, error) 
  UpdateTLSInspectionConfiguration(ctx context.Context, params *UpdateTLSInspectionConfigurationInput, optFns ...func(*Options)) (*UpdateTLSInspectionConfigurationOutput, error) 

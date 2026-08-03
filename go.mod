@@ -126,7 +126,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/devicefarm v1.41.3
 	github.com/aws/aws-sdk-go-v2/service/devopsagent v1.10.3
 	github.com/aws/aws-sdk-go-v2/service/devopsguru v1.43.3
-	github.com/aws/aws-sdk-go-v2/service/directconnect v1.43.3
+	github.com/aws/aws-sdk-go-v2/service/directconnect v1.44.0
 	github.com/aws/aws-sdk-go-v2/service/directoryservice v1.41.3
 	github.com/aws/aws-sdk-go-v2/service/directoryservicedata v1.10.3
 	github.com/aws/aws-sdk-go-v2/service/dlm v1.39.3
@@ -144,7 +144,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ecs v1.89.3
 	github.com/aws/aws-sdk-go-v2/service/efs v1.44.3
 	github.com/aws/aws-sdk-go-v2/service/eks v1.90.3
-	github.com/aws/aws-sdk-go-v2/service/eksauth v1.15.3
+	github.com/aws/aws-sdk-go-v2/service/eksauth v1.16.0
 	github.com/aws/aws-sdk-go-v2/service/elasticache v1.56.3
 	github.com/aws/aws-sdk-go-v2/service/elasticbeanstalk v1.37.3
 	github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing v1.36.3
@@ -250,7 +250,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/marketplacemetering v1.39.3
 	github.com/aws/aws-sdk-go-v2/service/marketplacereporting v1.10.3
 	github.com/aws/aws-sdk-go-v2/service/mediaconnect v1.53.3
-	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.96.3
+	github.com/aws/aws-sdk-go-v2/service/mediaconvert v1.97.0
 	github.com/aws/aws-sdk-go-v2/service/medialive v1.101.3
 	github.com/aws/aws-sdk-go-v2/service/mediapackage v1.42.3
 	github.com/aws/aws-sdk-go-v2/service/mediapackagev2 v1.43.3
@@ -274,7 +274,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/neptune v1.48.3
 	github.com/aws/aws-sdk-go-v2/service/neptunedata v1.20.3
 	github.com/aws/aws-sdk-go-v2/service/neptunegraph v1.24.3
-	github.com/aws/aws-sdk-go-v2/service/networkfirewall v1.66.0
+	github.com/aws/aws-sdk-go-v2/service/networkfirewall v1.67.0
 	github.com/aws/aws-sdk-go-v2/service/networkflowmonitor v1.14.3
 	github.com/aws/aws-sdk-go-v2/service/networkmanager v1.44.3
 	github.com/aws/aws-sdk-go-v2/service/networkmonitor v1.16.3
@@ -282,7 +282,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/notificationscontacts v1.8.3
 	github.com/aws/aws-sdk-go-v2/service/novaact v1.3.3
 	github.com/aws/aws-sdk-go-v2/service/oam v1.26.3
-	github.com/aws/aws-sdk-go-v2/service/observabilityadmin v1.21.3
+	github.com/aws/aws-sdk-go-v2/service/observabilityadmin v1.22.0
 	github.com/aws/aws-sdk-go-v2/service/odb v1.15.4
 	github.com/aws/aws-sdk-go-v2/service/omics v1.49.4
 	github.com/aws/aws-sdk-go-v2/service/opensearch v1.75.3
@@ -342,7 +342,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/route53resolver v1.48.3
 	github.com/aws/aws-sdk-go-v2/service/rtbfabric v1.10.3
 	github.com/aws/aws-sdk-go-v2/service/rum v1.33.3
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.106.3
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.106.4
 	github.com/aws/aws-sdk-go-v2/service/s3control v1.73.3
 	github.com/aws/aws-sdk-go-v2/service/s3files v1.3.3
 	github.com/aws/aws-sdk-go-v2/service/s3outposts v1.37.3
@@ -403,7 +403,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/synthetics v1.47.3
 	github.com/aws/aws-sdk-go-v2/service/taxsettings v1.20.3
 	github.com/aws/aws-sdk-go-v2/service/textract v1.43.3
-	github.com/aws/aws-sdk-go-v2/service/timestreaminfluxdb v1.22.3
+	github.com/aws/aws-sdk-go-v2/service/timestreaminfluxdb v1.23.0
 	github.com/aws/aws-sdk-go-v2/service/timestreamquery v1.39.3
 	github.com/aws/aws-sdk-go-v2/service/timestreamwrite v1.38.3
 	github.com/aws/aws-sdk-go-v2/service/tnb v1.21.3
@@ -418,7 +418,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/vpclattice v1.25.4
 	github.com/aws/aws-sdk-go-v2/service/waf v1.33.3
 	github.com/aws/aws-sdk-go-v2/service/wafregional v1.33.3
-	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.77.1
+	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.77.2
 	github.com/aws/aws-sdk-go-v2/service/wellarchitected v1.42.3
 	github.com/aws/aws-sdk-go-v2/service/wickr v1.5.3
 	github.com/aws/aws-sdk-go-v2/service/wisdom v1.35.3
@@ -431,7 +431,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/workspacesweb v1.42.3
 	github.com/aws/aws-sdk-go-v2/service/xray v1.39.3
 	github.com/nmccready/go-debug v0.5.0
-	github.com/stretchr/testify v1.11.1
+	github.com/stretchr/testify v1.6.1
 )
 
 require (
@@ -446,14 +446,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.34 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.35 // indirect
 	github.com/aws/smithy-go v1.27.6 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/davecgh/go-spew v1.1.0 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.4 // indirect
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/nmccready/colorjson v0.1.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.5.2 // indirect
+	github.com/stretchr/objx v0.1.0 // indirect
 	golang.org/x/sys v0.0.0-20191026070338-33540a1f6037 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )

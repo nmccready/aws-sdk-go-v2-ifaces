@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateDbBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDbBackup(ctx context.Context, params *timestreaminfluxdb.CreateDbBackupInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.CreateDbBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDbBackup")
+	}
+
+	var r0 *timestreaminfluxdb.CreateDbBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.CreateDbBackupInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.CreateDbBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.CreateDbBackupInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.CreateDbBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.CreateDbBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.CreateDbBackupInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDbCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDbCluster(ctx context.Context, params *timestreaminfluxdb.CreateDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.CreateDbClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -125,6 +162,43 @@ func (_m *IClient) CreateDbParameterGroup(ctx context.Context, params *timestrea
 	return r0, r1
 }
 
+// DeleteDbBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDbBackup(ctx context.Context, params *timestreaminfluxdb.DeleteDbBackupInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.DeleteDbBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDbBackup")
+	}
+
+	var r0 *timestreaminfluxdb.DeleteDbBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.DeleteDbBackupInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.DeleteDbBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.DeleteDbBackupInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.DeleteDbBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.DeleteDbBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.DeleteDbBackupInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDbCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDbCluster(ctx context.Context, params *timestreaminfluxdb.DeleteDbClusterInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.DeleteDbClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -191,6 +265,43 @@ func (_m *IClient) DeleteDbInstance(ctx context.Context, params *timestreaminflu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.DeleteDbInstanceInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDbBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDbBackup(ctx context.Context, params *timestreaminfluxdb.GetDbBackupInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.GetDbBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDbBackup")
+	}
+
+	var r0 *timestreaminfluxdb.GetDbBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.GetDbBackupInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.GetDbBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.GetDbBackupInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.GetDbBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.GetDbBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.GetDbBackupInput, ...func(*timestreaminfluxdb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -302,6 +413,43 @@ func (_m *IClient) GetDbParameterGroup(ctx context.Context, params *timestreamin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.GetDbParameterGroupInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDbBackups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDbBackups(ctx context.Context, params *timestreaminfluxdb.ListDbBackupsInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbBackupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDbBackups")
+	}
+
+	var r0 *timestreaminfluxdb.ListDbBackupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.ListDbBackupsInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.ListDbBackupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.ListDbBackupsInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.ListDbBackupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.ListDbBackupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.ListDbBackupsInput, ...func(*timestreaminfluxdb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -579,6 +727,43 @@ func (_m *IClient) RebootDbInstance(ctx context.Context, params *timestreaminflu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.RebootDbInstanceInput, ...func(*timestreaminfluxdb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RestoreFromDbBackup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RestoreFromDbBackup(ctx context.Context, params *timestreaminfluxdb.RestoreFromDbBackupInput, optFns ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.RestoreFromDbBackupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RestoreFromDbBackup")
+	}
+
+	var r0 *timestreaminfluxdb.RestoreFromDbBackupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.RestoreFromDbBackupInput, ...func(*timestreaminfluxdb.Options)) (*timestreaminfluxdb.RestoreFromDbBackupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *timestreaminfluxdb.RestoreFromDbBackupInput, ...func(*timestreaminfluxdb.Options)) *timestreaminfluxdb.RestoreFromDbBackupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*timestreaminfluxdb.RestoreFromDbBackupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *timestreaminfluxdb.RestoreFromDbBackupInput, ...func(*timestreaminfluxdb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

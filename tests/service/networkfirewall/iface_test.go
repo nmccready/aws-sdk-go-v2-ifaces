@@ -1087,6 +1087,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateProxySettings", func(t *testing.T) {
+        input := &networkfirewall.UpdateProxySettingsInput{}
+        output := &networkfirewall.UpdateProxySettingsOutput{}
+
+        mockClient.On("UpdateProxySettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProxySettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateRuleGroup", func(t *testing.T) {
         input := &networkfirewall.UpdateRuleGroupInput{}
         output := &networkfirewall.UpdateRuleGroupOutput{}

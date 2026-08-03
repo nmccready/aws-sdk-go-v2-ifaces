@@ -1976,6 +1976,43 @@ func (_m *IClient) DisassociateMacSecKey(ctx context.Context, params *directconn
 	return r0, r1
 }
 
+// ListVirtualInterfaceRoutes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListVirtualInterfaceRoutes(ctx context.Context, params *directconnect.ListVirtualInterfaceRoutesInput, optFns ...func(*directconnect.Options)) (*directconnect.ListVirtualInterfaceRoutesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListVirtualInterfaceRoutes")
+	}
+
+	var r0 *directconnect.ListVirtualInterfaceRoutesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.ListVirtualInterfaceRoutesInput, ...func(*directconnect.Options)) (*directconnect.ListVirtualInterfaceRoutesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.ListVirtualInterfaceRoutesInput, ...func(*directconnect.Options)) *directconnect.ListVirtualInterfaceRoutesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.ListVirtualInterfaceRoutesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.ListVirtualInterfaceRoutesInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListVirtualInterfaceTestHistory provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListVirtualInterfaceTestHistory(ctx context.Context, params *directconnect.ListVirtualInterfaceTestHistoryInput, optFns ...func(*directconnect.Options)) (*directconnect.ListVirtualInterfaceTestHistoryOutput, error) {
 	_va := make([]interface{}, len(optFns))

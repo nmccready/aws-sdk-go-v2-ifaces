@@ -723,6 +723,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListVirtualInterfaceRoutes", func(t *testing.T) {
+        input := &directconnect.ListVirtualInterfaceRoutesInput{}
+        output := &directconnect.ListVirtualInterfaceRoutesOutput{}
+
+        mockClient.On("ListVirtualInterfaceRoutes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVirtualInterfaceRoutes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListVirtualInterfaceTestHistory", func(t *testing.T) {
         input := &directconnect.ListVirtualInterfaceTestHistoryInput{}
         output := &directconnect.ListVirtualInterfaceTestHistoryOutput{}

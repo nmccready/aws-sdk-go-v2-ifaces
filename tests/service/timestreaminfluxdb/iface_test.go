@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDbBackup", func(t *testing.T) {
+        input := &timestreaminfluxdb.CreateDbBackupInput{}
+        output := &timestreaminfluxdb.CreateDbBackupOutput{}
+
+        mockClient.On("CreateDbBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDbBackup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDbCluster", func(t *testing.T) {
         input := &timestreaminfluxdb.CreateDbClusterInput{}
         output := &timestreaminfluxdb.CreateDbClusterOutput{}
@@ -73,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDbBackup", func(t *testing.T) {
+        input := &timestreaminfluxdb.DeleteDbBackupInput{}
+        output := &timestreaminfluxdb.DeleteDbBackupOutput{}
+
+        mockClient.On("DeleteDbBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDbBackup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDbCluster", func(t *testing.T) {
         input := &timestreaminfluxdb.DeleteDbClusterInput{}
         output := &timestreaminfluxdb.DeleteDbClusterOutput{}
@@ -93,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDbInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDbInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDbBackup", func(t *testing.T) {
+        input := &timestreaminfluxdb.GetDbBackupInput{}
+        output := &timestreaminfluxdb.GetDbBackupOutput{}
+
+        mockClient.On("GetDbBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDbBackup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -132,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDbParameterGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDbParameterGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDbBackups", func(t *testing.T) {
+        input := &timestreaminfluxdb.ListDbBackupsInput{}
+        output := &timestreaminfluxdb.ListDbBackupsOutput{}
+
+        mockClient.On("ListDbBackups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDbBackups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -223,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RebootDbInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.RebootDbInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRestoreFromDbBackup", func(t *testing.T) {
+        input := &timestreaminfluxdb.RestoreFromDbBackupInput{}
+        output := &timestreaminfluxdb.RestoreFromDbBackupOutput{}
+
+        mockClient.On("RestoreFromDbBackup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreFromDbBackup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

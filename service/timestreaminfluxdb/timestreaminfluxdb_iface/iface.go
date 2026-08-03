@@ -10,14 +10,18 @@ import (
 // IClient defines the interface for timestreaminfluxdb
 type IClient interface {
  Options() Options 
+ CreateDbBackup(ctx context.Context, params *CreateDbBackupInput, optFns ...func(*Options)) (*CreateDbBackupOutput, error) 
  CreateDbCluster(ctx context.Context, params *CreateDbClusterInput, optFns ...func(*Options)) (*CreateDbClusterOutput, error) 
  CreateDbInstance(ctx context.Context, params *CreateDbInstanceInput, optFns ...func(*Options)) (*CreateDbInstanceOutput, error) 
  CreateDbParameterGroup(ctx context.Context, params *CreateDbParameterGroupInput, optFns ...func(*Options)) (*CreateDbParameterGroupOutput, error) 
+ DeleteDbBackup(ctx context.Context, params *DeleteDbBackupInput, optFns ...func(*Options)) (*DeleteDbBackupOutput, error) 
  DeleteDbCluster(ctx context.Context, params *DeleteDbClusterInput, optFns ...func(*Options)) (*DeleteDbClusterOutput, error) 
  DeleteDbInstance(ctx context.Context, params *DeleteDbInstanceInput, optFns ...func(*Options)) (*DeleteDbInstanceOutput, error) 
+ GetDbBackup(ctx context.Context, params *GetDbBackupInput, optFns ...func(*Options)) (*GetDbBackupOutput, error) 
  GetDbCluster(ctx context.Context, params *GetDbClusterInput, optFns ...func(*Options)) (*GetDbClusterOutput, error) 
  GetDbInstance(ctx context.Context, params *GetDbInstanceInput, optFns ...func(*Options)) (*GetDbInstanceOutput, error) 
  GetDbParameterGroup(ctx context.Context, params *GetDbParameterGroupInput, optFns ...func(*Options)) (*GetDbParameterGroupOutput, error) 
+ ListDbBackups(ctx context.Context, params *ListDbBackupsInput, optFns ...func(*Options)) (*ListDbBackupsOutput, error) 
  ListDbClusters(ctx context.Context, params *ListDbClustersInput, optFns ...func(*Options)) (*ListDbClustersOutput, error) 
  ListDbInstances(ctx context.Context, params *ListDbInstancesInput, optFns ...func(*Options)) (*ListDbInstancesOutput, error) 
  ListDbInstancesForCluster(ctx context.Context, params *ListDbInstancesForClusterInput, optFns ...func(*Options)) (*ListDbInstancesForClusterOutput, error) 
@@ -25,6 +29,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  RebootDbCluster(ctx context.Context, params *RebootDbClusterInput, optFns ...func(*Options)) (*RebootDbClusterOutput, error) 
  RebootDbInstance(ctx context.Context, params *RebootDbInstanceInput, optFns ...func(*Options)) (*RebootDbInstanceOutput, error) 
+ RestoreFromDbBackup(ctx context.Context, params *RestoreFromDbBackupInput, optFns ...func(*Options)) (*RestoreFromDbBackupOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateDbCluster(ctx context.Context, params *UpdateDbClusterInput, optFns ...func(*Options)) (*UpdateDbClusterOutput, error) 
