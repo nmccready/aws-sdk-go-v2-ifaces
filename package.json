@@ -20,7 +20,7 @@
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
     "@stdlib/string-pascalcase-cli": "0.2.3",
-    "commit-and-tag-version": "12",
+    "commit-and-tag-version": "13",
     "commitlint": "21",
     "sort-package-json": "4.0"
   }
