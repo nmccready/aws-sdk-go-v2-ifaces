@@ -1659,6 +1659,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataCatalogExportConfiguration", func(t *testing.T) {
+        input := &glue.GetDataCatalogExportConfigurationInput{}
+        output := &glue.GetDataCatalogExportConfigurationOutput{}
+
+        mockClient.On("GetDataCatalogExportConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataCatalogExportConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDataQualityModel", func(t *testing.T) {
         input := &glue.GetDataQualityModelInput{}
         output := &glue.GetDataQualityModelOutput{}
@@ -2966,6 +2979,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutDataCatalogEncryptionSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutDataCatalogEncryptionSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutDataCatalogExportConfiguration", func(t *testing.T) {
+        input := &glue.PutDataCatalogExportConfigurationInput{}
+        output := &glue.PutDataCatalogExportConfigurationOutput{}
+
+        mockClient.On("PutDataCatalogExportConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutDataCatalogExportConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

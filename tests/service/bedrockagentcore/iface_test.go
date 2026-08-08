@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCapacityProviderSession", func(t *testing.T) {
+        input := &bedrockagentcore.DeleteCapacityProviderSessionInput{}
+        output := &bedrockagentcore.DeleteCapacityProviderSessionOutput{}
+
+        mockClient.On("DeleteCapacityProviderSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCapacityProviderSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEvent", func(t *testing.T) {
         input := &bedrockagentcore.DeleteEventInput{}
         output := &bedrockagentcore.DeleteEventOutput{}

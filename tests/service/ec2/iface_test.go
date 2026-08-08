@@ -268,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateApplicationStatusCheck", func(t *testing.T) {
+        input := &ec2.AssociateApplicationStatusCheckInput{}
+        output := &ec2.AssociateApplicationStatusCheckOutput{}
+
+        mockClient.On("AssociateApplicationStatusCheck", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateApplicationStatusCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateCapacityReservationBillingOwner", func(t *testing.T) {
         input := &ec2.AssociateCapacityReservationBillingOwnerInput{}
         output := &ec2.AssociateCapacityReservationBillingOwnerOutput{}
@@ -632,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchModifyIpamRoutingPolicyRegistrations", func(t *testing.T) {
+        input := &ec2.BatchModifyIpamRoutingPolicyRegistrationsInput{}
+        output := &ec2.BatchModifyIpamRoutingPolicyRegistrationsOutput{}
+
+        mockClient.On("BatchModifyIpamRoutingPolicyRegistrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchModifyIpamRoutingPolicyRegistrations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBundleInstance", func(t *testing.T) {
         input := &ec2.BundleInstanceInput{}
         output := &ec2.BundleInstanceOutput{}
@@ -847,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CopyVolumes", ctx, input).Return(output, nil)
 
         result, err := mockClient.CopyVolumes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateApplicationStatusCheck", func(t *testing.T) {
+        input := &ec2.CreateApplicationStatusCheckInput{}
+        output := &ec2.CreateApplicationStatusCheckOutput{}
+
+        mockClient.On("CreateApplicationStatusCheck", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateApplicationStatusCheck(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1217,6 +1256,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateIpamInternetRegistryAssociation", func(t *testing.T) {
+        input := &ec2.CreateIpamInternetRegistryAssociationInput{}
+        output := &ec2.CreateIpamInternetRegistryAssociationOutput{}
+
+        mockClient.On("CreateIpamInternetRegistryAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIpamInternetRegistryAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateIpamPolicy", func(t *testing.T) {
         input := &ec2.CreateIpamPolicyInput{}
         output := &ec2.CreateIpamPolicyOutput{}
@@ -1276,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIpamResourceDiscovery", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIpamResourceDiscovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIpamRoutingPolicyRegistration", func(t *testing.T) {
+        input := &ec2.CreateIpamRoutingPolicyRegistrationInput{}
+        output := &ec2.CreateIpamRoutingPolicyRegistrationOutput{}
+
+        mockClient.On("CreateIpamRoutingPolicyRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIpamRoutingPolicyRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2231,6 +2296,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteApplicationStatusCheck", func(t *testing.T) {
+        input := &ec2.DeleteApplicationStatusCheckInput{}
+        output := &ec2.DeleteApplicationStatusCheckOutput{}
+
+        mockClient.On("DeleteApplicationStatusCheck", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApplicationStatusCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCapacityManagerDataExport", func(t *testing.T) {
         input := &ec2.DeleteCapacityManagerDataExportInput{}
         output := &ec2.DeleteCapacityManagerDataExportOutput{}
@@ -2465,6 +2543,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIpamInternetRegistryAssociation", func(t *testing.T) {
+        input := &ec2.DeleteIpamInternetRegistryAssociationInput{}
+        output := &ec2.DeleteIpamInternetRegistryAssociationOutput{}
+
+        mockClient.On("DeleteIpamInternetRegistryAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIpamInternetRegistryAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteIpamPolicy", func(t *testing.T) {
         input := &ec2.DeleteIpamPolicyInput{}
         output := &ec2.DeleteIpamPolicyOutput{}
@@ -2524,6 +2615,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteIpamResourceDiscovery", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteIpamResourceDiscovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteIpamRoutingPolicyRegistration", func(t *testing.T) {
+        input := &ec2.DeleteIpamRoutingPolicyRegistrationInput{}
+        output := &ec2.DeleteIpamRoutingPolicyRegistrationOutput{}
+
+        mockClient.On("DeleteIpamRoutingPolicyRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIpamRoutingPolicyRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3635,6 +3739,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeApplicationStatus", func(t *testing.T) {
+        input := &ec2.DescribeApplicationStatusInput{}
+        output := &ec2.DescribeApplicationStatusOutput{}
+
+        mockClient.On("DescribeApplicationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplicationStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApplicationStatusCheckAssociations", func(t *testing.T) {
+        input := &ec2.DescribeApplicationStatusCheckAssociationsInput{}
+        output := &ec2.DescribeApplicationStatusCheckAssociationsOutput{}
+
+        mockClient.On("DescribeApplicationStatusCheckAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplicationStatusCheckAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApplicationStatusChecks", func(t *testing.T) {
+        input := &ec2.DescribeApplicationStatusChecksInput{}
+        output := &ec2.DescribeApplicationStatusChecksOutput{}
+
+        mockClient.On("DescribeApplicationStatusChecks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApplicationStatusChecks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAvailabilityZones", func(t *testing.T) {
         input := &ec2.DescribeAvailabilityZonesInput{}
         output := &ec2.DescribeAvailabilityZonesOutput{}
@@ -4513,6 +4656,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeIpamExternalResourceVerificationTokens", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeIpamExternalResourceVerificationTokens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeIpamInternetRegistryAssociations", func(t *testing.T) {
+        input := &ec2.DescribeIpamInternetRegistryAssociationsInput{}
+        output := &ec2.DescribeIpamInternetRegistryAssociationsOutput{}
+
+        mockClient.On("DescribeIpamInternetRegistryAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIpamInternetRegistryAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6118,6 +6274,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableApplicationStatusCheckSuppression", func(t *testing.T) {
+        input := &ec2.DisableApplicationStatusCheckSuppressionInput{}
+        output := &ec2.DisableApplicationStatusCheckSuppressionOutput{}
+
+        mockClient.On("DisableApplicationStatusCheckSuppression", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableApplicationStatusCheckSuppression(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableAwsNetworkPerformanceMetricSubscription", func(t *testing.T) {
         input := &ec2.DisableAwsNetworkPerformanceMetricSubscriptionInput{}
         output := &ec2.DisableAwsNetworkPerformanceMetricSubscriptionOutput{}
@@ -6378,6 +6547,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateApplicationStatusCheck", func(t *testing.T) {
+        input := &ec2.DisassociateApplicationStatusCheckInput{}
+        output := &ec2.DisassociateApplicationStatusCheckOutput{}
+
+        mockClient.On("DisassociateApplicationStatusCheck", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateApplicationStatusCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateCapacityReservationBillingOwner", func(t *testing.T) {
         input := &ec2.DisassociateCapacityReservationBillingOwnerInput{}
         output := &ec2.DisassociateCapacityReservationBillingOwnerOutput{}
@@ -6625,6 +6807,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestEnableApplicationStatusCheckSuppression", func(t *testing.T) {
+        input := &ec2.EnableApplicationStatusCheckSuppressionInput{}
+        output := &ec2.EnableApplicationStatusCheckSuppressionOutput{}
+
+        mockClient.On("EnableApplicationStatusCheckSuppression", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableApplicationStatusCheckSuppression(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableAwsNetworkPerformanceMetricSubscription", func(t *testing.T) {
         input := &ec2.EnableAwsNetworkPerformanceMetricSubscriptionInput{}
         output := &ec2.EnableAwsNetworkPerformanceMetricSubscriptionOutput{}
@@ -6749,6 +6944,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableInstanceSqlHaStandbyDetections", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableInstanceSqlHaStandbyDetections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableIpamInternetRegistryAssociation", func(t *testing.T) {
+        input := &ec2.EnableIpamInternetRegistryAssociationInput{}
+        output := &ec2.EnableIpamInternetRegistryAssociationOutput{}
+
+        mockClient.On("EnableIpamInternetRegistryAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableIpamInternetRegistryAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -7366,6 +7574,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIpamDiscoveredRoutes", func(t *testing.T) {
+        input := &ec2.GetIpamDiscoveredRoutesInput{}
+        output := &ec2.GetIpamDiscoveredRoutesOutput{}
+
+        mockClient.On("GetIpamDiscoveredRoutes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamDiscoveredRoutes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamInternetRegistryAssociationAsns", func(t *testing.T) {
+        input := &ec2.GetIpamInternetRegistryAssociationAsnsInput{}
+        output := &ec2.GetIpamInternetRegistryAssociationAsnsOutput{}
+
+        mockClient.On("GetIpamInternetRegistryAssociationAsns", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamInternetRegistryAssociationAsns(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamInternetRegistryAssociationCidrs", func(t *testing.T) {
+        input := &ec2.GetIpamInternetRegistryAssociationCidrsInput{}
+        output := &ec2.GetIpamInternetRegistryAssociationCidrsOutput{}
+
+        mockClient.On("GetIpamInternetRegistryAssociationCidrs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamInternetRegistryAssociationCidrs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetIpamPolicyAllocationRules", func(t *testing.T) {
         input := &ec2.GetIpamPolicyAllocationRulesInput{}
         output := &ec2.GetIpamPolicyAllocationRulesOutput{}
@@ -7464,6 +7711,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetIpamResourceCidrs", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetIpamResourceCidrs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamRouteOriginAuthorizations", func(t *testing.T) {
+        input := &ec2.GetIpamRouteOriginAuthorizationsInput{}
+        output := &ec2.GetIpamRouteOriginAuthorizationsOutput{}
+
+        mockClient.On("GetIpamRouteOriginAuthorizations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamRouteOriginAuthorizations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamRouteProtectionFindings", func(t *testing.T) {
+        input := &ec2.GetIpamRouteProtectionFindingsInput{}
+        output := &ec2.GetIpamRouteProtectionFindingsOutput{}
+
+        mockClient.On("GetIpamRouteProtectionFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamRouteProtectionFindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamRoutingPolicyRegistrationDeltas", func(t *testing.T) {
+        input := &ec2.GetIpamRoutingPolicyRegistrationDeltasInput{}
+        output := &ec2.GetIpamRoutingPolicyRegistrationDeltasOutput{}
+
+        mockClient.On("GetIpamRoutingPolicyRegistrationDeltas", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamRoutingPolicyRegistrationDeltas(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIpamRoutingPolicyRegistrations", func(t *testing.T) {
+        input := &ec2.GetIpamRoutingPolicyRegistrationsInput{}
+        output := &ec2.GetIpamRoutingPolicyRegistrationsOutput{}
+
+        mockClient.On("GetIpamRoutingPolicyRegistrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIpamRoutingPolicyRegistrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -8029,6 +8328,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyApplicationStatusCheck", func(t *testing.T) {
+        input := &ec2.ModifyApplicationStatusCheckInput{}
+        output := &ec2.ModifyApplicationStatusCheckOutput{}
+
+        mockClient.On("ModifyApplicationStatusCheck", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyApplicationStatusCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyAvailabilityZoneGroup", func(t *testing.T) {
         input := &ec2.ModifyAvailabilityZoneGroupInput{}
         output := &ec2.ModifyAvailabilityZoneGroupOutput{}
@@ -8439,6 +8751,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyIpamResourceDiscovery", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyIpamResourceDiscovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyIpamRoutingPolicyRegistration", func(t *testing.T) {
+        input := &ec2.ModifyIpamRoutingPolicyRegistrationInput{}
+        output := &ec2.ModifyIpamRoutingPolicyRegistrationOutput{}
+
+        mockClient.On("ModifyIpamRoutingPolicyRegistration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyIpamRoutingPolicyRegistration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -4311,6 +4311,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateContactTaskTemplate", func(t *testing.T) {
+        input := &connect.UpdateContactTaskTemplateInput{}
+        output := &connect.UpdateContactTaskTemplateOutput{}
+
+        mockClient.On("UpdateContactTaskTemplate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContactTaskTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateDataTableAttribute", func(t *testing.T) {
         input := &connect.UpdateDataTableAttributeInput{}
         output := &connect.UpdateDataTableAttributeOutput{}

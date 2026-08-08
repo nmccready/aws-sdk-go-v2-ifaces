@@ -681,6 +681,43 @@ func (_m *IClient) AssociateAddress(ctx context.Context, params *ec2.AssociateAd
 	return r0, r1
 }
 
+// AssociateApplicationStatusCheck provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateApplicationStatusCheck(ctx context.Context, params *ec2.AssociateApplicationStatusCheckInput, optFns ...func(*ec2.Options)) (*ec2.AssociateApplicationStatusCheckOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateApplicationStatusCheck")
+	}
+
+	var r0 *ec2.AssociateApplicationStatusCheckOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AssociateApplicationStatusCheckInput, ...func(*ec2.Options)) (*ec2.AssociateApplicationStatusCheckOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AssociateApplicationStatusCheckInput, ...func(*ec2.Options)) *ec2.AssociateApplicationStatusCheckOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.AssociateApplicationStatusCheckOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.AssociateApplicationStatusCheckInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateCapacityReservationBillingOwner provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateCapacityReservationBillingOwner(ctx context.Context, params *ec2.AssociateCapacityReservationBillingOwnerInput, optFns ...func(*ec2.Options)) (*ec2.AssociateCapacityReservationBillingOwnerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1717,6 +1754,43 @@ func (_m *IClient) AuthorizeSecurityGroupIngress(ctx context.Context, params *ec
 	return r0, r1
 }
 
+// BatchModifyIpamRoutingPolicyRegistrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchModifyIpamRoutingPolicyRegistrations(ctx context.Context, params *ec2.BatchModifyIpamRoutingPolicyRegistrationsInput, optFns ...func(*ec2.Options)) (*ec2.BatchModifyIpamRoutingPolicyRegistrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchModifyIpamRoutingPolicyRegistrations")
+	}
+
+	var r0 *ec2.BatchModifyIpamRoutingPolicyRegistrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.BatchModifyIpamRoutingPolicyRegistrationsInput, ...func(*ec2.Options)) (*ec2.BatchModifyIpamRoutingPolicyRegistrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.BatchModifyIpamRoutingPolicyRegistrationsInput, ...func(*ec2.Options)) *ec2.BatchModifyIpamRoutingPolicyRegistrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.BatchModifyIpamRoutingPolicyRegistrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.BatchModifyIpamRoutingPolicyRegistrationsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BundleInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BundleInstance(ctx context.Context, params *ec2.BundleInstanceInput, optFns ...func(*ec2.Options)) (*ec2.BundleInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2338,6 +2412,43 @@ func (_m *IClient) CopyVolumes(ctx context.Context, params *ec2.CopyVolumesInput
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CopyVolumesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateApplicationStatusCheck provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateApplicationStatusCheck(ctx context.Context, params *ec2.CreateApplicationStatusCheckInput, optFns ...func(*ec2.Options)) (*ec2.CreateApplicationStatusCheckOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateApplicationStatusCheck")
+	}
+
+	var r0 *ec2.CreateApplicationStatusCheckOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateApplicationStatusCheckInput, ...func(*ec2.Options)) (*ec2.CreateApplicationStatusCheckOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateApplicationStatusCheckInput, ...func(*ec2.Options)) *ec2.CreateApplicationStatusCheckOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateApplicationStatusCheckOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateApplicationStatusCheckInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3382,6 +3493,43 @@ func (_m *IClient) CreateIpamExternalResourceVerificationToken(ctx context.Conte
 	return r0, r1
 }
 
+// CreateIpamInternetRegistryAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIpamInternetRegistryAssociation(ctx context.Context, params *ec2.CreateIpamInternetRegistryAssociationInput, optFns ...func(*ec2.Options)) (*ec2.CreateIpamInternetRegistryAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIpamInternetRegistryAssociation")
+	}
+
+	var r0 *ec2.CreateIpamInternetRegistryAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) (*ec2.CreateIpamInternetRegistryAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) *ec2.CreateIpamInternetRegistryAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateIpamInternetRegistryAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateIpamPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateIpamPolicy(ctx context.Context, params *ec2.CreateIpamPolicyInput, optFns ...func(*ec2.Options)) (*ec2.CreateIpamPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3559,6 +3707,43 @@ func (_m *IClient) CreateIpamResourceDiscovery(ctx context.Context, params *ec2.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateIpamResourceDiscoveryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIpamRoutingPolicyRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIpamRoutingPolicyRegistration(ctx context.Context, params *ec2.CreateIpamRoutingPolicyRegistrationInput, optFns ...func(*ec2.Options)) (*ec2.CreateIpamRoutingPolicyRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIpamRoutingPolicyRegistration")
+	}
+
+	var r0 *ec2.CreateIpamRoutingPolicyRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) (*ec2.CreateIpamRoutingPolicyRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) *ec2.CreateIpamRoutingPolicyRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateIpamRoutingPolicyRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6268,6 +6453,43 @@ func (_m *IClient) CreateVpnGateway(ctx context.Context, params *ec2.CreateVpnGa
 	return r0, r1
 }
 
+// DeleteApplicationStatusCheck provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteApplicationStatusCheck(ctx context.Context, params *ec2.DeleteApplicationStatusCheckInput, optFns ...func(*ec2.Options)) (*ec2.DeleteApplicationStatusCheckOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteApplicationStatusCheck")
+	}
+
+	var r0 *ec2.DeleteApplicationStatusCheckOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteApplicationStatusCheckInput, ...func(*ec2.Options)) (*ec2.DeleteApplicationStatusCheckOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteApplicationStatusCheckInput, ...func(*ec2.Options)) *ec2.DeleteApplicationStatusCheckOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteApplicationStatusCheckOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteApplicationStatusCheckInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCapacityManagerDataExport provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCapacityManagerDataExport(ctx context.Context, params *ec2.DeleteCapacityManagerDataExportInput, optFns ...func(*ec2.Options)) (*ec2.DeleteCapacityManagerDataExportOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6934,6 +7156,43 @@ func (_m *IClient) DeleteIpamExternalResourceVerificationToken(ctx context.Conte
 	return r0, r1
 }
 
+// DeleteIpamInternetRegistryAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIpamInternetRegistryAssociation(ctx context.Context, params *ec2.DeleteIpamInternetRegistryAssociationInput, optFns ...func(*ec2.Options)) (*ec2.DeleteIpamInternetRegistryAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIpamInternetRegistryAssociation")
+	}
+
+	var r0 *ec2.DeleteIpamInternetRegistryAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) (*ec2.DeleteIpamInternetRegistryAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) *ec2.DeleteIpamInternetRegistryAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteIpamInternetRegistryAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteIpamPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteIpamPolicy(ctx context.Context, params *ec2.DeleteIpamPolicyInput, optFns ...func(*ec2.Options)) (*ec2.DeleteIpamPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7111,6 +7370,43 @@ func (_m *IClient) DeleteIpamResourceDiscovery(ctx context.Context, params *ec2.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteIpamResourceDiscoveryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteIpamRoutingPolicyRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIpamRoutingPolicyRegistration(ctx context.Context, params *ec2.DeleteIpamRoutingPolicyRegistrationInput, optFns ...func(*ec2.Options)) (*ec2.DeleteIpamRoutingPolicyRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIpamRoutingPolicyRegistration")
+	}
+
+	var r0 *ec2.DeleteIpamRoutingPolicyRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) (*ec2.DeleteIpamRoutingPolicyRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) *ec2.DeleteIpamRoutingPolicyRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteIpamRoutingPolicyRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -10264,6 +10560,117 @@ func (_m *IClient) DescribeAggregateIdFormat(ctx context.Context, params *ec2.De
 	return r0, r1
 }
 
+// DescribeApplicationStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeApplicationStatus(ctx context.Context, params *ec2.DescribeApplicationStatusInput, optFns ...func(*ec2.Options)) (*ec2.DescribeApplicationStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeApplicationStatus")
+	}
+
+	var r0 *ec2.DescribeApplicationStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeApplicationStatusInput, ...func(*ec2.Options)) (*ec2.DescribeApplicationStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeApplicationStatusInput, ...func(*ec2.Options)) *ec2.DescribeApplicationStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeApplicationStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeApplicationStatusInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeApplicationStatusCheckAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeApplicationStatusCheckAssociations(ctx context.Context, params *ec2.DescribeApplicationStatusCheckAssociationsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeApplicationStatusCheckAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeApplicationStatusCheckAssociations")
+	}
+
+	var r0 *ec2.DescribeApplicationStatusCheckAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeApplicationStatusCheckAssociationsInput, ...func(*ec2.Options)) (*ec2.DescribeApplicationStatusCheckAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeApplicationStatusCheckAssociationsInput, ...func(*ec2.Options)) *ec2.DescribeApplicationStatusCheckAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeApplicationStatusCheckAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeApplicationStatusCheckAssociationsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeApplicationStatusChecks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeApplicationStatusChecks(ctx context.Context, params *ec2.DescribeApplicationStatusChecksInput, optFns ...func(*ec2.Options)) (*ec2.DescribeApplicationStatusChecksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeApplicationStatusChecks")
+	}
+
+	var r0 *ec2.DescribeApplicationStatusChecksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeApplicationStatusChecksInput, ...func(*ec2.Options)) (*ec2.DescribeApplicationStatusChecksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeApplicationStatusChecksInput, ...func(*ec2.Options)) *ec2.DescribeApplicationStatusChecksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeApplicationStatusChecksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeApplicationStatusChecksInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAvailabilityZones provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAvailabilityZones(ctx context.Context, params *ec2.DescribeAvailabilityZonesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeAvailabilityZonesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -12772,6 +13179,43 @@ func (_m *IClient) DescribeIpamExternalResourceVerificationTokens(ctx context.Co
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeIpamExternalResourceVerificationTokensInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeIpamInternetRegistryAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeIpamInternetRegistryAssociations(ctx context.Context, params *ec2.DescribeIpamInternetRegistryAssociationsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeIpamInternetRegistryAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeIpamInternetRegistryAssociations")
+	}
+
+	var r0 *ec2.DescribeIpamInternetRegistryAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeIpamInternetRegistryAssociationsInput, ...func(*ec2.Options)) (*ec2.DescribeIpamInternetRegistryAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeIpamInternetRegistryAssociationsInput, ...func(*ec2.Options)) *ec2.DescribeIpamInternetRegistryAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeIpamInternetRegistryAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeIpamInternetRegistryAssociationsInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -17331,6 +17775,43 @@ func (_m *IClient) DisableAllowedImagesSettings(ctx context.Context, params *ec2
 	return r0, r1
 }
 
+// DisableApplicationStatusCheckSuppression provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableApplicationStatusCheckSuppression(ctx context.Context, params *ec2.DisableApplicationStatusCheckSuppressionInput, optFns ...func(*ec2.Options)) (*ec2.DisableApplicationStatusCheckSuppressionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableApplicationStatusCheckSuppression")
+	}
+
+	var r0 *ec2.DisableApplicationStatusCheckSuppressionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisableApplicationStatusCheckSuppressionInput, ...func(*ec2.Options)) (*ec2.DisableApplicationStatusCheckSuppressionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisableApplicationStatusCheckSuppressionInput, ...func(*ec2.Options)) *ec2.DisableApplicationStatusCheckSuppressionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DisableApplicationStatusCheckSuppressionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DisableApplicationStatusCheckSuppressionInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisableAwsNetworkPerformanceMetricSubscription provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisableAwsNetworkPerformanceMetricSubscription(ctx context.Context, params *ec2.DisableAwsNetworkPerformanceMetricSubscriptionInput, optFns ...func(*ec2.Options)) (*ec2.DisableAwsNetworkPerformanceMetricSubscriptionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -18071,6 +18552,43 @@ func (_m *IClient) DisassociateAddress(ctx context.Context, params *ec2.Disassoc
 	return r0, r1
 }
 
+// DisassociateApplicationStatusCheck provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateApplicationStatusCheck(ctx context.Context, params *ec2.DisassociateApplicationStatusCheckInput, optFns ...func(*ec2.Options)) (*ec2.DisassociateApplicationStatusCheckOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateApplicationStatusCheck")
+	}
+
+	var r0 *ec2.DisassociateApplicationStatusCheckOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisassociateApplicationStatusCheckInput, ...func(*ec2.Options)) (*ec2.DisassociateApplicationStatusCheckOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisassociateApplicationStatusCheckInput, ...func(*ec2.Options)) *ec2.DisassociateApplicationStatusCheckOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DisassociateApplicationStatusCheckOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DisassociateApplicationStatusCheckInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateCapacityReservationBillingOwner provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateCapacityReservationBillingOwner(ctx context.Context, params *ec2.DisassociateCapacityReservationBillingOwnerInput, optFns ...func(*ec2.Options)) (*ec2.DisassociateCapacityReservationBillingOwnerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -18774,6 +19292,43 @@ func (_m *IClient) EnableAllowedImagesSettings(ctx context.Context, params *ec2.
 	return r0, r1
 }
 
+// EnableApplicationStatusCheckSuppression provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableApplicationStatusCheckSuppression(ctx context.Context, params *ec2.EnableApplicationStatusCheckSuppressionInput, optFns ...func(*ec2.Options)) (*ec2.EnableApplicationStatusCheckSuppressionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableApplicationStatusCheckSuppression")
+	}
+
+	var r0 *ec2.EnableApplicationStatusCheckSuppressionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.EnableApplicationStatusCheckSuppressionInput, ...func(*ec2.Options)) (*ec2.EnableApplicationStatusCheckSuppressionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.EnableApplicationStatusCheckSuppressionInput, ...func(*ec2.Options)) *ec2.EnableApplicationStatusCheckSuppressionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.EnableApplicationStatusCheckSuppressionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.EnableApplicationStatusCheckSuppressionInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableAwsNetworkPerformanceMetricSubscription provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableAwsNetworkPerformanceMetricSubscription(ctx context.Context, params *ec2.EnableAwsNetworkPerformanceMetricSubscriptionInput, optFns ...func(*ec2.Options)) (*ec2.EnableAwsNetworkPerformanceMetricSubscriptionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -19136,6 +19691,43 @@ func (_m *IClient) EnableInstanceSqlHaStandbyDetections(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.EnableInstanceSqlHaStandbyDetectionsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableIpamInternetRegistryAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableIpamInternetRegistryAssociation(ctx context.Context, params *ec2.EnableIpamInternetRegistryAssociationInput, optFns ...func(*ec2.Options)) (*ec2.EnableIpamInternetRegistryAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableIpamInternetRegistryAssociation")
+	}
+
+	var r0 *ec2.EnableIpamInternetRegistryAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.EnableIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) (*ec2.EnableIpamInternetRegistryAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.EnableIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) *ec2.EnableIpamInternetRegistryAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.EnableIpamInternetRegistryAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.EnableIpamInternetRegistryAssociationInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -20883,6 +21475,117 @@ func (_m *IClient) GetIpamDiscoveredResourceCidrs(ctx context.Context, params *e
 	return r0, r1
 }
 
+// GetIpamDiscoveredRoutes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamDiscoveredRoutes(ctx context.Context, params *ec2.GetIpamDiscoveredRoutesInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamDiscoveredRoutesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamDiscoveredRoutes")
+	}
+
+	var r0 *ec2.GetIpamDiscoveredRoutesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamDiscoveredRoutesInput, ...func(*ec2.Options)) (*ec2.GetIpamDiscoveredRoutesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamDiscoveredRoutesInput, ...func(*ec2.Options)) *ec2.GetIpamDiscoveredRoutesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamDiscoveredRoutesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamDiscoveredRoutesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIpamInternetRegistryAssociationAsns provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamInternetRegistryAssociationAsns(ctx context.Context, params *ec2.GetIpamInternetRegistryAssociationAsnsInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamInternetRegistryAssociationAsnsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamInternetRegistryAssociationAsns")
+	}
+
+	var r0 *ec2.GetIpamInternetRegistryAssociationAsnsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamInternetRegistryAssociationAsnsInput, ...func(*ec2.Options)) (*ec2.GetIpamInternetRegistryAssociationAsnsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamInternetRegistryAssociationAsnsInput, ...func(*ec2.Options)) *ec2.GetIpamInternetRegistryAssociationAsnsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamInternetRegistryAssociationAsnsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamInternetRegistryAssociationAsnsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIpamInternetRegistryAssociationCidrs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamInternetRegistryAssociationCidrs(ctx context.Context, params *ec2.GetIpamInternetRegistryAssociationCidrsInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamInternetRegistryAssociationCidrsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamInternetRegistryAssociationCidrs")
+	}
+
+	var r0 *ec2.GetIpamInternetRegistryAssociationCidrsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamInternetRegistryAssociationCidrsInput, ...func(*ec2.Options)) (*ec2.GetIpamInternetRegistryAssociationCidrsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamInternetRegistryAssociationCidrsInput, ...func(*ec2.Options)) *ec2.GetIpamInternetRegistryAssociationCidrsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamInternetRegistryAssociationCidrsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamInternetRegistryAssociationCidrsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetIpamPolicyAllocationRules provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetIpamPolicyAllocationRules(ctx context.Context, params *ec2.GetIpamPolicyAllocationRulesInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamPolicyAllocationRulesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -21171,6 +21874,154 @@ func (_m *IClient) GetIpamResourceCidrs(ctx context.Context, params *ec2.GetIpam
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamResourceCidrsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIpamRouteOriginAuthorizations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamRouteOriginAuthorizations(ctx context.Context, params *ec2.GetIpamRouteOriginAuthorizationsInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamRouteOriginAuthorizationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamRouteOriginAuthorizations")
+	}
+
+	var r0 *ec2.GetIpamRouteOriginAuthorizationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRouteOriginAuthorizationsInput, ...func(*ec2.Options)) (*ec2.GetIpamRouteOriginAuthorizationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRouteOriginAuthorizationsInput, ...func(*ec2.Options)) *ec2.GetIpamRouteOriginAuthorizationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamRouteOriginAuthorizationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamRouteOriginAuthorizationsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIpamRouteProtectionFindings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamRouteProtectionFindings(ctx context.Context, params *ec2.GetIpamRouteProtectionFindingsInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamRouteProtectionFindingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamRouteProtectionFindings")
+	}
+
+	var r0 *ec2.GetIpamRouteProtectionFindingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRouteProtectionFindingsInput, ...func(*ec2.Options)) (*ec2.GetIpamRouteProtectionFindingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRouteProtectionFindingsInput, ...func(*ec2.Options)) *ec2.GetIpamRouteProtectionFindingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamRouteProtectionFindingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamRouteProtectionFindingsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIpamRoutingPolicyRegistrationDeltas provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamRoutingPolicyRegistrationDeltas(ctx context.Context, params *ec2.GetIpamRoutingPolicyRegistrationDeltasInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamRoutingPolicyRegistrationDeltasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamRoutingPolicyRegistrationDeltas")
+	}
+
+	var r0 *ec2.GetIpamRoutingPolicyRegistrationDeltasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRoutingPolicyRegistrationDeltasInput, ...func(*ec2.Options)) (*ec2.GetIpamRoutingPolicyRegistrationDeltasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRoutingPolicyRegistrationDeltasInput, ...func(*ec2.Options)) *ec2.GetIpamRoutingPolicyRegistrationDeltasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamRoutingPolicyRegistrationDeltasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamRoutingPolicyRegistrationDeltasInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIpamRoutingPolicyRegistrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIpamRoutingPolicyRegistrations(ctx context.Context, params *ec2.GetIpamRoutingPolicyRegistrationsInput, optFns ...func(*ec2.Options)) (*ec2.GetIpamRoutingPolicyRegistrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIpamRoutingPolicyRegistrations")
+	}
+
+	var r0 *ec2.GetIpamRoutingPolicyRegistrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRoutingPolicyRegistrationsInput, ...func(*ec2.Options)) (*ec2.GetIpamRoutingPolicyRegistrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetIpamRoutingPolicyRegistrationsInput, ...func(*ec2.Options)) *ec2.GetIpamRoutingPolicyRegistrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetIpamRoutingPolicyRegistrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetIpamRoutingPolicyRegistrationsInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -22770,6 +23621,43 @@ func (_m *IClient) ModifyAddressAttribute(ctx context.Context, params *ec2.Modif
 	return r0, r1
 }
 
+// ModifyApplicationStatusCheck provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyApplicationStatusCheck(ctx context.Context, params *ec2.ModifyApplicationStatusCheckInput, optFns ...func(*ec2.Options)) (*ec2.ModifyApplicationStatusCheckOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyApplicationStatusCheck")
+	}
+
+	var r0 *ec2.ModifyApplicationStatusCheckOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyApplicationStatusCheckInput, ...func(*ec2.Options)) (*ec2.ModifyApplicationStatusCheckOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyApplicationStatusCheckInput, ...func(*ec2.Options)) *ec2.ModifyApplicationStatusCheckOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyApplicationStatusCheckOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyApplicationStatusCheckInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ModifyAvailabilityZoneGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ModifyAvailabilityZoneGroup(ctx context.Context, params *ec2.ModifyAvailabilityZoneGroupInput, optFns ...func(*ec2.Options)) (*ec2.ModifyAvailabilityZoneGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -23946,6 +24834,43 @@ func (_m *IClient) ModifyIpamResourceDiscovery(ctx context.Context, params *ec2.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyIpamResourceDiscoveryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyIpamRoutingPolicyRegistration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyIpamRoutingPolicyRegistration(ctx context.Context, params *ec2.ModifyIpamRoutingPolicyRegistrationInput, optFns ...func(*ec2.Options)) (*ec2.ModifyIpamRoutingPolicyRegistrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyIpamRoutingPolicyRegistration")
+	}
+
+	var r0 *ec2.ModifyIpamRoutingPolicyRegistrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) (*ec2.ModifyIpamRoutingPolicyRegistrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) *ec2.ModifyIpamRoutingPolicyRegistrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyIpamRoutingPolicyRegistrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyIpamRoutingPolicyRegistrationInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

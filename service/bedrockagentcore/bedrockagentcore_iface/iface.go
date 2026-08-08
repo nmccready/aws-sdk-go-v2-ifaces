@@ -20,6 +20,7 @@ type IClient interface {
  CreatePaymentSession(ctx context.Context, params *CreatePaymentSessionInput, optFns ...func(*Options)) (*CreatePaymentSessionOutput, error) 
  DeleteABTest(ctx context.Context, params *DeleteABTestInput, optFns ...func(*Options)) (*DeleteABTestOutput, error) 
  DeleteBatchEvaluation(ctx context.Context, params *DeleteBatchEvaluationInput, optFns ...func(*Options)) (*DeleteBatchEvaluationOutput, error) 
+ DeleteCapacityProviderSession(ctx context.Context, params *DeleteCapacityProviderSessionInput, optFns ...func(*Options)) (*DeleteCapacityProviderSessionOutput, error) 
  DeleteEvent(ctx context.Context, params *DeleteEventInput, optFns ...func(*Options)) (*DeleteEventOutput, error) 
  DeleteMemoryRecord(ctx context.Context, params *DeleteMemoryRecordInput, optFns ...func(*Options)) (*DeleteMemoryRecordOutput, error) 
  DeletePaymentInstrument(ctx context.Context, params *DeletePaymentInstrumentInput, optFns ...func(*Options)) (*DeletePaymentInstrumentOutput, error) 

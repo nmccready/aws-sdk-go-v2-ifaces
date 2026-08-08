@@ -1230,6 +1230,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFreeTrialStatusesV2", func(t *testing.T) {
+        input := &securityhub.ListFreeTrialStatusesV2Input{}
+        output := &securityhub.ListFreeTrialStatusesV2Output{}
+
+        mockClient.On("ListFreeTrialStatusesV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFreeTrialStatusesV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListInvitations", func(t *testing.T) {
         input := &securityhub.ListInvitationsInput{}
         output := &securityhub.ListInvitationsOutput{}

@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchPutGatewayRateLimits", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.BatchPutGatewayRateLimitsInput{}
+        output := &bedrockagentcorecontrol.BatchPutGatewayRateLimitsOutput{}
+
+        mockClient.On("BatchPutGatewayRateLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchPutGatewayRateLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAgentRuntime", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateAgentRuntimeInput{}
         output := &bedrockagentcorecontrol.CreateAgentRuntimeOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateBrowserProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateBrowserProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCapacityProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateCapacityProviderInput{}
+        output := &bedrockagentcorecontrol.CreateCapacityProviderOutput{}
+
+        mockClient.On("CreateCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCapacityProvider(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -184,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateGatewayRateLimit", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateGatewayRateLimitInput{}
+        output := &bedrockagentcorecontrol.CreateGatewayRateLimitOutput{}
+
+        mockClient.On("CreateGatewayRateLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGatewayRateLimit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCapacityProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteCapacityProviderInput{}
+        output := &bedrockagentcorecontrol.DeleteCapacityProviderOutput{}
+
+        mockClient.On("DeleteCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCapacityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCodeInterpreter", func(t *testing.T) {
         input := &bedrockagentcorecontrol.DeleteCodeInterpreterInput{}
         output := &bedrockagentcorecontrol.DeleteCodeInterpreterOutput{}
@@ -522,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteGatewayRateLimit", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteGatewayRateLimitInput{}
+        output := &bedrockagentcorecontrol.DeleteGatewayRateLimitOutput{}
+
+        mockClient.On("DeleteGatewayRateLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGatewayRateLimit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -801,6 +866,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCapacityProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetCapacityProviderInput{}
+        output := &bedrockagentcorecontrol.GetCapacityProviderOutput{}
+
+        mockClient.On("GetCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCodeInterpreter", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetCodeInterpreterInput{}
         output := &bedrockagentcorecontrol.GetCodeInterpreterOutput{}
@@ -873,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetGatewayRateLimit", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetGatewayRateLimitInput{}
+        output := &bedrockagentcorecontrol.GetGatewayRateLimitOutput{}
+
+        mockClient.On("GetGatewayRateLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGatewayRateLimit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1178,6 +1269,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAgentRuntimeVersionsByCapacityProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderInput{}
+        output := &bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderOutput{}
+
+        mockClient.On("ListAgentRuntimeVersionsByCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentRuntimeVersionsByCapacityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAgentRuntimes", func(t *testing.T) {
         input := &bedrockagentcorecontrol.ListAgentRuntimesInput{}
         output := &bedrockagentcorecontrol.ListAgentRuntimesOutput{}
@@ -1224,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBrowsers", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBrowsers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCapacityProviders", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListCapacityProvidersInput{}
+        output := &bedrockagentcorecontrol.ListCapacityProvidersOutput{}
+
+        mockClient.On("ListCapacityProviders", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCapacityProviders(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1315,6 +1432,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEvaluators", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEvaluators(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGatewayRateLimits", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListGatewayRateLimitsInput{}
+        output := &bedrockagentcorecontrol.ListGatewayRateLimitsOutput{}
+
+        mockClient.On("ListGatewayRateLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGatewayRateLimits(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1750,6 +1880,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCapacityProvider", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateCapacityProviderInput{}
+        output := &bedrockagentcorecontrol.UpdateCapacityProviderOutput{}
+
+        mockClient.On("UpdateCapacityProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCapacityProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateConfigurationBundle", func(t *testing.T) {
         input := &bedrockagentcorecontrol.UpdateConfigurationBundleInput{}
         output := &bedrockagentcorecontrol.UpdateConfigurationBundleOutput{}
@@ -1809,6 +1952,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateGatewayRateLimit", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateGatewayRateLimitInput{}
+        output := &bedrockagentcorecontrol.UpdateGatewayRateLimitOutput{}
+
+        mockClient.On("UpdateGatewayRateLimit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGatewayRateLimit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

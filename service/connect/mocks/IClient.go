@@ -12206,6 +12206,43 @@ func (_m *IClient) UpdateContactSchedule(ctx context.Context, params *connect.Up
 	return r0, r1
 }
 
+// UpdateContactTaskTemplate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContactTaskTemplate(ctx context.Context, params *connect.UpdateContactTaskTemplateInput, optFns ...func(*connect.Options)) (*connect.UpdateContactTaskTemplateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContactTaskTemplate")
+	}
+
+	var r0 *connect.UpdateContactTaskTemplateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateContactTaskTemplateInput, ...func(*connect.Options)) (*connect.UpdateContactTaskTemplateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateContactTaskTemplateInput, ...func(*connect.Options)) *connect.UpdateContactTaskTemplateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateContactTaskTemplateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateContactTaskTemplateInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDataTableAttribute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDataTableAttribute(ctx context.Context, params *connect.UpdateDataTableAttributeInput, optFns ...func(*connect.Options)) (*connect.UpdateDataTableAttributeOutput, error) {
 	_va := make([]interface{}, len(optFns))

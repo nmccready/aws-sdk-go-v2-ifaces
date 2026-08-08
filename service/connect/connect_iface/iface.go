@@ -339,6 +339,7 @@ type IClient interface {
  UpdateContactFlowName(ctx context.Context, params *UpdateContactFlowNameInput, optFns ...func(*Options)) (*UpdateContactFlowNameOutput, error) 
  UpdateContactRoutingData(ctx context.Context, params *UpdateContactRoutingDataInput, optFns ...func(*Options)) (*UpdateContactRoutingDataOutput, error) 
  UpdateContactSchedule(ctx context.Context, params *UpdateContactScheduleInput, optFns ...func(*Options)) (*UpdateContactScheduleOutput, error) 
+ UpdateContactTaskTemplate(ctx context.Context, params *UpdateContactTaskTemplateInput, optFns ...func(*Options)) (*UpdateContactTaskTemplateOutput, error) 
  UpdateDataTableAttribute(ctx context.Context, params *UpdateDataTableAttributeInput, optFns ...func(*Options)) (*UpdateDataTableAttributeOutput, error) 
  UpdateDataTableMetadata(ctx context.Context, params *UpdateDataTableMetadataInput, optFns ...func(*Options)) (*UpdateDataTableMetadataOutput, error) 
  UpdateDataTablePrimaryValues(ctx context.Context, params *UpdateDataTablePrimaryValuesInput, optFns ...func(*Options)) (*UpdateDataTablePrimaryValuesOutput, error) 

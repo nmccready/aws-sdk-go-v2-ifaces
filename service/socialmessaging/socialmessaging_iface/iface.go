@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  AssociateWhatsAppBusinessAccount(ctx context.Context, params *AssociateWhatsAppBusinessAccountInput, optFns ...func(*Options)) (*AssociateWhatsAppBusinessAccountOutput, error) 
+ CreateWhatsAppDataset(ctx context.Context, params *CreateWhatsAppDatasetInput, optFns ...func(*Options)) (*CreateWhatsAppDatasetOutput, error) 
  CreateWhatsAppFlow(ctx context.Context, params *CreateWhatsAppFlowInput, optFns ...func(*Options)) (*CreateWhatsAppFlowOutput, error) 
  CreateWhatsAppMessageTemplate(ctx context.Context, params *CreateWhatsAppMessageTemplateInput, optFns ...func(*Options)) (*CreateWhatsAppMessageTemplateOutput, error) 
  CreateWhatsAppMessageTemplateFromLibrary(ctx context.Context, params *CreateWhatsAppMessageTemplateFromLibraryInput, optFns ...func(*Options)) (*CreateWhatsAppMessageTemplateFromLibraryOutput, error) 
@@ -35,6 +36,7 @@ type IClient interface {
  PostWhatsAppMessageMedia(ctx context.Context, params *PostWhatsAppMessageMediaInput, optFns ...func(*Options)) (*PostWhatsAppMessageMediaOutput, error) 
  PublishWhatsAppFlow(ctx context.Context, params *PublishWhatsAppFlowInput, optFns ...func(*Options)) (*PublishWhatsAppFlowOutput, error) 
  PutWhatsAppBusinessAccountEventDestinations(ctx context.Context, params *PutWhatsAppBusinessAccountEventDestinationsInput, optFns ...func(*Options)) (*PutWhatsAppBusinessAccountEventDestinationsOutput, error) 
+ SendWhatsAppConversionEvent(ctx context.Context, params *SendWhatsAppConversionEventInput, optFns ...func(*Options)) (*SendWhatsAppConversionEventOutput, error) 
  SendWhatsAppMessage(ctx context.Context, params *SendWhatsAppMessageInput, optFns ...func(*Options)) (*SendWhatsAppMessageOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 

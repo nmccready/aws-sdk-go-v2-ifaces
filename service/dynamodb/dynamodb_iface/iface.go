@@ -54,6 +54,7 @@ type IClient interface {
  RestoreTableFromBackup(ctx context.Context, params *RestoreTableFromBackupInput, optFns ...func(*Options)) (*RestoreTableFromBackupOutput, error) 
  RestoreTableToPointInTime(ctx context.Context, params *RestoreTableToPointInTimeInput, optFns ...func(*Options)) (*RestoreTableToPointInTimeOutput, error) 
  Scan(ctx context.Context, params *ScanInput, optFns ...func(*Options)) (*ScanOutput, error) 
+ SearchVectors(ctx context.Context, params *SearchVectorsInput, optFns ...func(*Options)) (*SearchVectorsOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  TransactGetItems(ctx context.Context, params *TransactGetItemsInput, optFns ...func(*Options)) (*TransactGetItemsOutput, error) 
  TransactWriteItems(ctx context.Context, params *TransactWriteItemsInput, optFns ...func(*Options)) (*TransactWriteItemsOutput, error) 

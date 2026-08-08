@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWhatsAppDataset", func(t *testing.T) {
+        input := &socialmessaging.CreateWhatsAppDatasetInput{}
+        output := &socialmessaging.CreateWhatsAppDatasetOutput{}
+
+        mockClient.On("CreateWhatsAppDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWhatsAppDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWhatsAppFlow", func(t *testing.T) {
         input := &socialmessaging.CreateWhatsAppFlowInput{}
         output := &socialmessaging.CreateWhatsAppFlowOutput{}
@@ -353,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutWhatsAppBusinessAccountEventDestinations", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutWhatsAppBusinessAccountEventDestinations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendWhatsAppConversionEvent", func(t *testing.T) {
+        input := &socialmessaging.SendWhatsAppConversionEventInput{}
+        output := &socialmessaging.SendWhatsAppConversionEventOutput{}
+
+        mockClient.On("SendWhatsAppConversionEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendWhatsAppConversionEvent(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

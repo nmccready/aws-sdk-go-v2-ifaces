@@ -102,6 +102,7 @@ type IClient interface {
  ListConnectorsV2(ctx context.Context, params *ListConnectorsV2Input, optFns ...func(*Options)) (*ListConnectorsV2Output, error) 
  ListEnabledProductsForImport(ctx context.Context, params *ListEnabledProductsForImportInput, optFns ...func(*Options)) (*ListEnabledProductsForImportOutput, error) 
  ListFindingAggregators(ctx context.Context, params *ListFindingAggregatorsInput, optFns ...func(*Options)) (*ListFindingAggregatorsOutput, error) 
+ ListFreeTrialStatusesV2(ctx context.Context, params *ListFreeTrialStatusesV2Input, optFns ...func(*Options)) (*ListFreeTrialStatusesV2Output, error) 
  ListInvitations(ctx context.Context, params *ListInvitationsInput, optFns ...func(*Options)) (*ListInvitationsOutput, error) 
  ListMembers(ctx context.Context, params *ListMembersInput, optFns ...func(*Options)) (*ListMembersOutput, error) 
  ListOrganizationAdminAccounts(ctx context.Context, params *ListOrganizationAdminAccountsInput, optFns ...func(*Options)) (*ListOrganizationAdminAccountsOutput, error) 

@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchVectors", func(t *testing.T) {
+        input := &dynamodb.SearchVectorsInput{}
+        output := &dynamodb.SearchVectorsOutput{}
+
+        mockClient.On("SearchVectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchVectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &dynamodb.TagResourceInput{}
         output := &dynamodb.TagResourceOutput{}

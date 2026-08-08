@@ -52,6 +52,43 @@ func (_m *IClient) AddDatasetExamples(ctx context.Context, params *bedrockagentc
 	return r0, r1
 }
 
+// BatchPutGatewayRateLimits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchPutGatewayRateLimits(ctx context.Context, params *bedrockagentcorecontrol.BatchPutGatewayRateLimitsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.BatchPutGatewayRateLimitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchPutGatewayRateLimits")
+	}
+
+	var r0 *bedrockagentcorecontrol.BatchPutGatewayRateLimitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.BatchPutGatewayRateLimitsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.BatchPutGatewayRateLimitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.BatchPutGatewayRateLimitsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.BatchPutGatewayRateLimitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.BatchPutGatewayRateLimitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.BatchPutGatewayRateLimitsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAgentRuntime provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAgentRuntime(ctx context.Context, params *bedrockagentcorecontrol.CreateAgentRuntimeInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateAgentRuntimeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +266,43 @@ func (_m *IClient) CreateBrowserProfile(ctx context.Context, params *bedrockagen
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateBrowserProfileInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCapacityProvider(ctx context.Context, params *bedrockagentcorecontrol.CreateCapacityProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCapacityProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -451,6 +525,43 @@ func (_m *IClient) CreateGateway(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateGatewayRateLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateGatewayRateLimit(ctx context.Context, params *bedrockagentcorecontrol.CreateGatewayRateLimitInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateGatewayRateLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateGatewayRateLimit")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateGatewayRateLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateGatewayRateLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateGatewayRateLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateGatewayRateLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1199,6 +1310,43 @@ func (_m *IClient) DeleteBrowserProfile(ctx context.Context, params *bedrockagen
 	return r0, r1
 }
 
+// DeleteCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCapacityProvider(ctx context.Context, params *bedrockagentcorecontrol.DeleteCapacityProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCapacityProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCodeInterpreter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCodeInterpreter(ctx context.Context, params *bedrockagentcorecontrol.DeleteCodeInterpreterInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteCodeInterpreterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1413,6 +1561,43 @@ func (_m *IClient) DeleteGateway(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteGatewayRateLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGatewayRateLimit(ctx context.Context, params *bedrockagentcorecontrol.DeleteGatewayRateLimitInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteGatewayRateLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGatewayRateLimit")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteGatewayRateLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteGatewayRateLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteGatewayRateLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteGatewayRateLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2198,6 +2383,43 @@ func (_m *IClient) GetBrowserProfile(ctx context.Context, params *bedrockagentco
 	return r0, r1
 }
 
+// GetCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCapacityProvider(ctx context.Context, params *bedrockagentcorecontrol.GetCapacityProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCapacityProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCodeInterpreter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCodeInterpreter(ctx context.Context, params *bedrockagentcorecontrol.GetCodeInterpreterInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetCodeInterpreterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2412,6 +2634,43 @@ func (_m *IClient) GetGateway(ctx context.Context, params *bedrockagentcorecontr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetGatewayInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetGatewayRateLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetGatewayRateLimit(ctx context.Context, params *bedrockagentcorecontrol.GetGatewayRateLimitInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetGatewayRateLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetGatewayRateLimit")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetGatewayRateLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetGatewayRateLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetGatewayRateLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetGatewayRateLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3271,6 +3530,43 @@ func (_m *IClient) ListAgentRuntimeVersions(ctx context.Context, params *bedrock
 	return r0, r1
 }
 
+// ListAgentRuntimeVersionsByCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgentRuntimeVersionsByCapacityProvider(ctx context.Context, params *bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgentRuntimeVersionsByCapacityProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListAgentRuntimeVersionsByCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAgentRuntimes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAgentRuntimes(ctx context.Context, params *bedrockagentcorecontrol.ListAgentRuntimesInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListAgentRuntimesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3411,6 +3707,43 @@ func (_m *IClient) ListBrowsers(ctx context.Context, params *bedrockagentcorecon
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListBrowsersInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCapacityProviders provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCapacityProviders(ctx context.Context, params *bedrockagentcorecontrol.ListCapacityProvidersInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListCapacityProvidersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCapacityProviders")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListCapacityProvidersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListCapacityProvidersInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListCapacityProvidersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListCapacityProvidersInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListCapacityProvidersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListCapacityProvidersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListCapacityProvidersInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3670,6 +4003,43 @@ func (_m *IClient) ListEvaluators(ctx context.Context, params *bedrockagentcorec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListEvaluatorsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGatewayRateLimits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGatewayRateLimits(ctx context.Context, params *bedrockagentcorecontrol.ListGatewayRateLimitsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListGatewayRateLimitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGatewayRateLimits")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListGatewayRateLimitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListGatewayRateLimitsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListGatewayRateLimitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListGatewayRateLimitsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListGatewayRateLimitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListGatewayRateLimitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListGatewayRateLimitsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4917,6 +5287,43 @@ func (_m *IClient) UpdateApiKeyCredentialProvider(ctx context.Context, params *b
 	return r0, r1
 }
 
+// UpdateCapacityProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCapacityProvider(ctx context.Context, params *bedrockagentcorecontrol.UpdateCapacityProviderInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateCapacityProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCapacityProvider")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateCapacityProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateCapacityProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateCapacityProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateCapacityProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateCapacityProviderInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateConfigurationBundle provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateConfigurationBundle(ctx context.Context, params *bedrockagentcorecontrol.UpdateConfigurationBundleInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateConfigurationBundleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5094,6 +5501,43 @@ func (_m *IClient) UpdateGateway(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateGatewayRateLimit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateGatewayRateLimit(ctx context.Context, params *bedrockagentcorecontrol.UpdateGatewayRateLimitInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateGatewayRateLimitOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateGatewayRateLimit")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateGatewayRateLimitOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateGatewayRateLimitOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateGatewayRateLimitOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateGatewayRateLimitOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateGatewayRateLimitInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

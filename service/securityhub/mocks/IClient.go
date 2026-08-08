@@ -3418,6 +3418,43 @@ func (_m *IClient) ListFindingAggregators(ctx context.Context, params *securityh
 	return r0, r1
 }
 
+// ListFreeTrialStatusesV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFreeTrialStatusesV2(ctx context.Context, params *securityhub.ListFreeTrialStatusesV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListFreeTrialStatusesV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFreeTrialStatusesV2")
+	}
+
+	var r0 *securityhub.ListFreeTrialStatusesV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListFreeTrialStatusesV2Input, ...func(*securityhub.Options)) (*securityhub.ListFreeTrialStatusesV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListFreeTrialStatusesV2Input, ...func(*securityhub.Options)) *securityhub.ListFreeTrialStatusesV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListFreeTrialStatusesV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListFreeTrialStatusesV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListInvitations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListInvitations(ctx context.Context, params *securityhub.ListInvitationsInput, optFns ...func(*securityhub.Options)) (*securityhub.ListInvitationsOutput, error) {
 	_va := make([]interface{}, len(optFns))

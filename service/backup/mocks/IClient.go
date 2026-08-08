@@ -89,6 +89,43 @@ func (_m *IClient) CancelLegalHold(ctx context.Context, params *backup.CancelLeg
 	return r0, r1
 }
 
+// CreateBackupAccessPoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateBackupAccessPoint(ctx context.Context, params *backup.CreateBackupAccessPointInput, optFns ...func(*backup.Options)) (*backup.CreateBackupAccessPointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateBackupAccessPoint")
+	}
+
+	var r0 *backup.CreateBackupAccessPointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.CreateBackupAccessPointInput, ...func(*backup.Options)) (*backup.CreateBackupAccessPointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.CreateBackupAccessPointInput, ...func(*backup.Options)) *backup.CreateBackupAccessPointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.CreateBackupAccessPointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.CreateBackupAccessPointInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBackupPlan provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBackupPlan(ctx context.Context, params *backup.CreateBackupPlanInput, optFns ...func(*backup.Options)) (*backup.CreateBackupPlanOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -488,6 +525,43 @@ func (_m *IClient) CreateTieringConfiguration(ctx context.Context, params *backu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.CreateTieringConfigurationInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteBackupAccessPoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBackupAccessPoint(ctx context.Context, params *backup.DeleteBackupAccessPointInput, optFns ...func(*backup.Options)) (*backup.DeleteBackupAccessPointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBackupAccessPoint")
+	}
+
+	var r0 *backup.DeleteBackupAccessPointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DeleteBackupAccessPointInput, ...func(*backup.Options)) (*backup.DeleteBackupAccessPointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DeleteBackupAccessPointInput, ...func(*backup.Options)) *backup.DeleteBackupAccessPointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.DeleteBackupAccessPointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.DeleteBackupAccessPointInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -932,6 +1006,43 @@ func (_m *IClient) DeleteTieringConfiguration(ctx context.Context, params *backu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.DeleteTieringConfigurationInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeBackupAccessPoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeBackupAccessPoint(ctx context.Context, params *backup.DescribeBackupAccessPointInput, optFns ...func(*backup.Options)) (*backup.DescribeBackupAccessPointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeBackupAccessPoint")
+	}
+
+	var r0 *backup.DescribeBackupAccessPointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DescribeBackupAccessPointInput, ...func(*backup.Options)) (*backup.DescribeBackupAccessPointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.DescribeBackupAccessPointInput, ...func(*backup.Options)) *backup.DescribeBackupAccessPointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.DescribeBackupAccessPointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.DescribeBackupAccessPointInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2116,6 +2227,117 @@ func (_m *IClient) GetTieringConfiguration(ctx context.Context, params *backup.G
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *backup.GetTieringConfigurationInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBackupAccessPoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBackupAccessPoints(ctx context.Context, params *backup.ListBackupAccessPointsInput, optFns ...func(*backup.Options)) (*backup.ListBackupAccessPointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBackupAccessPoints")
+	}
+
+	var r0 *backup.ListBackupAccessPointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListBackupAccessPointsInput, ...func(*backup.Options)) (*backup.ListBackupAccessPointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListBackupAccessPointsInput, ...func(*backup.Options)) *backup.ListBackupAccessPointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListBackupAccessPointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListBackupAccessPointsInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBackupAccessPointsByRecoveryPoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBackupAccessPointsByRecoveryPoint(ctx context.Context, params *backup.ListBackupAccessPointsByRecoveryPointInput, optFns ...func(*backup.Options)) (*backup.ListBackupAccessPointsByRecoveryPointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBackupAccessPointsByRecoveryPoint")
+	}
+
+	var r0 *backup.ListBackupAccessPointsByRecoveryPointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListBackupAccessPointsByRecoveryPointInput, ...func(*backup.Options)) (*backup.ListBackupAccessPointsByRecoveryPointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListBackupAccessPointsByRecoveryPointInput, ...func(*backup.Options)) *backup.ListBackupAccessPointsByRecoveryPointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListBackupAccessPointsByRecoveryPointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListBackupAccessPointsByRecoveryPointInput, ...func(*backup.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBackupAccessPointsByResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBackupAccessPointsByResource(ctx context.Context, params *backup.ListBackupAccessPointsByResourceInput, optFns ...func(*backup.Options)) (*backup.ListBackupAccessPointsByResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBackupAccessPointsByResource")
+	}
+
+	var r0 *backup.ListBackupAccessPointsByResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListBackupAccessPointsByResourceInput, ...func(*backup.Options)) (*backup.ListBackupAccessPointsByResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *backup.ListBackupAccessPointsByResourceInput, ...func(*backup.Options)) *backup.ListBackupAccessPointsByResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*backup.ListBackupAccessPointsByResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *backup.ListBackupAccessPointsByResourceInput, ...func(*backup.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

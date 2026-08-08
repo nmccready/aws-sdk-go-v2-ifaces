@@ -4640,6 +4640,43 @@ func (_m *IClient) GetDataCatalogEncryptionSettings(ctx context.Context, params 
 	return r0, r1
 }
 
+// GetDataCatalogExportConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataCatalogExportConfiguration(ctx context.Context, params *glue.GetDataCatalogExportConfigurationInput, optFns ...func(*glue.Options)) (*glue.GetDataCatalogExportConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataCatalogExportConfiguration")
+	}
+
+	var r0 *glue.GetDataCatalogExportConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataCatalogExportConfigurationInput, ...func(*glue.Options)) (*glue.GetDataCatalogExportConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataCatalogExportConfigurationInput, ...func(*glue.Options)) *glue.GetDataCatalogExportConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetDataCatalogExportConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataCatalogExportConfigurationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataQualityModel provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataQualityModel(ctx context.Context, params *glue.GetDataQualityModelInput, optFns ...func(*glue.Options)) (*glue.GetDataQualityModelOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8387,6 +8424,43 @@ func (_m *IClient) PutDataCatalogEncryptionSettings(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutDataCatalogEncryptionSettingsInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutDataCatalogExportConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutDataCatalogExportConfiguration(ctx context.Context, params *glue.PutDataCatalogExportConfigurationInput, optFns ...func(*glue.Options)) (*glue.PutDataCatalogExportConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutDataCatalogExportConfiguration")
+	}
+
+	var r0 *glue.PutDataCatalogExportConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutDataCatalogExportConfigurationInput, ...func(*glue.Options)) (*glue.PutDataCatalogExportConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PutDataCatalogExportConfigurationInput, ...func(*glue.Options)) *glue.PutDataCatalogExportConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PutDataCatalogExportConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PutDataCatalogExportConfigurationInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

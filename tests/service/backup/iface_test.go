@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBackupAccessPoint", func(t *testing.T) {
+        input := &backup.CreateBackupAccessPointInput{}
+        output := &backup.CreateBackupAccessPointOutput{}
+
+        mockClient.On("CreateBackupAccessPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBackupAccessPoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBackupPlan", func(t *testing.T) {
         input := &backup.CreateBackupPlanInput{}
         output := &backup.CreateBackupPlanOutput{}
@@ -197,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateTieringConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateTieringConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBackupAccessPoint", func(t *testing.T) {
+        input := &backup.DeleteBackupAccessPointInput{}
+        output := &backup.DeleteBackupAccessPointOutput{}
+
+        mockClient.On("DeleteBackupAccessPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBackupAccessPoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -353,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTieringConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTieringConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeBackupAccessPoint", func(t *testing.T) {
+        input := &backup.DescribeBackupAccessPointInput{}
+        output := &backup.DescribeBackupAccessPointOutput{}
+
+        mockClient.On("DescribeBackupAccessPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeBackupAccessPoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -769,6 +808,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTieringConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTieringConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBackupAccessPoints", func(t *testing.T) {
+        input := &backup.ListBackupAccessPointsInput{}
+        output := &backup.ListBackupAccessPointsOutput{}
+
+        mockClient.On("ListBackupAccessPoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBackupAccessPoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBackupAccessPointsByRecoveryPoint", func(t *testing.T) {
+        input := &backup.ListBackupAccessPointsByRecoveryPointInput{}
+        output := &backup.ListBackupAccessPointsByRecoveryPointOutput{}
+
+        mockClient.On("ListBackupAccessPointsByRecoveryPoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBackupAccessPointsByRecoveryPoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBackupAccessPointsByResource", func(t *testing.T) {
+        input := &backup.ListBackupAccessPointsByResourceInput{}
+        output := &backup.ListBackupAccessPointsByResourceOutput{}
+
+        mockClient.On("ListBackupAccessPointsByResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBackupAccessPointsByResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
