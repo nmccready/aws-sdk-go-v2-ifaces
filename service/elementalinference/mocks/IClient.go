@@ -477,6 +477,43 @@ func (_m *IClient) Options() elementalinference.Options {
 	return r0
 }
 
+// SearchFixtures provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchFixtures(ctx context.Context, params *elementalinference.SearchFixturesInput, optFns ...func(*elementalinference.Options)) (*elementalinference.SearchFixturesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchFixtures")
+	}
+
+	var r0 *elementalinference.SearchFixturesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.SearchFixturesInput, ...func(*elementalinference.Options)) (*elementalinference.SearchFixturesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.SearchFixturesInput, ...func(*elementalinference.Options)) *elementalinference.SearchFixturesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.SearchFixturesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.SearchFixturesInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *elementalinference.TagResourceInput, optFns ...func(*elementalinference.Options)) (*elementalinference.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))

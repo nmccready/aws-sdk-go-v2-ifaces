@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchFixtures", func(t *testing.T) {
+        input := &elementalinference.SearchFixturesInput{}
+        output := &elementalinference.SearchFixturesOutput{}
+
+        mockClient.On("SearchFixtures", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchFixtures(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &elementalinference.TagResourceInput{}
         output := &elementalinference.TagResourceOutput{}

@@ -22,6 +22,7 @@ type IClient interface {
  ListDictionaries(ctx context.Context, params *ListDictionariesInput, optFns ...func(*Options)) (*ListDictionariesOutput, error) 
  ListFeeds(ctx context.Context, params *ListFeedsInput, optFns ...func(*Options)) (*ListFeedsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ SearchFixtures(ctx context.Context, params *SearchFixturesInput, optFns ...func(*Options)) (*SearchFixturesOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateDictionary(ctx context.Context, params *UpdateDictionaryInput, optFns ...func(*Options)) (*UpdateDictionaryOutput, error) 
