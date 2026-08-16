@@ -671,6 +671,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateMetric", func(t *testing.T) {
+        input := &connect.CreateMetricInput{}
+        output := &connect.CreateMetricOutput{}
+
+        mockClient.On("CreateMetric", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMetric(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateNotification", func(t *testing.T) {
         input := &connect.CreateNotificationInput{}
         output := &connect.CreateNotificationOutput{}
@@ -1178,6 +1191,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteMetric", func(t *testing.T) {
+        input := &connect.DeleteMetricInput{}
+        output := &connect.DeleteMetricOutput{}
+
+        mockClient.On("DeleteMetric", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMetric(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteNotification", func(t *testing.T) {
         input := &connect.DeleteNotificationInput{}
         output := &connect.DeleteNotificationOutput{}
@@ -1679,6 +1705,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInstanceStorageConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInstanceStorageConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMetric", func(t *testing.T) {
+        input := &connect.DescribeMetricInput{}
+        output := &connect.DescribeMetricOutput{}
+
+        mockClient.On("DescribeMetric", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetric(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2816,6 +2855,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMetrics", func(t *testing.T) {
+        input := &connect.ListMetricsInput{}
+        output := &connect.ListMetricsOutput{}
+
+        mockClient.On("ListMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNotifications", func(t *testing.T) {
         input := &connect.ListNotificationsInput{}
         output := &connect.ListNotificationsOutput{}
@@ -3518,6 +3570,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchMetrics", func(t *testing.T) {
+        input := &connect.SearchMetricsInput{}
+        output := &connect.SearchMetricsOutput{}
+
+        mockClient.On("SearchMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchNotifications", func(t *testing.T) {
         input := &connect.SearchNotificationsInput{}
         output := &connect.SearchNotificationsOutput{}
@@ -3759,6 +3824,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendOutboundWebNotification", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendOutboundWebNotification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAssistantContact", func(t *testing.T) {
+        input := &connect.StartAssistantContactInput{}
+        output := &connect.StartAssistantContactOutput{}
+
+        mockClient.On("StartAssistantContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAssistantContact(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4435,6 +4513,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInstanceStorageConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInstanceStorageConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMetricContent", func(t *testing.T) {
+        input := &connect.UpdateMetricContentInput{}
+        output := &connect.UpdateMetricContentOutput{}
+
+        mockClient.On("UpdateMetricContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMetricContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMetricMetadata", func(t *testing.T) {
+        input := &connect.UpdateMetricMetadataInput{}
+        output := &connect.UpdateMetricMetadataOutput{}
+
+        mockClient.On("UpdateMetricMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMetricMetadata(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

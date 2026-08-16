@@ -359,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetBlobDifferences", func(t *testing.T) {
+        input := &codecommit.GetBlobDifferencesInput{}
+        output := &codecommit.GetBlobDifferencesOutput{}
+
+        mockClient.On("GetBlobDifferences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBlobDifferences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBranch", func(t *testing.T) {
         input := &codecommit.GetBranchInput{}
         output := &codecommit.GetBranchOutput{}

@@ -35,6 +35,7 @@ type IClient interface {
  EvaluatePullRequestApprovalRules(ctx context.Context, params *EvaluatePullRequestApprovalRulesInput, optFns ...func(*Options)) (*EvaluatePullRequestApprovalRulesOutput, error) 
  GetApprovalRuleTemplate(ctx context.Context, params *GetApprovalRuleTemplateInput, optFns ...func(*Options)) (*GetApprovalRuleTemplateOutput, error) 
  GetBlob(ctx context.Context, params *GetBlobInput, optFns ...func(*Options)) (*GetBlobOutput, error) 
+ GetBlobDifferences(ctx context.Context, params *GetBlobDifferencesInput, optFns ...func(*Options)) (*GetBlobDifferencesOutput, error) 
  GetBranch(ctx context.Context, params *GetBranchInput, optFns ...func(*Options)) (*GetBranchOutput, error) 
  GetComment(ctx context.Context, params *GetCommentInput, optFns ...func(*Options)) (*GetCommentOutput, error) 
  GetCommentReactions(ctx context.Context, params *GetCommentReactionsInput, optFns ...func(*Options)) (*GetCommentReactionsOutput, error) 
