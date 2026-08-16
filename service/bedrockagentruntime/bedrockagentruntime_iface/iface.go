@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  AgenticRetrieveStream(ctx context.Context, params *AgenticRetrieveStreamInput, optFns ...func(*Options)) (*AgenticRetrieveStreamOutput, error) 
+ CheckIngestedDocumentAcl(ctx context.Context, params *CheckIngestedDocumentAclInput, optFns ...func(*Options)) (*CheckIngestedDocumentAclOutput, error) 
  CreateInvocation(ctx context.Context, params *CreateInvocationInput, optFns ...func(*Options)) (*CreateInvocationOutput, error) 
  CreateSession(ctx context.Context, params *CreateSessionInput, optFns ...func(*Options)) (*CreateSessionOutput, error) 
  DeleteAgentMemory(ctx context.Context, params *DeleteAgentMemoryInput, optFns ...func(*Options)) (*DeleteAgentMemoryOutput, error) 
@@ -21,6 +22,7 @@ type IClient interface {
  GetDocumentContent(ctx context.Context, params *GetDocumentContentInput, optFns ...func(*Options)) (*GetDocumentContentOutput, error) 
  GetExecutionFlowSnapshot(ctx context.Context, params *GetExecutionFlowSnapshotInput, optFns ...func(*Options)) (*GetExecutionFlowSnapshotOutput, error) 
  GetFlowExecution(ctx context.Context, params *GetFlowExecutionInput, optFns ...func(*Options)) (*GetFlowExecutionOutput, error) 
+ GetIngestedDocumentAcl(ctx context.Context, params *GetIngestedDocumentAclInput, optFns ...func(*Options)) (*GetIngestedDocumentAclOutput, error) 
  GetInvocationStep(ctx context.Context, params *GetInvocationStepInput, optFns ...func(*Options)) (*GetInvocationStepOutput, error) 
  GetSession(ctx context.Context, params *GetSessionInput, optFns ...func(*Options)) (*GetSessionOutput, error) 
  InvokeAgent(ctx context.Context, params *InvokeAgentInput, optFns ...func(*Options)) (*InvokeAgentOutput, error) 

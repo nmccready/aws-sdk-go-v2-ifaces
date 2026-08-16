@@ -829,6 +829,43 @@ func (_m *IClient) ListAcmeExternalAccountBindings(ctx context.Context, params *
 	return r0, r1
 }
 
+// ListCertificateDomainValidations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCertificateDomainValidations(ctx context.Context, params *acm.ListCertificateDomainValidationsInput, optFns ...func(*acm.Options)) (*acm.ListCertificateDomainValidationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCertificateDomainValidations")
+	}
+
+	var r0 *acm.ListCertificateDomainValidationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListCertificateDomainValidationsInput, ...func(*acm.Options)) (*acm.ListCertificateDomainValidationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *acm.ListCertificateDomainValidationsInput, ...func(*acm.Options)) *acm.ListCertificateDomainValidationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*acm.ListCertificateDomainValidationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *acm.ListCertificateDomainValidationsInput, ...func(*acm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCertificates provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCertificates(ctx context.Context, params *acm.ListCertificatesInput, optFns ...func(*acm.Options)) (*acm.ListCertificatesOutput, error) {
 	_va := make([]interface{}, len(optFns))

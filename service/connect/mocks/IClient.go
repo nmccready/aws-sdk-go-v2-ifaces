@@ -1828,6 +1828,43 @@ func (_m *IClient) CreateIntegrationAssociation(ctx context.Context, params *con
 	return r0, r1
 }
 
+// CreateMetric provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateMetric(ctx context.Context, params *connect.CreateMetricInput, optFns ...func(*connect.Options)) (*connect.CreateMetricOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateMetric")
+	}
+
+	var r0 *connect.CreateMetricOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateMetricInput, ...func(*connect.Options)) (*connect.CreateMetricOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateMetricInput, ...func(*connect.Options)) *connect.CreateMetricOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateMetricOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateMetricInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateNotification provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateNotification(ctx context.Context, params *connect.CreateNotificationInput, optFns ...func(*connect.Options)) (*connect.CreateNotificationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3271,6 +3308,43 @@ func (_m *IClient) DeleteIntegrationAssociation(ctx context.Context, params *con
 	return r0, r1
 }
 
+// DeleteMetric provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteMetric(ctx context.Context, params *connect.DeleteMetricInput, optFns ...func(*connect.Options)) (*connect.DeleteMetricOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteMetric")
+	}
+
+	var r0 *connect.DeleteMetricOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteMetricInput, ...func(*connect.Options)) (*connect.DeleteMetricOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteMetricInput, ...func(*connect.Options)) *connect.DeleteMetricOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteMetricOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteMetricInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteNotification provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteNotification(ctx context.Context, params *connect.DeleteNotificationInput, optFns ...func(*connect.Options)) (*connect.DeleteNotificationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4706,6 +4780,43 @@ func (_m *IClient) DescribeInstanceStorageConfig(ctx context.Context, params *co
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeInstanceStorageConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeMetric provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetric(ctx context.Context, params *connect.DescribeMetricInput, optFns ...func(*connect.Options)) (*connect.DescribeMetricOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetric")
+	}
+
+	var r0 *connect.DescribeMetricOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeMetricInput, ...func(*connect.Options)) (*connect.DescribeMetricOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeMetricInput, ...func(*connect.Options)) *connect.DescribeMetricOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeMetricOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeMetricInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7933,6 +8044,43 @@ func (_m *IClient) ListLexBots(ctx context.Context, params *connect.ListLexBotsI
 	return r0, r1
 }
 
+// ListMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMetrics(ctx context.Context, params *connect.ListMetricsInput, optFns ...func(*connect.Options)) (*connect.ListMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMetrics")
+	}
+
+	var r0 *connect.ListMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListMetricsInput, ...func(*connect.Options)) (*connect.ListMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListMetricsInput, ...func(*connect.Options)) *connect.ListMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListMetricsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListNotifications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListNotifications(ctx context.Context, params *connect.ListNotificationsInput, optFns ...func(*connect.Options)) (*connect.ListNotificationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9949,6 +10097,43 @@ func (_m *IClient) SearchHoursOfOperations(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// SearchMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchMetrics(ctx context.Context, params *connect.SearchMetricsInput, optFns ...func(*connect.Options)) (*connect.SearchMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchMetrics")
+	}
+
+	var r0 *connect.SearchMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchMetricsInput, ...func(*connect.Options)) (*connect.SearchMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchMetricsInput, ...func(*connect.Options)) *connect.SearchMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchMetricsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchNotifications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchNotifications(ctx context.Context, params *connect.SearchNotificationsInput, optFns ...func(*connect.Options)) (*connect.SearchNotificationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10644,6 +10829,43 @@ func (_m *IClient) SendOutboundWebNotification(ctx context.Context, params *conn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.SendOutboundWebNotificationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAssistantContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAssistantContact(ctx context.Context, params *connect.StartAssistantContactInput, optFns ...func(*connect.Options)) (*connect.StartAssistantContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAssistantContact")
+	}
+
+	var r0 *connect.StartAssistantContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartAssistantContactInput, ...func(*connect.Options)) (*connect.StartAssistantContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartAssistantContactInput, ...func(*connect.Options)) *connect.StartAssistantContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartAssistantContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartAssistantContactInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12568,6 +12790,80 @@ func (_m *IClient) UpdateInstanceStorageConfig(ctx context.Context, params *conn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateInstanceStorageConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMetricContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMetricContent(ctx context.Context, params *connect.UpdateMetricContentInput, optFns ...func(*connect.Options)) (*connect.UpdateMetricContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMetricContent")
+	}
+
+	var r0 *connect.UpdateMetricContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricContentInput, ...func(*connect.Options)) (*connect.UpdateMetricContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricContentInput, ...func(*connect.Options)) *connect.UpdateMetricContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateMetricContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateMetricContentInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMetricMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMetricMetadata(ctx context.Context, params *connect.UpdateMetricMetadataInput, optFns ...func(*connect.Options)) (*connect.UpdateMetricMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMetricMetadata")
+	}
+
+	var r0 *connect.UpdateMetricMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricMetadataInput, ...func(*connect.Options)) (*connect.UpdateMetricMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricMetadataInput, ...func(*connect.Options)) *connect.UpdateMetricMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateMetricMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateMetricMetadataInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

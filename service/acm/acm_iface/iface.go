@@ -32,6 +32,7 @@ type IClient interface {
  ListAcmeDomainValidations(ctx context.Context, params *ListAcmeDomainValidationsInput, optFns ...func(*Options)) (*ListAcmeDomainValidationsOutput, error) 
  ListAcmeEndpoints(ctx context.Context, params *ListAcmeEndpointsInput, optFns ...func(*Options)) (*ListAcmeEndpointsOutput, error) 
  ListAcmeExternalAccountBindings(ctx context.Context, params *ListAcmeExternalAccountBindingsInput, optFns ...func(*Options)) (*ListAcmeExternalAccountBindingsOutput, error) 
+ ListCertificateDomainValidations(ctx context.Context, params *ListCertificateDomainValidationsInput, optFns ...func(*Options)) (*ListCertificateDomainValidationsOutput, error) 
  ListCertificates(ctx context.Context, params *ListCertificatesInput, optFns ...func(*Options)) (*ListCertificatesOutput, error) 
  ListTagsForCertificate(ctx context.Context, params *ListTagsForCertificateInput, optFns ...func(*Options)) (*ListTagsForCertificateOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 

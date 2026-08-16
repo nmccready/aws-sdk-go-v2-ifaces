@@ -88,6 +88,43 @@ func (_m *IClient) AssociateIamRoleToResource(ctx context.Context, params *odb.A
 	return r0, r1
 }
 
+// AssociateVirtualMachinesToExadbVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateVirtualMachinesToExadbVmCluster(ctx context.Context, params *odb.AssociateVirtualMachinesToExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.AssociateVirtualMachinesToExadbVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateVirtualMachinesToExadbVmCluster")
+	}
+
+	var r0 *odb.AssociateVirtualMachinesToExadbVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.AssociateVirtualMachinesToExadbVmClusterInput, ...func(*odb.Options)) (*odb.AssociateVirtualMachinesToExadbVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.AssociateVirtualMachinesToExadbVmClusterInput, ...func(*odb.Options)) *odb.AssociateVirtualMachinesToExadbVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.AssociateVirtualMachinesToExadbVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.AssociateVirtualMachinesToExadbVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAutonomousDatabase provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAutonomousDatabase(ctx context.Context, params *odb.CreateAutonomousDatabaseInput, optFns ...func(*odb.Options)) (*odb.CreateAutonomousDatabaseOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -302,6 +339,80 @@ func (_m *IClient) CreateCloudVmCluster(ctx context.Context, params *odb.CreateC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateCloudVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateExadbVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateExadbVmCluster(ctx context.Context, params *odb.CreateExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.CreateExadbVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateExadbVmCluster")
+	}
+
+	var r0 *odb.CreateExadbVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateExadbVmClusterInput, ...func(*odb.Options)) (*odb.CreateExadbVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateExadbVmClusterInput, ...func(*odb.Options)) *odb.CreateExadbVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.CreateExadbVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateExadbVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateExascaleDbStorageVault provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateExascaleDbStorageVault(ctx context.Context, params *odb.CreateExascaleDbStorageVaultInput, optFns ...func(*odb.Options)) (*odb.CreateExascaleDbStorageVaultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateExascaleDbStorageVault")
+	}
+
+	var r0 *odb.CreateExascaleDbStorageVaultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateExascaleDbStorageVaultInput, ...func(*odb.Options)) (*odb.CreateExascaleDbStorageVaultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.CreateExascaleDbStorageVaultInput, ...func(*odb.Options)) *odb.CreateExascaleDbStorageVaultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.CreateExascaleDbStorageVaultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.CreateExascaleDbStorageVaultInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -569,6 +680,80 @@ func (_m *IClient) DeleteCloudVmCluster(ctx context.Context, params *odb.DeleteC
 	return r0, r1
 }
 
+// DeleteExadbVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteExadbVmCluster(ctx context.Context, params *odb.DeleteExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.DeleteExadbVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteExadbVmCluster")
+	}
+
+	var r0 *odb.DeleteExadbVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteExadbVmClusterInput, ...func(*odb.Options)) (*odb.DeleteExadbVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteExadbVmClusterInput, ...func(*odb.Options)) *odb.DeleteExadbVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DeleteExadbVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DeleteExadbVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteExascaleDbStorageVault provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteExascaleDbStorageVault(ctx context.Context, params *odb.DeleteExascaleDbStorageVaultInput, optFns ...func(*odb.Options)) (*odb.DeleteExascaleDbStorageVaultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteExascaleDbStorageVault")
+	}
+
+	var r0 *odb.DeleteExascaleDbStorageVaultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteExascaleDbStorageVaultInput, ...func(*odb.Options)) (*odb.DeleteExascaleDbStorageVaultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DeleteExascaleDbStorageVaultInput, ...func(*odb.Options)) *odb.DeleteExascaleDbStorageVaultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DeleteExascaleDbStorageVaultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DeleteExascaleDbStorageVaultInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteOdbNetwork provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteOdbNetwork(ctx context.Context, params *odb.DeleteOdbNetworkInput, optFns ...func(*odb.Options)) (*odb.DeleteOdbNetworkOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -672,6 +857,43 @@ func (_m *IClient) DisassociateIamRoleFromResource(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.DisassociateIamRoleFromResourceInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateVirtualMachinesFromExadbVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateVirtualMachinesFromExadbVmCluster(ctx context.Context, params *odb.DisassociateVirtualMachinesFromExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.DisassociateVirtualMachinesFromExadbVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateVirtualMachinesFromExadbVmCluster")
+	}
+
+	var r0 *odb.DisassociateVirtualMachinesFromExadbVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DisassociateVirtualMachinesFromExadbVmClusterInput, ...func(*odb.Options)) (*odb.DisassociateVirtualMachinesFromExadbVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DisassociateVirtualMachinesFromExadbVmClusterInput, ...func(*odb.Options)) *odb.DisassociateVirtualMachinesFromExadbVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DisassociateVirtualMachinesFromExadbVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DisassociateVirtualMachinesFromExadbVmClusterInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1042,6 +1264,80 @@ func (_m *IClient) GetDbServer(ctx context.Context, params *odb.GetDbServerInput
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.GetDbServerInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetExadbVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExadbVmCluster(ctx context.Context, params *odb.GetExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.GetExadbVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExadbVmCluster")
+	}
+
+	var r0 *odb.GetExadbVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetExadbVmClusterInput, ...func(*odb.Options)) (*odb.GetExadbVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetExadbVmClusterInput, ...func(*odb.Options)) *odb.GetExadbVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.GetExadbVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.GetExadbVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetExascaleDbStorageVault provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExascaleDbStorageVault(ctx context.Context, params *odb.GetExascaleDbStorageVaultInput, optFns ...func(*odb.Options)) (*odb.GetExascaleDbStorageVaultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExascaleDbStorageVault")
+	}
+
+	var r0 *odb.GetExascaleDbStorageVaultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetExascaleDbStorageVaultInput, ...func(*odb.Options)) (*odb.GetExascaleDbStorageVaultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.GetExascaleDbStorageVaultInput, ...func(*odb.Options)) *odb.GetExascaleDbStorageVaultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.GetExascaleDbStorageVaultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.GetExascaleDbStorageVaultInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1671,6 +1967,117 @@ func (_m *IClient) ListDbSystemShapes(ctx context.Context, params *odb.ListDbSys
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListDbSystemShapesInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListExadbVmClusters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExadbVmClusters(ctx context.Context, params *odb.ListExadbVmClustersInput, optFns ...func(*odb.Options)) (*odb.ListExadbVmClustersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExadbVmClusters")
+	}
+
+	var r0 *odb.ListExadbVmClustersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListExadbVmClustersInput, ...func(*odb.Options)) (*odb.ListExadbVmClustersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListExadbVmClustersInput, ...func(*odb.Options)) *odb.ListExadbVmClustersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListExadbVmClustersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListExadbVmClustersInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListExascaleDbStorageVaults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExascaleDbStorageVaults(ctx context.Context, params *odb.ListExascaleDbStorageVaultsInput, optFns ...func(*odb.Options)) (*odb.ListExascaleDbStorageVaultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExascaleDbStorageVaults")
+	}
+
+	var r0 *odb.ListExascaleDbStorageVaultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListExascaleDbStorageVaultsInput, ...func(*odb.Options)) (*odb.ListExascaleDbStorageVaultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListExascaleDbStorageVaultsInput, ...func(*odb.Options)) *odb.ListExascaleDbStorageVaultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListExascaleDbStorageVaultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListExascaleDbStorageVaultsInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListGiMinorVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGiMinorVersions(ctx context.Context, params *odb.ListGiMinorVersionsInput, optFns ...func(*odb.Options)) (*odb.ListGiMinorVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGiMinorVersions")
+	}
+
+	var r0 *odb.ListGiMinorVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListGiMinorVersionsInput, ...func(*odb.Options)) (*odb.ListGiMinorVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListGiMinorVersionsInput, ...func(*odb.Options)) *odb.ListGiMinorVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListGiMinorVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListGiMinorVersionsInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2392,6 +2799,80 @@ func (_m *IClient) UpdateCloudExadataInfrastructure(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateCloudExadataInfrastructureInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateExadbVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExadbVmCluster(ctx context.Context, params *odb.UpdateExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.UpdateExadbVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExadbVmCluster")
+	}
+
+	var r0 *odb.UpdateExadbVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateExadbVmClusterInput, ...func(*odb.Options)) (*odb.UpdateExadbVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateExadbVmClusterInput, ...func(*odb.Options)) *odb.UpdateExadbVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateExadbVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateExadbVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateExascaleDbStorageVault provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExascaleDbStorageVault(ctx context.Context, params *odb.UpdateExascaleDbStorageVaultInput, optFns ...func(*odb.Options)) (*odb.UpdateExascaleDbStorageVaultOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExascaleDbStorageVault")
+	}
+
+	var r0 *odb.UpdateExascaleDbStorageVaultOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateExascaleDbStorageVaultInput, ...func(*odb.Options)) (*odb.UpdateExascaleDbStorageVaultOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateExascaleDbStorageVaultInput, ...func(*odb.Options)) *odb.UpdateExascaleDbStorageVaultOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateExascaleDbStorageVaultOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateExascaleDbStorageVaultInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

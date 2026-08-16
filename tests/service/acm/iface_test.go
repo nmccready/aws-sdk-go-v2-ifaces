@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCertificateDomainValidations", func(t *testing.T) {
+        input := &acm.ListCertificateDomainValidationsInput{}
+        output := &acm.ListCertificateDomainValidationsOutput{}
+
+        mockClient.On("ListCertificateDomainValidations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCertificateDomainValidations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCertificates", func(t *testing.T) {
         input := &acm.ListCertificatesInput{}
         output := &acm.ListCertificatesOutput{}

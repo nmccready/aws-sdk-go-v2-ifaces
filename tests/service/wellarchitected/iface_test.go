@@ -60,6 +60,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAgentContext", func(t *testing.T) {
+        input := &wellarchitected.CreateAgentContextInput{}
+        output := &wellarchitected.CreateAgentContextOutput{}
+
+        mockClient.On("CreateAgentContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgentContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAgentGoal", func(t *testing.T) {
+        input := &wellarchitected.CreateAgentGoalInput{}
+        output := &wellarchitected.CreateAgentGoalOutput{}
+
+        mockClient.On("CreateAgentGoal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgentGoal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAgentProfile", func(t *testing.T) {
+        input := &wellarchitected.CreateAgentProfileInput{}
+        output := &wellarchitected.CreateAgentProfileOutput{}
+
+        mockClient.On("CreateAgentProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgentProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateLensShare", func(t *testing.T) {
         input := &wellarchitected.CreateLensShareInput{}
         output := &wellarchitected.CreateLensShareOutput{}
@@ -171,6 +210,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateWorkloadShare", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateWorkloadShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAgentContext", func(t *testing.T) {
+        input := &wellarchitected.DeleteAgentContextInput{}
+        output := &wellarchitected.DeleteAgentContextOutput{}
+
+        mockClient.On("DeleteAgentContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgentContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAgentGoal", func(t *testing.T) {
+        input := &wellarchitected.DeleteAgentGoalInput{}
+        output := &wellarchitected.DeleteAgentGoalOutput{}
+
+        mockClient.On("DeleteAgentGoal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgentGoal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAgentProfile", func(t *testing.T) {
+        input := &wellarchitected.DeleteAgentProfileInput{}
+        output := &wellarchitected.DeleteAgentProfileOutput{}
+
+        mockClient.On("DeleteAgentProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgentProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -314,6 +392,71 @@ func TestIClient(t *testing.T) {
         mockClient.On("ExportLens", ctx, input).Return(output, nil)
 
         result, err := mockClient.ExportLens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentContext", func(t *testing.T) {
+        input := &wellarchitected.GetAgentContextInput{}
+        output := &wellarchitected.GetAgentContextOutput{}
+
+        mockClient.On("GetAgentContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentGoal", func(t *testing.T) {
+        input := &wellarchitected.GetAgentGoalInput{}
+        output := &wellarchitected.GetAgentGoalOutput{}
+
+        mockClient.On("GetAgentGoal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentGoal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentProfile", func(t *testing.T) {
+        input := &wellarchitected.GetAgentProfileInput{}
+        output := &wellarchitected.GetAgentProfileOutput{}
+
+        mockClient.On("GetAgentProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentRecommendation", func(t *testing.T) {
+        input := &wellarchitected.GetAgentRecommendationInput{}
+        output := &wellarchitected.GetAgentRecommendationOutput{}
+
+        mockClient.On("GetAgentRecommendation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentRecommendation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentRecommendationGeneration", func(t *testing.T) {
+        input := &wellarchitected.GetAgentRecommendationGenerationInput{}
+        output := &wellarchitected.GetAgentRecommendationGenerationOutput{}
+
+        mockClient.On("GetAgentRecommendationGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentRecommendationGeneration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -509,6 +652,84 @@ func TestIClient(t *testing.T) {
         mockClient.On("ImportLens", ctx, input).Return(output, nil)
 
         result, err := mockClient.ImportLens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentContexts", func(t *testing.T) {
+        input := &wellarchitected.ListAgentContextsInput{}
+        output := &wellarchitected.ListAgentContextsOutput{}
+
+        mockClient.On("ListAgentContexts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentContexts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentGoals", func(t *testing.T) {
+        input := &wellarchitected.ListAgentGoalsInput{}
+        output := &wellarchitected.ListAgentGoalsOutput{}
+
+        mockClient.On("ListAgentGoals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentGoals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentProfiles", func(t *testing.T) {
+        input := &wellarchitected.ListAgentProfilesInput{}
+        output := &wellarchitected.ListAgentProfilesOutput{}
+
+        mockClient.On("ListAgentProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentRecommendationGenerations", func(t *testing.T) {
+        input := &wellarchitected.ListAgentRecommendationGenerationsInput{}
+        output := &wellarchitected.ListAgentRecommendationGenerationsOutput{}
+
+        mockClient.On("ListAgentRecommendationGenerations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentRecommendationGenerations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentRecommendationItems", func(t *testing.T) {
+        input := &wellarchitected.ListAgentRecommendationItemsInput{}
+        output := &wellarchitected.ListAgentRecommendationItemsOutput{}
+
+        mockClient.On("ListAgentRecommendationItems", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentRecommendationItems(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentRecommendations", func(t *testing.T) {
+        input := &wellarchitected.ListAgentRecommendationsInput{}
+        output := &wellarchitected.ListAgentRecommendationsOutput{}
+
+        mockClient.On("ListAgentRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentRecommendations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -762,6 +983,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutAgentRecommendationFeedback", func(t *testing.T) {
+        input := &wellarchitected.PutAgentRecommendationFeedbackInput{}
+        output := &wellarchitected.PutAgentRecommendationFeedbackOutput{}
+
+        mockClient.On("PutAgentRecommendationFeedback", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAgentRecommendationFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAgentRecommendationGeneration", func(t *testing.T) {
+        input := &wellarchitected.StartAgentRecommendationGenerationInput{}
+        output := &wellarchitected.StartAgentRecommendationGenerationOutput{}
+
+        mockClient.On("StartAgentRecommendationGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAgentRecommendationGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &wellarchitected.TagResourceInput{}
         output := &wellarchitected.TagResourceOutput{}
@@ -782,6 +1029,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentContext", func(t *testing.T) {
+        input := &wellarchitected.UpdateAgentContextInput{}
+        output := &wellarchitected.UpdateAgentContextOutput{}
+
+        mockClient.On("UpdateAgentContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentGoal", func(t *testing.T) {
+        input := &wellarchitected.UpdateAgentGoalInput{}
+        output := &wellarchitected.UpdateAgentGoalOutput{}
+
+        mockClient.On("UpdateAgentGoal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentGoal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentProfile", func(t *testing.T) {
+        input := &wellarchitected.UpdateAgentProfileInput{}
+        output := &wellarchitected.UpdateAgentProfileOutput{}
+
+        mockClient.On("UpdateAgentProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentRecommendationStatus", func(t *testing.T) {
+        input := &wellarchitected.UpdateAgentRecommendationStatusInput{}
+        output := &wellarchitected.UpdateAgentRecommendationStatusOutput{}
+
+        mockClient.On("UpdateAgentRecommendationStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentRecommendationStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

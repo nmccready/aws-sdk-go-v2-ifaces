@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCheckIngestedDocumentAcl", func(t *testing.T) {
+        input := &bedrockagentruntime.CheckIngestedDocumentAclInput{}
+        output := &bedrockagentruntime.CheckIngestedDocumentAclOutput{}
+
+        mockClient.On("CheckIngestedDocumentAcl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CheckIngestedDocumentAcl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateInvocation", func(t *testing.T) {
         input := &bedrockagentruntime.CreateInvocationInput{}
         output := &bedrockagentruntime.CreateInvocationOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetFlowExecution", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetFlowExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIngestedDocumentAcl", func(t *testing.T) {
+        input := &bedrockagentruntime.GetIngestedDocumentAclInput{}
+        output := &bedrockagentruntime.GetIngestedDocumentAclOutput{}
+
+        mockClient.On("GetIngestedDocumentAcl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIngestedDocumentAcl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
