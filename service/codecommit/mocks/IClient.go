@@ -940,6 +940,43 @@ func (_m *IClient) GetBlob(ctx context.Context, params *codecommit.GetBlobInput,
 	return r0, r1
 }
 
+// GetBlobDifferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBlobDifferences(ctx context.Context, params *codecommit.GetBlobDifferencesInput, optFns ...func(*codecommit.Options)) (*codecommit.GetBlobDifferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBlobDifferences")
+	}
+
+	var r0 *codecommit.GetBlobDifferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *codecommit.GetBlobDifferencesInput, ...func(*codecommit.Options)) (*codecommit.GetBlobDifferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *codecommit.GetBlobDifferencesInput, ...func(*codecommit.Options)) *codecommit.GetBlobDifferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*codecommit.GetBlobDifferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *codecommit.GetBlobDifferencesInput, ...func(*codecommit.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBranch provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBranch(ctx context.Context, params *codecommit.GetBranchInput, optFns ...func(*codecommit.Options)) (*codecommit.GetBranchOutput, error) {
 	_va := make([]interface{}, len(optFns))

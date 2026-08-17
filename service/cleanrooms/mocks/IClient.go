@@ -1199,6 +1199,43 @@ func (_m *IClient) DisallowIntermediateTable(ctx context.Context, params *cleanr
 	return r0, r1
 }
 
+// GetAnalysisLogExport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAnalysisLogExport(ctx context.Context, params *cleanrooms.GetAnalysisLogExportInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetAnalysisLogExportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAnalysisLogExport")
+	}
+
+	var r0 *cleanrooms.GetAnalysisLogExportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetAnalysisLogExportInput, ...func(*cleanrooms.Options)) (*cleanrooms.GetAnalysisLogExportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.GetAnalysisLogExportInput, ...func(*cleanrooms.Options)) *cleanrooms.GetAnalysisLogExportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.GetAnalysisLogExportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetAnalysisLogExportInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAnalysisTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAnalysisTemplate(ctx context.Context, params *cleanrooms.GetAnalysisTemplateInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.GetAnalysisTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2005,6 +2042,43 @@ func (_m *IClient) GetSchemaAnalysisRule(ctx context.Context, params *cleanrooms
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.GetSchemaAnalysisRuleInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAnalysisLogExports provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAnalysisLogExports(ctx context.Context, params *cleanrooms.ListAnalysisLogExportsInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.ListAnalysisLogExportsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAnalysisLogExports")
+	}
+
+	var r0 *cleanrooms.ListAnalysisLogExportsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListAnalysisLogExportsInput, ...func(*cleanrooms.Options)) (*cleanrooms.ListAnalysisLogExportsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.ListAnalysisLogExportsInput, ...func(*cleanrooms.Options)) *cleanrooms.ListAnalysisLogExportsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.ListAnalysisLogExportsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.ListAnalysisLogExportsInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2985,6 +3059,43 @@ func (_m *IClient) PreviewPrivacyImpact(ctx context.Context, params *cleanrooms.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.PreviewPrivacyImpactInput, ...func(*cleanrooms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAnalysisLogExport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAnalysisLogExport(ctx context.Context, params *cleanrooms.StartAnalysisLogExportInput, optFns ...func(*cleanrooms.Options)) (*cleanrooms.StartAnalysisLogExportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAnalysisLogExport")
+	}
+
+	var r0 *cleanrooms.StartAnalysisLogExportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.StartAnalysisLogExportInput, ...func(*cleanrooms.Options)) (*cleanrooms.StartAnalysisLogExportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cleanrooms.StartAnalysisLogExportInput, ...func(*cleanrooms.Options)) *cleanrooms.StartAnalysisLogExportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cleanrooms.StartAnalysisLogExportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cleanrooms.StartAnalysisLogExportInput, ...func(*cleanrooms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -450,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAnalysisLogExport", func(t *testing.T) {
+        input := &cleanrooms.GetAnalysisLogExportInput{}
+        output := &cleanrooms.GetAnalysisLogExportOutput{}
+
+        mockClient.On("GetAnalysisLogExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAnalysisLogExport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAnalysisTemplate", func(t *testing.T) {
         input := &cleanrooms.GetAnalysisTemplateInput{}
         output := &cleanrooms.GetAnalysisTemplateOutput{}
@@ -730,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSchemaAnalysisRule", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSchemaAnalysisRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAnalysisLogExports", func(t *testing.T) {
+        input := &cleanrooms.ListAnalysisLogExportsInput{}
+        output := &cleanrooms.ListAnalysisLogExportsOutput{}
+
+        mockClient.On("ListAnalysisLogExports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAnalysisLogExports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1068,6 +1094,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PreviewPrivacyImpact", ctx, input).Return(output, nil)
 
         result, err := mockClient.PreviewPrivacyImpact(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAnalysisLogExport", func(t *testing.T) {
+        input := &cleanrooms.StartAnalysisLogExportInput{}
+        output := &cleanrooms.StartAnalysisLogExportOutput{}
+
+        mockClient.On("StartAnalysisLogExport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAnalysisLogExport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDescribeUserLimits", func(t *testing.T) {
+        input := &quicksight.BatchDescribeUserLimitsInput{}
+        output := &quicksight.BatchDescribeUserLimitsOutput{}
+
+        mockClient.On("BatchDescribeUserLimits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDescribeUserLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelIngestion", func(t *testing.T) {
         input := &quicksight.CancelIngestionInput{}
         output := &quicksight.CancelIngestionOutput{}
@@ -151,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateApprovalPolicy", func(t *testing.T) {
+        input := &quicksight.CreateApprovalPolicyInput{}
+        output := &quicksight.CreateApprovalPolicyOutput{}
+
+        mockClient.On("CreateApprovalPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateApprovalPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBrand", func(t *testing.T) {
         input := &quicksight.CreateBrandInput{}
         output := &quicksight.CreateBrandOutput{}
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDlpSetting", func(t *testing.T) {
+        input := &quicksight.CreateDlpSettingInput{}
+        output := &quicksight.CreateDlpSettingOutput{}
+
+        mockClient.On("CreateDlpSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDlpSetting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -314,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateKnowledgeBase", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateLimitsProfile", func(t *testing.T) {
+        input := &quicksight.CreateLimitsProfileInput{}
+        output := &quicksight.CreateLimitsProfileOutput{}
+
+        mockClient.On("CreateLimitsProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateLimitsProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteApprovalPolicy", func(t *testing.T) {
+        input := &quicksight.DeleteApprovalPolicyInput{}
+        output := &quicksight.DeleteApprovalPolicyOutput{}
+
+        mockClient.On("DeleteApprovalPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApprovalPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteBrand", func(t *testing.T) {
         input := &quicksight.DeleteBrandInput{}
         output := &quicksight.DeleteBrandOutput{}
@@ -671,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDlpSetting", func(t *testing.T) {
+        input := &quicksight.DeleteDlpSettingInput{}
+        output := &quicksight.DeleteDlpSettingOutput{}
+
+        mockClient.On("DeleteDlpSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDlpSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteFlow", func(t *testing.T) {
         input := &quicksight.DeleteFlowInput{}
         output := &quicksight.DeleteFlowOutput{}
@@ -769,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteKnowledgeBase", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteLimitsProfile", func(t *testing.T) {
+        input := &quicksight.DeleteLimitsProfileInput{}
+        output := &quicksight.DeleteLimitsProfileOutput{}
+
+        mockClient.On("DeleteLimitsProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteLimitsProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1139,6 +1230,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeApprovalPolicy", func(t *testing.T) {
+        input := &quicksight.DescribeApprovalPolicyInput{}
+        output := &quicksight.DescribeApprovalPolicyOutput{}
+
+        mockClient.On("DescribeApprovalPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApprovalPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAssetBundleExportJob", func(t *testing.T) {
         input := &quicksight.DescribeAssetBundleExportJobInput{}
         output := &quicksight.DescribeAssetBundleExportJobOutput{}
@@ -1386,6 +1490,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDlpSetting", func(t *testing.T) {
+        input := &quicksight.DescribeDlpSettingInput{}
+        output := &quicksight.DescribeDlpSettingOutput{}
+
+        mockClient.On("DescribeDlpSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDlpSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeFlow", func(t *testing.T) {
         input := &quicksight.DescribeFlowInput{}
         output := &quicksight.DescribeFlowOutput{}
@@ -1536,6 +1653,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeKnowledgeBasePermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeKnowledgeBasePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeLimitsProfile", func(t *testing.T) {
+        input := &quicksight.DescribeLimitsProfileInput{}
+        output := &quicksight.DescribeLimitsProfileOutput{}
+
+        mockClient.On("DescribeLimitsProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeLimitsProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1997,6 +2127,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListApprovalPolicies", func(t *testing.T) {
+        input := &quicksight.ListApprovalPoliciesInput{}
+        output := &quicksight.ListApprovalPoliciesOutput{}
+
+        mockClient.On("ListApprovalPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApprovalPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAssetBundleExportJobs", func(t *testing.T) {
         input := &quicksight.ListAssetBundleExportJobsInput{}
         output := &quicksight.ListAssetBundleExportJobsOutput{}
@@ -2095,6 +2238,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDlpSettings", func(t *testing.T) {
+        input := &quicksight.ListDlpSettingsInput{}
+        output := &quicksight.ListDlpSettingsOutput{}
+
+        mockClient.On("ListDlpSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDlpSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2238,6 +2394,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListKnowledgeBases", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListKnowledgeBases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListLimitsProfiles", func(t *testing.T) {
+        input := &quicksight.ListLimitsProfilesInput{}
+        output := &quicksight.ListLimitsProfilesOutput{}
+
+        mockClient.On("ListLimitsProfiles", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListLimitsProfiles(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2972,6 +3141,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateApprovalPolicy", func(t *testing.T) {
+        input := &quicksight.UpdateApprovalPolicyInput{}
+        output := &quicksight.UpdateApprovalPolicyOutput{}
+
+        mockClient.On("UpdateApprovalPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateApprovalPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateBrand", func(t *testing.T) {
         input := &quicksight.UpdateBrandInput{}
         output := &quicksight.UpdateBrandOutput{}
@@ -3154,6 +3336,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateDlpSetting", func(t *testing.T) {
+        input := &quicksight.UpdateDlpSettingInput{}
+        output := &quicksight.UpdateDlpSettingOutput{}
+
+        mockClient.On("UpdateDlpSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDlpSetting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateFlow", func(t *testing.T) {
         input := &quicksight.UpdateFlowInput{}
         output := &quicksight.UpdateFlowOutput{}
@@ -3291,6 +3486,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateKnowledgeBasePermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateKnowledgeBasePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLimitsProfile", func(t *testing.T) {
+        input := &quicksight.UpdateLimitsProfileInput{}
+        output := &quicksight.UpdateLimitsProfileOutput{}
+
+        mockClient.On("UpdateLimitsProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLimitsProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

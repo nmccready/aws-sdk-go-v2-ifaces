@@ -52,6 +52,43 @@ func (_m *IClient) AssociateSourceNetworkStack(ctx context.Context, params *drs.
 	return r0, r1
 }
 
+// CancelRecoveryPlanExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelRecoveryPlanExecution(ctx context.Context, params *drs.CancelRecoveryPlanExecutionInput, optFns ...func(*drs.Options)) (*drs.CancelRecoveryPlanExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelRecoveryPlanExecution")
+	}
+
+	var r0 *drs.CancelRecoveryPlanExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.CancelRecoveryPlanExecutionInput, ...func(*drs.Options)) (*drs.CancelRecoveryPlanExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.CancelRecoveryPlanExecutionInput, ...func(*drs.Options)) *drs.CancelRecoveryPlanExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.CancelRecoveryPlanExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.CancelRecoveryPlanExecutionInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateExtendedSourceServer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateExtendedSourceServer(ctx context.Context, params *drs.CreateExtendedSourceServerInput, optFns ...func(*drs.Options)) (*drs.CreateExtendedSourceServerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,80 @@ func (_m *IClient) CreateLaunchConfigurationTemplate(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *drs.CreateLaunchConfigurationTemplateInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRecoveryPlan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRecoveryPlan(ctx context.Context, params *drs.CreateRecoveryPlanInput, optFns ...func(*drs.Options)) (*drs.CreateRecoveryPlanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRecoveryPlan")
+	}
+
+	var r0 *drs.CreateRecoveryPlanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.CreateRecoveryPlanInput, ...func(*drs.Options)) (*drs.CreateRecoveryPlanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.CreateRecoveryPlanInput, ...func(*drs.Options)) *drs.CreateRecoveryPlanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.CreateRecoveryPlanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.CreateRecoveryPlanInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRecoveryPlanStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRecoveryPlanStep(ctx context.Context, params *drs.CreateRecoveryPlanStepInput, optFns ...func(*drs.Options)) (*drs.CreateRecoveryPlanStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRecoveryPlanStep")
+	}
+
+	var r0 *drs.CreateRecoveryPlanStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.CreateRecoveryPlanStepInput, ...func(*drs.Options)) (*drs.CreateRecoveryPlanStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.CreateRecoveryPlanStepInput, ...func(*drs.Options)) *drs.CreateRecoveryPlanStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.CreateRecoveryPlanStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.CreateRecoveryPlanStepInput, ...func(*drs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -340,6 +451,117 @@ func (_m *IClient) DeleteRecoveryInstance(ctx context.Context, params *drs.Delet
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *drs.DeleteRecoveryInstanceInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRecoveryPlan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRecoveryPlan(ctx context.Context, params *drs.DeleteRecoveryPlanInput, optFns ...func(*drs.Options)) (*drs.DeleteRecoveryPlanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRecoveryPlan")
+	}
+
+	var r0 *drs.DeleteRecoveryPlanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.DeleteRecoveryPlanInput, ...func(*drs.Options)) (*drs.DeleteRecoveryPlanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.DeleteRecoveryPlanInput, ...func(*drs.Options)) *drs.DeleteRecoveryPlanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.DeleteRecoveryPlanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.DeleteRecoveryPlanInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRecoveryPlanExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRecoveryPlanExecution(ctx context.Context, params *drs.DeleteRecoveryPlanExecutionInput, optFns ...func(*drs.Options)) (*drs.DeleteRecoveryPlanExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRecoveryPlanExecution")
+	}
+
+	var r0 *drs.DeleteRecoveryPlanExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.DeleteRecoveryPlanExecutionInput, ...func(*drs.Options)) (*drs.DeleteRecoveryPlanExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.DeleteRecoveryPlanExecutionInput, ...func(*drs.Options)) *drs.DeleteRecoveryPlanExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.DeleteRecoveryPlanExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.DeleteRecoveryPlanExecutionInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRecoveryPlanStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRecoveryPlanStep(ctx context.Context, params *drs.DeleteRecoveryPlanStepInput, optFns ...func(*drs.Options)) (*drs.DeleteRecoveryPlanStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRecoveryPlanStep")
+	}
+
+	var r0 *drs.DeleteRecoveryPlanStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.DeleteRecoveryPlanStepInput, ...func(*drs.Options)) (*drs.DeleteRecoveryPlanStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.DeleteRecoveryPlanStepInput, ...func(*drs.Options)) *drs.DeleteRecoveryPlanStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.DeleteRecoveryPlanStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.DeleteRecoveryPlanStepInput, ...func(*drs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -940,6 +1162,154 @@ func (_m *IClient) GetLaunchConfiguration(ctx context.Context, params *drs.GetLa
 	return r0, r1
 }
 
+// GetRecoveryPlan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecoveryPlan(ctx context.Context, params *drs.GetRecoveryPlanInput, optFns ...func(*drs.Options)) (*drs.GetRecoveryPlanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecoveryPlan")
+	}
+
+	var r0 *drs.GetRecoveryPlanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanInput, ...func(*drs.Options)) (*drs.GetRecoveryPlanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanInput, ...func(*drs.Options)) *drs.GetRecoveryPlanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.GetRecoveryPlanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.GetRecoveryPlanInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRecoveryPlanExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecoveryPlanExecution(ctx context.Context, params *drs.GetRecoveryPlanExecutionInput, optFns ...func(*drs.Options)) (*drs.GetRecoveryPlanExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecoveryPlanExecution")
+	}
+
+	var r0 *drs.GetRecoveryPlanExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanExecutionInput, ...func(*drs.Options)) (*drs.GetRecoveryPlanExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanExecutionInput, ...func(*drs.Options)) *drs.GetRecoveryPlanExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.GetRecoveryPlanExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.GetRecoveryPlanExecutionInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRecoveryPlanExecutionStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecoveryPlanExecutionStep(ctx context.Context, params *drs.GetRecoveryPlanExecutionStepInput, optFns ...func(*drs.Options)) (*drs.GetRecoveryPlanExecutionStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecoveryPlanExecutionStep")
+	}
+
+	var r0 *drs.GetRecoveryPlanExecutionStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanExecutionStepInput, ...func(*drs.Options)) (*drs.GetRecoveryPlanExecutionStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanExecutionStepInput, ...func(*drs.Options)) *drs.GetRecoveryPlanExecutionStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.GetRecoveryPlanExecutionStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.GetRecoveryPlanExecutionStepInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRecoveryPlanStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRecoveryPlanStep(ctx context.Context, params *drs.GetRecoveryPlanStepInput, optFns ...func(*drs.Options)) (*drs.GetRecoveryPlanStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRecoveryPlanStep")
+	}
+
+	var r0 *drs.GetRecoveryPlanStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanStepInput, ...func(*drs.Options)) (*drs.GetRecoveryPlanStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.GetRecoveryPlanStepInput, ...func(*drs.Options)) *drs.GetRecoveryPlanStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.GetRecoveryPlanStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.GetRecoveryPlanStepInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetReplicationConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetReplicationConfiguration(ctx context.Context, params *drs.GetReplicationConfigurationInput, optFns ...func(*drs.Options)) (*drs.GetReplicationConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1088,6 +1458,154 @@ func (_m *IClient) ListLaunchActions(ctx context.Context, params *drs.ListLaunch
 	return r0, r1
 }
 
+// ListRecoveryPlanExecutionSteps provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecoveryPlanExecutionSteps(ctx context.Context, params *drs.ListRecoveryPlanExecutionStepsInput, optFns ...func(*drs.Options)) (*drs.ListRecoveryPlanExecutionStepsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecoveryPlanExecutionSteps")
+	}
+
+	var r0 *drs.ListRecoveryPlanExecutionStepsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlanExecutionStepsInput, ...func(*drs.Options)) (*drs.ListRecoveryPlanExecutionStepsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlanExecutionStepsInput, ...func(*drs.Options)) *drs.ListRecoveryPlanExecutionStepsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.ListRecoveryPlanExecutionStepsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.ListRecoveryPlanExecutionStepsInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecoveryPlanExecutions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecoveryPlanExecutions(ctx context.Context, params *drs.ListRecoveryPlanExecutionsInput, optFns ...func(*drs.Options)) (*drs.ListRecoveryPlanExecutionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecoveryPlanExecutions")
+	}
+
+	var r0 *drs.ListRecoveryPlanExecutionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlanExecutionsInput, ...func(*drs.Options)) (*drs.ListRecoveryPlanExecutionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlanExecutionsInput, ...func(*drs.Options)) *drs.ListRecoveryPlanExecutionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.ListRecoveryPlanExecutionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.ListRecoveryPlanExecutionsInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecoveryPlanSteps provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecoveryPlanSteps(ctx context.Context, params *drs.ListRecoveryPlanStepsInput, optFns ...func(*drs.Options)) (*drs.ListRecoveryPlanStepsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecoveryPlanSteps")
+	}
+
+	var r0 *drs.ListRecoveryPlanStepsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlanStepsInput, ...func(*drs.Options)) (*drs.ListRecoveryPlanStepsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlanStepsInput, ...func(*drs.Options)) *drs.ListRecoveryPlanStepsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.ListRecoveryPlanStepsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.ListRecoveryPlanStepsInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRecoveryPlans provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRecoveryPlans(ctx context.Context, params *drs.ListRecoveryPlansInput, optFns ...func(*drs.Options)) (*drs.ListRecoveryPlansOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRecoveryPlans")
+	}
+
+	var r0 *drs.ListRecoveryPlansOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlansInput, ...func(*drs.Options)) (*drs.ListRecoveryPlansOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ListRecoveryPlansInput, ...func(*drs.Options)) *drs.ListRecoveryPlansOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.ListRecoveryPlansOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.ListRecoveryPlansInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListStagingAccounts provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListStagingAccounts(ctx context.Context, params *drs.ListStagingAccountsInput, optFns ...func(*drs.Options)) (*drs.ListStagingAccountsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1217,6 +1735,43 @@ func (_m *IClient) PutLaunchAction(ctx context.Context, params *drs.PutLaunchAct
 	return r0, r1
 }
 
+// ReorderRecoveryPlanSteps provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ReorderRecoveryPlanSteps(ctx context.Context, params *drs.ReorderRecoveryPlanStepsInput, optFns ...func(*drs.Options)) (*drs.ReorderRecoveryPlanStepsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ReorderRecoveryPlanSteps")
+	}
+
+	var r0 *drs.ReorderRecoveryPlanStepsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ReorderRecoveryPlanStepsInput, ...func(*drs.Options)) (*drs.ReorderRecoveryPlanStepsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.ReorderRecoveryPlanStepsInput, ...func(*drs.Options)) *drs.ReorderRecoveryPlanStepsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.ReorderRecoveryPlanStepsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.ReorderRecoveryPlanStepsInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RetryDataReplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RetryDataReplication(ctx context.Context, params *drs.RetryDataReplicationInput, optFns ...func(*drs.Options)) (*drs.RetryDataReplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1246,6 +1801,43 @@ func (_m *IClient) RetryDataReplication(ctx context.Context, params *drs.RetryDa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *drs.RetryDataReplicationInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RetryRecoveryPlanExecutionStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RetryRecoveryPlanExecutionStep(ctx context.Context, params *drs.RetryRecoveryPlanExecutionStepInput, optFns ...func(*drs.Options)) (*drs.RetryRecoveryPlanExecutionStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RetryRecoveryPlanExecutionStep")
+	}
+
+	var r0 *drs.RetryRecoveryPlanExecutionStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.RetryRecoveryPlanExecutionStepInput, ...func(*drs.Options)) (*drs.RetryRecoveryPlanExecutionStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.RetryRecoveryPlanExecutionStepInput, ...func(*drs.Options)) *drs.RetryRecoveryPlanExecutionStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.RetryRecoveryPlanExecutionStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.RetryRecoveryPlanExecutionStepInput, ...func(*drs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1357,6 +1949,43 @@ func (_m *IClient) StartRecovery(ctx context.Context, params *drs.StartRecoveryI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *drs.StartRecoveryInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartRecoveryPlanExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartRecoveryPlanExecution(ctx context.Context, params *drs.StartRecoveryPlanExecutionInput, optFns ...func(*drs.Options)) (*drs.StartRecoveryPlanExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartRecoveryPlanExecution")
+	}
+
+	var r0 *drs.StartRecoveryPlanExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.StartRecoveryPlanExecutionInput, ...func(*drs.Options)) (*drs.StartRecoveryPlanExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.StartRecoveryPlanExecutionInput, ...func(*drs.Options)) *drs.StartRecoveryPlanExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.StartRecoveryPlanExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.StartRecoveryPlanExecutionInput, ...func(*drs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1801,6 +2430,117 @@ func (_m *IClient) UpdateLaunchConfigurationTemplate(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *drs.UpdateLaunchConfigurationTemplateInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRecoveryPlan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRecoveryPlan(ctx context.Context, params *drs.UpdateRecoveryPlanInput, optFns ...func(*drs.Options)) (*drs.UpdateRecoveryPlanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRecoveryPlan")
+	}
+
+	var r0 *drs.UpdateRecoveryPlanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.UpdateRecoveryPlanInput, ...func(*drs.Options)) (*drs.UpdateRecoveryPlanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.UpdateRecoveryPlanInput, ...func(*drs.Options)) *drs.UpdateRecoveryPlanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.UpdateRecoveryPlanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.UpdateRecoveryPlanInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRecoveryPlanExecutionStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRecoveryPlanExecutionStep(ctx context.Context, params *drs.UpdateRecoveryPlanExecutionStepInput, optFns ...func(*drs.Options)) (*drs.UpdateRecoveryPlanExecutionStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRecoveryPlanExecutionStep")
+	}
+
+	var r0 *drs.UpdateRecoveryPlanExecutionStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.UpdateRecoveryPlanExecutionStepInput, ...func(*drs.Options)) (*drs.UpdateRecoveryPlanExecutionStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.UpdateRecoveryPlanExecutionStepInput, ...func(*drs.Options)) *drs.UpdateRecoveryPlanExecutionStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.UpdateRecoveryPlanExecutionStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.UpdateRecoveryPlanExecutionStepInput, ...func(*drs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRecoveryPlanStep provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRecoveryPlanStep(ctx context.Context, params *drs.UpdateRecoveryPlanStepInput, optFns ...func(*drs.Options)) (*drs.UpdateRecoveryPlanStepOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRecoveryPlanStep")
+	}
+
+	var r0 *drs.UpdateRecoveryPlanStepOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.UpdateRecoveryPlanStepInput, ...func(*drs.Options)) (*drs.UpdateRecoveryPlanStepOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *drs.UpdateRecoveryPlanStepInput, ...func(*drs.Options)) *drs.UpdateRecoveryPlanStepOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*drs.UpdateRecoveryPlanStepOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *drs.UpdateRecoveryPlanStepInput, ...func(*drs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

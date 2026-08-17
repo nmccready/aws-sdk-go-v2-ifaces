@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateVirtualMachinesToExadbVmCluster", func(t *testing.T) {
+        input := &odb.AssociateVirtualMachinesToExadbVmClusterInput{}
+        output := &odb.AssociateVirtualMachinesToExadbVmClusterOutput{}
+
+        mockClient.On("AssociateVirtualMachinesToExadbVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateVirtualMachinesToExadbVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAutonomousDatabase", func(t *testing.T) {
         input := &odb.CreateAutonomousDatabaseInput{}
         output := &odb.CreateAutonomousDatabaseOutput{}
@@ -132,6 +145,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCloudVmCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCloudVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateExadbVmCluster", func(t *testing.T) {
+        input := &odb.CreateExadbVmClusterInput{}
+        output := &odb.CreateExadbVmClusterOutput{}
+
+        mockClient.On("CreateExadbVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateExadbVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateExascaleDbStorageVault", func(t *testing.T) {
+        input := &odb.CreateExascaleDbStorageVaultInput{}
+        output := &odb.CreateExascaleDbStorageVaultOutput{}
+
+        mockClient.On("CreateExascaleDbStorageVault", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateExascaleDbStorageVault(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,6 +268,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteExadbVmCluster", func(t *testing.T) {
+        input := &odb.DeleteExadbVmClusterInput{}
+        output := &odb.DeleteExadbVmClusterOutput{}
+
+        mockClient.On("DeleteExadbVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteExadbVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteExascaleDbStorageVault", func(t *testing.T) {
+        input := &odb.DeleteExascaleDbStorageVaultInput{}
+        output := &odb.DeleteExascaleDbStorageVaultOutput{}
+
+        mockClient.On("DeleteExascaleDbStorageVault", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteExascaleDbStorageVault(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteOdbNetwork", func(t *testing.T) {
         input := &odb.DeleteOdbNetworkInput{}
         output := &odb.DeleteOdbNetworkOutput{}
@@ -262,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateIamRoleFromResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateIamRoleFromResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateVirtualMachinesFromExadbVmCluster", func(t *testing.T) {
+        input := &odb.DisassociateVirtualMachinesFromExadbVmClusterInput{}
+        output := &odb.DisassociateVirtualMachinesFromExadbVmClusterOutput{}
+
+        mockClient.On("DisassociateVirtualMachinesFromExadbVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateVirtualMachinesFromExadbVmCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -392,6 +470,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDbServer", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDbServer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetExadbVmCluster", func(t *testing.T) {
+        input := &odb.GetExadbVmClusterInput{}
+        output := &odb.GetExadbVmClusterOutput{}
+
+        mockClient.On("GetExadbVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExadbVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetExascaleDbStorageVault", func(t *testing.T) {
+        input := &odb.GetExascaleDbStorageVaultInput{}
+        output := &odb.GetExascaleDbStorageVaultOutput{}
+
+        mockClient.On("GetExascaleDbStorageVault", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExascaleDbStorageVault(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -613,6 +717,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDbSystemShapes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDbSystemShapes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExadbVmClusters", func(t *testing.T) {
+        input := &odb.ListExadbVmClustersInput{}
+        output := &odb.ListExadbVmClustersOutput{}
+
+        mockClient.On("ListExadbVmClusters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExadbVmClusters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExascaleDbStorageVaults", func(t *testing.T) {
+        input := &odb.ListExascaleDbStorageVaultsInput{}
+        output := &odb.ListExascaleDbStorageVaultsOutput{}
+
+        mockClient.On("ListExascaleDbStorageVaults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExascaleDbStorageVaults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGiMinorVersions", func(t *testing.T) {
+        input := &odb.ListGiMinorVersionsInput{}
+        output := &odb.ListGiMinorVersionsOutput{}
+
+        mockClient.On("ListGiMinorVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGiMinorVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -860,6 +1003,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCloudExadataInfrastructure", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCloudExadataInfrastructure(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateExadbVmCluster", func(t *testing.T) {
+        input := &odb.UpdateExadbVmClusterInput{}
+        output := &odb.UpdateExadbVmClusterOutput{}
+
+        mockClient.On("UpdateExadbVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExadbVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateExascaleDbStorageVault", func(t *testing.T) {
+        input := &odb.UpdateExascaleDbStorageVaultInput{}
+        output := &odb.UpdateExascaleDbStorageVaultOutput{}
+
+        mockClient.On("UpdateExascaleDbStorageVault", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExascaleDbStorageVault(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

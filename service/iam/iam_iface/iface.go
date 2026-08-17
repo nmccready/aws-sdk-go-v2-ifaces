@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  AcceptDelegationRequest(ctx context.Context, params *AcceptDelegationRequestInput, optFns ...func(*Options)) (*AcceptDelegationRequestOutput, error) 
+ AcquireRole(ctx context.Context, params *AcquireRoleInput, optFns ...func(*Options)) (*AcquireRoleOutput, error) 
  AddClientIDToOpenIDConnectProvider(ctx context.Context, params *AddClientIDToOpenIDConnectProviderInput, optFns ...func(*Options)) (*AddClientIDToOpenIDConnectProviderOutput, error) 
  AddRoleToInstanceProfile(ctx context.Context, params *AddRoleToInstanceProfileInput, optFns ...func(*Options)) (*AddRoleToInstanceProfileOutput, error) 
  AddUserToGroup(ctx context.Context, params *AddUserToGroupInput, optFns ...func(*Options)) (*AddUserToGroupOutput, error) 
@@ -74,6 +75,7 @@ type IClient interface {
  GetAccessKeyLastUsed(ctx context.Context, params *GetAccessKeyLastUsedInput, optFns ...func(*Options)) (*GetAccessKeyLastUsedOutput, error) 
  GetAccountAuthorizationDetails(ctx context.Context, params *GetAccountAuthorizationDetailsInput, optFns ...func(*Options)) (*GetAccountAuthorizationDetailsOutput, error) 
  GetAccountPasswordPolicy(ctx context.Context, params *GetAccountPasswordPolicyInput, optFns ...func(*Options)) (*GetAccountPasswordPolicyOutput, error) 
+ GetAccountProperties(ctx context.Context, params *GetAccountPropertiesInput, optFns ...func(*Options)) (*GetAccountPropertiesOutput, error) 
  GetAccountSummary(ctx context.Context, params *GetAccountSummaryInput, optFns ...func(*Options)) (*GetAccountSummaryOutput, error) 
  GetContextKeysForCustomPolicy(ctx context.Context, params *GetContextKeysForCustomPolicyInput, optFns ...func(*Options)) (*GetContextKeysForCustomPolicyOutput, error) 
  GetContextKeysForPrincipalPolicy(ctx context.Context, params *GetContextKeysForPrincipalPolicyInput, optFns ...func(*Options)) (*GetContextKeysForPrincipalPolicyOutput, error) 
@@ -92,6 +94,7 @@ type IClient interface {
  GetPolicyVersion(ctx context.Context, params *GetPolicyVersionInput, optFns ...func(*Options)) (*GetPolicyVersionOutput, error) 
  GetRole(ctx context.Context, params *GetRoleInput, optFns ...func(*Options)) (*GetRoleOutput, error) 
  GetRolePolicy(ctx context.Context, params *GetRolePolicyInput, optFns ...func(*Options)) (*GetRolePolicyOutput, error) 
+ GetRoleTemplateVersion(ctx context.Context, params *GetRoleTemplateVersionInput, optFns ...func(*Options)) (*GetRoleTemplateVersionOutput, error) 
  GetSAMLProvider(ctx context.Context, params *GetSAMLProviderInput, optFns ...func(*Options)) (*GetSAMLProviderOutput, error) 
  GetSSHPublicKey(ctx context.Context, params *GetSSHPublicKeyInput, optFns ...func(*Options)) (*GetSSHPublicKeyOutput, error) 
  GetServerCertificate(ctx context.Context, params *GetServerCertificateInput, optFns ...func(*Options)) (*GetServerCertificateOutput, error) 
@@ -136,6 +139,7 @@ type IClient interface {
  ListUserTags(ctx context.Context, params *ListUserTagsInput, optFns ...func(*Options)) (*ListUserTagsOutput, error) 
  ListUsers(ctx context.Context, params *ListUsersInput, optFns ...func(*Options)) (*ListUsersOutput, error) 
  ListVirtualMFADevices(ctx context.Context, params *ListVirtualMFADevicesInput, optFns ...func(*Options)) (*ListVirtualMFADevicesOutput, error) 
+ PutAccountProperties(ctx context.Context, params *PutAccountPropertiesInput, optFns ...func(*Options)) (*PutAccountPropertiesOutput, error) 
  PutGroupPolicy(ctx context.Context, params *PutGroupPolicyInput, optFns ...func(*Options)) (*PutGroupPolicyOutput, error) 
  PutRolePermissionsBoundary(ctx context.Context, params *PutRolePermissionsBoundaryInput, optFns ...func(*Options)) (*PutRolePermissionsBoundaryOutput, error) 
  PutRolePolicy(ctx context.Context, params *PutRolePolicyInput, optFns ...func(*Options)) (*PutRolePolicyOutput, error) 

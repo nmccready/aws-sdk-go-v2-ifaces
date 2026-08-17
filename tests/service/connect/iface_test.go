@@ -619,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateExtractionDefinition", func(t *testing.T) {
+        input := &connect.CreateExtractionDefinitionInput{}
+        output := &connect.CreateExtractionDefinitionOutput{}
+
+        mockClient.On("CreateExtractionDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateExtractionDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateHoursOfOperation", func(t *testing.T) {
         input := &connect.CreateHoursOfOperationInput{}
         output := &connect.CreateHoursOfOperationOutput{}
@@ -665,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIntegrationAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIntegrationAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateMetric", func(t *testing.T) {
+        input := &connect.CreateMetricInput{}
+        output := &connect.CreateMetricOutput{}
+
+        mockClient.On("CreateMetric", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMetric(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1126,6 +1152,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteExtractionDefinition", func(t *testing.T) {
+        input := &connect.DeleteExtractionDefinitionInput{}
+        output := &connect.DeleteExtractionDefinitionOutput{}
+
+        mockClient.On("DeleteExtractionDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteExtractionDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteHoursOfOperation", func(t *testing.T) {
         input := &connect.DeleteHoursOfOperationInput{}
         output := &connect.DeleteHoursOfOperationOutput{}
@@ -1172,6 +1211,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteIntegrationAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteIntegrationAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteMetric", func(t *testing.T) {
+        input := &connect.DeleteMetricInput{}
+        output := &connect.DeleteMetricOutput{}
+
+        mockClient.On("DeleteMetric", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMetric(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1620,6 +1672,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeExtractionDefinition", func(t *testing.T) {
+        input := &connect.DescribeExtractionDefinitionInput{}
+        output := &connect.DescribeExtractionDefinitionOutput{}
+
+        mockClient.On("DescribeExtractionDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeExtractionDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeHoursOfOperation", func(t *testing.T) {
         input := &connect.DescribeHoursOfOperationInput{}
         output := &connect.DescribeHoursOfOperationOutput{}
@@ -1679,6 +1744,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInstanceStorageConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInstanceStorageConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeMetric", func(t *testing.T) {
+        input := &connect.DescribeMetricInput{}
+        output := &connect.DescribeMetricOutput{}
+
+        mockClient.On("DescribeMetric", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetric(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2699,6 +2777,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListExtractionDefinitions", func(t *testing.T) {
+        input := &connect.ListExtractionDefinitionsInput{}
+        output := &connect.ListExtractionDefinitionsOutput{}
+
+        mockClient.On("ListExtractionDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExtractionDefinitions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListFlowAssociations", func(t *testing.T) {
         input := &connect.ListFlowAssociationsInput{}
         output := &connect.ListFlowAssociationsOutput{}
@@ -2810,6 +2901,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListLexBots", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListLexBots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMetrics", func(t *testing.T) {
+        input := &connect.ListMetricsInput{}
+        output := &connect.ListMetricsOutput{}
+
+        mockClient.On("ListMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMetrics(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3518,6 +3622,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchMetrics", func(t *testing.T) {
+        input := &connect.SearchMetricsInput{}
+        output := &connect.SearchMetricsOutput{}
+
+        mockClient.On("SearchMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchNotifications", func(t *testing.T) {
         input := &connect.SearchNotificationsInput{}
         output := &connect.SearchNotificationsOutput{}
@@ -3759,6 +3876,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendOutboundWebNotification", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendOutboundWebNotification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAssistantContact", func(t *testing.T) {
+        input := &connect.StartAssistantContactInput{}
+        output := &connect.StartAssistantContactOutput{}
+
+        mockClient.On("StartAssistantContact", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAssistantContact(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4389,6 +4519,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateExtractionDefinition", func(t *testing.T) {
+        input := &connect.UpdateExtractionDefinitionInput{}
+        output := &connect.UpdateExtractionDefinitionOutput{}
+
+        mockClient.On("UpdateExtractionDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExtractionDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateHoursOfOperation", func(t *testing.T) {
         input := &connect.UpdateHoursOfOperationInput{}
         output := &connect.UpdateHoursOfOperationOutput{}
@@ -4435,6 +4578,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInstanceStorageConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInstanceStorageConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMetricContent", func(t *testing.T) {
+        input := &connect.UpdateMetricContentInput{}
+        output := &connect.UpdateMetricContentOutput{}
+
+        mockClient.On("UpdateMetricContent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMetricContent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateMetricMetadata", func(t *testing.T) {
+        input := &connect.UpdateMetricMetadataInput{}
+        output := &connect.UpdateMetricMetadataOutput{}
+
+        mockClient.On("UpdateMetricMetadata", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMetricMetadata(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

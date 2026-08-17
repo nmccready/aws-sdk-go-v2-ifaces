@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelRecoveryPlanExecution", func(t *testing.T) {
+        input := &drs.CancelRecoveryPlanExecutionInput{}
+        output := &drs.CancelRecoveryPlanExecutionOutput{}
+
+        mockClient.On("CancelRecoveryPlanExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelRecoveryPlanExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateExtendedSourceServer", func(t *testing.T) {
         input := &drs.CreateExtendedSourceServerInput{}
         output := &drs.CreateExtendedSourceServerOutput{}
@@ -67,6 +80,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateLaunchConfigurationTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateLaunchConfigurationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRecoveryPlan", func(t *testing.T) {
+        input := &drs.CreateRecoveryPlanInput{}
+        output := &drs.CreateRecoveryPlanOutput{}
+
+        mockClient.On("CreateRecoveryPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRecoveryPlan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRecoveryPlanStep", func(t *testing.T) {
+        input := &drs.CreateRecoveryPlanStepInput{}
+        output := &drs.CreateRecoveryPlanStepOutput{}
+
+        mockClient.On("CreateRecoveryPlanStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRecoveryPlanStep(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +184,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRecoveryInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRecoveryInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRecoveryPlan", func(t *testing.T) {
+        input := &drs.DeleteRecoveryPlanInput{}
+        output := &drs.DeleteRecoveryPlanOutput{}
+
+        mockClient.On("DeleteRecoveryPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRecoveryPlan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRecoveryPlanExecution", func(t *testing.T) {
+        input := &drs.DeleteRecoveryPlanExecutionInput{}
+        output := &drs.DeleteRecoveryPlanExecutionOutput{}
+
+        mockClient.On("DeleteRecoveryPlanExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRecoveryPlanExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRecoveryPlanStep", func(t *testing.T) {
+        input := &drs.DeleteRecoveryPlanStepInput{}
+        output := &drs.DeleteRecoveryPlanStepOutput{}
+
+        mockClient.On("DeleteRecoveryPlanStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRecoveryPlanStep(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -359,6 +437,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetRecoveryPlan", func(t *testing.T) {
+        input := &drs.GetRecoveryPlanInput{}
+        output := &drs.GetRecoveryPlanOutput{}
+
+        mockClient.On("GetRecoveryPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecoveryPlan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecoveryPlanExecution", func(t *testing.T) {
+        input := &drs.GetRecoveryPlanExecutionInput{}
+        output := &drs.GetRecoveryPlanExecutionOutput{}
+
+        mockClient.On("GetRecoveryPlanExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecoveryPlanExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecoveryPlanExecutionStep", func(t *testing.T) {
+        input := &drs.GetRecoveryPlanExecutionStepInput{}
+        output := &drs.GetRecoveryPlanExecutionStepOutput{}
+
+        mockClient.On("GetRecoveryPlanExecutionStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecoveryPlanExecutionStep(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRecoveryPlanStep", func(t *testing.T) {
+        input := &drs.GetRecoveryPlanStepInput{}
+        output := &drs.GetRecoveryPlanStepOutput{}
+
+        mockClient.On("GetRecoveryPlanStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRecoveryPlanStep(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetReplicationConfiguration", func(t *testing.T) {
         input := &drs.GetReplicationConfigurationInput{}
         output := &drs.GetReplicationConfigurationOutput{}
@@ -411,6 +541,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRecoveryPlanExecutionSteps", func(t *testing.T) {
+        input := &drs.ListRecoveryPlanExecutionStepsInput{}
+        output := &drs.ListRecoveryPlanExecutionStepsOutput{}
+
+        mockClient.On("ListRecoveryPlanExecutionSteps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecoveryPlanExecutionSteps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecoveryPlanExecutions", func(t *testing.T) {
+        input := &drs.ListRecoveryPlanExecutionsInput{}
+        output := &drs.ListRecoveryPlanExecutionsOutput{}
+
+        mockClient.On("ListRecoveryPlanExecutions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecoveryPlanExecutions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecoveryPlanSteps", func(t *testing.T) {
+        input := &drs.ListRecoveryPlanStepsInput{}
+        output := &drs.ListRecoveryPlanStepsOutput{}
+
+        mockClient.On("ListRecoveryPlanSteps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecoveryPlanSteps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRecoveryPlans", func(t *testing.T) {
+        input := &drs.ListRecoveryPlansInput{}
+        output := &drs.ListRecoveryPlansOutput{}
+
+        mockClient.On("ListRecoveryPlans", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRecoveryPlans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListStagingAccounts", func(t *testing.T) {
         input := &drs.ListStagingAccountsInput{}
         output := &drs.ListStagingAccountsOutput{}
@@ -450,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestReorderRecoveryPlanSteps", func(t *testing.T) {
+        input := &drs.ReorderRecoveryPlanStepsInput{}
+        output := &drs.ReorderRecoveryPlanStepsOutput{}
+
+        mockClient.On("ReorderRecoveryPlanSteps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ReorderRecoveryPlanSteps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRetryDataReplication", func(t *testing.T) {
         input := &drs.RetryDataReplicationInput{}
         output := &drs.RetryDataReplicationOutput{}
@@ -457,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RetryDataReplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.RetryDataReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRetryRecoveryPlanExecutionStep", func(t *testing.T) {
+        input := &drs.RetryRecoveryPlanExecutionStepInput{}
+        output := &drs.RetryRecoveryPlanExecutionStepOutput{}
+
+        mockClient.On("RetryRecoveryPlanExecutionStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RetryRecoveryPlanExecutionStep(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -496,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartRecovery", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartRecovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartRecoveryPlanExecution", func(t *testing.T) {
+        input := &drs.StartRecoveryPlanExecutionInput{}
+        output := &drs.StartRecoveryPlanExecutionOutput{}
+
+        mockClient.On("StartRecoveryPlanExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRecoveryPlanExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -652,6 +873,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLaunchConfigurationTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLaunchConfigurationTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRecoveryPlan", func(t *testing.T) {
+        input := &drs.UpdateRecoveryPlanInput{}
+        output := &drs.UpdateRecoveryPlanOutput{}
+
+        mockClient.On("UpdateRecoveryPlan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRecoveryPlan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRecoveryPlanExecutionStep", func(t *testing.T) {
+        input := &drs.UpdateRecoveryPlanExecutionStepInput{}
+        output := &drs.UpdateRecoveryPlanExecutionStepOutput{}
+
+        mockClient.On("UpdateRecoveryPlanExecutionStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRecoveryPlanExecutionStep(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRecoveryPlanStep", func(t *testing.T) {
+        input := &drs.UpdateRecoveryPlanStepInput{}
+        output := &drs.UpdateRecoveryPlanStepOutput{}
+
+        mockClient.On("UpdateRecoveryPlanStep", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRecoveryPlanStep(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcquireRole", func(t *testing.T) {
+        input := &iam.AcquireRoleInput{}
+        output := &iam.AcquireRoleOutput{}
+
+        mockClient.On("AcquireRole", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcquireRole(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAddClientIDToOpenIDConnectProvider", func(t *testing.T) {
         input := &iam.AddClientIDToOpenIDConnectProviderInput{}
         output := &iam.AddClientIDToOpenIDConnectProviderOutput{}
@@ -866,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccountProperties", func(t *testing.T) {
+        input := &iam.GetAccountPropertiesInput{}
+        output := &iam.GetAccountPropertiesOutput{}
+
+        mockClient.On("GetAccountProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountProperties(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAccountSummary", func(t *testing.T) {
         input := &iam.GetAccountSummaryInput{}
         output := &iam.GetAccountSummaryOutput{}
@@ -1094,6 +1120,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRolePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRolePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRoleTemplateVersion", func(t *testing.T) {
+        input := &iam.GetRoleTemplateVersionInput{}
+        output := &iam.GetRoleTemplateVersionOutput{}
+
+        mockClient.On("GetRoleTemplateVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRoleTemplateVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1666,6 +1705,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListVirtualMFADevices", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListVirtualMFADevices(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountProperties", func(t *testing.T) {
+        input := &iam.PutAccountPropertiesInput{}
+        output := &iam.PutAccountPropertiesOutput{}
+
+        mockClient.On("PutAccountProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountProperties(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

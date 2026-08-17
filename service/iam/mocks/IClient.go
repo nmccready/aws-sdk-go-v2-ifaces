@@ -52,6 +52,43 @@ func (_m *IClient) AcceptDelegationRequest(ctx context.Context, params *iam.Acce
 	return r0, r1
 }
 
+// AcquireRole provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcquireRole(ctx context.Context, params *iam.AcquireRoleInput, optFns ...func(*iam.Options)) (*iam.AcquireRoleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcquireRole")
+	}
+
+	var r0 *iam.AcquireRoleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.AcquireRoleInput, ...func(*iam.Options)) (*iam.AcquireRoleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.AcquireRoleInput, ...func(*iam.Options)) *iam.AcquireRoleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.AcquireRoleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.AcquireRoleInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddClientIDToOpenIDConnectProvider provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddClientIDToOpenIDConnectProvider(ctx context.Context, params *iam.AddClientIDToOpenIDConnectProviderInput, optFns ...func(*iam.Options)) (*iam.AddClientIDToOpenIDConnectProviderOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2383,6 +2420,43 @@ func (_m *IClient) GetAccountPasswordPolicy(ctx context.Context, params *iam.Get
 	return r0, r1
 }
 
+// GetAccountProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountProperties(ctx context.Context, params *iam.GetAccountPropertiesInput, optFns ...func(*iam.Options)) (*iam.GetAccountPropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountProperties")
+	}
+
+	var r0 *iam.GetAccountPropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetAccountPropertiesInput, ...func(*iam.Options)) (*iam.GetAccountPropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetAccountPropertiesInput, ...func(*iam.Options)) *iam.GetAccountPropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.GetAccountPropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetAccountPropertiesInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAccountSummary provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAccountSummary(ctx context.Context, params *iam.GetAccountSummaryInput, optFns ...func(*iam.Options)) (*iam.GetAccountSummaryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3041,6 +3115,43 @@ func (_m *IClient) GetRolePolicy(ctx context.Context, params *iam.GetRolePolicyI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetRolePolicyInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRoleTemplateVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRoleTemplateVersion(ctx context.Context, params *iam.GetRoleTemplateVersionInput, optFns ...func(*iam.Options)) (*iam.GetRoleTemplateVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRoleTemplateVersion")
+	}
+
+	var r0 *iam.GetRoleTemplateVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetRoleTemplateVersionInput, ...func(*iam.Options)) (*iam.GetRoleTemplateVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.GetRoleTemplateVersionInput, ...func(*iam.Options)) *iam.GetRoleTemplateVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.GetRoleTemplateVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.GetRoleTemplateVersionInput, ...func(*iam.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4693,6 +4804,43 @@ func (_m *IClient) Options() iam.Options {
 	}
 
 	return r0
+}
+
+// PutAccountProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountProperties(ctx context.Context, params *iam.PutAccountPropertiesInput, optFns ...func(*iam.Options)) (*iam.PutAccountPropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountProperties")
+	}
+
+	var r0 *iam.PutAccountPropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.PutAccountPropertiesInput, ...func(*iam.Options)) (*iam.PutAccountPropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.PutAccountPropertiesInput, ...func(*iam.Options)) *iam.PutAccountPropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.PutAccountPropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.PutAccountPropertiesInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutGroupPolicy provides a mock function with given fields: ctx, params, optFns

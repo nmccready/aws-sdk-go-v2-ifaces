@@ -1680,6 +1680,43 @@ func (_m *IClient) CreateEvaluationForm(ctx context.Context, params *connect.Cre
 	return r0, r1
 }
 
+// CreateExtractionDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateExtractionDefinition(ctx context.Context, params *connect.CreateExtractionDefinitionInput, optFns ...func(*connect.Options)) (*connect.CreateExtractionDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateExtractionDefinition")
+	}
+
+	var r0 *connect.CreateExtractionDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateExtractionDefinitionInput, ...func(*connect.Options)) (*connect.CreateExtractionDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateExtractionDefinitionInput, ...func(*connect.Options)) *connect.CreateExtractionDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateExtractionDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateExtractionDefinitionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateHoursOfOperation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateHoursOfOperation(ctx context.Context, params *connect.CreateHoursOfOperationInput, optFns ...func(*connect.Options)) (*connect.CreateHoursOfOperationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1820,6 +1857,43 @@ func (_m *IClient) CreateIntegrationAssociation(ctx context.Context, params *con
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateIntegrationAssociationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateMetric provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateMetric(ctx context.Context, params *connect.CreateMetricInput, optFns ...func(*connect.Options)) (*connect.CreateMetricOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateMetric")
+	}
+
+	var r0 *connect.CreateMetricOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateMetricInput, ...func(*connect.Options)) (*connect.CreateMetricOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateMetricInput, ...func(*connect.Options)) *connect.CreateMetricOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateMetricOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateMetricInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3123,6 +3197,43 @@ func (_m *IClient) DeleteEvaluationForm(ctx context.Context, params *connect.Del
 	return r0, r1
 }
 
+// DeleteExtractionDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteExtractionDefinition(ctx context.Context, params *connect.DeleteExtractionDefinitionInput, optFns ...func(*connect.Options)) (*connect.DeleteExtractionDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteExtractionDefinition")
+	}
+
+	var r0 *connect.DeleteExtractionDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteExtractionDefinitionInput, ...func(*connect.Options)) (*connect.DeleteExtractionDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteExtractionDefinitionInput, ...func(*connect.Options)) *connect.DeleteExtractionDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteExtractionDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteExtractionDefinitionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteHoursOfOperation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteHoursOfOperation(ctx context.Context, params *connect.DeleteHoursOfOperationInput, optFns ...func(*connect.Options)) (*connect.DeleteHoursOfOperationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3263,6 +3374,43 @@ func (_m *IClient) DeleteIntegrationAssociation(ctx context.Context, params *con
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteIntegrationAssociationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteMetric provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteMetric(ctx context.Context, params *connect.DeleteMetricInput, optFns ...func(*connect.Options)) (*connect.DeleteMetricOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteMetric")
+	}
+
+	var r0 *connect.DeleteMetricOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteMetricInput, ...func(*connect.Options)) (*connect.DeleteMetricOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteMetricInput, ...func(*connect.Options)) *connect.DeleteMetricOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteMetricOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteMetricInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4529,6 +4677,43 @@ func (_m *IClient) DescribeEvaluationForm(ctx context.Context, params *connect.D
 	return r0, r1
 }
 
+// DescribeExtractionDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeExtractionDefinition(ctx context.Context, params *connect.DescribeExtractionDefinitionInput, optFns ...func(*connect.Options)) (*connect.DescribeExtractionDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeExtractionDefinition")
+	}
+
+	var r0 *connect.DescribeExtractionDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeExtractionDefinitionInput, ...func(*connect.Options)) (*connect.DescribeExtractionDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeExtractionDefinitionInput, ...func(*connect.Options)) *connect.DescribeExtractionDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeExtractionDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeExtractionDefinitionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeHoursOfOperation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeHoursOfOperation(ctx context.Context, params *connect.DescribeHoursOfOperationInput, optFns ...func(*connect.Options)) (*connect.DescribeHoursOfOperationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4706,6 +4891,43 @@ func (_m *IClient) DescribeInstanceStorageConfig(ctx context.Context, params *co
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeInstanceStorageConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeMetric provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetric(ctx context.Context, params *connect.DescribeMetricInput, optFns ...func(*connect.Options)) (*connect.DescribeMetricOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetric")
+	}
+
+	var r0 *connect.DescribeMetricOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeMetricInput, ...func(*connect.Options)) (*connect.DescribeMetricOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeMetricInput, ...func(*connect.Options)) *connect.DescribeMetricOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeMetricOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeMetricInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7600,6 +7822,43 @@ func (_m *IClient) ListEvaluationForms(ctx context.Context, params *connect.List
 	return r0, r1
 }
 
+// ListExtractionDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExtractionDefinitions(ctx context.Context, params *connect.ListExtractionDefinitionsInput, optFns ...func(*connect.Options)) (*connect.ListExtractionDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExtractionDefinitions")
+	}
+
+	var r0 *connect.ListExtractionDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListExtractionDefinitionsInput, ...func(*connect.Options)) (*connect.ListExtractionDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListExtractionDefinitionsInput, ...func(*connect.Options)) *connect.ListExtractionDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListExtractionDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListExtractionDefinitionsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFlowAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFlowAssociations(ctx context.Context, params *connect.ListFlowAssociationsInput, optFns ...func(*connect.Options)) (*connect.ListFlowAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7925,6 +8184,43 @@ func (_m *IClient) ListLexBots(ctx context.Context, params *connect.ListLexBotsI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListLexBotsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMetrics(ctx context.Context, params *connect.ListMetricsInput, optFns ...func(*connect.Options)) (*connect.ListMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMetrics")
+	}
+
+	var r0 *connect.ListMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListMetricsInput, ...func(*connect.Options)) (*connect.ListMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListMetricsInput, ...func(*connect.Options)) *connect.ListMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListMetricsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9949,6 +10245,43 @@ func (_m *IClient) SearchHoursOfOperations(ctx context.Context, params *connect.
 	return r0, r1
 }
 
+// SearchMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchMetrics(ctx context.Context, params *connect.SearchMetricsInput, optFns ...func(*connect.Options)) (*connect.SearchMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchMetrics")
+	}
+
+	var r0 *connect.SearchMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchMetricsInput, ...func(*connect.Options)) (*connect.SearchMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.SearchMetricsInput, ...func(*connect.Options)) *connect.SearchMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.SearchMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.SearchMetricsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SearchNotifications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SearchNotifications(ctx context.Context, params *connect.SearchNotificationsInput, optFns ...func(*connect.Options)) (*connect.SearchNotificationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10644,6 +10977,43 @@ func (_m *IClient) SendOutboundWebNotification(ctx context.Context, params *conn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.SendOutboundWebNotificationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAssistantContact provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAssistantContact(ctx context.Context, params *connect.StartAssistantContactInput, optFns ...func(*connect.Options)) (*connect.StartAssistantContactOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAssistantContact")
+	}
+
+	var r0 *connect.StartAssistantContactOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartAssistantContactInput, ...func(*connect.Options)) (*connect.StartAssistantContactOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.StartAssistantContactInput, ...func(*connect.Options)) *connect.StartAssistantContactOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.StartAssistantContactOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.StartAssistantContactInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12428,6 +12798,43 @@ func (_m *IClient) UpdateEvaluationForm(ctx context.Context, params *connect.Upd
 	return r0, r1
 }
 
+// UpdateExtractionDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExtractionDefinition(ctx context.Context, params *connect.UpdateExtractionDefinitionInput, optFns ...func(*connect.Options)) (*connect.UpdateExtractionDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExtractionDefinition")
+	}
+
+	var r0 *connect.UpdateExtractionDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateExtractionDefinitionInput, ...func(*connect.Options)) (*connect.UpdateExtractionDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateExtractionDefinitionInput, ...func(*connect.Options)) *connect.UpdateExtractionDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateExtractionDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateExtractionDefinitionInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateHoursOfOperation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateHoursOfOperation(ctx context.Context, params *connect.UpdateHoursOfOperationInput, optFns ...func(*connect.Options)) (*connect.UpdateHoursOfOperationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -12568,6 +12975,80 @@ func (_m *IClient) UpdateInstanceStorageConfig(ctx context.Context, params *conn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateInstanceStorageConfigInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMetricContent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMetricContent(ctx context.Context, params *connect.UpdateMetricContentInput, optFns ...func(*connect.Options)) (*connect.UpdateMetricContentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMetricContent")
+	}
+
+	var r0 *connect.UpdateMetricContentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricContentInput, ...func(*connect.Options)) (*connect.UpdateMetricContentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricContentInput, ...func(*connect.Options)) *connect.UpdateMetricContentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateMetricContentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateMetricContentInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateMetricMetadata provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMetricMetadata(ctx context.Context, params *connect.UpdateMetricMetadataInput, optFns ...func(*connect.Options)) (*connect.UpdateMetricMetadataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMetricMetadata")
+	}
+
+	var r0 *connect.UpdateMetricMetadataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricMetadataInput, ...func(*connect.Options)) (*connect.UpdateMetricMetadataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateMetricMetadataInput, ...func(*connect.Options)) *connect.UpdateMetricMetadataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateMetricMetadataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateMetricMetadataInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

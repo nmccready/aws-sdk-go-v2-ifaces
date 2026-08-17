@@ -52,6 +52,43 @@ func (_m *IClient) AgenticRetrieveStream(ctx context.Context, params *bedrockage
 	return r0, r1
 }
 
+// CheckIngestedDocumentAcl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CheckIngestedDocumentAcl(ctx context.Context, params *bedrockagentruntime.CheckIngestedDocumentAclInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CheckIngestedDocumentAclOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CheckIngestedDocumentAcl")
+	}
+
+	var r0 *bedrockagentruntime.CheckIngestedDocumentAclOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.CheckIngestedDocumentAclInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CheckIngestedDocumentAclOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.CheckIngestedDocumentAclInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.CheckIngestedDocumentAclOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.CheckIngestedDocumentAclOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.CheckIngestedDocumentAclInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateInvocation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateInvocation(ctx context.Context, params *bedrockagentruntime.CreateInvocationInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.CreateInvocationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +451,43 @@ func (_m *IClient) GetFlowExecution(ctx context.Context, params *bedrockagentrun
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetFlowExecutionInput, ...func(*bedrockagentruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIngestedDocumentAcl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIngestedDocumentAcl(ctx context.Context, params *bedrockagentruntime.GetIngestedDocumentAclInput, optFns ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetIngestedDocumentAclOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIngestedDocumentAcl")
+	}
+
+	var r0 *bedrockagentruntime.GetIngestedDocumentAclOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetIngestedDocumentAclInput, ...func(*bedrockagentruntime.Options)) (*bedrockagentruntime.GetIngestedDocumentAclOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentruntime.GetIngestedDocumentAclInput, ...func(*bedrockagentruntime.Options)) *bedrockagentruntime.GetIngestedDocumentAclOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentruntime.GetIngestedDocumentAclOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentruntime.GetIngestedDocumentAclInput, ...func(*bedrockagentruntime.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
