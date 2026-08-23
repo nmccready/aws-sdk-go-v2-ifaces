@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// ActivateCertificateAuthority provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ActivateCertificateAuthority(ctx context.Context, params *eks.ActivateCertificateAuthorityInput, optFns ...func(*eks.Options)) (*eks.ActivateCertificateAuthorityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ActivateCertificateAuthority")
+	}
+
+	var r0 *eks.ActivateCertificateAuthorityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.ActivateCertificateAuthorityInput, ...func(*eks.Options)) (*eks.ActivateCertificateAuthorityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.ActivateCertificateAuthorityInput, ...func(*eks.Options)) *eks.ActivateCertificateAuthorityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.ActivateCertificateAuthorityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.ActivateCertificateAuthorityInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateAccessPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateAccessPolicy(ctx context.Context, params *eks.AssociateAccessPolicyInput, optFns ...func(*eks.Options)) (*eks.AssociateAccessPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +303,43 @@ func (_m *IClient) CreateCapability(ctx context.Context, params *eks.CreateCapab
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.CreateCapabilityInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCertificateAuthority provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCertificateAuthority(ctx context.Context, params *eks.CreateCertificateAuthorityInput, optFns ...func(*eks.Options)) (*eks.CreateCertificateAuthorityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCertificateAuthority")
+	}
+
+	var r0 *eks.CreateCertificateAuthorityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.CreateCertificateAuthorityInput, ...func(*eks.Options)) (*eks.CreateCertificateAuthorityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.CreateCertificateAuthorityInput, ...func(*eks.Options)) *eks.CreateCertificateAuthorityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.CreateCertificateAuthorityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.CreateCertificateAuthorityInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -562,6 +636,43 @@ func (_m *IClient) DeleteCapability(ctx context.Context, params *eks.DeleteCapab
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.DeleteCapabilityInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCertificateAuthority provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCertificateAuthority(ctx context.Context, params *eks.DeleteCertificateAuthorityInput, optFns ...func(*eks.Options)) (*eks.DeleteCertificateAuthorityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCertificateAuthority")
+	}
+
+	var r0 *eks.DeleteCertificateAuthorityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DeleteCertificateAuthorityInput, ...func(*eks.Options)) (*eks.DeleteCertificateAuthorityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DeleteCertificateAuthorityInput, ...func(*eks.Options)) *eks.DeleteCertificateAuthorityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.DeleteCertificateAuthorityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.DeleteCertificateAuthorityInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -969,6 +1080,43 @@ func (_m *IClient) DescribeCapability(ctx context.Context, params *eks.DescribeC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.DescribeCapabilityInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCertificateAuthority provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCertificateAuthority(ctx context.Context, params *eks.DescribeCertificateAuthorityInput, optFns ...func(*eks.Options)) (*eks.DescribeCertificateAuthorityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCertificateAuthority")
+	}
+
+	var r0 *eks.DescribeCertificateAuthorityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DescribeCertificateAuthorityInput, ...func(*eks.Options)) (*eks.DescribeCertificateAuthorityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.DescribeCertificateAuthorityInput, ...func(*eks.Options)) *eks.DescribeCertificateAuthorityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.DescribeCertificateAuthorityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.DescribeCertificateAuthorityInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1598,6 +1746,43 @@ func (_m *IClient) ListCapabilities(ctx context.Context, params *eks.ListCapabil
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *eks.ListCapabilitiesInput, ...func(*eks.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCertificateAuthorities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCertificateAuthorities(ctx context.Context, params *eks.ListCertificateAuthoritiesInput, optFns ...func(*eks.Options)) (*eks.ListCertificateAuthoritiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCertificateAuthorities")
+	}
+
+	var r0 *eks.ListCertificateAuthoritiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.ListCertificateAuthoritiesInput, ...func(*eks.Options)) (*eks.ListCertificateAuthoritiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *eks.ListCertificateAuthoritiesInput, ...func(*eks.Options)) *eks.ListCertificateAuthoritiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*eks.ListCertificateAuthoritiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *eks.ListCertificateAuthoritiesInput, ...func(*eks.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

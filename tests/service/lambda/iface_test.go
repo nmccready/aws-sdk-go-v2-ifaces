@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &lambda.DeleteResourcePolicyInput{}
+        output := &lambda.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAccountSettings", func(t *testing.T) {
         input := &lambda.GetAccountSettingsInput{}
         output := &lambda.GetAccountSettingsOutput{}
@@ -561,6 +574,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetProvisionedConcurrencyConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetProvisionedConcurrencyConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &lambda.GetResourcePolicyInput{}
+        output := &lambda.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -912,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutProvisionedConcurrencyConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutProvisionedConcurrencyConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &lambda.PutResourcePolicyInput{}
+        output := &lambda.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

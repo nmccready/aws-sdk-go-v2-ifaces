@@ -162,6 +162,43 @@ func (_m *IClient) CreateOutpost(ctx context.Context, params *outposts.CreateOut
 	return r0, r1
 }
 
+// CreatePrivateConnectivityConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePrivateConnectivityConfig(ctx context.Context, params *outposts.CreatePrivateConnectivityConfigInput, optFns ...func(*outposts.Options)) (*outposts.CreatePrivateConnectivityConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePrivateConnectivityConfig")
+	}
+
+	var r0 *outposts.CreatePrivateConnectivityConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.CreatePrivateConnectivityConfigInput, ...func(*outposts.Options)) (*outposts.CreatePrivateConnectivityConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.CreatePrivateConnectivityConfigInput, ...func(*outposts.Options)) *outposts.CreatePrivateConnectivityConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.CreatePrivateConnectivityConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.CreatePrivateConnectivityConfigInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateQuote provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateQuote(ctx context.Context, params *outposts.CreateQuoteInput, optFns ...func(*outposts.Options)) (*outposts.CreateQuoteOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -672,6 +709,43 @@ func (_m *IClient) GetOutpostSupportedInstanceTypes(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *outposts.GetOutpostSupportedInstanceTypesInput, ...func(*outposts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPrivateConnectivityConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPrivateConnectivityConfig(ctx context.Context, params *outposts.GetPrivateConnectivityConfigInput, optFns ...func(*outposts.Options)) (*outposts.GetPrivateConnectivityConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPrivateConnectivityConfig")
+	}
+
+	var r0 *outposts.GetPrivateConnectivityConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.GetPrivateConnectivityConfigInput, ...func(*outposts.Options)) (*outposts.GetPrivateConnectivityConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *outposts.GetPrivateConnectivityConfigInput, ...func(*outposts.Options)) *outposts.GetPrivateConnectivityConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*outposts.GetPrivateConnectivityConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *outposts.GetPrivateConnectivityConfigInput, ...func(*outposts.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
