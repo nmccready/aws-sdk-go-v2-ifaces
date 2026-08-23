@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAssessment", func(t *testing.T) {
+        input := &marketplacecatalog.DescribeAssessmentInput{}
+        output := &marketplacecatalog.DescribeAssessmentOutput{}
+
+        mockClient.On("DescribeAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeChangeSet", func(t *testing.T) {
         input := &marketplacecatalog.DescribeChangeSetInput{}
         output := &marketplacecatalog.DescribeChangeSetOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssessments", func(t *testing.T) {
+        input := &marketplacecatalog.ListAssessmentsInput{}
+        output := &marketplacecatalog.ListAssessmentsOutput{}
+
+        mockClient.On("ListAssessments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssessments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

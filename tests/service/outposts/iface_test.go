@@ -86,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePrivateConnectivityConfig", func(t *testing.T) {
+        input := &outposts.CreatePrivateConnectivityConfigInput{}
+        output := &outposts.CreatePrivateConnectivityConfigOutput{}
+
+        mockClient.On("CreatePrivateConnectivityConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePrivateConnectivityConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateQuote", func(t *testing.T) {
         input := &outposts.CreateQuoteInput{}
         output := &outposts.CreateQuoteOutput{}
@@ -262,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOutpostSupportedInstanceTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOutpostSupportedInstanceTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPrivateConnectivityConfig", func(t *testing.T) {
+        input := &outposts.GetPrivateConnectivityConfigInput{}
+        output := &outposts.GetPrivateConnectivityConfigOutput{}
+
+        mockClient.On("GetPrivateConnectivityConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPrivateConnectivityConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

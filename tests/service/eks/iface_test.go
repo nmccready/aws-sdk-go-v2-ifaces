@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestActivateCertificateAuthority", func(t *testing.T) {
+        input := &eks.ActivateCertificateAuthorityInput{}
+        output := &eks.ActivateCertificateAuthorityOutput{}
+
+        mockClient.On("ActivateCertificateAuthority", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ActivateCertificateAuthority(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateAccessPolicy", func(t *testing.T) {
         input := &eks.AssociateAccessPolicyInput{}
         output := &eks.AssociateAccessPolicyOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCapability", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCapability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCertificateAuthority", func(t *testing.T) {
+        input := &eks.CreateCertificateAuthorityInput{}
+        output := &eks.CreateCertificateAuthorityOutput{}
+
+        mockClient.On("CreateCertificateAuthority", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCertificateAuthority(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -223,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCapability", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCapability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCertificateAuthority", func(t *testing.T) {
+        input := &eks.DeleteCertificateAuthorityInput{}
+        output := &eks.DeleteCertificateAuthorityOutput{}
+
+        mockClient.On("DeleteCertificateAuthority", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCertificateAuthority(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -366,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCapability", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCapability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCertificateAuthority", func(t *testing.T) {
+        input := &eks.DescribeCertificateAuthorityInput{}
+        output := &eks.DescribeCertificateAuthorityOutput{}
+
+        mockClient.On("DescribeCertificateAuthority", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCertificateAuthority(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -587,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCapabilities", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCapabilities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCertificateAuthorities", func(t *testing.T) {
+        input := &eks.ListCertificateAuthoritiesInput{}
+        output := &eks.ListCertificateAuthoritiesOutput{}
+
+        mockClient.On("ListCertificateAuthorities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCertificateAuthorities(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

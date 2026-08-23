@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for eks
 type IClient interface {
  Options() Options 
+ ActivateCertificateAuthority(ctx context.Context, params *ActivateCertificateAuthorityInput, optFns ...func(*Options)) (*ActivateCertificateAuthorityOutput, error) 
  AssociateAccessPolicy(ctx context.Context, params *AssociateAccessPolicyInput, optFns ...func(*Options)) (*AssociateAccessPolicyOutput, error) 
  AssociateEncryptionConfig(ctx context.Context, params *AssociateEncryptionConfigInput, optFns ...func(*Options)) (*AssociateEncryptionConfigOutput, error) 
  AssociateIdentityProviderConfig(ctx context.Context, params *AssociateIdentityProviderConfigInput, optFns ...func(*Options)) (*AssociateIdentityProviderConfigOutput, error) 
@@ -17,6 +18,7 @@ type IClient interface {
  CreateAccessEntry(ctx context.Context, params *CreateAccessEntryInput, optFns ...func(*Options)) (*CreateAccessEntryOutput, error) 
  CreateAddon(ctx context.Context, params *CreateAddonInput, optFns ...func(*Options)) (*CreateAddonOutput, error) 
  CreateCapability(ctx context.Context, params *CreateCapabilityInput, optFns ...func(*Options)) (*CreateCapabilityOutput, error) 
+ CreateCertificateAuthority(ctx context.Context, params *CreateCertificateAuthorityInput, optFns ...func(*Options)) (*CreateCertificateAuthorityOutput, error) 
  CreateCluster(ctx context.Context, params *CreateClusterInput, optFns ...func(*Options)) (*CreateClusterOutput, error) 
  CreateEksAnywhereSubscription(ctx context.Context, params *CreateEksAnywhereSubscriptionInput, optFns ...func(*Options)) (*CreateEksAnywhereSubscriptionOutput, error) 
  CreateFargateProfile(ctx context.Context, params *CreateFargateProfileInput, optFns ...func(*Options)) (*CreateFargateProfileOutput, error) 
@@ -25,6 +27,7 @@ type IClient interface {
  DeleteAccessEntry(ctx context.Context, params *DeleteAccessEntryInput, optFns ...func(*Options)) (*DeleteAccessEntryOutput, error) 
  DeleteAddon(ctx context.Context, params *DeleteAddonInput, optFns ...func(*Options)) (*DeleteAddonOutput, error) 
  DeleteCapability(ctx context.Context, params *DeleteCapabilityInput, optFns ...func(*Options)) (*DeleteCapabilityOutput, error) 
+ DeleteCertificateAuthority(ctx context.Context, params *DeleteCertificateAuthorityInput, optFns ...func(*Options)) (*DeleteCertificateAuthorityOutput, error) 
  DeleteCluster(ctx context.Context, params *DeleteClusterInput, optFns ...func(*Options)) (*DeleteClusterOutput, error) 
  DeleteEksAnywhereSubscription(ctx context.Context, params *DeleteEksAnywhereSubscriptionInput, optFns ...func(*Options)) (*DeleteEksAnywhereSubscriptionOutput, error) 
  DeleteFargateProfile(ctx context.Context, params *DeleteFargateProfileInput, optFns ...func(*Options)) (*DeleteFargateProfileOutput, error) 
@@ -36,6 +39,7 @@ type IClient interface {
  DescribeAddonConfiguration(ctx context.Context, params *DescribeAddonConfigurationInput, optFns ...func(*Options)) (*DescribeAddonConfigurationOutput, error) 
  DescribeAddonVersions(ctx context.Context, params *DescribeAddonVersionsInput, optFns ...func(*Options)) (*DescribeAddonVersionsOutput, error) 
  DescribeCapability(ctx context.Context, params *DescribeCapabilityInput, optFns ...func(*Options)) (*DescribeCapabilityOutput, error) 
+ DescribeCertificateAuthority(ctx context.Context, params *DescribeCertificateAuthorityInput, optFns ...func(*Options)) (*DescribeCertificateAuthorityOutput, error) 
  DescribeCluster(ctx context.Context, params *DescribeClusterInput, optFns ...func(*Options)) (*DescribeClusterOutput, error) 
  DescribeClusterVersions(ctx context.Context, params *DescribeClusterVersionsInput, optFns ...func(*Options)) (*DescribeClusterVersionsOutput, error) 
  DescribeEksAnywhereSubscription(ctx context.Context, params *DescribeEksAnywhereSubscriptionInput, optFns ...func(*Options)) (*DescribeEksAnywhereSubscriptionOutput, error) 
@@ -53,6 +57,7 @@ type IClient interface {
  ListAddons(ctx context.Context, params *ListAddonsInput, optFns ...func(*Options)) (*ListAddonsOutput, error) 
  ListAssociatedAccessPolicies(ctx context.Context, params *ListAssociatedAccessPoliciesInput, optFns ...func(*Options)) (*ListAssociatedAccessPoliciesOutput, error) 
  ListCapabilities(ctx context.Context, params *ListCapabilitiesInput, optFns ...func(*Options)) (*ListCapabilitiesOutput, error) 
+ ListCertificateAuthorities(ctx context.Context, params *ListCertificateAuthoritiesInput, optFns ...func(*Options)) (*ListCertificateAuthoritiesOutput, error) 
  ListClusters(ctx context.Context, params *ListClustersInput, optFns ...func(*Options)) (*ListClustersOutput, error) 
  ListEksAnywhereSubscriptions(ctx context.Context, params *ListEksAnywhereSubscriptionsInput, optFns ...func(*Options)) (*ListEksAnywhereSubscriptionsOutput, error) 
  ListFargateProfiles(ctx context.Context, params *ListFargateProfilesInput, optFns ...func(*Options)) (*ListFargateProfilesOutput, error) 
