@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/accountaccess v1.1.1
 	github.com/aws/aws-sdk-go-v2/service/acm v1.44.2
 	github.com/aws/aws-sdk-go-v2/service/acmpca v1.50.3
-	github.com/aws/aws-sdk-go-v2/service/agentregistry v1.0.2
+	github.com/aws/aws-sdk-go-v2/service/agentregistry v1.0.3
 	github.com/aws/aws-sdk-go-v2/service/agentregistrycontrol v1.0.3
 	github.com/aws/aws-sdk-go-v2/service/aiops v1.9.7
 	github.com/aws/aws-sdk-go-v2/service/amp v1.48.4
