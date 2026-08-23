@@ -11,4 +11,9 @@ jobs:
 
   release:
     needs: [tests]
+    # required: the repo default workflow token is read-only, and the reusable
+    # workflow's create-release job requests contents:write. Without granting it
+    # here the run is rejected at startup (startup_failure, no jobs scheduled).
+    permissions:
+      contents: write
     uses: brickhouse-tech/.github/.github/workflows/auto-release.yml@main
