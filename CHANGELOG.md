@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 0.1.46 (2026-08-29)
 ## 0.1.45 (2026-08-23)
 ## 0.1.44 (2026-08-17)
 ## 0.1.43 (2026-08-10)
