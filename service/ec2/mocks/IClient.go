@@ -27783,6 +27783,43 @@ func (_m *IClient) ReplaceImageCriteriaInAllowedImagesSettings(ctx context.Conte
 	return r0, r1
 }
 
+// ReplaceImageInstanceTypeSpecification provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ReplaceImageInstanceTypeSpecification(ctx context.Context, params *ec2.ReplaceImageInstanceTypeSpecificationInput, optFns ...func(*ec2.Options)) (*ec2.ReplaceImageInstanceTypeSpecificationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ReplaceImageInstanceTypeSpecification")
+	}
+
+	var r0 *ec2.ReplaceImageInstanceTypeSpecificationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ReplaceImageInstanceTypeSpecificationInput, ...func(*ec2.Options)) (*ec2.ReplaceImageInstanceTypeSpecificationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ReplaceImageInstanceTypeSpecificationInput, ...func(*ec2.Options)) *ec2.ReplaceImageInstanceTypeSpecificationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ReplaceImageInstanceTypeSpecificationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ReplaceImageInstanceTypeSpecificationInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ReplaceNetworkAclAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ReplaceNetworkAclAssociation(ctx context.Context, params *ec2.ReplaceNetworkAclAssociationInput, optFns ...func(*ec2.Options)) (*ec2.ReplaceNetworkAclAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))

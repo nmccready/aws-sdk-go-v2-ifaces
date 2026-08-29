@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFixture", func(t *testing.T) {
+        input := &elementalinference.GetFixtureInput{}
+        output := &elementalinference.GetFixtureOutput{}
+
+        mockClient.On("GetFixture", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFixture(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDictionaries", func(t *testing.T) {
         input := &elementalinference.ListDictionariesInput{}
         output := &elementalinference.ListDictionariesOutput{}

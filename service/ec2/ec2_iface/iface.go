@@ -760,6 +760,7 @@ type IClient interface {
  ReleaseIpamPoolAllocation(ctx context.Context, params *ReleaseIpamPoolAllocationInput, optFns ...func(*Options)) (*ReleaseIpamPoolAllocationOutput, error) 
  ReplaceIamInstanceProfileAssociation(ctx context.Context, params *ReplaceIamInstanceProfileAssociationInput, optFns ...func(*Options)) (*ReplaceIamInstanceProfileAssociationOutput, error) 
  ReplaceImageCriteriaInAllowedImagesSettings(ctx context.Context, params *ReplaceImageCriteriaInAllowedImagesSettingsInput, optFns ...func(*Options)) (*ReplaceImageCriteriaInAllowedImagesSettingsOutput, error) 
+ ReplaceImageInstanceTypeSpecification(ctx context.Context, params *ReplaceImageInstanceTypeSpecificationInput, optFns ...func(*Options)) (*ReplaceImageInstanceTypeSpecificationOutput, error) 
  ReplaceNetworkAclAssociation(ctx context.Context, params *ReplaceNetworkAclAssociationInput, optFns ...func(*Options)) (*ReplaceNetworkAclAssociationOutput, error) 
  ReplaceNetworkAclEntry(ctx context.Context, params *ReplaceNetworkAclEntryInput, optFns ...func(*Options)) (*ReplaceNetworkAclEntryOutput, error) 
  ReplaceRoute(ctx context.Context, params *ReplaceRouteInput, optFns ...func(*Options)) (*ReplaceRouteOutput, error) 

@@ -710,6 +710,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateApprovalAction", func(t *testing.T) {
+        input := &devopsagent.UpdateApprovalActionInput{}
+        output := &devopsagent.UpdateApprovalActionOutput{}
+
+        mockClient.On("UpdateApprovalAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateApprovalAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateAsset", func(t *testing.T) {
         input := &devopsagent.UpdateAssetInput{}
         output := &devopsagent.UpdateAssetOutput{}

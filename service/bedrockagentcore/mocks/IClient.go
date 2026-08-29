@@ -1273,6 +1273,43 @@ func (_m *IClient) GetWorkloadAccessTokenForUserId(ctx context.Context, params *
 	return r0, r1
 }
 
+// IngestData provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) IngestData(ctx context.Context, params *bedrockagentcore.IngestDataInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.IngestDataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for IngestData")
+	}
+
+	var r0 *bedrockagentcore.IngestDataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.IngestDataInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.IngestDataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.IngestDataInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.IngestDataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.IngestDataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.IngestDataInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InvokeAgentRuntime provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InvokeAgentRuntime(ctx context.Context, params *bedrockagentcore.InvokeAgentRuntimeInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.InvokeAgentRuntimeOutput, error) {
 	_va := make([]interface{}, len(optFns))

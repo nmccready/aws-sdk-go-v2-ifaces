@@ -62,6 +62,7 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateAgentSpace(ctx context.Context, params *UpdateAgentSpaceInput, optFns ...func(*Options)) (*UpdateAgentSpaceOutput, error) 
+ UpdateApprovalAction(ctx context.Context, params *UpdateApprovalActionInput, optFns ...func(*Options)) (*UpdateApprovalActionOutput, error) 
  UpdateAsset(ctx context.Context, params *UpdateAssetInput, optFns ...func(*Options)) (*UpdateAssetOutput, error) 
  UpdateAssetFile(ctx context.Context, params *UpdateAssetFileInput, optFns ...func(*Options)) (*UpdateAssetFileOutput, error) 
  UpdateAssociation(ctx context.Context, params *UpdateAssociationInput, optFns ...func(*Options)) (*UpdateAssociationOutput, error) 

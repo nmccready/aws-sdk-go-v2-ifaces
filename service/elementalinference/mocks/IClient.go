@@ -348,6 +348,43 @@ func (_m *IClient) GetFeed(ctx context.Context, params *elementalinference.GetFe
 	return r0, r1
 }
 
+// GetFixture provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFixture(ctx context.Context, params *elementalinference.GetFixtureInput, optFns ...func(*elementalinference.Options)) (*elementalinference.GetFixtureOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFixture")
+	}
+
+	var r0 *elementalinference.GetFixtureOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetFixtureInput, ...func(*elementalinference.Options)) (*elementalinference.GetFixtureOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetFixtureInput, ...func(*elementalinference.Options)) *elementalinference.GetFixtureOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.GetFixtureOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetFixtureInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDictionaries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDictionaries(ctx context.Context, params *elementalinference.ListDictionariesInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListDictionariesOutput, error) {
 	_va := make([]interface{}, len(optFns))

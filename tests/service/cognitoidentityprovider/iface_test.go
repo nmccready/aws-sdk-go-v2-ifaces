@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAdminDeleteSoftwareToken", func(t *testing.T) {
+        input := &cognitoidentityprovider.AdminDeleteSoftwareTokenInput{}
+        output := &cognitoidentityprovider.AdminDeleteSoftwareTokenOutput{}
+
+        mockClient.On("AdminDeleteSoftwareToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AdminDeleteSoftwareToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAdminDeleteUser", func(t *testing.T) {
         input := &cognitoidentityprovider.AdminDeleteUserInput{}
         output := &cognitoidentityprovider.AdminDeleteUserOutput{}
@@ -866,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTermsByClient", func(t *testing.T) {
+        input := &cognitoidentityprovider.DescribeTermsByClientInput{}
+        output := &cognitoidentityprovider.DescribeTermsByClientOutput{}
+
+        mockClient.On("DescribeTermsByClient", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTermsByClient(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeUserImportJob", func(t *testing.T) {
         input := &cognitoidentityprovider.DescribeUserImportJobInput{}
         output := &cognitoidentityprovider.DescribeUserImportJobOutput{}
@@ -951,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCSVHeader", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCSVHeader(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetClientToken", func(t *testing.T) {
+        input := &cognitoidentityprovider.GetClientTokenInput{}
+        output := &cognitoidentityprovider.GetClientTokenOutput{}
+
+        mockClient.On("GetClientToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetClientToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

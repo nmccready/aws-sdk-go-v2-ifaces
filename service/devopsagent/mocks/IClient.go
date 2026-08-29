@@ -1957,6 +1957,43 @@ func (_m *IClient) UpdateAgentSpace(ctx context.Context, params *devopsagent.Upd
 	return r0, r1
 }
 
+// UpdateApprovalAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateApprovalAction(ctx context.Context, params *devopsagent.UpdateApprovalActionInput, optFns ...func(*devopsagent.Options)) (*devopsagent.UpdateApprovalActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateApprovalAction")
+	}
+
+	var r0 *devopsagent.UpdateApprovalActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateApprovalActionInput, ...func(*devopsagent.Options)) (*devopsagent.UpdateApprovalActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *devopsagent.UpdateApprovalActionInput, ...func(*devopsagent.Options)) *devopsagent.UpdateApprovalActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*devopsagent.UpdateApprovalActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *devopsagent.UpdateApprovalActionInput, ...func(*devopsagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateAsset provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateAsset(ctx context.Context, params *devopsagent.UpdateAssetInput, optFns ...func(*devopsagent.Options)) (*devopsagent.UpdateAssetOutput, error) {
 	_va := make([]interface{}, len(optFns))

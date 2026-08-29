@@ -27,6 +27,7 @@ type IClient interface {
  ListFHIRImportJobs(ctx context.Context, params *ListFHIRImportJobsInput, optFns ...func(*Options)) (*ListFHIRImportJobsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PublishDataTransformationProfile(ctx context.Context, params *PublishDataTransformationProfileInput, optFns ...func(*Options)) (*PublishDataTransformationProfileOutput, error) 
+ RestoreFHIRDatastore(ctx context.Context, params *RestoreFHIRDatastoreInput, optFns ...func(*Options)) (*RestoreFHIRDatastoreOutput, error) 
  StartDataTransformationJob(ctx context.Context, params *StartDataTransformationJobInput, optFns ...func(*Options)) (*StartDataTransformationJobOutput, error) 
  StartFHIRExportJob(ctx context.Context, params *StartFHIRExportJobInput, optFns ...func(*Options)) (*StartFHIRExportJobOutput, error) 
  StartFHIRImportJob(ctx context.Context, params *StartFHIRImportJobInput, optFns ...func(*Options)) (*StartFHIRImportJobOutput, error) 

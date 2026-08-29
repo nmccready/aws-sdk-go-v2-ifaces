@@ -9784,6 +9784,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestReplaceImageInstanceTypeSpecification", func(t *testing.T) {
+        input := &ec2.ReplaceImageInstanceTypeSpecificationInput{}
+        output := &ec2.ReplaceImageInstanceTypeSpecificationOutput{}
+
+        mockClient.On("ReplaceImageInstanceTypeSpecification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ReplaceImageInstanceTypeSpecification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestReplaceNetworkAclAssociation", func(t *testing.T) {
         input := &ec2.ReplaceNetworkAclAssociationInput{}
         output := &ec2.ReplaceNetworkAclAssociationOutput{}

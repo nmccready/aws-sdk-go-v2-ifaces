@@ -476,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestIngestData", func(t *testing.T) {
+        input := &bedrockagentcore.IngestDataInput{}
+        output := &bedrockagentcore.IngestDataOutput{}
+
+        mockClient.On("IngestData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.IngestData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInvokeAgentRuntime", func(t *testing.T) {
         input := &bedrockagentcore.InvokeAgentRuntimeInput{}
         output := &bedrockagentcore.InvokeAgentRuntimeOutput{}

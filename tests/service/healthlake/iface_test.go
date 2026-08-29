@@ -255,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRestoreFHIRDatastore", func(t *testing.T) {
+        input := &healthlake.RestoreFHIRDatastoreInput{}
+        output := &healthlake.RestoreFHIRDatastoreOutput{}
+
+        mockClient.On("RestoreFHIRDatastore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreFHIRDatastore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartDataTransformationJob", func(t *testing.T) {
         input := &healthlake.StartDataTransformationJobInput{}
         output := &healthlake.StartDataTransformationJobOutput{}

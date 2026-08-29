@@ -200,6 +200,43 @@ func (_m *IClient) AdminCreateUser(ctx context.Context, params *cognitoidentityp
 	return r0, r1
 }
 
+// AdminDeleteSoftwareToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AdminDeleteSoftwareToken(ctx context.Context, params *cognitoidentityprovider.AdminDeleteSoftwareTokenInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminDeleteSoftwareTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AdminDeleteSoftwareToken")
+	}
+
+	var r0 *cognitoidentityprovider.AdminDeleteSoftwareTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AdminDeleteSoftwareTokenInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminDeleteSoftwareTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AdminDeleteSoftwareTokenInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.AdminDeleteSoftwareTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.AdminDeleteSoftwareTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.AdminDeleteSoftwareTokenInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AdminDeleteUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AdminDeleteUser(ctx context.Context, params *cognitoidentityprovider.AdminDeleteUserInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminDeleteUserOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2383,6 +2420,43 @@ func (_m *IClient) DescribeTerms(ctx context.Context, params *cognitoidentitypro
 	return r0, r1
 }
 
+// DescribeTermsByClient provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTermsByClient(ctx context.Context, params *cognitoidentityprovider.DescribeTermsByClientInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeTermsByClientOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTermsByClient")
+	}
+
+	var r0 *cognitoidentityprovider.DescribeTermsByClientOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeTermsByClientInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeTermsByClientOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeTermsByClientInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DescribeTermsByClientOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DescribeTermsByClientOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeTermsByClientInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeUserImportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeUserImportJob(ctx context.Context, params *cognitoidentityprovider.DescribeUserImportJobInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeUserImportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2634,6 +2708,43 @@ func (_m *IClient) GetCSVHeader(ctx context.Context, params *cognitoidentityprov
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetCSVHeaderInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetClientToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetClientToken(ctx context.Context, params *cognitoidentityprovider.GetClientTokenInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetClientTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetClientToken")
+	}
+
+	var r0 *cognitoidentityprovider.GetClientTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetClientTokenInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetClientTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetClientTokenInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.GetClientTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.GetClientTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetClientTokenInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

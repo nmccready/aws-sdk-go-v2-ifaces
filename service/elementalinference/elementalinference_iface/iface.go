@@ -19,6 +19,7 @@ type IClient interface {
  ExportDictionaryEntries(ctx context.Context, params *ExportDictionaryEntriesInput, optFns ...func(*Options)) (*ExportDictionaryEntriesOutput, error) 
  GetDictionary(ctx context.Context, params *GetDictionaryInput, optFns ...func(*Options)) (*GetDictionaryOutput, error) 
  GetFeed(ctx context.Context, params *GetFeedInput, optFns ...func(*Options)) (*GetFeedOutput, error) 
+ GetFixture(ctx context.Context, params *GetFixtureInput, optFns ...func(*Options)) (*GetFixtureOutput, error) 
  ListDictionaries(ctx context.Context, params *ListDictionariesInput, optFns ...func(*Options)) (*ListDictionariesOutput, error) 
  ListFeeds(ctx context.Context, params *ListFeedsInput, optFns ...func(*Options)) (*ListFeedsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
