@@ -52,6 +52,43 @@ func (_m *IClient) CancelJob(ctx context.Context, params *batch.CancelJobInput, 
 	return r0, r1
 }
 
+// CancelJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelJobs(ctx context.Context, params *batch.CancelJobsInput, optFns ...func(*batch.Options)) (*batch.CancelJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelJobs")
+	}
+
+	var r0 *batch.CancelJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.CancelJobsInput, ...func(*batch.Options)) (*batch.CancelJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.CancelJobsInput, ...func(*batch.Options)) *batch.CancelJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.CancelJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.CancelJobsInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateComputeEnvironment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateComputeEnvironment(ctx context.Context, params *batch.CreateComputeEnvironmentInput, optFns ...func(*batch.Options)) (*batch.CreateComputeEnvironmentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1365,6 +1402,43 @@ func (_m *IClient) TerminateJob(ctx context.Context, params *batch.TerminateJobI
 	return r0, r1
 }
 
+// TerminateJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TerminateJobs(ctx context.Context, params *batch.TerminateJobsInput, optFns ...func(*batch.Options)) (*batch.TerminateJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TerminateJobs")
+	}
+
+	var r0 *batch.TerminateJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.TerminateJobsInput, ...func(*batch.Options)) (*batch.TerminateJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.TerminateJobsInput, ...func(*batch.Options)) *batch.TerminateJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.TerminateJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.TerminateJobsInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TerminateServiceJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TerminateServiceJob(ctx context.Context, params *batch.TerminateServiceJobInput, optFns ...func(*batch.Options)) (*batch.TerminateServiceJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1394,6 +1468,43 @@ func (_m *IClient) TerminateServiceJob(ctx context.Context, params *batch.Termin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *batch.TerminateServiceJobInput, ...func(*batch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TerminateServiceJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TerminateServiceJobs(ctx context.Context, params *batch.TerminateServiceJobsInput, optFns ...func(*batch.Options)) (*batch.TerminateServiceJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TerminateServiceJobs")
+	}
+
+	var r0 *batch.TerminateServiceJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.TerminateServiceJobsInput, ...func(*batch.Options)) (*batch.TerminateServiceJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *batch.TerminateServiceJobsInput, ...func(*batch.Options)) *batch.TerminateServiceJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*batch.TerminateServiceJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *batch.TerminateServiceJobsInput, ...func(*batch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

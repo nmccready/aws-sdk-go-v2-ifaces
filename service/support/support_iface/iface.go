@@ -12,8 +12,10 @@ type IClient interface {
  Options() Options 
  AddAttachmentsToSet(ctx context.Context, params *AddAttachmentsToSetInput, optFns ...func(*Options)) (*AddAttachmentsToSetOutput, error) 
  AddCommunicationToCase(ctx context.Context, params *AddCommunicationToCaseInput, optFns ...func(*Options)) (*AddCommunicationToCaseOutput, error) 
+ CompleteAttachmentUpload(ctx context.Context, params *CompleteAttachmentUploadInput, optFns ...func(*Options)) (*CompleteAttachmentUploadOutput, error) 
  CreateCase(ctx context.Context, params *CreateCaseInput, optFns ...func(*Options)) (*CreateCaseOutput, error) 
  DescribeAttachment(ctx context.Context, params *DescribeAttachmentInput, optFns ...func(*Options)) (*DescribeAttachmentOutput, error) 
+ DescribeAttachmentUploadStatus(ctx context.Context, params *DescribeAttachmentUploadStatusInput, optFns ...func(*Options)) (*DescribeAttachmentUploadStatusOutput, error) 
  DescribeCases(ctx context.Context, params *DescribeCasesInput, optFns ...func(*Options)) (*DescribeCasesOutput, error) 
  DescribeCommunications(ctx context.Context, params *DescribeCommunicationsInput, optFns ...func(*Options)) (*DescribeCommunicationsOutput, error) 
  DescribeCreateCaseOptions(ctx context.Context, params *DescribeCreateCaseOptionsInput, optFns ...func(*Options)) (*DescribeCreateCaseOptionsOutput, error) 
@@ -24,6 +26,8 @@ type IClient interface {
  DescribeTrustedAdvisorCheckResult(ctx context.Context, params *DescribeTrustedAdvisorCheckResultInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorCheckResultOutput, error) 
  DescribeTrustedAdvisorCheckSummaries(ctx context.Context, params *DescribeTrustedAdvisorCheckSummariesInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorCheckSummariesOutput, error) 
  DescribeTrustedAdvisorChecks(ctx context.Context, params *DescribeTrustedAdvisorChecksInput, optFns ...func(*Options)) (*DescribeTrustedAdvisorChecksOutput, error) 
+ GetAttachmentDownloadLink(ctx context.Context, params *GetAttachmentDownloadLinkInput, optFns ...func(*Options)) (*GetAttachmentDownloadLinkOutput, error) 
+ GetAttachmentUploadLinks(ctx context.Context, params *GetAttachmentUploadLinksInput, optFns ...func(*Options)) (*GetAttachmentUploadLinksOutput, error) 
  RefreshTrustedAdvisorCheck(ctx context.Context, params *RefreshTrustedAdvisorCheckInput, optFns ...func(*Options)) (*RefreshTrustedAdvisorCheckOutput, error) 
  ResolveCase(ctx context.Context, params *ResolveCaseInput, optFns ...func(*Options)) (*ResolveCaseOutput, error) 
 }

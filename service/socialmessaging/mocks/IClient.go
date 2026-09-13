@@ -495,6 +495,43 @@ func (_m *IClient) GetLinkedWhatsAppBusinessAccountPhoneNumber(ctx context.Conte
 	return r0, r1
 }
 
+// GetWhatsAppBusinessPublicKey provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetWhatsAppBusinessPublicKey(ctx context.Context, params *socialmessaging.GetWhatsAppBusinessPublicKeyInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppBusinessPublicKeyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetWhatsAppBusinessPublicKey")
+	}
+
+	var r0 *socialmessaging.GetWhatsAppBusinessPublicKeyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.GetWhatsAppBusinessPublicKeyInput, ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppBusinessPublicKeyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.GetWhatsAppBusinessPublicKeyInput, ...func(*socialmessaging.Options)) *socialmessaging.GetWhatsAppBusinessPublicKeyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.GetWhatsAppBusinessPublicKeyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.GetWhatsAppBusinessPublicKeyInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetWhatsAppFlow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetWhatsAppFlow(ctx context.Context, params *socialmessaging.GetWhatsAppFlowInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppFlowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -986,6 +1023,43 @@ func (_m *IClient) PutWhatsAppBusinessAccountEventDestinations(ctx context.Conte
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.PutWhatsAppBusinessAccountEventDestinationsInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutWhatsAppBusinessPublicKey provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutWhatsAppBusinessPublicKey(ctx context.Context, params *socialmessaging.PutWhatsAppBusinessPublicKeyInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.PutWhatsAppBusinessPublicKeyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutWhatsAppBusinessPublicKey")
+	}
+
+	var r0 *socialmessaging.PutWhatsAppBusinessPublicKeyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.PutWhatsAppBusinessPublicKeyInput, ...func(*socialmessaging.Options)) (*socialmessaging.PutWhatsAppBusinessPublicKeyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.PutWhatsAppBusinessPublicKeyInput, ...func(*socialmessaging.Options)) *socialmessaging.PutWhatsAppBusinessPublicKeyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.PutWhatsAppBusinessPublicKeyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.PutWhatsAppBusinessPublicKeyInput, ...func(*socialmessaging.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

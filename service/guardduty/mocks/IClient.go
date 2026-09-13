@@ -126,6 +126,80 @@ func (_m *IClient) ArchiveFindings(ctx context.Context, params *guardduty.Archiv
 	return r0, r1
 }
 
+// CreateCustomDetectionRuleAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCustomDetectionRuleAssociation(ctx context.Context, params *guardduty.CreateCustomDetectionRuleAssociationInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateCustomDetectionRuleAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCustomDetectionRuleAssociation")
+	}
+
+	var r0 *guardduty.CreateCustomDetectionRuleAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) (*guardduty.CreateCustomDetectionRuleAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) *guardduty.CreateCustomDetectionRuleAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.CreateCustomDetectionRuleAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.CreateCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCustomDetectionRuleOrgConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCustomDetectionRuleOrgConfiguration(ctx context.Context, params *guardduty.CreateCustomDetectionRuleOrgConfigurationInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateCustomDetectionRuleOrgConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCustomDetectionRuleOrgConfiguration")
+	}
+
+	var r0 *guardduty.CreateCustomDetectionRuleOrgConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) (*guardduty.CreateCustomDetectionRuleOrgConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.CreateCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) *guardduty.CreateCustomDetectionRuleOrgConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.CreateCustomDetectionRuleOrgConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.CreateCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDetector provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDetector(ctx context.Context, params *guardduty.CreateDetectorInput, optFns ...func(*guardduty.Options)) (*guardduty.CreateDetectorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +636,80 @@ func (_m *IClient) DeclineInvitations(ctx context.Context, params *guardduty.Dec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.DeclineInvitationsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCustomDetectionRuleAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCustomDetectionRuleAssociation(ctx context.Context, params *guardduty.DeleteCustomDetectionRuleAssociationInput, optFns ...func(*guardduty.Options)) (*guardduty.DeleteCustomDetectionRuleAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCustomDetectionRuleAssociation")
+	}
+
+	var r0 *guardduty.DeleteCustomDetectionRuleAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) (*guardduty.DeleteCustomDetectionRuleAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) *guardduty.DeleteCustomDetectionRuleAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.DeleteCustomDetectionRuleAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.DeleteCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCustomDetectionRuleOrgConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCustomDetectionRuleOrgConfiguration(ctx context.Context, params *guardduty.DeleteCustomDetectionRuleOrgConfigurationInput, optFns ...func(*guardduty.Options)) (*guardduty.DeleteCustomDetectionRuleOrgConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCustomDetectionRuleOrgConfiguration")
+	}
+
+	var r0 *guardduty.DeleteCustomDetectionRuleOrgConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) (*guardduty.DeleteCustomDetectionRuleOrgConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.DeleteCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) *guardduty.DeleteCustomDetectionRuleOrgConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.DeleteCustomDetectionRuleOrgConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.DeleteCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1302,6 +1450,117 @@ func (_m *IClient) GetCoverageStatistics(ctx context.Context, params *guardduty.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetCoverageStatisticsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomDetectionRule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomDetectionRule(ctx context.Context, params *guardduty.GetCustomDetectionRuleInput, optFns ...func(*guardduty.Options)) (*guardduty.GetCustomDetectionRuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomDetectionRule")
+	}
+
+	var r0 *guardduty.GetCustomDetectionRuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetCustomDetectionRuleInput, ...func(*guardduty.Options)) (*guardduty.GetCustomDetectionRuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetCustomDetectionRuleInput, ...func(*guardduty.Options)) *guardduty.GetCustomDetectionRuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetCustomDetectionRuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetCustomDetectionRuleInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomDetectionRuleAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomDetectionRuleAssociation(ctx context.Context, params *guardduty.GetCustomDetectionRuleAssociationInput, optFns ...func(*guardduty.Options)) (*guardduty.GetCustomDetectionRuleAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomDetectionRuleAssociation")
+	}
+
+	var r0 *guardduty.GetCustomDetectionRuleAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) (*guardduty.GetCustomDetectionRuleAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) *guardduty.GetCustomDetectionRuleAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetCustomDetectionRuleAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomDetectionRuleOrgConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomDetectionRuleOrgConfiguration(ctx context.Context, params *guardduty.GetCustomDetectionRuleOrgConfigurationInput, optFns ...func(*guardduty.Options)) (*guardduty.GetCustomDetectionRuleOrgConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomDetectionRuleOrgConfiguration")
+	}
+
+	var r0 *guardduty.GetCustomDetectionRuleOrgConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) (*guardduty.GetCustomDetectionRuleOrgConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.GetCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) *guardduty.GetCustomDetectionRuleOrgConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.GetCustomDetectionRuleOrgConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.GetCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2079,6 +2338,117 @@ func (_m *IClient) ListCoverage(ctx context.Context, params *guardduty.ListCover
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListCoverageInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCustomDetectionRuleAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomDetectionRuleAssociations(ctx context.Context, params *guardduty.ListCustomDetectionRuleAssociationsInput, optFns ...func(*guardduty.Options)) (*guardduty.ListCustomDetectionRuleAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomDetectionRuleAssociations")
+	}
+
+	var r0 *guardduty.ListCustomDetectionRuleAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListCustomDetectionRuleAssociationsInput, ...func(*guardduty.Options)) (*guardduty.ListCustomDetectionRuleAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListCustomDetectionRuleAssociationsInput, ...func(*guardduty.Options)) *guardduty.ListCustomDetectionRuleAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListCustomDetectionRuleAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListCustomDetectionRuleAssociationsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCustomDetectionRuleOrgConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomDetectionRuleOrgConfigurations(ctx context.Context, params *guardduty.ListCustomDetectionRuleOrgConfigurationsInput, optFns ...func(*guardduty.Options)) (*guardduty.ListCustomDetectionRuleOrgConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomDetectionRuleOrgConfigurations")
+	}
+
+	var r0 *guardduty.ListCustomDetectionRuleOrgConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListCustomDetectionRuleOrgConfigurationsInput, ...func(*guardduty.Options)) (*guardduty.ListCustomDetectionRuleOrgConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListCustomDetectionRuleOrgConfigurationsInput, ...func(*guardduty.Options)) *guardduty.ListCustomDetectionRuleOrgConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListCustomDetectionRuleOrgConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListCustomDetectionRuleOrgConfigurationsInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCustomDetectionRules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomDetectionRules(ctx context.Context, params *guardduty.ListCustomDetectionRulesInput, optFns ...func(*guardduty.Options)) (*guardduty.ListCustomDetectionRulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomDetectionRules")
+	}
+
+	var r0 *guardduty.ListCustomDetectionRulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListCustomDetectionRulesInput, ...func(*guardduty.Options)) (*guardduty.ListCustomDetectionRulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.ListCustomDetectionRulesInput, ...func(*guardduty.Options)) *guardduty.ListCustomDetectionRulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.ListCustomDetectionRulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.ListCustomDetectionRulesInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2911,6 +3281,80 @@ func (_m *IClient) UntagResource(ctx context.Context, params *guardduty.UntagRes
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.UntagResourceInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCustomDetectionRuleAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCustomDetectionRuleAssociation(ctx context.Context, params *guardduty.UpdateCustomDetectionRuleAssociationInput, optFns ...func(*guardduty.Options)) (*guardduty.UpdateCustomDetectionRuleAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCustomDetectionRuleAssociation")
+	}
+
+	var r0 *guardduty.UpdateCustomDetectionRuleAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) (*guardduty.UpdateCustomDetectionRuleAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) *guardduty.UpdateCustomDetectionRuleAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.UpdateCustomDetectionRuleAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.UpdateCustomDetectionRuleAssociationInput, ...func(*guardduty.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCustomDetectionRuleOrgConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCustomDetectionRuleOrgConfiguration(ctx context.Context, params *guardduty.UpdateCustomDetectionRuleOrgConfigurationInput, optFns ...func(*guardduty.Options)) (*guardduty.UpdateCustomDetectionRuleOrgConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCustomDetectionRuleOrgConfiguration")
+	}
+
+	var r0 *guardduty.UpdateCustomDetectionRuleOrgConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) (*guardduty.UpdateCustomDetectionRuleOrgConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *guardduty.UpdateCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) *guardduty.UpdateCustomDetectionRuleOrgConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*guardduty.UpdateCustomDetectionRuleOrgConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *guardduty.UpdateCustomDetectionRuleOrgConfigurationInput, ...func(*guardduty.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

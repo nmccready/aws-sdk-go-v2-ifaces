@@ -2283,6 +2283,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCrossRegionRouting", func(t *testing.T) {
+        input := &connect.GetCrossRegionRoutingInput{}
+        output := &connect.GetCrossRegionRoutingOutput{}
+
+        mockClient.On("GetCrossRegionRouting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCrossRegionRouting(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCurrentMetricData", func(t *testing.T) {
         input := &connect.GetCurrentMetricDataInput{}
         output := &connect.GetCurrentMetricDataOutput{}
@@ -2745,6 +2758,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEntitySecurityProfiles", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEntitySecurityProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEvaluationFormAIVersions", func(t *testing.T) {
+        input := &connect.ListEvaluationFormAIVersionsInput{}
+        output := &connect.ListEvaluationFormAIVersionsOutput{}
+
+        mockClient.On("ListEvaluationFormAIVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEvaluationFormAIVersions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4448,6 +4474,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateContactTaskTemplate", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateContactTaskTemplate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCrossRegionRouting", func(t *testing.T) {
+        input := &connect.UpdateCrossRegionRoutingInput{}
+        output := &connect.UpdateCrossRegionRoutingOutput{}
+
+        mockClient.On("UpdateCrossRegionRouting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCrossRegionRouting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

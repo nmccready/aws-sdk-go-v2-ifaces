@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  CancelJob(ctx context.Context, params *CancelJobInput, optFns ...func(*Options)) (*CancelJobOutput, error) 
+ CancelJobs(ctx context.Context, params *CancelJobsInput, optFns ...func(*Options)) (*CancelJobsOutput, error) 
  CreateComputeEnvironment(ctx context.Context, params *CreateComputeEnvironmentInput, optFns ...func(*Options)) (*CreateComputeEnvironmentOutput, error) 
  CreateConsumableResource(ctx context.Context, params *CreateConsumableResourceInput, optFns ...func(*Options)) (*CreateConsumableResourceOutput, error) 
  CreateJobQueue(ctx context.Context, params *CreateJobQueueInput, optFns ...func(*Options)) (*CreateJobQueueOutput, error) 
@@ -46,7 +47,9 @@ type IClient interface {
  SubmitServiceJob(ctx context.Context, params *SubmitServiceJobInput, optFns ...func(*Options)) (*SubmitServiceJobOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  TerminateJob(ctx context.Context, params *TerminateJobInput, optFns ...func(*Options)) (*TerminateJobOutput, error) 
+ TerminateJobs(ctx context.Context, params *TerminateJobsInput, optFns ...func(*Options)) (*TerminateJobsOutput, error) 
  TerminateServiceJob(ctx context.Context, params *TerminateServiceJobInput, optFns ...func(*Options)) (*TerminateServiceJobOutput, error) 
+ TerminateServiceJobs(ctx context.Context, params *TerminateServiceJobsInput, optFns ...func(*Options)) (*TerminateServiceJobsOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateComputeEnvironment(ctx context.Context, params *UpdateComputeEnvironmentInput, optFns ...func(*Options)) (*UpdateComputeEnvironmentOutput, error) 
  UpdateConsumableResource(ctx context.Context, params *UpdateConsumableResourceInput, optFns ...func(*Options)) (*UpdateConsumableResourceOutput, error) 

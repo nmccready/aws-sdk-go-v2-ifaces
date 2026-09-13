@@ -88,6 +88,43 @@ func (_m *IClient) AddCommunicationToCase(ctx context.Context, params *support.A
 	return r0, r1
 }
 
+// CompleteAttachmentUpload provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CompleteAttachmentUpload(ctx context.Context, params *support.CompleteAttachmentUploadInput, optFns ...func(*support.Options)) (*support.CompleteAttachmentUploadOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CompleteAttachmentUpload")
+	}
+
+	var r0 *support.CompleteAttachmentUploadOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *support.CompleteAttachmentUploadInput, ...func(*support.Options)) (*support.CompleteAttachmentUploadOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *support.CompleteAttachmentUploadInput, ...func(*support.Options)) *support.CompleteAttachmentUploadOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*support.CompleteAttachmentUploadOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *support.CompleteAttachmentUploadInput, ...func(*support.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCase provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCase(ctx context.Context, params *support.CreateCaseInput, optFns ...func(*support.Options)) (*support.CreateCaseOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +191,43 @@ func (_m *IClient) DescribeAttachment(ctx context.Context, params *support.Descr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *support.DescribeAttachmentInput, ...func(*support.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeAttachmentUploadStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAttachmentUploadStatus(ctx context.Context, params *support.DescribeAttachmentUploadStatusInput, optFns ...func(*support.Options)) (*support.DescribeAttachmentUploadStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAttachmentUploadStatus")
+	}
+
+	var r0 *support.DescribeAttachmentUploadStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *support.DescribeAttachmentUploadStatusInput, ...func(*support.Options)) (*support.DescribeAttachmentUploadStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *support.DescribeAttachmentUploadStatusInput, ...func(*support.Options)) *support.DescribeAttachmentUploadStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*support.DescribeAttachmentUploadStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *support.DescribeAttachmentUploadStatusInput, ...func(*support.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -524,6 +598,80 @@ func (_m *IClient) DescribeTrustedAdvisorChecks(ctx context.Context, params *sup
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *support.DescribeTrustedAdvisorChecksInput, ...func(*support.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAttachmentDownloadLink provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAttachmentDownloadLink(ctx context.Context, params *support.GetAttachmentDownloadLinkInput, optFns ...func(*support.Options)) (*support.GetAttachmentDownloadLinkOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAttachmentDownloadLink")
+	}
+
+	var r0 *support.GetAttachmentDownloadLinkOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *support.GetAttachmentDownloadLinkInput, ...func(*support.Options)) (*support.GetAttachmentDownloadLinkOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *support.GetAttachmentDownloadLinkInput, ...func(*support.Options)) *support.GetAttachmentDownloadLinkOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*support.GetAttachmentDownloadLinkOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *support.GetAttachmentDownloadLinkInput, ...func(*support.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAttachmentUploadLinks provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAttachmentUploadLinks(ctx context.Context, params *support.GetAttachmentUploadLinksInput, optFns ...func(*support.Options)) (*support.GetAttachmentUploadLinksOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAttachmentUploadLinks")
+	}
+
+	var r0 *support.GetAttachmentUploadLinksOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *support.GetAttachmentUploadLinksInput, ...func(*support.Options)) (*support.GetAttachmentUploadLinksOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *support.GetAttachmentUploadLinksInput, ...func(*support.Options)) *support.GetAttachmentUploadLinksOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*support.GetAttachmentUploadLinksOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *support.GetAttachmentUploadLinksInput, ...func(*support.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

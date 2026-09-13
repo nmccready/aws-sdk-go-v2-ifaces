@@ -16,4 +16,5 @@ type IClient interface {
  GetRecord(ctx context.Context, params *GetRecordInput, optFns ...func(*Options)) (*GetRecordOutput, error) 
  ListRecords(ctx context.Context, params *ListRecordsInput, optFns ...func(*Options)) (*ListRecordsOutput, error) 
  PutRecord(ctx context.Context, params *PutRecordInput, optFns ...func(*Options)) (*PutRecordOutput, error) 
+ UpdateRecord(ctx context.Context, params *UpdateRecordInput, optFns ...func(*Options)) (*UpdateRecordOutput, error) 
 }

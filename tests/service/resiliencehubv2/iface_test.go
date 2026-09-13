@@ -632,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTestRunDependencies", func(t *testing.T) {
+        input := &resiliencehubv2.ListTestRunDependenciesInput{}
+        output := &resiliencehubv2.ListTestRunDependenciesOutput{}
+
+        mockClient.On("ListTestRunDependencies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTestRunDependencies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTestRunEvents", func(t *testing.T) {
         input := &resiliencehubv2.ListTestRunEventsInput{}
         output := &resiliencehubv2.ListTestRunEventsOutput{}
@@ -639,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTestRunEvents", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTestRunEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTestRunSourceEvents", func(t *testing.T) {
+        input := &resiliencehubv2.ListTestRunSourceEventsInput{}
+        output := &resiliencehubv2.ListTestRunSourceEventsOutput{}
+
+        mockClient.On("ListTestRunSourceEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTestRunSourceEvents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

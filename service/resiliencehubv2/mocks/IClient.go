@@ -1716,6 +1716,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *resiliencehu
 	return r0, r1
 }
 
+// ListTestRunDependencies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestRunDependencies(ctx context.Context, params *resiliencehubv2.ListTestRunDependenciesInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunDependenciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestRunDependencies")
+	}
+
+	var r0 *resiliencehubv2.ListTestRunDependenciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunDependenciesInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunDependenciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunDependenciesInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestRunDependenciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestRunDependenciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestRunDependenciesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTestRunEvents provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTestRunEvents(ctx context.Context, params *resiliencehubv2.ListTestRunEventsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunEventsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1745,6 +1782,43 @@ func (_m *IClient) ListTestRunEvents(ctx context.Context, params *resiliencehubv
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestRunEventsInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTestRunSourceEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTestRunSourceEvents(ctx context.Context, params *resiliencehubv2.ListTestRunSourceEventsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunSourceEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTestRunSourceEvents")
+	}
+
+	var r0 *resiliencehubv2.ListTestRunSourceEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunSourceEventsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListTestRunSourceEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListTestRunSourceEventsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListTestRunSourceEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListTestRunSourceEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListTestRunSourceEventsInput, ...func(*resiliencehubv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

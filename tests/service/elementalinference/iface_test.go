@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteFeedPolicy", func(t *testing.T) {
+        input := &elementalinference.DeleteFeedPolicyInput{}
+        output := &elementalinference.DeleteFeedPolicyOutput{}
+
+        mockClient.On("DeleteFeedPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFeedPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateFeed", func(t *testing.T) {
         input := &elementalinference.DisassociateFeedInput{}
         output := &elementalinference.DisassociateFeedOutput{}
@@ -151,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFeedPolicy", func(t *testing.T) {
+        input := &elementalinference.GetFeedPolicyInput{}
+        output := &elementalinference.GetFeedPolicyOutput{}
+
+        mockClient.On("GetFeedPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFeedPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFixture", func(t *testing.T) {
         input := &elementalinference.GetFixtureInput{}
         output := &elementalinference.GetFixtureOutput{}
@@ -197,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutFeedPolicy", func(t *testing.T) {
+        input := &elementalinference.PutFeedPolicyInput{}
+        output := &elementalinference.PutFeedPolicyOutput{}
+
+        mockClient.On("PutFeedPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutFeedPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

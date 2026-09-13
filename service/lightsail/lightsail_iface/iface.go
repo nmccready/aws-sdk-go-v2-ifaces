@@ -120,6 +120,7 @@ type IClient interface {
  GetOperation(ctx context.Context, params *GetOperationInput, optFns ...func(*Options)) (*GetOperationOutput, error) 
  GetOperations(ctx context.Context, params *GetOperationsInput, optFns ...func(*Options)) (*GetOperationsOutput, error) 
  GetOperationsForResource(ctx context.Context, params *GetOperationsForResourceInput, optFns ...func(*Options)) (*GetOperationsForResourceOutput, error) 
+ GetProfile(ctx context.Context, params *GetProfileInput, optFns ...func(*Options)) (*GetProfileOutput, error) 
  GetRegions(ctx context.Context, params *GetRegionsInput, optFns ...func(*Options)) (*GetRegionsOutput, error) 
  GetRelationalDatabase(ctx context.Context, params *GetRelationalDatabaseInput, optFns ...func(*Options)) (*GetRelationalDatabaseOutput, error) 
  GetRelationalDatabaseBlueprints(ctx context.Context, params *GetRelationalDatabaseBlueprintsInput, optFns ...func(*Options)) (*GetRelationalDatabaseBlueprintsOutput, error) 

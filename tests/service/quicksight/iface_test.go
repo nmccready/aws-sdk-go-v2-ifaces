@@ -619,6 +619,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteApp", func(t *testing.T) {
+        input := &quicksight.DeleteAppInput{}
+        output := &quicksight.DeleteAppOutput{}
+
+        mockClient.On("DeleteApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteApprovalPolicy", func(t *testing.T) {
         input := &quicksight.DeleteApprovalPolicyInput{}
         output := &quicksight.DeleteApprovalPolicyOutput{}
@@ -1224,6 +1237,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAnalysisPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAnalysisPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeApp", func(t *testing.T) {
+        input := &quicksight.DescribeAppInput{}
+        output := &quicksight.DescribeAppOutput{}
+
+        mockClient.On("DescribeApp", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeApp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAppPermissions", func(t *testing.T) {
+        input := &quicksight.DescribeAppPermissionsInput{}
+        output := &quicksight.DescribeAppPermissionsOutput{}
+
+        mockClient.On("DescribeAppPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAppPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2140,6 +2179,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListApps", func(t *testing.T) {
+        input := &quicksight.ListAppsInput{}
+        output := &quicksight.ListAppsOutput{}
+
+        mockClient.On("ListApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListApps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAssetBundleExportJobs", func(t *testing.T) {
         input := &quicksight.ListAssetBundleExportJobsInput{}
         output := &quicksight.ListAssetBundleExportJobsOutput{}
@@ -2790,6 +2842,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchApps", func(t *testing.T) {
+        input := &quicksight.SearchAppsInput{}
+        output := &quicksight.SearchAppsOutput{}
+
+        mockClient.On("SearchApps", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchApps(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSearchDashboards", func(t *testing.T) {
         input := &quicksight.SearchDashboardsInput{}
         output := &quicksight.SearchDashboardsOutput{}
@@ -3122,6 +3187,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAnalysisPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAnalysisPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAppPermissions", func(t *testing.T) {
+        input := &quicksight.UpdateAppPermissionsInput{}
+        output := &quicksight.UpdateAppPermissionsOutput{}
+
+        mockClient.On("UpdateAppPermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAppPermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConsentPortal", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.CreateConsentPortalInput{}
+        output := &bedrockagentcorecontrol.CreateConsentPortalOutput{}
+
+        mockClient.On("CreateConsentPortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConsentPortal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataset", func(t *testing.T) {
         input := &bedrockagentcorecontrol.CreateDatasetInput{}
         output := &bedrockagentcorecontrol.CreateDatasetOutput{}
@@ -522,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteConfigurationBundle", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteConfigurationBundle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteConsentPortal", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.DeleteConsentPortalInput{}
+        output := &bedrockagentcorecontrol.DeleteConsentPortalOutput{}
+
+        mockClient.On("DeleteConsentPortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConsentPortal(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -912,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConfigurationBundleVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConfigurationBundleVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConsentPortal", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetConsentPortalInput{}
+        output := &bedrockagentcorecontrol.GetConsentPortalOutput{}
+
+        mockClient.On("GetConsentPortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConsentPortal(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1380,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListConfigurationBundles", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListConfigurationBundles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConsentPortals", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListConsentPortalsInput{}
+        output := &bedrockagentcorecontrol.ListConsentPortalsOutput{}
+
+        mockClient.On("ListConsentPortals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConsentPortals(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1900,6 +1952,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConfigurationBundle", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConfigurationBundle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConsentPortal", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateConsentPortalInput{}
+        output := &bedrockagentcorecontrol.UpdateConsentPortalOutput{}
+
+        mockClient.On("UpdateConsentPortal", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConsentPortal(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

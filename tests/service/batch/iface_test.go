@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelJobs", func(t *testing.T) {
+        input := &batch.CancelJobsInput{}
+        output := &batch.CancelJobsOutput{}
+
+        mockClient.On("CancelJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateComputeEnvironment", func(t *testing.T) {
         input := &batch.CreateComputeEnvironmentInput{}
         output := &batch.CreateComputeEnvironmentOutput{}
@@ -502,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTerminateJobs", func(t *testing.T) {
+        input := &batch.TerminateJobsInput{}
+        output := &batch.TerminateJobsOutput{}
+
+        mockClient.On("TerminateJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTerminateServiceJob", func(t *testing.T) {
         input := &batch.TerminateServiceJobInput{}
         output := &batch.TerminateServiceJobOutput{}
@@ -509,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("TerminateServiceJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.TerminateServiceJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTerminateServiceJobs", func(t *testing.T) {
+        input := &batch.TerminateServiceJobsInput{}
+        output := &batch.TerminateServiceJobsOutput{}
+
+        mockClient.On("TerminateServiceJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TerminateServiceJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

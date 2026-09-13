@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateChannel", func(t *testing.T) {
+        input := &kinesis.CreateChannelInput{}
+        output := &kinesis.CreateChannelOutput{}
+
+        mockClient.On("CreateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateStream", func(t *testing.T) {
         input := &kinesis.CreateStreamInput{}
         output := &kinesis.CreateStreamOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DecreaseStreamRetentionPeriod", ctx, input).Return(output, nil)
 
         result, err := mockClient.DecreaseStreamRetentionPeriod(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteChannel", func(t *testing.T) {
+        input := &kinesis.DeleteChannelInput{}
+        output := &kinesis.DeleteChannelOutput{}
+
+        mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -119,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeChannel", func(t *testing.T) {
+        input := &kinesis.DescribeChannelInput{}
+        output := &kinesis.DescribeChannelOutput{}
+
+        mockClient.On("DescribeChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -249,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("IncreaseStreamRetentionPeriod", ctx, input).Return(output, nil)
 
         result, err := mockClient.IncreaseStreamRetentionPeriod(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannels", func(t *testing.T) {
+        input := &kinesis.ListChannelsInput{}
+        output := &kinesis.ListChannelsOutput{}
+
+        mockClient.On("ListChannels", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannels(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChannel", func(t *testing.T) {
+        input := &kinesis.UpdateChannelInput{}
+        output := &kinesis.UpdateChannelOutput{}
+
+        mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChannel(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

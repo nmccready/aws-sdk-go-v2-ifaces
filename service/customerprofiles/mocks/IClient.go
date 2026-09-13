@@ -52,6 +52,43 @@ func (_m *IClient) AddProfileKey(ctx context.Context, params *customerprofiles.A
 	return r0, r1
 }
 
+// AssociateStreamForSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateStreamForSegments(ctx context.Context, params *customerprofiles.AssociateStreamForSegmentsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.AssociateStreamForSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateStreamForSegments")
+	}
+
+	var r0 *customerprofiles.AssociateStreamForSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.AssociateStreamForSegmentsInput, ...func(*customerprofiles.Options)) (*customerprofiles.AssociateStreamForSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.AssociateStreamForSegmentsInput, ...func(*customerprofiles.Options)) *customerprofiles.AssociateStreamForSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.AssociateStreamForSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.AssociateStreamForSegmentsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetCalculatedAttributeForProfile provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetCalculatedAttributeForProfile(ctx context.Context, params *customerprofiles.BatchGetCalculatedAttributeForProfileInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.BatchGetCalculatedAttributeForProfileOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1236,6 +1273,43 @@ func (_m *IClient) DeleteSegmentDefinition(ctx context.Context, params *customer
 	return r0, r1
 }
 
+// DeleteSegmentSubscription provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSegmentSubscription(ctx context.Context, params *customerprofiles.DeleteSegmentSubscriptionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteSegmentSubscriptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSegmentSubscription")
+	}
+
+	var r0 *customerprofiles.DeleteSegmentSubscriptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteSegmentSubscriptionInput, ...func(*customerprofiles.Options)) (*customerprofiles.DeleteSegmentSubscriptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DeleteSegmentSubscriptionInput, ...func(*customerprofiles.Options)) *customerprofiles.DeleteSegmentSubscriptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DeleteSegmentSubscriptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DeleteSegmentSubscriptionInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteWorkflow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteWorkflow(ctx context.Context, params *customerprofiles.DeleteWorkflowInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DeleteWorkflowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1302,6 +1376,43 @@ func (_m *IClient) DetectProfileObjectType(ctx context.Context, params *customer
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DetectProfileObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateStreamForSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateStreamForSegments(ctx context.Context, params *customerprofiles.DisassociateStreamForSegmentsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.DisassociateStreamForSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateStreamForSegments")
+	}
+
+	var r0 *customerprofiles.DisassociateStreamForSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DisassociateStreamForSegmentsInput, ...func(*customerprofiles.Options)) (*customerprofiles.DisassociateStreamForSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.DisassociateStreamForSegmentsInput, ...func(*customerprofiles.Options)) *customerprofiles.DisassociateStreamForSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.DisassociateStreamForSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.DisassociateStreamForSegmentsInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2161,6 +2272,43 @@ func (_m *IClient) GetSegmentSnapshot(ctx context.Context, params *customerprofi
 	return r0, r1
 }
 
+// GetSegmentSubscription provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSegmentSubscription(ctx context.Context, params *customerprofiles.GetSegmentSubscriptionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentSubscriptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSegmentSubscription")
+	}
+
+	var r0 *customerprofiles.GetSegmentSubscriptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentSubscriptionInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetSegmentSubscriptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetSegmentSubscriptionInput, ...func(*customerprofiles.Options)) *customerprofiles.GetSegmentSubscriptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetSegmentSubscriptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetSegmentSubscriptionInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSimilarProfiles provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSimilarProfiles(ctx context.Context, params *customerprofiles.GetSimilarProfilesInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetSimilarProfilesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2190,6 +2338,43 @@ func (_m *IClient) GetSimilarProfiles(ctx context.Context, params *customerprofi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetSimilarProfilesInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetStreamForSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetStreamForSegments(ctx context.Context, params *customerprofiles.GetStreamForSegmentsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.GetStreamForSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetStreamForSegments")
+	}
+
+	var r0 *customerprofiles.GetStreamForSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetStreamForSegmentsInput, ...func(*customerprofiles.Options)) (*customerprofiles.GetStreamForSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.GetStreamForSegmentsInput, ...func(*customerprofiles.Options)) *customerprofiles.GetStreamForSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.GetStreamForSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.GetStreamForSegmentsInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3197,6 +3382,43 @@ func (_m *IClient) ListSegmentDefinitions(ctx context.Context, params *customerp
 	return r0, r1
 }
 
+// ListSegmentSubscriptionEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSegmentSubscriptionEvents(ctx context.Context, params *customerprofiles.ListSegmentSubscriptionEventsInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListSegmentSubscriptionEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSegmentSubscriptionEvents")
+	}
+
+	var r0 *customerprofiles.ListSegmentSubscriptionEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListSegmentSubscriptionEventsInput, ...func(*customerprofiles.Options)) (*customerprofiles.ListSegmentSubscriptionEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.ListSegmentSubscriptionEventsInput, ...func(*customerprofiles.Options)) *customerprofiles.ListSegmentSubscriptionEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.ListSegmentSubscriptionEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.ListSegmentSubscriptionEventsInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *customerprofiles.ListTagsForResourceInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3503,6 +3725,43 @@ func (_m *IClient) PutProfileObjectType(ctx context.Context, params *customerpro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.PutProfileObjectTypeInput, ...func(*customerprofiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutSegmentSubscription provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutSegmentSubscription(ctx context.Context, params *customerprofiles.PutSegmentSubscriptionInput, optFns ...func(*customerprofiles.Options)) (*customerprofiles.PutSegmentSubscriptionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutSegmentSubscription")
+	}
+
+	var r0 *customerprofiles.PutSegmentSubscriptionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.PutSegmentSubscriptionInput, ...func(*customerprofiles.Options)) (*customerprofiles.PutSegmentSubscriptionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *customerprofiles.PutSegmentSubscriptionInput, ...func(*customerprofiles.Options)) *customerprofiles.PutSegmentSubscriptionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*customerprofiles.PutSegmentSubscriptionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *customerprofiles.PutSegmentSubscriptionInput, ...func(*customerprofiles.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

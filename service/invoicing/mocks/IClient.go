@@ -422,6 +422,80 @@ func (_m *IClient) ListProcurementPortalPreferences(ctx context.Context, params 
 	return r0, r1
 }
 
+// ListProcurementPortalSuppliers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProcurementPortalSuppliers(ctx context.Context, params *invoicing.ListProcurementPortalSuppliersInput, optFns ...func(*invoicing.Options)) (*invoicing.ListProcurementPortalSuppliersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProcurementPortalSuppliers")
+	}
+
+	var r0 *invoicing.ListProcurementPortalSuppliersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListProcurementPortalSuppliersInput, ...func(*invoicing.Options)) (*invoicing.ListProcurementPortalSuppliersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListProcurementPortalSuppliersInput, ...func(*invoicing.Options)) *invoicing.ListProcurementPortalSuppliersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.ListProcurementPortalSuppliersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.ListProcurementPortalSuppliersInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProcurementPortals provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProcurementPortals(ctx context.Context, params *invoicing.ListProcurementPortalsInput, optFns ...func(*invoicing.Options)) (*invoicing.ListProcurementPortalsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProcurementPortals")
+	}
+
+	var r0 *invoicing.ListProcurementPortalsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListProcurementPortalsInput, ...func(*invoicing.Options)) (*invoicing.ListProcurementPortalsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *invoicing.ListProcurementPortalsInput, ...func(*invoicing.Options)) *invoicing.ListProcurementPortalsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*invoicing.ListProcurementPortalsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *invoicing.ListProcurementPortalsInput, ...func(*invoicing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *invoicing.ListTagsForResourceInput, optFns ...func(*invoicing.Options)) (*invoicing.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))

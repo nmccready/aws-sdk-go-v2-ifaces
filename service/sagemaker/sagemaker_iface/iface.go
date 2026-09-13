@@ -13,6 +13,7 @@ type IClient interface {
  AddAssociation(ctx context.Context, params *AddAssociationInput, optFns ...func(*Options)) (*AddAssociationOutput, error) 
  AddTags(ctx context.Context, params *AddTagsInput, optFns ...func(*Options)) (*AddTagsOutput, error) 
  AssociateTrialComponent(ctx context.Context, params *AssociateTrialComponentInput, optFns ...func(*Options)) (*AssociateTrialComponentOutput, error) 
+ AttachClusterNodeNetworkInterface(ctx context.Context, params *AttachClusterNodeNetworkInterfaceInput, optFns ...func(*Options)) (*AttachClusterNodeNetworkInterfaceOutput, error) 
  AttachClusterNodeVolume(ctx context.Context, params *AttachClusterNodeVolumeInput, optFns ...func(*Options)) (*AttachClusterNodeVolumeOutput, error) 
  BatchAddClusterNodes(ctx context.Context, params *BatchAddClusterNodesInput, optFns ...func(*Options)) (*BatchAddClusterNodesOutput, error) 
  BatchDeleteClusterNodes(ctx context.Context, params *BatchDeleteClusterNodesInput, optFns ...func(*Options)) (*BatchDeleteClusterNodesOutput, error) 

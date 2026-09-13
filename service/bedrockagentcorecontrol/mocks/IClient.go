@@ -385,6 +385,43 @@ func (_m *IClient) CreateConfigurationBundle(ctx context.Context, params *bedroc
 	return r0, r1
 }
 
+// CreateConsentPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateConsentPortal(ctx context.Context, params *bedrockagentcorecontrol.CreateConsentPortalInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateConsentPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateConsentPortal")
+	}
+
+	var r0 *bedrockagentcorecontrol.CreateConsentPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateConsentPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.CreateConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.CreateConsentPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.CreateConsentPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.CreateConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDataset provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDataset(ctx context.Context, params *bedrockagentcorecontrol.CreateDatasetInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.CreateDatasetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1413,6 +1450,43 @@ func (_m *IClient) DeleteConfigurationBundle(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteConsentPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteConsentPortal(ctx context.Context, params *bedrockagentcorecontrol.DeleteConsentPortalInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteConsentPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteConsentPortal")
+	}
+
+	var r0 *bedrockagentcorecontrol.DeleteConsentPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.DeleteConsentPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.DeleteConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.DeleteConsentPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.DeleteConsentPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.DeleteConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2523,6 +2597,43 @@ func (_m *IClient) GetConfigurationBundleVersion(ctx context.Context, params *be
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetConfigurationBundleVersionInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetConsentPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetConsentPortal(ctx context.Context, params *bedrockagentcorecontrol.GetConsentPortalInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetConsentPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetConsentPortal")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetConsentPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetConsentPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetConsentPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetConsentPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3855,6 +3966,43 @@ func (_m *IClient) ListConfigurationBundles(ctx context.Context, params *bedrock
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListConfigurationBundlesInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListConsentPortals provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListConsentPortals(ctx context.Context, params *bedrockagentcorecontrol.ListConsentPortalsInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListConsentPortalsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListConsentPortals")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListConsentPortalsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListConsentPortalsInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListConsentPortalsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListConsentPortalsInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListConsentPortalsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListConsentPortalsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListConsentPortalsInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5353,6 +5501,43 @@ func (_m *IClient) UpdateConfigurationBundle(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateConfigurationBundleInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConsentPortal provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConsentPortal(ctx context.Context, params *bedrockagentcorecontrol.UpdateConsentPortalInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateConsentPortalOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConsentPortal")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateConsentPortalOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateConsentPortalOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateConsentPortalOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateConsentPortalOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateConsentPortalInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

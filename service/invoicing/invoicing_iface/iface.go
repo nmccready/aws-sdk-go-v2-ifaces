@@ -21,6 +21,8 @@ type IClient interface {
  ListInvoiceSummaries(ctx context.Context, params *ListInvoiceSummariesInput, optFns ...func(*Options)) (*ListInvoiceSummariesOutput, error) 
  ListInvoiceUnits(ctx context.Context, params *ListInvoiceUnitsInput, optFns ...func(*Options)) (*ListInvoiceUnitsOutput, error) 
  ListProcurementPortalPreferences(ctx context.Context, params *ListProcurementPortalPreferencesInput, optFns ...func(*Options)) (*ListProcurementPortalPreferencesOutput, error) 
+ ListProcurementPortalSuppliers(ctx context.Context, params *ListProcurementPortalSuppliersInput, optFns ...func(*Options)) (*ListProcurementPortalSuppliersOutput, error) 
+ ListProcurementPortals(ctx context.Context, params *ListProcurementPortalsInput, optFns ...func(*Options)) (*ListProcurementPortalsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutProcurementPortalPreference(ctx context.Context, params *PutProcurementPortalPreferenceInput, optFns ...func(*Options)) (*PutProcurementPortalPreferenceOutput, error) 
  SendProcurementPortalValidation(ctx context.Context, params *SendProcurementPortalValidationInput, optFns ...func(*Options)) (*SendProcurementPortalValidationOutput, error) 

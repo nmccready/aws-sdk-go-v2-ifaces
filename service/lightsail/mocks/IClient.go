@@ -4085,6 +4085,43 @@ func (_m *IClient) GetOperationsForResource(ctx context.Context, params *lightsa
 	return r0, r1
 }
 
+// GetProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProfile(ctx context.Context, params *lightsail.GetProfileInput, optFns ...func(*lightsail.Options)) (*lightsail.GetProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProfile")
+	}
+
+	var r0 *lightsail.GetProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.GetProfileInput, ...func(*lightsail.Options)) (*lightsail.GetProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.GetProfileInput, ...func(*lightsail.Options)) *lightsail.GetProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lightsail.GetProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.GetProfileInput, ...func(*lightsail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRegions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRegions(ctx context.Context, params *lightsail.GetRegionsInput, optFns ...func(*lightsail.Options)) (*lightsail.GetRegionsOutput, error) {
 	_va := make([]interface{}, len(optFns))

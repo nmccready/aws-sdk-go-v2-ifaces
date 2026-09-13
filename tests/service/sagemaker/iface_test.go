@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAttachClusterNodeNetworkInterface", func(t *testing.T) {
+        input := &sagemaker.AttachClusterNodeNetworkInterfaceInput{}
+        output := &sagemaker.AttachClusterNodeNetworkInterfaceOutput{}
+
+        mockClient.On("AttachClusterNodeNetworkInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AttachClusterNodeNetworkInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAttachClusterNodeVolume", func(t *testing.T) {
         input := &sagemaker.AttachClusterNodeVolumeInput{}
         output := &sagemaker.AttachClusterNodeVolumeOutput{}

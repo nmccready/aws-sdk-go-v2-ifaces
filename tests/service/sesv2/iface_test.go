@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateEmailIdentityCertificate", func(t *testing.T) {
+        input := &sesv2.AssociateEmailIdentityCertificateInput{}
+        output := &sesv2.AssociateEmailIdentityCertificateOutput{}
+
+        mockClient.On("AssociateEmailIdentityCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateEmailIdentityCertificate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetMetricData", func(t *testing.T) {
         input := &sesv2.BatchGetMetricDataInput{}
         output := &sesv2.BatchGetMetricDataOutput{}
@@ -418,6 +431,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTenantResourceAssociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTenantResourceAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateEmailIdentityCertificate", func(t *testing.T) {
+        input := &sesv2.DisassociateEmailIdentityCertificateInput{}
+        output := &sesv2.DisassociateEmailIdentityCertificateOutput{}
+
+        mockClient.On("DisassociateEmailIdentityCertificate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateEmailIdentityCertificate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -847,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEmailIdentities", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEmailIdentities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEmailIdentityCertificates", func(t *testing.T) {
+        input := &sesv2.ListEmailIdentityCertificatesInput{}
+        output := &sesv2.ListEmailIdentityCertificatesOutput{}
+
+        mockClient.On("ListEmailIdentityCertificates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEmailIdentityCertificates(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1380,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateConfigurationSet", func(t *testing.T) {
+        input := &sesv2.UpdateConfigurationSetInput{}
+        output := &sesv2.UpdateConfigurationSetOutput{}
+
+        mockClient.On("UpdateConfigurationSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConfigurationSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

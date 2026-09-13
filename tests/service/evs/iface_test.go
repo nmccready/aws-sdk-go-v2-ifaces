@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAccountSettings", func(t *testing.T) {
+        input := &evs.GetAccountSettingsInput{}
+        output := &evs.GetAccountSettingsOutput{}
+
+        mockClient.On("GetAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDepotUrl", func(t *testing.T) {
         input := &evs.GetDepotUrlInput{}
         output := &evs.GetDepotUrlOutput{}
@@ -275,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListVmEntitlements", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListVmEntitlements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountSettings", func(t *testing.T) {
+        input := &evs.PutAccountSettingsInput{}
+        output := &evs.PutAccountSettingsOutput{}
+
+        mockClient.On("PutAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountSettings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

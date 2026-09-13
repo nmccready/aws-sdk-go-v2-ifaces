@@ -588,6 +588,43 @@ func (_m *IClient) Options() kafkaconnect.Options {
 	return r0
 }
 
+// RestartConnector provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RestartConnector(ctx context.Context, params *kafkaconnect.RestartConnectorInput, optFns ...func(*kafkaconnect.Options)) (*kafkaconnect.RestartConnectorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RestartConnector")
+	}
+
+	var r0 *kafkaconnect.RestartConnectorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kafkaconnect.RestartConnectorInput, ...func(*kafkaconnect.Options)) (*kafkaconnect.RestartConnectorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kafkaconnect.RestartConnectorInput, ...func(*kafkaconnect.Options)) *kafkaconnect.RestartConnectorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kafkaconnect.RestartConnectorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kafkaconnect.RestartConnectorInput, ...func(*kafkaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *kafkaconnect.TagResourceInput, optFns ...func(*kafkaconnect.Options)) (*kafkaconnect.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
