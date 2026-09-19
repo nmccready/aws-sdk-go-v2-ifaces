@@ -532,6 +532,43 @@ func (_m *IClient) GetWhatsAppBusinessPublicKey(ctx context.Context, params *soc
 	return r0, r1
 }
 
+// GetWhatsAppCallPermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetWhatsAppCallPermission(ctx context.Context, params *socialmessaging.GetWhatsAppCallPermissionInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppCallPermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetWhatsAppCallPermission")
+	}
+
+	var r0 *socialmessaging.GetWhatsAppCallPermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.GetWhatsAppCallPermissionInput, ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppCallPermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.GetWhatsAppCallPermissionInput, ...func(*socialmessaging.Options)) *socialmessaging.GetWhatsAppCallPermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.GetWhatsAppCallPermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.GetWhatsAppCallPermissionInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetWhatsAppFlow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetWhatsAppFlow(ctx context.Context, params *socialmessaging.GetWhatsAppFlowInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.GetWhatsAppFlowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1068,6 +1105,43 @@ func (_m *IClient) PutWhatsAppBusinessPublicKey(ctx context.Context, params *soc
 	return r0, r1
 }
 
+// SendWhatsAppCallEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendWhatsAppCallEvent(ctx context.Context, params *socialmessaging.SendWhatsAppCallEventInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.SendWhatsAppCallEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendWhatsAppCallEvent")
+	}
+
+	var r0 *socialmessaging.SendWhatsAppCallEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.SendWhatsAppCallEventInput, ...func(*socialmessaging.Options)) (*socialmessaging.SendWhatsAppCallEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.SendWhatsAppCallEventInput, ...func(*socialmessaging.Options)) *socialmessaging.SendWhatsAppCallEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.SendWhatsAppCallEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.SendWhatsAppCallEventInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SendWhatsAppConversionEvent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SendWhatsAppConversionEvent(ctx context.Context, params *socialmessaging.SendWhatsAppConversionEventInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.SendWhatsAppConversionEventOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1208,6 +1282,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *socialmessaging.Un
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.UntagResourceInput, ...func(*socialmessaging.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateLinkedWhatsAppBusinessAccountPhoneNumber provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLinkedWhatsAppBusinessAccountPhoneNumber(ctx context.Context, params *socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberInput, optFns ...func(*socialmessaging.Options)) (*socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLinkedWhatsAppBusinessAccountPhoneNumber")
+	}
+
+	var r0 *socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberInput, ...func(*socialmessaging.Options)) (*socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberInput, ...func(*socialmessaging.Options)) *socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberInput, ...func(*socialmessaging.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

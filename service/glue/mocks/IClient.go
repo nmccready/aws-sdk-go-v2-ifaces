@@ -7748,6 +7748,43 @@ func (_m *IClient) ListIntegrationResourceProperties(ctx context.Context, params
 	return r0, r1
 }
 
+// ListIntegrationTableProperties provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIntegrationTableProperties(ctx context.Context, params *glue.ListIntegrationTablePropertiesInput, optFns ...func(*glue.Options)) (*glue.ListIntegrationTablePropertiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIntegrationTableProperties")
+	}
+
+	var r0 *glue.ListIntegrationTablePropertiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListIntegrationTablePropertiesInput, ...func(*glue.Options)) (*glue.ListIntegrationTablePropertiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListIntegrationTablePropertiesInput, ...func(*glue.Options)) *glue.ListIntegrationTablePropertiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListIntegrationTablePropertiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListIntegrationTablePropertiesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListIterableForms provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListIterableForms(ctx context.Context, params *glue.ListIterableFormsInput, optFns ...func(*glue.Options)) (*glue.ListIterableFormsOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -8858,6 +8858,43 @@ func (_m *IClient) ListSecurityKeys(ctx context.Context, params *connect.ListSec
 	return r0, r1
 }
 
+// ListSecurityProfileAIAgents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSecurityProfileAIAgents(ctx context.Context, params *connect.ListSecurityProfileAIAgentsInput, optFns ...func(*connect.Options)) (*connect.ListSecurityProfileAIAgentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSecurityProfileAIAgents")
+	}
+
+	var r0 *connect.ListSecurityProfileAIAgentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListSecurityProfileAIAgentsInput, ...func(*connect.Options)) (*connect.ListSecurityProfileAIAgentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListSecurityProfileAIAgentsInput, ...func(*connect.Options)) *connect.ListSecurityProfileAIAgentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListSecurityProfileAIAgentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListSecurityProfileAIAgentsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListSecurityProfileApplications provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListSecurityProfileApplications(ctx context.Context, params *connect.ListSecurityProfileApplicationsInput, optFns ...func(*connect.Options)) (*connect.ListSecurityProfileApplicationsOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -2751,6 +2751,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListIntegrationTableProperties", func(t *testing.T) {
+        input := &glue.ListIntegrationTablePropertiesInput{}
+        output := &glue.ListIntegrationTablePropertiesOutput{}
+
+        mockClient.On("ListIntegrationTableProperties", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIntegrationTableProperties(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListIterableForms", func(t *testing.T) {
         input := &glue.ListIterableFormsInput{}
         output := &glue.ListIterableFormsOutput{}

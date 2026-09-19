@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDependencyInsights", func(t *testing.T) {
+        input := &resiliencehubv2.GetDependencyInsightsInput{}
+        output := &resiliencehubv2.GetDependencyInsightsOutput{}
+
+        mockClient.On("GetDependencyInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDependencyInsights(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFailureModeFinding", func(t *testing.T) {
         input := &resiliencehubv2.GetFailureModeFindingInput{}
         output := &resiliencehubv2.GetFailureModeFindingOutput{}
@@ -496,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPolicies", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPolicyEvents", func(t *testing.T) {
+        input := &resiliencehubv2.ListPolicyEventsInput{}
+        output := &resiliencehubv2.ListPolicyEventsOutput{}
+
+        mockClient.On("ListPolicyEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPolicyEvents(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutTestSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutTestSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDependencyInsights", func(t *testing.T) {
+        input := &resiliencehubv2.StartDependencyInsightsInput{}
+        output := &resiliencehubv2.StartDependencyInsightsOutput{}
+
+        mockClient.On("StartDependencyInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDependencyInsights(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

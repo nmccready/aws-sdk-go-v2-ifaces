@@ -48,5 +48,6 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateEventRule(ctx context.Context, params *UpdateEventRuleInput, optFns ...func(*Options)) (*UpdateEventRuleOutput, error) 
+ UpdateManagedNotificationChannelAssociation(ctx context.Context, params *UpdateManagedNotificationChannelAssociationInput, optFns ...func(*Options)) (*UpdateManagedNotificationChannelAssociationOutput, error) 
  UpdateNotificationConfiguration(ctx context.Context, params *UpdateNotificationConfigurationInput, optFns ...func(*Options)) (*UpdateNotificationConfigurationOutput, error) 
 }

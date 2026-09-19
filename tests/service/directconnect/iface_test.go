@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateConnectionsToResiliencyGroup", func(t *testing.T) {
+        input := &directconnect.AssociateConnectionsToResiliencyGroupInput{}
+        output := &directconnect.AssociateConnectionsToResiliencyGroupOutput{}
+
+        mockClient.On("AssociateConnectionsToResiliencyGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateConnectionsToResiliencyGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateHostedConnection", func(t *testing.T) {
         input := &directconnect.AssociateHostedConnectionInput{}
         output := &directconnect.AssociateHostedConnectionOutput{}
@@ -346,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateResiliencyGroup", func(t *testing.T) {
+        input := &directconnect.CreateResiliencyGroupInput{}
+        output := &directconnect.CreateResiliencyGroupOutput{}
+
+        mockClient.On("CreateResiliencyGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateResiliencyGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTransitVirtualInterface", func(t *testing.T) {
         input := &directconnect.CreateTransitVirtualInterfaceInput{}
         output := &directconnect.CreateTransitVirtualInterfaceOutput{}
@@ -444,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLag", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLag(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResiliencyGroup", func(t *testing.T) {
+        input := &directconnect.DeleteResiliencyGroupInput{}
+        output := &directconnect.DeleteResiliencyGroupOutput{}
+
+        mockClient.On("DeleteResiliencyGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResiliencyGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateConnectionsFromResiliencyGroup", func(t *testing.T) {
+        input := &directconnect.DisassociateConnectionsFromResiliencyGroupInput{}
+        output := &directconnect.DisassociateConnectionsFromResiliencyGroupOutput{}
+
+        mockClient.On("DisassociateConnectionsFromResiliencyGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateConnectionsFromResiliencyGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateMacSecKey", func(t *testing.T) {
         input := &directconnect.DisassociateMacSecKeyInput{}
         output := &directconnect.DisassociateMacSecKeyOutput{}
@@ -717,6 +769,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateMacSecKey", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateMacSecKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResiliencyGroup", func(t *testing.T) {
+        input := &directconnect.GetResiliencyGroupInput{}
+        output := &directconnect.GetResiliencyGroupOutput{}
+
+        mockClient.On("GetResiliencyGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResiliencyGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResiliencyGroupAssociations", func(t *testing.T) {
+        input := &directconnect.ListResiliencyGroupAssociationsInput{}
+        output := &directconnect.ListResiliencyGroupAssociationsOutput{}
+
+        mockClient.On("ListResiliencyGroupAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResiliencyGroupAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResiliencyGroups", func(t *testing.T) {
+        input := &directconnect.ListResiliencyGroupsInput{}
+        output := &directconnect.ListResiliencyGroupsOutput{}
+
+        mockClient.On("ListResiliencyGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResiliencyGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,6 +905,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateConnectionsBillingMode", func(t *testing.T) {
+        input := &directconnect.UpdateConnectionsBillingModeInput{}
+        output := &directconnect.UpdateConnectionsBillingModeOutput{}
+
+        mockClient.On("UpdateConnectionsBillingMode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateConnectionsBillingMode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateDirectConnectGateway", func(t *testing.T) {
         input := &directconnect.UpdateDirectConnectGatewayInput{}
         output := &directconnect.UpdateDirectConnectGatewayOutput{}
@@ -847,6 +951,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLag", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLag(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResiliencyGroup", func(t *testing.T) {
+        input := &directconnect.UpdateResiliencyGroupInput{}
+        output := &directconnect.UpdateResiliencyGroupOutput{}
+
+        mockClient.On("UpdateResiliencyGroup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResiliencyGroup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

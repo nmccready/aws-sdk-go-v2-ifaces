@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetWhatsAppCallPermission", func(t *testing.T) {
+        input := &socialmessaging.GetWhatsAppCallPermissionInput{}
+        output := &socialmessaging.GetWhatsAppCallPermissionOutput{}
+
+        mockClient.On("GetWhatsAppCallPermission", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWhatsAppCallPermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWhatsAppFlow", func(t *testing.T) {
         input := &socialmessaging.GetWhatsAppFlowInput{}
         output := &socialmessaging.GetWhatsAppFlowOutput{}
@@ -398,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendWhatsAppCallEvent", func(t *testing.T) {
+        input := &socialmessaging.SendWhatsAppCallEventInput{}
+        output := &socialmessaging.SendWhatsAppCallEventOutput{}
+
+        mockClient.On("SendWhatsAppCallEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendWhatsAppCallEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSendWhatsAppConversionEvent", func(t *testing.T) {
         input := &socialmessaging.SendWhatsAppConversionEventInput{}
         output := &socialmessaging.SendWhatsAppConversionEventOutput{}
@@ -444,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateLinkedWhatsAppBusinessAccountPhoneNumber", func(t *testing.T) {
+        input := &socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberInput{}
+        output := &socialmessaging.UpdateLinkedWhatsAppBusinessAccountPhoneNumberOutput{}
+
+        mockClient.On("UpdateLinkedWhatsAppBusinessAccountPhoneNumber", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLinkedWhatsAppBusinessAccountPhoneNumber(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

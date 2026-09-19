@@ -3141,6 +3141,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSecurityProfileAIAgents", func(t *testing.T) {
+        input := &connect.ListSecurityProfileAIAgentsInput{}
+        output := &connect.ListSecurityProfileAIAgentsOutput{}
+
+        mockClient.On("ListSecurityProfileAIAgents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSecurityProfileAIAgents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListSecurityProfileApplications", func(t *testing.T) {
         input := &connect.ListSecurityProfileApplicationsInput{}
         output := &connect.ListSecurityProfileApplicationsOutput{}

@@ -219,6 +219,7 @@ type IClient interface {
  ListGlossaries(ctx context.Context, params *ListGlossariesInput, optFns ...func(*Options)) (*ListGlossariesOutput, error) 
  ListGlossaryTerms(ctx context.Context, params *ListGlossaryTermsInput, optFns ...func(*Options)) (*ListGlossaryTermsOutput, error) 
  ListIntegrationResourceProperties(ctx context.Context, params *ListIntegrationResourcePropertiesInput, optFns ...func(*Options)) (*ListIntegrationResourcePropertiesOutput, error) 
+ ListIntegrationTableProperties(ctx context.Context, params *ListIntegrationTablePropertiesInput, optFns ...func(*Options)) (*ListIntegrationTablePropertiesOutput, error) 
  ListIterableForms(ctx context.Context, params *ListIterableFormsInput, optFns ...func(*Options)) (*ListIterableFormsOutput, error) 
  ListJobs(ctx context.Context, params *ListJobsInput, optFns ...func(*Options)) (*ListJobsOutput, error) 
  ListMLTransforms(ctx context.Context, params *ListMLTransformsInput, optFns ...func(*Options)) (*ListMLTransformsOutput, error) 

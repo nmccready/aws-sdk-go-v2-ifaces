@@ -754,6 +754,43 @@ func (_m *IClient) DeleteUserJourney(ctx context.Context, params *resiliencehubv
 	return r0, r1
 }
 
+// GetDependencyInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDependencyInsights(ctx context.Context, params *resiliencehubv2.GetDependencyInsightsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetDependencyInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDependencyInsights")
+	}
+
+	var r0 *resiliencehubv2.GetDependencyInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetDependencyInsightsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetDependencyInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.GetDependencyInsightsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.GetDependencyInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.GetDependencyInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.GetDependencyInsightsInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFailureModeFinding provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFailureModeFinding(ctx context.Context, params *resiliencehubv2.GetFailureModeFindingInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.GetFailureModeFindingOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1338,6 +1375,43 @@ func (_m *IClient) ListPolicies(ctx context.Context, params *resiliencehubv2.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListPoliciesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPolicyEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPolicyEvents(ctx context.Context, params *resiliencehubv2.ListPolicyEventsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListPolicyEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPolicyEvents")
+	}
+
+	var r0 *resiliencehubv2.ListPolicyEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListPolicyEventsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.ListPolicyEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.ListPolicyEventsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.ListPolicyEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.ListPolicyEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.ListPolicyEventsInput, ...func(*resiliencehubv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2096,6 +2170,43 @@ func (_m *IClient) PutTestSources(ctx context.Context, params *resiliencehubv2.P
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.PutTestSourcesInput, ...func(*resiliencehubv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartDependencyInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDependencyInsights(ctx context.Context, params *resiliencehubv2.StartDependencyInsightsInput, optFns ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StartDependencyInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDependencyInsights")
+	}
+
+	var r0 *resiliencehubv2.StartDependencyInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.StartDependencyInsightsInput, ...func(*resiliencehubv2.Options)) (*resiliencehubv2.StartDependencyInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *resiliencehubv2.StartDependencyInsightsInput, ...func(*resiliencehubv2.Options)) *resiliencehubv2.StartDependencyInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*resiliencehubv2.StartDependencyInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *resiliencehubv2.StartDependencyInsightsInput, ...func(*resiliencehubv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

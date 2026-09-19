@@ -112,6 +112,7 @@ type IClient interface {
  PutProfileObjectType(ctx context.Context, params *PutProfileObjectTypeInput, optFns ...func(*Options)) (*PutProfileObjectTypeOutput, error) 
  PutSegmentSubscription(ctx context.Context, params *PutSegmentSubscriptionInput, optFns ...func(*Options)) (*PutSegmentSubscriptionOutput, error) 
  SearchProfiles(ctx context.Context, params *SearchProfilesInput, optFns ...func(*Options)) (*SearchProfilesOutput, error) 
+ SearchRecommendations(ctx context.Context, params *SearchRecommendationsInput, optFns ...func(*Options)) (*SearchRecommendationsOutput, error) 
  StartRecommender(ctx context.Context, params *StartRecommenderInput, optFns ...func(*Options)) (*StartRecommenderOutput, error) 
  StartUploadJob(ctx context.Context, params *StartUploadJobInput, optFns ...func(*Options)) (*StartUploadJobOutput, error) 
  StopRecommender(ctx context.Context, params *StopRecommenderInput, optFns ...func(*Options)) (*StopRecommenderOutput, error) 

@@ -528,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateManagedNotificationChannelAssociation", func(t *testing.T) {
+        input := &notifications.UpdateManagedNotificationChannelAssociationInput{}
+        output := &notifications.UpdateManagedNotificationChannelAssociationOutput{}
+
+        mockClient.On("UpdateManagedNotificationChannelAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateManagedNotificationChannelAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateNotificationConfiguration", func(t *testing.T) {
         input := &notifications.UpdateNotificationConfigurationInput{}
         output := &notifications.UpdateNotificationConfigurationOutput{}

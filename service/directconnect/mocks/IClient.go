@@ -274,6 +274,43 @@ func (_m *IClient) AssociateConnectionWithLag(ctx context.Context, params *direc
 	return r0, r1
 }
 
+// AssociateConnectionsToResiliencyGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateConnectionsToResiliencyGroup(ctx context.Context, params *directconnect.AssociateConnectionsToResiliencyGroupInput, optFns ...func(*directconnect.Options)) (*directconnect.AssociateConnectionsToResiliencyGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateConnectionsToResiliencyGroup")
+	}
+
+	var r0 *directconnect.AssociateConnectionsToResiliencyGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.AssociateConnectionsToResiliencyGroupInput, ...func(*directconnect.Options)) (*directconnect.AssociateConnectionsToResiliencyGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.AssociateConnectionsToResiliencyGroupInput, ...func(*directconnect.Options)) *directconnect.AssociateConnectionsToResiliencyGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.AssociateConnectionsToResiliencyGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.AssociateConnectionsToResiliencyGroupInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateHostedConnection provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateHostedConnection(ctx context.Context, params *directconnect.AssociateHostedConnectionInput, optFns ...func(*directconnect.Options)) (*directconnect.AssociateHostedConnectionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -903,6 +940,43 @@ func (_m *IClient) CreatePublicVirtualInterface(ctx context.Context, params *dir
 	return r0, r1
 }
 
+// CreateResiliencyGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateResiliencyGroup(ctx context.Context, params *directconnect.CreateResiliencyGroupInput, optFns ...func(*directconnect.Options)) (*directconnect.CreateResiliencyGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateResiliencyGroup")
+	}
+
+	var r0 *directconnect.CreateResiliencyGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.CreateResiliencyGroupInput, ...func(*directconnect.Options)) (*directconnect.CreateResiliencyGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.CreateResiliencyGroupInput, ...func(*directconnect.Options)) *directconnect.CreateResiliencyGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.CreateResiliencyGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.CreateResiliencyGroupInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTransitVirtualInterface provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTransitVirtualInterface(ctx context.Context, params *directconnect.CreateTransitVirtualInterfaceInput, optFns ...func(*directconnect.Options)) (*directconnect.CreateTransitVirtualInterfaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1191,6 +1265,43 @@ func (_m *IClient) DeleteLag(ctx context.Context, params *directconnect.DeleteLa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.DeleteLagInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResiliencyGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResiliencyGroup(ctx context.Context, params *directconnect.DeleteResiliencyGroupInput, optFns ...func(*directconnect.Options)) (*directconnect.DeleteResiliencyGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResiliencyGroup")
+	}
+
+	var r0 *directconnect.DeleteResiliencyGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.DeleteResiliencyGroupInput, ...func(*directconnect.Options)) (*directconnect.DeleteResiliencyGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.DeleteResiliencyGroupInput, ...func(*directconnect.Options)) *directconnect.DeleteResiliencyGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.DeleteResiliencyGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.DeleteResiliencyGroupInput, ...func(*directconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1939,6 +2050,43 @@ func (_m *IClient) DisassociateConnectionFromLag(ctx context.Context, params *di
 	return r0, r1
 }
 
+// DisassociateConnectionsFromResiliencyGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateConnectionsFromResiliencyGroup(ctx context.Context, params *directconnect.DisassociateConnectionsFromResiliencyGroupInput, optFns ...func(*directconnect.Options)) (*directconnect.DisassociateConnectionsFromResiliencyGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateConnectionsFromResiliencyGroup")
+	}
+
+	var r0 *directconnect.DisassociateConnectionsFromResiliencyGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.DisassociateConnectionsFromResiliencyGroupInput, ...func(*directconnect.Options)) (*directconnect.DisassociateConnectionsFromResiliencyGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.DisassociateConnectionsFromResiliencyGroupInput, ...func(*directconnect.Options)) *directconnect.DisassociateConnectionsFromResiliencyGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.DisassociateConnectionsFromResiliencyGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.DisassociateConnectionsFromResiliencyGroupInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateMacSecKey provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateMacSecKey(ctx context.Context, params *directconnect.DisassociateMacSecKeyInput, optFns ...func(*directconnect.Options)) (*directconnect.DisassociateMacSecKeyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1968,6 +2116,117 @@ func (_m *IClient) DisassociateMacSecKey(ctx context.Context, params *directconn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.DisassociateMacSecKeyInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResiliencyGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResiliencyGroup(ctx context.Context, params *directconnect.GetResiliencyGroupInput, optFns ...func(*directconnect.Options)) (*directconnect.GetResiliencyGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResiliencyGroup")
+	}
+
+	var r0 *directconnect.GetResiliencyGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.GetResiliencyGroupInput, ...func(*directconnect.Options)) (*directconnect.GetResiliencyGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.GetResiliencyGroupInput, ...func(*directconnect.Options)) *directconnect.GetResiliencyGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.GetResiliencyGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.GetResiliencyGroupInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResiliencyGroupAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResiliencyGroupAssociations(ctx context.Context, params *directconnect.ListResiliencyGroupAssociationsInput, optFns ...func(*directconnect.Options)) (*directconnect.ListResiliencyGroupAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResiliencyGroupAssociations")
+	}
+
+	var r0 *directconnect.ListResiliencyGroupAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.ListResiliencyGroupAssociationsInput, ...func(*directconnect.Options)) (*directconnect.ListResiliencyGroupAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.ListResiliencyGroupAssociationsInput, ...func(*directconnect.Options)) *directconnect.ListResiliencyGroupAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.ListResiliencyGroupAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.ListResiliencyGroupAssociationsInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResiliencyGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResiliencyGroups(ctx context.Context, params *directconnect.ListResiliencyGroupsInput, optFns ...func(*directconnect.Options)) (*directconnect.ListResiliencyGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResiliencyGroups")
+	}
+
+	var r0 *directconnect.ListResiliencyGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.ListResiliencyGroupsInput, ...func(*directconnect.Options)) (*directconnect.ListResiliencyGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.ListResiliencyGroupsInput, ...func(*directconnect.Options)) *directconnect.ListResiliencyGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.ListResiliencyGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.ListResiliencyGroupsInput, ...func(*directconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2253,6 +2512,43 @@ func (_m *IClient) UpdateConnection(ctx context.Context, params *directconnect.U
 	return r0, r1
 }
 
+// UpdateConnectionsBillingMode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConnectionsBillingMode(ctx context.Context, params *directconnect.UpdateConnectionsBillingModeInput, optFns ...func(*directconnect.Options)) (*directconnect.UpdateConnectionsBillingModeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConnectionsBillingMode")
+	}
+
+	var r0 *directconnect.UpdateConnectionsBillingModeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.UpdateConnectionsBillingModeInput, ...func(*directconnect.Options)) (*directconnect.UpdateConnectionsBillingModeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.UpdateConnectionsBillingModeInput, ...func(*directconnect.Options)) *directconnect.UpdateConnectionsBillingModeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.UpdateConnectionsBillingModeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.UpdateConnectionsBillingModeInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDirectConnectGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDirectConnectGateway(ctx context.Context, params *directconnect.UpdateDirectConnectGatewayInput, optFns ...func(*directconnect.Options)) (*directconnect.UpdateDirectConnectGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2356,6 +2652,43 @@ func (_m *IClient) UpdateLag(ctx context.Context, params *directconnect.UpdateLa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.UpdateLagInput, ...func(*directconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateResiliencyGroup provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateResiliencyGroup(ctx context.Context, params *directconnect.UpdateResiliencyGroupInput, optFns ...func(*directconnect.Options)) (*directconnect.UpdateResiliencyGroupOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateResiliencyGroup")
+	}
+
+	var r0 *directconnect.UpdateResiliencyGroupOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.UpdateResiliencyGroupInput, ...func(*directconnect.Options)) (*directconnect.UpdateResiliencyGroupOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *directconnect.UpdateResiliencyGroupInput, ...func(*directconnect.Options)) *directconnect.UpdateResiliencyGroupOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*directconnect.UpdateResiliencyGroupOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *directconnect.UpdateResiliencyGroupInput, ...func(*directconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -1360,6 +1360,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchRecommendations", func(t *testing.T) {
+        input := &customerprofiles.SearchRecommendationsInput{}
+        output := &customerprofiles.SearchRecommendationsOutput{}
+
+        mockClient.On("SearchRecommendations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchRecommendations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartRecommender", func(t *testing.T) {
         input := &customerprofiles.StartRecommenderInput{}
         output := &customerprofiles.StartRecommenderOutput{}

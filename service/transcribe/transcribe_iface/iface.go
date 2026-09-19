@@ -50,6 +50,7 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateCallAnalyticsCategory(ctx context.Context, params *UpdateCallAnalyticsCategoryInput, optFns ...func(*Options)) (*UpdateCallAnalyticsCategoryOutput, error) 
+ UpdateLanguageModel(ctx context.Context, params *UpdateLanguageModelInput, optFns ...func(*Options)) (*UpdateLanguageModelOutput, error) 
  UpdateMedicalVocabulary(ctx context.Context, params *UpdateMedicalVocabularyInput, optFns ...func(*Options)) (*UpdateMedicalVocabularyOutput, error) 
  UpdateVocabulary(ctx context.Context, params *UpdateVocabularyInput, optFns ...func(*Options)) (*UpdateVocabularyOutput, error) 
  UpdateVocabularyFilter(ctx context.Context, params *UpdateVocabularyFilterInput, optFns ...func(*Options)) (*UpdateVocabularyFilterOutput, error) 

@@ -249,6 +249,7 @@ type IClient interface {
  ListRoutingProfiles(ctx context.Context, params *ListRoutingProfilesInput, optFns ...func(*Options)) (*ListRoutingProfilesOutput, error) 
  ListRules(ctx context.Context, params *ListRulesInput, optFns ...func(*Options)) (*ListRulesOutput, error) 
  ListSecurityKeys(ctx context.Context, params *ListSecurityKeysInput, optFns ...func(*Options)) (*ListSecurityKeysOutput, error) 
+ ListSecurityProfileAIAgents(ctx context.Context, params *ListSecurityProfileAIAgentsInput, optFns ...func(*Options)) (*ListSecurityProfileAIAgentsOutput, error) 
  ListSecurityProfileApplications(ctx context.Context, params *ListSecurityProfileApplicationsInput, optFns ...func(*Options)) (*ListSecurityProfileApplicationsOutput, error) 
  ListSecurityProfileFlowModules(ctx context.Context, params *ListSecurityProfileFlowModulesInput, optFns ...func(*Options)) (*ListSecurityProfileFlowModulesOutput, error) 
  ListSecurityProfilePermissions(ctx context.Context, params *ListSecurityProfilePermissionsInput, optFns ...func(*Options)) (*ListSecurityProfilePermissionsOutput, error) 

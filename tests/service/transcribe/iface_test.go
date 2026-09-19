@@ -554,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateLanguageModel", func(t *testing.T) {
+        input := &transcribe.UpdateLanguageModelInput{}
+        output := &transcribe.UpdateLanguageModelOutput{}
+
+        mockClient.On("UpdateLanguageModel", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLanguageModel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateMedicalVocabulary", func(t *testing.T) {
         input := &transcribe.UpdateMedicalVocabularyInput{}
         output := &transcribe.UpdateMedicalVocabularyOutput{}
