@@ -125,6 +125,43 @@ func (_m *IClient) AssociateTrialComponent(ctx context.Context, params *sagemake
 	return r0, r1
 }
 
+// AttachClusterNodeNetworkInterface provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AttachClusterNodeNetworkInterface(ctx context.Context, params *sagemaker.AttachClusterNodeNetworkInterfaceInput, optFns ...func(*sagemaker.Options)) (*sagemaker.AttachClusterNodeNetworkInterfaceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AttachClusterNodeNetworkInterface")
+	}
+
+	var r0 *sagemaker.AttachClusterNodeNetworkInterfaceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.AttachClusterNodeNetworkInterfaceInput, ...func(*sagemaker.Options)) (*sagemaker.AttachClusterNodeNetworkInterfaceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.AttachClusterNodeNetworkInterfaceInput, ...func(*sagemaker.Options)) *sagemaker.AttachClusterNodeNetworkInterfaceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.AttachClusterNodeNetworkInterfaceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.AttachClusterNodeNetworkInterfaceInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AttachClusterNodeVolume provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AttachClusterNodeVolume(ctx context.Context, params *sagemaker.AttachClusterNodeVolumeInput, optFns ...func(*sagemaker.Options)) (*sagemaker.AttachClusterNodeVolumeOutput, error) {
 	_va := make([]interface{}, len(optFns))

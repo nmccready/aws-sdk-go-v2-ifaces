@@ -76,6 +76,7 @@ type IClient interface {
  DiscardRegistrationVersion(ctx context.Context, params *DiscardRegistrationVersionInput, optFns ...func(*Options)) (*DiscardRegistrationVersionOutput, error) 
  GetProtectConfigurationCountryRuleSet(ctx context.Context, params *GetProtectConfigurationCountryRuleSetInput, optFns ...func(*Options)) (*GetProtectConfigurationCountryRuleSetOutput, error) 
  GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
+ ListAvailablePhoneNumbers(ctx context.Context, params *ListAvailablePhoneNumbersInput, optFns ...func(*Options)) (*ListAvailablePhoneNumbersOutput, error) 
  ListNotifyCountries(ctx context.Context, params *ListNotifyCountriesInput, optFns ...func(*Options)) (*ListNotifyCountriesOutput, error) 
  ListPoolOriginationIdentities(ctx context.Context, params *ListPoolOriginationIdentitiesInput, optFns ...func(*Options)) (*ListPoolOriginationIdentitiesOutput, error) 
  ListProtectConfigurationRuleSetNumberOverrides(ctx context.Context, params *ListProtectConfigurationRuleSetNumberOverridesInput, optFns ...func(*Options)) (*ListProtectConfigurationRuleSetNumberOverridesOutput, error) 

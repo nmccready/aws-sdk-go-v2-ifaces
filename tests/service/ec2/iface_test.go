@@ -10434,6 +10434,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestValidateSecurityGroupQuotasForInterface", func(t *testing.T) {
+        input := &ec2.ValidateSecurityGroupQuotasForInterfaceInput{}
+        output := &ec2.ValidateSecurityGroupQuotasForInterfaceOutput{}
+
+        mockClient.On("ValidateSecurityGroupQuotasForInterface", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ValidateSecurityGroupQuotasForInterface(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestWithdrawByoipCidr", func(t *testing.T) {
         input := &ec2.WithdrawByoipCidrInput{}
         output := &ec2.WithdrawByoipCidrOutput{}

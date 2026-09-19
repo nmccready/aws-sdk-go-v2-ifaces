@@ -52,6 +52,43 @@ func (_m *IClient) AddTagsToStream(ctx context.Context, params *kinesis.AddTagsT
 	return r0, r1
 }
 
+// CreateChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateChannel(ctx context.Context, params *kinesis.CreateChannelInput, optFns ...func(*kinesis.Options)) (*kinesis.CreateChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateChannel")
+	}
+
+	var r0 *kinesis.CreateChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.CreateChannelInput, ...func(*kinesis.Options)) (*kinesis.CreateChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.CreateChannelInput, ...func(*kinesis.Options)) *kinesis.CreateChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.CreateChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.CreateChannelInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateStream(ctx context.Context, params *kinesis.CreateStreamInput, optFns ...func(*kinesis.Options)) (*kinesis.CreateStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) DecreaseStreamRetentionPeriod(ctx context.Context, params *ki
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DecreaseStreamRetentionPeriodInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteChannel(ctx context.Context, params *kinesis.DeleteChannelInput, optFns ...func(*kinesis.Options)) (*kinesis.DeleteChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteChannel")
+	}
+
+	var r0 *kinesis.DeleteChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DeleteChannelInput, ...func(*kinesis.Options)) (*kinesis.DeleteChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DeleteChannelInput, ...func(*kinesis.Options)) *kinesis.DeleteChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.DeleteChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DeleteChannelInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -266,6 +340,43 @@ func (_m *IClient) DescribeAccountSettings(ctx context.Context, params *kinesis.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DescribeAccountSettingsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeChannel(ctx context.Context, params *kinesis.DescribeChannelInput, optFns ...func(*kinesis.Options)) (*kinesis.DescribeChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeChannel")
+	}
+
+	var r0 *kinesis.DescribeChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DescribeChannelInput, ...func(*kinesis.Options)) (*kinesis.DescribeChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DescribeChannelInput, ...func(*kinesis.Options)) *kinesis.DescribeChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.DescribeChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DescribeChannelInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -636,6 +747,43 @@ func (_m *IClient) IncreaseStreamRetentionPeriod(ctx context.Context, params *ki
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.IncreaseStreamRetentionPeriodInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChannels provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChannels(ctx context.Context, params *kinesis.ListChannelsInput, optFns ...func(*kinesis.Options)) (*kinesis.ListChannelsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChannels")
+	}
+
+	var r0 *kinesis.ListChannelsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ListChannelsInput, ...func(*kinesis.Options)) (*kinesis.ListChannelsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ListChannelsInput, ...func(*kinesis.Options)) *kinesis.ListChannelsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.ListChannelsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.ListChannelsInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1320,6 +1468,43 @@ func (_m *IClient) UpdateAccountSettings(ctx context.Context, params *kinesis.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateAccountSettingsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateChannel provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateChannel(ctx context.Context, params *kinesis.UpdateChannelInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateChannelOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateChannel")
+	}
+
+	var r0 *kinesis.UpdateChannelOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateChannelInput, ...func(*kinesis.Options)) (*kinesis.UpdateChannelOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateChannelInput, ...func(*kinesis.Options)) *kinesis.UpdateChannelOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateChannelOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateChannelInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -65,6 +65,7 @@ type IClient interface {
  ListDbSystemShapes(ctx context.Context, params *ListDbSystemShapesInput, optFns ...func(*Options)) (*ListDbSystemShapesOutput, error) 
  ListExadbVmClusters(ctx context.Context, params *ListExadbVmClustersInput, optFns ...func(*Options)) (*ListExadbVmClustersOutput, error) 
  ListExascaleDbStorageVaults(ctx context.Context, params *ListExascaleDbStorageVaultsInput, optFns ...func(*Options)) (*ListExascaleDbStorageVaultsOutput, error) 
+ ListFlexComponents(ctx context.Context, params *ListFlexComponentsInput, optFns ...func(*Options)) (*ListFlexComponentsOutput, error) 
  ListGiMinorVersions(ctx context.Context, params *ListGiMinorVersionsInput, optFns ...func(*Options)) (*ListGiMinorVersionsOutput, error) 
  ListGiVersions(ctx context.Context, params *ListGiVersionsInput, optFns ...func(*Options)) (*ListGiVersionsOutput, error) 
  ListOdbNetworks(ctx context.Context, params *ListOdbNetworksInput, optFns ...func(*Options)) (*ListOdbNetworksOutput, error) 

@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetWhatsAppBusinessPublicKey", func(t *testing.T) {
+        input := &socialmessaging.GetWhatsAppBusinessPublicKeyInput{}
+        output := &socialmessaging.GetWhatsAppBusinessPublicKeyOutput{}
+
+        mockClient.On("GetWhatsAppBusinessPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWhatsAppBusinessPublicKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWhatsAppFlow", func(t *testing.T) {
         input := &socialmessaging.GetWhatsAppFlowInput{}
         output := &socialmessaging.GetWhatsAppFlowOutput{}
@@ -366,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutWhatsAppBusinessAccountEventDestinations", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutWhatsAppBusinessAccountEventDestinations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutWhatsAppBusinessPublicKey", func(t *testing.T) {
+        input := &socialmessaging.PutWhatsAppBusinessPublicKeyInput{}
+        output := &socialmessaging.PutWhatsAppBusinessPublicKeyOutput{}
+
+        mockClient.On("PutWhatsAppBusinessPublicKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutWhatsAppBusinessPublicKey(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

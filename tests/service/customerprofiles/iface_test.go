@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateStreamForSegments", func(t *testing.T) {
+        input := &customerprofiles.AssociateStreamForSegmentsInput{}
+        output := &customerprofiles.AssociateStreamForSegmentsOutput{}
+
+        mockClient.On("AssociateStreamForSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateStreamForSegments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetCalculatedAttributeForProfile", func(t *testing.T) {
         input := &customerprofiles.BatchGetCalculatedAttributeForProfileInput{}
         output := &customerprofiles.BatchGetCalculatedAttributeForProfileOutput{}
@@ -463,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSegmentSubscription", func(t *testing.T) {
+        input := &customerprofiles.DeleteSegmentSubscriptionInput{}
+        output := &customerprofiles.DeleteSegmentSubscriptionOutput{}
+
+        mockClient.On("DeleteSegmentSubscription", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSegmentSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteWorkflow", func(t *testing.T) {
         input := &customerprofiles.DeleteWorkflowInput{}
         output := &customerprofiles.DeleteWorkflowOutput{}
@@ -483,6 +509,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DetectProfileObjectType", ctx, input).Return(output, nil)
 
         result, err := mockClient.DetectProfileObjectType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateStreamForSegments", func(t *testing.T) {
+        input := &customerprofiles.DisassociateStreamForSegmentsInput{}
+        output := &customerprofiles.DisassociateStreamForSegmentsOutput{}
+
+        mockClient.On("DisassociateStreamForSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateStreamForSegments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -788,6 +827,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSegmentSubscription", func(t *testing.T) {
+        input := &customerprofiles.GetSegmentSubscriptionInput{}
+        output := &customerprofiles.GetSegmentSubscriptionOutput{}
+
+        mockClient.On("GetSegmentSubscription", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSegmentSubscription(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSimilarProfiles", func(t *testing.T) {
         input := &customerprofiles.GetSimilarProfilesInput{}
         output := &customerprofiles.GetSimilarProfilesOutput{}
@@ -795,6 +847,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSimilarProfiles", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSimilarProfiles(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetStreamForSegments", func(t *testing.T) {
+        input := &customerprofiles.GetStreamForSegmentsInput{}
+        output := &customerprofiles.GetStreamForSegmentsOutput{}
+
+        mockClient.On("GetStreamForSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStreamForSegments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1152,6 +1217,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSegmentSubscriptionEvents", func(t *testing.T) {
+        input := &customerprofiles.ListSegmentSubscriptionEventsInput{}
+        output := &customerprofiles.ListSegmentSubscriptionEventsOutput{}
+
+        mockClient.On("ListSegmentSubscriptionEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSegmentSubscriptionEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &customerprofiles.ListTagsForResourceInput{}
         output := &customerprofiles.ListTagsForResourceOutput{}
@@ -1250,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutProfileObjectType", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutProfileObjectType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutSegmentSubscription", func(t *testing.T) {
+        input := &customerprofiles.PutSegmentSubscriptionInput{}
+        output := &customerprofiles.PutSegmentSubscriptionOutput{}
+
+        mockClient.On("PutSegmentSubscription", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutSegmentSubscription(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

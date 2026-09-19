@@ -200,6 +200,43 @@ func (_m *IClient) DeleteFeed(ctx context.Context, params *elementalinference.De
 	return r0, r1
 }
 
+// DeleteFeedPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFeedPolicy(ctx context.Context, params *elementalinference.DeleteFeedPolicyInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteFeedPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFeedPolicy")
+	}
+
+	var r0 *elementalinference.DeleteFeedPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteFeedPolicyInput, ...func(*elementalinference.Options)) (*elementalinference.DeleteFeedPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteFeedPolicyInput, ...func(*elementalinference.Options)) *elementalinference.DeleteFeedPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.DeleteFeedPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteFeedPolicyInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateFeed provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateFeed(ctx context.Context, params *elementalinference.DisassociateFeedInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DisassociateFeedOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +377,43 @@ func (_m *IClient) GetFeed(ctx context.Context, params *elementalinference.GetFe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetFeedInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFeedPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFeedPolicy(ctx context.Context, params *elementalinference.GetFeedPolicyInput, optFns ...func(*elementalinference.Options)) (*elementalinference.GetFeedPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFeedPolicy")
+	}
+
+	var r0 *elementalinference.GetFeedPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetFeedPolicyInput, ...func(*elementalinference.Options)) (*elementalinference.GetFeedPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetFeedPolicyInput, ...func(*elementalinference.Options)) *elementalinference.GetFeedPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.GetFeedPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetFeedPolicyInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -512,6 +586,43 @@ func (_m *IClient) Options() elementalinference.Options {
 	}
 
 	return r0
+}
+
+// PutFeedPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutFeedPolicy(ctx context.Context, params *elementalinference.PutFeedPolicyInput, optFns ...func(*elementalinference.Options)) (*elementalinference.PutFeedPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutFeedPolicy")
+	}
+
+	var r0 *elementalinference.PutFeedPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.PutFeedPolicyInput, ...func(*elementalinference.Options)) (*elementalinference.PutFeedPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.PutFeedPolicyInput, ...func(*elementalinference.Options)) *elementalinference.PutFeedPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.PutFeedPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.PutFeedPolicyInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // SearchFixtures provides a mock function with given fields: ctx, params, optFns

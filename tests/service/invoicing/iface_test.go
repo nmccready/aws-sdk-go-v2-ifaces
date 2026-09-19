@@ -177,6 +177,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListProcurementPortalSuppliers", func(t *testing.T) {
+        input := &invoicing.ListProcurementPortalSuppliersInput{}
+        output := &invoicing.ListProcurementPortalSuppliersOutput{}
+
+        mockClient.On("ListProcurementPortalSuppliers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProcurementPortalSuppliers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProcurementPortals", func(t *testing.T) {
+        input := &invoicing.ListProcurementPortalsInput{}
+        output := &invoicing.ListProcurementPortalsOutput{}
+
+        mockClient.On("ListProcurementPortals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProcurementPortals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &invoicing.ListTagsForResourceInput{}
         output := &invoicing.ListTagsForResourceOutput{}

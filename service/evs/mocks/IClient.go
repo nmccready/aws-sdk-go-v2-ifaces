@@ -385,6 +385,43 @@ func (_m *IClient) DisassociateEipFromVlan(ctx context.Context, params *evs.Disa
 	return r0, r1
 }
 
+// GetAccountSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountSettings(ctx context.Context, params *evs.GetAccountSettingsInput, optFns ...func(*evs.Options)) (*evs.GetAccountSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountSettings")
+	}
+
+	var r0 *evs.GetAccountSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.GetAccountSettingsInput, ...func(*evs.Options)) (*evs.GetAccountSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.GetAccountSettingsInput, ...func(*evs.Options)) *evs.GetAccountSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.GetAccountSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.GetAccountSettingsInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDepotUrl provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDepotUrl(ctx context.Context, params *evs.GetDepotUrlInput, optFns ...func(*evs.Options)) (*evs.GetDepotUrlOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -734,6 +771,43 @@ func (_m *IClient) Options() evs.Options {
 	}
 
 	return r0
+}
+
+// PutAccountSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountSettings(ctx context.Context, params *evs.PutAccountSettingsInput, optFns ...func(*evs.Options)) (*evs.PutAccountSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountSettings")
+	}
+
+	var r0 *evs.PutAccountSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.PutAccountSettingsInput, ...func(*evs.Options)) (*evs.PutAccountSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *evs.PutAccountSettingsInput, ...func(*evs.Options)) *evs.PutAccountSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*evs.PutAccountSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *evs.PutAccountSettingsInput, ...func(*evs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // TagResource provides a mock function with given fields: ctx, params, optFns

@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateEmailIdentityCertificate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateEmailIdentityCertificate(ctx context.Context, params *sesv2.AssociateEmailIdentityCertificateInput, optFns ...func(*sesv2.Options)) (*sesv2.AssociateEmailIdentityCertificateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateEmailIdentityCertificate")
+	}
+
+	var r0 *sesv2.AssociateEmailIdentityCertificateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.AssociateEmailIdentityCertificateInput, ...func(*sesv2.Options)) (*sesv2.AssociateEmailIdentityCertificateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.AssociateEmailIdentityCertificateInput, ...func(*sesv2.Options)) *sesv2.AssociateEmailIdentityCertificateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.AssociateEmailIdentityCertificateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.AssociateEmailIdentityCertificateInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetMetricData provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetMetricData(ctx context.Context, params *sesv2.BatchGetMetricDataInput, optFns ...func(*sesv2.Options)) (*sesv2.BatchGetMetricDataOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1116,6 +1153,43 @@ func (_m *IClient) DeleteTenantResourceAssociation(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.DeleteTenantResourceAssociationInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateEmailIdentityCertificate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateEmailIdentityCertificate(ctx context.Context, params *sesv2.DisassociateEmailIdentityCertificateInput, optFns ...func(*sesv2.Options)) (*sesv2.DisassociateEmailIdentityCertificateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateEmailIdentityCertificate")
+	}
+
+	var r0 *sesv2.DisassociateEmailIdentityCertificateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.DisassociateEmailIdentityCertificateInput, ...func(*sesv2.Options)) (*sesv2.DisassociateEmailIdentityCertificateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.DisassociateEmailIdentityCertificateInput, ...func(*sesv2.Options)) *sesv2.DisassociateEmailIdentityCertificateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.DisassociateEmailIdentityCertificateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.DisassociateEmailIdentityCertificateInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2337,6 +2411,43 @@ func (_m *IClient) ListEmailIdentities(ctx context.Context, params *sesv2.ListEm
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListEmailIdentitiesInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEmailIdentityCertificates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEmailIdentityCertificates(ctx context.Context, params *sesv2.ListEmailIdentityCertificatesInput, optFns ...func(*sesv2.Options)) (*sesv2.ListEmailIdentityCertificatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEmailIdentityCertificates")
+	}
+
+	var r0 *sesv2.ListEmailIdentityCertificatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListEmailIdentityCertificatesInput, ...func(*sesv2.Options)) (*sesv2.ListEmailIdentityCertificatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.ListEmailIdentityCertificatesInput, ...func(*sesv2.Options)) *sesv2.ListEmailIdentityCertificatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.ListEmailIdentityCertificatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.ListEmailIdentityCertificatesInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3872,6 +3983,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *sesv2.UntagResourc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.UntagResourceInput, ...func(*sesv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateConfigurationSet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateConfigurationSet(ctx context.Context, params *sesv2.UpdateConfigurationSetInput, optFns ...func(*sesv2.Options)) (*sesv2.UpdateConfigurationSetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateConfigurationSet")
+	}
+
+	var r0 *sesv2.UpdateConfigurationSetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.UpdateConfigurationSetInput, ...func(*sesv2.Options)) (*sesv2.UpdateConfigurationSetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sesv2.UpdateConfigurationSetInput, ...func(*sesv2.Options)) *sesv2.UpdateConfigurationSetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sesv2.UpdateConfigurationSetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sesv2.UpdateConfigurationSetInput, ...func(*sesv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

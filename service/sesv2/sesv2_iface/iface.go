@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for sesv2
 type IClient interface {
  Options() Options 
+ AssociateEmailIdentityCertificate(ctx context.Context, params *AssociateEmailIdentityCertificateInput, optFns ...func(*Options)) (*AssociateEmailIdentityCertificateOutput, error) 
  BatchGetMetricData(ctx context.Context, params *BatchGetMetricDataInput, optFns ...func(*Options)) (*BatchGetMetricDataOutput, error) 
  CancelExportJob(ctx context.Context, params *CancelExportJobInput, optFns ...func(*Options)) (*CancelExportJobOutput, error) 
  CreateConfigurationSet(ctx context.Context, params *CreateConfigurationSetInput, optFns ...func(*Options)) (*CreateConfigurationSetOutput, error) 
@@ -40,6 +41,7 @@ type IClient interface {
  DeleteSuppressedDestination(ctx context.Context, params *DeleteSuppressedDestinationInput, optFns ...func(*Options)) (*DeleteSuppressedDestinationOutput, error) 
  DeleteTenant(ctx context.Context, params *DeleteTenantInput, optFns ...func(*Options)) (*DeleteTenantOutput, error) 
  DeleteTenantResourceAssociation(ctx context.Context, params *DeleteTenantResourceAssociationInput, optFns ...func(*Options)) (*DeleteTenantResourceAssociationOutput, error) 
+ DisassociateEmailIdentityCertificate(ctx context.Context, params *DisassociateEmailIdentityCertificateInput, optFns ...func(*Options)) (*DisassociateEmailIdentityCertificateOutput, error) 
  GetAccount(ctx context.Context, params *GetAccountInput, optFns ...func(*Options)) (*GetAccountOutput, error) 
  GetBlacklistReports(ctx context.Context, params *GetBlacklistReportsInput, optFns ...func(*Options)) (*GetBlacklistReportsOutput, error) 
  GetConfigurationSet(ctx context.Context, params *GetConfigurationSetInput, optFns ...func(*Options)) (*GetConfigurationSetOutput, error) 
@@ -73,6 +75,7 @@ type IClient interface {
  ListDeliverabilityTestReports(ctx context.Context, params *ListDeliverabilityTestReportsInput, optFns ...func(*Options)) (*ListDeliverabilityTestReportsOutput, error) 
  ListDomainDeliverabilityCampaigns(ctx context.Context, params *ListDomainDeliverabilityCampaignsInput, optFns ...func(*Options)) (*ListDomainDeliverabilityCampaignsOutput, error) 
  ListEmailIdentities(ctx context.Context, params *ListEmailIdentitiesInput, optFns ...func(*Options)) (*ListEmailIdentitiesOutput, error) 
+ ListEmailIdentityCertificates(ctx context.Context, params *ListEmailIdentityCertificatesInput, optFns ...func(*Options)) (*ListEmailIdentityCertificatesOutput, error) 
  ListEmailTemplates(ctx context.Context, params *ListEmailTemplatesInput, optFns ...func(*Options)) (*ListEmailTemplatesOutput, error) 
  ListExportJobs(ctx context.Context, params *ListExportJobsInput, optFns ...func(*Options)) (*ListExportJobsOutput, error) 
  ListImportJobs(ctx context.Context, params *ListImportJobsInput, optFns ...func(*Options)) (*ListImportJobsOutput, error) 
@@ -114,6 +117,7 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  TestRenderEmailTemplate(ctx context.Context, params *TestRenderEmailTemplateInput, optFns ...func(*Options)) (*TestRenderEmailTemplateOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateConfigurationSet(ctx context.Context, params *UpdateConfigurationSetInput, optFns ...func(*Options)) (*UpdateConfigurationSetOutput, error) 
  UpdateConfigurationSetEventDestination(ctx context.Context, params *UpdateConfigurationSetEventDestinationInput, optFns ...func(*Options)) (*UpdateConfigurationSetEventDestinationOutput, error) 
  UpdateContact(ctx context.Context, params *UpdateContactInput, optFns ...func(*Options)) (*UpdateContactOutput, error) 
  UpdateContactList(ctx context.Context, params *UpdateContactListInput, optFns ...func(*Options)) (*UpdateContactListOutput, error) 

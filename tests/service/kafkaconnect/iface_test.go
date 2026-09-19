@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRestartConnector", func(t *testing.T) {
+        input := &kafkaconnect.RestartConnectorInput{}
+        output := &kafkaconnect.RestartConnectorOutput{}
+
+        mockClient.On("RestartConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestartConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &kafkaconnect.TagResourceInput{}
         output := &kafkaconnect.TagResourceOutput{}

@@ -73,6 +73,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCustomDetectionRuleAssociation", func(t *testing.T) {
+        input := &guardduty.CreateCustomDetectionRuleAssociationInput{}
+        output := &guardduty.CreateCustomDetectionRuleAssociationOutput{}
+
+        mockClient.On("CreateCustomDetectionRuleAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCustomDetectionRuleAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCustomDetectionRuleOrgConfiguration", func(t *testing.T) {
+        input := &guardduty.CreateCustomDetectionRuleOrgConfigurationInput{}
+        output := &guardduty.CreateCustomDetectionRuleOrgConfigurationOutput{}
+
+        mockClient.On("CreateCustomDetectionRuleOrgConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCustomDetectionRuleOrgConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDetector", func(t *testing.T) {
         input := &guardduty.CreateDetectorInput{}
         output := &guardduty.CreateDetectorOutput{}
@@ -223,6 +249,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeclineInvitations", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeclineInvitations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCustomDetectionRuleAssociation", func(t *testing.T) {
+        input := &guardduty.DeleteCustomDetectionRuleAssociationInput{}
+        output := &guardduty.DeleteCustomDetectionRuleAssociationOutput{}
+
+        mockClient.On("DeleteCustomDetectionRuleAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCustomDetectionRuleAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCustomDetectionRuleOrgConfiguration", func(t *testing.T) {
+        input := &guardduty.DeleteCustomDetectionRuleOrgConfigurationInput{}
+        output := &guardduty.DeleteCustomDetectionRuleOrgConfigurationOutput{}
+
+        mockClient.On("DeleteCustomDetectionRuleOrgConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCustomDetectionRuleOrgConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -483,6 +535,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCoverageStatistics", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCoverageStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomDetectionRule", func(t *testing.T) {
+        input := &guardduty.GetCustomDetectionRuleInput{}
+        output := &guardduty.GetCustomDetectionRuleOutput{}
+
+        mockClient.On("GetCustomDetectionRule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomDetectionRule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomDetectionRuleAssociation", func(t *testing.T) {
+        input := &guardduty.GetCustomDetectionRuleAssociationInput{}
+        output := &guardduty.GetCustomDetectionRuleAssociationOutput{}
+
+        mockClient.On("GetCustomDetectionRuleAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomDetectionRuleAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomDetectionRuleOrgConfiguration", func(t *testing.T) {
+        input := &guardduty.GetCustomDetectionRuleOrgConfigurationInput{}
+        output := &guardduty.GetCustomDetectionRuleOrgConfigurationOutput{}
+
+        mockClient.On("GetCustomDetectionRuleOrgConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomDetectionRuleOrgConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -756,6 +847,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCoverage", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCoverage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomDetectionRuleAssociations", func(t *testing.T) {
+        input := &guardduty.ListCustomDetectionRuleAssociationsInput{}
+        output := &guardduty.ListCustomDetectionRuleAssociationsOutput{}
+
+        mockClient.On("ListCustomDetectionRuleAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomDetectionRuleAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomDetectionRuleOrgConfigurations", func(t *testing.T) {
+        input := &guardduty.ListCustomDetectionRuleOrgConfigurationsInput{}
+        output := &guardduty.ListCustomDetectionRuleOrgConfigurationsOutput{}
+
+        mockClient.On("ListCustomDetectionRuleOrgConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomDetectionRuleOrgConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomDetectionRules", func(t *testing.T) {
+        input := &guardduty.ListCustomDetectionRulesInput{}
+        output := &guardduty.ListCustomDetectionRulesOutput{}
+
+        mockClient.On("ListCustomDetectionRules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomDetectionRules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1042,6 +1172,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCustomDetectionRuleAssociation", func(t *testing.T) {
+        input := &guardduty.UpdateCustomDetectionRuleAssociationInput{}
+        output := &guardduty.UpdateCustomDetectionRuleAssociationOutput{}
+
+        mockClient.On("UpdateCustomDetectionRuleAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCustomDetectionRuleAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCustomDetectionRuleOrgConfiguration", func(t *testing.T) {
+        input := &guardduty.UpdateCustomDetectionRuleOrgConfigurationInput{}
+        output := &guardduty.UpdateCustomDetectionRuleOrgConfigurationOutput{}
+
+        mockClient.On("UpdateCustomDetectionRuleOrgConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCustomDetectionRuleOrgConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

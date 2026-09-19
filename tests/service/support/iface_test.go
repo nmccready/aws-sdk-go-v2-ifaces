@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCompleteAttachmentUpload", func(t *testing.T) {
+        input := &support.CompleteAttachmentUploadInput{}
+        output := &support.CompleteAttachmentUploadOutput{}
+
+        mockClient.On("CompleteAttachmentUpload", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CompleteAttachmentUpload(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCase", func(t *testing.T) {
         input := &support.CreateCaseInput{}
         output := &support.CreateCaseOutput{}
@@ -80,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeAttachment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAttachmentUploadStatus", func(t *testing.T) {
+        input := &support.DescribeAttachmentUploadStatusInput{}
+        output := &support.DescribeAttachmentUploadStatusOutput{}
+
+        mockClient.On("DescribeAttachmentUploadStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAttachmentUploadStatus(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -210,6 +236,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTrustedAdvisorChecks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTrustedAdvisorChecks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAttachmentDownloadLink", func(t *testing.T) {
+        input := &support.GetAttachmentDownloadLinkInput{}
+        output := &support.GetAttachmentDownloadLinkOutput{}
+
+        mockClient.On("GetAttachmentDownloadLink", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAttachmentDownloadLink(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAttachmentUploadLinks", func(t *testing.T) {
+        input := &support.GetAttachmentUploadLinksInput{}
+        output := &support.GetAttachmentUploadLinksOutput{}
+
+        mockClient.On("GetAttachmentUploadLinks", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAttachmentUploadLinks(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

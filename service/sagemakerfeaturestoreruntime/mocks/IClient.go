@@ -254,6 +254,43 @@ func (_m *IClient) PutRecord(ctx context.Context, params *sagemakerfeaturestorer
 	return r0, r1
 }
 
+// UpdateRecord provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRecord(ctx context.Context, params *sagemakerfeaturestoreruntime.UpdateRecordInput, optFns ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.UpdateRecordOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRecord")
+	}
+
+	var r0 *sagemakerfeaturestoreruntime.UpdateRecordOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemakerfeaturestoreruntime.UpdateRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) (*sagemakerfeaturestoreruntime.UpdateRecordOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemakerfeaturestoreruntime.UpdateRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) *sagemakerfeaturestoreruntime.UpdateRecordOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemakerfeaturestoreruntime.UpdateRecordOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemakerfeaturestoreruntime.UpdateRecordInput, ...func(*sagemakerfeaturestoreruntime.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
 // The first argument is typically a *testing.T value.
 func NewIClient(t interface {

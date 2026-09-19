@@ -810,5 +810,6 @@ type IClient interface {
  UpdateInterruptibleCapacityReservationAllocation(ctx context.Context, params *UpdateInterruptibleCapacityReservationAllocationInput, optFns ...func(*Options)) (*UpdateInterruptibleCapacityReservationAllocationOutput, error) 
  UpdateSecurityGroupRuleDescriptionsEgress(ctx context.Context, params *UpdateSecurityGroupRuleDescriptionsEgressInput, optFns ...func(*Options)) (*UpdateSecurityGroupRuleDescriptionsEgressOutput, error) 
  UpdateSecurityGroupRuleDescriptionsIngress(ctx context.Context, params *UpdateSecurityGroupRuleDescriptionsIngressInput, optFns ...func(*Options)) (*UpdateSecurityGroupRuleDescriptionsIngressOutput, error) 
+ ValidateSecurityGroupQuotasForInterface(ctx context.Context, params *ValidateSecurityGroupQuotasForInterfaceInput, optFns ...func(*Options)) (*ValidateSecurityGroupQuotasForInterfaceOutput, error) 
  WithdrawByoipCidr(ctx context.Context, params *WithdrawByoipCidrInput, optFns ...func(*Options)) (*WithdrawByoipCidrOutput, error) 
 }

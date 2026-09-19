@@ -892,6 +892,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAvailablePhoneNumbers", func(t *testing.T) {
+        input := &pinpointsmsvoicev2.ListAvailablePhoneNumbersInput{}
+        output := &pinpointsmsvoicev2.ListAvailablePhoneNumbersOutput{}
+
+        mockClient.On("ListAvailablePhoneNumbers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAvailablePhoneNumbers(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNotifyCountries", func(t *testing.T) {
         input := &pinpointsmsvoicev2.ListNotifyCountriesInput{}
         output := &pinpointsmsvoicev2.ListNotifyCountriesOutput{}

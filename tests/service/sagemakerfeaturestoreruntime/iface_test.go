@@ -111,4 +111,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestUpdateRecord", func(t *testing.T) {
+        input := &sagemakerfeaturestoreruntime.UpdateRecordInput{}
+        output := &sagemakerfeaturestoreruntime.UpdateRecordOutput{}
+
+        mockClient.On("UpdateRecord", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

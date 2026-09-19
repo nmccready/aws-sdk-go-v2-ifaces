@@ -749,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFlexComponents", func(t *testing.T) {
+        input := &odb.ListFlexComponentsInput{}
+        output := &odb.ListFlexComponentsOutput{}
+
+        mockClient.On("ListFlexComponents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFlexComponents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListGiMinorVersions", func(t *testing.T) {
         input := &odb.ListGiMinorVersionsInput{}
         output := &odb.ListGiMinorVersionsOutput{}

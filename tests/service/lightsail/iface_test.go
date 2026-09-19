@@ -1464,6 +1464,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetProfile", func(t *testing.T) {
+        input := &lightsail.GetProfileInput{}
+        output := &lightsail.GetProfileOutput{}
+
+        mockClient.On("GetProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRegions", func(t *testing.T) {
         input := &lightsail.GetRegionsInput{}
         output := &lightsail.GetRegionsOutput{}

@@ -25,6 +25,7 @@ type IClient interface {
  ListCustomPlugins(ctx context.Context, params *ListCustomPluginsInput, optFns ...func(*Options)) (*ListCustomPluginsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListWorkerConfigurations(ctx context.Context, params *ListWorkerConfigurationsInput, optFns ...func(*Options)) (*ListWorkerConfigurationsOutput, error) 
+ RestartConnector(ctx context.Context, params *RestartConnectorInput, optFns ...func(*Options)) (*RestartConnectorOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateConnector(ctx context.Context, params *UpdateConnectorInput, optFns ...func(*Options)) (*UpdateConnectorOutput, error) 

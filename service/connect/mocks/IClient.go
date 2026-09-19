@@ -6416,6 +6416,43 @@ func (_m *IClient) GetContactMetrics(ctx context.Context, params *connect.GetCon
 	return r0, r1
 }
 
+// GetCrossRegionRouting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCrossRegionRouting(ctx context.Context, params *connect.GetCrossRegionRoutingInput, optFns ...func(*connect.Options)) (*connect.GetCrossRegionRoutingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCrossRegionRouting")
+	}
+
+	var r0 *connect.GetCrossRegionRoutingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetCrossRegionRoutingInput, ...func(*connect.Options)) (*connect.GetCrossRegionRoutingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.GetCrossRegionRoutingInput, ...func(*connect.Options)) *connect.GetCrossRegionRoutingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.GetCrossRegionRoutingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.GetCrossRegionRoutingInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCurrentMetricData provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCurrentMetricData(ctx context.Context, params *connect.GetCurrentMetricDataInput, optFns ...func(*connect.Options)) (*connect.GetCurrentMetricDataOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7740,6 +7777,43 @@ func (_m *IClient) ListEntitySecurityProfiles(ctx context.Context, params *conne
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListEntitySecurityProfilesInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEvaluationFormAIVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEvaluationFormAIVersions(ctx context.Context, params *connect.ListEvaluationFormAIVersionsInput, optFns ...func(*connect.Options)) (*connect.ListEvaluationFormAIVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEvaluationFormAIVersions")
+	}
+
+	var r0 *connect.ListEvaluationFormAIVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListEvaluationFormAIVersionsInput, ...func(*connect.Options)) (*connect.ListEvaluationFormAIVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListEvaluationFormAIVersionsInput, ...func(*connect.Options)) *connect.ListEvaluationFormAIVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListEvaluationFormAIVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListEvaluationFormAIVersionsInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12605,6 +12679,43 @@ func (_m *IClient) UpdateContactTaskTemplate(ctx context.Context, params *connec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateContactTaskTemplateInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCrossRegionRouting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCrossRegionRouting(ctx context.Context, params *connect.UpdateCrossRegionRoutingInput, optFns ...func(*connect.Options)) (*connect.UpdateCrossRegionRoutingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCrossRegionRouting")
+	}
+
+	var r0 *connect.UpdateCrossRegionRoutingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateCrossRegionRoutingInput, ...func(*connect.Options)) (*connect.UpdateCrossRegionRoutingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateCrossRegionRoutingInput, ...func(*connect.Options)) *connect.UpdateCrossRegionRoutingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateCrossRegionRoutingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateCrossRegionRoutingInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
