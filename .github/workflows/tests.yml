@@ -14,10 +14,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      # read-only checkout: use the default token. A PAT here breaks Dependabot
+      # PRs, which read secrets.GH_TOKEN from the separate Dependabot secret store.
       - uses: actions/checkout@v4
-        with: # important, must be defined on checkout to kick publish (defining in setup/node doesn't work)
-          token: ${{ secrets.GH_TOKEN || github.token }}
-      
+
       - name: load runtime versions
         id: load-versions
         run: |
