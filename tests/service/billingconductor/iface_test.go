@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetBillingTransferPreference", func(t *testing.T) {
+        input := &billingconductor.GetBillingTransferPreferenceInput{}
+        output := &billingconductor.GetBillingTransferPreferenceOutput{}
+
+        mockClient.On("GetBillingTransferPreference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBillingTransferPreference(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAccountAssociations", func(t *testing.T) {
         input := &billingconductor.ListAccountAssociationsInput{}
         output := &billingconductor.ListAccountAssociationsOutput{}
@@ -405,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBillingGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBillingGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBillingTransferPreference", func(t *testing.T) {
+        input := &billingconductor.UpdateBillingTransferPreferenceInput{}
+        output := &billingconductor.UpdateBillingTransferPreferenceOutput{}
+
+        mockClient.On("UpdateBillingTransferPreference", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBillingTransferPreference(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

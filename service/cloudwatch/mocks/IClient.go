@@ -52,6 +52,43 @@ func (_m *IClient) AssociateDatasetKmsKey(ctx context.Context, params *cloudwatc
 	return r0, r1
 }
 
+// CreateResourceMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateResourceMetricsConfiguration(ctx context.Context, params *cloudwatch.CreateResourceMetricsConfigurationInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.CreateResourceMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateResourceMetricsConfiguration")
+	}
+
+	var r0 *cloudwatch.CreateResourceMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.CreateResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) (*cloudwatch.CreateResourceMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.CreateResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) *cloudwatch.CreateResourceMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.CreateResourceMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.CreateResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAlarmMuteRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAlarmMuteRule(ctx context.Context, params *cloudwatch.DeleteAlarmMuteRuleInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteAlarmMuteRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +303,43 @@ func (_m *IClient) DeleteMetricStream(ctx context.Context, params *cloudwatch.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.DeleteMetricStreamInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourceMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourceMetricsConfiguration(ctx context.Context, params *cloudwatch.DeleteResourceMetricsConfigurationInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteResourceMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourceMetricsConfiguration")
+	}
+
+	var r0 *cloudwatch.DeleteResourceMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DeleteResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) (*cloudwatch.DeleteResourceMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DeleteResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) *cloudwatch.DeleteResourceMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.DeleteResourceMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.DeleteResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1006,6 +1080,43 @@ func (_m *IClient) GetOTelEnrichment(ctx context.Context, params *cloudwatch.Get
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetOTelEnrichmentInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResourceMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourceMetricsConfiguration(ctx context.Context, params *cloudwatch.GetResourceMetricsConfigurationInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetResourceMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourceMetricsConfiguration")
+	}
+
+	var r0 *cloudwatch.GetResourceMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) (*cloudwatch.GetResourceMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) *cloudwatch.GetResourceMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.GetResourceMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1875,6 +1986,80 @@ func (_m *IClient) UntagResource(ctx context.Context, params *cloudwatch.UntagRe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.UntagResourceInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateOTelEnrichment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateOTelEnrichment(ctx context.Context, params *cloudwatch.UpdateOTelEnrichmentInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.UpdateOTelEnrichmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateOTelEnrichment")
+	}
+
+	var r0 *cloudwatch.UpdateOTelEnrichmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.UpdateOTelEnrichmentInput, ...func(*cloudwatch.Options)) (*cloudwatch.UpdateOTelEnrichmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.UpdateOTelEnrichmentInput, ...func(*cloudwatch.Options)) *cloudwatch.UpdateOTelEnrichmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.UpdateOTelEnrichmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.UpdateOTelEnrichmentInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateResourceMetricsConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateResourceMetricsConfiguration(ctx context.Context, params *cloudwatch.UpdateResourceMetricsConfigurationInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.UpdateResourceMetricsConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateResourceMetricsConfiguration")
+	}
+
+	var r0 *cloudwatch.UpdateResourceMetricsConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.UpdateResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) (*cloudwatch.UpdateResourceMetricsConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.UpdateResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) *cloudwatch.UpdateResourceMetricsConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.UpdateResourceMetricsConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.UpdateResourceMetricsConfigurationInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

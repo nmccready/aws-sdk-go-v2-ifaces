@@ -422,6 +422,43 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *billing.GetRes
 	return r0, r1
 }
 
+// ListBillingViewSegments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBillingViewSegments(ctx context.Context, params *billing.ListBillingViewSegmentsInput, optFns ...func(*billing.Options)) (*billing.ListBillingViewSegmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBillingViewSegments")
+	}
+
+	var r0 *billing.ListBillingViewSegmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListBillingViewSegmentsInput, ...func(*billing.Options)) (*billing.ListBillingViewSegmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListBillingViewSegmentsInput, ...func(*billing.Options)) *billing.ListBillingViewSegmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListBillingViewSegmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListBillingViewSegmentsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListBillingViews provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListBillingViews(ctx context.Context, params *billing.ListBillingViewsInput, optFns ...func(*billing.Options)) (*billing.ListBillingViewsOutput, error) {
 	_va := make([]interface{}, len(optFns))

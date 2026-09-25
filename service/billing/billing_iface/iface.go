@@ -21,6 +21,7 @@ type IClient interface {
  GetEnterpriseSupportChargeSummary(ctx context.Context, params *GetEnterpriseSupportChargeSummaryInput, optFns ...func(*Options)) (*GetEnterpriseSupportChargeSummaryOutput, error) 
  GetEnterpriseSupportContractDetails(ctx context.Context, params *GetEnterpriseSupportContractDetailsInput, optFns ...func(*Options)) (*GetEnterpriseSupportContractDetailsOutput, error) 
  GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
+ ListBillingViewSegments(ctx context.Context, params *ListBillingViewSegmentsInput, optFns ...func(*Options)) (*ListBillingViewSegmentsOutput, error) 
  ListBillingViews(ctx context.Context, params *ListBillingViewsInput, optFns ...func(*Options)) (*ListBillingViewsOutput, error) 
  ListEnterpriseSupportLinkedAccountCharges(ctx context.Context, params *ListEnterpriseSupportLinkedAccountChargesInput, optFns ...func(*Options)) (*ListEnterpriseSupportLinkedAccountChargesOutput, error) 
  ListSourceViewsForBillingView(ctx context.Context, params *ListSourceViewsForBillingViewInput, optFns ...func(*Options)) (*ListSourceViewsForBillingViewOutput, error) 

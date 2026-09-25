@@ -53,5 +53,6 @@ type IClient interface {
  UpdateMaxRecordSize(ctx context.Context, params *UpdateMaxRecordSizeInput, optFns ...func(*Options)) (*UpdateMaxRecordSizeOutput, error) 
  UpdateShardCount(ctx context.Context, params *UpdateShardCountInput, optFns ...func(*Options)) (*UpdateShardCountOutput, error) 
  UpdateStreamMode(ctx context.Context, params *UpdateStreamModeInput, optFns ...func(*Options)) (*UpdateStreamModeOutput, error) 
+ UpdateStreamRecordDistributionStrategy(ctx context.Context, params *UpdateStreamRecordDistributionStrategyInput, optFns ...func(*Options)) (*UpdateStreamRecordDistributionStrategyOutput, error) 
  UpdateStreamWarmThroughput(ctx context.Context, params *UpdateStreamWarmThroughputInput, optFns ...func(*Options)) (*UpdateStreamWarmThroughputOutput, error) 
 }

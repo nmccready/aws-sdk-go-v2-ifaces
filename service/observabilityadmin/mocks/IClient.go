@@ -51,6 +51,43 @@ func (_m *IClient) CreateCentralizationRuleForOrganization(ctx context.Context, 
 	return r0, r1
 }
 
+// CreateDatasetIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDatasetIntegration(ctx context.Context, params *observabilityadmin.CreateDatasetIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateDatasetIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDatasetIntegration")
+	}
+
+	var r0 *observabilityadmin.CreateDatasetIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateDatasetIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateDatasetIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.CreateDatasetIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.CreateDatasetIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.CreateDatasetIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.CreateDatasetIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateS3TableIntegration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateS3TableIntegration(ctx context.Context, params *observabilityadmin.CreateS3TableIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.CreateS3TableIntegrationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -236,6 +273,43 @@ func (_m *IClient) DeleteCentralizationRuleForOrganization(ctx context.Context, 
 	return r0, r1
 }
 
+// DeleteDatasetIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDatasetIntegration(ctx context.Context, params *observabilityadmin.DeleteDatasetIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteDatasetIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDatasetIntegration")
+	}
+
+	var r0 *observabilityadmin.DeleteDatasetIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteDatasetIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteDatasetIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.DeleteDatasetIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.DeleteDatasetIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.DeleteDatasetIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.DeleteDatasetIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteS3TableIntegration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteS3TableIntegration(ctx context.Context, params *observabilityadmin.DeleteS3TableIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.DeleteS3TableIntegrationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -413,6 +487,43 @@ func (_m *IClient) GetCentralizationRuleForOrganization(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDatasetIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDatasetIntegration(ctx context.Context, params *observabilityadmin.GetDatasetIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.GetDatasetIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDatasetIntegration")
+	}
+
+	var r0 *observabilityadmin.GetDatasetIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetDatasetIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.GetDatasetIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.GetDatasetIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.GetDatasetIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.GetDatasetIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.GetDatasetIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -709,6 +820,43 @@ func (_m *IClient) ListCentralizationRulesForOrganization(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ListCentralizationRulesForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasetIntegrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetIntegrations(ctx context.Context, params *observabilityadmin.ListDatasetIntegrationsInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.ListDatasetIntegrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetIntegrations")
+	}
+
+	var r0 *observabilityadmin.ListDatasetIntegrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListDatasetIntegrationsInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.ListDatasetIntegrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.ListDatasetIntegrationsInput, ...func(*observabilityadmin.Options)) *observabilityadmin.ListDatasetIntegrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.ListDatasetIntegrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.ListDatasetIntegrationsInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1356,6 +1504,43 @@ func (_m *IClient) UpdateCentralizationRuleForOrganization(ctx context.Context, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.UpdateCentralizationRuleForOrganizationInput, ...func(*observabilityadmin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDatasetIntegration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDatasetIntegration(ctx context.Context, params *observabilityadmin.UpdateDatasetIntegrationInput, optFns ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateDatasetIntegrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDatasetIntegration")
+	}
+
+	var r0 *observabilityadmin.UpdateDatasetIntegrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.UpdateDatasetIntegrationInput, ...func(*observabilityadmin.Options)) (*observabilityadmin.UpdateDatasetIntegrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *observabilityadmin.UpdateDatasetIntegrationInput, ...func(*observabilityadmin.Options)) *observabilityadmin.UpdateDatasetIntegrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*observabilityadmin.UpdateDatasetIntegrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *observabilityadmin.UpdateDatasetIntegrationInput, ...func(*observabilityadmin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

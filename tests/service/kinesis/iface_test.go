@@ -593,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateStreamRecordDistributionStrategy", func(t *testing.T) {
+        input := &kinesis.UpdateStreamRecordDistributionStrategyInput{}
+        output := &kinesis.UpdateStreamRecordDistributionStrategyOutput{}
+
+        mockClient.On("UpdateStreamRecordDistributionStrategy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateStreamRecordDistributionStrategy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateStreamWarmThroughput", func(t *testing.T) {
         input := &kinesis.UpdateStreamWarmThroughputInput{}
         output := &kinesis.UpdateStreamWarmThroughputOutput{}

@@ -570,6 +570,43 @@ func (_m *IClient) GetBillingGroupCostReport(ctx context.Context, params *billin
 	return r0, r1
 }
 
+// GetBillingTransferPreference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBillingTransferPreference(ctx context.Context, params *billingconductor.GetBillingTransferPreferenceInput, optFns ...func(*billingconductor.Options)) (*billingconductor.GetBillingTransferPreferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBillingTransferPreference")
+	}
+
+	var r0 *billingconductor.GetBillingTransferPreferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billingconductor.GetBillingTransferPreferenceInput, ...func(*billingconductor.Options)) (*billingconductor.GetBillingTransferPreferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billingconductor.GetBillingTransferPreferenceInput, ...func(*billingconductor.Options)) *billingconductor.GetBillingTransferPreferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billingconductor.GetBillingTransferPreferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billingconductor.GetBillingTransferPreferenceInput, ...func(*billingconductor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAccountAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAccountAssociations(ctx context.Context, params *billingconductor.ListAccountAssociationsInput, optFns ...func(*billingconductor.Options)) (*billingconductor.ListAccountAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1098,6 +1135,43 @@ func (_m *IClient) UpdateBillingGroup(ctx context.Context, params *billingconduc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billingconductor.UpdateBillingGroupInput, ...func(*billingconductor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBillingTransferPreference provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBillingTransferPreference(ctx context.Context, params *billingconductor.UpdateBillingTransferPreferenceInput, optFns ...func(*billingconductor.Options)) (*billingconductor.UpdateBillingTransferPreferenceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBillingTransferPreference")
+	}
+
+	var r0 *billingconductor.UpdateBillingTransferPreferenceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billingconductor.UpdateBillingTransferPreferenceInput, ...func(*billingconductor.Options)) (*billingconductor.UpdateBillingTransferPreferenceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billingconductor.UpdateBillingTransferPreferenceInput, ...func(*billingconductor.Options)) *billingconductor.UpdateBillingTransferPreferenceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billingconductor.UpdateBillingTransferPreferenceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billingconductor.UpdateBillingTransferPreferenceInput, ...func(*billingconductor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

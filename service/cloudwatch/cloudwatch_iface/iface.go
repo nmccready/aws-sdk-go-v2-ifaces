@@ -11,12 +11,14 @@ import (
 type IClient interface {
  Options() Options 
  AssociateDatasetKmsKey(ctx context.Context, params *AssociateDatasetKmsKeyInput, optFns ...func(*Options)) (*AssociateDatasetKmsKeyOutput, error) 
+ CreateResourceMetricsConfiguration(ctx context.Context, params *CreateResourceMetricsConfigurationInput, optFns ...func(*Options)) (*CreateResourceMetricsConfigurationOutput, error) 
  DeleteAlarmMuteRule(ctx context.Context, params *DeleteAlarmMuteRuleInput, optFns ...func(*Options)) (*DeleteAlarmMuteRuleOutput, error) 
  DeleteAlarms(ctx context.Context, params *DeleteAlarmsInput, optFns ...func(*Options)) (*DeleteAlarmsOutput, error) 
  DeleteAnomalyDetector(ctx context.Context, params *DeleteAnomalyDetectorInput, optFns ...func(*Options)) (*DeleteAnomalyDetectorOutput, error) 
  DeleteDashboards(ctx context.Context, params *DeleteDashboardsInput, optFns ...func(*Options)) (*DeleteDashboardsOutput, error) 
  DeleteInsightRules(ctx context.Context, params *DeleteInsightRulesInput, optFns ...func(*Options)) (*DeleteInsightRulesOutput, error) 
  DeleteMetricStream(ctx context.Context, params *DeleteMetricStreamInput, optFns ...func(*Options)) (*DeleteMetricStreamOutput, error) 
+ DeleteResourceMetricsConfiguration(ctx context.Context, params *DeleteResourceMetricsConfigurationInput, optFns ...func(*Options)) (*DeleteResourceMetricsConfigurationOutput, error) 
  DescribeAlarmContributors(ctx context.Context, params *DescribeAlarmContributorsInput, optFns ...func(*Options)) (*DescribeAlarmContributorsOutput, error) 
  DescribeAlarmHistory(ctx context.Context, params *DescribeAlarmHistoryInput, optFns ...func(*Options)) (*DescribeAlarmHistoryOutput, error) 
  DescribeAlarms(ctx context.Context, params *DescribeAlarmsInput, optFns ...func(*Options)) (*DescribeAlarmsOutput, error) 
@@ -37,6 +39,7 @@ type IClient interface {
  GetMetricStream(ctx context.Context, params *GetMetricStreamInput, optFns ...func(*Options)) (*GetMetricStreamOutput, error) 
  GetMetricWidgetImage(ctx context.Context, params *GetMetricWidgetImageInput, optFns ...func(*Options)) (*GetMetricWidgetImageOutput, error) 
  GetOTelEnrichment(ctx context.Context, params *GetOTelEnrichmentInput, optFns ...func(*Options)) (*GetOTelEnrichmentOutput, error) 
+ GetResourceMetricsConfiguration(ctx context.Context, params *GetResourceMetricsConfigurationInput, optFns ...func(*Options)) (*GetResourceMetricsConfigurationOutput, error) 
  ListAlarmMuteRules(ctx context.Context, params *ListAlarmMuteRulesInput, optFns ...func(*Options)) (*ListAlarmMuteRulesOutput, error) 
  ListDashboards(ctx context.Context, params *ListDashboardsInput, optFns ...func(*Options)) (*ListDashboardsOutput, error) 
  ListManagedInsightRules(ctx context.Context, params *ListManagedInsightRulesInput, optFns ...func(*Options)) (*ListManagedInsightRulesOutput, error) 
@@ -60,4 +63,6 @@ type IClient interface {
  StopOTelEnrichment(ctx context.Context, params *StopOTelEnrichmentInput, optFns ...func(*Options)) (*StopOTelEnrichmentOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateOTelEnrichment(ctx context.Context, params *UpdateOTelEnrichmentInput, optFns ...func(*Options)) (*UpdateOTelEnrichmentOutput, error) 
+ UpdateResourceMetricsConfiguration(ctx context.Context, params *UpdateResourceMetricsConfigurationInput, optFns ...func(*Options)) (*UpdateResourceMetricsConfigurationOutput, error) 
 }

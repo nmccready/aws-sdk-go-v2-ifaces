@@ -1624,6 +1624,43 @@ func (_m *IClient) UpdateStreamMode(ctx context.Context, params *kinesis.UpdateS
 	return r0, r1
 }
 
+// UpdateStreamRecordDistributionStrategy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateStreamRecordDistributionStrategy(ctx context.Context, params *kinesis.UpdateStreamRecordDistributionStrategyInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateStreamRecordDistributionStrategyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateStreamRecordDistributionStrategy")
+	}
+
+	var r0 *kinesis.UpdateStreamRecordDistributionStrategyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateStreamRecordDistributionStrategyInput, ...func(*kinesis.Options)) (*kinesis.UpdateStreamRecordDistributionStrategyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateStreamRecordDistributionStrategyInput, ...func(*kinesis.Options)) *kinesis.UpdateStreamRecordDistributionStrategyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateStreamRecordDistributionStrategyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateStreamRecordDistributionStrategyInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateStreamWarmThroughput provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateStreamWarmThroughput(ctx context.Context, params *kinesis.UpdateStreamWarmThroughputInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateStreamWarmThroughputOutput, error) {
 	_va := make([]interface{}, len(optFns))

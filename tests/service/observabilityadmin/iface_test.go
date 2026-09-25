@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDatasetIntegration", func(t *testing.T) {
+        input := &observabilityadmin.CreateDatasetIntegrationInput{}
+        output := &observabilityadmin.CreateDatasetIntegrationOutput{}
+
+        mockClient.On("CreateDatasetIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDatasetIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateS3TableIntegration", func(t *testing.T) {
         input := &observabilityadmin.CreateS3TableIntegrationInput{}
         output := &observabilityadmin.CreateS3TableIntegrationOutput{}
@@ -112,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDatasetIntegration", func(t *testing.T) {
+        input := &observabilityadmin.DeleteDatasetIntegrationInput{}
+        output := &observabilityadmin.DeleteDatasetIntegrationOutput{}
+
+        mockClient.On("DeleteDatasetIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDatasetIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteS3TableIntegration", func(t *testing.T) {
         input := &observabilityadmin.DeleteS3TableIntegrationInput{}
         output := &observabilityadmin.DeleteS3TableIntegrationOutput{}
@@ -171,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCentralizationRuleForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCentralizationRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDatasetIntegration", func(t *testing.T) {
+        input := &observabilityadmin.GetDatasetIntegrationInput{}
+        output := &observabilityadmin.GetDatasetIntegrationOutput{}
+
+        mockClient.On("GetDatasetIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDatasetIntegration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -275,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCentralizationRulesForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCentralizationRulesForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasetIntegrations", func(t *testing.T) {
+        input := &observabilityadmin.ListDatasetIntegrationsInput{}
+        output := &observabilityadmin.ListDatasetIntegrationsOutput{}
+
+        mockClient.On("ListDatasetIntegrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetIntegrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -496,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCentralizationRuleForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCentralizationRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDatasetIntegration", func(t *testing.T) {
+        input := &observabilityadmin.UpdateDatasetIntegrationInput{}
+        output := &observabilityadmin.UpdateDatasetIntegrationOutput{}
+
+        mockClient.On("UpdateDatasetIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDatasetIntegration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

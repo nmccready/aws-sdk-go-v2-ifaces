@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListBillingViewSegments", func(t *testing.T) {
+        input := &billing.ListBillingViewSegmentsInput{}
+        output := &billing.ListBillingViewSegmentsOutput{}
+
+        mockClient.On("ListBillingViewSegments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBillingViewSegments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListBillingViews", func(t *testing.T) {
         input := &billing.ListBillingViewsInput{}
         output := &billing.ListBillingViewsOutput{}

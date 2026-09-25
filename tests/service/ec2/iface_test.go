@@ -944,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCapacityReservationDateChangeQuote", func(t *testing.T) {
+        input := &ec2.CreateCapacityReservationDateChangeQuoteInput{}
+        output := &ec2.CreateCapacityReservationDateChangeQuoteOutput{}
+
+        mockClient.On("CreateCapacityReservationDateChangeQuote", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCapacityReservationDateChangeQuote(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateCapacityReservationFleet", func(t *testing.T) {
         input := &ec2.CreateCapacityReservationFleetInput{}
         output := &ec2.CreateCapacityReservationFleetOutput{}
@@ -3928,6 +3941,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCapacityReservationCancellationQuotes", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCapacityReservationCancellationQuotes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeCapacityReservationDateChangeQuotes", func(t *testing.T) {
+        input := &ec2.DescribeCapacityReservationDateChangeQuotesInput{}
+        output := &ec2.DescribeCapacityReservationDateChangeQuotesOutput{}
+
+        mockClient.On("DescribeCapacityReservationDateChangeQuotes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityReservationDateChangeQuotes(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

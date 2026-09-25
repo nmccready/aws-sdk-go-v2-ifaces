@@ -2605,6 +2605,43 @@ func (_m *IClient) CreateCapacityReservationCancellationQuote(ctx context.Contex
 	return r0, r1
 }
 
+// CreateCapacityReservationDateChangeQuote provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCapacityReservationDateChangeQuote(ctx context.Context, params *ec2.CreateCapacityReservationDateChangeQuoteInput, optFns ...func(*ec2.Options)) (*ec2.CreateCapacityReservationDateChangeQuoteOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCapacityReservationDateChangeQuote")
+	}
+
+	var r0 *ec2.CreateCapacityReservationDateChangeQuoteOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateCapacityReservationDateChangeQuoteInput, ...func(*ec2.Options)) (*ec2.CreateCapacityReservationDateChangeQuoteOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateCapacityReservationDateChangeQuoteInput, ...func(*ec2.Options)) *ec2.CreateCapacityReservationDateChangeQuoteOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateCapacityReservationDateChangeQuoteOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateCapacityReservationDateChangeQuoteInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateCapacityReservationFleet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateCapacityReservationFleet(ctx context.Context, params *ec2.CreateCapacityReservationFleetInput, optFns ...func(*ec2.Options)) (*ec2.CreateCapacityReservationFleetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -11107,6 +11144,43 @@ func (_m *IClient) DescribeCapacityReservationCancellationQuotes(ctx context.Con
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeCapacityReservationCancellationQuotesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeCapacityReservationDateChangeQuotes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCapacityReservationDateChangeQuotes(ctx context.Context, params *ec2.DescribeCapacityReservationDateChangeQuotesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeCapacityReservationDateChangeQuotesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCapacityReservationDateChangeQuotes")
+	}
+
+	var r0 *ec2.DescribeCapacityReservationDateChangeQuotesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeCapacityReservationDateChangeQuotesInput, ...func(*ec2.Options)) (*ec2.DescribeCapacityReservationDateChangeQuotesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeCapacityReservationDateChangeQuotesInput, ...func(*ec2.Options)) *ec2.DescribeCapacityReservationDateChangeQuotesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeCapacityReservationDateChangeQuotesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeCapacityReservationDateChangeQuotesInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

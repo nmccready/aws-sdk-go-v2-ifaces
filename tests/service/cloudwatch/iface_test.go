@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateResourceMetricsConfiguration", func(t *testing.T) {
+        input := &cloudwatch.CreateResourceMetricsConfigurationInput{}
+        output := &cloudwatch.CreateResourceMetricsConfigurationOutput{}
+
+        mockClient.On("CreateResourceMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateResourceMetricsConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAlarmMuteRule", func(t *testing.T) {
         input := &cloudwatch.DeleteAlarmMuteRuleInput{}
         output := &cloudwatch.DeleteAlarmMuteRuleOutput{}
@@ -119,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteMetricStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteMetricStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourceMetricsConfiguration", func(t *testing.T) {
+        input := &cloudwatch.DeleteResourceMetricsConfigurationInput{}
+        output := &cloudwatch.DeleteResourceMetricsConfigurationOutput{}
+
+        mockClient.On("DeleteResourceMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourceMetricsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -379,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOTelEnrichment", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOTelEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourceMetricsConfiguration", func(t *testing.T) {
+        input := &cloudwatch.GetResourceMetricsConfigurationInput{}
+        output := &cloudwatch.GetResourceMetricsConfigurationOutput{}
+
+        mockClient.On("GetResourceMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourceMetricsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -678,6 +717,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateOTelEnrichment", func(t *testing.T) {
+        input := &cloudwatch.UpdateOTelEnrichmentInput{}
+        output := &cloudwatch.UpdateOTelEnrichmentOutput{}
+
+        mockClient.On("UpdateOTelEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOTelEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResourceMetricsConfiguration", func(t *testing.T) {
+        input := &cloudwatch.UpdateResourceMetricsConfigurationInput{}
+        output := &cloudwatch.UpdateResourceMetricsConfigurationOutput{}
+
+        mockClient.On("UpdateResourceMetricsConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResourceMetricsConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
