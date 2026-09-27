@@ -1790,6 +1790,43 @@ func (_m *IClient) InitiateProviderRegistration(ctx context.Context, params *sec
 	return r0, r1
 }
 
+// ListActorMessages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListActorMessages(ctx context.Context, params *securityagent.ListActorMessagesInput, optFns ...func(*securityagent.Options)) (*securityagent.ListActorMessagesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListActorMessages")
+	}
+
+	var r0 *securityagent.ListActorMessagesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListActorMessagesInput, ...func(*securityagent.Options)) (*securityagent.ListActorMessagesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.ListActorMessagesInput, ...func(*securityagent.Options)) *securityagent.ListActorMessagesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.ListActorMessagesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.ListActorMessagesInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAgentSpaces provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAgentSpaces(ctx context.Context, params *securityagent.ListAgentSpacesInput, optFns ...func(*securityagent.Options)) (*securityagent.ListAgentSpacesOutput, error) {
 	_va := make([]interface{}, len(optFns))

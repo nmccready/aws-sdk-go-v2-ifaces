@@ -58,6 +58,7 @@ type IClient interface {
  GetSecurityRequirementPack(ctx context.Context, params *GetSecurityRequirementPackInput, optFns ...func(*Options)) (*GetSecurityRequirementPackOutput, error) 
  ImportSecurityRequirements(ctx context.Context, params *ImportSecurityRequirementsInput, optFns ...func(*Options)) (*ImportSecurityRequirementsOutput, error) 
  InitiateProviderRegistration(ctx context.Context, params *InitiateProviderRegistrationInput, optFns ...func(*Options)) (*InitiateProviderRegistrationOutput, error) 
+ ListActorMessages(ctx context.Context, params *ListActorMessagesInput, optFns ...func(*Options)) (*ListActorMessagesOutput, error) 
  ListAgentSpaces(ctx context.Context, params *ListAgentSpacesInput, optFns ...func(*Options)) (*ListAgentSpacesOutput, error) 
  ListApplications(ctx context.Context, params *ListApplicationsInput, optFns ...func(*Options)) (*ListApplicationsOutput, error) 
  ListArtifacts(ctx context.Context, params *ListArtifactsInput, optFns ...func(*Options)) (*ListArtifactsOutput, error) 

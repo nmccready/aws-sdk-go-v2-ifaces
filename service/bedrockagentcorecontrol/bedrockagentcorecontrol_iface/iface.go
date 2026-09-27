@@ -147,6 +147,7 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListWorkloadIdentities(ctx context.Context, params *ListWorkloadIdentitiesInput, optFns ...func(*Options)) (*ListWorkloadIdentitiesOutput, error) 
  PutResourcePolicy(ctx context.Context, params *PutResourcePolicyInput, optFns ...func(*Options)) (*PutResourcePolicyOutput, error) 
+ RotatePaymentConnectorCredentials(ctx context.Context, params *RotatePaymentConnectorCredentialsInput, optFns ...func(*Options)) (*RotatePaymentConnectorCredentialsOutput, error) 
  SetTokenVaultCMK(ctx context.Context, params *SetTokenVaultCMKInput, optFns ...func(*Options)) (*SetTokenVaultCMKOutput, error) 
  StartPolicyGeneration(ctx context.Context, params *StartPolicyGenerationInput, optFns ...func(*Options)) (*StartPolicyGenerationOutput, error) 
  SubmitRegistryRecordForApproval(ctx context.Context, params *SubmitRegistryRecordForApprovalInput, optFns ...func(*Options)) (*SubmitRegistryRecordForApprovalOutput, error) 
