@@ -459,6 +459,43 @@ func (_m *IClient) CreatePromptVersion(ctx context.Context, params *bedrockagent
 	return r0, r1
 }
 
+// CreateVpcConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateVpcConfiguration(ctx context.Context, params *bedrockagent.CreateVpcConfigurationInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.CreateVpcConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateVpcConfiguration")
+	}
+
+	var r0 *bedrockagent.CreateVpcConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.CreateVpcConfigurationInput, ...func(*bedrockagent.Options)) (*bedrockagent.CreateVpcConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.CreateVpcConfigurationInput, ...func(*bedrockagent.Options)) *bedrockagent.CreateVpcConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.CreateVpcConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.CreateVpcConfigurationInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAgent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAgent(ctx context.Context, params *bedrockagent.DeleteAgentInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.DeleteAgentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -895,6 +932,43 @@ func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *bedrockagen
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DeleteResourcePolicyInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteVpcConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteVpcConfiguration(ctx context.Context, params *bedrockagent.DeleteVpcConfigurationInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.DeleteVpcConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteVpcConfiguration")
+	}
+
+	var r0 *bedrockagent.DeleteVpcConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DeleteVpcConfigurationInput, ...func(*bedrockagent.Options)) (*bedrockagent.DeleteVpcConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DeleteVpcConfigurationInput, ...func(*bedrockagent.Options)) *bedrockagent.DeleteVpcConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.DeleteVpcConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DeleteVpcConfigurationInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1532,6 +1606,43 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *bedrockagent.G
 	return r0, r1
 }
 
+// GetVpcConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetVpcConfiguration(ctx context.Context, params *bedrockagent.GetVpcConfigurationInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.GetVpcConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetVpcConfiguration")
+	}
+
+	var r0 *bedrockagent.GetVpcConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetVpcConfigurationInput, ...func(*bedrockagent.Options)) (*bedrockagent.GetVpcConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetVpcConfigurationInput, ...func(*bedrockagent.Options)) *bedrockagent.GetVpcConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.GetVpcConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.GetVpcConfigurationInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // IngestKnowledgeBaseDocuments provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) IngestKnowledgeBaseDocuments(ctx context.Context, params *bedrockagent.IngestKnowledgeBaseDocumentsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.IngestKnowledgeBaseDocumentsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2116,6 +2227,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListTagsForResourceInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListVpcConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListVpcConfigurations(ctx context.Context, params *bedrockagent.ListVpcConfigurationsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ListVpcConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListVpcConfigurations")
+	}
+
+	var r0 *bedrockagent.ListVpcConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListVpcConfigurationsInput, ...func(*bedrockagent.Options)) (*bedrockagent.ListVpcConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListVpcConfigurationsInput, ...func(*bedrockagent.Options)) *bedrockagent.ListVpcConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.ListVpcConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListVpcConfigurationsInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

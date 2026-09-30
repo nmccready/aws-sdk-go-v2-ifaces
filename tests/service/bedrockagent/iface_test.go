@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVpcConfiguration", func(t *testing.T) {
+        input := &bedrockagent.CreateVpcConfigurationInput{}
+        output := &bedrockagent.CreateVpcConfigurationOutput{}
+
+        mockClient.On("CreateVpcConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVpcConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAgent", func(t *testing.T) {
         input := &bedrockagent.DeleteAgentInput{}
         output := &bedrockagent.DeleteAgentOutput{}
@@ -340,6 +353,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteVpcConfiguration", func(t *testing.T) {
+        input := &bedrockagent.DeleteVpcConfigurationInput{}
+        output := &bedrockagent.DeleteVpcConfigurationOutput{}
+
+        mockClient.On("DeleteVpcConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVpcConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -567,6 +593,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetVpcConfiguration", func(t *testing.T) {
+        input := &bedrockagent.GetVpcConfigurationInput{}
+        output := &bedrockagent.GetVpcConfigurationOutput{}
+
+        mockClient.On("GetVpcConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVpcConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestIngestKnowledgeBaseDocuments", func(t *testing.T) {
         input := &bedrockagent.IngestKnowledgeBaseDocumentsInput{}
         output := &bedrockagent.IngestKnowledgeBaseDocumentsOutput{}
@@ -769,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListVpcConfigurations", func(t *testing.T) {
+        input := &bedrockagent.ListVpcConfigurationsInput{}
+        output := &bedrockagent.ListVpcConfigurationsOutput{}
+
+        mockClient.On("ListVpcConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListVpcConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListServiceQuotaWarnings", func(t *testing.T) {
+        input := &arcregionswitch.ListServiceQuotaWarningsInput{}
+        output := &arcregionswitch.ListServiceQuotaWarningsOutput{}
+
+        mockClient.On("ListServiceQuotaWarnings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListServiceQuotaWarnings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &arcregionswitch.ListTagsForResourceInput{}
         output := &arcregionswitch.ListTagsForResourceOutput{}

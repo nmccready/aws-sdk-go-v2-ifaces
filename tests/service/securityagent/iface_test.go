@@ -658,6 +658,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListActorMessages", func(t *testing.T) {
+        input := &securityagent.ListActorMessagesInput{}
+        output := &securityagent.ListActorMessagesOutput{}
+
+        mockClient.On("ListActorMessages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListActorMessages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAgentSpaces", func(t *testing.T) {
         input := &securityagent.ListAgentSpacesInput{}
         output := &securityagent.ListAgentSpacesOutput{}
