@@ -550,6 +550,43 @@ func (_m *IClient) Options() s3vectors.Options {
 	return r0
 }
 
+// PutVectorBucketDefaultIndexMode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutVectorBucketDefaultIndexMode(ctx context.Context, params *s3vectors.PutVectorBucketDefaultIndexModeInput, optFns ...func(*s3vectors.Options)) (*s3vectors.PutVectorBucketDefaultIndexModeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutVectorBucketDefaultIndexMode")
+	}
+
+	var r0 *s3vectors.PutVectorBucketDefaultIndexModeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.PutVectorBucketDefaultIndexModeInput, ...func(*s3vectors.Options)) (*s3vectors.PutVectorBucketDefaultIndexModeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.PutVectorBucketDefaultIndexModeInput, ...func(*s3vectors.Options)) *s3vectors.PutVectorBucketDefaultIndexModeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3vectors.PutVectorBucketDefaultIndexModeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.PutVectorBucketDefaultIndexModeInput, ...func(*s3vectors.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutVectorBucketPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutVectorBucketPolicy(ctx context.Context, params *s3vectors.PutVectorBucketPolicyInput, optFns ...func(*s3vectors.Options)) (*s3vectors.PutVectorBucketPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -727,6 +764,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *s3vectors.UntagRes
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.UntagResourceInput, ...func(*s3vectors.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIndexMode provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIndexMode(ctx context.Context, params *s3vectors.UpdateIndexModeInput, optFns ...func(*s3vectors.Options)) (*s3vectors.UpdateIndexModeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIndexMode")
+	}
+
+	var r0 *s3vectors.UpdateIndexModeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.UpdateIndexModeInput, ...func(*s3vectors.Options)) (*s3vectors.UpdateIndexModeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.UpdateIndexModeInput, ...func(*s3vectors.Options)) *s3vectors.UpdateIndexModeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3vectors.UpdateIndexModeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.UpdateIndexModeInput, ...func(*s3vectors.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

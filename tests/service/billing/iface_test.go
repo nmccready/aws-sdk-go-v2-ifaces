@@ -203,6 +203,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListBusinessSupportAccountCharges", func(t *testing.T) {
+        input := &billing.ListBusinessSupportAccountChargesInput{}
+        output := &billing.ListBusinessSupportAccountChargesOutput{}
+
+        mockClient.On("ListBusinessSupportAccountCharges", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBusinessSupportAccountCharges(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListBusinessSupportSubscriptionHistory", func(t *testing.T) {
+        input := &billing.ListBusinessSupportSubscriptionHistoryInput{}
+        output := &billing.ListBusinessSupportSubscriptionHistoryOutput{}
+
+        mockClient.On("ListBusinessSupportSubscriptionHistory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBusinessSupportSubscriptionHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEnterpriseSupportLinkedAccountCharges", func(t *testing.T) {
         input := &billing.ListEnterpriseSupportLinkedAccountChargesInput{}
         output := &billing.ListEnterpriseSupportLinkedAccountChargesOutput{}

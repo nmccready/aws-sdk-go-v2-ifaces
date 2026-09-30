@@ -18,6 +18,7 @@ type IClient interface {
  DeleteUser(ctx context.Context, params *DeleteUserInput, optFns ...func(*Options)) (*DeleteUserOutput, error) 
  DescribeGroup(ctx context.Context, params *DescribeGroupInput, optFns ...func(*Options)) (*DescribeGroupOutput, error) 
  DescribeGroupMembership(ctx context.Context, params *DescribeGroupMembershipInput, optFns ...func(*Options)) (*DescribeGroupMembershipOutput, error) 
+ DescribeIdentityStore(ctx context.Context, params *DescribeIdentityStoreInput, optFns ...func(*Options)) (*DescribeIdentityStoreOutput, error) 
  DescribeUser(ctx context.Context, params *DescribeUserInput, optFns ...func(*Options)) (*DescribeUserOutput, error) 
  GetGroupId(ctx context.Context, params *GetGroupIdInput, optFns ...func(*Options)) (*GetGroupIdOutput, error) 
  GetGroupMembershipId(ctx context.Context, params *GetGroupMembershipIdInput, optFns ...func(*Options)) (*GetGroupMembershipIdOutput, error) 
@@ -26,7 +27,9 @@ type IClient interface {
  ListGroupMemberships(ctx context.Context, params *ListGroupMembershipsInput, optFns ...func(*Options)) (*ListGroupMembershipsOutput, error) 
  ListGroupMembershipsForMember(ctx context.Context, params *ListGroupMembershipsForMemberInput, optFns ...func(*Options)) (*ListGroupMembershipsForMemberOutput, error) 
  ListGroups(ctx context.Context, params *ListGroupsInput, optFns ...func(*Options)) (*ListGroupsOutput, error) 
+ ListIdentityStores(ctx context.Context, params *ListIdentityStoresInput, optFns ...func(*Options)) (*ListIdentityStoresOutput, error) 
  ListUsers(ctx context.Context, params *ListUsersInput, optFns ...func(*Options)) (*ListUsersOutput, error) 
  UpdateGroup(ctx context.Context, params *UpdateGroupInput, optFns ...func(*Options)) (*UpdateGroupOutput, error) 
+ UpdateIdentityStore(ctx context.Context, params *UpdateIdentityStoreInput, optFns ...func(*Options)) (*UpdateIdentityStoreOutput, error) 
  UpdateUser(ctx context.Context, params *UpdateUserInput, optFns ...func(*Options)) (*UpdateUserOutput, error) 
 }

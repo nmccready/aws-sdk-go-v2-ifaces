@@ -25,5 +25,7 @@ type IClient interface {
  PutAccountName(ctx context.Context, params *PutAccountNameInput, optFns ...func(*Options)) (*PutAccountNameOutput, error) 
  PutAlternateContact(ctx context.Context, params *PutAlternateContactInput, optFns ...func(*Options)) (*PutAlternateContactOutput, error) 
  PutContactInformation(ctx context.Context, params *PutContactInformationInput, optFns ...func(*Options)) (*PutContactInformationOutput, error) 
+ SendPhoneNumberVerification(ctx context.Context, params *SendPhoneNumberVerificationInput, optFns ...func(*Options)) (*SendPhoneNumberVerificationOutput, error) 
  StartPrimaryEmailUpdate(ctx context.Context, params *StartPrimaryEmailUpdateInput, optFns ...func(*Options)) (*StartPrimaryEmailUpdateOutput, error) 
+ VerifyPhoneNumber(ctx context.Context, params *VerifyPhoneNumberInput, optFns ...func(*Options)) (*VerifyPhoneNumberOutput, error) 
 }

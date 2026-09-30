@@ -96,6 +96,7 @@ type IClient interface {
  UpdateCodeReview(ctx context.Context, params *UpdateCodeReviewInput, optFns ...func(*Options)) (*UpdateCodeReviewOutput, error) 
  UpdateFinding(ctx context.Context, params *UpdateFindingInput, optFns ...func(*Options)) (*UpdateFindingOutput, error) 
  UpdateIntegratedResources(ctx context.Context, params *UpdateIntegratedResourcesInput, optFns ...func(*Options)) (*UpdateIntegratedResourcesOutput, error) 
+ UpdateIntegration(ctx context.Context, params *UpdateIntegrationInput, optFns ...func(*Options)) (*UpdateIntegrationOutput, error) 
  UpdatePentest(ctx context.Context, params *UpdatePentestInput, optFns ...func(*Options)) (*UpdatePentestOutput, error) 
  UpdatePrivateConnectionCertificate(ctx context.Context, params *UpdatePrivateConnectionCertificateInput, optFns ...func(*Options)) (*UpdatePrivateConnectionCertificateOutput, error) 
  UpdateSecurityRequirementPack(ctx context.Context, params *UpdateSecurityRequirementPackInput, optFns ...func(*Options)) (*UpdateSecurityRequirementPackOutput, error) 

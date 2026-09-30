@@ -588,6 +588,43 @@ func (_m *IClient) PutContactInformation(ctx context.Context, params *account.Pu
 	return r0, r1
 }
 
+// SendPhoneNumberVerification provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendPhoneNumberVerification(ctx context.Context, params *account.SendPhoneNumberVerificationInput, optFns ...func(*account.Options)) (*account.SendPhoneNumberVerificationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendPhoneNumberVerification")
+	}
+
+	var r0 *account.SendPhoneNumberVerificationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *account.SendPhoneNumberVerificationInput, ...func(*account.Options)) (*account.SendPhoneNumberVerificationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *account.SendPhoneNumberVerificationInput, ...func(*account.Options)) *account.SendPhoneNumberVerificationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*account.SendPhoneNumberVerificationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *account.SendPhoneNumberVerificationInput, ...func(*account.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartPrimaryEmailUpdate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartPrimaryEmailUpdate(ctx context.Context, params *account.StartPrimaryEmailUpdateInput, optFns ...func(*account.Options)) (*account.StartPrimaryEmailUpdateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -617,6 +654,43 @@ func (_m *IClient) StartPrimaryEmailUpdate(ctx context.Context, params *account.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *account.StartPrimaryEmailUpdateInput, ...func(*account.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// VerifyPhoneNumber provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) VerifyPhoneNumber(ctx context.Context, params *account.VerifyPhoneNumberInput, optFns ...func(*account.Options)) (*account.VerifyPhoneNumberOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for VerifyPhoneNumber")
+	}
+
+	var r0 *account.VerifyPhoneNumberOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *account.VerifyPhoneNumberInput, ...func(*account.Options)) (*account.VerifyPhoneNumberOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *account.VerifyPhoneNumberInput, ...func(*account.Options)) *account.VerifyPhoneNumberOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*account.VerifyPhoneNumberOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *account.VerifyPhoneNumberInput, ...func(*account.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

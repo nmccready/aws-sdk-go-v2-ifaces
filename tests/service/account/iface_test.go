@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSendPhoneNumberVerification", func(t *testing.T) {
+        input := &account.SendPhoneNumberVerificationInput{}
+        output := &account.SendPhoneNumberVerificationOutput{}
+
+        mockClient.On("SendPhoneNumberVerification", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendPhoneNumberVerification(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartPrimaryEmailUpdate", func(t *testing.T) {
         input := &account.StartPrimaryEmailUpdateInput{}
         output := &account.StartPrimaryEmailUpdateOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartPrimaryEmailUpdate", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartPrimaryEmailUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestVerifyPhoneNumber", func(t *testing.T) {
+        input := &account.VerifyPhoneNumberInput{}
+        output := &account.VerifyPhoneNumberOutput{}
+
+        mockClient.On("VerifyPhoneNumber", ctx, input).Return(output, nil)
+
+        result, err := mockClient.VerifyPhoneNumber(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

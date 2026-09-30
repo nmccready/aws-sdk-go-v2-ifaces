@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutVectorBucketDefaultIndexMode", func(t *testing.T) {
+        input := &s3vectors.PutVectorBucketDefaultIndexModeInput{}
+        output := &s3vectors.PutVectorBucketDefaultIndexModeOutput{}
+
+        mockClient.On("PutVectorBucketDefaultIndexMode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutVectorBucketDefaultIndexMode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutVectorBucketPolicy", func(t *testing.T) {
         input := &s3vectors.PutVectorBucketPolicyInput{}
         output := &s3vectors.PutVectorBucketPolicyOutput{}
@@ -275,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIndexMode", func(t *testing.T) {
+        input := &s3vectors.UpdateIndexModeInput{}
+        output := &s3vectors.UpdateIndexModeOutput{}
+
+        mockClient.On("UpdateIndexMode", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIndexMode(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

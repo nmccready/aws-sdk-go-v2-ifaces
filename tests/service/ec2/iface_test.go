@@ -2361,6 +2361,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteClientVpnEndpointAuthorizationPolicy", func(t *testing.T) {
+        input := &ec2.DeleteClientVpnEndpointAuthorizationPolicyInput{}
+        output := &ec2.DeleteClientVpnEndpointAuthorizationPolicyOutput{}
+
+        mockClient.On("DeleteClientVpnEndpointAuthorizationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteClientVpnEndpointAuthorizationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteClientVpnRoute", func(t *testing.T) {
         input := &ec2.DeleteClientVpnRouteInput{}
         output := &ec2.DeleteClientVpnRouteOutput{}
@@ -7327,6 +7340,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetClientVpnEndpointAuthorizationPolicy", func(t *testing.T) {
+        input := &ec2.GetClientVpnEndpointAuthorizationPolicyInput{}
+        output := &ec2.GetClientVpnEndpointAuthorizationPolicyOutput{}
+
+        mockClient.On("GetClientVpnEndpointAuthorizationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetClientVpnEndpointAuthorizationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCoipPoolUsage", func(t *testing.T) {
         input := &ec2.GetCoipPoolUsageInput{}
         output := &ec2.GetCoipPoolUsageOutput{}
@@ -8413,6 +8439,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyClientVpnEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyClientVpnEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyClientVpnEndpointAuthorizationPolicy", func(t *testing.T) {
+        input := &ec2.ModifyClientVpnEndpointAuthorizationPolicyInput{}
+        output := &ec2.ModifyClientVpnEndpointAuthorizationPolicyOutput{}
+
+        mockClient.On("ModifyClientVpnEndpointAuthorizationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyClientVpnEndpointAuthorizationPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -6638,6 +6638,43 @@ func (_m *IClient) DeleteClientVpnEndpoint(ctx context.Context, params *ec2.Dele
 	return r0, r1
 }
 
+// DeleteClientVpnEndpointAuthorizationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteClientVpnEndpointAuthorizationPolicy(ctx context.Context, params *ec2.DeleteClientVpnEndpointAuthorizationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.DeleteClientVpnEndpointAuthorizationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteClientVpnEndpointAuthorizationPolicy")
+	}
+
+	var r0 *ec2.DeleteClientVpnEndpointAuthorizationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) (*ec2.DeleteClientVpnEndpointAuthorizationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) *ec2.DeleteClientVpnEndpointAuthorizationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteClientVpnEndpointAuthorizationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteClientVpnRoute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteClientVpnRoute(ctx context.Context, params *ec2.DeleteClientVpnRouteInput, optFns ...func(*ec2.Options)) (*ec2.DeleteClientVpnRouteOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -20772,6 +20809,43 @@ func (_m *IClient) GetCapacityReservationUsage(ctx context.Context, params *ec2.
 	return r0, r1
 }
 
+// GetClientVpnEndpointAuthorizationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetClientVpnEndpointAuthorizationPolicy(ctx context.Context, params *ec2.GetClientVpnEndpointAuthorizationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.GetClientVpnEndpointAuthorizationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetClientVpnEndpointAuthorizationPolicy")
+	}
+
+	var r0 *ec2.GetClientVpnEndpointAuthorizationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) (*ec2.GetClientVpnEndpointAuthorizationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) *ec2.GetClientVpnEndpointAuthorizationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetClientVpnEndpointAuthorizationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCoipPoolUsage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCoipPoolUsage(ctx context.Context, params *ec2.GetCoipPoolUsageInput, optFns ...func(*ec2.Options)) (*ec2.GetCoipPoolUsageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -23872,6 +23946,43 @@ func (_m *IClient) ModifyClientVpnEndpoint(ctx context.Context, params *ec2.Modi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyClientVpnEndpointInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyClientVpnEndpointAuthorizationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyClientVpnEndpointAuthorizationPolicy(ctx context.Context, params *ec2.ModifyClientVpnEndpointAuthorizationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.ModifyClientVpnEndpointAuthorizationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyClientVpnEndpointAuthorizationPolicy")
+	}
+
+	var r0 *ec2.ModifyClientVpnEndpointAuthorizationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) (*ec2.ModifyClientVpnEndpointAuthorizationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) *ec2.ModifyClientVpnEndpointAuthorizationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyClientVpnEndpointAuthorizationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyClientVpnEndpointAuthorizationPolicyInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -138,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeIdentityStore", func(t *testing.T) {
+        input := &identitystore.DescribeIdentityStoreInput{}
+        output := &identitystore.DescribeIdentityStoreOutput{}
+
+        mockClient.On("DescribeIdentityStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeIdentityStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeUser", func(t *testing.T) {
         input := &identitystore.DescribeUserInput{}
         output := &identitystore.DescribeUserOutput{}
@@ -242,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListIdentityStores", func(t *testing.T) {
+        input := &identitystore.ListIdentityStoresInput{}
+        output := &identitystore.ListIdentityStoresOutput{}
+
+        mockClient.On("ListIdentityStores", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIdentityStores(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListUsers", func(t *testing.T) {
         input := &identitystore.ListUsersInput{}
         output := &identitystore.ListUsersOutput{}
@@ -262,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateGroup", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateGroup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateIdentityStore", func(t *testing.T) {
+        input := &identitystore.UpdateIdentityStoreInput{}
+        output := &identitystore.UpdateIdentityStoreOutput{}
+
+        mockClient.On("UpdateIdentityStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIdentityStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

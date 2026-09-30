@@ -24,9 +24,11 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListVectorBuckets(ctx context.Context, params *ListVectorBucketsInput, optFns ...func(*Options)) (*ListVectorBucketsOutput, error) 
  ListVectors(ctx context.Context, params *ListVectorsInput, optFns ...func(*Options)) (*ListVectorsOutput, error) 
+ PutVectorBucketDefaultIndexMode(ctx context.Context, params *PutVectorBucketDefaultIndexModeInput, optFns ...func(*Options)) (*PutVectorBucketDefaultIndexModeOutput, error) 
  PutVectorBucketPolicy(ctx context.Context, params *PutVectorBucketPolicyInput, optFns ...func(*Options)) (*PutVectorBucketPolicyOutput, error) 
  PutVectors(ctx context.Context, params *PutVectorsInput, optFns ...func(*Options)) (*PutVectorsOutput, error) 
  QueryVectors(ctx context.Context, params *QueryVectorsInput, optFns ...func(*Options)) (*QueryVectorsOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateIndexMode(ctx context.Context, params *UpdateIndexModeInput, optFns ...func(*Options)) (*UpdateIndexModeOutput, error) 
 }

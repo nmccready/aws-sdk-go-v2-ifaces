@@ -311,6 +311,43 @@ func (_m *IClient) DescribeGroupMembership(ctx context.Context, params *identity
 	return r0, r1
 }
 
+// DescribeIdentityStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeIdentityStore(ctx context.Context, params *identitystore.DescribeIdentityStoreInput, optFns ...func(*identitystore.Options)) (*identitystore.DescribeIdentityStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeIdentityStore")
+	}
+
+	var r0 *identitystore.DescribeIdentityStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *identitystore.DescribeIdentityStoreInput, ...func(*identitystore.Options)) (*identitystore.DescribeIdentityStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *identitystore.DescribeIdentityStoreInput, ...func(*identitystore.Options)) *identitystore.DescribeIdentityStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*identitystore.DescribeIdentityStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *identitystore.DescribeIdentityStoreInput, ...func(*identitystore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeUser provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeUser(ctx context.Context, params *identitystore.DescribeUserInput, optFns ...func(*identitystore.Options)) (*identitystore.DescribeUserOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -607,6 +644,43 @@ func (_m *IClient) ListGroups(ctx context.Context, params *identitystore.ListGro
 	return r0, r1
 }
 
+// ListIdentityStores provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIdentityStores(ctx context.Context, params *identitystore.ListIdentityStoresInput, optFns ...func(*identitystore.Options)) (*identitystore.ListIdentityStoresOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIdentityStores")
+	}
+
+	var r0 *identitystore.ListIdentityStoresOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *identitystore.ListIdentityStoresInput, ...func(*identitystore.Options)) (*identitystore.ListIdentityStoresOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *identitystore.ListIdentityStoresInput, ...func(*identitystore.Options)) *identitystore.ListIdentityStoresOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*identitystore.ListIdentityStoresOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *identitystore.ListIdentityStoresInput, ...func(*identitystore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListUsers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListUsers(ctx context.Context, params *identitystore.ListUsersInput, optFns ...func(*identitystore.Options)) (*identitystore.ListUsersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -691,6 +765,43 @@ func (_m *IClient) UpdateGroup(ctx context.Context, params *identitystore.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *identitystore.UpdateGroupInput, ...func(*identitystore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateIdentityStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateIdentityStore(ctx context.Context, params *identitystore.UpdateIdentityStoreInput, optFns ...func(*identitystore.Options)) (*identitystore.UpdateIdentityStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateIdentityStore")
+	}
+
+	var r0 *identitystore.UpdateIdentityStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *identitystore.UpdateIdentityStoreInput, ...func(*identitystore.Options)) (*identitystore.UpdateIdentityStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *identitystore.UpdateIdentityStoreInput, ...func(*identitystore.Options)) *identitystore.UpdateIdentityStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*identitystore.UpdateIdentityStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *identitystore.UpdateIdentityStoreInput, ...func(*identitystore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

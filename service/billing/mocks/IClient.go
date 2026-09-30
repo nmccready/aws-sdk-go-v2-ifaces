@@ -496,6 +496,80 @@ func (_m *IClient) ListBillingViews(ctx context.Context, params *billing.ListBil
 	return r0, r1
 }
 
+// ListBusinessSupportAccountCharges provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBusinessSupportAccountCharges(ctx context.Context, params *billing.ListBusinessSupportAccountChargesInput, optFns ...func(*billing.Options)) (*billing.ListBusinessSupportAccountChargesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBusinessSupportAccountCharges")
+	}
+
+	var r0 *billing.ListBusinessSupportAccountChargesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListBusinessSupportAccountChargesInput, ...func(*billing.Options)) (*billing.ListBusinessSupportAccountChargesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListBusinessSupportAccountChargesInput, ...func(*billing.Options)) *billing.ListBusinessSupportAccountChargesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListBusinessSupportAccountChargesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListBusinessSupportAccountChargesInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBusinessSupportSubscriptionHistory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBusinessSupportSubscriptionHistory(ctx context.Context, params *billing.ListBusinessSupportSubscriptionHistoryInput, optFns ...func(*billing.Options)) (*billing.ListBusinessSupportSubscriptionHistoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBusinessSupportSubscriptionHistory")
+	}
+
+	var r0 *billing.ListBusinessSupportSubscriptionHistoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListBusinessSupportSubscriptionHistoryInput, ...func(*billing.Options)) (*billing.ListBusinessSupportSubscriptionHistoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListBusinessSupportSubscriptionHistoryInput, ...func(*billing.Options)) *billing.ListBusinessSupportSubscriptionHistoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListBusinessSupportSubscriptionHistoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListBusinessSupportSubscriptionHistoryInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEnterpriseSupportLinkedAccountCharges provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEnterpriseSupportLinkedAccountCharges(ctx context.Context, params *billing.ListEnterpriseSupportLinkedAccountChargesInput, optFns ...func(*billing.Options)) (*billing.ListEnterpriseSupportLinkedAccountChargesOutput, error) {
 	_va := make([]interface{}, len(optFns))

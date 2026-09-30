@@ -1152,6 +1152,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateIntegration", func(t *testing.T) {
+        input := &securityagent.UpdateIntegrationInput{}
+        output := &securityagent.UpdateIntegrationOutput{}
+
+        mockClient.On("UpdateIntegration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateIntegration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdatePentest", func(t *testing.T) {
         input := &securityagent.UpdatePentestInput{}
         output := &securityagent.UpdatePentestOutput{}
