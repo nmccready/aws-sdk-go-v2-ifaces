@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelExportJobV2", func(t *testing.T) {
+        input := &securityhub.CancelExportJobV2Input{}
+        output := &securityhub.CancelExportJobV2Output{}
+
+        mockClient.On("CancelExportJobV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelExportJobV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateActionTarget", func(t *testing.T) {
         input := &securityhub.CreateActionTargetInput{}
         output := &securityhub.CreateActionTargetOutput{}
@@ -892,6 +905,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetExportJobV2", func(t *testing.T) {
+        input := &securityhub.GetExportJobV2Input{}
+        output := &securityhub.GetExportJobV2Output{}
+
+        mockClient.On("GetExportJobV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetExportJobV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetFindingAggregator", func(t *testing.T) {
         input := &securityhub.GetFindingAggregatorInput{}
         output := &securityhub.GetFindingAggregatorOutput{}
@@ -1042,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRecommendedPolicyV2", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRecommendedPolicyV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRemediationsV2", func(t *testing.T) {
+        input := &securityhub.GetRemediationsV2Input{}
+        output := &securityhub.GetRemediationsV2Output{}
+
+        mockClient.On("GetRemediationsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRemediationsV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1217,6 +1256,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListExportJobsV2", func(t *testing.T) {
+        input := &securityhub.ListExportJobsV2Input{}
+        output := &securityhub.ListExportJobsV2Output{}
+
+        mockClient.On("ListExportJobsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExportJobsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListExposuresByRemediationV2", func(t *testing.T) {
+        input := &securityhub.ListExposuresByRemediationV2Input{}
+        output := &securityhub.ListExposuresByRemediationV2Output{}
+
+        mockClient.On("ListExposuresByRemediationV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListExposuresByRemediationV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListFindingAggregators", func(t *testing.T) {
         input := &securityhub.ListFindingAggregatorsInput{}
         output := &securityhub.ListFindingAggregatorsOutput{}
@@ -1354,6 +1419,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartConfigurationPolicyDisassociation", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartConfigurationPolicyDisassociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartExportJobV2", func(t *testing.T) {
+        input := &securityhub.StartExportJobV2Input{}
+        output := &securityhub.StartExportJobV2Output{}
+
+        mockClient.On("StartExportJobV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartExportJobV2(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

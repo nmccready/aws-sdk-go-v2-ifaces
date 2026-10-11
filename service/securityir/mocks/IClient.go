@@ -347,6 +347,43 @@ func (_m *IClient) GetCaseAttachmentUploadUrl(ctx context.Context, params *secur
 	return r0, r1
 }
 
+// GetFindingMetrics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFindingMetrics(ctx context.Context, params *securityir.GetFindingMetricsInput, optFns ...func(*securityir.Options)) (*securityir.GetFindingMetricsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFindingMetrics")
+	}
+
+	var r0 *securityir.GetFindingMetricsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityir.GetFindingMetricsInput, ...func(*securityir.Options)) (*securityir.GetFindingMetricsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityir.GetFindingMetricsInput, ...func(*securityir.Options)) *securityir.GetFindingMetricsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityir.GetFindingMetricsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityir.GetFindingMetricsInput, ...func(*securityir.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetMembership provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetMembership(ctx context.Context, params *securityir.GetMembershipInput, optFns ...func(*securityir.Options)) (*securityir.GetMembershipOutput, error) {
 	_va := make([]interface{}, len(optFns))

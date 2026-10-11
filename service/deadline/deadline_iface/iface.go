@@ -92,6 +92,7 @@ type IClient interface {
  ListJobs(ctx context.Context, params *ListJobsInput, optFns ...func(*Options)) (*ListJobsOutput, error) 
  ListLicenseEndpoints(ctx context.Context, params *ListLicenseEndpointsInput, optFns ...func(*Options)) (*ListLicenseEndpointsOutput, error) 
  ListLimits(ctx context.Context, params *ListLimitsInput, optFns ...func(*Options)) (*ListLimitsOutput, error) 
+ ListMemberships(ctx context.Context, params *ListMembershipsInput, optFns ...func(*Options)) (*ListMembershipsOutput, error) 
  ListMeteredProducts(ctx context.Context, params *ListMeteredProductsInput, optFns ...func(*Options)) (*ListMeteredProductsOutput, error) 
  ListMonitors(ctx context.Context, params *ListMonitorsInput, optFns ...func(*Options)) (*ListMonitorsOutput, error) 
  ListQueueEnvironments(ctx context.Context, params *ListQueueEnvironmentsInput, optFns ...func(*Options)) (*ListQueueEnvironmentsOutput, error) 

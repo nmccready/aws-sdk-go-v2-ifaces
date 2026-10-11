@@ -532,6 +532,43 @@ func (_m *IClient) BatchUpdateStandardsControlAssociations(ctx context.Context, 
 	return r0, r1
 }
 
+// CancelExportJobV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelExportJobV2(ctx context.Context, params *securityhub.CancelExportJobV2Input, optFns ...func(*securityhub.Options)) (*securityhub.CancelExportJobV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelExportJobV2")
+	}
+
+	var r0 *securityhub.CancelExportJobV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CancelExportJobV2Input, ...func(*securityhub.Options)) (*securityhub.CancelExportJobV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.CancelExportJobV2Input, ...func(*securityhub.Options)) *securityhub.CancelExportJobV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.CancelExportJobV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.CancelExportJobV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateActionTarget provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateActionTarget(ctx context.Context, params *securityhub.CreateActionTargetInput, optFns ...func(*securityhub.Options)) (*securityhub.CreateActionTargetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2456,6 +2493,43 @@ func (_m *IClient) GetEnabledStandards(ctx context.Context, params *securityhub.
 	return r0, r1
 }
 
+// GetExportJobV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetExportJobV2(ctx context.Context, params *securityhub.GetExportJobV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetExportJobV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetExportJobV2")
+	}
+
+	var r0 *securityhub.GetExportJobV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetExportJobV2Input, ...func(*securityhub.Options)) (*securityhub.GetExportJobV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetExportJobV2Input, ...func(*securityhub.Options)) *securityhub.GetExportJobV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetExportJobV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetExportJobV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetFindingAggregator provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetFindingAggregator(ctx context.Context, params *securityhub.GetFindingAggregatorInput, optFns ...func(*securityhub.Options)) (*securityhub.GetFindingAggregatorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2892,6 +2966,43 @@ func (_m *IClient) GetRecommendedPolicyV2(ctx context.Context, params *securityh
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetRecommendedPolicyV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRemediationsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRemediationsV2(ctx context.Context, params *securityhub.GetRemediationsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetRemediationsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRemediationsV2")
+	}
+
+	var r0 *securityhub.GetRemediationsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetRemediationsV2Input, ...func(*securityhub.Options)) (*securityhub.GetRemediationsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetRemediationsV2Input, ...func(*securityhub.Options)) *securityhub.GetRemediationsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetRemediationsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetRemediationsV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3381,6 +3492,80 @@ func (_m *IClient) ListEnabledProductsForImport(ctx context.Context, params *sec
 	return r0, r1
 }
 
+// ListExportJobsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExportJobsV2(ctx context.Context, params *securityhub.ListExportJobsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListExportJobsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExportJobsV2")
+	}
+
+	var r0 *securityhub.ListExportJobsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListExportJobsV2Input, ...func(*securityhub.Options)) (*securityhub.ListExportJobsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListExportJobsV2Input, ...func(*securityhub.Options)) *securityhub.ListExportJobsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListExportJobsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListExportJobsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListExposuresByRemediationV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListExposuresByRemediationV2(ctx context.Context, params *securityhub.ListExposuresByRemediationV2Input, optFns ...func(*securityhub.Options)) (*securityhub.ListExposuresByRemediationV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListExposuresByRemediationV2")
+	}
+
+	var r0 *securityhub.ListExposuresByRemediationV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListExposuresByRemediationV2Input, ...func(*securityhub.Options)) (*securityhub.ListExposuresByRemediationV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.ListExposuresByRemediationV2Input, ...func(*securityhub.Options)) *securityhub.ListExposuresByRemediationV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.ListExposuresByRemediationV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.ListExposuresByRemediationV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFindingAggregators provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFindingAggregators(ctx context.Context, params *securityhub.ListFindingAggregatorsInput, optFns ...func(*securityhub.Options)) (*securityhub.ListFindingAggregatorsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3798,6 +3983,43 @@ func (_m *IClient) StartConfigurationPolicyDisassociation(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.StartConfigurationPolicyDisassociationInput, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartExportJobV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartExportJobV2(ctx context.Context, params *securityhub.StartExportJobV2Input, optFns ...func(*securityhub.Options)) (*securityhub.StartExportJobV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartExportJobV2")
+	}
+
+	var r0 *securityhub.StartExportJobV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.StartExportJobV2Input, ...func(*securityhub.Options)) (*securityhub.StartExportJobV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.StartExportJobV2Input, ...func(*securityhub.Options)) *securityhub.StartExportJobV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.StartExportJobV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.StartExportJobV2Input, ...func(*securityhub.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

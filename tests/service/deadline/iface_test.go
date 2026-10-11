@@ -1100,6 +1100,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListMemberships", func(t *testing.T) {
+        input := &deadline.ListMembershipsInput{}
+        output := &deadline.ListMembershipsOutput{}
+
+        mockClient.On("ListMemberships", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMemberships(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListMeteredProducts", func(t *testing.T) {
         input := &deadline.ListMeteredProductsInput{}
         output := &deadline.ListMeteredProductsOutput{}
