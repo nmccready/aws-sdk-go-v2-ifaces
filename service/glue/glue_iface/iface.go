@@ -181,6 +181,8 @@ type IClient interface {
  GetSession(ctx context.Context, params *GetSessionInput, optFns ...func(*Options)) (*GetSessionOutput, error) 
  GetSessionEndpoint(ctx context.Context, params *GetSessionEndpointInput, optFns ...func(*Options)) (*GetSessionEndpointOutput, error) 
  GetStatement(ctx context.Context, params *GetStatementInput, optFns ...func(*Options)) (*GetStatementOutput, error) 
+ GetSystemLogsForJobRun(ctx context.Context, params *GetSystemLogsForJobRunInput, optFns ...func(*Options)) (*GetSystemLogsForJobRunOutput, error) 
+ GetSystemLogsForSession(ctx context.Context, params *GetSystemLogsForSessionInput, optFns ...func(*Options)) (*GetSystemLogsForSessionOutput, error) 
  GetTable(ctx context.Context, params *GetTableInput, optFns ...func(*Options)) (*GetTableOutput, error) 
  GetTableOptimizer(ctx context.Context, params *GetTableOptimizerInput, optFns ...func(*Options)) (*GetTableOptimizerOutput, error) 
  GetTableVersion(ctx context.Context, params *GetTableVersionInput, optFns ...func(*Options)) (*GetTableVersionOutput, error) 

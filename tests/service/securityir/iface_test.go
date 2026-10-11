@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFindingMetrics", func(t *testing.T) {
+        input := &securityir.GetFindingMetricsInput{}
+        output := &securityir.GetFindingMetricsOutput{}
+
+        mockClient.On("GetFindingMetrics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFindingMetrics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetMembership", func(t *testing.T) {
         input := &securityir.GetMembershipInput{}
         output := &securityir.GetMembershipOutput{}

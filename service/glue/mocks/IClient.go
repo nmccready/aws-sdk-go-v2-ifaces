@@ -6342,6 +6342,80 @@ func (_m *IClient) GetStatement(ctx context.Context, params *glue.GetStatementIn
 	return r0, r1
 }
 
+// GetSystemLogsForJobRun provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSystemLogsForJobRun(ctx context.Context, params *glue.GetSystemLogsForJobRunInput, optFns ...func(*glue.Options)) (*glue.GetSystemLogsForJobRunOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSystemLogsForJobRun")
+	}
+
+	var r0 *glue.GetSystemLogsForJobRunOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetSystemLogsForJobRunInput, ...func(*glue.Options)) (*glue.GetSystemLogsForJobRunOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetSystemLogsForJobRunInput, ...func(*glue.Options)) *glue.GetSystemLogsForJobRunOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetSystemLogsForJobRunOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetSystemLogsForJobRunInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSystemLogsForSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSystemLogsForSession(ctx context.Context, params *glue.GetSystemLogsForSessionInput, optFns ...func(*glue.Options)) (*glue.GetSystemLogsForSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSystemLogsForSession")
+	}
+
+	var r0 *glue.GetSystemLogsForSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetSystemLogsForSessionInput, ...func(*glue.Options)) (*glue.GetSystemLogsForSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetSystemLogsForSessionInput, ...func(*glue.Options)) *glue.GetSystemLogsForSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetSystemLogsForSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetSystemLogsForSessionInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTable provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTable(ctx context.Context, params *glue.GetTableInput, optFns ...func(*glue.Options)) (*glue.GetTableOutput, error) {
 	_va := make([]interface{}, len(optFns))

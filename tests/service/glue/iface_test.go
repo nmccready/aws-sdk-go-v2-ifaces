@@ -2257,6 +2257,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSystemLogsForJobRun", func(t *testing.T) {
+        input := &glue.GetSystemLogsForJobRunInput{}
+        output := &glue.GetSystemLogsForJobRunOutput{}
+
+        mockClient.On("GetSystemLogsForJobRun", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSystemLogsForJobRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSystemLogsForSession", func(t *testing.T) {
+        input := &glue.GetSystemLogsForSessionInput{}
+        output := &glue.GetSystemLogsForSessionOutput{}
+
+        mockClient.On("GetSystemLogsForSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSystemLogsForSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTable", func(t *testing.T) {
         input := &glue.GetTableInput{}
         output := &glue.GetTableOutput{}

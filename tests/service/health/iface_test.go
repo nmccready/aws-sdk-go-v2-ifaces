@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeServiceLifecycle", func(t *testing.T) {
+        input := &health.DescribeServiceLifecycleInput{}
+        output := &health.DescribeServiceLifecycleOutput{}
+
+        mockClient.On("DescribeServiceLifecycle", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServiceLifecycle(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableHealthServiceAccessForOrganization", func(t *testing.T) {
         input := &health.DisableHealthServiceAccessForOrganizationInput{}
         output := &health.DisableHealthServiceAccessForOrganizationOutput{}

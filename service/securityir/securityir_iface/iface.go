@@ -19,6 +19,7 @@ type IClient interface {
  GetCase(ctx context.Context, params *GetCaseInput, optFns ...func(*Options)) (*GetCaseOutput, error) 
  GetCaseAttachmentDownloadUrl(ctx context.Context, params *GetCaseAttachmentDownloadUrlInput, optFns ...func(*Options)) (*GetCaseAttachmentDownloadUrlOutput, error) 
  GetCaseAttachmentUploadUrl(ctx context.Context, params *GetCaseAttachmentUploadUrlInput, optFns ...func(*Options)) (*GetCaseAttachmentUploadUrlOutput, error) 
+ GetFindingMetrics(ctx context.Context, params *GetFindingMetricsInput, optFns ...func(*Options)) (*GetFindingMetricsOutput, error) 
  GetMembership(ctx context.Context, params *GetMembershipInput, optFns ...func(*Options)) (*GetMembershipOutput, error) 
  ListCaseEdits(ctx context.Context, params *ListCaseEditsInput, optFns ...func(*Options)) (*ListCaseEditsOutput, error) 
  ListCases(ctx context.Context, params *ListCasesInput, optFns ...func(*Options)) (*ListCasesOutput, error) 
