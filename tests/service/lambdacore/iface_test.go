@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListNetworkConnectorVersions", func(t *testing.T) {
+        input := &lambdacore.ListNetworkConnectorVersionsInput{}
+        output := &lambdacore.ListNetworkConnectorVersionsOutput{}
+
+        mockClient.On("ListNetworkConnectorVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkConnectorVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNetworkConnectors", func(t *testing.T) {
         input := &lambdacore.ListNetworkConnectorsInput{}
         output := &lambdacore.ListNetworkConnectorsOutput{}

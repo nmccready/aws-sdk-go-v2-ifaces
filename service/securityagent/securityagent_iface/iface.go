@@ -16,6 +16,8 @@ type IClient interface {
  BatchDeletePentests(ctx context.Context, params *BatchDeletePentestsInput, optFns ...func(*Options)) (*BatchDeletePentestsOutput, error) 
  BatchDeleteSecurityRequirements(ctx context.Context, params *BatchDeleteSecurityRequirementsInput, optFns ...func(*Options)) (*BatchDeleteSecurityRequirementsOutput, error) 
  BatchDeleteThreatModels(ctx context.Context, params *BatchDeleteThreatModelsInput, optFns ...func(*Options)) (*BatchDeleteThreatModelsOutput, error) 
+ BatchDisassociateFindingIssue(ctx context.Context, params *BatchDisassociateFindingIssueInput, optFns ...func(*Options)) (*BatchDisassociateFindingIssueOutput, error) 
+ BatchExportFindings(ctx context.Context, params *BatchExportFindingsInput, optFns ...func(*Options)) (*BatchExportFindingsOutput, error) 
  BatchGetAgentSpaces(ctx context.Context, params *BatchGetAgentSpacesInput, optFns ...func(*Options)) (*BatchGetAgentSpacesOutput, error) 
  BatchGetArtifactMetadata(ctx context.Context, params *BatchGetArtifactMetadataInput, optFns ...func(*Options)) (*BatchGetArtifactMetadataOutput, error) 
  BatchGetCodeReviewJobTasks(ctx context.Context, params *BatchGetCodeReviewJobTasksInput, optFns ...func(*Options)) (*BatchGetCodeReviewJobTasksOutput, error) 

@@ -216,6 +216,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDomainPrices", func(t *testing.T) {
+        input := &route53domains.GetDomainPricesInput{}
+        output := &route53domains.GetDomainPricesOutput{}
+
+        mockClient.On("GetDomainPrices", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDomainPrices(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDomainSuggestions", func(t *testing.T) {
         input := &route53domains.GetDomainSuggestionsInput{}
         output := &route53domains.GetDomainSuggestionsOutput{}

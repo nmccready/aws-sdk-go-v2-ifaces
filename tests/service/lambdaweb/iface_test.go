@@ -34,6 +34,110 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateWebFunction", func(t *testing.T) {
+        input := &lambdaweb.CreateWebFunctionInput{}
+        output := &lambdaweb.CreateWebFunctionOutput{}
+
+        mockClient.On("CreateWebFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWebFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWebFunctionEndpoint", func(t *testing.T) {
+        input := &lambdaweb.CreateWebFunctionEndpointInput{}
+        output := &lambdaweb.CreateWebFunctionEndpointOutput{}
+
+        mockClient.On("CreateWebFunctionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWebFunctionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateWebFunctionRevision", func(t *testing.T) {
+        input := &lambdaweb.CreateWebFunctionRevisionInput{}
+        output := &lambdaweb.CreateWebFunctionRevisionOutput{}
+
+        mockClient.On("CreateWebFunctionRevision", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateWebFunctionRevision(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourcePolicy", func(t *testing.T) {
+        input := &lambdaweb.DeleteResourcePolicyInput{}
+        output := &lambdaweb.DeleteResourcePolicyOutput{}
+
+        mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWebFunction", func(t *testing.T) {
+        input := &lambdaweb.DeleteWebFunctionInput{}
+        output := &lambdaweb.DeleteWebFunctionOutput{}
+
+        mockClient.On("DeleteWebFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWebFunctionEndpoint", func(t *testing.T) {
+        input := &lambdaweb.DeleteWebFunctionEndpointInput{}
+        output := &lambdaweb.DeleteWebFunctionEndpointOutput{}
+
+        mockClient.On("DeleteWebFunctionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebFunctionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteWebFunctionRevision", func(t *testing.T) {
+        input := &lambdaweb.DeleteWebFunctionRevisionInput{}
+        output := &lambdaweb.DeleteWebFunctionRevisionOutput{}
+
+        mockClient.On("DeleteWebFunctionRevision", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteWebFunctionRevision(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetResourcePolicy", func(t *testing.T) {
+        input := &lambdaweb.GetResourcePolicyInput{}
+        output := &lambdaweb.GetResourcePolicyOutput{}
+
+        mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWebAccountSettings", func(t *testing.T) {
         input := &lambdaweb.GetWebAccountSettingsInput{}
         output := &lambdaweb.GetWebAccountSettingsOutput{}
@@ -41,6 +145,149 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetWebAccountSettings", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetWebAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWebFunction", func(t *testing.T) {
+        input := &lambdaweb.GetWebFunctionInput{}
+        output := &lambdaweb.GetWebFunctionOutput{}
+
+        mockClient.On("GetWebFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWebFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWebFunctionEndpoint", func(t *testing.T) {
+        input := &lambdaweb.GetWebFunctionEndpointInput{}
+        output := &lambdaweb.GetWebFunctionEndpointOutput{}
+
+        mockClient.On("GetWebFunctionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWebFunctionEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetWebFunctionRevision", func(t *testing.T) {
+        input := &lambdaweb.GetWebFunctionRevisionInput{}
+        output := &lambdaweb.GetWebFunctionRevisionOutput{}
+
+        mockClient.On("GetWebFunctionRevision", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetWebFunctionRevision(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTags", func(t *testing.T) {
+        input := &lambdaweb.ListTagsInput{}
+        output := &lambdaweb.ListTagsOutput{}
+
+        mockClient.On("ListTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWebFunctionEndpoints", func(t *testing.T) {
+        input := &lambdaweb.ListWebFunctionEndpointsInput{}
+        output := &lambdaweb.ListWebFunctionEndpointsOutput{}
+
+        mockClient.On("ListWebFunctionEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWebFunctionEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWebFunctionRevisions", func(t *testing.T) {
+        input := &lambdaweb.ListWebFunctionRevisionsInput{}
+        output := &lambdaweb.ListWebFunctionRevisionsOutput{}
+
+        mockClient.On("ListWebFunctionRevisions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWebFunctionRevisions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListWebFunctions", func(t *testing.T) {
+        input := &lambdaweb.ListWebFunctionsInput{}
+        output := &lambdaweb.ListWebFunctionsOutput{}
+
+        mockClient.On("ListWebFunctions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListWebFunctions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutResourcePolicy", func(t *testing.T) {
+        input := &lambdaweb.PutResourcePolicyInput{}
+        output := &lambdaweb.PutResourcePolicyOutput{}
+
+        mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &lambdaweb.TagResourceInput{}
+        output := &lambdaweb.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &lambdaweb.UntagResourceInput{}
+        output := &lambdaweb.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateWebFunctionEndpoint", func(t *testing.T) {
+        input := &lambdaweb.UpdateWebFunctionEndpointInput{}
+        output := &lambdaweb.UpdateWebFunctionEndpointOutput{}
+
+        mockClient.On("UpdateWebFunctionEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateWebFunctionEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

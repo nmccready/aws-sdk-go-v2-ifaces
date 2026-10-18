@@ -112,6 +112,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDisassociateFindingIssue", func(t *testing.T) {
+        input := &securityagent.BatchDisassociateFindingIssueInput{}
+        output := &securityagent.BatchDisassociateFindingIssueOutput{}
+
+        mockClient.On("BatchDisassociateFindingIssue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDisassociateFindingIssue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchExportFindings", func(t *testing.T) {
+        input := &securityagent.BatchExportFindingsInput{}
+        output := &securityagent.BatchExportFindingsOutput{}
+
+        mockClient.On("BatchExportFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchExportFindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetAgentSpaces", func(t *testing.T) {
         input := &securityagent.BatchGetAgentSpacesInput{}
         output := &securityagent.BatchGetAgentSpacesOutput{}

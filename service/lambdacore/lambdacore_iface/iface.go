@@ -13,6 +13,7 @@ type IClient interface {
  CreateNetworkConnector(ctx context.Context, params *CreateNetworkConnectorInput, optFns ...func(*Options)) (*CreateNetworkConnectorOutput, error) 
  DeleteNetworkConnector(ctx context.Context, params *DeleteNetworkConnectorInput, optFns ...func(*Options)) (*DeleteNetworkConnectorOutput, error) 
  GetNetworkConnector(ctx context.Context, params *GetNetworkConnectorInput, optFns ...func(*Options)) (*GetNetworkConnectorOutput, error) 
+ ListNetworkConnectorVersions(ctx context.Context, params *ListNetworkConnectorVersionsInput, optFns ...func(*Options)) (*ListNetworkConnectorVersionsOutput, error) 
  ListNetworkConnectors(ctx context.Context, params *ListNetworkConnectorsInput, optFns ...func(*Options)) (*ListNetworkConnectorsOutput, error) 
  UpdateNetworkConnector(ctx context.Context, params *UpdateNetworkConnectorInput, optFns ...func(*Options)) (*UpdateNetworkConnectorOutput, error) 
 }

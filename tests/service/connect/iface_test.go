@@ -515,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateContactFlowAlias", func(t *testing.T) {
+        input := &connect.CreateContactFlowAliasInput{}
+        output := &connect.CreateContactFlowAliasOutput{}
+
+        mockClient.On("CreateContactFlowAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContactFlowAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateContactFlowModule", func(t *testing.T) {
         input := &connect.CreateContactFlowModuleInput{}
         output := &connect.CreateContactFlowModuleOutput{}
@@ -1042,6 +1055,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteContactFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteContactFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteContactFlowAlias", func(t *testing.T) {
+        input := &connect.DeleteContactFlowAliasInput{}
+        output := &connect.DeleteContactFlowAliasOutput{}
+
+        mockClient.On("DeleteContactFlowAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContactFlowAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1588,6 +1614,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeContactFlow", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeContactFlow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeContactFlowAlias", func(t *testing.T) {
+        input := &connect.DescribeContactFlowAliasInput{}
+        output := &connect.DescribeContactFlowAliasOutput{}
+
+        mockClient.On("DescribeContactFlowAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeContactFlowAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2602,6 +2641,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListContactEvaluations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListContactEvaluations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContactFlowAliases", func(t *testing.T) {
+        input := &connect.ListContactFlowAliasesInput{}
+        output := &connect.ListContactFlowAliasesOutput{}
+
+        mockClient.On("ListContactFlowAliases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContactFlowAliases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4370,6 +4422,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateContactEvaluation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateContactEvaluation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContactFlowAlias", func(t *testing.T) {
+        input := &connect.UpdateContactFlowAliasInput{}
+        output := &connect.UpdateContactFlowAliasOutput{}
+
+        mockClient.On("UpdateContactFlowAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContactFlowAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

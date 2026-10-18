@@ -24,6 +24,7 @@ type IClient interface {
  EnableDomainTransferLock(ctx context.Context, params *EnableDomainTransferLockInput, optFns ...func(*Options)) (*EnableDomainTransferLockOutput, error) 
  GetContactReachabilityStatus(ctx context.Context, params *GetContactReachabilityStatusInput, optFns ...func(*Options)) (*GetContactReachabilityStatusOutput, error) 
  GetDomainDetail(ctx context.Context, params *GetDomainDetailInput, optFns ...func(*Options)) (*GetDomainDetailOutput, error) 
+ GetDomainPrices(ctx context.Context, params *GetDomainPricesInput, optFns ...func(*Options)) (*GetDomainPricesOutput, error) 
  GetDomainSuggestions(ctx context.Context, params *GetDomainSuggestionsInput, optFns ...func(*Options)) (*GetDomainSuggestionsOutput, error) 
  GetOperationDetail(ctx context.Context, params *GetOperationDetailInput, optFns ...func(*Options)) (*GetOperationDetailOutput, error) 
  ListDomains(ctx context.Context, params *ListDomainsInput, optFns ...func(*Options)) (*ListDomainsOutput, error) 
