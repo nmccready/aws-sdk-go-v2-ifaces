@@ -236,6 +236,80 @@ func (_m *IClient) BatchDeleteThreatModels(ctx context.Context, params *security
 	return r0, r1
 }
 
+// BatchDisassociateFindingIssue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchDisassociateFindingIssue(ctx context.Context, params *securityagent.BatchDisassociateFindingIssueInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchDisassociateFindingIssueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchDisassociateFindingIssue")
+	}
+
+	var r0 *securityagent.BatchDisassociateFindingIssueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDisassociateFindingIssueInput, ...func(*securityagent.Options)) (*securityagent.BatchDisassociateFindingIssueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchDisassociateFindingIssueInput, ...func(*securityagent.Options)) *securityagent.BatchDisassociateFindingIssueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchDisassociateFindingIssueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchDisassociateFindingIssueInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchExportFindings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchExportFindings(ctx context.Context, params *securityagent.BatchExportFindingsInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchExportFindingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchExportFindings")
+	}
+
+	var r0 *securityagent.BatchExportFindingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchExportFindingsInput, ...func(*securityagent.Options)) (*securityagent.BatchExportFindingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityagent.BatchExportFindingsInput, ...func(*securityagent.Options)) *securityagent.BatchExportFindingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityagent.BatchExportFindingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityagent.BatchExportFindingsInput, ...func(*securityagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetAgentSpaces provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetAgentSpaces(ctx context.Context, params *securityagent.BatchGetAgentSpacesInput, optFns ...func(*securityagent.Options)) (*securityagent.BatchGetAgentSpacesOutput, error) {
 	_va := make([]interface{}, len(optFns))

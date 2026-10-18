@@ -89,6 +89,43 @@ func (_m *IClient) AssumeDecoratedRoleWithSAML(ctx context.Context, params *lake
 	return r0, r1
 }
 
+// AttachRLSPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AttachRLSPolicy(ctx context.Context, params *lakeformation.AttachRLSPolicyInput, optFns ...func(*lakeformation.Options)) (*lakeformation.AttachRLSPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AttachRLSPolicy")
+	}
+
+	var r0 *lakeformation.AttachRLSPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.AttachRLSPolicyInput, ...func(*lakeformation.Options)) (*lakeformation.AttachRLSPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.AttachRLSPolicyInput, ...func(*lakeformation.Options)) *lakeformation.AttachRLSPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.AttachRLSPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.AttachRLSPolicyInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGrantPermissions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGrantPermissions(ctx context.Context, params *lakeformation.BatchGrantPermissionsInput, optFns ...func(*lakeformation.Options)) (*lakeformation.BatchGrantPermissionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -422,6 +459,43 @@ func (_m *IClient) CreateLakeFormationOptIn(ctx context.Context, params *lakefor
 	return r0, r1
 }
 
+// CreateRLSPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRLSPolicy(ctx context.Context, params *lakeformation.CreateRLSPolicyInput, optFns ...func(*lakeformation.Options)) (*lakeformation.CreateRLSPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRLSPolicy")
+	}
+
+	var r0 *lakeformation.CreateRLSPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.CreateRLSPolicyInput, ...func(*lakeformation.Options)) (*lakeformation.CreateRLSPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.CreateRLSPolicyInput, ...func(*lakeformation.Options)) *lakeformation.CreateRLSPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.CreateRLSPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.CreateRLSPolicyInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDataCellsFilter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDataCellsFilter(ctx context.Context, params *lakeformation.DeleteDataCellsFilterInput, optFns ...func(*lakeformation.Options)) (*lakeformation.DeleteDataCellsFilterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -644,6 +718,43 @@ func (_m *IClient) DeleteObjectsOnCancel(ctx context.Context, params *lakeformat
 	return r0, r1
 }
 
+// DeleteRLSPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRLSPolicy(ctx context.Context, params *lakeformation.DeleteRLSPolicyInput, optFns ...func(*lakeformation.Options)) (*lakeformation.DeleteRLSPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRLSPolicy")
+	}
+
+	var r0 *lakeformation.DeleteRLSPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.DeleteRLSPolicyInput, ...func(*lakeformation.Options)) (*lakeformation.DeleteRLSPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.DeleteRLSPolicyInput, ...func(*lakeformation.Options)) *lakeformation.DeleteRLSPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.DeleteRLSPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.DeleteRLSPolicyInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeregisterResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeregisterResource(ctx context.Context, params *lakeformation.DeregisterResourceInput, optFns ...func(*lakeformation.Options)) (*lakeformation.DeregisterResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -784,6 +895,43 @@ func (_m *IClient) DescribeTransaction(ctx context.Context, params *lakeformatio
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.DescribeTransactionInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DetachRLSPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DetachRLSPolicy(ctx context.Context, params *lakeformation.DetachRLSPolicyInput, optFns ...func(*lakeformation.Options)) (*lakeformation.DetachRLSPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DetachRLSPolicy")
+	}
+
+	var r0 *lakeformation.DetachRLSPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.DetachRLSPolicyInput, ...func(*lakeformation.Options)) (*lakeformation.DetachRLSPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.DetachRLSPolicyInput, ...func(*lakeformation.Options)) *lakeformation.DetachRLSPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.DetachRLSPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.DetachRLSPolicyInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1117,6 +1265,43 @@ func (_m *IClient) GetQueryStatistics(ctx context.Context, params *lakeformation
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetQueryStatisticsInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRLSPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRLSPolicy(ctx context.Context, params *lakeformation.GetRLSPolicyInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetRLSPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRLSPolicy")
+	}
+
+	var r0 *lakeformation.GetRLSPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetRLSPolicyInput, ...func(*lakeformation.Options)) (*lakeformation.GetRLSPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetRLSPolicyInput, ...func(*lakeformation.Options)) *lakeformation.GetRLSPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.GetRLSPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetRLSPolicyInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1598,6 +1783,80 @@ func (_m *IClient) ListPermissions(ctx context.Context, params *lakeformation.Li
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.ListPermissionsInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRLSPolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRLSPolicies(ctx context.Context, params *lakeformation.ListRLSPoliciesInput, optFns ...func(*lakeformation.Options)) (*lakeformation.ListRLSPoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRLSPolicies")
+	}
+
+	var r0 *lakeformation.ListRLSPoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.ListRLSPoliciesInput, ...func(*lakeformation.Options)) (*lakeformation.ListRLSPoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.ListRLSPoliciesInput, ...func(*lakeformation.Options)) *lakeformation.ListRLSPoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.ListRLSPoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.ListRLSPoliciesInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRLSPolicyAttachments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRLSPolicyAttachments(ctx context.Context, params *lakeformation.ListRLSPolicyAttachmentsInput, optFns ...func(*lakeformation.Options)) (*lakeformation.ListRLSPolicyAttachmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRLSPolicyAttachments")
+	}
+
+	var r0 *lakeformation.ListRLSPolicyAttachmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.ListRLSPolicyAttachmentsInput, ...func(*lakeformation.Options)) (*lakeformation.ListRLSPolicyAttachmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.ListRLSPolicyAttachmentsInput, ...func(*lakeformation.Options)) *lakeformation.ListRLSPolicyAttachmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.ListRLSPolicyAttachmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.ListRLSPolicyAttachmentsInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2171,6 +2430,43 @@ func (_m *IClient) UpdateLakeFormationIdentityCenterConfiguration(ctx context.Co
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.UpdateLakeFormationIdentityCenterConfigurationInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRLSPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRLSPolicy(ctx context.Context, params *lakeformation.UpdateRLSPolicyInput, optFns ...func(*lakeformation.Options)) (*lakeformation.UpdateRLSPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRLSPolicy")
+	}
+
+	var r0 *lakeformation.UpdateRLSPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.UpdateRLSPolicyInput, ...func(*lakeformation.Options)) (*lakeformation.UpdateRLSPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.UpdateRLSPolicyInput, ...func(*lakeformation.Options)) *lakeformation.UpdateRLSPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.UpdateRLSPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.UpdateRLSPolicyInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

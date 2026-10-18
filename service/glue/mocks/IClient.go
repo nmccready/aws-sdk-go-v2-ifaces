@@ -385,6 +385,43 @@ func (_m *IClient) BatchGetDataQualityResult(ctx context.Context, params *glue.B
 	return r0, r1
 }
 
+// BatchGetDataQualityResultV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetDataQualityResultV2(ctx context.Context, params *glue.BatchGetDataQualityResultV2Input, optFns ...func(*glue.Options)) (*glue.BatchGetDataQualityResultV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetDataQualityResultV2")
+	}
+
+	var r0 *glue.BatchGetDataQualityResultV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.BatchGetDataQualityResultV2Input, ...func(*glue.Options)) (*glue.BatchGetDataQualityResultV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.BatchGetDataQualityResultV2Input, ...func(*glue.Options)) *glue.BatchGetDataQualityResultV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.BatchGetDataQualityResultV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.BatchGetDataQualityResultV2Input, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetDataQualityRulesetEvaluationRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetDataQualityRulesetEvaluationRun(ctx context.Context, params *glue.BatchGetDataQualityRulesetEvaluationRunInput, optFns ...func(*glue.Options)) (*glue.BatchGetDataQualityRulesetEvaluationRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4788,6 +4825,43 @@ func (_m *IClient) GetDataQualityResult(ctx context.Context, params *glue.GetDat
 	return r0, r1
 }
 
+// GetDataQualityResultV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataQualityResultV2(ctx context.Context, params *glue.GetDataQualityResultV2Input, optFns ...func(*glue.Options)) (*glue.GetDataQualityResultV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataQualityResultV2")
+	}
+
+	var r0 *glue.GetDataQualityResultV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityResultV2Input, ...func(*glue.Options)) (*glue.GetDataQualityResultV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityResultV2Input, ...func(*glue.Options)) *glue.GetDataQualityResultV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetDataQualityResultV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataQualityResultV2Input, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDataQualityRuleRecommendationRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDataQualityRuleRecommendationRun(ctx context.Context, params *glue.GetDataQualityRuleRecommendationRunInput, optFns ...func(*glue.Options)) (*glue.GetDataQualityRuleRecommendationRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7415,6 +7489,43 @@ func (_m *IClient) ListDataQualityResults(ctx context.Context, params *glue.List
 	return r0, r1
 }
 
+// ListDataQualityResultsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataQualityResultsV2(ctx context.Context, params *glue.ListDataQualityResultsV2Input, optFns ...func(*glue.Options)) (*glue.ListDataQualityResultsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataQualityResultsV2")
+	}
+
+	var r0 *glue.ListDataQualityResultsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityResultsV2Input, ...func(*glue.Options)) (*glue.ListDataQualityResultsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityResultsV2Input, ...func(*glue.Options)) *glue.ListDataQualityResultsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListDataQualityResultsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListDataQualityResultsV2Input, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDataQualityRuleRecommendationRuns provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDataQualityRuleRecommendationRuns(ctx context.Context, params *glue.ListDataQualityRuleRecommendationRunsInput, optFns ...func(*glue.Options)) (*glue.ListDataQualityRuleRecommendationRunsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8393,6 +8504,43 @@ func (_m *IClient) Options() glue.Options {
 	}
 
 	return r0
+}
+
+// PublishDataQualityResultV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PublishDataQualityResultV2(ctx context.Context, params *glue.PublishDataQualityResultV2Input, optFns ...func(*glue.Options)) (*glue.PublishDataQualityResultV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PublishDataQualityResultV2")
+	}
+
+	var r0 *glue.PublishDataQualityResultV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PublishDataQualityResultV2Input, ...func(*glue.Options)) (*glue.PublishDataQualityResultV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.PublishDataQualityResultV2Input, ...func(*glue.Options)) *glue.PublishDataQualityResultV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.PublishDataQualityResultV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.PublishDataQualityResultV2Input, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutAsset provides a mock function with given fields: ctx, params, optFns

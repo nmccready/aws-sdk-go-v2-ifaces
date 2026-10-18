@@ -10,5 +10,24 @@ import (
 // IClient defines the interface for lambdaweb
 type IClient interface {
  Options() Options 
+ CreateWebFunction(ctx context.Context, params *CreateWebFunctionInput, optFns ...func(*Options)) (*CreateWebFunctionOutput, error) 
+ CreateWebFunctionEndpoint(ctx context.Context, params *CreateWebFunctionEndpointInput, optFns ...func(*Options)) (*CreateWebFunctionEndpointOutput, error) 
+ CreateWebFunctionRevision(ctx context.Context, params *CreateWebFunctionRevisionInput, optFns ...func(*Options)) (*CreateWebFunctionRevisionOutput, error) 
+ DeleteResourcePolicy(ctx context.Context, params *DeleteResourcePolicyInput, optFns ...func(*Options)) (*DeleteResourcePolicyOutput, error) 
+ DeleteWebFunction(ctx context.Context, params *DeleteWebFunctionInput, optFns ...func(*Options)) (*DeleteWebFunctionOutput, error) 
+ DeleteWebFunctionEndpoint(ctx context.Context, params *DeleteWebFunctionEndpointInput, optFns ...func(*Options)) (*DeleteWebFunctionEndpointOutput, error) 
+ DeleteWebFunctionRevision(ctx context.Context, params *DeleteWebFunctionRevisionInput, optFns ...func(*Options)) (*DeleteWebFunctionRevisionOutput, error) 
+ GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
  GetWebAccountSettings(ctx context.Context, params *GetWebAccountSettingsInput, optFns ...func(*Options)) (*GetWebAccountSettingsOutput, error) 
+ GetWebFunction(ctx context.Context, params *GetWebFunctionInput, optFns ...func(*Options)) (*GetWebFunctionOutput, error) 
+ GetWebFunctionEndpoint(ctx context.Context, params *GetWebFunctionEndpointInput, optFns ...func(*Options)) (*GetWebFunctionEndpointOutput, error) 
+ GetWebFunctionRevision(ctx context.Context, params *GetWebFunctionRevisionInput, optFns ...func(*Options)) (*GetWebFunctionRevisionOutput, error) 
+ ListTags(ctx context.Context, params *ListTagsInput, optFns ...func(*Options)) (*ListTagsOutput, error) 
+ ListWebFunctionEndpoints(ctx context.Context, params *ListWebFunctionEndpointsInput, optFns ...func(*Options)) (*ListWebFunctionEndpointsOutput, error) 
+ ListWebFunctionRevisions(ctx context.Context, params *ListWebFunctionRevisionsInput, optFns ...func(*Options)) (*ListWebFunctionRevisionsOutput, error) 
+ ListWebFunctions(ctx context.Context, params *ListWebFunctionsInput, optFns ...func(*Options)) (*ListWebFunctionsOutput, error) 
+ PutResourcePolicy(ctx context.Context, params *PutResourcePolicyInput, optFns ...func(*Options)) (*PutResourcePolicyOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateWebFunctionEndpoint(ctx context.Context, params *UpdateWebFunctionEndpointInput, optFns ...func(*Options)) (*UpdateWebFunctionEndpointOutput, error) 
 }

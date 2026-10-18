@@ -2826,6 +2826,43 @@ func (_m *IClient) CreateTrainingPlan(ctx context.Context, params *sagemaker.Cre
 	return r0, r1
 }
 
+// CreateTrainingSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTrainingSession(ctx context.Context, params *sagemaker.CreateTrainingSessionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateTrainingSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTrainingSession")
+	}
+
+	var r0 *sagemaker.CreateTrainingSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateTrainingSessionInput, ...func(*sagemaker.Options)) (*sagemaker.CreateTrainingSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateTrainingSessionInput, ...func(*sagemaker.Options)) *sagemaker.CreateTrainingSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateTrainingSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateTrainingSessionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTransformJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTransformJob(ctx context.Context, params *sagemaker.CreateTransformJobInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateTransformJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5149,6 +5186,43 @@ func (_m *IClient) DeleteTrainingJob(ctx context.Context, params *sagemaker.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteTrainingJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTrainingSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTrainingSession(ctx context.Context, params *sagemaker.DeleteTrainingSessionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteTrainingSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTrainingSession")
+	}
+
+	var r0 *sagemaker.DeleteTrainingSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteTrainingSessionInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteTrainingSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteTrainingSessionInput, ...func(*sagemaker.Options)) *sagemaker.DeleteTrainingSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteTrainingSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteTrainingSessionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7961,6 +8035,43 @@ func (_m *IClient) DescribeTrainingPlanExtensionHistory(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeTrainingPlanExtensionHistoryInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTrainingSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTrainingSession(ctx context.Context, params *sagemaker.DescribeTrainingSessionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeTrainingSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTrainingSession")
+	}
+
+	var r0 *sagemaker.DescribeTrainingSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeTrainingSessionInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeTrainingSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeTrainingSessionInput, ...func(*sagemaker.Options)) *sagemaker.DescribeTrainingSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeTrainingSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeTrainingSessionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -11706,6 +11817,43 @@ func (_m *IClient) ListTrainingPlans(ctx context.Context, params *sagemaker.List
 	return r0, r1
 }
 
+// ListTrainingSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTrainingSessions(ctx context.Context, params *sagemaker.ListTrainingSessionsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListTrainingSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTrainingSessions")
+	}
+
+	var r0 *sagemaker.ListTrainingSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListTrainingSessionsInput, ...func(*sagemaker.Options)) (*sagemaker.ListTrainingSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListTrainingSessionsInput, ...func(*sagemaker.Options)) *sagemaker.ListTrainingSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListTrainingSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListTrainingSessionsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTransformJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTransformJobs(ctx context.Context, params *sagemaker.ListTransformJobsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListTransformJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -13270,6 +13418,43 @@ func (_m *IClient) StopTrainingJob(ctx context.Context, params *sagemaker.StopTr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StopTrainingJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopTrainingSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopTrainingSession(ctx context.Context, params *sagemaker.StopTrainingSessionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.StopTrainingSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopTrainingSession")
+	}
+
+	var r0 *sagemaker.StopTrainingSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopTrainingSessionInput, ...func(*sagemaker.Options)) (*sagemaker.StopTrainingSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.StopTrainingSessionInput, ...func(*sagemaker.Options)) *sagemaker.StopTrainingSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.StopTrainingSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.StopTrainingSessionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

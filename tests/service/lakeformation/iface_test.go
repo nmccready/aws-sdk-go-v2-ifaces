@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAttachRLSPolicy", func(t *testing.T) {
+        input := &lakeformation.AttachRLSPolicyInput{}
+        output := &lakeformation.AttachRLSPolicyOutput{}
+
+        mockClient.On("AttachRLSPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AttachRLSPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGrantPermissions", func(t *testing.T) {
         input := &lakeformation.BatchGrantPermissionsInput{}
         output := &lakeformation.BatchGrantPermissionsOutput{}
@@ -177,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRLSPolicy", func(t *testing.T) {
+        input := &lakeformation.CreateRLSPolicyInput{}
+        output := &lakeformation.CreateRLSPolicyOutput{}
+
+        mockClient.On("CreateRLSPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRLSPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDataCellsFilter", func(t *testing.T) {
         input := &lakeformation.DeleteDataCellsFilterInput{}
         output := &lakeformation.DeleteDataCellsFilterOutput{}
@@ -255,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteRLSPolicy", func(t *testing.T) {
+        input := &lakeformation.DeleteRLSPolicyInput{}
+        output := &lakeformation.DeleteRLSPolicyOutput{}
+
+        mockClient.On("DeleteRLSPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRLSPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeregisterResource", func(t *testing.T) {
         input := &lakeformation.DeregisterResourceInput{}
         output := &lakeformation.DeregisterResourceOutput{}
@@ -301,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTransaction", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTransaction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDetachRLSPolicy", func(t *testing.T) {
+        input := &lakeformation.DetachRLSPolicyInput{}
+        output := &lakeformation.DetachRLSPolicyOutput{}
+
+        mockClient.On("DetachRLSPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DetachRLSPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -418,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQueryStatistics", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQueryStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRLSPolicy", func(t *testing.T) {
+        input := &lakeformation.GetRLSPolicyInput{}
+        output := &lakeformation.GetRLSPolicyOutput{}
+
+        mockClient.On("GetRLSPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRLSPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -587,6 +652,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRLSPolicies", func(t *testing.T) {
+        input := &lakeformation.ListRLSPoliciesInput{}
+        output := &lakeformation.ListRLSPoliciesOutput{}
+
+        mockClient.On("ListRLSPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRLSPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRLSPolicyAttachments", func(t *testing.T) {
+        input := &lakeformation.ListRLSPolicyAttachmentsInput{}
+        output := &lakeformation.ListRLSPolicyAttachmentsOutput{}
+
+        mockClient.On("ListRLSPolicyAttachments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRLSPolicyAttachments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -782,6 +873,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateLakeFormationIdentityCenterConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateLakeFormationIdentityCenterConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRLSPolicy", func(t *testing.T) {
+        input := &lakeformation.UpdateRLSPolicyInput{}
+        output := &lakeformation.UpdateRLSPolicyOutput{}
+
+        mockClient.On("UpdateRLSPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRLSPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

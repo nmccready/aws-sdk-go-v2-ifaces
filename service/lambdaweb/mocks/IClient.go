@@ -15,6 +15,302 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateWebFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWebFunction(ctx context.Context, params *lambdaweb.CreateWebFunctionInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.CreateWebFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWebFunction")
+	}
+
+	var r0 *lambdaweb.CreateWebFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.CreateWebFunctionInput, ...func(*lambdaweb.Options)) (*lambdaweb.CreateWebFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.CreateWebFunctionInput, ...func(*lambdaweb.Options)) *lambdaweb.CreateWebFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.CreateWebFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.CreateWebFunctionInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateWebFunctionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWebFunctionEndpoint(ctx context.Context, params *lambdaweb.CreateWebFunctionEndpointInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.CreateWebFunctionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWebFunctionEndpoint")
+	}
+
+	var r0 *lambdaweb.CreateWebFunctionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.CreateWebFunctionEndpointInput, ...func(*lambdaweb.Options)) (*lambdaweb.CreateWebFunctionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.CreateWebFunctionEndpointInput, ...func(*lambdaweb.Options)) *lambdaweb.CreateWebFunctionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.CreateWebFunctionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.CreateWebFunctionEndpointInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateWebFunctionRevision provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateWebFunctionRevision(ctx context.Context, params *lambdaweb.CreateWebFunctionRevisionInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.CreateWebFunctionRevisionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateWebFunctionRevision")
+	}
+
+	var r0 *lambdaweb.CreateWebFunctionRevisionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.CreateWebFunctionRevisionInput, ...func(*lambdaweb.Options)) (*lambdaweb.CreateWebFunctionRevisionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.CreateWebFunctionRevisionInput, ...func(*lambdaweb.Options)) *lambdaweb.CreateWebFunctionRevisionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.CreateWebFunctionRevisionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.CreateWebFunctionRevisionInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *lambdaweb.DeleteResourcePolicyInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.DeleteResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourcePolicy")
+	}
+
+	var r0 *lambdaweb.DeleteResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteResourcePolicyInput, ...func(*lambdaweb.Options)) (*lambdaweb.DeleteResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteResourcePolicyInput, ...func(*lambdaweb.Options)) *lambdaweb.DeleteResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.DeleteResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.DeleteResourcePolicyInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWebFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWebFunction(ctx context.Context, params *lambdaweb.DeleteWebFunctionInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.DeleteWebFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWebFunction")
+	}
+
+	var r0 *lambdaweb.DeleteWebFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteWebFunctionInput, ...func(*lambdaweb.Options)) (*lambdaweb.DeleteWebFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteWebFunctionInput, ...func(*lambdaweb.Options)) *lambdaweb.DeleteWebFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.DeleteWebFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.DeleteWebFunctionInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWebFunctionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWebFunctionEndpoint(ctx context.Context, params *lambdaweb.DeleteWebFunctionEndpointInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.DeleteWebFunctionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWebFunctionEndpoint")
+	}
+
+	var r0 *lambdaweb.DeleteWebFunctionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteWebFunctionEndpointInput, ...func(*lambdaweb.Options)) (*lambdaweb.DeleteWebFunctionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteWebFunctionEndpointInput, ...func(*lambdaweb.Options)) *lambdaweb.DeleteWebFunctionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.DeleteWebFunctionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.DeleteWebFunctionEndpointInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteWebFunctionRevision provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteWebFunctionRevision(ctx context.Context, params *lambdaweb.DeleteWebFunctionRevisionInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.DeleteWebFunctionRevisionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteWebFunctionRevision")
+	}
+
+	var r0 *lambdaweb.DeleteWebFunctionRevisionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteWebFunctionRevisionInput, ...func(*lambdaweb.Options)) (*lambdaweb.DeleteWebFunctionRevisionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.DeleteWebFunctionRevisionInput, ...func(*lambdaweb.Options)) *lambdaweb.DeleteWebFunctionRevisionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.DeleteWebFunctionRevisionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.DeleteWebFunctionRevisionInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetResourcePolicy(ctx context.Context, params *lambdaweb.GetResourcePolicyInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.GetResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetResourcePolicy")
+	}
+
+	var r0 *lambdaweb.GetResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetResourcePolicyInput, ...func(*lambdaweb.Options)) (*lambdaweb.GetResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetResourcePolicyInput, ...func(*lambdaweb.Options)) *lambdaweb.GetResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.GetResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.GetResourcePolicyInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetWebAccountSettings provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetWebAccountSettings(ctx context.Context, params *lambdaweb.GetWebAccountSettingsInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.GetWebAccountSettingsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -52,6 +348,265 @@ func (_m *IClient) GetWebAccountSettings(ctx context.Context, params *lambdaweb.
 	return r0, r1
 }
 
+// GetWebFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetWebFunction(ctx context.Context, params *lambdaweb.GetWebFunctionInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.GetWebFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetWebFunction")
+	}
+
+	var r0 *lambdaweb.GetWebFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetWebFunctionInput, ...func(*lambdaweb.Options)) (*lambdaweb.GetWebFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetWebFunctionInput, ...func(*lambdaweb.Options)) *lambdaweb.GetWebFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.GetWebFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.GetWebFunctionInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetWebFunctionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetWebFunctionEndpoint(ctx context.Context, params *lambdaweb.GetWebFunctionEndpointInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.GetWebFunctionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetWebFunctionEndpoint")
+	}
+
+	var r0 *lambdaweb.GetWebFunctionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetWebFunctionEndpointInput, ...func(*lambdaweb.Options)) (*lambdaweb.GetWebFunctionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetWebFunctionEndpointInput, ...func(*lambdaweb.Options)) *lambdaweb.GetWebFunctionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.GetWebFunctionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.GetWebFunctionEndpointInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetWebFunctionRevision provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetWebFunctionRevision(ctx context.Context, params *lambdaweb.GetWebFunctionRevisionInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.GetWebFunctionRevisionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetWebFunctionRevision")
+	}
+
+	var r0 *lambdaweb.GetWebFunctionRevisionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetWebFunctionRevisionInput, ...func(*lambdaweb.Options)) (*lambdaweb.GetWebFunctionRevisionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.GetWebFunctionRevisionInput, ...func(*lambdaweb.Options)) *lambdaweb.GetWebFunctionRevisionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.GetWebFunctionRevisionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.GetWebFunctionRevisionInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTags provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTags(ctx context.Context, params *lambdaweb.ListTagsInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.ListTagsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTags")
+	}
+
+	var r0 *lambdaweb.ListTagsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListTagsInput, ...func(*lambdaweb.Options)) (*lambdaweb.ListTagsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListTagsInput, ...func(*lambdaweb.Options)) *lambdaweb.ListTagsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.ListTagsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.ListTagsInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWebFunctionEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWebFunctionEndpoints(ctx context.Context, params *lambdaweb.ListWebFunctionEndpointsInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.ListWebFunctionEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWebFunctionEndpoints")
+	}
+
+	var r0 *lambdaweb.ListWebFunctionEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListWebFunctionEndpointsInput, ...func(*lambdaweb.Options)) (*lambdaweb.ListWebFunctionEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListWebFunctionEndpointsInput, ...func(*lambdaweb.Options)) *lambdaweb.ListWebFunctionEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.ListWebFunctionEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.ListWebFunctionEndpointsInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWebFunctionRevisions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWebFunctionRevisions(ctx context.Context, params *lambdaweb.ListWebFunctionRevisionsInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.ListWebFunctionRevisionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWebFunctionRevisions")
+	}
+
+	var r0 *lambdaweb.ListWebFunctionRevisionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListWebFunctionRevisionsInput, ...func(*lambdaweb.Options)) (*lambdaweb.ListWebFunctionRevisionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListWebFunctionRevisionsInput, ...func(*lambdaweb.Options)) *lambdaweb.ListWebFunctionRevisionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.ListWebFunctionRevisionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.ListWebFunctionRevisionsInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListWebFunctions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListWebFunctions(ctx context.Context, params *lambdaweb.ListWebFunctionsInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.ListWebFunctionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListWebFunctions")
+	}
+
+	var r0 *lambdaweb.ListWebFunctionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListWebFunctionsInput, ...func(*lambdaweb.Options)) (*lambdaweb.ListWebFunctionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.ListWebFunctionsInput, ...func(*lambdaweb.Options)) *lambdaweb.ListWebFunctionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.ListWebFunctionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.ListWebFunctionsInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() lambdaweb.Options {
 	ret := _m.Called()
@@ -68,6 +623,154 @@ func (_m *IClient) Options() lambdaweb.Options {
 	}
 
 	return r0
+}
+
+// PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutResourcePolicy(ctx context.Context, params *lambdaweb.PutResourcePolicyInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.PutResourcePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutResourcePolicy")
+	}
+
+	var r0 *lambdaweb.PutResourcePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.PutResourcePolicyInput, ...func(*lambdaweb.Options)) (*lambdaweb.PutResourcePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.PutResourcePolicyInput, ...func(*lambdaweb.Options)) *lambdaweb.PutResourcePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.PutResourcePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.PutResourcePolicyInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *lambdaweb.TagResourceInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *lambdaweb.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.TagResourceInput, ...func(*lambdaweb.Options)) (*lambdaweb.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.TagResourceInput, ...func(*lambdaweb.Options)) *lambdaweb.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.TagResourceInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *lambdaweb.UntagResourceInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *lambdaweb.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.UntagResourceInput, ...func(*lambdaweb.Options)) (*lambdaweb.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.UntagResourceInput, ...func(*lambdaweb.Options)) *lambdaweb.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.UntagResourceInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateWebFunctionEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateWebFunctionEndpoint(ctx context.Context, params *lambdaweb.UpdateWebFunctionEndpointInput, optFns ...func(*lambdaweb.Options)) (*lambdaweb.UpdateWebFunctionEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateWebFunctionEndpoint")
+	}
+
+	var r0 *lambdaweb.UpdateWebFunctionEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.UpdateWebFunctionEndpointInput, ...func(*lambdaweb.Options)) (*lambdaweb.UpdateWebFunctionEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdaweb.UpdateWebFunctionEndpointInput, ...func(*lambdaweb.Options)) *lambdaweb.UpdateWebFunctionEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdaweb.UpdateWebFunctionEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdaweb.UpdateWebFunctionEndpointInput, ...func(*lambdaweb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

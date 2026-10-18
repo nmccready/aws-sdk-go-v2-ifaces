@@ -1384,6 +1384,43 @@ func (_m *IClient) CreateContactFlow(ctx context.Context, params *connect.Create
 	return r0, r1
 }
 
+// CreateContactFlowAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContactFlowAlias(ctx context.Context, params *connect.CreateContactFlowAliasInput, optFns ...func(*connect.Options)) (*connect.CreateContactFlowAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContactFlowAlias")
+	}
+
+	var r0 *connect.CreateContactFlowAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateContactFlowAliasInput, ...func(*connect.Options)) (*connect.CreateContactFlowAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.CreateContactFlowAliasInput, ...func(*connect.Options)) *connect.CreateContactFlowAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.CreateContactFlowAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.CreateContactFlowAliasInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateContactFlowModule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateContactFlowModule(ctx context.Context, params *connect.CreateContactFlowModuleInput, optFns ...func(*connect.Options)) (*connect.CreateContactFlowModuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2893,6 +2930,43 @@ func (_m *IClient) DeleteContactFlow(ctx context.Context, params *connect.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteContactFlowInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteContactFlowAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteContactFlowAlias(ctx context.Context, params *connect.DeleteContactFlowAliasInput, optFns ...func(*connect.Options)) (*connect.DeleteContactFlowAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteContactFlowAlias")
+	}
+
+	var r0 *connect.DeleteContactFlowAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteContactFlowAliasInput, ...func(*connect.Options)) (*connect.DeleteContactFlowAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DeleteContactFlowAliasInput, ...func(*connect.Options)) *connect.DeleteContactFlowAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DeleteContactFlowAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DeleteContactFlowAliasInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4447,6 +4521,43 @@ func (_m *IClient) DescribeContactFlow(ctx context.Context, params *connect.Desc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeContactFlowInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeContactFlowAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeContactFlowAlias(ctx context.Context, params *connect.DescribeContactFlowAliasInput, optFns ...func(*connect.Options)) (*connect.DescribeContactFlowAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeContactFlowAlias")
+	}
+
+	var r0 *connect.DescribeContactFlowAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeContactFlowAliasInput, ...func(*connect.Options)) (*connect.DescribeContactFlowAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.DescribeContactFlowAliasInput, ...func(*connect.Options)) *connect.DescribeContactFlowAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.DescribeContactFlowAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.DescribeContactFlowAliasInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7333,6 +7444,43 @@ func (_m *IClient) ListContactEvaluations(ctx context.Context, params *connect.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListContactEvaluationsInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContactFlowAliases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContactFlowAliases(ctx context.Context, params *connect.ListContactFlowAliasesInput, optFns ...func(*connect.Options)) (*connect.ListContactFlowAliasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContactFlowAliases")
+	}
+
+	var r0 *connect.ListContactFlowAliasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListContactFlowAliasesInput, ...func(*connect.Options)) (*connect.ListContactFlowAliasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.ListContactFlowAliasesInput, ...func(*connect.Options)) *connect.ListContactFlowAliasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.ListContactFlowAliasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.ListContactFlowAliasesInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12383,6 +12531,43 @@ func (_m *IClient) UpdateContactEvaluation(ctx context.Context, params *connect.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateContactEvaluationInput, ...func(*connect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateContactFlowAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContactFlowAlias(ctx context.Context, params *connect.UpdateContactFlowAliasInput, optFns ...func(*connect.Options)) (*connect.UpdateContactFlowAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContactFlowAlias")
+	}
+
+	var r0 *connect.UpdateContactFlowAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateContactFlowAliasInput, ...func(*connect.Options)) (*connect.UpdateContactFlowAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connect.UpdateContactFlowAliasInput, ...func(*connect.Options)) *connect.UpdateContactFlowAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connect.UpdateContactFlowAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connect.UpdateContactFlowAliasInput, ...func(*connect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

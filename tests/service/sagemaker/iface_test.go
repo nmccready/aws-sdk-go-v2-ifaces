@@ -1022,6 +1022,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTrainingSession", func(t *testing.T) {
+        input := &sagemaker.CreateTrainingSessionInput{}
+        output := &sagemaker.CreateTrainingSessionOutput{}
+
+        mockClient.On("CreateTrainingSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTrainingSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTransformJob", func(t *testing.T) {
         input := &sagemaker.CreateTransformJobInput{}
         output := &sagemaker.CreateTransformJobOutput{}
@@ -1835,6 +1848,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTrainingJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTrainingJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTrainingSession", func(t *testing.T) {
+        input := &sagemaker.DeleteTrainingSessionInput{}
+        output := &sagemaker.DeleteTrainingSessionOutput{}
+
+        mockClient.On("DeleteTrainingSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTrainingSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2823,6 +2849,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTrainingPlanExtensionHistory", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTrainingPlanExtensionHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTrainingSession", func(t *testing.T) {
+        input := &sagemaker.DescribeTrainingSessionInput{}
+        output := &sagemaker.DescribeTrainingSessionOutput{}
+
+        mockClient.On("DescribeTrainingSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTrainingSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4142,6 +4181,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTrainingSessions", func(t *testing.T) {
+        input := &sagemaker.ListTrainingSessionsInput{}
+        output := &sagemaker.ListTrainingSessionsOutput{}
+
+        mockClient.On("ListTrainingSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrainingSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTransformJobs", func(t *testing.T) {
         input := &sagemaker.ListTransformJobsInput{}
         output := &sagemaker.ListTransformJobsOutput{}
@@ -4682,6 +4734,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopTrainingJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopTrainingJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopTrainingSession", func(t *testing.T) {
+        input := &sagemaker.StopTrainingSessionInput{}
+        output := &sagemaker.StopTrainingSessionOutput{}
+
+        mockClient.On("StopTrainingSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopTrainingSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
