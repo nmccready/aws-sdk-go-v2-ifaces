@@ -21,6 +21,7 @@ type IClient interface {
  ListRegions(ctx context.Context, params *ListRegionsInput, optFns ...func(*Options)) (*ListRegionsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  ListWorkspaceInstances(ctx context.Context, params *ListWorkspaceInstancesInput, optFns ...func(*Options)) (*ListWorkspaceInstancesOutput, error) 
+ ModifyVolume(ctx context.Context, params *ModifyVolumeInput, optFns ...func(*Options)) (*ModifyVolumeOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

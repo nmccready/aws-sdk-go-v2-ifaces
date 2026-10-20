@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyVolume", func(t *testing.T) {
+        input := &workspacesinstances.ModifyVolumeInput{}
+        output := &workspacesinstances.ModifyVolumeOutput{}
+
+        mockClient.On("ModifyVolume", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyVolume(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &workspacesinstances.TagResourceInput{}
         output := &workspacesinstances.TagResourceOutput{}

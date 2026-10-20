@@ -459,6 +459,80 @@ func (_m *IClient) CreatePromptVersion(ctx context.Context, params *bedrockagent
 	return r0, r1
 }
 
+// CreateRetrievalInstruction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRetrievalInstruction(ctx context.Context, params *bedrockagent.CreateRetrievalInstructionInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.CreateRetrievalInstructionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRetrievalInstruction")
+	}
+
+	var r0 *bedrockagent.CreateRetrievalInstructionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.CreateRetrievalInstructionInput, ...func(*bedrockagent.Options)) (*bedrockagent.CreateRetrievalInstructionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.CreateRetrievalInstructionInput, ...func(*bedrockagent.Options)) *bedrockagent.CreateRetrievalInstructionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.CreateRetrievalInstructionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.CreateRetrievalInstructionInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRetrievalInstructionVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRetrievalInstructionVersion(ctx context.Context, params *bedrockagent.CreateRetrievalInstructionVersionInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.CreateRetrievalInstructionVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRetrievalInstructionVersion")
+	}
+
+	var r0 *bedrockagent.CreateRetrievalInstructionVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.CreateRetrievalInstructionVersionInput, ...func(*bedrockagent.Options)) (*bedrockagent.CreateRetrievalInstructionVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.CreateRetrievalInstructionVersionInput, ...func(*bedrockagent.Options)) *bedrockagent.CreateRetrievalInstructionVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.CreateRetrievalInstructionVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.CreateRetrievalInstructionVersionInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateVpcConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateVpcConfiguration(ctx context.Context, params *bedrockagent.CreateVpcConfigurationInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.CreateVpcConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -932,6 +1006,43 @@ func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *bedrockagen
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DeleteResourcePolicyInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRetrievalInstruction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRetrievalInstruction(ctx context.Context, params *bedrockagent.DeleteRetrievalInstructionInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.DeleteRetrievalInstructionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRetrievalInstruction")
+	}
+
+	var r0 *bedrockagent.DeleteRetrievalInstructionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DeleteRetrievalInstructionInput, ...func(*bedrockagent.Options)) (*bedrockagent.DeleteRetrievalInstructionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.DeleteRetrievalInstructionInput, ...func(*bedrockagent.Options)) *bedrockagent.DeleteRetrievalInstructionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.DeleteRetrievalInstructionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.DeleteRetrievalInstructionInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1606,6 +1717,43 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *bedrockagent.G
 	return r0, r1
 }
 
+// GetRetrievalInstruction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRetrievalInstruction(ctx context.Context, params *bedrockagent.GetRetrievalInstructionInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.GetRetrievalInstructionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRetrievalInstruction")
+	}
+
+	var r0 *bedrockagent.GetRetrievalInstructionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetRetrievalInstructionInput, ...func(*bedrockagent.Options)) (*bedrockagent.GetRetrievalInstructionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.GetRetrievalInstructionInput, ...func(*bedrockagent.Options)) *bedrockagent.GetRetrievalInstructionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.GetRetrievalInstructionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.GetRetrievalInstructionInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetVpcConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetVpcConfiguration(ctx context.Context, params *bedrockagent.GetVpcConfigurationInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.GetVpcConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2190,6 +2338,80 @@ func (_m *IClient) ListPrompts(ctx context.Context, params *bedrockagent.ListPro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListPromptsInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRetrievalInstructionVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRetrievalInstructionVersions(ctx context.Context, params *bedrockagent.ListRetrievalInstructionVersionsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ListRetrievalInstructionVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRetrievalInstructionVersions")
+	}
+
+	var r0 *bedrockagent.ListRetrievalInstructionVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListRetrievalInstructionVersionsInput, ...func(*bedrockagent.Options)) (*bedrockagent.ListRetrievalInstructionVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListRetrievalInstructionVersionsInput, ...func(*bedrockagent.Options)) *bedrockagent.ListRetrievalInstructionVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.ListRetrievalInstructionVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListRetrievalInstructionVersionsInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRetrievalInstructions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRetrievalInstructions(ctx context.Context, params *bedrockagent.ListRetrievalInstructionsInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.ListRetrievalInstructionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRetrievalInstructions")
+	}
+
+	var r0 *bedrockagent.ListRetrievalInstructionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListRetrievalInstructionsInput, ...func(*bedrockagent.Options)) (*bedrockagent.ListRetrievalInstructionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.ListRetrievalInstructionsInput, ...func(*bedrockagent.Options)) *bedrockagent.ListRetrievalInstructionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.ListRetrievalInstructionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.ListRetrievalInstructionsInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2911,6 +3133,43 @@ func (_m *IClient) UpdatePrompt(ctx context.Context, params *bedrockagent.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.UpdatePromptInput, ...func(*bedrockagent.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRetrievalInstruction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRetrievalInstruction(ctx context.Context, params *bedrockagent.UpdateRetrievalInstructionInput, optFns ...func(*bedrockagent.Options)) (*bedrockagent.UpdateRetrievalInstructionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRetrievalInstruction")
+	}
+
+	var r0 *bedrockagent.UpdateRetrievalInstructionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.UpdateRetrievalInstructionInput, ...func(*bedrockagent.Options)) (*bedrockagent.UpdateRetrievalInstructionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagent.UpdateRetrievalInstructionInput, ...func(*bedrockagent.Options)) *bedrockagent.UpdateRetrievalInstructionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagent.UpdateRetrievalInstructionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagent.UpdateRetrievalInstructionInput, ...func(*bedrockagent.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

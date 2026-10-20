@@ -190,6 +190,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRetrievalInstruction", func(t *testing.T) {
+        input := &bedrockagent.CreateRetrievalInstructionInput{}
+        output := &bedrockagent.CreateRetrievalInstructionOutput{}
+
+        mockClient.On("CreateRetrievalInstruction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRetrievalInstruction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRetrievalInstructionVersion", func(t *testing.T) {
+        input := &bedrockagent.CreateRetrievalInstructionVersionInput{}
+        output := &bedrockagent.CreateRetrievalInstructionVersionOutput{}
+
+        mockClient.On("CreateRetrievalInstructionVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRetrievalInstructionVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateVpcConfiguration", func(t *testing.T) {
         input := &bedrockagent.CreateVpcConfigurationInput{}
         output := &bedrockagent.CreateVpcConfigurationOutput{}
@@ -353,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRetrievalInstruction", func(t *testing.T) {
+        input := &bedrockagent.DeleteRetrievalInstructionInput{}
+        output := &bedrockagent.DeleteRetrievalInstructionOutput{}
+
+        mockClient.On("DeleteRetrievalInstruction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRetrievalInstruction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetRetrievalInstruction", func(t *testing.T) {
+        input := &bedrockagent.GetRetrievalInstructionInput{}
+        output := &bedrockagent.GetRetrievalInstructionOutput{}
+
+        mockClient.On("GetRetrievalInstruction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRetrievalInstruction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetVpcConfiguration", func(t *testing.T) {
         input := &bedrockagent.GetVpcConfigurationInput{}
         output := &bedrockagent.GetVpcConfigurationOutput{}
@@ -795,6 +847,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPrompts", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPrompts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRetrievalInstructionVersions", func(t *testing.T) {
+        input := &bedrockagent.ListRetrievalInstructionVersionsInput{}
+        output := &bedrockagent.ListRetrievalInstructionVersionsOutput{}
+
+        mockClient.On("ListRetrievalInstructionVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRetrievalInstructionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRetrievalInstructions", func(t *testing.T) {
+        input := &bedrockagent.ListRetrievalInstructionsInput{}
+        output := &bedrockagent.ListRetrievalInstructionsOutput{}
+
+        mockClient.On("ListRetrievalInstructions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRetrievalInstructions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1042,6 +1120,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePrompt", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePrompt(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRetrievalInstruction", func(t *testing.T) {
+        input := &bedrockagent.UpdateRetrievalInstructionInput{}
+        output := &bedrockagent.UpdateRetrievalInstructionOutput{}
+
+        mockClient.On("UpdateRetrievalInstruction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRetrievalInstruction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
