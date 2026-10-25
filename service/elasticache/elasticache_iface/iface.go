@@ -76,6 +76,7 @@ type IClient interface {
  ModifyServerlessCache(ctx context.Context, params *ModifyServerlessCacheInput, optFns ...func(*Options)) (*ModifyServerlessCacheOutput, error) 
  ModifyUser(ctx context.Context, params *ModifyUserInput, optFns ...func(*Options)) (*ModifyUserOutput, error) 
  ModifyUserGroup(ctx context.Context, params *ModifyUserGroupInput, optFns ...func(*Options)) (*ModifyUserGroupOutput, error) 
+ PrepareMigration(ctx context.Context, params *PrepareMigrationInput, optFns ...func(*Options)) (*PrepareMigrationOutput, error) 
  PurchaseReservedCacheNodesOffering(ctx context.Context, params *PurchaseReservedCacheNodesOfferingInput, optFns ...func(*Options)) (*PurchaseReservedCacheNodesOfferingOutput, error) 
  RebalanceSlotsInGlobalReplicationGroup(ctx context.Context, params *RebalanceSlotsInGlobalReplicationGroupInput, optFns ...func(*Options)) (*RebalanceSlotsInGlobalReplicationGroupOutput, error) 
  RebootCacheCluster(ctx context.Context, params *RebootCacheClusterInput, optFns ...func(*Options)) (*RebootCacheClusterOutput, error) 
@@ -83,6 +84,7 @@ type IClient interface {
  ResetCacheParameterGroup(ctx context.Context, params *ResetCacheParameterGroupInput, optFns ...func(*Options)) (*ResetCacheParameterGroupOutput, error) 
  RevokeCacheSecurityGroupIngress(ctx context.Context, params *RevokeCacheSecurityGroupIngressInput, optFns ...func(*Options)) (*RevokeCacheSecurityGroupIngressOutput, error) 
  StartMigration(ctx context.Context, params *StartMigrationInput, optFns ...func(*Options)) (*StartMigrationOutput, error) 
+ StopMigration(ctx context.Context, params *StopMigrationInput, optFns ...func(*Options)) (*StopMigrationOutput, error) 
  TestFailover(ctx context.Context, params *TestFailoverInput, optFns ...func(*Options)) (*TestFailoverOutput, error) 
  TestMigration(ctx context.Context, params *TestMigrationInput, optFns ...func(*Options)) (*TestMigrationOutput, error) 
 }

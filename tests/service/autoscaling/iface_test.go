@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeAccountSettings", func(t *testing.T) {
+        input := &autoscaling.DescribeAccountSettingsInput{}
+        output := &autoscaling.DescribeAccountSettingsOutput{}
+
+        mockClient.On("DescribeAccountSettings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAccountSettings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAdjustmentTypes", func(t *testing.T) {
         input := &autoscaling.DescribeAdjustmentTypesInput{}
         output := &autoscaling.DescribeAdjustmentTypesOutput{}
@@ -691,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("LaunchInstances", ctx, input).Return(output, nil)
 
         result, err := mockClient.LaunchInstances(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountSetting", func(t *testing.T) {
+        input := &autoscaling.PutAccountSettingInput{}
+        output := &autoscaling.PutAccountSettingOutput{}
+
+        mockClient.On("PutAccountSetting", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountSetting(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

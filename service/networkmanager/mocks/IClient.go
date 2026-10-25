@@ -2419,6 +2419,43 @@ func (_m *IClient) GetVpcAttachment(ctx context.Context, params *networkmanager.
 	return r0, r1
 }
 
+// ListAttachmentNatConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAttachmentNatConfigurations(ctx context.Context, params *networkmanager.ListAttachmentNatConfigurationsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListAttachmentNatConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAttachmentNatConfigurations")
+	}
+
+	var r0 *networkmanager.ListAttachmentNatConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListAttachmentNatConfigurationsInput, ...func(*networkmanager.Options)) (*networkmanager.ListAttachmentNatConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListAttachmentNatConfigurationsInput, ...func(*networkmanager.Options)) *networkmanager.ListAttachmentNatConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListAttachmentNatConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListAttachmentNatConfigurationsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAttachmentRoutingPolicyAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAttachmentRoutingPolicyAssociations(ctx context.Context, params *networkmanager.ListAttachmentRoutingPolicyAssociationsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListAttachmentRoutingPolicyAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3206,6 +3243,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *networkmanager.Unt
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.UntagResourceInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAttachmentNatConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAttachmentNatConfiguration(ctx context.Context, params *networkmanager.UpdateAttachmentNatConfigurationInput, optFns ...func(*networkmanager.Options)) (*networkmanager.UpdateAttachmentNatConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAttachmentNatConfiguration")
+	}
+
+	var r0 *networkmanager.UpdateAttachmentNatConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.UpdateAttachmentNatConfigurationInput, ...func(*networkmanager.Options)) (*networkmanager.UpdateAttachmentNatConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.UpdateAttachmentNatConfigurationInput, ...func(*networkmanager.Options)) *networkmanager.UpdateAttachmentNatConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.UpdateAttachmentNatConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.UpdateAttachmentNatConfigurationInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

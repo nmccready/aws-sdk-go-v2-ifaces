@@ -2475,6 +2475,43 @@ func (_m *IClient) Options() elasticache.Options {
 	return r0
 }
 
+// PrepareMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PrepareMigration(ctx context.Context, params *elasticache.PrepareMigrationInput, optFns ...func(*elasticache.Options)) (*elasticache.PrepareMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PrepareMigration")
+	}
+
+	var r0 *elasticache.PrepareMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elasticache.PrepareMigrationInput, ...func(*elasticache.Options)) (*elasticache.PrepareMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elasticache.PrepareMigrationInput, ...func(*elasticache.Options)) *elasticache.PrepareMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elasticache.PrepareMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elasticache.PrepareMigrationInput, ...func(*elasticache.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PurchaseReservedCacheNodesOffering provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PurchaseReservedCacheNodesOffering(ctx context.Context, params *elasticache.PurchaseReservedCacheNodesOfferingInput, optFns ...func(*elasticache.Options)) (*elasticache.PurchaseReservedCacheNodesOfferingOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2726,6 +2763,43 @@ func (_m *IClient) StartMigration(ctx context.Context, params *elasticache.Start
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elasticache.StartMigrationInput, ...func(*elasticache.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopMigration(ctx context.Context, params *elasticache.StopMigrationInput, optFns ...func(*elasticache.Options)) (*elasticache.StopMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopMigration")
+	}
+
+	var r0 *elasticache.StopMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elasticache.StopMigrationInput, ...func(*elasticache.Options)) (*elasticache.StopMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elasticache.StopMigrationInput, ...func(*elasticache.Options)) *elasticache.StopMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elasticache.StopMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elasticache.StopMigrationInput, ...func(*elasticache.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

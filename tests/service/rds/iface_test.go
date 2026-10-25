@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelDBCapacityReservation", func(t *testing.T) {
+        input := &rds.CancelDBCapacityReservationInput{}
+        output := &rds.CancelDBCapacityReservationOutput{}
+
+        mockClient.On("CancelDBCapacityReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelDBCapacityReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelExportTask", func(t *testing.T) {
         input := &rds.CancelExportTaskInput{}
         output := &rds.CancelExportTaskOutput{}
@@ -223,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateCustomDBEngineVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateCustomDBEngineVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateDBCapacityReservation", func(t *testing.T) {
+        input := &rds.CreateDBCapacityReservationInput{}
+        output := &rds.CreateDBCapacityReservationOutput{}
+
+        mockClient.On("CreateDBCapacityReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDBCapacityReservation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -782,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeCertificates", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeCertificates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeDBCapacityReservations", func(t *testing.T) {
+        input := &rds.DescribeDBCapacityReservationsInput{}
+        output := &rds.DescribeDBCapacityReservationsOutput{}
+
+        mockClient.On("DescribeDBCapacityReservations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDBCapacityReservations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1484,6 +1523,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyCustomDBEngineVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyCustomDBEngineVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyDBCapacityReservation", func(t *testing.T) {
+        input := &rds.ModifyDBCapacityReservationInput{}
+        output := &rds.ModifyDBCapacityReservationOutput{}
+
+        mockClient.On("ModifyDBCapacityReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyDBCapacityReservation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

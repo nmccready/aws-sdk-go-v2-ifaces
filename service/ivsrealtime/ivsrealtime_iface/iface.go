@@ -41,6 +41,7 @@ type IClient interface {
  ListStages(ctx context.Context, params *ListStagesInput, optFns ...func(*Options)) (*ListStagesOutput, error) 
  ListStorageConfigurations(ctx context.Context, params *ListStorageConfigurationsInput, optFns ...func(*Options)) (*ListStorageConfigurationsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
+ RevokeConnectionToken(ctx context.Context, params *RevokeConnectionTokenInput, optFns ...func(*Options)) (*RevokeConnectionTokenOutput, error) 
  StartComposition(ctx context.Context, params *StartCompositionInput, optFns ...func(*Options)) (*StartCompositionOutput, error) 
  StartParticipantReplication(ctx context.Context, params *StartParticipantReplicationInput, optFns ...func(*Options)) (*StartParticipantReplicationOutput, error) 
  StopComposition(ctx context.Context, params *StopCompositionInput, optFns ...func(*Options)) (*StopCompositionOutput, error) 

@@ -8029,6 +8029,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTransitGatewayAttachmentNatConfiguration", func(t *testing.T) {
+        input := &ec2.GetTransitGatewayAttachmentNatConfigurationInput{}
+        output := &ec2.GetTransitGatewayAttachmentNatConfigurationOutput{}
+
+        mockClient.On("GetTransitGatewayAttachmentNatConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTransitGatewayAttachmentNatConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTransitGatewayAttachmentPropagations", func(t *testing.T) {
         input := &ec2.GetTransitGatewayAttachmentPropagationsInput{}
         output := &ec2.GetTransitGatewayAttachmentPropagationsOutput{}
@@ -9076,6 +9089,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyTransitGateway", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyTransitGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyTransitGatewayAttachmentNatConfiguration", func(t *testing.T) {
+        input := &ec2.ModifyTransitGatewayAttachmentNatConfigurationInput{}
+        output := &ec2.ModifyTransitGatewayAttachmentNatConfigurationOutput{}
+
+        mockClient.On("ModifyTransitGatewayAttachmentNatConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyTransitGatewayAttachmentNatConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

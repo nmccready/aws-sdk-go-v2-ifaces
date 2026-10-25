@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPauseConnector", func(t *testing.T) {
+        input := &kafkaconnect.PauseConnectorInput{}
+        output := &kafkaconnect.PauseConnectorOutput{}
+
+        mockClient.On("PauseConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PauseConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRestartConnector", func(t *testing.T) {
         input := &kafkaconnect.RestartConnectorInput{}
         output := &kafkaconnect.RestartConnectorOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RestartConnector", ctx, input).Return(output, nil)
 
         result, err := mockClient.RestartConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestResumeConnector", func(t *testing.T) {
+        input := &kafkaconnect.ResumeConnectorInput{}
+        output := &kafkaconnect.ResumeConnectorOutput{}
+
+        mockClient.On("ResumeConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResumeConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -281,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDesignation", func(t *testing.T) {
+        input := &datazone.CreateDesignationInput{}
+        output := &datazone.CreateDesignationOutput{}
+
+        mockClient.On("CreateDesignation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDesignation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDomain", func(t *testing.T) {
         input := &datazone.CreateDomainInput{}
         output := &datazone.CreateDomainOutput{}
@@ -639,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDesignation", func(t *testing.T) {
+        input := &datazone.DeleteDesignationInput{}
+        output := &datazone.DeleteDesignationOutput{}
+
+        mockClient.On("DeleteDesignation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDesignation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1055,6 +1081,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataSourceRun", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataSourceRun(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDesignation", func(t *testing.T) {
+        input := &datazone.GetDesignationInput{}
+        output := &datazone.GetDesignationOutput{}
+
+        mockClient.On("GetDesignation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDesignation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1562,6 +1601,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDataSources", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDataSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDesignations", func(t *testing.T) {
+        input := &datazone.ListDesignationsInput{}
+        output := &datazone.ListDesignationsOutput{}
+
+        mockClient.On("ListDesignations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDesignations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2264,6 +2316,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateDataSource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateDataSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDesignation", func(t *testing.T) {
+        input := &datazone.UpdateDesignationInput{}
+        output := &datazone.UpdateDesignationOutput{}
+
+        mockClient.On("UpdateDesignation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDesignation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateScheduleAction", func(t *testing.T) {
+        input := &elementalinference.CreateScheduleActionInput{}
+        output := &elementalinference.CreateScheduleActionOutput{}
+
+        mockClient.On("CreateScheduleAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateScheduleAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDictionary", func(t *testing.T) {
         input := &elementalinference.DeleteDictionaryInput{}
         output := &elementalinference.DeleteDictionaryOutput{}
@@ -106,6 +119,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFeedPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFeedPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteScheduleAction", func(t *testing.T) {
+        input := &elementalinference.DeleteScheduleActionInput{}
+        output := &elementalinference.DeleteScheduleActionOutput{}
+
+        mockClient.On("DeleteScheduleAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteScheduleAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFeeds", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFeeds(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListScheduleActions", func(t *testing.T) {
+        input := &elementalinference.ListScheduleActionsInput{}
+        output := &elementalinference.ListScheduleActionsOutput{}
+
+        mockClient.On("ListScheduleActions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListScheduleActions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

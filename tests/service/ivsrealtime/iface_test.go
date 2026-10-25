@@ -437,6 +437,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRevokeConnectionToken", func(t *testing.T) {
+        input := &ivsrealtime.RevokeConnectionTokenInput{}
+        output := &ivsrealtime.RevokeConnectionTokenOutput{}
+
+        mockClient.On("RevokeConnectionToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokeConnectionToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartComposition", func(t *testing.T) {
         input := &ivsrealtime.StartCompositionInput{}
         output := &ivsrealtime.StartCompositionOutput{}

@@ -22770,6 +22770,43 @@ func (_m *IClient) GetSubnetCidrReservations(ctx context.Context, params *ec2.Ge
 	return r0, r1
 }
 
+// GetTransitGatewayAttachmentNatConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTransitGatewayAttachmentNatConfiguration(ctx context.Context, params *ec2.GetTransitGatewayAttachmentNatConfigurationInput, optFns ...func(*ec2.Options)) (*ec2.GetTransitGatewayAttachmentNatConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTransitGatewayAttachmentNatConfiguration")
+	}
+
+	var r0 *ec2.GetTransitGatewayAttachmentNatConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetTransitGatewayAttachmentNatConfigurationInput, ...func(*ec2.Options)) (*ec2.GetTransitGatewayAttachmentNatConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetTransitGatewayAttachmentNatConfigurationInput, ...func(*ec2.Options)) *ec2.GetTransitGatewayAttachmentNatConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetTransitGatewayAttachmentNatConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetTransitGatewayAttachmentNatConfigurationInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTransitGatewayAttachmentPropagations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTransitGatewayAttachmentPropagations(ctx context.Context, params *ec2.GetTransitGatewayAttachmentPropagationsInput, optFns ...func(*ec2.Options)) (*ec2.GetTransitGatewayAttachmentPropagationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -25759,6 +25796,43 @@ func (_m *IClient) ModifyTransitGateway(ctx context.Context, params *ec2.ModifyT
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyTransitGatewayAttachmentNatConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyTransitGatewayAttachmentNatConfiguration(ctx context.Context, params *ec2.ModifyTransitGatewayAttachmentNatConfigurationInput, optFns ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayAttachmentNatConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyTransitGatewayAttachmentNatConfiguration")
+	}
+
+	var r0 *ec2.ModifyTransitGatewayAttachmentNatConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayAttachmentNatConfigurationInput, ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayAttachmentNatConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayAttachmentNatConfigurationInput, ...func(*ec2.Options)) *ec2.ModifyTransitGatewayAttachmentNatConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyTransitGatewayAttachmentNatConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayAttachmentNatConfigurationInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

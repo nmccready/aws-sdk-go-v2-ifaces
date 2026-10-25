@@ -248,6 +248,7 @@ type IClient interface {
  ListQueues(ctx context.Context, params *ListQueuesInput, optFns ...func(*Options)) (*ListQueuesOutput, error) 
  ListQuickConnects(ctx context.Context, params *ListQuickConnectsInput, optFns ...func(*Options)) (*ListQuickConnectsOutput, error) 
  ListRealtimeContactAnalysisSegmentsV2(ctx context.Context, params *ListRealtimeContactAnalysisSegmentsV2Input, optFns ...func(*Options)) (*ListRealtimeContactAnalysisSegmentsV2Output, error) 
+ ListReplicationFindings(ctx context.Context, params *ListReplicationFindingsInput, optFns ...func(*Options)) (*ListReplicationFindingsOutput, error) 
  ListRoutingProfileManualAssignmentQueues(ctx context.Context, params *ListRoutingProfileManualAssignmentQueuesInput, optFns ...func(*Options)) (*ListRoutingProfileManualAssignmentQueuesOutput, error) 
  ListRoutingProfileQueues(ctx context.Context, params *ListRoutingProfileQueuesInput, optFns ...func(*Options)) (*ListRoutingProfileQueuesOutput, error) 
  ListRoutingProfiles(ctx context.Context, params *ListRoutingProfilesInput, optFns ...func(*Options)) (*ListRoutingProfilesOutput, error) 

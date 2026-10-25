@@ -3128,6 +3128,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListReplicationFindings", func(t *testing.T) {
+        input := &connect.ListReplicationFindingsInput{}
+        output := &connect.ListReplicationFindingsOutput{}
+
+        mockClient.On("ListReplicationFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReplicationFindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRoutingProfileManualAssignmentQueues", func(t *testing.T) {
         input := &connect.ListRoutingProfileManualAssignmentQueuesInput{}
         output := &connect.ListRoutingProfileManualAssignmentQueuesOutput{}
