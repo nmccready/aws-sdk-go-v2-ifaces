@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateGatewayWithCluster", func(t *testing.T) {
+        input := &ecs.AssociateGatewayWithClusterInput{}
+        output := &ecs.AssociateGatewayWithClusterOutput{}
+
+        mockClient.On("AssociateGatewayWithCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateGatewayWithCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestContinueServiceDeployment", func(t *testing.T) {
         input := &ecs.ContinueServiceDeploymentInput{}
         output := &ecs.ContinueServiceDeploymentOutput{}
@@ -93,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateExpressGatewayService", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateExpressGatewayService(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateGateway", func(t *testing.T) {
+        input := &ecs.CreateGatewayInput{}
+        output := &ecs.CreateGatewayOutput{}
+
+        mockClient.On("CreateGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -210,6 +236,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteExpressGatewayService", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteExpressGatewayService(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteGateway", func(t *testing.T) {
+        input := &ecs.DeleteGatewayInput{}
+        output := &ecs.DeleteGatewayOutput{}
+
+        mockClient.On("DeleteGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -385,6 +424,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeGateway", func(t *testing.T) {
+        input := &ecs.DescribeGatewayInput{}
+        output := &ecs.DescribeGatewayOutput{}
+
+        mockClient.On("DescribeGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeGatewayResources", func(t *testing.T) {
+        input := &ecs.DescribeGatewayResourcesInput{}
+        output := &ecs.DescribeGatewayResourcesOutput{}
+
+        mockClient.On("DescribeGatewayResources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeGatewayResources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeGatewayRoute", func(t *testing.T) {
+        input := &ecs.DescribeGatewayRouteInput{}
+        output := &ecs.DescribeGatewayRouteOutput{}
+
+        mockClient.On("DescribeGatewayRoute", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeGatewayRoute(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeServiceDeployments", func(t *testing.T) {
         input := &ecs.DescribeServiceDeploymentsInput{}
         output := &ecs.DescribeServiceDeploymentsOutput{}
@@ -457,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateGatewayFromCluster", func(t *testing.T) {
+        input := &ecs.DisassociateGatewayFromClusterInput{}
+        output := &ecs.DisassociateGatewayFromClusterOutput{}
+
+        mockClient.On("DisassociateGatewayFromCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateGatewayFromCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -587,6 +678,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListDaemons", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListDaemons(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGatewayClusterAssociations", func(t *testing.T) {
+        input := &ecs.ListGatewayClusterAssociationsInput{}
+        output := &ecs.ListGatewayClusterAssociationsOutput{}
+
+        mockClient.On("ListGatewayClusterAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGatewayClusterAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGatewayRoutes", func(t *testing.T) {
+        input := &ecs.ListGatewayRoutesInput{}
+        output := &ecs.ListGatewayRoutesOutput{}
+
+        mockClient.On("ListGatewayRoutes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGatewayRoutes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListGateways", func(t *testing.T) {
+        input := &ecs.ListGatewaysInput{}
+        output := &ecs.ListGatewaysOutput{}
+
+        mockClient.On("ListGateways", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGateways(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -977,6 +1107,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateExpressGatewayService", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateExpressGatewayService(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateGateway", func(t *testing.T) {
+        input := &ecs.UpdateGatewayInput{}
+        output := &ecs.UpdateGatewayOutput{}
+
+        mockClient.On("UpdateGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

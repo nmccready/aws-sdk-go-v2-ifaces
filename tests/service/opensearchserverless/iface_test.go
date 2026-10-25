@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelIngestionJob", func(t *testing.T) {
+        input := &opensearchserverless.CancelIngestionJobInput{}
+        output := &opensearchserverless.CancelIngestionJobOutput{}
+
+        mockClient.On("CancelIngestionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelIngestionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAccessPolicy", func(t *testing.T) {
         input := &opensearchserverless.CreateAccessPolicyInput{}
         output := &opensearchserverless.CreateAccessPolicyOutput{}
@@ -145,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateIndex", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateIndex(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIngestionJob", func(t *testing.T) {
+        input := &opensearchserverless.CreateIngestionJobInput{}
+        output := &opensearchserverless.CreateIngestionJobOutput{}
+
+        mockClient.On("CreateIngestionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIngestionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateIngestionStream", func(t *testing.T) {
+        input := &opensearchserverless.CreateIngestionStreamInput{}
+        output := &opensearchserverless.CreateIngestionStreamOutput{}
+
+        mockClient.On("CreateIngestionStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateIngestionStream(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -255,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteIngestionStream", func(t *testing.T) {
+        input := &opensearchserverless.DeleteIngestionStreamInput{}
+        output := &opensearchserverless.DeleteIngestionStreamOutput{}
+
+        mockClient.On("DeleteIngestionStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteIngestionStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLifecyclePolicy", func(t *testing.T) {
         input := &opensearchserverless.DeleteLifecyclePolicyInput{}
         output := &opensearchserverless.DeleteLifecyclePolicyOutput{}
@@ -346,6 +398,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIngestionJob", func(t *testing.T) {
+        input := &opensearchserverless.GetIngestionJobInput{}
+        output := &opensearchserverless.GetIngestionJobOutput{}
+
+        mockClient.On("GetIngestionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIngestionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetIngestionStream", func(t *testing.T) {
+        input := &opensearchserverless.GetIngestionStreamInput{}
+        output := &opensearchserverless.GetIngestionStreamOutput{}
+
+        mockClient.On("GetIngestionStream", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIngestionStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPoliciesStats", func(t *testing.T) {
         input := &opensearchserverless.GetPoliciesStatsInput{}
         output := &opensearchserverless.GetPoliciesStatsOutput{}
@@ -418,6 +496,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCollections", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCollections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIngestionJobs", func(t *testing.T) {
+        input := &opensearchserverless.ListIngestionJobsInput{}
+        output := &opensearchserverless.ListIngestionJobsOutput{}
+
+        mockClient.On("ListIngestionJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIngestionJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIngestionStreams", func(t *testing.T) {
+        input := &opensearchserverless.ListIngestionStreamsInput{}
+        output := &opensearchserverless.ListIngestionStreamsOutput{}
+
+        mockClient.On("ListIngestionStreams", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIngestionStreams(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -718,6 +718,43 @@ func (_m *IClient) CreateDataSource(ctx context.Context, params *datazone.Create
 	return r0, r1
 }
 
+// CreateDesignation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDesignation(ctx context.Context, params *datazone.CreateDesignationInput, optFns ...func(*datazone.Options)) (*datazone.CreateDesignationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDesignation")
+	}
+
+	var r0 *datazone.CreateDesignationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDesignationInput, ...func(*datazone.Options)) (*datazone.CreateDesignationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.CreateDesignationInput, ...func(*datazone.Options)) *datazone.CreateDesignationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.CreateDesignationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.CreateDesignationInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDomain(ctx context.Context, params *datazone.CreateDomainInput, optFns ...func(*datazone.Options)) (*datazone.CreateDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1746,6 +1783,43 @@ func (_m *IClient) DeleteDataSource(ctx context.Context, params *datazone.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteDataSourceInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDesignation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDesignation(ctx context.Context, params *datazone.DeleteDesignationInput, optFns ...func(*datazone.Options)) (*datazone.DeleteDesignationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDesignation")
+	}
+
+	var r0 *datazone.DeleteDesignationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDesignationInput, ...func(*datazone.Options)) (*datazone.DeleteDesignationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.DeleteDesignationInput, ...func(*datazone.Options)) *datazone.DeleteDesignationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.DeleteDesignationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.DeleteDesignationInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2930,6 +3004,43 @@ func (_m *IClient) GetDataSourceRun(ctx context.Context, params *datazone.GetDat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetDataSourceRunInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDesignation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDesignation(ctx context.Context, params *datazone.GetDesignationInput, optFns ...func(*datazone.Options)) (*datazone.GetDesignationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDesignation")
+	}
+
+	var r0 *datazone.GetDesignationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDesignationInput, ...func(*datazone.Options)) (*datazone.GetDesignationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.GetDesignationInput, ...func(*datazone.Options)) *datazone.GetDesignationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.GetDesignationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.GetDesignationInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4373,6 +4484,43 @@ func (_m *IClient) ListDataSources(ctx context.Context, params *datazone.ListDat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListDataSourcesInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDesignations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDesignations(ctx context.Context, params *datazone.ListDesignationsInput, optFns ...func(*datazone.Options)) (*datazone.ListDesignationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDesignations")
+	}
+
+	var r0 *datazone.ListDesignationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListDesignationsInput, ...func(*datazone.Options)) (*datazone.ListDesignationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.ListDesignationsInput, ...func(*datazone.Options)) *datazone.ListDesignationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.ListDesignationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.ListDesignationsInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -6389,6 +6537,43 @@ func (_m *IClient) UpdateDataSource(ctx context.Context, params *datazone.Update
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateDataSourceInput, ...func(*datazone.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDesignation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDesignation(ctx context.Context, params *datazone.UpdateDesignationInput, optFns ...func(*datazone.Options)) (*datazone.UpdateDesignationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDesignation")
+	}
+
+	var r0 *datazone.UpdateDesignationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateDesignationInput, ...func(*datazone.Options)) (*datazone.UpdateDesignationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *datazone.UpdateDesignationInput, ...func(*datazone.Options)) *datazone.UpdateDesignationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*datazone.UpdateDesignationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *datazone.UpdateDesignationInput, ...func(*datazone.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -199,6 +199,43 @@ func (_m *IClient) BatchGetVpcEndpoint(ctx context.Context, params *opensearchse
 	return r0, r1
 }
 
+// CancelIngestionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelIngestionJob(ctx context.Context, params *opensearchserverless.CancelIngestionJobInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CancelIngestionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelIngestionJob")
+	}
+
+	var r0 *opensearchserverless.CancelIngestionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CancelIngestionJobInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.CancelIngestionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CancelIngestionJobInput, ...func(*opensearchserverless.Options)) *opensearchserverless.CancelIngestionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.CancelIngestionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CancelIngestionJobInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAccessPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAccessPolicy(ctx context.Context, params *opensearchserverless.CreateAccessPolicyInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateAccessPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -339,6 +376,80 @@ func (_m *IClient) CreateIndex(ctx context.Context, params *opensearchserverless
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CreateIndexInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIngestionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIngestionJob(ctx context.Context, params *opensearchserverless.CreateIngestionJobInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateIngestionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIngestionJob")
+	}
+
+	var r0 *opensearchserverless.CreateIngestionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateIngestionJobInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateIngestionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateIngestionJobInput, ...func(*opensearchserverless.Options)) *opensearchserverless.CreateIngestionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.CreateIngestionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CreateIngestionJobInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateIngestionStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateIngestionStream(ctx context.Context, params *opensearchserverless.CreateIngestionStreamInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateIngestionStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateIngestionStream")
+	}
+
+	var r0 *opensearchserverless.CreateIngestionStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateIngestionStreamInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.CreateIngestionStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.CreateIngestionStreamInput, ...func(*opensearchserverless.Options)) *opensearchserverless.CreateIngestionStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.CreateIngestionStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.CreateIngestionStreamInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -643,6 +754,43 @@ func (_m *IClient) DeleteIndex(ctx context.Context, params *opensearchserverless
 	return r0, r1
 }
 
+// DeleteIngestionStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteIngestionStream(ctx context.Context, params *opensearchserverless.DeleteIngestionStreamInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteIngestionStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteIngestionStream")
+	}
+
+	var r0 *opensearchserverless.DeleteIngestionStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.DeleteIngestionStreamInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteIngestionStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.DeleteIngestionStreamInput, ...func(*opensearchserverless.Options)) *opensearchserverless.DeleteIngestionStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.DeleteIngestionStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.DeleteIngestionStreamInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteLifecyclePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteLifecyclePolicy(ctx context.Context, params *opensearchserverless.DeleteLifecyclePolicyInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.DeleteLifecyclePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -902,6 +1050,80 @@ func (_m *IClient) GetIndex(ctx context.Context, params *opensearchserverless.Ge
 	return r0, r1
 }
 
+// GetIngestionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIngestionJob(ctx context.Context, params *opensearchserverless.GetIngestionJobInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.GetIngestionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIngestionJob")
+	}
+
+	var r0 *opensearchserverless.GetIngestionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.GetIngestionJobInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.GetIngestionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.GetIngestionJobInput, ...func(*opensearchserverless.Options)) *opensearchserverless.GetIngestionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.GetIngestionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.GetIngestionJobInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetIngestionStream provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIngestionStream(ctx context.Context, params *opensearchserverless.GetIngestionStreamInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.GetIngestionStreamOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIngestionStream")
+	}
+
+	var r0 *opensearchserverless.GetIngestionStreamOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.GetIngestionStreamInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.GetIngestionStreamOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.GetIngestionStreamInput, ...func(*opensearchserverless.Options)) *opensearchserverless.GetIngestionStreamOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.GetIngestionStreamOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.GetIngestionStreamInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPoliciesStats provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPoliciesStats(ctx context.Context, params *opensearchserverless.GetPoliciesStatsInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.GetPoliciesStatsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1116,6 +1338,80 @@ func (_m *IClient) ListCollections(ctx context.Context, params *opensearchserver
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.ListCollectionsInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIngestionJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIngestionJobs(ctx context.Context, params *opensearchserverless.ListIngestionJobsInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.ListIngestionJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIngestionJobs")
+	}
+
+	var r0 *opensearchserverless.ListIngestionJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.ListIngestionJobsInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.ListIngestionJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.ListIngestionJobsInput, ...func(*opensearchserverless.Options)) *opensearchserverless.ListIngestionJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.ListIngestionJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.ListIngestionJobsInput, ...func(*opensearchserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIngestionStreams provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIngestionStreams(ctx context.Context, params *opensearchserverless.ListIngestionStreamsInput, optFns ...func(*opensearchserverless.Options)) (*opensearchserverless.ListIngestionStreamsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIngestionStreams")
+	}
+
+	var r0 *opensearchserverless.ListIngestionStreamsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.ListIngestionStreamsInput, ...func(*opensearchserverless.Options)) (*opensearchserverless.ListIngestionStreamsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearchserverless.ListIngestionStreamsInput, ...func(*opensearchserverless.Options)) *opensearchserverless.ListIngestionStreamsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearchserverless.ListIngestionStreamsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearchserverless.ListIngestionStreamsInput, ...func(*opensearchserverless.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

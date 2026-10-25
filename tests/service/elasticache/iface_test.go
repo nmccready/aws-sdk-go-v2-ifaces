@@ -892,6 +892,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPrepareMigration", func(t *testing.T) {
+        input := &elasticache.PrepareMigrationInput{}
+        output := &elasticache.PrepareMigrationOutput{}
+
+        mockClient.On("PrepareMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PrepareMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPurchaseReservedCacheNodesOffering", func(t *testing.T) {
         input := &elasticache.PurchaseReservedCacheNodesOfferingInput{}
         output := &elasticache.PurchaseReservedCacheNodesOfferingOutput{}
@@ -977,6 +990,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartMigration", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopMigration", func(t *testing.T) {
+        input := &elasticache.StopMigrationInput{}
+        output := &elasticache.StopMigrationOutput{}
+
+        mockClient.On("StopMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopMigration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

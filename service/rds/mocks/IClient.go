@@ -273,6 +273,43 @@ func (_m *IClient) BacktrackDBCluster(ctx context.Context, params *rds.Backtrack
 	return r0, r1
 }
 
+// CancelDBCapacityReservation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelDBCapacityReservation(ctx context.Context, params *rds.CancelDBCapacityReservationInput, optFns ...func(*rds.Options)) (*rds.CancelDBCapacityReservationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelDBCapacityReservation")
+	}
+
+	var r0 *rds.CancelDBCapacityReservationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.CancelDBCapacityReservationInput, ...func(*rds.Options)) (*rds.CancelDBCapacityReservationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.CancelDBCapacityReservationInput, ...func(*rds.Options)) *rds.CancelDBCapacityReservationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rds.CancelDBCapacityReservationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rds.CancelDBCapacityReservationInput, ...func(*rds.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelExportTask provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelExportTask(ctx context.Context, params *rds.CancelExportTaskInput, optFns ...func(*rds.Options)) (*rds.CancelExportTaskOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -561,6 +598,43 @@ func (_m *IClient) CreateCustomDBEngineVersion(ctx context.Context, params *rds.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rds.CreateCustomDBEngineVersionInput, ...func(*rds.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateDBCapacityReservation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDBCapacityReservation(ctx context.Context, params *rds.CreateDBCapacityReservationInput, optFns ...func(*rds.Options)) (*rds.CreateDBCapacityReservationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDBCapacityReservation")
+	}
+
+	var r0 *rds.CreateDBCapacityReservationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.CreateDBCapacityReservationInput, ...func(*rds.Options)) (*rds.CreateDBCapacityReservationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.CreateDBCapacityReservationInput, ...func(*rds.Options)) *rds.CreateDBCapacityReservationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rds.CreateDBCapacityReservationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rds.CreateDBCapacityReservationInput, ...func(*rds.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2152,6 +2226,43 @@ func (_m *IClient) DescribeCertificates(ctx context.Context, params *rds.Describ
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rds.DescribeCertificatesInput, ...func(*rds.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeDBCapacityReservations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDBCapacityReservations(ctx context.Context, params *rds.DescribeDBCapacityReservationsInput, optFns ...func(*rds.Options)) (*rds.DescribeDBCapacityReservationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDBCapacityReservations")
+	}
+
+	var r0 *rds.DescribeDBCapacityReservationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.DescribeDBCapacityReservationsInput, ...func(*rds.Options)) (*rds.DescribeDBCapacityReservationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.DescribeDBCapacityReservationsInput, ...func(*rds.Options)) *rds.DescribeDBCapacityReservationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rds.DescribeDBCapacityReservationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rds.DescribeDBCapacityReservationsInput, ...func(*rds.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4150,6 +4261,43 @@ func (_m *IClient) ModifyCustomDBEngineVersion(ctx context.Context, params *rds.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *rds.ModifyCustomDBEngineVersionInput, ...func(*rds.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyDBCapacityReservation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyDBCapacityReservation(ctx context.Context, params *rds.ModifyDBCapacityReservationInput, optFns ...func(*rds.Options)) (*rds.ModifyDBCapacityReservationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyDBCapacityReservation")
+	}
+
+	var r0 *rds.ModifyDBCapacityReservationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.ModifyDBCapacityReservationInput, ...func(*rds.Options)) (*rds.ModifyDBCapacityReservationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rds.ModifyDBCapacityReservationInput, ...func(*rds.Options)) *rds.ModifyDBCapacityReservationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rds.ModifyDBCapacityReservationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rds.ModifyDBCapacityReservationInput, ...func(*rds.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

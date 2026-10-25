@@ -879,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAttachmentNatConfigurations", func(t *testing.T) {
+        input := &networkmanager.ListAttachmentNatConfigurationsInput{}
+        output := &networkmanager.ListAttachmentNatConfigurationsOutput{}
+
+        mockClient.On("ListAttachmentNatConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAttachmentNatConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAttachmentRoutingPolicyAssociations", func(t *testing.T) {
         input := &networkmanager.ListAttachmentRoutingPolicyAssociationsInput{}
         output := &networkmanager.ListAttachmentRoutingPolicyAssociationsOutput{}
@@ -1146,6 +1159,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAttachmentNatConfiguration", func(t *testing.T) {
+        input := &networkmanager.UpdateAttachmentNatConfigurationInput{}
+        output := &networkmanager.UpdateAttachmentNatConfigurationOutput{}
+
+        mockClient.On("UpdateAttachmentNatConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAttachmentNatConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

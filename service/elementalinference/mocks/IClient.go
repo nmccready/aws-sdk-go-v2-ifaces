@@ -126,6 +126,43 @@ func (_m *IClient) CreateFeed(ctx context.Context, params *elementalinference.Cr
 	return r0, r1
 }
 
+// CreateScheduleAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateScheduleAction(ctx context.Context, params *elementalinference.CreateScheduleActionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateScheduleActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateScheduleAction")
+	}
+
+	var r0 *elementalinference.CreateScheduleActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateScheduleActionInput, ...func(*elementalinference.Options)) (*elementalinference.CreateScheduleActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateScheduleActionInput, ...func(*elementalinference.Options)) *elementalinference.CreateScheduleActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.CreateScheduleActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.CreateScheduleActionInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDictionary provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDictionary(ctx context.Context, params *elementalinference.DeleteDictionaryInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteDictionaryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +266,43 @@ func (_m *IClient) DeleteFeedPolicy(ctx context.Context, params *elementalinfere
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteFeedPolicyInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteScheduleAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteScheduleAction(ctx context.Context, params *elementalinference.DeleteScheduleActionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteScheduleActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteScheduleAction")
+	}
+
+	var r0 *elementalinference.DeleteScheduleActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteScheduleActionInput, ...func(*elementalinference.Options)) (*elementalinference.DeleteScheduleActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteScheduleActionInput, ...func(*elementalinference.Options)) *elementalinference.DeleteScheduleActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.DeleteScheduleActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteScheduleActionInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -525,6 +599,43 @@ func (_m *IClient) ListFeeds(ctx context.Context, params *elementalinference.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListFeedsInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListScheduleActions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListScheduleActions(ctx context.Context, params *elementalinference.ListScheduleActionsInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListScheduleActionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListScheduleActions")
+	}
+
+	var r0 *elementalinference.ListScheduleActionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListScheduleActionsInput, ...func(*elementalinference.Options)) (*elementalinference.ListScheduleActionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListScheduleActionsInput, ...func(*elementalinference.Options)) *elementalinference.ListScheduleActionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.ListScheduleActionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListScheduleActionsInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

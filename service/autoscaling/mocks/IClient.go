@@ -755,6 +755,43 @@ func (_m *IClient) DescribeAccountLimits(ctx context.Context, params *autoscalin
 	return r0, r1
 }
 
+// DescribeAccountSettings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeAccountSettings(ctx context.Context, params *autoscaling.DescribeAccountSettingsInput, optFns ...func(*autoscaling.Options)) (*autoscaling.DescribeAccountSettingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeAccountSettings")
+	}
+
+	var r0 *autoscaling.DescribeAccountSettingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *autoscaling.DescribeAccountSettingsInput, ...func(*autoscaling.Options)) (*autoscaling.DescribeAccountSettingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *autoscaling.DescribeAccountSettingsInput, ...func(*autoscaling.Options)) *autoscaling.DescribeAccountSettingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*autoscaling.DescribeAccountSettingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *autoscaling.DescribeAccountSettingsInput, ...func(*autoscaling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAdjustmentTypes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAdjustmentTypes(ctx context.Context, params *autoscaling.DescribeAdjustmentTypesInput, optFns ...func(*autoscaling.Options)) (*autoscaling.DescribeAdjustmentTypesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1918,6 +1955,43 @@ func (_m *IClient) Options() autoscaling.Options {
 	}
 
 	return r0
+}
+
+// PutAccountSetting provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountSetting(ctx context.Context, params *autoscaling.PutAccountSettingInput, optFns ...func(*autoscaling.Options)) (*autoscaling.PutAccountSettingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountSetting")
+	}
+
+	var r0 *autoscaling.PutAccountSettingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *autoscaling.PutAccountSettingInput, ...func(*autoscaling.Options)) (*autoscaling.PutAccountSettingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *autoscaling.PutAccountSettingInput, ...func(*autoscaling.Options)) *autoscaling.PutAccountSettingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*autoscaling.PutAccountSettingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *autoscaling.PutAccountSettingInput, ...func(*autoscaling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutLifecycleHook provides a mock function with given fields: ctx, params, optFns
