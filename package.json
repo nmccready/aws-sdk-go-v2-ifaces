@@ -7,7 +7,7 @@
   "scripts": {
     "clone_sdk": "./scripts/git_clone_aws-sdk.sh",
     "commitlint": "commitlint --from $(git log origin/main | cut -d ' ' -f2 | head -n1)",
-    "install:go": "go mod tidy -e && go mod vendor",
+    "install:go": "./scripts/install_go.sh",
     "lint": "golangci-lint run --fix --timeout 15m",
     "prepare": "npm run clone_sdk && ./scripts/install_binary_deps.sh && sort-package-json",
     "sync": "./scripts/gen_all.sh",
