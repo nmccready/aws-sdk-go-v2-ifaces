@@ -237,6 +237,43 @@ func (_m *IClient) CreateKey(ctx context.Context, params *kms.CreateKeyInput, op
 	return r0, r1
 }
 
+// Decapsulate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) Decapsulate(ctx context.Context, params *kms.DecapsulateInput, optFns ...func(*kms.Options)) (*kms.DecapsulateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for Decapsulate")
+	}
+
+	var r0 *kms.DecapsulateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kms.DecapsulateInput, ...func(*kms.Options)) (*kms.DecapsulateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kms.DecapsulateInput, ...func(*kms.Options)) *kms.DecapsulateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kms.DecapsulateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kms.DecapsulateInput, ...func(*kms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Decrypt provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) Decrypt(ctx context.Context, params *kms.DecryptInput, optFns ...func(*kms.Options)) (*kms.DecryptOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -673,6 +710,43 @@ func (_m *IClient) EnableKeyRotation(ctx context.Context, params *kms.EnableKeyR
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kms.EnableKeyRotationInput, ...func(*kms.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// Encapsulate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) Encapsulate(ctx context.Context, params *kms.EncapsulateInput, optFns ...func(*kms.Options)) (*kms.EncapsulateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for Encapsulate")
+	}
+
+	var r0 *kms.EncapsulateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kms.EncapsulateInput, ...func(*kms.Options)) (*kms.EncapsulateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kms.EncapsulateInput, ...func(*kms.Options)) *kms.EncapsulateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kms.EncapsulateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kms.EncapsulateInput, ...func(*kms.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

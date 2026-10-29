@@ -88,6 +88,43 @@ func (_m *IClient) CreateOAuth2TokenWithIAM(ctx context.Context, params *signin.
 	return r0, r1
 }
 
+// CreateOAuth2TokenWithTokenExchange provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateOAuth2TokenWithTokenExchange(ctx context.Context, params *signin.CreateOAuth2TokenWithTokenExchangeInput, optFns ...func(*signin.Options)) (*signin.CreateOAuth2TokenWithTokenExchangeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateOAuth2TokenWithTokenExchange")
+	}
+
+	var r0 *signin.CreateOAuth2TokenWithTokenExchangeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.CreateOAuth2TokenWithTokenExchangeInput, ...func(*signin.Options)) (*signin.CreateOAuth2TokenWithTokenExchangeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.CreateOAuth2TokenWithTokenExchangeInput, ...func(*signin.Options)) *signin.CreateOAuth2TokenWithTokenExchangeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.CreateOAuth2TokenWithTokenExchangeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.CreateOAuth2TokenWithTokenExchangeInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteConsoleAuthorizationConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteConsoleAuthorizationConfiguration(ctx context.Context, params *signin.DeleteConsoleAuthorizationConfigurationInput, optFns ...func(*signin.Options)) (*signin.DeleteConsoleAuthorizationConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))

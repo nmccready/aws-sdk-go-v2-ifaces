@@ -1532,6 +1532,43 @@ func (_m *IClient) GetMember(ctx context.Context, params *inspector2.GetMemberIn
 	return r0, r1
 }
 
+// GetOnDemandScanStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOnDemandScanStatus(ctx context.Context, params *inspector2.GetOnDemandScanStatusInput, optFns ...func(*inspector2.Options)) (*inspector2.GetOnDemandScanStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOnDemandScanStatus")
+	}
+
+	var r0 *inspector2.GetOnDemandScanStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetOnDemandScanStatusInput, ...func(*inspector2.Options)) (*inspector2.GetOnDemandScanStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.GetOnDemandScanStatusInput, ...func(*inspector2.Options)) *inspector2.GetOnDemandScanStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.GetOnDemandScanStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.GetOnDemandScanStatusInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSbomExport provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSbomExport(ctx context.Context, params *inspector2.GetSbomExportInput, optFns ...func(*inspector2.Options)) (*inspector2.GetSbomExportOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2198,6 +2235,43 @@ func (_m *IClient) ListMembers(ctx context.Context, params *inspector2.ListMembe
 	return r0, r1
 }
 
+// ListOnDemandScans provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOnDemandScans(ctx context.Context, params *inspector2.ListOnDemandScansInput, optFns ...func(*inspector2.Options)) (*inspector2.ListOnDemandScansOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOnDemandScans")
+	}
+
+	var r0 *inspector2.ListOnDemandScansOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListOnDemandScansInput, ...func(*inspector2.Options)) (*inspector2.ListOnDemandScansOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.ListOnDemandScansInput, ...func(*inspector2.Options)) *inspector2.ListOnDemandScansOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.ListOnDemandScansOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.ListOnDemandScansInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *inspector2.ListTagsForResourceInput, optFns ...func(*inspector2.Options)) (*inspector2.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2504,6 +2578,43 @@ func (_m *IClient) StartCodeSecurityScan(ctx context.Context, params *inspector2
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.StartCodeSecurityScanInput, ...func(*inspector2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartOnDemandScan provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartOnDemandScan(ctx context.Context, params *inspector2.StartOnDemandScanInput, optFns ...func(*inspector2.Options)) (*inspector2.StartOnDemandScanOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartOnDemandScan")
+	}
+
+	var r0 *inspector2.StartOnDemandScanOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.StartOnDemandScanInput, ...func(*inspector2.Options)) (*inspector2.StartOnDemandScanOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *inspector2.StartOnDemandScanInput, ...func(*inspector2.Options)) *inspector2.StartOnDemandScanOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*inspector2.StartOnDemandScanOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *inspector2.StartOnDemandScanInput, ...func(*inspector2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

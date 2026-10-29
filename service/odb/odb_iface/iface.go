@@ -87,6 +87,7 @@ type IClient interface {
  UpdateAutonomousDatabaseBackup(ctx context.Context, params *UpdateAutonomousDatabaseBackupInput, optFns ...func(*Options)) (*UpdateAutonomousDatabaseBackupOutput, error) 
  UpdateCloudExadataInfrastructure(ctx context.Context, params *UpdateCloudExadataInfrastructureInput, optFns ...func(*Options)) (*UpdateCloudExadataInfrastructureOutput, error) 
  UpdateExadbVmCluster(ctx context.Context, params *UpdateExadbVmClusterInput, optFns ...func(*Options)) (*UpdateExadbVmClusterOutput, error) 
+ UpdateExascaleCloudExadataInfrastructure(ctx context.Context, params *UpdateExascaleCloudExadataInfrastructureInput, optFns ...func(*Options)) (*UpdateExascaleCloudExadataInfrastructureOutput, error) 
  UpdateExascaleDbStorageVault(ctx context.Context, params *UpdateExascaleDbStorageVaultInput, optFns ...func(*Options)) (*UpdateExascaleDbStorageVaultOutput, error) 
  UpdateOdbNetwork(ctx context.Context, params *UpdateOdbNetworkInput, optFns ...func(*Options)) (*UpdateOdbNetworkOutput, error) 
  UpdateOdbPeeringConnection(ctx context.Context, params *UpdateOdbPeeringConnectionInput, optFns ...func(*Options)) (*UpdateOdbPeeringConnectionOutput, error) 

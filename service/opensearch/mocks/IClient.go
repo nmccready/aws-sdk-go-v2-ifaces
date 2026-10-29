@@ -125,6 +125,43 @@ func (_m *IClient) AddDirectQueryDataSource(ctx context.Context, params *opensea
 	return r0, r1
 }
 
+// AddReplicationPeer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddReplicationPeer(ctx context.Context, params *opensearch.AddReplicationPeerInput, optFns ...func(*opensearch.Options)) (*opensearch.AddReplicationPeerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddReplicationPeer")
+	}
+
+	var r0 *opensearch.AddReplicationPeerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AddReplicationPeerInput, ...func(*opensearch.Options)) (*opensearch.AddReplicationPeerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.AddReplicationPeerInput, ...func(*opensearch.Options)) *opensearch.AddReplicationPeerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.AddReplicationPeerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.AddReplicationPeerInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddTags provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddTags(ctx context.Context, params *opensearch.AddTagsInput, optFns ...func(*opensearch.Options)) (*opensearch.AddTagsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -376,6 +413,43 @@ func (_m *IClient) CancelServiceSoftwareUpdate(ctx context.Context, params *open
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.CancelServiceSoftwareUpdateInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CompareDomainConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CompareDomainConfiguration(ctx context.Context, params *opensearch.CompareDomainConfigurationInput, optFns ...func(*opensearch.Options)) (*opensearch.CompareDomainConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CompareDomainConfiguration")
+	}
+
+	var r0 *opensearch.CompareDomainConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.CompareDomainConfigurationInput, ...func(*opensearch.Options)) (*opensearch.CompareDomainConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.CompareDomainConfigurationInput, ...func(*opensearch.Options)) *opensearch.CompareDomainConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.CompareDomainConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.CompareDomainConfigurationInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1235,6 +1309,43 @@ func (_m *IClient) DescribeDomainNodes(ctx context.Context, params *opensearch.D
 	return r0, r1
 }
 
+// DescribeDomainReplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeDomainReplication(ctx context.Context, params *opensearch.DescribeDomainReplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeDomainReplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeDomainReplication")
+	}
+
+	var r0 *opensearch.DescribeDomainReplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DescribeDomainReplicationInput, ...func(*opensearch.Options)) (*opensearch.DescribeDomainReplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.DescribeDomainReplicationInput, ...func(*opensearch.Options)) *opensearch.DescribeDomainReplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.DescribeDomainReplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DescribeDomainReplicationInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeDomains provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeDomains(ctx context.Context, params *opensearch.DescribeDomainsInput, optFns ...func(*opensearch.Options)) (*opensearch.DescribeDomainsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1708,6 +1819,43 @@ func (_m *IClient) DissociatePackages(ctx context.Context, params *opensearch.Di
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.DissociatePackagesInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// FailoverReplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) FailoverReplication(ctx context.Context, params *opensearch.FailoverReplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.FailoverReplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for FailoverReplication")
+	}
+
+	var r0 *opensearch.FailoverReplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.FailoverReplicationInput, ...func(*opensearch.Options)) (*opensearch.FailoverReplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.FailoverReplicationInput, ...func(*opensearch.Options)) *opensearch.FailoverReplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.FailoverReplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.FailoverReplicationInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2992,6 +3140,43 @@ func (_m *IClient) RejectInboundConnection(ctx context.Context, params *opensear
 	return r0, r1
 }
 
+// RemoveReplicationPeer provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveReplicationPeer(ctx context.Context, params *opensearch.RemoveReplicationPeerInput, optFns ...func(*opensearch.Options)) (*opensearch.RemoveReplicationPeerOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveReplicationPeer")
+	}
+
+	var r0 *opensearch.RemoveReplicationPeerOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.RemoveReplicationPeerInput, ...func(*opensearch.Options)) (*opensearch.RemoveReplicationPeerOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.RemoveReplicationPeerInput, ...func(*opensearch.Options)) *opensearch.RemoveReplicationPeerOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.RemoveReplicationPeerOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.RemoveReplicationPeerInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RemoveTags provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RemoveTags(ctx context.Context, params *opensearch.RemoveTagsInput, optFns ...func(*opensearch.Options)) (*opensearch.RemoveTagsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3206,6 +3391,43 @@ func (_m *IClient) StartServiceSoftwareUpdate(ctx context.Context, params *opens
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.StartServiceSoftwareUpdateInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SwitchoverReplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SwitchoverReplication(ctx context.Context, params *opensearch.SwitchoverReplicationInput, optFns ...func(*opensearch.Options)) (*opensearch.SwitchoverReplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SwitchoverReplication")
+	}
+
+	var r0 *opensearch.SwitchoverReplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.SwitchoverReplicationInput, ...func(*opensearch.Options)) (*opensearch.SwitchoverReplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.SwitchoverReplicationInput, ...func(*opensearch.Options)) *opensearch.SwitchoverReplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.SwitchoverReplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.SwitchoverReplicationInput, ...func(*opensearch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

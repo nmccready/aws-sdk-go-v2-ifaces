@@ -2881,6 +2881,43 @@ func (_m *IClient) UpdateExadbVmCluster(ctx context.Context, params *odb.UpdateE
 	return r0, r1
 }
 
+// UpdateExascaleCloudExadataInfrastructure provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateExascaleCloudExadataInfrastructure(ctx context.Context, params *odb.UpdateExascaleCloudExadataInfrastructureInput, optFns ...func(*odb.Options)) (*odb.UpdateExascaleCloudExadataInfrastructureOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateExascaleCloudExadataInfrastructure")
+	}
+
+	var r0 *odb.UpdateExascaleCloudExadataInfrastructureOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateExascaleCloudExadataInfrastructureInput, ...func(*odb.Options)) (*odb.UpdateExascaleCloudExadataInfrastructureOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateExascaleCloudExadataInfrastructureInput, ...func(*odb.Options)) *odb.UpdateExascaleCloudExadataInfrastructureOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateExascaleCloudExadataInfrastructureOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateExascaleCloudExadataInfrastructureInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateExascaleDbStorageVault provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateExascaleDbStorageVault(ctx context.Context, params *odb.UpdateExascaleDbStorageVaultInput, optFns ...func(*odb.Options)) (*odb.UpdateExascaleDbStorageVaultOutput, error) {
 	_va := make([]interface{}, len(optFns))

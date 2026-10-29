@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddReplicationPeer", func(t *testing.T) {
+        input := &opensearch.AddReplicationPeerInput{}
+        output := &opensearch.AddReplicationPeerOutput{}
+
+        mockClient.On("AddReplicationPeer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddReplicationPeer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAddTags", func(t *testing.T) {
         input := &opensearch.AddTagsInput{}
         output := &opensearch.AddTagsOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelServiceSoftwareUpdate", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelServiceSoftwareUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCompareDomainConfiguration", func(t *testing.T) {
+        input := &opensearch.CompareDomainConfigurationInput{}
+        output := &opensearch.CompareDomainConfigurationOutput{}
+
+        mockClient.On("CompareDomainConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CompareDomainConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeDomainReplication", func(t *testing.T) {
+        input := &opensearch.DescribeDomainReplicationInput{}
+        output := &opensearch.DescribeDomainReplicationOutput{}
+
+        mockClient.On("DescribeDomainReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeDomainReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeDomains", func(t *testing.T) {
         input := &opensearch.DescribeDomainsInput{}
         output := &opensearch.DescribeDomainsOutput{}
@@ -626,6 +665,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DissociatePackages", ctx, input).Return(output, nil)
 
         result, err := mockClient.DissociatePackages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestFailoverReplication", func(t *testing.T) {
+        input := &opensearch.FailoverReplicationInput{}
+        output := &opensearch.FailoverReplicationOutput{}
+
+        mockClient.On("FailoverReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.FailoverReplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1074,6 +1126,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRemoveReplicationPeer", func(t *testing.T) {
+        input := &opensearch.RemoveReplicationPeerInput{}
+        output := &opensearch.RemoveReplicationPeerOutput{}
+
+        mockClient.On("RemoveReplicationPeer", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveReplicationPeer(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRemoveTags", func(t *testing.T) {
         input := &opensearch.RemoveTagsInput{}
         output := &opensearch.RemoveTagsOutput{}
@@ -1146,6 +1211,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartServiceSoftwareUpdate", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartServiceSoftwareUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSwitchoverReplication", func(t *testing.T) {
+        input := &opensearch.SwitchoverReplicationInput{}
+        output := &opensearch.SwitchoverReplicationOutput{}
+
+        mockClient.On("SwitchoverReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SwitchoverReplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

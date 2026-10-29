@@ -1035,6 +1035,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateExascaleCloudExadataInfrastructure", func(t *testing.T) {
+        input := &odb.UpdateExascaleCloudExadataInfrastructureInput{}
+        output := &odb.UpdateExascaleCloudExadataInfrastructureOutput{}
+
+        mockClient.On("UpdateExascaleCloudExadataInfrastructure", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateExascaleCloudExadataInfrastructure(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateExascaleDbStorageVault", func(t *testing.T) {
         input := &odb.UpdateExascaleDbStorageVaultInput{}
         output := &odb.UpdateExascaleDbStorageVaultOutput{}

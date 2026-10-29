@@ -829,6 +829,43 @@ func (_m *IClient) DescribeRegistry(ctx context.Context, params *ecr.DescribeReg
 	return r0, r1
 }
 
+// DescribeReplicationBackfillResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeReplicationBackfillResults(ctx context.Context, params *ecr.DescribeReplicationBackfillResultsInput, optFns ...func(*ecr.Options)) (*ecr.DescribeReplicationBackfillResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeReplicationBackfillResults")
+	}
+
+	var r0 *ecr.DescribeReplicationBackfillResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DescribeReplicationBackfillResultsInput, ...func(*ecr.Options)) (*ecr.DescribeReplicationBackfillResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.DescribeReplicationBackfillResultsInput, ...func(*ecr.Options)) *ecr.DescribeReplicationBackfillResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.DescribeReplicationBackfillResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.DescribeReplicationBackfillResultsInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeRepositories provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeRepositories(ctx context.Context, params *ecr.DescribeRepositoriesInput, optFns ...func(*ecr.Options)) (*ecr.DescribeRepositoriesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1384,6 +1421,43 @@ func (_m *IClient) ListPullTimeUpdateExclusions(ctx context.Context, params *ecr
 	return r0, r1
 }
 
+// ListReplicationBackfills provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListReplicationBackfills(ctx context.Context, params *ecr.ListReplicationBackfillsInput, optFns ...func(*ecr.Options)) (*ecr.ListReplicationBackfillsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListReplicationBackfills")
+	}
+
+	var r0 *ecr.ListReplicationBackfillsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.ListReplicationBackfillsInput, ...func(*ecr.Options)) (*ecr.ListReplicationBackfillsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.ListReplicationBackfillsInput, ...func(*ecr.Options)) *ecr.ListReplicationBackfillsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.ListReplicationBackfillsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.ListReplicationBackfillsInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *ecr.ListTagsForResourceInput, optFns ...func(*ecr.Options)) (*ecr.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1912,6 +1986,80 @@ func (_m *IClient) StartLifecyclePolicyPreview(ctx context.Context, params *ecr.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ecr.StartLifecyclePolicyPreviewInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartReplicationBackfill provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartReplicationBackfill(ctx context.Context, params *ecr.StartReplicationBackfillInput, optFns ...func(*ecr.Options)) (*ecr.StartReplicationBackfillOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartReplicationBackfill")
+	}
+
+	var r0 *ecr.StartReplicationBackfillOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.StartReplicationBackfillInput, ...func(*ecr.Options)) (*ecr.StartReplicationBackfillOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.StartReplicationBackfillInput, ...func(*ecr.Options)) *ecr.StartReplicationBackfillOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.StartReplicationBackfillOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.StartReplicationBackfillInput, ...func(*ecr.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopReplicationBackfill provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopReplicationBackfill(ctx context.Context, params *ecr.StopReplicationBackfillInput, optFns ...func(*ecr.Options)) (*ecr.StopReplicationBackfillOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopReplicationBackfill")
+	}
+
+	var r0 *ecr.StopReplicationBackfillOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.StopReplicationBackfillInput, ...func(*ecr.Options)) (*ecr.StopReplicationBackfillOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ecr.StopReplicationBackfillInput, ...func(*ecr.Options)) *ecr.StopReplicationBackfillOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ecr.StopReplicationBackfillOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ecr.StopReplicationBackfillInput, ...func(*ecr.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

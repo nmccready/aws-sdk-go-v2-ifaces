@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateOAuth2TokenWithTokenExchange", func(t *testing.T) {
+        input := &signin.CreateOAuth2TokenWithTokenExchangeInput{}
+        output := &signin.CreateOAuth2TokenWithTokenExchangeOutput{}
+
+        mockClient.On("CreateOAuth2TokenWithTokenExchange", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateOAuth2TokenWithTokenExchange(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteConsoleAuthorizationConfiguration", func(t *testing.T) {
         input := &signin.DeleteConsoleAuthorizationConfigurationInput{}
         output := &signin.DeleteConsoleAuthorizationConfigurationOutput{}

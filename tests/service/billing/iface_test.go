@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateContract", func(t *testing.T) {
+        input := &billing.AssociateContractInput{}
+        output := &billing.AssociateContractOutput{}
+
+        mockClient.On("AssociateContract", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateContract(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateSourceViews", func(t *testing.T) {
         input := &billing.AssociateSourceViewsInput{}
         output := &billing.AssociateSourceViewsOutput{}
@@ -41,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("AssociateSourceViews", ctx, input).Return(output, nil)
 
         result, err := mockClient.AssociateSourceViews(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCancelContractualInvestmentAttestation", func(t *testing.T) {
+        input := &billing.CancelContractualInvestmentAttestationInput{}
+        output := &billing.CancelContractualInvestmentAttestationOutput{}
+
+        mockClient.On("CancelContractualInvestmentAttestation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelContractualInvestmentAttestation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -60,6 +86,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateContractualInvestmentAttestation", func(t *testing.T) {
+        input := &billing.CreateContractualInvestmentAttestationInput{}
+        output := &billing.CreateContractualInvestmentAttestationOutput{}
+
+        mockClient.On("CreateContractualInvestmentAttestation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContractualInvestmentAttestation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteBillingView", func(t *testing.T) {
         input := &billing.DeleteBillingViewInput{}
         output := &billing.DeleteBillingViewOutput{}
@@ -67,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteBillingView", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteBillingView(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateContract", func(t *testing.T) {
+        input := &billing.DisassociateContractInput{}
+        output := &billing.DisassociateContractOutput{}
+
+        mockClient.On("DisassociateContract", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateContract(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -106,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBillingView", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBillingView(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetContractInformation", func(t *testing.T) {
+        input := &billing.GetContractInformationInput{}
+        output := &billing.GetContractInformationOutput{}
+
+        mockClient.On("GetContractInformation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetContractInformation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -223,6 +288,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBusinessSupportSubscriptionHistory", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBusinessSupportSubscriptionHistory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContracts", func(t *testing.T) {
+        input := &billing.ListContractsInput{}
+        output := &billing.ListContractsOutput{}
+
+        mockClient.On("ListContracts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContracts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContractualInvestmentAttestations", func(t *testing.T) {
+        input := &billing.ListContractualInvestmentAttestationsInput{}
+        output := &billing.ListContractualInvestmentAttestationsOutput{}
+
+        mockClient.On("ListContractualInvestmentAttestations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContractualInvestmentAttestations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContractualInvestmentSummaries", func(t *testing.T) {
+        input := &billing.ListContractualInvestmentSummariesInput{}
+        output := &billing.ListContractualInvestmentSummariesOutput{}
+
+        mockClient.On("ListContractualInvestmentSummaries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContractualInvestmentSummaries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContractualInvestments", func(t *testing.T) {
+        input := &billing.ListContractualInvestmentsInput{}
+        output := &billing.ListContractualInvestmentsOutput{}
+
+        mockClient.On("ListContractualInvestments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContractualInvestments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

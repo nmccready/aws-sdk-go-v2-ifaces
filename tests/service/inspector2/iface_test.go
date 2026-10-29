@@ -567,6 +567,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetOnDemandScanStatus", func(t *testing.T) {
+        input := &inspector2.GetOnDemandScanStatusInput{}
+        output := &inspector2.GetOnDemandScanStatusOutput{}
+
+        mockClient.On("GetOnDemandScanStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOnDemandScanStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSbomExport", func(t *testing.T) {
         input := &inspector2.GetSbomExportInput{}
         output := &inspector2.GetSbomExportOutput{}
@@ -801,6 +814,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListOnDemandScans", func(t *testing.T) {
+        input := &inspector2.ListOnDemandScansInput{}
+        output := &inspector2.ListOnDemandScansOutput{}
+
+        mockClient.On("ListOnDemandScans", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOnDemandScans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &inspector2.ListTagsForResourceInput{}
         output := &inspector2.ListTagsForResourceOutput{}
@@ -899,6 +925,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartCodeSecurityScan", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartCodeSecurityScan(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartOnDemandScan", func(t *testing.T) {
+        input := &inspector2.StartOnDemandScanInput{}
+        output := &inspector2.StartOnDemandScanOutput{}
+
+        mockClient.On("StartOnDemandScan", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOnDemandScan(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

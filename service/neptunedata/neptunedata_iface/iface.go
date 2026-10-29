@@ -11,6 +11,7 @@ import (
 type IClient interface {
  Options() Options 
  CancelGremlinQuery(ctx context.Context, params *CancelGremlinQueryInput, optFns ...func(*Options)) (*CancelGremlinQueryOutput, error) 
+ CancelIndexRebuild(ctx context.Context, params *CancelIndexRebuildInput, optFns ...func(*Options)) (*CancelIndexRebuildOutput, error) 
  CancelLoaderJob(ctx context.Context, params *CancelLoaderJobInput, optFns ...func(*Options)) (*CancelLoaderJobOutput, error) 
  CancelMLDataProcessingJob(ctx context.Context, params *CancelMLDataProcessingJobInput, optFns ...func(*Options)) (*CancelMLDataProcessingJobOutput, error) 
  CancelMLModelTrainingJob(ctx context.Context, params *CancelMLModelTrainingJobInput, optFns ...func(*Options)) (*CancelMLModelTrainingJobOutput, error) 
@@ -28,6 +29,7 @@ type IClient interface {
  ExecuteOpenCypherQuery(ctx context.Context, params *ExecuteOpenCypherQueryInput, optFns ...func(*Options)) (*ExecuteOpenCypherQueryOutput, error) 
  GetEngineStatus(ctx context.Context, params *GetEngineStatusInput, optFns ...func(*Options)) (*GetEngineStatusOutput, error) 
  GetGremlinQueryStatus(ctx context.Context, params *GetGremlinQueryStatusInput, optFns ...func(*Options)) (*GetGremlinQueryStatusOutput, error) 
+ GetIndexRebuildStatus(ctx context.Context, params *GetIndexRebuildStatusInput, optFns ...func(*Options)) (*GetIndexRebuildStatusOutput, error) 
  GetLoaderJobStatus(ctx context.Context, params *GetLoaderJobStatusInput, optFns ...func(*Options)) (*GetLoaderJobStatusOutput, error) 
  GetMLDataProcessingJob(ctx context.Context, params *GetMLDataProcessingJobInput, optFns ...func(*Options)) (*GetMLDataProcessingJobOutput, error) 
  GetMLEndpoint(ctx context.Context, params *GetMLEndpointInput, optFns ...func(*Options)) (*GetMLEndpointOutput, error) 
@@ -40,7 +42,9 @@ type IClient interface {
  GetRDFGraphSummary(ctx context.Context, params *GetRDFGraphSummaryInput, optFns ...func(*Options)) (*GetRDFGraphSummaryOutput, error) 
  GetSparqlStatistics(ctx context.Context, params *GetSparqlStatisticsInput, optFns ...func(*Options)) (*GetSparqlStatisticsOutput, error) 
  GetSparqlStream(ctx context.Context, params *GetSparqlStreamInput, optFns ...func(*Options)) (*GetSparqlStreamOutput, error) 
+ GetStorageInfo(ctx context.Context, params *GetStorageInfoInput, optFns ...func(*Options)) (*GetStorageInfoOutput, error) 
  ListGremlinQueries(ctx context.Context, params *ListGremlinQueriesInput, optFns ...func(*Options)) (*ListGremlinQueriesOutput, error) 
+ ListIndexRebuilds(ctx context.Context, params *ListIndexRebuildsInput, optFns ...func(*Options)) (*ListIndexRebuildsOutput, error) 
  ListLoaderJobs(ctx context.Context, params *ListLoaderJobsInput, optFns ...func(*Options)) (*ListLoaderJobsOutput, error) 
  ListMLDataProcessingJobs(ctx context.Context, params *ListMLDataProcessingJobsInput, optFns ...func(*Options)) (*ListMLDataProcessingJobsOutput, error) 
  ListMLEndpoints(ctx context.Context, params *ListMLEndpointsInput, optFns ...func(*Options)) (*ListMLEndpointsOutput, error) 
@@ -49,6 +53,7 @@ type IClient interface {
  ListOpenCypherQueries(ctx context.Context, params *ListOpenCypherQueriesInput, optFns ...func(*Options)) (*ListOpenCypherQueriesOutput, error) 
  ManagePropertygraphStatistics(ctx context.Context, params *ManagePropertygraphStatisticsInput, optFns ...func(*Options)) (*ManagePropertygraphStatisticsOutput, error) 
  ManageSparqlStatistics(ctx context.Context, params *ManageSparqlStatisticsInput, optFns ...func(*Options)) (*ManageSparqlStatisticsOutput, error) 
+ StartIndexRebuild(ctx context.Context, params *StartIndexRebuildInput, optFns ...func(*Options)) (*StartIndexRebuildOutput, error) 
  StartLoaderJob(ctx context.Context, params *StartLoaderJobInput, optFns ...func(*Options)) (*StartLoaderJobOutput, error) 
  StartMLDataProcessingJob(ctx context.Context, params *StartMLDataProcessingJobInput, optFns ...func(*Options)) (*StartMLDataProcessingJobOutput, error) 
  StartMLModelTrainingJob(ctx context.Context, params *StartMLModelTrainingJobInput, optFns ...func(*Options)) (*StartMLModelTrainingJobOutput, error) 

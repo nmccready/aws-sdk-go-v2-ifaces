@@ -99,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateFailoverSlateConfiguration", func(t *testing.T) {
+        input := &ivs.CreateFailoverSlateConfigurationInput{}
+        output := &ivs.CreateFailoverSlateConfigurationOutput{}
+
+        mockClient.On("CreateFailoverSlateConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateFailoverSlateConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreatePlaybackRestrictionPolicy", func(t *testing.T) {
         input := &ivs.CreatePlaybackRestrictionPolicyInput{}
         output := &ivs.CreatePlaybackRestrictionPolicyOutput{}
@@ -158,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteFailoverSlateConfiguration", func(t *testing.T) {
+        input := &ivs.DeleteFailoverSlateConfigurationInput{}
+        output := &ivs.DeleteFailoverSlateConfigurationOutput{}
+
+        mockClient.On("DeleteFailoverSlateConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFailoverSlateConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -236,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetFailoverSlateConfiguration", func(t *testing.T) {
+        input := &ivs.GetFailoverSlateConfigurationInput{}
+        output := &ivs.GetFailoverSlateConfigurationOutput{}
+
+        mockClient.On("GetFailoverSlateConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFailoverSlateConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -366,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListChannels", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListChannels(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFailoverSlateConfigurations", func(t *testing.T) {
+        input := &ivs.ListFailoverSlateConfigurationsInput{}
+        output := &ivs.ListFailoverSlateConfigurationsOutput{}
+
+        mockClient.On("ListFailoverSlateConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFailoverSlateConfigurations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -548,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateFailoverSlateConfiguration", func(t *testing.T) {
+        input := &ivs.UpdateFailoverSlateConfigurationInput{}
+        output := &ivs.UpdateFailoverSlateConfigurationOutput{}
+
+        mockClient.On("UpdateFailoverSlateConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFailoverSlateConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

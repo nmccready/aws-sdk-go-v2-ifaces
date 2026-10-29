@@ -1815,6 +1815,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestResetTokenVaultKeyMaterial", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ResetTokenVaultKeyMaterialInput{}
+        output := &bedrockagentcorecontrol.ResetTokenVaultKeyMaterialOutput{}
+
+        mockClient.On("ResetTokenVaultKeyMaterial", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResetTokenVaultKeyMaterial(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRotatePaymentConnectorCredentials", func(t *testing.T) {
         input := &bedrockagentcorecontrol.RotatePaymentConnectorCredentialsInput{}
         output := &bedrockagentcorecontrol.RotatePaymentConnectorCredentialsOutput{}

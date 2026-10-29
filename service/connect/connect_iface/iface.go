@@ -373,6 +373,7 @@ type IClient interface {
  UpdateMetricContent(ctx context.Context, params *UpdateMetricContentInput, optFns ...func(*Options)) (*UpdateMetricContentOutput, error) 
  UpdateMetricMetadata(ctx context.Context, params *UpdateMetricMetadataInput, optFns ...func(*Options)) (*UpdateMetricMetadataOutput, error) 
  UpdateNotificationContent(ctx context.Context, params *UpdateNotificationContentInput, optFns ...func(*Options)) (*UpdateNotificationContentOutput, error) 
+ UpdateOutboundEmailContactMessage(ctx context.Context, params *UpdateOutboundEmailContactMessageInput, optFns ...func(*Options)) (*UpdateOutboundEmailContactMessageOutput, error) 
  UpdateParticipantAuthentication(ctx context.Context, params *UpdateParticipantAuthenticationInput, optFns ...func(*Options)) (*UpdateParticipantAuthenticationOutput, error) 
  UpdateParticipantRoleConfig(ctx context.Context, params *UpdateParticipantRoleConfigInput, optFns ...func(*Options)) (*UpdateParticipantRoleConfigOutput, error) 
  UpdatePhoneNumber(ctx context.Context, params *UpdatePhoneNumberInput, optFns ...func(*Options)) (*UpdatePhoneNumberOutput, error) 

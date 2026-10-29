@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelIndexRebuild", func(t *testing.T) {
+        input := &neptunedata.CancelIndexRebuildInput{}
+        output := &neptunedata.CancelIndexRebuildOutput{}
+
+        mockClient.On("CancelIndexRebuild", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelIndexRebuild(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelLoaderJob", func(t *testing.T) {
         input := &neptunedata.CancelLoaderJobInput{}
         output := &neptunedata.CancelLoaderJobOutput{}
@@ -268,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetIndexRebuildStatus", func(t *testing.T) {
+        input := &neptunedata.GetIndexRebuildStatusInput{}
+        output := &neptunedata.GetIndexRebuildStatusOutput{}
+
+        mockClient.On("GetIndexRebuildStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetIndexRebuildStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLoaderJobStatus", func(t *testing.T) {
         input := &neptunedata.GetLoaderJobStatusInput{}
         output := &neptunedata.GetLoaderJobStatusOutput{}
@@ -424,6 +450,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetStorageInfo", func(t *testing.T) {
+        input := &neptunedata.GetStorageInfoInput{}
+        output := &neptunedata.GetStorageInfoOutput{}
+
+        mockClient.On("GetStorageInfo", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetStorageInfo(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListGremlinQueries", func(t *testing.T) {
         input := &neptunedata.ListGremlinQueriesInput{}
         output := &neptunedata.ListGremlinQueriesOutput{}
@@ -431,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListGremlinQueries", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListGremlinQueries(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListIndexRebuilds", func(t *testing.T) {
+        input := &neptunedata.ListIndexRebuildsInput{}
+        output := &neptunedata.ListIndexRebuildsOutput{}
+
+        mockClient.On("ListIndexRebuilds", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListIndexRebuilds(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -535,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ManageSparqlStatistics", ctx, input).Return(output, nil)
 
         result, err := mockClient.ManageSparqlStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartIndexRebuild", func(t *testing.T) {
+        input := &neptunedata.StartIndexRebuildInput{}
+        output := &neptunedata.StartIndexRebuildOutput{}
+
+        mockClient.On("StartIndexRebuild", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartIndexRebuild(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

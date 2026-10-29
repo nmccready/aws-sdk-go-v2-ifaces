@@ -51,6 +51,43 @@ func (_m *IClient) CancelGremlinQuery(ctx context.Context, params *neptunedata.C
 	return r0, r1
 }
 
+// CancelIndexRebuild provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelIndexRebuild(ctx context.Context, params *neptunedata.CancelIndexRebuildInput, optFns ...func(*neptunedata.Options)) (*neptunedata.CancelIndexRebuildOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelIndexRebuild")
+	}
+
+	var r0 *neptunedata.CancelIndexRebuildOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.CancelIndexRebuildInput, ...func(*neptunedata.Options)) (*neptunedata.CancelIndexRebuildOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.CancelIndexRebuildInput, ...func(*neptunedata.Options)) *neptunedata.CancelIndexRebuildOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunedata.CancelIndexRebuildOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunedata.CancelIndexRebuildInput, ...func(*neptunedata.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelLoaderJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelLoaderJob(ctx context.Context, params *neptunedata.CancelLoaderJobInput, optFns ...func(*neptunedata.Options)) (*neptunedata.CancelLoaderJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -680,6 +717,43 @@ func (_m *IClient) GetGremlinQueryStatus(ctx context.Context, params *neptunedat
 	return r0, r1
 }
 
+// GetIndexRebuildStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetIndexRebuildStatus(ctx context.Context, params *neptunedata.GetIndexRebuildStatusInput, optFns ...func(*neptunedata.Options)) (*neptunedata.GetIndexRebuildStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetIndexRebuildStatus")
+	}
+
+	var r0 *neptunedata.GetIndexRebuildStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.GetIndexRebuildStatusInput, ...func(*neptunedata.Options)) (*neptunedata.GetIndexRebuildStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.GetIndexRebuildStatusInput, ...func(*neptunedata.Options)) *neptunedata.GetIndexRebuildStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunedata.GetIndexRebuildStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunedata.GetIndexRebuildStatusInput, ...func(*neptunedata.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetLoaderJobStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetLoaderJobStatus(ctx context.Context, params *neptunedata.GetLoaderJobStatusInput, optFns ...func(*neptunedata.Options)) (*neptunedata.GetLoaderJobStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1124,6 +1198,43 @@ func (_m *IClient) GetSparqlStream(ctx context.Context, params *neptunedata.GetS
 	return r0, r1
 }
 
+// GetStorageInfo provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetStorageInfo(ctx context.Context, params *neptunedata.GetStorageInfoInput, optFns ...func(*neptunedata.Options)) (*neptunedata.GetStorageInfoOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetStorageInfo")
+	}
+
+	var r0 *neptunedata.GetStorageInfoOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.GetStorageInfoInput, ...func(*neptunedata.Options)) (*neptunedata.GetStorageInfoOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.GetStorageInfoInput, ...func(*neptunedata.Options)) *neptunedata.GetStorageInfoOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunedata.GetStorageInfoOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunedata.GetStorageInfoInput, ...func(*neptunedata.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListGremlinQueries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListGremlinQueries(ctx context.Context, params *neptunedata.ListGremlinQueriesInput, optFns ...func(*neptunedata.Options)) (*neptunedata.ListGremlinQueriesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1153,6 +1264,43 @@ func (_m *IClient) ListGremlinQueries(ctx context.Context, params *neptunedata.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *neptunedata.ListGremlinQueriesInput, ...func(*neptunedata.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListIndexRebuilds provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListIndexRebuilds(ctx context.Context, params *neptunedata.ListIndexRebuildsInput, optFns ...func(*neptunedata.Options)) (*neptunedata.ListIndexRebuildsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListIndexRebuilds")
+	}
+
+	var r0 *neptunedata.ListIndexRebuildsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.ListIndexRebuildsInput, ...func(*neptunedata.Options)) (*neptunedata.ListIndexRebuildsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.ListIndexRebuildsInput, ...func(*neptunedata.Options)) *neptunedata.ListIndexRebuildsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunedata.ListIndexRebuildsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunedata.ListIndexRebuildsInput, ...func(*neptunedata.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1473,6 +1621,43 @@ func (_m *IClient) Options() neptunedata.Options {
 	}
 
 	return r0
+}
+
+// StartIndexRebuild provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartIndexRebuild(ctx context.Context, params *neptunedata.StartIndexRebuildInput, optFns ...func(*neptunedata.Options)) (*neptunedata.StartIndexRebuildOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartIndexRebuild")
+	}
+
+	var r0 *neptunedata.StartIndexRebuildOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.StartIndexRebuildInput, ...func(*neptunedata.Options)) (*neptunedata.StartIndexRebuildOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *neptunedata.StartIndexRebuildInput, ...func(*neptunedata.Options)) *neptunedata.StartIndexRebuildOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*neptunedata.StartIndexRebuildOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *neptunedata.StartIndexRebuildInput, ...func(*neptunedata.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // StartLoaderJob provides a mock function with given fields: ctx, params, optFns

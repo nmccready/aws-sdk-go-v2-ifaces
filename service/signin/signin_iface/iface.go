@@ -12,6 +12,7 @@ type IClient interface {
  Options() Options 
  CreateOAuth2Token(ctx context.Context, params *CreateOAuth2TokenInput, optFns ...func(*Options)) (*CreateOAuth2TokenOutput, error) 
  CreateOAuth2TokenWithIAM(ctx context.Context, params *CreateOAuth2TokenWithIAMInput, optFns ...func(*Options)) (*CreateOAuth2TokenWithIAMOutput, error) 
+ CreateOAuth2TokenWithTokenExchange(ctx context.Context, params *CreateOAuth2TokenWithTokenExchangeInput, optFns ...func(*Options)) (*CreateOAuth2TokenWithTokenExchangeOutput, error) 
  DeleteConsoleAuthorizationConfiguration(ctx context.Context, params *DeleteConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*DeleteConsoleAuthorizationConfigurationOutput, error) 
  DeleteResourcePermissionStatement(ctx context.Context, params *DeleteResourcePermissionStatementInput, optFns ...func(*Options)) (*DeleteResourcePermissionStatementOutput, error) 
  GetConsoleAuthorizationConfiguration(ctx context.Context, params *GetConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*GetConsoleAuthorizationConfigurationOutput, error) 

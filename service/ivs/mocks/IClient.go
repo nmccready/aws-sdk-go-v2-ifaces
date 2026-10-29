@@ -200,6 +200,43 @@ func (_m *IClient) CreateChannel(ctx context.Context, params *ivs.CreateChannelI
 	return r0, r1
 }
 
+// CreateFailoverSlateConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateFailoverSlateConfiguration(ctx context.Context, params *ivs.CreateFailoverSlateConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.CreateFailoverSlateConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateFailoverSlateConfiguration")
+	}
+
+	var r0 *ivs.CreateFailoverSlateConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.CreateFailoverSlateConfigurationInput, ...func(*ivs.Options)) (*ivs.CreateFailoverSlateConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.CreateFailoverSlateConfigurationInput, ...func(*ivs.Options)) *ivs.CreateFailoverSlateConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.CreateFailoverSlateConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.CreateFailoverSlateConfigurationInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreatePlaybackRestrictionPolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreatePlaybackRestrictionPolicy(ctx context.Context, params *ivs.CreatePlaybackRestrictionPolicyInput, optFns ...func(*ivs.Options)) (*ivs.CreatePlaybackRestrictionPolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -377,6 +414,43 @@ func (_m *IClient) DeleteChannel(ctx context.Context, params *ivs.DeleteChannelI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.DeleteChannelInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteFailoverSlateConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFailoverSlateConfiguration(ctx context.Context, params *ivs.DeleteFailoverSlateConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.DeleteFailoverSlateConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFailoverSlateConfiguration")
+	}
+
+	var r0 *ivs.DeleteFailoverSlateConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.DeleteFailoverSlateConfigurationInput, ...func(*ivs.Options)) (*ivs.DeleteFailoverSlateConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.DeleteFailoverSlateConfigurationInput, ...func(*ivs.Options)) *ivs.DeleteFailoverSlateConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.DeleteFailoverSlateConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.DeleteFailoverSlateConfigurationInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -599,6 +673,43 @@ func (_m *IClient) GetChannel(ctx context.Context, params *ivs.GetChannelInput, 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.GetChannelInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetFailoverSlateConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFailoverSlateConfiguration(ctx context.Context, params *ivs.GetFailoverSlateConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.GetFailoverSlateConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFailoverSlateConfiguration")
+	}
+
+	var r0 *ivs.GetFailoverSlateConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.GetFailoverSlateConfigurationInput, ...func(*ivs.Options)) (*ivs.GetFailoverSlateConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.GetFailoverSlateConfigurationInput, ...func(*ivs.Options)) *ivs.GetFailoverSlateConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.GetFailoverSlateConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.GetFailoverSlateConfigurationInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -969,6 +1080,43 @@ func (_m *IClient) ListChannels(ctx context.Context, params *ivs.ListChannelsInp
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.ListChannelsInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFailoverSlateConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFailoverSlateConfigurations(ctx context.Context, params *ivs.ListFailoverSlateConfigurationsInput, optFns ...func(*ivs.Options)) (*ivs.ListFailoverSlateConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFailoverSlateConfigurations")
+	}
+
+	var r0 *ivs.ListFailoverSlateConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.ListFailoverSlateConfigurationsInput, ...func(*ivs.Options)) (*ivs.ListFailoverSlateConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.ListFailoverSlateConfigurationsInput, ...func(*ivs.Options)) *ivs.ListFailoverSlateConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.ListFailoverSlateConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.ListFailoverSlateConfigurationsInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1505,6 +1653,43 @@ func (_m *IClient) UpdateChannel(ctx context.Context, params *ivs.UpdateChannelI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ivs.UpdateChannelInput, ...func(*ivs.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateFailoverSlateConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateFailoverSlateConfiguration(ctx context.Context, params *ivs.UpdateFailoverSlateConfigurationInput, optFns ...func(*ivs.Options)) (*ivs.UpdateFailoverSlateConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateFailoverSlateConfiguration")
+	}
+
+	var r0 *ivs.UpdateFailoverSlateConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.UpdateFailoverSlateConfigurationInput, ...func(*ivs.Options)) (*ivs.UpdateFailoverSlateConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ivs.UpdateFailoverSlateConfigurationInput, ...func(*ivs.Options)) *ivs.UpdateFailoverSlateConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ivs.UpdateFailoverSlateConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ivs.UpdateFailoverSlateConfigurationInput, ...func(*ivs.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

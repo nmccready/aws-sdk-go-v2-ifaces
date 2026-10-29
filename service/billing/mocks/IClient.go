@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateContract provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateContract(ctx context.Context, params *billing.AssociateContractInput, optFns ...func(*billing.Options)) (*billing.AssociateContractOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateContract")
+	}
+
+	var r0 *billing.AssociateContractOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.AssociateContractInput, ...func(*billing.Options)) (*billing.AssociateContractOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.AssociateContractInput, ...func(*billing.Options)) *billing.AssociateContractOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.AssociateContractOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.AssociateContractInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateSourceViews provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateSourceViews(ctx context.Context, params *billing.AssociateSourceViewsInput, optFns ...func(*billing.Options)) (*billing.AssociateSourceViewsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -44,6 +81,43 @@ func (_m *IClient) AssociateSourceViews(ctx context.Context, params *billing.Ass
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.AssociateSourceViewsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CancelContractualInvestmentAttestation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelContractualInvestmentAttestation(ctx context.Context, params *billing.CancelContractualInvestmentAttestationInput, optFns ...func(*billing.Options)) (*billing.CancelContractualInvestmentAttestationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelContractualInvestmentAttestation")
+	}
+
+	var r0 *billing.CancelContractualInvestmentAttestationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.CancelContractualInvestmentAttestationInput, ...func(*billing.Options)) (*billing.CancelContractualInvestmentAttestationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.CancelContractualInvestmentAttestationInput, ...func(*billing.Options)) *billing.CancelContractualInvestmentAttestationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.CancelContractualInvestmentAttestationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.CancelContractualInvestmentAttestationInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -89,6 +163,43 @@ func (_m *IClient) CreateBillingView(ctx context.Context, params *billing.Create
 	return r0, r1
 }
 
+// CreateContractualInvestmentAttestation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContractualInvestmentAttestation(ctx context.Context, params *billing.CreateContractualInvestmentAttestationInput, optFns ...func(*billing.Options)) (*billing.CreateContractualInvestmentAttestationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContractualInvestmentAttestation")
+	}
+
+	var r0 *billing.CreateContractualInvestmentAttestationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.CreateContractualInvestmentAttestationInput, ...func(*billing.Options)) (*billing.CreateContractualInvestmentAttestationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.CreateContractualInvestmentAttestationInput, ...func(*billing.Options)) *billing.CreateContractualInvestmentAttestationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.CreateContractualInvestmentAttestationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.CreateContractualInvestmentAttestationInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteBillingView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteBillingView(ctx context.Context, params *billing.DeleteBillingViewInput, optFns ...func(*billing.Options)) (*billing.DeleteBillingViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +229,43 @@ func (_m *IClient) DeleteBillingView(ctx context.Context, params *billing.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.DeleteBillingViewInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateContract provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateContract(ctx context.Context, params *billing.DisassociateContractInput, optFns ...func(*billing.Options)) (*billing.DisassociateContractOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateContract")
+	}
+
+	var r0 *billing.DisassociateContractOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.DisassociateContractInput, ...func(*billing.Options)) (*billing.DisassociateContractOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.DisassociateContractInput, ...func(*billing.Options)) *billing.DisassociateContractOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.DisassociateContractOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.DisassociateContractInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -229,6 +377,43 @@ func (_m *IClient) GetBillingView(ctx context.Context, params *billing.GetBillin
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetBillingViewInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetContractInformation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetContractInformation(ctx context.Context, params *billing.GetContractInformationInput, optFns ...func(*billing.Options)) (*billing.GetContractInformationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetContractInformation")
+	}
+
+	var r0 *billing.GetContractInformationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetContractInformationInput, ...func(*billing.Options)) (*billing.GetContractInformationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.GetContractInformationInput, ...func(*billing.Options)) *billing.GetContractInformationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.GetContractInformationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.GetContractInformationInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -562,6 +747,154 @@ func (_m *IClient) ListBusinessSupportSubscriptionHistory(ctx context.Context, p
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListBusinessSupportSubscriptionHistoryInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContracts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContracts(ctx context.Context, params *billing.ListContractsInput, optFns ...func(*billing.Options)) (*billing.ListContractsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContracts")
+	}
+
+	var r0 *billing.ListContractsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractsInput, ...func(*billing.Options)) (*billing.ListContractsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractsInput, ...func(*billing.Options)) *billing.ListContractsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListContractsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListContractsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContractualInvestmentAttestations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContractualInvestmentAttestations(ctx context.Context, params *billing.ListContractualInvestmentAttestationsInput, optFns ...func(*billing.Options)) (*billing.ListContractualInvestmentAttestationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContractualInvestmentAttestations")
+	}
+
+	var r0 *billing.ListContractualInvestmentAttestationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractualInvestmentAttestationsInput, ...func(*billing.Options)) (*billing.ListContractualInvestmentAttestationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractualInvestmentAttestationsInput, ...func(*billing.Options)) *billing.ListContractualInvestmentAttestationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListContractualInvestmentAttestationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListContractualInvestmentAttestationsInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContractualInvestmentSummaries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContractualInvestmentSummaries(ctx context.Context, params *billing.ListContractualInvestmentSummariesInput, optFns ...func(*billing.Options)) (*billing.ListContractualInvestmentSummariesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContractualInvestmentSummaries")
+	}
+
+	var r0 *billing.ListContractualInvestmentSummariesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractualInvestmentSummariesInput, ...func(*billing.Options)) (*billing.ListContractualInvestmentSummariesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractualInvestmentSummariesInput, ...func(*billing.Options)) *billing.ListContractualInvestmentSummariesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListContractualInvestmentSummariesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListContractualInvestmentSummariesInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContractualInvestments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContractualInvestments(ctx context.Context, params *billing.ListContractualInvestmentsInput, optFns ...func(*billing.Options)) (*billing.ListContractualInvestmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContractualInvestments")
+	}
+
+	var r0 *billing.ListContractualInvestmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractualInvestmentsInput, ...func(*billing.Options)) (*billing.ListContractualInvestmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.ListContractualInvestmentsInput, ...func(*billing.Options)) *billing.ListContractualInvestmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.ListContractualInvestmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.ListContractualInvestmentsInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

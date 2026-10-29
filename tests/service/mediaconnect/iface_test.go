@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchGetDestinationEndpoint", func(t *testing.T) {
+        input := &mediaconnect.BatchGetDestinationEndpointInput{}
+        output := &mediaconnect.BatchGetDestinationEndpointOutput{}
+
+        mockClient.On("BatchGetDestinationEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetDestinationEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetRouterInput", func(t *testing.T) {
         input := &mediaconnect.BatchGetRouterInputInput{}
         output := &mediaconnect.BatchGetRouterInputOutput{}
@@ -145,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchGetRouterOutput", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchGetRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchGetSourceEndpoint", func(t *testing.T) {
+        input := &mediaconnect.BatchGetSourceEndpointInput{}
+        output := &mediaconnect.BatchGetSourceEndpointOutput{}
+
+        mockClient.On("BatchGetSourceEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchGetSourceEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestConnectEndpoints", func(t *testing.T) {
+        input := &mediaconnect.ConnectEndpointsInput{}
+        output := &mediaconnect.ConnectEndpointsOutput{}
+
+        mockClient.On("ConnectEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ConnectEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeregisterDestinationEndpoint", func(t *testing.T) {
+        input := &mediaconnect.DeregisterDestinationEndpointInput{}
+        output := &mediaconnect.DeregisterDestinationEndpointOutput{}
+
+        mockClient.On("DeregisterDestinationEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterDestinationEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeregisterGatewayInstance", func(t *testing.T) {
         input := &mediaconnect.DeregisterGatewayInstanceInput{}
         output := &mediaconnect.DeregisterGatewayInstanceOutput{}
@@ -314,6 +366,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeregisterGatewayInstance", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeregisterGatewayInstance(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeregisterSourceEndpoint", func(t *testing.T) {
+        input := &mediaconnect.DeregisterSourceEndpointInput{}
+        output := &mediaconnect.DeregisterSourceEndpointOutput{}
+
+        mockClient.On("DeregisterSourceEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterSourceEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +489,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisconnectEndpoints", func(t *testing.T) {
+        input := &mediaconnect.DisconnectEndpointsInput{}
+        output := &mediaconnect.DisconnectEndpointsOutput{}
+
+        mockClient.On("DisconnectEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisconnectEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDestinationEndpoint", func(t *testing.T) {
+        input := &mediaconnect.GetDestinationEndpointInput{}
+        output := &mediaconnect.GetDestinationEndpointOutput{}
+
+        mockClient.On("GetDestinationEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDestinationEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRouterInput", func(t *testing.T) {
         input := &mediaconnect.GetRouterInputInput{}
         output := &mediaconnect.GetRouterInputOutput{}
@@ -489,6 +580,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSourceEndpoint", func(t *testing.T) {
+        input := &mediaconnect.GetSourceEndpointInput{}
+        output := &mediaconnect.GetSourceEndpointOutput{}
+
+        mockClient.On("GetSourceEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSourceEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGrantFlowEntitlements", func(t *testing.T) {
         input := &mediaconnect.GrantFlowEntitlementsInput{}
         output := &mediaconnect.GrantFlowEntitlementsOutput{}
@@ -509,6 +613,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBridges", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBridges(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDestinationEndpoints", func(t *testing.T) {
+        input := &mediaconnect.ListDestinationEndpointsInput{}
+        output := &mediaconnect.ListDestinationEndpointsOutput{}
+
+        mockClient.On("ListDestinationEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDestinationEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -632,6 +749,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListSourceEndpoints", func(t *testing.T) {
+        input := &mediaconnect.ListSourceEndpointsInput{}
+        output := &mediaconnect.ListSourceEndpointsOutput{}
+
+        mockClient.On("ListSourceEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSourceEndpoints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForGlobalResource", func(t *testing.T) {
         input := &mediaconnect.ListTagsForGlobalResourceInput{}
         output := &mediaconnect.ListTagsForGlobalResourceOutput{}
@@ -665,6 +795,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("PurchaseOffering", ctx, input).Return(output, nil)
 
         result, err := mockClient.PurchaseOffering(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterDestinationEndpoint", func(t *testing.T) {
+        input := &mediaconnect.RegisterDestinationEndpointInput{}
+        output := &mediaconnect.RegisterDestinationEndpointOutput{}
+
+        mockClient.On("RegisterDestinationEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterDestinationEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterSourceEndpoint", func(t *testing.T) {
+        input := &mediaconnect.RegisterSourceEndpointInput{}
+        output := &mediaconnect.RegisterSourceEndpointOutput{}
+
+        mockClient.On("RegisterSourceEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterSourceEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -983,6 +1139,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateDestinationEndpoint", func(t *testing.T) {
+        input := &mediaconnect.UpdateDestinationEndpointInput{}
+        output := &mediaconnect.UpdateDestinationEndpointOutput{}
+
+        mockClient.On("UpdateDestinationEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDestinationEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateFlow", func(t *testing.T) {
         input := &mediaconnect.UpdateFlowInput{}
         output := &mediaconnect.UpdateFlowOutput{}
@@ -1094,6 +1263,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRouterOutput", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRouterOutput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSourceEndpoint", func(t *testing.T) {
+        input := &mediaconnect.UpdateSourceEndpointInput{}
+        output := &mediaconnect.UpdateSourceEndpointOutput{}
+
+        mockClient.On("UpdateSourceEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSourceEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

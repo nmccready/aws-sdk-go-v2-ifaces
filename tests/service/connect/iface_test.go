@@ -4753,6 +4753,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateOutboundEmailContactMessage", func(t *testing.T) {
+        input := &connect.UpdateOutboundEmailContactMessageInput{}
+        output := &connect.UpdateOutboundEmailContactMessageOutput{}
+
+        mockClient.On("UpdateOutboundEmailContactMessage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOutboundEmailContactMessage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateParticipantAuthentication", func(t *testing.T) {
         input := &connect.UpdateParticipantAuthenticationInput{}
         output := &connect.UpdateParticipantAuthenticationOutput{}

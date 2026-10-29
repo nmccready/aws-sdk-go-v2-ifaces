@@ -20772,6 +20772,43 @@ func (_m *IClient) GetCapacityManagerMonitoredTagKeys(ctx context.Context, param
 	return r0, r1
 }
 
+// GetCapacityManagerSupportabilityScores provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCapacityManagerSupportabilityScores(ctx context.Context, params *ec2.GetCapacityManagerSupportabilityScoresInput, optFns ...func(*ec2.Options)) (*ec2.GetCapacityManagerSupportabilityScoresOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCapacityManagerSupportabilityScores")
+	}
+
+	var r0 *ec2.GetCapacityManagerSupportabilityScoresOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetCapacityManagerSupportabilityScoresInput, ...func(*ec2.Options)) (*ec2.GetCapacityManagerSupportabilityScoresOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetCapacityManagerSupportabilityScoresInput, ...func(*ec2.Options)) *ec2.GetCapacityManagerSupportabilityScoresOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetCapacityManagerSupportabilityScoresOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetCapacityManagerSupportabilityScoresInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCapacityReservationUsage provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCapacityReservationUsage(ctx context.Context, params *ec2.GetCapacityReservationUsageInput, optFns ...func(*ec2.Options)) (*ec2.GetCapacityReservationUsageOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -21319,6 +21356,43 @@ func (_m *IClient) GetImageBlockPublicAccessState(ctx context.Context, params *e
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetImageBlockPublicAccessStateInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetImageFindings provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetImageFindings(ctx context.Context, params *ec2.GetImageFindingsInput, optFns ...func(*ec2.Options)) (*ec2.GetImageFindingsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetImageFindings")
+	}
+
+	var r0 *ec2.GetImageFindingsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetImageFindingsInput, ...func(*ec2.Options)) (*ec2.GetImageFindingsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetImageFindingsInput, ...func(*ec2.Options)) *ec2.GetImageFindingsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetImageFindingsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetImageFindingsInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -237,6 +237,43 @@ func (_m *IClient) AddFlowVpcInterfaces(ctx context.Context, params *mediaconnec
 	return r0, r1
 }
 
+// BatchGetDestinationEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetDestinationEndpoint(ctx context.Context, params *mediaconnect.BatchGetDestinationEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.BatchGetDestinationEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetDestinationEndpoint")
+	}
+
+	var r0 *mediaconnect.BatchGetDestinationEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.BatchGetDestinationEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.BatchGetDestinationEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.BatchGetDestinationEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.BatchGetDestinationEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.BatchGetDestinationEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.BatchGetDestinationEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetRouterInput provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetRouterInput(ctx context.Context, params *mediaconnect.BatchGetRouterInputInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.BatchGetRouterInputOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -340,6 +377,80 @@ func (_m *IClient) BatchGetRouterOutput(ctx context.Context, params *mediaconnec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.BatchGetRouterOutputInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchGetSourceEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchGetSourceEndpoint(ctx context.Context, params *mediaconnect.BatchGetSourceEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.BatchGetSourceEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchGetSourceEndpoint")
+	}
+
+	var r0 *mediaconnect.BatchGetSourceEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.BatchGetSourceEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.BatchGetSourceEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.BatchGetSourceEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.BatchGetSourceEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.BatchGetSourceEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.BatchGetSourceEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ConnectEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ConnectEndpoints(ctx context.Context, params *mediaconnect.ConnectEndpointsInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.ConnectEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ConnectEndpoints")
+	}
+
+	var r0 *mediaconnect.ConnectEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.ConnectEndpointsInput, ...func(*mediaconnect.Options)) (*mediaconnect.ConnectEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.ConnectEndpointsInput, ...func(*mediaconnect.Options)) *mediaconnect.ConnectEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.ConnectEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.ConnectEndpointsInput, ...func(*mediaconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +903,43 @@ func (_m *IClient) DeleteRouterOutput(ctx context.Context, params *mediaconnect.
 	return r0, r1
 }
 
+// DeregisterDestinationEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterDestinationEndpoint(ctx context.Context, params *mediaconnect.DeregisterDestinationEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.DeregisterDestinationEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterDestinationEndpoint")
+	}
+
+	var r0 *mediaconnect.DeregisterDestinationEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.DeregisterDestinationEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.DeregisterDestinationEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.DeregisterDestinationEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.DeregisterDestinationEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.DeregisterDestinationEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.DeregisterDestinationEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeregisterGatewayInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeregisterGatewayInstance(ctx context.Context, params *mediaconnect.DeregisterGatewayInstanceInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.DeregisterGatewayInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +969,43 @@ func (_m *IClient) DeregisterGatewayInstance(ctx context.Context, params *mediac
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.DeregisterGatewayInstanceInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeregisterSourceEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterSourceEndpoint(ctx context.Context, params *mediaconnect.DeregisterSourceEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.DeregisterSourceEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterSourceEndpoint")
+	}
+
+	var r0 *mediaconnect.DeregisterSourceEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.DeregisterSourceEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.DeregisterSourceEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.DeregisterSourceEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.DeregisterSourceEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.DeregisterSourceEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.DeregisterSourceEndpointInput, ...func(*mediaconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1125,6 +1310,80 @@ func (_m *IClient) DescribeReservation(ctx context.Context, params *mediaconnect
 	return r0, r1
 }
 
+// DisconnectEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisconnectEndpoints(ctx context.Context, params *mediaconnect.DisconnectEndpointsInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.DisconnectEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisconnectEndpoints")
+	}
+
+	var r0 *mediaconnect.DisconnectEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.DisconnectEndpointsInput, ...func(*mediaconnect.Options)) (*mediaconnect.DisconnectEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.DisconnectEndpointsInput, ...func(*mediaconnect.Options)) *mediaconnect.DisconnectEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.DisconnectEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.DisconnectEndpointsInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDestinationEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDestinationEndpoint(ctx context.Context, params *mediaconnect.GetDestinationEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.GetDestinationEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDestinationEndpoint")
+	}
+
+	var r0 *mediaconnect.GetDestinationEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.GetDestinationEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.GetDestinationEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.GetDestinationEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.GetDestinationEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.GetDestinationEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.GetDestinationEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRouterInput provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRouterInput(ctx context.Context, params *mediaconnect.GetRouterInputInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.GetRouterInputOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1310,6 +1569,43 @@ func (_m *IClient) GetRouterOutput(ctx context.Context, params *mediaconnect.Get
 	return r0, r1
 }
 
+// GetSourceEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSourceEndpoint(ctx context.Context, params *mediaconnect.GetSourceEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.GetSourceEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSourceEndpoint")
+	}
+
+	var r0 *mediaconnect.GetSourceEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.GetSourceEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.GetSourceEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.GetSourceEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.GetSourceEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.GetSourceEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.GetSourceEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GrantFlowEntitlements provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GrantFlowEntitlements(ctx context.Context, params *mediaconnect.GrantFlowEntitlementsInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.GrantFlowEntitlementsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1376,6 +1672,43 @@ func (_m *IClient) ListBridges(ctx context.Context, params *mediaconnect.ListBri
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.ListBridgesInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDestinationEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDestinationEndpoints(ctx context.Context, params *mediaconnect.ListDestinationEndpointsInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.ListDestinationEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDestinationEndpoints")
+	}
+
+	var r0 *mediaconnect.ListDestinationEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.ListDestinationEndpointsInput, ...func(*mediaconnect.Options)) (*mediaconnect.ListDestinationEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.ListDestinationEndpointsInput, ...func(*mediaconnect.Options)) *mediaconnect.ListDestinationEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.ListDestinationEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.ListDestinationEndpointsInput, ...func(*mediaconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1717,6 +2050,43 @@ func (_m *IClient) ListRouterOutputs(ctx context.Context, params *mediaconnect.L
 	return r0, r1
 }
 
+// ListSourceEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSourceEndpoints(ctx context.Context, params *mediaconnect.ListSourceEndpointsInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.ListSourceEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSourceEndpoints")
+	}
+
+	var r0 *mediaconnect.ListSourceEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.ListSourceEndpointsInput, ...func(*mediaconnect.Options)) (*mediaconnect.ListSourceEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.ListSourceEndpointsInput, ...func(*mediaconnect.Options)) *mediaconnect.ListSourceEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.ListSourceEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.ListSourceEndpointsInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForGlobalResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForGlobalResource(ctx context.Context, params *mediaconnect.ListTagsForGlobalResourceInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.ListTagsForGlobalResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1838,6 +2208,80 @@ func (_m *IClient) PurchaseOffering(ctx context.Context, params *mediaconnect.Pu
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.PurchaseOfferingInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterDestinationEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterDestinationEndpoint(ctx context.Context, params *mediaconnect.RegisterDestinationEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.RegisterDestinationEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterDestinationEndpoint")
+	}
+
+	var r0 *mediaconnect.RegisterDestinationEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.RegisterDestinationEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.RegisterDestinationEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.RegisterDestinationEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.RegisterDestinationEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.RegisterDestinationEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.RegisterDestinationEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterSourceEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterSourceEndpoint(ctx context.Context, params *mediaconnect.RegisterSourceEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.RegisterSourceEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterSourceEndpoint")
+	}
+
+	var r0 *mediaconnect.RegisterSourceEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.RegisterSourceEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.RegisterSourceEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.RegisterSourceEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.RegisterSourceEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.RegisterSourceEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.RegisterSourceEndpointInput, ...func(*mediaconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2734,6 +3178,43 @@ func (_m *IClient) UpdateBridgeState(ctx context.Context, params *mediaconnect.U
 	return r0, r1
 }
 
+// UpdateDestinationEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDestinationEndpoint(ctx context.Context, params *mediaconnect.UpdateDestinationEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.UpdateDestinationEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDestinationEndpoint")
+	}
+
+	var r0 *mediaconnect.UpdateDestinationEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.UpdateDestinationEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.UpdateDestinationEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.UpdateDestinationEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.UpdateDestinationEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.UpdateDestinationEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.UpdateDestinationEndpointInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateFlow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateFlow(ctx context.Context, params *mediaconnect.UpdateFlowInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.UpdateFlowOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3059,6 +3540,43 @@ func (_m *IClient) UpdateRouterOutput(ctx context.Context, params *mediaconnect.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.UpdateRouterOutputInput, ...func(*mediaconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSourceEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSourceEndpoint(ctx context.Context, params *mediaconnect.UpdateSourceEndpointInput, optFns ...func(*mediaconnect.Options)) (*mediaconnect.UpdateSourceEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSourceEndpoint")
+	}
+
+	var r0 *mediaconnect.UpdateSourceEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.UpdateSourceEndpointInput, ...func(*mediaconnect.Options)) (*mediaconnect.UpdateSourceEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mediaconnect.UpdateSourceEndpointInput, ...func(*mediaconnect.Options)) *mediaconnect.UpdateSourceEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mediaconnect.UpdateSourceEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mediaconnect.UpdateSourceEndpointInput, ...func(*mediaconnect.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

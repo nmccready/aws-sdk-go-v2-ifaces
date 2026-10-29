@@ -320,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeReplicationBackfillResults", func(t *testing.T) {
+        input := &ecr.DescribeReplicationBackfillResultsInput{}
+        output := &ecr.DescribeReplicationBackfillResultsOutput{}
+
+        mockClient.On("DescribeReplicationBackfillResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeReplicationBackfillResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeRepositories", func(t *testing.T) {
         input := &ecr.DescribeRepositoriesInput{}
         output := &ecr.DescribeRepositoriesOutput{}
@@ -515,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListReplicationBackfills", func(t *testing.T) {
+        input := &ecr.ListReplicationBackfillsInput{}
+        output := &ecr.ListReplicationBackfillsOutput{}
+
+        mockClient.On("ListReplicationBackfills", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListReplicationBackfills(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &ecr.ListTagsForResourceInput{}
         output := &ecr.ListTagsForResourceOutput{}
@@ -691,6 +717,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartLifecyclePolicyPreview", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartLifecyclePolicyPreview(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartReplicationBackfill", func(t *testing.T) {
+        input := &ecr.StartReplicationBackfillInput{}
+        output := &ecr.StartReplicationBackfillOutput{}
+
+        mockClient.On("StartReplicationBackfill", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartReplicationBackfill(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopReplicationBackfill", func(t *testing.T) {
+        input := &ecr.StopReplicationBackfillInput{}
+        output := &ecr.StopReplicationBackfillOutput{}
+
+        mockClient.On("StopReplicationBackfill", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopReplicationBackfill(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

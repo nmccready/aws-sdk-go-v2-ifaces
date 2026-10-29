@@ -7327,6 +7327,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCapacityManagerSupportabilityScores", func(t *testing.T) {
+        input := &ec2.GetCapacityManagerSupportabilityScoresInput{}
+        output := &ec2.GetCapacityManagerSupportabilityScoresOutput{}
+
+        mockClient.On("GetCapacityManagerSupportabilityScores", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityManagerSupportabilityScores(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCapacityReservationUsage", func(t *testing.T) {
         input := &ec2.GetCapacityReservationUsageInput{}
         output := &ec2.GetCapacityReservationUsageOutput{}
@@ -7516,6 +7529,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetImageBlockPublicAccessState", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetImageBlockPublicAccessState(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetImageFindings", func(t *testing.T) {
+        input := &ec2.GetImageFindingsInput{}
+        output := &ec2.GetImageFindingsOutput{}
+
+        mockClient.On("GetImageFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetImageFindings(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

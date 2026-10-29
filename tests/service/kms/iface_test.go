@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDecapsulate", func(t *testing.T) {
+        input := &kms.DecapsulateInput{}
+        output := &kms.DecapsulateOutput{}
+
+        mockClient.On("Decapsulate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.Decapsulate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDecrypt", func(t *testing.T) {
         input := &kms.DecryptInput{}
         output := &kms.DecryptOutput{}
@@ -262,6 +275,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableKeyRotation", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableKeyRotation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEncapsulate", func(t *testing.T) {
+        input := &kms.EncapsulateInput{}
+        output := &kms.EncapsulateOutput{}
+
+        mockClient.On("Encapsulate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.Encapsulate(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

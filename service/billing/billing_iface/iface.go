@@ -10,12 +10,17 @@ import (
 // IClient defines the interface for billing
 type IClient interface {
  Options() Options 
+ AssociateContract(ctx context.Context, params *AssociateContractInput, optFns ...func(*Options)) (*AssociateContractOutput, error) 
  AssociateSourceViews(ctx context.Context, params *AssociateSourceViewsInput, optFns ...func(*Options)) (*AssociateSourceViewsOutput, error) 
+ CancelContractualInvestmentAttestation(ctx context.Context, params *CancelContractualInvestmentAttestationInput, optFns ...func(*Options)) (*CancelContractualInvestmentAttestationOutput, error) 
  CreateBillingView(ctx context.Context, params *CreateBillingViewInput, optFns ...func(*Options)) (*CreateBillingViewOutput, error) 
+ CreateContractualInvestmentAttestation(ctx context.Context, params *CreateContractualInvestmentAttestationInput, optFns ...func(*Options)) (*CreateContractualInvestmentAttestationOutput, error) 
  DeleteBillingView(ctx context.Context, params *DeleteBillingViewInput, optFns ...func(*Options)) (*DeleteBillingViewOutput, error) 
+ DisassociateContract(ctx context.Context, params *DisassociateContractInput, optFns ...func(*Options)) (*DisassociateContractOutput, error) 
  DisassociateSourceViews(ctx context.Context, params *DisassociateSourceViewsInput, optFns ...func(*Options)) (*DisassociateSourceViewsOutput, error) 
  GetBillingPreferences(ctx context.Context, params *GetBillingPreferencesInput, optFns ...func(*Options)) (*GetBillingPreferencesOutput, error) 
  GetBillingView(ctx context.Context, params *GetBillingViewInput, optFns ...func(*Options)) (*GetBillingViewOutput, error) 
+ GetContractInformation(ctx context.Context, params *GetContractInformationInput, optFns ...func(*Options)) (*GetContractInformationOutput, error) 
  GetCreditAllocationHistory(ctx context.Context, params *GetCreditAllocationHistoryInput, optFns ...func(*Options)) (*GetCreditAllocationHistoryOutput, error) 
  GetCredits(ctx context.Context, params *GetCreditsInput, optFns ...func(*Options)) (*GetCreditsOutput, error) 
  GetEnterpriseSupportChargeSummary(ctx context.Context, params *GetEnterpriseSupportChargeSummaryInput, optFns ...func(*Options)) (*GetEnterpriseSupportChargeSummaryOutput, error) 
@@ -25,6 +30,10 @@ type IClient interface {
  ListBillingViews(ctx context.Context, params *ListBillingViewsInput, optFns ...func(*Options)) (*ListBillingViewsOutput, error) 
  ListBusinessSupportAccountCharges(ctx context.Context, params *ListBusinessSupportAccountChargesInput, optFns ...func(*Options)) (*ListBusinessSupportAccountChargesOutput, error) 
  ListBusinessSupportSubscriptionHistory(ctx context.Context, params *ListBusinessSupportSubscriptionHistoryInput, optFns ...func(*Options)) (*ListBusinessSupportSubscriptionHistoryOutput, error) 
+ ListContracts(ctx context.Context, params *ListContractsInput, optFns ...func(*Options)) (*ListContractsOutput, error) 
+ ListContractualInvestmentAttestations(ctx context.Context, params *ListContractualInvestmentAttestationsInput, optFns ...func(*Options)) (*ListContractualInvestmentAttestationsOutput, error) 
+ ListContractualInvestmentSummaries(ctx context.Context, params *ListContractualInvestmentSummariesInput, optFns ...func(*Options)) (*ListContractualInvestmentSummariesOutput, error) 
+ ListContractualInvestments(ctx context.Context, params *ListContractualInvestmentsInput, optFns ...func(*Options)) (*ListContractualInvestmentsOutput, error) 
  ListEnterpriseSupportLinkedAccountCharges(ctx context.Context, params *ListEnterpriseSupportLinkedAccountChargesInput, optFns ...func(*Options)) (*ListEnterpriseSupportLinkedAccountChargesOutput, error) 
  ListSourceViewsForBillingView(ctx context.Context, params *ListSourceViewsForBillingViewInput, optFns ...func(*Options)) (*ListSourceViewsForBillingViewOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
