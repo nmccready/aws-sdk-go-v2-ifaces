@@ -50,8 +50,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/bcmrecommendedactions v1.12.7
 	github.com/aws/aws-sdk-go-v2/service/bedrock v1.74.2
 	github.com/aws/aws-sdk-go-v2/service/bedrockagent v1.69.2
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.55.1
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.76.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcore v1.56.0
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol v1.77.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.65.3
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomation v1.25.1
 	github.com/aws/aws-sdk-go-v2/service/bedrockdataautomationruntime v1.19.7
@@ -67,7 +67,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/chimesdkmeetings v1.42.7
 	github.com/aws/aws-sdk-go-v2/service/chimesdkmessaging v1.41.7
 	github.com/aws/aws-sdk-go-v2/service/chimesdkvoice v1.38.7
-	github.com/aws/aws-sdk-go-v2/service/cleanrooms v1.58.2
+	github.com/aws/aws-sdk-go-v2/service/cleanrooms v1.59.0
 	github.com/aws/aws-sdk-go-v2/service/cleanroomsml v1.34.1
 	github.com/aws/aws-sdk-go-v2/service/cloud9 v1.42.7
 	github.com/aws/aws-sdk-go-v2/service/cloudcontrol v1.38.7
@@ -190,7 +190,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/iam v1.64.6
 	github.com/aws/aws-sdk-go-v2/service/iamtoolbox v1.4.7
 	github.com/aws/aws-sdk-go-v2/service/identitystore v1.49.4
-	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.67.3
+	github.com/aws/aws-sdk-go-v2/service/imagebuilder v1.68.0
 	github.com/aws/aws-sdk-go-v2/service/inspector v1.39.7
 	github.com/aws/aws-sdk-go-v2/service/inspector2 v1.62.0
 	github.com/aws/aws-sdk-go-v2/service/inspectorscan v1.23.1
@@ -239,7 +239,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/licensemanager v1.48.0
 	github.com/aws/aws-sdk-go-v2/service/licensemanagerlinuxsubscriptions v1.29.0
 	github.com/aws/aws-sdk-go-v2/service/licensemanagerusersubscriptions v1.30.0
-	github.com/aws/aws-sdk-go-v2/service/lightsail v1.69.0
+	github.com/aws/aws-sdk-go-v2/service/lightsail v1.70.0
 	github.com/aws/aws-sdk-go-v2/service/location v1.60.0
 	github.com/aws/aws-sdk-go-v2/service/lookoutequipment v1.48.4
 	github.com/aws/aws-sdk-go-v2/service/m2 v1.35.7
@@ -426,7 +426,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/vpclattice v1.33.7
 	github.com/aws/aws-sdk-go-v2/service/waf v1.40.1
 	github.com/aws/aws-sdk-go-v2/service/wafregional v1.40.1
-	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.83.7
+	github.com/aws/aws-sdk-go-v2/service/wafv2 v1.84.0
 	github.com/aws/aws-sdk-go-v2/service/wellarchitected v1.50.6
 	github.com/aws/aws-sdk-go-v2/service/wickr v1.11.0
 	github.com/aws/aws-sdk-go-v2/service/wisdom v1.41.7
