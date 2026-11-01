@@ -489,6 +489,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeServerlessV2PlatformVersions", func(t *testing.T) {
+        input := &docdb.DescribeServerlessV2PlatformVersionsInput{}
+        output := &docdb.DescribeServerlessV2PlatformVersionsOutput{}
+
+        mockClient.On("DescribeServerlessV2PlatformVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServerlessV2PlatformVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestFailoverDBCluster", func(t *testing.T) {
         input := &docdb.FailoverDBClusterInput{}
         output := &docdb.FailoverDBClusterOutput{}
