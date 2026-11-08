@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for s3tables
 type IClient interface {
  Options() Options 
+ CompleteTableMigration(ctx context.Context, params *CompleteTableMigrationInput, optFns ...func(*Options)) (*CompleteTableMigrationOutput, error) 
  CreateNamespace(ctx context.Context, params *CreateNamespaceInput, optFns ...func(*Options)) (*CreateNamespaceOutput, error) 
  CreateTable(ctx context.Context, params *CreateTableInput, optFns ...func(*Options)) (*CreateTableOutput, error) 
  CreateTableBucket(ctx context.Context, params *CreateTableBucketInput, optFns ...func(*Options)) (*CreateTableBucketOutput, error) 
@@ -35,6 +36,7 @@ type IClient interface {
  GetTableMaintenanceConfiguration(ctx context.Context, params *GetTableMaintenanceConfigurationInput, optFns ...func(*Options)) (*GetTableMaintenanceConfigurationOutput, error) 
  GetTableMaintenanceJobStatus(ctx context.Context, params *GetTableMaintenanceJobStatusInput, optFns ...func(*Options)) (*GetTableMaintenanceJobStatusOutput, error) 
  GetTableMetadataLocation(ctx context.Context, params *GetTableMetadataLocationInput, optFns ...func(*Options)) (*GetTableMetadataLocationOutput, error) 
+ GetTableMigration(ctx context.Context, params *GetTableMigrationInput, optFns ...func(*Options)) (*GetTableMigrationOutput, error) 
  GetTablePolicy(ctx context.Context, params *GetTablePolicyInput, optFns ...func(*Options)) (*GetTablePolicyOutput, error) 
  GetTableRecordExpirationConfiguration(ctx context.Context, params *GetTableRecordExpirationConfigurationInput, optFns ...func(*Options)) (*GetTableRecordExpirationConfigurationOutput, error) 
  GetTableRecordExpirationJobStatus(ctx context.Context, params *GetTableRecordExpirationJobStatusInput, optFns ...func(*Options)) (*GetTableRecordExpirationJobStatusOutput, error) 
@@ -43,6 +45,7 @@ type IClient interface {
  GetTableStorageClass(ctx context.Context, params *GetTableStorageClassInput, optFns ...func(*Options)) (*GetTableStorageClassOutput, error) 
  ListNamespaces(ctx context.Context, params *ListNamespacesInput, optFns ...func(*Options)) (*ListNamespacesOutput, error) 
  ListTableBuckets(ctx context.Context, params *ListTableBucketsInput, optFns ...func(*Options)) (*ListTableBucketsOutput, error) 
+ ListTableMigrations(ctx context.Context, params *ListTableMigrationsInput, optFns ...func(*Options)) (*ListTableMigrationsOutput, error) 
  ListTables(ctx context.Context, params *ListTablesInput, optFns ...func(*Options)) (*ListTablesOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutTableBucketEncryption(ctx context.Context, params *PutTableBucketEncryptionInput, optFns ...func(*Options)) (*PutTableBucketEncryptionOutput, error) 
@@ -56,7 +59,10 @@ type IClient interface {
  PutTableRecordExpirationConfiguration(ctx context.Context, params *PutTableRecordExpirationConfigurationInput, optFns ...func(*Options)) (*PutTableRecordExpirationConfigurationOutput, error) 
  PutTableReplication(ctx context.Context, params *PutTableReplicationInput, optFns ...func(*Options)) (*PutTableReplicationOutput, error) 
  RenameTable(ctx context.Context, params *RenameTableInput, optFns ...func(*Options)) (*RenameTableOutput, error) 
+ StartTableMigration(ctx context.Context, params *StartTableMigrationInput, optFns ...func(*Options)) (*StartTableMigrationOutput, error) 
+ SyncTableMigration(ctx context.Context, params *SyncTableMigrationInput, optFns ...func(*Options)) (*SyncTableMigrationOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateTableMetadataLocation(ctx context.Context, params *UpdateTableMetadataLocationInput, optFns ...func(*Options)) (*UpdateTableMetadataLocationOutput, error) 
+ UpdateTableMigration(ctx context.Context, params *UpdateTableMigrationInput, optFns ...func(*Options)) (*UpdateTableMigrationOutput, error) 
 }

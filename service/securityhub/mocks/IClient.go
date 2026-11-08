@@ -3159,6 +3159,117 @@ func (_m *IClient) GetSecurityControlDefinition(ctx context.Context, params *sec
 	return r0, r1
 }
 
+// GetSoftwareResourcesV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSoftwareResourcesV2(ctx context.Context, params *securityhub.GetSoftwareResourcesV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetSoftwareResourcesV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSoftwareResourcesV2")
+	}
+
+	var r0 *securityhub.GetSoftwareResourcesV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetSoftwareResourcesV2Input, ...func(*securityhub.Options)) (*securityhub.GetSoftwareResourcesV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetSoftwareResourcesV2Input, ...func(*securityhub.Options)) *securityhub.GetSoftwareResourcesV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetSoftwareResourcesV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetSoftwareResourcesV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSoftwareStatisticsV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSoftwareStatisticsV2(ctx context.Context, params *securityhub.GetSoftwareStatisticsV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetSoftwareStatisticsV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSoftwareStatisticsV2")
+	}
+
+	var r0 *securityhub.GetSoftwareStatisticsV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetSoftwareStatisticsV2Input, ...func(*securityhub.Options)) (*securityhub.GetSoftwareStatisticsV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetSoftwareStatisticsV2Input, ...func(*securityhub.Options)) *securityhub.GetSoftwareStatisticsV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetSoftwareStatisticsV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetSoftwareStatisticsV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetSoftwareV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSoftwareV2(ctx context.Context, params *securityhub.GetSoftwareV2Input, optFns ...func(*securityhub.Options)) (*securityhub.GetSoftwareV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSoftwareV2")
+	}
+
+	var r0 *securityhub.GetSoftwareV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetSoftwareV2Input, ...func(*securityhub.Options)) (*securityhub.GetSoftwareV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *securityhub.GetSoftwareV2Input, ...func(*securityhub.Options)) *securityhub.GetSoftwareV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*securityhub.GetSoftwareV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *securityhub.GetSoftwareV2Input, ...func(*securityhub.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // InviteMembers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) InviteMembers(ctx context.Context, params *securityhub.InviteMembersInput, optFns ...func(*securityhub.Options)) (*securityhub.InviteMembersOutput, error) {
 	_va := make([]interface{}, len(optFns))

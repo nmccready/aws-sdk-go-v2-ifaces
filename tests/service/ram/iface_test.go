@@ -476,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdatePermission", func(t *testing.T) {
+        input := &ram.UpdatePermissionInput{}
+        output := &ram.UpdatePermissionOutput{}
+
+        mockClient.On("UpdatePermission", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateResourceShare", func(t *testing.T) {
         input := &ram.UpdateResourceShareInput{}
         output := &ram.UpdateResourceShareOutput{}

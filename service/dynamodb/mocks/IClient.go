@@ -126,6 +126,43 @@ func (_m *IClient) BatchWriteItem(ctx context.Context, params *dynamodb.BatchWri
 	return r0, r1
 }
 
+// CancelBulkOperation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelBulkOperation(ctx context.Context, params *dynamodb.CancelBulkOperationInput, optFns ...func(*dynamodb.Options)) (*dynamodb.CancelBulkOperationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelBulkOperation")
+	}
+
+	var r0 *dynamodb.CancelBulkOperationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.CancelBulkOperationInput, ...func(*dynamodb.Options)) (*dynamodb.CancelBulkOperationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.CancelBulkOperationInput, ...func(*dynamodb.Options)) *dynamodb.CancelBulkOperationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dynamodb.CancelBulkOperationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dynamodb.CancelBulkOperationInput, ...func(*dynamodb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBackup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBackup(ctx context.Context, params *dynamodb.CreateBackupInput, optFns ...func(*dynamodb.Options)) (*dynamodb.CreateBackupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -414,6 +451,43 @@ func (_m *IClient) DescribeBackup(ctx context.Context, params *dynamodb.Describe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *dynamodb.DescribeBackupInput, ...func(*dynamodb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeBulkOperation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeBulkOperation(ctx context.Context, params *dynamodb.DescribeBulkOperationInput, optFns ...func(*dynamodb.Options)) (*dynamodb.DescribeBulkOperationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeBulkOperation")
+	}
+
+	var r0 *dynamodb.DescribeBulkOperationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.DescribeBulkOperationInput, ...func(*dynamodb.Options)) (*dynamodb.DescribeBulkOperationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.DescribeBulkOperationInput, ...func(*dynamodb.Options)) *dynamodb.DescribeBulkOperationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dynamodb.DescribeBulkOperationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dynamodb.DescribeBulkOperationInput, ...func(*dynamodb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1199,6 +1273,43 @@ func (_m *IClient) ListBackups(ctx context.Context, params *dynamodb.ListBackups
 	return r0, r1
 }
 
+// ListBulkOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBulkOperations(ctx context.Context, params *dynamodb.ListBulkOperationsInput, optFns ...func(*dynamodb.Options)) (*dynamodb.ListBulkOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBulkOperations")
+	}
+
+	var r0 *dynamodb.ListBulkOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.ListBulkOperationsInput, ...func(*dynamodb.Options)) (*dynamodb.ListBulkOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.ListBulkOperationsInput, ...func(*dynamodb.Options)) *dynamodb.ListBulkOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dynamodb.ListBulkOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dynamodb.ListBulkOperationsInput, ...func(*dynamodb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListContributorInsights provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListContributorInsights(ctx context.Context, params *dynamodb.ListContributorInsightsInput, optFns ...func(*dynamodb.Options)) (*dynamodb.ListContributorInsightsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1690,6 +1801,43 @@ func (_m *IClient) SearchVectors(ctx context.Context, params *dynamodb.SearchVec
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *dynamodb.SearchVectorsInput, ...func(*dynamodb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartBulkPutItems provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartBulkPutItems(ctx context.Context, params *dynamodb.StartBulkPutItemsInput, optFns ...func(*dynamodb.Options)) (*dynamodb.StartBulkPutItemsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartBulkPutItems")
+	}
+
+	var r0 *dynamodb.StartBulkPutItemsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.StartBulkPutItemsInput, ...func(*dynamodb.Options)) (*dynamodb.StartBulkPutItemsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *dynamodb.StartBulkPutItemsInput, ...func(*dynamodb.Options)) *dynamodb.StartBulkPutItemsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*dynamodb.StartBulkPutItemsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *dynamodb.StartBulkPutItemsInput, ...func(*dynamodb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

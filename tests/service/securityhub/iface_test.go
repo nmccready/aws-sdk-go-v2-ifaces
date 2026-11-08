@@ -1139,6 +1139,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSoftwareResourcesV2", func(t *testing.T) {
+        input := &securityhub.GetSoftwareResourcesV2Input{}
+        output := &securityhub.GetSoftwareResourcesV2Output{}
+
+        mockClient.On("GetSoftwareResourcesV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSoftwareResourcesV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSoftwareStatisticsV2", func(t *testing.T) {
+        input := &securityhub.GetSoftwareStatisticsV2Input{}
+        output := &securityhub.GetSoftwareStatisticsV2Output{}
+
+        mockClient.On("GetSoftwareStatisticsV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSoftwareStatisticsV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetSoftwareV2", func(t *testing.T) {
+        input := &securityhub.GetSoftwareV2Input{}
+        output := &securityhub.GetSoftwareV2Output{}
+
+        mockClient.On("GetSoftwareV2", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSoftwareV2(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestInviteMembers", func(t *testing.T) {
         input := &securityhub.InviteMembersInput{}
         output := &securityhub.InviteMembersOutput{}

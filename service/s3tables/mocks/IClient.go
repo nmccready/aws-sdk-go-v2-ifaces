@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CompleteTableMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CompleteTableMigration(ctx context.Context, params *s3tables.CompleteTableMigrationInput, optFns ...func(*s3tables.Options)) (*s3tables.CompleteTableMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CompleteTableMigration")
+	}
+
+	var r0 *s3tables.CompleteTableMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.CompleteTableMigrationInput, ...func(*s3tables.Options)) (*s3tables.CompleteTableMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.CompleteTableMigrationInput, ...func(*s3tables.Options)) *s3tables.CompleteTableMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.CompleteTableMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.CompleteTableMigrationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateNamespace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateNamespace(ctx context.Context, params *s3tables.CreateNamespaceInput, optFns ...func(*s3tables.Options)) (*s3tables.CreateNamespaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -939,6 +976,43 @@ func (_m *IClient) GetTableMetadataLocation(ctx context.Context, params *s3table
 	return r0, r1
 }
 
+// GetTableMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTableMigration(ctx context.Context, params *s3tables.GetTableMigrationInput, optFns ...func(*s3tables.Options)) (*s3tables.GetTableMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTableMigration")
+	}
+
+	var r0 *s3tables.GetTableMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.GetTableMigrationInput, ...func(*s3tables.Options)) (*s3tables.GetTableMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.GetTableMigrationInput, ...func(*s3tables.Options)) *s3tables.GetTableMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.GetTableMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.GetTableMigrationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTablePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTablePolicy(ctx context.Context, params *s3tables.GetTablePolicyInput, optFns ...func(*s3tables.Options)) (*s3tables.GetTablePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1227,6 +1301,43 @@ func (_m *IClient) ListTableBuckets(ctx context.Context, params *s3tables.ListTa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.ListTableBucketsInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListTableMigrations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTableMigrations(ctx context.Context, params *s3tables.ListTableMigrationsInput, optFns ...func(*s3tables.Options)) (*s3tables.ListTableMigrationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTableMigrations")
+	}
+
+	var r0 *s3tables.ListTableMigrationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.ListTableMigrationsInput, ...func(*s3tables.Options)) (*s3tables.ListTableMigrationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.ListTableMigrationsInput, ...func(*s3tables.Options)) *s3tables.ListTableMigrationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.ListTableMigrationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.ListTableMigrationsInput, ...func(*s3tables.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1734,6 +1845,80 @@ func (_m *IClient) RenameTable(ctx context.Context, params *s3tables.RenameTable
 	return r0, r1
 }
 
+// StartTableMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTableMigration(ctx context.Context, params *s3tables.StartTableMigrationInput, optFns ...func(*s3tables.Options)) (*s3tables.StartTableMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTableMigration")
+	}
+
+	var r0 *s3tables.StartTableMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.StartTableMigrationInput, ...func(*s3tables.Options)) (*s3tables.StartTableMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.StartTableMigrationInput, ...func(*s3tables.Options)) *s3tables.StartTableMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.StartTableMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.StartTableMigrationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SyncTableMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SyncTableMigration(ctx context.Context, params *s3tables.SyncTableMigrationInput, optFns ...func(*s3tables.Options)) (*s3tables.SyncTableMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SyncTableMigration")
+	}
+
+	var r0 *s3tables.SyncTableMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.SyncTableMigrationInput, ...func(*s3tables.Options)) (*s3tables.SyncTableMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.SyncTableMigrationInput, ...func(*s3tables.Options)) *s3tables.SyncTableMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.SyncTableMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.SyncTableMigrationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *s3tables.TagResourceInput, optFns ...func(*s3tables.Options)) (*s3tables.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1837,6 +2022,43 @@ func (_m *IClient) UpdateTableMetadataLocation(ctx context.Context, params *s3ta
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.UpdateTableMetadataLocationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateTableMigration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateTableMigration(ctx context.Context, params *s3tables.UpdateTableMigrationInput, optFns ...func(*s3tables.Options)) (*s3tables.UpdateTableMigrationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateTableMigration")
+	}
+
+	var r0 *s3tables.UpdateTableMigrationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.UpdateTableMigrationInput, ...func(*s3tables.Options)) (*s3tables.UpdateTableMigrationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.UpdateTableMigrationInput, ...func(*s3tables.Options)) *s3tables.UpdateTableMigrationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.UpdateTableMigrationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.UpdateTableMigrationInput, ...func(*s3tables.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

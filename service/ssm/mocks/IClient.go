@@ -1013,6 +1013,43 @@ func (_m *IClient) DeleteResourcePolicy(ctx context.Context, params *ssm.DeleteR
 	return r0, r1
 }
 
+// DeregisterDefaultHostManagementConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeregisterDefaultHostManagementConfiguration(ctx context.Context, params *ssm.DeregisterDefaultHostManagementConfigurationInput, optFns ...func(*ssm.Options)) (*ssm.DeregisterDefaultHostManagementConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeregisterDefaultHostManagementConfiguration")
+	}
+
+	var r0 *ssm.DeregisterDefaultHostManagementConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.DeregisterDefaultHostManagementConfigurationInput, ...func(*ssm.Options)) (*ssm.DeregisterDefaultHostManagementConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.DeregisterDefaultHostManagementConfigurationInput, ...func(*ssm.Options)) *ssm.DeregisterDefaultHostManagementConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.DeregisterDefaultHostManagementConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.DeregisterDefaultHostManagementConfigurationInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeregisterManagedInstance provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeregisterManagedInstance(ctx context.Context, params *ssm.DeregisterManagedInstanceInput, optFns ...func(*ssm.Options)) (*ssm.DeregisterManagedInstanceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4390,6 +4427,43 @@ func (_m *IClient) PutResourcePolicy(ctx context.Context, params *ssm.PutResourc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ssm.PutResourcePolicyInput, ...func(*ssm.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterDefaultHostManagementConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterDefaultHostManagementConfiguration(ctx context.Context, params *ssm.RegisterDefaultHostManagementConfigurationInput, optFns ...func(*ssm.Options)) (*ssm.RegisterDefaultHostManagementConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterDefaultHostManagementConfiguration")
+	}
+
+	var r0 *ssm.RegisterDefaultHostManagementConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.RegisterDefaultHostManagementConfigurationInput, ...func(*ssm.Options)) (*ssm.RegisterDefaultHostManagementConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ssm.RegisterDefaultHostManagementConfigurationInput, ...func(*ssm.Options)) *ssm.RegisterDefaultHostManagementConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ssm.RegisterDefaultHostManagementConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ssm.RegisterDefaultHostManagementConfigurationInput, ...func(*ssm.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

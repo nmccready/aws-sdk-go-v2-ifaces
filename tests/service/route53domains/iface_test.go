@@ -385,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRestoreDomain", func(t *testing.T) {
+        input := &route53domains.RestoreDomainInput{}
+        output := &route53domains.RestoreDomainOutput{}
+
+        mockClient.On("RestoreDomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRetrieveDomainAuthCode", func(t *testing.T) {
         input := &route53domains.RetrieveDomainAuthCodeInput{}
         output := &route53domains.RetrieveDomainAuthCodeOutput{}

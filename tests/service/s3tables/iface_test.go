@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCompleteTableMigration", func(t *testing.T) {
+        input := &s3tables.CompleteTableMigrationInput{}
+        output := &s3tables.CompleteTableMigrationOutput{}
+
+        mockClient.On("CompleteTableMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CompleteTableMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateNamespace", func(t *testing.T) {
         input := &s3tables.CreateNamespaceInput{}
         output := &s3tables.CreateNamespaceOutput{}
@@ -359,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTableMigration", func(t *testing.T) {
+        input := &s3tables.GetTableMigrationInput{}
+        output := &s3tables.GetTableMigrationOutput{}
+
+        mockClient.On("GetTableMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTablePolicy", func(t *testing.T) {
         input := &s3tables.GetTablePolicyInput{}
         output := &s3tables.GetTablePolicyOutput{}
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTableBuckets", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTableBuckets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListTableMigrations", func(t *testing.T) {
+        input := &s3tables.ListTableMigrationsInput{}
+        output := &s3tables.ListTableMigrationsOutput{}
+
+        mockClient.On("ListTableMigrations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTableMigrations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -632,6 +671,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartTableMigration", func(t *testing.T) {
+        input := &s3tables.StartTableMigrationInput{}
+        output := &s3tables.StartTableMigrationOutput{}
+
+        mockClient.On("StartTableMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTableMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSyncTableMigration", func(t *testing.T) {
+        input := &s3tables.SyncTableMigrationInput{}
+        output := &s3tables.SyncTableMigrationOutput{}
+
+        mockClient.On("SyncTableMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SyncTableMigration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &s3tables.TagResourceInput{}
         output := &s3tables.TagResourceOutput{}
@@ -665,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateTableMetadataLocation", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateTableMetadataLocation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateTableMigration", func(t *testing.T) {
+        input := &s3tables.UpdateTableMigrationInput{}
+        output := &s3tables.UpdateTableMigrationOutput{}
+
+        mockClient.On("UpdateTableMigration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateTableMigration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

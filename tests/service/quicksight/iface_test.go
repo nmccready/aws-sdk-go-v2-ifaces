@@ -1776,6 +1776,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeResourcePermissions", func(t *testing.T) {
+        input := &quicksight.DescribeResourcePermissionsInput{}
+        output := &quicksight.DescribeResourcePermissionsOutput{}
+
+        mockClient.On("DescribeResourcePermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeResourcePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeRoleCustomPermission", func(t *testing.T) {
         input := &quicksight.DescribeRoleCustomPermissionInput{}
         output := &quicksight.DescribeRoleCustomPermissionOutput{}
@@ -3642,6 +3655,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRefreshSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRefreshSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateResourcePermissions", func(t *testing.T) {
+        input := &quicksight.UpdateResourcePermissionsInput{}
+        output := &quicksight.UpdateResourcePermissionsOutput{}
+
+        mockClient.On("UpdateResourcePermissions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateResourcePermissions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

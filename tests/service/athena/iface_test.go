@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSystemTableConfiguration", func(t *testing.T) {
+        input := &athena.CreateSystemTableConfigurationInput{}
+        output := &athena.CreateSystemTableConfigurationOutput{}
+
+        mockClient.On("CreateSystemTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSystemTableConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWorkGroup", func(t *testing.T) {
         input := &athena.CreateWorkGroupInput{}
         output := &athena.CreateWorkGroupOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeletePreparedStatement", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeletePreparedStatement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSystemTableConfiguration", func(t *testing.T) {
+        input := &athena.DeleteSystemTableConfigurationInput{}
+        output := &athena.DeleteSystemTableConfigurationOutput{}
+
+        mockClient.On("DeleteSystemTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSystemTableConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -489,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSystemTableConfiguration", func(t *testing.T) {
+        input := &athena.GetSystemTableConfigurationInput{}
+        output := &athena.GetSystemTableConfigurationOutput{}
+
+        mockClient.On("GetSystemTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSystemTableConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTableMetadata", func(t *testing.T) {
         input := &athena.GetTableMetadataInput{}
         output := &athena.GetTableMetadataOutput{}
@@ -691,6 +730,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSystemTableStatuses", func(t *testing.T) {
+        input := &athena.ListSystemTableStatusesInput{}
+        output := &athena.ListSystemTableStatusesOutput{}
+
+        mockClient.On("ListSystemTableStatuses", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSystemTableStatuses(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -925,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdatePreparedStatement", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdatePreparedStatement(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSystemTableConfiguration", func(t *testing.T) {
+        input := &athena.UpdateSystemTableConfigurationInput{}
+        output := &athena.UpdateSystemTableConfigurationOutput{}
+
+        mockClient.On("UpdateSystemTableConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSystemTableConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
