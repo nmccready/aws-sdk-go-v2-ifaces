@@ -38,12 +38,15 @@ git checkout "$MOST_RECENT_TAG"
 
 cd "$ORIG_DIR"
 
-# keep pinned non-aws direct deps (testify, go-debug, ...) across the wipe;
-# otherwise tidy resolves them from transitive requires (testify -> 1.6.1 via
-# go-debug) and every Dependabot bump is reverted by the next sync.
+# keep pinned non-aws deps, indirect ones included, and the go directive
+# across the wipe; otherwise tidy resolves them from stale transitive requires
+# (x/sys -> 2019 via go-debug -> fatih/color) and every Dependabot bump is
+# reverted by the next sync. tidy drops any pin that stops being needed.
 PINNED_DEPS=""
+GO_DIRECTIVE="1.24"
 if [ -f go.mod ]; then
-    PINNED_DEPS=$(awk '/^require \(/{b=1;next} b&&/^\)/{b=0} b&&!/indirect/&&!/aws\/aws-sdk-go-v2/&&NF==2{print "\t"$1" "$2}' go.mod)
+    PINNED_DEPS=$(awk '/^require \(/{b=1;next} b&&/^\)/{b=0} b&&!/aws\/aws-sdk-go-v2/&&NF>=2{print "\t"$1" "$2}' go.mod)
+    GO_DIRECTIVE=$(awk '$1=="go"{print $2; exit}' go.mod)
 fi
 
 # wipe out dependencies as they will come directly from pulling
@@ -52,7 +55,7 @@ rm -rf go.sum go.mod vendor
 
 echo "module github.com/nmccready/aws-sdk-go-v2-ifaces
 
-go 1.24" > go.mod
+go $GO_DIRECTIVE" > go.mod
 
 if [ -n "$PINNED_DEPS" ]; then
     printf '\nrequire (\n%b\n)\n' "$PINNED_DEPS" >> go.mod
