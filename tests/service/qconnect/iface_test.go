@@ -944,6 +944,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRegisterAssistantReplicaKey", func(t *testing.T) {
+        input := &qconnect.RegisterAssistantReplicaKeyInput{}
+        output := &qconnect.RegisterAssistantReplicaKeyOutput{}
+
+        mockClient.On("RegisterAssistantReplicaKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterAssistantReplicaKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterKnowledgeBaseReplicaKey", func(t *testing.T) {
+        input := &qconnect.RegisterKnowledgeBaseReplicaKeyInput{}
+        output := &qconnect.RegisterKnowledgeBaseReplicaKeyOutput{}
+
+        mockClient.On("RegisterKnowledgeBaseReplicaKey", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterKnowledgeBaseReplicaKey(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRemoveAssistantAIAgent", func(t *testing.T) {
         input := &qconnect.RemoveAssistantAIAgentInput{}
         output := &qconnect.RemoveAssistantAIAgentOutput{}

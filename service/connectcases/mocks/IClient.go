@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchCreateRelatedItem provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchCreateRelatedItem(ctx context.Context, params *connectcases.BatchCreateRelatedItemInput, optFns ...func(*connectcases.Options)) (*connectcases.BatchCreateRelatedItemOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchCreateRelatedItem")
+	}
+
+	var r0 *connectcases.BatchCreateRelatedItemOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.BatchCreateRelatedItemInput, ...func(*connectcases.Options)) (*connectcases.BatchCreateRelatedItemOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.BatchCreateRelatedItemInput, ...func(*connectcases.Options)) *connectcases.BatchCreateRelatedItemOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.BatchCreateRelatedItemOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.BatchCreateRelatedItemInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetCaseRule provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetCaseRule(ctx context.Context, params *connectcases.BatchGetCaseRuleInput, optFns ...func(*connectcases.Options)) (*connectcases.BatchGetCaseRuleOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +155,43 @@ func (_m *IClient) BatchPutFieldOptions(ctx context.Context, params *connectcase
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.BatchPutFieldOptionsInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// BatchUpdateCase provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchUpdateCase(ctx context.Context, params *connectcases.BatchUpdateCaseInput, optFns ...func(*connectcases.Options)) (*connectcases.BatchUpdateCaseOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchUpdateCase")
+	}
+
+	var r0 *connectcases.BatchUpdateCaseOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.BatchUpdateCaseInput, ...func(*connectcases.Options)) (*connectcases.BatchUpdateCaseOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.BatchUpdateCaseInput, ...func(*connectcases.Options)) *connectcases.BatchUpdateCaseOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.BatchUpdateCaseOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.BatchUpdateCaseInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

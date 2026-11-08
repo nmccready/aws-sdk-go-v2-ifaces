@@ -80,6 +80,8 @@ type IClient interface {
  NotifyRecommendationsReceived(ctx context.Context, params *NotifyRecommendationsReceivedInput, optFns ...func(*Options)) (*NotifyRecommendationsReceivedOutput, error) 
  PutFeedback(ctx context.Context, params *PutFeedbackInput, optFns ...func(*Options)) (*PutFeedbackOutput, error) 
  QueryAssistant(ctx context.Context, params *QueryAssistantInput, optFns ...func(*Options)) (*QueryAssistantOutput, error) 
+ RegisterAssistantReplicaKey(ctx context.Context, params *RegisterAssistantReplicaKeyInput, optFns ...func(*Options)) (*RegisterAssistantReplicaKeyOutput, error) 
+ RegisterKnowledgeBaseReplicaKey(ctx context.Context, params *RegisterKnowledgeBaseReplicaKeyInput, optFns ...func(*Options)) (*RegisterKnowledgeBaseReplicaKeyOutput, error) 
  RemoveAssistantAIAgent(ctx context.Context, params *RemoveAssistantAIAgentInput, optFns ...func(*Options)) (*RemoveAssistantAIAgentOutput, error) 
  RemoveKnowledgeBaseTemplateUri(ctx context.Context, params *RemoveKnowledgeBaseTemplateUriInput, optFns ...func(*Options)) (*RemoveKnowledgeBaseTemplateUriOutput, error) 
  RenderMessageTemplate(ctx context.Context, params *RenderMessageTemplateInput, optFns ...func(*Options)) (*RenderMessageTemplateOutput, error) 

@@ -44,5 +44,6 @@ type IClient interface {
  SetDefaultPermissionVersion(ctx context.Context, params *SetDefaultPermissionVersionInput, optFns ...func(*Options)) (*SetDefaultPermissionVersionOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdatePermission(ctx context.Context, params *UpdatePermissionInput, optFns ...func(*Options)) (*UpdatePermissionOutput, error) 
  UpdateResourceShare(ctx context.Context, params *UpdateResourceShareInput, optFns ...func(*Options)) (*UpdateResourceShareOutput, error) 
 }

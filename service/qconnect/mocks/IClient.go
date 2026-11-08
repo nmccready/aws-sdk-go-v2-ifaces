@@ -2622,6 +2622,80 @@ func (_m *IClient) QueryAssistant(ctx context.Context, params *qconnect.QueryAss
 	return r0, r1
 }
 
+// RegisterAssistantReplicaKey provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterAssistantReplicaKey(ctx context.Context, params *qconnect.RegisterAssistantReplicaKeyInput, optFns ...func(*qconnect.Options)) (*qconnect.RegisterAssistantReplicaKeyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterAssistantReplicaKey")
+	}
+
+	var r0 *qconnect.RegisterAssistantReplicaKeyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.RegisterAssistantReplicaKeyInput, ...func(*qconnect.Options)) (*qconnect.RegisterAssistantReplicaKeyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.RegisterAssistantReplicaKeyInput, ...func(*qconnect.Options)) *qconnect.RegisterAssistantReplicaKeyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qconnect.RegisterAssistantReplicaKeyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qconnect.RegisterAssistantReplicaKeyInput, ...func(*qconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RegisterKnowledgeBaseReplicaKey provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RegisterKnowledgeBaseReplicaKey(ctx context.Context, params *qconnect.RegisterKnowledgeBaseReplicaKeyInput, optFns ...func(*qconnect.Options)) (*qconnect.RegisterKnowledgeBaseReplicaKeyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RegisterKnowledgeBaseReplicaKey")
+	}
+
+	var r0 *qconnect.RegisterKnowledgeBaseReplicaKeyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.RegisterKnowledgeBaseReplicaKeyInput, ...func(*qconnect.Options)) (*qconnect.RegisterKnowledgeBaseReplicaKeyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *qconnect.RegisterKnowledgeBaseReplicaKeyInput, ...func(*qconnect.Options)) *qconnect.RegisterKnowledgeBaseReplicaKeyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*qconnect.RegisterKnowledgeBaseReplicaKeyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *qconnect.RegisterKnowledgeBaseReplicaKeyInput, ...func(*qconnect.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RemoveAssistantAIAgent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RemoveAssistantAIAgent(ctx context.Context, params *qconnect.RemoveAssistantAIAgentInput, optFns ...func(*qconnect.Options)) (*qconnect.RemoveAssistantAIAgentOutput, error) {
 	_va := make([]interface{}, len(optFns))

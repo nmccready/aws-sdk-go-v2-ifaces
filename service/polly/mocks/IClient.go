@@ -236,6 +236,43 @@ func (_m *IClient) ListSpeechSynthesisTasks(ctx context.Context, params *polly.L
 	return r0, r1
 }
 
+// ListTagsForResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTagsForResource(ctx context.Context, params *polly.ListTagsForResourceInput, optFns ...func(*polly.Options)) (*polly.ListTagsForResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTagsForResource")
+	}
+
+	var r0 *polly.ListTagsForResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.ListTagsForResourceInput, ...func(*polly.Options)) (*polly.ListTagsForResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.ListTagsForResourceInput, ...func(*polly.Options)) *polly.ListTagsForResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*polly.ListTagsForResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *polly.ListTagsForResourceInput, ...func(*polly.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() polly.Options {
 	ret := _m.Called()
@@ -394,6 +431,80 @@ func (_m *IClient) SynthesizeSpeech(ctx context.Context, params *polly.Synthesiz
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *polly.SynthesizeSpeechInput, ...func(*polly.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TagResource(ctx context.Context, params *polly.TagResourceInput, optFns ...func(*polly.Options)) (*polly.TagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TagResource")
+	}
+
+	var r0 *polly.TagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.TagResourceInput, ...func(*polly.Options)) (*polly.TagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.TagResourceInput, ...func(*polly.Options)) *polly.TagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*polly.TagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *polly.TagResourceInput, ...func(*polly.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UntagResource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UntagResource(ctx context.Context, params *polly.UntagResourceInput, optFns ...func(*polly.Options)) (*polly.UntagResourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UntagResource")
+	}
+
+	var r0 *polly.UntagResourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.UntagResourceInput, ...func(*polly.Options)) (*polly.UntagResourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.UntagResourceInput, ...func(*polly.Options)) *polly.UntagResourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*polly.UntagResourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *polly.UntagResourceInput, ...func(*polly.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

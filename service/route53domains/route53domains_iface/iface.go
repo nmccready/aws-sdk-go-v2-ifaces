@@ -37,6 +37,7 @@ type IClient interface {
  RenewDomain(ctx context.Context, params *RenewDomainInput, optFns ...func(*Options)) (*RenewDomainOutput, error) 
  ResendContactReachabilityEmail(ctx context.Context, params *ResendContactReachabilityEmailInput, optFns ...func(*Options)) (*ResendContactReachabilityEmailOutput, error) 
  ResendOperationAuthorization(ctx context.Context, params *ResendOperationAuthorizationInput, optFns ...func(*Options)) (*ResendOperationAuthorizationOutput, error) 
+ RestoreDomain(ctx context.Context, params *RestoreDomainInput, optFns ...func(*Options)) (*RestoreDomainOutput, error) 
  RetrieveDomainAuthCode(ctx context.Context, params *RetrieveDomainAuthCodeInput, optFns ...func(*Options)) (*RetrieveDomainAuthCodeOutput, error) 
  TransferDomain(ctx context.Context, params *TransferDomainInput, optFns ...func(*Options)) (*TransferDomainOutput, error) 
  TransferDomainToAnotherAwsAccount(ctx context.Context, params *TransferDomainToAnotherAwsAccountInput, optFns ...func(*Options)) (*TransferDomainToAnotherAwsAccountOutput, error) 

@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchCreateRelatedItem", func(t *testing.T) {
+        input := &connectcases.BatchCreateRelatedItemInput{}
+        output := &connectcases.BatchCreateRelatedItemOutput{}
+
+        mockClient.On("BatchCreateRelatedItem", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchCreateRelatedItem(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetCaseRule", func(t *testing.T) {
         input := &connectcases.BatchGetCaseRuleInput{}
         output := &connectcases.BatchGetCaseRuleOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("BatchPutFieldOptions", ctx, input).Return(output, nil)
 
         result, err := mockClient.BatchPutFieldOptions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestBatchUpdateCase", func(t *testing.T) {
+        input := &connectcases.BatchUpdateCaseInput{}
+        output := &connectcases.BatchUpdateCaseOutput{}
+
+        mockClient.On("BatchUpdateCase", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchUpdateCase(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

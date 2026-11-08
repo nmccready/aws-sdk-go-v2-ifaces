@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTagsForResource", func(t *testing.T) {
+        input := &polly.ListTagsForResourceInput{}
+        output := &polly.ListTagsForResourceOutput{}
+
+        mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutLexicon", func(t *testing.T) {
         input := &polly.PutLexiconInput{}
         output := &polly.PutLexiconOutput{}
@@ -158,6 +171,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("SynthesizeSpeech", ctx, input).Return(output, nil)
 
         result, err := mockClient.SynthesizeSpeech(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTagResource", func(t *testing.T) {
+        input := &polly.TagResourceInput{}
+        output := &polly.TagResourceOutput{}
+
+        mockClient.On("TagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUntagResource", func(t *testing.T) {
+        input := &polly.UntagResourceInput{}
+        output := &polly.UntagResourceOutput{}
+
+        mockClient.On("UntagResource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UntagResource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

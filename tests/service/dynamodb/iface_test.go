@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelBulkOperation", func(t *testing.T) {
+        input := &dynamodb.CancelBulkOperationInput{}
+        output := &dynamodb.CancelBulkOperationOutput{}
+
+        mockClient.On("CancelBulkOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelBulkOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBackup", func(t *testing.T) {
         input := &dynamodb.CreateBackupInput{}
         output := &dynamodb.CreateBackupOutput{}
@@ -171,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeBackup", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeBackup(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeBulkOperation", func(t *testing.T) {
+        input := &dynamodb.DescribeBulkOperationInput{}
+        output := &dynamodb.DescribeBulkOperationOutput{}
+
+        mockClient.On("DescribeBulkOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeBulkOperation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -450,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListBulkOperations", func(t *testing.T) {
+        input := &dynamodb.ListBulkOperationsInput{}
+        output := &dynamodb.ListBulkOperationsOutput{}
+
+        mockClient.On("ListBulkOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBulkOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListContributorInsights", func(t *testing.T) {
         input := &dynamodb.ListContributorInsightsInput{}
         output := &dynamodb.ListContributorInsightsOutput{}
@@ -613,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchVectors", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchVectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartBulkPutItems", func(t *testing.T) {
+        input := &dynamodb.StartBulkPutItemsInput{}
+        output := &dynamodb.StartBulkPutItemsOutput{}
+
+        mockClient.On("StartBulkPutItems", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartBulkPutItems(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -10,9 +10,11 @@ import (
 // IClient defines the interface for connectcases
 type IClient interface {
  Options() Options 
+ BatchCreateRelatedItem(ctx context.Context, params *BatchCreateRelatedItemInput, optFns ...func(*Options)) (*BatchCreateRelatedItemOutput, error) 
  BatchGetCaseRule(ctx context.Context, params *BatchGetCaseRuleInput, optFns ...func(*Options)) (*BatchGetCaseRuleOutput, error) 
  BatchGetField(ctx context.Context, params *BatchGetFieldInput, optFns ...func(*Options)) (*BatchGetFieldOutput, error) 
  BatchPutFieldOptions(ctx context.Context, params *BatchPutFieldOptionsInput, optFns ...func(*Options)) (*BatchPutFieldOptionsOutput, error) 
+ BatchUpdateCase(ctx context.Context, params *BatchUpdateCaseInput, optFns ...func(*Options)) (*BatchUpdateCaseOutput, error) 
  CreateCase(ctx context.Context, params *CreateCaseInput, optFns ...func(*Options)) (*CreateCaseOutput, error) 
  CreateCaseRule(ctx context.Context, params *CreateCaseRuleInput, optFns ...func(*Options)) (*CreateCaseRuleOutput, error) 
  CreateDomain(ctx context.Context, params *CreateDomainInput, optFns ...func(*Options)) (*CreateDomainOutput, error) 

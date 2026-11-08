@@ -16,8 +16,11 @@ type IClient interface {
  GetSpeechSynthesisTask(ctx context.Context, params *GetSpeechSynthesisTaskInput, optFns ...func(*Options)) (*GetSpeechSynthesisTaskOutput, error) 
  ListLexicons(ctx context.Context, params *ListLexiconsInput, optFns ...func(*Options)) (*ListLexiconsOutput, error) 
  ListSpeechSynthesisTasks(ctx context.Context, params *ListSpeechSynthesisTasksInput, optFns ...func(*Options)) (*ListSpeechSynthesisTasksOutput, error) 
+ ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutLexicon(ctx context.Context, params *PutLexiconInput, optFns ...func(*Options)) (*PutLexiconOutput, error) 
  StartSpeechSynthesisStream(ctx context.Context, params *StartSpeechSynthesisStreamInput, optFns ...func(*Options)) (*StartSpeechSynthesisStreamOutput, error) 
  StartSpeechSynthesisTask(ctx context.Context, params *StartSpeechSynthesisTaskInput, optFns ...func(*Options)) (*StartSpeechSynthesisTaskOutput, error) 
  SynthesizeSpeech(ctx context.Context, params *SynthesizeSpeechInput, optFns ...func(*Options)) (*SynthesizeSpeechOutput, error) 
+ TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

@@ -4972,6 +4972,43 @@ func (_m *IClient) DescribeRefreshSchedule(ctx context.Context, params *quicksig
 	return r0, r1
 }
 
+// DescribeResourcePermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeResourcePermissions(ctx context.Context, params *quicksight.DescribeResourcePermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeResourcePermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeResourcePermissions")
+	}
+
+	var r0 *quicksight.DescribeResourcePermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeResourcePermissionsInput, ...func(*quicksight.Options)) (*quicksight.DescribeResourcePermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.DescribeResourcePermissionsInput, ...func(*quicksight.Options)) *quicksight.DescribeResourcePermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.DescribeResourcePermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.DescribeResourcePermissionsInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeRoleCustomPermission provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeRoleCustomPermission(ctx context.Context, params *quicksight.DescribeRoleCustomPermissionInput, optFns ...func(*quicksight.Options)) (*quicksight.DescribeRoleCustomPermissionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10310,6 +10347,43 @@ func (_m *IClient) UpdateRefreshSchedule(ctx context.Context, params *quicksight
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateRefreshScheduleInput, ...func(*quicksight.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateResourcePermissions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateResourcePermissions(ctx context.Context, params *quicksight.UpdateResourcePermissionsInput, optFns ...func(*quicksight.Options)) (*quicksight.UpdateResourcePermissionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateResourcePermissions")
+	}
+
+	var r0 *quicksight.UpdateResourcePermissionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateResourcePermissionsInput, ...func(*quicksight.Options)) (*quicksight.UpdateResourcePermissionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *quicksight.UpdateResourcePermissionsInput, ...func(*quicksight.Options)) *quicksight.UpdateResourcePermissionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*quicksight.UpdateResourcePermissionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *quicksight.UpdateResourcePermissionsInput, ...func(*quicksight.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

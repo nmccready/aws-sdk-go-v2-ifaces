@@ -1984,6 +1984,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetJobUpgradeAnalysis", func(t *testing.T) {
+        input := &glue.GetJobUpgradeAnalysisInput{}
+        output := &glue.GetJobUpgradeAnalysisOutput{}
+
+        mockClient.On("GetJobUpgradeAnalysis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetJobUpgradeAnalysis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetJobs", func(t *testing.T) {
         input := &glue.GetJobsInput{}
         output := &glue.GetJobsOutput{}
@@ -3401,6 +3414,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartJobUpgradeAnalysis", func(t *testing.T) {
+        input := &glue.StartJobUpgradeAnalysisInput{}
+        output := &glue.StartJobUpgradeAnalysisOutput{}
+
+        mockClient.On("StartJobUpgradeAnalysis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartJobUpgradeAnalysis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartMLEvaluationTaskRun", func(t *testing.T) {
         input := &glue.StartMLEvaluationTaskRunInput{}
         output := &glue.StartMLEvaluationTaskRunOutput{}
@@ -3512,6 +3538,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopCrawlerSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopCrawlerSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopJobUpgradeAnalysis", func(t *testing.T) {
+        input := &glue.StopJobUpgradeAnalysisInput{}
+        output := &glue.StopJobUpgradeAnalysisOutput{}
+
+        mockClient.On("StopJobUpgradeAnalysis", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopJobUpgradeAnalysis(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

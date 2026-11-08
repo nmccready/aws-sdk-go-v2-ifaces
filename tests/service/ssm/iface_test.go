@@ -385,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeregisterDefaultHostManagementConfiguration", func(t *testing.T) {
+        input := &ssm.DeregisterDefaultHostManagementConfigurationInput{}
+        output := &ssm.DeregisterDefaultHostManagementConfigurationOutput{}
+
+        mockClient.On("DeregisterDefaultHostManagementConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeregisterDefaultHostManagementConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeregisterManagedInstance", func(t *testing.T) {
         input := &ssm.DeregisterManagedInstanceInput{}
         output := &ssm.DeregisterManagedInstanceOutput{}
@@ -1562,6 +1575,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRegisterDefaultHostManagementConfiguration", func(t *testing.T) {
+        input := &ssm.RegisterDefaultHostManagementConfigurationInput{}
+        output := &ssm.RegisterDefaultHostManagementConfigurationOutput{}
+
+        mockClient.On("RegisterDefaultHostManagementConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RegisterDefaultHostManagementConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

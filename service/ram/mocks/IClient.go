@@ -1290,6 +1290,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *ram.UntagResourceI
 	return r0, r1
 }
 
+// UpdatePermission provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePermission(ctx context.Context, params *ram.UpdatePermissionInput, optFns ...func(*ram.Options)) (*ram.UpdatePermissionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePermission")
+	}
+
+	var r0 *ram.UpdatePermissionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ram.UpdatePermissionInput, ...func(*ram.Options)) (*ram.UpdatePermissionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ram.UpdatePermissionInput, ...func(*ram.Options)) *ram.UpdatePermissionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ram.UpdatePermissionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ram.UpdatePermissionInput, ...func(*ram.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateResourceShare provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateResourceShare(ctx context.Context, params *ram.UpdateResourceShareInput, optFns ...func(*ram.Options)) (*ram.UpdateResourceShareOutput, error) {
 	_va := make([]interface{}, len(optFns))

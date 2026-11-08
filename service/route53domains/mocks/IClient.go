@@ -1031,6 +1031,43 @@ func (_m *IClient) ResendOperationAuthorization(ctx context.Context, params *rou
 	return r0, r1
 }
 
+// RestoreDomain provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RestoreDomain(ctx context.Context, params *route53domains.RestoreDomainInput, optFns ...func(*route53domains.Options)) (*route53domains.RestoreDomainOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RestoreDomain")
+	}
+
+	var r0 *route53domains.RestoreDomainOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53domains.RestoreDomainInput, ...func(*route53domains.Options)) (*route53domains.RestoreDomainOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53domains.RestoreDomainInput, ...func(*route53domains.Options)) *route53domains.RestoreDomainOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53domains.RestoreDomainOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53domains.RestoreDomainInput, ...func(*route53domains.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RetrieveDomainAuthCode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RetrieveDomainAuthCode(ctx context.Context, params *route53domains.RetrieveDomainAuthCodeInput, optFns ...func(*route53domains.Options)) (*route53domains.RetrieveDomainAuthCodeOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -5565,6 +5565,43 @@ func (_m *IClient) GetJobRuns(ctx context.Context, params *glue.GetJobRunsInput,
 	return r0, r1
 }
 
+// GetJobUpgradeAnalysis provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetJobUpgradeAnalysis(ctx context.Context, params *glue.GetJobUpgradeAnalysisInput, optFns ...func(*glue.Options)) (*glue.GetJobUpgradeAnalysisOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetJobUpgradeAnalysis")
+	}
+
+	var r0 *glue.GetJobUpgradeAnalysisOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetJobUpgradeAnalysisInput, ...func(*glue.Options)) (*glue.GetJobUpgradeAnalysisOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetJobUpgradeAnalysisInput, ...func(*glue.Options)) *glue.GetJobUpgradeAnalysisOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetJobUpgradeAnalysisOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetJobUpgradeAnalysisInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetJobs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetJobs(ctx context.Context, params *glue.GetJobsInput, optFns ...func(*glue.Options)) (*glue.GetJobsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9616,6 +9653,43 @@ func (_m *IClient) StartJobRun(ctx context.Context, params *glue.StartJobRunInpu
 	return r0, r1
 }
 
+// StartJobUpgradeAnalysis provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartJobUpgradeAnalysis(ctx context.Context, params *glue.StartJobUpgradeAnalysisInput, optFns ...func(*glue.Options)) (*glue.StartJobUpgradeAnalysisOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartJobUpgradeAnalysis")
+	}
+
+	var r0 *glue.StartJobUpgradeAnalysisOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StartJobUpgradeAnalysisInput, ...func(*glue.Options)) (*glue.StartJobUpgradeAnalysisOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StartJobUpgradeAnalysisInput, ...func(*glue.Options)) *glue.StartJobUpgradeAnalysisOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.StartJobUpgradeAnalysisOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.StartJobUpgradeAnalysisInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartMLEvaluationTaskRun provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartMLEvaluationTaskRun(ctx context.Context, params *glue.StartMLEvaluationTaskRunInput, optFns ...func(*glue.Options)) (*glue.StartMLEvaluationTaskRunOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9941,6 +10015,43 @@ func (_m *IClient) StopCrawlerSchedule(ctx context.Context, params *glue.StopCra
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.StopCrawlerScheduleInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopJobUpgradeAnalysis provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopJobUpgradeAnalysis(ctx context.Context, params *glue.StopJobUpgradeAnalysisInput, optFns ...func(*glue.Options)) (*glue.StopJobUpgradeAnalysisOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopJobUpgradeAnalysis")
+	}
+
+	var r0 *glue.StopJobUpgradeAnalysisOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StopJobUpgradeAnalysisInput, ...func(*glue.Options)) (*glue.StopJobUpgradeAnalysisOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.StopJobUpgradeAnalysisInput, ...func(*glue.Options)) *glue.StopJobUpgradeAnalysisOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.StopJobUpgradeAnalysisOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.StopJobUpgradeAnalysisInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

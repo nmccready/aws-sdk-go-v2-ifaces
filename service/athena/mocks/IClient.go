@@ -385,6 +385,43 @@ func (_m *IClient) CreatePresignedNotebookUrl(ctx context.Context, params *athen
 	return r0, r1
 }
 
+// CreateSystemTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSystemTableConfiguration(ctx context.Context, params *athena.CreateSystemTableConfigurationInput, optFns ...func(*athena.Options)) (*athena.CreateSystemTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSystemTableConfiguration")
+	}
+
+	var r0 *athena.CreateSystemTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.CreateSystemTableConfigurationInput, ...func(*athena.Options)) (*athena.CreateSystemTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.CreateSystemTableConfigurationInput, ...func(*athena.Options)) *athena.CreateSystemTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.CreateSystemTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.CreateSystemTableConfigurationInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateWorkGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateWorkGroup(ctx context.Context, params *athena.CreateWorkGroupInput, optFns ...func(*athena.Options)) (*athena.CreateWorkGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +636,43 @@ func (_m *IClient) DeletePreparedStatement(ctx context.Context, params *athena.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *athena.DeletePreparedStatementInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSystemTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSystemTableConfiguration(ctx context.Context, params *athena.DeleteSystemTableConfigurationInput, optFns ...func(*athena.Options)) (*athena.DeleteSystemTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSystemTableConfiguration")
+	}
+
+	var r0 *athena.DeleteSystemTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.DeleteSystemTableConfigurationInput, ...func(*athena.Options)) (*athena.DeleteSystemTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.DeleteSystemTableConfigurationInput, ...func(*athena.Options)) *athena.DeleteSystemTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.DeleteSystemTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.DeleteSystemTableConfigurationInput, ...func(*athena.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1310,6 +1384,43 @@ func (_m *IClient) GetSessionStatus(ctx context.Context, params *athena.GetSessi
 	return r0, r1
 }
 
+// GetSystemTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSystemTableConfiguration(ctx context.Context, params *athena.GetSystemTableConfigurationInput, optFns ...func(*athena.Options)) (*athena.GetSystemTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSystemTableConfiguration")
+	}
+
+	var r0 *athena.GetSystemTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.GetSystemTableConfigurationInput, ...func(*athena.Options)) (*athena.GetSystemTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.GetSystemTableConfigurationInput, ...func(*athena.Options)) *athena.GetSystemTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.GetSystemTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.GetSystemTableConfigurationInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTableMetadata provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTableMetadata(ctx context.Context, params *athena.GetTableMetadataInput, optFns ...func(*athena.Options)) (*athena.GetTableMetadataOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1894,6 +2005,43 @@ func (_m *IClient) ListSessions(ctx context.Context, params *athena.ListSessions
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *athena.ListSessionsInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSystemTableStatuses provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSystemTableStatuses(ctx context.Context, params *athena.ListSystemTableStatusesInput, optFns ...func(*athena.Options)) (*athena.ListSystemTableStatusesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSystemTableStatuses")
+	}
+
+	var r0 *athena.ListSystemTableStatusesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.ListSystemTableStatusesInput, ...func(*athena.Options)) (*athena.ListSystemTableStatusesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.ListSystemTableStatusesInput, ...func(*athena.Options)) *athena.ListSystemTableStatusesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.ListSystemTableStatusesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.ListSystemTableStatusesInput, ...func(*athena.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2578,6 +2726,43 @@ func (_m *IClient) UpdatePreparedStatement(ctx context.Context, params *athena.U
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *athena.UpdatePreparedStatementInput, ...func(*athena.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSystemTableConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSystemTableConfiguration(ctx context.Context, params *athena.UpdateSystemTableConfigurationInput, optFns ...func(*athena.Options)) (*athena.UpdateSystemTableConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSystemTableConfiguration")
+	}
+
+	var r0 *athena.UpdateSystemTableConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.UpdateSystemTableConfigurationInput, ...func(*athena.Options)) (*athena.UpdateSystemTableConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *athena.UpdateSystemTableConfigurationInput, ...func(*athena.Options)) *athena.UpdateSystemTableConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*athena.UpdateSystemTableConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *athena.UpdateSystemTableConfigurationInput, ...func(*athena.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
