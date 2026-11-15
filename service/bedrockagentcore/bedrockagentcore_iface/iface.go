@@ -50,6 +50,7 @@ type IClient interface {
  InvokeBrowser(ctx context.Context, params *InvokeBrowserInput, optFns ...func(*Options)) (*InvokeBrowserOutput, error) 
  InvokeCodeInterpreter(ctx context.Context, params *InvokeCodeInterpreterInput, optFns ...func(*Options)) (*InvokeCodeInterpreterOutput, error) 
  InvokeHarness(ctx context.Context, params *InvokeHarnessInput, optFns ...func(*Options)) (*InvokeHarnessOutput, error) 
+ InvokeWebSearch(ctx context.Context, params *InvokeWebSearchInput, optFns ...func(*Options)) (*InvokeWebSearchOutput, error) 
  ListABTests(ctx context.Context, params *ListABTestsInput, optFns ...func(*Options)) (*ListABTestsOutput, error) 
  ListActors(ctx context.Context, params *ListActorsInput, optFns ...func(*Options)) (*ListActorsOutput, error) 
  ListBatchEvaluations(ctx context.Context, params *ListBatchEvaluationsInput, optFns ...func(*Options)) (*ListBatchEvaluationsOutput, error) 

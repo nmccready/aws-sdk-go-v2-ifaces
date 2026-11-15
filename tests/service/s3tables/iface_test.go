@@ -255,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetTableBucketLogging", func(t *testing.T) {
+        input := &s3tables.GetTableBucketLoggingInput{}
+        output := &s3tables.GetTableBucketLoggingOutput{}
+
+        mockClient.On("GetTableBucketLogging", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTableBucketLogging(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTableBucketMaintenanceConfiguration", func(t *testing.T) {
         input := &s3tables.GetTableBucketMaintenanceConfigurationInput{}
         output := &s3tables.GetTableBucketMaintenanceConfigurationOutput{}
@@ -535,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutTableBucketEncryption", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutTableBucketEncryption(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTableBucketLogging", func(t *testing.T) {
+        input := &s3tables.PutTableBucketLoggingInput{}
+        output := &s3tables.PutTableBucketLoggingOutput{}
+
+        mockClient.On("PutTableBucketLogging", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTableBucketLogging(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

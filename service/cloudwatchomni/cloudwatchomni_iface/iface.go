@@ -43,6 +43,7 @@ type IClient interface {
  GetOmniDashboard(ctx context.Context, params *GetOmniDashboardInput, optFns ...func(*Options)) (*GetOmniDashboardOutput, error) 
  GetSpace(ctx context.Context, params *GetSpaceInput, optFns ...func(*Options)) (*GetSpaceOutput, error) 
  GetSpaceCredentialsForOrganization(ctx context.Context, params *GetSpaceCredentialsForOrganizationInput, optFns ...func(*Options)) (*GetSpaceCredentialsForOrganizationOutput, error) 
+ GetSpaceDataAccess(ctx context.Context, params *GetSpaceDataAccessInput, optFns ...func(*Options)) (*GetSpaceDataAccessOutput, error) 
  GetTelemetryQueryResults(ctx context.Context, params *GetTelemetryQueryResultsInput, optFns ...func(*Options)) (*GetTelemetryQueryResultsOutput, error) 
  GetView(ctx context.Context, params *GetViewInput, optFns ...func(*Options)) (*GetViewOutput, error) 
  ListAccessGrants(ctx context.Context, params *ListAccessGrantsInput, optFns ...func(*Options)) (*ListAccessGrantsOutput, error) 

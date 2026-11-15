@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSpaceDataAccess", func(t *testing.T) {
+        input := &cloudwatchomni.GetSpaceDataAccessInput{}
+        output := &cloudwatchomni.GetSpaceDataAccessOutput{}
+
+        mockClient.On("GetSpaceDataAccess", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSpaceDataAccess(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTelemetryQueryResults", func(t *testing.T) {
         input := &cloudwatchomni.GetTelemetryQueryResultsInput{}
         output := &cloudwatchomni.GetTelemetryQueryResultsOutput{}

@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for signin
 type IClient interface {
  Options() Options 
+ CreateBearerToken(ctx context.Context, params *CreateBearerTokenInput, optFns ...func(*Options)) (*CreateBearerTokenOutput, error) 
  CreateOAuth2Token(ctx context.Context, params *CreateOAuth2TokenInput, optFns ...func(*Options)) (*CreateOAuth2TokenOutput, error) 
  CreateOAuth2TokenWithIAM(ctx context.Context, params *CreateOAuth2TokenWithIAMInput, optFns ...func(*Options)) (*CreateOAuth2TokenWithIAMOutput, error) 
  CreateOAuth2TokenWithTokenExchange(ctx context.Context, params *CreateOAuth2TokenWithTokenExchangeInput, optFns ...func(*Options)) (*CreateOAuth2TokenWithTokenExchangeOutput, error) 

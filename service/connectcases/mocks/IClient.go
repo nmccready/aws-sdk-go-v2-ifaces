@@ -903,6 +903,43 @@ func (_m *IClient) GetLayout(ctx context.Context, params *connectcases.GetLayout
 	return r0, r1
 }
 
+// GetMergeCasesStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMergeCasesStatus(ctx context.Context, params *connectcases.GetMergeCasesStatusInput, optFns ...func(*connectcases.Options)) (*connectcases.GetMergeCasesStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMergeCasesStatus")
+	}
+
+	var r0 *connectcases.GetMergeCasesStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.GetMergeCasesStatusInput, ...func(*connectcases.Options)) (*connectcases.GetMergeCasesStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.GetMergeCasesStatusInput, ...func(*connectcases.Options)) *connectcases.GetMergeCasesStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.GetMergeCasesStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.GetMergeCasesStatusInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTemplate(ctx context.Context, params *connectcases.GetTemplateInput, optFns ...func(*connectcases.Options)) (*connectcases.GetTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1394,6 +1431,43 @@ func (_m *IClient) SearchRelatedItems(ctx context.Context, params *connectcases.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.SearchRelatedItemsInput, ...func(*connectcases.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartMergeCases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMergeCases(ctx context.Context, params *connectcases.StartMergeCasesInput, optFns ...func(*connectcases.Options)) (*connectcases.StartMergeCasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMergeCases")
+	}
+
+	var r0 *connectcases.StartMergeCasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.StartMergeCasesInput, ...func(*connectcases.Options)) (*connectcases.StartMergeCasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connectcases.StartMergeCasesInput, ...func(*connectcases.Options)) *connectcases.StartMergeCasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connectcases.StartMergeCasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connectcases.StartMergeCasesInput, ...func(*connectcases.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

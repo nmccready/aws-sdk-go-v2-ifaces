@@ -3473,6 +3473,43 @@ func (_m *IClient) UpdateApplication(ctx context.Context, params *opensearch.Upd
 	return r0, r1
 }
 
+// UpdateClone provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateClone(ctx context.Context, params *opensearch.UpdateCloneInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdateCloneOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateClone")
+	}
+
+	var r0 *opensearch.UpdateCloneOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateCloneInput, ...func(*opensearch.Options)) (*opensearch.UpdateCloneOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *opensearch.UpdateCloneInput, ...func(*opensearch.Options)) *opensearch.UpdateCloneOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*opensearch.UpdateCloneOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *opensearch.UpdateCloneInput, ...func(*opensearch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateDataSource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateDataSource(ctx context.Context, params *opensearch.UpdateDataSourceInput, optFns ...func(*opensearch.Options)) (*opensearch.UpdateDataSourceOutput, error) {
 	_va := make([]interface{}, len(optFns))

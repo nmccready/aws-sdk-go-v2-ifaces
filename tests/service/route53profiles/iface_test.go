@@ -229,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateProfileAssociation", func(t *testing.T) {
+        input := &route53profiles.UpdateProfileAssociationInput{}
+        output := &route53profiles.UpdateProfileAssociationOutput{}
+
+        mockClient.On("UpdateProfileAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProfileAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateProfileResourceAssociation", func(t *testing.T) {
         input := &route53profiles.UpdateProfileResourceAssociationInput{}
         output := &route53profiles.UpdateProfileResourceAssociationOutput{}

@@ -944,6 +944,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInvestigationRecords", func(t *testing.T) {
+        input := &guardduty.ListInvestigationRecordsInput{}
+        output := &guardduty.ListInvestigationRecordsOutput{}
+
+        mockClient.On("ListInvestigationRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInvestigationRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListInvestigations", func(t *testing.T) {
         input := &guardduty.ListInvestigationsInput{}
         output := &guardduty.ListInvestigationsOutput{}

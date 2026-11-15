@@ -643,6 +643,43 @@ func (_m *IClient) GetTableBucketEncryption(ctx context.Context, params *s3table
 	return r0, r1
 }
 
+// GetTableBucketLogging provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTableBucketLogging(ctx context.Context, params *s3tables.GetTableBucketLoggingInput, optFns ...func(*s3tables.Options)) (*s3tables.GetTableBucketLoggingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTableBucketLogging")
+	}
+
+	var r0 *s3tables.GetTableBucketLoggingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.GetTableBucketLoggingInput, ...func(*s3tables.Options)) (*s3tables.GetTableBucketLoggingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.GetTableBucketLoggingInput, ...func(*s3tables.Options)) *s3tables.GetTableBucketLoggingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.GetTableBucketLoggingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.GetTableBucketLoggingInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTableBucketMaintenanceConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTableBucketMaintenanceConfiguration(ctx context.Context, params *s3tables.GetTableBucketMaintenanceConfigurationInput, optFns ...func(*s3tables.Options)) (*s3tables.GetTableBucketMaintenanceConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1467,6 +1504,43 @@ func (_m *IClient) PutTableBucketEncryption(ctx context.Context, params *s3table
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.PutTableBucketEncryptionInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutTableBucketLogging provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTableBucketLogging(ctx context.Context, params *s3tables.PutTableBucketLoggingInput, optFns ...func(*s3tables.Options)) (*s3tables.PutTableBucketLoggingOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTableBucketLogging")
+	}
+
+	var r0 *s3tables.PutTableBucketLoggingOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.PutTableBucketLoggingInput, ...func(*s3tables.Options)) (*s3tables.PutTableBucketLoggingOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.PutTableBucketLoggingInput, ...func(*s3tables.Options)) *s3tables.PutTableBucketLoggingOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.PutTableBucketLoggingOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.PutTableBucketLoggingInput, ...func(*s3tables.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

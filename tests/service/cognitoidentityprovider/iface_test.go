@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAdminListUserSessions", func(t *testing.T) {
+        input := &cognitoidentityprovider.AdminListUserSessionsInput{}
+        output := &cognitoidentityprovider.AdminListUserSessionsOutput{}
+
+        mockClient.On("AdminListUserSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AdminListUserSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAdminRemoveUserFromGroup", func(t *testing.T) {
         input := &cognitoidentityprovider.AdminRemoveUserFromGroupInput{}
         output := &cognitoidentityprovider.AdminRemoveUserFromGroupOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("AdminRespondToAuthChallenge", ctx, input).Return(output, nil)
 
         result, err := mockClient.AdminRespondToAuthChallenge(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAdminRevokeUserSession", func(t *testing.T) {
+        input := &cognitoidentityprovider.AdminRevokeUserSessionInput{}
+        output := &cognitoidentityprovider.AdminRevokeUserSessionOutput{}
+
+        mockClient.On("AdminRevokeUserSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AdminRevokeUserSession(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1139,6 +1165,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetUserPoolClientSessionConfiguration", func(t *testing.T) {
+        input := &cognitoidentityprovider.GetUserPoolClientSessionConfigurationInput{}
+        output := &cognitoidentityprovider.GetUserPoolClientSessionConfigurationOutput{}
+
+        mockClient.On("GetUserPoolClientSessionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUserPoolClientSessionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetUserPoolMfaConfig", func(t *testing.T) {
         input := &cognitoidentityprovider.GetUserPoolMfaConfigInput{}
         output := &cognitoidentityprovider.GetUserPoolMfaConfigOutput{}
@@ -1146,6 +1185,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetUserPoolMfaConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetUserPoolMfaConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetUserPoolSessionConfiguration", func(t *testing.T) {
+        input := &cognitoidentityprovider.GetUserPoolSessionConfigurationInput{}
+        output := &cognitoidentityprovider.GetUserPoolSessionConfigurationOutput{}
+
+        mockClient.On("GetUserPoolSessionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUserPoolSessionConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1321,6 +1373,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListUserSessions", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListUserSessionsInput{}
+        output := &cognitoidentityprovider.ListUserSessionsOutput{}
+
+        mockClient.On("ListUserSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUserSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListUsers", func(t *testing.T) {
         input := &cognitoidentityprovider.ListUsersInput{}
         output := &cognitoidentityprovider.ListUsersOutput{}
@@ -1399,6 +1464,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRevokeUserSession", func(t *testing.T) {
+        input := &cognitoidentityprovider.RevokeUserSessionInput{}
+        output := &cognitoidentityprovider.RevokeUserSessionOutput{}
+
+        mockClient.On("RevokeUserSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RevokeUserSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSetLogDeliveryConfiguration", func(t *testing.T) {
         input := &cognitoidentityprovider.SetLogDeliveryConfigurationInput{}
         output := &cognitoidentityprovider.SetLogDeliveryConfigurationOutput{}
@@ -1451,6 +1529,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSetUserPoolClientSessionConfiguration", func(t *testing.T) {
+        input := &cognitoidentityprovider.SetUserPoolClientSessionConfigurationInput{}
+        output := &cognitoidentityprovider.SetUserPoolClientSessionConfigurationOutput{}
+
+        mockClient.On("SetUserPoolClientSessionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SetUserPoolClientSessionConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestSetUserPoolMfaConfig", func(t *testing.T) {
         input := &cognitoidentityprovider.SetUserPoolMfaConfigInput{}
         output := &cognitoidentityprovider.SetUserPoolMfaConfigOutput{}
@@ -1458,6 +1549,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SetUserPoolMfaConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.SetUserPoolMfaConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSetUserPoolSessionConfiguration", func(t *testing.T) {
+        input := &cognitoidentityprovider.SetUserPoolSessionConfigurationInput{}
+        output := &cognitoidentityprovider.SetUserPoolSessionConfigurationOutput{}
+
+        mockClient.On("SetUserPoolSessionConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SetUserPoolSessionConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

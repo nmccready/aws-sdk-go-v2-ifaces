@@ -88,6 +88,43 @@ func (_m *IClient) AssociateIamRoleToResource(ctx context.Context, params *odb.A
 	return r0, r1
 }
 
+// AssociateVirtualMachinesToCloudVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateVirtualMachinesToCloudVmCluster(ctx context.Context, params *odb.AssociateVirtualMachinesToCloudVmClusterInput, optFns ...func(*odb.Options)) (*odb.AssociateVirtualMachinesToCloudVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateVirtualMachinesToCloudVmCluster")
+	}
+
+	var r0 *odb.AssociateVirtualMachinesToCloudVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.AssociateVirtualMachinesToCloudVmClusterInput, ...func(*odb.Options)) (*odb.AssociateVirtualMachinesToCloudVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.AssociateVirtualMachinesToCloudVmClusterInput, ...func(*odb.Options)) *odb.AssociateVirtualMachinesToCloudVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.AssociateVirtualMachinesToCloudVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.AssociateVirtualMachinesToCloudVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateVirtualMachinesToExadbVmCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateVirtualMachinesToExadbVmCluster(ctx context.Context, params *odb.AssociateVirtualMachinesToExadbVmClusterInput, optFns ...func(*odb.Options)) (*odb.AssociateVirtualMachinesToExadbVmClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -857,6 +894,43 @@ func (_m *IClient) DisassociateIamRoleFromResource(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.DisassociateIamRoleFromResourceInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateVirtualMachinesFromCloudVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateVirtualMachinesFromCloudVmCluster(ctx context.Context, params *odb.DisassociateVirtualMachinesFromCloudVmClusterInput, optFns ...func(*odb.Options)) (*odb.DisassociateVirtualMachinesFromCloudVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateVirtualMachinesFromCloudVmCluster")
+	}
+
+	var r0 *odb.DisassociateVirtualMachinesFromCloudVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DisassociateVirtualMachinesFromCloudVmClusterInput, ...func(*odb.Options)) (*odb.DisassociateVirtualMachinesFromCloudVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.DisassociateVirtualMachinesFromCloudVmClusterInput, ...func(*odb.Options)) *odb.DisassociateVirtualMachinesFromCloudVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.DisassociateVirtualMachinesFromCloudVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.DisassociateVirtualMachinesFromCloudVmClusterInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2807,6 +2881,43 @@ func (_m *IClient) UpdateAutonomousDatabaseBackup(ctx context.Context, params *o
 	return r0, r1
 }
 
+// UpdateCloudAutonomousVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCloudAutonomousVmCluster(ctx context.Context, params *odb.UpdateCloudAutonomousVmClusterInput, optFns ...func(*odb.Options)) (*odb.UpdateCloudAutonomousVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCloudAutonomousVmCluster")
+	}
+
+	var r0 *odb.UpdateCloudAutonomousVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateCloudAutonomousVmClusterInput, ...func(*odb.Options)) (*odb.UpdateCloudAutonomousVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateCloudAutonomousVmClusterInput, ...func(*odb.Options)) *odb.UpdateCloudAutonomousVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateCloudAutonomousVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateCloudAutonomousVmClusterInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateCloudExadataInfrastructure provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateCloudExadataInfrastructure(ctx context.Context, params *odb.UpdateCloudExadataInfrastructureInput, optFns ...func(*odb.Options)) (*odb.UpdateCloudExadataInfrastructureOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2836,6 +2947,80 @@ func (_m *IClient) UpdateCloudExadataInfrastructure(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateCloudExadataInfrastructureInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCloudExadataInfrastructureStorageCapacity provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCloudExadataInfrastructureStorageCapacity(ctx context.Context, params *odb.UpdateCloudExadataInfrastructureStorageCapacityInput, optFns ...func(*odb.Options)) (*odb.UpdateCloudExadataInfrastructureStorageCapacityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCloudExadataInfrastructureStorageCapacity")
+	}
+
+	var r0 *odb.UpdateCloudExadataInfrastructureStorageCapacityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateCloudExadataInfrastructureStorageCapacityInput, ...func(*odb.Options)) (*odb.UpdateCloudExadataInfrastructureStorageCapacityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateCloudExadataInfrastructureStorageCapacityInput, ...func(*odb.Options)) *odb.UpdateCloudExadataInfrastructureStorageCapacityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateCloudExadataInfrastructureStorageCapacityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateCloudExadataInfrastructureStorageCapacityInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCloudVmCluster provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCloudVmCluster(ctx context.Context, params *odb.UpdateCloudVmClusterInput, optFns ...func(*odb.Options)) (*odb.UpdateCloudVmClusterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCloudVmCluster")
+	}
+
+	var r0 *odb.UpdateCloudVmClusterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateCloudVmClusterInput, ...func(*odb.Options)) (*odb.UpdateCloudVmClusterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.UpdateCloudVmClusterInput, ...func(*odb.Options)) *odb.UpdateCloudVmClusterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.UpdateCloudVmClusterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.UpdateCloudVmClusterInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

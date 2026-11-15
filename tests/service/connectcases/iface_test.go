@@ -346,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMergeCasesStatus", func(t *testing.T) {
+        input := &connectcases.GetMergeCasesStatusInput{}
+        output := &connectcases.GetMergeCasesStatusOutput{}
+
+        mockClient.On("GetMergeCasesStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMergeCasesStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetTemplate", func(t *testing.T) {
         input := &connectcases.GetTemplateInput{}
         output := &connectcases.GetTemplateOutput{}
@@ -509,6 +522,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SearchRelatedItems", ctx, input).Return(output, nil)
 
         result, err := mockClient.SearchRelatedItems(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartMergeCases", func(t *testing.T) {
+        input := &connectcases.StartMergeCasesInput{}
+        output := &connectcases.StartMergeCasesOutput{}
+
+        mockClient.On("StartMergeCases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMergeCases(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

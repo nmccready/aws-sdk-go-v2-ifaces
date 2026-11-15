@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociateCrossAccountReplica provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateCrossAccountReplica(ctx context.Context, params *secretsmanager.AssociateCrossAccountReplicaInput, optFns ...func(*secretsmanager.Options)) (*secretsmanager.AssociateCrossAccountReplicaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateCrossAccountReplica")
+	}
+
+	var r0 *secretsmanager.AssociateCrossAccountReplicaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *secretsmanager.AssociateCrossAccountReplicaInput, ...func(*secretsmanager.Options)) (*secretsmanager.AssociateCrossAccountReplicaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *secretsmanager.AssociateCrossAccountReplicaInput, ...func(*secretsmanager.Options)) *secretsmanager.AssociateCrossAccountReplicaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*secretsmanager.AssociateCrossAccountReplicaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *secretsmanager.AssociateCrossAccountReplicaInput, ...func(*secretsmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchGetSecretValue provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchGetSecretValue(ctx context.Context, params *secretsmanager.BatchGetSecretValueInput, optFns ...func(*secretsmanager.Options)) (*secretsmanager.BatchGetSecretValueOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -236,6 +273,43 @@ func (_m *IClient) DescribeSecret(ctx context.Context, params *secretsmanager.De
 	return r0, r1
 }
 
+// DisassociateCrossAccountReplica provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateCrossAccountReplica(ctx context.Context, params *secretsmanager.DisassociateCrossAccountReplicaInput, optFns ...func(*secretsmanager.Options)) (*secretsmanager.DisassociateCrossAccountReplicaOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateCrossAccountReplica")
+	}
+
+	var r0 *secretsmanager.DisassociateCrossAccountReplicaOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *secretsmanager.DisassociateCrossAccountReplicaInput, ...func(*secretsmanager.Options)) (*secretsmanager.DisassociateCrossAccountReplicaOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *secretsmanager.DisassociateCrossAccountReplicaInput, ...func(*secretsmanager.Options)) *secretsmanager.DisassociateCrossAccountReplicaOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*secretsmanager.DisassociateCrossAccountReplicaOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *secretsmanager.DisassociateCrossAccountReplicaInput, ...func(*secretsmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRandomPassword provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRandomPassword(ctx context.Context, params *secretsmanager.GetRandomPasswordInput, optFns ...func(*secretsmanager.Options)) (*secretsmanager.GetRandomPasswordOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -339,6 +413,43 @@ func (_m *IClient) GetSecretValue(ctx context.Context, params *secretsmanager.Ge
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *secretsmanager.GetSecretValueInput, ...func(*secretsmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourcePolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourcePolicies(ctx context.Context, params *secretsmanager.ListResourcePoliciesInput, optFns ...func(*secretsmanager.Options)) (*secretsmanager.ListResourcePoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourcePolicies")
+	}
+
+	var r0 *secretsmanager.ListResourcePoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *secretsmanager.ListResourcePoliciesInput, ...func(*secretsmanager.Options)) (*secretsmanager.ListResourcePoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *secretsmanager.ListResourcePoliciesInput, ...func(*secretsmanager.Options)) *secretsmanager.ListResourcePoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*secretsmanager.ListResourcePoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *secretsmanager.ListResourcePoliciesInput, ...func(*secretsmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

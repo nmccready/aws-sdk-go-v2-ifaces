@@ -587,6 +587,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *route53profiles.Un
 	return r0, r1
 }
 
+// UpdateProfileAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProfileAssociation(ctx context.Context, params *route53profiles.UpdateProfileAssociationInput, optFns ...func(*route53profiles.Options)) (*route53profiles.UpdateProfileAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProfileAssociation")
+	}
+
+	var r0 *route53profiles.UpdateProfileAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53profiles.UpdateProfileAssociationInput, ...func(*route53profiles.Options)) (*route53profiles.UpdateProfileAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53profiles.UpdateProfileAssociationInput, ...func(*route53profiles.Options)) *route53profiles.UpdateProfileAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53profiles.UpdateProfileAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53profiles.UpdateProfileAssociationInput, ...func(*route53profiles.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateProfileResourceAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateProfileResourceAssociation(ctx context.Context, params *route53profiles.UpdateProfileResourceAssociationInput, optFns ...func(*route53profiles.Options)) (*route53profiles.UpdateProfileResourceAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))

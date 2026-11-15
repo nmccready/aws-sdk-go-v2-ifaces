@@ -476,6 +476,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataQualityEvaluationConfig", func(t *testing.T) {
+        input := &glue.CreateDataQualityEvaluationConfigInput{}
+        output := &glue.CreateDataQualityEvaluationConfigOutput{}
+
+        mockClient.On("CreateDataQualityEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataQualityEvaluationConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDataQualityRuleset", func(t *testing.T) {
         input := &glue.CreateDataQualityRulesetInput{}
         output := &glue.CreateDataQualityRulesetOutput{}
@@ -951,6 +964,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteCustomEntityType", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteCustomEntityType(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteDataQualityEvaluationConfig", func(t *testing.T) {
+        input := &glue.DeleteDataQualityEvaluationConfigInput{}
+        output := &glue.DeleteDataQualityEvaluationConfigOutput{}
+
+        mockClient.On("DeleteDataQualityEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataQualityEvaluationConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1679,6 +1705,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDataCatalogExportConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDataCatalogExportConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDataQualityEvaluationConfig", func(t *testing.T) {
+        input := &glue.GetDataQualityEvaluationConfigInput{}
+        output := &glue.GetDataQualityEvaluationConfigOutput{}
+
+        mockClient.On("GetDataQualityEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataQualityEvaluationConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2654,6 +2693,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCustomEntityTypes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCustomEntityTypes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDataQualityEvaluationConfigs", func(t *testing.T) {
+        input := &glue.ListDataQualityEvaluationConfigsInput{}
+        output := &glue.ListDataQualityEvaluationConfigsOutput{}
+
+        mockClient.On("ListDataQualityEvaluationConfigs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDataQualityEvaluationConfigs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3772,6 +3824,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCrawlerSchedule", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCrawlerSchedule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateDataQualityEvaluationConfig", func(t *testing.T) {
+        input := &glue.UpdateDataQualityEvaluationConfigInput{}
+        output := &glue.UpdateDataQualityEvaluationConfigOutput{}
+
+        mockClient.On("UpdateDataQualityEvaluationConfig", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDataQualityEvaluationConfig(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

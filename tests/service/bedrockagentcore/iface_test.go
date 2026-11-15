@@ -554,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInvokeWebSearch", func(t *testing.T) {
+        input := &bedrockagentcore.InvokeWebSearchInput{}
+        output := &bedrockagentcore.InvokeWebSearchOutput{}
+
+        mockClient.On("InvokeWebSearch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InvokeWebSearch(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListABTests", func(t *testing.T) {
         input := &bedrockagentcore.ListABTestsInput{}
         output := &bedrockagentcore.ListABTestsOutput{}

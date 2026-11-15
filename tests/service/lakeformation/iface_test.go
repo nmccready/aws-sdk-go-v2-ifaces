@@ -424,6 +424,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetGlueFunctionSessionContext", func(t *testing.T) {
+        input := &lakeformation.GetGlueFunctionSessionContextInput{}
+        output := &lakeformation.GetGlueFunctionSessionContextOutput{}
+
+        mockClient.On("GetGlueFunctionSessionContext", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetGlueFunctionSessionContext(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetLFTag", func(t *testing.T) {
         input := &lakeformation.GetLFTagInput{}
         output := &lakeformation.GetLFTagOutput{}
@@ -522,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetTemporaryDataLocationCredentials", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetTemporaryDataLocationCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTemporaryGlueFunctionCredentials", func(t *testing.T) {
+        input := &lakeformation.GetTemporaryGlueFunctionCredentialsInput{}
+        output := &lakeformation.GetTemporaryGlueFunctionCredentialsOutput{}
+
+        mockClient.On("GetTemporaryGlueFunctionCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTemporaryGlueFunctionCredentials(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

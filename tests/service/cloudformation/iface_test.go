@@ -1022,6 +1022,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRemoveAlias", func(t *testing.T) {
+        input := &cloudformation.RemoveAliasInput{}
+        output := &cloudformation.RemoveAliasOutput{}
+
+        mockClient.On("RemoveAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRollbackStack", func(t *testing.T) {
         input := &cloudformation.RollbackStackInput{}
         output := &cloudformation.RollbackStackOutput{}
@@ -1029,6 +1042,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RollbackStack", ctx, input).Return(output, nil)
 
         result, err := mockClient.RollbackStack(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSetAlias", func(t *testing.T) {
+        input := &cloudformation.SetAliasInput{}
+        output := &cloudformation.SetAliasOutput{}
+
+        mockClient.On("SetAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SetAlias(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

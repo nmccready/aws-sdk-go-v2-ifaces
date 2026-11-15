@@ -103,6 +103,7 @@ type IClient interface {
  StartServiceSoftwareUpdate(ctx context.Context, params *StartServiceSoftwareUpdateInput, optFns ...func(*Options)) (*StartServiceSoftwareUpdateOutput, error) 
  SwitchoverReplication(ctx context.Context, params *SwitchoverReplicationInput, optFns ...func(*Options)) (*SwitchoverReplicationOutput, error) 
  UpdateApplication(ctx context.Context, params *UpdateApplicationInput, optFns ...func(*Options)) (*UpdateApplicationOutput, error) 
+ UpdateClone(ctx context.Context, params *UpdateCloneInput, optFns ...func(*Options)) (*UpdateCloneOutput, error) 
  UpdateDataSource(ctx context.Context, params *UpdateDataSourceInput, optFns ...func(*Options)) (*UpdateDataSourceOutput, error) 
  UpdateDirectQueryDataSource(ctx context.Context, params *UpdateDirectQueryDataSourceInput, optFns ...func(*Options)) (*UpdateDirectQueryDataSourceOutput, error) 
  UpdateDomainConfig(ctx context.Context, params *UpdateDomainConfigInput, optFns ...func(*Options)) (*UpdateDomainConfigOutput, error) 

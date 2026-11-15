@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteMetricDataQueryDefinition", func(t *testing.T) {
+        input := &cloudwatch.DeleteMetricDataQueryDefinitionInput{}
+        output := &cloudwatch.DeleteMetricDataQueryDefinitionOutput{}
+
+        mockClient.On("DeleteMetricDataQueryDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMetricDataQueryDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteMetricStream", func(t *testing.T) {
         input := &cloudwatch.DeleteMetricStreamInput{}
         output := &cloudwatch.DeleteMetricStreamOutput{}
@@ -359,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMetricDataQueryDefinition", func(t *testing.T) {
+        input := &cloudwatch.GetMetricDataQueryDefinitionInput{}
+        output := &cloudwatch.GetMetricDataQueryDefinitionOutput{}
+
+        mockClient.On("GetMetricDataQueryDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMetricDataQueryDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetMetricStatistics", func(t *testing.T) {
         input := &cloudwatch.GetMetricStatisticsInput{}
         output := &cloudwatch.GetMetricStatisticsOutput{}
@@ -457,6 +483,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListManagedInsightRules", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListManagedInsightRules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListMetricDataQueryDefinitions", func(t *testing.T) {
+        input := &cloudwatch.ListMetricDataQueryDefinitionsInput{}
+        output := &cloudwatch.ListMetricDataQueryDefinitionsOutput{}
+
+        mockClient.On("ListMetricDataQueryDefinitions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListMetricDataQueryDefinitions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -613,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutMetricData", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutMetricData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutMetricDataQueryDefinition", func(t *testing.T) {
+        input := &cloudwatch.PutMetricDataQueryDefinitionInput{}
+        output := &cloudwatch.PutMetricDataQueryDefinitionOutput{}
+
+        mockClient.On("PutMetricDataQueryDefinition", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutMetricDataQueryDefinition(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

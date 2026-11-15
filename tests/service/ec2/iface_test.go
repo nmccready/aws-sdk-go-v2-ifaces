@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateNetworkingFlexCostAllocationPolicy", func(t *testing.T) {
+        input := &ec2.AssociateNetworkingFlexCostAllocationPolicyInput{}
+        output := &ec2.AssociateNetworkingFlexCostAllocationPolicyOutput{}
+
+        mockClient.On("AssociateNetworkingFlexCostAllocationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateNetworkingFlexCostAllocationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateRouteServer", func(t *testing.T) {
         input := &ec2.AssociateRouteServerInput{}
         output := &ec2.AssociateRouteServerOutput{}
@@ -1516,6 +1529,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateMetricCategory", func(t *testing.T) {
+        input := &ec2.CreateMetricCategoryInput{}
+        output := &ec2.CreateMetricCategoryOutput{}
+
+        mockClient.On("CreateMetricCategory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateMetricCategory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateNatGateway", func(t *testing.T) {
         input := &ec2.CreateNatGatewayInput{}
         output := &ec2.CreateNatGatewayOutput{}
@@ -1601,6 +1627,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateNetworkInterfacePermission", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateNetworkInterfacePermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateNetworkingFlexCostAllocationPolicy", func(t *testing.T) {
+        input := &ec2.CreateNetworkingFlexCostAllocationPolicyInput{}
+        output := &ec2.CreateNetworkingFlexCostAllocationPolicyOutput{}
+
+        mockClient.On("CreateNetworkingFlexCostAllocationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateNetworkingFlexCostAllocationPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2803,6 +2842,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteMetricCategory", func(t *testing.T) {
+        input := &ec2.DeleteMetricCategoryInput{}
+        output := &ec2.DeleteMetricCategoryOutput{}
+
+        mockClient.On("DeleteMetricCategory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteMetricCategory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteNatGateway", func(t *testing.T) {
         input := &ec2.DeleteNatGatewayInput{}
         output := &ec2.DeleteNatGatewayOutput{}
@@ -2914,6 +2966,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteNetworkInterfacePermission", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteNetworkInterfacePermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteNetworkingFlexCostAllocationPolicies", func(t *testing.T) {
+        input := &ec2.DeleteNetworkingFlexCostAllocationPoliciesInput{}
+        output := &ec2.DeleteNetworkingFlexCostAllocationPoliciesOutput{}
+
+        mockClient.On("DeleteNetworkingFlexCostAllocationPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteNetworkingFlexCostAllocationPolicies(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5013,6 +5078,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeMetricCategories", func(t *testing.T) {
+        input := &ec2.DescribeMetricCategoriesInput{}
+        output := &ec2.DescribeMetricCategoriesOutput{}
+
+        mockClient.On("DescribeMetricCategories", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeMetricCategories(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeMovingAddresses", func(t *testing.T) {
         input := &ec2.DescribeMovingAddressesInput{}
         output := &ec2.DescribeMovingAddressesOutput{}
@@ -5137,6 +5215,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeNetworkInterfaces", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeNetworkInterfaces(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNetworkingFlexCostAllocationPolicies", func(t *testing.T) {
+        input := &ec2.DescribeNetworkingFlexCostAllocationPoliciesInput{}
+        output := &ec2.DescribeNetworkingFlexCostAllocationPoliciesOutput{}
+
+        mockClient.On("DescribeNetworkingFlexCostAllocationPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNetworkingFlexCostAllocationPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeNetworkingFlexCostAllocationPolicyAssociations", func(t *testing.T) {
+        input := &ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsInput{}
+        output := &ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsOutput{}
+
+        mockClient.On("DescribeNetworkingFlexCostAllocationPolicyAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeNetworkingFlexCostAllocationPolicyAssociations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -6703,6 +6807,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateNetworkingFlexCostAllocationPolicy", func(t *testing.T) {
+        input := &ec2.DisassociateNetworkingFlexCostAllocationPolicyInput{}
+        output := &ec2.DisassociateNetworkingFlexCostAllocationPolicyOutput{}
+
+        mockClient.On("DisassociateNetworkingFlexCostAllocationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateNetworkingFlexCostAllocationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateRouteServer", func(t *testing.T) {
         input := &ec2.DisassociateRouteServerInput{}
         output := &ec2.DisassociateRouteServerOutput{}
@@ -7925,6 +8042,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetNetworkingFlexCostAllocationPolicyVersions", func(t *testing.T) {
+        input := &ec2.GetNetworkingFlexCostAllocationPolicyVersionsInput{}
+        output := &ec2.GetNetworkingFlexCostAllocationPolicyVersionsOutput{}
+
+        mockClient.On("GetNetworkingFlexCostAllocationPolicyVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetNetworkingFlexCostAllocationPolicyVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPasswordData", func(t *testing.T) {
         input := &ec2.GetPasswordDataInput{}
         output := &ec2.GetPasswordDataOutput{}
@@ -8939,6 +9069,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestModifyMetricCategory", func(t *testing.T) {
+        input := &ec2.ModifyMetricCategoryInput{}
+        output := &ec2.ModifyMetricCategoryOutput{}
+
+        mockClient.On("ModifyMetricCategory", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyMetricCategory(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestModifyNetworkInterfaceAttribute", func(t *testing.T) {
         input := &ec2.ModifyNetworkInterfaceAttributeInput{}
         output := &ec2.ModifyNetworkInterfaceAttributeOutput{}
@@ -8946,6 +9089,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyNetworkInterfaceAttribute", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyNetworkInterfaceAttribute(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyNetworkingFlexCostAllocationPolicy", func(t *testing.T) {
+        input := &ec2.ModifyNetworkingFlexCostAllocationPolicyInput{}
+        output := &ec2.ModifyNetworkingFlexCostAllocationPolicyOutput{}
+
+        mockClient.On("ModifyNetworkingFlexCostAllocationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyNetworkingFlexCostAllocationPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

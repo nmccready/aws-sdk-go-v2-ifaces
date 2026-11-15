@@ -1495,6 +1495,43 @@ func (_m *IClient) InvokeHarness(ctx context.Context, params *bedrockagentcore.I
 	return r0, r1
 }
 
+// InvokeWebSearch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InvokeWebSearch(ctx context.Context, params *bedrockagentcore.InvokeWebSearchInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.InvokeWebSearchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InvokeWebSearch")
+	}
+
+	var r0 *bedrockagentcore.InvokeWebSearchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.InvokeWebSearchInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.InvokeWebSearchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.InvokeWebSearchInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.InvokeWebSearchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.InvokeWebSearchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.InvokeWebSearchInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListABTests provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListABTests(ctx context.Context, params *bedrockagentcore.ListABTestsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListABTestsOutput, error) {
 	_va := make([]interface{}, len(optFns))

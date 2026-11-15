@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateAirflowUiUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAirflowUiUrl(ctx context.Context, params *mwaaserverless.CreateAirflowUiUrlInput, optFns ...func(*mwaaserverless.Options)) (*mwaaserverless.CreateAirflowUiUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAirflowUiUrl")
+	}
+
+	var r0 *mwaaserverless.CreateAirflowUiUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mwaaserverless.CreateAirflowUiUrlInput, ...func(*mwaaserverless.Options)) (*mwaaserverless.CreateAirflowUiUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mwaaserverless.CreateAirflowUiUrlInput, ...func(*mwaaserverless.Options)) *mwaaserverless.CreateAirflowUiUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mwaaserverless.CreateAirflowUiUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mwaaserverless.CreateAirflowUiUrlInput, ...func(*mwaaserverless.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateWorkflow provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateWorkflow(ctx context.Context, params *mwaaserverless.CreateWorkflowInput, optFns ...func(*mwaaserverless.Options)) (*mwaaserverless.CreateWorkflowOutput, error) {
 	_va := make([]interface{}, len(optFns))

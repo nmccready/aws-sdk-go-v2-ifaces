@@ -2845,6 +2845,43 @@ func (_m *IClient) RegisterType(ctx context.Context, params *cloudformation.Regi
 	return r0, r1
 }
 
+// RemoveAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveAlias(ctx context.Context, params *cloudformation.RemoveAliasInput, optFns ...func(*cloudformation.Options)) (*cloudformation.RemoveAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveAlias")
+	}
+
+	var r0 *cloudformation.RemoveAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.RemoveAliasInput, ...func(*cloudformation.Options)) (*cloudformation.RemoveAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.RemoveAliasInput, ...func(*cloudformation.Options)) *cloudformation.RemoveAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.RemoveAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.RemoveAliasInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RollbackStack provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RollbackStack(ctx context.Context, params *cloudformation.RollbackStackInput, optFns ...func(*cloudformation.Options)) (*cloudformation.RollbackStackOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2874,6 +2911,43 @@ func (_m *IClient) RollbackStack(ctx context.Context, params *cloudformation.Rol
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.RollbackStackInput, ...func(*cloudformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SetAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SetAlias(ctx context.Context, params *cloudformation.SetAliasInput, optFns ...func(*cloudformation.Options)) (*cloudformation.SetAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SetAlias")
+	}
+
+	var r0 *cloudformation.SetAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.SetAliasInput, ...func(*cloudformation.Options)) (*cloudformation.SetAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudformation.SetAliasInput, ...func(*cloudformation.Options)) *cloudformation.SetAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudformation.SetAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudformation.SetAliasInput, ...func(*cloudformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
