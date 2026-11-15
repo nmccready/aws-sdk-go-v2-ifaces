@@ -1273,6 +1273,43 @@ func (_m *IClient) CreateCustomEntityType(ctx context.Context, params *glue.Crea
 	return r0, r1
 }
 
+// CreateDataQualityEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataQualityEvaluationConfig(ctx context.Context, params *glue.CreateDataQualityEvaluationConfigInput, optFns ...func(*glue.Options)) (*glue.CreateDataQualityEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataQualityEvaluationConfig")
+	}
+
+	var r0 *glue.CreateDataQualityEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateDataQualityEvaluationConfigInput, ...func(*glue.Options)) (*glue.CreateDataQualityEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.CreateDataQualityEvaluationConfigInput, ...func(*glue.Options)) *glue.CreateDataQualityEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.CreateDataQualityEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.CreateDataQualityEvaluationConfigInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDataQualityRuleset provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDataQualityRuleset(ctx context.Context, params *glue.CreateDataQualityRulesetInput, optFns ...func(*glue.Options)) (*glue.CreateDataQualityRulesetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2634,6 +2671,43 @@ func (_m *IClient) DeleteCustomEntityType(ctx context.Context, params *glue.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteCustomEntityTypeInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteDataQualityEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataQualityEvaluationConfig(ctx context.Context, params *glue.DeleteDataQualityEvaluationConfigInput, optFns ...func(*glue.Options)) (*glue.DeleteDataQualityEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataQualityEvaluationConfig")
+	}
+
+	var r0 *glue.DeleteDataQualityEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteDataQualityEvaluationConfigInput, ...func(*glue.Options)) (*glue.DeleteDataQualityEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.DeleteDataQualityEvaluationConfigInput, ...func(*glue.Options)) *glue.DeleteDataQualityEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.DeleteDataQualityEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.DeleteDataQualityEvaluationConfigInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4706,6 +4780,43 @@ func (_m *IClient) GetDataCatalogExportConfiguration(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataCatalogExportConfigurationInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDataQualityEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataQualityEvaluationConfig(ctx context.Context, params *glue.GetDataQualityEvaluationConfigInput, optFns ...func(*glue.Options)) (*glue.GetDataQualityEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataQualityEvaluationConfig")
+	}
+
+	var r0 *glue.GetDataQualityEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityEvaluationConfigInput, ...func(*glue.Options)) (*glue.GetDataQualityEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.GetDataQualityEvaluationConfigInput, ...func(*glue.Options)) *glue.GetDataQualityEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.GetDataQualityEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.GetDataQualityEvaluationConfigInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7481,6 +7592,43 @@ func (_m *IClient) ListCustomEntityTypes(ctx context.Context, params *glue.ListC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListCustomEntityTypesInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDataQualityEvaluationConfigs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDataQualityEvaluationConfigs(ctx context.Context, params *glue.ListDataQualityEvaluationConfigsInput, optFns ...func(*glue.Options)) (*glue.ListDataQualityEvaluationConfigsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDataQualityEvaluationConfigs")
+	}
+
+	var r0 *glue.ListDataQualityEvaluationConfigsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityEvaluationConfigsInput, ...func(*glue.Options)) (*glue.ListDataQualityEvaluationConfigsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.ListDataQualityEvaluationConfigsInput, ...func(*glue.Options)) *glue.ListDataQualityEvaluationConfigsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.ListDataQualityEvaluationConfigsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.ListDataQualityEvaluationConfigsInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -10681,6 +10829,43 @@ func (_m *IClient) UpdateCrawlerSchedule(ctx context.Context, params *glue.Updat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateCrawlerScheduleInput, ...func(*glue.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateDataQualityEvaluationConfig provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDataQualityEvaluationConfig(ctx context.Context, params *glue.UpdateDataQualityEvaluationConfigInput, optFns ...func(*glue.Options)) (*glue.UpdateDataQualityEvaluationConfigOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDataQualityEvaluationConfig")
+	}
+
+	var r0 *glue.UpdateDataQualityEvaluationConfigOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateDataQualityEvaluationConfigInput, ...func(*glue.Options)) (*glue.UpdateDataQualityEvaluationConfigOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *glue.UpdateDataQualityEvaluationConfigInput, ...func(*glue.Options)) *glue.UpdateDataQualityEvaluationConfigOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*glue.UpdateDataQualityEvaluationConfigOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *glue.UpdateDataQualityEvaluationConfigInput, ...func(*glue.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

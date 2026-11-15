@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for mwaaserverless
 type IClient interface {
  Options() Options 
+ CreateAirflowUiUrl(ctx context.Context, params *CreateAirflowUiUrlInput, optFns ...func(*Options)) (*CreateAirflowUiUrlOutput, error) 
  CreateWorkflow(ctx context.Context, params *CreateWorkflowInput, optFns ...func(*Options)) (*CreateWorkflowOutput, error) 
  DeleteWorkflow(ctx context.Context, params *DeleteWorkflowInput, optFns ...func(*Options)) (*DeleteWorkflowOutput, error) 
  GetTaskInstance(ctx context.Context, params *GetTaskInstanceInput, optFns ...func(*Options)) (*GetTaskInstanceOutput, error) 

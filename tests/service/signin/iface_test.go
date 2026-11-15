@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBearerToken", func(t *testing.T) {
+        input := &signin.CreateBearerTokenInput{}
+        output := &signin.CreateBearerTokenOutput{}
+
+        mockClient.On("CreateBearerToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBearerToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateOAuth2Token", func(t *testing.T) {
         input := &signin.CreateOAuth2TokenInput{}
         output := &signin.CreateOAuth2TokenOutput{}

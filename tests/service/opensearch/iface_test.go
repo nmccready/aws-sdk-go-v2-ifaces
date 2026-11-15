@@ -1243,6 +1243,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateClone", func(t *testing.T) {
+        input := &opensearch.UpdateCloneInput{}
+        output := &opensearch.UpdateCloneOutput{}
+
+        mockClient.On("UpdateClone", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateClone(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateDataSource", func(t *testing.T) {
         input := &opensearch.UpdateDataSourceInput{}
         output := &opensearch.UpdateDataSourceOutput{}

@@ -274,6 +274,43 @@ func (_m *IClient) DeleteInsightRules(ctx context.Context, params *cloudwatch.De
 	return r0, r1
 }
 
+// DeleteMetricDataQueryDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteMetricDataQueryDefinition(ctx context.Context, params *cloudwatch.DeleteMetricDataQueryDefinitionInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteMetricDataQueryDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteMetricDataQueryDefinition")
+	}
+
+	var r0 *cloudwatch.DeleteMetricDataQueryDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DeleteMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) (*cloudwatch.DeleteMetricDataQueryDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.DeleteMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) *cloudwatch.DeleteMetricDataQueryDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.DeleteMetricDataQueryDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.DeleteMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteMetricStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteMetricStream(ctx context.Context, params *cloudwatch.DeleteMetricStreamInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.DeleteMetricStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -940,6 +977,43 @@ func (_m *IClient) GetMetricData(ctx context.Context, params *cloudwatch.GetMetr
 	return r0, r1
 }
 
+// GetMetricDataQueryDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMetricDataQueryDefinition(ctx context.Context, params *cloudwatch.GetMetricDataQueryDefinitionInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetMetricDataQueryDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMetricDataQueryDefinition")
+	}
+
+	var r0 *cloudwatch.GetMetricDataQueryDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) (*cloudwatch.GetMetricDataQueryDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.GetMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) *cloudwatch.GetMetricDataQueryDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.GetMetricDataQueryDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.GetMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetMetricStatistics provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetMetricStatistics(ctx context.Context, params *cloudwatch.GetMetricStatisticsInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.GetMetricStatisticsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1228,6 +1302,43 @@ func (_m *IClient) ListManagedInsightRules(ctx context.Context, params *cloudwat
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.ListManagedInsightRulesInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListMetricDataQueryDefinitions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListMetricDataQueryDefinitions(ctx context.Context, params *cloudwatch.ListMetricDataQueryDefinitionsInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.ListMetricDataQueryDefinitionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListMetricDataQueryDefinitions")
+	}
+
+	var r0 *cloudwatch.ListMetricDataQueryDefinitionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.ListMetricDataQueryDefinitionsInput, ...func(*cloudwatch.Options)) (*cloudwatch.ListMetricDataQueryDefinitionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.ListMetricDataQueryDefinitionsInput, ...func(*cloudwatch.Options)) *cloudwatch.ListMetricDataQueryDefinitionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.ListMetricDataQueryDefinitionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.ListMetricDataQueryDefinitionsInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1690,6 +1801,43 @@ func (_m *IClient) PutMetricData(ctx context.Context, params *cloudwatch.PutMetr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.PutMetricDataInput, ...func(*cloudwatch.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutMetricDataQueryDefinition provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutMetricDataQueryDefinition(ctx context.Context, params *cloudwatch.PutMetricDataQueryDefinitionInput, optFns ...func(*cloudwatch.Options)) (*cloudwatch.PutMetricDataQueryDefinitionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutMetricDataQueryDefinition")
+	}
+
+	var r0 *cloudwatch.PutMetricDataQueryDefinitionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.PutMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) (*cloudwatch.PutMetricDataQueryDefinitionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatch.PutMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) *cloudwatch.PutMetricDataQueryDefinitionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatch.PutMetricDataQueryDefinitionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatch.PutMetricDataQueryDefinitionInput, ...func(*cloudwatch.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

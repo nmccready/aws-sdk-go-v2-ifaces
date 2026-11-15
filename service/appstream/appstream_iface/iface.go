@@ -96,6 +96,7 @@ type IClient interface {
  UpdateDirectoryConfig(ctx context.Context, params *UpdateDirectoryConfigInput, optFns ...func(*Options)) (*UpdateDirectoryConfigOutput, error) 
  UpdateEntitlement(ctx context.Context, params *UpdateEntitlementInput, optFns ...func(*Options)) (*UpdateEntitlementOutput, error) 
  UpdateFleet(ctx context.Context, params *UpdateFleetInput, optFns ...func(*Options)) (*UpdateFleetOutput, error) 
+ UpdateImageBuilder(ctx context.Context, params *UpdateImageBuilderInput, optFns ...func(*Options)) (*UpdateImageBuilderOutput, error) 
  UpdateImagePermissions(ctx context.Context, params *UpdateImagePermissionsInput, optFns ...func(*Options)) (*UpdateImagePermissionsOutput, error) 
  UpdateStack(ctx context.Context, params *UpdateStackInput, optFns ...func(*Options)) (*UpdateStackOutput, error) 
  UpdateThemeForStack(ctx context.Context, params *UpdateThemeForStackInput, optFns ...func(*Options)) (*UpdateThemeForStackOutput, error) 

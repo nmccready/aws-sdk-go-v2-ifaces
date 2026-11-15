@@ -52,6 +52,117 @@ func (_m *IClient) CreateNetworkConnector(ctx context.Context, params *lambdacor
 	return r0, r1
 }
 
+// CreateRuntime provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRuntime(ctx context.Context, params *lambdacore.CreateRuntimeInput, optFns ...func(*lambdacore.Options)) (*lambdacore.CreateRuntimeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRuntime")
+	}
+
+	var r0 *lambdacore.CreateRuntimeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.CreateRuntimeInput, ...func(*lambdacore.Options)) (*lambdacore.CreateRuntimeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.CreateRuntimeInput, ...func(*lambdacore.Options)) *lambdacore.CreateRuntimeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.CreateRuntimeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.CreateRuntimeInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRuntimeAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRuntimeAlias(ctx context.Context, params *lambdacore.CreateRuntimeAliasInput, optFns ...func(*lambdacore.Options)) (*lambdacore.CreateRuntimeAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRuntimeAlias")
+	}
+
+	var r0 *lambdacore.CreateRuntimeAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.CreateRuntimeAliasInput, ...func(*lambdacore.Options)) (*lambdacore.CreateRuntimeAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.CreateRuntimeAliasInput, ...func(*lambdacore.Options)) *lambdacore.CreateRuntimeAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.CreateRuntimeAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.CreateRuntimeAliasInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateRuntimeVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRuntimeVersion(ctx context.Context, params *lambdacore.CreateRuntimeVersionInput, optFns ...func(*lambdacore.Options)) (*lambdacore.CreateRuntimeVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRuntimeVersion")
+	}
+
+	var r0 *lambdacore.CreateRuntimeVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.CreateRuntimeVersionInput, ...func(*lambdacore.Options)) (*lambdacore.CreateRuntimeVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.CreateRuntimeVersionInput, ...func(*lambdacore.Options)) *lambdacore.CreateRuntimeVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.CreateRuntimeVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.CreateRuntimeVersionInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteNetworkConnector provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteNetworkConnector(ctx context.Context, params *lambdacore.DeleteNetworkConnectorInput, optFns ...func(*lambdacore.Options)) (*lambdacore.DeleteNetworkConnectorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -89,6 +200,117 @@ func (_m *IClient) DeleteNetworkConnector(ctx context.Context, params *lambdacor
 	return r0, r1
 }
 
+// DeleteRuntime provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRuntime(ctx context.Context, params *lambdacore.DeleteRuntimeInput, optFns ...func(*lambdacore.Options)) (*lambdacore.DeleteRuntimeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRuntime")
+	}
+
+	var r0 *lambdacore.DeleteRuntimeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.DeleteRuntimeInput, ...func(*lambdacore.Options)) (*lambdacore.DeleteRuntimeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.DeleteRuntimeInput, ...func(*lambdacore.Options)) *lambdacore.DeleteRuntimeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.DeleteRuntimeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.DeleteRuntimeInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRuntimeAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRuntimeAlias(ctx context.Context, params *lambdacore.DeleteRuntimeAliasInput, optFns ...func(*lambdacore.Options)) (*lambdacore.DeleteRuntimeAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRuntimeAlias")
+	}
+
+	var r0 *lambdacore.DeleteRuntimeAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.DeleteRuntimeAliasInput, ...func(*lambdacore.Options)) (*lambdacore.DeleteRuntimeAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.DeleteRuntimeAliasInput, ...func(*lambdacore.Options)) *lambdacore.DeleteRuntimeAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.DeleteRuntimeAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.DeleteRuntimeAliasInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRuntimeVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRuntimeVersion(ctx context.Context, params *lambdacore.DeleteRuntimeVersionInput, optFns ...func(*lambdacore.Options)) (*lambdacore.DeleteRuntimeVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRuntimeVersion")
+	}
+
+	var r0 *lambdacore.DeleteRuntimeVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.DeleteRuntimeVersionInput, ...func(*lambdacore.Options)) (*lambdacore.DeleteRuntimeVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.DeleteRuntimeVersionInput, ...func(*lambdacore.Options)) *lambdacore.DeleteRuntimeVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.DeleteRuntimeVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.DeleteRuntimeVersionInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetNetworkConnector provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetNetworkConnector(ctx context.Context, params *lambdacore.GetNetworkConnectorInput, optFns ...func(*lambdacore.Options)) (*lambdacore.GetNetworkConnectorOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -118,6 +340,117 @@ func (_m *IClient) GetNetworkConnector(ctx context.Context, params *lambdacore.G
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.GetNetworkConnectorInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRuntime provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRuntime(ctx context.Context, params *lambdacore.GetRuntimeInput, optFns ...func(*lambdacore.Options)) (*lambdacore.GetRuntimeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRuntime")
+	}
+
+	var r0 *lambdacore.GetRuntimeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.GetRuntimeInput, ...func(*lambdacore.Options)) (*lambdacore.GetRuntimeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.GetRuntimeInput, ...func(*lambdacore.Options)) *lambdacore.GetRuntimeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.GetRuntimeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.GetRuntimeInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRuntimeAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRuntimeAlias(ctx context.Context, params *lambdacore.GetRuntimeAliasInput, optFns ...func(*lambdacore.Options)) (*lambdacore.GetRuntimeAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRuntimeAlias")
+	}
+
+	var r0 *lambdacore.GetRuntimeAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.GetRuntimeAliasInput, ...func(*lambdacore.Options)) (*lambdacore.GetRuntimeAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.GetRuntimeAliasInput, ...func(*lambdacore.Options)) *lambdacore.GetRuntimeAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.GetRuntimeAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.GetRuntimeAliasInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetRuntimeVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRuntimeVersion(ctx context.Context, params *lambdacore.GetRuntimeVersionInput, optFns ...func(*lambdacore.Options)) (*lambdacore.GetRuntimeVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRuntimeVersion")
+	}
+
+	var r0 *lambdacore.GetRuntimeVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.GetRuntimeVersionInput, ...func(*lambdacore.Options)) (*lambdacore.GetRuntimeVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.GetRuntimeVersionInput, ...func(*lambdacore.Options)) *lambdacore.GetRuntimeVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.GetRuntimeVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.GetRuntimeVersionInput, ...func(*lambdacore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -200,6 +533,117 @@ func (_m *IClient) ListNetworkConnectors(ctx context.Context, params *lambdacore
 	return r0, r1
 }
 
+// ListRuntimeAliases provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRuntimeAliases(ctx context.Context, params *lambdacore.ListRuntimeAliasesInput, optFns ...func(*lambdacore.Options)) (*lambdacore.ListRuntimeAliasesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRuntimeAliases")
+	}
+
+	var r0 *lambdacore.ListRuntimeAliasesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.ListRuntimeAliasesInput, ...func(*lambdacore.Options)) (*lambdacore.ListRuntimeAliasesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.ListRuntimeAliasesInput, ...func(*lambdacore.Options)) *lambdacore.ListRuntimeAliasesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.ListRuntimeAliasesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.ListRuntimeAliasesInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRuntimeVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRuntimeVersions(ctx context.Context, params *lambdacore.ListRuntimeVersionsInput, optFns ...func(*lambdacore.Options)) (*lambdacore.ListRuntimeVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRuntimeVersions")
+	}
+
+	var r0 *lambdacore.ListRuntimeVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.ListRuntimeVersionsInput, ...func(*lambdacore.Options)) (*lambdacore.ListRuntimeVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.ListRuntimeVersionsInput, ...func(*lambdacore.Options)) *lambdacore.ListRuntimeVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.ListRuntimeVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.ListRuntimeVersionsInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRuntimes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRuntimes(ctx context.Context, params *lambdacore.ListRuntimesInput, optFns ...func(*lambdacore.Options)) (*lambdacore.ListRuntimesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRuntimes")
+	}
+
+	var r0 *lambdacore.ListRuntimesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.ListRuntimesInput, ...func(*lambdacore.Options)) (*lambdacore.ListRuntimesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.ListRuntimesInput, ...func(*lambdacore.Options)) *lambdacore.ListRuntimesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.ListRuntimesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.ListRuntimesInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() lambdacore.Options {
 	ret := _m.Called()
@@ -216,6 +660,43 @@ func (_m *IClient) Options() lambdacore.Options {
 	}
 
 	return r0
+}
+
+// RestoreRuntime provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RestoreRuntime(ctx context.Context, params *lambdacore.RestoreRuntimeInput, optFns ...func(*lambdacore.Options)) (*lambdacore.RestoreRuntimeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RestoreRuntime")
+	}
+
+	var r0 *lambdacore.RestoreRuntimeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.RestoreRuntimeInput, ...func(*lambdacore.Options)) (*lambdacore.RestoreRuntimeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.RestoreRuntimeInput, ...func(*lambdacore.Options)) *lambdacore.RestoreRuntimeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.RestoreRuntimeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.RestoreRuntimeInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // UpdateNetworkConnector provides a mock function with given fields: ctx, params, optFns
@@ -247,6 +728,117 @@ func (_m *IClient) UpdateNetworkConnector(ctx context.Context, params *lambdacor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.UpdateNetworkConnectorInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRuntime provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRuntime(ctx context.Context, params *lambdacore.UpdateRuntimeInput, optFns ...func(*lambdacore.Options)) (*lambdacore.UpdateRuntimeOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRuntime")
+	}
+
+	var r0 *lambdacore.UpdateRuntimeOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.UpdateRuntimeInput, ...func(*lambdacore.Options)) (*lambdacore.UpdateRuntimeOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.UpdateRuntimeInput, ...func(*lambdacore.Options)) *lambdacore.UpdateRuntimeOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.UpdateRuntimeOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.UpdateRuntimeInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRuntimeAlias provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRuntimeAlias(ctx context.Context, params *lambdacore.UpdateRuntimeAliasInput, optFns ...func(*lambdacore.Options)) (*lambdacore.UpdateRuntimeAliasOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRuntimeAlias")
+	}
+
+	var r0 *lambdacore.UpdateRuntimeAliasOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.UpdateRuntimeAliasInput, ...func(*lambdacore.Options)) (*lambdacore.UpdateRuntimeAliasOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.UpdateRuntimeAliasInput, ...func(*lambdacore.Options)) *lambdacore.UpdateRuntimeAliasOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.UpdateRuntimeAliasOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.UpdateRuntimeAliasInput, ...func(*lambdacore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRuntimeVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRuntimeVersion(ctx context.Context, params *lambdacore.UpdateRuntimeVersionInput, optFns ...func(*lambdacore.Options)) (*lambdacore.UpdateRuntimeVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRuntimeVersion")
+	}
+
+	var r0 *lambdacore.UpdateRuntimeVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.UpdateRuntimeVersionInput, ...func(*lambdacore.Options)) (*lambdacore.UpdateRuntimeVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambdacore.UpdateRuntimeVersionInput, ...func(*lambdacore.Options)) *lambdacore.UpdateRuntimeVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambdacore.UpdateRuntimeVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambdacore.UpdateRuntimeVersionInput, ...func(*lambdacore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

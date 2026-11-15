@@ -755,6 +755,43 @@ func (_m *IClient) AdminListUserAuthEvents(ctx context.Context, params *cognitoi
 	return r0, r1
 }
 
+// AdminListUserSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AdminListUserSessions(ctx context.Context, params *cognitoidentityprovider.AdminListUserSessionsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminListUserSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AdminListUserSessions")
+	}
+
+	var r0 *cognitoidentityprovider.AdminListUserSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AdminListUserSessionsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminListUserSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AdminListUserSessionsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.AdminListUserSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.AdminListUserSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.AdminListUserSessionsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AdminRemoveUserFromGroup provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AdminRemoveUserFromGroup(ctx context.Context, params *cognitoidentityprovider.AdminRemoveUserFromGroupInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminRemoveUserFromGroupOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -858,6 +895,43 @@ func (_m *IClient) AdminRespondToAuthChallenge(ctx context.Context, params *cogn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.AdminRespondToAuthChallengeInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AdminRevokeUserSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AdminRevokeUserSession(ctx context.Context, params *cognitoidentityprovider.AdminRevokeUserSessionInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminRevokeUserSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AdminRevokeUserSession")
+	}
+
+	var r0 *cognitoidentityprovider.AdminRevokeUserSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AdminRevokeUserSessionInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.AdminRevokeUserSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.AdminRevokeUserSessionInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.AdminRevokeUserSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.AdminRevokeUserSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.AdminRevokeUserSessionInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3160,6 +3234,43 @@ func (_m *IClient) GetUserAuthFactors(ctx context.Context, params *cognitoidenti
 	return r0, r1
 }
 
+// GetUserPoolClientSessionConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUserPoolClientSessionConfiguration(ctx context.Context, params *cognitoidentityprovider.GetUserPoolClientSessionConfigurationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserPoolClientSessionConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUserPoolClientSessionConfiguration")
+	}
+
+	var r0 *cognitoidentityprovider.GetUserPoolClientSessionConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetUserPoolClientSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserPoolClientSessionConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetUserPoolClientSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.GetUserPoolClientSessionConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.GetUserPoolClientSessionConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetUserPoolClientSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetUserPoolMfaConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetUserPoolMfaConfig(ctx context.Context, params *cognitoidentityprovider.GetUserPoolMfaConfigInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3189,6 +3300,43 @@ func (_m *IClient) GetUserPoolMfaConfig(ctx context.Context, params *cognitoiden
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetUserPoolMfaConfigInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetUserPoolSessionConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUserPoolSessionConfiguration(ctx context.Context, params *cognitoidentityprovider.GetUserPoolSessionConfigurationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserPoolSessionConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUserPoolSessionConfiguration")
+	}
+
+	var r0 *cognitoidentityprovider.GetUserPoolSessionConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetUserPoolSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetUserPoolSessionConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetUserPoolSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.GetUserPoolSessionConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.GetUserPoolSessionConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetUserPoolSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3678,6 +3826,43 @@ func (_m *IClient) ListUserPools(ctx context.Context, params *cognitoidentitypro
 	return r0, r1
 }
 
+// ListUserSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUserSessions(ctx context.Context, params *cognitoidentityprovider.ListUserSessionsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUserSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUserSessions")
+	}
+
+	var r0 *cognitoidentityprovider.ListUserSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListUserSessionsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUserSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListUserSessionsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListUserSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListUserSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListUserSessionsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListUsers provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListUsers(ctx context.Context, params *cognitoidentityprovider.ListUsersInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListUsersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3918,6 +4103,43 @@ func (_m *IClient) RevokeToken(ctx context.Context, params *cognitoidentityprovi
 	return r0, r1
 }
 
+// RevokeUserSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RevokeUserSession(ctx context.Context, params *cognitoidentityprovider.RevokeUserSessionInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.RevokeUserSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RevokeUserSession")
+	}
+
+	var r0 *cognitoidentityprovider.RevokeUserSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.RevokeUserSessionInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.RevokeUserSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.RevokeUserSessionInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.RevokeUserSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.RevokeUserSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.RevokeUserSessionInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetLogDeliveryConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SetLogDeliveryConfiguration(ctx context.Context, params *cognitoidentityprovider.SetLogDeliveryConfigurationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.SetLogDeliveryConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4066,6 +4288,43 @@ func (_m *IClient) SetUserMFAPreference(ctx context.Context, params *cognitoiden
 	return r0, r1
 }
 
+// SetUserPoolClientSessionConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SetUserPoolClientSessionConfiguration(ctx context.Context, params *cognitoidentityprovider.SetUserPoolClientSessionConfigurationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.SetUserPoolClientSessionConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SetUserPoolClientSessionConfiguration")
+	}
+
+	var r0 *cognitoidentityprovider.SetUserPoolClientSessionConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.SetUserPoolClientSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.SetUserPoolClientSessionConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.SetUserPoolClientSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.SetUserPoolClientSessionConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.SetUserPoolClientSessionConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.SetUserPoolClientSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetUserPoolMfaConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) SetUserPoolMfaConfig(ctx context.Context, params *cognitoidentityprovider.SetUserPoolMfaConfigInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4095,6 +4354,43 @@ func (_m *IClient) SetUserPoolMfaConfig(ctx context.Context, params *cognitoiden
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.SetUserPoolMfaConfigInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SetUserPoolSessionConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SetUserPoolSessionConfiguration(ctx context.Context, params *cognitoidentityprovider.SetUserPoolSessionConfigurationInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.SetUserPoolSessionConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SetUserPoolSessionConfiguration")
+	}
+
+	var r0 *cognitoidentityprovider.SetUserPoolSessionConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.SetUserPoolSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.SetUserPoolSessionConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.SetUserPoolSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.SetUserPoolSessionConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.SetUserPoolSessionConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.SetUserPoolSessionConfigurationInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

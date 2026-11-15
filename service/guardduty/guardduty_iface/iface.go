@@ -80,6 +80,7 @@ type IClient interface {
  ListFilters(ctx context.Context, params *ListFiltersInput, optFns ...func(*Options)) (*ListFiltersOutput, error) 
  ListFindings(ctx context.Context, params *ListFindingsInput, optFns ...func(*Options)) (*ListFindingsOutput, error) 
  ListIPSets(ctx context.Context, params *ListIPSetsInput, optFns ...func(*Options)) (*ListIPSetsOutput, error) 
+ ListInvestigationRecords(ctx context.Context, params *ListInvestigationRecordsInput, optFns ...func(*Options)) (*ListInvestigationRecordsOutput, error) 
  ListInvestigations(ctx context.Context, params *ListInvestigationsInput, optFns ...func(*Options)) (*ListInvestigationsOutput, error) 
  ListInvitations(ctx context.Context, params *ListInvitationsInput, optFns ...func(*Options)) (*ListInvitationsOutput, error) 
  ListMalwareProtectionPlans(ctx context.Context, params *ListMalwareProtectionPlansInput, optFns ...func(*Options)) (*ListMalwareProtectionPlansOutput, error) 

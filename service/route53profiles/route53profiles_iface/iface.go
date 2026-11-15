@@ -25,5 +25,6 @@ type IClient interface {
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateProfileAssociation(ctx context.Context, params *UpdateProfileAssociationInput, optFns ...func(*Options)) (*UpdateProfileAssociationOutput, error) 
  UpdateProfileResourceAssociation(ctx context.Context, params *UpdateProfileResourceAssociationInput, optFns ...func(*Options)) (*UpdateProfileResourceAssociationOutput, error) 
 }

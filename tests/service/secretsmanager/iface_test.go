@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateCrossAccountReplica", func(t *testing.T) {
+        input := &secretsmanager.AssociateCrossAccountReplicaInput{}
+        output := &secretsmanager.AssociateCrossAccountReplicaOutput{}
+
+        mockClient.On("AssociateCrossAccountReplica", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateCrossAccountReplica(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchGetSecretValue", func(t *testing.T) {
         input := &secretsmanager.BatchGetSecretValueInput{}
         output := &secretsmanager.BatchGetSecretValueOutput{}
@@ -112,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateCrossAccountReplica", func(t *testing.T) {
+        input := &secretsmanager.DisassociateCrossAccountReplicaInput{}
+        output := &secretsmanager.DisassociateCrossAccountReplicaOutput{}
+
+        mockClient.On("DisassociateCrossAccountReplica", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateCrossAccountReplica(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRandomPassword", func(t *testing.T) {
         input := &secretsmanager.GetRandomPasswordInput{}
         output := &secretsmanager.GetRandomPasswordOutput{}
@@ -145,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSecretValue", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSecretValue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourcePolicies", func(t *testing.T) {
+        input := &secretsmanager.ListResourcePoliciesInput{}
+        output := &secretsmanager.ListResourcePoliciesOutput{}
+
+        mockClient.On("ListResourcePolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourcePolicies(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

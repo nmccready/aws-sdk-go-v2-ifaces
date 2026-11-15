@@ -348,6 +348,43 @@ func (_m *IClient) CreateApplicationSnapshot(ctx context.Context, params *kinesi
 	return r0, r1
 }
 
+// CreateSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSnapshot(ctx context.Context, params *kinesisanalyticsv2.CreateSnapshotInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.CreateSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSnapshot")
+	}
+
+	var r0 *kinesisanalyticsv2.CreateSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.CreateSnapshotInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.CreateSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.CreateSnapshotInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.CreateSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.CreateSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.CreateSnapshotInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteApplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteApplication(ctx context.Context, params *kinesisanalyticsv2.DeleteApplicationInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DeleteApplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -607,6 +644,43 @@ func (_m *IClient) DeleteApplicationVpcConfiguration(ctx context.Context, params
 	return r0, r1
 }
 
+// DeleteSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSnapshot(ctx context.Context, params *kinesisanalyticsv2.DeleteSnapshotInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DeleteSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSnapshot")
+	}
+
+	var r0 *kinesisanalyticsv2.DeleteSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.DeleteSnapshotInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DeleteSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.DeleteSnapshotInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.DeleteSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.DeleteSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.DeleteSnapshotInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeApplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeApplication(ctx context.Context, params *kinesisanalyticsv2.DescribeApplicationInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DescribeApplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -755,6 +829,80 @@ func (_m *IClient) DescribeApplicationVersion(ctx context.Context, params *kines
 	return r0, r1
 }
 
+// DescribeSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSnapshot(ctx context.Context, params *kinesisanalyticsv2.DescribeSnapshotInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DescribeSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSnapshot")
+	}
+
+	var r0 *kinesisanalyticsv2.DescribeSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.DescribeSnapshotInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DescribeSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.DescribeSnapshotInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.DescribeSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.DescribeSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.DescribeSnapshotInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeSnapshotOperation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeSnapshotOperation(ctx context.Context, params *kinesisanalyticsv2.DescribeSnapshotOperationInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DescribeSnapshotOperationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeSnapshotOperation")
+	}
+
+	var r0 *kinesisanalyticsv2.DescribeSnapshotOperationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.DescribeSnapshotOperationInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DescribeSnapshotOperationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.DescribeSnapshotOperationInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.DescribeSnapshotOperationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.DescribeSnapshotOperationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.DescribeSnapshotOperationInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DiscoverInputSchema provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DiscoverInputSchema(ctx context.Context, params *kinesisanalyticsv2.DiscoverInputSchemaInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.DiscoverInputSchemaOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -784,6 +932,80 @@ func (_m *IClient) DiscoverInputSchema(ctx context.Context, params *kinesisanaly
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.DiscoverInputSchemaInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ExportSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ExportSnapshot(ctx context.Context, params *kinesisanalyticsv2.ExportSnapshotInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ExportSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ExportSnapshot")
+	}
+
+	var r0 *kinesisanalyticsv2.ExportSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ExportSnapshotInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ExportSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ExportSnapshotInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.ExportSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.ExportSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.ExportSnapshotInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ImportSnapshot provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ImportSnapshot(ctx context.Context, params *kinesisanalyticsv2.ImportSnapshotInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ImportSnapshotOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ImportSnapshot")
+	}
+
+	var r0 *kinesisanalyticsv2.ImportSnapshotOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ImportSnapshotInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ImportSnapshotOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ImportSnapshotInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.ImportSnapshotOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.ImportSnapshotOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.ImportSnapshotInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -932,6 +1154,80 @@ func (_m *IClient) ListApplications(ctx context.Context, params *kinesisanalytic
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.ListApplicationsInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSnapshotOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSnapshotOperations(ctx context.Context, params *kinesisanalyticsv2.ListSnapshotOperationsInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ListSnapshotOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSnapshotOperations")
+	}
+
+	var r0 *kinesisanalyticsv2.ListSnapshotOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ListSnapshotOperationsInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ListSnapshotOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ListSnapshotOperationsInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.ListSnapshotOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.ListSnapshotOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.ListSnapshotOperationsInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSnapshots provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSnapshots(ctx context.Context, params *kinesisanalyticsv2.ListSnapshotsInput, optFns ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ListSnapshotsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSnapshots")
+	}
+
+	var r0 *kinesisanalyticsv2.ListSnapshotsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ListSnapshotsInput, ...func(*kinesisanalyticsv2.Options)) (*kinesisanalyticsv2.ListSnapshotsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesisanalyticsv2.ListSnapshotsInput, ...func(*kinesisanalyticsv2.Options)) *kinesisanalyticsv2.ListSnapshotsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesisanalyticsv2.ListSnapshotsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesisanalyticsv2.ListSnapshotsInput, ...func(*kinesisanalyticsv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

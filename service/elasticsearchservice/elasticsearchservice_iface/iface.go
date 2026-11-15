@@ -57,6 +57,7 @@ type IClient interface {
  RemoveTags(ctx context.Context, params *RemoveTagsInput, optFns ...func(*Options)) (*RemoveTagsOutput, error) 
  RevokeVpcEndpointAccess(ctx context.Context, params *RevokeVpcEndpointAccessInput, optFns ...func(*Options)) (*RevokeVpcEndpointAccessOutput, error) 
  StartElasticsearchServiceSoftwareUpdate(ctx context.Context, params *StartElasticsearchServiceSoftwareUpdateInput, optFns ...func(*Options)) (*StartElasticsearchServiceSoftwareUpdateOutput, error) 
+ UpdateClone(ctx context.Context, params *UpdateCloneInput, optFns ...func(*Options)) (*UpdateCloneOutput, error) 
  UpdateElasticsearchDomainConfig(ctx context.Context, params *UpdateElasticsearchDomainConfigInput, optFns ...func(*Options)) (*UpdateElasticsearchDomainConfigOutput, error) 
  UpdatePackage(ctx context.Context, params *UpdatePackageInput, optFns ...func(*Options)) (*UpdatePackageOutput, error) 
  UpdateVpcEndpoint(ctx context.Context, params *UpdateVpcEndpointInput, optFns ...func(*Options)) (*UpdateVpcEndpointOutput, error) 

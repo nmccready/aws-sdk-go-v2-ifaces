@@ -1051,6 +1051,43 @@ func (_m *IClient) AssociateNatGatewayAddress(ctx context.Context, params *ec2.A
 	return r0, r1
 }
 
+// AssociateNetworkingFlexCostAllocationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateNetworkingFlexCostAllocationPolicy(ctx context.Context, params *ec2.AssociateNetworkingFlexCostAllocationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.AssociateNetworkingFlexCostAllocationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateNetworkingFlexCostAllocationPolicy")
+	}
+
+	var r0 *ec2.AssociateNetworkingFlexCostAllocationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AssociateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) (*ec2.AssociateNetworkingFlexCostAllocationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AssociateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) *ec2.AssociateNetworkingFlexCostAllocationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.AssociateNetworkingFlexCostAllocationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.AssociateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateRouteServer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateRouteServer(ctx context.Context, params *ec2.AssociateRouteServerInput, optFns ...func(*ec2.Options)) (*ec2.AssociateRouteServerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4233,6 +4270,43 @@ func (_m *IClient) CreateManagedPrefixList(ctx context.Context, params *ec2.Crea
 	return r0, r1
 }
 
+// CreateMetricCategory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateMetricCategory(ctx context.Context, params *ec2.CreateMetricCategoryInput, optFns ...func(*ec2.Options)) (*ec2.CreateMetricCategoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateMetricCategory")
+	}
+
+	var r0 *ec2.CreateMetricCategoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateMetricCategoryInput, ...func(*ec2.Options)) (*ec2.CreateMetricCategoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateMetricCategoryInput, ...func(*ec2.Options)) *ec2.CreateMetricCategoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateMetricCategoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateMetricCategoryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateNatGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateNatGateway(ctx context.Context, params *ec2.CreateNatGatewayInput, optFns ...func(*ec2.Options)) (*ec2.CreateNatGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4484,6 +4558,43 @@ func (_m *IClient) CreateNetworkInterfacePermission(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateNetworkInterfacePermissionInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateNetworkingFlexCostAllocationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateNetworkingFlexCostAllocationPolicy(ctx context.Context, params *ec2.CreateNetworkingFlexCostAllocationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.CreateNetworkingFlexCostAllocationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateNetworkingFlexCostAllocationPolicy")
+	}
+
+	var r0 *ec2.CreateNetworkingFlexCostAllocationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) (*ec2.CreateNetworkingFlexCostAllocationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) *ec2.CreateNetworkingFlexCostAllocationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateNetworkingFlexCostAllocationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7896,6 +8007,43 @@ func (_m *IClient) DeleteManagedPrefixList(ctx context.Context, params *ec2.Dele
 	return r0, r1
 }
 
+// DeleteMetricCategory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteMetricCategory(ctx context.Context, params *ec2.DeleteMetricCategoryInput, optFns ...func(*ec2.Options)) (*ec2.DeleteMetricCategoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteMetricCategory")
+	}
+
+	var r0 *ec2.DeleteMetricCategoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteMetricCategoryInput, ...func(*ec2.Options)) (*ec2.DeleteMetricCategoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteMetricCategoryInput, ...func(*ec2.Options)) *ec2.DeleteMetricCategoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteMetricCategoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteMetricCategoryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteNatGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteNatGateway(ctx context.Context, params *ec2.DeleteNatGatewayInput, optFns ...func(*ec2.Options)) (*ec2.DeleteNatGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8221,6 +8369,43 @@ func (_m *IClient) DeleteNetworkInterfacePermission(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteNetworkInterfacePermissionInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteNetworkingFlexCostAllocationPolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteNetworkingFlexCostAllocationPolicies(ctx context.Context, params *ec2.DeleteNetworkingFlexCostAllocationPoliciesInput, optFns ...func(*ec2.Options)) (*ec2.DeleteNetworkingFlexCostAllocationPoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteNetworkingFlexCostAllocationPolicies")
+	}
+
+	var r0 *ec2.DeleteNetworkingFlexCostAllocationPoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteNetworkingFlexCostAllocationPoliciesInput, ...func(*ec2.Options)) (*ec2.DeleteNetworkingFlexCostAllocationPoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteNetworkingFlexCostAllocationPoliciesInput, ...func(*ec2.Options)) *ec2.DeleteNetworkingFlexCostAllocationPoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteNetworkingFlexCostAllocationPoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteNetworkingFlexCostAllocationPoliciesInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -14186,6 +14371,43 @@ func (_m *IClient) DescribeManagedPrefixLists(ctx context.Context, params *ec2.D
 	return r0, r1
 }
 
+// DescribeMetricCategories provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeMetricCategories(ctx context.Context, params *ec2.DescribeMetricCategoriesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeMetricCategoriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeMetricCategories")
+	}
+
+	var r0 *ec2.DescribeMetricCategoriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeMetricCategoriesInput, ...func(*ec2.Options)) (*ec2.DescribeMetricCategoriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeMetricCategoriesInput, ...func(*ec2.Options)) *ec2.DescribeMetricCategoriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeMetricCategoriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeMetricCategoriesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeMovingAddresses provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeMovingAddresses(ctx context.Context, params *ec2.DescribeMovingAddressesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeMovingAddressesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -14548,6 +14770,80 @@ func (_m *IClient) DescribeNetworkInterfaces(ctx context.Context, params *ec2.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeNetworkInterfacesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeNetworkingFlexCostAllocationPolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeNetworkingFlexCostAllocationPolicies(ctx context.Context, params *ec2.DescribeNetworkingFlexCostAllocationPoliciesInput, optFns ...func(*ec2.Options)) (*ec2.DescribeNetworkingFlexCostAllocationPoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeNetworkingFlexCostAllocationPolicies")
+	}
+
+	var r0 *ec2.DescribeNetworkingFlexCostAllocationPoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeNetworkingFlexCostAllocationPoliciesInput, ...func(*ec2.Options)) (*ec2.DescribeNetworkingFlexCostAllocationPoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeNetworkingFlexCostAllocationPoliciesInput, ...func(*ec2.Options)) *ec2.DescribeNetworkingFlexCostAllocationPoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeNetworkingFlexCostAllocationPoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeNetworkingFlexCostAllocationPoliciesInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeNetworkingFlexCostAllocationPolicyAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeNetworkingFlexCostAllocationPolicyAssociations(ctx context.Context, params *ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeNetworkingFlexCostAllocationPolicyAssociations")
+	}
+
+	var r0 *ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsInput, ...func(*ec2.Options)) (*ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsInput, ...func(*ec2.Options)) *ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeNetworkingFlexCostAllocationPolicyAssociationsInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -18996,6 +19292,43 @@ func (_m *IClient) DisassociateNatGatewayAddress(ctx context.Context, params *ec
 	return r0, r1
 }
 
+// DisassociateNetworkingFlexCostAllocationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateNetworkingFlexCostAllocationPolicy(ctx context.Context, params *ec2.DisassociateNetworkingFlexCostAllocationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.DisassociateNetworkingFlexCostAllocationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateNetworkingFlexCostAllocationPolicy")
+	}
+
+	var r0 *ec2.DisassociateNetworkingFlexCostAllocationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisassociateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) (*ec2.DisassociateNetworkingFlexCostAllocationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisassociateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) *ec2.DisassociateNetworkingFlexCostAllocationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DisassociateNetworkingFlexCostAllocationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DisassociateNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateRouteServer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateRouteServer(ctx context.Context, params *ec2.DisassociateRouteServerInput, optFns ...func(*ec2.Options)) (*ec2.DisassociateRouteServerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -22474,6 +22807,43 @@ func (_m *IClient) GetNetworkInsightsAccessScopeContent(ctx context.Context, par
 	return r0, r1
 }
 
+// GetNetworkingFlexCostAllocationPolicyVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetNetworkingFlexCostAllocationPolicyVersions(ctx context.Context, params *ec2.GetNetworkingFlexCostAllocationPolicyVersionsInput, optFns ...func(*ec2.Options)) (*ec2.GetNetworkingFlexCostAllocationPolicyVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetNetworkingFlexCostAllocationPolicyVersions")
+	}
+
+	var r0 *ec2.GetNetworkingFlexCostAllocationPolicyVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetNetworkingFlexCostAllocationPolicyVersionsInput, ...func(*ec2.Options)) (*ec2.GetNetworkingFlexCostAllocationPolicyVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.GetNetworkingFlexCostAllocationPolicyVersionsInput, ...func(*ec2.Options)) *ec2.GetNetworkingFlexCostAllocationPolicyVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.GetNetworkingFlexCostAllocationPolicyVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.GetNetworkingFlexCostAllocationPolicyVersionsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPasswordData provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPasswordData(ctx context.Context, params *ec2.GetPasswordDataInput, optFns ...func(*ec2.Options)) (*ec2.GetPasswordDataOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -25360,6 +25730,43 @@ func (_m *IClient) ModifyManagedResourceVisibility(ctx context.Context, params *
 	return r0, r1
 }
 
+// ModifyMetricCategory provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyMetricCategory(ctx context.Context, params *ec2.ModifyMetricCategoryInput, optFns ...func(*ec2.Options)) (*ec2.ModifyMetricCategoryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyMetricCategory")
+	}
+
+	var r0 *ec2.ModifyMetricCategoryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyMetricCategoryInput, ...func(*ec2.Options)) (*ec2.ModifyMetricCategoryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyMetricCategoryInput, ...func(*ec2.Options)) *ec2.ModifyMetricCategoryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyMetricCategoryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyMetricCategoryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ModifyNetworkInterfaceAttribute provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ModifyNetworkInterfaceAttribute(ctx context.Context, params *ec2.ModifyNetworkInterfaceAttributeInput, optFns ...func(*ec2.Options)) (*ec2.ModifyNetworkInterfaceAttributeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -25389,6 +25796,43 @@ func (_m *IClient) ModifyNetworkInterfaceAttribute(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyNetworkInterfaceAttributeInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyNetworkingFlexCostAllocationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyNetworkingFlexCostAllocationPolicy(ctx context.Context, params *ec2.ModifyNetworkingFlexCostAllocationPolicyInput, optFns ...func(*ec2.Options)) (*ec2.ModifyNetworkingFlexCostAllocationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyNetworkingFlexCostAllocationPolicy")
+	}
+
+	var r0 *ec2.ModifyNetworkingFlexCostAllocationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) (*ec2.ModifyNetworkingFlexCostAllocationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) *ec2.ModifyNetworkingFlexCostAllocationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyNetworkingFlexCostAllocationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyNetworkingFlexCostAllocationPolicyInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

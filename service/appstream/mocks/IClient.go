@@ -3215,6 +3215,43 @@ func (_m *IClient) UpdateFleet(ctx context.Context, params *appstream.UpdateFlee
 	return r0, r1
 }
 
+// UpdateImageBuilder provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateImageBuilder(ctx context.Context, params *appstream.UpdateImageBuilderInput, optFns ...func(*appstream.Options)) (*appstream.UpdateImageBuilderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateImageBuilder")
+	}
+
+	var r0 *appstream.UpdateImageBuilderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.UpdateImageBuilderInput, ...func(*appstream.Options)) (*appstream.UpdateImageBuilderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *appstream.UpdateImageBuilderInput, ...func(*appstream.Options)) *appstream.UpdateImageBuilderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*appstream.UpdateImageBuilderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *appstream.UpdateImageBuilderInput, ...func(*appstream.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateImagePermissions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateImagePermissions(ctx context.Context, params *appstream.UpdateImagePermissionsInput, optFns ...func(*appstream.Options)) (*appstream.UpdateImagePermissionsOutput, error) {
 	_va := make([]interface{}, len(optFns))

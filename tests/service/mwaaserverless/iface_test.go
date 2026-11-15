@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAirflowUiUrl", func(t *testing.T) {
+        input := &mwaaserverless.CreateAirflowUiUrlInput{}
+        output := &mwaaserverless.CreateAirflowUiUrlOutput{}
+
+        mockClient.On("CreateAirflowUiUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAirflowUiUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateWorkflow", func(t *testing.T) {
         input := &mwaaserverless.CreateWorkflowInput{}
         output := &mwaaserverless.CreateWorkflowOutput{}

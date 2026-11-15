@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCheckSubdomainAvailability", func(t *testing.T) {
+        input := &lightsail.CheckSubdomainAvailabilityInput{}
+        output := &lightsail.CheckSubdomainAvailabilityOutput{}
+
+        mockClient.On("CheckSubdomainAvailability", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CheckSubdomainAvailability(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCloseInstancePublicPorts", func(t *testing.T) {
         input := &lightsail.CloseInstancePublicPortsInput{}
         output := &lightsail.CloseInstancePublicPortsOutput{}
@@ -450,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSubdomain", func(t *testing.T) {
+        input := &lightsail.CreateSubdomainInput{}
+        output := &lightsail.CreateSubdomainOutput{}
+
+        mockClient.On("CreateSubdomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSubdomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAlarm", func(t *testing.T) {
         input := &lightsail.DeleteAlarmInput{}
         output := &lightsail.DeleteAlarmOutput{}
@@ -717,6 +743,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteRelationalDatabaseSnapshot", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteRelationalDatabaseSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteSubdomain", func(t *testing.T) {
+        input := &lightsail.DeleteSubdomainInput{}
+        output := &lightsail.DeleteSubdomainOutput{}
+
+        mockClient.On("DeleteSubdomain", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSubdomain(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1685,6 +1724,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSubdomains", func(t *testing.T) {
+        input := &lightsail.GetSubdomainsInput{}
+        output := &lightsail.GetSubdomainsOutput{}
+
+        mockClient.On("GetSubdomains", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSubdomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestImportKeyPair", func(t *testing.T) {
         input := &lightsail.ImportKeyPairInput{}
         output := &lightsail.ImportKeyPairOutput{}
@@ -2134,6 +2186,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRelationalDatabaseParameters", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRelationalDatabaseParameters(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateSubdomainAssociation", func(t *testing.T) {
+        input := &lightsail.UpdateSubdomainAssociationInput{}
+        output := &lightsail.UpdateSubdomainAssociationOutput{}
+
+        mockClient.On("UpdateSubdomainAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateSubdomainAssociation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

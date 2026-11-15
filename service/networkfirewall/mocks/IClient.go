@@ -162,43 +162,6 @@ func (_m *IClient) AssociateSubnets(ctx context.Context, params *networkfirewall
 	return r0, r1
 }
 
-// AttachRuleGroupsToProxyConfiguration provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) AttachRuleGroupsToProxyConfiguration(ctx context.Context, params *networkfirewall.AttachRuleGroupsToProxyConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.AttachRuleGroupsToProxyConfigurationOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for AttachRuleGroupsToProxyConfiguration")
-	}
-
-	var r0 *networkfirewall.AttachRuleGroupsToProxyConfigurationOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.AttachRuleGroupsToProxyConfigurationInput, ...func(*networkfirewall.Options)) (*networkfirewall.AttachRuleGroupsToProxyConfigurationOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.AttachRuleGroupsToProxyConfigurationInput, ...func(*networkfirewall.Options)) *networkfirewall.AttachRuleGroupsToProxyConfigurationOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.AttachRuleGroupsToProxyConfigurationOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.AttachRuleGroupsToProxyConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
 // CreateContainerAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateContainerAssociation(ctx context.Context, params *networkfirewall.CreateContainerAssociationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateContainerAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -310,8 +273,8 @@ func (_m *IClient) CreateFirewallPolicy(ctx context.Context, params *networkfire
 	return r0, r1
 }
 
-// CreateProxy provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) CreateProxy(ctx context.Context, params *networkfirewall.CreateProxyInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyOutput, error) {
+// CreateFirewallPolicyV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateFirewallPolicyV2(ctx context.Context, params *networkfirewall.CreateFirewallPolicyV2Input, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateFirewallPolicyV2Output, error) {
 	_va := make([]interface{}, len(optFns))
 	for _i := range optFns {
 		_va[_i] = optFns[_i]
@@ -322,134 +285,23 @@ func (_m *IClient) CreateProxy(ctx context.Context, params *networkfirewall.Crea
 	ret := _m.Called(_ca...)
 
 	if len(ret) == 0 {
-		panic("no return value specified for CreateProxy")
+		panic("no return value specified for CreateFirewallPolicyV2")
 	}
 
-	var r0 *networkfirewall.CreateProxyOutput
+	var r0 *networkfirewall.CreateFirewallPolicyV2Output
 	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyInput, ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyOutput, error)); ok {
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateFirewallPolicyV2Input, ...func(*networkfirewall.Options)) (*networkfirewall.CreateFirewallPolicyV2Output, error)); ok {
 		return rf(ctx, params, optFns...)
 	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyInput, ...func(*networkfirewall.Options)) *networkfirewall.CreateProxyOutput); ok {
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateFirewallPolicyV2Input, ...func(*networkfirewall.Options)) *networkfirewall.CreateFirewallPolicyV2Output); ok {
 		r0 = rf(ctx, params, optFns...)
 	} else {
 		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.CreateProxyOutput)
+			r0 = ret.Get(0).(*networkfirewall.CreateFirewallPolicyV2Output)
 		}
 	}
 
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateProxyInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// CreateProxyConfiguration provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) CreateProxyConfiguration(ctx context.Context, params *networkfirewall.CreateProxyConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyConfigurationOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for CreateProxyConfiguration")
-	}
-
-	var r0 *networkfirewall.CreateProxyConfigurationOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyConfigurationInput, ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyConfigurationOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyConfigurationInput, ...func(*networkfirewall.Options)) *networkfirewall.CreateProxyConfigurationOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.CreateProxyConfigurationOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateProxyConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// CreateProxyRuleGroup provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) CreateProxyRuleGroup(ctx context.Context, params *networkfirewall.CreateProxyRuleGroupInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyRuleGroupOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for CreateProxyRuleGroup")
-	}
-
-	var r0 *networkfirewall.CreateProxyRuleGroupOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyRuleGroupInput, ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyRuleGroupOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyRuleGroupInput, ...func(*networkfirewall.Options)) *networkfirewall.CreateProxyRuleGroupOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.CreateProxyRuleGroupOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateProxyRuleGroupInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// CreateProxyRules provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) CreateProxyRules(ctx context.Context, params *networkfirewall.CreateProxyRulesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyRulesOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for CreateProxyRules")
-	}
-
-	var r0 *networkfirewall.CreateProxyRulesOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyRulesInput, ...func(*networkfirewall.Options)) (*networkfirewall.CreateProxyRulesOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.CreateProxyRulesInput, ...func(*networkfirewall.Options)) *networkfirewall.CreateProxyRulesOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.CreateProxyRulesOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateProxyRulesInput, ...func(*networkfirewall.Options)) error); ok {
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.CreateFirewallPolicyV2Input, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -680,6 +532,43 @@ func (_m *IClient) DeleteFirewallPolicy(ctx context.Context, params *networkfire
 	return r0, r1
 }
 
+// DeleteFirewallPolicyV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFirewallPolicyV2(ctx context.Context, params *networkfirewall.DeleteFirewallPolicyV2Input, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteFirewallPolicyV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFirewallPolicyV2")
+	}
+
+	var r0 *networkfirewall.DeleteFirewallPolicyV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteFirewallPolicyV2Input, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteFirewallPolicyV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteFirewallPolicyV2Input, ...func(*networkfirewall.Options)) *networkfirewall.DeleteFirewallPolicyV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DeleteFirewallPolicyV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteFirewallPolicyV2Input, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteNetworkFirewallTransitGatewayAttachment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteNetworkFirewallTransitGatewayAttachment(ctx context.Context, params *networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteNetworkFirewallTransitGatewayAttachmentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -746,117 +635,6 @@ func (_m *IClient) DeleteProxy(ctx context.Context, params *networkfirewall.Dele
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteProxyInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// DeleteProxyConfiguration provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DeleteProxyConfiguration(ctx context.Context, params *networkfirewall.DeleteProxyConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteProxyConfigurationOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DeleteProxyConfiguration")
-	}
-
-	var r0 *networkfirewall.DeleteProxyConfigurationOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteProxyConfigurationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteProxyConfigurationOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteProxyConfigurationInput, ...func(*networkfirewall.Options)) *networkfirewall.DeleteProxyConfigurationOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DeleteProxyConfigurationOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteProxyConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// DeleteProxyRuleGroup provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DeleteProxyRuleGroup(ctx context.Context, params *networkfirewall.DeleteProxyRuleGroupInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteProxyRuleGroupOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DeleteProxyRuleGroup")
-	}
-
-	var r0 *networkfirewall.DeleteProxyRuleGroupOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteProxyRuleGroupInput, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteProxyRuleGroupOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteProxyRuleGroupInput, ...func(*networkfirewall.Options)) *networkfirewall.DeleteProxyRuleGroupOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DeleteProxyRuleGroupOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteProxyRuleGroupInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// DeleteProxyRules provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DeleteProxyRules(ctx context.Context, params *networkfirewall.DeleteProxyRulesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DeleteProxyRulesOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DeleteProxyRules")
-	}
-
-	var r0 *networkfirewall.DeleteProxyRulesOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteProxyRulesInput, ...func(*networkfirewall.Options)) (*networkfirewall.DeleteProxyRulesOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DeleteProxyRulesInput, ...func(*networkfirewall.Options)) *networkfirewall.DeleteProxyRulesOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DeleteProxyRulesOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DeleteProxyRulesInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1161,6 +939,43 @@ func (_m *IClient) DescribeFirewallPolicy(ctx context.Context, params *networkfi
 	return r0, r1
 }
 
+// DescribeFirewallPolicyV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeFirewallPolicyV2(ctx context.Context, params *networkfirewall.DescribeFirewallPolicyV2Input, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallPolicyV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeFirewallPolicyV2")
+	}
+
+	var r0 *networkfirewall.DescribeFirewallPolicyV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeFirewallPolicyV2Input, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFirewallPolicyV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeFirewallPolicyV2Input, ...func(*networkfirewall.Options)) *networkfirewall.DescribeFirewallPolicyV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.DescribeFirewallPolicyV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeFirewallPolicyV2Input, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeFlowOperation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeFlowOperation(ctx context.Context, params *networkfirewall.DescribeFlowOperationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeFlowOperationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1264,117 +1079,6 @@ func (_m *IClient) DescribeProxy(ctx context.Context, params *networkfirewall.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeProxyInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// DescribeProxyConfiguration provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DescribeProxyConfiguration(ctx context.Context, params *networkfirewall.DescribeProxyConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeProxyConfigurationOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DescribeProxyConfiguration")
-	}
-
-	var r0 *networkfirewall.DescribeProxyConfigurationOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeProxyConfigurationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeProxyConfigurationOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeProxyConfigurationInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeProxyConfigurationOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DescribeProxyConfigurationOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeProxyConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// DescribeProxyRule provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DescribeProxyRule(ctx context.Context, params *networkfirewall.DescribeProxyRuleInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeProxyRuleOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DescribeProxyRule")
-	}
-
-	var r0 *networkfirewall.DescribeProxyRuleOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeProxyRuleInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeProxyRuleOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeProxyRuleInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeProxyRuleOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DescribeProxyRuleOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeProxyRuleInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// DescribeProxyRuleGroup provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DescribeProxyRuleGroup(ctx context.Context, params *networkfirewall.DescribeProxyRuleGroupInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DescribeProxyRuleGroupOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DescribeProxyRuleGroup")
-	}
-
-	var r0 *networkfirewall.DescribeProxyRuleGroupOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeProxyRuleGroupInput, ...func(*networkfirewall.Options)) (*networkfirewall.DescribeProxyRuleGroupOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DescribeProxyRuleGroupInput, ...func(*networkfirewall.Options)) *networkfirewall.DescribeProxyRuleGroupOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DescribeProxyRuleGroupOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DescribeProxyRuleGroupInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1605,43 +1309,6 @@ func (_m *IClient) DescribeVpcEndpointAssociation(ctx context.Context, params *n
 	return r0, r1
 }
 
-// DetachRuleGroupsFromProxyConfiguration provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) DetachRuleGroupsFromProxyConfiguration(ctx context.Context, params *networkfirewall.DetachRuleGroupsFromProxyConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DetachRuleGroupsFromProxyConfigurationOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for DetachRuleGroupsFromProxyConfiguration")
-	}
-
-	var r0 *networkfirewall.DetachRuleGroupsFromProxyConfigurationOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DetachRuleGroupsFromProxyConfigurationInput, ...func(*networkfirewall.Options)) (*networkfirewall.DetachRuleGroupsFromProxyConfigurationOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.DetachRuleGroupsFromProxyConfigurationInput, ...func(*networkfirewall.Options)) *networkfirewall.DetachRuleGroupsFromProxyConfigurationOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.DetachRuleGroupsFromProxyConfigurationOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.DetachRuleGroupsFromProxyConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
 // DisassociateAvailabilityZones provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateAvailabilityZones(ctx context.Context, params *networkfirewall.DisassociateAvailabilityZonesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.DisassociateAvailabilityZonesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1864,6 +1531,43 @@ func (_m *IClient) ListFirewallPolicies(ctx context.Context, params *networkfire
 	return r0, r1
 }
 
+// ListFirewallPoliciesV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFirewallPoliciesV2(ctx context.Context, params *networkfirewall.ListFirewallPoliciesV2Input, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallPoliciesV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFirewallPoliciesV2")
+	}
+
+	var r0 *networkfirewall.ListFirewallPoliciesV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListFirewallPoliciesV2Input, ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallPoliciesV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListFirewallPoliciesV2Input, ...func(*networkfirewall.Options)) *networkfirewall.ListFirewallPoliciesV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.ListFirewallPoliciesV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListFirewallPoliciesV2Input, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFirewalls provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFirewalls(ctx context.Context, params *networkfirewall.ListFirewallsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1967,117 +1671,6 @@ func (_m *IClient) ListFlowOperations(ctx context.Context, params *networkfirewa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListFlowOperationsInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// ListProxies provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) ListProxies(ctx context.Context, params *networkfirewall.ListProxiesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListProxiesOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for ListProxies")
-	}
-
-	var r0 *networkfirewall.ListProxiesOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListProxiesInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListProxiesOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListProxiesInput, ...func(*networkfirewall.Options)) *networkfirewall.ListProxiesOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.ListProxiesOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListProxiesInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// ListProxyConfigurations provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) ListProxyConfigurations(ctx context.Context, params *networkfirewall.ListProxyConfigurationsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListProxyConfigurationsOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for ListProxyConfigurations")
-	}
-
-	var r0 *networkfirewall.ListProxyConfigurationsOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListProxyConfigurationsInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListProxyConfigurationsOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListProxyConfigurationsInput, ...func(*networkfirewall.Options)) *networkfirewall.ListProxyConfigurationsOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.ListProxyConfigurationsOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListProxyConfigurationsInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// ListProxyRuleGroups provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) ListProxyRuleGroups(ctx context.Context, params *networkfirewall.ListProxyRuleGroupsInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListProxyRuleGroupsOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for ListProxyRuleGroups")
-	}
-
-	var r0 *networkfirewall.ListProxyRuleGroupsOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListProxyRuleGroupsInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListProxyRuleGroupsOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListProxyRuleGroupsInput, ...func(*networkfirewall.Options)) *networkfirewall.ListProxyRuleGroupsOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.ListProxyRuleGroupsOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListProxyRuleGroupsInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2807,6 +2400,43 @@ func (_m *IClient) UpdateFirewallPolicyChangeProtection(ctx context.Context, par
 	return r0, r1
 }
 
+// UpdateFirewallPolicyV2 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateFirewallPolicyV2(ctx context.Context, params *networkfirewall.UpdateFirewallPolicyV2Input, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateFirewallPolicyV2Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateFirewallPolicyV2")
+	}
+
+	var r0 *networkfirewall.UpdateFirewallPolicyV2Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateFirewallPolicyV2Input, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateFirewallPolicyV2Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateFirewallPolicyV2Input, ...func(*networkfirewall.Options)) *networkfirewall.UpdateFirewallPolicyV2Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.UpdateFirewallPolicyV2Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateFirewallPolicyV2Input, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateLoggingConfiguration provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateLoggingConfiguration(ctx context.Context, params *networkfirewall.UpdateLoggingConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateLoggingConfigurationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2836,191 +2466,6 @@ func (_m *IClient) UpdateLoggingConfiguration(ctx context.Context, params *netwo
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateLoggingConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// UpdateProxy provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) UpdateProxy(ctx context.Context, params *networkfirewall.UpdateProxyInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UpdateProxy")
-	}
-
-	var r0 *networkfirewall.UpdateProxyOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateProxyOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.UpdateProxyOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateProxyInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// UpdateProxyConfiguration provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) UpdateProxyConfiguration(ctx context.Context, params *networkfirewall.UpdateProxyConfigurationInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyConfigurationOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UpdateProxyConfiguration")
-	}
-
-	var r0 *networkfirewall.UpdateProxyConfigurationOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyConfigurationInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyConfigurationOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyConfigurationInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateProxyConfigurationOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.UpdateProxyConfigurationOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateProxyConfigurationInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// UpdateProxyRule provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) UpdateProxyRule(ctx context.Context, params *networkfirewall.UpdateProxyRuleInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyRuleOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UpdateProxyRule")
-	}
-
-	var r0 *networkfirewall.UpdateProxyRuleOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyRuleInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyRuleOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyRuleInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateProxyRuleOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.UpdateProxyRuleOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateProxyRuleInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// UpdateProxyRuleGroupPriorities provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) UpdateProxyRuleGroupPriorities(ctx context.Context, params *networkfirewall.UpdateProxyRuleGroupPrioritiesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyRuleGroupPrioritiesOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UpdateProxyRuleGroupPriorities")
-	}
-
-	var r0 *networkfirewall.UpdateProxyRuleGroupPrioritiesOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyRuleGroupPrioritiesInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyRuleGroupPrioritiesOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyRuleGroupPrioritiesInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateProxyRuleGroupPrioritiesOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.UpdateProxyRuleGroupPrioritiesOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateProxyRuleGroupPrioritiesInput, ...func(*networkfirewall.Options)) error); ok {
-		r1 = rf(ctx, params, optFns...)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
-}
-
-// UpdateProxyRulePriorities provides a mock function with given fields: ctx, params, optFns
-func (_m *IClient) UpdateProxyRulePriorities(ctx context.Context, params *networkfirewall.UpdateProxyRulePrioritiesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyRulePrioritiesOutput, error) {
-	_va := make([]interface{}, len(optFns))
-	for _i := range optFns {
-		_va[_i] = optFns[_i]
-	}
-	var _ca []interface{}
-	_ca = append(_ca, ctx, params)
-	_ca = append(_ca, _va...)
-	ret := _m.Called(_ca...)
-
-	if len(ret) == 0 {
-		panic("no return value specified for UpdateProxyRulePriorities")
-	}
-
-	var r0 *networkfirewall.UpdateProxyRulePrioritiesOutput
-	var r1 error
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyRulePrioritiesInput, ...func(*networkfirewall.Options)) (*networkfirewall.UpdateProxyRulePrioritiesOutput, error)); ok {
-		return rf(ctx, params, optFns...)
-	}
-	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.UpdateProxyRulePrioritiesInput, ...func(*networkfirewall.Options)) *networkfirewall.UpdateProxyRulePrioritiesOutput); ok {
-		r0 = rf(ctx, params, optFns...)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*networkfirewall.UpdateProxyRulePrioritiesOutput)
-		}
-	}
-
-	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.UpdateProxyRulePrioritiesInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

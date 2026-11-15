@@ -791,6 +791,43 @@ func (_m *IClient) CreateCluster(ctx context.Context, params *sagemaker.CreateCl
 	return r0, r1
 }
 
+// CreateClusterExtension provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateClusterExtension(ctx context.Context, params *sagemaker.CreateClusterExtensionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateClusterExtensionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateClusterExtension")
+	}
+
+	var r0 *sagemaker.CreateClusterExtensionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateClusterExtensionInput, ...func(*sagemaker.Options)) (*sagemaker.CreateClusterExtensionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateClusterExtensionInput, ...func(*sagemaker.Options)) *sagemaker.CreateClusterExtensionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateClusterExtensionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateClusterExtensionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateClusterSchedulerConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateClusterSchedulerConfig(ctx context.Context, params *sagemaker.CreateClusterSchedulerConfigInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateClusterSchedulerConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3455,6 +3492,43 @@ func (_m *IClient) DeleteCluster(ctx context.Context, params *sagemaker.DeleteCl
 	return r0, r1
 }
 
+// DeleteClusterExtension provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteClusterExtension(ctx context.Context, params *sagemaker.DeleteClusterExtensionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteClusterExtensionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteClusterExtension")
+	}
+
+	var r0 *sagemaker.DeleteClusterExtensionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteClusterExtensionInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteClusterExtensionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteClusterExtensionInput, ...func(*sagemaker.Options)) *sagemaker.DeleteClusterExtensionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteClusterExtensionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteClusterExtensionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteClusterSchedulerConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteClusterSchedulerConfig(ctx context.Context, params *sagemaker.DeleteClusterSchedulerConfigInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteClusterSchedulerConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5897,6 +5971,43 @@ func (_m *IClient) DescribeClusterEvent(ctx context.Context, params *sagemaker.D
 	return r0, r1
 }
 
+// DescribeClusterExtension provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeClusterExtension(ctx context.Context, params *sagemaker.DescribeClusterExtensionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterExtensionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeClusterExtension")
+	}
+
+	var r0 *sagemaker.DescribeClusterExtensionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeClusterExtensionInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterExtensionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeClusterExtensionInput, ...func(*sagemaker.Options)) *sagemaker.DescribeClusterExtensionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeClusterExtensionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeClusterExtensionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeClusterNode provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeClusterNode(ctx context.Context, params *sagemaker.DescribeClusterNodeInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterNodeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5926,6 +6037,43 @@ func (_m *IClient) DescribeClusterNode(ctx context.Context, params *sagemaker.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeClusterNodeInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeClusterOperation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeClusterOperation(ctx context.Context, params *sagemaker.DescribeClusterOperationInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterOperationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeClusterOperation")
+	}
+
+	var r0 *sagemaker.DescribeClusterOperationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeClusterOperationInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterOperationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeClusterOperationInput, ...func(*sagemaker.Options)) *sagemaker.DescribeClusterOperationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeClusterOperationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeClusterOperationInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9227,6 +9375,80 @@ func (_m *IClient) ListClusterEvents(ctx context.Context, params *sagemaker.List
 	return r0, r1
 }
 
+// ListClusterExtensionVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClusterExtensionVersions(ctx context.Context, params *sagemaker.ListClusterExtensionVersionsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListClusterExtensionVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClusterExtensionVersions")
+	}
+
+	var r0 *sagemaker.ListClusterExtensionVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterExtensionVersionsInput, ...func(*sagemaker.Options)) (*sagemaker.ListClusterExtensionVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterExtensionVersionsInput, ...func(*sagemaker.Options)) *sagemaker.ListClusterExtensionVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListClusterExtensionVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListClusterExtensionVersionsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListClusterExtensions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClusterExtensions(ctx context.Context, params *sagemaker.ListClusterExtensionsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListClusterExtensionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClusterExtensions")
+	}
+
+	var r0 *sagemaker.ListClusterExtensionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterExtensionsInput, ...func(*sagemaker.Options)) (*sagemaker.ListClusterExtensionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterExtensionsInput, ...func(*sagemaker.Options)) *sagemaker.ListClusterExtensionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListClusterExtensionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListClusterExtensionsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListClusterNodes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListClusterNodes(ctx context.Context, params *sagemaker.ListClusterNodesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListClusterNodesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9256,6 +9478,43 @@ func (_m *IClient) ListClusterNodes(ctx context.Context, params *sagemaker.ListC
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListClusterNodesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListClusterOperations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClusterOperations(ctx context.Context, params *sagemaker.ListClusterOperationsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListClusterOperationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClusterOperations")
+	}
+
+	var r0 *sagemaker.ListClusterOperationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterOperationsInput, ...func(*sagemaker.Options)) (*sagemaker.ListClusterOperationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListClusterOperationsInput, ...func(*sagemaker.Options)) *sagemaker.ListClusterOperationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListClusterOperationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListClusterOperationsInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -13640,6 +13899,43 @@ func (_m *IClient) UpdateCluster(ctx context.Context, params *sagemaker.UpdateCl
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateClusterInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateClusterExtension provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateClusterExtension(ctx context.Context, params *sagemaker.UpdateClusterExtensionInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateClusterExtensionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateClusterExtension")
+	}
+
+	var r0 *sagemaker.UpdateClusterExtensionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateClusterExtensionInput, ...func(*sagemaker.Options)) (*sagemaker.UpdateClusterExtensionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateClusterExtensionInput, ...func(*sagemaker.Options)) *sagemaker.UpdateClusterExtensionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdateClusterExtensionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateClusterExtensionInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

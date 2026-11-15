@@ -1772,6 +1772,43 @@ func (_m *IClient) StartElasticsearchServiceSoftwareUpdate(ctx context.Context, 
 	return r0, r1
 }
 
+// UpdateClone provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateClone(ctx context.Context, params *elasticsearchservice.UpdateCloneInput, optFns ...func(*elasticsearchservice.Options)) (*elasticsearchservice.UpdateCloneOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateClone")
+	}
+
+	var r0 *elasticsearchservice.UpdateCloneOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elasticsearchservice.UpdateCloneInput, ...func(*elasticsearchservice.Options)) (*elasticsearchservice.UpdateCloneOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elasticsearchservice.UpdateCloneInput, ...func(*elasticsearchservice.Options)) *elasticsearchservice.UpdateCloneOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elasticsearchservice.UpdateCloneOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elasticsearchservice.UpdateCloneInput, ...func(*elasticsearchservice.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateElasticsearchDomainConfig provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateElasticsearchDomainConfig(ctx context.Context, params *elasticsearchservice.UpdateElasticsearchDomainConfigInput, optFns ...func(*elasticsearchservice.Options)) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error) {
 	_va := make([]interface{}, len(optFns))

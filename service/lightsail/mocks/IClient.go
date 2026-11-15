@@ -237,6 +237,43 @@ func (_m *IClient) AttachStaticIp(ctx context.Context, params *lightsail.AttachS
 	return r0, r1
 }
 
+// CheckSubdomainAvailability provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CheckSubdomainAvailability(ctx context.Context, params *lightsail.CheckSubdomainAvailabilityInput, optFns ...func(*lightsail.Options)) (*lightsail.CheckSubdomainAvailabilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CheckSubdomainAvailability")
+	}
+
+	var r0 *lightsail.CheckSubdomainAvailabilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.CheckSubdomainAvailabilityInput, ...func(*lightsail.Options)) (*lightsail.CheckSubdomainAvailabilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.CheckSubdomainAvailabilityInput, ...func(*lightsail.Options)) *lightsail.CheckSubdomainAvailabilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lightsail.CheckSubdomainAvailabilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.CheckSubdomainAvailabilityInput, ...func(*lightsail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CloseInstancePublicPorts provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CloseInstancePublicPorts(ctx context.Context, params *lightsail.CloseInstancePublicPortsInput, optFns ...func(*lightsail.Options)) (*lightsail.CloseInstancePublicPortsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1199,6 +1236,43 @@ func (_m *IClient) CreateRelationalDatabaseSnapshot(ctx context.Context, params 
 	return r0, r1
 }
 
+// CreateSubdomain provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateSubdomain(ctx context.Context, params *lightsail.CreateSubdomainInput, optFns ...func(*lightsail.Options)) (*lightsail.CreateSubdomainOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateSubdomain")
+	}
+
+	var r0 *lightsail.CreateSubdomainOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.CreateSubdomainInput, ...func(*lightsail.Options)) (*lightsail.CreateSubdomainOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.CreateSubdomainInput, ...func(*lightsail.Options)) *lightsail.CreateSubdomainOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lightsail.CreateSubdomainOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.CreateSubdomainInput, ...func(*lightsail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAlarm provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAlarm(ctx context.Context, params *lightsail.DeleteAlarmInput, optFns ...func(*lightsail.Options)) (*lightsail.DeleteAlarmOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1968,6 +2042,43 @@ func (_m *IClient) DeleteRelationalDatabaseSnapshot(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.DeleteRelationalDatabaseSnapshotInput, ...func(*lightsail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteSubdomain provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteSubdomain(ctx context.Context, params *lightsail.DeleteSubdomainInput, optFns ...func(*lightsail.Options)) (*lightsail.DeleteSubdomainOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteSubdomain")
+	}
+
+	var r0 *lightsail.DeleteSubdomainOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.DeleteSubdomainInput, ...func(*lightsail.Options)) (*lightsail.DeleteSubdomainOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.DeleteSubdomainInput, ...func(*lightsail.Options)) *lightsail.DeleteSubdomainOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lightsail.DeleteSubdomainOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.DeleteSubdomainInput, ...func(*lightsail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4714,6 +4825,43 @@ func (_m *IClient) GetStaticIps(ctx context.Context, params *lightsail.GetStatic
 	return r0, r1
 }
 
+// GetSubdomains provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSubdomains(ctx context.Context, params *lightsail.GetSubdomainsInput, optFns ...func(*lightsail.Options)) (*lightsail.GetSubdomainsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSubdomains")
+	}
+
+	var r0 *lightsail.GetSubdomainsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.GetSubdomainsInput, ...func(*lightsail.Options)) (*lightsail.GetSubdomainsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.GetSubdomainsInput, ...func(*lightsail.Options)) *lightsail.GetSubdomainsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lightsail.GetSubdomainsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.GetSubdomainsInput, ...func(*lightsail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ImportKeyPair provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ImportKeyPair(ctx context.Context, params *lightsail.ImportKeyPairInput, optFns ...func(*lightsail.Options)) (*lightsail.ImportKeyPairOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6019,6 +6167,43 @@ func (_m *IClient) UpdateRelationalDatabaseParameters(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.UpdateRelationalDatabaseParametersInput, ...func(*lightsail.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateSubdomainAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateSubdomainAssociation(ctx context.Context, params *lightsail.UpdateSubdomainAssociationInput, optFns ...func(*lightsail.Options)) (*lightsail.UpdateSubdomainAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateSubdomainAssociation")
+	}
+
+	var r0 *lightsail.UpdateSubdomainAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.UpdateSubdomainAssociationInput, ...func(*lightsail.Options)) (*lightsail.UpdateSubdomainAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lightsail.UpdateSubdomainAssociationInput, ...func(*lightsail.Options)) *lightsail.UpdateSubdomainAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lightsail.UpdateSubdomainAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lightsail.UpdateSubdomainAssociationInput, ...func(*lightsail.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

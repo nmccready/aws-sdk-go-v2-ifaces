@@ -645,6 +645,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateClone", func(t *testing.T) {
+        input := &elasticsearchservice.UpdateCloneInput{}
+        output := &elasticsearchservice.UpdateCloneOutput{}
+
+        mockClient.On("UpdateClone", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateClone(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateElasticsearchDomainConfig", func(t *testing.T) {
         input := &elasticsearchservice.UpdateElasticsearchDomainConfigInput{}
         output := &elasticsearchservice.UpdateElasticsearchDomainConfigOutput{}

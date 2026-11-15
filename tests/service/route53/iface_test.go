@@ -164,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateResourceRecordSetProtections", func(t *testing.T) {
+        input := &route53.CreateResourceRecordSetProtectionsInput{}
+        output := &route53.CreateResourceRecordSetProtectionsOutput{}
+
+        mockClient.On("CreateResourceRecordSetProtections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateResourceRecordSetProtections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateReusableDelegationSet", func(t *testing.T) {
         input := &route53.CreateReusableDelegationSetInput{}
         output := &route53.CreateReusableDelegationSetOutput{}
@@ -301,6 +314,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteQueryLoggingConfig", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteQueryLoggingConfig(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteResourceRecordSetProtections", func(t *testing.T) {
+        input := &route53.DeleteResourceRecordSetProtectionsInput{}
+        output := &route53.DeleteResourceRecordSetProtectionsOutput{}
+
+        mockClient.On("DeleteResourceRecordSetProtections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteResourceRecordSetProtections(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -743,6 +769,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListQueryLoggingConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListQueryLoggingConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourceRecordSetProtections", func(t *testing.T) {
+        input := &route53.ListResourceRecordSetProtectionsInput{}
+        output := &route53.ListResourceRecordSetProtectionsOutput{}
+
+        mockClient.On("ListResourceRecordSetProtections", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceRecordSetProtections(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

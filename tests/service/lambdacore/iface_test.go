@@ -47,6 +47,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRuntime", func(t *testing.T) {
+        input := &lambdacore.CreateRuntimeInput{}
+        output := &lambdacore.CreateRuntimeOutput{}
+
+        mockClient.On("CreateRuntime", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRuntime(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRuntimeAlias", func(t *testing.T) {
+        input := &lambdacore.CreateRuntimeAliasInput{}
+        output := &lambdacore.CreateRuntimeAliasOutput{}
+
+        mockClient.On("CreateRuntimeAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRuntimeAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateRuntimeVersion", func(t *testing.T) {
+        input := &lambdacore.CreateRuntimeVersionInput{}
+        output := &lambdacore.CreateRuntimeVersionOutput{}
+
+        mockClient.On("CreateRuntimeVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRuntimeVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteNetworkConnector", func(t *testing.T) {
         input := &lambdacore.DeleteNetworkConnectorInput{}
         output := &lambdacore.DeleteNetworkConnectorOutput{}
@@ -60,6 +99,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteRuntime", func(t *testing.T) {
+        input := &lambdacore.DeleteRuntimeInput{}
+        output := &lambdacore.DeleteRuntimeOutput{}
+
+        mockClient.On("DeleteRuntime", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRuntime(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRuntimeAlias", func(t *testing.T) {
+        input := &lambdacore.DeleteRuntimeAliasInput{}
+        output := &lambdacore.DeleteRuntimeAliasOutput{}
+
+        mockClient.On("DeleteRuntimeAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRuntimeAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRuntimeVersion", func(t *testing.T) {
+        input := &lambdacore.DeleteRuntimeVersionInput{}
+        output := &lambdacore.DeleteRuntimeVersionOutput{}
+
+        mockClient.On("DeleteRuntimeVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRuntimeVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetNetworkConnector", func(t *testing.T) {
         input := &lambdacore.GetNetworkConnectorInput{}
         output := &lambdacore.GetNetworkConnectorOutput{}
@@ -67,6 +145,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetNetworkConnector", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetNetworkConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRuntime", func(t *testing.T) {
+        input := &lambdacore.GetRuntimeInput{}
+        output := &lambdacore.GetRuntimeOutput{}
+
+        mockClient.On("GetRuntime", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRuntime(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRuntimeAlias", func(t *testing.T) {
+        input := &lambdacore.GetRuntimeAliasInput{}
+        output := &lambdacore.GetRuntimeAliasOutput{}
+
+        mockClient.On("GetRuntimeAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRuntimeAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetRuntimeVersion", func(t *testing.T) {
+        input := &lambdacore.GetRuntimeVersionInput{}
+        output := &lambdacore.GetRuntimeVersionOutput{}
+
+        mockClient.On("GetRuntimeVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRuntimeVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +216,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListRuntimeAliases", func(t *testing.T) {
+        input := &lambdacore.ListRuntimeAliasesInput{}
+        output := &lambdacore.ListRuntimeAliasesOutput{}
+
+        mockClient.On("ListRuntimeAliases", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRuntimeAliases(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRuntimeVersions", func(t *testing.T) {
+        input := &lambdacore.ListRuntimeVersionsInput{}
+        output := &lambdacore.ListRuntimeVersionsOutput{}
+
+        mockClient.On("ListRuntimeVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRuntimeVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRuntimes", func(t *testing.T) {
+        input := &lambdacore.ListRuntimesInput{}
+        output := &lambdacore.ListRuntimesOutput{}
+
+        mockClient.On("ListRuntimes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRuntimes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRestoreRuntime", func(t *testing.T) {
+        input := &lambdacore.RestoreRuntimeInput{}
+        output := &lambdacore.RestoreRuntimeOutput{}
+
+        mockClient.On("RestoreRuntime", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreRuntime(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateNetworkConnector", func(t *testing.T) {
         input := &lambdacore.UpdateNetworkConnectorInput{}
         output := &lambdacore.UpdateNetworkConnectorOutput{}
@@ -106,6 +275,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateNetworkConnector", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateNetworkConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRuntime", func(t *testing.T) {
+        input := &lambdacore.UpdateRuntimeInput{}
+        output := &lambdacore.UpdateRuntimeOutput{}
+
+        mockClient.On("UpdateRuntime", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRuntime(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRuntimeAlias", func(t *testing.T) {
+        input := &lambdacore.UpdateRuntimeAliasInput{}
+        output := &lambdacore.UpdateRuntimeAliasOutput{}
+
+        mockClient.On("UpdateRuntimeAlias", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRuntimeAlias(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRuntimeVersion", func(t *testing.T) {
+        input := &lambdacore.UpdateRuntimeVersionInput{}
+        output := &lambdacore.UpdateRuntimeVersionOutput{}
+
+        mockClient.On("UpdateRuntimeVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRuntimeVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

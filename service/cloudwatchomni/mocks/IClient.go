@@ -1236,6 +1236,43 @@ func (_m *IClient) GetSpaceCredentialsForOrganization(ctx context.Context, param
 	return r0, r1
 }
 
+// GetSpaceDataAccess provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSpaceDataAccess(ctx context.Context, params *cloudwatchomni.GetSpaceDataAccessInput, optFns ...func(*cloudwatchomni.Options)) (*cloudwatchomni.GetSpaceDataAccessOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSpaceDataAccess")
+	}
+
+	var r0 *cloudwatchomni.GetSpaceDataAccessOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchomni.GetSpaceDataAccessInput, ...func(*cloudwatchomni.Options)) (*cloudwatchomni.GetSpaceDataAccessOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cloudwatchomni.GetSpaceDataAccessInput, ...func(*cloudwatchomni.Options)) *cloudwatchomni.GetSpaceDataAccessOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cloudwatchomni.GetSpaceDataAccessOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cloudwatchomni.GetSpaceDataAccessInput, ...func(*cloudwatchomni.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetTelemetryQueryResults provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetTelemetryQueryResults(ctx context.Context, params *cloudwatchomni.GetTelemetryQueryResultsInput, optFns ...func(*cloudwatchomni.Options)) (*cloudwatchomni.GetTelemetryQueryResultsOutput, error) {
 	_va := make([]interface{}, len(optFns))

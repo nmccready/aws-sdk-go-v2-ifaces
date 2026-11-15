@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateVirtualMachinesToCloudVmCluster", func(t *testing.T) {
+        input := &odb.AssociateVirtualMachinesToCloudVmClusterInput{}
+        output := &odb.AssociateVirtualMachinesToCloudVmClusterOutput{}
+
+        mockClient.On("AssociateVirtualMachinesToCloudVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateVirtualMachinesToCloudVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateVirtualMachinesToExadbVmCluster", func(t *testing.T) {
         input := &odb.AssociateVirtualMachinesToExadbVmClusterInput{}
         output := &odb.AssociateVirtualMachinesToExadbVmClusterOutput{}
@@ -327,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateIamRoleFromResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateIamRoleFromResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateVirtualMachinesFromCloudVmCluster", func(t *testing.T) {
+        input := &odb.DisassociateVirtualMachinesFromCloudVmClusterInput{}
+        output := &odb.DisassociateVirtualMachinesFromCloudVmClusterOutput{}
+
+        mockClient.On("DisassociateVirtualMachinesFromCloudVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateVirtualMachinesFromCloudVmCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1009,6 +1035,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateCloudAutonomousVmCluster", func(t *testing.T) {
+        input := &odb.UpdateCloudAutonomousVmClusterInput{}
+        output := &odb.UpdateCloudAutonomousVmClusterOutput{}
+
+        mockClient.On("UpdateCloudAutonomousVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCloudAutonomousVmCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateCloudExadataInfrastructure", func(t *testing.T) {
         input := &odb.UpdateCloudExadataInfrastructureInput{}
         output := &odb.UpdateCloudExadataInfrastructureOutput{}
@@ -1016,6 +1055,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCloudExadataInfrastructure", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCloudExadataInfrastructure(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCloudExadataInfrastructureStorageCapacity", func(t *testing.T) {
+        input := &odb.UpdateCloudExadataInfrastructureStorageCapacityInput{}
+        output := &odb.UpdateCloudExadataInfrastructureStorageCapacityOutput{}
+
+        mockClient.On("UpdateCloudExadataInfrastructureStorageCapacity", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCloudExadataInfrastructureStorageCapacity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCloudVmCluster", func(t *testing.T) {
+        input := &odb.UpdateCloudVmClusterInput{}
+        output := &odb.UpdateCloudVmClusterOutput{}
+
+        mockClient.On("UpdateCloudVmCluster", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCloudVmCluster(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

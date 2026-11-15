@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateSnapshot", func(t *testing.T) {
+        input := &kinesisanalyticsv2.CreateSnapshotInput{}
+        output := &kinesisanalyticsv2.CreateSnapshotOutput{}
+
+        mockClient.On("CreateSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteApplication", func(t *testing.T) {
         input := &kinesisanalyticsv2.DeleteApplicationInput{}
         output := &kinesisanalyticsv2.DeleteApplicationOutput{}
@@ -242,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteSnapshot", func(t *testing.T) {
+        input := &kinesisanalyticsv2.DeleteSnapshotInput{}
+        output := &kinesisanalyticsv2.DeleteSnapshotOutput{}
+
+        mockClient.On("DeleteSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeApplication", func(t *testing.T) {
         input := &kinesisanalyticsv2.DescribeApplicationInput{}
         output := &kinesisanalyticsv2.DescribeApplicationOutput{}
@@ -294,6 +320,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeSnapshot", func(t *testing.T) {
+        input := &kinesisanalyticsv2.DescribeSnapshotInput{}
+        output := &kinesisanalyticsv2.DescribeSnapshotOutput{}
+
+        mockClient.On("DescribeSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeSnapshotOperation", func(t *testing.T) {
+        input := &kinesisanalyticsv2.DescribeSnapshotOperationInput{}
+        output := &kinesisanalyticsv2.DescribeSnapshotOperationOutput{}
+
+        mockClient.On("DescribeSnapshotOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeSnapshotOperation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDiscoverInputSchema", func(t *testing.T) {
         input := &kinesisanalyticsv2.DiscoverInputSchemaInput{}
         output := &kinesisanalyticsv2.DiscoverInputSchemaOutput{}
@@ -301,6 +353,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DiscoverInputSchema", ctx, input).Return(output, nil)
 
         result, err := mockClient.DiscoverInputSchema(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestExportSnapshot", func(t *testing.T) {
+        input := &kinesisanalyticsv2.ExportSnapshotInput{}
+        output := &kinesisanalyticsv2.ExportSnapshotOutput{}
+
+        mockClient.On("ExportSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ExportSnapshot(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestImportSnapshot", func(t *testing.T) {
+        input := &kinesisanalyticsv2.ImportSnapshotInput{}
+        output := &kinesisanalyticsv2.ImportSnapshotOutput{}
+
+        mockClient.On("ImportSnapshot", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ImportSnapshot(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -353,6 +431,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSnapshotOperations", func(t *testing.T) {
+        input := &kinesisanalyticsv2.ListSnapshotOperationsInput{}
+        output := &kinesisanalyticsv2.ListSnapshotOperationsOutput{}
+
+        mockClient.On("ListSnapshotOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSnapshotOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSnapshots", func(t *testing.T) {
+        input := &kinesisanalyticsv2.ListSnapshotsInput{}
+        output := &kinesisanalyticsv2.ListSnapshotsOutput{}
+
+        mockClient.On("ListSnapshots", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSnapshots(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -1152,6 +1152,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateImageBuilder", func(t *testing.T) {
+        input := &appstream.UpdateImageBuilderInput{}
+        output := &appstream.UpdateImageBuilderOutput{}
+
+        mockClient.On("UpdateImageBuilder", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateImageBuilder(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateImagePermissions", func(t *testing.T) {
         input := &appstream.UpdateImagePermissionsInput{}
         output := &appstream.UpdateImagePermissionsOutput{}

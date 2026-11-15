@@ -1125,6 +1125,43 @@ func (_m *IClient) GetEffectivePermissionsForPath(ctx context.Context, params *l
 	return r0, r1
 }
 
+// GetGlueFunctionSessionContext provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetGlueFunctionSessionContext(ctx context.Context, params *lakeformation.GetGlueFunctionSessionContextInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetGlueFunctionSessionContextOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetGlueFunctionSessionContext")
+	}
+
+	var r0 *lakeformation.GetGlueFunctionSessionContextOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetGlueFunctionSessionContextInput, ...func(*lakeformation.Options)) (*lakeformation.GetGlueFunctionSessionContextOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetGlueFunctionSessionContextInput, ...func(*lakeformation.Options)) *lakeformation.GetGlueFunctionSessionContextOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.GetGlueFunctionSessionContextOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetGlueFunctionSessionContextInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetLFTag provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetLFTag(ctx context.Context, params *lakeformation.GetLFTagInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetLFTagOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1413,6 +1450,43 @@ func (_m *IClient) GetTemporaryDataLocationCredentials(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetTemporaryDataLocationCredentialsInput, ...func(*lakeformation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTemporaryGlueFunctionCredentials provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTemporaryGlueFunctionCredentials(ctx context.Context, params *lakeformation.GetTemporaryGlueFunctionCredentialsInput, optFns ...func(*lakeformation.Options)) (*lakeformation.GetTemporaryGlueFunctionCredentialsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTemporaryGlueFunctionCredentials")
+	}
+
+	var r0 *lakeformation.GetTemporaryGlueFunctionCredentialsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetTemporaryGlueFunctionCredentialsInput, ...func(*lakeformation.Options)) (*lakeformation.GetTemporaryGlueFunctionCredentialsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lakeformation.GetTemporaryGlueFunctionCredentialsInput, ...func(*lakeformation.Options)) *lakeformation.GetTemporaryGlueFunctionCredentialsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lakeformation.GetTemporaryGlueFunctionCredentialsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lakeformation.GetTemporaryGlueFunctionCredentialsInput, ...func(*lakeformation.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

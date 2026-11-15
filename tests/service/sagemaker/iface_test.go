@@ -307,6 +307,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateClusterExtension", func(t *testing.T) {
+        input := &sagemaker.CreateClusterExtensionInput{}
+        output := &sagemaker.CreateClusterExtensionOutput{}
+
+        mockClient.On("CreateClusterExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateClusterExtension(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateClusterSchedulerConfig", func(t *testing.T) {
         input := &sagemaker.CreateClusterSchedulerConfigInput{}
         output := &sagemaker.CreateClusterSchedulerConfigOutput{}
@@ -1243,6 +1256,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteClusterExtension", func(t *testing.T) {
+        input := &sagemaker.DeleteClusterExtensionInput{}
+        output := &sagemaker.DeleteClusterExtensionOutput{}
+
+        mockClient.On("DeleteClusterExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteClusterExtension(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteClusterSchedulerConfig", func(t *testing.T) {
         input := &sagemaker.DeleteClusterSchedulerConfigInput{}
         output := &sagemaker.DeleteClusterSchedulerConfigOutput{}
@@ -2101,6 +2127,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeClusterExtension", func(t *testing.T) {
+        input := &sagemaker.DescribeClusterExtensionInput{}
+        output := &sagemaker.DescribeClusterExtensionOutput{}
+
+        mockClient.On("DescribeClusterExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeClusterExtension(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeClusterNode", func(t *testing.T) {
         input := &sagemaker.DescribeClusterNodeInput{}
         output := &sagemaker.DescribeClusterNodeOutput{}
@@ -2108,6 +2147,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeClusterNode", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeClusterNode(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeClusterOperation", func(t *testing.T) {
+        input := &sagemaker.DescribeClusterOperationInput{}
+        output := &sagemaker.DescribeClusterOperationOutput{}
+
+        mockClient.On("DescribeClusterOperation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeClusterOperation(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3271,6 +3323,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListClusterExtensionVersions", func(t *testing.T) {
+        input := &sagemaker.ListClusterExtensionVersionsInput{}
+        output := &sagemaker.ListClusterExtensionVersionsOutput{}
+
+        mockClient.On("ListClusterExtensionVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClusterExtensionVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListClusterExtensions", func(t *testing.T) {
+        input := &sagemaker.ListClusterExtensionsInput{}
+        output := &sagemaker.ListClusterExtensionsOutput{}
+
+        mockClient.On("ListClusterExtensions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClusterExtensions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListClusterNodes", func(t *testing.T) {
         input := &sagemaker.ListClusterNodesInput{}
         output := &sagemaker.ListClusterNodesOutput{}
@@ -3278,6 +3356,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListClusterNodes", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListClusterNodes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListClusterOperations", func(t *testing.T) {
+        input := &sagemaker.ListClusterOperationsInput{}
+        output := &sagemaker.ListClusterOperationsOutput{}
+
+        mockClient.On("ListClusterOperations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClusterOperations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4812,6 +4903,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateCluster", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateCluster(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateClusterExtension", func(t *testing.T) {
+        input := &sagemaker.UpdateClusterExtensionInput{}
+        output := &sagemaker.UpdateClusterExtensionOutput{}
+
+        mockClient.On("UpdateClusterExtension", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateClusterExtension(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

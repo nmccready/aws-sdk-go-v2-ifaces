@@ -384,6 +384,43 @@ func (_m *IClient) CreateQueryLoggingConfig(ctx context.Context, params *route53
 	return r0, r1
 }
 
+// CreateResourceRecordSetProtections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateResourceRecordSetProtections(ctx context.Context, params *route53.CreateResourceRecordSetProtectionsInput, optFns ...func(*route53.Options)) (*route53.CreateResourceRecordSetProtectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateResourceRecordSetProtections")
+	}
+
+	var r0 *route53.CreateResourceRecordSetProtectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.CreateResourceRecordSetProtectionsInput, ...func(*route53.Options)) (*route53.CreateResourceRecordSetProtectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.CreateResourceRecordSetProtectionsInput, ...func(*route53.Options)) *route53.CreateResourceRecordSetProtectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.CreateResourceRecordSetProtectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.CreateResourceRecordSetProtectionsInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateReusableDelegationSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateReusableDelegationSet(ctx context.Context, params *route53.CreateReusableDelegationSetInput, optFns ...func(*route53.Options)) (*route53.CreateReusableDelegationSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -783,6 +820,43 @@ func (_m *IClient) DeleteQueryLoggingConfig(ctx context.Context, params *route53
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.DeleteQueryLoggingConfigInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteResourceRecordSetProtections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteResourceRecordSetProtections(ctx context.Context, params *route53.DeleteResourceRecordSetProtectionsInput, optFns ...func(*route53.Options)) (*route53.DeleteResourceRecordSetProtectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteResourceRecordSetProtections")
+	}
+
+	var r0 *route53.DeleteResourceRecordSetProtectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.DeleteResourceRecordSetProtectionsInput, ...func(*route53.Options)) (*route53.DeleteResourceRecordSetProtectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.DeleteResourceRecordSetProtectionsInput, ...func(*route53.Options)) *route53.DeleteResourceRecordSetProtectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.DeleteResourceRecordSetProtectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.DeleteResourceRecordSetProtectionsInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2041,6 +2115,43 @@ func (_m *IClient) ListQueryLoggingConfigs(ctx context.Context, params *route53.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListQueryLoggingConfigsInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourceRecordSetProtections provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourceRecordSetProtections(ctx context.Context, params *route53.ListResourceRecordSetProtectionsInput, optFns ...func(*route53.Options)) (*route53.ListResourceRecordSetProtectionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourceRecordSetProtections")
+	}
+
+	var r0 *route53.ListResourceRecordSetProtectionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListResourceRecordSetProtectionsInput, ...func(*route53.Options)) (*route53.ListResourceRecordSetProtectionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListResourceRecordSetProtectionsInput, ...func(*route53.Options)) *route53.ListResourceRecordSetProtectionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.ListResourceRecordSetProtectionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListResourceRecordSetProtectionsInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
