@@ -814,19 +814,6 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
-    t.Run("TestDeleteAssetType", func(t *testing.T) {
-        input := &glue.DeleteAssetTypeInput{}
-        output := &glue.DeleteAssetTypeOutput{}
-
-        mockClient.On("DeleteAssetType", ctx, input).Return(output, nil)
-
-        result, err := mockClient.DeleteAssetType(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
     t.Run("TestDeleteAttachment", func(t *testing.T) {
         input := &glue.DeleteAttachmentInput{}
         output := &glue.DeleteAttachmentOutput{}
@@ -3096,19 +3083,6 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAsset", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAsset(ctx, input)
-        assert.NoError(t, err)
-        assert.Equal(t, output, result)
-
-        mockClient.AssertExpectations(t)
-    })
-
-    t.Run("TestPutAssetType", func(t *testing.T) {
-        input := &glue.PutAssetTypeInput{}
-        output := &glue.PutAssetTypeOutput{}
-
-        mockClient.On("PutAssetType", ctx, input).Return(output, nil)
-
-        result, err := mockClient.PutAssetType(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

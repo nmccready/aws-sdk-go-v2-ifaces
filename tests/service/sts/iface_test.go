@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetScopedCredentials", func(t *testing.T) {
+        input := &sts.GetScopedCredentialsInput{}
+        output := &sts.GetScopedCredentialsOutput{}
+
+        mockClient.On("GetScopedCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetScopedCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSessionToken", func(t *testing.T) {
         input := &sts.GetSessionTokenInput{}
         output := &sts.GetSessionTokenOutput{}

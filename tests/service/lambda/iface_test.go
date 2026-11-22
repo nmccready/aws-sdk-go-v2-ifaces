@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDurableExecution", func(t *testing.T) {
+        input := &lambda.DeleteDurableExecutionInput{}
+        output := &lambda.DeleteDurableExecutionOutput{}
+
+        mockClient.On("DeleteDurableExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDurableExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEventSourceMapping", func(t *testing.T) {
         input := &lambda.DeleteEventSourceMappingInput{}
         output := &lambda.DeleteEventSourceMappingOutput{}
@@ -840,6 +853,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPauseDurableExecution", func(t *testing.T) {
+        input := &lambda.PauseDurableExecutionInput{}
+        output := &lambda.PauseDurableExecutionOutput{}
+
+        mockClient.On("PauseDurableExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PauseDurableExecution(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPublishLayerVersion", func(t *testing.T) {
         input := &lambda.PublishLayerVersionInput{}
         output := &lambda.PublishLayerVersionOutput{}
@@ -990,6 +1016,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RemovePermission", ctx, input).Return(output, nil)
 
         result, err := mockClient.RemovePermission(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestResumeDurableExecution", func(t *testing.T) {
+        input := &lambda.ResumeDurableExecutionInput{}
+        output := &lambda.ResumeDurableExecutionOutput{}
+
+        mockClient.On("ResumeDurableExecution", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResumeDurableExecution(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

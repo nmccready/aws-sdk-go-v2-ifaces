@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchDeletePolicyAssignmentByPolicy", func(t *testing.T) {
+        input := &quicksight.BatchDeletePolicyAssignmentByPolicyInput{}
+        output := &quicksight.BatchDeletePolicyAssignmentByPolicyOutput{}
+
+        mockClient.On("BatchDeletePolicyAssignmentByPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchDeletePolicyAssignmentByPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDeleteTopicReviewedAnswer", func(t *testing.T) {
         input := &quicksight.BatchDeleteTopicReviewedAnswerInput{}
         output := &quicksight.BatchDeleteTopicReviewedAnswerOutput{}
@@ -86,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchPutPolicyAssignmentByPolicy", func(t *testing.T) {
+        input := &quicksight.BatchPutPolicyAssignmentByPolicyInput{}
+        output := &quicksight.BatchPutPolicyAssignmentByPolicyOutput{}
+
+        mockClient.On("BatchPutPolicyAssignmentByPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchPutPolicyAssignmentByPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelIngestion", func(t *testing.T) {
         input := &quicksight.CancelIngestionInput{}
         output := &quicksight.CancelIngestionOutput{}
@@ -93,6 +119,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelIngestion", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelIngestion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAccessControlApplication", func(t *testing.T) {
+        input := &quicksight.CreateAccessControlApplicationInput{}
+        output := &quicksight.CreateAccessControlApplicationOutput{}
+
+        mockClient.On("CreateAccessControlApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAccessControlApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAccessControlApplicationSecret", func(t *testing.T) {
+        input := &quicksight.CreateAccessControlApplicationSecretInput{}
+        output := &quicksight.CreateAccessControlApplicationSecretOutput{}
+
+        mockClient.On("CreateAccessControlApplicationSecret", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAccessControlApplicationSecret(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -333,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateInboundConnector", func(t *testing.T) {
+        input := &quicksight.CreateInboundConnectorInput{}
+        output := &quicksight.CreateInboundConnectorOutput{}
+
+        mockClient.On("CreateInboundConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInboundConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateIngestion", func(t *testing.T) {
         input := &quicksight.CreateIngestionInput{}
         output := &quicksight.CreateIngestionOutput{}
@@ -353,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateKnowledgeBase", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateKnowledgeBaseRefreshSchedule", func(t *testing.T) {
+        input := &quicksight.CreateKnowledgeBaseRefreshScheduleInput{}
+        output := &quicksight.CreateKnowledgeBaseRefreshScheduleOutput{}
+
+        mockClient.On("CreateKnowledgeBaseRefreshSchedule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateKnowledgeBaseRefreshSchedule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -535,6 +613,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateVPCConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateVPCConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAccessControlApplication", func(t *testing.T) {
+        input := &quicksight.DeleteAccessControlApplicationInput{}
+        output := &quicksight.DeleteAccessControlApplicationOutput{}
+
+        mockClient.On("DeleteAccessControlApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccessControlApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAccessControlApplicationSecret", func(t *testing.T) {
+        input := &quicksight.DeleteAccessControlApplicationSecretInput{}
+        output := &quicksight.DeleteAccessControlApplicationSecretOutput{}
+
+        mockClient.On("DeleteAccessControlApplicationSecret", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccessControlApplicationSecret(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -853,6 +957,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteInboundConnector", func(t *testing.T) {
+        input := &quicksight.DeleteInboundConnectorInput{}
+        output := &quicksight.DeleteInboundConnectorOutput{}
+
+        mockClient.On("DeleteInboundConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteInboundConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteKnowledgeBase", func(t *testing.T) {
         input := &quicksight.DeleteKnowledgeBaseInput{}
         output := &quicksight.DeleteKnowledgeBaseOutput{}
@@ -860,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteKnowledgeBase", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteKnowledgeBase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteKnowledgeBaseRefreshSchedule", func(t *testing.T) {
+        input := &quicksight.DeleteKnowledgeBaseRefreshScheduleInput{}
+        output := &quicksight.DeleteKnowledgeBaseRefreshScheduleOutput{}
+
+        mockClient.On("DeleteKnowledgeBaseRefreshSchedule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteKnowledgeBaseRefreshSchedule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -899,6 +1029,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteOAuthClientApplication", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteOAuthClientApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePolicyAssignment", func(t *testing.T) {
+        input := &quicksight.DeletePolicyAssignmentInput{}
+        output := &quicksight.DeletePolicyAssignmentOutput{}
+
+        mockClient.On("DeletePolicyAssignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePolicyAssignment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1094,6 +1237,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVPCConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVPCConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAccessControlApplication", func(t *testing.T) {
+        input := &quicksight.DescribeAccessControlApplicationInput{}
+        output := &quicksight.DescribeAccessControlApplicationOutput{}
+
+        mockClient.On("DescribeAccessControlApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAccessControlApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1633,6 +1789,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeInboundConnector", func(t *testing.T) {
+        input := &quicksight.DescribeInboundConnectorInput{}
+        output := &quicksight.DescribeInboundConnectorOutput{}
+
+        mockClient.On("DescribeInboundConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInboundConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeIngestion", func(t *testing.T) {
         input := &quicksight.DescribeIngestionInput{}
         output := &quicksight.DescribeIngestionOutput{}
@@ -1692,6 +1861,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeKnowledgeBasePermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeKnowledgeBasePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeKnowledgeBaseRefreshSchedule", func(t *testing.T) {
+        input := &quicksight.DescribeKnowledgeBaseRefreshScheduleInput{}
+        output := &quicksight.DescribeKnowledgeBaseRefreshScheduleOutput{}
+
+        mockClient.On("DescribeKnowledgeBaseRefreshSchedule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeKnowledgeBaseRefreshSchedule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2127,6 +2309,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetPolicyAssignment", func(t *testing.T) {
+        input := &quicksight.GetPolicyAssignmentInput{}
+        output := &quicksight.GetPolicyAssignmentOutput{}
+
+        mockClient.On("GetPolicyAssignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPolicyAssignment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetSessionEmbedUrl", func(t *testing.T) {
         input := &quicksight.GetSessionEmbedUrlInput{}
         output := &quicksight.GetSessionEmbedUrlOutput{}
@@ -2134,6 +2329,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSessionEmbedUrl", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSessionEmbedUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAccessControlApplications", func(t *testing.T) {
+        input := &quicksight.ListAccessControlApplicationsInput{}
+        output := &quicksight.ListAccessControlApplicationsOutput{}
+
+        mockClient.On("ListAccessControlApplications", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAccessControlApplications(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2439,6 +2647,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInboundConnectorApplicationAssociations", func(t *testing.T) {
+        input := &quicksight.ListInboundConnectorApplicationAssociationsInput{}
+        output := &quicksight.ListInboundConnectorApplicationAssociationsOutput{}
+
+        mockClient.On("ListInboundConnectorApplicationAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInboundConnectorApplicationAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInboundConnectors", func(t *testing.T) {
+        input := &quicksight.ListInboundConnectorsInput{}
+        output := &quicksight.ListInboundConnectorsOutput{}
+
+        mockClient.On("ListInboundConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInboundConnectors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListIngestions", func(t *testing.T) {
         input := &quicksight.ListIngestionsInput{}
         output := &quicksight.ListIngestionsOutput{}
@@ -2446,6 +2680,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIngestions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIngestions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListKnowledgeBaseRefreshSchedules", func(t *testing.T) {
+        input := &quicksight.ListKnowledgeBaseRefreshSchedulesInput{}
+        output := &quicksight.ListKnowledgeBaseRefreshSchedulesOutput{}
+
+        mockClient.On("ListKnowledgeBaseRefreshSchedules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListKnowledgeBaseRefreshSchedules(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2498,6 +2745,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOAuthClientApplications", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOAuthClientApplications(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPrincipalsForPolicy", func(t *testing.T) {
+        input := &quicksight.ListPrincipalsForPolicyInput{}
+        output := &quicksight.ListPrincipalsForPolicyOutput{}
+
+        mockClient.On("ListPrincipalsForPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPrincipalsForPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2784,6 +3044,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutDataSetRefreshProperties", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutDataSetRefreshProperties(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutPolicyAssignment", func(t *testing.T) {
+        input := &quicksight.PutPolicyAssignmentInput{}
+        output := &quicksight.PutPolicyAssignmentOutput{}
+
+        mockClient.On("PutPolicyAssignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutPolicyAssignment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3083,6 +3356,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAccessControlApplication", func(t *testing.T) {
+        input := &quicksight.UpdateAccessControlApplicationInput{}
+        output := &quicksight.UpdateAccessControlApplicationOutput{}
+
+        mockClient.On("UpdateAccessControlApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccessControlApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAccessControlApplicationSecret", func(t *testing.T) {
+        input := &quicksight.UpdateAccessControlApplicationSecretInput{}
+        output := &quicksight.UpdateAccessControlApplicationSecretOutput{}
+
+        mockClient.On("UpdateAccessControlApplicationSecret", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAccessControlApplicationSecret(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3531,6 +3830,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateInboundConnector", func(t *testing.T) {
+        input := &quicksight.UpdateInboundConnectorInput{}
+        output := &quicksight.UpdateInboundConnectorOutput{}
+
+        mockClient.On("UpdateInboundConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateInboundConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateInboundConnectorApplicationAssociations", func(t *testing.T) {
+        input := &quicksight.UpdateInboundConnectorApplicationAssociationsInput{}
+        output := &quicksight.UpdateInboundConnectorApplicationAssociationsOutput{}
+
+        mockClient.On("UpdateInboundConnectorApplicationAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateInboundConnectorApplicationAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateIpRestriction", func(t *testing.T) {
         input := &quicksight.UpdateIpRestrictionInput{}
         output := &quicksight.UpdateIpRestrictionOutput{}
@@ -3577,6 +3902,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateKnowledgeBasePermissions", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateKnowledgeBasePermissions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateKnowledgeBaseRefreshSchedule", func(t *testing.T) {
+        input := &quicksight.UpdateKnowledgeBaseRefreshScheduleInput{}
+        output := &quicksight.UpdateKnowledgeBaseRefreshScheduleOutput{}
+
+        mockClient.On("UpdateKnowledgeBaseRefreshSchedule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateKnowledgeBaseRefreshSchedule(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -10,10 +10,13 @@ import (
 // IClient defines the interface for polly
 type IClient interface {
  Options() Options 
+ CreateVoice(ctx context.Context, params *CreateVoiceInput, optFns ...func(*Options)) (*CreateVoiceOutput, error) 
  DeleteLexicon(ctx context.Context, params *DeleteLexiconInput, optFns ...func(*Options)) (*DeleteLexiconOutput, error) 
+ DeleteVoice(ctx context.Context, params *DeleteVoiceInput, optFns ...func(*Options)) (*DeleteVoiceOutput, error) 
  DescribeVoices(ctx context.Context, params *DescribeVoicesInput, optFns ...func(*Options)) (*DescribeVoicesOutput, error) 
  GetLexicon(ctx context.Context, params *GetLexiconInput, optFns ...func(*Options)) (*GetLexiconOutput, error) 
  GetSpeechSynthesisTask(ctx context.Context, params *GetSpeechSynthesisTaskInput, optFns ...func(*Options)) (*GetSpeechSynthesisTaskOutput, error) 
+ GetVoice(ctx context.Context, params *GetVoiceInput, optFns ...func(*Options)) (*GetVoiceOutput, error) 
  ListLexicons(ctx context.Context, params *ListLexiconsInput, optFns ...func(*Options)) (*ListLexiconsOutput, error) 
  ListSpeechSynthesisTasks(ctx context.Context, params *ListSpeechSynthesisTasksInput, optFns ...func(*Options)) (*ListSpeechSynthesisTasksOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 

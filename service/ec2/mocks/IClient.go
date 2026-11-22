@@ -1014,6 +1014,43 @@ func (_m *IClient) AssociateIpamResourceDiscovery(ctx context.Context, params *e
 	return r0, r1
 }
 
+// AssociateKmsKeyId provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateKmsKeyId(ctx context.Context, params *ec2.AssociateKmsKeyIdInput, optFns ...func(*ec2.Options)) (*ec2.AssociateKmsKeyIdOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateKmsKeyId")
+	}
+
+	var r0 *ec2.AssociateKmsKeyIdOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AssociateKmsKeyIdInput, ...func(*ec2.Options)) (*ec2.AssociateKmsKeyIdOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.AssociateKmsKeyIdInput, ...func(*ec2.Options)) *ec2.AssociateKmsKeyIdOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.AssociateKmsKeyIdOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.AssociateKmsKeyIdInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateNatGatewayAddress provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateNatGatewayAddress(ctx context.Context, params *ec2.AssociateNatGatewayAddressInput, optFns ...func(*ec2.Options)) (*ec2.AssociateNatGatewayAddressOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -5713,6 +5750,43 @@ func (_m *IClient) CreateTransitGatewayMulticastDomain(ctx context.Context, para
 	return r0, r1
 }
 
+// CreateTransitGatewayNetworkFunctionAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateTransitGatewayNetworkFunctionAttachment(ctx context.Context, params *ec2.CreateTransitGatewayNetworkFunctionAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.CreateTransitGatewayNetworkFunctionAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateTransitGatewayNetworkFunctionAttachment")
+	}
+
+	var r0 *ec2.CreateTransitGatewayNetworkFunctionAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) (*ec2.CreateTransitGatewayNetworkFunctionAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.CreateTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) *ec2.CreateTransitGatewayNetworkFunctionAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.CreateTransitGatewayNetworkFunctionAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.CreateTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateTransitGatewayPeeringAttachment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateTransitGatewayPeeringAttachment(ctx context.Context, params *ec2.CreateTransitGatewayPeeringAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.CreateTransitGatewayPeeringAttachmentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -9405,6 +9479,43 @@ func (_m *IClient) DeleteTransitGatewayMulticastDomain(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteTransitGatewayMulticastDomainInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteTransitGatewayNetworkFunctionAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteTransitGatewayNetworkFunctionAttachment(ctx context.Context, params *ec2.DeleteTransitGatewayNetworkFunctionAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.DeleteTransitGatewayNetworkFunctionAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteTransitGatewayNetworkFunctionAttachment")
+	}
+
+	var r0 *ec2.DeleteTransitGatewayNetworkFunctionAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) (*ec2.DeleteTransitGatewayNetworkFunctionAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DeleteTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) *ec2.DeleteTransitGatewayNetworkFunctionAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DeleteTransitGatewayNetworkFunctionAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DeleteTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -16591,6 +16702,43 @@ func (_m *IClient) DescribeTransitGatewayMulticastDomains(ctx context.Context, p
 	return r0, r1
 }
 
+// DescribeTransitGatewayNetworkFunctionAttachments provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTransitGatewayNetworkFunctionAttachments(ctx context.Context, params *ec2.DescribeTransitGatewayNetworkFunctionAttachmentsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeTransitGatewayNetworkFunctionAttachmentsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTransitGatewayNetworkFunctionAttachments")
+	}
+
+	var r0 *ec2.DescribeTransitGatewayNetworkFunctionAttachmentsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeTransitGatewayNetworkFunctionAttachmentsInput, ...func(*ec2.Options)) (*ec2.DescribeTransitGatewayNetworkFunctionAttachmentsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DescribeTransitGatewayNetworkFunctionAttachmentsInput, ...func(*ec2.Options)) *ec2.DescribeTransitGatewayNetworkFunctionAttachmentsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DescribeTransitGatewayNetworkFunctionAttachmentsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DescribeTransitGatewayNetworkFunctionAttachmentsInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeTransitGatewayPeeringAttachments provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeTransitGatewayPeeringAttachments(ctx context.Context, params *ec2.DescribeTransitGatewayPeeringAttachmentsInput, optFns ...func(*ec2.Options)) (*ec2.DescribeTransitGatewayPeeringAttachmentsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -19247,6 +19395,43 @@ func (_m *IClient) DisassociateIpamResourceDiscovery(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DisassociateIpamResourceDiscoveryInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisassociateKmsKeyId provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateKmsKeyId(ctx context.Context, params *ec2.DisassociateKmsKeyIdInput, optFns ...func(*ec2.Options)) (*ec2.DisassociateKmsKeyIdOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateKmsKeyId")
+	}
+
+	var r0 *ec2.DisassociateKmsKeyIdOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisassociateKmsKeyIdInput, ...func(*ec2.Options)) (*ec2.DisassociateKmsKeyIdOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.DisassociateKmsKeyIdInput, ...func(*ec2.Options)) *ec2.DisassociateKmsKeyIdOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.DisassociateKmsKeyIdOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.DisassociateKmsKeyIdInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -26388,6 +26573,80 @@ func (_m *IClient) ModifyTransitGatewayMeteringPolicy(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayMeteringPolicyInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyTransitGatewayNetworkFunctionAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyTransitGatewayNetworkFunctionAttachment(ctx context.Context, params *ec2.ModifyTransitGatewayNetworkFunctionAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayNetworkFunctionAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyTransitGatewayNetworkFunctionAttachment")
+	}
+
+	var r0 *ec2.ModifyTransitGatewayNetworkFunctionAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayNetworkFunctionAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) *ec2.ModifyTransitGatewayNetworkFunctionAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyTransitGatewayNetworkFunctionAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayNetworkFunctionAttachmentInput, ...func(*ec2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ModifyTransitGatewayPeeringAttachment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ModifyTransitGatewayPeeringAttachment(ctx context.Context, params *ec2.ModifyTransitGatewayPeeringAttachmentInput, optFns ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayPeeringAttachmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ModifyTransitGatewayPeeringAttachment")
+	}
+
+	var r0 *ec2.ModifyTransitGatewayPeeringAttachmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayPeeringAttachmentInput, ...func(*ec2.Options)) (*ec2.ModifyTransitGatewayPeeringAttachmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *ec2.ModifyTransitGatewayPeeringAttachmentInput, ...func(*ec2.Options)) *ec2.ModifyTransitGatewayPeeringAttachmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*ec2.ModifyTransitGatewayPeeringAttachmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *ec2.ModifyTransitGatewayPeeringAttachmentInput, ...func(*ec2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

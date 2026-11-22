@@ -385,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListEntityCoverages", func(t *testing.T) {
+        input := &networksecuritymanager.ListEntityCoveragesInput{}
+        output := &networksecuritymanager.ListEntityCoveragesOutput{}
+
+        mockClient.On("ListEntityCoverages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEntityCoverages(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPolicies", func(t *testing.T) {
         input := &networksecuritymanager.ListPoliciesInput{}
         output := &networksecuritymanager.ListPoliciesOutput{}
@@ -405,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListPolicySnapshots", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListPolicySnapshots(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProtectedResourceCoverages", func(t *testing.T) {
+        input := &networksecuritymanager.ListProtectedResourceCoveragesInput{}
+        output := &networksecuritymanager.ListProtectedResourceCoveragesOutput{}
+
+        mockClient.On("ListProtectedResourceCoverages", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProtectedResourceCoverages(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

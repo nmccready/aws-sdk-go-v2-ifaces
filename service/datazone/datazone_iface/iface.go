@@ -184,6 +184,7 @@ type IClient interface {
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateAccountPool(ctx context.Context, params *UpdateAccountPoolInput, optFns ...func(*Options)) (*UpdateAccountPoolOutput, error) 
  UpdateAssetFilter(ctx context.Context, params *UpdateAssetFilterInput, optFns ...func(*Options)) (*UpdateAssetFilterOutput, error) 
+ UpdateAssetOwner(ctx context.Context, params *UpdateAssetOwnerInput, optFns ...func(*Options)) (*UpdateAssetOwnerOutput, error) 
  UpdateConnection(ctx context.Context, params *UpdateConnectionInput, optFns ...func(*Options)) (*UpdateConnectionOutput, error) 
  UpdateDataSource(ctx context.Context, params *UpdateDataSourceInput, optFns ...func(*Options)) (*UpdateDataSourceOutput, error) 
  UpdateDesignation(ctx context.Context, params *UpdateDesignationInput, optFns ...func(*Options)) (*UpdateDesignationOutput, error) 

@@ -34,6 +34,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDeploymentConfiguration", func(t *testing.T) {
+        input := &marketplacedeployment.GetDeploymentConfigurationInput{}
+        output := &marketplacedeployment.GetDeploymentConfigurationOutput{}
+
+        mockClient.On("GetDeploymentConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDeploymentConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDeploymentConfigurationJob", func(t *testing.T) {
+        input := &marketplacedeployment.GetDeploymentConfigurationJobInput{}
+        output := &marketplacedeployment.GetDeploymentConfigurationJobOutput{}
+
+        mockClient.On("GetDeploymentConfigurationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDeploymentConfigurationJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDeploymentConfigurationJobs", func(t *testing.T) {
+        input := &marketplacedeployment.ListDeploymentConfigurationJobsInput{}
+        output := &marketplacedeployment.ListDeploymentConfigurationJobsOutput{}
+
+        mockClient.On("ListDeploymentConfigurationJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDeploymentConfigurationJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &marketplacedeployment.ListTagsForResourceInput{}
         output := &marketplacedeployment.ListTagsForResourceOutput{}
@@ -54,6 +93,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutDeploymentParameter", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutDeploymentParameter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDeploymentConfigurationJob", func(t *testing.T) {
+        input := &marketplacedeployment.StartDeploymentConfigurationJobInput{}
+        output := &marketplacedeployment.StartDeploymentConfigurationJobOutput{}
+
+        mockClient.On("StartDeploymentConfigurationJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDeploymentConfigurationJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

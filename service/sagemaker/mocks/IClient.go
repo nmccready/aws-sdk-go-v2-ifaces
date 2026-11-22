@@ -51,6 +51,43 @@ func (_m *IClient) AddAssociation(ctx context.Context, params *sagemaker.AddAsso
 	return r0, r1
 }
 
+// AddInferenceGateway provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AddInferenceGateway(ctx context.Context, params *sagemaker.AddInferenceGatewayInput, optFns ...func(*sagemaker.Options)) (*sagemaker.AddInferenceGatewayOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AddInferenceGateway")
+	}
+
+	var r0 *sagemaker.AddInferenceGatewayOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.AddInferenceGatewayInput, ...func(*sagemaker.Options)) (*sagemaker.AddInferenceGatewayOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.AddInferenceGatewayInput, ...func(*sagemaker.Options)) *sagemaker.AddInferenceGatewayOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.AddInferenceGatewayOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.AddInferenceGatewayInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddTags provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddTags(ctx context.Context, params *sagemaker.AddTagsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.AddTagsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1420,6 +1457,43 @@ func (_m *IClient) CreateFlowDefinition(ctx context.Context, params *sagemaker.C
 	return r0, r1
 }
 
+// CreateGlobalInferenceGateway provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateGlobalInferenceGateway(ctx context.Context, params *sagemaker.CreateGlobalInferenceGatewayInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateGlobalInferenceGatewayOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateGlobalInferenceGateway")
+	}
+
+	var r0 *sagemaker.CreateGlobalInferenceGatewayOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) (*sagemaker.CreateGlobalInferenceGatewayOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) *sagemaker.CreateGlobalInferenceGatewayOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateGlobalInferenceGatewayOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateHub provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateHub(ctx context.Context, params *sagemaker.CreateHubInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateHubOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1782,6 +1856,43 @@ func (_m *IClient) CreateInferenceRecommendationsJob(ctx context.Context, params
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateInferenceRecommendationsJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateInferenceRouter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateInferenceRouter(ctx context.Context, params *sagemaker.CreateInferenceRouterInput, optFns ...func(*sagemaker.Options)) (*sagemaker.CreateInferenceRouterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateInferenceRouter")
+	}
+
+	var r0 *sagemaker.CreateInferenceRouterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateInferenceRouterInput, ...func(*sagemaker.Options)) (*sagemaker.CreateInferenceRouterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.CreateInferenceRouterInput, ...func(*sagemaker.Options)) *sagemaker.CreateInferenceRouterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.CreateInferenceRouterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.CreateInferenceRouterInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3973,6 +4084,43 @@ func (_m *IClient) DeleteEndpointConfig(ctx context.Context, params *sagemaker.D
 	return r0, r1
 }
 
+// DeleteEndpointPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteEndpointPolicy(ctx context.Context, params *sagemaker.DeleteEndpointPolicyInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteEndpointPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteEndpointPolicy")
+	}
+
+	var r0 *sagemaker.DeleteEndpointPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteEndpointPolicyInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteEndpointPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteEndpointPolicyInput, ...func(*sagemaker.Options)) *sagemaker.DeleteEndpointPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteEndpointPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteEndpointPolicyInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteExperiment provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteExperiment(ctx context.Context, params *sagemaker.DeleteExperimentInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteExperimentOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4076,6 +4224,43 @@ func (_m *IClient) DeleteFlowDefinition(ctx context.Context, params *sagemaker.D
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteFlowDefinitionInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteGlobalInferenceGateway provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteGlobalInferenceGateway(ctx context.Context, params *sagemaker.DeleteGlobalInferenceGatewayInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteGlobalInferenceGatewayOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteGlobalInferenceGateway")
+	}
+
+	var r0 *sagemaker.DeleteGlobalInferenceGatewayOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteGlobalInferenceGatewayOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) *sagemaker.DeleteGlobalInferenceGatewayOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteGlobalInferenceGatewayOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4409,6 +4594,43 @@ func (_m *IClient) DeleteInferenceExperiment(ctx context.Context, params *sagema
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteInferenceExperimentInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteInferenceRouter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteInferenceRouter(ctx context.Context, params *sagemaker.DeleteInferenceRouterInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DeleteInferenceRouterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteInferenceRouter")
+	}
+
+	var r0 *sagemaker.DeleteInferenceRouterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteInferenceRouterInput, ...func(*sagemaker.Options)) (*sagemaker.DeleteInferenceRouterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DeleteInferenceRouterInput, ...func(*sagemaker.Options)) *sagemaker.DeleteInferenceRouterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DeleteInferenceRouterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DeleteInferenceRouterInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5897,6 +6119,43 @@ func (_m *IClient) DescribeAutoMLJobV2(ctx context.Context, params *sagemaker.De
 	return r0, r1
 }
 
+// DescribeCapacityReservation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCapacityReservation(ctx context.Context, params *sagemaker.DescribeCapacityReservationInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeCapacityReservationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCapacityReservation")
+	}
+
+	var r0 *sagemaker.DescribeCapacityReservationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeCapacityReservationInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeCapacityReservationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeCapacityReservationInput, ...func(*sagemaker.Options)) *sagemaker.DescribeCapacityReservationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeCapacityReservationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeCapacityReservationInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeCluster provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeCluster(ctx context.Context, params *sagemaker.DescribeClusterInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeClusterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -6711,6 +6970,43 @@ func (_m *IClient) DescribeFlowDefinition(ctx context.Context, params *sagemaker
 	return r0, r1
 }
 
+// DescribeGlobalInferenceGateway provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeGlobalInferenceGateway(ctx context.Context, params *sagemaker.DescribeGlobalInferenceGatewayInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeGlobalInferenceGatewayOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeGlobalInferenceGateway")
+	}
+
+	var r0 *sagemaker.DescribeGlobalInferenceGatewayOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeGlobalInferenceGatewayOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) *sagemaker.DescribeGlobalInferenceGatewayOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeGlobalInferenceGatewayOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeHub provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeHub(ctx context.Context, params *sagemaker.DescribeHubInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeHubOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -7036,6 +7332,43 @@ func (_m *IClient) DescribeInferenceRecommendationsJob(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeInferenceRecommendationsJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeInferenceRouter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeInferenceRouter(ctx context.Context, params *sagemaker.DescribeInferenceRouterInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeInferenceRouterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeInferenceRouter")
+	}
+
+	var r0 *sagemaker.DescribeInferenceRouterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeInferenceRouterInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeInferenceRouterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeInferenceRouterInput, ...func(*sagemaker.Options)) *sagemaker.DescribeInferenceRouterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeInferenceRouterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeInferenceRouterInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -7969,6 +8302,43 @@ func (_m *IClient) DescribeReservedCapacity(ctx context.Context, params *sagemak
 	return r0, r1
 }
 
+// DescribeResourceAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeResourceAssociations(ctx context.Context, params *sagemaker.DescribeResourceAssociationsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeResourceAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeResourceAssociations")
+	}
+
+	var r0 *sagemaker.DescribeResourceAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeResourceAssociationsInput, ...func(*sagemaker.Options)) (*sagemaker.DescribeResourceAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.DescribeResourceAssociationsInput, ...func(*sagemaker.Options)) *sagemaker.DescribeResourceAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.DescribeResourceAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.DescribeResourceAssociationsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeSpace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeSpace(ctx context.Context, params *sagemaker.DescribeSpaceInput, optFns ...func(*sagemaker.Options)) (*sagemaker.DescribeSpaceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8635,6 +9005,43 @@ func (_m *IClient) ExtendTrainingPlan(ctx context.Context, params *sagemaker.Ext
 	return r0, r1
 }
 
+// GetCapacityReservationUsage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCapacityReservationUsage(ctx context.Context, params *sagemaker.GetCapacityReservationUsageInput, optFns ...func(*sagemaker.Options)) (*sagemaker.GetCapacityReservationUsageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCapacityReservationUsage")
+	}
+
+	var r0 *sagemaker.GetCapacityReservationUsageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.GetCapacityReservationUsageInput, ...func(*sagemaker.Options)) (*sagemaker.GetCapacityReservationUsageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.GetCapacityReservationUsageInput, ...func(*sagemaker.Options)) *sagemaker.GetCapacityReservationUsageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.GetCapacityReservationUsageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.GetCapacityReservationUsageInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDeviceFleetReport provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDeviceFleetReport(ctx context.Context, params *sagemaker.GetDeviceFleetReportInput, optFns ...func(*sagemaker.Options)) (*sagemaker.GetDeviceFleetReportOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -8664,6 +9071,43 @@ func (_m *IClient) GetDeviceFleetReport(ctx context.Context, params *sagemaker.G
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.GetDeviceFleetReportInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetEndpointPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEndpointPolicy(ctx context.Context, params *sagemaker.GetEndpointPolicyInput, optFns ...func(*sagemaker.Options)) (*sagemaker.GetEndpointPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEndpointPolicy")
+	}
+
+	var r0 *sagemaker.GetEndpointPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.GetEndpointPolicyInput, ...func(*sagemaker.Options)) (*sagemaker.GetEndpointPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.GetEndpointPolicyInput, ...func(*sagemaker.Options)) *sagemaker.GetEndpointPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.GetEndpointPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.GetEndpointPolicyInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -9330,6 +9774,43 @@ func (_m *IClient) ListCandidatesForAutoMLJob(ctx context.Context, params *sagem
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListCandidatesForAutoMLJobInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCapacityReservations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCapacityReservations(ctx context.Context, params *sagemaker.ListCapacityReservationsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListCapacityReservationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCapacityReservations")
+	}
+
+	var r0 *sagemaker.ListCapacityReservationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListCapacityReservationsInput, ...func(*sagemaker.Options)) (*sagemaker.ListCapacityReservationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListCapacityReservationsInput, ...func(*sagemaker.Options)) *sagemaker.ListCapacityReservationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListCapacityReservationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListCapacityReservationsInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -10152,6 +10633,43 @@ func (_m *IClient) ListFlowDefinitions(ctx context.Context, params *sagemaker.Li
 	return r0, r1
 }
 
+// ListGlobalInferenceGateways provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListGlobalInferenceGateways(ctx context.Context, params *sagemaker.ListGlobalInferenceGatewaysInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListGlobalInferenceGatewaysOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListGlobalInferenceGateways")
+	}
+
+	var r0 *sagemaker.ListGlobalInferenceGatewaysOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListGlobalInferenceGatewaysInput, ...func(*sagemaker.Options)) (*sagemaker.ListGlobalInferenceGatewaysOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListGlobalInferenceGatewaysInput, ...func(*sagemaker.Options)) *sagemaker.ListGlobalInferenceGatewaysOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListGlobalInferenceGatewaysOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListGlobalInferenceGatewaysInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListHubContentVersions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListHubContentVersions(ctx context.Context, params *sagemaker.ListHubContentVersionsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListHubContentVersionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10485,6 +11003,43 @@ func (_m *IClient) ListInferenceExperiments(ctx context.Context, params *sagemak
 	return r0, r1
 }
 
+// ListInferenceGateways provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInferenceGateways(ctx context.Context, params *sagemaker.ListInferenceGatewaysInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListInferenceGatewaysOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInferenceGateways")
+	}
+
+	var r0 *sagemaker.ListInferenceGatewaysOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListInferenceGatewaysInput, ...func(*sagemaker.Options)) (*sagemaker.ListInferenceGatewaysOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListInferenceGatewaysInput, ...func(*sagemaker.Options)) *sagemaker.ListInferenceGatewaysOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListInferenceGatewaysOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListInferenceGatewaysInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListInferenceRecommendationsJobSteps provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListInferenceRecommendationsJobSteps(ctx context.Context, params *sagemaker.ListInferenceRecommendationsJobStepsInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListInferenceRecommendationsJobStepsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -10551,6 +11106,43 @@ func (_m *IClient) ListInferenceRecommendationsJobs(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListInferenceRecommendationsJobsInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListInferenceRouters provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListInferenceRouters(ctx context.Context, params *sagemaker.ListInferenceRoutersInput, optFns ...func(*sagemaker.Options)) (*sagemaker.ListInferenceRoutersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListInferenceRouters")
+	}
+
+	var r0 *sagemaker.ListInferenceRoutersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListInferenceRoutersInput, ...func(*sagemaker.Options)) (*sagemaker.ListInferenceRoutersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.ListInferenceRoutersInput, ...func(*sagemaker.Options)) *sagemaker.ListInferenceRoutersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.ListInferenceRoutersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.ListInferenceRoutersInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -12372,6 +12964,43 @@ func (_m *IClient) ListWorkteams(ctx context.Context, params *sagemaker.ListWork
 	return r0, r1
 }
 
+// MoveClusterNodes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) MoveClusterNodes(ctx context.Context, params *sagemaker.MoveClusterNodesInput, optFns ...func(*sagemaker.Options)) (*sagemaker.MoveClusterNodesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for MoveClusterNodes")
+	}
+
+	var r0 *sagemaker.MoveClusterNodesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.MoveClusterNodesInput, ...func(*sagemaker.Options)) (*sagemaker.MoveClusterNodesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.MoveClusterNodesInput, ...func(*sagemaker.Options)) *sagemaker.MoveClusterNodesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.MoveClusterNodesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.MoveClusterNodesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() sagemaker.Options {
 	ret := _m.Called()
@@ -12388,6 +13017,43 @@ func (_m *IClient) Options() sagemaker.Options {
 	}
 
 	return r0
+}
+
+// PutEndpointPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutEndpointPolicy(ctx context.Context, params *sagemaker.PutEndpointPolicyInput, optFns ...func(*sagemaker.Options)) (*sagemaker.PutEndpointPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutEndpointPolicy")
+	}
+
+	var r0 *sagemaker.PutEndpointPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.PutEndpointPolicyInput, ...func(*sagemaker.Options)) (*sagemaker.PutEndpointPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.PutEndpointPolicyInput, ...func(*sagemaker.Options)) *sagemaker.PutEndpointPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.PutEndpointPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.PutEndpointPolicyInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // PutModelPackageGroupPolicy provides a mock function with given fields: ctx, params, optFns
@@ -12493,6 +13159,43 @@ func (_m *IClient) RegisterDevices(ctx context.Context, params *sagemaker.Regist
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.RegisterDevicesInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RemoveInferenceGateway provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RemoveInferenceGateway(ctx context.Context, params *sagemaker.RemoveInferenceGatewayInput, optFns ...func(*sagemaker.Options)) (*sagemaker.RemoveInferenceGatewayOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RemoveInferenceGateway")
+	}
+
+	var r0 *sagemaker.RemoveInferenceGatewayOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.RemoveInferenceGatewayInput, ...func(*sagemaker.Options)) (*sagemaker.RemoveInferenceGatewayOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.RemoveInferenceGatewayInput, ...func(*sagemaker.Options)) *sagemaker.RemoveInferenceGatewayOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.RemoveInferenceGatewayOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.RemoveInferenceGatewayInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -14425,6 +15128,43 @@ func (_m *IClient) UpdateFeatureMetadata(ctx context.Context, params *sagemaker.
 	return r0, r1
 }
 
+// UpdateGlobalInferenceGateway provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateGlobalInferenceGateway(ctx context.Context, params *sagemaker.UpdateGlobalInferenceGatewayInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateGlobalInferenceGatewayOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateGlobalInferenceGateway")
+	}
+
+	var r0 *sagemaker.UpdateGlobalInferenceGatewayOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) (*sagemaker.UpdateGlobalInferenceGatewayOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) *sagemaker.UpdateGlobalInferenceGatewayOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdateGlobalInferenceGatewayOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateGlobalInferenceGatewayInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateHub provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateHub(ctx context.Context, params *sagemaker.UpdateHubInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateHubOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -14713,6 +15453,43 @@ func (_m *IClient) UpdateInferenceExperiment(ctx context.Context, params *sagema
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateInferenceExperimentInput, ...func(*sagemaker.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateInferenceRouter provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateInferenceRouter(ctx context.Context, params *sagemaker.UpdateInferenceRouterInput, optFns ...func(*sagemaker.Options)) (*sagemaker.UpdateInferenceRouterOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateInferenceRouter")
+	}
+
+	var r0 *sagemaker.UpdateInferenceRouterOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateInferenceRouterInput, ...func(*sagemaker.Options)) (*sagemaker.UpdateInferenceRouterOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sagemaker.UpdateInferenceRouterInput, ...func(*sagemaker.Options)) *sagemaker.UpdateInferenceRouterOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sagemaker.UpdateInferenceRouterOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sagemaker.UpdateInferenceRouterInput, ...func(*sagemaker.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

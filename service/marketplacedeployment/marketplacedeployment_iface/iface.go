@@ -10,8 +10,12 @@ import (
 // IClient defines the interface for marketplacedeployment
 type IClient interface {
  Options() Options 
+ GetDeploymentConfiguration(ctx context.Context, params *GetDeploymentConfigurationInput, optFns ...func(*Options)) (*GetDeploymentConfigurationOutput, error) 
+ GetDeploymentConfigurationJob(ctx context.Context, params *GetDeploymentConfigurationJobInput, optFns ...func(*Options)) (*GetDeploymentConfigurationJobOutput, error) 
+ ListDeploymentConfigurationJobs(ctx context.Context, params *ListDeploymentConfigurationJobsInput, optFns ...func(*Options)) (*ListDeploymentConfigurationJobsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  PutDeploymentParameter(ctx context.Context, params *PutDeploymentParameterInput, optFns ...func(*Options)) (*PutDeploymentParameterOutput, error) 
+ StartDeploymentConfigurationJob(ctx context.Context, params *StartDeploymentConfigurationJobInput, optFns ...func(*Options)) (*StartDeploymentConfigurationJobOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
 }

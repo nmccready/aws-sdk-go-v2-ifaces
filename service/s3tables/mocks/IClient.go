@@ -495,6 +495,43 @@ func (_m *IClient) DeleteTableReplication(ctx context.Context, params *s3tables.
 	return r0, r1
 }
 
+// DisassociateTableReplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateTableReplication(ctx context.Context, params *s3tables.DisassociateTableReplicationInput, optFns ...func(*s3tables.Options)) (*s3tables.DisassociateTableReplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateTableReplication")
+	}
+
+	var r0 *s3tables.DisassociateTableReplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.DisassociateTableReplicationInput, ...func(*s3tables.Options)) (*s3tables.DisassociateTableReplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3tables.DisassociateTableReplicationInput, ...func(*s3tables.Options)) *s3tables.DisassociateTableReplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3tables.DisassociateTableReplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3tables.DisassociateTableReplicationInput, ...func(*s3tables.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetNamespace provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetNamespace(ctx context.Context, params *s3tables.GetNamespaceInput, optFns ...func(*s3tables.Options)) (*s3tables.GetNamespaceOutput, error) {
 	_va := make([]interface{}, len(optFns))

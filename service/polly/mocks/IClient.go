@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// CreateVoice provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateVoice(ctx context.Context, params *polly.CreateVoiceInput, optFns ...func(*polly.Options)) (*polly.CreateVoiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateVoice")
+	}
+
+	var r0 *polly.CreateVoiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.CreateVoiceInput, ...func(*polly.Options)) (*polly.CreateVoiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.CreateVoiceInput, ...func(*polly.Options)) *polly.CreateVoiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*polly.CreateVoiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *polly.CreateVoiceInput, ...func(*polly.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteLexicon provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteLexicon(ctx context.Context, params *polly.DeleteLexiconInput, optFns ...func(*polly.Options)) (*polly.DeleteLexiconOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -43,6 +80,43 @@ func (_m *IClient) DeleteLexicon(ctx context.Context, params *polly.DeleteLexico
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *polly.DeleteLexiconInput, ...func(*polly.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteVoice provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteVoice(ctx context.Context, params *polly.DeleteVoiceInput, optFns ...func(*polly.Options)) (*polly.DeleteVoiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteVoice")
+	}
+
+	var r0 *polly.DeleteVoiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.DeleteVoiceInput, ...func(*polly.Options)) (*polly.DeleteVoiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.DeleteVoiceInput, ...func(*polly.Options)) *polly.DeleteVoiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*polly.DeleteVoiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *polly.DeleteVoiceInput, ...func(*polly.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -154,6 +228,43 @@ func (_m *IClient) GetSpeechSynthesisTask(ctx context.Context, params *polly.Get
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *polly.GetSpeechSynthesisTaskInput, ...func(*polly.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetVoice provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetVoice(ctx context.Context, params *polly.GetVoiceInput, optFns ...func(*polly.Options)) (*polly.GetVoiceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetVoice")
+	}
+
+	var r0 *polly.GetVoiceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.GetVoiceInput, ...func(*polly.Options)) (*polly.GetVoiceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *polly.GetVoiceInput, ...func(*polly.Options)) *polly.GetVoiceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*polly.GetVoiceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *polly.GetVoiceInput, ...func(*polly.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

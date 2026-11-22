@@ -52,6 +52,43 @@ func (_m *IClient) GetRequestAuthorizationDetails(ctx context.Context, params *i
 	return r0, r1
 }
 
+// GetRequestAuthorizationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetRequestAuthorizationPolicy(ctx context.Context, params *iamtoolbox.GetRequestAuthorizationPolicyInput, optFns ...func(*iamtoolbox.Options)) (*iamtoolbox.GetRequestAuthorizationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetRequestAuthorizationPolicy")
+	}
+
+	var r0 *iamtoolbox.GetRequestAuthorizationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iamtoolbox.GetRequestAuthorizationPolicyInput, ...func(*iamtoolbox.Options)) (*iamtoolbox.GetRequestAuthorizationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iamtoolbox.GetRequestAuthorizationPolicyInput, ...func(*iamtoolbox.Options)) *iamtoolbox.GetRequestAuthorizationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iamtoolbox.GetRequestAuthorizationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iamtoolbox.GetRequestAuthorizationPolicyInput, ...func(*iamtoolbox.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() iamtoolbox.Options {
 	ret := _m.Called()

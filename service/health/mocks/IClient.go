@@ -15,6 +15,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// ConfigureTags provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ConfigureTags(ctx context.Context, params *health.ConfigureTagsInput, optFns ...func(*health.Options)) (*health.ConfigureTagsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ConfigureTags")
+	}
+
+	var r0 *health.ConfigureTagsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.ConfigureTagsInput, ...func(*health.Options)) (*health.ConfigureTagsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.ConfigureTagsInput, ...func(*health.Options)) *health.ConfigureTagsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.ConfigureTagsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.ConfigureTagsInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ConfigureTagsForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ConfigureTagsForOrganization(ctx context.Context, params *health.ConfigureTagsForOrganizationInput, optFns ...func(*health.Options)) (*health.ConfigureTagsForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ConfigureTagsForOrganization")
+	}
+
+	var r0 *health.ConfigureTagsForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.ConfigureTagsForOrganizationInput, ...func(*health.Options)) (*health.ConfigureTagsForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.ConfigureTagsForOrganizationInput, ...func(*health.Options)) *health.ConfigureTagsForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.ConfigureTagsForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.ConfigureTagsForOrganizationInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeAffectedAccountsForOrganization provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeAffectedAccountsForOrganization(ctx context.Context, params *health.DescribeAffectedAccountsForOrganizationInput, optFns ...func(*health.Options)) (*health.DescribeAffectedAccountsForOrganizationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -496,6 +570,228 @@ func (_m *IClient) DescribeServiceLifecycle(ctx context.Context, params *health.
 	return r0, r1
 }
 
+// DescribeTagKeys provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTagKeys(ctx context.Context, params *health.DescribeTagKeysInput, optFns ...func(*health.Options)) (*health.DescribeTagKeysOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTagKeys")
+	}
+
+	var r0 *health.DescribeTagKeysOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagKeysInput, ...func(*health.Options)) (*health.DescribeTagKeysOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagKeysInput, ...func(*health.Options)) *health.DescribeTagKeysOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DescribeTagKeysOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DescribeTagKeysInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTagKeysForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTagKeysForOrganization(ctx context.Context, params *health.DescribeTagKeysForOrganizationInput, optFns ...func(*health.Options)) (*health.DescribeTagKeysForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTagKeysForOrganization")
+	}
+
+	var r0 *health.DescribeTagKeysForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagKeysForOrganizationInput, ...func(*health.Options)) (*health.DescribeTagKeysForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagKeysForOrganizationInput, ...func(*health.Options)) *health.DescribeTagKeysForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DescribeTagKeysForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DescribeTagKeysForOrganizationInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTags provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTags(ctx context.Context, params *health.DescribeTagsInput, optFns ...func(*health.Options)) (*health.DescribeTagsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTags")
+	}
+
+	var r0 *health.DescribeTagsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsInput, ...func(*health.Options)) (*health.DescribeTagsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsInput, ...func(*health.Options)) *health.DescribeTagsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DescribeTagsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DescribeTagsInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTagsForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTagsForOrganization(ctx context.Context, params *health.DescribeTagsForOrganizationInput, optFns ...func(*health.Options)) (*health.DescribeTagsForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTagsForOrganization")
+	}
+
+	var r0 *health.DescribeTagsForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsForOrganizationInput, ...func(*health.Options)) (*health.DescribeTagsForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsForOrganizationInput, ...func(*health.Options)) *health.DescribeTagsForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DescribeTagsForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DescribeTagsForOrganizationInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTagsOnboardingStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTagsOnboardingStatus(ctx context.Context, params *health.DescribeTagsOnboardingStatusInput, optFns ...func(*health.Options)) (*health.DescribeTagsOnboardingStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTagsOnboardingStatus")
+	}
+
+	var r0 *health.DescribeTagsOnboardingStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsOnboardingStatusInput, ...func(*health.Options)) (*health.DescribeTagsOnboardingStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsOnboardingStatusInput, ...func(*health.Options)) *health.DescribeTagsOnboardingStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DescribeTagsOnboardingStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DescribeTagsOnboardingStatusInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeTagsOnboardingStatusForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeTagsOnboardingStatusForOrganization(ctx context.Context, params *health.DescribeTagsOnboardingStatusForOrganizationInput, optFns ...func(*health.Options)) (*health.DescribeTagsOnboardingStatusForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeTagsOnboardingStatusForOrganization")
+	}
+
+	var r0 *health.DescribeTagsOnboardingStatusForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsOnboardingStatusForOrganizationInput, ...func(*health.Options)) (*health.DescribeTagsOnboardingStatusForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DescribeTagsOnboardingStatusForOrganizationInput, ...func(*health.Options)) *health.DescribeTagsOnboardingStatusForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DescribeTagsOnboardingStatusForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DescribeTagsOnboardingStatusForOrganizationInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisableHealthServiceAccessForOrganization provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisableHealthServiceAccessForOrganization(ctx context.Context, params *health.DisableHealthServiceAccessForOrganizationInput, optFns ...func(*health.Options)) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -533,6 +829,80 @@ func (_m *IClient) DisableHealthServiceAccessForOrganization(ctx context.Context
 	return r0, r1
 }
 
+// DisableTags provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableTags(ctx context.Context, params *health.DisableTagsInput, optFns ...func(*health.Options)) (*health.DisableTagsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableTags")
+	}
+
+	var r0 *health.DisableTagsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DisableTagsInput, ...func(*health.Options)) (*health.DisableTagsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DisableTagsInput, ...func(*health.Options)) *health.DisableTagsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DisableTagsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DisableTagsInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DisableTagsForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisableTagsForOrganization(ctx context.Context, params *health.DisableTagsForOrganizationInput, optFns ...func(*health.Options)) (*health.DisableTagsForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisableTagsForOrganization")
+	}
+
+	var r0 *health.DisableTagsForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DisableTagsForOrganizationInput, ...func(*health.Options)) (*health.DisableTagsForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.DisableTagsForOrganizationInput, ...func(*health.Options)) *health.DisableTagsForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.DisableTagsForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.DisableTagsForOrganizationInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // EnableHealthServiceAccessForOrganization provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) EnableHealthServiceAccessForOrganization(ctx context.Context, params *health.EnableHealthServiceAccessForOrganizationInput, optFns ...func(*health.Options)) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -562,6 +932,80 @@ func (_m *IClient) EnableHealthServiceAccessForOrganization(ctx context.Context,
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *health.EnableHealthServiceAccessForOrganizationInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableTags provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableTags(ctx context.Context, params *health.EnableTagsInput, optFns ...func(*health.Options)) (*health.EnableTagsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableTags")
+	}
+
+	var r0 *health.EnableTagsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.EnableTagsInput, ...func(*health.Options)) (*health.EnableTagsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.EnableTagsInput, ...func(*health.Options)) *health.EnableTagsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.EnableTagsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.EnableTagsInput, ...func(*health.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// EnableTagsForOrganization provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) EnableTagsForOrganization(ctx context.Context, params *health.EnableTagsForOrganizationInput, optFns ...func(*health.Options)) (*health.EnableTagsForOrganizationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for EnableTagsForOrganization")
+	}
+
+	var r0 *health.EnableTagsForOrganizationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *health.EnableTagsForOrganizationInput, ...func(*health.Options)) (*health.EnableTagsForOrganizationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *health.EnableTagsForOrganizationInput, ...func(*health.Options)) *health.EnableTagsForOrganizationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*health.EnableTagsForOrganizationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *health.EnableTagsForOrganizationInput, ...func(*health.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

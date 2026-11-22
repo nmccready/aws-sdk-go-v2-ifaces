@@ -19,6 +19,7 @@ type IClient interface {
  GetCallerIdentity(ctx context.Context, params *GetCallerIdentityInput, optFns ...func(*Options)) (*GetCallerIdentityOutput, error) 
  GetDelegatedAccessToken(ctx context.Context, params *GetDelegatedAccessTokenInput, optFns ...func(*Options)) (*GetDelegatedAccessTokenOutput, error) 
  GetFederationToken(ctx context.Context, params *GetFederationTokenInput, optFns ...func(*Options)) (*GetFederationTokenOutput, error) 
+ GetScopedCredentials(ctx context.Context, params *GetScopedCredentialsInput, optFns ...func(*Options)) (*GetScopedCredentialsOutput, error) 
  GetSessionToken(ctx context.Context, params *GetSessionTokenInput, optFns ...func(*Options)) (*GetSessionTokenOutput, error) 
  GetWebIdentityToken(ctx context.Context, params *GetWebIdentityTokenInput, optFns ...func(*Options)) (*GetWebIdentityTokenOutput, error) 
 }

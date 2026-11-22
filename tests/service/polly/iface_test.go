@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateVoice", func(t *testing.T) {
+        input := &polly.CreateVoiceInput{}
+        output := &polly.CreateVoiceOutput{}
+
+        mockClient.On("CreateVoice", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateVoice(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteLexicon", func(t *testing.T) {
         input := &polly.DeleteLexiconInput{}
         output := &polly.DeleteLexiconOutput{}
@@ -41,6 +54,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteLexicon", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteLexicon(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteVoice", func(t *testing.T) {
+        input := &polly.DeleteVoiceInput{}
+        output := &polly.DeleteVoiceOutput{}
+
+        mockClient.On("DeleteVoice", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteVoice(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -80,6 +106,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetSpeechSynthesisTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetSpeechSynthesisTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetVoice", func(t *testing.T) {
+        input := &polly.GetVoiceInput{}
+        output := &polly.GetVoiceOutput{}
+
+        mockClient.On("GetVoice", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetVoice(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

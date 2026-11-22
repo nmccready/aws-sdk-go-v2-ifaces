@@ -359,6 +359,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetChat", func(t *testing.T) {
+        input := &devopsagent.GetChatInput{}
+        output := &devopsagent.GetChatOutput{}
+
+        mockClient.On("GetChat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetChat(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetOperatorApp", func(t *testing.T) {
         input := &devopsagent.GetOperatorAppInput{}
         output := &devopsagent.GetOperatorAppOutput{}
@@ -769,6 +782,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateBacklogTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateBacklogTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateChat", func(t *testing.T) {
+        input := &devopsagent.UpdateChatInput{}
+        output := &devopsagent.UpdateChatOutput{}
+
+        mockClient.On("UpdateChat", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateChat(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

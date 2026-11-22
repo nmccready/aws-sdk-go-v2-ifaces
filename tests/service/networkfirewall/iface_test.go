@@ -554,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListContextStores", func(t *testing.T) {
+        input := &networkfirewall.ListContextStoresInput{}
+        output := &networkfirewall.ListContextStoresOutput{}
+
+        mockClient.On("ListContextStores", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContextStores(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListFirewallPolicies", func(t *testing.T) {
         input := &networkfirewall.ListFirewallPoliciesInput{}
         output := &networkfirewall.ListFirewallPoliciesOutput{}
@@ -613,6 +626,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFlowOperations", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFlowOperations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourcesInContextStore", func(t *testing.T) {
+        input := &networkfirewall.ListResourcesInContextStoreInput{}
+        output := &networkfirewall.ListResourcesInContextStoreOutput{}
+
+        mockClient.On("ListResourcesInContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourcesInContextStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

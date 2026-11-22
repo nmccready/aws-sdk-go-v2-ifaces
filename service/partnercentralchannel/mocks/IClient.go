@@ -51,6 +51,43 @@ func (_m *IClient) AcceptChannelHandshake(ctx context.Context, params *partnerce
 	return r0, r1
 }
 
+// CancelChannelContract provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelChannelContract(ctx context.Context, params *partnercentralchannel.CancelChannelContractInput, optFns ...func(*partnercentralchannel.Options)) (*partnercentralchannel.CancelChannelContractOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelChannelContract")
+	}
+
+	var r0 *partnercentralchannel.CancelChannelContractOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.CancelChannelContractInput, ...func(*partnercentralchannel.Options)) (*partnercentralchannel.CancelChannelContractOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.CancelChannelContractInput, ...func(*partnercentralchannel.Options)) *partnercentralchannel.CancelChannelContractOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralchannel.CancelChannelContractOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralchannel.CancelChannelContractInput, ...func(*partnercentralchannel.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CancelChannelHandshake provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CancelChannelHandshake(ctx context.Context, params *partnercentralchannel.CancelChannelHandshakeInput, optFns ...func(*partnercentralchannel.Options)) (*partnercentralchannel.CancelChannelHandshakeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -80,6 +117,43 @@ func (_m *IClient) CancelChannelHandshake(ctx context.Context, params *partnerce
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralchannel.CancelChannelHandshakeInput, ...func(*partnercentralchannel.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateChannelContract provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateChannelContract(ctx context.Context, params *partnercentralchannel.CreateChannelContractInput, optFns ...func(*partnercentralchannel.Options)) (*partnercentralchannel.CreateChannelContractOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateChannelContract")
+	}
+
+	var r0 *partnercentralchannel.CreateChannelContractOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.CreateChannelContractInput, ...func(*partnercentralchannel.Options)) (*partnercentralchannel.CreateChannelContractOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.CreateChannelContractInput, ...func(*partnercentralchannel.Options)) *partnercentralchannel.CreateChannelContractOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralchannel.CreateChannelContractOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralchannel.CreateChannelContractInput, ...func(*partnercentralchannel.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -273,6 +347,43 @@ func (_m *IClient) DeleteRelationship(ctx context.Context, params *partnercentra
 	return r0, r1
 }
 
+// GetChannelContract provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetChannelContract(ctx context.Context, params *partnercentralchannel.GetChannelContractInput, optFns ...func(*partnercentralchannel.Options)) (*partnercentralchannel.GetChannelContractOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetChannelContract")
+	}
+
+	var r0 *partnercentralchannel.GetChannelContractOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.GetChannelContractInput, ...func(*partnercentralchannel.Options)) (*partnercentralchannel.GetChannelContractOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.GetChannelContractInput, ...func(*partnercentralchannel.Options)) *partnercentralchannel.GetChannelContractOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralchannel.GetChannelContractOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralchannel.GetChannelContractInput, ...func(*partnercentralchannel.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRelationship provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRelationship(ctx context.Context, params *partnercentralchannel.GetRelationshipInput, optFns ...func(*partnercentralchannel.Options)) (*partnercentralchannel.GetRelationshipOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -302,6 +413,43 @@ func (_m *IClient) GetRelationship(ctx context.Context, params *partnercentralch
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralchannel.GetRelationshipInput, ...func(*partnercentralchannel.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListChannelContracts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListChannelContracts(ctx context.Context, params *partnercentralchannel.ListChannelContractsInput, optFns ...func(*partnercentralchannel.Options)) (*partnercentralchannel.ListChannelContractsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListChannelContracts")
+	}
+
+	var r0 *partnercentralchannel.ListChannelContractsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.ListChannelContractsInput, ...func(*partnercentralchannel.Options)) (*partnercentralchannel.ListChannelContractsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralchannel.ListChannelContractsInput, ...func(*partnercentralchannel.Options)) *partnercentralchannel.ListChannelContractsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralchannel.ListChannelContractsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralchannel.ListChannelContractsInput, ...func(*partnercentralchannel.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeServerlessV2PlatformVersions", func(t *testing.T) {
+        input := &neptune.DescribeServerlessV2PlatformVersionsInput{}
+        output := &neptune.DescribeServerlessV2PlatformVersionsOutput{}
+
+        mockClient.On("DescribeServerlessV2PlatformVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeServerlessV2PlatformVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeValidDBInstanceModifications", func(t *testing.T) {
         input := &neptune.DescribeValidDBInstanceModificationsInput{}
         output := &neptune.DescribeValidDBInstanceModificationsOutput{}

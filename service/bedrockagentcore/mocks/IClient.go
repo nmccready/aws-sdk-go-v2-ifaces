@@ -422,6 +422,43 @@ func (_m *IClient) DeleteCapacityProviderSession(ctx context.Context, params *be
 	return r0, r1
 }
 
+// DeleteDatasetGeneration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDatasetGeneration(ctx context.Context, params *bedrockagentcore.DeleteDatasetGenerationInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.DeleteDatasetGenerationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDatasetGeneration")
+	}
+
+	var r0 *bedrockagentcore.DeleteDatasetGenerationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.DeleteDatasetGenerationInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.DeleteDatasetGenerationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.DeleteDatasetGenerationInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.DeleteDatasetGenerationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.DeleteDatasetGenerationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.DeleteDatasetGenerationInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEvent provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEvent(ctx context.Context, params *bedrockagentcore.DeleteEventInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.DeleteEventOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -718,6 +755,43 @@ func (_m *IClient) GetAgentCard(ctx context.Context, params *bedrockagentcore.Ge
 	return r0, r1
 }
 
+// GetAgentInsight provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentInsight(ctx context.Context, params *bedrockagentcore.GetAgentInsightInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetAgentInsightOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentInsight")
+	}
+
+	var r0 *bedrockagentcore.GetAgentInsightOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.GetAgentInsightInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetAgentInsightOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.GetAgentInsightInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.GetAgentInsightOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.GetAgentInsightOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.GetAgentInsightInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetBatchEvaluation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetBatchEvaluation(ctx context.Context, params *bedrockagentcore.GetBatchEvaluationInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetBatchEvaluationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -821,6 +895,43 @@ func (_m *IClient) GetCodeInterpreterSession(ctx context.Context, params *bedroc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.GetCodeInterpreterSessionInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDatasetGeneration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDatasetGeneration(ctx context.Context, params *bedrockagentcore.GetDatasetGenerationInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetDatasetGenerationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDatasetGeneration")
+	}
+
+	var r0 *bedrockagentcore.GetDatasetGenerationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.GetDatasetGenerationInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.GetDatasetGenerationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.GetDatasetGenerationInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.GetDatasetGenerationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.GetDatasetGenerationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.GetDatasetGenerationInput, ...func(*bedrockagentcore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1606,6 +1717,43 @@ func (_m *IClient) ListActors(ctx context.Context, params *bedrockagentcore.List
 	return r0, r1
 }
 
+// ListAgentInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgentInsights(ctx context.Context, params *bedrockagentcore.ListAgentInsightsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListAgentInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgentInsights")
+	}
+
+	var r0 *bedrockagentcore.ListAgentInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.ListAgentInsightsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListAgentInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.ListAgentInsightsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.ListAgentInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.ListAgentInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.ListAgentInsightsInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListBatchEvaluations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListBatchEvaluations(ctx context.Context, params *bedrockagentcore.ListBatchEvaluationsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListBatchEvaluationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1709,6 +1857,43 @@ func (_m *IClient) ListCodeInterpreterSessions(ctx context.Context, params *bedr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.ListCodeInterpreterSessionsInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasetGenerations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasetGenerations(ctx context.Context, params *bedrockagentcore.ListDatasetGenerationsInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListDatasetGenerationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasetGenerations")
+	}
+
+	var r0 *bedrockagentcore.ListDatasetGenerationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.ListDatasetGenerationsInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.ListDatasetGenerationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.ListDatasetGenerationsInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.ListDatasetGenerationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.ListDatasetGenerationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.ListDatasetGenerationsInput, ...func(*bedrockagentcore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2253,6 +2438,43 @@ func (_m *IClient) StartCodeInterpreterSession(ctx context.Context, params *bedr
 	return r0, r1
 }
 
+// StartDatasetGeneration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDatasetGeneration(ctx context.Context, params *bedrockagentcore.StartDatasetGenerationInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StartDatasetGenerationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDatasetGeneration")
+	}
+
+	var r0 *bedrockagentcore.StartDatasetGenerationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.StartDatasetGenerationInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StartDatasetGenerationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.StartDatasetGenerationInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.StartDatasetGenerationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.StartDatasetGenerationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.StartDatasetGenerationInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartMemoryExtractionJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartMemoryExtractionJob(ctx context.Context, params *bedrockagentcore.StartMemoryExtractionJobInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.StartMemoryExtractionJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2504,6 +2726,43 @@ func (_m *IClient) UpdateABTest(ctx context.Context, params *bedrockagentcore.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.UpdateABTestInput, ...func(*bedrockagentcore.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAgentInsight provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAgentInsight(ctx context.Context, params *bedrockagentcore.UpdateAgentInsightInput, optFns ...func(*bedrockagentcore.Options)) (*bedrockagentcore.UpdateAgentInsightOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAgentInsight")
+	}
+
+	var r0 *bedrockagentcore.UpdateAgentInsightOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.UpdateAgentInsightInput, ...func(*bedrockagentcore.Options)) (*bedrockagentcore.UpdateAgentInsightOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcore.UpdateAgentInsightInput, ...func(*bedrockagentcore.Options)) *bedrockagentcore.UpdateAgentInsightOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcore.UpdateAgentInsightOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcore.UpdateAgentInsightInput, ...func(*bedrockagentcore.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

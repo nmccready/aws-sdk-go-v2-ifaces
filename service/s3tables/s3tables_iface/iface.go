@@ -23,6 +23,7 @@ type IClient interface {
  DeleteTableBucketReplication(ctx context.Context, params *DeleteTableBucketReplicationInput, optFns ...func(*Options)) (*DeleteTableBucketReplicationOutput, error) 
  DeleteTablePolicy(ctx context.Context, params *DeleteTablePolicyInput, optFns ...func(*Options)) (*DeleteTablePolicyOutput, error) 
  DeleteTableReplication(ctx context.Context, params *DeleteTableReplicationInput, optFns ...func(*Options)) (*DeleteTableReplicationOutput, error) 
+ DisassociateTableReplication(ctx context.Context, params *DisassociateTableReplicationInput, optFns ...func(*Options)) (*DisassociateTableReplicationOutput, error) 
  GetNamespace(ctx context.Context, params *GetNamespaceInput, optFns ...func(*Options)) (*GetNamespaceOutput, error) 
  GetTable(ctx context.Context, params *GetTableInput, optFns ...func(*Options)) (*GetTableOutput, error) 
  GetTableBucket(ctx context.Context, params *GetTableBucketInput, optFns ...func(*Options)) (*GetTableBucketOutput, error) 

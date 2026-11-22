@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociatePublisher", func(t *testing.T) {
+        input := &agentregistrycontrol.AssociatePublisherInput{}
+        output := &agentregistrycontrol.AssociatePublisherOutput{}
+
+        mockClient.On("AssociatePublisher", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociatePublisher(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreatePublisher", func(t *testing.T) {
+        input := &agentregistrycontrol.CreatePublisherInput{}
+        output := &agentregistrycontrol.CreatePublisherOutput{}
+
+        mockClient.On("CreatePublisher", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePublisher(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateRegistry", func(t *testing.T) {
         input := &agentregistrycontrol.CreateRegistryInput{}
         output := &agentregistrycontrol.CreateRegistryOutput{}
@@ -54,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateRegistryRecord", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateRegistryRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePublisher", func(t *testing.T) {
+        input := &agentregistrycontrol.DeletePublisherInput{}
+        output := &agentregistrycontrol.DeletePublisherOutput{}
+
+        mockClient.On("DeletePublisher", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePublisher(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -86,6 +125,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociatePublisher", func(t *testing.T) {
+        input := &agentregistrycontrol.DisassociatePublisherInput{}
+        output := &agentregistrycontrol.DisassociatePublisherOutput{}
+
+        mockClient.On("DisassociatePublisher", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociatePublisher(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPublisher", func(t *testing.T) {
+        input := &agentregistrycontrol.GetPublisherInput{}
+        output := &agentregistrycontrol.GetPublisherOutput{}
+
+        mockClient.On("GetPublisher", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPublisher(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRegistry", func(t *testing.T) {
         input := &agentregistrycontrol.GetRegistryInput{}
         output := &agentregistrycontrol.GetRegistryOutput{}
@@ -106,6 +171,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRegistryRecord", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRegistryRecord(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPublisherAssociations", func(t *testing.T) {
+        input := &agentregistrycontrol.ListPublisherAssociationsInput{}
+        output := &agentregistrycontrol.ListPublisherAssociationsOutput{}
+
+        mockClient.On("ListPublisherAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPublisherAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPublishers", func(t *testing.T) {
+        input := &agentregistrycontrol.ListPublishersInput{}
+        output := &agentregistrycontrol.ListPublishersOutput{}
+
+        mockClient.On("ListPublishers", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPublishers(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdatePublisherAssociationApprovalStatus", func(t *testing.T) {
+        input := &agentregistrycontrol.UpdatePublisherAssociationApprovalStatusInput{}
+        output := &agentregistrycontrol.UpdatePublisherAssociationApprovalStatusOutput{}
+
+        mockClient.On("UpdatePublisherAssociationApprovalStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePublisherAssociationApprovalStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateRegistry", func(t *testing.T) {
         input := &agentregistrycontrol.UpdateRegistryInput{}
         output := &agentregistrycontrol.UpdateRegistryOutput{}
@@ -223,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateRegistryRecordStatus", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateRegistryRecordStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestValidatePublisher", func(t *testing.T) {
+        input := &agentregistrycontrol.ValidatePublisherInput{}
+        output := &agentregistrycontrol.ValidatePublisherOutput{}
+
+        mockClient.On("ValidatePublisher", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ValidatePublisher(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

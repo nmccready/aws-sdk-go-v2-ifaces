@@ -177,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDatasetGeneration", func(t *testing.T) {
+        input := &bedrockagentcore.DeleteDatasetGenerationInput{}
+        output := &bedrockagentcore.DeleteDatasetGenerationOutput{}
+
+        mockClient.On("DeleteDatasetGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDatasetGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteEvent", func(t *testing.T) {
         input := &bedrockagentcore.DeleteEventInput{}
         output := &bedrockagentcore.DeleteEventOutput{}
@@ -281,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAgentInsight", func(t *testing.T) {
+        input := &bedrockagentcore.GetAgentInsightInput{}
+        output := &bedrockagentcore.GetAgentInsightOutput{}
+
+        mockClient.On("GetAgentInsight", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentInsight(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetBatchEvaluation", func(t *testing.T) {
         input := &bedrockagentcore.GetBatchEvaluationInput{}
         output := &bedrockagentcore.GetBatchEvaluationOutput{}
@@ -314,6 +340,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCodeInterpreterSession", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCodeInterpreterSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDatasetGeneration", func(t *testing.T) {
+        input := &bedrockagentcore.GetDatasetGenerationInput{}
+        output := &bedrockagentcore.GetDatasetGenerationOutput{}
+
+        mockClient.On("GetDatasetGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDatasetGeneration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAgentInsights", func(t *testing.T) {
+        input := &bedrockagentcore.ListAgentInsightsInput{}
+        output := &bedrockagentcore.ListAgentInsightsOutput{}
+
+        mockClient.On("ListAgentInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentInsights(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListBatchEvaluations", func(t *testing.T) {
         input := &bedrockagentcore.ListBatchEvaluationsInput{}
         output := &bedrockagentcore.ListBatchEvaluationsOutput{}
@@ -626,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCodeInterpreterSessions", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCodeInterpreterSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListDatasetGenerations", func(t *testing.T) {
+        input := &bedrockagentcore.ListDatasetGenerationsInput{}
+        output := &bedrockagentcore.ListDatasetGenerationsOutput{}
+
+        mockClient.On("ListDatasetGenerations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasetGenerations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -814,6 +879,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartDatasetGeneration", func(t *testing.T) {
+        input := &bedrockagentcore.StartDatasetGenerationInput{}
+        output := &bedrockagentcore.StartDatasetGenerationOutput{}
+
+        mockClient.On("StartDatasetGeneration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDatasetGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartMemoryExtractionJob", func(t *testing.T) {
         input := &bedrockagentcore.StartMemoryExtractionJobInput{}
         output := &bedrockagentcore.StartMemoryExtractionJobOutput{}
@@ -899,6 +977,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateABTest", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateABTest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentInsight", func(t *testing.T) {
+        input := &bedrockagentcore.UpdateAgentInsightInput{}
+        output := &bedrockagentcore.UpdateAgentInsightOutput{}
+
+        mockClient.On("UpdateAgentInsight", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentInsight(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

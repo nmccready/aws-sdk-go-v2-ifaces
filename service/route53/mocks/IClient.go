@@ -273,6 +273,43 @@ func (_m *IClient) CreateHealthCheck(ctx context.Context, params *route53.Create
 	return r0, r1
 }
 
+// CreateHealthCheckSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateHealthCheckSource(ctx context.Context, params *route53.CreateHealthCheckSourceInput, optFns ...func(*route53.Options)) (*route53.CreateHealthCheckSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateHealthCheckSource")
+	}
+
+	var r0 *route53.CreateHealthCheckSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.CreateHealthCheckSourceInput, ...func(*route53.Options)) (*route53.CreateHealthCheckSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.CreateHealthCheckSourceInput, ...func(*route53.Options)) *route53.CreateHealthCheckSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.CreateHealthCheckSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.CreateHealthCheckSourceInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateHostedZone provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateHostedZone(ctx context.Context, params *route53.CreateHostedZoneInput, optFns ...func(*route53.Options)) (*route53.CreateHostedZoneOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -709,6 +746,43 @@ func (_m *IClient) DeleteHealthCheck(ctx context.Context, params *route53.Delete
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.DeleteHealthCheckInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteHealthCheckSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteHealthCheckSource(ctx context.Context, params *route53.DeleteHealthCheckSourceInput, optFns ...func(*route53.Options)) (*route53.DeleteHealthCheckSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteHealthCheckSource")
+	}
+
+	var r0 *route53.DeleteHealthCheckSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.DeleteHealthCheckSourceInput, ...func(*route53.Options)) (*route53.DeleteHealthCheckSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.DeleteHealthCheckSourceInput, ...func(*route53.Options)) *route53.DeleteHealthCheckSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.DeleteHealthCheckSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.DeleteHealthCheckSourceInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1420,6 +1494,43 @@ func (_m *IClient) GetHealthCheckLastFailureReason(ctx context.Context, params *
 	return r0, r1
 }
 
+// GetHealthCheckSource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetHealthCheckSource(ctx context.Context, params *route53.GetHealthCheckSourceInput, optFns ...func(*route53.Options)) (*route53.GetHealthCheckSourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetHealthCheckSource")
+	}
+
+	var r0 *route53.GetHealthCheckSourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.GetHealthCheckSourceInput, ...func(*route53.Options)) (*route53.GetHealthCheckSourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.GetHealthCheckSourceInput, ...func(*route53.Options)) *route53.GetHealthCheckSourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.GetHealthCheckSourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.GetHealthCheckSourceInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetHealthCheckStatus provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetHealthCheckStatus(ctx context.Context, params *route53.GetHealthCheckStatusInput, optFns ...func(*route53.Options)) (*route53.GetHealthCheckStatusOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1486,6 +1597,43 @@ func (_m *IClient) GetHostedZone(ctx context.Context, params *route53.GetHostedZ
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.GetHostedZoneInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetHostedZoneChangeBatch provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetHostedZoneChangeBatch(ctx context.Context, params *route53.GetHostedZoneChangeBatchInput, optFns ...func(*route53.Options)) (*route53.GetHostedZoneChangeBatchOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetHostedZoneChangeBatch")
+	}
+
+	var r0 *route53.GetHostedZoneChangeBatchOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.GetHostedZoneChangeBatchInput, ...func(*route53.Options)) (*route53.GetHostedZoneChangeBatchOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.GetHostedZoneChangeBatchInput, ...func(*route53.Options)) *route53.GetHostedZoneChangeBatchOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.GetHostedZoneChangeBatchOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.GetHostedZoneChangeBatchInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1938,6 +2086,43 @@ func (_m *IClient) ListGeoLocations(ctx context.Context, params *route53.ListGeo
 	return r0, r1
 }
 
+// ListHealthCheckSources provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHealthCheckSources(ctx context.Context, params *route53.ListHealthCheckSourcesInput, optFns ...func(*route53.Options)) (*route53.ListHealthCheckSourcesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHealthCheckSources")
+	}
+
+	var r0 *route53.ListHealthCheckSourcesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListHealthCheckSourcesInput, ...func(*route53.Options)) (*route53.ListHealthCheckSourcesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListHealthCheckSourcesInput, ...func(*route53.Options)) *route53.ListHealthCheckSourcesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.ListHealthCheckSourcesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListHealthCheckSourcesInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListHealthChecks provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListHealthChecks(ctx context.Context, params *route53.ListHealthChecksInput, optFns ...func(*route53.Options)) (*route53.ListHealthChecksOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1967,6 +2152,80 @@ func (_m *IClient) ListHealthChecks(ctx context.Context, params *route53.ListHea
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListHealthChecksInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListHealthChecksBySource provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHealthChecksBySource(ctx context.Context, params *route53.ListHealthChecksBySourceInput, optFns ...func(*route53.Options)) (*route53.ListHealthChecksBySourceOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHealthChecksBySource")
+	}
+
+	var r0 *route53.ListHealthChecksBySourceOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListHealthChecksBySourceInput, ...func(*route53.Options)) (*route53.ListHealthChecksBySourceOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListHealthChecksBySourceInput, ...func(*route53.Options)) *route53.ListHealthChecksBySourceOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.ListHealthChecksBySourceOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListHealthChecksBySourceInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListHostedZoneChangeBatches provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListHostedZoneChangeBatches(ctx context.Context, params *route53.ListHostedZoneChangeBatchesInput, optFns ...func(*route53.Options)) (*route53.ListHostedZoneChangeBatchesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListHostedZoneChangeBatches")
+	}
+
+	var r0 *route53.ListHostedZoneChangeBatchesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListHostedZoneChangeBatchesInput, ...func(*route53.Options)) (*route53.ListHostedZoneChangeBatchesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListHostedZoneChangeBatchesInput, ...func(*route53.Options)) *route53.ListHostedZoneChangeBatchesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.ListHostedZoneChangeBatchesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListHostedZoneChangeBatchesInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2115,6 +2374,43 @@ func (_m *IClient) ListQueryLoggingConfigs(ctx context.Context, params *route53.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListQueryLoggingConfigsInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourceRecordSetChanges provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourceRecordSetChanges(ctx context.Context, params *route53.ListResourceRecordSetChangesInput, optFns ...func(*route53.Options)) (*route53.ListResourceRecordSetChangesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourceRecordSetChanges")
+	}
+
+	var r0 *route53.ListResourceRecordSetChangesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListResourceRecordSetChangesInput, ...func(*route53.Options)) (*route53.ListResourceRecordSetChangesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.ListResourceRecordSetChangesInput, ...func(*route53.Options)) *route53.ListResourceRecordSetChangesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.ListResourceRecordSetChangesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.ListResourceRecordSetChangesInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2688,6 +2984,43 @@ func (_m *IClient) UpdateHostedZoneFeatures(ctx context.Context, params *route53
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53.UpdateHostedZoneFeaturesInput, ...func(*route53.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateHostedZoneTier provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateHostedZoneTier(ctx context.Context, params *route53.UpdateHostedZoneTierInput, optFns ...func(*route53.Options)) (*route53.UpdateHostedZoneTierOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateHostedZoneTier")
+	}
+
+	var r0 *route53.UpdateHostedZoneTierOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.UpdateHostedZoneTierInput, ...func(*route53.Options)) (*route53.UpdateHostedZoneTierOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53.UpdateHostedZoneTierInput, ...func(*route53.Options)) *route53.UpdateHostedZoneTierOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53.UpdateHostedZoneTierOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53.UpdateHostedZoneTierInput, ...func(*route53.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

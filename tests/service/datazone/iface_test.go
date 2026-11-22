@@ -2296,6 +2296,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateAssetOwner", func(t *testing.T) {
+        input := &datazone.UpdateAssetOwnerInput{}
+        output := &datazone.UpdateAssetOwnerOutput{}
+
+        mockClient.On("UpdateAssetOwner", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAssetOwner(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateConnection", func(t *testing.T) {
         input := &datazone.UpdateConnectionInput{}
         output := &datazone.UpdateConnectionOutput{}

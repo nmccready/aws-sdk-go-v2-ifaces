@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateDataset", func(t *testing.T) {
+        input := &connecthealth.CreateDatasetInput{}
+        output := &connecthealth.CreateDatasetOutput{}
+
+        mockClient.On("CreateDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDomain", func(t *testing.T) {
         input := &connecthealth.CreateDomainInput{}
         output := &connecthealth.CreateDomainOutput{}
@@ -86,6 +99,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteDataset", func(t *testing.T) {
+        input := &connecthealth.DeleteDatasetInput{}
+        output := &connecthealth.DeleteDatasetOutput{}
+
+        mockClient.On("DeleteDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDomain", func(t *testing.T) {
         input := &connecthealth.DeleteDomainInput{}
         output := &connecthealth.DeleteDomainOutput{}
@@ -99,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetDataset", func(t *testing.T) {
+        input := &connecthealth.GetDatasetInput{}
+        output := &connecthealth.GetDatasetOutput{}
+
+        mockClient.On("GetDataset", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDataset(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDomain", func(t *testing.T) {
         input := &connecthealth.GetDomainInput{}
         output := &connecthealth.GetDomainOutput{}
@@ -106,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetMedicalCodingJob", func(t *testing.T) {
+        input := &connecthealth.GetMedicalCodingJobInput{}
+        output := &connecthealth.GetMedicalCodingJobOutput{}
+
+        mockClient.On("GetMedicalCodingJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMedicalCodingJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -151,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListDatasets", func(t *testing.T) {
+        input := &connecthealth.ListDatasetsInput{}
+        output := &connecthealth.ListDatasetsOutput{}
+
+        mockClient.On("ListDatasets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListDatasets(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDomains", func(t *testing.T) {
         input := &connecthealth.ListDomainsInput{}
         output := &connecthealth.ListDomainsOutput{}
@@ -190,6 +255,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartMedicalCodingJob", func(t *testing.T) {
+        input := &connecthealth.StartMedicalCodingJobInput{}
+        output := &connecthealth.StartMedicalCodingJobOutput{}
+
+        mockClient.On("StartMedicalCodingJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartMedicalCodingJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartMedicalScribeListeningSession", func(t *testing.T) {
         input := &connecthealth.StartMedicalScribeListeningSessionInput{}
         output := &connecthealth.StartMedicalScribeListeningSessionOutput{}
@@ -210,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartPatientInsightsJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartPatientInsightsJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSubmitFeedback", func(t *testing.T) {
+        input := &connecthealth.SubmitFeedbackInput{}
+        output := &connecthealth.SubmitFeedbackOutput{}
+
+        mockClient.On("SubmitFeedback", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SubmitFeedback(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

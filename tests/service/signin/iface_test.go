@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestBatchRevokeSessions", func(t *testing.T) {
+        input := &signin.BatchRevokeSessionsInput{}
+        output := &signin.BatchRevokeSessionsOutput{}
+
+        mockClient.On("BatchRevokeSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.BatchRevokeSessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateBearerToken", func(t *testing.T) {
         input := &signin.CreateBearerTokenInput{}
         output := &signin.CreateBearerTokenOutput{}
@@ -138,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetSession", func(t *testing.T) {
+        input := &signin.GetSessionInput{}
+        output := &signin.GetSessionOutput{}
+
+        mockClient.On("GetSession", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetSession(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestIntrospectOAuth2TokenWithIAM", func(t *testing.T) {
         input := &signin.IntrospectOAuth2TokenWithIAMInput{}
         output := &signin.IntrospectOAuth2TokenWithIAMOutput{}
@@ -158,6 +184,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResourcePermissionStatements", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResourcePermissionStatements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListSessions", func(t *testing.T) {
+        input := &signin.ListSessionsInput{}
+        output := &signin.ListSessionsOutput{}
+
+        mockClient.On("ListSessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListSessions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

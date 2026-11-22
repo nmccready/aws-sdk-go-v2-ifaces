@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelChannelContract", func(t *testing.T) {
+        input := &partnercentralchannel.CancelChannelContractInput{}
+        output := &partnercentralchannel.CancelChannelContractOutput{}
+
+        mockClient.On("CancelChannelContract", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelChannelContract(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCancelChannelHandshake", func(t *testing.T) {
         input := &partnercentralchannel.CancelChannelHandshakeInput{}
         output := &partnercentralchannel.CancelChannelHandshakeOutput{}
@@ -54,6 +67,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CancelChannelHandshake", ctx, input).Return(output, nil)
 
         result, err := mockClient.CancelChannelHandshake(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateChannelContract", func(t *testing.T) {
+        input := &partnercentralchannel.CreateChannelContractInput{}
+        output := &partnercentralchannel.CreateChannelContractOutput{}
+
+        mockClient.On("CreateChannelContract", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateChannelContract(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -125,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetChannelContract", func(t *testing.T) {
+        input := &partnercentralchannel.GetChannelContractInput{}
+        output := &partnercentralchannel.GetChannelContractOutput{}
+
+        mockClient.On("GetChannelContract", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetChannelContract(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetRelationship", func(t *testing.T) {
         input := &partnercentralchannel.GetRelationshipInput{}
         output := &partnercentralchannel.GetRelationshipOutput{}
@@ -132,6 +171,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetRelationship", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetRelationship(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListChannelContracts", func(t *testing.T) {
+        input := &partnercentralchannel.ListChannelContractsInput{}
+        output := &partnercentralchannel.ListChannelContractsOutput{}
+
+        mockClient.On("ListChannelContracts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListChannelContracts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -54,6 +54,7 @@ type IClient interface {
  ListFirewallConfigs(ctx context.Context, params *ListFirewallConfigsInput, optFns ...func(*Options)) (*ListFirewallConfigsOutput, error) 
  ListFirewallDomainLists(ctx context.Context, params *ListFirewallDomainListsInput, optFns ...func(*Options)) (*ListFirewallDomainListsOutput, error) 
  ListFirewallDomains(ctx context.Context, params *ListFirewallDomainsInput, optFns ...func(*Options)) (*ListFirewallDomainsOutput, error) 
+ ListFirewallRuleDomains(ctx context.Context, params *ListFirewallRuleDomainsInput, optFns ...func(*Options)) (*ListFirewallRuleDomainsOutput, error) 
  ListFirewallRuleGroupAssociations(ctx context.Context, params *ListFirewallRuleGroupAssociationsInput, optFns ...func(*Options)) (*ListFirewallRuleGroupAssociationsOutput, error) 
  ListFirewallRuleGroups(ctx context.Context, params *ListFirewallRuleGroupsInput, optFns ...func(*Options)) (*ListFirewallRuleGroupsOutput, error) 
  ListFirewallRuleTypes(ctx context.Context, params *ListFirewallRuleTypesInput, optFns ...func(*Options)) (*ListFirewallRuleTypesOutput, error) 

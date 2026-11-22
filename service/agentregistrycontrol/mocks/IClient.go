@@ -15,6 +15,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// AssociatePublisher provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociatePublisher(ctx context.Context, params *agentregistrycontrol.AssociatePublisherInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.AssociatePublisherOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociatePublisher")
+	}
+
+	var r0 *agentregistrycontrol.AssociatePublisherOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.AssociatePublisherInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.AssociatePublisherOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.AssociatePublisherInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.AssociatePublisherOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.AssociatePublisherOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.AssociatePublisherInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreatePublisher provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePublisher(ctx context.Context, params *agentregistrycontrol.CreatePublisherInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.CreatePublisherOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePublisher")
+	}
+
+	var r0 *agentregistrycontrol.CreatePublisherOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.CreatePublisherInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.CreatePublisherOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.CreatePublisherInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.CreatePublisherOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.CreatePublisherOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.CreatePublisherInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateRegistry provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateRegistry(ctx context.Context, params *agentregistrycontrol.CreateRegistryInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.CreateRegistryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +155,43 @@ func (_m *IClient) CreateRegistryRecord(ctx context.Context, params *agentregist
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.CreateRegistryRecordInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePublisher provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePublisher(ctx context.Context, params *agentregistrycontrol.DeletePublisherInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.DeletePublisherOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePublisher")
+	}
+
+	var r0 *agentregistrycontrol.DeletePublisherOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.DeletePublisherInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.DeletePublisherOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.DeletePublisherInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.DeletePublisherOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.DeletePublisherOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.DeletePublisherInput, ...func(*agentregistrycontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -163,6 +274,80 @@ func (_m *IClient) DeleteRegistryRecord(ctx context.Context, params *agentregist
 	return r0, r1
 }
 
+// DisassociatePublisher provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociatePublisher(ctx context.Context, params *agentregistrycontrol.DisassociatePublisherInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.DisassociatePublisherOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociatePublisher")
+	}
+
+	var r0 *agentregistrycontrol.DisassociatePublisherOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.DisassociatePublisherInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.DisassociatePublisherOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.DisassociatePublisherInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.DisassociatePublisherOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.DisassociatePublisherOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.DisassociatePublisherInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPublisher provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPublisher(ctx context.Context, params *agentregistrycontrol.GetPublisherInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.GetPublisherOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPublisher")
+	}
+
+	var r0 *agentregistrycontrol.GetPublisherOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.GetPublisherInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.GetPublisherOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.GetPublisherInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.GetPublisherOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.GetPublisherOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.GetPublisherInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetRegistry provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetRegistry(ctx context.Context, params *agentregistrycontrol.GetRegistryInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.GetRegistryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +414,80 @@ func (_m *IClient) GetRegistryRecord(ctx context.Context, params *agentregistryc
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.GetRegistryRecordInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPublisherAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPublisherAssociations(ctx context.Context, params *agentregistrycontrol.ListPublisherAssociationsInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.ListPublisherAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPublisherAssociations")
+	}
+
+	var r0 *agentregistrycontrol.ListPublisherAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.ListPublisherAssociationsInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.ListPublisherAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.ListPublisherAssociationsInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.ListPublisherAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.ListPublisherAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.ListPublisherAssociationsInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPublishers provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPublishers(ctx context.Context, params *agentregistrycontrol.ListPublishersInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.ListPublishersOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPublishers")
+	}
+
+	var r0 *agentregistrycontrol.ListPublishersOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.ListPublishersInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.ListPublishersOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.ListPublishersInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.ListPublishersOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.ListPublishersOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.ListPublishersInput, ...func(*agentregistrycontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -477,6 +736,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *agentregistrycontr
 	return r0, r1
 }
 
+// UpdatePublisherAssociationApprovalStatus provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePublisherAssociationApprovalStatus(ctx context.Context, params *agentregistrycontrol.UpdatePublisherAssociationApprovalStatusInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.UpdatePublisherAssociationApprovalStatusOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePublisherAssociationApprovalStatus")
+	}
+
+	var r0 *agentregistrycontrol.UpdatePublisherAssociationApprovalStatusOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.UpdatePublisherAssociationApprovalStatusInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.UpdatePublisherAssociationApprovalStatusOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.UpdatePublisherAssociationApprovalStatusInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.UpdatePublisherAssociationApprovalStatusOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.UpdatePublisherAssociationApprovalStatusOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.UpdatePublisherAssociationApprovalStatusInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateRegistry provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateRegistry(ctx context.Context, params *agentregistrycontrol.UpdateRegistryInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.UpdateRegistryOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -580,6 +876,43 @@ func (_m *IClient) UpdateRegistryRecordStatus(ctx context.Context, params *agent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.UpdateRegistryRecordStatusInput, ...func(*agentregistrycontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ValidatePublisher provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ValidatePublisher(ctx context.Context, params *agentregistrycontrol.ValidatePublisherInput, optFns ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.ValidatePublisherOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ValidatePublisher")
+	}
+
+	var r0 *agentregistrycontrol.ValidatePublisherOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.ValidatePublisherInput, ...func(*agentregistrycontrol.Options)) (*agentregistrycontrol.ValidatePublisherOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *agentregistrycontrol.ValidatePublisherInput, ...func(*agentregistrycontrol.Options)) *agentregistrycontrol.ValidatePublisherOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*agentregistrycontrol.ValidatePublisherOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *agentregistrycontrol.ValidatePublisherInput, ...func(*agentregistrycontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

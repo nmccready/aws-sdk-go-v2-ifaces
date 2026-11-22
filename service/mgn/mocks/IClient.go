@@ -348,6 +348,43 @@ func (_m *IClient) CreateNetworkMigrationDefinition(ctx context.Context, params 
 	return r0, r1
 }
 
+// CreateRemoteSourceAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateRemoteSourceAction(ctx context.Context, params *mgn.CreateRemoteSourceActionInput, optFns ...func(*mgn.Options)) (*mgn.CreateRemoteSourceActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateRemoteSourceAction")
+	}
+
+	var r0 *mgn.CreateRemoteSourceActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.CreateRemoteSourceActionInput, ...func(*mgn.Options)) (*mgn.CreateRemoteSourceActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.CreateRemoteSourceActionInput, ...func(*mgn.Options)) *mgn.CreateRemoteSourceActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.CreateRemoteSourceActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.CreateRemoteSourceActionInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateReplicationConfigurationTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateReplicationConfigurationTemplate(ctx context.Context, params *mgn.CreateReplicationConfigurationTemplateInput, optFns ...func(*mgn.Options)) (*mgn.CreateReplicationConfigurationTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +636,43 @@ func (_m *IClient) DeleteNetworkMigrationDefinition(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.DeleteNetworkMigrationDefinitionInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteRemoteSourceAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteRemoteSourceAction(ctx context.Context, params *mgn.DeleteRemoteSourceActionInput, optFns ...func(*mgn.Options)) (*mgn.DeleteRemoteSourceActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteRemoteSourceAction")
+	}
+
+	var r0 *mgn.DeleteRemoteSourceActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.DeleteRemoteSourceActionInput, ...func(*mgn.Options)) (*mgn.DeleteRemoteSourceActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.DeleteRemoteSourceActionInput, ...func(*mgn.Options)) *mgn.DeleteRemoteSourceActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.DeleteRemoteSourceActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.DeleteRemoteSourceActionInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1154,6 +1228,43 @@ func (_m *IClient) GetLaunchConfiguration(ctx context.Context, params *mgn.GetLa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.GetLaunchConfigurationInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetLaunchConfigurationDefaults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetLaunchConfigurationDefaults(ctx context.Context, params *mgn.GetLaunchConfigurationDefaultsInput, optFns ...func(*mgn.Options)) (*mgn.GetLaunchConfigurationDefaultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetLaunchConfigurationDefaults")
+	}
+
+	var r0 *mgn.GetLaunchConfigurationDefaultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.GetLaunchConfigurationDefaultsInput, ...func(*mgn.Options)) (*mgn.GetLaunchConfigurationDefaultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.GetLaunchConfigurationDefaultsInput, ...func(*mgn.Options)) *mgn.GetLaunchConfigurationDefaultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.GetLaunchConfigurationDefaultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.GetLaunchConfigurationDefaultsInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1902,6 +2013,43 @@ func (_m *IClient) ListNetworkMigrationExecutions(ctx context.Context, params *m
 	return r0, r1
 }
 
+// ListNetworkMigrationInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListNetworkMigrationInsights(ctx context.Context, params *mgn.ListNetworkMigrationInsightsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListNetworkMigrationInsights")
+	}
+
+	var r0 *mgn.ListNetworkMigrationInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationInsightsInput, ...func(*mgn.Options)) (*mgn.ListNetworkMigrationInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListNetworkMigrationInsightsInput, ...func(*mgn.Options)) *mgn.ListNetworkMigrationInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListNetworkMigrationInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationInsightsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListNetworkMigrationMapperSegmentConstructs provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListNetworkMigrationMapperSegmentConstructs(ctx context.Context, params *mgn.ListNetworkMigrationMapperSegmentConstructsInput, optFns ...func(*mgn.Options)) (*mgn.ListNetworkMigrationMapperSegmentConstructsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2042,6 +2190,154 @@ func (_m *IClient) ListNetworkMigrationMappings(ctx context.Context, params *mgn
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListNetworkMigrationMappingsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRemoteSourceActionInvocationResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRemoteSourceActionInvocationResults(ctx context.Context, params *mgn.ListRemoteSourceActionInvocationResultsInput, optFns ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionInvocationResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRemoteSourceActionInvocationResults")
+	}
+
+	var r0 *mgn.ListRemoteSourceActionInvocationResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionInvocationResultsInput, ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionInvocationResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionInvocationResultsInput, ...func(*mgn.Options)) *mgn.ListRemoteSourceActionInvocationResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListRemoteSourceActionInvocationResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListRemoteSourceActionInvocationResultsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRemoteSourceActionInvocations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRemoteSourceActionInvocations(ctx context.Context, params *mgn.ListRemoteSourceActionInvocationsInput, optFns ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionInvocationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRemoteSourceActionInvocations")
+	}
+
+	var r0 *mgn.ListRemoteSourceActionInvocationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionInvocationsInput, ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionInvocationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionInvocationsInput, ...func(*mgn.Options)) *mgn.ListRemoteSourceActionInvocationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListRemoteSourceActionInvocationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListRemoteSourceActionInvocationsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRemoteSourceActionJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRemoteSourceActionJobs(ctx context.Context, params *mgn.ListRemoteSourceActionJobsInput, optFns ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRemoteSourceActionJobs")
+	}
+
+	var r0 *mgn.ListRemoteSourceActionJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionJobsInput, ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionJobsInput, ...func(*mgn.Options)) *mgn.ListRemoteSourceActionJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListRemoteSourceActionJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListRemoteSourceActionJobsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListRemoteSourceActions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListRemoteSourceActions(ctx context.Context, params *mgn.ListRemoteSourceActionsInput, optFns ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListRemoteSourceActions")
+	}
+
+	var r0 *mgn.ListRemoteSourceActionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionsInput, ...func(*mgn.Options)) (*mgn.ListRemoteSourceActionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.ListRemoteSourceActionsInput, ...func(*mgn.Options)) *mgn.ListRemoteSourceActionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.ListRemoteSourceActionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.ListRemoteSourceActionsInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2845,6 +3141,43 @@ func (_m *IClient) StartNetworkMigrationMappingUpdate(ctx context.Context, param
 	return r0, r1
 }
 
+// StartRemoteSourceActionJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartRemoteSourceActionJob(ctx context.Context, params *mgn.StartRemoteSourceActionJobInput, optFns ...func(*mgn.Options)) (*mgn.StartRemoteSourceActionJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartRemoteSourceActionJob")
+	}
+
+	var r0 *mgn.StartRemoteSourceActionJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartRemoteSourceActionJobInput, ...func(*mgn.Options)) (*mgn.StartRemoteSourceActionJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.StartRemoteSourceActionJobInput, ...func(*mgn.Options)) *mgn.StartRemoteSourceActionJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.StartRemoteSourceActionJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.StartRemoteSourceActionJobInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartReplication provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartReplication(ctx context.Context, params *mgn.StartReplicationInput, optFns ...func(*mgn.Options)) (*mgn.StartReplicationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3252,6 +3585,43 @@ func (_m *IClient) UpdateLaunchConfiguration(ctx context.Context, params *mgn.Up
 	return r0, r1
 }
 
+// UpdateLaunchConfigurationDefaults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateLaunchConfigurationDefaults(ctx context.Context, params *mgn.UpdateLaunchConfigurationDefaultsInput, optFns ...func(*mgn.Options)) (*mgn.UpdateLaunchConfigurationDefaultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateLaunchConfigurationDefaults")
+	}
+
+	var r0 *mgn.UpdateLaunchConfigurationDefaultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateLaunchConfigurationDefaultsInput, ...func(*mgn.Options)) (*mgn.UpdateLaunchConfigurationDefaultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateLaunchConfigurationDefaultsInput, ...func(*mgn.Options)) *mgn.UpdateLaunchConfigurationDefaultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.UpdateLaunchConfigurationDefaultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.UpdateLaunchConfigurationDefaultsInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateLaunchConfigurationTemplate provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateLaunchConfigurationTemplate(ctx context.Context, params *mgn.UpdateLaunchConfigurationTemplateInput, optFns ...func(*mgn.Options)) (*mgn.UpdateLaunchConfigurationTemplateOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3355,6 +3725,43 @@ func (_m *IClient) UpdateNetworkMigrationMapperSegment(ctx context.Context, para
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *mgn.UpdateNetworkMigrationMapperSegmentInput, ...func(*mgn.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateRemoteSourceAction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateRemoteSourceAction(ctx context.Context, params *mgn.UpdateRemoteSourceActionInput, optFns ...func(*mgn.Options)) (*mgn.UpdateRemoteSourceActionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateRemoteSourceAction")
+	}
+
+	var r0 *mgn.UpdateRemoteSourceActionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateRemoteSourceActionInput, ...func(*mgn.Options)) (*mgn.UpdateRemoteSourceActionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *mgn.UpdateRemoteSourceActionInput, ...func(*mgn.Options)) *mgn.UpdateRemoteSourceActionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*mgn.UpdateRemoteSourceActionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *mgn.UpdateRemoteSourceActionInput, ...func(*mgn.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

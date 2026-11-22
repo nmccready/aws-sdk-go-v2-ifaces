@@ -51,6 +51,43 @@ func (_m *IClient) CreateMonitor(ctx context.Context, params *networkflowmonitor
 	return r0, r1
 }
 
+// CreatePerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreatePerformanceMonitor(ctx context.Context, params *networkflowmonitor.CreatePerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.CreatePerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreatePerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.CreatePerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.CreatePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.CreatePerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.CreatePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.CreatePerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.CreatePerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.CreatePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateScope provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateScope(ctx context.Context, params *networkflowmonitor.CreateScopeInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.CreateScopeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -117,6 +154,43 @@ func (_m *IClient) DeleteMonitor(ctx context.Context, params *networkflowmonitor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.DeleteMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeletePerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeletePerformanceMonitor(ctx context.Context, params *networkflowmonitor.DeletePerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.DeletePerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeletePerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.DeletePerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.DeletePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.DeletePerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.DeletePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.DeletePerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.DeletePerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.DeletePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -199,6 +273,80 @@ func (_m *IClient) GetMonitor(ctx context.Context, params *networkflowmonitor.Ge
 	return r0, r1
 }
 
+// GetMonitorScopeSuggestions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMonitorScopeSuggestions(ctx context.Context, params *networkflowmonitor.GetMonitorScopeSuggestionsInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetMonitorScopeSuggestionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMonitorScopeSuggestions")
+	}
+
+	var r0 *networkflowmonitor.GetMonitorScopeSuggestionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetMonitorScopeSuggestionsInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetMonitorScopeSuggestionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetMonitorScopeSuggestionsInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.GetMonitorScopeSuggestionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.GetMonitorScopeSuggestionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.GetMonitorScopeSuggestionsInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetPerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetPerformanceMonitor(ctx context.Context, params *networkflowmonitor.GetPerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetPerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetPerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.GetPerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetPerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.GetPerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.GetPerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.GetPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetQueryResultsMonitorTopContributors provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetQueryResultsMonitorTopContributors(ctx context.Context, params *networkflowmonitor.GetQueryResultsMonitorTopContributorsInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetQueryResultsMonitorTopContributorsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -228,6 +376,43 @@ func (_m *IClient) GetQueryResultsMonitorTopContributors(ctx context.Context, pa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.GetQueryResultsMonitorTopContributorsInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQueryResultsPerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQueryResultsPerformanceMonitor(ctx context.Context, params *networkflowmonitor.GetQueryResultsPerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetQueryResultsPerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQueryResultsPerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.GetQueryResultsPerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetQueryResultsPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetQueryResultsPerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetQueryResultsPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.GetQueryResultsPerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.GetQueryResultsPerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.GetQueryResultsPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -339,6 +524,43 @@ func (_m *IClient) GetQueryStatusMonitorTopContributors(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.GetQueryStatusMonitorTopContributorsInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQueryStatusPerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQueryStatusPerformanceMonitor(ctx context.Context, params *networkflowmonitor.GetQueryStatusPerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetQueryStatusPerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQueryStatusPerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.GetQueryStatusPerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetQueryStatusPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.GetQueryStatusPerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.GetQueryStatusPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.GetQueryStatusPerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.GetQueryStatusPerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.GetQueryStatusPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -495,6 +717,43 @@ func (_m *IClient) ListMonitors(ctx context.Context, params *networkflowmonitor.
 	return r0, r1
 }
 
+// ListPerformanceMonitors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPerformanceMonitors(ctx context.Context, params *networkflowmonitor.ListPerformanceMonitorsInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.ListPerformanceMonitorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPerformanceMonitors")
+	}
+
+	var r0 *networkflowmonitor.ListPerformanceMonitorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.ListPerformanceMonitorsInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.ListPerformanceMonitorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.ListPerformanceMonitorsInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.ListPerformanceMonitorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.ListPerformanceMonitorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.ListPerformanceMonitorsInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListScopes provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListScopes(ctx context.Context, params *networkflowmonitor.ListScopesInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.ListScopesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -624,6 +883,43 @@ func (_m *IClient) StartQueryMonitorTopContributors(ctx context.Context, params 
 	return r0, r1
 }
 
+// StartQueryPerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartQueryPerformanceMonitor(ctx context.Context, params *networkflowmonitor.StartQueryPerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.StartQueryPerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartQueryPerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.StartQueryPerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.StartQueryPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.StartQueryPerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.StartQueryPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.StartQueryPerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.StartQueryPerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.StartQueryPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartQueryWorkloadInsightsTopContributors provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartQueryWorkloadInsightsTopContributors(ctx context.Context, params *networkflowmonitor.StartQueryWorkloadInsightsTopContributorsInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.StartQueryWorkloadInsightsTopContributorsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -727,6 +1023,43 @@ func (_m *IClient) StopQueryMonitorTopContributors(ctx context.Context, params *
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.StopQueryMonitorTopContributorsInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StopQueryPerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StopQueryPerformanceMonitor(ctx context.Context, params *networkflowmonitor.StopQueryPerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.StopQueryPerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StopQueryPerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.StopQueryPerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.StopQueryPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.StopQueryPerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.StopQueryPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.StopQueryPerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.StopQueryPerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.StopQueryPerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -912,6 +1245,43 @@ func (_m *IClient) UpdateMonitor(ctx context.Context, params *networkflowmonitor
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.UpdateMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdatePerformanceMonitor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdatePerformanceMonitor(ctx context.Context, params *networkflowmonitor.UpdatePerformanceMonitorInput, optFns ...func(*networkflowmonitor.Options)) (*networkflowmonitor.UpdatePerformanceMonitorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdatePerformanceMonitor")
+	}
+
+	var r0 *networkflowmonitor.UpdatePerformanceMonitorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.UpdatePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) (*networkflowmonitor.UpdatePerformanceMonitorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkflowmonitor.UpdatePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) *networkflowmonitor.UpdatePerformanceMonitorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkflowmonitor.UpdatePerformanceMonitorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkflowmonitor.UpdatePerformanceMonitorInput, ...func(*networkflowmonitor.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

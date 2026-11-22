@@ -126,6 +126,43 @@ func (_m *IClient) DeleteAutomationRule(ctx context.Context, params *computeopti
 	return r0, r1
 }
 
+// DeleteOrganizationEnrollmentConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteOrganizationEnrollmentConfiguration(ctx context.Context, params *computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationInput, optFns ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteOrganizationEnrollmentConfiguration")
+	}
+
+	var r0 *computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationInput, ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationInput, ...func(*computeoptimizerautomation.Options)) *computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationInput, ...func(*computeoptimizerautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateAccounts provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateAccounts(ctx context.Context, params *computeoptimizerautomation.DisassociateAccountsInput, optFns ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.DisassociateAccountsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -533,6 +570,80 @@ func (_m *IClient) ListAutomationRules(ctx context.Context, params *computeoptim
 	return r0, r1
 }
 
+// ListOrganizationEnrollmentConfigurations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOrganizationEnrollmentConfigurations(ctx context.Context, params *computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsInput, optFns ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOrganizationEnrollmentConfigurations")
+	}
+
+	var r0 *computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsInput, ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsInput, ...func(*computeoptimizerautomation.Options)) *computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsInput, ...func(*computeoptimizerautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListOrganizationalUnits provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOrganizationalUnits(ctx context.Context, params *computeoptimizerautomation.ListOrganizationalUnitsInput, optFns ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.ListOrganizationalUnitsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOrganizationalUnits")
+	}
+
+	var r0 *computeoptimizerautomation.ListOrganizationalUnitsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.ListOrganizationalUnitsInput, ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.ListOrganizationalUnitsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.ListOrganizationalUnitsInput, ...func(*computeoptimizerautomation.Options)) *computeoptimizerautomation.ListOrganizationalUnitsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*computeoptimizerautomation.ListOrganizationalUnitsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizerautomation.ListOrganizationalUnitsInput, ...func(*computeoptimizerautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListRecommendedActionSummaries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListRecommendedActionSummaries(ctx context.Context, params *computeoptimizerautomation.ListRecommendedActionSummariesInput, optFns ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.ListRecommendedActionSummariesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -660,6 +771,43 @@ func (_m *IClient) Options() computeoptimizerautomation.Options {
 	}
 
 	return r0
+}
+
+// PutOrganizationEnrollmentConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutOrganizationEnrollmentConfiguration(ctx context.Context, params *computeoptimizerautomation.PutOrganizationEnrollmentConfigurationInput, optFns ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.PutOrganizationEnrollmentConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutOrganizationEnrollmentConfiguration")
+	}
+
+	var r0 *computeoptimizerautomation.PutOrganizationEnrollmentConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.PutOrganizationEnrollmentConfigurationInput, ...func(*computeoptimizerautomation.Options)) (*computeoptimizerautomation.PutOrganizationEnrollmentConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *computeoptimizerautomation.PutOrganizationEnrollmentConfigurationInput, ...func(*computeoptimizerautomation.Options)) *computeoptimizerautomation.PutOrganizationEnrollmentConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*computeoptimizerautomation.PutOrganizationEnrollmentConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *computeoptimizerautomation.PutOrganizationEnrollmentConfigurationInput, ...func(*computeoptimizerautomation.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // RollbackAutomationEvent provides a mock function with given fields: ctx, params, optFns

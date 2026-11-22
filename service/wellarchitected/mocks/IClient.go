@@ -88,6 +88,43 @@ func (_m *IClient) AssociateProfiles(ctx context.Context, params *wellarchitecte
 	return r0, r1
 }
 
+// CreateAgentBasicProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAgentBasicProfile(ctx context.Context, params *wellarchitected.CreateAgentBasicProfileInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentBasicProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAgentBasicProfile")
+	}
+
+	var r0 *wellarchitected.CreateAgentBasicProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.CreateAgentBasicProfileInput, ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentBasicProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.CreateAgentBasicProfileInput, ...func(*wellarchitected.Options)) *wellarchitected.CreateAgentBasicProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.CreateAgentBasicProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.CreateAgentBasicProfileInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateAgentContext provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateAgentContext(ctx context.Context, params *wellarchitected.CreateAgentContextInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentContextOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -154,6 +191,80 @@ func (_m *IClient) CreateAgentGoal(ctx context.Context, params *wellarchitected.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.CreateAgentGoalInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAgentOrganizationalProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAgentOrganizationalProfile(ctx context.Context, params *wellarchitected.CreateAgentOrganizationalProfileInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentOrganizationalProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAgentOrganizationalProfile")
+	}
+
+	var r0 *wellarchitected.CreateAgentOrganizationalProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.CreateAgentOrganizationalProfileInput, ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentOrganizationalProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.CreateAgentOrganizationalProfileInput, ...func(*wellarchitected.Options)) *wellarchitected.CreateAgentOrganizationalProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.CreateAgentOrganizationalProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.CreateAgentOrganizationalProfileInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateAgentOrganizationalReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateAgentOrganizationalReport(ctx context.Context, params *wellarchitected.CreateAgentOrganizationalReportInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentOrganizationalReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateAgentOrganizationalReport")
+	}
+
+	var r0 *wellarchitected.CreateAgentOrganizationalReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.CreateAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) (*wellarchitected.CreateAgentOrganizationalReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.CreateAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) *wellarchitected.CreateAgentOrganizationalReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.CreateAgentOrganizationalReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.CreateAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -606,6 +717,43 @@ func (_m *IClient) DeleteAgentGoal(ctx context.Context, params *wellarchitected.
 	return r0, r1
 }
 
+// DeleteAgentOrganizationalReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAgentOrganizationalReport(ctx context.Context, params *wellarchitected.DeleteAgentOrganizationalReportInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentOrganizationalReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAgentOrganizationalReport")
+	}
+
+	var r0 *wellarchitected.DeleteAgentOrganizationalReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.DeleteAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentOrganizationalReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.DeleteAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) *wellarchitected.DeleteAgentOrganizationalReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.DeleteAgentOrganizationalReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.DeleteAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAgentProfile provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAgentProfile(ctx context.Context, params *wellarchitected.DeleteAgentProfileInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentProfileOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -635,6 +783,80 @@ func (_m *IClient) DeleteAgentProfile(ctx context.Context, params *wellarchitect
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.DeleteAgentProfileInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAgentProfilePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAgentProfilePolicy(ctx context.Context, params *wellarchitected.DeleteAgentProfilePolicyInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentProfilePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAgentProfilePolicy")
+	}
+
+	var r0 *wellarchitected.DeleteAgentProfilePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.DeleteAgentProfilePolicyInput, ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentProfilePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.DeleteAgentProfilePolicyInput, ...func(*wellarchitected.Options)) *wellarchitected.DeleteAgentProfilePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.DeleteAgentProfilePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.DeleteAgentProfilePolicyInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAgentRecommendationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAgentRecommendationPolicy(ctx context.Context, params *wellarchitected.DeleteAgentRecommendationPolicyInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentRecommendationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAgentRecommendationPolicy")
+	}
+
+	var r0 *wellarchitected.DeleteAgentRecommendationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.DeleteAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) (*wellarchitected.DeleteAgentRecommendationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.DeleteAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) *wellarchitected.DeleteAgentRecommendationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.DeleteAgentRecommendationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.DeleteAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1124,6 +1346,117 @@ func (_m *IClient) GetAgentGoal(ctx context.Context, params *wellarchitected.Get
 	return r0, r1
 }
 
+// GetAgentOrganizationalReport provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentOrganizationalReport(ctx context.Context, params *wellarchitected.GetAgentOrganizationalReportInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentOrganizationalReportOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentOrganizationalReport")
+	}
+
+	var r0 *wellarchitected.GetAgentOrganizationalReportOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentOrganizationalReportOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) *wellarchitected.GetAgentOrganizationalReportOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.GetAgentOrganizationalReportOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentOrganizationalReportInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentOrganizationalReportData provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentOrganizationalReportData(ctx context.Context, params *wellarchitected.GetAgentOrganizationalReportDataInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentOrganizationalReportDataOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentOrganizationalReportData")
+	}
+
+	var r0 *wellarchitected.GetAgentOrganizationalReportDataOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentOrganizationalReportDataInput, ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentOrganizationalReportDataOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentOrganizationalReportDataInput, ...func(*wellarchitected.Options)) *wellarchitected.GetAgentOrganizationalReportDataOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.GetAgentOrganizationalReportDataOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentOrganizationalReportDataInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentPreferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentPreferences(ctx context.Context, params *wellarchitected.GetAgentPreferencesInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentPreferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentPreferences")
+	}
+
+	var r0 *wellarchitected.GetAgentPreferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentPreferencesInput, ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentPreferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentPreferencesInput, ...func(*wellarchitected.Options)) *wellarchitected.GetAgentPreferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.GetAgentPreferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentPreferencesInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAgentProfile provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAgentProfile(ctx context.Context, params *wellarchitected.GetAgentProfileInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentProfileOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1153,6 +1486,43 @@ func (_m *IClient) GetAgentProfile(ctx context.Context, params *wellarchitected.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentProfileInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentProfilePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentProfilePolicy(ctx context.Context, params *wellarchitected.GetAgentProfilePolicyInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentProfilePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentProfilePolicy")
+	}
+
+	var r0 *wellarchitected.GetAgentProfilePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentProfilePolicyInput, ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentProfilePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentProfilePolicyInput, ...func(*wellarchitected.Options)) *wellarchitected.GetAgentProfilePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.GetAgentProfilePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentProfilePolicyInput, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1227,6 +1597,43 @@ func (_m *IClient) GetAgentRecommendationGeneration(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentRecommendationGenerationInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAgentRecommendationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentRecommendationPolicy(ctx context.Context, params *wellarchitected.GetAgentRecommendationPolicyInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentRecommendationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentRecommendationPolicy")
+	}
+
+	var r0 *wellarchitected.GetAgentRecommendationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) (*wellarchitected.GetAgentRecommendationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.GetAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) *wellarchitected.GetAgentRecommendationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.GetAgentRecommendationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.GetAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1856,6 +2263,43 @@ func (_m *IClient) ListAgentGoals(ctx context.Context, params *wellarchitected.L
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.ListAgentGoalsInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAgentOrganizationalReports provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgentOrganizationalReports(ctx context.Context, params *wellarchitected.ListAgentOrganizationalReportsInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.ListAgentOrganizationalReportsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgentOrganizationalReports")
+	}
+
+	var r0 *wellarchitected.ListAgentOrganizationalReportsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.ListAgentOrganizationalReportsInput, ...func(*wellarchitected.Options)) (*wellarchitected.ListAgentOrganizationalReportsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.ListAgentOrganizationalReportsInput, ...func(*wellarchitected.Options)) *wellarchitected.ListAgentOrganizationalReportsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.ListAgentOrganizationalReportsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.ListAgentOrganizationalReportsInput, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2733,6 +3177,80 @@ func (_m *IClient) Options() wellarchitected.Options {
 	return r0
 }
 
+// PutAgentPreferences provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAgentPreferences(ctx context.Context, params *wellarchitected.PutAgentPreferencesInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentPreferencesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAgentPreferences")
+	}
+
+	var r0 *wellarchitected.PutAgentPreferencesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.PutAgentPreferencesInput, ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentPreferencesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.PutAgentPreferencesInput, ...func(*wellarchitected.Options)) *wellarchitected.PutAgentPreferencesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.PutAgentPreferencesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.PutAgentPreferencesInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutAgentProfilePolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAgentProfilePolicy(ctx context.Context, params *wellarchitected.PutAgentProfilePolicyInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentProfilePolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAgentProfilePolicy")
+	}
+
+	var r0 *wellarchitected.PutAgentProfilePolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.PutAgentProfilePolicyInput, ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentProfilePolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.PutAgentProfilePolicyInput, ...func(*wellarchitected.Options)) *wellarchitected.PutAgentProfilePolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.PutAgentProfilePolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.PutAgentProfilePolicyInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutAgentRecommendationFeedback provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutAgentRecommendationFeedback(ctx context.Context, params *wellarchitected.PutAgentRecommendationFeedbackInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentRecommendationFeedbackOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2762,6 +3280,80 @@ func (_m *IClient) PutAgentRecommendationFeedback(ctx context.Context, params *w
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.PutAgentRecommendationFeedbackInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutAgentRecommendationPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAgentRecommendationPolicy(ctx context.Context, params *wellarchitected.PutAgentRecommendationPolicyInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentRecommendationPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAgentRecommendationPolicy")
+	}
+
+	var r0 *wellarchitected.PutAgentRecommendationPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.PutAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) (*wellarchitected.PutAgentRecommendationPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.PutAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) *wellarchitected.PutAgentRecommendationPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.PutAgentRecommendationPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.PutAgentRecommendationPolicyInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SendAgentOrganizationalReportDataToS3 provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SendAgentOrganizationalReportDataToS3(ctx context.Context, params *wellarchitected.SendAgentOrganizationalReportDataToS3Input, optFns ...func(*wellarchitected.Options)) (*wellarchitected.SendAgentOrganizationalReportDataToS3Output, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SendAgentOrganizationalReportDataToS3")
+	}
+
+	var r0 *wellarchitected.SendAgentOrganizationalReportDataToS3Output
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.SendAgentOrganizationalReportDataToS3Input, ...func(*wellarchitected.Options)) (*wellarchitected.SendAgentOrganizationalReportDataToS3Output, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.SendAgentOrganizationalReportDataToS3Input, ...func(*wellarchitected.Options)) *wellarchitected.SendAgentOrganizationalReportDataToS3Output); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.SendAgentOrganizationalReportDataToS3Output)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.SendAgentOrganizationalReportDataToS3Input, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2947,6 +3539,43 @@ func (_m *IClient) UpdateAgentGoal(ctx context.Context, params *wellarchitected.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.UpdateAgentGoalInput, ...func(*wellarchitected.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAgentOrganizationalProfile provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAgentOrganizationalProfile(ctx context.Context, params *wellarchitected.UpdateAgentOrganizationalProfileInput, optFns ...func(*wellarchitected.Options)) (*wellarchitected.UpdateAgentOrganizationalProfileOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAgentOrganizationalProfile")
+	}
+
+	var r0 *wellarchitected.UpdateAgentOrganizationalProfileOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.UpdateAgentOrganizationalProfileInput, ...func(*wellarchitected.Options)) (*wellarchitected.UpdateAgentOrganizationalProfileOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wellarchitected.UpdateAgentOrganizationalProfileInput, ...func(*wellarchitected.Options)) *wellarchitected.UpdateAgentOrganizationalProfileOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wellarchitected.UpdateAgentOrganizationalProfileOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wellarchitected.UpdateAgentOrganizationalProfileInput, ...func(*wellarchitected.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

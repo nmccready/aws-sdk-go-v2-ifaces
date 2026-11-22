@@ -52,6 +52,43 @@ func (_m *IClient) ActivateSubscription(ctx context.Context, params *connectheal
 	return r0, r1
 }
 
+// CreateDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateDataset(ctx context.Context, params *connecthealth.CreateDatasetInput, optFns ...func(*connecthealth.Options)) (*connecthealth.CreateDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateDataset")
+	}
+
+	var r0 *connecthealth.CreateDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.CreateDatasetInput, ...func(*connecthealth.Options)) (*connecthealth.CreateDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.CreateDatasetInput, ...func(*connecthealth.Options)) *connecthealth.CreateDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.CreateDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.CreateDatasetInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDomain(ctx context.Context, params *connecthealth.CreateDomainInput, optFns ...func(*connecthealth.Options)) (*connecthealth.CreateDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -163,6 +200,43 @@ func (_m *IClient) DeactivateSubscription(ctx context.Context, params *connecthe
 	return r0, r1
 }
 
+// DeleteDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDataset(ctx context.Context, params *connecthealth.DeleteDatasetInput, optFns ...func(*connecthealth.Options)) (*connecthealth.DeleteDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDataset")
+	}
+
+	var r0 *connecthealth.DeleteDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.DeleteDatasetInput, ...func(*connecthealth.Options)) (*connecthealth.DeleteDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.DeleteDatasetInput, ...func(*connecthealth.Options)) *connecthealth.DeleteDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.DeleteDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.DeleteDatasetInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteDomain(ctx context.Context, params *connecthealth.DeleteDomainInput, optFns ...func(*connecthealth.Options)) (*connecthealth.DeleteDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -200,6 +274,43 @@ func (_m *IClient) DeleteDomain(ctx context.Context, params *connecthealth.Delet
 	return r0, r1
 }
 
+// GetDataset provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDataset(ctx context.Context, params *connecthealth.GetDatasetInput, optFns ...func(*connecthealth.Options)) (*connecthealth.GetDatasetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDataset")
+	}
+
+	var r0 *connecthealth.GetDatasetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.GetDatasetInput, ...func(*connecthealth.Options)) (*connecthealth.GetDatasetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.GetDatasetInput, ...func(*connecthealth.Options)) *connecthealth.GetDatasetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.GetDatasetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.GetDatasetInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDomain provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDomain(ctx context.Context, params *connecthealth.GetDomainInput, optFns ...func(*connecthealth.Options)) (*connecthealth.GetDomainOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -229,6 +340,43 @@ func (_m *IClient) GetDomain(ctx context.Context, params *connecthealth.GetDomai
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.GetDomainInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetMedicalCodingJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetMedicalCodingJob(ctx context.Context, params *connecthealth.GetMedicalCodingJobInput, optFns ...func(*connecthealth.Options)) (*connecthealth.GetMedicalCodingJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetMedicalCodingJob")
+	}
+
+	var r0 *connecthealth.GetMedicalCodingJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.GetMedicalCodingJobInput, ...func(*connecthealth.Options)) (*connecthealth.GetMedicalCodingJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.GetMedicalCodingJobInput, ...func(*connecthealth.Options)) *connecthealth.GetMedicalCodingJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.GetMedicalCodingJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.GetMedicalCodingJobInput, ...func(*connecthealth.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -340,6 +488,43 @@ func (_m *IClient) GetSubscription(ctx context.Context, params *connecthealth.Ge
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.GetSubscriptionInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDatasets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDatasets(ctx context.Context, params *connecthealth.ListDatasetsInput, optFns ...func(*connecthealth.Options)) (*connecthealth.ListDatasetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDatasets")
+	}
+
+	var r0 *connecthealth.ListDatasetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.ListDatasetsInput, ...func(*connecthealth.Options)) (*connecthealth.ListDatasetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.ListDatasetsInput, ...func(*connecthealth.Options)) *connecthealth.ListDatasetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.ListDatasetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.ListDatasetsInput, ...func(*connecthealth.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -477,6 +662,43 @@ func (_m *IClient) Options() connecthealth.Options {
 	return r0
 }
 
+// StartMedicalCodingJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartMedicalCodingJob(ctx context.Context, params *connecthealth.StartMedicalCodingJobInput, optFns ...func(*connecthealth.Options)) (*connecthealth.StartMedicalCodingJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartMedicalCodingJob")
+	}
+
+	var r0 *connecthealth.StartMedicalCodingJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.StartMedicalCodingJobInput, ...func(*connecthealth.Options)) (*connecthealth.StartMedicalCodingJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.StartMedicalCodingJobInput, ...func(*connecthealth.Options)) *connecthealth.StartMedicalCodingJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.StartMedicalCodingJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.StartMedicalCodingJobInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartMedicalScribeListeningSession provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartMedicalScribeListeningSession(ctx context.Context, params *connecthealth.StartMedicalScribeListeningSessionInput, optFns ...func(*connecthealth.Options)) (*connecthealth.StartMedicalScribeListeningSessionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -543,6 +765,43 @@ func (_m *IClient) StartPatientInsightsJob(ctx context.Context, params *connecth
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.StartPatientInsightsJobInput, ...func(*connecthealth.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SubmitFeedback provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SubmitFeedback(ctx context.Context, params *connecthealth.SubmitFeedbackInput, optFns ...func(*connecthealth.Options)) (*connecthealth.SubmitFeedbackOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SubmitFeedback")
+	}
+
+	var r0 *connecthealth.SubmitFeedbackOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.SubmitFeedbackInput, ...func(*connecthealth.Options)) (*connecthealth.SubmitFeedbackOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *connecthealth.SubmitFeedbackInput, ...func(*connecthealth.Options)) *connecthealth.SubmitFeedbackOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*connecthealth.SubmitFeedbackOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *connecthealth.SubmitFeedbackInput, ...func(*connecthealth.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -48,6 +48,7 @@ type IClient interface {
  StartMedicalTranscriptionJob(ctx context.Context, params *StartMedicalTranscriptionJobInput, optFns ...func(*Options)) (*StartMedicalTranscriptionJobOutput, error) 
  StartTranscriptionJob(ctx context.Context, params *StartTranscriptionJobInput, optFns ...func(*Options)) (*StartTranscriptionJobOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
+ TranscribeAudio(ctx context.Context, params *TranscribeAudioInput, optFns ...func(*Options)) (*TranscribeAudioOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateCallAnalyticsCategory(ctx context.Context, params *UpdateCallAnalyticsCategoryInput, optFns ...func(*Options)) (*UpdateCallAnalyticsCategoryOutput, error) 
  UpdateLanguageModel(ctx context.Context, params *UpdateLanguageModelInput, optFns ...func(*Options)) (*UpdateLanguageModelOutput, error) 

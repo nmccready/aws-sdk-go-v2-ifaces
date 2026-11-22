@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListListingAttributes", func(t *testing.T) {
+        input := &marketplacediscovery.ListListingAttributesInput{}
+        output := &marketplacediscovery.ListListingAttributesOutput{}
+
+        mockClient.On("ListListingAttributes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListListingAttributes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPurchaseOptions", func(t *testing.T) {
         input := &marketplacediscovery.ListPurchaseOptionsInput{}
         output := &marketplacediscovery.ListPurchaseOptionsOutput{}

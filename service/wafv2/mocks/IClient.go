@@ -791,6 +791,80 @@ func (_m *IClient) GetDecryptedAPIKey(ctx context.Context, params *wafv2.GetDecr
 	return r0, r1
 }
 
+// GetEvent provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEvent(ctx context.Context, params *wafv2.GetEventInput, optFns ...func(*wafv2.Options)) (*wafv2.GetEventOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEvent")
+	}
+
+	var r0 *wafv2.GetEventOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetEventInput, ...func(*wafv2.Options)) (*wafv2.GetEventOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetEventInput, ...func(*wafv2.Options)) *wafv2.GetEventOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.GetEventOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.GetEventInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetEventActor provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetEventActor(ctx context.Context, params *wafv2.GetEventActorInput, optFns ...func(*wafv2.Options)) (*wafv2.GetEventActorOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetEventActor")
+	}
+
+	var r0 *wafv2.GetEventActorOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetEventActorInput, ...func(*wafv2.Options)) (*wafv2.GetEventActorOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.GetEventActorInput, ...func(*wafv2.Options)) *wafv2.GetEventActorOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.GetEventActorOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.GetEventActorInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetIPSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetIPSet(ctx context.Context, params *wafv2.GetIPSetInput, optFns ...func(*wafv2.Options)) (*wafv2.GetIPSetOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1449,6 +1523,117 @@ func (_m *IClient) ListAvailableManagedRuleGroups(ctx context.Context, params *w
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.ListAvailableManagedRuleGroupsInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEventActors provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEventActors(ctx context.Context, params *wafv2.ListEventActorsInput, optFns ...func(*wafv2.Options)) (*wafv2.ListEventActorsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEventActors")
+	}
+
+	var r0 *wafv2.ListEventActorsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListEventActorsInput, ...func(*wafv2.Options)) (*wafv2.ListEventActorsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListEventActorsInput, ...func(*wafv2.Options)) *wafv2.ListEventActorsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.ListEventActorsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.ListEventActorsInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEvents provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEvents(ctx context.Context, params *wafv2.ListEventsInput, optFns ...func(*wafv2.Options)) (*wafv2.ListEventsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEvents")
+	}
+
+	var r0 *wafv2.ListEventsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListEventsInput, ...func(*wafv2.Options)) (*wafv2.ListEventsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListEventsInput, ...func(*wafv2.Options)) *wafv2.ListEventsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.ListEventsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.ListEventsInput, ...func(*wafv2.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEventsByWebACL provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEventsByWebACL(ctx context.Context, params *wafv2.ListEventsByWebACLInput, optFns ...func(*wafv2.Options)) (*wafv2.ListEventsByWebACLOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEventsByWebACL")
+	}
+
+	var r0 *wafv2.ListEventsByWebACLOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListEventsByWebACLInput, ...func(*wafv2.Options)) (*wafv2.ListEventsByWebACLOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *wafv2.ListEventsByWebACLInput, ...func(*wafv2.Options)) *wafv2.ListEventsByWebACLOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*wafv2.ListEventsByWebACLOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *wafv2.ListEventsByWebACLInput, ...func(*wafv2.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -151,6 +151,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateRemoteSourceAction", func(t *testing.T) {
+        input := &mgn.CreateRemoteSourceActionInput{}
+        output := &mgn.CreateRemoteSourceActionOutput{}
+
+        mockClient.On("CreateRemoteSourceAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateRemoteSourceAction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateReplicationConfigurationTemplate", func(t *testing.T) {
         input := &mgn.CreateReplicationConfigurationTemplateInput{}
         output := &mgn.CreateReplicationConfigurationTemplateOutput{}
@@ -236,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteNetworkMigrationDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteNetworkMigrationDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteRemoteSourceAction", func(t *testing.T) {
+        input := &mgn.DeleteRemoteSourceActionInput{}
+        output := &mgn.DeleteRemoteSourceActionOutput{}
+
+        mockClient.On("DeleteRemoteSourceAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteRemoteSourceAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -431,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetLaunchConfiguration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetLaunchConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetLaunchConfigurationDefaults", func(t *testing.T) {
+        input := &mgn.GetLaunchConfigurationDefaultsInput{}
+        output := &mgn.GetLaunchConfigurationDefaultsOutput{}
+
+        mockClient.On("GetLaunchConfigurationDefaults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetLaunchConfigurationDefaults(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -697,6 +736,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListNetworkMigrationInsights", func(t *testing.T) {
+        input := &mgn.ListNetworkMigrationInsightsInput{}
+        output := &mgn.ListNetworkMigrationInsightsOutput{}
+
+        mockClient.On("ListNetworkMigrationInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListNetworkMigrationInsights(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListNetworkMigrationMapperSegmentConstructs", func(t *testing.T) {
         input := &mgn.ListNetworkMigrationMapperSegmentConstructsInput{}
         output := &mgn.ListNetworkMigrationMapperSegmentConstructsOutput{}
@@ -743,6 +795,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListNetworkMigrationMappings", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListNetworkMigrationMappings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRemoteSourceActionInvocationResults", func(t *testing.T) {
+        input := &mgn.ListRemoteSourceActionInvocationResultsInput{}
+        output := &mgn.ListRemoteSourceActionInvocationResultsOutput{}
+
+        mockClient.On("ListRemoteSourceActionInvocationResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRemoteSourceActionInvocationResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRemoteSourceActionInvocations", func(t *testing.T) {
+        input := &mgn.ListRemoteSourceActionInvocationsInput{}
+        output := &mgn.ListRemoteSourceActionInvocationsOutput{}
+
+        mockClient.On("ListRemoteSourceActionInvocations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRemoteSourceActionInvocations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRemoteSourceActionJobs", func(t *testing.T) {
+        input := &mgn.ListRemoteSourceActionJobsInput{}
+        output := &mgn.ListRemoteSourceActionJobsOutput{}
+
+        mockClient.On("ListRemoteSourceActionJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRemoteSourceActionJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListRemoteSourceActions", func(t *testing.T) {
+        input := &mgn.ListRemoteSourceActionsInput{}
+        output := &mgn.ListRemoteSourceActionsOutput{}
+
+        mockClient.On("ListRemoteSourceActions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListRemoteSourceActions(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1022,6 +1126,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartRemoteSourceActionJob", func(t *testing.T) {
+        input := &mgn.StartRemoteSourceActionJobInput{}
+        output := &mgn.StartRemoteSourceActionJobOutput{}
+
+        mockClient.On("StartRemoteSourceActionJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartRemoteSourceActionJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartReplication", func(t *testing.T) {
         input := &mgn.StartReplicationInput{}
         output := &mgn.StartReplicationOutput{}
@@ -1165,6 +1282,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateLaunchConfigurationDefaults", func(t *testing.T) {
+        input := &mgn.UpdateLaunchConfigurationDefaultsInput{}
+        output := &mgn.UpdateLaunchConfigurationDefaultsOutput{}
+
+        mockClient.On("UpdateLaunchConfigurationDefaults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateLaunchConfigurationDefaults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateLaunchConfigurationTemplate", func(t *testing.T) {
         input := &mgn.UpdateLaunchConfigurationTemplateInput{}
         output := &mgn.UpdateLaunchConfigurationTemplateOutput{}
@@ -1198,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateNetworkMigrationMapperSegment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateNetworkMigrationMapperSegment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateRemoteSourceAction", func(t *testing.T) {
+        input := &mgn.UpdateRemoteSourceActionInput{}
+        output := &mgn.UpdateRemoteSourceActionOutput{}
+
+        mockClient.On("UpdateRemoteSourceAction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateRemoteSourceAction(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

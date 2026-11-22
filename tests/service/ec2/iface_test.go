@@ -385,6 +385,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateKmsKeyId", func(t *testing.T) {
+        input := &ec2.AssociateKmsKeyIdInput{}
+        output := &ec2.AssociateKmsKeyIdOutput{}
+
+        mockClient.On("AssociateKmsKeyId", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateKmsKeyId(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateNatGatewayAddress", func(t *testing.T) {
         input := &ec2.AssociateNatGatewayAddressInput{}
         output := &ec2.AssociateNatGatewayAddressOutput{}
@@ -2036,6 +2049,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateTransitGatewayNetworkFunctionAttachment", func(t *testing.T) {
+        input := &ec2.CreateTransitGatewayNetworkFunctionAttachmentInput{}
+        output := &ec2.CreateTransitGatewayNetworkFunctionAttachmentOutput{}
+
+        mockClient.On("CreateTransitGatewayNetworkFunctionAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateTransitGatewayNetworkFunctionAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateTransitGatewayPeeringAttachment", func(t *testing.T) {
         input := &ec2.CreateTransitGatewayPeeringAttachmentInput{}
         output := &ec2.CreateTransitGatewayPeeringAttachmentOutput{}
@@ -3330,6 +3356,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteTransitGatewayMulticastDomain", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteTransitGatewayMulticastDomain(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteTransitGatewayNetworkFunctionAttachment", func(t *testing.T) {
+        input := &ec2.DeleteTransitGatewayNetworkFunctionAttachmentInput{}
+        output := &ec2.DeleteTransitGatewayNetworkFunctionAttachmentOutput{}
+
+        mockClient.On("DeleteTransitGatewayNetworkFunctionAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteTransitGatewayNetworkFunctionAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5858,6 +5897,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTransitGatewayNetworkFunctionAttachments", func(t *testing.T) {
+        input := &ec2.DescribeTransitGatewayNetworkFunctionAttachmentsInput{}
+        output := &ec2.DescribeTransitGatewayNetworkFunctionAttachmentsOutput{}
+
+        mockClient.On("DescribeTransitGatewayNetworkFunctionAttachments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTransitGatewayNetworkFunctionAttachments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeTransitGatewayPeeringAttachments", func(t *testing.T) {
         input := &ec2.DescribeTransitGatewayPeeringAttachmentsInput{}
         output := &ec2.DescribeTransitGatewayPeeringAttachmentsOutput{}
@@ -6788,6 +6840,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DisassociateIpamResourceDiscovery", ctx, input).Return(output, nil)
 
         result, err := mockClient.DisassociateIpamResourceDiscovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisassociateKmsKeyId", func(t *testing.T) {
+        input := &ec2.DisassociateKmsKeyIdInput{}
+        output := &ec2.DisassociateKmsKeyIdOutput{}
+
+        mockClient.On("DisassociateKmsKeyId", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateKmsKeyId(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -9297,6 +9362,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ModifyTransitGatewayMeteringPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.ModifyTransitGatewayMeteringPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyTransitGatewayNetworkFunctionAttachment", func(t *testing.T) {
+        input := &ec2.ModifyTransitGatewayNetworkFunctionAttachmentInput{}
+        output := &ec2.ModifyTransitGatewayNetworkFunctionAttachmentOutput{}
+
+        mockClient.On("ModifyTransitGatewayNetworkFunctionAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyTransitGatewayNetworkFunctionAttachment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestModifyTransitGatewayPeeringAttachment", func(t *testing.T) {
+        input := &ec2.ModifyTransitGatewayPeeringAttachmentInput{}
+        output := &ec2.ModifyTransitGatewayPeeringAttachmentOutput{}
+
+        mockClient.On("ModifyTransitGatewayPeeringAttachment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ModifyTransitGatewayPeeringAttachment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

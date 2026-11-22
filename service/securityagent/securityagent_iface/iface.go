@@ -84,6 +84,7 @@ type IClient interface {
  ListThreatModelJobs(ctx context.Context, params *ListThreatModelJobsInput, optFns ...func(*Options)) (*ListThreatModelJobsOutput, error) 
  ListThreatModels(ctx context.Context, params *ListThreatModelsInput, optFns ...func(*Options)) (*ListThreatModelsOutput, error) 
  ListThreats(ctx context.Context, params *ListThreatsInput, optFns ...func(*Options)) (*ListThreatsOutput, error) 
+ ResumePentestJob(ctx context.Context, params *ResumePentestJobInput, optFns ...func(*Options)) (*ResumePentestJobOutput, error) 
  StartCodeRemediation(ctx context.Context, params *StartCodeRemediationInput, optFns ...func(*Options)) (*StartCodeRemediationOutput, error) 
  StartCodeReviewJob(ctx context.Context, params *StartCodeReviewJobInput, optFns ...func(*Options)) (*StartCodeReviewJobOutput, error) 
  StartPentestJob(ctx context.Context, params *StartPentestJobInput, optFns ...func(*Options)) (*StartPentestJobOutput, error) 

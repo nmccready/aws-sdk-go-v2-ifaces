@@ -125,6 +125,43 @@ func (_m *IClient) AssociateOpportunity(ctx context.Context, params *partnercent
 	return r0, r1
 }
 
+// CreateCustomerAccount provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCustomerAccount(ctx context.Context, params *partnercentralselling.CreateCustomerAccountInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.CreateCustomerAccountOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCustomerAccount")
+	}
+
+	var r0 *partnercentralselling.CreateCustomerAccountOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.CreateCustomerAccountInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.CreateCustomerAccountOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.CreateCustomerAccountInput, ...func(*partnercentralselling.Options)) *partnercentralselling.CreateCustomerAccountOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.CreateCustomerAccountOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.CreateCustomerAccountInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateEngagement provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateEngagement(ctx context.Context, params *partnercentralselling.CreateEngagementInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.CreateEngagementOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -347,6 +384,43 @@ func (_m *IClient) CreateResourceSnapshotJob(ctx context.Context, params *partne
 	return r0, r1
 }
 
+// DeleteCustomerAccount provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCustomerAccount(ctx context.Context, params *partnercentralselling.DeleteCustomerAccountInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.DeleteCustomerAccountOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCustomerAccount")
+	}
+
+	var r0 *partnercentralselling.DeleteCustomerAccountOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.DeleteCustomerAccountInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.DeleteCustomerAccountOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.DeleteCustomerAccountInput, ...func(*partnercentralselling.Options)) *partnercentralselling.DeleteCustomerAccountOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.DeleteCustomerAccountOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.DeleteCustomerAccountInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteResourceSnapshotJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteResourceSnapshotJob(ctx context.Context, params *partnercentralselling.DeleteResourceSnapshotJobInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.DeleteResourceSnapshotJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -458,6 +532,154 @@ func (_m *IClient) GetAwsOpportunitySummary(ctx context.Context, params *partner
 	return r0, r1
 }
 
+// GetCustomerAccount provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomerAccount(ctx context.Context, params *partnercentralselling.GetCustomerAccountInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomerAccount")
+	}
+
+	var r0 *partnercentralselling.GetCustomerAccountOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountInput, ...func(*partnercentralselling.Options)) *partnercentralselling.GetCustomerAccountOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.GetCustomerAccountOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetCustomerAccountInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomerAccountBulkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomerAccountBulkJob(ctx context.Context, params *partnercentralselling.GetCustomerAccountBulkJobInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountBulkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomerAccountBulkJob")
+	}
+
+	var r0 *partnercentralselling.GetCustomerAccountBulkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountBulkJobInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountBulkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountBulkJobInput, ...func(*partnercentralselling.Options)) *partnercentralselling.GetCustomerAccountBulkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.GetCustomerAccountBulkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetCustomerAccountBulkJobInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomerAccountBulkJobReportUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomerAccountBulkJobReportUrl(ctx context.Context, params *partnercentralselling.GetCustomerAccountBulkJobReportUrlInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountBulkJobReportUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomerAccountBulkJobReportUrl")
+	}
+
+	var r0 *partnercentralselling.GetCustomerAccountBulkJobReportUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountBulkJobReportUrlInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountBulkJobReportUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountBulkJobReportUrlInput, ...func(*partnercentralselling.Options)) *partnercentralselling.GetCustomerAccountBulkJobReportUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.GetCustomerAccountBulkJobReportUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetCustomerAccountBulkJobReportUrlInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetCustomerAccountStatistics provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCustomerAccountStatistics(ctx context.Context, params *partnercentralselling.GetCustomerAccountStatisticsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountStatisticsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCustomerAccountStatistics")
+	}
+
+	var r0 *partnercentralselling.GetCustomerAccountStatisticsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountStatisticsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.GetCustomerAccountStatisticsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetCustomerAccountStatisticsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.GetCustomerAccountStatisticsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.GetCustomerAccountStatisticsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetCustomerAccountStatisticsInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetEngagement provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetEngagement(ctx context.Context, params *partnercentralselling.GetEngagementInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetEngagementOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -561,6 +783,43 @@ func (_m *IClient) GetOpportunity(ctx context.Context, params *partnercentralsel
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetOpportunityInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetOpportunityBulkJobReportUrl provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOpportunityBulkJobReportUrl(ctx context.Context, params *partnercentralselling.GetOpportunityBulkJobReportUrlInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.GetOpportunityBulkJobReportUrlOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOpportunityBulkJobReportUrl")
+	}
+
+	var r0 *partnercentralselling.GetOpportunityBulkJobReportUrlOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetOpportunityBulkJobReportUrlInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.GetOpportunityBulkJobReportUrlOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.GetOpportunityBulkJobReportUrlInput, ...func(*partnercentralselling.Options)) *partnercentralselling.GetOpportunityBulkJobReportUrlOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.GetOpportunityBulkJobReportUrlOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.GetOpportunityBulkJobReportUrlInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -717,6 +976,80 @@ func (_m *IClient) GetSellingSystemSettings(ctx context.Context, params *partner
 	return r0, r1
 }
 
+// ListCustomerAccountBulkJobResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomerAccountBulkJobResults(ctx context.Context, params *partnercentralselling.ListCustomerAccountBulkJobResultsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListCustomerAccountBulkJobResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomerAccountBulkJobResults")
+	}
+
+	var r0 *partnercentralselling.ListCustomerAccountBulkJobResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListCustomerAccountBulkJobResultsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListCustomerAccountBulkJobResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListCustomerAccountBulkJobResultsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListCustomerAccountBulkJobResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListCustomerAccountBulkJobResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListCustomerAccountBulkJobResultsInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCustomerAccountBulkJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCustomerAccountBulkJobs(ctx context.Context, params *partnercentralselling.ListCustomerAccountBulkJobsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListCustomerAccountBulkJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCustomerAccountBulkJobs")
+	}
+
+	var r0 *partnercentralselling.ListCustomerAccountBulkJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListCustomerAccountBulkJobsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListCustomerAccountBulkJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListCustomerAccountBulkJobsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListCustomerAccountBulkJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListCustomerAccountBulkJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListCustomerAccountBulkJobsInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListEngagementByAcceptingInvitationTasks provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListEngagementByAcceptingInvitationTasks(ctx context.Context, params *partnercentralselling.ListEngagementByAcceptingInvitationTasksInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListEngagementByAcceptingInvitationTasksOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -783,6 +1116,43 @@ func (_m *IClient) ListEngagementFromOpportunityTasks(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListEngagementFromOpportunityTasksInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListEngagementGroups provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEngagementGroups(ctx context.Context, params *partnercentralselling.ListEngagementGroupsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListEngagementGroupsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEngagementGroups")
+	}
+
+	var r0 *partnercentralselling.ListEngagementGroupsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListEngagementGroupsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListEngagementGroupsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListEngagementGroupsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListEngagementGroupsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListEngagementGroupsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListEngagementGroupsInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -968,6 +1338,80 @@ func (_m *IClient) ListOpportunities(ctx context.Context, params *partnercentral
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListOpportunitiesInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListOpportunityBulkJobResults provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOpportunityBulkJobResults(ctx context.Context, params *partnercentralselling.ListOpportunityBulkJobResultsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListOpportunityBulkJobResultsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOpportunityBulkJobResults")
+	}
+
+	var r0 *partnercentralselling.ListOpportunityBulkJobResultsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListOpportunityBulkJobResultsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListOpportunityBulkJobResultsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListOpportunityBulkJobResultsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListOpportunityBulkJobResultsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListOpportunityBulkJobResultsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListOpportunityBulkJobResultsInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListOpportunityBulkJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListOpportunityBulkJobs(ctx context.Context, params *partnercentralselling.ListOpportunityBulkJobsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.ListOpportunityBulkJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListOpportunityBulkJobs")
+	}
+
+	var r0 *partnercentralselling.ListOpportunityBulkJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListOpportunityBulkJobsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.ListOpportunityBulkJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.ListOpportunityBulkJobsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.ListOpportunityBulkJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.ListOpportunityBulkJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.ListOpportunityBulkJobsInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1290,6 +1734,154 @@ func (_m *IClient) RejectEngagementInvitation(ctx context.Context, params *partn
 	return r0, r1
 }
 
+// SearchCustomerAccounts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchCustomerAccounts(ctx context.Context, params *partnercentralselling.SearchCustomerAccountsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.SearchCustomerAccountsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchCustomerAccounts")
+	}
+
+	var r0 *partnercentralselling.SearchCustomerAccountsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.SearchCustomerAccountsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.SearchCustomerAccountsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.SearchCustomerAccountsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.SearchCustomerAccountsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.SearchCustomerAccountsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.SearchCustomerAccountsInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchEngagements provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchEngagements(ctx context.Context, params *partnercentralselling.SearchEngagementsInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.SearchEngagementsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchEngagements")
+	}
+
+	var r0 *partnercentralselling.SearchEngagementsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.SearchEngagementsInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.SearchEngagementsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.SearchEngagementsInput, ...func(*partnercentralselling.Options)) *partnercentralselling.SearchEngagementsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.SearchEngagementsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.SearchEngagementsInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// SearchOpportunities provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SearchOpportunities(ctx context.Context, params *partnercentralselling.SearchOpportunitiesInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.SearchOpportunitiesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SearchOpportunities")
+	}
+
+	var r0 *partnercentralselling.SearchOpportunitiesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.SearchOpportunitiesInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.SearchOpportunitiesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.SearchOpportunitiesInput, ...func(*partnercentralselling.Options)) *partnercentralselling.SearchOpportunitiesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.SearchOpportunitiesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.SearchOpportunitiesInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartCustomerAccountBulkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartCustomerAccountBulkJob(ctx context.Context, params *partnercentralselling.StartCustomerAccountBulkJobInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.StartCustomerAccountBulkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartCustomerAccountBulkJob")
+	}
+
+	var r0 *partnercentralselling.StartCustomerAccountBulkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartCustomerAccountBulkJobInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.StartCustomerAccountBulkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartCustomerAccountBulkJobInput, ...func(*partnercentralselling.Options)) *partnercentralselling.StartCustomerAccountBulkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.StartCustomerAccountBulkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.StartCustomerAccountBulkJobInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartEngagementByAcceptingInvitationTask provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartEngagementByAcceptingInvitationTask(ctx context.Context, params *partnercentralselling.StartEngagementByAcceptingInvitationTaskInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.StartEngagementByAcceptingInvitationTaskOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1356,6 +1948,43 @@ func (_m *IClient) StartEngagementFromOpportunityTask(ctx context.Context, param
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.StartEngagementFromOpportunityTaskInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartOpportunityBulkJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartOpportunityBulkJob(ctx context.Context, params *partnercentralselling.StartOpportunityBulkJobInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.StartOpportunityBulkJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartOpportunityBulkJob")
+	}
+
+	var r0 *partnercentralselling.StartOpportunityBulkJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartOpportunityBulkJobInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.StartOpportunityBulkJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.StartOpportunityBulkJobInput, ...func(*partnercentralselling.Options)) *partnercentralselling.StartOpportunityBulkJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.StartOpportunityBulkJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.StartOpportunityBulkJobInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1615,6 +2244,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *partnercentralsell
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.UntagResourceInput, ...func(*partnercentralselling.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCustomerAccount provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCustomerAccount(ctx context.Context, params *partnercentralselling.UpdateCustomerAccountInput, optFns ...func(*partnercentralselling.Options)) (*partnercentralselling.UpdateCustomerAccountOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCustomerAccount")
+	}
+
+	var r0 *partnercentralselling.UpdateCustomerAccountOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.UpdateCustomerAccountInput, ...func(*partnercentralselling.Options)) (*partnercentralselling.UpdateCustomerAccountOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *partnercentralselling.UpdateCustomerAccountInput, ...func(*partnercentralselling.Options)) *partnercentralselling.UpdateCustomerAccountOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*partnercentralselling.UpdateCustomerAccountOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *partnercentralselling.UpdateCustomerAccountInput, ...func(*partnercentralselling.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

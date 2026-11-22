@@ -236,6 +236,43 @@ func (_m *IClient) CreateAccessToken(ctx context.Context, params *route53globalr
 	return r0, r1
 }
 
+// CreateCoreNetworkEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCoreNetworkEndpoint(ctx context.Context, params *route53globalresolver.CreateCoreNetworkEndpointInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.CreateCoreNetworkEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCoreNetworkEndpoint")
+	}
+
+	var r0 *route53globalresolver.CreateCoreNetworkEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.CreateCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) (*route53globalresolver.CreateCoreNetworkEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.CreateCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) *route53globalresolver.CreateCoreNetworkEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53globalresolver.CreateCoreNetworkEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.CreateCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateDNSView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateDNSView(ctx context.Context, params *route53globalresolver.CreateDNSViewInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.CreateDNSViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -450,6 +487,43 @@ func (_m *IClient) DeleteAccessToken(ctx context.Context, params *route53globalr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.DeleteAccessTokenInput, ...func(*route53globalresolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCoreNetworkEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCoreNetworkEndpoint(ctx context.Context, params *route53globalresolver.DeleteCoreNetworkEndpointInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.DeleteCoreNetworkEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCoreNetworkEndpoint")
+	}
+
+	var r0 *route53globalresolver.DeleteCoreNetworkEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.DeleteCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) (*route53globalresolver.DeleteCoreNetworkEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.DeleteCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) *route53globalresolver.DeleteCoreNetworkEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53globalresolver.DeleteCoreNetworkEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.DeleteCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -791,6 +865,43 @@ func (_m *IClient) GetAccessToken(ctx context.Context, params *route53globalreso
 	return r0, r1
 }
 
+// GetCoreNetworkEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetCoreNetworkEndpoint(ctx context.Context, params *route53globalresolver.GetCoreNetworkEndpointInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.GetCoreNetworkEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetCoreNetworkEndpoint")
+	}
+
+	var r0 *route53globalresolver.GetCoreNetworkEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.GetCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) (*route53globalresolver.GetCoreNetworkEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.GetCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) *route53globalresolver.GetCoreNetworkEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53globalresolver.GetCoreNetworkEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.GetCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDNSView provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDNSView(ctx context.Context, params *route53globalresolver.GetDNSViewInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.GetDNSViewOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1116,6 +1227,43 @@ func (_m *IClient) ListAccessTokens(ctx context.Context, params *route53globalre
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.ListAccessTokensInput, ...func(*route53globalresolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCoreNetworkEndpoints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCoreNetworkEndpoints(ctx context.Context, params *route53globalresolver.ListCoreNetworkEndpointsInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.ListCoreNetworkEndpointsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCoreNetworkEndpoints")
+	}
+
+	var r0 *route53globalresolver.ListCoreNetworkEndpointsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.ListCoreNetworkEndpointsInput, ...func(*route53globalresolver.Options)) (*route53globalresolver.ListCoreNetworkEndpointsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.ListCoreNetworkEndpointsInput, ...func(*route53globalresolver.Options)) *route53globalresolver.ListCoreNetworkEndpointsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53globalresolver.ListCoreNetworkEndpointsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.ListCoreNetworkEndpointsInput, ...func(*route53globalresolver.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1615,6 +1763,43 @@ func (_m *IClient) UpdateAccessToken(ctx context.Context, params *route53globalr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.UpdateAccessTokenInput, ...func(*route53globalresolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCoreNetworkEndpoint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCoreNetworkEndpoint(ctx context.Context, params *route53globalresolver.UpdateCoreNetworkEndpointInput, optFns ...func(*route53globalresolver.Options)) (*route53globalresolver.UpdateCoreNetworkEndpointOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCoreNetworkEndpoint")
+	}
+
+	var r0 *route53globalresolver.UpdateCoreNetworkEndpointOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.UpdateCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) (*route53globalresolver.UpdateCoreNetworkEndpointOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53globalresolver.UpdateCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) *route53globalresolver.UpdateCoreNetworkEndpointOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53globalresolver.UpdateCoreNetworkEndpointOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53globalresolver.UpdateCoreNetworkEndpointInput, ...func(*route53globalresolver.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

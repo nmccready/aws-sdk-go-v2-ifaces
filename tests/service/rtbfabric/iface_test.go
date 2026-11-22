@@ -229,6 +229,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAvailableModule", func(t *testing.T) {
+        input := &rtbfabric.GetAvailableModuleInput{}
+        output := &rtbfabric.GetAvailableModuleOutput{}
+
+        mockClient.On("GetAvailableModule", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAvailableModule(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAvailableModuleVersion", func(t *testing.T) {
+        input := &rtbfabric.GetAvailableModuleVersionInput{}
+        output := &rtbfabric.GetAvailableModuleVersionOutput{}
+
+        mockClient.On("GetAvailableModuleVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAvailableModuleVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetCertificateAssociation", func(t *testing.T) {
         input := &rtbfabric.GetCertificateAssociationInput{}
         output := &rtbfabric.GetCertificateAssociationOutput{}
@@ -320,6 +346,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetUpdate", func(t *testing.T) {
+        input := &rtbfabric.GetUpdateInput{}
+        output := &rtbfabric.GetUpdateOutput{}
+
+        mockClient.On("GetUpdate", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUpdate(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAvailableModuleVersions", func(t *testing.T) {
+        input := &rtbfabric.ListAvailableModuleVersionsInput{}
+        output := &rtbfabric.ListAvailableModuleVersionsOutput{}
+
+        mockClient.On("ListAvailableModuleVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAvailableModuleVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAvailableModules", func(t *testing.T) {
+        input := &rtbfabric.ListAvailableModulesInput{}
+        output := &rtbfabric.ListAvailableModulesOutput{}
+
+        mockClient.On("ListAvailableModules", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAvailableModules(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCertificateAssociations", func(t *testing.T) {
         input := &rtbfabric.ListCertificateAssociationsInput{}
         output := &rtbfabric.ListCertificateAssociationsOutput{}
@@ -392,6 +457,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListUpdates", func(t *testing.T) {
+        input := &rtbfabric.ListUpdatesInput{}
+        output := &rtbfabric.ListUpdatesOutput{}
+
+        mockClient.On("ListUpdates", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListUpdates(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutLinkFlows", func(t *testing.T) {
+        input := &rtbfabric.PutLinkFlowsInput{}
+        output := &rtbfabric.PutLinkFlowsOutput{}
+
+        mockClient.On("PutLinkFlows", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutLinkFlows(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

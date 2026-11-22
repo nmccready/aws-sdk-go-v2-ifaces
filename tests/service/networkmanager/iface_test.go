@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAssociateContextStore", func(t *testing.T) {
+        input := &networkmanager.AssociateContextStoreInput{}
+        output := &networkmanager.AssociateContextStoreOutput{}
+
+        mockClient.On("AssociateContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AssociateContextStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAssociateCustomerGateway", func(t *testing.T) {
         input := &networkmanager.AssociateCustomerGatewayInput{}
         output := &networkmanager.AssociateCustomerGatewayOutput{}
@@ -132,6 +145,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateContextStore", func(t *testing.T) {
+        input := &networkmanager.CreateContextStoreInput{}
+        output := &networkmanager.CreateContextStoreOutput{}
+
+        mockClient.On("CreateContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateContextStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -320,6 +346,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteContextStore", func(t *testing.T) {
+        input := &networkmanager.DeleteContextStoreInput{}
+        output := &networkmanager.DeleteContextStoreOutput{}
+
+        mockClient.On("DeleteContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteContextStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteCoreNetwork", func(t *testing.T) {
         input := &networkmanager.DeleteCoreNetworkInput{}
         output := &networkmanager.DeleteCoreNetworkOutput{}
@@ -476,6 +515,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateContextStore", func(t *testing.T) {
+        input := &networkmanager.DisassociateContextStoreInput{}
+        output := &networkmanager.DisassociateContextStoreOutput{}
+
+        mockClient.On("DisassociateContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateContextStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateCustomerGateway", func(t *testing.T) {
         input := &networkmanager.DisassociateCustomerGatewayInput{}
         output := &networkmanager.DisassociateCustomerGatewayOutput{}
@@ -574,6 +626,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetConnections", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetConnections(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetContextStore", func(t *testing.T) {
+        input := &networkmanager.GetContextStoreInput{}
+        output := &networkmanager.GetContextStoreOutput{}
+
+        mockClient.On("GetContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetContextStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetContextStoreAssociation", func(t *testing.T) {
+        input := &networkmanager.GetContextStoreAssociationInput{}
+        output := &networkmanager.GetContextStoreAssociationOutput{}
+
+        mockClient.On("GetContextStoreAssociation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetContextStoreAssociation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetContextVersion", func(t *testing.T) {
+        input := &networkmanager.GetContextVersionInput{}
+        output := &networkmanager.GetContextVersionOutput{}
+
+        mockClient.On("GetContextVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetContextVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -931,6 +1022,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListContextChanges", func(t *testing.T) {
+        input := &networkmanager.ListContextChangesInput{}
+        output := &networkmanager.ListContextChangesOutput{}
+
+        mockClient.On("ListContextChanges", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContextChanges(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContextStoreAssociations", func(t *testing.T) {
+        input := &networkmanager.ListContextStoreAssociationsInput{}
+        output := &networkmanager.ListContextStoreAssociationsOutput{}
+
+        mockClient.On("ListContextStoreAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContextStoreAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContextStores", func(t *testing.T) {
+        input := &networkmanager.ListContextStoresInput{}
+        output := &networkmanager.ListContextStoresOutput{}
+
+        mockClient.On("ListContextStores", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContextStores(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListContexts", func(t *testing.T) {
+        input := &networkmanager.ListContextsInput{}
+        output := &networkmanager.ListContextsOutput{}
+
+        mockClient.On("ListContexts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListContexts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCoreNetworkPolicyVersions", func(t *testing.T) {
         input := &networkmanager.ListCoreNetworkPolicyVersionsInput{}
         output := &networkmanager.ListCoreNetworkPolicyVersionsOutput{}
@@ -1185,6 +1328,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateContextStore", func(t *testing.T) {
+        input := &networkmanager.UpdateContextStoreInput{}
+        output := &networkmanager.UpdateContextStoreOutput{}
+
+        mockClient.On("UpdateContextStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateContextStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

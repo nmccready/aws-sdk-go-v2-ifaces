@@ -15,6 +15,80 @@ type IClient struct {
 	mock.Mock
 }
 
+// AcknowledgeDeadLetterQueueRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcknowledgeDeadLetterQueueRecords(ctx context.Context, params *kinesis.AcknowledgeDeadLetterQueueRecordsInput, optFns ...func(*kinesis.Options)) (*kinesis.AcknowledgeDeadLetterQueueRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcknowledgeDeadLetterQueueRecords")
+	}
+
+	var r0 *kinesis.AcknowledgeDeadLetterQueueRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.AcknowledgeDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) (*kinesis.AcknowledgeDeadLetterQueueRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.AcknowledgeDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) *kinesis.AcknowledgeDeadLetterQueueRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.AcknowledgeDeadLetterQueueRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.AcknowledgeDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// AcknowledgeQueueRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AcknowledgeQueueRecords(ctx context.Context, params *kinesis.AcknowledgeQueueRecordsInput, optFns ...func(*kinesis.Options)) (*kinesis.AcknowledgeQueueRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AcknowledgeQueueRecords")
+	}
+
+	var r0 *kinesis.AcknowledgeQueueRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.AcknowledgeQueueRecordsInput, ...func(*kinesis.Options)) (*kinesis.AcknowledgeQueueRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.AcknowledgeQueueRecordsInput, ...func(*kinesis.Options)) *kinesis.AcknowledgeQueueRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.AcknowledgeQueueRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.AcknowledgeQueueRecordsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AddTagsToStream provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AddTagsToStream(ctx context.Context, params *kinesis.AddTagsToStreamInput, optFns ...func(*kinesis.Options)) (*kinesis.AddTagsToStreamOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -81,6 +155,43 @@ func (_m *IClient) CreateChannel(ctx context.Context, params *kinesis.CreateChan
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.CreateChannelInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateQueue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQueue(ctx context.Context, params *kinesis.CreateQueueInput, optFns ...func(*kinesis.Options)) (*kinesis.CreateQueueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQueue")
+	}
+
+	var r0 *kinesis.CreateQueueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.CreateQueueInput, ...func(*kinesis.Options)) (*kinesis.CreateQueueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.CreateQueueInput, ...func(*kinesis.Options)) *kinesis.CreateQueueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.CreateQueueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.CreateQueueInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -192,6 +303,43 @@ func (_m *IClient) DeleteChannel(ctx context.Context, params *kinesis.DeleteChan
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DeleteChannelInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQueue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQueue(ctx context.Context, params *kinesis.DeleteQueueInput, optFns ...func(*kinesis.Options)) (*kinesis.DeleteQueueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQueue")
+	}
+
+	var r0 *kinesis.DeleteQueueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DeleteQueueInput, ...func(*kinesis.Options)) (*kinesis.DeleteQueueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DeleteQueueInput, ...func(*kinesis.Options)) *kinesis.DeleteQueueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.DeleteQueueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DeleteQueueInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -414,6 +562,43 @@ func (_m *IClient) DescribeLimits(ctx context.Context, params *kinesis.DescribeL
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DescribeLimitsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribeQueue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeQueue(ctx context.Context, params *kinesis.DescribeQueueInput, optFns ...func(*kinesis.Options)) (*kinesis.DescribeQueueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeQueue")
+	}
+
+	var r0 *kinesis.DescribeQueueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DescribeQueueInput, ...func(*kinesis.Options)) (*kinesis.DescribeQueueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.DescribeQueueInput, ...func(*kinesis.Options)) *kinesis.DescribeQueueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.DescribeQueueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.DescribeQueueInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -792,6 +977,43 @@ func (_m *IClient) ListChannels(ctx context.Context, params *kinesis.ListChannel
 	return r0, r1
 }
 
+// ListQueues provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQueues(ctx context.Context, params *kinesis.ListQueuesInput, optFns ...func(*kinesis.Options)) (*kinesis.ListQueuesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQueues")
+	}
+
+	var r0 *kinesis.ListQueuesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ListQueuesInput, ...func(*kinesis.Options)) (*kinesis.ListQueuesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ListQueuesInput, ...func(*kinesis.Options)) *kinesis.ListQueuesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.ListQueuesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.ListQueuesInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListShards provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListShards(ctx context.Context, params *kinesis.ListShardsInput, optFns ...func(*kinesis.Options)) (*kinesis.ListShardsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1143,6 +1365,80 @@ func (_m *IClient) PutResourcePolicy(ctx context.Context, params *kinesis.PutRes
 	return r0, r1
 }
 
+// ReceiveDeadLetterQueueRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ReceiveDeadLetterQueueRecords(ctx context.Context, params *kinesis.ReceiveDeadLetterQueueRecordsInput, optFns ...func(*kinesis.Options)) (*kinesis.ReceiveDeadLetterQueueRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ReceiveDeadLetterQueueRecords")
+	}
+
+	var r0 *kinesis.ReceiveDeadLetterQueueRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ReceiveDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) (*kinesis.ReceiveDeadLetterQueueRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ReceiveDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) *kinesis.ReceiveDeadLetterQueueRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.ReceiveDeadLetterQueueRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.ReceiveDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ReceiveQueueRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ReceiveQueueRecords(ctx context.Context, params *kinesis.ReceiveQueueRecordsInput, optFns ...func(*kinesis.Options)) (*kinesis.ReceiveQueueRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ReceiveQueueRecords")
+	}
+
+	var r0 *kinesis.ReceiveQueueRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ReceiveQueueRecordsInput, ...func(*kinesis.Options)) (*kinesis.ReceiveQueueRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.ReceiveQueueRecordsInput, ...func(*kinesis.Options)) *kinesis.ReceiveQueueRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.ReceiveQueueRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.ReceiveQueueRecordsInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // RegisterStreamConsumer provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) RegisterStreamConsumer(ctx context.Context, params *kinesis.RegisterStreamConsumerInput, optFns ...func(*kinesis.Options)) (*kinesis.RegisterStreamConsumerOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1209,6 +1505,43 @@ func (_m *IClient) RemoveTagsFromStream(ctx context.Context, params *kinesis.Rem
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.RemoveTagsFromStreamInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// RestoreDeadLetterQueueRecords provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) RestoreDeadLetterQueueRecords(ctx context.Context, params *kinesis.RestoreDeadLetterQueueRecordsInput, optFns ...func(*kinesis.Options)) (*kinesis.RestoreDeadLetterQueueRecordsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for RestoreDeadLetterQueueRecords")
+	}
+
+	var r0 *kinesis.RestoreDeadLetterQueueRecordsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.RestoreDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) (*kinesis.RestoreDeadLetterQueueRecordsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.RestoreDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) *kinesis.RestoreDeadLetterQueueRecordsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.RestoreDeadLetterQueueRecordsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.RestoreDeadLetterQueueRecordsInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1513,6 +1846,43 @@ func (_m *IClient) UpdateChannel(ctx context.Context, params *kinesis.UpdateChan
 	return r0, r1
 }
 
+// UpdateDeadLetterQueueRecordsVisibility provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateDeadLetterQueueRecordsVisibility(ctx context.Context, params *kinesis.UpdateDeadLetterQueueRecordsVisibilityInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateDeadLetterQueueRecordsVisibilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateDeadLetterQueueRecordsVisibility")
+	}
+
+	var r0 *kinesis.UpdateDeadLetterQueueRecordsVisibilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateDeadLetterQueueRecordsVisibilityInput, ...func(*kinesis.Options)) (*kinesis.UpdateDeadLetterQueueRecordsVisibilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateDeadLetterQueueRecordsVisibilityInput, ...func(*kinesis.Options)) *kinesis.UpdateDeadLetterQueueRecordsVisibilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateDeadLetterQueueRecordsVisibilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateDeadLetterQueueRecordsVisibilityInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateMaxRecordSize provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateMaxRecordSize(ctx context.Context, params *kinesis.UpdateMaxRecordSizeInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateMaxRecordSizeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1542,6 +1912,80 @@ func (_m *IClient) UpdateMaxRecordSize(ctx context.Context, params *kinesis.Upda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateMaxRecordSizeInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQueue provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQueue(ctx context.Context, params *kinesis.UpdateQueueInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateQueueOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQueue")
+	}
+
+	var r0 *kinesis.UpdateQueueOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateQueueInput, ...func(*kinesis.Options)) (*kinesis.UpdateQueueOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateQueueInput, ...func(*kinesis.Options)) *kinesis.UpdateQueueOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateQueueOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateQueueInput, ...func(*kinesis.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQueueRecordsVisibility provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQueueRecordsVisibility(ctx context.Context, params *kinesis.UpdateQueueRecordsVisibilityInput, optFns ...func(*kinesis.Options)) (*kinesis.UpdateQueueRecordsVisibilityOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQueueRecordsVisibility")
+	}
+
+	var r0 *kinesis.UpdateQueueRecordsVisibilityOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateQueueRecordsVisibilityInput, ...func(*kinesis.Options)) (*kinesis.UpdateQueueRecordsVisibilityOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *kinesis.UpdateQueueRecordsVisibilityInput, ...func(*kinesis.Options)) *kinesis.UpdateQueueRecordsVisibilityOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*kinesis.UpdateQueueRecordsVisibilityOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *kinesis.UpdateQueueRecordsVisibilityInput, ...func(*kinesis.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

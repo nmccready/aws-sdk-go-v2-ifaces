@@ -190,6 +190,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartAssessment", func(t *testing.T) {
+        input := &marketplacecatalog.StartAssessmentInput{}
+        output := &marketplacecatalog.StartAssessmentOutput{}
+
+        mockClient.On("StartAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartChangeSet", func(t *testing.T) {
         input := &marketplacecatalog.StartChangeSetInput{}
         output := &marketplacecatalog.StartChangeSetOutput{}

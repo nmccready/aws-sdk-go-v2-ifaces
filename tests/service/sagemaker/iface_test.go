@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAddInferenceGateway", func(t *testing.T) {
+        input := &sagemaker.AddInferenceGatewayInput{}
+        output := &sagemaker.AddInferenceGatewayOutput{}
+
+        mockClient.On("AddInferenceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AddInferenceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAddTags", func(t *testing.T) {
         input := &sagemaker.AddTagsInput{}
         output := &sagemaker.AddTagsOutput{}
@@ -528,6 +541,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateGlobalInferenceGateway", func(t *testing.T) {
+        input := &sagemaker.CreateGlobalInferenceGatewayInput{}
+        output := &sagemaker.CreateGlobalInferenceGatewayOutput{}
+
+        mockClient.On("CreateGlobalInferenceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateGlobalInferenceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateHub", func(t *testing.T) {
         input := &sagemaker.CreateHubInput{}
         output := &sagemaker.CreateHubOutput{}
@@ -652,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateInferenceRecommendationsJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateInferenceRecommendationsJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateInferenceRouter", func(t *testing.T) {
+        input := &sagemaker.CreateInferenceRouterInput{}
+        output := &sagemaker.CreateInferenceRouterOutput{}
+
+        mockClient.On("CreateInferenceRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateInferenceRouter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1425,6 +1464,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteEndpointPolicy", func(t *testing.T) {
+        input := &sagemaker.DeleteEndpointPolicyInput{}
+        output := &sagemaker.DeleteEndpointPolicyOutput{}
+
+        mockClient.On("DeleteEndpointPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteEndpointPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteExperiment", func(t *testing.T) {
         input := &sagemaker.DeleteExperimentInput{}
         output := &sagemaker.DeleteExperimentOutput{}
@@ -1458,6 +1510,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFlowDefinition", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFlowDefinition(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteGlobalInferenceGateway", func(t *testing.T) {
+        input := &sagemaker.DeleteGlobalInferenceGatewayInput{}
+        output := &sagemaker.DeleteGlobalInferenceGatewayOutput{}
+
+        mockClient.On("DeleteGlobalInferenceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteGlobalInferenceGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1575,6 +1640,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteInferenceExperiment", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteInferenceExperiment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteInferenceRouter", func(t *testing.T) {
+        input := &sagemaker.DeleteInferenceRouterInput{}
+        output := &sagemaker.DeleteInferenceRouterOutput{}
+
+        mockClient.On("DeleteInferenceRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteInferenceRouter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2101,6 +2179,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeCapacityReservation", func(t *testing.T) {
+        input := &sagemaker.DescribeCapacityReservationInput{}
+        output := &sagemaker.DescribeCapacityReservationOutput{}
+
+        mockClient.On("DescribeCapacityReservation", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCapacityReservation(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeCluster", func(t *testing.T) {
         input := &sagemaker.DescribeClusterInput{}
         output := &sagemaker.DescribeClusterOutput{}
@@ -2387,6 +2478,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeGlobalInferenceGateway", func(t *testing.T) {
+        input := &sagemaker.DescribeGlobalInferenceGatewayInput{}
+        output := &sagemaker.DescribeGlobalInferenceGatewayOutput{}
+
+        mockClient.On("DescribeGlobalInferenceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeGlobalInferenceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeHub", func(t *testing.T) {
         input := &sagemaker.DescribeHubInput{}
         output := &sagemaker.DescribeHubOutput{}
@@ -2498,6 +2602,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeInferenceRecommendationsJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeInferenceRecommendationsJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeInferenceRouter", func(t *testing.T) {
+        input := &sagemaker.DescribeInferenceRouterInput{}
+        output := &sagemaker.DescribeInferenceRouterOutput{}
+
+        mockClient.On("DescribeInferenceRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeInferenceRouter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -2829,6 +2946,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeResourceAssociations", func(t *testing.T) {
+        input := &sagemaker.DescribeResourceAssociationsInput{}
+        output := &sagemaker.DescribeResourceAssociationsOutput{}
+
+        mockClient.On("DescribeResourceAssociations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeResourceAssociations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeSpace", func(t *testing.T) {
         input := &sagemaker.DescribeSpaceInput{}
         output := &sagemaker.DescribeSpaceOutput{}
@@ -3063,6 +3193,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCapacityReservationUsage", func(t *testing.T) {
+        input := &sagemaker.GetCapacityReservationUsageInput{}
+        output := &sagemaker.GetCapacityReservationUsageOutput{}
+
+        mockClient.On("GetCapacityReservationUsage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCapacityReservationUsage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDeviceFleetReport", func(t *testing.T) {
         input := &sagemaker.GetDeviceFleetReportInput{}
         output := &sagemaker.GetDeviceFleetReportOutput{}
@@ -3070,6 +3213,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDeviceFleetReport", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDeviceFleetReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEndpointPolicy", func(t *testing.T) {
+        input := &sagemaker.GetEndpointPolicyInput{}
+        output := &sagemaker.GetEndpointPolicyOutput{}
+
+        mockClient.On("GetEndpointPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEndpointPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3304,6 +3460,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCandidatesForAutoMLJob", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCandidatesForAutoMLJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCapacityReservations", func(t *testing.T) {
+        input := &sagemaker.ListCapacityReservationsInput{}
+        output := &sagemaker.ListCapacityReservationsOutput{}
+
+        mockClient.On("ListCapacityReservations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCapacityReservations(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -3596,6 +3765,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListGlobalInferenceGateways", func(t *testing.T) {
+        input := &sagemaker.ListGlobalInferenceGatewaysInput{}
+        output := &sagemaker.ListGlobalInferenceGatewaysOutput{}
+
+        mockClient.On("ListGlobalInferenceGateways", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListGlobalInferenceGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListHubContentVersions", func(t *testing.T) {
         input := &sagemaker.ListHubContentVersionsInput{}
         output := &sagemaker.ListHubContentVersionsOutput{}
@@ -3713,6 +3895,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListInferenceGateways", func(t *testing.T) {
+        input := &sagemaker.ListInferenceGatewaysInput{}
+        output := &sagemaker.ListInferenceGatewaysOutput{}
+
+        mockClient.On("ListInferenceGateways", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInferenceGateways(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListInferenceRecommendationsJobSteps", func(t *testing.T) {
         input := &sagemaker.ListInferenceRecommendationsJobStepsInput{}
         output := &sagemaker.ListInferenceRecommendationsJobStepsOutput{}
@@ -3733,6 +3928,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListInferenceRecommendationsJobs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListInferenceRecommendationsJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListInferenceRouters", func(t *testing.T) {
+        input := &sagemaker.ListInferenceRoutersInput{}
+        output := &sagemaker.ListInferenceRoutersOutput{}
+
+        mockClient.On("ListInferenceRouters", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListInferenceRouters(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -4376,6 +4584,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestMoveClusterNodes", func(t *testing.T) {
+        input := &sagemaker.MoveClusterNodesInput{}
+        output := &sagemaker.MoveClusterNodesOutput{}
+
+        mockClient.On("MoveClusterNodes", ctx, input).Return(output, nil)
+
+        result, err := mockClient.MoveClusterNodes(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutEndpointPolicy", func(t *testing.T) {
+        input := &sagemaker.PutEndpointPolicyInput{}
+        output := &sagemaker.PutEndpointPolicyOutput{}
+
+        mockClient.On("PutEndpointPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutEndpointPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutModelPackageGroupPolicy", func(t *testing.T) {
         input := &sagemaker.PutModelPackageGroupPolicyInput{}
         output := &sagemaker.PutModelPackageGroupPolicyOutput{}
@@ -4409,6 +4643,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RegisterDevices", ctx, input).Return(output, nil)
 
         result, err := mockClient.RegisterDevices(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRemoveInferenceGateway", func(t *testing.T) {
+        input := &sagemaker.RemoveInferenceGatewayInput{}
+        output := &sagemaker.RemoveInferenceGatewayOutput{}
+
+        mockClient.On("RemoveInferenceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RemoveInferenceGateway(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -5091,6 +5338,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateGlobalInferenceGateway", func(t *testing.T) {
+        input := &sagemaker.UpdateGlobalInferenceGatewayInput{}
+        output := &sagemaker.UpdateGlobalInferenceGatewayOutput{}
+
+        mockClient.On("UpdateGlobalInferenceGateway", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateGlobalInferenceGateway(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateHub", func(t *testing.T) {
         input := &sagemaker.UpdateHubInput{}
         output := &sagemaker.UpdateHubOutput{}
@@ -5189,6 +5449,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateInferenceExperiment", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateInferenceExperiment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateInferenceRouter", func(t *testing.T) {
+        input := &sagemaker.UpdateInferenceRouterInput{}
+        output := &sagemaker.UpdateInferenceRouterOutput{}
+
+        mockClient.On("UpdateInferenceRouter", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateInferenceRouter(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

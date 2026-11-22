@@ -126,6 +126,117 @@ func (_m *IClient) CreateFeed(ctx context.Context, params *elementalinference.Cr
 	return r0, r1
 }
 
+// CreateFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateFunction(ctx context.Context, params *elementalinference.CreateFunctionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateFunction")
+	}
+
+	var r0 *elementalinference.CreateFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateFunctionInput, ...func(*elementalinference.Options)) (*elementalinference.CreateFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateFunctionInput, ...func(*elementalinference.Options)) *elementalinference.CreateFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.CreateFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.CreateFunctionInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateQuestionSet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQuestionSet(ctx context.Context, params *elementalinference.CreateQuestionSetInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateQuestionSetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQuestionSet")
+	}
+
+	var r0 *elementalinference.CreateQuestionSetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateQuestionSetInput, ...func(*elementalinference.Options)) (*elementalinference.CreateQuestionSetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateQuestionSetInput, ...func(*elementalinference.Options)) *elementalinference.CreateQuestionSetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.CreateQuestionSetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.CreateQuestionSetInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateQuestionSetVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateQuestionSetVersion(ctx context.Context, params *elementalinference.CreateQuestionSetVersionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateQuestionSetVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateQuestionSetVersion")
+	}
+
+	var r0 *elementalinference.CreateQuestionSetVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateQuestionSetVersionInput, ...func(*elementalinference.Options)) (*elementalinference.CreateQuestionSetVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.CreateQuestionSetVersionInput, ...func(*elementalinference.Options)) *elementalinference.CreateQuestionSetVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.CreateQuestionSetVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.CreateQuestionSetVersionInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateScheduleAction provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateScheduleAction(ctx context.Context, params *elementalinference.CreateScheduleActionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.CreateScheduleActionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -266,6 +377,117 @@ func (_m *IClient) DeleteFeedPolicy(ctx context.Context, params *elementalinfere
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteFeedPolicyInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteFunction(ctx context.Context, params *elementalinference.DeleteFunctionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteFunction")
+	}
+
+	var r0 *elementalinference.DeleteFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteFunctionInput, ...func(*elementalinference.Options)) (*elementalinference.DeleteFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteFunctionInput, ...func(*elementalinference.Options)) *elementalinference.DeleteFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.DeleteFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteFunctionInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQuestionSet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQuestionSet(ctx context.Context, params *elementalinference.DeleteQuestionSetInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteQuestionSetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQuestionSet")
+	}
+
+	var r0 *elementalinference.DeleteQuestionSetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteQuestionSetInput, ...func(*elementalinference.Options)) (*elementalinference.DeleteQuestionSetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteQuestionSetInput, ...func(*elementalinference.Options)) *elementalinference.DeleteQuestionSetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.DeleteQuestionSetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteQuestionSetInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteQuestionSetVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteQuestionSetVersion(ctx context.Context, params *elementalinference.DeleteQuestionSetVersionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.DeleteQuestionSetVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteQuestionSetVersion")
+	}
+
+	var r0 *elementalinference.DeleteQuestionSetVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteQuestionSetVersionInput, ...func(*elementalinference.Options)) (*elementalinference.DeleteQuestionSetVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.DeleteQuestionSetVersionInput, ...func(*elementalinference.Options)) *elementalinference.DeleteQuestionSetVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.DeleteQuestionSetVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.DeleteQuestionSetVersionInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -533,6 +755,80 @@ func (_m *IClient) GetFixture(ctx context.Context, params *elementalinference.Ge
 	return r0, r1
 }
 
+// GetFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetFunction(ctx context.Context, params *elementalinference.GetFunctionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.GetFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetFunction")
+	}
+
+	var r0 *elementalinference.GetFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetFunctionInput, ...func(*elementalinference.Options)) (*elementalinference.GetFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetFunctionInput, ...func(*elementalinference.Options)) *elementalinference.GetFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.GetFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetFunctionInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetQuestionSet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetQuestionSet(ctx context.Context, params *elementalinference.GetQuestionSetInput, optFns ...func(*elementalinference.Options)) (*elementalinference.GetQuestionSetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetQuestionSet")
+	}
+
+	var r0 *elementalinference.GetQuestionSetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetQuestionSetInput, ...func(*elementalinference.Options)) (*elementalinference.GetQuestionSetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.GetQuestionSetInput, ...func(*elementalinference.Options)) *elementalinference.GetQuestionSetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.GetQuestionSetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.GetQuestionSetInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDictionaries provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDictionaries(ctx context.Context, params *elementalinference.ListDictionariesInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListDictionariesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -599,6 +895,117 @@ func (_m *IClient) ListFeeds(ctx context.Context, params *elementalinference.Lis
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListFeedsInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListFunctions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFunctions(ctx context.Context, params *elementalinference.ListFunctionsInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListFunctionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFunctions")
+	}
+
+	var r0 *elementalinference.ListFunctionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListFunctionsInput, ...func(*elementalinference.Options)) (*elementalinference.ListFunctionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListFunctionsInput, ...func(*elementalinference.Options)) *elementalinference.ListFunctionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.ListFunctionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListFunctionsInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListQuestionSetVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQuestionSetVersions(ctx context.Context, params *elementalinference.ListQuestionSetVersionsInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListQuestionSetVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQuestionSetVersions")
+	}
+
+	var r0 *elementalinference.ListQuestionSetVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListQuestionSetVersionsInput, ...func(*elementalinference.Options)) (*elementalinference.ListQuestionSetVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListQuestionSetVersionsInput, ...func(*elementalinference.Options)) *elementalinference.ListQuestionSetVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.ListQuestionSetVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListQuestionSetVersionsInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListQuestionSets provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListQuestionSets(ctx context.Context, params *elementalinference.ListQuestionSetsInput, optFns ...func(*elementalinference.Options)) (*elementalinference.ListQuestionSetsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListQuestionSets")
+	}
+
+	var r0 *elementalinference.ListQuestionSetsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListQuestionSetsInput, ...func(*elementalinference.Options)) (*elementalinference.ListQuestionSetsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.ListQuestionSetsInput, ...func(*elementalinference.Options)) *elementalinference.ListQuestionSetsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.ListQuestionSetsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.ListQuestionSetsInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -913,6 +1320,80 @@ func (_m *IClient) UpdateFeed(ctx context.Context, params *elementalinference.Up
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.UpdateFeedInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateFunction provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateFunction(ctx context.Context, params *elementalinference.UpdateFunctionInput, optFns ...func(*elementalinference.Options)) (*elementalinference.UpdateFunctionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateFunction")
+	}
+
+	var r0 *elementalinference.UpdateFunctionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.UpdateFunctionInput, ...func(*elementalinference.Options)) (*elementalinference.UpdateFunctionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.UpdateFunctionInput, ...func(*elementalinference.Options)) *elementalinference.UpdateFunctionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.UpdateFunctionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.UpdateFunctionInput, ...func(*elementalinference.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateQuestionSet provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateQuestionSet(ctx context.Context, params *elementalinference.UpdateQuestionSetInput, optFns ...func(*elementalinference.Options)) (*elementalinference.UpdateQuestionSetOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateQuestionSet")
+	}
+
+	var r0 *elementalinference.UpdateQuestionSetOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.UpdateQuestionSetInput, ...func(*elementalinference.Options)) (*elementalinference.UpdateQuestionSetOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *elementalinference.UpdateQuestionSetInput, ...func(*elementalinference.Options)) *elementalinference.UpdateQuestionSetOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*elementalinference.UpdateQuestionSetOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *elementalinference.UpdateQuestionSetInput, ...func(*elementalinference.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -112,6 +112,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCoreNetworkEndpoint", func(t *testing.T) {
+        input := &route53globalresolver.CreateCoreNetworkEndpointInput{}
+        output := &route53globalresolver.CreateCoreNetworkEndpointOutput{}
+
+        mockClient.On("CreateCoreNetworkEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCoreNetworkEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDNSView", func(t *testing.T) {
         input := &route53globalresolver.CreateDNSViewInput{}
         output := &route53globalresolver.CreateDNSViewOutput{}
@@ -184,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAccessToken", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAccessToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCoreNetworkEndpoint", func(t *testing.T) {
+        input := &route53globalresolver.DeleteCoreNetworkEndpointInput{}
+        output := &route53globalresolver.DeleteCoreNetworkEndpointOutput{}
+
+        mockClient.On("DeleteCoreNetworkEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCoreNetworkEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCoreNetworkEndpoint", func(t *testing.T) {
+        input := &route53globalresolver.GetCoreNetworkEndpointInput{}
+        output := &route53globalresolver.GetCoreNetworkEndpointOutput{}
+
+        mockClient.On("GetCoreNetworkEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCoreNetworkEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDNSView", func(t *testing.T) {
         input := &route53globalresolver.GetDNSViewInput{}
         output := &route53globalresolver.GetDNSViewOutput{}
@@ -418,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAccessTokens", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAccessTokens(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCoreNetworkEndpoints", func(t *testing.T) {
+        input := &route53globalresolver.ListCoreNetworkEndpointsInput{}
+        output := &route53globalresolver.ListCoreNetworkEndpointsOutput{}
+
+        mockClient.On("ListCoreNetworkEndpoints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCoreNetworkEndpoints(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -587,6 +639,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAccessToken", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAccessToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCoreNetworkEndpoint", func(t *testing.T) {
+        input := &route53globalresolver.UpdateCoreNetworkEndpointInput{}
+        output := &route53globalresolver.UpdateCoreNetworkEndpointOutput{}
+
+        mockClient.On("UpdateCoreNetworkEndpoint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCoreNetworkEndpoint(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

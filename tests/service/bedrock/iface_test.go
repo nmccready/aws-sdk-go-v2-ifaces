@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestArchiveProject", func(t *testing.T) {
+        input := &bedrock.ArchiveProjectInput{}
+        output := &bedrock.ArchiveProjectOutput{}
+
+        mockClient.On("ArchiveProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ArchiveProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestBatchDeleteAdvancedPromptOptimizationJob", func(t *testing.T) {
         input := &bedrock.BatchDeleteAdvancedPromptOptimizationJobInput{}
         output := &bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput{}
@@ -281,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateProject", func(t *testing.T) {
+        input := &bedrock.CreateProjectInput{}
+        output := &bedrock.CreateProjectOutput{}
+
+        mockClient.On("CreateProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreatePromptRouter", func(t *testing.T) {
         input := &bedrock.CreatePromptRouterInput{}
         output := &bedrock.CreatePromptRouterOutput{}
@@ -301,6 +327,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateProvisionedModelThroughput", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateProvisionedModelThroughput(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAccountDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.DeleteAccountDataRetentionStorageInput{}
+        output := &bedrock.DeleteAccountDataRetentionStorageOutput{}
+
+        mockClient.On("DeleteAccountDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAccountDataRetentionStorage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -463,6 +502,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteOrganizationDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.DeleteOrganizationDataRetentionStorageInput{}
+        output := &bedrock.DeleteOrganizationDataRetentionStorageOutput{}
+
+        mockClient.On("DeleteOrganizationDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteOrganizationDataRetentionStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProjectDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.DeleteProjectDataRetentionStorageInput{}
+        output := &bedrock.DeleteProjectDataRetentionStorageOutput{}
+
+        mockClient.On("DeleteProjectDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProjectDataRetentionStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeletePromptRouter", func(t *testing.T) {
         input := &bedrock.DeletePromptRouterInput{}
         output := &bedrock.DeletePromptRouterOutput{}
@@ -535,6 +600,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAccountDataRetention", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAccountDataRetention(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAccountDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.GetAccountDataRetentionStorageInput{}
+        output := &bedrock.GetAccountDataRetentionStorageOutput{}
+
+        mockClient.On("GetAccountDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAccountDataRetentionStorage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,6 +905,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetOrganizationDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.GetOrganizationDataRetentionStorageInput{}
+        output := &bedrock.GetOrganizationDataRetentionStorageOutput{}
+
+        mockClient.On("GetOrganizationDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOrganizationDataRetentionStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProject", func(t *testing.T) {
+        input := &bedrock.GetProjectInput{}
+        output := &bedrock.GetProjectOutput{}
+
+        mockClient.On("GetProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetProjectDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.GetProjectDataRetentionStorageInput{}
+        output := &bedrock.GetProjectDataRetentionStorageOutput{}
+
+        mockClient.On("GetProjectDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProjectDataRetentionStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetPromptRouter", func(t *testing.T) {
         input := &bedrock.GetPromptRouterInput{}
         output := &bedrock.GetPromptRouterOutput{}
@@ -860,6 +977,58 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrustedAccessProgram", func(t *testing.T) {
+        input := &bedrock.GetTrustedAccessProgramInput{}
+        output := &bedrock.GetTrustedAccessProgramOutput{}
+
+        mockClient.On("GetTrustedAccessProgram", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrustedAccessProgram(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrustedAccessProgramAccountEnrollment", func(t *testing.T) {
+        input := &bedrock.GetTrustedAccessProgramAccountEnrollmentInput{}
+        output := &bedrock.GetTrustedAccessProgramAccountEnrollmentOutput{}
+
+        mockClient.On("GetTrustedAccessProgramAccountEnrollment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrustedAccessProgramAccountEnrollment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrustedAccessProgramOrganizationEnrollment", func(t *testing.T) {
+        input := &bedrock.GetTrustedAccessProgramOrganizationEnrollmentInput{}
+        output := &bedrock.GetTrustedAccessProgramOrganizationEnrollmentOutput{}
+
+        mockClient.On("GetTrustedAccessProgramOrganizationEnrollment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrustedAccessProgramOrganizationEnrollment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetTrustedAccessProgramProjectEnrollment", func(t *testing.T) {
+        input := &bedrock.GetTrustedAccessProgramProjectEnrollmentInput{}
+        output := &bedrock.GetTrustedAccessProgramProjectEnrollmentOutput{}
+
+        mockClient.On("GetTrustedAccessProgramProjectEnrollment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetTrustedAccessProgramProjectEnrollment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1126,6 +1295,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListProjects", func(t *testing.T) {
+        input := &bedrock.ListProjectsInput{}
+        output := &bedrock.ListProjectsOutput{}
+
+        mockClient.On("ListProjects", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProjects(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListPromptRouters", func(t *testing.T) {
         input := &bedrock.ListPromptRoutersInput{}
         output := &bedrock.ListPromptRoutersOutput{}
@@ -1165,6 +1347,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTrustedAccessPrograms", func(t *testing.T) {
+        input := &bedrock.ListTrustedAccessProgramsInput{}
+        output := &bedrock.ListTrustedAccessProgramsOutput{}
+
+        mockClient.On("ListTrustedAccessPrograms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTrustedAccessPrograms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutAccountDataRetention", func(t *testing.T) {
         input := &bedrock.PutAccountDataRetentionInput{}
         output := &bedrock.PutAccountDataRetentionOutput{}
@@ -1172,6 +1367,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAccountDataRetention", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAccountDataRetention(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAccountDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.PutAccountDataRetentionStorageInput{}
+        output := &bedrock.PutAccountDataRetentionStorageOutput{}
+
+        mockClient.On("PutAccountDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAccountDataRetentionStorage(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1204,6 +1412,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutOrganizationDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.PutOrganizationDataRetentionStorageInput{}
+        output := &bedrock.PutOrganizationDataRetentionStorageOutput{}
+
+        mockClient.On("PutOrganizationDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutOrganizationDataRetentionStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutProjectDataRetentionStorage", func(t *testing.T) {
+        input := &bedrock.PutProjectDataRetentionStorageInput{}
+        output := &bedrock.PutProjectDataRetentionStorageOutput{}
+
+        mockClient.On("PutProjectDataRetentionStorage", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutProjectDataRetentionStorage(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutResourcePolicy", func(t *testing.T) {
         input := &bedrock.PutResourcePolicyInput{}
         output := &bedrock.PutResourcePolicyOutput{}
@@ -1211,6 +1445,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutResourcePolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutResourcePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTrustedAccessProgramAccountEnrollment", func(t *testing.T) {
+        input := &bedrock.PutTrustedAccessProgramAccountEnrollmentInput{}
+        output := &bedrock.PutTrustedAccessProgramAccountEnrollmentOutput{}
+
+        mockClient.On("PutTrustedAccessProgramAccountEnrollment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTrustedAccessProgramAccountEnrollment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTrustedAccessProgramOrganizationEnrollment", func(t *testing.T) {
+        input := &bedrock.PutTrustedAccessProgramOrganizationEnrollmentInput{}
+        output := &bedrock.PutTrustedAccessProgramOrganizationEnrollmentOutput{}
+
+        mockClient.On("PutTrustedAccessProgramOrganizationEnrollment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTrustedAccessProgramOrganizationEnrollment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutTrustedAccessProgramProjectEnrollment", func(t *testing.T) {
+        input := &bedrock.PutTrustedAccessProgramProjectEnrollmentInput{}
+        output := &bedrock.PutTrustedAccessProgramProjectEnrollmentOutput{}
+
+        mockClient.On("PutTrustedAccessProgramProjectEnrollment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutTrustedAccessProgramProjectEnrollment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1263,6 +1536,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAutomatedReasoningPolicyTestWorkflow", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAutomatedReasoningPolicyTestWorkflow(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTrustedAccessProgramAccountApplication", func(t *testing.T) {
+        input := &bedrock.StartTrustedAccessProgramAccountApplicationInput{}
+        output := &bedrock.StartTrustedAccessProgramAccountApplicationOutput{}
+
+        mockClient.On("StartTrustedAccessProgramAccountApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTrustedAccessProgramAccountApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTrustedAccessProgramOrganizationApplication", func(t *testing.T) {
+        input := &bedrock.StartTrustedAccessProgramOrganizationApplicationInput{}
+        output := &bedrock.StartTrustedAccessProgramOrganizationApplicationOutput{}
+
+        mockClient.On("StartTrustedAccessProgramOrganizationApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTrustedAccessProgramOrganizationApplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTrustedAccessProgramProjectApplication", func(t *testing.T) {
+        input := &bedrock.StartTrustedAccessProgramProjectApplicationInput{}
+        output := &bedrock.StartTrustedAccessProgramProjectApplicationOutput{}
+
+        mockClient.On("StartTrustedAccessProgramProjectApplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTrustedAccessProgramProjectApplication(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1419,6 +1731,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateMarketplaceModelEndpoint", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateMarketplaceModelEndpoint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProject", func(t *testing.T) {
+        input := &bedrock.UpdateProjectInput{}
+        output := &bedrock.UpdateProjectOutput{}
+
+        mockClient.On("UpdateProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

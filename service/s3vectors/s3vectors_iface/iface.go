@@ -31,4 +31,5 @@ type IClient interface {
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateIndexMode(ctx context.Context, params *UpdateIndexModeInput, optFns ...func(*Options)) (*UpdateIndexModeOutput, error) 
+ UpdateMetadataConfiguration(ctx context.Context, params *UpdateMetadataConfigurationInput, optFns ...func(*Options)) (*UpdateMetadataConfigurationOutput, error) 
 }

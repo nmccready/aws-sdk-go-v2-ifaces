@@ -10,6 +10,7 @@ import (
 // IClient defines the interface for signin
 type IClient interface {
  Options() Options 
+ BatchRevokeSessions(ctx context.Context, params *BatchRevokeSessionsInput, optFns ...func(*Options)) (*BatchRevokeSessionsOutput, error) 
  CreateBearerToken(ctx context.Context, params *CreateBearerTokenInput, optFns ...func(*Options)) (*CreateBearerTokenOutput, error) 
  CreateOAuth2Token(ctx context.Context, params *CreateOAuth2TokenInput, optFns ...func(*Options)) (*CreateOAuth2TokenOutput, error) 
  CreateOAuth2TokenWithIAM(ctx context.Context, params *CreateOAuth2TokenWithIAMInput, optFns ...func(*Options)) (*CreateOAuth2TokenWithIAMOutput, error) 
@@ -18,8 +19,10 @@ type IClient interface {
  DeleteResourcePermissionStatement(ctx context.Context, params *DeleteResourcePermissionStatementInput, optFns ...func(*Options)) (*DeleteResourcePermissionStatementOutput, error) 
  GetConsoleAuthorizationConfiguration(ctx context.Context, params *GetConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*GetConsoleAuthorizationConfigurationOutput, error) 
  GetResourcePolicy(ctx context.Context, params *GetResourcePolicyInput, optFns ...func(*Options)) (*GetResourcePolicyOutput, error) 
+ GetSession(ctx context.Context, params *GetSessionInput, optFns ...func(*Options)) (*GetSessionOutput, error) 
  IntrospectOAuth2TokenWithIAM(ctx context.Context, params *IntrospectOAuth2TokenWithIAMInput, optFns ...func(*Options)) (*IntrospectOAuth2TokenWithIAMOutput, error) 
  ListResourcePermissionStatements(ctx context.Context, params *ListResourcePermissionStatementsInput, optFns ...func(*Options)) (*ListResourcePermissionStatementsOutput, error) 
+ ListSessions(ctx context.Context, params *ListSessionsInput, optFns ...func(*Options)) (*ListSessionsOutput, error) 
  PutConsoleAuthorizationConfiguration(ctx context.Context, params *PutConsoleAuthorizationConfigurationInput, optFns ...func(*Options)) (*PutConsoleAuthorizationConfigurationOutput, error) 
  PutResourcePermissionStatement(ctx context.Context, params *PutResourcePermissionStatementInput, optFns ...func(*Options)) (*PutResourcePermissionStatementOutput, error) 
  RevokeOAuth2TokenWithIAM(ctx context.Context, params *RevokeOAuth2TokenWithIAMInput, optFns ...func(*Options)) (*RevokeOAuth2TokenWithIAMOutput, error) 

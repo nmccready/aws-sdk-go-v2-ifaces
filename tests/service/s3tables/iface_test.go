@@ -203,6 +203,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisassociateTableReplication", func(t *testing.T) {
+        input := &s3tables.DisassociateTableReplicationInput{}
+        output := &s3tables.DisassociateTableReplicationOutput{}
+
+        mockClient.On("DisassociateTableReplication", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisassociateTableReplication(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetNamespace", func(t *testing.T) {
         input := &s3tables.GetNamespaceInput{}
         output := &s3tables.GetNamespaceOutput{}

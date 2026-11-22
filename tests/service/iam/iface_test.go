@@ -2218,6 +2218,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateOpenIDConnectProvider", func(t *testing.T) {
+        input := &iam.UpdateOpenIDConnectProviderInput{}
+        output := &iam.UpdateOpenIDConnectProviderOutput{}
+
+        mockClient.On("UpdateOpenIDConnectProvider", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateOpenIDConnectProvider(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateOpenIDConnectProviderThumbprint", func(t *testing.T) {
         input := &iam.UpdateOpenIDConnectProviderThumbprintInput{}
         output := &iam.UpdateOpenIDConnectProviderThumbprintOutput{}
