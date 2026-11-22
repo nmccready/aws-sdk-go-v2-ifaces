@@ -606,6 +606,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListFirewallRuleDomains", func(t *testing.T) {
+        input := &route53resolver.ListFirewallRuleDomainsInput{}
+        output := &route53resolver.ListFirewallRuleDomainsOutput{}
+
+        mockClient.On("ListFirewallRuleDomains", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFirewallRuleDomains(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListFirewallRuleGroupAssociations", func(t *testing.T) {
         input := &route53resolver.ListFirewallRuleGroupAssociationsInput{}
         output := &route53resolver.ListFirewallRuleGroupAssociationsOutput{}

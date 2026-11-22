@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateCustomerAccount", func(t *testing.T) {
+        input := &partnercentralselling.CreateCustomerAccountInput{}
+        output := &partnercentralselling.CreateCustomerAccountOutput{}
+
+        mockClient.On("CreateCustomerAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCustomerAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateEngagement", func(t *testing.T) {
         input := &partnercentralselling.CreateEngagementInput{}
         output := &partnercentralselling.CreateEngagementOutput{}
@@ -151,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteCustomerAccount", func(t *testing.T) {
+        input := &partnercentralselling.DeleteCustomerAccountInput{}
+        output := &partnercentralselling.DeleteCustomerAccountOutput{}
+
+        mockClient.On("DeleteCustomerAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCustomerAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteResourceSnapshotJob", func(t *testing.T) {
         input := &partnercentralselling.DeleteResourceSnapshotJobInput{}
         output := &partnercentralselling.DeleteResourceSnapshotJobOutput{}
@@ -190,6 +216,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetCustomerAccount", func(t *testing.T) {
+        input := &partnercentralselling.GetCustomerAccountInput{}
+        output := &partnercentralselling.GetCustomerAccountOutput{}
+
+        mockClient.On("GetCustomerAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomerAccount(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomerAccountBulkJob", func(t *testing.T) {
+        input := &partnercentralselling.GetCustomerAccountBulkJobInput{}
+        output := &partnercentralselling.GetCustomerAccountBulkJobOutput{}
+
+        mockClient.On("GetCustomerAccountBulkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomerAccountBulkJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomerAccountBulkJobReportUrl", func(t *testing.T) {
+        input := &partnercentralselling.GetCustomerAccountBulkJobReportUrlInput{}
+        output := &partnercentralselling.GetCustomerAccountBulkJobReportUrlOutput{}
+
+        mockClient.On("GetCustomerAccountBulkJobReportUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomerAccountBulkJobReportUrl(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetCustomerAccountStatistics", func(t *testing.T) {
+        input := &partnercentralselling.GetCustomerAccountStatisticsInput{}
+        output := &partnercentralselling.GetCustomerAccountStatisticsOutput{}
+
+        mockClient.On("GetCustomerAccountStatistics", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetCustomerAccountStatistics(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetEngagement", func(t *testing.T) {
         input := &partnercentralselling.GetEngagementInput{}
         output := &partnercentralselling.GetEngagementOutput{}
@@ -223,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetOpportunity", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetOpportunity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetOpportunityBulkJobReportUrl", func(t *testing.T) {
+        input := &partnercentralselling.GetOpportunityBulkJobReportUrlInput{}
+        output := &partnercentralselling.GetOpportunityBulkJobReportUrlOutput{}
+
+        mockClient.On("GetOpportunityBulkJobReportUrl", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetOpportunityBulkJobReportUrl(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -281,6 +372,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListCustomerAccountBulkJobResults", func(t *testing.T) {
+        input := &partnercentralselling.ListCustomerAccountBulkJobResultsInput{}
+        output := &partnercentralselling.ListCustomerAccountBulkJobResultsOutput{}
+
+        mockClient.On("ListCustomerAccountBulkJobResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomerAccountBulkJobResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCustomerAccountBulkJobs", func(t *testing.T) {
+        input := &partnercentralselling.ListCustomerAccountBulkJobsInput{}
+        output := &partnercentralselling.ListCustomerAccountBulkJobsOutput{}
+
+        mockClient.On("ListCustomerAccountBulkJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCustomerAccountBulkJobs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListEngagementByAcceptingInvitationTasks", func(t *testing.T) {
         input := &partnercentralselling.ListEngagementByAcceptingInvitationTasksInput{}
         output := &partnercentralselling.ListEngagementByAcceptingInvitationTasksOutput{}
@@ -301,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListEngagementFromOpportunityTasks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListEngagementFromOpportunityTasks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEngagementGroups", func(t *testing.T) {
+        input := &partnercentralselling.ListEngagementGroupsInput{}
+        output := &partnercentralselling.ListEngagementGroupsOutput{}
+
+        mockClient.On("ListEngagementGroups", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEngagementGroups(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -366,6 +496,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListOpportunities", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListOpportunities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOpportunityBulkJobResults", func(t *testing.T) {
+        input := &partnercentralselling.ListOpportunityBulkJobResultsInput{}
+        output := &partnercentralselling.ListOpportunityBulkJobResultsOutput{}
+
+        mockClient.On("ListOpportunityBulkJobResults", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOpportunityBulkJobResults(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOpportunityBulkJobs", func(t *testing.T) {
+        input := &partnercentralselling.ListOpportunityBulkJobsInput{}
+        output := &partnercentralselling.ListOpportunityBulkJobsOutput{}
+
+        mockClient.On("ListOpportunityBulkJobs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOpportunityBulkJobs(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -476,6 +632,58 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSearchCustomerAccounts", func(t *testing.T) {
+        input := &partnercentralselling.SearchCustomerAccountsInput{}
+        output := &partnercentralselling.SearchCustomerAccountsOutput{}
+
+        mockClient.On("SearchCustomerAccounts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchCustomerAccounts(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchEngagements", func(t *testing.T) {
+        input := &partnercentralselling.SearchEngagementsInput{}
+        output := &partnercentralselling.SearchEngagementsOutput{}
+
+        mockClient.On("SearchEngagements", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchEngagements(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSearchOpportunities", func(t *testing.T) {
+        input := &partnercentralselling.SearchOpportunitiesInput{}
+        output := &partnercentralselling.SearchOpportunitiesOutput{}
+
+        mockClient.On("SearchOpportunities", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SearchOpportunities(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartCustomerAccountBulkJob", func(t *testing.T) {
+        input := &partnercentralselling.StartCustomerAccountBulkJobInput{}
+        output := &partnercentralselling.StartCustomerAccountBulkJobOutput{}
+
+        mockClient.On("StartCustomerAccountBulkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartCustomerAccountBulkJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartEngagementByAcceptingInvitationTask", func(t *testing.T) {
         input := &partnercentralselling.StartEngagementByAcceptingInvitationTaskInput{}
         output := &partnercentralselling.StartEngagementByAcceptingInvitationTaskOutput{}
@@ -496,6 +704,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartEngagementFromOpportunityTask", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartEngagementFromOpportunityTask(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartOpportunityBulkJob", func(t *testing.T) {
+        input := &partnercentralselling.StartOpportunityBulkJobInput{}
+        output := &partnercentralselling.StartOpportunityBulkJobOutput{}
+
+        mockClient.On("StartOpportunityBulkJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartOpportunityBulkJob(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -587,6 +808,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCustomerAccount", func(t *testing.T) {
+        input := &partnercentralselling.UpdateCustomerAccountInput{}
+        output := &partnercentralselling.UpdateCustomerAccountOutput{}
+
+        mockClient.On("UpdateCustomerAccount", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCustomerAccount(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

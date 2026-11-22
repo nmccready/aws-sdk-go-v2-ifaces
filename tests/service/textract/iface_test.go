@@ -99,6 +99,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateBlueprint", func(t *testing.T) {
+        input := &textract.CreateBlueprintInput{}
+        output := &textract.CreateBlueprintOutput{}
+
+        mockClient.On("CreateBlueprint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateBlueprintVersion", func(t *testing.T) {
+        input := &textract.CreateBlueprintVersionInput{}
+        output := &textract.CreateBlueprintVersionOutput{}
+
+        mockClient.On("CreateBlueprintVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateBlueprintVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateProject", func(t *testing.T) {
+        input := &textract.CreateProjectInput{}
+        output := &textract.CreateProjectOutput{}
+
+        mockClient.On("CreateProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAdapter", func(t *testing.T) {
         input := &textract.DeleteAdapterInput{}
         output := &textract.DeleteAdapterOutput{}
@@ -119,6 +158,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAdapterVersion", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAdapterVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteBlueprint", func(t *testing.T) {
+        input := &textract.DeleteBlueprintInput{}
+        output := &textract.DeleteBlueprintOutput{}
+
+        mockClient.On("DeleteBlueprint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteProject", func(t *testing.T) {
+        input := &textract.DeleteProjectInput{}
+        output := &textract.DeleteProjectOutput{}
+
+        mockClient.On("DeleteProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -164,6 +229,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetBlueprint", func(t *testing.T) {
+        input := &textract.GetBlueprintInput{}
+        output := &textract.GetBlueprintOutput{}
+
+        mockClient.On("GetBlueprint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetDocumentAnalysis", func(t *testing.T) {
         input := &textract.GetDocumentAnalysisInput{}
         output := &textract.GetDocumentAnalysisOutput{}
@@ -171,6 +249,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetDocumentAnalysis", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetDocumentAnalysis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDocumentInsights", func(t *testing.T) {
+        input := &textract.GetDocumentInsightsInput{}
+        output := &textract.GetDocumentInsightsOutput{}
+
+        mockClient.On("GetDocumentInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDocumentInsights(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -229,6 +320,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetProject", func(t *testing.T) {
+        input := &textract.GetProjectInput{}
+        output := &textract.GetProjectOutput{}
+
+        mockClient.On("GetProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetProject(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAdapterVersions", func(t *testing.T) {
         input := &textract.ListAdapterVersionsInput{}
         output := &textract.ListAdapterVersionsOutput{}
@@ -255,6 +359,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListBlueprints", func(t *testing.T) {
+        input := &textract.ListBlueprintsInput{}
+        output := &textract.ListBlueprintsOutput{}
+
+        mockClient.On("ListBlueprints", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListBlueprints(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListProjects", func(t *testing.T) {
+        input := &textract.ListProjectsInput{}
+        output := &textract.ListProjectsOutput{}
+
+        mockClient.On("ListProjects", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListProjects(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTagsForResource", func(t *testing.T) {
         input := &textract.ListTagsForResourceInput{}
         output := &textract.ListTagsForResourceOutput{}
@@ -275,6 +405,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartDocumentAnalysis", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartDocumentAnalysis(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartDocumentInsights", func(t *testing.T) {
+        input := &textract.StartDocumentInsightsInput{}
+        output := &textract.StartDocumentInsightsOutput{}
+
+        mockClient.On("StartDocumentInsights", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartDocumentInsights(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -353,6 +496,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAdapter", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAdapter(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateBlueprint", func(t *testing.T) {
+        input := &textract.UpdateBlueprintInput{}
+        output := &textract.UpdateBlueprintOutput{}
+
+        mockClient.On("UpdateBlueprint", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateBlueprint(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateProject", func(t *testing.T) {
+        input := &textract.UpdateProjectInput{}
+        output := &textract.UpdateProjectOutput{}
+
+        mockClient.On("UpdateProject", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateProject(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

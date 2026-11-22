@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestConfigureTags", func(t *testing.T) {
+        input := &health.ConfigureTagsInput{}
+        output := &health.ConfigureTagsOutput{}
+
+        mockClient.On("ConfigureTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ConfigureTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestConfigureTagsForOrganization", func(t *testing.T) {
+        input := &health.ConfigureTagsForOrganizationInput{}
+        output := &health.ConfigureTagsForOrganizationOutput{}
+
+        mockClient.On("ConfigureTagsForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ConfigureTagsForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeAffectedAccountsForOrganization", func(t *testing.T) {
         input := &health.DescribeAffectedAccountsForOrganizationInput{}
         output := &health.DescribeAffectedAccountsForOrganizationOutput{}
@@ -203,6 +229,84 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTagKeys", func(t *testing.T) {
+        input := &health.DescribeTagKeysInput{}
+        output := &health.DescribeTagKeysOutput{}
+
+        mockClient.On("DescribeTagKeys", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTagKeys(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTagKeysForOrganization", func(t *testing.T) {
+        input := &health.DescribeTagKeysForOrganizationInput{}
+        output := &health.DescribeTagKeysForOrganizationOutput{}
+
+        mockClient.On("DescribeTagKeysForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTagKeysForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTags", func(t *testing.T) {
+        input := &health.DescribeTagsInput{}
+        output := &health.DescribeTagsOutput{}
+
+        mockClient.On("DescribeTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTagsForOrganization", func(t *testing.T) {
+        input := &health.DescribeTagsForOrganizationInput{}
+        output := &health.DescribeTagsForOrganizationOutput{}
+
+        mockClient.On("DescribeTagsForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTagsForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTagsOnboardingStatus", func(t *testing.T) {
+        input := &health.DescribeTagsOnboardingStatusInput{}
+        output := &health.DescribeTagsOnboardingStatusOutput{}
+
+        mockClient.On("DescribeTagsOnboardingStatus", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTagsOnboardingStatus(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeTagsOnboardingStatusForOrganization", func(t *testing.T) {
+        input := &health.DescribeTagsOnboardingStatusForOrganizationInput{}
+        output := &health.DescribeTagsOnboardingStatusForOrganizationOutput{}
+
+        mockClient.On("DescribeTagsOnboardingStatusForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTagsOnboardingStatusForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisableHealthServiceAccessForOrganization", func(t *testing.T) {
         input := &health.DisableHealthServiceAccessForOrganizationInput{}
         output := &health.DisableHealthServiceAccessForOrganizationOutput{}
@@ -216,6 +320,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDisableTags", func(t *testing.T) {
+        input := &health.DisableTagsInput{}
+        output := &health.DisableTagsOutput{}
+
+        mockClient.On("DisableTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDisableTagsForOrganization", func(t *testing.T) {
+        input := &health.DisableTagsForOrganizationInput{}
+        output := &health.DisableTagsForOrganizationOutput{}
+
+        mockClient.On("DisableTagsForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DisableTagsForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestEnableHealthServiceAccessForOrganization", func(t *testing.T) {
         input := &health.EnableHealthServiceAccessForOrganizationInput{}
         output := &health.EnableHealthServiceAccessForOrganizationOutput{}
@@ -223,6 +353,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("EnableHealthServiceAccessForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.EnableHealthServiceAccessForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableTags", func(t *testing.T) {
+        input := &health.EnableTagsInput{}
+        output := &health.EnableTagsOutput{}
+
+        mockClient.On("EnableTags", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableTags(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestEnableTagsForOrganization", func(t *testing.T) {
+        input := &health.EnableTagsForOrganizationInput{}
+        output := &health.EnableTagsForOrganizationOutput{}
+
+        mockClient.On("EnableTagsForOrganization", ctx, input).Return(output, nil)
+
+        result, err := mockClient.EnableTagsForOrganization(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -307,6 +307,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetEvent", func(t *testing.T) {
+        input := &wafv2.GetEventInput{}
+        output := &wafv2.GetEventOutput{}
+
+        mockClient.On("GetEvent", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEvent(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetEventActor", func(t *testing.T) {
+        input := &wafv2.GetEventActorInput{}
+        output := &wafv2.GetEventActorOutput{}
+
+        mockClient.On("GetEventActor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetEventActor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetIPSet", func(t *testing.T) {
         input := &wafv2.GetIPSetInput{}
         output := &wafv2.GetIPSetOutput{}
@@ -535,6 +561,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAvailableManagedRuleGroups", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAvailableManagedRuleGroups(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEventActors", func(t *testing.T) {
+        input := &wafv2.ListEventActorsInput{}
+        output := &wafv2.ListEventActorsOutput{}
+
+        mockClient.On("ListEventActors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEventActors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEvents", func(t *testing.T) {
+        input := &wafv2.ListEventsInput{}
+        output := &wafv2.ListEventsOutput{}
+
+        mockClient.On("ListEvents", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEvents(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListEventsByWebACL", func(t *testing.T) {
+        input := &wafv2.ListEventsByWebACLInput{}
+        output := &wafv2.ListEventsByWebACLOutput{}
+
+        mockClient.On("ListEventsByWebACL", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListEventsByWebACL(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

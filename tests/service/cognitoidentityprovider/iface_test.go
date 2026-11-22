@@ -463,6 +463,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelPointInTimeRecovery", func(t *testing.T) {
+        input := &cognitoidentityprovider.CancelPointInTimeRecoveryInput{}
+        output := &cognitoidentityprovider.CancelPointInTimeRecoveryOutput{}
+
+        mockClient.On("CancelPointInTimeRecovery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelPointInTimeRecovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestChangePassword", func(t *testing.T) {
         input := &cognitoidentityprovider.ChangePasswordInput{}
         output := &cognitoidentityprovider.ChangePasswordOutput{}
@@ -522,6 +535,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ConfirmSignUp", ctx, input).Return(output, nil)
 
         result, err := mockClient.ConfirmSignUp(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateCIMDPolicy", func(t *testing.T) {
+        input := &cognitoidentityprovider.CreateCIMDPolicyInput{}
+        output := &cognitoidentityprovider.CreateCIMDPolicyOutput{}
+
+        mockClient.On("CreateCIMDPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateCIMDPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -652,6 +678,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateUserPoolReplica", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateUserPoolReplica(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteCIMDPolicy", func(t *testing.T) {
+        input := &cognitoidentityprovider.DeleteCIMDPolicyInput{}
+        output := &cognitoidentityprovider.DeleteCIMDPolicyOutput{}
+
+        mockClient.On("DeleteCIMDPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteCIMDPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -827,6 +866,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeCIMDPolicy", func(t *testing.T) {
+        input := &cognitoidentityprovider.DescribeCIMDPolicyInput{}
+        output := &cognitoidentityprovider.DescribeCIMDPolicyOutput{}
+
+        mockClient.On("DescribeCIMDPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeCIMDPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeIdentityProvider", func(t *testing.T) {
         input := &cognitoidentityprovider.DescribeIdentityProviderInput{}
         output := &cognitoidentityprovider.DescribeIdentityProviderOutput{}
@@ -860,6 +912,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeManagedLoginBrandingByClient", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeManagedLoginBrandingByClient(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribePointInTimeRecovery", func(t *testing.T) {
+        input := &cognitoidentityprovider.DescribePointInTimeRecoveryInput{}
+        output := &cognitoidentityprovider.DescribePointInTimeRecoveryOutput{}
+
+        mockClient.On("DescribePointInTimeRecovery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribePointInTimeRecovery(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1016,6 +1081,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetClientToken", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetClientToken(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetDerivedToken", func(t *testing.T) {
+        input := &cognitoidentityprovider.GetDerivedTokenInput{}
+        output := &cognitoidentityprovider.GetDerivedTokenOutput{}
+
+        mockClient.On("GetDerivedToken", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetDerivedToken(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1230,6 +1308,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestInitiatePointInTimeRecovery", func(t *testing.T) {
+        input := &cognitoidentityprovider.InitiatePointInTimeRecoveryInput{}
+        output := &cognitoidentityprovider.InitiatePointInTimeRecoveryOutput{}
+
+        mockClient.On("InitiatePointInTimeRecovery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.InitiatePointInTimeRecovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListCIMDPolicies", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListCIMDPoliciesInput{}
+        output := &cognitoidentityprovider.ListCIMDPoliciesOutput{}
+
+        mockClient.On("ListCIMDPolicies", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListCIMDPolicies(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListClientMetadataURLs", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListClientMetadataURLsInput{}
+        output := &cognitoidentityprovider.ListClientMetadataURLsOutput{}
+
+        mockClient.On("ListClientMetadataURLs", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListClientMetadataURLs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDevices", func(t *testing.T) {
         input := &cognitoidentityprovider.ListDevicesInput{}
         output := &cognitoidentityprovider.ListDevicesOutput{}
@@ -1263,6 +1380,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListIdentityProviders", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListIdentityProviders(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListPointInTimeRecoveries", func(t *testing.T) {
+        input := &cognitoidentityprovider.ListPointInTimeRecoveriesInput{}
+        output := &cognitoidentityprovider.ListPointInTimeRecoveriesOutput{}
+
+        mockClient.On("ListPointInTimeRecoveries", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPointInTimeRecoveries(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1594,6 +1724,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartPointInTimeRecovery", func(t *testing.T) {
+        input := &cognitoidentityprovider.StartPointInTimeRecoveryInput{}
+        output := &cognitoidentityprovider.StartPointInTimeRecoveryOutput{}
+
+        mockClient.On("StartPointInTimeRecovery", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartPointInTimeRecovery(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartUserImportJob", func(t *testing.T) {
         input := &cognitoidentityprovider.StartUserImportJobInput{}
         output := &cognitoidentityprovider.StartUserImportJobOutput{}
@@ -1666,6 +1809,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAuthEventFeedback", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAuthEventFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateCIMDPolicy", func(t *testing.T) {
+        input := &cognitoidentityprovider.UpdateCIMDPolicyInput{}
+        output := &cognitoidentityprovider.UpdateCIMDPolicyOutput{}
+
+        mockClient.On("UpdateCIMDPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateCIMDPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateClientMetadataURLState", func(t *testing.T) {
+        input := &cognitoidentityprovider.UpdateClientMetadataURLStateInput{}
+        output := &cognitoidentityprovider.UpdateClientMetadataURLStateOutput{}
+
+        mockClient.On("UpdateClientMetadataURLState", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateClientMetadataURLState(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

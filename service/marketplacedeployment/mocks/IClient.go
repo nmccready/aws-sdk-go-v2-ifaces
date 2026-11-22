@@ -15,6 +15,117 @@ type IClient struct {
 	mock.Mock
 }
 
+// GetDeploymentConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDeploymentConfiguration(ctx context.Context, params *marketplacedeployment.GetDeploymentConfigurationInput, optFns ...func(*marketplacedeployment.Options)) (*marketplacedeployment.GetDeploymentConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDeploymentConfiguration")
+	}
+
+	var r0 *marketplacedeployment.GetDeploymentConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.GetDeploymentConfigurationInput, ...func(*marketplacedeployment.Options)) (*marketplacedeployment.GetDeploymentConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.GetDeploymentConfigurationInput, ...func(*marketplacedeployment.Options)) *marketplacedeployment.GetDeploymentConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplacedeployment.GetDeploymentConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplacedeployment.GetDeploymentConfigurationInput, ...func(*marketplacedeployment.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDeploymentConfigurationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDeploymentConfigurationJob(ctx context.Context, params *marketplacedeployment.GetDeploymentConfigurationJobInput, optFns ...func(*marketplacedeployment.Options)) (*marketplacedeployment.GetDeploymentConfigurationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDeploymentConfigurationJob")
+	}
+
+	var r0 *marketplacedeployment.GetDeploymentConfigurationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.GetDeploymentConfigurationJobInput, ...func(*marketplacedeployment.Options)) (*marketplacedeployment.GetDeploymentConfigurationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.GetDeploymentConfigurationJobInput, ...func(*marketplacedeployment.Options)) *marketplacedeployment.GetDeploymentConfigurationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplacedeployment.GetDeploymentConfigurationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplacedeployment.GetDeploymentConfigurationJobInput, ...func(*marketplacedeployment.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListDeploymentConfigurationJobs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListDeploymentConfigurationJobs(ctx context.Context, params *marketplacedeployment.ListDeploymentConfigurationJobsInput, optFns ...func(*marketplacedeployment.Options)) (*marketplacedeployment.ListDeploymentConfigurationJobsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListDeploymentConfigurationJobs")
+	}
+
+	var r0 *marketplacedeployment.ListDeploymentConfigurationJobsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.ListDeploymentConfigurationJobsInput, ...func(*marketplacedeployment.Options)) (*marketplacedeployment.ListDeploymentConfigurationJobsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.ListDeploymentConfigurationJobsInput, ...func(*marketplacedeployment.Options)) *marketplacedeployment.ListDeploymentConfigurationJobsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplacedeployment.ListDeploymentConfigurationJobsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplacedeployment.ListDeploymentConfigurationJobsInput, ...func(*marketplacedeployment.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListTagsForResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListTagsForResource(ctx context.Context, params *marketplacedeployment.ListTagsForResourceInput, optFns ...func(*marketplacedeployment.Options)) (*marketplacedeployment.ListTagsForResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -99,6 +210,43 @@ func (_m *IClient) PutDeploymentParameter(ctx context.Context, params *marketpla
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *marketplacedeployment.PutDeploymentParameterInput, ...func(*marketplacedeployment.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartDeploymentConfigurationJob provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDeploymentConfigurationJob(ctx context.Context, params *marketplacedeployment.StartDeploymentConfigurationJobInput, optFns ...func(*marketplacedeployment.Options)) (*marketplacedeployment.StartDeploymentConfigurationJobOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDeploymentConfigurationJob")
+	}
+
+	var r0 *marketplacedeployment.StartDeploymentConfigurationJobOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.StartDeploymentConfigurationJobInput, ...func(*marketplacedeployment.Options)) (*marketplacedeployment.StartDeploymentConfigurationJobOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacedeployment.StartDeploymentConfigurationJobInput, ...func(*marketplacedeployment.Options)) *marketplacedeployment.StartDeploymentConfigurationJobOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplacedeployment.StartDeploymentConfigurationJobOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplacedeployment.StartDeploymentConfigurationJobInput, ...func(*marketplacedeployment.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

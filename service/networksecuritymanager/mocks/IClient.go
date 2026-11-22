@@ -1013,6 +1013,43 @@ func (_m *IClient) ListDeployments(ctx context.Context, params *networksecuritym
 	return r0, r1
 }
 
+// ListEntityCoverages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListEntityCoverages(ctx context.Context, params *networksecuritymanager.ListEntityCoveragesInput, optFns ...func(*networksecuritymanager.Options)) (*networksecuritymanager.ListEntityCoveragesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListEntityCoverages")
+	}
+
+	var r0 *networksecuritymanager.ListEntityCoveragesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networksecuritymanager.ListEntityCoveragesInput, ...func(*networksecuritymanager.Options)) (*networksecuritymanager.ListEntityCoveragesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networksecuritymanager.ListEntityCoveragesInput, ...func(*networksecuritymanager.Options)) *networksecuritymanager.ListEntityCoveragesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networksecuritymanager.ListEntityCoveragesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networksecuritymanager.ListEntityCoveragesInput, ...func(*networksecuritymanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPolicies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPolicies(ctx context.Context, params *networksecuritymanager.ListPoliciesInput, optFns ...func(*networksecuritymanager.Options)) (*networksecuritymanager.ListPoliciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1079,6 +1116,43 @@ func (_m *IClient) ListPolicySnapshots(ctx context.Context, params *networksecur
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networksecuritymanager.ListPolicySnapshotsInput, ...func(*networksecuritymanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProtectedResourceCoverages provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProtectedResourceCoverages(ctx context.Context, params *networksecuritymanager.ListProtectedResourceCoveragesInput, optFns ...func(*networksecuritymanager.Options)) (*networksecuritymanager.ListProtectedResourceCoveragesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProtectedResourceCoverages")
+	}
+
+	var r0 *networksecuritymanager.ListProtectedResourceCoveragesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networksecuritymanager.ListProtectedResourceCoveragesInput, ...func(*networksecuritymanager.Options)) (*networksecuritymanager.ListProtectedResourceCoveragesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networksecuritymanager.ListProtectedResourceCoveragesInput, ...func(*networksecuritymanager.Options)) *networksecuritymanager.ListProtectedResourceCoveragesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networksecuritymanager.ListProtectedResourceCoveragesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networksecuritymanager.ListProtectedResourceCoveragesInput, ...func(*networksecuritymanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

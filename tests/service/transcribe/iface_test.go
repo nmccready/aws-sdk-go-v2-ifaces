@@ -528,6 +528,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestTranscribeAudio", func(t *testing.T) {
+        input := &transcribe.TranscribeAudioInput{}
+        output := &transcribe.TranscribeAudioOutput{}
+
+        mockClient.On("TranscribeAudio", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TranscribeAudio(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUntagResource", func(t *testing.T) {
         input := &transcribe.UntagResourceInput{}
         output := &transcribe.UntagResourceOutput{}

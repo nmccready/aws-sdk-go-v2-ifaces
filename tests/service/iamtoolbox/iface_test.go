@@ -46,4 +46,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestGetRequestAuthorizationPolicy", func(t *testing.T) {
+        input := &iamtoolbox.GetRequestAuthorizationPolicyInput{}
+        output := &iamtoolbox.GetRequestAuthorizationPolicyOutput{}
+
+        mockClient.On("GetRequestAuthorizationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetRequestAuthorizationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

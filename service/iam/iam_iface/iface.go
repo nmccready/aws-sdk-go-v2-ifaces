@@ -178,6 +178,7 @@ type IClient interface {
  UpdateDelegationRequest(ctx context.Context, params *UpdateDelegationRequestInput, optFns ...func(*Options)) (*UpdateDelegationRequestOutput, error) 
  UpdateGroup(ctx context.Context, params *UpdateGroupInput, optFns ...func(*Options)) (*UpdateGroupOutput, error) 
  UpdateLoginProfile(ctx context.Context, params *UpdateLoginProfileInput, optFns ...func(*Options)) (*UpdateLoginProfileOutput, error) 
+ UpdateOpenIDConnectProvider(ctx context.Context, params *UpdateOpenIDConnectProviderInput, optFns ...func(*Options)) (*UpdateOpenIDConnectProviderOutput, error) 
  UpdateOpenIDConnectProviderThumbprint(ctx context.Context, params *UpdateOpenIDConnectProviderThumbprintInput, optFns ...func(*Options)) (*UpdateOpenIDConnectProviderThumbprintOutput, error) 
  UpdateRole(ctx context.Context, params *UpdateRoleInput, optFns ...func(*Options)) (*UpdateRoleOutput, error) 
  UpdateRoleDescription(ctx context.Context, params *UpdateRoleDescriptionInput, optFns ...func(*Options)) (*UpdateRoleDescriptionOutput, error) 

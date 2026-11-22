@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateConnector", func(t *testing.T) {
+        input := &observabilityadmin.CreateConnectorInput{}
+        output := &observabilityadmin.CreateConnectorOutput{}
+
+        mockClient.On("CreateConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateDatasetIntegration", func(t *testing.T) {
         input := &observabilityadmin.CreateDatasetIntegrationInput{}
         output := &observabilityadmin.CreateDatasetIntegrationOutput{}
@@ -125,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteConnector", func(t *testing.T) {
+        input := &observabilityadmin.DeleteConnectorInput{}
+        output := &observabilityadmin.DeleteConnectorOutput{}
+
+        mockClient.On("DeleteConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteDatasetIntegration", func(t *testing.T) {
         input := &observabilityadmin.DeleteDatasetIntegrationInput{}
         output := &observabilityadmin.DeleteDatasetIntegrationOutput{}
@@ -197,6 +223,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCentralizationRuleForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCentralizationRuleForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnector", func(t *testing.T) {
+        input := &observabilityadmin.GetConnectorInput{}
+        output := &observabilityadmin.GetConnectorOutput{}
+
+        mockClient.On("GetConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnector(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnectorTelemetryManifest", func(t *testing.T) {
+        input := &observabilityadmin.GetConnectorTelemetryManifestInput{}
+        output := &observabilityadmin.GetConnectorTelemetryManifestOutput{}
+
+        mockClient.On("GetConnectorTelemetryManifest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnectorTelemetryManifest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetConnectorTelemetrySetup", func(t *testing.T) {
+        input := &observabilityadmin.GetConnectorTelemetrySetupInput{}
+        output := &observabilityadmin.GetConnectorTelemetrySetupOutput{}
+
+        mockClient.On("GetConnectorTelemetrySetup", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetConnectorTelemetrySetup(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetThirdPartyTelemetryEnrichment", func(t *testing.T) {
+        input := &observabilityadmin.GetThirdPartyTelemetryEnrichmentInput{}
+        output := &observabilityadmin.GetThirdPartyTelemetryEnrichmentOutput{}
+
+        mockClient.On("GetThirdPartyTelemetryEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetThirdPartyTelemetryEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListCentralizationRulesForOrganization", func(t *testing.T) {
         input := &observabilityadmin.ListCentralizationRulesForOrganizationInput{}
         output := &observabilityadmin.ListCentralizationRulesForOrganizationOutput{}
@@ -314,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListCentralizationRulesForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListCentralizationRulesForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListConnectors", func(t *testing.T) {
+        input := &observabilityadmin.ListConnectorsInput{}
+        output := &observabilityadmin.ListConnectorsOutput{}
+
+        mockClient.On("ListConnectors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListConnectors(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -353,6 +444,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListResourceTelemetryForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListResourceTelemetryForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourcesByConnector", func(t *testing.T) {
+        input := &observabilityadmin.ListResourcesByConnectorInput{}
+        output := &observabilityadmin.ListResourcesByConnectorOutput{}
+
+        mockClient.On("ListResourcesByConnector", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourcesByConnector(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +528,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListThirdPartyTelemetryEnrichments", func(t *testing.T) {
+        input := &observabilityadmin.ListThirdPartyTelemetryEnrichmentsInput{}
+        output := &observabilityadmin.ListThirdPartyTelemetryEnrichmentsOutput{}
+
+        mockClient.On("ListThirdPartyTelemetryEnrichments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListThirdPartyTelemetryEnrichments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutConnectorTelemetryManifest", func(t *testing.T) {
+        input := &observabilityadmin.PutConnectorTelemetryManifestInput{}
+        output := &observabilityadmin.PutConnectorTelemetryManifestOutput{}
+
+        mockClient.On("PutConnectorTelemetryManifest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutConnectorTelemetryManifest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartTelemetryEnrichment", func(t *testing.T) {
         input := &observabilityadmin.StartTelemetryEnrichmentInput{}
         output := &observabilityadmin.StartTelemetryEnrichmentOutput{}
@@ -463,6 +593,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartTelemetryPipelineRefresh", func(t *testing.T) {
+        input := &observabilityadmin.StartTelemetryPipelineRefreshInput{}
+        output := &observabilityadmin.StartTelemetryPipelineRefreshOutput{}
+
+        mockClient.On("StartTelemetryPipelineRefresh", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTelemetryPipelineRefresh(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartThirdPartyTelemetryEnrichment", func(t *testing.T) {
+        input := &observabilityadmin.StartThirdPartyTelemetryEnrichmentInput{}
+        output := &observabilityadmin.StartThirdPartyTelemetryEnrichmentOutput{}
+
+        mockClient.On("StartThirdPartyTelemetryEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartThirdPartyTelemetryEnrichment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStopTelemetryEnrichment", func(t *testing.T) {
         input := &observabilityadmin.StopTelemetryEnrichmentInput{}
         output := &observabilityadmin.StopTelemetryEnrichmentOutput{}
@@ -496,6 +652,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopTelemetryEvaluationForOrganization", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopTelemetryEvaluationForOrganization(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopThirdPartyTelemetryEnrichment", func(t *testing.T) {
+        input := &observabilityadmin.StopThirdPartyTelemetryEnrichmentInput{}
+        output := &observabilityadmin.StopThirdPartyTelemetryEnrichmentOutput{}
+
+        mockClient.On("StopThirdPartyTelemetryEnrichment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopThirdPartyTelemetryEnrichment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

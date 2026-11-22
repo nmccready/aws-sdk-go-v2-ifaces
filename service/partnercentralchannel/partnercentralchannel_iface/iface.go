@@ -11,13 +11,17 @@ import (
 type IClient interface {
  Options() Options 
  AcceptChannelHandshake(ctx context.Context, params *AcceptChannelHandshakeInput, optFns ...func(*Options)) (*AcceptChannelHandshakeOutput, error) 
+ CancelChannelContract(ctx context.Context, params *CancelChannelContractInput, optFns ...func(*Options)) (*CancelChannelContractOutput, error) 
  CancelChannelHandshake(ctx context.Context, params *CancelChannelHandshakeInput, optFns ...func(*Options)) (*CancelChannelHandshakeOutput, error) 
+ CreateChannelContract(ctx context.Context, params *CreateChannelContractInput, optFns ...func(*Options)) (*CreateChannelContractOutput, error) 
  CreateChannelHandshake(ctx context.Context, params *CreateChannelHandshakeInput, optFns ...func(*Options)) (*CreateChannelHandshakeOutput, error) 
  CreateProgramManagementAccount(ctx context.Context, params *CreateProgramManagementAccountInput, optFns ...func(*Options)) (*CreateProgramManagementAccountOutput, error) 
  CreateRelationship(ctx context.Context, params *CreateRelationshipInput, optFns ...func(*Options)) (*CreateRelationshipOutput, error) 
  DeleteProgramManagementAccount(ctx context.Context, params *DeleteProgramManagementAccountInput, optFns ...func(*Options)) (*DeleteProgramManagementAccountOutput, error) 
  DeleteRelationship(ctx context.Context, params *DeleteRelationshipInput, optFns ...func(*Options)) (*DeleteRelationshipOutput, error) 
+ GetChannelContract(ctx context.Context, params *GetChannelContractInput, optFns ...func(*Options)) (*GetChannelContractOutput, error) 
  GetRelationship(ctx context.Context, params *GetRelationshipInput, optFns ...func(*Options)) (*GetRelationshipOutput, error) 
+ ListChannelContracts(ctx context.Context, params *ListChannelContractsInput, optFns ...func(*Options)) (*ListChannelContractsOutput, error) 
  ListChannelHandshakes(ctx context.Context, params *ListChannelHandshakesInput, optFns ...func(*Options)) (*ListChannelHandshakesOutput, error) 
  ListProgramManagementAccounts(ctx context.Context, params *ListProgramManagementAccountsInput, optFns ...func(*Options)) (*ListProgramManagementAccountsOutput, error) 
  ListRelationships(ctx context.Context, params *ListRelationshipsInput, optFns ...func(*Options)) (*ListRelationshipsOutput, error) 

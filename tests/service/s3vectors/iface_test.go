@@ -306,4 +306,17 @@ func TestIClient(t *testing.T) {
 
         mockClient.AssertExpectations(t)
     })
+
+    t.Run("TestUpdateMetadataConfiguration", func(t *testing.T) {
+        input := &s3vectors.UpdateMetadataConfigurationInput{}
+        output := &s3vectors.UpdateMetadataConfigurationOutput{}
+
+        mockClient.On("UpdateMetadataConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMetadataConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
 }

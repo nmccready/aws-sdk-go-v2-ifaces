@@ -569,6 +569,80 @@ func (_m *IClient) DisassociateCertificate(ctx context.Context, params *rtbfabri
 	return r0, r1
 }
 
+// GetAvailableModule provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAvailableModule(ctx context.Context, params *rtbfabric.GetAvailableModuleInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetAvailableModuleOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAvailableModule")
+	}
+
+	var r0 *rtbfabric.GetAvailableModuleOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetAvailableModuleInput, ...func(*rtbfabric.Options)) (*rtbfabric.GetAvailableModuleOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetAvailableModuleInput, ...func(*rtbfabric.Options)) *rtbfabric.GetAvailableModuleOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.GetAvailableModuleOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetAvailableModuleInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAvailableModuleVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAvailableModuleVersion(ctx context.Context, params *rtbfabric.GetAvailableModuleVersionInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetAvailableModuleVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAvailableModuleVersion")
+	}
+
+	var r0 *rtbfabric.GetAvailableModuleVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetAvailableModuleVersionInput, ...func(*rtbfabric.Options)) (*rtbfabric.GetAvailableModuleVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetAvailableModuleVersionInput, ...func(*rtbfabric.Options)) *rtbfabric.GetAvailableModuleVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.GetAvailableModuleVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetAvailableModuleVersionInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetCertificateAssociation provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetCertificateAssociation(ctx context.Context, params *rtbfabric.GetCertificateAssociationInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetCertificateAssociationOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -828,6 +902,117 @@ func (_m *IClient) GetResponderGateway(ctx context.Context, params *rtbfabric.Ge
 	return r0, r1
 }
 
+// GetUpdate provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetUpdate(ctx context.Context, params *rtbfabric.GetUpdateInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.GetUpdateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetUpdate")
+	}
+
+	var r0 *rtbfabric.GetUpdateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetUpdateInput, ...func(*rtbfabric.Options)) (*rtbfabric.GetUpdateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.GetUpdateInput, ...func(*rtbfabric.Options)) *rtbfabric.GetUpdateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.GetUpdateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.GetUpdateInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAvailableModuleVersions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAvailableModuleVersions(ctx context.Context, params *rtbfabric.ListAvailableModuleVersionsInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.ListAvailableModuleVersionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAvailableModuleVersions")
+	}
+
+	var r0 *rtbfabric.ListAvailableModuleVersionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListAvailableModuleVersionsInput, ...func(*rtbfabric.Options)) (*rtbfabric.ListAvailableModuleVersionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListAvailableModuleVersionsInput, ...func(*rtbfabric.Options)) *rtbfabric.ListAvailableModuleVersionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.ListAvailableModuleVersionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.ListAvailableModuleVersionsInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAvailableModules provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAvailableModules(ctx context.Context, params *rtbfabric.ListAvailableModulesInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.ListAvailableModulesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAvailableModules")
+	}
+
+	var r0 *rtbfabric.ListAvailableModulesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListAvailableModulesInput, ...func(*rtbfabric.Options)) (*rtbfabric.ListAvailableModulesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListAvailableModulesInput, ...func(*rtbfabric.Options)) *rtbfabric.ListAvailableModulesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.ListAvailableModulesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.ListAvailableModulesInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCertificateAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCertificateAssociations(ctx context.Context, params *rtbfabric.ListCertificateAssociationsInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.ListCertificateAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1050,6 +1235,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *rtbfabric.Li
 	return r0, r1
 }
 
+// ListUpdates provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListUpdates(ctx context.Context, params *rtbfabric.ListUpdatesInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.ListUpdatesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListUpdates")
+	}
+
+	var r0 *rtbfabric.ListUpdatesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListUpdatesInput, ...func(*rtbfabric.Options)) (*rtbfabric.ListUpdatesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.ListUpdatesInput, ...func(*rtbfabric.Options)) *rtbfabric.ListUpdatesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.ListUpdatesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.ListUpdatesInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() rtbfabric.Options {
 	ret := _m.Called()
@@ -1066,6 +1288,43 @@ func (_m *IClient) Options() rtbfabric.Options {
 	}
 
 	return r0
+}
+
+// PutLinkFlows provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutLinkFlows(ctx context.Context, params *rtbfabric.PutLinkFlowsInput, optFns ...func(*rtbfabric.Options)) (*rtbfabric.PutLinkFlowsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutLinkFlows")
+	}
+
+	var r0 *rtbfabric.PutLinkFlowsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.PutLinkFlowsInput, ...func(*rtbfabric.Options)) (*rtbfabric.PutLinkFlowsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *rtbfabric.PutLinkFlowsInput, ...func(*rtbfabric.Options)) *rtbfabric.PutLinkFlowsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*rtbfabric.PutLinkFlowsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *rtbfabric.PutLinkFlowsInput, ...func(*rtbfabric.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
 }
 
 // RejectLink provides a mock function with given fields: ctx, params, optFns

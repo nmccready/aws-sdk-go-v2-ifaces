@@ -398,6 +398,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestSplitCredit", func(t *testing.T) {
+        input := &billing.SplitCreditInput{}
+        output := &billing.SplitCreditOutput{}
+
+        mockClient.On("SplitCredit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SplitCredit(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &billing.TagResourceInput{}
         output := &billing.TagResourceOutput{}
@@ -405,6 +418,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("TagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.TagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestTransferCredit", func(t *testing.T) {
+        input := &billing.TransferCreditInput{}
+        output := &billing.TransferCreditOutput{}
+
+        mockClient.On("TransferCredit", ctx, input).Return(output, nil)
+
+        result, err := mockClient.TransferCredit(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

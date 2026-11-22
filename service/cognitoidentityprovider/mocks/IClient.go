@@ -1236,6 +1236,43 @@ func (_m *IClient) AssociateSoftwareToken(ctx context.Context, params *cognitoid
 	return r0, r1
 }
 
+// CancelPointInTimeRecovery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CancelPointInTimeRecovery(ctx context.Context, params *cognitoidentityprovider.CancelPointInTimeRecoveryInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CancelPointInTimeRecoveryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CancelPointInTimeRecovery")
+	}
+
+	var r0 *cognitoidentityprovider.CancelPointInTimeRecoveryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CancelPointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CancelPointInTimeRecoveryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CancelPointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.CancelPointInTimeRecoveryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.CancelPointInTimeRecoveryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CancelPointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ChangePassword provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ChangePassword(ctx context.Context, params *cognitoidentityprovider.ChangePasswordInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ChangePasswordOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1413,6 +1450,43 @@ func (_m *IClient) ConfirmSignUp(ctx context.Context, params *cognitoidentitypro
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ConfirmSignUpInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateCIMDPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateCIMDPolicy(ctx context.Context, params *cognitoidentityprovider.CreateCIMDPolicyInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateCIMDPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateCIMDPolicy")
+	}
+
+	var r0 *cognitoidentityprovider.CreateCIMDPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.CreateCIMDPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.CreateCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.CreateCIMDPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.CreateCIMDPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CreateCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1783,6 +1857,43 @@ func (_m *IClient) CreateUserPoolReplica(ctx context.Context, params *cognitoide
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.CreateUserPoolReplicaInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteCIMDPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteCIMDPolicy(ctx context.Context, params *cognitoidentityprovider.DeleteCIMDPolicyInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteCIMDPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteCIMDPolicy")
+	}
+
+	var r0 *cognitoidentityprovider.DeleteCIMDPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DeleteCIMDPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DeleteCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DeleteCIMDPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DeleteCIMDPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DeleteCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2272,6 +2383,43 @@ func (_m *IClient) DeleteWebAuthnCredential(ctx context.Context, params *cognito
 	return r0, r1
 }
 
+// DescribeCIMDPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribeCIMDPolicy(ctx context.Context, params *cognitoidentityprovider.DescribeCIMDPolicyInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeCIMDPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribeCIMDPolicy")
+	}
+
+	var r0 *cognitoidentityprovider.DescribeCIMDPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeCIMDPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribeCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DescribeCIMDPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DescribeCIMDPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DescribeIdentityProvider provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DescribeIdentityProvider(ctx context.Context, params *cognitoidentityprovider.DescribeIdentityProviderInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2375,6 +2523,43 @@ func (_m *IClient) DescribeManagedLoginBrandingByClient(ctx context.Context, par
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribeManagedLoginBrandingByClientInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DescribePointInTimeRecovery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DescribePointInTimeRecovery(ctx context.Context, params *cognitoidentityprovider.DescribePointInTimeRecoveryInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribePointInTimeRecoveryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DescribePointInTimeRecovery")
+	}
+
+	var r0 *cognitoidentityprovider.DescribePointInTimeRecoveryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribePointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.DescribePointInTimeRecoveryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.DescribePointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.DescribePointInTimeRecoveryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.DescribePointInTimeRecoveryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.DescribePointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2819,6 +3004,43 @@ func (_m *IClient) GetClientToken(ctx context.Context, params *cognitoidentitypr
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetClientTokenInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDerivedToken provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDerivedToken(ctx context.Context, params *cognitoidentityprovider.GetDerivedTokenInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetDerivedTokenOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDerivedToken")
+	}
+
+	var r0 *cognitoidentityprovider.GetDerivedTokenOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetDerivedTokenInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.GetDerivedTokenOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.GetDerivedTokenInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.GetDerivedTokenOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.GetDerivedTokenOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.GetDerivedTokenInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3419,6 +3641,117 @@ func (_m *IClient) InitiateAuth(ctx context.Context, params *cognitoidentityprov
 	return r0, r1
 }
 
+// InitiatePointInTimeRecovery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) InitiatePointInTimeRecovery(ctx context.Context, params *cognitoidentityprovider.InitiatePointInTimeRecoveryInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.InitiatePointInTimeRecoveryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for InitiatePointInTimeRecovery")
+	}
+
+	var r0 *cognitoidentityprovider.InitiatePointInTimeRecoveryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.InitiatePointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.InitiatePointInTimeRecoveryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.InitiatePointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.InitiatePointInTimeRecoveryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.InitiatePointInTimeRecoveryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.InitiatePointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListCIMDPolicies provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListCIMDPolicies(ctx context.Context, params *cognitoidentityprovider.ListCIMDPoliciesInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListCIMDPoliciesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListCIMDPolicies")
+	}
+
+	var r0 *cognitoidentityprovider.ListCIMDPoliciesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListCIMDPoliciesInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListCIMDPoliciesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListCIMDPoliciesInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListCIMDPoliciesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListCIMDPoliciesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListCIMDPoliciesInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListClientMetadataURLs provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListClientMetadataURLs(ctx context.Context, params *cognitoidentityprovider.ListClientMetadataURLsInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListClientMetadataURLsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListClientMetadataURLs")
+	}
+
+	var r0 *cognitoidentityprovider.ListClientMetadataURLsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListClientMetadataURLsInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListClientMetadataURLsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListClientMetadataURLsInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListClientMetadataURLsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListClientMetadataURLsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListClientMetadataURLsInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListDevices provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListDevices(ctx context.Context, params *cognitoidentityprovider.ListDevicesInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListDevicesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3522,6 +3855,43 @@ func (_m *IClient) ListIdentityProviders(ctx context.Context, params *cognitoide
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListIdentityProvidersInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListPointInTimeRecoveries provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListPointInTimeRecoveries(ctx context.Context, params *cognitoidentityprovider.ListPointInTimeRecoveriesInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListPointInTimeRecoveriesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListPointInTimeRecoveries")
+	}
+
+	var r0 *cognitoidentityprovider.ListPointInTimeRecoveriesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListPointInTimeRecoveriesInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.ListPointInTimeRecoveriesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.ListPointInTimeRecoveriesInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.ListPointInTimeRecoveriesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.ListPointInTimeRecoveriesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.ListPointInTimeRecoveriesInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -4473,6 +4843,43 @@ func (_m *IClient) SignUp(ctx context.Context, params *cognitoidentityprovider.S
 	return r0, r1
 }
 
+// StartPointInTimeRecovery provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartPointInTimeRecovery(ctx context.Context, params *cognitoidentityprovider.StartPointInTimeRecoveryInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.StartPointInTimeRecoveryOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartPointInTimeRecovery")
+	}
+
+	var r0 *cognitoidentityprovider.StartPointInTimeRecoveryOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.StartPointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.StartPointInTimeRecoveryOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.StartPointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.StartPointInTimeRecoveryOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.StartPointInTimeRecoveryOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.StartPointInTimeRecoveryInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartUserImportJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartUserImportJob(ctx context.Context, params *cognitoidentityprovider.StartUserImportJobInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.StartUserImportJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -4687,6 +5094,80 @@ func (_m *IClient) UpdateAuthEventFeedback(ctx context.Context, params *cognitoi
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateAuthEventFeedbackInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateCIMDPolicy provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateCIMDPolicy(ctx context.Context, params *cognitoidentityprovider.UpdateCIMDPolicyInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateCIMDPolicyOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateCIMDPolicy")
+	}
+
+	var r0 *cognitoidentityprovider.UpdateCIMDPolicyOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateCIMDPolicyOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.UpdateCIMDPolicyOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.UpdateCIMDPolicyOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateCIMDPolicyInput, ...func(*cognitoidentityprovider.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateClientMetadataURLState provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateClientMetadataURLState(ctx context.Context, params *cognitoidentityprovider.UpdateClientMetadataURLStateInput, optFns ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateClientMetadataURLStateOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateClientMetadataURLState")
+	}
+
+	var r0 *cognitoidentityprovider.UpdateClientMetadataURLStateOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateClientMetadataURLStateInput, ...func(*cognitoidentityprovider.Options)) (*cognitoidentityprovider.UpdateClientMetadataURLStateOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *cognitoidentityprovider.UpdateClientMetadataURLStateInput, ...func(*cognitoidentityprovider.Options)) *cognitoidentityprovider.UpdateClientMetadataURLStateOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*cognitoidentityprovider.UpdateClientMetadataURLStateOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *cognitoidentityprovider.UpdateClientMetadataURLStateInput, ...func(*cognitoidentityprovider.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

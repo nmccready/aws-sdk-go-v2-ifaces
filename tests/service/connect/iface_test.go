@@ -1009,6 +1009,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAllEntitySessions", func(t *testing.T) {
+        input := &connect.DeleteAllEntitySessionsInput{}
+        output := &connect.DeleteAllEntitySessionsOutput{}
+
+        mockClient.On("DeleteAllEntitySessions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAllEntitySessions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAttachedFile", func(t *testing.T) {
         input := &connect.DeleteAttachedFileInput{}
         output := &connect.DeleteAttachedFileOutput{}

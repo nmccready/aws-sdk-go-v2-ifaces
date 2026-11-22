@@ -827,6 +827,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAgentInsightStore", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.GetAgentInsightStoreInput{}
+        output := &bedrockagentcorecontrol.GetAgentInsightStoreOutput{}
+
+        mockClient.On("GetAgentInsightStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentInsightStore(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAgentRuntime", func(t *testing.T) {
         input := &bedrockagentcorecontrol.GetAgentRuntimeInput{}
         output := &bedrockagentcorecontrol.GetAgentRuntimeOutput{}
@@ -1276,6 +1289,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetWorkloadIdentity", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetWorkloadIdentity(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentInsightStores", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.ListAgentInsightStoresInput{}
+        output := &bedrockagentcorecontrol.ListAgentInsightStoresOutput{}
+
+        mockClient.On("ListAgentInsightStores", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentInsightStores(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1913,6 +1939,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UntagResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.UntagResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentInsightStore", func(t *testing.T) {
+        input := &bedrockagentcorecontrol.UpdateAgentInsightStoreInput{}
+        output := &bedrockagentcorecontrol.UpdateAgentInsightStoreOutput{}
+
+        mockClient.On("UpdateAgentInsightStore", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentInsightStore(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

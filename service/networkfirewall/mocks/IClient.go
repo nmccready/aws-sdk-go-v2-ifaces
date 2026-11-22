@@ -1494,6 +1494,43 @@ func (_m *IClient) ListContainerAssociations(ctx context.Context, params *networ
 	return r0, r1
 }
 
+// ListContextStores provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContextStores(ctx context.Context, params *networkfirewall.ListContextStoresInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListContextStoresOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContextStores")
+	}
+
+	var r0 *networkfirewall.ListContextStoresOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListContextStoresInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListContextStoresOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListContextStoresInput, ...func(*networkfirewall.Options)) *networkfirewall.ListContextStoresOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.ListContextStoresOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListContextStoresInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFirewallPolicies provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFirewallPolicies(ctx context.Context, params *networkfirewall.ListFirewallPoliciesInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListFirewallPoliciesOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1671,6 +1708,43 @@ func (_m *IClient) ListFlowOperations(ctx context.Context, params *networkfirewa
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListFlowOperationsInput, ...func(*networkfirewall.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListResourcesInContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListResourcesInContextStore(ctx context.Context, params *networkfirewall.ListResourcesInContextStoreInput, optFns ...func(*networkfirewall.Options)) (*networkfirewall.ListResourcesInContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListResourcesInContextStore")
+	}
+
+	var r0 *networkfirewall.ListResourcesInContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListResourcesInContextStoreInput, ...func(*networkfirewall.Options)) (*networkfirewall.ListResourcesInContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkfirewall.ListResourcesInContextStoreInput, ...func(*networkfirewall.Options)) *networkfirewall.ListResourcesInContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkfirewall.ListResourcesInContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkfirewall.ListResourcesInContextStoreInput, ...func(*networkfirewall.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

@@ -1069,6 +1069,43 @@ func (_m *IClient) RedeemCredits(ctx context.Context, params *billing.RedeemCred
 	return r0, r1
 }
 
+// SplitCredit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) SplitCredit(ctx context.Context, params *billing.SplitCreditInput, optFns ...func(*billing.Options)) (*billing.SplitCreditOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for SplitCredit")
+	}
+
+	var r0 *billing.SplitCreditOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.SplitCreditInput, ...func(*billing.Options)) (*billing.SplitCreditOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.SplitCreditInput, ...func(*billing.Options)) *billing.SplitCreditOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.SplitCreditOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.SplitCreditInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // TagResource provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) TagResource(ctx context.Context, params *billing.TagResourceInput, optFns ...func(*billing.Options)) (*billing.TagResourceOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1098,6 +1135,43 @@ func (_m *IClient) TagResource(ctx context.Context, params *billing.TagResourceI
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *billing.TagResourceInput, ...func(*billing.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// TransferCredit provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) TransferCredit(ctx context.Context, params *billing.TransferCreditInput, optFns ...func(*billing.Options)) (*billing.TransferCreditOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for TransferCredit")
+	}
+
+	var r0 *billing.TransferCreditOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.TransferCreditInput, ...func(*billing.Options)) (*billing.TransferCreditOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *billing.TransferCreditInput, ...func(*billing.Options)) *billing.TransferCreditOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*billing.TransferCreditOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *billing.TransferCreditInput, ...func(*billing.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

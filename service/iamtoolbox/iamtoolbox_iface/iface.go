@@ -11,4 +11,5 @@ import (
 type IClient interface {
  Options() Options 
  GetRequestAuthorizationDetails(ctx context.Context, params *GetRequestAuthorizationDetailsInput, optFns ...func(*Options)) (*GetRequestAuthorizationDetailsOutput, error) 
+ GetRequestAuthorizationPolicy(ctx context.Context, params *GetRequestAuthorizationPolicyInput, optFns ...func(*Options)) (*GetRequestAuthorizationPolicyOutput, error) 
 }

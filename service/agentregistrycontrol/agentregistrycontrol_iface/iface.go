@@ -10,19 +10,28 @@ import (
 // IClient defines the interface for agentregistrycontrol
 type IClient interface {
  Options() Options 
+ AssociatePublisher(ctx context.Context, params *AssociatePublisherInput, optFns ...func(*Options)) (*AssociatePublisherOutput, error) 
+ CreatePublisher(ctx context.Context, params *CreatePublisherInput, optFns ...func(*Options)) (*CreatePublisherOutput, error) 
  CreateRegistry(ctx context.Context, params *CreateRegistryInput, optFns ...func(*Options)) (*CreateRegistryOutput, error) 
  CreateRegistryRecord(ctx context.Context, params *CreateRegistryRecordInput, optFns ...func(*Options)) (*CreateRegistryRecordOutput, error) 
+ DeletePublisher(ctx context.Context, params *DeletePublisherInput, optFns ...func(*Options)) (*DeletePublisherOutput, error) 
  DeleteRegistry(ctx context.Context, params *DeleteRegistryInput, optFns ...func(*Options)) (*DeleteRegistryOutput, error) 
  DeleteRegistryRecord(ctx context.Context, params *DeleteRegistryRecordInput, optFns ...func(*Options)) (*DeleteRegistryRecordOutput, error) 
+ DisassociatePublisher(ctx context.Context, params *DisassociatePublisherInput, optFns ...func(*Options)) (*DisassociatePublisherOutput, error) 
+ GetPublisher(ctx context.Context, params *GetPublisherInput, optFns ...func(*Options)) (*GetPublisherOutput, error) 
  GetRegistry(ctx context.Context, params *GetRegistryInput, optFns ...func(*Options)) (*GetRegistryOutput, error) 
  GetRegistryRecord(ctx context.Context, params *GetRegistryRecordInput, optFns ...func(*Options)) (*GetRegistryRecordOutput, error) 
+ ListPublisherAssociations(ctx context.Context, params *ListPublisherAssociationsInput, optFns ...func(*Options)) (*ListPublisherAssociationsOutput, error) 
+ ListPublishers(ctx context.Context, params *ListPublishersInput, optFns ...func(*Options)) (*ListPublishersOutput, error) 
  ListRegistries(ctx context.Context, params *ListRegistriesInput, optFns ...func(*Options)) (*ListRegistriesOutput, error) 
  ListRegistryRecords(ctx context.Context, params *ListRegistryRecordsInput, optFns ...func(*Options)) (*ListRegistryRecordsOutput, error) 
  ListTagsForResource(ctx context.Context, params *ListTagsForResourceInput, optFns ...func(*Options)) (*ListTagsForResourceOutput, error) 
  SubmitRegistryRecordForApproval(ctx context.Context, params *SubmitRegistryRecordForApprovalInput, optFns ...func(*Options)) (*SubmitRegistryRecordForApprovalOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdatePublisherAssociationApprovalStatus(ctx context.Context, params *UpdatePublisherAssociationApprovalStatusInput, optFns ...func(*Options)) (*UpdatePublisherAssociationApprovalStatusOutput, error) 
  UpdateRegistry(ctx context.Context, params *UpdateRegistryInput, optFns ...func(*Options)) (*UpdateRegistryOutput, error) 
  UpdateRegistryRecord(ctx context.Context, params *UpdateRegistryRecordInput, optFns ...func(*Options)) (*UpdateRegistryRecordOutput, error) 
  UpdateRegistryRecordStatus(ctx context.Context, params *UpdateRegistryRecordStatusInput, optFns ...func(*Options)) (*UpdateRegistryRecordStatusOutput, error) 
+ ValidatePublisher(ctx context.Context, params *ValidatePublisherInput, optFns ...func(*Options)) (*ValidatePublisherOutput, error) 
 }

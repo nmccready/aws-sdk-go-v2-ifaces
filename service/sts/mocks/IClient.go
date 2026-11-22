@@ -347,6 +347,43 @@ func (_m *IClient) GetFederationToken(ctx context.Context, params *sts.GetFedera
 	return r0, r1
 }
 
+// GetScopedCredentials provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetScopedCredentials(ctx context.Context, params *sts.GetScopedCredentialsInput, optFns ...func(*sts.Options)) (*sts.GetScopedCredentialsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetScopedCredentials")
+	}
+
+	var r0 *sts.GetScopedCredentialsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *sts.GetScopedCredentialsInput, ...func(*sts.Options)) (*sts.GetScopedCredentialsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *sts.GetScopedCredentialsInput, ...func(*sts.Options)) *sts.GetScopedCredentialsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*sts.GetScopedCredentialsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *sts.GetScopedCredentialsInput, ...func(*sts.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetSessionToken provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetSessionToken(ctx context.Context, params *sts.GetSessionTokenInput, optFns ...func(*sts.Options)) (*sts.GetSessionTokenOutput, error) {
 	_va := make([]interface{}, len(optFns))

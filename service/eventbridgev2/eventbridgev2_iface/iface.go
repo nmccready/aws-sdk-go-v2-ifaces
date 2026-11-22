@@ -30,6 +30,7 @@ type IClient interface {
  PutRawEvents(ctx context.Context, params *PutRawEventsInput, optFns ...func(*Options)) (*PutRawEventsOutput, error) 
  PutResourcePolicy(ctx context.Context, params *PutResourcePolicyInput, optFns ...func(*Options)) (*PutResourcePolicyOutput, error) 
  RevokeResource(ctx context.Context, params *RevokeResourceInput, optFns ...func(*Options)) (*RevokeResourceOutput, error) 
+ RotateWebhookCredentials(ctx context.Context, params *RotateWebhookCredentialsInput, optFns ...func(*Options)) (*RotateWebhookCredentialsOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
  UpdateEventBus(ctx context.Context, params *UpdateEventBusInput, optFns ...func(*Options)) (*UpdateEventBusOutput, error) 

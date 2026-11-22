@@ -6249,6 +6249,43 @@ func (_m *IClient) UpdateLoginProfile(ctx context.Context, params *iam.UpdateLog
 	return r0, r1
 }
 
+// UpdateOpenIDConnectProvider provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateOpenIDConnectProvider(ctx context.Context, params *iam.UpdateOpenIDConnectProviderInput, optFns ...func(*iam.Options)) (*iam.UpdateOpenIDConnectProviderOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateOpenIDConnectProvider")
+	}
+
+	var r0 *iam.UpdateOpenIDConnectProviderOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.UpdateOpenIDConnectProviderInput, ...func(*iam.Options)) (*iam.UpdateOpenIDConnectProviderOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *iam.UpdateOpenIDConnectProviderInput, ...func(*iam.Options)) *iam.UpdateOpenIDConnectProviderOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*iam.UpdateOpenIDConnectProviderOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *iam.UpdateOpenIDConnectProviderInput, ...func(*iam.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // UpdateOpenIDConnectProviderThumbprint provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) UpdateOpenIDConnectProviderThumbprint(ctx context.Context, params *iam.UpdateOpenIDConnectProviderThumbprintInput, optFns ...func(*iam.Options)) (*iam.UpdateOpenIDConnectProviderThumbprintOutput, error) {
 	_va := make([]interface{}, len(optFns))

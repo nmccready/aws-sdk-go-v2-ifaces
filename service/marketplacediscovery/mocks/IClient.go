@@ -237,6 +237,43 @@ func (_m *IClient) ListFulfillmentOptions(ctx context.Context, params *marketpla
 	return r0, r1
 }
 
+// ListListingAttributes provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListListingAttributes(ctx context.Context, params *marketplacediscovery.ListListingAttributesInput, optFns ...func(*marketplacediscovery.Options)) (*marketplacediscovery.ListListingAttributesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListListingAttributes")
+	}
+
+	var r0 *marketplacediscovery.ListListingAttributesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacediscovery.ListListingAttributesInput, ...func(*marketplacediscovery.Options)) (*marketplacediscovery.ListListingAttributesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacediscovery.ListListingAttributesInput, ...func(*marketplacediscovery.Options)) *marketplacediscovery.ListListingAttributesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplacediscovery.ListListingAttributesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplacediscovery.ListListingAttributesInput, ...func(*marketplacediscovery.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPurchaseOptions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPurchaseOptions(ctx context.Context, params *marketplacediscovery.ListPurchaseOptionsInput, optFns ...func(*marketplacediscovery.Options)) (*marketplacediscovery.ListPurchaseOptionsOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -294,6 +294,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestRotateWebhookCredentials", func(t *testing.T) {
+        input := &eventbridgev2.RotateWebhookCredentialsInput{}
+        output := &eventbridgev2.RotateWebhookCredentialsOutput{}
+
+        mockClient.On("RotateWebhookCredentials", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RotateWebhookCredentials(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestTagResource", func(t *testing.T) {
         input := &eventbridgev2.TagResourceInput{}
         output := &eventbridgev2.TagResourceOutput{}

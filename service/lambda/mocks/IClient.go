@@ -459,6 +459,43 @@ func (_m *IClient) DeleteCodeSigningConfig(ctx context.Context, params *lambda.D
 	return r0, r1
 }
 
+// DeleteDurableExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteDurableExecution(ctx context.Context, params *lambda.DeleteDurableExecutionInput, optFns ...func(*lambda.Options)) (*lambda.DeleteDurableExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteDurableExecution")
+	}
+
+	var r0 *lambda.DeleteDurableExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.DeleteDurableExecutionInput, ...func(*lambda.Options)) (*lambda.DeleteDurableExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.DeleteDurableExecutionInput, ...func(*lambda.Options)) *lambda.DeleteDurableExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.DeleteDurableExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.DeleteDurableExecutionInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteEventSourceMapping provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteEventSourceMapping(ctx context.Context, params *lambda.DeleteEventSourceMappingInput, optFns ...func(*lambda.Options)) (*lambda.DeleteEventSourceMappingOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2327,6 +2364,43 @@ func (_m *IClient) Options() lambda.Options {
 	return r0
 }
 
+// PauseDurableExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PauseDurableExecution(ctx context.Context, params *lambda.PauseDurableExecutionInput, optFns ...func(*lambda.Options)) (*lambda.PauseDurableExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PauseDurableExecution")
+	}
+
+	var r0 *lambda.PauseDurableExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.PauseDurableExecutionInput, ...func(*lambda.Options)) (*lambda.PauseDurableExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.PauseDurableExecutionInput, ...func(*lambda.Options)) *lambda.PauseDurableExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.PauseDurableExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.PauseDurableExecutionInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PublishLayerVersion provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PublishLayerVersion(ctx context.Context, params *lambda.PublishLayerVersionInput, optFns ...func(*lambda.Options)) (*lambda.PublishLayerVersionOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2763,6 +2837,43 @@ func (_m *IClient) RemovePermission(ctx context.Context, params *lambda.RemovePe
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *lambda.RemovePermissionInput, ...func(*lambda.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ResumeDurableExecution provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ResumeDurableExecution(ctx context.Context, params *lambda.ResumeDurableExecutionInput, optFns ...func(*lambda.Options)) (*lambda.ResumeDurableExecutionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ResumeDurableExecution")
+	}
+
+	var r0 *lambda.ResumeDurableExecutionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ResumeDurableExecutionInput, ...func(*lambda.Options)) (*lambda.ResumeDurableExecutionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *lambda.ResumeDurableExecutionInput, ...func(*lambda.Options)) *lambda.ResumeDurableExecutionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*lambda.ResumeDurableExecutionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *lambda.ResumeDurableExecutionInput, ...func(*lambda.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

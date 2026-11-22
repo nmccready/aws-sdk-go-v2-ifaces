@@ -268,6 +268,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetUsageLinesEstimatedCost", func(t *testing.T) {
+        input := &bcmpricingcalculator.GetUsageLinesEstimatedCostInput{}
+        output := &bcmpricingcalculator.GetUsageLinesEstimatedCostOutput{}
+
+        mockClient.On("GetUsageLinesEstimatedCost", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetUsageLinesEstimatedCost(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetWorkloadEstimate", func(t *testing.T) {
         input := &bcmpricingcalculator.GetWorkloadEstimateInput{}
         output := &bcmpricingcalculator.GetWorkloadEstimateOutput{}

@@ -28,6 +28,7 @@ type IClient interface {
  GetBillEstimate(ctx context.Context, params *GetBillEstimateInput, optFns ...func(*Options)) (*GetBillEstimateOutput, error) 
  GetBillScenario(ctx context.Context, params *GetBillScenarioInput, optFns ...func(*Options)) (*GetBillScenarioOutput, error) 
  GetPreferences(ctx context.Context, params *GetPreferencesInput, optFns ...func(*Options)) (*GetPreferencesOutput, error) 
+ GetUsageLinesEstimatedCost(ctx context.Context, params *GetUsageLinesEstimatedCostInput, optFns ...func(*Options)) (*GetUsageLinesEstimatedCostOutput, error) 
  GetWorkloadEstimate(ctx context.Context, params *GetWorkloadEstimateInput, optFns ...func(*Options)) (*GetWorkloadEstimateOutput, error) 
  ListBillEstimateCommitments(ctx context.Context, params *ListBillEstimateCommitmentsInput, optFns ...func(*Options)) (*ListBillEstimateCommitmentsOutput, error) 
  ListBillEstimateInputCommitmentModifications(ctx context.Context, params *ListBillEstimateInputCommitmentModificationsInput, optFns ...func(*Options)) (*ListBillEstimateInputCommitmentModificationsOutput, error) 

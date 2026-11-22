@@ -16,6 +16,7 @@ type IClient interface {
  GetOfferTerms(ctx context.Context, params *GetOfferTermsInput, optFns ...func(*Options)) (*GetOfferTermsOutput, error) 
  GetProduct(ctx context.Context, params *GetProductInput, optFns ...func(*Options)) (*GetProductOutput, error) 
  ListFulfillmentOptions(ctx context.Context, params *ListFulfillmentOptionsInput, optFns ...func(*Options)) (*ListFulfillmentOptionsOutput, error) 
+ ListListingAttributes(ctx context.Context, params *ListListingAttributesInput, optFns ...func(*Options)) (*ListListingAttributesOutput, error) 
  ListPurchaseOptions(ctx context.Context, params *ListPurchaseOptionsInput, optFns ...func(*Options)) (*ListPurchaseOptionsOutput, error) 
  SearchFacets(ctx context.Context, params *SearchFacetsInput, optFns ...func(*Options)) (*SearchFacetsOutput, error) 
  SearchListings(ctx context.Context, params *SearchListingsInput, optFns ...func(*Options)) (*SearchListingsOutput, error) 

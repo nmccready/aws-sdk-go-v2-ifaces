@@ -34,6 +34,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcknowledgeDeadLetterQueueRecords", func(t *testing.T) {
+        input := &kinesis.AcknowledgeDeadLetterQueueRecordsInput{}
+        output := &kinesis.AcknowledgeDeadLetterQueueRecordsOutput{}
+
+        mockClient.On("AcknowledgeDeadLetterQueueRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcknowledgeDeadLetterQueueRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestAcknowledgeQueueRecords", func(t *testing.T) {
+        input := &kinesis.AcknowledgeQueueRecordsInput{}
+        output := &kinesis.AcknowledgeQueueRecordsOutput{}
+
+        mockClient.On("AcknowledgeQueueRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcknowledgeQueueRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAddTagsToStream", func(t *testing.T) {
         input := &kinesis.AddTagsToStreamInput{}
         output := &kinesis.AddTagsToStreamOutput{}
@@ -54,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateQueue", func(t *testing.T) {
+        input := &kinesis.CreateQueueInput{}
+        output := &kinesis.CreateQueueOutput{}
+
+        mockClient.On("CreateQueue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQueue(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -93,6 +132,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteChannel", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteChannel(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQueue", func(t *testing.T) {
+        input := &kinesis.DeleteQueueInput{}
+        output := &kinesis.DeleteQueueOutput{}
+
+        mockClient.On("DeleteQueue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQueue(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -171,6 +223,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DescribeLimits", ctx, input).Return(output, nil)
 
         result, err := mockClient.DescribeLimits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeQueue", func(t *testing.T) {
+        input := &kinesis.DescribeQueueInput{}
+        output := &kinesis.DescribeQueueOutput{}
+
+        mockClient.On("DescribeQueue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeQueue(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -307,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListQueues", func(t *testing.T) {
+        input := &kinesis.ListQueuesInput{}
+        output := &kinesis.ListQueuesOutput{}
+
+        mockClient.On("ListQueues", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQueues(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListShards", func(t *testing.T) {
         input := &kinesis.ListShardsInput{}
         output := &kinesis.ListShardsOutput{}
@@ -424,6 +502,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestReceiveDeadLetterQueueRecords", func(t *testing.T) {
+        input := &kinesis.ReceiveDeadLetterQueueRecordsInput{}
+        output := &kinesis.ReceiveDeadLetterQueueRecordsOutput{}
+
+        mockClient.On("ReceiveDeadLetterQueueRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ReceiveDeadLetterQueueRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestReceiveQueueRecords", func(t *testing.T) {
+        input := &kinesis.ReceiveQueueRecordsInput{}
+        output := &kinesis.ReceiveQueueRecordsOutput{}
+
+        mockClient.On("ReceiveQueueRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ReceiveQueueRecords(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestRegisterStreamConsumer", func(t *testing.T) {
         input := &kinesis.RegisterStreamConsumerInput{}
         output := &kinesis.RegisterStreamConsumerOutput{}
@@ -444,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("RemoveTagsFromStream", ctx, input).Return(output, nil)
 
         result, err := mockClient.RemoveTagsFromStream(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRestoreDeadLetterQueueRecords", func(t *testing.T) {
+        input := &kinesis.RestoreDeadLetterQueueRecordsInput{}
+        output := &kinesis.RestoreDeadLetterQueueRecordsOutput{}
+
+        mockClient.On("RestoreDeadLetterQueueRecords", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RestoreDeadLetterQueueRecords(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -554,6 +671,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateDeadLetterQueueRecordsVisibility", func(t *testing.T) {
+        input := &kinesis.UpdateDeadLetterQueueRecordsVisibilityInput{}
+        output := &kinesis.UpdateDeadLetterQueueRecordsVisibilityOutput{}
+
+        mockClient.On("UpdateDeadLetterQueueRecordsVisibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateDeadLetterQueueRecordsVisibility(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateMaxRecordSize", func(t *testing.T) {
         input := &kinesis.UpdateMaxRecordSizeInput{}
         output := &kinesis.UpdateMaxRecordSizeOutput{}
@@ -561,6 +691,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateMaxRecordSize", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateMaxRecordSize(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQueue", func(t *testing.T) {
+        input := &kinesis.UpdateQueueInput{}
+        output := &kinesis.UpdateQueueOutput{}
+
+        mockClient.On("UpdateQueue", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQueue(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQueueRecordsVisibility", func(t *testing.T) {
+        input := &kinesis.UpdateQueueRecordsVisibilityInput{}
+        output := &kinesis.UpdateQueueRecordsVisibilityOutput{}
+
+        mockClient.On("UpdateQueueRecordsVisibility", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQueueRecordsVisibility(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

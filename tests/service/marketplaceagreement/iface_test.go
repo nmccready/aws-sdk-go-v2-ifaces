@@ -34,6 +34,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestAcceptAgreementApproval", func(t *testing.T) {
+        input := &marketplaceagreement.AcceptAgreementApprovalInput{}
+        output := &marketplaceagreement.AcceptAgreementApprovalOutput{}
+
+        mockClient.On("AcceptAgreementApproval", ctx, input).Return(output, nil)
+
+        result, err := mockClient.AcceptAgreementApproval(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestAcceptAgreementCancellationRequest", func(t *testing.T) {
         input := &marketplaceagreement.AcceptAgreementCancellationRequestInput{}
         output := &marketplaceagreement.AcceptAgreementCancellationRequestOutput{}
@@ -125,6 +138,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCancelAgreementRequest", func(t *testing.T) {
+        input := &marketplaceagreement.CancelAgreementRequestInput{}
+        output := &marketplaceagreement.CancelAgreementRequestOutput{}
+
+        mockClient.On("CancelAgreementRequest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CancelAgreementRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAgreementRequest", func(t *testing.T) {
         input := &marketplaceagreement.CreateAgreementRequestInput{}
         output := &marketplaceagreement.CreateAgreementRequestOutput{}
@@ -151,6 +177,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAgreementApproval", func(t *testing.T) {
+        input := &marketplaceagreement.GetAgreementApprovalInput{}
+        output := &marketplaceagreement.GetAgreementApprovalOutput{}
+
+        mockClient.On("GetAgreementApproval", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgreementApproval(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAgreementCancellationRequest", func(t *testing.T) {
         input := &marketplaceagreement.GetAgreementCancellationRequestInput{}
         output := &marketplaceagreement.GetAgreementCancellationRequestOutput{}
@@ -158,6 +197,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgreementCancellationRequest", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgreementCancellationRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgreementContacts", func(t *testing.T) {
+        input := &marketplaceagreement.GetAgreementContactsInput{}
+        output := &marketplaceagreement.GetAgreementContactsOutput{}
+
+        mockClient.On("GetAgreementContacts", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgreementContacts(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -190,6 +242,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAgreementRequest", func(t *testing.T) {
+        input := &marketplaceagreement.GetAgreementRequestInput{}
+        output := &marketplaceagreement.GetAgreementRequestOutput{}
+
+        mockClient.On("GetAgreementRequest", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgreementRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgreementRequestApprovalPlans", func(t *testing.T) {
+        input := &marketplaceagreement.GetAgreementRequestApprovalPlansInput{}
+        output := &marketplaceagreement.GetAgreementRequestApprovalPlansOutput{}
+
+        mockClient.On("GetAgreementRequestApprovalPlans", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgreementRequestApprovalPlans(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgreementRequestTerms", func(t *testing.T) {
+        input := &marketplaceagreement.GetAgreementRequestTermsInput{}
+        output := &marketplaceagreement.GetAgreementRequestTermsOutput{}
+
+        mockClient.On("GetAgreementRequestTerms", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgreementRequestTerms(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAgreementTerms", func(t *testing.T) {
         input := &marketplaceagreement.GetAgreementTermsInput{}
         output := &marketplaceagreement.GetAgreementTermsOutput{}
@@ -210,6 +301,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetBillingAdjustmentRequest", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetBillingAdjustmentRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgreementApprovals", func(t *testing.T) {
+        input := &marketplaceagreement.ListAgreementApprovalsInput{}
+        output := &marketplaceagreement.ListAgreementApprovalsOutput{}
+
+        mockClient.On("ListAgreementApprovals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgreementApprovals(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -268,6 +372,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAgreementRequests", func(t *testing.T) {
+        input := &marketplaceagreement.ListAgreementRequestsInput{}
+        output := &marketplaceagreement.ListAgreementRequestsOutput{}
+
+        mockClient.On("ListAgreementRequests", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgreementRequests(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListBillingAdjustmentRequests", func(t *testing.T) {
         input := &marketplaceagreement.ListBillingAdjustmentRequestsInput{}
         output := &marketplaceagreement.ListBillingAdjustmentRequestsOutput{}
@@ -275,6 +392,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListBillingAdjustmentRequests", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListBillingAdjustmentRequests(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestRejectAgreementApproval", func(t *testing.T) {
+        input := &marketplaceagreement.RejectAgreementApprovalInput{}
+        output := &marketplaceagreement.RejectAgreementApprovalOutput{}
+
+        mockClient.On("RejectAgreementApproval", ctx, input).Return(output, nil)
+
+        result, err := mockClient.RejectAgreementApproval(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +470,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("SendAgreementPaymentRequest", ctx, input).Return(output, nil)
 
         result, err := mockClient.SendAgreementPaymentRequest(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAgreementApprovals", func(t *testing.T) {
+        input := &marketplaceagreement.StartAgreementApprovalsInput{}
+        output := &marketplaceagreement.StartAgreementApprovalsOutput{}
+
+        mockClient.On("StartAgreementApprovals", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAgreementApprovals(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

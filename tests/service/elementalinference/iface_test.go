@@ -73,6 +73,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateFunction", func(t *testing.T) {
+        input := &elementalinference.CreateFunctionInput{}
+        output := &elementalinference.CreateFunctionOutput{}
+
+        mockClient.On("CreateFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateQuestionSet", func(t *testing.T) {
+        input := &elementalinference.CreateQuestionSetInput{}
+        output := &elementalinference.CreateQuestionSetOutput{}
+
+        mockClient.On("CreateQuestionSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQuestionSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateQuestionSetVersion", func(t *testing.T) {
+        input := &elementalinference.CreateQuestionSetVersionInput{}
+        output := &elementalinference.CreateQuestionSetVersionOutput{}
+
+        mockClient.On("CreateQuestionSetVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateQuestionSetVersion(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateScheduleAction", func(t *testing.T) {
         input := &elementalinference.CreateScheduleActionInput{}
         output := &elementalinference.CreateScheduleActionOutput{}
@@ -119,6 +158,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteFeedPolicy", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteFeedPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteFunction", func(t *testing.T) {
+        input := &elementalinference.DeleteFunctionInput{}
+        output := &elementalinference.DeleteFunctionOutput{}
+
+        mockClient.On("DeleteFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQuestionSet", func(t *testing.T) {
+        input := &elementalinference.DeleteQuestionSetInput{}
+        output := &elementalinference.DeleteQuestionSetOutput{}
+
+        mockClient.On("DeleteQuestionSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQuestionSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteQuestionSetVersion", func(t *testing.T) {
+        input := &elementalinference.DeleteQuestionSetVersionInput{}
+        output := &elementalinference.DeleteQuestionSetVersionOutput{}
+
+        mockClient.On("DeleteQuestionSetVersion", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteQuestionSetVersion(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -216,6 +294,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetFunction", func(t *testing.T) {
+        input := &elementalinference.GetFunctionInput{}
+        output := &elementalinference.GetFunctionOutput{}
+
+        mockClient.On("GetFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQuestionSet", func(t *testing.T) {
+        input := &elementalinference.GetQuestionSetInput{}
+        output := &elementalinference.GetQuestionSetOutput{}
+
+        mockClient.On("GetQuestionSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQuestionSet(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListDictionaries", func(t *testing.T) {
         input := &elementalinference.ListDictionariesInput{}
         output := &elementalinference.ListDictionariesOutput{}
@@ -236,6 +340,45 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListFeeds", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListFeeds(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListFunctions", func(t *testing.T) {
+        input := &elementalinference.ListFunctionsInput{}
+        output := &elementalinference.ListFunctionsOutput{}
+
+        mockClient.On("ListFunctions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListFunctions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQuestionSetVersions", func(t *testing.T) {
+        input := &elementalinference.ListQuestionSetVersionsInput{}
+        output := &elementalinference.ListQuestionSetVersionsOutput{}
+
+        mockClient.On("ListQuestionSetVersions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQuestionSetVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListQuestionSets", func(t *testing.T) {
+        input := &elementalinference.ListQuestionSetsInput{}
+        output := &elementalinference.ListQuestionSetsOutput{}
+
+        mockClient.On("ListQuestionSets", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListQuestionSets(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +483,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateFeed", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateFeed(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateFunction", func(t *testing.T) {
+        input := &elementalinference.UpdateFunctionInput{}
+        output := &elementalinference.UpdateFunctionOutput{}
+
+        mockClient.On("UpdateFunction", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateFunction(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateQuestionSet", func(t *testing.T) {
+        input := &elementalinference.UpdateQuestionSetInput{}
+        output := &elementalinference.UpdateQuestionSetOutput{}
+
+        mockClient.On("UpdateQuestionSet", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateQuestionSet(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

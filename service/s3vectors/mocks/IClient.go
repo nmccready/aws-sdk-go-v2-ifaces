@@ -809,6 +809,43 @@ func (_m *IClient) UpdateIndexMode(ctx context.Context, params *s3vectors.Update
 	return r0, r1
 }
 
+// UpdateMetadataConfiguration provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateMetadataConfiguration(ctx context.Context, params *s3vectors.UpdateMetadataConfigurationInput, optFns ...func(*s3vectors.Options)) (*s3vectors.UpdateMetadataConfigurationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateMetadataConfiguration")
+	}
+
+	var r0 *s3vectors.UpdateMetadataConfigurationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.UpdateMetadataConfigurationInput, ...func(*s3vectors.Options)) (*s3vectors.UpdateMetadataConfigurationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *s3vectors.UpdateMetadataConfigurationInput, ...func(*s3vectors.Options)) *s3vectors.UpdateMetadataConfigurationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*s3vectors.UpdateMetadataConfigurationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *s3vectors.UpdateMetadataConfigurationInput, ...func(*s3vectors.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // NewIClient creates a new instance of IClient. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
 // The first argument is typically a *testing.T value.
 func NewIClient(t interface {

@@ -73,6 +73,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteOrganizationEnrollmentConfiguration", func(t *testing.T) {
+        input := &computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationInput{}
+        output := &computeoptimizerautomation.DeleteOrganizationEnrollmentConfigurationOutput{}
+
+        mockClient.On("DeleteOrganizationEnrollmentConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteOrganizationEnrollmentConfiguration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDisassociateAccounts", func(t *testing.T) {
         input := &computeoptimizerautomation.DisassociateAccountsInput{}
         output := &computeoptimizerautomation.DisassociateAccountsOutput{}
@@ -216,6 +229,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListOrganizationEnrollmentConfigurations", func(t *testing.T) {
+        input := &computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsInput{}
+        output := &computeoptimizerautomation.ListOrganizationEnrollmentConfigurationsOutput{}
+
+        mockClient.On("ListOrganizationEnrollmentConfigurations", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOrganizationEnrollmentConfigurations(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListOrganizationalUnits", func(t *testing.T) {
+        input := &computeoptimizerautomation.ListOrganizationalUnitsInput{}
+        output := &computeoptimizerautomation.ListOrganizationalUnitsOutput{}
+
+        mockClient.On("ListOrganizationalUnits", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListOrganizationalUnits(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListRecommendedActionSummaries", func(t *testing.T) {
         input := &computeoptimizerautomation.ListRecommendedActionSummariesInput{}
         output := &computeoptimizerautomation.ListRecommendedActionSummariesOutput{}
@@ -249,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListTagsForResource", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListTagsForResource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutOrganizationEnrollmentConfiguration", func(t *testing.T) {
+        input := &computeoptimizerautomation.PutOrganizationEnrollmentConfigurationInput{}
+        output := &computeoptimizerautomation.PutOrganizationEnrollmentConfigurationOutput{}
+
+        mockClient.On("PutOrganizationEnrollmentConfiguration", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutOrganizationEnrollmentConfiguration(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

@@ -1716,6 +1716,43 @@ func (_m *IClient) ListAutonomousDatabasePeers(ctx context.Context, params *odb.
 	return r0, r1
 }
 
+// ListAutonomousDatabaseRefreshableClones provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAutonomousDatabaseRefreshableClones(ctx context.Context, params *odb.ListAutonomousDatabaseRefreshableClonesInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabaseRefreshableClonesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAutonomousDatabaseRefreshableClones")
+	}
+
+	var r0 *odb.ListAutonomousDatabaseRefreshableClonesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseRefreshableClonesInput, ...func(*odb.Options)) (*odb.ListAutonomousDatabaseRefreshableClonesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.ListAutonomousDatabaseRefreshableClonesInput, ...func(*odb.Options)) *odb.ListAutonomousDatabaseRefreshableClonesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.ListAutonomousDatabaseRefreshableClonesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.ListAutonomousDatabaseRefreshableClonesInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAutonomousDatabaseVersions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAutonomousDatabaseVersions(ctx context.Context, params *odb.ListAutonomousDatabaseVersionsInput, optFns ...func(*odb.Options)) (*odb.ListAutonomousDatabaseVersionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2577,6 +2614,43 @@ func (_m *IClient) StartAutonomousDatabase(ctx context.Context, params *odb.Star
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *odb.StartAutonomousDatabaseInput, ...func(*odb.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartAutonomousDatabaseRefresh provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAutonomousDatabaseRefresh(ctx context.Context, params *odb.StartAutonomousDatabaseRefreshInput, optFns ...func(*odb.Options)) (*odb.StartAutonomousDatabaseRefreshOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAutonomousDatabaseRefresh")
+	}
+
+	var r0 *odb.StartAutonomousDatabaseRefreshOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.StartAutonomousDatabaseRefreshInput, ...func(*odb.Options)) (*odb.StartAutonomousDatabaseRefreshOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *odb.StartAutonomousDatabaseRefreshInput, ...func(*odb.Options)) *odb.StartAutonomousDatabaseRefreshOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*odb.StartAutonomousDatabaseRefreshOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *odb.StartAutonomousDatabaseRefreshInput, ...func(*odb.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

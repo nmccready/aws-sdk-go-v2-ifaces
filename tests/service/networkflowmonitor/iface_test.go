@@ -47,6 +47,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreatePerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.CreatePerformanceMonitorInput{}
+        output := &networkflowmonitor.CreatePerformanceMonitorOutput{}
+
+        mockClient.On("CreatePerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreatePerformanceMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateScope", func(t *testing.T) {
         input := &networkflowmonitor.CreateScopeInput{}
         output := &networkflowmonitor.CreateScopeOutput{}
@@ -67,6 +80,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteMonitor", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeletePerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.DeletePerformanceMonitorInput{}
+        output := &networkflowmonitor.DeletePerformanceMonitorOutput{}
+
+        mockClient.On("DeletePerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeletePerformanceMonitor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -99,6 +125,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetMonitorScopeSuggestions", func(t *testing.T) {
+        input := &networkflowmonitor.GetMonitorScopeSuggestionsInput{}
+        output := &networkflowmonitor.GetMonitorScopeSuggestionsOutput{}
+
+        mockClient.On("GetMonitorScopeSuggestions", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetMonitorScopeSuggestions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetPerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.GetPerformanceMonitorInput{}
+        output := &networkflowmonitor.GetPerformanceMonitorOutput{}
+
+        mockClient.On("GetPerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetPerformanceMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetQueryResultsMonitorTopContributors", func(t *testing.T) {
         input := &networkflowmonitor.GetQueryResultsMonitorTopContributorsInput{}
         output := &networkflowmonitor.GetQueryResultsMonitorTopContributorsOutput{}
@@ -106,6 +158,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQueryResultsMonitorTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQueryResultsMonitorTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQueryResultsPerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.GetQueryResultsPerformanceMonitorInput{}
+        output := &networkflowmonitor.GetQueryResultsPerformanceMonitorOutput{}
+
+        mockClient.On("GetQueryResultsPerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQueryResultsPerformanceMonitor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -145,6 +210,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetQueryStatusMonitorTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetQueryStatusMonitorTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetQueryStatusPerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.GetQueryStatusPerformanceMonitorInput{}
+        output := &networkflowmonitor.GetQueryStatusPerformanceMonitorOutput{}
+
+        mockClient.On("GetQueryStatusPerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetQueryStatusPerformanceMonitor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -203,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListPerformanceMonitors", func(t *testing.T) {
+        input := &networkflowmonitor.ListPerformanceMonitorsInput{}
+        output := &networkflowmonitor.ListPerformanceMonitorsOutput{}
+
+        mockClient.On("ListPerformanceMonitors", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListPerformanceMonitors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListScopes", func(t *testing.T) {
         input := &networkflowmonitor.ListScopesInput{}
         output := &networkflowmonitor.ListScopesOutput{}
@@ -242,6 +333,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestStartQueryPerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.StartQueryPerformanceMonitorInput{}
+        output := &networkflowmonitor.StartQueryPerformanceMonitorOutput{}
+
+        mockClient.On("StartQueryPerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartQueryPerformanceMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartQueryWorkloadInsightsTopContributors", func(t *testing.T) {
         input := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsInput{}
         output := &networkflowmonitor.StartQueryWorkloadInsightsTopContributorsOutput{}
@@ -275,6 +379,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StopQueryMonitorTopContributors", ctx, input).Return(output, nil)
 
         result, err := mockClient.StopQueryMonitorTopContributors(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopQueryPerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.StopQueryPerformanceMonitorInput{}
+        output := &networkflowmonitor.StopQueryPerformanceMonitorOutput{}
+
+        mockClient.On("StopQueryPerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopQueryPerformanceMonitor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -340,6 +457,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateMonitor", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateMonitor(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdatePerformanceMonitor", func(t *testing.T) {
+        input := &networkflowmonitor.UpdatePerformanceMonitorInput{}
+        output := &networkflowmonitor.UpdatePerformanceMonitorOutput{}
+
+        mockClient.On("UpdatePerformanceMonitor", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdatePerformanceMonitor(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

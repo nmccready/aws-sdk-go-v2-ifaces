@@ -15,6 +15,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// ArchiveProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ArchiveProject(ctx context.Context, params *bedrock.ArchiveProjectInput, optFns ...func(*bedrock.Options)) (*bedrock.ArchiveProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ArchiveProject")
+	}
+
+	var r0 *bedrock.ArchiveProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ArchiveProjectInput, ...func(*bedrock.Options)) (*bedrock.ArchiveProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ArchiveProjectInput, ...func(*bedrock.Options)) *bedrock.ArchiveProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ArchiveProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ArchiveProjectInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // BatchDeleteAdvancedPromptOptimizationJob provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) BatchDeleteAdvancedPromptOptimizationJob(ctx context.Context, params *bedrock.BatchDeleteAdvancedPromptOptimizationJobInput, optFns ...func(*bedrock.Options)) (*bedrock.BatchDeleteAdvancedPromptOptimizationJobOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -718,6 +755,43 @@ func (_m *IClient) CreateModelInvocationJob(ctx context.Context, params *bedrock
 	return r0, r1
 }
 
+// CreateProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateProject(ctx context.Context, params *bedrock.CreateProjectInput, optFns ...func(*bedrock.Options)) (*bedrock.CreateProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateProject")
+	}
+
+	var r0 *bedrock.CreateProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateProjectInput, ...func(*bedrock.Options)) (*bedrock.CreateProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.CreateProjectInput, ...func(*bedrock.Options)) *bedrock.CreateProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.CreateProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateProjectInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreatePromptRouter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreatePromptRouter(ctx context.Context, params *bedrock.CreatePromptRouterInput, optFns ...func(*bedrock.Options)) (*bedrock.CreatePromptRouterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -784,6 +858,43 @@ func (_m *IClient) CreateProvisionedModelThroughput(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.CreateProvisionedModelThroughputInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteAccountDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteAccountDataRetentionStorage(ctx context.Context, params *bedrock.DeleteAccountDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteAccountDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteAccountDataRetentionStorage")
+	}
+
+	var r0 *bedrock.DeleteAccountDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAccountDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.DeleteAccountDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteAccountDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.DeleteAccountDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteAccountDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteAccountDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -1236,6 +1347,80 @@ func (_m *IClient) DeleteModelInvocationLoggingConfiguration(ctx context.Context
 	return r0, r1
 }
 
+// DeleteOrganizationDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteOrganizationDataRetentionStorage(ctx context.Context, params *bedrock.DeleteOrganizationDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteOrganizationDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteOrganizationDataRetentionStorage")
+	}
+
+	var r0 *bedrock.DeleteOrganizationDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.DeleteOrganizationDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.DeleteOrganizationDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteOrganizationDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteProjectDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProjectDataRetentionStorage(ctx context.Context, params *bedrock.DeleteProjectDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.DeleteProjectDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProjectDataRetentionStorage")
+	}
+
+	var r0 *bedrock.DeleteProjectDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteProjectDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.DeleteProjectDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.DeleteProjectDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.DeleteProjectDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.DeleteProjectDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.DeleteProjectDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeletePromptRouter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeletePromptRouter(ctx context.Context, params *bedrock.DeletePromptRouterInput, optFns ...func(*bedrock.Options)) (*bedrock.DeletePromptRouterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1450,6 +1635,43 @@ func (_m *IClient) GetAccountDataRetention(ctx context.Context, params *bedrock.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAccountDataRetentionInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetAccountDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAccountDataRetentionStorage(ctx context.Context, params *bedrock.GetAccountDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.GetAccountDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAccountDataRetentionStorage")
+	}
+
+	var r0 *bedrock.GetAccountDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAccountDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.GetAccountDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetAccountDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.GetAccountDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetAccountDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetAccountDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2272,6 +2494,117 @@ func (_m *IClient) GetModelInvocationLoggingConfiguration(ctx context.Context, p
 	return r0, r1
 }
 
+// GetOrganizationDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetOrganizationDataRetentionStorage(ctx context.Context, params *bedrock.GetOrganizationDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.GetOrganizationDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetOrganizationDataRetentionStorage")
+	}
+
+	var r0 *bedrock.GetOrganizationDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.GetOrganizationDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.GetOrganizationDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetOrganizationDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProject(ctx context.Context, params *bedrock.GetProjectInput, optFns ...func(*bedrock.Options)) (*bedrock.GetProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProject")
+	}
+
+	var r0 *bedrock.GetProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetProjectInput, ...func(*bedrock.Options)) (*bedrock.GetProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetProjectInput, ...func(*bedrock.Options)) *bedrock.GetProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetProjectInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetProjectDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProjectDataRetentionStorage(ctx context.Context, params *bedrock.GetProjectDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.GetProjectDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProjectDataRetentionStorage")
+	}
+
+	var r0 *bedrock.GetProjectDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetProjectDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.GetProjectDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetProjectDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.GetProjectDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetProjectDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetProjectDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetPromptRouter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetPromptRouter(ctx context.Context, params *bedrock.GetPromptRouterInput, optFns ...func(*bedrock.Options)) (*bedrock.GetPromptRouterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -2375,6 +2708,154 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *bedrock.GetRes
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetResourcePolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTrustedAccessProgram provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrustedAccessProgram(ctx context.Context, params *bedrock.GetTrustedAccessProgramInput, optFns ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrustedAccessProgram")
+	}
+
+	var r0 *bedrock.GetTrustedAccessProgramOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramInput, ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramInput, ...func(*bedrock.Options)) *bedrock.GetTrustedAccessProgramOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetTrustedAccessProgramOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetTrustedAccessProgramInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTrustedAccessProgramAccountEnrollment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrustedAccessProgramAccountEnrollment(ctx context.Context, params *bedrock.GetTrustedAccessProgramAccountEnrollmentInput, optFns ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramAccountEnrollmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrustedAccessProgramAccountEnrollment")
+	}
+
+	var r0 *bedrock.GetTrustedAccessProgramAccountEnrollmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramAccountEnrollmentInput, ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramAccountEnrollmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramAccountEnrollmentInput, ...func(*bedrock.Options)) *bedrock.GetTrustedAccessProgramAccountEnrollmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetTrustedAccessProgramAccountEnrollmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetTrustedAccessProgramAccountEnrollmentInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTrustedAccessProgramOrganizationEnrollment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrustedAccessProgramOrganizationEnrollment(ctx context.Context, params *bedrock.GetTrustedAccessProgramOrganizationEnrollmentInput, optFns ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramOrganizationEnrollmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrustedAccessProgramOrganizationEnrollment")
+	}
+
+	var r0 *bedrock.GetTrustedAccessProgramOrganizationEnrollmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramOrganizationEnrollmentInput, ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramOrganizationEnrollmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramOrganizationEnrollmentInput, ...func(*bedrock.Options)) *bedrock.GetTrustedAccessProgramOrganizationEnrollmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetTrustedAccessProgramOrganizationEnrollmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetTrustedAccessProgramOrganizationEnrollmentInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetTrustedAccessProgramProjectEnrollment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetTrustedAccessProgramProjectEnrollment(ctx context.Context, params *bedrock.GetTrustedAccessProgramProjectEnrollmentInput, optFns ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramProjectEnrollmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetTrustedAccessProgramProjectEnrollment")
+	}
+
+	var r0 *bedrock.GetTrustedAccessProgramProjectEnrollmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramProjectEnrollmentInput, ...func(*bedrock.Options)) (*bedrock.GetTrustedAccessProgramProjectEnrollmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.GetTrustedAccessProgramProjectEnrollmentInput, ...func(*bedrock.Options)) *bedrock.GetTrustedAccessProgramProjectEnrollmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.GetTrustedAccessProgramProjectEnrollmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.GetTrustedAccessProgramProjectEnrollmentInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3123,6 +3604,43 @@ func (_m *IClient) ListModelInvocationJobs(ctx context.Context, params *bedrock.
 	return r0, r1
 }
 
+// ListProjects provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProjects(ctx context.Context, params *bedrock.ListProjectsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListProjectsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProjects")
+	}
+
+	var r0 *bedrock.ListProjectsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListProjectsInput, ...func(*bedrock.Options)) (*bedrock.ListProjectsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListProjectsInput, ...func(*bedrock.Options)) *bedrock.ListProjectsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListProjectsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListProjectsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListPromptRouters provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListPromptRouters(ctx context.Context, params *bedrock.ListPromptRoutersInput, optFns ...func(*bedrock.Options)) (*bedrock.ListPromptRoutersOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3234,6 +3752,43 @@ func (_m *IClient) ListTagsForResource(ctx context.Context, params *bedrock.List
 	return r0, r1
 }
 
+// ListTrustedAccessPrograms provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListTrustedAccessPrograms(ctx context.Context, params *bedrock.ListTrustedAccessProgramsInput, optFns ...func(*bedrock.Options)) (*bedrock.ListTrustedAccessProgramsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListTrustedAccessPrograms")
+	}
+
+	var r0 *bedrock.ListTrustedAccessProgramsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListTrustedAccessProgramsInput, ...func(*bedrock.Options)) (*bedrock.ListTrustedAccessProgramsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.ListTrustedAccessProgramsInput, ...func(*bedrock.Options)) *bedrock.ListTrustedAccessProgramsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.ListTrustedAccessProgramsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.ListTrustedAccessProgramsInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Options provides a mock function with no fields
 func (_m *IClient) Options() bedrock.Options {
 	ret := _m.Called()
@@ -3281,6 +3836,43 @@ func (_m *IClient) PutAccountDataRetention(ctx context.Context, params *bedrock.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutAccountDataRetentionInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutAccountDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutAccountDataRetentionStorage(ctx context.Context, params *bedrock.PutAccountDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.PutAccountDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutAccountDataRetentionStorage")
+	}
+
+	var r0 *bedrock.PutAccountDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutAccountDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.PutAccountDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutAccountDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.PutAccountDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutAccountDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutAccountDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3363,6 +3955,80 @@ func (_m *IClient) PutModelInvocationLoggingConfiguration(ctx context.Context, p
 	return r0, r1
 }
 
+// PutOrganizationDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutOrganizationDataRetentionStorage(ctx context.Context, params *bedrock.PutOrganizationDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.PutOrganizationDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutOrganizationDataRetentionStorage")
+	}
+
+	var r0 *bedrock.PutOrganizationDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.PutOrganizationDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.PutOrganizationDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutOrganizationDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutOrganizationDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutProjectDataRetentionStorage provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutProjectDataRetentionStorage(ctx context.Context, params *bedrock.PutProjectDataRetentionStorageInput, optFns ...func(*bedrock.Options)) (*bedrock.PutProjectDataRetentionStorageOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutProjectDataRetentionStorage")
+	}
+
+	var r0 *bedrock.PutProjectDataRetentionStorageOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutProjectDataRetentionStorageInput, ...func(*bedrock.Options)) (*bedrock.PutProjectDataRetentionStorageOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutProjectDataRetentionStorageInput, ...func(*bedrock.Options)) *bedrock.PutProjectDataRetentionStorageOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutProjectDataRetentionStorageOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutProjectDataRetentionStorageInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // PutResourcePolicy provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) PutResourcePolicy(ctx context.Context, params *bedrock.PutResourcePolicyInput, optFns ...func(*bedrock.Options)) (*bedrock.PutResourcePolicyOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3392,6 +4058,117 @@ func (_m *IClient) PutResourcePolicy(ctx context.Context, params *bedrock.PutRes
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutResourcePolicyInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutTrustedAccessProgramAccountEnrollment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTrustedAccessProgramAccountEnrollment(ctx context.Context, params *bedrock.PutTrustedAccessProgramAccountEnrollmentInput, optFns ...func(*bedrock.Options)) (*bedrock.PutTrustedAccessProgramAccountEnrollmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTrustedAccessProgramAccountEnrollment")
+	}
+
+	var r0 *bedrock.PutTrustedAccessProgramAccountEnrollmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutTrustedAccessProgramAccountEnrollmentInput, ...func(*bedrock.Options)) (*bedrock.PutTrustedAccessProgramAccountEnrollmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutTrustedAccessProgramAccountEnrollmentInput, ...func(*bedrock.Options)) *bedrock.PutTrustedAccessProgramAccountEnrollmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutTrustedAccessProgramAccountEnrollmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutTrustedAccessProgramAccountEnrollmentInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutTrustedAccessProgramOrganizationEnrollment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTrustedAccessProgramOrganizationEnrollment(ctx context.Context, params *bedrock.PutTrustedAccessProgramOrganizationEnrollmentInput, optFns ...func(*bedrock.Options)) (*bedrock.PutTrustedAccessProgramOrganizationEnrollmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTrustedAccessProgramOrganizationEnrollment")
+	}
+
+	var r0 *bedrock.PutTrustedAccessProgramOrganizationEnrollmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutTrustedAccessProgramOrganizationEnrollmentInput, ...func(*bedrock.Options)) (*bedrock.PutTrustedAccessProgramOrganizationEnrollmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutTrustedAccessProgramOrganizationEnrollmentInput, ...func(*bedrock.Options)) *bedrock.PutTrustedAccessProgramOrganizationEnrollmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutTrustedAccessProgramOrganizationEnrollmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutTrustedAccessProgramOrganizationEnrollmentInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// PutTrustedAccessProgramProjectEnrollment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) PutTrustedAccessProgramProjectEnrollment(ctx context.Context, params *bedrock.PutTrustedAccessProgramProjectEnrollmentInput, optFns ...func(*bedrock.Options)) (*bedrock.PutTrustedAccessProgramProjectEnrollmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for PutTrustedAccessProgramProjectEnrollment")
+	}
+
+	var r0 *bedrock.PutTrustedAccessProgramProjectEnrollmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutTrustedAccessProgramProjectEnrollmentInput, ...func(*bedrock.Options)) (*bedrock.PutTrustedAccessProgramProjectEnrollmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.PutTrustedAccessProgramProjectEnrollmentInput, ...func(*bedrock.Options)) *bedrock.PutTrustedAccessProgramProjectEnrollmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.PutTrustedAccessProgramProjectEnrollmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.PutTrustedAccessProgramProjectEnrollmentInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3540,6 +4317,117 @@ func (_m *IClient) StartAutomatedReasoningPolicyTestWorkflow(ctx context.Context
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartAutomatedReasoningPolicyTestWorkflowInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartTrustedAccessProgramAccountApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTrustedAccessProgramAccountApplication(ctx context.Context, params *bedrock.StartTrustedAccessProgramAccountApplicationInput, optFns ...func(*bedrock.Options)) (*bedrock.StartTrustedAccessProgramAccountApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTrustedAccessProgramAccountApplication")
+	}
+
+	var r0 *bedrock.StartTrustedAccessProgramAccountApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartTrustedAccessProgramAccountApplicationInput, ...func(*bedrock.Options)) (*bedrock.StartTrustedAccessProgramAccountApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartTrustedAccessProgramAccountApplicationInput, ...func(*bedrock.Options)) *bedrock.StartTrustedAccessProgramAccountApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StartTrustedAccessProgramAccountApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartTrustedAccessProgramAccountApplicationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartTrustedAccessProgramOrganizationApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTrustedAccessProgramOrganizationApplication(ctx context.Context, params *bedrock.StartTrustedAccessProgramOrganizationApplicationInput, optFns ...func(*bedrock.Options)) (*bedrock.StartTrustedAccessProgramOrganizationApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTrustedAccessProgramOrganizationApplication")
+	}
+
+	var r0 *bedrock.StartTrustedAccessProgramOrganizationApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartTrustedAccessProgramOrganizationApplicationInput, ...func(*bedrock.Options)) (*bedrock.StartTrustedAccessProgramOrganizationApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartTrustedAccessProgramOrganizationApplicationInput, ...func(*bedrock.Options)) *bedrock.StartTrustedAccessProgramOrganizationApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StartTrustedAccessProgramOrganizationApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartTrustedAccessProgramOrganizationApplicationInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartTrustedAccessProgramProjectApplication provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartTrustedAccessProgramProjectApplication(ctx context.Context, params *bedrock.StartTrustedAccessProgramProjectApplicationInput, optFns ...func(*bedrock.Options)) (*bedrock.StartTrustedAccessProgramProjectApplicationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartTrustedAccessProgramProjectApplication")
+	}
+
+	var r0 *bedrock.StartTrustedAccessProgramProjectApplicationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartTrustedAccessProgramProjectApplicationInput, ...func(*bedrock.Options)) (*bedrock.StartTrustedAccessProgramProjectApplicationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.StartTrustedAccessProgramProjectApplicationInput, ...func(*bedrock.Options)) *bedrock.StartTrustedAccessProgramProjectApplicationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.StartTrustedAccessProgramProjectApplicationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.StartTrustedAccessProgramProjectApplicationInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -3984,6 +4872,43 @@ func (_m *IClient) UpdateMarketplaceModelEndpoint(ctx context.Context, params *b
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateMarketplaceModelEndpointInput, ...func(*bedrock.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProject(ctx context.Context, params *bedrock.UpdateProjectInput, optFns ...func(*bedrock.Options)) (*bedrock.UpdateProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProject")
+	}
+
+	var r0 *bedrock.UpdateProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateProjectInput, ...func(*bedrock.Options)) (*bedrock.UpdateProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrock.UpdateProjectInput, ...func(*bedrock.Options)) *bedrock.UpdateProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrock.UpdateProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrock.UpdateProjectInput, ...func(*bedrock.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

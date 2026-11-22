@@ -242,6 +242,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestUpdateMarketplaceRevenueShare", func(t *testing.T) {
+        input := &partnercentralrevenuemeasurement.UpdateMarketplaceRevenueShareInput{}
+        output := &partnercentralrevenuemeasurement.UpdateMarketplaceRevenueShareOutput{}
+
+        mockClient.On("UpdateMarketplaceRevenueShare", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateMarketplaceRevenueShare(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestUpdateMarketplaceRevenueShareAllocation", func(t *testing.T) {
         input := &partnercentralrevenuemeasurement.UpdateMarketplaceRevenueShareAllocationInput{}
         output := &partnercentralrevenuemeasurement.UpdateMarketplaceRevenueShareAllocationOutput{}

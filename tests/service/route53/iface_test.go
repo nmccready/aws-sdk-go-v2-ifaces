@@ -125,6 +125,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateHealthCheckSource", func(t *testing.T) {
+        input := &route53.CreateHealthCheckSourceInput{}
+        output := &route53.CreateHealthCheckSourceOutput{}
+
+        mockClient.On("CreateHealthCheckSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateHealthCheckSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateHostedZone", func(t *testing.T) {
         input := &route53.CreateHostedZoneInput{}
         output := &route53.CreateHostedZoneOutput{}
@@ -275,6 +288,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteHealthCheck", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteHealthCheck(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteHealthCheckSource", func(t *testing.T) {
+        input := &route53.DeleteHealthCheckSourceInput{}
+        output := &route53.DeleteHealthCheckSourceOutput{}
+
+        mockClient.On("DeleteHealthCheckSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteHealthCheckSource(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -528,6 +554,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetHealthCheckSource", func(t *testing.T) {
+        input := &route53.GetHealthCheckSourceInput{}
+        output := &route53.GetHealthCheckSourceOutput{}
+
+        mockClient.On("GetHealthCheckSource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHealthCheckSource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetHealthCheckStatus", func(t *testing.T) {
         input := &route53.GetHealthCheckStatusInput{}
         output := &route53.GetHealthCheckStatusOutput{}
@@ -548,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetHostedZone", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetHostedZone(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetHostedZoneChangeBatch", func(t *testing.T) {
+        input := &route53.GetHostedZoneChangeBatchInput{}
+        output := &route53.GetHostedZoneChangeBatchOutput{}
+
+        mockClient.On("GetHostedZoneChangeBatch", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetHostedZoneChangeBatch(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -710,6 +762,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListHealthCheckSources", func(t *testing.T) {
+        input := &route53.ListHealthCheckSourcesInput{}
+        output := &route53.ListHealthCheckSourcesOutput{}
+
+        mockClient.On("ListHealthCheckSources", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHealthCheckSources(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListHealthChecks", func(t *testing.T) {
         input := &route53.ListHealthChecksInput{}
         output := &route53.ListHealthChecksOutput{}
@@ -717,6 +782,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListHealthChecks", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListHealthChecks(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHealthChecksBySource", func(t *testing.T) {
+        input := &route53.ListHealthChecksBySourceInput{}
+        output := &route53.ListHealthChecksBySourceOutput{}
+
+        mockClient.On("ListHealthChecksBySource", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHealthChecksBySource(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListHostedZoneChangeBatches", func(t *testing.T) {
+        input := &route53.ListHostedZoneChangeBatchesInput{}
+        output := &route53.ListHostedZoneChangeBatchesOutput{}
+
+        mockClient.On("ListHostedZoneChangeBatches", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListHostedZoneChangeBatches(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -769,6 +860,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListQueryLoggingConfigs", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListQueryLoggingConfigs(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListResourceRecordSetChanges", func(t *testing.T) {
+        input := &route53.ListResourceRecordSetChangesInput{}
+        output := &route53.ListResourceRecordSetChangesOutput{}
+
+        mockClient.On("ListResourceRecordSetChanges", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListResourceRecordSetChanges(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -964,6 +1068,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateHostedZoneFeatures", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateHostedZoneFeatures(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateHostedZoneTier", func(t *testing.T) {
+        input := &route53.UpdateHostedZoneTierInput{}
+        output := &route53.UpdateHostedZoneTierOutput{}
+
+        mockClient.On("UpdateHostedZoneTier", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateHostedZoneTier(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

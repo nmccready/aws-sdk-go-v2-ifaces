@@ -14,6 +14,43 @@ type IClient struct {
 	mock.Mock
 }
 
+// BatchRevokeSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) BatchRevokeSessions(ctx context.Context, params *signin.BatchRevokeSessionsInput, optFns ...func(*signin.Options)) (*signin.BatchRevokeSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for BatchRevokeSessions")
+	}
+
+	var r0 *signin.BatchRevokeSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.BatchRevokeSessionsInput, ...func(*signin.Options)) (*signin.BatchRevokeSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.BatchRevokeSessionsInput, ...func(*signin.Options)) *signin.BatchRevokeSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.BatchRevokeSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.BatchRevokeSessionsInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // CreateBearerToken provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) CreateBearerToken(ctx context.Context, params *signin.CreateBearerTokenInput, optFns ...func(*signin.Options)) (*signin.CreateBearerTokenOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -310,6 +347,43 @@ func (_m *IClient) GetResourcePolicy(ctx context.Context, params *signin.GetReso
 	return r0, r1
 }
 
+// GetSession provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetSession(ctx context.Context, params *signin.GetSessionInput, optFns ...func(*signin.Options)) (*signin.GetSessionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetSession")
+	}
+
+	var r0 *signin.GetSessionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.GetSessionInput, ...func(*signin.Options)) (*signin.GetSessionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.GetSessionInput, ...func(*signin.Options)) *signin.GetSessionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.GetSessionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.GetSessionInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // IntrospectOAuth2TokenWithIAM provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) IntrospectOAuth2TokenWithIAM(ctx context.Context, params *signin.IntrospectOAuth2TokenWithIAMInput, optFns ...func(*signin.Options)) (*signin.IntrospectOAuth2TokenWithIAMOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -376,6 +450,43 @@ func (_m *IClient) ListResourcePermissionStatements(ctx context.Context, params 
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *signin.ListResourcePermissionStatementsInput, ...func(*signin.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListSessions provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListSessions(ctx context.Context, params *signin.ListSessionsInput, optFns ...func(*signin.Options)) (*signin.ListSessionsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListSessions")
+	}
+
+	var r0 *signin.ListSessionsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.ListSessionsInput, ...func(*signin.Options)) (*signin.ListSessionsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *signin.ListSessionsInput, ...func(*signin.Options)) *signin.ListSessionsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*signin.ListSessionsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *signin.ListSessionsInput, ...func(*signin.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

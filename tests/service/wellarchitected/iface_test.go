@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAgentBasicProfile", func(t *testing.T) {
+        input := &wellarchitected.CreateAgentBasicProfileInput{}
+        output := &wellarchitected.CreateAgentBasicProfileOutput{}
+
+        mockClient.On("CreateAgentBasicProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgentBasicProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateAgentContext", func(t *testing.T) {
         input := &wellarchitected.CreateAgentContextInput{}
         output := &wellarchitected.CreateAgentContextOutput{}
@@ -80,6 +93,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("CreateAgentGoal", ctx, input).Return(output, nil)
 
         result, err := mockClient.CreateAgentGoal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAgentOrganizationalProfile", func(t *testing.T) {
+        input := &wellarchitected.CreateAgentOrganizationalProfileInput{}
+        output := &wellarchitected.CreateAgentOrganizationalProfileOutput{}
+
+        mockClient.On("CreateAgentOrganizationalProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgentOrganizationalProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestCreateAgentOrganizationalReport", func(t *testing.T) {
+        input := &wellarchitected.CreateAgentOrganizationalReportInput{}
+        output := &wellarchitected.CreateAgentOrganizationalReportOutput{}
+
+        mockClient.On("CreateAgentOrganizationalReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAgentOrganizationalReport(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -242,6 +281,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAgentOrganizationalReport", func(t *testing.T) {
+        input := &wellarchitected.DeleteAgentOrganizationalReportInput{}
+        output := &wellarchitected.DeleteAgentOrganizationalReportOutput{}
+
+        mockClient.On("DeleteAgentOrganizationalReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgentOrganizationalReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteAgentProfile", func(t *testing.T) {
         input := &wellarchitected.DeleteAgentProfileInput{}
         output := &wellarchitected.DeleteAgentProfileOutput{}
@@ -249,6 +301,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteAgentProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteAgentProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAgentProfilePolicy", func(t *testing.T) {
+        input := &wellarchitected.DeleteAgentProfilePolicyInput{}
+        output := &wellarchitected.DeleteAgentProfilePolicyOutput{}
+
+        mockClient.On("DeleteAgentProfilePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgentProfilePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDeleteAgentRecommendationPolicy", func(t *testing.T) {
+        input := &wellarchitected.DeleteAgentRecommendationPolicyInput{}
+        output := &wellarchitected.DeleteAgentRecommendationPolicyOutput{}
+
+        mockClient.On("DeleteAgentRecommendationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAgentRecommendationPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -424,6 +502,45 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestGetAgentOrganizationalReport", func(t *testing.T) {
+        input := &wellarchitected.GetAgentOrganizationalReportInput{}
+        output := &wellarchitected.GetAgentOrganizationalReportOutput{}
+
+        mockClient.On("GetAgentOrganizationalReport", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentOrganizationalReport(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentOrganizationalReportData", func(t *testing.T) {
+        input := &wellarchitected.GetAgentOrganizationalReportDataInput{}
+        output := &wellarchitected.GetAgentOrganizationalReportDataOutput{}
+
+        mockClient.On("GetAgentOrganizationalReportData", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentOrganizationalReportData(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentPreferences", func(t *testing.T) {
+        input := &wellarchitected.GetAgentPreferencesInput{}
+        output := &wellarchitected.GetAgentPreferencesOutput{}
+
+        mockClient.On("GetAgentPreferences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentPreferences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestGetAgentProfile", func(t *testing.T) {
         input := &wellarchitected.GetAgentProfileInput{}
         output := &wellarchitected.GetAgentProfileOutput{}
@@ -431,6 +548,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentProfile", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentProfile(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentProfilePolicy", func(t *testing.T) {
+        input := &wellarchitected.GetAgentProfilePolicyInput{}
+        output := &wellarchitected.GetAgentProfilePolicyOutput{}
+
+        mockClient.On("GetAgentProfilePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentProfilePolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -457,6 +587,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetAgentRecommendationGeneration", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetAgentRecommendationGeneration(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestGetAgentRecommendationPolicy", func(t *testing.T) {
+        input := &wellarchitected.GetAgentRecommendationPolicyInput{}
+        output := &wellarchitected.GetAgentRecommendationPolicyOutput{}
+
+        mockClient.On("GetAgentRecommendationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.GetAgentRecommendationPolicy(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -678,6 +821,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("ListAgentGoals", ctx, input).Return(output, nil)
 
         result, err := mockClient.ListAgentGoals(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAgentOrganizationalReports", func(t *testing.T) {
+        input := &wellarchitected.ListAgentOrganizationalReportsInput{}
+        output := &wellarchitected.ListAgentOrganizationalReportsOutput{}
+
+        mockClient.On("ListAgentOrganizationalReports", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAgentOrganizationalReports(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -983,6 +1139,32 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestPutAgentPreferences", func(t *testing.T) {
+        input := &wellarchitected.PutAgentPreferencesInput{}
+        output := &wellarchitected.PutAgentPreferencesOutput{}
+
+        mockClient.On("PutAgentPreferences", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAgentPreferences(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAgentProfilePolicy", func(t *testing.T) {
+        input := &wellarchitected.PutAgentProfilePolicyInput{}
+        output := &wellarchitected.PutAgentProfilePolicyOutput{}
+
+        mockClient.On("PutAgentProfilePolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAgentProfilePolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestPutAgentRecommendationFeedback", func(t *testing.T) {
         input := &wellarchitected.PutAgentRecommendationFeedbackInput{}
         output := &wellarchitected.PutAgentRecommendationFeedbackOutput{}
@@ -990,6 +1172,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("PutAgentRecommendationFeedback", ctx, input).Return(output, nil)
 
         result, err := mockClient.PutAgentRecommendationFeedback(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestPutAgentRecommendationPolicy", func(t *testing.T) {
+        input := &wellarchitected.PutAgentRecommendationPolicyInput{}
+        output := &wellarchitected.PutAgentRecommendationPolicyOutput{}
+
+        mockClient.On("PutAgentRecommendationPolicy", ctx, input).Return(output, nil)
+
+        result, err := mockClient.PutAgentRecommendationPolicy(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestSendAgentOrganizationalReportDataToS3", func(t *testing.T) {
+        input := &wellarchitected.SendAgentOrganizationalReportDataToS3Input{}
+        output := &wellarchitected.SendAgentOrganizationalReportDataToS3Output{}
+
+        mockClient.On("SendAgentOrganizationalReportDataToS3", ctx, input).Return(output, nil)
+
+        result, err := mockClient.SendAgentOrganizationalReportDataToS3(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -1055,6 +1263,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("UpdateAgentGoal", ctx, input).Return(output, nil)
 
         result, err := mockClient.UpdateAgentGoal(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestUpdateAgentOrganizationalProfile", func(t *testing.T) {
+        input := &wellarchitected.UpdateAgentOrganizationalProfileInput{}
+        output := &wellarchitected.UpdateAgentOrganizationalProfileOutput{}
+
+        mockClient.On("UpdateAgentOrganizationalProfile", ctx, input).Return(output, nil)
+
+        result, err := mockClient.UpdateAgentOrganizationalProfile(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

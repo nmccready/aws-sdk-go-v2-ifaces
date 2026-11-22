@@ -1642,6 +1642,43 @@ func (_m *IClient) ListFirewallDomains(ctx context.Context, params *route53resol
 	return r0, r1
 }
 
+// ListFirewallRuleDomains provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListFirewallRuleDomains(ctx context.Context, params *route53resolver.ListFirewallRuleDomainsInput, optFns ...func(*route53resolver.Options)) (*route53resolver.ListFirewallRuleDomainsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListFirewallRuleDomains")
+	}
+
+	var r0 *route53resolver.ListFirewallRuleDomainsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.ListFirewallRuleDomainsInput, ...func(*route53resolver.Options)) (*route53resolver.ListFirewallRuleDomainsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *route53resolver.ListFirewallRuleDomainsInput, ...func(*route53resolver.Options)) *route53resolver.ListFirewallRuleDomainsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*route53resolver.ListFirewallRuleDomainsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *route53resolver.ListFirewallRuleDomainsInput, ...func(*route53resolver.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListFirewallRuleGroupAssociations provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListFirewallRuleGroupAssociations(ctx context.Context, params *route53resolver.ListFirewallRuleGroupAssociationsInput, optFns ...func(*route53resolver.Options)) (*route53resolver.ListFirewallRuleGroupAssociationsOutput, error) {
 	_va := make([]interface{}, len(optFns))

@@ -996,6 +996,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestResumePentestJob", func(t *testing.T) {
+        input := &securityagent.ResumePentestJobInput{}
+        output := &securityagent.ResumePentestJobOutput{}
+
+        mockClient.On("ResumePentestJob", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ResumePentestJob(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestStartCodeRemediation", func(t *testing.T) {
         input := &securityagent.StartCodeRemediationInput{}
         output := &securityagent.StartCodeRemediationOutput{}

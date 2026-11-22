@@ -60,6 +60,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestCreateAssessment", func(t *testing.T) {
+        input := &kafka.CreateAssessmentInput{}
+        output := &kafka.CreateAssessmentOutput{}
+
+        mockClient.On("CreateAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.CreateAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestCreateChannel", func(t *testing.T) {
         input := &kafka.CreateChannelInput{}
         output := &kafka.CreateChannelOutput{}
@@ -151,6 +164,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDeleteAssessment", func(t *testing.T) {
+        input := &kafka.DeleteAssessmentInput{}
+        output := &kafka.DeleteAssessmentOutput{}
+
+        mockClient.On("DeleteAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DeleteAssessment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDeleteChannel", func(t *testing.T) {
         input := &kafka.DeleteChannelInput{}
         output := &kafka.DeleteChannelOutput{}
@@ -236,6 +262,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("DeleteVpcConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.DeleteVpcConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestDescribeAssessment", func(t *testing.T) {
+        input := &kafka.DescribeAssessmentInput{}
+        output := &kafka.DescribeAssessmentOutput{}
+
+        mockClient.On("DescribeAssessment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeAssessment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -372,6 +411,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestDescribeTopicReassignment", func(t *testing.T) {
+        input := &kafka.DescribeTopicReassignmentInput{}
+        output := &kafka.DescribeTopicReassignmentOutput{}
+
+        mockClient.On("DescribeTopicReassignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.DescribeTopicReassignment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestDescribeVpcConnection", func(t *testing.T) {
         input := &kafka.DescribeVpcConnectionInput{}
         output := &kafka.DescribeVpcConnectionOutput{}
@@ -418,6 +470,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("GetCompatibleKafkaVersions", ctx, input).Return(output, nil)
 
         result, err := mockClient.GetCompatibleKafkaVersions(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssessmentFindings", func(t *testing.T) {
+        input := &kafka.ListAssessmentFindingsInput{}
+        output := &kafka.ListAssessmentFindingsOutput{}
+
+        mockClient.On("ListAssessmentFindings", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssessmentFindings(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestListAssessments", func(t *testing.T) {
+        input := &kafka.ListAssessmentsInput{}
+        output := &kafka.ListAssessmentsOutput{}
+
+        mockClient.On("ListAssessments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAssessments(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 
@@ -593,6 +671,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListTopicReassignments", func(t *testing.T) {
+        input := &kafka.ListTopicReassignmentsInput{}
+        output := &kafka.ListTopicReassignmentsOutput{}
+
+        mockClient.On("ListTopicReassignments", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListTopicReassignments(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListTopics", func(t *testing.T) {
         input := &kafka.ListTopicsInput{}
         output := &kafka.ListTopicsOutput{}
@@ -652,6 +743,32 @@ func TestIClient(t *testing.T) {
         mockClient.On("RejectClientVpcConnection", ctx, input).Return(output, nil)
 
         result, err := mockClient.RejectClientVpcConnection(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartTopicReassignment", func(t *testing.T) {
+        input := &kafka.StartTopicReassignmentInput{}
+        output := &kafka.StartTopicReassignmentOutput{}
+
+        mockClient.On("StartTopicReassignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartTopicReassignment(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStopTopicReassignment", func(t *testing.T) {
+        input := &kafka.StopTopicReassignmentInput{}
+        output := &kafka.StopTopicReassignmentOutput{}
+
+        mockClient.On("StopTopicReassignment", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StopTopicReassignment(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

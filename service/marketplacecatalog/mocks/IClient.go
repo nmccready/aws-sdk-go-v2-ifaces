@@ -477,6 +477,43 @@ func (_m *IClient) PutResourcePolicy(ctx context.Context, params *marketplacecat
 	return r0, r1
 }
 
+// StartAssessment provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartAssessment(ctx context.Context, params *marketplacecatalog.StartAssessmentInput, optFns ...func(*marketplacecatalog.Options)) (*marketplacecatalog.StartAssessmentOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartAssessment")
+	}
+
+	var r0 *marketplacecatalog.StartAssessmentOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacecatalog.StartAssessmentInput, ...func(*marketplacecatalog.Options)) (*marketplacecatalog.StartAssessmentOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *marketplacecatalog.StartAssessmentInput, ...func(*marketplacecatalog.Options)) *marketplacecatalog.StartAssessmentOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*marketplacecatalog.StartAssessmentOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *marketplacecatalog.StartAssessmentInput, ...func(*marketplacecatalog.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // StartChangeSet provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) StartChangeSet(ctx context.Context, params *marketplacecatalog.StartChangeSetInput, optFns ...func(*marketplacecatalog.Options)) (*marketplacecatalog.StartChangeSetOutput, error) {
 	_va := make([]interface{}, len(optFns))

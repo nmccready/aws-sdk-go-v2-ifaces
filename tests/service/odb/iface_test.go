@@ -632,6 +632,19 @@ func TestIClient(t *testing.T) {
         mockClient.AssertExpectations(t)
     })
 
+    t.Run("TestListAutonomousDatabaseRefreshableClones", func(t *testing.T) {
+        input := &odb.ListAutonomousDatabaseRefreshableClonesInput{}
+        output := &odb.ListAutonomousDatabaseRefreshableClonesOutput{}
+
+        mockClient.On("ListAutonomousDatabaseRefreshableClones", ctx, input).Return(output, nil)
+
+        result, err := mockClient.ListAutonomousDatabaseRefreshableClones(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
     t.Run("TestListAutonomousDatabaseVersions", func(t *testing.T) {
         input := &odb.ListAutonomousDatabaseVersionsInput{}
         output := &odb.ListAutonomousDatabaseVersionsOutput{}
@@ -925,6 +938,19 @@ func TestIClient(t *testing.T) {
         mockClient.On("StartAutonomousDatabase", ctx, input).Return(output, nil)
 
         result, err := mockClient.StartAutonomousDatabase(ctx, input)
+        assert.NoError(t, err)
+        assert.Equal(t, output, result)
+
+        mockClient.AssertExpectations(t)
+    })
+
+    t.Run("TestStartAutonomousDatabaseRefresh", func(t *testing.T) {
+        input := &odb.StartAutonomousDatabaseRefreshInput{}
+        output := &odb.StartAutonomousDatabaseRefreshOutput{}
+
+        mockClient.On("StartAutonomousDatabaseRefresh", ctx, input).Return(output, nil)
+
+        result, err := mockClient.StartAutonomousDatabaseRefresh(ctx, input)
         assert.NoError(t, err)
         assert.Equal(t, output, result)
 

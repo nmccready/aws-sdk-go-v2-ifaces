@@ -2272,6 +2272,43 @@ func (_m *IClient) DeleteWorkloadIdentity(ctx context.Context, params *bedrockag
 	return r0, r1
 }
 
+// GetAgentInsightStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetAgentInsightStore(ctx context.Context, params *bedrockagentcorecontrol.GetAgentInsightStoreInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetAgentInsightStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetAgentInsightStore")
+	}
+
+	var r0 *bedrockagentcorecontrol.GetAgentInsightStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetAgentInsightStoreInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetAgentInsightStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.GetAgentInsightStoreInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.GetAgentInsightStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.GetAgentInsightStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetAgentInsightStoreInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetAgentRuntime provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetAgentRuntime(ctx context.Context, params *bedrockagentcorecontrol.GetAgentRuntimeInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.GetAgentRuntimeOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3559,6 +3596,43 @@ func (_m *IClient) GetWorkloadIdentity(ctx context.Context, params *bedrockagent
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.GetWorkloadIdentityInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListAgentInsightStores provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListAgentInsightStores(ctx context.Context, params *bedrockagentcorecontrol.ListAgentInsightStoresInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListAgentInsightStoresOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListAgentInsightStores")
+	}
+
+	var r0 *bedrockagentcorecontrol.ListAgentInsightStoresOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListAgentInsightStoresInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.ListAgentInsightStoresOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.ListAgentInsightStoresInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.ListAgentInsightStoresOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.ListAgentInsightStoresOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.ListAgentInsightStoresInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -5390,6 +5464,43 @@ func (_m *IClient) UntagResource(ctx context.Context, params *bedrockagentcoreco
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UntagResourceInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateAgentInsightStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateAgentInsightStore(ctx context.Context, params *bedrockagentcorecontrol.UpdateAgentInsightStoreInput, optFns ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateAgentInsightStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateAgentInsightStore")
+	}
+
+	var r0 *bedrockagentcorecontrol.UpdateAgentInsightStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateAgentInsightStoreInput, ...func(*bedrockagentcorecontrol.Options)) (*bedrockagentcorecontrol.UpdateAgentInsightStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *bedrockagentcorecontrol.UpdateAgentInsightStoreInput, ...func(*bedrockagentcorecontrol.Options)) *bedrockagentcorecontrol.UpdateAgentInsightStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*bedrockagentcorecontrol.UpdateAgentInsightStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *bedrockagentcorecontrol.UpdateAgentInsightStoreInput, ...func(*bedrockagentcorecontrol.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

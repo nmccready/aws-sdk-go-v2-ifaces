@@ -199,6 +199,117 @@ func (_m *IClient) CreateAdapterVersion(ctx context.Context, params *textract.Cr
 	return r0, r1
 }
 
+// CreateBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateBlueprint(ctx context.Context, params *textract.CreateBlueprintInput, optFns ...func(*textract.Options)) (*textract.CreateBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateBlueprint")
+	}
+
+	var r0 *textract.CreateBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.CreateBlueprintInput, ...func(*textract.Options)) (*textract.CreateBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.CreateBlueprintInput, ...func(*textract.Options)) *textract.CreateBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.CreateBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.CreateBlueprintInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateBlueprintVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateBlueprintVersion(ctx context.Context, params *textract.CreateBlueprintVersionInput, optFns ...func(*textract.Options)) (*textract.CreateBlueprintVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateBlueprintVersion")
+	}
+
+	var r0 *textract.CreateBlueprintVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.CreateBlueprintVersionInput, ...func(*textract.Options)) (*textract.CreateBlueprintVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.CreateBlueprintVersionInput, ...func(*textract.Options)) *textract.CreateBlueprintVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.CreateBlueprintVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.CreateBlueprintVersionInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateProject(ctx context.Context, params *textract.CreateProjectInput, optFns ...func(*textract.Options)) (*textract.CreateProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateProject")
+	}
+
+	var r0 *textract.CreateProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.CreateProjectInput, ...func(*textract.Options)) (*textract.CreateProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.CreateProjectInput, ...func(*textract.Options)) *textract.CreateProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.CreateProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.CreateProjectInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteAdapter provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteAdapter(ctx context.Context, params *textract.DeleteAdapterInput, optFns ...func(*textract.Options)) (*textract.DeleteAdapterOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -265,6 +376,80 @@ func (_m *IClient) DeleteAdapterVersion(ctx context.Context, params *textract.De
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *textract.DeleteAdapterVersionInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteBlueprint(ctx context.Context, params *textract.DeleteBlueprintInput, optFns ...func(*textract.Options)) (*textract.DeleteBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteBlueprint")
+	}
+
+	var r0 *textract.DeleteBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.DeleteBlueprintInput, ...func(*textract.Options)) (*textract.DeleteBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.DeleteBlueprintInput, ...func(*textract.Options)) *textract.DeleteBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.DeleteBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.DeleteBlueprintInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// DeleteProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteProject(ctx context.Context, params *textract.DeleteProjectInput, optFns ...func(*textract.Options)) (*textract.DeleteProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteProject")
+	}
+
+	var r0 *textract.DeleteProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.DeleteProjectInput, ...func(*textract.Options)) (*textract.DeleteProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.DeleteProjectInput, ...func(*textract.Options)) *textract.DeleteProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.DeleteProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.DeleteProjectInput, ...func(*textract.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -384,6 +569,43 @@ func (_m *IClient) GetAdapterVersion(ctx context.Context, params *textract.GetAd
 	return r0, r1
 }
 
+// GetBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetBlueprint(ctx context.Context, params *textract.GetBlueprintInput, optFns ...func(*textract.Options)) (*textract.GetBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetBlueprint")
+	}
+
+	var r0 *textract.GetBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.GetBlueprintInput, ...func(*textract.Options)) (*textract.GetBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.GetBlueprintInput, ...func(*textract.Options)) *textract.GetBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.GetBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.GetBlueprintInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // GetDocumentAnalysis provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) GetDocumentAnalysis(ctx context.Context, params *textract.GetDocumentAnalysisInput, optFns ...func(*textract.Options)) (*textract.GetDocumentAnalysisOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -413,6 +635,43 @@ func (_m *IClient) GetDocumentAnalysis(ctx context.Context, params *textract.Get
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *textract.GetDocumentAnalysisInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetDocumentInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetDocumentInsights(ctx context.Context, params *textract.GetDocumentInsightsInput, optFns ...func(*textract.Options)) (*textract.GetDocumentInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetDocumentInsights")
+	}
+
+	var r0 *textract.GetDocumentInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.GetDocumentInsightsInput, ...func(*textract.Options)) (*textract.GetDocumentInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.GetDocumentInsightsInput, ...func(*textract.Options)) *textract.GetDocumentInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.GetDocumentInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.GetDocumentInsightsInput, ...func(*textract.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -569,6 +828,43 @@ func (_m *IClient) GetLendingAnalysisSummary(ctx context.Context, params *textra
 	return r0, r1
 }
 
+// GetProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetProject(ctx context.Context, params *textract.GetProjectInput, optFns ...func(*textract.Options)) (*textract.GetProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetProject")
+	}
+
+	var r0 *textract.GetProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.GetProjectInput, ...func(*textract.Options)) (*textract.GetProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.GetProjectInput, ...func(*textract.Options)) *textract.GetProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.GetProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.GetProjectInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListAdapterVersions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListAdapterVersions(ctx context.Context, params *textract.ListAdapterVersionsInput, optFns ...func(*textract.Options)) (*textract.ListAdapterVersionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -635,6 +931,80 @@ func (_m *IClient) ListAdapters(ctx context.Context, params *textract.ListAdapte
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *textract.ListAdaptersInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListBlueprints provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListBlueprints(ctx context.Context, params *textract.ListBlueprintsInput, optFns ...func(*textract.Options)) (*textract.ListBlueprintsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListBlueprints")
+	}
+
+	var r0 *textract.ListBlueprintsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.ListBlueprintsInput, ...func(*textract.Options)) (*textract.ListBlueprintsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.ListBlueprintsInput, ...func(*textract.Options)) *textract.ListBlueprintsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.ListBlueprintsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.ListBlueprintsInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListProjects provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListProjects(ctx context.Context, params *textract.ListProjectsInput, optFns ...func(*textract.Options)) (*textract.ListProjectsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListProjects")
+	}
+
+	var r0 *textract.ListProjectsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.ListProjectsInput, ...func(*textract.Options)) (*textract.ListProjectsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.ListProjectsInput, ...func(*textract.Options)) *textract.ListProjectsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.ListProjectsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.ListProjectsInput, ...func(*textract.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -727,6 +1097,43 @@ func (_m *IClient) StartDocumentAnalysis(ctx context.Context, params *textract.S
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *textract.StartDocumentAnalysisInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// StartDocumentInsights provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) StartDocumentInsights(ctx context.Context, params *textract.StartDocumentInsightsInput, optFns ...func(*textract.Options)) (*textract.StartDocumentInsightsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for StartDocumentInsights")
+	}
+
+	var r0 *textract.StartDocumentInsightsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.StartDocumentInsightsInput, ...func(*textract.Options)) (*textract.StartDocumentInsightsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.StartDocumentInsightsInput, ...func(*textract.Options)) *textract.StartDocumentInsightsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.StartDocumentInsightsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.StartDocumentInsightsInput, ...func(*textract.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -949,6 +1356,80 @@ func (_m *IClient) UpdateAdapter(ctx context.Context, params *textract.UpdateAda
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *textract.UpdateAdapterInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateBlueprint provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateBlueprint(ctx context.Context, params *textract.UpdateBlueprintInput, optFns ...func(*textract.Options)) (*textract.UpdateBlueprintOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateBlueprint")
+	}
+
+	var r0 *textract.UpdateBlueprintOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.UpdateBlueprintInput, ...func(*textract.Options)) (*textract.UpdateBlueprintOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.UpdateBlueprintInput, ...func(*textract.Options)) *textract.UpdateBlueprintOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.UpdateBlueprintOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.UpdateBlueprintInput, ...func(*textract.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateProject provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateProject(ctx context.Context, params *textract.UpdateProjectInput, optFns ...func(*textract.Options)) (*textract.UpdateProjectOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateProject")
+	}
+
+	var r0 *textract.UpdateProjectOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.UpdateProjectInput, ...func(*textract.Options)) (*textract.UpdateProjectOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *textract.UpdateProjectInput, ...func(*textract.Options)) *textract.UpdateProjectOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*textract.UpdateProjectOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *textract.UpdateProjectInput, ...func(*textract.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

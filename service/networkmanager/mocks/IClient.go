@@ -88,6 +88,43 @@ func (_m *IClient) AssociateConnectPeer(ctx context.Context, params *networkmana
 	return r0, r1
 }
 
+// AssociateContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) AssociateContextStore(ctx context.Context, params *networkmanager.AssociateContextStoreInput, optFns ...func(*networkmanager.Options)) (*networkmanager.AssociateContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for AssociateContextStore")
+	}
+
+	var r0 *networkmanager.AssociateContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.AssociateContextStoreInput, ...func(*networkmanager.Options)) (*networkmanager.AssociateContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.AssociateContextStoreInput, ...func(*networkmanager.Options)) *networkmanager.AssociateContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.AssociateContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.AssociateContextStoreInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // AssociateCustomerGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) AssociateCustomerGateway(ctx context.Context, params *networkmanager.AssociateCustomerGatewayInput, optFns ...func(*networkmanager.Options)) (*networkmanager.AssociateCustomerGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -302,6 +339,43 @@ func (_m *IClient) CreateConnection(ctx context.Context, params *networkmanager.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.CreateConnectionInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// CreateContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) CreateContextStore(ctx context.Context, params *networkmanager.CreateContextStoreInput, optFns ...func(*networkmanager.Options)) (*networkmanager.CreateContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for CreateContextStore")
+	}
+
+	var r0 *networkmanager.CreateContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.CreateContextStoreInput, ...func(*networkmanager.Options)) (*networkmanager.CreateContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.CreateContextStoreInput, ...func(*networkmanager.Options)) *networkmanager.CreateContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.CreateContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.CreateContextStoreInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -828,6 +902,43 @@ func (_m *IClient) DeleteConnection(ctx context.Context, params *networkmanager.
 	return r0, r1
 }
 
+// DeleteContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DeleteContextStore(ctx context.Context, params *networkmanager.DeleteContextStoreInput, optFns ...func(*networkmanager.Options)) (*networkmanager.DeleteContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DeleteContextStore")
+	}
+
+	var r0 *networkmanager.DeleteContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.DeleteContextStoreInput, ...func(*networkmanager.Options)) (*networkmanager.DeleteContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.DeleteContextStoreInput, ...func(*networkmanager.Options)) *networkmanager.DeleteContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.DeleteContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.DeleteContextStoreInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DeleteCoreNetwork provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DeleteCoreNetwork(ctx context.Context, params *networkmanager.DeleteCoreNetworkInput, optFns ...func(*networkmanager.Options)) (*networkmanager.DeleteCoreNetworkOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1272,6 +1383,43 @@ func (_m *IClient) DisassociateConnectPeer(ctx context.Context, params *networkm
 	return r0, r1
 }
 
+// DisassociateContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) DisassociateContextStore(ctx context.Context, params *networkmanager.DisassociateContextStoreInput, optFns ...func(*networkmanager.Options)) (*networkmanager.DisassociateContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for DisassociateContextStore")
+	}
+
+	var r0 *networkmanager.DisassociateContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.DisassociateContextStoreInput, ...func(*networkmanager.Options)) (*networkmanager.DisassociateContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.DisassociateContextStoreInput, ...func(*networkmanager.Options)) *networkmanager.DisassociateContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.DisassociateContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.DisassociateContextStoreInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // DisassociateCustomerGateway provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) DisassociateCustomerGateway(ctx context.Context, params *networkmanager.DisassociateCustomerGatewayInput, optFns ...func(*networkmanager.Options)) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -1560,6 +1708,117 @@ func (_m *IClient) GetConnections(ctx context.Context, params *networkmanager.Ge
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.GetConnectionsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetContextStore(ctx context.Context, params *networkmanager.GetContextStoreInput, optFns ...func(*networkmanager.Options)) (*networkmanager.GetContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetContextStore")
+	}
+
+	var r0 *networkmanager.GetContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetContextStoreInput, ...func(*networkmanager.Options)) (*networkmanager.GetContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetContextStoreInput, ...func(*networkmanager.Options)) *networkmanager.GetContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.GetContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.GetContextStoreInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetContextStoreAssociation provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetContextStoreAssociation(ctx context.Context, params *networkmanager.GetContextStoreAssociationInput, optFns ...func(*networkmanager.Options)) (*networkmanager.GetContextStoreAssociationOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetContextStoreAssociation")
+	}
+
+	var r0 *networkmanager.GetContextStoreAssociationOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetContextStoreAssociationInput, ...func(*networkmanager.Options)) (*networkmanager.GetContextStoreAssociationOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetContextStoreAssociationInput, ...func(*networkmanager.Options)) *networkmanager.GetContextStoreAssociationOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.GetContextStoreAssociationOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.GetContextStoreAssociationInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// GetContextVersion provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) GetContextVersion(ctx context.Context, params *networkmanager.GetContextVersionInput, optFns ...func(*networkmanager.Options)) (*networkmanager.GetContextVersionOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for GetContextVersion")
+	}
+
+	var r0 *networkmanager.GetContextVersionOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetContextVersionInput, ...func(*networkmanager.Options)) (*networkmanager.GetContextVersionOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.GetContextVersionInput, ...func(*networkmanager.Options)) *networkmanager.GetContextVersionOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.GetContextVersionOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.GetContextVersionInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)
@@ -2567,6 +2826,154 @@ func (_m *IClient) ListConnectPeers(ctx context.Context, params *networkmanager.
 	return r0, r1
 }
 
+// ListContextChanges provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContextChanges(ctx context.Context, params *networkmanager.ListContextChangesInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListContextChangesOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContextChanges")
+	}
+
+	var r0 *networkmanager.ListContextChangesOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextChangesInput, ...func(*networkmanager.Options)) (*networkmanager.ListContextChangesOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextChangesInput, ...func(*networkmanager.Options)) *networkmanager.ListContextChangesOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListContextChangesOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListContextChangesInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContextStoreAssociations provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContextStoreAssociations(ctx context.Context, params *networkmanager.ListContextStoreAssociationsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListContextStoreAssociationsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContextStoreAssociations")
+	}
+
+	var r0 *networkmanager.ListContextStoreAssociationsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextStoreAssociationsInput, ...func(*networkmanager.Options)) (*networkmanager.ListContextStoreAssociationsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextStoreAssociationsInput, ...func(*networkmanager.Options)) *networkmanager.ListContextStoreAssociationsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListContextStoreAssociationsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListContextStoreAssociationsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContextStores provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContextStores(ctx context.Context, params *networkmanager.ListContextStoresInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListContextStoresOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContextStores")
+	}
+
+	var r0 *networkmanager.ListContextStoresOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextStoresInput, ...func(*networkmanager.Options)) (*networkmanager.ListContextStoresOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextStoresInput, ...func(*networkmanager.Options)) *networkmanager.ListContextStoresOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListContextStoresOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListContextStoresInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// ListContexts provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) ListContexts(ctx context.Context, params *networkmanager.ListContextsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListContextsOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for ListContexts")
+	}
+
+	var r0 *networkmanager.ListContextsOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextsInput, ...func(*networkmanager.Options)) (*networkmanager.ListContextsOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.ListContextsInput, ...func(*networkmanager.Options)) *networkmanager.ListContextsOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.ListContextsOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.ListContextsInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // ListCoreNetworkPolicyVersions provides a mock function with given fields: ctx, params, optFns
 func (_m *IClient) ListCoreNetworkPolicyVersions(ctx context.Context, params *networkmanager.ListCoreNetworkPolicyVersionsInput, optFns ...func(*networkmanager.Options)) (*networkmanager.ListCoreNetworkPolicyVersionsOutput, error) {
 	_va := make([]interface{}, len(optFns))
@@ -3317,6 +3724,43 @@ func (_m *IClient) UpdateConnection(ctx context.Context, params *networkmanager.
 	}
 
 	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.UpdateConnectionInput, ...func(*networkmanager.Options)) error); ok {
+		r1 = rf(ctx, params, optFns...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
+// UpdateContextStore provides a mock function with given fields: ctx, params, optFns
+func (_m *IClient) UpdateContextStore(ctx context.Context, params *networkmanager.UpdateContextStoreInput, optFns ...func(*networkmanager.Options)) (*networkmanager.UpdateContextStoreOutput, error) {
+	_va := make([]interface{}, len(optFns))
+	for _i := range optFns {
+		_va[_i] = optFns[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, ctx, params)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateContextStore")
+	}
+
+	var r0 *networkmanager.UpdateContextStoreOutput
+	var r1 error
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.UpdateContextStoreInput, ...func(*networkmanager.Options)) (*networkmanager.UpdateContextStoreOutput, error)); ok {
+		return rf(ctx, params, optFns...)
+	}
+	if rf, ok := ret.Get(0).(func(context.Context, *networkmanager.UpdateContextStoreInput, ...func(*networkmanager.Options)) *networkmanager.UpdateContextStoreOutput); ok {
+		r0 = rf(ctx, params, optFns...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*networkmanager.UpdateContextStoreOutput)
+		}
+	}
+
+	if rf, ok := ret.Get(1).(func(context.Context, *networkmanager.UpdateContextStoreInput, ...func(*networkmanager.Options)) error); ok {
 		r1 = rf(ctx, params, optFns...)
 	} else {
 		r1 = ret.Error(1)

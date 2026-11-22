@@ -26,6 +26,7 @@ type IClient interface {
  StartRevenueAttributionAllocationsTask(ctx context.Context, params *StartRevenueAttributionAllocationsTaskInput, optFns ...func(*Options)) (*StartRevenueAttributionAllocationsTaskOutput, error) 
  TagResource(ctx context.Context, params *TagResourceInput, optFns ...func(*Options)) (*TagResourceOutput, error) 
  UntagResource(ctx context.Context, params *UntagResourceInput, optFns ...func(*Options)) (*UntagResourceOutput, error) 
+ UpdateMarketplaceRevenueShare(ctx context.Context, params *UpdateMarketplaceRevenueShareInput, optFns ...func(*Options)) (*UpdateMarketplaceRevenueShareOutput, error) 
  UpdateMarketplaceRevenueShareAllocation(ctx context.Context, params *UpdateMarketplaceRevenueShareAllocationInput, optFns ...func(*Options)) (*UpdateMarketplaceRevenueShareAllocationOutput, error) 
  UpdateRevenueAttribution(ctx context.Context, params *UpdateRevenueAttributionInput, optFns ...func(*Options)) (*UpdateRevenueAttributionOutput, error) 
 }

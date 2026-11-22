@@ -85,6 +85,7 @@ type IClient interface {
  CreateWorkspace(ctx context.Context, params *CreateWorkspaceInput, optFns ...func(*Options)) (*CreateWorkspaceOutput, error) 
  CreateWorkspacePage(ctx context.Context, params *CreateWorkspacePageInput, optFns ...func(*Options)) (*CreateWorkspacePageOutput, error) 
  DeactivateEvaluationForm(ctx context.Context, params *DeactivateEvaluationFormInput, optFns ...func(*Options)) (*DeactivateEvaluationFormOutput, error) 
+ DeleteAllEntitySessions(ctx context.Context, params *DeleteAllEntitySessionsInput, optFns ...func(*Options)) (*DeleteAllEntitySessionsOutput, error) 
  DeleteAttachedFile(ctx context.Context, params *DeleteAttachedFileInput, optFns ...func(*Options)) (*DeleteAttachedFileOutput, error) 
  DeleteContactData(ctx context.Context, params *DeleteContactDataInput, optFns ...func(*Options)) (*DeleteContactDataOutput, error) 
  DeleteContactEvaluation(ctx context.Context, params *DeleteContactEvaluationInput, optFns ...func(*Options)) (*DeleteContactEvaluationOutput, error) 

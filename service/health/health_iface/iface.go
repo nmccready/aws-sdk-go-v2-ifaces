@@ -10,6 +10,8 @@ import (
 // IClient defines the interface for health
 type IClient interface {
  Options() Options 
+ ConfigureTags(ctx context.Context, params *ConfigureTagsInput, optFns ...func(*Options)) (*ConfigureTagsOutput, error) 
+ ConfigureTagsForOrganization(ctx context.Context, params *ConfigureTagsForOrganizationInput, optFns ...func(*Options)) (*ConfigureTagsForOrganizationOutput, error) 
  DescribeAffectedAccountsForOrganization(ctx context.Context, params *DescribeAffectedAccountsForOrganizationInput, optFns ...func(*Options)) (*DescribeAffectedAccountsForOrganizationOutput, error) 
  DescribeAffectedEntities(ctx context.Context, params *DescribeAffectedEntitiesInput, optFns ...func(*Options)) (*DescribeAffectedEntitiesOutput, error) 
  DescribeAffectedEntitiesForOrganization(ctx context.Context, params *DescribeAffectedEntitiesForOrganizationInput, optFns ...func(*Options)) (*DescribeAffectedEntitiesForOrganizationOutput, error) 
@@ -23,6 +25,16 @@ type IClient interface {
  DescribeEventsForOrganization(ctx context.Context, params *DescribeEventsForOrganizationInput, optFns ...func(*Options)) (*DescribeEventsForOrganizationOutput, error) 
  DescribeHealthServiceStatusForOrganization(ctx context.Context, params *DescribeHealthServiceStatusForOrganizationInput, optFns ...func(*Options)) (*DescribeHealthServiceStatusForOrganizationOutput, error) 
  DescribeServiceLifecycle(ctx context.Context, params *DescribeServiceLifecycleInput, optFns ...func(*Options)) (*DescribeServiceLifecycleOutput, error) 
+ DescribeTagKeys(ctx context.Context, params *DescribeTagKeysInput, optFns ...func(*Options)) (*DescribeTagKeysOutput, error) 
+ DescribeTagKeysForOrganization(ctx context.Context, params *DescribeTagKeysForOrganizationInput, optFns ...func(*Options)) (*DescribeTagKeysForOrganizationOutput, error) 
+ DescribeTags(ctx context.Context, params *DescribeTagsInput, optFns ...func(*Options)) (*DescribeTagsOutput, error) 
+ DescribeTagsForOrganization(ctx context.Context, params *DescribeTagsForOrganizationInput, optFns ...func(*Options)) (*DescribeTagsForOrganizationOutput, error) 
+ DescribeTagsOnboardingStatus(ctx context.Context, params *DescribeTagsOnboardingStatusInput, optFns ...func(*Options)) (*DescribeTagsOnboardingStatusOutput, error) 
+ DescribeTagsOnboardingStatusForOrganization(ctx context.Context, params *DescribeTagsOnboardingStatusForOrganizationInput, optFns ...func(*Options)) (*DescribeTagsOnboardingStatusForOrganizationOutput, error) 
  DisableHealthServiceAccessForOrganization(ctx context.Context, params *DisableHealthServiceAccessForOrganizationInput, optFns ...func(*Options)) (*DisableHealthServiceAccessForOrganizationOutput, error) 
+ DisableTags(ctx context.Context, params *DisableTagsInput, optFns ...func(*Options)) (*DisableTagsOutput, error) 
+ DisableTagsForOrganization(ctx context.Context, params *DisableTagsForOrganizationInput, optFns ...func(*Options)) (*DisableTagsForOrganizationOutput, error) 
  EnableHealthServiceAccessForOrganization(ctx context.Context, params *EnableHealthServiceAccessForOrganizationInput, optFns ...func(*Options)) (*EnableHealthServiceAccessForOrganizationOutput, error) 
+ EnableTags(ctx context.Context, params *EnableTagsInput, optFns ...func(*Options)) (*EnableTagsOutput, error) 
+ EnableTagsForOrganization(ctx context.Context, params *EnableTagsForOrganizationInput, optFns ...func(*Options)) (*EnableTagsForOrganizationOutput, error) 
 }
